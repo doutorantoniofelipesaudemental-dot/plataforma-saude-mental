@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artigo — Doutor Saúde Mental</title>
+<meta name="description" content="Artigo sobre saúde mental publicado pelo Dr. Antônio Felipe, especialista em Medicina de Família e Comunidade.">
+<meta name="theme-color" content="#0d3330">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="cabecalho">
+  <div class="container cabecalho__interno">
+    <a class="marca" href="/">
+      <span class="marca__simbolo" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.3-9A5.2 5.2 0 0 1 12 6.6a5.2 5.2 0 0 1 9.3 5.4C19.5 16.4 12 21 12 21z"/></svg>
+      </span>
+      <span>
+        <span class="marca__nome">Doutor Saúde Mental</span>
+        <span class="marca__descricao">Dr. Antônio Felipe</span>
+      </span>
+    </a>
+
+    <button class="menu-botao" id="menu-botao" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu">
+      <span class="menu-botao__barras" aria-hidden="true"></span>
+    </button>
+
+    <nav class="navegacao" id="navegacao" aria-label="Principal">
+      <ul class="navegacao__lista">
+        <li><a class="navegacao__link" href="/#sobre">Sobre</a></li>
+        <li><a class="navegacao__link" href="/#atendimento">Atendimento</a></li>
+        <li><a class="navegacao__link" href="/#como-funciona">Como funciona</a></li>
+        <li><a class="navegacao__link" href="/blog" aria-current="page">Artigos</a></li>
+        <li><a class="navegacao__link" href="/#perguntas">Dúvidas</a></li>
+      </ul>
+      <a class="botao botao--primario botao--pequeno" href="/#agendar">Agendar consulta</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <article>
+    <header class="artigo-topo">
+      <div class="container artigo-topo__interno" id="artigo-cabecalho">
+        <div class="esqueleto" style="height:1.2rem;width:8rem;margin-bottom:1rem;"></div>
+        <div class="esqueleto" style="height:3rem;margin-bottom:0.8rem;"></div>
+        <div class="esqueleto" style="height:1rem;width:60%;"></div>
+      </div>
+    </header>
+
+    <div class="secao secao--papel" style="padding-top:clamp(2rem,4vw,3rem);">
+      <div class="container">
+        <div class="conteudo-artigo" id="artigo-conteudo" aria-busy="true">
+          <div class="esqueleto" style="height:1rem;margin-bottom:0.8rem;"></div>
+          <div class="esqueleto" style="height:1rem;margin-bottom:0.8rem;width:92%;"></div>
+          <div class="esqueleto" style="height:1rem;margin-bottom:0.8rem;width:96%;"></div>
+          <div class="esqueleto" style="height:1rem;width:70%;"></div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Chamada para agendamento -->
+  <section class="secao secao--verde">
+    <div class="container" style="text-align:center;max-width:42rem;">
+      <h2>Quer conversar sobre isso?</h2>
+      <p class="texto-apoio" style="margin:0 auto 2rem;">
+        Este texto é informativo e não substitui uma avaliação individual.
+        Se você se reconheceu em algo aqui, agende uma consulta.
+      </p>
+      <a class="botao botao--claro" href="/#agendar">
+        Agendar avaliação
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Relacionados -->
+  <section class="secao" id="secao-relacionados" hidden>
+    <div class="container">
+      <div class="secao-cabecalho">
+        <p class="etiqueta">Continue lendo</p>
+        <h2>Artigos relacionados</h2>
+      </div>
+      <div class="grade grade--3" id="relacionados"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape__grade">
+      <div class="rodape__marca">
+        <a class="marca" href="/" style="color:#fff;">
+          <span class="marca__simbolo" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.3-9A5.2 5.2 0 0 1 12 6.6a5.2 5.2 0 0 1 9.3 5.4C19.5 16.4 12 21 12 21z"/></svg>
+          </span>
+          <span>
+            <span class="marca__nome">Doutor Saúde Mental</span>
+            <span class="marca__descricao">Dr. Antônio Felipe</span>
+          </span>
+        </a>
+        <p>Especialista em Medicina de Família e Comunidade, com pós-graduações em Psiquiatria, Saúde Mental, Medicina do Trabalho, Atenção Psicossocial e Neuropsicologia.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="/#sobre">Sobre</a></li>
+          <li><a href="/#atendimento">Atendimento</a></li>
+          <li><a href="/#como-funciona">Como funciona</a></li>
+          <li><a href="/blog">Artigos</a></li>
+          <li><a href="/#perguntas">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="/#agendar">Agendar consulta</a></li>
+          <li><a href="mailto:doutor.antoniofelipe.saudemental@gmail.com">doutor.antoniofelipe.saudemental@gmail.com</a></li>
+          <li><a href="https://instagram.com/doutor.antoniofelipe.smental" target="_blank" rel="noopener">@doutor.antoniofelipe.smental</a></li>
+          <li><a href="/privacidade">Privacidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Emergência</h4>
+        <ul>
+          <li><a href="tel:188">CVV — 188 (24h, gratuito)</a></li>
+          <li><a href="tel:192">SAMU — 192</a></li>
+          <li><a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="aviso-legal">
+      O conteúdo deste site tem caráter informativo e educativo e não substitui consulta,
+      diagnóstico ou tratamento realizados por profissional de saúde habilitado.
+      Este site não realiza atendimento de urgência ou emergência.
+    </div>
+
+    <div class="rodape__base">
+      <span>&copy; <span id="ano">2026</span> Doutor Saúde Mental.</span>
+      <span>Responsável técnico: Dr. Antônio Felipe — CRM-BA 41322 · RQE 26638</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/artigo.js" defer></script>
+</body>
+</html>

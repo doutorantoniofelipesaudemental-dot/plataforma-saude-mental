@@ -1,0 +1,16 @@
+.vercel
+node_modules
+.env
+.env.local
+*.log
+.DS_Store
+carrosseis-instagram/
+prontos_para_postar/
+
+.env*
+
+# Cache de bytecode Python e snapshots do Playwright MCP gerados durante
+# verificacoes manuais — nao fazem parte do codigo do projeto.
+__pycache__/
+*.pyc
+.playwright-mcp/

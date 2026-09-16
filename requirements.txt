@@ -1,0 +1,4 @@
+# Scripts Python de publicacao no Instagram (raiz do projeto).
+requests>=2.31
+python-dotenv>=1.0
+Pillow>=10.0

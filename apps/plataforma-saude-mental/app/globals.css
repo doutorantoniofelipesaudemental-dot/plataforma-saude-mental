@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Tokens de marca — extraidos de backend/lib/carrossel.js (fonte unica da
+     verdade do DNA visual do projeto, Regra 7 do CLAUDE.md). Nenhum valor
+     hardcoded em componentes novos: tudo referencia estas variaveis. */
+  --color-verde-escuro: #0d3330;
+  --color-verde: #185d58;
+  --color-verde-claro: #8cc4b8;
+  --color-areia: #faf7f2;
+  --color-tinta: #17211f;
+  --color-tinta-media: #45564f;
+  --color-dourado: #c9a227;
+
+  /* Azuis frios da familia do verde-claro de marca. Entram aqui, e nao no
+     componente, porque a Regra 7 do CLAUDE.md exige que token inedito seja
+     absorvido pelo DNA antes de ser usado — nunca excecao local. Usados no
+     gradiente azul/verde-menta da esfera de respiracao guiada. */
+  --color-azul-calmo: #4a8fa8;
+  --color-azul-claro: #bcdfe4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+
+  --color-verde-escuro: var(--color-verde-escuro);
+  --color-verde: var(--color-verde);
+  --color-verde-claro: var(--color-verde-claro);
+  --color-areia: var(--color-areia);
+  --color-tinta: var(--color-tinta);
+  --color-tinta-media: var(--color-tinta-media);
+  --color-dourado: var(--color-dourado);
+  --color-azul-calmo: var(--color-azul-calmo);
+  --color-azul-claro: var(--color-azul-claro);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Tipografia de artigo (blog em MDX) — variaveis do plugin
+   @tailwindcss/typography remapeadas para os tokens de marca, em vez dos
+   cinzas/azuis padrao. Aplicado via className="prose prose-marca". */
+.prose-marca {
+  --tw-prose-body: var(--color-tinta-media);
+  --tw-prose-headings: var(--color-verde-escuro);
+  --tw-prose-lead: var(--color-tinta-media);
+  --tw-prose-links: var(--color-verde);
+  --tw-prose-bold: var(--color-tinta);
+  --tw-prose-counters: var(--color-verde);
+  --tw-prose-bullets: var(--color-verde-claro);
+  --tw-prose-hr: color-mix(in srgb, var(--color-tinta-media) 15%, transparent);
+  --tw-prose-quotes: var(--color-verde-escuro);
+  --tw-prose-quote-borders: var(--color-dourado);
+  --tw-prose-captions: var(--color-tinta-media);
+  --tw-prose-code: var(--color-verde-escuro);
+  --tw-prose-th-borders: color-mix(in srgb, var(--color-tinta-media) 25%, transparent);
+  --tw-prose-td-borders: color-mix(in srgb, var(--color-tinta-media) 15%, transparent);
+}

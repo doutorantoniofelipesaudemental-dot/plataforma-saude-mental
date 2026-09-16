@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "backend/index.js", "use": "@vercel/node" },
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/index.js" },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/public/assets/$1",
+      "headers": { "Cache-Control": "public, max-age=86400, must-revalidate" }
+    },
+    { "src": "/(favicon.svg|robots.txt|sitemap.xml)", "dest": "/public/$1" },
+    { "src": "/blog/?", "dest": "/public/blog.html" },
+    { "src": "/artigo/[^/]+/?", "dest": "/public/artigo.html" },
+    { "src": "/privacidade/?", "dest": "/public/privacidade.html" },
+    { "src": "/admin/?", "dest": "/public/admin.html" },
+    { "src": "/(.*)", "dest": "/public/index.html" }
+  ]
+}

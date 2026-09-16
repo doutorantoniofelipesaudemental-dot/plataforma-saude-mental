@@ -1,0 +1,29 @@
+{
+  "name": "drsaudemental",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site e blog da Doutor Saúde Mental, consultório do Dr. Antônio Felipe",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --env-file-if-exists=.env --watch index.js",
+    "seed": "node --env-file-if-exists=.env backend/seed.js",
+    "seed:reset": "node --env-file-if-exists=.env backend/seed.js --reset",
+    "carrosseis": "node --env-file-if-exists=.env backend/tools/gerar-carrosseis.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "archiver": "^8.0.0",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "express": "^5.2.1",
+    "framer-motion": "^13.3.0",
+    "lucide-react": "^1.46.0",
+    "mongoose": "^9.9.5",
+    "opentype.js": "^2.0.0",
+    "sharp": "^0.35.4",
+    "tailwind-merge": "^3.7.0"
+  }
+}

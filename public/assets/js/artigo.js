@@ -1,0 +1,98 @@
+/* =========================================================================
+   Página de artigo. O slug vem do caminho (/artigo/<slug>) ou de ?slug=.
+   ========================================================================= */
+(function () {
+  'use strict';
+
+  const { api, esc, formatarData, cartaoArtigo } = window.Site;
+
+  const cabecalho = document.getElementById('artigo-cabecalho');
+  const conteudo = document.getElementById('artigo-conteudo');
+  const secaoRelacionados = document.getElementById('secao-relacionados');
+  const listaRelacionados = document.getElementById('relacionados');
+
+  function obterSlug() {
+    const partes = location.pathname.split('/').filter(Boolean);
+    if (partes[0] === 'artigo' && partes[1]) return decodeURIComponent(partes[1]);
+    return new URLSearchParams(location.search).get('slug') || '';
+  }
+
+  function mostrarErro(titulo, texto) {
+    cabecalho.innerHTML = `<h1>${esc(titulo)}</h1>`;
+    conteudo.setAttribute('aria-busy', 'false');
+    conteudo.innerHTML = `
+      <p>${esc(texto)}</p>
+      <p><a class="botao botao--primario" href="/blog">Ver todos os artigos</a></p>`;
+  }
+
+  async function carregar() {
+    const slug = obterSlug();
+
+    if (!slug) {
+      mostrarErro('Artigo não encontrado', 'O endereço acessado não aponta para um artigo válido.');
+      return;
+    }
+
+    try {
+      const { artigo, relacionados } = await api(`/artigos/${encodeURIComponent(slug)}`);
+
+      document.title = `${artigo.titulo} — Doutor Saúde Mental`;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', artigo.resumo);
+
+      cabecalho.innerHTML = `
+        <a href="/blog" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;text-decoration:none;color:var(--tinta-fraca);margin-bottom:.5rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          Todos os artigos
+        </a>
+        <div><span class="selo">${esc(artigo.categoria)}</span></div>
+        <h1>${esc(artigo.titulo)}</h1>
+        <p class="texto-apoio" style="font-size:1.12rem;">${esc(artigo.resumo)}</p>
+        <div class="artigo-meta" style="margin-top:1.25rem;">
+          <span>${esc(artigo.autor || 'Dr. Antônio Felipe')}</span>
+          <span aria-hidden="true">•</span>
+          <time datetime="${esc(artigo.publicadoEm)}">${esc(formatarData(artigo.publicadoEm))}</time>
+          <span aria-hidden="true">•</span>
+          <span>${esc(artigo.tempoLeitura || 4)} min de leitura</span>
+        </div>`;
+
+      conteudo.setAttribute('aria-busy', 'false');
+      // O conteúdo é HTML escrito pela clínica pelas rotas administrativas
+      // autenticadas — não é entrada de usuário anônimo.
+      conteudo.innerHTML = artigo.conteudo;
+
+      // Links externos dentro do artigo abrem em nova aba com rel seguro.
+      conteudo.querySelectorAll('a[href^="http"]').forEach((link) => {
+        if (link.hostname !== location.hostname) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
+      });
+
+      if (relacionados && relacionados.length > 0) {
+        listaRelacionados.innerHTML = relacionados.map(cartaoArtigo).join('');
+        secaoRelacionados.hidden = false;
+      }
+    } catch (err) {
+      if (err.status === 404) {
+        mostrarErro(
+          'Artigo não encontrado',
+          'Este artigo pode ter sido removido ou o endereço está incorreto.'
+        );
+      } else if (err.status === 503) {
+        mostrarErro(
+          'Serviço indisponível',
+          'Não conseguimos carregar o artigo agora. Tente novamente em alguns instantes.'
+        );
+      } else {
+        mostrarErro(
+          'Não foi possível carregar o artigo',
+          'Verifique sua conexão e tente recarregar a página.'
+        );
+      }
+      console.warn('[artigo]', err.message);
+    }
+  }
+
+  carregar();
+})();
