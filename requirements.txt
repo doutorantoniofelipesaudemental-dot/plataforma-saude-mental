@@ -2,3 +2,10 @@
 requests>=2.31
 python-dotenv>=1.0
 Pillow>=10.0
+
+# post_instagram.py — geracao de legenda (Claude) + publicacao via Composio.
+# Atencao: o pacote certo e "composio" (SDK atual, expoe `from composio import
+# Composio`), nao "composio-core" (pacote legado — trava build no Windows com
+# Python 3.14 por causa do pin Pillow<11, que nao tem wheel pronta pra 3.14).
+anthropic>=0.69
+composio>=0.21
