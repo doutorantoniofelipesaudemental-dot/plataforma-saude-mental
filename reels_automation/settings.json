@@ -1,0 +1,84 @@
+{
+  "project": {
+    "name": "Reels Automation - Dr. Saude Mental",
+    "description": "Pipeline de geracao e publicacao automatica de Reels faceless: roteiro (Ollama) -> narracao (Edge-TTS) -> legendas sincronizadas (WhisperX) -> imagens (Stable Diffusion) -> montagem (MoviePy) -> publicacao (Instagram Graph API / Composio).",
+    "root_repo_relative": ".."
+  },
+  "ollama": {
+    "host": "http://localhost:11434",
+    "model": "deepseek-r1:8b",
+    "temperature": 0.7,
+    "num_predict": 900,
+    "timeout_seconds": 180,
+    "max_retries": 3
+  },
+  "content": {
+    "csv_path": "../30_REELS_FACELESS.csv",
+    "idioma": "pt-BR",
+    "voz_marca": "Clinico-acolhedor: autoridade medica sem frieza, calma sem infantilizacao. Nunca promete cura, resultado garantido ou diagnostico a distancia. Evita aberturas genericas (ex.: 'No mundo atual...') e listas de tres adjetivos.",
+    "hashtags_padrao": ["#saudemental", "#psiquiatria", "#doutorsaudemental", "#reels", "#saudementalimporta"]
+  },
+  "tts": {
+    "engine": "edge-tts",
+    "voice": "pt-BR-AntonioNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz",
+    "volume": "+0%",
+    "max_retries": 3
+  },
+  "whisperx": {
+    "model_size": "small",
+    "device": "cpu",
+    "compute_type": "int8",
+    "language": "pt",
+    "batch_size": 8,
+    "max_words_per_caption_chunk": 4
+  },
+  "stable_diffusion": {
+    "backend": "automatic1111",
+    "api_url": "http://127.0.0.1:7860",
+    "diffusers_model_id": "stabilityai/stable-diffusion-xl-base-1.0",
+    "steps": 12,
+    "cfg_scale": 7,
+    "sampler_name": "DPM++ 2M Karras",
+    "width": 512,
+    "height": 768,
+    "negative_prompt": "texto, letras, marca dagua, assinatura, baixa qualidade, borrado, distorcido, deformado, nsfw",
+    "style_suffix": "fotografia cinematografica, luz natural suave, tons quentes e calmos, sem texto, sem marca dagua, 4k",
+    "max_retries": 3
+  },
+  "video": {
+    "resolution": [1080, 1920],
+    "fps": 30,
+    "fade_seconds": 0.4,
+    "ken_burns_zoom": 1.08,
+    "caption_font": "C:\\Windows\\Fonts\\arialbd.ttf",
+    "caption_fontsize": 64,
+    "caption_color": "white",
+    "caption_stroke_color": "black",
+    "caption_stroke_width": 3,
+    "caption_position_ratio": [0.5, 0.78],
+    "codec": "libx264",
+    "audio_codec": "aac",
+    "bitrate": "8000k"
+  },
+  "instagram": {
+    "default_publisher": "graph",
+    "root_scripts": {
+      "prepare_media": "preparar_midia_publica.py",
+      "publish_graph": "publicar_instagram.py",
+      "publish_composio": "post_instagram.py"
+    },
+    "carousel_folder": "carrosseis-instagram",
+    "media_filename": "reel.mp4"
+  },
+  "composio": {
+    "notify_on_success": false,
+    "notify_on_failure": false,
+    "notify_action": ""
+  },
+  "paths": {
+    "assets_dir": "assets",
+    "logs_dir": "logs"
+  }
+}

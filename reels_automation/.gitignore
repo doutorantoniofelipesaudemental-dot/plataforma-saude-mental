@@ -1,0 +1,29 @@
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+
+# Segredos
+.env
+
+# Artefatos gerados (audio, imagens, video, legendas, logs de execucao)
+assets/audio/*
+assets/images/*
+assets/captions/*
+assets/output/*
+assets/runs/*
+!assets/audio/.gitkeep
+!assets/images/.gitkeep
+!assets/captions/.gitkeep
+!assets/output/.gitkeep
+!assets/runs/.gitkeep
+logs/*.log
+!logs/.gitkeep
+
+# Modelos baixados localmente (WhisperX / diffusers cache, se apontado pra ca)
+models_cache/
+
+# AUTOMATIC1111 WebUI e qualquer outra ferramenta externa instalada
+# localmente (app vendorizado com seu proprio .git/venv, modelos de varios
+# GB, logs de execucao) — nao faz sentido versionar dentro deste repo
+tools/

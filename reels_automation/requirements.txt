@@ -1,0 +1,52 @@
+# Pipeline de automacao de Reels (Dr. Saude Mental) — subprojeto isolado.
+# Recomenda-se um virtualenv proprio para esta pasta (veja scripts/install.ps1),
+# separado do restante do repositorio, por causa do peso das dependencias de
+# ML (torch, whisperx, diffusers).
+
+# --- Config / utilitarios ---
+python-dotenv>=1.0
+requests>=2.31
+tenacity>=8.2
+
+# --- Ollama (geracao de roteiro) ---
+ollama>=0.3
+
+# --- Edge-TTS (narracao) ---
+edge-tts>=6.1
+
+# --- WhisperX (transcricao + alinhamento word-level para legendas) ---
+# torch/torchaudio: instale a build compativel com sua maquina ANTES deste
+# arquivo se for usar GPU CUDA — veja https://pytorch.org/get-started/locally/
+# A instalacao padrao abaixo traz a build CPU.
+torch>=2.2
+torchaudio>=2.2
+whisperx>=3.1
+srt>=3.5
+
+# --- Stable Diffusion ---
+# Backend "automatic1111" (recomendado no Windows): so precisa do requests
+# acima para falar com a API do WebUI (http://127.0.0.1:7860). As libs abaixo
+# so sao necessarias para o backend "diffusers" (execucao local via Python).
+diffusers>=0.30
+transformers>=4.42
+accelerate>=0.33
+safetensors>=0.4
+
+# --- MoviePy (montagem do video) ---
+moviepy>=1.0.3
+Pillow>=10.0
+# numpy: sem pin proprio de proposito — deixe o pip resolver a versao pedida
+# por torch/ctranslate2/moviepy. Fixar "numpy<2.0" aqui ja causou falha de
+# build em Python novo (a 1.26.4 nao tem wheel pronta, so build via Meson/C).
+numpy
+
+# --- Composio (notificacoes opcionais / publicacao alternativa) ---
+# Atencao: o pacote certo e "composio" (SDK atual, expoe `from composio import
+# Composio`), nao "composio-core" (pacote legado — trava build no Windows com
+# Python 3.14 por causa do pin Pillow<11, que nao tem wheel pronta pra 3.14).
+# Ja esta instalado na raiz do repo (usado por post_instagram.py); listado
+# aqui so para quem rodar este subprojeto em venv isolado.
+composio>=0.21
+
+# --- Testes ---
+pytest>=8.0
