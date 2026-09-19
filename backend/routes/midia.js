@@ -1,22 +1,18 @@
 const express = require('express');
-const { put } = require('@vercel/blob');
 const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin } = require('../middleware');
 
 const router = express.Router();
 
-/**
- * Garante que o Blob store da Vercel está configurado antes de tentar subir
- * mídia. Mesmo espírito do `exigirBanco`: 503 explicando o que falta, nunca
- * um 500 cru — o backend Python de automação depende dessa resposta para
- * distinguir "ambiente mal configurado" de "erro de verdade".
- */
-function exigirBlob(req, res, next) {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    return res.status(503).json({
-      erro: 'Armazenamento de mídia não configurado.',
-      detalhe: 'Defina BLOB_READ_WRITE_TOKEN nas variáveis de ambiente.',
-    });
+// Só aceita URL do próprio Blob Store desta plataforma — nunca salva no
+// artigo (campo renderizado direto em <audio>/<img> pra qualquer visitante)
+// uma URL arbitrária vinda de quem quer que tenha o ADMIN_TOKEN.
+const BLOB_URL_RE = /^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\//;
+
+function validarUrlDeMidia(req, res, next) {
+  const { url } = req.body || {};
+  if (typeof url !== 'string' || !BLOB_URL_RE.test(url)) {
+    return res.status(400).json({ erro: 'Campo "url" ausente ou não aponta para o Blob Store desta plataforma.' });
   }
   next();
 }
@@ -24,83 +20,46 @@ function exigirBlob(req, res, next) {
 /**
  * PUT /api/artigos/:slug/midia/audio
  *
- * Recebe, como corpo binário `audio/mpeg`, a narração TTS do artigo completo
- * (gerada pelo backend Python de automação) e guarda no Vercel Blob. O
- * caminho é fixo por slug e `allowOverwrite` fica ligado de propósito: uma
- * regeneração da narração deve substituir o arquivo anterior, não acumular
- * lixo no Blob store.
+ * O upload em si (narração TTS do artigo completo, gerada pelo backend
+ * Python de automação) já foi feito DIRETO para o Vercel Blob pelo próprio
+ * Python — arquivos de narração longos passavam do limite de payload de
+ * serverless function da Vercel (413) quando iam inteiros por aqui. Esta
+ * rota só recebe a URL pública resultante (JSON pequeno) e salva no artigo.
  */
-router.put(
-  '/:slug/midia/audio',
-  exigirAdmin,
-  exigirBanco,
-  exigirBlob,
-  express.raw({ type: 'audio/mpeg', limit: '30mb' }),
-  async (req, res) => {
-    try {
-      const artigo = await Artigo.findOne({ slug: req.params.slug });
-      if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
+router.put('/:slug/midia/audio', exigirAdmin, exigirBanco, validarUrlDeMidia, async (req, res) => {
+  try {
+    const artigo = await Artigo.findOne({ slug: req.params.slug });
+    if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
 
-      if (!Buffer.isBuffer(req.body) || req.body.length === 0) {
-        return res.status(400).json({ erro: 'Corpo da requisição vazio ou em formato inválido.' });
-      }
+    artigo.audioNarracaoUrl = req.body.url;
+    await artigo.save();
 
-      const blob = await put(`artigos/${artigo.slug}/narracao.mp3`, req.body, {
-        access: 'public',
-        contentType: 'audio/mpeg',
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      });
-
-      artigo.audioNarracaoUrl = blob.url;
-      await artigo.save();
-
-      res.json({ ok: true, audioNarracaoUrl: blob.url });
-    } catch (err) {
-      console.error('[midia] erro ao salvar áudio de narração:', err);
-      res.status(500).json({ erro: 'Não foi possível salvar o áudio da narração.' });
-    }
+    res.json({ ok: true, audioNarracaoUrl: artigo.audioNarracaoUrl });
+  } catch (err) {
+    console.error('[midia] erro ao salvar URL do áudio de narração:', err);
+    res.status(500).json({ erro: 'Não foi possível salvar o áudio da narração.' });
   }
-);
+});
 
 /**
  * PUT /api/artigos/:slug/midia/capa
  *
- * Recebe, como corpo binário `image/png`, a imagem de capa gerada pelo
- * backend Python de automação e guarda no Vercel Blob, salvando a URL no
- * campo `imagemCapa` já existente no schema.
+ * Mesmo esquema da rota de áudio: o Python já subiu a imagem direto pro
+ * Vercel Blob, aqui só chega a URL pública para salvar em `imagemCapa`.
  */
-router.put(
-  '/:slug/midia/capa',
-  exigirAdmin,
-  exigirBanco,
-  exigirBlob,
-  express.raw({ type: 'image/png', limit: '30mb' }),
-  async (req, res) => {
-    try {
-      const artigo = await Artigo.findOne({ slug: req.params.slug });
-      if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
+router.put('/:slug/midia/capa', exigirAdmin, exigirBanco, validarUrlDeMidia, async (req, res) => {
+  try {
+    const artigo = await Artigo.findOne({ slug: req.params.slug });
+    if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
 
-      if (!Buffer.isBuffer(req.body) || req.body.length === 0) {
-        return res.status(400).json({ erro: 'Corpo da requisição vazio ou em formato inválido.' });
-      }
+    artigo.imagemCapa = req.body.url;
+    await artigo.save();
 
-      const blob = await put(`artigos/${artigo.slug}/capa.png`, req.body, {
-        access: 'public',
-        contentType: 'image/png',
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      });
-
-      artigo.imagemCapa = blob.url;
-      await artigo.save();
-
-      res.json({ ok: true, imagemCapa: blob.url });
-    } catch (err) {
-      console.error('[midia] erro ao salvar imagem de capa:', err);
-      res.status(500).json({ erro: 'Não foi possível salvar a imagem de capa.' });
-    }
+    res.json({ ok: true, imagemCapa: artigo.imagemCapa });
+  } catch (err) {
+    console.error('[midia] erro ao salvar URL da imagem de capa:', err);
+    res.status(500).json({ erro: 'Não foi possível salvar a imagem de capa.' });
   }
-);
+});
 
 module.exports = router;
