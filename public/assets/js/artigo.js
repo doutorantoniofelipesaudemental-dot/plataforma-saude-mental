@@ -40,6 +40,27 @@
       const meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute('content', artigo.resumo);
 
+      // Capa gerada (Vercel Blob) — só renderiza quando o artigo tiver uma.
+      const capaHtml = artigo.imagemCapa
+        ? `<div class="artigo-capa">
+             <img src="${esc(artigo.imagemCapa)}" alt="" loading="eager">
+           </div>`
+        : '';
+
+      // Narração TTS do artigo completo — idem, some quando não houver áudio.
+      const narracaoHtml = artigo.audioNarracaoUrl
+        ? `<div class="artigo-narracao">
+             <p class="artigo-narracao__rotulo">
+               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M16 8.2a4.2 4.2 0 0 1 0 7.6"/><path d="M18.6 5.6a7.8 7.8 0 0 1 0 12.8"/></svg>
+               Ouvir o artigo completo
+             </p>
+             <audio controls preload="none" src="${esc(artigo.audioNarracaoUrl)}">
+               Seu navegador não suporta áudio incorporado.
+               <a href="${esc(artigo.audioNarracaoUrl)}">Baixar o áudio da narração</a>.
+             </audio>
+           </div>`
+        : '';
+
       cabecalho.innerHTML = `
         <a href="/blog" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;text-decoration:none;color:var(--tinta-fraca);margin-bottom:.5rem;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
@@ -54,7 +75,9 @@
           <time datetime="${esc(artigo.publicadoEm)}">${esc(formatarData(artigo.publicadoEm))}</time>
           <span aria-hidden="true">•</span>
           <span>${esc(artigo.tempoLeitura || 4)} min de leitura</span>
-        </div>`;
+        </div>
+        ${capaHtml}
+        ${narracaoHtml}`;
 
       conteudo.setAttribute('aria-busy', 'false');
       // O conteúdo é HTML escrito pela clínica pelas rotas administrativas

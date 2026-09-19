@@ -56,6 +56,10 @@ const ArtigoSchema = new mongoose.Schema(
     },
     autor: { type: String, default: 'Dr. Antônio Felipe', trim: true, maxlength: 120 },
     imagemCapa: { type: String, default: '', trim: true, maxlength: 500 },
+    // URL do áudio (Vercel Blob) com a narração TTS do artigo completo,
+    // gerada pelo backend Python de automação e enviada via PUT
+    // /api/artigos/:slug/midia/audio. Vazio enquanto não houver narração.
+    audioNarracaoUrl: { type: String, default: '', trim: true, maxlength: 500 },
     tempoLeitura: { type: Number, default: 4, min: 1, max: 60 },
     publicado: { type: Boolean, default: true, index: true },
     publicadoEm: { type: Date, default: Date.now, index: true },

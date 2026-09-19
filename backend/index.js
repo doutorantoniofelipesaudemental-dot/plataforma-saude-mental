@@ -4,6 +4,7 @@ const express = require('express');
 const db = require('./lib/db');
 const agendamentosRouter = require('./routes/agendamentos');
 const artigosRouter = require('./routes/artigos');
+const midiaRouter = require('./routes/midia');
 const carrosselRouter = require('./routes/carrossel');
 const adminRouter = require('./routes/admin');
 
@@ -55,6 +56,10 @@ app.get('/api/health', async (req, res) => {
 
 app.use('/api/agendamentos', agendamentosRouter);
 app.use('/api/artigos', artigosRouter);
+// Mesmo prefixo de artigosRouter: as rotas de mídia (PUT .../midia/audio e
+// .../midia/capa) usadas pelo backend Python de automação vivem sob
+// /api/artigos/:slug/midia/*.
+app.use('/api/artigos', midiaRouter);
 app.use('/api/carrossel', carrosselRouter);
 app.use('/api/admin', adminRouter);
 
