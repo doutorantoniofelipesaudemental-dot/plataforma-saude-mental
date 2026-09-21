@@ -147,7 +147,7 @@
   /** Monta o HTML de um cartão de artigo a partir do objeto da API. */
   function cartaoArtigo(artigo) {
     const capa = artigo.imagemCapa
-      ? `<img src="${esc(artigo.imagemCapa)}" alt="" loading="lazy">`
+      ? `<img src="${esc(artigo.imagemCapa)}" alt="Capa do artigo: ${esc(artigo.titulo)}" loading="lazy">`
       : ICONE_CAPA;
 
     return `

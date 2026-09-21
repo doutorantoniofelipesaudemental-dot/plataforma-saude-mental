@@ -130,11 +130,14 @@ Consolida em um único checklist as cinco referências de design que toda tela/c
 - Padrão de código: Python/JS limpo, modular, fortemente tipado, sem *magic numbers* nem variáveis de ambiente soltas — centralizar em `config.py`.
 
 ### 18.2 Paleta e Tokens Visuais de Referência
-Valores concretos que alimentam o Design DNA consolidado na Regra 7 deste repo (fonte de verdade única — nenhum hardcode em componente novo):
-- Primária (soberania/acolhimento): Deep Slate `#0F172A`, `#1E293B` · Deep Teal `#0D9488`, `#0F766E`.
-- Secundária (saúde/vitalidade): Emerald Soft `#10B981`, `#059669`.
-- Fundos/superfícies: Off-White `#F8FAFC` · Card `#FFFFFF`.
-- Acessibilidade: contraste mínimo WCAG AAA (mais estrito que o AA mínimo da Regra 2 — usar AAA como meta nesses componentes).
+
+**Atualizado em 2026-09-21 via auditoria de QA visual (Playwright) no site em produção — estes são os valores realmente computados em `https://drsaudemental.vercel.app`, medidos com `getComputedStyle`, e substituem a paleta slate/emerald originalmente prevista neste documento.** A implementação em `public/assets/css/style.css` (`:root`) segue uma paleta floresta/teal quente, não a slate/emerald fria documentada antes — mantenha este bloco como fonte da verdade até que uma decisão de design mude a implementação real.
+
+- Headings e texto de destaque (`--verde-900`): `#0D3330`.
+- CTAs e links primários (`--verde-800`/`--verde-700`): `#114240` / `#185D58`, com hover/acento em `#2B978D`.
+- Fundo quente da página (`--papel` ou equivalente): `#FAF7F2` — bege quente, não off-white frio.
+- Cards: `#FFFFFF`.
+- Acessibilidade: contraste mínimo WCAG AAA (mais estrito que o AA mínimo da Regra 2 — usar AAA como meta nesses componentes). Contrastes medidos: headings sobre fundo 12.82:1, CTA (branco sobre `#185D58`) 7.65:1 — ambos acima do mínimo AAA (7:1) para texto normal.
 - Espaçamento: escala estrita de 8px (8/16/24/32/48) — consistente com a Regra 2.
 - Tipografia: `Inter`/System UI; títulos `font-bold` + `tracking-tight`; corpo `leading-relaxed`.
 - Cards: `rounded-xl`/`rounded-2xl`, `shadow-sm`.

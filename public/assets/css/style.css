@@ -275,6 +275,7 @@ a:hover { color: var(--verde-500); }
 
 .menu-botao {
   display: none;
+  flex-shrink: 0;
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid var(--linha);
