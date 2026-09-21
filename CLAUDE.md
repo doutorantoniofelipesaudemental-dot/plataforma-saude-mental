@@ -118,3 +118,41 @@ Consolida em um único checklist as cinco referências de design que toda tela/c
 - **RAUNO CRAFT**: o acabamento é a interação, não a superfície — cada elemento que responde a input (arrastar, expandir, dispensar) precisa de uma resposta contínua ao gesto (drag segue o dedo/cursor 1:1 durante o movimento, spring só na soltura), nunca um estado binário instantâneo. Bordas e sombras carregam cor sutil da paleta da marca (slate/teal), nunca preto puro (`rgba(0,0,0,.4)` genérico). Nenhum componente customizado é entregue sem os estados hover/focus-visible/active/disabled todos desenhados — não apenas o default.
 - **REFACTORING UI**: nunca usar apenas tamanho de fonte para hierarquia — combinar peso, cor/opacidade (ver Taste acima) e espaçamento. Evitar cinza puro (`#808080`-like) em qualquer texto ou borda — usar a própria paleta slate/teal da marca em tons mais claros/escuros. Todo card/painel precisa de pelo menos duas fontes de profundidade (borda sutil + sombra), nunca sombra genérica de framework sem ajuste.
 - **LIMPEZA DE MARCADORES ESTRUTURAIS EM LEGENDAS/CONTEÚDO GERADO**: qualquer texto que chegue de um pipeline de geração (roteiro de carrossel, legenda social, transcrição) precisa ter rótulos de estrutura removidos antes de ir para tela ou publicação — `"Slide 1 -"`, `"Item 2:"`, marcação markdown (`**`), colchetes de instrução de roteiro. Isso já é reforçado no lado do backend Python (`content_pipeline/orchestrator.py` e `backend/app/core/publish_validator.py`, no repo `DOUTOR_ANTONIO_FELIPE_SAUDE_MENTAL`); qualquer texto renderizado aqui na plataforma que vier desse pipeline segue a mesma regra — nunca exibir um rótulo estrutural cru na UI.
+
+## 18. REPO COMPANHEIRO — PROMPT MESTRE DO BACKEND (`DOUTOR_ANTONIO_FELIPE_SAUDE_MENTAL`)
+
+**NOTA DE ESCOPO:** Esta seção documenta as regras do repositório Python/Flask companheiro (`DOUTOR_ANTONIO_FELIPE_SAUDE_MENTAL` — backend, `content_pipeline`, SQLite, geração de imagem via Replicate) já referenciado na Regra 17. **Este repositório (`DRSAUDEMENTAL`) não contém Flask, SQLite nem código Replicate** — aqui vivem o site (`apps/plataforma-saude-mental`) e os scripts Python de publicação (`reels_automation/`, `post_instagram.py`, `publicar_instagram.py`, `gerar_carrossel_local.py`, `gerar_capas_artigos.py`, `preparar_midia_publica.py`). Trate os itens abaixo como contexto de integração — aplicam-se quando este repo consome, chama ou espelha dados/artefatos produzidos por aquele backend, nunca como afirmação de que esses sistemas existem aqui.
+
+### 18.1 Identidade e Autonomia do Agente (no repo backend)
+- Atuação como Staff Full-Stack Engineer + UI/UX Specialist + Lead Agentic Developer.
+- Autonomia total para tarefas com tripla checagem automatizada (`watermark_free=True`, `policy_passed=True`, validações de código): executar, validar e commitar/reiniciar workers sem pausa.
+- Resiliência: em falha de API externa ou modelo, usar fallback gracioso (ex.: `institutional_covers.py` local) sem interromper o worker.
+- Padrão de código: Python/JS limpo, modular, fortemente tipado, sem *magic numbers* nem variáveis de ambiente soltas — centralizar em `config.py`.
+
+### 18.2 Paleta e Tokens Visuais de Referência
+Valores concretos que alimentam o Design DNA consolidado na Regra 7 deste repo (fonte de verdade única — nenhum hardcode em componente novo):
+- Primária (soberania/acolhimento): Deep Slate `#0F172A`, `#1E293B` · Deep Teal `#0D9488`, `#0F766E`.
+- Secundária (saúde/vitalidade): Emerald Soft `#10B981`, `#059669`.
+- Fundos/superfícies: Off-White `#F8FAFC` · Card `#FFFFFF`.
+- Acessibilidade: contraste mínimo WCAG AAA (mais estrito que o AA mínimo da Regra 2 — usar AAA como meta nesses componentes).
+- Espaçamento: escala estrita de 8px (8/16/24/32/48) — consistente com a Regra 2.
+- Tipografia: `Inter`/System UI; títulos `font-bold` + `tracking-tight`; corpo `leading-relaxed`.
+- Cards: `rounded-xl`/`rounded-2xl`, `shadow-sm`.
+- Anti-patterns adicionais: gradientes agressivos, neon ou qualquer elemento que transmita pânico/urgência/alarde; layouts poluídos com múltiplos CTAs competindo.
+
+### 18.3 Pipeline de Imagens — Replicate (FLUX.1 [schnell])
+- Provedor primário: Replicate, modelo `black-forest-labs/flux-schnell`.
+- **Prompt de geração:** nunca usar negações (ex.: "never smoking") — sempre descrever afirmativamente o ambiente ideal ("clean, healthy lifestyle, calm atmosphere"). Regra aplica-se a qualquer prompt de imagem gerado por este site também, por consistência com a Regra 1/Stop-Slop.
+- Regras de chamada: resolver sempre `latest_version.id` antes de criar a predição; passar `wait=False` em `client.run()` (evita `ReadTimeout` e conexões presas de 60s); polling manual via `prediction.wait()`; validar `watermark_free = True` antes de aceitar o retorno.
+
+### 18.4 Loop de Feedback Visual (Playwright CLI)
+Sempre que criar/alterar UI ou gerar layout de carrossel/página no backend: renderizar no navegador via Playwright CLI, inspecionar alinhamento/quebra de linha/proporção/contraste, e refatorar+revalidar automaticamente se houver desvio do Design System (ex.: carrossel com mais de 10 slides).
+
+### 18.5 Comandos de Referência (repo backend)
+- Worker: `python -m content_pipeline.worker`
+- Testes E2E/visuais: `npx playwright test tests/e2e/`
+- Checar mídias no SQLite: `python -c "import sqlite3; con = sqlite3.connect('data/db/app.db'); print(con.execute('SELECT id, status, type FROM media_assets').fetchall())"`
+
+### 18.6 Commit e Deploy (regra compartilhada)
+- Commits atômicos com convenção clara (`fix:`, `feat:`, `refactor:`, `style:`) — já é a prática observada no histórico deste repo, manter em ambos.
+- Nunca commitar segredos (`r8_...`, senhas, `.env`) em nenhum dos dois repositórios.
