@@ -13,7 +13,7 @@
     },
     { "src": "/(favicon.svg|robots.txt|sitemap.xml)", "dest": "/public/$1" },
     { "src": "/blog/?", "dest": "/public/blog.html" },
-    { "src": "/artigo/[^/]+/?", "dest": "/public/artigo.html" },
+    { "src": "/artigo/[^/]+/?", "dest": "/backend/index.js" },
     { "src": "/privacidade/?", "dest": "/public/privacidade.html" },
     { "src": "/admin/?", "dest": "/public/admin.html" },
     { "src": "/(.*)", "dest": "/public/index.html" }

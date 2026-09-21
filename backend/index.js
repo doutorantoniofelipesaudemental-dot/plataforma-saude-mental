@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 
 const db = require('./lib/db');
+const Artigo = require('./models/Artigo');
+const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
 const agendamentosRouter = require('./routes/agendamentos');
 const artigosRouter = require('./routes/artigos');
 const midiaRouter = require('./routes/midia');
@@ -80,7 +82,36 @@ app.use(
 );
 
 app.get('/blog', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'blog.html')));
-app.get('/artigo/:slug', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'artigo.html')));
+
+/**
+ * Pré-renderiza meta tags OpenGraph/canonical/JSON-LD para bots de preview e
+ * crawlers, que não executam o JS que hoje monta o conteúdo do artigo.
+ * O corpo do artigo continua vindo do client-side via /api/artigos/:slug —
+ * aqui só o <head> muda. Sem banco configurado, artigo não encontrado, ou
+ * qualquer erro na consulta, cai para o shell estático de sempre e o
+ * client-side assume a renderização (inclusive a tela de "não encontrado").
+ */
+app.get('/artigo/:slug', async (req, res) => {
+  const shellEstatico = () => res.sendFile(path.join(PUBLIC_DIR, 'artigo.html'));
+
+  if (!db.isConfigured()) return shellEstatico();
+
+  try {
+    await db.connect();
+    const artigo = await Artigo.findOne({ slug: req.params.slug, publicado: true })
+      .select('titulo slug resumo imagemCapa autor publicadoEm atualizadoEm')
+      .lean();
+
+    if (!artigo) return shellEstatico();
+
+    res.set('Content-Type', 'text/html; charset=utf-8');
+    res.send(renderizarArtigoHtml(artigo));
+  } catch (err) {
+    console.error('[artigo] falha ao pré-renderizar, caindo para o shell estático:', err.message);
+    shellEstatico();
+  }
+});
+
 app.get('/admin', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'admin.html')));
 
 // SPA-ish fallback: qualquer rota desconhecida devolve a home.
