@@ -79,11 +79,45 @@
       <p><a class="botao botao--primario" href="/blog">Ver todos os artigos</a></p>`;
   }
 
+  /** Links externos dentro do corpo do artigo abrem em nova aba com rel seguro. */
+  function endurecerLinksExternos() {
+    conteudo.querySelectorAll('a[href^="http"]').forEach((link) => {
+      if (link.hostname !== location.hostname) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+    });
+  }
+
+  function exibirRelacionados(relacionados) {
+    if (relacionados && relacionados.length > 0) {
+      listaRelacionados.innerHTML = relacionados.map(cartaoArtigo).join('');
+      secaoRelacionados.hidden = false;
+    }
+  }
+
   async function carregar() {
     const slug = obterSlug();
 
     if (!slug) {
       mostrarErro('Artigo não encontrado', 'O endereço acessado não aponta para um artigo válido.');
+      return;
+    }
+
+    // O servidor (backend/lib/renderizarArtigo.js) já preenche cabeçalho e
+    // corpo quando consegue consultar o banco — marca <article data-ssr="1">
+    // nesse caso. Aqui só reforçamos o hardening de links e buscamos os
+    // relacionados (que não vêm pré-renderizados), sem re-montar nada nem
+    // mostrar skeleton — evita o layout shift de trocar o HTML inteiro.
+    const artigoEl = document.querySelector('article');
+    if (artigoEl?.dataset.ssr === '1') {
+      endurecerLinksExternos();
+      try {
+        const { relacionados } = await api(`/artigos/${encodeURIComponent(slug)}`);
+        exibirRelacionados(relacionados);
+      } catch (err) {
+        console.warn('[artigo] falha ao carregar relacionados:', err.message);
+      }
       return;
     }
 
@@ -139,18 +173,8 @@
       // autenticadas — não é entrada de usuário anônimo.
       conteudo.innerHTML = artigo.conteudo;
 
-      // Links externos dentro do artigo abrem em nova aba com rel seguro.
-      conteudo.querySelectorAll('a[href^="http"]').forEach((link) => {
-        if (link.hostname !== location.hostname) {
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
-        }
-      });
-
-      if (relacionados && relacionados.length > 0) {
-        listaRelacionados.innerHTML = relacionados.map(cartaoArtigo).join('');
-        secaoRelacionados.hidden = false;
-      }
+      endurecerLinksExternos();
+      exibirRelacionados(relacionados);
     } catch (err) {
       if (err.status === 404) {
         mostrarErro(

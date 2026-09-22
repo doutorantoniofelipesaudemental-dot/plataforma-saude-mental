@@ -99,7 +99,7 @@ app.get('/artigo/:slug', async (req, res) => {
   try {
     await db.connect();
     const artigo = await Artigo.findOne({ slug: req.params.slug, publicado: true })
-      .select('titulo slug resumo imagemCapa autor publicadoEm atualizadoEm')
+      .select('titulo slug resumo conteudo categoria autor imagemCapa audioNarracaoUrl tempoLeitura publicadoEm atualizadoEm')
       .lean();
 
     if (!artigo) return shellEstatico();
