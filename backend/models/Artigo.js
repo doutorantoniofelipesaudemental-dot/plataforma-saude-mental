@@ -13,6 +13,11 @@ const CATEGORIAS = [
   'Geral',
 ];
 
+// Fluxo de aprovação para publicação nas redes sociais (backend/lib/socialPublisher.js)
+// — independente de `publicado`, que controla só a visibilidade no site.
+// Um artigo pode estar publicado no site e ainda não aprovado para redes.
+const STATUS_REDES = ['rascunho', 'aprovado', 'publicado'];
+
 /**
  * Artigo do blog. O campo `conteudo` guarda HTML escrito pela própria clínica
  * (conteúdo confiável, criado apenas por rotas administrativas autenticadas) e
@@ -64,6 +69,14 @@ const ArtigoSchema = new mongoose.Schema(
     publicado: { type: Boolean, default: true, index: true },
     publicadoEm: { type: Date, default: Date.now, index: true },
     visualizacoes: { type: Number, default: 0, min: 0 },
+    // Aprovação para redes sociais (ver STATUS_REDES acima) — default
+    // 'rascunho' para nunca disparar publicação sem revisão explícita.
+    status: {
+      type: String,
+      enum: { values: STATUS_REDES, message: 'Status inválido.' },
+      default: 'rascunho',
+      index: true,
+    },
   },
   {
     timestamps: { createdAt: 'criadoEm', updatedAt: 'atualizadoEm' },
@@ -85,3 +98,4 @@ ArtigoSchema.pre('validate', function gerarSlug() {
 module.exports =
   mongoose.models.Artigo || mongoose.model('Artigo', ArtigoSchema);
 module.exports.CATEGORIAS = CATEGORIAS;
+module.exports.STATUS_REDES = STATUS_REDES;

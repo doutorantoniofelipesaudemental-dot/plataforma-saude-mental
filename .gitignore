@@ -1,18 +1,18 @@
 .vercel
 node_modules
-.env
-.env.local
 *.log
 .DS_Store
 carrosseis-instagram/
 prontos_para_postar/
 
+# Segredos reais nunca vão pro repo — mas .env.example é só documentação
+# (placeholders vazios) e precisa ficar versionado pra quem clonar saber
+# quais variáveis o projeto espera.
 .env*
+!.env.example
 
 # Cache de bytecode Python e snapshots do Playwright MCP gerados durante
 # verificacoes manuais — nao fazem parte do codigo do projeto.
 __pycache__/
 *.pyc
 .playwright-mcp/
-
-.env*

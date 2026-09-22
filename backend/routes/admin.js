@@ -1,7 +1,8 @@
 const express = require('express');
-const { exigirAdmin } = require('../middleware');
+const { exigirAdmin, exigirBanco } = require('../middleware');
 const { ROTEIROS_REELS, HASHTAGS_FIXAS } = require('../data/roteirosVideoReels');
 const { paraCsv } = require('../lib/csv');
+const { publicarArtigoNasRedes, ErroPublicacao } = require('../lib/socialPublisher');
 
 const router = express.Router();
 
@@ -69,6 +70,32 @@ router.get('/export-video-data', exigirAdmin, (req, res) => {
   }
 
   res.json({ total: linhas.length, itens: linhas });
+});
+
+/**
+ * POST /api/admin/artigos/:id/publicar-redes
+ * Body: { redes?: ['instagram','linkedin'], confirmar?: boolean }
+ *
+ * Roda a tripla checagem (status aprovado -> URLs acessíveis -> payloads) e só
+ * publica de fato no Instagram/LinkedIn se `confirmar: true` vier no corpo —
+ * sem isso, devolve os payloads exatos para revisão (dry-run), nunca posta
+ * sozinho. Aprove o artigo primeiro via `PUT /api/artigos/:slug` com
+ * `{ "status": "aprovado" }`. Ver backend/lib/socialPublisher.js.
+ */
+router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req, res) => {
+  const redes = Array.isArray(req.body.redes) && req.body.redes.length ? req.body.redes : ['instagram', 'linkedin'];
+  const confirmar = req.body.confirmar === true;
+
+  try {
+    const resultado = await publicarArtigoNasRedes(req.params.id, { redes, confirmar });
+    res.json(resultado);
+  } catch (err) {
+    if (err instanceof ErroPublicacao) {
+      return res.status(422).json({ erro: err.message, codigo: err.codigo });
+    }
+    console.error('[admin] erro ao publicar nas redes:', err);
+    res.status(500).json({ erro: 'Falha inesperada ao publicar nas redes.' });
+  }
 });
 
 module.exports = router;

@@ -9,7 +9,8 @@
     "dev": "node --env-file-if-exists=.env --watch index.js",
     "seed": "node --env-file-if-exists=.env backend/seed.js",
     "seed:reset": "node --env-file-if-exists=.env backend/seed.js --reset",
-    "carrosseis": "node --env-file-if-exists=.env backend/tools/gerar-carrosseis.js"
+    "carrosseis": "node --env-file-if-exists=.env backend/tools/gerar-carrosseis.js",
+    "publicar-redes": "node --env-file-if-exists=.env backend/tools/publicar-redes.js"
   },
   "engines": {
     "node": ">=20"
