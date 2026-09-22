@@ -195,7 +195,7 @@ Documenta a arquitetura real implementada neste repositório (`DRSAUDEMENTAL`) e
 | Página | Performance (Desktop/Mobile) | CLS (Desktop/Mobile) | LCP (Desktop/Mobile) | FCP (Desktop/Mobile) |
 |---|---|---|---|---|
 | Home | 100 / 98 | 0.007 / 0.085 | 0.6s / 1.0s | 0.6s / 1.0s |
-| Blog | 100 / 100 | 0.004 / 0.02 | 0.6s / 1.0s | 0.4s / 1.0s |
+| Blog | 96 / 100 | 0.004 / 0.02 | 0.8s / 0.9s | 0.6s / 0.9s |
 | Artigo | 95 / 100 | 0.002 / 0.027 | 0.8s / 1.8s | 0.6s / 1.1s |
 
 Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TBT ≤40ms em todas. Pequena variação de Performance entre execuções (ex.: Artigo Desktop 97→95) é ruído normal do Lighthouse — olhar CLS/LCP/FCP/TBT junto antes de investigar como regressão. Ver 19.1b para o motivo do SSR do Blog (crawlability, não performance) e 19.2 para a armadilha de roteamento (`express.static` vs. rotas dinâmicas) encontrada ao aplicar.
