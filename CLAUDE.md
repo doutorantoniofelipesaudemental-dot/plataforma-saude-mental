@@ -159,3 +159,37 @@ Sempre que criar/alterar UI ou gerar layout de carrossel/página no backend: ren
 ### 18.6 Commit e Deploy (regra compartilhada)
 - Commits atômicos com convenção clara (`fix:`, `feat:`, `refactor:`, `style:`) — já é a prática observada no histórico deste repo, manter em ambos.
 - Nunca commitar segredos (`r8_...`, senhas, `.env`) em nenhum dos dois repositórios.
+
+## 19. SSR E PERFORMANCE — ROTA `/artigo/:slug` (Node.js/Express, este repo)
+
+Documenta a arquitetura real implementada neste repositório (`DRSAUDEMENTAL`) em 2026-09-21/22, via auditoria de QA + Lighthouse. Backend é **Node.js/Express** (`backend/index.js`), não Flask — ver nota de escopo da Regra 18.
+
+### 19.1 SSR completo em `/artigo/:slug`
+- `vercel.json` roteia `/artigo/[^/]+/?` para a função serverless (`/backend/index.js`), não mais para o arquivo estático `public/artigo.html` diretamente.
+- `backend/index.js` (rota `GET /artigo/:slug`) consulta `Artigo.findOne({ slug, publicado: true })` no MongoDB (campos: `titulo slug resumo conteudo categoria autor imagemCapa audioNarracaoUrl tempoLeitura publicadoEm atualizadoEm`) e passa o resultado para `backend/lib/renderizarArtigo.js`.
+- `renderizarArtigoHtml(artigo)` injeta no shell estático de `public/artigo.html`:
+  - **`<head>`**: `<title>`, `meta[name=description]`, `canonical`, `og:title`/`og:description`/`og:url`/`og:image`, e um `<script type="application/ld+json">` com `@type: ["MedicalWebPage", "Article"]` (headline, description, datePublished/dateModified, author, publisher).
+  - **Corpo visível**: cabeçalho do artigo (breadcrumb, selo de categoria, `h1`, resumo, autor/data/tempo de leitura, capa com `width="1200" height="630"`, player de narração) e o `conteudo` HTML do artigo, substituindo os dois blocos de skeleton (`#artigo-cabecalho` e `#artigo-conteudo`) do template.
+  - **Sanitização**: todo valor interpolado no HTML (título, resumo, autor, URLs) passa por `escapeHtml` (`backend/lib/texto.js`). O JSON-LD é gerado via `JSON.stringify` e tem `</` escapado para `<\/` — evita que o próprio conteúdo do artigo feche a tag `<script>` prematuramente (`</script>` embutido no título, por exemplo). `artigo.conteudo` (HTML rico) **não** passa por escapeHtml — é conteúdo de CMS escrito só pelas rotas administrativas autenticadas (`exigirAdmin`), mesmo modelo de confiança do client-side.
+  - **Marcação de sucesso**: `<article data-ssr="1">` só é aplicado se os dois blocos de skeleton baterem exatamente com o template atual — se o template mudar e o replace não bater, a marca não é aplicada e a página cai no fluxo 100% client-side em vez de ficar com skeleton preso.
+- **Fallback em 3 camadas** (sempre serve o shell estático de `public/artigo.html`, sem a marca `data-ssr`): banco não configurado (`db.isConfigured()` falso) → artigo não encontrado/despublicado → qualquer erro na consulta (logado, nunca derruba a rota).
+
+### 19.2 Hidratação client-side (`public/assets/js/artigo.js`)
+- Ao carregar, verifica `document.querySelector('article')?.dataset.ssr === '1'`.
+  - **Se SSR'd**: não toca em `cabecalho`/`conteudo`, não mostra skeleton, não chama `atualizarMetadados` (evita duplicar `og:image`/JSON-LD já injetados pelo servidor). Só (1) aplica o hardening de links externos (`target="_blank"`, `rel="noopener noreferrer"`) sobre o conteúdo já renderizado, e (2) busca `/api/artigos/:slug` **apenas** para popular "Artigos relacionados" (que nunca vêm pré-renderizados). Falha nesse fetch é tratada em silêncio (`console.warn`) — nunca substitui a página por uma mensagem de erro, já que o conteúdo real já está visível.
+  - **Se não SSR'd** (qualquer fallback do item 19.1): mantém o fluxo client-side completo de sempre — fetch, monta cabeçalho/conteúdo, `atualizarMetadados`, trata 404/503/erro genérico com `mostrarErro`.
+- **Armadilha já corrigida**: `publicadoEm`/`atualizadoEm` chegam do Mongoose/`.lean()` como objetos `Date`, não string — usar `new Date(valor).toISOString()` explicitamente ao montar atributos `datetime=""`; `JSON.stringify` já serializa `Date` como ISO automaticamente, então o JSON-LD não precisa desse cuidado extra.
+
+### 19.3 Diretrizes de Performance / Core Web Vitals
+- **Fontes auto-hospedadas**: Inter e Fraunces (`public/assets/fonts/*.woff2`, 4 arquivos — variável, `font-weight: 400 600`, subconjuntos `latin`/`latin-ext` cobrindo acentuação do português) declaradas via `@font-face` no topo de `public/assets/css/style.css`. **Nunca reintroduzir `<link>` para `fonts.googleapis.com`/`fonts.gstatic.com`** — a segunda viagem de rede externa era a causa dominante do "element render delay" no LCP mobile (~2.2s de um LCP de 3.3s).
+- **Dimensões explícitas obrigatórias em toda imagem de conteúdo** (capas de artigo, thumbnails de card): atributo `width`/`height` na tag `<img>` **e** `aspect-ratio` no CSS do container (`.artigo-capa`, `.artigo-cartao__capa`) — nunca um dos dois isolado. Proporção padrão das capas geradas pelo pipeline: `1200 / 630`. Ausência disso é a causa nº1 de CLS neste projeto.
+- **Nunca montar uma página inteira via skeleton → replace de HTML completo no client-side** sem pré-renderizar o corpo no servidor quando há como consultar os dados na própria rota — esse padrão (skeleton pequeno virando conteúdo real muito maior) desloca tudo abaixo do ponto de injeção e domina o CLS mesmo com todas as imagens corrigidas. Ver 19.1 para o padrão correto (SSR completo com fallback client-side).
+- **Resultados medidos (Lighthouse CLI, Chrome headless local, 2026-09-22)** — usar como baseline para regressão em mudanças futuras:
+
+| Página | Performance (Desktop/Mobile) | CLS (Desktop/Mobile) | LCP (Desktop/Mobile) |
+|---|---|---|---|
+| Home | 98 / 97 | 0.011 / 0.085 | 0.8s / 1.8s |
+| Blog | 95 / 83 | 0.01 / 0.064 | 1.3s / 3.3s |
+| Artigo | 97 / 98 | 0.002 / 0.036 | 0.7s / 2.2s |
+
+Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações. Blog Mobile (83) ainda não recebeu a extensão de SSR completo do corpo aplicada ao Artigo — candidato natural para o mesmo tratamento se o Performance mobile do blog precisar subir.
