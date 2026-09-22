@@ -199,3 +199,17 @@ Documenta a arquitetura real implementada neste repositório (`DRSAUDEMENTAL`) e
 | Artigo | 95 / 100 | 0.002 / 0.027 | 0.8s / 1.8s | 0.6s / 1.1s |
 
 Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TBT ≤40ms em todas. Pequena variação de Performance entre execuções (ex.: Artigo Desktop 97→95) é ruído normal do Lighthouse — olhar CLS/LCP/FCP/TBT junto antes de investigar como regressão. Ver 19.1b para o motivo do SSR do Blog (crawlability, não performance) e 19.2 para a armadilha de roteamento (`express.static` vs. rotas dinâmicas) encontrada ao aplicar.
+
+## 20. PUBLICAÇÃO EM REDES SOCIAIS COM TRIPLA CHECAGEM (`backend/lib/socialPublisher.js`)
+
+**⚠️ Não coexiste sem cuidado com os scripts Python legados da raiz do repo** (`publicar_instagram.py` — Graph API direto, e `post_instagram.py` — via Composio com legenda gerada por Claude). Os três publicam na **mesma conta do Instagram**. Nunca disparar mais de um para o mesmo artigo/dia — risco real de post duplicado. Este módulo é o único dos três que também cobre LinkedIn e que parte do status de aprovação de um artigo no MongoDB (os scripts Python trabalham a partir de `CONTEUDO_INSTAGRAM/CALENDARIO_30_DIAS.md`, uma fonte diferente).
+
+- **Tripla checagem, nessa ordem, cada uma bloqueando a próxima**:
+  1. `Artigo.status === 'aprovado'` no MongoDB (campo novo no schema, `enum: ['rascunho','aprovado','publicado']`, default `'rascunho'` — nunca dispara sozinho). Independente de `publicado` (que só controla visibilidade no site): um artigo pode estar publicado no site e ainda não aprovado para redes. Aprovar via `PUT /api/artigos/:slug` com `{ "status": "aprovado" }` (rota administrativa já existente, sem endpoint novo).
+  2. A URL pública do artigo (`/artigo/:slug`) e a `imagemCapa` (usada como `og:image`) respondem HTTP 200 (checagem de rede real via `fetch`, não suposição).
+  3. Monta os payloads exatos — Instagram (fluxo oficial de 2 passos da Regra 16: `POST .../media` → aguarda `status_code === 'FINISHED'` → `POST .../media_publish`) e LinkedIn (`POST /v2/ugcPosts`) — e **só executa a chamada de escrita real com `confirmar: true`** explícito; sem isso, devolve os payloads para revisão (dry-run) e não posta nada.
+- **Dois gatilhos manuais pós-aprovação** (nunca automático):
+  - CLI: `npm run publicar-redes -- --slug=<slug> [--confirmar] [--redes=instagram,linkedin]`
+  - Rota admin: `POST /api/admin/artigos/:id/publicar-redes` (`exigirAdmin` + `exigirBanco`, mesmo padrão das outras rotas administrativas), body `{ redes?, confirmar? }`.
+- **Variáveis de ambiente** (`.env.example`): reaproveita `INSTAGRAM_ACCOUNT_ID`/`INSTAGRAM_ACCESS_TOKEN` já existentes para os scripts Python (mesma conta — não duplicar). Novas, só deste módulo: `LINKEDIN_ACCESS_TOKEN` e `LINKEDIN_AUTHOR_URN` (a URN do autor — organização ou pessoa — é obrigatória; o token sozinho não identifica em nome de quem postar).
+- **Armadilha corrigida ao criar isso**: `.env.example` nunca tinha sido versionado — um `.gitignore` com `.env*` duplicado bloqueava até o arquivo de exemplo (que não tem segredo, só placeholders vazios). Corrigido para `.env*` + `!.env.example`; `.env`/`.env.local` continuam ignorados normalmente. O mesmo ajuste liberou `reels_automation/.env.example`.
