@@ -17,6 +17,7 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@vercel/blob": "^2.8.0",
     "archiver": "^8.0.0",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
