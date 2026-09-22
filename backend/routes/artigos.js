@@ -3,6 +3,24 @@ const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin, tratarErroValidacao } = require('../middleware');
 const { slugify } = require('../lib/texto');
 const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listarArtigos');
+const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
+
+/**
+ * Dispara a esteira de publicação automática (Seção 20 do CLAUDE.md) quando
+ * o status TRANSICIONA para 'aprovado' — nunca em re-saves que já estavam
+ * aprovados/publicados, para não repetir o disparo a cada edição. Aguardado
+ * (não fire-and-forget): funções serverless da Vercel podem ser encerradas
+ * assim que a resposta HTTP é enviada, então "disparar em background" sem
+ * aguardar arriscaria a publicação nunca completar. Efeito colateral aceito:
+ * com AUTO_PUBLICAR_REDES=true, salvar um artigo como "aprovado" pode levar
+ * alguns segundos a mais (até ~30s no pior caso, esperando o Instagram
+ * processar o container) — com a variável desligada (padrão), o overhead é
+ * desprezível (só checa a flag e loga).
+ */
+async function dispararSeTransicionouParaAprovado(statusAnterior, artigoSalvo) {
+  if (!artigoSalvo || artigoSalvo.status !== 'aprovado' || statusAnterior === 'aprovado') return;
+  await dispararPublicacaoAutomatica(artigoSalvo._id);
+}
 
 const router = express.Router();
 
@@ -72,6 +90,12 @@ router.post('/', exigirAdmin, exigirBanco, async (req, res) => {
     const dados = { ...req.body };
     if (dados.slug) dados.slug = slugify(dados.slug);
     const artigo = await Artigo.create(dados);
+
+    // Criar já com status:'aprovado' também conta como transição (não havia
+    // status anterior). Aguardado ANTES de responder — ver nota acima sobre
+    // por que isso não pode ser fire-and-forget num runtime serverless.
+    await dispararSeTransicionouParaAprovado(null, artigo);
+
     res.status(201).json({ ok: true, artigo });
   } catch (err) {
     if (tratarErroValidacao(err, res)) return;
@@ -85,12 +109,18 @@ router.put('/:slug', exigirAdmin, exigirBanco, async (req, res) => {
   try {
     const dados = { ...req.body };
     if (dados.slug) dados.slug = slugify(dados.slug);
+
+    const antes = await Artigo.findOne({ slug: req.params.slug }).select('status').lean();
+
     const artigo = await Artigo.findOneAndUpdate({ slug: req.params.slug }, dados, {
       new: true,
       runValidators: true,
     }).lean();
 
     if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
+
+    await dispararSeTransicionouParaAprovado(antes?.status, artigo);
+
     res.json({ ok: true, artigo });
   } catch (err) {
     if (tratarErroValidacao(err, res)) return;
