@@ -98,7 +98,7 @@
       // Capa gerada (Vercel Blob) — só renderiza quando o artigo tiver uma.
       const capaHtml = artigo.imagemCapa
         ? `<div class="artigo-capa">
-             <img src="${esc(artigo.imagemCapa)}" alt="Capa do artigo: ${esc(artigo.titulo)}" loading="eager">
+             <img src="${esc(artigo.imagemCapa)}" alt="Capa do artigo: ${esc(artigo.titulo)}" width="1200" height="630" loading="eager">
            </div>`
         : '';
 
