@@ -1,22 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const { escapeHtml } = require('./texto');
+const { escapeHtml, formatarData } = require('./texto');
 
 const BASE_URL = 'https://drsaudemental.vercel.app';
 const TEMPLATE_PATH = path.join(__dirname, '..', '..', 'public', 'artigo.html');
-
-const formatadorData = new Intl.DateTimeFormat('pt-BR', {
-  day: '2-digit',
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-});
-
-function formatarData(valor) {
-  if (!valor) return '';
-  const data = new Date(valor);
-  return Number.isNaN(data.getTime()) ? '' : formatadorData.format(data);
-}
 
 // Lido uma vez por instância serverless — o template estático não muda em runtime.
 let templateCache = null;

@@ -204,6 +204,15 @@
 
   lerUrl();
   escreverUrl(true);
-  carregarCategorias();
-  carregarArtigos();
+  marcarFiltroAtivo();
+
+  // backend/lib/renderizarBlog.js já preenche a lista, os filtros e a
+  // paginação para o estado atual da URL quando consegue consultar o banco
+  // (marca #lista-artigos[data-ssr="1"]). Nesse caso não refazemos o fetch
+  // inicial nem mostramos skeleton — só a partir da próxima interação
+  // (filtro, busca, paginação) o client-side assume, normalmente.
+  if (lista.dataset.ssr !== '1') {
+    carregarCategorias();
+    carregarArtigos();
+  }
 })();

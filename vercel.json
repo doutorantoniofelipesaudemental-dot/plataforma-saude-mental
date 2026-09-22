@@ -12,7 +12,7 @@
       "headers": { "Cache-Control": "public, max-age=86400, must-revalidate" }
     },
     { "src": "/(favicon.svg|robots.txt|sitemap.xml)", "dest": "/public/$1" },
-    { "src": "/blog/?", "dest": "/public/blog.html" },
+    { "src": "/blog/?", "dest": "/backend/index.js" },
     { "src": "/artigo/[^/]+/?", "dest": "/backend/index.js" },
     { "src": "/privacidade/?", "dest": "/public/privacidade.html" },
     { "src": "/admin/?", "dest": "/public/admin.html" },

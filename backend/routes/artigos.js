@@ -1,25 +1,16 @@
 const express = require('express');
 const Artigo = require('../models/Artigo');
-const { CATEGORIAS } = require('../models/Artigo');
 const { exigirBanco, exigirAdmin, tratarErroValidacao } = require('../middleware');
 const { slugify } = require('../lib/texto');
+const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listarArtigos');
 
 const router = express.Router();
-
-// Campos devolvidos na listagem (o conteúdo completo só vem no detalhe).
-const CAMPOS_LISTA = 'titulo slug resumo categoria tags autor imagemCapa tempoLeitura publicadoEm visualizacoes';
 
 /** GET /api/artigos/categorias — categorias disponíveis + contagem publicada. */
 router.get('/categorias', exigirBanco, async (req, res) => {
   try {
-    const contagens = await Artigo.aggregate([
-      { $match: { publicado: true } },
-      { $group: { _id: '$categoria', total: { $sum: 1 } } },
-    ]);
-    const mapa = Object.fromEntries(contagens.map((c) => [c._id, c.total]));
-    res.json({
-      categorias: CATEGORIAS.map((nome) => ({ nome, total: mapa[nome] || 0 })),
-    });
+    const categorias = await listarCategorias();
+    res.json({ categorias });
   } catch (err) {
     console.error('[artigos] erro ao agregar categorias:', err);
     res.status(500).json({ erro: 'Não foi possível carregar as categorias.' });
@@ -29,40 +20,13 @@ router.get('/categorias', exigirBanco, async (req, res) => {
 /**
  * GET /api/artigos
  * Query: categoria, busca, pagina, limite, destaque
- * Retorna apenas artigos publicados.
+ * Retorna apenas artigos publicados. Mesma lógica usada pelo SSR da
+ * listagem do blog (ver backend/lib/renderizarBlog.js).
  */
 router.get('/', exigirBanco, async (req, res) => {
-  const pagina = Math.max(1, parseInt(req.query.pagina, 10) || 1);
-  const limite = Math.min(24, Math.max(1, parseInt(req.query.limite, 10) || 9));
-  const filtro = { publicado: true };
-
-  if (req.query.categoria && CATEGORIAS.includes(req.query.categoria)) {
-    filtro.categoria = req.query.categoria;
-  }
-
-  const busca = (req.query.busca || '').trim();
-  if (busca) {
-    // Regex escapada em título/resumo/tags: mais previsível que $text para
-    // buscas parciais e acentuadas, e o volume de artigos é pequeno.
-    const termo = new RegExp(busca.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
-    filtro.$or = [{ titulo: termo }, { resumo: termo }, { tags: termo }];
-  }
-
   try {
-    const [itens, total] = await Promise.all([
-      Artigo.find(filtro)
-        .select(CAMPOS_LISTA)
-        .sort({ publicadoEm: -1 })
-        .skip((pagina - 1) * limite)
-        .limit(limite)
-        .lean(),
-      Artigo.countDocuments(filtro),
-    ]);
-
-    res.json({
-      itens,
-      paginacao: { pagina, limite, total, paginas: Math.ceil(total / limite) || 1 },
-    });
+    const { itens, paginacao } = await listarArtigos(req.query);
+    res.json({ itens, paginacao });
   } catch (err) {
     console.error('[artigos] erro ao listar:', err);
     res.status(500).json({ erro: 'Não foi possível carregar os artigos.' });

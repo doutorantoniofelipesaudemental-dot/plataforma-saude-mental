@@ -4,6 +4,8 @@ const express = require('express');
 const db = require('./lib/db');
 const Artigo = require('./models/Artigo');
 const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
+const { listarArtigos, listarCategorias } = require('./lib/listarArtigos');
+const { renderizarBlogHtml } = require('./lib/renderizarBlog');
 const agendamentosRouter = require('./routes/agendamentos');
 const artigosRouter = require('./routes/artigos');
 const midiaRouter = require('./routes/midia');
@@ -81,7 +83,32 @@ app.use(
   })
 );
 
-app.get('/blog', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'blog.html')));
+/**
+ * Pré-renderiza a primeira página da listagem (respeitando ?categoria/
+ * ?busca/?pagina) para que crawlers sem JS vejam os links dos artigos em vez
+ * de um grid de skeleton vazio. Sem banco configurado ou qualquer erro na
+ * consulta, cai para o shell estático de sempre e o client-side assume a
+ * listagem inteira, como sempre.
+ */
+app.get('/blog', async (req, res) => {
+  const shellEstatico = () => res.sendFile(path.join(PUBLIC_DIR, 'blog.html'));
+
+  if (!db.isConfigured()) return shellEstatico();
+
+  try {
+    await db.connect();
+    const [{ itens, paginacao, categoria, busca }, categorias] = await Promise.all([
+      listarArtigos(req.query),
+      listarCategorias(),
+    ]);
+
+    res.set('Content-Type', 'text/html; charset=utf-8');
+    res.send(renderizarBlogHtml({ itens, paginacao, categoria, busca, categorias }));
+  } catch (err) {
+    console.error('[blog] falha ao pré-renderizar, caindo para o shell estático:', err.message);
+    shellEstatico();
+  }
+});
 
 /**
  * Pré-renderiza meta tags OpenGraph/canonical/JSON-LD para bots de preview e
