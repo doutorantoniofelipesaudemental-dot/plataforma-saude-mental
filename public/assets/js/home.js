@@ -192,5 +192,143 @@
     }
   });
 
+  /* ----------------------- Contato — Serviços ---------------------------- */
+
+  const formularioServicos = document.getElementById('formulario-contato-servicos');
+
+  if (formularioServicos) {
+    // Os CTAs dos cards de Serviços já chegam com o tipo de atendimento certo marcado.
+    document.querySelectorAll('[data-preencher-tipo]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const valor = link.dataset.preencherTipo;
+        const radio = formularioServicos.querySelector(`input[name="tipoAtendimento"][value="${valor}"]`);
+        if (radio) radio.checked = true;
+      });
+    });
+
+    const botaoServicos = document.getElementById('botao-enviar-servicos');
+    const retornoServicos = document.getElementById('retorno-formulario-servicos');
+
+    const MENSAGENS_SERVICOS = {
+      nome: 'Informe seu nome completo.',
+      email: 'Informe um e-mail válido.',
+      telefone: 'Informe um telefone com DDD.',
+      mensagem: 'Escreva um pouco sobre o que você procura (mínimo 10 caracteres).',
+      consentimentoLGPD: 'É preciso aceitar a política de privacidade para continuar.',
+    };
+
+    function limparErrosServicos() {
+      formularioServicos.querySelectorAll('[data-erro]').forEach((el) => { el.textContent = ''; });
+      formularioServicos.querySelectorAll('[aria-invalid="true"]').forEach((el) => {
+        el.removeAttribute('aria-invalid');
+      });
+    }
+
+    function marcarErroServicos(campo, mensagem) {
+      const alvo = formularioServicos.querySelector(`[data-erro="${campo}"]`);
+      if (alvo) alvo.textContent = mensagem;
+      const entrada = formularioServicos.elements[campo];
+      if (entrada && entrada.setAttribute) entrada.setAttribute('aria-invalid', 'true');
+    }
+
+    function validarServicos(dados) {
+      const erros = {};
+      if (!dados.nome || dados.nome.trim().length < 2) erros.nome = MENSAGENS_SERVICOS.nome;
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(dados.email || '')) erros.email = MENSAGENS_SERVICOS.email;
+
+      const digitos = (dados.telefone || '').replace(/\D/g, '');
+      if (digitos.length < 10 || digitos.length > 13) erros.telefone = MENSAGENS_SERVICOS.telefone;
+
+      if (!dados.mensagem || dados.mensagem.trim().length < 10) erros.mensagem = MENSAGENS_SERVICOS.mensagem;
+      if (!dados.consentimentoLGPD) erros.consentimentoLGPD = MENSAGENS_SERVICOS.consentimentoLGPD;
+
+      return erros;
+    }
+
+    function mostrarRetornoServicos(tipo, titulo, texto) {
+      retornoServicos.className = `retorno retorno--${tipo}`;
+      retornoServicos.innerHTML = `<strong>${window.Site.esc(titulo)}</strong>${window.Site.esc(texto)}`;
+      retornoServicos.hidden = false;
+      retornoServicos.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    formularioServicos.addEventListener('submit', async (evento) => {
+      evento.preventDefault();
+      limparErrosServicos();
+      retornoServicos.hidden = true;
+
+      const bruto = new FormData(formularioServicos);
+      const dados = {
+        nome: (bruto.get('nome') || '').trim(),
+        email: (bruto.get('email') || '').trim(),
+        telefone: (bruto.get('telefone') || '').trim(),
+        tipoAtendimento: bruto.get('tipoAtendimento') || 'particular',
+        mensagem: (bruto.get('mensagem') || '').trim(),
+        consentimentoLGPD: bruto.get('consentimentoLGPD') === 'on',
+        website: bruto.get('website') || '', // honeypot
+      };
+
+      const erros = validarServicos(dados);
+      if (Object.keys(erros).length > 0) {
+        Object.entries(erros).forEach(([campo, msg]) => marcarErroServicos(campo, msg));
+        const primeiro = formularioServicos.querySelector('[aria-invalid="true"]');
+        if (primeiro) primeiro.focus();
+        return;
+      }
+
+      botaoServicos.disabled = true;
+      const textoOriginal = botaoServicos.textContent;
+      botaoServicos.textContent = 'Enviando…';
+
+      try {
+        const resposta = await api('/contato', {
+          method: 'POST',
+          body: JSON.stringify(dados),
+        });
+
+        formularioServicos.reset();
+
+        mostrarRetornoServicos(
+          'sucesso',
+          resposta.duplicado ? 'Já temos sua mensagem' : 'Mensagem recebida!',
+          resposta.mensagem || 'Entraremos em contato em até 2 dias úteis.'
+        );
+      } catch (err) {
+        if (err.campos) {
+          Object.entries(err.campos).forEach(([campo, msg]) => marcarErroServicos(campo, msg));
+          mostrarRetornoServicos('erro', 'Confira os campos destacados', 'Alguns dados precisam ser corrigidos.');
+        } else if (err.status === 429) {
+          mostrarRetornoServicos('erro', 'Muitas tentativas', 'Aguarde um minuto antes de enviar novamente.');
+        } else if (err.status === 503) {
+          mostrarRetornoServicos(
+            'erro',
+            'Serviço indisponível no momento',
+            'Não conseguimos registrar sua mensagem. Escreva para doutor.antoniofelipe.saudemental@gmail.com que respondemos por lá.'
+          );
+        } else {
+          mostrarRetornoServicos(
+            'erro',
+            'Não foi possível enviar',
+            'Tente novamente em instantes ou escreva para doutor.antoniofelipe.saudemental@gmail.com.'
+          );
+        }
+        console.warn('[contato-servicos]', err.message);
+      } finally {
+        botaoServicos.disabled = false;
+        botaoServicos.textContent = textoOriginal;
+      }
+    });
+
+    formularioServicos.addEventListener('input', (evento) => {
+      const nome = evento.target.name;
+      if (!nome) return;
+      const alvo = formularioServicos.querySelector(`[data-erro="${nome}"]`);
+      if (alvo && alvo.textContent) {
+        alvo.textContent = '';
+        evento.target.removeAttribute('aria-invalid');
+      }
+    });
+  }
+
   carregarArtigos();
 })();

@@ -7,6 +7,7 @@ const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
 const { listarArtigos, listarCategorias } = require('./lib/listarArtigos');
 const { renderizarBlogHtml } = require('./lib/renderizarBlog');
 const agendamentosRouter = require('./routes/agendamentos');
+const contatoRouter = require('./routes/contato');
 const artigosRouter = require('./routes/artigos');
 const midiaRouter = require('./routes/midia');
 const carrosselRouter = require('./routes/carrossel');
@@ -59,6 +60,7 @@ app.get('/api/health', async (req, res) => {
 });
 
 app.use('/api/agendamentos', agendamentosRouter);
+app.use('/api/contato', contatoRouter);
 app.use('/api/artigos', artigosRouter);
 // Mesmo prefixo de artigosRouter: as rotas de mídia (PUT .../midia/audio e
 // .../midia/capa) usadas pelo backend Python de automação vivem sob
