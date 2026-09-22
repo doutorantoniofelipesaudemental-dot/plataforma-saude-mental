@@ -10,7 +10,8 @@
     "seed": "node --env-file-if-exists=.env backend/seed.js",
     "seed:reset": "node --env-file-if-exists=.env backend/seed.js --reset",
     "carrosseis": "node --env-file-if-exists=.env backend/tools/gerar-carrosseis.js",
-    "publicar-redes": "node --env-file-if-exists=.env backend/tools/publicar-redes.js"
+    "publicar-redes": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/publicar-redes.js",
+    "renovar-token-instagram": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/renovar-token-instagram.js"
   },
   "engines": {
     "node": ">=20"
