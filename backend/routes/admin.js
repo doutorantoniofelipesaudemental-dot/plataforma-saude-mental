@@ -1,12 +1,13 @@
 const express = require('express');
 const { exigirAdmin, exigirBanco } = require('../middleware');
 const { ROTEIROS_REELS, HASHTAGS_FIXAS } = require('../data/roteirosVideoReels');
+const { ROTEIROS_STORIES, HASHTAGS_FIXAS: HASHTAGS_FIXAS_STORIES } = require('../data/roteirosStories');
 const { paraCsv } = require('../lib/csv');
 const { publicarArtigoNasRedes, ErroPublicacao } = require('../lib/socialPublisher');
 
 const router = express.Router();
 
-const CABECALHOS_CSV = [
+const CABECALHOS_CSV_REELS = [
   'Nº',
   'Tema',
   'Slug do Artigo',
@@ -17,8 +18,17 @@ const CABECALHOS_CSV = [
   'Hashtags',
 ];
 
-/** Achata um roteiro para as colunas pedidas por ferramentas de geração de vídeo. */
-function paraLinha(roteiro, indice) {
+const CABECALHOS_CSV_STORIES = [
+  'Nº',
+  'Tema',
+  'Slug do Artigo',
+  'Categoria',
+  'Quadros (ordem: texto de tela)',
+  'Hashtags',
+];
+
+/** Achata um roteiro de Reels para as colunas pedidas por ferramentas de geração de vídeo. */
+function paraLinhaReels(roteiro, indice) {
   return {
     numero: indice + 1,
     tema: roteiro.tema,
@@ -32,26 +42,63 @@ function paraLinha(roteiro, indice) {
   };
 }
 
+/** Achata um roteiro de Stories (sequência de quadros) para exportação. */
+function paraLinhaStories(roteiro, indice) {
+  return {
+    numero: indice + 1,
+    tema: roteiro.tema,
+    slugArtigo: roteiro.slugArtigo,
+    categoria: roteiro.categoria,
+    quadros: roteiro.quadros,
+    hashtags: [...HASHTAGS_FIXAS_STORIES, ...roteiro.hashtagsExtras],
+  };
+}
+
 /**
  * GET /api/admin/export-video-data
- * Query: formato=json (padrão) | csv
+ * Query: formato=json (padrão) | csv · tipo=reels (padrão) | stories
  *
- * Exporta os 30 roteiros de Reels (ver backend/data/roteirosVideoReels.js)
- * em formato estruturado — Texto de Tela, Categoria, Sugestão de B-roll,
- * Legenda e Hashtags — pronto para importar em ferramentas de geração
- * automática de vídeo.
+ * Exporta os roteiros de Reels (backend/data/roteirosVideoReels.js) ou de
+ * Stories (backend/data/roteirosStories.js) em formato estruturado — pronto
+ * para importar em ferramentas de geração automática de vídeo/imagem.
  */
 router.get('/export-video-data', exigirAdmin, (req, res) => {
   const formato = String(req.query.formato || 'json').toLowerCase();
+  const tipo = String(req.query.tipo || 'reels').toLowerCase();
+
   if (formato !== 'json' && formato !== 'csv') {
     return res.status(400).json({ erro: 'Formato inválido. Use "json" ou "csv".' });
   }
+  if (tipo !== 'reels' && tipo !== 'stories') {
+    return res.status(400).json({ erro: 'Tipo inválido. Use "reels" ou "stories".' });
+  }
 
-  const linhas = ROTEIROS_REELS.map(paraLinha);
+  if (tipo === 'stories') {
+    const linhas = ROTEIROS_STORIES.map(paraLinhaStories);
+    if (formato === 'csv') {
+      const csv = paraCsv(
+        CABECALHOS_CSV_STORIES,
+        linhas.map((l) => [
+          l.numero,
+          l.tema,
+          l.slugArtigo,
+          l.categoria,
+          l.quadros.map((q) => `${q.ordem}) ${q.textoTela}`).join(' | '),
+          l.hashtags.join(' '),
+        ])
+      );
+      res.set('Content-Type', 'text/csv; charset=utf-8');
+      res.set('Content-Disposition', 'attachment; filename="roteiros-stories.csv"');
+      return res.send(`﻿${csv}`);
+    }
+    return res.json({ total: linhas.length, itens: linhas });
+  }
+
+  const linhas = ROTEIROS_REELS.map(paraLinhaReels);
 
   if (formato === 'csv') {
     const csv = paraCsv(
-      CABECALHOS_CSV,
+      CABECALHOS_CSV_REELS,
       linhas.map((l) => [
         l.numero,
         l.tema,

@@ -312,6 +312,36 @@ const ROTEIROS_REELS = [
     hashtagsExtras: ['#setembroamarelo', '#prevencaodosuicidio'],
     alertaEmergencia: true,
   },
+  {
+    tema: 'Burnout na gestão: o risco que a empresa não vê',
+    slugArtigo: 'burnout-na-gestao-fatores-de-risco',
+    categoria: 'Empresas & RH',
+    textoTela: ['BURNOUT NÃO É FRAQUEZA', 'É FENÔMENO OCUPACIONAL (OMS)', 'TESTE OS 6 FATORES DE RISCO'],
+    bRoll: 'Escritório movimentado visto de cima; gestor observando a equipe através do vidro da sala; pessoa em frente ao computador tarde da noite; mãos no rosto num intervalo entre reuniões.',
+    legenda:
+      'A OMS classifica burnout como fenômeno ocupacional, não fraqueza individual. No artigo tem uma matriz interativa para avaliar 6 fatores de risco na sua equipe agora. 📖 [LINK] 📅 [LINK BIO]',
+    hashtagsExtras: ['#burnout', '#gestaodepessoas', '#riscopsicossocial'],
+  },
+  {
+    tema: 'Estresse ou ansiedade? A diferença que sua equipe precisa saber',
+    slugArtigo: 'ansiedade-corporativa-sintomas-tratamento',
+    categoria: 'Empresas & RH',
+    textoTela: ['ESTRESSE PASSA', 'ANSIEDADE CLÍNICA PERSISTE', 'FAÇA O CHECKLIST'],
+    bRoll: 'Pessoa trabalhando sob pressão com múltiplas telas; respiração pausada em close; celular acendendo com notificações de trabalho à noite; xícaras de café acumuladas na mesa.',
+    legenda:
+      'Nem toda tensão no trabalho é a mesma coisa. O artigo traz um checklist rápido para diferenciar estresse do dia a dia de um quadro clínico. 📖 [LINK] 📅 [LINK BIO]',
+    hashtagsExtras: ['#ansiedadecorporativa', '#saudementalnotrabalho'],
+  },
+  {
+    tema: 'Cada R$1 em saúde mental retorna R$4, segundo a OMS',
+    slugArtigo: 'saude-mental-pilar-de-performance-liderancas',
+    categoria: 'Empresas & RH',
+    textoTela: ['R$1 INVESTIDO', 'R$4 DE RETORNO (ESTIMATIVA OMS)', 'SIMULE O IMPACTO NA SUA EMPRESA'],
+    bRoll: 'Liderança em reunião de planejamento estratégico; gráfico de performance em uma tela; equipe colaborando em ambiente leve e bem iluminado; aperto de mão após apresentação.',
+    legenda:
+      'Segundo estudo para a OMS, cada dólar investido em tratamento de ansiedade e depressão retorna cerca de quatro em produtividade. O artigo traz um simulador para estimar o impacto na sua empresa. 📖 [LINK] 📅 [LINK BIO]',
+    hashtagsExtras: ['#performanceorganizacional', '#lideranca', '#prevencao'],
+  },
 ];
 
 module.exports = { ROTEIROS_REELS, HASHTAGS_FIXAS };
