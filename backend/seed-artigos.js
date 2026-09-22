@@ -783,5 +783,406 @@ module.exports = [
     autor: "Dr. Antônio Felipe",
     tempoLeitura: 4,
     publicadoEm: "2026-09-11T12:00:00.000Z"
+  },
+  {
+    titulo: "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
+    slug: "burnout-na-gestao-fatores-de-risco",
+    resumo: "Como gestores podem identificar fatores de risco psicossocial que levam ao burnout nas equipes, com uma matriz prática de autoavaliação, por Dr. Antonio Felipe.",
+    conteudo: `<p class="lead-para">A Organização Mundial da Saúde reclassificou o burnout no CID-11 como fenômeno ocupacional — resultante de estresse crônico no trabalho que não foi administrado com sucesso. Não é fraqueza individual: é sintoma de um ambiente que ultrapassou seus próprios limites de sustentabilidade.</p>
+
+    <p>Para quem gerencia pessoas, essa distinção muda a pergunta central. Não é "por que esse colaborador não aguenta mais", e sim "o que, na organização do trabalho desta equipe, está gerando esse esgotamento — e por que eu, como gestor, só percebi quando já era tarde".</p>
+
+    <ul><li><strong>20-30%</strong> — faixa de prevalência de sintomas compatíveis com burnout relatada em pesquisas ocupacionais recentes em diferentes setores</li>
+      <li><strong>CID-11</strong> — classifica o burnout como fenômeno ocupacional, não como transtorno mental isolado</li>
+      <li><strong>3</strong> — dimensões clássicas do burnout: exaustão emocional, cinismo/despersonalização e baixa realização profissional</li>
+    </ul>
+
+    <h2>Por que gestores costumam identificar o burnout tarde demais</h2>
+    <p>O burnout raramente aparece de repente. Ele se instala em etapas — entusiasmo excessivo no início, seguido de estagnação, frustração e, por fim, apatia — e é justamente essa progressão lenta que faz com que o gestor só note quando o colaborador já está na fase de apatia: entregando o mínimo, isolado, ou pedindo demissão sem aviso prévio aparente.</p>
+
+    <p>Boa parte disso acontece porque os sinais de alerta são, no início, sutis e facilmente atribuídos a outras causas: "ele está com a produtividade baixa porque está desmotivado", "ela está mais fechada porque deve estar com algum problema pessoal". Sem um vocabulário e uma ferramenta estruturada para nomear risco psicossocial, esses sinais se acumulam sem gerar ação.</p>
+
+    <h2>Os fatores de risco psicossocial que mais pesam na gestão de equipes</h2>
+    <p>A literatura em saúde ocupacional converge em torno de um conjunto relativamente estável de fatores organizacionais que, quando presentes de forma persistente, elevam o risco de burnout em uma equipe — independentemente do quanto cada pessoa individualmente seja resiliente:</p>
+
+    <ul>
+      <li><strong>Carga de trabalho</strong> consistentemente acima da capacidade sustentável, sem ajuste de prazos ou recursos</li>
+      <li><strong>Ambiguidade de papéis</strong> — expectativas pouco claras sobre o que é esperado, e de quem</li>
+      <li><strong>Baixa autonomia</strong> para decidir como o próprio trabalho é executado</li>
+      <li><strong>Suporte insuficiente da liderança direta</strong>, especialmente em momentos de dificuldade</li>
+      <li><strong>Falta de reconhecimento</strong> proporcional ao esforço entregue</li>
+      <li><strong>Dificuldade estrutural de equilíbrio</strong> entre vida profissional e pessoal, muitas vezes normalizada pela cultura da equipe</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Um ponto que gestores costumam subestimar:</strong> esses seis fatores interagem entre si. Uma pessoa com carga de trabalho alta, mas com autonomia real e reconhecimento consistente, tende a sustentar isso por mais tempo do que alguém com carga moderada, mas sem nenhum dos fatores protetores. Avaliar os fatores isoladamente esconde o risco real.
+    </div>
+
+    <h2>Ferramenta prática: avalie os fatores de risco na sua equipe agora</h2>
+    <p>A matriz abaixo ajuda a organizar essa avaliação de forma estruturada. Para cada fator, marque de 1 (nunca acontece) a 5 (acontece o tempo todo) o quanto ele descreve a realidade atual da sua equipe.</p>
+
+    <div class="ferramenta-embutida" id="ferramenta-matriz-risco">
+      <h3>Matriz de Risco Psicossocial Corporativo</h3>
+      <p class="ferramenta-embutida__intro">Seis fatores, uma escala de 1 a 5 cada. Leva menos de 2 minutos. É uma ferramenta educativa de autoavaliação — não substitui um diagnóstico organizacional formal conduzido por profissional habilitado.</p>
+
+      <fieldset class="campo">
+        <legend>Carga de trabalho acima da capacidade sustentável da equipe</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="mr-carga" value="1"><span>1</span></label>
+          <label class="opcao"><input type="radio" name="mr-carga" value="2"><span>2</span></label>
+          <label class="opcao"><input type="radio" name="mr-carga" value="3"><span>3</span></label>
+          <label class="opcao"><input type="radio" name="mr-carga" value="4"><span>4</span></label>
+          <label class="opcao"><input type="radio" name="mr-carga" value="5"><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="campo">
+        <legend>Papéis e responsabilidades pouco claros</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="mr-clareza" value="1"><span>1</span></label>
+          <label class="opcao"><input type="radio" name="mr-clareza" value="2"><span>2</span></label>
+          <label class="opcao"><input type="radio" name="mr-clareza" value="3"><span>3</span></label>
+          <label class="opcao"><input type="radio" name="mr-clareza" value="4"><span>4</span></label>
+          <label class="opcao"><input type="radio" name="mr-clareza" value="5"><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="campo">
+        <legend>Baixa autonomia na execução das tarefas</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="mr-autonomia" value="1"><span>1</span></label>
+          <label class="opcao"><input type="radio" name="mr-autonomia" value="2"><span>2</span></label>
+          <label class="opcao"><input type="radio" name="mr-autonomia" value="3"><span>3</span></label>
+          <label class="opcao"><input type="radio" name="mr-autonomia" value="4"><span>4</span></label>
+          <label class="opcao"><input type="radio" name="mr-autonomia" value="5"><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="campo">
+        <legend>Pouco suporte da liderança direta</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="mr-suporte" value="1"><span>1</span></label>
+          <label class="opcao"><input type="radio" name="mr-suporte" value="2"><span>2</span></label>
+          <label class="opcao"><input type="radio" name="mr-suporte" value="3"><span>3</span></label>
+          <label class="opcao"><input type="radio" name="mr-suporte" value="4"><span>4</span></label>
+          <label class="opcao"><input type="radio" name="mr-suporte" value="5"><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="campo">
+        <legend>Falta de reconhecimento pelo trabalho realizado</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="mr-reconhecimento" value="1"><span>1</span></label>
+          <label class="opcao"><input type="radio" name="mr-reconhecimento" value="2"><span>2</span></label>
+          <label class="opcao"><input type="radio" name="mr-reconhecimento" value="3"><span>3</span></label>
+          <label class="opcao"><input type="radio" name="mr-reconhecimento" value="4"><span>4</span></label>
+          <label class="opcao"><input type="radio" name="mr-reconhecimento" value="5"><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="campo">
+        <legend>Dificuldade de equilíbrio entre vida profissional e pessoal</legend>
+        <div class="opcoes">
+          <label class="opcao"><input type="radio" name="mr-equilibrio" value="1"><span>1</span></label>
+          <label class="opcao"><input type="radio" name="mr-equilibrio" value="2"><span>2</span></label>
+          <label class="opcao"><input type="radio" name="mr-equilibrio" value="3"><span>3</span></label>
+          <label class="opcao"><input type="radio" name="mr-equilibrio" value="4"><span>4</span></label>
+          <label class="opcao"><input type="radio" name="mr-equilibrio" value="5"><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <p class="erro" id="mr-erro" role="alert"></p>
+      <button type="button" class="botao botao--primario" id="mr-calcular">Calcular risco da equipe</button>
+
+      <div class="ferramenta-embutida__resultado" id="mr-resultado" hidden>
+        <h4 id="mr-resultado-titulo"></h4>
+        <p id="mr-resultado-texto"></p>
+        <div class="ferramenta-embutida__acao">
+          <a class="botao botao--vazado" href="/#contato-servicos">Falar sobre consultoria institucional</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function () {
+      var fatores = ['carga', 'clareza', 'autonomia', 'suporte', 'reconhecimento', 'equilibrio'];
+      var botao = document.getElementById('mr-calcular');
+      if (!botao) return;
+      botao.addEventListener('click', function () {
+        var erro = document.getElementById('mr-erro');
+        var soma = 0;
+        var faltando = false;
+        for (var i = 0; i < fatores.length; i++) {
+          var marcado = document.querySelector('input[name="mr-' + fatores[i] + '"]:checked');
+          if (!marcado) { faltando = true; break; }
+          soma += parseInt(marcado.value, 10);
+        }
+        if (faltando) {
+          erro.textContent = 'Responda os 6 itens para calcular o resultado.';
+          return;
+        }
+        erro.textContent = '';
+
+        var resultado = document.getElementById('mr-resultado');
+        var titulo = document.getElementById('mr-resultado-titulo');
+        var texto = document.getElementById('mr-resultado-texto');
+        resultado.classList.remove('nivel-alto');
+
+        if (soma <= 12) {
+          titulo.textContent = 'Risco psicossocial baixo (pontuação ' + soma + ' de 30)';
+          texto.textContent = 'Os fatores avaliados indicam uma equipe com risco psicossocial relativamente controlado hoje. Mesmo assim, vale reavaliar periodicamente — fatores de risco mudam com o tempo, com a carga de trabalho e com mudanças na equipe.';
+        } else if (soma <= 19) {
+          titulo.textContent = 'Risco psicossocial moderado (pontuação ' + soma + ' de 30)';
+          texto.textContent = 'Existem sinais de atenção que merecem investigação mais próxima. Um diagnóstico organizacional estruturado ajuda a identificar exatamente onde intervir antes que o risco evolua para afastamentos.';
+        } else if (soma <= 25) {
+          resultado.classList.add('nivel-alto');
+          titulo.textContent = 'Risco psicossocial alto (pontuação ' + soma + ' de 30)';
+          texto.textContent = 'A pontuação indica fatores de risco relevantes e acumulados. Nesse patamar, ação estruturada — não apenas pontual — costuma ser necessária para reverter a tendência antes que ela se traduza em afastamentos e rotatividade.';
+        } else {
+          resultado.classList.add('nivel-alto');
+          titulo.textContent = 'Risco psicossocial crítico (pontuação ' + soma + ' de 30)';
+          texto.textContent = 'A combinação de fatores sugere um ambiente de risco elevado para adoecimento da equipe. Este resultado é um indicativo educativo, não um diagnóstico — uma avaliação institucional prioritária pode confirmar a extensão real do problema e orientar por onde começar.';
+        }
+        resultado.hidden = false;
+        resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    })();
+    </script>
+
+    <h2>Da percepção à ação: o que muda quando o risco é identificado cedo</h2>
+    <p>Equipes em que gestores reconhecem e nomeiam fatores de risco psicossocial precocemente apresentam, de forma consistente na literatura de saúde ocupacional, menor rotatividade e menor incidência de afastamentos por transtornos mentais relacionados ao trabalho. A diferença não está em ter uma equipe "mais forte" — está em intervir na organização do trabalho antes que o desgaste se acumule a ponto de se tornar irreversível para aquela pessoa naquele momento.</p>
+
+    <h2>Caminhos possíveis</h2>
+    <ul>
+      <li><strong>Individual:</strong> conversas de checagem genuínas (não apenas de desempenho) entre gestor e colaborador, com espaço real para nomear dificuldades.</li>
+      <li><strong>Equipe:</strong> revisão periódica de carga de trabalho e clareza de papéis, feita em conjunto com quem executa o trabalho — não apenas definida de cima para baixo.</li>
+      <li><strong>Organizacional:</strong> mapeamento formal de risco psicossocial por setor, com apoio de consultoria especializada quando a complexidade ultrapassa o que o RH interno consegue endereçar sozinho.</li>
+    </ul>
+
+    <p class="refs-note">Este artigo é uma adaptação, em formato de leitura acessível, elaborada pelo Dr. Antonio Felipe, com base em publicações indexadas em LILACS, MEDLINE/PubMed, SciELO e BVS sobre burnout e risco psicossocial ocupacional, e na classificação do CID-11 da Organização Mundial da Saúde. A ferramenta de autoavaliação incluída tem finalidade exclusivamente educativa e não substitui diagnóstico organizacional conduzido por profissional habilitado.</p>`,
+    categoria: "Empresas & RH",
+    tags: ["burnout", "gestão de pessoas", "risco psicossocial"],
+    autor: "Dr. Antônio Felipe",
+    tempoLeitura: 6,
+    publicadoEm: "2026-09-20T12:00:00.000Z"
+  },
+  {
+    titulo: "Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico",
+    slug: "ansiedade-corporativa-sintomas-tratamento",
+    resumo: "Como diferenciar o estresse esperado do trabalho de um transtorno de ansiedade clínico, com um checklist prático de autoavaliação, por Dr. Antonio Felipe.",
+    conteudo: `<p class="lead-para">O Brasil é apontado por levantamentos da Organização Mundial da Saúde como um dos países com maior prevalência de transtornos de ansiedade do mundo — um dado que se reflete diretamente dentro das empresas, onde estresse e ansiedade clínica costumam ser tratados, equivocadamente, como sinônimos.</p>
+
+    <p>Essa confusão tem custo real. Colaboradores em sofrimento significativo continuam sendo orientados a "ter mais controle" ou "gerenciar melhor o tempo", quando na verdade apresentam um quadro clínico que exige avaliação profissional. Ao mesmo tempo, situações de estresse pontual — esperado e até útil diante de um prazo apertado — às vezes são tratadas com alarde desproporcional. Saber diferenciar as duas coisas é o primeiro passo para agir corretamente em cada caso.</p>
+
+    <h2>Estresse: uma resposta esperada — e até útil — do organismo</h2>
+    <p>O estresse agudo é a resposta fisiológica normal do corpo diante de uma demanda: coração acelera, atenção se estreita, energia é mobilizada. Diante de um prazo apertado ou uma apresentação importante, um certo nível de estresse melhora o desempenho — é o que a psicologia chama de ativação adaptativa. O problema não é o estresse em si; é a ausência de recuperação entre um pico e outro.</p>
+
+    <p>Estresse esperado no trabalho tende a ter início e fim claros, ligados a um evento específico (entrega, reunião, mudança pontual), e se resolve com descanso adequado depois que a demanda passa.</p>
+
+    <h2>Quando a ansiedade deixa de ser reação e passa a ser transtorno</h2>
+    <p>O Transtorno de Ansiedade Generalizada e outros quadros ansiosos clínicos se diferenciam do estresse cotidiano por características específicas, bem estabelecidas nos critérios diagnósticos utilizados na prática clínica:</p>
+
+    <ul>
+      <li><strong>Duração prolongada</strong> — preocupação excessiva na maior parte dos dias, por período de meses, não apenas em torno de um evento pontual</li>
+      <li><strong>Intensidade desproporcional</strong> ao gatilho real — a preocupação persiste mesmo quando o problema que a originou já foi resolvido ou nunca teve gravidade real</li>
+      <li><strong>Prejuízo funcional</strong> — impacto perceptível na qualidade do trabalho, nas relações ou na vida pessoal, não apenas desconforto subjetivo</li>
+      <li><strong>Sintomas físicos persistentes</strong> — tensão muscular, fadiga, alterações do sono, taquicardia sem esforço físico correspondente</li>
+      <li><strong>Comportamento de evitação</strong> — passar a evitar reuniões, decisões ou situações específicas por antecipação ansiosa</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Uma diferença prática:</strong> estresse cotidiano melhora quando a demanda específica termina. Ansiedade clínica persiste, muda de foco, ou reaparece mesmo quando "não há mais motivo aparente" — porque o motivo real não está no evento externo, está em um funcionamento que passou a gerar sofrimento por conta própria.
+    </div>
+
+    <h2>Ferramenta prática: como você tem se sentido nas últimas semanas?</h2>
+    <p>O checklist abaixo reúne sinais frequentemente associados à sobrecarga mental no ambiente corporativo. Marque o que descreve como você tem se sentido — não como você acha que "deveria" se sentir.</p>
+
+    <div class="ferramenta-embutida" id="ferramenta-checklist-sobrecarga">
+      <h3>Checklist de Autoavaliação de Sobrecarga Mental</h3>
+      <p class="ferramenta-embutida__intro">10 itens, marque os que se aplicam a você nas últimas semanas. É uma ferramenta educativa de autopercepção — não é um instrumento diagnóstico e não substitui avaliação profissional.</p>
+
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="1"><span>Dificuldade de concentração mesmo em tarefas simples</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="2"><span>Irritabilidade maior do que o habitual</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="3"><span>Insônia ou sono que não recupera a energia</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="4"><span>Tensão muscular, dores de cabeça ou no corpo sem causa clara</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="5"><span>Vontade de evitar reuniões ou contato com colegas</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="6"><span>Sensação de estar "no limite" na maior parte dos dias</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="7"><span>Procrastinação de tarefas que antes eram simples de começar</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="8"><span>Uso maior de café, álcool ou outras substâncias para "aguentar" o dia</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="9"><span>Pensamentos recorrentes sobre o trabalho fora do horário de expediente</span></label>
+      <label class="consentimento"><input type="checkbox" name="cs-item" value="10"><span>Queda perceptível no próprio rendimento nas últimas semanas</span></label>
+
+      <div style="margin-top:1.5rem;">
+        <button type="button" class="botao botao--primario" id="cs-calcular">Ver resultado</button>
+      </div>
+
+      <div class="ferramenta-embutida__resultado" id="cs-resultado" hidden>
+        <h4 id="cs-resultado-titulo"></h4>
+        <p id="cs-resultado-texto"></p>
+        <div class="ferramenta-embutida__acao">
+          <a class="botao botao--vazado" href="/#contato-servicos">Agendar uma conversa</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function () {
+      var botao = document.getElementById('cs-calcular');
+      if (!botao) return;
+      botao.addEventListener('click', function () {
+        var marcados = document.querySelectorAll('input[name="cs-item"]:checked');
+        var total = marcados.length;
+
+        var resultado = document.getElementById('cs-resultado');
+        var titulo = document.getElementById('cs-resultado-titulo');
+        var texto = document.getElementById('cs-resultado-texto');
+        resultado.classList.remove('nivel-alto');
+
+        if (total <= 2) {
+          titulo.textContent = 'Sinais pontuais (' + total + ' de 10 itens marcados)';
+          texto.textContent = 'O número de sinais marcados é baixo. Isso não significa ausência de estresse, mas não indica, por ora, um padrão de sobrecarga generalizada.';
+        } else if (total <= 5) {
+          titulo.textContent = 'Sinais de atenção (' + total + ' de 10 itens marcados)';
+          texto.textContent = 'Vários sinais presentes ao mesmo tempo merecem atenção. Vale observar se eles persistem ou pioram nas próximas semanas — e não esperar que "passem sozinhos" se isso não acontecer.';
+        } else if (total <= 8) {
+          resultado.classList.add('nivel-alto');
+          titulo.textContent = 'Sobrecarga significativa (' + total + ' de 10 itens marcados)';
+          texto.textContent = 'Esse padrão de sinais concomitantes é compatível com sobrecarga mental relevante. Conversar com um profissional pode ajudar a entender o que está por trás disso — não é preciso esperar piorar para buscar essa conversa.';
+        } else {
+          resultado.classList.add('nivel-alto');
+          titulo.textContent = 'Sobrecarga importante (' + total + ' de 10 itens marcados)';
+          texto.textContent = 'Praticamente todos os sinais avaliados estão presentes. Este resultado é educativo, não um diagnóstico — mas pede atenção prioritária: uma avaliação profissional pode esclarecer o que está acontecendo e quais caminhos fazem sentido para você.';
+        }
+        resultado.hidden = false;
+        resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    })();
+    </script>
+
+    <h2>O papel do ambiente corporativo na cronificação da ansiedade</h2>
+    <p>Nenhum quadro ansioso se desenvolve no vácuo. Culturas organizacionais marcadas por metas sistematicamente inalcançáveis, insegurança constante quanto à permanência no emprego, comunicação ambígua da liderança e normalização da disponibilidade fora do horário de trabalho funcionam como amplificadores diretos de sintomas ansiosos — mesmo em pessoas sem histórico prévio do quadro.</p>
+
+    <h2>Caminhos possíveis</h2>
+    <ul>
+      <li><strong>Individual:</strong> avaliação com psiquiatra ou psicólogo quando os sinais persistem além de algumas semanas — quanto mais cedo, mais simples tende a ser o manejo.</li>
+      <li><strong>Gestão direta:</strong> checagens regulares e genuínas com a equipe, não apenas cobrança de resultado.</li>
+      <li><strong>Organizacional:</strong> metas realistas, clareza de expectativas e políticas explícitas de desconexão fora do expediente.</li>
+    </ul>
+
+    <p class="refs-note">Este artigo é uma adaptação, em formato de leitura acessível, elaborada pelo Dr. Antonio Felipe, com base em publicações indexadas em LILACS, MEDLINE/PubMed, SciELO e BVS sobre transtornos de ansiedade e saúde mental ocupacional, e em levantamentos da Organização Mundial da Saúde sobre prevalência de ansiedade no Brasil. A ferramenta de autoavaliação incluída tem finalidade exclusivamente educativa, não é instrumento diagnóstico e não substitui avaliação profissional individualizada.</p>`,
+    categoria: "Empresas & RH",
+    tags: ["ansiedade", "saúde mental corporativa", "estresse ocupacional"],
+    autor: "Dr. Antônio Felipe",
+    tempoLeitura: 6,
+    publicadoEm: "2026-09-21T12:00:00.000Z"
+  },
+  {
+    titulo: "Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas",
+    slug: "saude-mental-pilar-de-performance-liderancas",
+    resumo: "Por que a saúde mental é um pilar estratégico de performance organizacional, com um simulador de impacto para dimensionar o investimento em prevenção, por Dr. Antonio Felipe.",
+    conteudo: `<p class="lead-para">Estudo conduzido para a Organização Mundial da Saúde estimou que cada dólar investido em tratamento de depressão e ansiedade retorna cerca de quatro dólares em ganhos de produtividade e saúde. Poucos investimentos corporativos têm retorno estimado dessa magnitude — e ainda assim, saúde mental costuma ser tratada como pauta de bem-estar, não como estratégia de performance.</p>
+
+    <p>Essa mudança de enquadramento — de "benefício simpático" para "pilar estratégico" — é o que diferencia empresas que apenas fazem campanhas pontuais daquelas que constroem performance sustentável ao longo do tempo, sem esgotar as pessoas que a produzem.</p>
+
+    <h2>Por que saúde mental deixou de ser "benefício" e virou estratégia</h2>
+    <p>Depressão e transtornos de ansiedade estão entre as principais causas de afastamento do trabalho registradas em levantamentos ocupacionais recentes, e seus efeitos vão além do afastamento formal: presenteísmo (estar fisicamente presente, mas com produtividade e qualidade de decisão reduzidas) costuma gerar perda de performance ainda maior do que o próprio absenteísmo, embora seja bem mais difícil de medir e, por isso, mais fácil de ignorar.</p>
+
+    <h2>O que caracteriza um protocolo preventivo real</h2>
+    <p>Um protocolo preventivo de saúde mental que efetivamente sustenta performance — e não apenas cumpre tabela — costuma reunir alguns elementos centrais:</p>
+
+    <ul>
+      <li><strong>Mapeamento de riscos psicossociais</strong> por setor e função, revisado periodicamente</li>
+      <li><strong>Canais de apoio acessíveis</strong>, sem risco real ou percebido de retaliação para quem os utiliza</li>
+      <li><strong>Capacitação de lideranças</strong> para reconhecer sinais precoces e conduzir conversas difíceis com sensibilidade</li>
+      <li><strong>Fluxos claros</strong> de afastamento e retorno ao trabalho, sem ambiguidade sobre o processo</li>
+      <li><strong>Monitoramento contínuo</strong> de indicadores — não uma ação isolada de uma única semana do ano</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Um erro estratégico comum:</strong> tratar saúde mental exclusivamente como responsabilidade individual do colaborador ("faça terapia", "pratique mindfulness") sem revisar a organização real do trabalho — cargas, metas, estilo de liderança — tende a reduzir a efetividade de qualquer protocolo e pode até gerar desconfiança da equipe quanto à seriedade da iniciativa.
+    </div>
+
+    <h2>Ferramenta prática: dimensione o impacto potencial na sua empresa</h2>
+    <p>O simulador abaixo ajuda a colocar números — ainda que estimados — na conversa sobre prevenção. Ajuste os valores para a realidade da sua empresa; os valores padrão refletem faixas frequentemente citadas na literatura de saúde ocupacional.</p>
+
+    <div class="ferramenta-embutida" id="ferramenta-simulador-roi">
+      <h3>Simulador de Impacto em Saúde Mental</h3>
+      <p class="ferramenta-embutida__intro">Uma estimativa ilustrativa, não uma previsão garantida — um exercício de dimensionamento para apoiar a conversa sobre investimento em prevenção.</p>
+
+      <div class="campo campo-numero">
+        <label for="sr-colaboradores">Número de colaboradores</label>
+        <input type="number" id="sr-colaboradores" min="1" max="200000" value="100">
+      </div>
+      <div class="campo campo-numero">
+        <label for="sr-custo">Custo médio mensal por afastamento (R$)</label>
+        <input type="number" id="sr-custo" min="0" step="100" value="4500">
+      </div>
+      <div class="campo campo-numero">
+        <label for="sr-prevalencia">% estimado com sofrimento psíquico significativo</label>
+        <input type="number" id="sr-prevalencia" min="0" max="100" value="18">
+      </div>
+      <div class="campo campo-numero">
+        <label for="sr-reducao">% de redução esperada com programa preventivo</label>
+        <input type="number" id="sr-reducao" min="0" max="100" value="25">
+      </div>
+
+      <button type="button" class="botao botao--primario" id="sr-calcular">Simular impacto</button>
+
+      <div class="ferramenta-embutida__resultado" id="sr-resultado" hidden>
+        <h4>Estimativa ilustrativa</h4>
+        <p id="sr-resultado-texto"></p>
+        <p style="font-size:0.85rem;color:var(--tinta-fraca);margin-top:0.75rem;">Estimativa educativa baseada exclusivamente nos valores informados — não constitui garantia de resultado nem substitui um diagnóstico organizacional real.</p>
+        <div class="ferramenta-embutida__acao">
+          <a class="botao botao--vazado" href="/#contato-servicos">Solicitar diagnóstico real para minha empresa</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function () {
+      var botao = document.getElementById('sr-calcular');
+      if (!botao) return;
+      botao.addEventListener('click', function () {
+        function numero(id) {
+          var v = parseFloat(document.getElementById(id).value);
+          return isNaN(v) || v < 0 ? 0 : v;
+        }
+        function formatar(v) {
+          return Math.round(v).toLocaleString('pt-BR');
+        }
+
+        var colaboradores = numero('sr-colaboradores');
+        var custo = numero('sr-custo');
+        var prevalencia = numero('sr-prevalencia');
+        var reducao = numero('sr-reducao');
+
+        var afetados = colaboradores * (prevalencia / 100);
+        var custoAtualMensal = afetados * custo;
+        var economiaMensal = custoAtualMensal * (reducao / 100);
+        var economiaAnual = economiaMensal * 12;
+
+        var texto = document.getElementById('sr-resultado-texto');
+        texto.textContent =
+          'Com os valores informados, cerca de ' + formatar(afetados) + ' colaborador(es) podem estar vivenciando sofrimento psíquico significativo, representando uma exposição estimada de R$ ' + formatar(custoAtualMensal) + ' por mês em custos associados a afastamento. Um programa preventivo com a redução informada poderia representar uma economia potencial da ordem de R$ ' + formatar(economiaMensal) + ' por mês — cerca de R$ ' + formatar(economiaAnual) + ' por ano.';
+
+        var resultado = document.getElementById('sr-resultado');
+        resultado.hidden = false;
+        resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    })();
+    </script>
+
+    <h2>Liderança como variável central do resultado</h2>
+    <p>Nenhuma estrutura formal de protocolo substitui o compromisso real da liderança direta. Quando gestores modelam comportamentos saudáveis — respeitam limites de jornada, falam abertamente sobre saúde mental, buscam ajuda quando necessário — o protocolo ganha credibilidade que nenhuma comunicação interna consegue criar isoladamente.</p>
+
+    <h2>Resultado esperado, com expectativa realista</h2>
+    <p>Protocolos preventivos bem estruturados reduzem afastamentos, melhoram retenção de talentos e fortalecem indicadores de clima organizacional ao longo do tempo — mas os resultados aparecem em meses, não em semanas, e nenhuma estimativa substitui a implementação real acompanhada de perto. Tratar prevenção em saúde mental como investimento de médio e longo prazo, desde o início, evita frustração e abandono precoce da iniciativa.</p>
+
+    <p class="refs-note">Este artigo é uma adaptação, em formato de leitura acessível, elaborada pelo Dr. Antonio Felipe, com base em publicações indexadas em LILACS, MEDLINE/PubMed, SciELO e BVS sobre saúde mental ocupacional e performance organizacional, e em estimativas de retorno sobre investimento publicadas pela Organização Mundial da Saúde. O simulador incluído tem finalidade exclusivamente educativa e ilustrativa, não constitui consultoria financeira ou organizacional, e não substitui diagnóstico institucional real.</p>`,
+    categoria: "Empresas & RH",
+    tags: ["performance organizacional", "prevenção", "liderança"],
+    autor: "Dr. Antônio Felipe",
+    tempoLeitura: 6,
+    publicadoEm: "2026-09-22T12:00:00.000Z"
   }
 ];

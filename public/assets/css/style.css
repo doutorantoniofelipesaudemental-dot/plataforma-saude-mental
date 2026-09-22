@@ -738,6 +738,39 @@ a:hover { color: var(--verde-500); }
 .callout-urgente strong { color: #8c3f1c; }
 .callout-urgente a { color: #a9522a; }
 
+/* Ferramentas interativas embutidas no corpo dos artigos (calculadoras,
+   checklists, matrizes de autoavaliação). */
+.ferramenta-embutida {
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio-g);
+  box-shadow: var(--sombra-m);
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  margin: 2rem 0;
+}
+.ferramenta-embutida h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-900);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.ferramenta-embutida__intro { color: var(--tinta-media); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.ferramenta-embutida .campo { margin-bottom: 1.25rem; }
+.ferramenta-embutida legend { font-size: 0.92rem; font-weight: 600; color: var(--verde-900); margin-bottom: 0.5rem; padding: 0; }
+.ferramenta-embutida fieldset { border: 0; padding: 0; }
+.ferramenta-embutida .opcao span { padding: 0.55rem 0.95rem; min-width: 2.75rem; text-align: center; }
+.ferramenta-embutida__resultado {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--raio);
+  border-left: 4px solid var(--verde-600);
+  background: var(--verde-50);
+}
+.ferramenta-embutida__resultado h4 { font-family: var(--fonte-titulo); color: var(--verde-900); margin-bottom: 0.5rem; font-size: 1.05rem; }
+.ferramenta-embutida__resultado.nivel-alto { border-left-color: var(--terracota); background: #fdf3ee; }
+.ferramenta-embutida__acao { margin-top: 1.25rem; }
+.ferramenta-embutida .campo-numero { max-width: 22rem; }
+
 /* ------------------------------ Formulário ------------------------------ */
 
 .formulario-bloco {
@@ -768,6 +801,7 @@ a:hover { color: var(--verde-500); }
 .campo input[type="email"],
 .campo input[type="tel"],
 .campo input[type="date"],
+.campo input[type="number"],
 .campo select,
 .campo textarea {
   width: 100%;
