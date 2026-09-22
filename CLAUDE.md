@@ -213,3 +213,16 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
   - Rota admin: `POST /api/admin/artigos/:id/publicar-redes` (`exigirAdmin` + `exigirBanco`, mesmo padrão das outras rotas administrativas), body `{ redes?, confirmar? }`.
 - **Variáveis de ambiente** (`.env.example`): reaproveita `INSTAGRAM_ACCOUNT_ID`/`INSTAGRAM_ACCESS_TOKEN` já existentes para os scripts Python (mesma conta — não duplicar). Novas, só deste módulo: `LINKEDIN_ACCESS_TOKEN` e `LINKEDIN_AUTHOR_URN` (a URN do autor — organização ou pessoa — é obrigatória; o token sozinho não identifica em nome de quem postar).
 - **Armadilha corrigida ao criar isso**: `.env.example` nunca tinha sido versionado — um `.gitignore` com `.env*` duplicado bloqueava até o arquivo de exemplo (que não tem segredo, só placeholders vazios). Corrigido para `.env*` + `!.env.example`; `.env`/`.env.local` continuam ignorados normalmente. O mesmo ajuste liberou `reels_automation/.env.example`.
+
+## 21. SEÇÃO DE SERVIÇOS E FORMULÁRIO DE CONTATO (Home)
+
+Duas seções novas em `public/index.html`, entre "Como funciona" (`#como-funciona`) e "Artigos" (`#artigos`) — reaproveitam classes/tokens já existentes em `style.css`, nenhum CSS novo foi necessário.
+
+- **`#servicos`** — dois cards (`.grade.grade--2` + `.cartao`, mesmo padrão de "Situações que acompanhamos"): **Mentoria Individual** (médicos/residentes/profissionais de saúde) e **Consultoria em Saúde Mental Institucional** (empresas/RH/instituições). Cada card tem um CTA `<a data-preencher-tipo="particular|consultoria-empresa">` que rola até o formulário e pré-marca o radio `tipoAtendimento` correspondente (lógica em `public/assets/js/home.js`).
+- **`#contato-servicos`** — formulário (Nome, E-mail, Telefone/WhatsApp, Tipo de atendimento, Mensagem), mesma marcação/classes do formulário de agendamento (`.formulario`, `.campos`, `.opcoes`/`.opcao`, honeypot `.campo-armadilha`, `.consentimento`) — herda toda a acessibilidade e validação client-side já provadas naquele formulário, sem reinventar padrão.
+- **Distinto de propósito do `#agendar`** (formulário de agendamento clínico, não tocado): este é um lead de primeiro contato — sem data/período/modalidade de consulta. Integra com a API do backend (não com WhatsApp): **não há número de WhatsApp institucional documentado no repo**, então nenhum redirecionamento foi inventado. Se um número for definido no futuro, dá para complementar com um CTA de WhatsApp pós-envio sem mexer na integração com a API.
+
+### Backend — `POST/GET/PATCH /api/contato`
+- `backend/models/Contato.js`: `nome`, `email`, `telefone`, `tipoAtendimento` (`enum: ['particular','consultoria-empresa']`), `mensagem` (obrigatória, min 10 caracteres — diferente do `mensagem` opcional do `Agendamento`), `consentimentoLGPD`, `status` (`novo`/`em-contato`/`concluido`). Modelo deliberadamente separado de `Agendamento`.
+- `backend/routes/contato.js`: mesmo padrão de `agendamentos.js` — `POST /` público (rate-limit 5/min por IP, honeypot, guarda de duplicidade por e-mail nos últimos 10 min), `GET /` e `PATCH /:id` administrativos (`exigirAdmin` + `exigirBanco`).
+- Registrado em `backend/index.js` como `app.use('/api/contato', contatoRouter)`.
