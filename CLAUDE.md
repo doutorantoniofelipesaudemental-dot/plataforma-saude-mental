@@ -194,7 +194,7 @@ Documenta a arquitetura real implementada neste repositório (`DRSAUDEMENTAL`) e
 
 | Página | Performance (Desktop/Mobile) | CLS (Desktop/Mobile) | LCP (Desktop/Mobile) | FCP (Desktop/Mobile) |
 |---|---|---|---|---|
-| Home | 100 / 100 | 0.007 / 0.032 | 0.3s / 1.0s | 0.3s / 1.0s |
+| Home | 100 / 98 | 0.007 / 0.085 | 0.6s / 1.0s | 0.6s / 1.0s |
 | Blog | 100 / 100 | 0.004 / 0.02 | 0.6s / 1.0s | 0.4s / 1.0s |
 | Artigo | 95 / 100 | 0.002 / 0.027 | 0.8s / 1.8s | 0.6s / 1.1s |
 
