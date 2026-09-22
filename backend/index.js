@@ -73,15 +73,10 @@ app.use('/api', (req, res) => {
 });
 
 /* -------------------------------- Site ----------------------------------- */
-// Em produção na Vercel os estáticos são servidos pela CDN (ver vercel.json);
-// isto aqui atende o desenvolvimento local e serve de fallback.
-
-app.use(
-  express.static(PUBLIC_DIR, {
-    extensions: ['html'],
-    maxAge: process.env.NODE_ENV === 'production' ? '1h' : 0,
-  })
-);
+// As duas rotas de SSR abaixo precisam vir ANTES do express.static: com
+// `extensions: ['html']`, o static shadowia /blog (existe public/blog.html)
+// e serviria o shell sem nunca chegar nos handlers — foi exatamente o bug
+// que fez o SSR do blog cair sempre no fallback em produção.
 
 /**
  * Pré-renderiza a primeira página da listagem (respeitando ?categoria/
@@ -138,6 +133,15 @@ app.get('/artigo/:slug', async (req, res) => {
     shellEstatico();
   }
 });
+
+// Em produção na Vercel os estáticos são servidos pela CDN (ver vercel.json);
+// isto aqui atende o desenvolvimento local e serve de fallback para o resto.
+app.use(
+  express.static(PUBLIC_DIR, {
+    extensions: ['html'],
+    maxAge: process.env.NODE_ENV === 'production' ? '1h' : 0,
+  })
+);
 
 app.get('/admin', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'admin.html')));
 
