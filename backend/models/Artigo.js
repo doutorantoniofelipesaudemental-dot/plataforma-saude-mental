@@ -20,6 +20,12 @@ const CATEGORIAS = [
   'Saúde Mental na Terceira Idade',
   'Trabalho Doméstico & Cuidados do Lar',
   'Neurodivergência na Vida Adulta',
+  'Pós-Graduação & Concursos',
+  'Ansiedade Social & Timidez',
+  'Terceiro Setor & Causas Sociais',
+  'Transição de Carreira & Aposentadoria',
+  'Dependências & Adições',
+  'Compulsões & Transtornos Alimentares',
 ];
 
 // Fluxo de aprovação para publicação nas redes sociais (backend/lib/socialPublisher.js)
