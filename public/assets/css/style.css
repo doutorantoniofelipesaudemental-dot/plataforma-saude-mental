@@ -887,6 +887,7 @@ a:hover { color: var(--verde-500); }
 /* Painel lateral do formulário */
 .painel-contato { display: grid; gap: 1.5rem; }
 .contato-item { display: grid; grid-template-columns: 2.75rem 1fr; gap: 1rem; align-items: start; }
+.contato-item > div { min-width: 0; }
 .contato-item__icone {
   width: 2.75rem; height: 2.75rem;
   border-radius: 12px;
@@ -896,7 +897,7 @@ a:hover { color: var(--verde-500); }
   display: grid; place-items: center;
 }
 .contato-item h3 { font-size: 1rem; margin: 0 0 0.15rem; font-family: var(--fonte-texto); font-weight: 600; }
-.contato-item p { font-size: 0.94rem; color: var(--tinta-media); margin: 0; }
+.contato-item p { font-size: 0.94rem; color: var(--tinta-media); margin: 0; overflow-wrap: anywhere; }
 
 /* --------------------------------- FAQ ---------------------------------- */
 
