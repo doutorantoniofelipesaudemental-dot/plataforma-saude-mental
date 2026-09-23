@@ -119,6 +119,32 @@ router.post('/:slug/enquete', limiteEnquete, exigirBanco, async (req, res) => {
   }
 });
 
+const limiteSolicitarNarracao = limitarTaxa({ janelaMs: 60_000, maximo: 20 });
+
+/**
+ * POST /api/artigos/:slug/solicitar-narracao
+ * Registra, de forma anônima, o interesse em narração para um artigo que
+ * ainda não tem (o fallback do player só mostra o botão nesse caso — mas a
+ * checagem aqui não depende disso, um clique em artigo que já ganhou áudio
+ * nesse meio-tempo só some do contador de prioridade, sem gerar erro).
+ */
+router.post('/:slug/solicitar-narracao', limiteSolicitarNarracao, exigirBanco, async (req, res) => {
+  try {
+    const resultado = await Artigo.updateOne(
+      { slug: req.params.slug, publicado: true },
+      { $inc: { solicitacoesNarracao: 1 } },
+      { timestamps: false }
+    );
+    if (resultado.matchedCount === 0) {
+      return res.status(404).json({ erro: 'Artigo não encontrado.' });
+    }
+    res.json({ ok: true });
+  } catch (err) {
+    console.error('[artigos] erro ao registrar solicitação de narração:', err);
+    res.status(500).json({ erro: 'Não foi possível registrar seu pedido.' });
+  }
+});
+
 /* ------------------------- rotas administrativas ------------------------- */
 
 /** POST /api/artigos — cria artigo. */

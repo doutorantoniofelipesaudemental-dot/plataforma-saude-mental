@@ -46,7 +46,15 @@ function montarCapaENarracao(artigo) {
                <a href="${escapeHtml(artigo.audioNarracaoUrl)}">Baixar o áudio da narração</a>.
              </audio>
            </div>`
-    : '';
+    : `<div class="artigo-narracao artigo-narracao--indisponivel">
+             <p class="artigo-narracao__rotulo">
+               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+               Narração em áudio indisponível para este artigo.
+             </p>
+             <button type="button" class="botao botao--vazado botao--pequeno" data-solicitar-narracao="${escapeHtml(artigo.slug)}">
+               Solicitar narração em áudio
+             </button>
+           </div>`;
 
   return { capaHtml, narracaoHtml };
 }

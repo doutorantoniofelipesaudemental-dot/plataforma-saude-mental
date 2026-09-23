@@ -3,7 +3,7 @@ const Artigo = require('../models/Artigo');
 const { CATEGORIAS } = Artigo;
 
 // Campos devolvidos na listagem (o conteúdo completo só vem no detalhe).
-const CAMPOS_LISTA = 'titulo slug resumo categoria tags autor imagemCapa tempoLeitura publicadoEm visualizacoes enquete';
+const CAMPOS_LISTA = 'titulo slug resumo categoria tags autor imagemCapa tempoLeitura publicadoEm visualizacoes enquete audioNarracaoUrl solicitacoesNarracao';
 
 /** Normaliza query params (categoria/busca/pagina/limite) nos mesmos limites usados pela API. */
 function normalizarQuery({ categoria, busca, pagina, limite } = {}) {

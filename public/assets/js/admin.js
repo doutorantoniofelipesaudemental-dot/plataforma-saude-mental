@@ -144,6 +144,14 @@
     return `<span style="font-size:0.85rem;color:var(--tinta-fraca);">👍 ${e.util?.sim || 0} · 👎 ${e.util?.nao || 0} · ${perfil} sobre o perfil</span>`;
   }
 
+  /** Pedidos de narração em áudio — só mostra para quem ainda não tem, é o que importa priorizar. */
+  function resumoNarracao(artigo) {
+    if (artigo.audioNarracaoUrl) return '';
+    const pedidos = artigo.solicitacoesNarracao || 0;
+    if (!pedidos) return '';
+    return `<span style="font-size:0.85rem;color:var(--verde-700);font-weight:600;">🎙️ ${pedidos} pedido${pedidos === 1 ? '' : 's'} de narração</span>`;
+  }
+
   function itemArtigo(artigo) {
     return `
       <li class="item-admin" data-slug="${esc(artigo.slug)}">
@@ -153,6 +161,7 @@
             <span class="selo">${esc(artigo.categoria)}</span>
             <span style="font-size:0.85rem;color:var(--tinta-fraca);">${esc(formatarData(artigo.publicadoEm))}</span>
             ${resumoEnquete(artigo)}
+            ${resumoNarracao(artigo)}
           </div>
         </div>
         <div class="item-admin__acoes">

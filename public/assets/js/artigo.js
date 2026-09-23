@@ -136,7 +136,8 @@
            </div>`
         : '';
 
-      // Narração TTS do artigo completo — idem, some quando não houver áudio.
+      // Narração TTS do artigo completo — quando não há áudio, mostra o
+      // fallback com botão de "solicitar narração" em vez de sumir.
       const narracaoHtml = artigo.audioNarracaoUrl
         ? `<div class="artigo-narracao">
              <p class="artigo-narracao__rotulo">
@@ -148,7 +149,15 @@
                <a href="${esc(artigo.audioNarracaoUrl)}">Baixar o áudio da narração</a>.
              </audio>
            </div>`
-        : '';
+        : `<div class="artigo-narracao artigo-narracao--indisponivel">
+             <p class="artigo-narracao__rotulo">
+               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+               Narração em áudio indisponível para este artigo.
+             </p>
+             <button type="button" class="botao botao--vazado botao--pequeno" data-solicitar-narracao="${esc(artigo.slug)}">
+               Solicitar narração em áudio
+             </button>
+           </div>`;
 
       cabecalho.innerHTML = `
         <a href="/blog" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;text-decoration:none;color:var(--tinta-fraca);margin-bottom:.5rem;">

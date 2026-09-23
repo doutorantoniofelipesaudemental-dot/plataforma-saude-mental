@@ -65,6 +65,10 @@ const ArtigoSchema = new mongoose.Schema(
     // gerada pelo backend Python de automação e enviada via PUT
     // /api/artigos/:slug/midia/audio. Vazio enquanto não houver narração.
     audioNarracaoUrl: { type: String, default: '', trim: true, maxlength: 500 },
+    // Contador anônimo de "Solicitar narração em áudio" (POST
+    // /api/artigos/:slug/solicitar-narracao) — só faz sentido enquanto
+    // audioNarracaoUrl estiver vazio; usado para priorizar gravação.
+    solicitacoesNarracao: { type: Number, default: 0, min: 0 },
     tempoLeitura: { type: Number, default: 4, min: 1, max: 60 },
     publicado: { type: Boolean, default: true, index: true },
     publicadoEm: { type: Date, default: Date.now, index: true },
