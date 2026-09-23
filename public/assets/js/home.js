@@ -206,6 +206,15 @@
       });
     });
 
+    // Mesma pré-marcação, mas vinda de outra página (ex.: CTA de uma
+    // ferramenta embutida num artigo, tipo /?tipo=consultoria-empresa#contato-servicos)
+    // — o clique aconteceu num documento diferente, então o listener acima nunca dispara.
+    const tipoDaUrl = new URLSearchParams(location.search).get('tipo');
+    if (tipoDaUrl) {
+      const radioUrl = formularioServicos.querySelector(`input[name="tipoAtendimento"][value="${tipoDaUrl}"]`);
+      if (radioUrl) radioUrl.checked = true;
+    }
+
     const botaoServicos = document.getElementById('botao-enviar-servicos');
     const retornoServicos = document.getElementById('retorno-formulario-servicos');
 
