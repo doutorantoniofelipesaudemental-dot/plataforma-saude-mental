@@ -69,6 +69,20 @@ const ArtigoSchema = new mongoose.Schema(
     publicado: { type: Boolean, default: true, index: true },
     publicadoEm: { type: Date, default: Date.now, index: true },
     visualizacoes: { type: Number, default: 0, min: 0 },
+    // Contadores anônimos da enquete de engajamento no fim do artigo
+    // (POST /api/artigos/:slug/enquete) — sem identificação de quem votou,
+    // só a soma por opção, para métricas simples no /admin.
+    enquete: {
+      util: {
+        sim: { type: Number, default: 0, min: 0 },
+        nao: { type: Number, default: 0, min: 0 },
+      },
+      perfil: {
+        gestorRh: { type: Number, default: 0, min: 0 },
+        profissionalSaude: { type: Number, default: 0, min: 0 },
+        usoPessoal: { type: Number, default: 0, min: 0 },
+      },
+    },
     // Aprovação para redes sociais (ver STATUS_REDES acima) — default
     // 'rascunho' para nunca disparar publicação sem revisão explícita.
     status: {

@@ -1,6 +1,6 @@
 const express = require('express');
 const Artigo = require('../models/Artigo');
-const { exigirBanco, exigirAdmin, tratarErroValidacao } = require('../middleware');
+const { exigirBanco, exigirAdmin, tratarErroValidacao, limitarTaxa } = require('../middleware');
 const { slugify } = require('../lib/texto');
 const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listarArtigos');
 const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
@@ -79,6 +79,43 @@ router.get('/:slug', exigirBanco, async (req, res) => {
   } catch (err) {
     console.error('[artigos] erro ao buscar:', err);
     res.status(500).json({ erro: 'Não foi possível carregar o artigo.' });
+  }
+});
+
+// Opções válidas por pergunta da enquete de engajamento — whitelist explícita
+// para nunca usar `campo`/`valor` vindos do público direto num caminho de $inc.
+const OPCOES_ENQUETE = {
+  util: ['sim', 'nao'],
+  perfil: ['gestorRh', 'profissionalSaude', 'usoPessoal'],
+};
+
+const limiteEnquete = limitarTaxa({ janelaMs: 60_000, maximo: 20 });
+
+/**
+ * POST /api/artigos/:slug/enquete
+ * Incrementa um contador anônimo (sem IP/sessão salvos) da enquete de
+ * engajamento no fim do artigo. Sem corpo de texto livre — só contagem.
+ */
+router.post('/:slug/enquete', limiteEnquete, exigirBanco, async (req, res) => {
+  const { campo, valor } = req.body || {};
+  const valoresValidos = OPCOES_ENQUETE[campo];
+  if (!valoresValidos || !valoresValidos.includes(valor)) {
+    return res.status(400).json({ erro: 'Campo ou valor da enquete inválido.' });
+  }
+
+  try {
+    const resultado = await Artigo.updateOne(
+      { slug: req.params.slug, publicado: true },
+      { $inc: { [`enquete.${campo}.${valor}`]: 1 } },
+      { timestamps: false } // voto não é edição de conteúdo — não deve mexer em atualizadoEm/dateModified
+    );
+    if (resultado.matchedCount === 0) {
+      return res.status(404).json({ erro: 'Artigo não encontrado.' });
+    }
+    res.json({ ok: true });
+  } catch (err) {
+    console.error('[artigos] erro ao registrar enquete:', err);
+    res.status(500).json({ erro: 'Não foi possível registrar sua resposta.' });
   }
 });
 

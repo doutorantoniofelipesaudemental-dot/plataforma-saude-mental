@@ -134,6 +134,16 @@
 
   /* ------------------------------- Listagem ------------------------------- */
 
+  /** Resumo curto da enquete de engajamento, só quando há pelo menos um voto. */
+  function resumoEnquete(artigo) {
+    const e = artigo.enquete;
+    if (!e) return '';
+    const util = (e.util && (e.util.sim || 0) + (e.util.nao || 0)) || 0;
+    const perfil = (e.perfil && (e.perfil.gestorRh || 0) + (e.perfil.profissionalSaude || 0) + (e.perfil.usoPessoal || 0)) || 0;
+    if (!util && !perfil) return '';
+    return `<span style="font-size:0.85rem;color:var(--tinta-fraca);">👍 ${e.util?.sim || 0} · 👎 ${e.util?.nao || 0} · ${perfil} sobre o perfil</span>`;
+  }
+
   function itemArtigo(artigo) {
     return `
       <li class="item-admin" data-slug="${esc(artigo.slug)}">
@@ -142,6 +152,7 @@
           <div class="item-admin__meta">
             <span class="selo">${esc(artigo.categoria)}</span>
             <span style="font-size:0.85rem;color:var(--tinta-fraca);">${esc(formatarData(artigo.publicadoEm))}</span>
+            ${resumoEnquete(artigo)}
           </div>
         </div>
         <div class="item-admin__acoes">

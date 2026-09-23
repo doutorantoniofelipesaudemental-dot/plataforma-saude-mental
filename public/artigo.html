@@ -89,6 +89,41 @@
     </div>
   </section>
 
+  <!-- Enquete de engajamento -->
+  <section class="secao">
+    <div class="container" style="max-width:42rem;">
+      <div class="enquete-card">
+        <h2>Sua opinião é fundamental</h2>
+        <p class="texto-apoio">
+          Sua experiência ou visão sobre este tema pode ajudar outras pessoas e equipes.
+          Compartilhe sua opinião, dúvida ou relato abaixo.
+        </p>
+
+        <div class="enquete-bloco" data-enquete-campo="util">
+          <p class="enquete-pergunta">Este conteúdo foi útil para você?</p>
+          <div class="enquete-opcoes">
+            <button class="botao botao--vazado" type="button" data-enquete-valor="sim">Sim, ajudou</button>
+            <button class="botao botao--vazado" type="button" data-enquete-valor="nao">Não muito</button>
+          </div>
+        </div>
+
+        <div class="enquete-bloco" data-enquete-campo="perfil">
+          <p class="enquete-pergunta">Como este tema se aplica a você?</p>
+          <div class="enquete-opcoes">
+            <button class="botao botao--vazado botao--pequeno" type="button" data-enquete-valor="gestorRh">Gestor/RH</button>
+            <button class="botao botao--vazado botao--pequeno" type="button" data-enquete-valor="profissionalSaude">Profissional da Saúde</button>
+            <button class="botao botao--vazado botao--pequeno" type="button" data-enquete-valor="usoPessoal">Uso pessoal/familiar</button>
+          </div>
+        </div>
+
+        <div class="enquete-obrigado" id="enquete-obrigado" hidden>
+          <p><strong>Obrigado pela sua resposta.</strong> Se quiser conversar mais sobre isso, com a equipe ou individualmente, estamos por aqui.</p>
+          <a class="botao botao--claro" href="/#contato-servicos">Falar com a equipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Relacionados -->
   <section class="secao" id="secao-relacionados" hidden>
     <div class="container">
@@ -161,5 +196,6 @@
 
 <script src="/assets/js/site.js" defer></script>
 <script src="/assets/js/artigo.js" defer></script>
+<script src="/assets/js/artigo-enquete.js" defer></script>
 </body>
 </html>

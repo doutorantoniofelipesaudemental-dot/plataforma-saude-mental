@@ -698,6 +698,26 @@ a:hover { color: var(--verde-500); }
 .artigo-narracao__rotulo svg { color: var(--verde-600); flex-shrink: 0; }
 .artigo-narracao audio { width: 100%; display: block; }
 
+/* Enquete de engajamento (fim do artigo) */
+.enquete-card {
+  background: var(--papel);
+  border: 1px solid var(--linha-suave);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-s);
+  padding: 2rem;
+  text-align: center;
+}
+.enquete-card h2 { margin-bottom: 0.5rem; }
+.enquete-card > .texto-apoio { margin: 0 auto 2rem; }
+.enquete-bloco + .enquete-bloco { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--linha-suave); }
+.enquete-pergunta { font-weight: 600; color: var(--verde-900); margin: 0 0 1rem; }
+.enquete-opcoes { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.enquete-opcoes .botao[aria-pressed="true"] { background: var(--verde-800); border-color: var(--verde-800); color: #fff; }
+.enquete-opcoes .botao[aria-pressed="true"]:disabled { opacity: 1; }
+.enquete-obrigado { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--linha-suave); }
+.enquete-obrigado p { margin: 0 0 1rem; color: var(--tinta-media); }
+.enquete-obrigado strong { color: var(--verde-900); }
+
 .conteudo-artigo {
   max-width: 46rem;
   margin-inline: auto;
