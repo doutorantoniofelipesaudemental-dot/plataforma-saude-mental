@@ -16,6 +16,10 @@ const CATEGORIAS = [
   'Migrantes & Expatriados',
   'Infância & Adolescência',
   'Luto & Divórcio',
+  'Maternidade, Puerpério & Lactação',
+  'Saúde Mental na Terceira Idade',
+  'Trabalho Doméstico & Cuidados do Lar',
+  'Neurodivergência na Vida Adulta',
 ];
 
 // Fluxo de aprovação para publicação nas redes sociais (backend/lib/socialPublisher.js)
