@@ -11,6 +11,11 @@ const CATEGORIAS = [
   'Residentes & Estudantes',
   'Empresas & RH',
   'Geral',
+  'Educadores & Professores',
+  'Cuidadores & Famílias',
+  'Migrantes & Expatriados',
+  'Infância & Adolescência',
+  'Luto & Divórcio',
 ];
 
 // Fluxo de aprovação para publicação nas redes sociais (backend/lib/socialPublisher.js)
