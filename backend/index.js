@@ -6,6 +6,7 @@ const Artigo = require('./models/Artigo');
 const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
 const { listarArtigos, listarCategorias } = require('./lib/listarArtigos');
 const { renderizarBlogHtml } = require('./lib/renderizarBlog');
+const { gerarSitemapArtigosXml, gerarSitemapIndexXml } = require('./lib/sitemap');
 const agendamentosRouter = require('./routes/agendamentos');
 const contatoRouter = require('./routes/contato');
 const artigosRouter = require('./routes/artigos');
@@ -133,6 +134,36 @@ app.get('/artigo/:slug', async (req, res) => {
   } catch (err) {
     console.error('[artigo] falha ao pré-renderizar, caindo para o shell estático:', err.message);
     shellEstatico();
+  }
+});
+
+/**
+ * Sitemap dos artigos + índice — gerados direto do MongoDB a cada request,
+ * então artigo novo aparece sozinho, sem precisar de rebuild/redeploy.
+ * Em produção a Vercel só chega a rotear aqui por causa das entradas
+ * dedicadas em vercel.json (sem isso, cairia no catch-all de index.html).
+ */
+app.get('/sitemap-artigos.xml', async (req, res) => {
+  if (!db.isConfigured()) return res.status(503).send('Sitemap indisponível: banco não configurado.');
+  try {
+    await db.connect();
+    res.set('Content-Type', 'application/xml; charset=utf-8');
+    res.send(await gerarSitemapArtigosXml());
+  } catch (err) {
+    console.error('[sitemap] falha ao gerar sitemap-artigos.xml:', err.message);
+    res.status(500).send('Não foi possível gerar o sitemap.');
+  }
+});
+
+app.get('/sitemap-index.xml', async (req, res) => {
+  if (!db.isConfigured()) return res.status(503).send('Sitemap indisponível: banco não configurado.');
+  try {
+    await db.connect();
+    res.set('Content-Type', 'application/xml; charset=utf-8');
+    res.send(await gerarSitemapIndexXml());
+  } catch (err) {
+    console.error('[sitemap] falha ao gerar sitemap-index.xml:', err.message);
+    res.status(500).send('Não foi possível gerar o sitemap.');
   }
 });
 
