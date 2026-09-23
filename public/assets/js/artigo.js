@@ -181,6 +181,13 @@
       // O conteúdo é HTML escrito pela clínica pelas rotas administrativas
       // autenticadas — não é entrada de usuário anônimo.
       conteudo.innerHTML = artigo.conteudo;
+      // <script> inserido via innerHTML não executa — sem recriá-los, a
+      // ferramenta interativa embutida ficaria inerte neste caminho de fallback.
+      conteudo.querySelectorAll('script').forEach((antigo) => {
+        const novo = document.createElement('script');
+        novo.textContent = antigo.textContent;
+        antigo.replaceWith(novo);
+      });
 
       endurecerLinksExternos();
       exibirRelacionados(relacionados);

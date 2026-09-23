@@ -7,7 +7,9 @@ const TEMPLATE_PATH = path.join(__dirname, '..', '..', 'public', 'blog.html');
 let templateCache = null;
 function lerTemplate() {
   if (!templateCache || process.env.NODE_ENV !== 'production') {
-    templateCache = fs.readFileSync(TEMPLATE_PATH, 'utf8');
+    // CRLF → LF: com core.autocrlf no Windows o checkout grava CRLF e os
+    // replaces exatos de skeleton deixam de bater, desligando o SSR em silêncio.
+    templateCache = fs.readFileSync(TEMPLATE_PATH, 'utf8').replace(/\r\n/g, '\n');
   }
   return templateCache;
 }

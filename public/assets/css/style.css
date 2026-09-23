@@ -39,6 +39,49 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
+/* Fallbacks com métrica ajustada: enquanto Inter/Fraunces não chegam, o texto
+   é pintado em Arial/Times escalados para ocupar a mesma largura — sem isso o
+   resumo e o h1 do artigo ganham/perdem uma linha na troca de fonte e empurram
+   meta e capa ~29px (CLS 0.15–0.30 medido no mobile). size-adjust medido no
+   DOM do Chromium com texto em português, no tamanho real de uso (Fraunces tem
+   eixo óptico: 600 calibrado no h1 mobile, 33.6px); overrides = métrica ÷ size-adjust. */
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 400;
+  src: local('Arial'), local('ArialMT'), local('Helvetica'), local('Roboto');
+  size-adjust: 106.1%;
+  ascent-override: 91.4%;
+  descent-override: 22.6%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 600;
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Helvetica Bold'), local('Roboto Medium');
+  size-adjust: 100.9%;
+  ascent-override: 96.1%;
+  descent-override: 23.8%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Fraunces Fallback';
+  font-weight: 400;
+  src: local('Times New Roman'), local('TimesNewRomanPSMT'), local('Times');
+  size-adjust: 116.5%;
+  ascent-override: 84.1%;
+  descent-override: 22.3%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Fraunces Fallback';
+  font-weight: 600;
+  src: local('Times New Roman Bold'), local('TimesNewRomanPS-BoldMT'), local('Times Bold');
+  size-adjust: 110.9%;
+  ascent-override: 88.4%;
+  descent-override: 23.4%;
+  line-gap-override: 0%;
+}
+
 :root {
   color-scheme: light;
 
@@ -68,8 +111,8 @@
   --linha-suave: rgba(13, 51, 48, 0.07);
 
   /* Tipografia */
-  --fonte-titulo: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  --fonte-texto: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --fonte-titulo: "Fraunces", "Fraunces Fallback", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --fonte-texto: "Inter", "Inter Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Métrica */
   --largura: 1140px;
@@ -626,12 +669,28 @@ a:hover { color: var(--verde-500); }
 }
 
 /* Filtros do blog */
+/* Linha única com rolagem horizontal: com ~23 categorias em flex-wrap, a troca
+   de fonte (fallback → Inter) mudava o ponto de quebra por poucos px e
+   reorganizava a grade inteira (CLS ~0.14 no /blog desktop em rede lenta).
+   Em linha única, a largura dos botões muda mas a altura da barra, não. */
 .filtros {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.6rem;
   margin-bottom: 2rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--verde-300) transparent;
+  /* Folga para o anel de foco (3px + 3px de offset) não ser cortado pelo overflow. */
+  padding: 0.4rem 0.4rem 0.75rem;
+  margin-inline: -0.4rem;
+  /* Esmaece a borda direita: sem isso, no desktop a linha pode terminar num
+     botão inteiro e nada indica que há mais categorias para rolar. */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent);
 }
+.filtros .filtro { flex: 0 0 auto; white-space: nowrap; }
 .filtro {
   padding: 0.5rem 1.1rem;
   border-radius: 999px;
@@ -791,6 +850,9 @@ a:hover { color: var(--verde-500); }
 .ferramenta-embutida__resultado.nivel-atencao { border-left-color: var(--dourado); background: #fdf8ea; }
 .ferramenta-embutida__resultado .ferramenta-embutida__aviso { font-size: 0.82rem; color: var(--tinta-fraca); margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--linha-suave); }
 .ferramenta-embutida__acao { margin-top: 1.25rem; }
+/* Rótulos de ação longos ("Calcular meu nível de…") estouravam a largura no
+   mobile por causa do nowrap global de .botao. */
+.ferramenta-embutida .botao { white-space: normal; max-width: 100%; text-align: center; }
 .ferramenta-embutida .campo-numero { max-width: 22rem; }
 
 /* ------------------------------ Formulário ------------------------------ */

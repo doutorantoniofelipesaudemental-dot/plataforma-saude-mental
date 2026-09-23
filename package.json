@@ -11,7 +11,8 @@
     "seed:reset": "node --env-file-if-exists=.env backend/seed.js --reset",
     "carrosseis": "node --env-file-if-exists=.env backend/tools/gerar-carrosseis.js",
     "publicar-redes": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/publicar-redes.js",
-    "renovar-token-instagram": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/renovar-token-instagram.js"
+    "renovar-token-instagram": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/renovar-token-instagram.js",
+    "test:e2e": "playwright test"
   },
   "engines": {
     "node": ">=20"
@@ -28,5 +29,8 @@
     "opentype.js": "^2.0.0",
     "sharp": "^0.35.4",
     "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.1"
   }
 }
