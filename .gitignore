@@ -20,3 +20,8 @@ __pycache__/
 # Saídas do runner de testes E2E (npm run test:e2e).
 test-results/
 playwright-report/
+
+# Backups locais de conteúdo do MongoDB (antes de edições diretas no banco).
+# Nunca versionar: um backup de Agendamento/Contato conteria dados de
+# pacientes (nome, e-mail, telefone) — LGPD.
+backups/
