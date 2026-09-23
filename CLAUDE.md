@@ -233,6 +233,18 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
 - **Exceção por rede, não tudo-ou-nada**: Instagram e LinkedIn são tentados em `try/catch` independentes dentro do orquestrador. Token ausente numa rede (`ENV_AUSENTE`) é logado (`console.error`) e **não impede** a tentativa na outra. `status` só vira `'publicado'` se **pelo menos uma** rede publicou de verdade; se todas falharem, o artigo continua `'aprovado'` para permitir nova tentativa depois de configurar o token que faltava.
 - **Log**: só `console.error`/`console.log` (capturado pelos logs de função da Vercel, `vercel logs`) — o pedido original mencionava "log em servidor/arquivo", mas funções serverless da Vercel têm sistema de arquivos efêmero (nada escrito em disco local sobrevive entre invocações); gravar em arquivo local seria um log que desaparece sozinho. Console é o mecanismo real e correto neste ambiente.
 
+### 20-ter. Fila diária de publicação (`backend/lib/filaRedes.js`, ativada em 2026-09-23)
+
+**Contexto:** em 2026-09-23 os 251 artigos foram aprovados de uma vez (direto no banco, sem disparo automático). Postar todos juntos estouraria o limite diário da API do Instagram e inundaria o feed; o dono da conta escolheu uma fila de **2 posts por dia**, na ordem de maior engajamento.
+
+- **Vercel Cron** (`vercel.json` → `crons`) chama `GET /api/cron/publicar-fila` às 15:00 e 22:00 UTC (12h e 19h de Brasília; no plano Hobby o disparo pode cair em qualquer minuto dessa hora). Cada chamada publica **no máximo 1 artigo**.
+- **Interruptor:** a rota exige `Authorization: Bearer $CRON_SECRET`. Sem a variável, tudo 401 — **apagar `CRON_SECRET` na Vercel pausa a fila**. `?simular=1` mostra o próximo sem publicar.
+- **Travas** sobre `publicadoRedesEm` (campo novo, gravado pelo orquestrador junto com `status: 'publicado'`, então cobre cron, CLI e /admin): teto `REDES_POSTS_POR_DIA` (padrão 2) nas últimas 24h e intervalo `REDES_INTERVALO_MIN_HORAS` (padrão 4). Execução duplicada do cron não vira post extra.
+- **Ordem:** `visualizacoes + 10 × (votos da enquete + usos da ferramenta + pedidos de narração)`, desempate por `publicadoEm` mais recente. Em 2026-09-23 só `visualizacoes` tinha dados.
+- **Falhas:** artigo barrado nas checagens 1/2 (capa/URL fora) é pulado (até 3 por execução); se todas as redes falharem (token expirado), a fila **para** em vez de queimar artigos. Só redes com credencial entram — hoje só Instagram (sem `LINKEDIN_*`).
+- **Scripts Python legados (`publicar_instagram.py`, `post_instagram.py`) não passam pelas travas** — não rodar enquanto a fila estiver ativa (Regra 20).
+- `maxDuration: 60` no build do `backend/index.js`: o polling do container do Instagram pode passar de 30s.
+
 ## 21. SEÇÃO DE SERVIÇOS E FORMULÁRIO DE CONTATO (Home)
 
 Duas seções novas em `public/index.html`, entre "Como funciona" (`#como-funciona`) e "Artigos" (`#artigos`) — reaproveitam classes/tokens já existentes em `style.css`, nenhum CSS novo foi necessário.

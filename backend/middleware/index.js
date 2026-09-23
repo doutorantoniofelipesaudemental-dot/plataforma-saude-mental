@@ -128,6 +128,7 @@ function tratarErroValidacao(err, res) {
 module.exports = {
   exigirBanco,
   exigirAdmin,
+  comparacaoSegura,
   limitarTaxa,
   tratarErroValidacao,
   ipDoPedido,

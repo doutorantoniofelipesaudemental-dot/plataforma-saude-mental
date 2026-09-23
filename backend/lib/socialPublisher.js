@@ -402,7 +402,7 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
   // "aprovado" para poder ser retentado depois.
   const publicouAlgumaRede = Object.keys(resultados).length > 0;
   if (publicouAlgumaRede) {
-    await Artigo.findByIdAndUpdate(artigoId, { status: 'publicado' });
+    await Artigo.findByIdAndUpdate(artigoId, { status: 'publicado', publicadoRedesEm: new Date() });
   }
 
   return {

@@ -13,6 +13,7 @@ const artigosRouter = require('./routes/artigos');
 const midiaRouter = require('./routes/midia');
 const carrosselRouter = require('./routes/carrossel');
 const adminRouter = require('./routes/admin');
+const cronRouter = require('./routes/cron');
 
 const app = express();
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
@@ -69,6 +70,7 @@ app.use('/api/artigos', artigosRouter);
 app.use('/api/artigos', midiaRouter);
 app.use('/api/carrossel', carrosselRouter);
 app.use('/api/admin', adminRouter);
+app.use('/api/cron', cronRouter);
 
 // Qualquer outra rota sob /api é 404 em JSON — nunca cai no HTML do site.
 app.use('/api', (req, res) => {

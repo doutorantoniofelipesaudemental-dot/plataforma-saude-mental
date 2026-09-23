@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "backend/index.js", "use": "@vercel/node" },
+    { "src": "backend/index.js", "use": "@vercel/node", "config": { "maxDuration": 60 } },
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
@@ -20,5 +20,9 @@
     { "src": "/privacidade/?", "dest": "/public/privacidade.html" },
     { "src": "/admin/?", "dest": "/public/admin.html" },
     { "src": "/(.*)", "dest": "/public/index.html" }
+  ],
+  "crons": [
+    { "path": "/api/cron/publicar-fila", "schedule": "0 15 * * *" },
+    { "path": "/api/cron/publicar-fila", "schedule": "0 22 * * *" }
   ]
 }

@@ -113,6 +113,10 @@ const ArtigoSchema = new mongoose.Schema(
       default: 'rascunho',
       index: true,
     },
+    // Quando o artigo foi de fato postado em alguma rede (setado junto com
+    // status 'publicado'). A fila diária (backend/lib/filaRedes.js) conta
+    // estes horários para respeitar o teto de posts/dia e o intervalo mínimo.
+    publicadoRedesEm: { type: Date, default: null, index: true },
   },
   {
     timestamps: { createdAt: 'criadoEm', updatedAt: 'atualizadoEm' },
