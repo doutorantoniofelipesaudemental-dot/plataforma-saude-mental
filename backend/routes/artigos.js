@@ -145,6 +145,31 @@ router.post('/:slug/solicitar-narracao', limiteSolicitarNarracao, exigirBanco, a
   }
 });
 
+const limiteFerramentaUso = limitarTaxa({ janelaMs: 60_000, maximo: 30 });
+
+/**
+ * POST /api/artigos/:slug/ferramenta-uso
+ * Conta anonimamente cada vez que a ferramenta interativa embutida no
+ * artigo (calculadora, termômetro, escala) é usada — sem registrar
+ * respostas, só a contagem, para saber quais ferramentas engajam mais.
+ */
+router.post('/:slug/ferramenta-uso', limiteFerramentaUso, exigirBanco, async (req, res) => {
+  try {
+    const resultado = await Artigo.updateOne(
+      { slug: req.params.slug, publicado: true },
+      { $inc: { usosFerramenta: 1 } },
+      { timestamps: false }
+    );
+    if (resultado.matchedCount === 0) {
+      return res.status(404).json({ erro: 'Artigo não encontrado.' });
+    }
+    res.json({ ok: true });
+  } catch (err) {
+    console.error('[artigos] erro ao registrar uso de ferramenta:', err);
+    res.status(500).json({ erro: 'Não foi possível registrar o uso.' });
+  }
+});
+
 /* ------------------------- rotas administrativas ------------------------- */
 
 /** POST /api/artigos — cria artigo. */

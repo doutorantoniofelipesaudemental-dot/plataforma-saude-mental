@@ -152,6 +152,13 @@
     return `<span style="font-size:0.85rem;color:var(--verde-700);font-weight:600;">🎙️ ${pedidos} pedido${pedidos === 1 ? '' : 's'} de narração</span>`;
   }
 
+  /** Usos da ferramenta interativa embutida no artigo (calculadora/escala/termômetro). */
+  function resumoFerramenta(artigo) {
+    const usos = artigo.usosFerramenta || 0;
+    if (!usos) return '';
+    return `<span style="font-size:0.85rem;color:var(--verde-700);font-weight:600;">🧮 ${usos} uso${usos === 1 ? '' : 's'} da ferramenta</span>`;
+  }
+
   function itemArtigo(artigo) {
     return `
       <li class="item-admin" data-slug="${esc(artigo.slug)}">
@@ -162,6 +169,7 @@
             <span style="font-size:0.85rem;color:var(--tinta-fraca);">${esc(formatarData(artigo.publicadoEm))}</span>
             ${resumoEnquete(artigo)}
             ${resumoNarracao(artigo)}
+            ${resumoFerramenta(artigo)}
           </div>
         </div>
         <div class="item-admin__acoes">
