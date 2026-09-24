@@ -22,12 +22,18 @@
  *       longo com `ig_exchange_token` (exige INSTAGRAM_APP_SECRET).
  *       EAA curto: fluxo antigo, com FACEBOOK_APP_ID/FACEBOOK_APP_SECRET.
  *
+ * O token vai no cabeçalho Authorization nas consultas e na renovação. As
+ * TROCAS de token curto (ig_exchange_token / fb_exchange_token) exigem os
+ * parâmetros na URL pela própria Meta — rodam só aqui, localmente, e toda
+ * saída passa pelo redator (lib/log.js).
+ *
  * IMPORTANTE: a fila diária roda na Vercel e lê o token das variáveis de
  * ambiente de PRODUÇÃO, não deste `.env.local`. Se o token mudar, atualize
  * também INSTAGRAM_ACCESS_TOKEN no painel da Vercel (o script avisa).
  */
 const fs = require('fs');
 const path = require('path');
+const { log } = require('../lib/log');
 
 const GRAPH_API_VERSION = 'v21.0';
 const INSTAGRAM_BASE = 'https://graph.instagram.com';
@@ -44,8 +50,9 @@ function lerArgumentos() {
   return args;
 }
 
-async function getJson(url) {
-  const resp = await fetch(url);
+/** GET com o token, quando houver, só no cabeçalho Authorization — nunca na URL. */
+async function getJson(url, token) {
+  const resp = await fetch(url, token ? { headers: { Authorization: `Bearer ${token}` } } : undefined);
   const dados = await resp.json();
   if (!resp.ok || dados.error) {
     const erro = dados.error ? `${dados.error.code}: ${dados.error.message}` : `HTTP ${resp.status}`;
@@ -70,18 +77,14 @@ async function trocarCurtoInstagram(tokenCurto, appSecret) {
 
 /** Renova um token de longa duração do Instagram Login por mais 60 dias. */
 async function renovarInstagram(tokenLongo) {
-  const dados = await getJson(`${INSTAGRAM_BASE}/refresh_access_token?` + new URLSearchParams({
-    grant_type: 'ig_refresh_token',
-    access_token: tokenLongo,
-  }));
+  const dados = await getJson(`${INSTAGRAM_BASE}/refresh_access_token?grant_type=ig_refresh_token`, tokenLongo);
   return { token: dados.access_token, expiraEmSegundos: dados.expires_in || 0 };
 }
 
 async function validarInstagram(token, contaId) {
   const base = `${INSTAGRAM_BASE}/${GRAPH_API_VERSION}`;
-  const qs = `access_token=${encodeURIComponent(token)}`;
-  const conta = await getJson(`${base}/${contaId}?fields=username,media_count&${qs}`);
-  const limite = await getJson(`${base}/${contaId}/content_publishing_limit?fields=config,quota_usage&${qs}`);
+  const conta = await getJson(`${base}/${contaId}?fields=username,media_count`, token);
+  const limite = await getJson(`${base}/${contaId}/content_publishing_limit?fields=config,quota_usage`, token);
   const cota = (limite.data || [])[0] || {};
   return {
     conta: `@${conta.username} (${conta.media_count} posts)`,
@@ -102,10 +105,9 @@ async function trocarCurtoFacebook(tokenCurto, appId, appSecret) {
 }
 
 async function validarFacebook(token, contaId) {
-  const qs = `access_token=${encodeURIComponent(token)}`;
-  const permissoes = (await getJson(`${FACEBOOK_BASE}/me/permissions?${qs}`)).data || [];
+  const permissoes = (await getJson(`${FACEBOOK_BASE}/me/permissions`, token)).data || [];
   const publica = permissoes.some((p) => p.permission === 'instagram_content_publish' && p.status === 'granted');
-  const conta = await getJson(`${FACEBOOK_BASE}/${contaId}?fields=username&${qs}`);
+  const conta = await getJson(`${FACEBOOK_BASE}/${contaId}?fields=username`, token);
   return {
     conta: `@${conta.username}`,
     cota: publica ? 'instagram_content_publish concedida' : 'AVISO: instagram_content_publish NÃO concedida — publicações vão falhar',
@@ -127,7 +129,7 @@ function atualizarEnvLocal(novoToken) {
 }
 
 function sair(mensagem) {
-  console.error(`\n  ${mensagem}\n`);
+  log.erro(`\n  ${mensagem}\n`);
   process.exit(1);
 }
 
@@ -142,12 +144,12 @@ async function main() {
 
   const instagram = ehInstagramLogin(tokenEntrada);
   const validar = instagram ? validarInstagram : validarFacebook;
-  console.log(`Tipo de token: ${instagram ? 'Instagram Login (graph.instagram.com)' : 'via Página do Facebook (graph.facebook.com)'}`);
+  log.info(`Tipo de token: ${instagram ? 'Instagram Login (graph.instagram.com)' : 'via Página do Facebook (graph.facebook.com)'}`);
 
   try {
     if (args.verificar) {
       const v = await validar(tokenEntrada, contaId);
-      console.log(`Token válido. Conta ${v.conta}. ${v.cota}.`);
+      log.info(`Token válido. Conta ${v.conta}. ${v.cota}.`);
       return;
     }
 
@@ -155,33 +157,33 @@ async function main() {
     if (instagram && args.curto) {
       const appSecret = process.env.INSTAGRAM_APP_SECRET;
       if (!appSecret) sair('INSTAGRAM_APP_SECRET ausente — necessário para trocar um token curto do Instagram Login.');
-      console.log('Trocando token curto do Instagram Login por um de longa duração...');
+      log.info('Trocando token curto do Instagram Login por um de longa duração...');
       novo = await trocarCurtoInstagram(tokenEntrada, appSecret);
     } else if (instagram) {
-      console.log('Renovando o token de longa duração do Instagram Login...');
+      log.info('Renovando o token de longa duração do Instagram Login...');
       novo = await renovarInstagram(tokenEntrada);
     } else {
       const { FACEBOOK_APP_ID: appId, FACEBOOK_APP_SECRET: appSecret } = process.env;
       if (!args.token) sair('Token via Facebook: passe --token=<user-token-curto> do Graph API Explorer.');
       if (!appId || !appSecret) sair('FACEBOOK_APP_ID e/ou FACEBOOK_APP_SECRET ausentes em .env.local.');
-      console.log('Trocando token curto do Facebook por um de longa duração...');
+      log.info('Trocando token curto do Facebook por um de longa duração...');
       novo = await trocarCurtoFacebook(tokenEntrada, appId, appSecret);
     }
 
     const dias = Math.round(novo.expiraEmSegundos / SEGUNDOS_POR_DIA);
     const vence = new Date(Date.now() + novo.expiraEmSegundos * 1000).toISOString().slice(0, 10);
-    console.log(`OK — o token vale por mais ~${dias} dias (até ${vence}).`);
+    log.info(`OK — o token vale por mais ~${dias} dias (até ${vence}).`);
 
     const v = await validar(novo.token, contaId);
-    console.log(`Conta ${v.conta}. ${v.cota}.`);
+    log.info(`Conta ${v.conta}. ${v.cota}.`);
 
     atualizarEnvLocal(novo.token);
-    console.log('.env.local atualizado.');
+    log.info('.env.local atualizado.');
     if (novo.token !== tokenAtual) {
-      console.log('\n  O token MUDOU. Atualize INSTAGRAM_ACCESS_TOKEN também no painel da Vercel');
-      console.log('  (Settings -> Environment Variables, ambiente Production) — é de lá que a fila diária lê.\n');
+      log.info('\n  O token MUDOU. Atualize INSTAGRAM_ACCESS_TOKEN também no painel da Vercel');
+      log.info('  (Settings -> Environment Variables, ambiente Production) — é de lá que a fila diária lê.\n');
     } else {
-      console.log('\n  O texto do token não mudou (só a validade): nada a atualizar na Vercel.\n');
+      log.info('\n  O texto do token não mudou (só a validade): nada a atualizar na Vercel.\n');
     }
   } catch (err) {
     sair(`Falha: ${err.message}`);

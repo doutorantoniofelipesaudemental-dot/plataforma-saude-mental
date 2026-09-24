@@ -16,6 +16,7 @@
  */
 const Artigo = require('../models/Artigo');
 const { publicarArtigoNasRedes, ErroPublicacao } = require('./socialPublisher');
+const { estadoPausa } = require('./tokenInstagram');
 
 const HORA_MS = 60 * 60 * 1000;
 // Artigos que falham nas checagens 1/2 (URL fora do ar, capa inacessível)
@@ -106,6 +107,11 @@ async function publicarProximoDaFila({ simular = false } = {}) {
   if (!redes.length) {
     return { publicado: false, motivo: 'nenhuma rede com credencial configurada' };
   }
+
+  // Token recusado pela Meta: não tenta de novo com ele (pausa sai sozinha
+  // quando um token novo é configurado — ver tokenInstagram.estadoPausa).
+  const pausa = await estadoPausa();
+  if (pausa) return { publicado: false, motivo: `pausada por token inválido: ${pausa.motivo}`, pausa };
 
   const aguardar = await motivoParaAguardar();
   if (aguardar) return { publicado: false, motivo: aguardar };

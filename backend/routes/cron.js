@@ -2,6 +2,7 @@ const express = require('express');
 const { exigirBanco, comparacaoSegura } = require('../middleware');
 const { publicarProximoDaFila } = require('../lib/filaRedes');
 const { renovarTokenInstagram } = require('../lib/tokenInstagram');
+const { log } = require('../lib/log');
 
 const router = express.Router();
 
@@ -23,10 +24,10 @@ function exigirCron(req, res, next) {
 router.get('/publicar-fila', exigirCron, exigirBanco, async (req, res) => {
   try {
     const resultado = await publicarProximoDaFila({ simular: req.query.simular === '1' });
-    console.log('[fila-redes]', JSON.stringify(resultado));
+    log.info('[fila-redes]', JSON.stringify(resultado));
     res.json(resultado);
   } catch (err) {
-    console.error('[fila-redes] erro inesperado:', err);
+    log.erro('[fila-redes] erro inesperado:', err);
     res.status(500).json({ erro: 'Falha inesperada na fila de publicação.' });
   }
 });
@@ -41,7 +42,7 @@ router.get('/renovar-token-instagram', exigirCron, exigirBanco, async (req, res)
   try {
     res.json(await renovarTokenInstagram());
   } catch (err) {
-    console.error('[token-instagram] erro inesperado na renovação:', err);
+    log.erro('[token-instagram] erro inesperado na renovação:', err);
     res.status(500).json({ erro: 'Falha inesperada na renovação do token.' });
   }
 });

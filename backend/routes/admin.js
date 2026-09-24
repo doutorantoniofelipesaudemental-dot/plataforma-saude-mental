@@ -6,6 +6,8 @@ const { paraCsv } = require('../lib/csv');
 const { publicarArtigoNasRedes, ErroPublicacao } = require('../lib/socialPublisher');
 const { redesConfiguradas, motivoParaAguardar, listarFila, configuracao } = require('../lib/filaRedes');
 const Artigo = require('../models/Artigo');
+const { resumoToken } = require('../lib/tokenInstagram');
+const { log } = require('../lib/log');
 
 const router = express.Router();
 
@@ -142,7 +144,7 @@ router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req,
     if (err instanceof ErroPublicacao) {
       return res.status(422).json({ erro: err.message, codigo: err.codigo });
     }
-    console.error('[admin] erro ao publicar nas redes:', err);
+    log.erro('[admin] erro ao publicar nas redes:', err);
     res.status(500).json({ erro: 'Falha inesperada ao publicar nas redes.' });
   }
 });
@@ -154,21 +156,24 @@ router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req,
  */
 router.get('/fila-redes', exigirAdmin, exigirBanco, async (req, res) => {
   try {
-    const [aguardar, proximos, ultimos] = await Promise.all([
+    const [aguardar, proximos, ultimos, token] = await Promise.all([
       motivoParaAguardar(),
       listarFila(5),
       Artigo.find({ publicadoRedesEm: { $ne: null } }).sort({ publicadoRedesEm: -1 }).limit(5).select('slug publicadoRedesEm').lean(),
+      resumoToken(),
     ]);
     res.json({
       redes: redesConfiguradas(),
+      // Só metadados: origem, impressão digital (SHA-256 truncado), validade, pausa. Nunca o token.
+      tokenInstagram: token,
       ...configuracao(),
-      podePublicarAgora: !aguardar,
+      podePublicarAgora: !aguardar && !token.pausa,
       aguardar,
       proximos: proximos.map((a) => ({ slug: a.slug, engajamento: a.engajamento })),
       ultimosPublicados: ultimos.map((a) => ({ slug: a.slug, em: a.publicadoRedesEm })),
     });
   } catch (err) {
-    console.error('[admin] erro ao consultar a fila de redes:', err);
+    log.erro('[admin] erro ao consultar a fila de redes:', err);
     res.status(500).json({ erro: 'Não foi possível consultar a fila.' });
   }
 });

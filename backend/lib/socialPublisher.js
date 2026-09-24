@@ -38,7 +38,8 @@
 const db = require('./db');
 const Artigo = require('../models/Artigo');
 const { montarSlides } = require('./carrossel');
-const { obterTokenInstagram } = require('./tokenInstagram');
+const { obterTokenInstagram, registrarTokenInvalido, ehErroDeToken } = require('./tokenInstagram');
+const { log } = require('./log');
 
 const BASE_URL = 'https://drsaudemental.vercel.app';
 const GRAPH_API_VERSION = 'v21.0';
@@ -238,12 +239,14 @@ function montarPayloads(artigo, url, redes) {
       passo1CriarContainer: {
         endpoint: `${graphBase()}/${process.env.INSTAGRAM_ACCOUNT_ID || '<INSTAGRAM_ACCOUNT_ID>'}/media`,
         metodo: 'POST',
-        corpo: { image_url: artigo.imagemCapa, caption: legenda, access_token: '[REDACTED]' },
+        corpo: { image_url: artigo.imagemCapa, caption: legenda },
+        cabecalho: { Authorization: 'Bearer [REDACTED]' },
       },
       passo2PublicarContainer: {
         endpoint: `${graphBase()}/${process.env.INSTAGRAM_ACCOUNT_ID || '<INSTAGRAM_ACCOUNT_ID>'}/media_publish`,
         metodo: 'POST',
-        corpo: { creation_id: '<preenchido após o passo 1 responder>', access_token: '[REDACTED]' },
+        corpo: { creation_id: '<preenchido após o passo 1 responder>' },
+        cabecalho: { Authorization: 'Bearer [REDACTED]' },
       },
     };
   }
@@ -281,34 +284,39 @@ async function publicarNoInstagram({ imagemUrl, legenda }) {
   const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
   const base = graphBase(token);
 
+  // Token só no cabeçalho Authorization — nunca na URL nem no corpo.
+  const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
   const containerResp = await fetch(`${base}/${contaId}/media`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ image_url: imagemUrl, caption: legenda, access_token: token }),
+    headers: cabecalhos,
+    body: new URLSearchParams({ image_url: imagemUrl, caption: legenda }),
   });
   const containerData = await containerResp.json();
   if (!containerResp.ok || !containerData.id) {
-    throw new ErroPublicacao(`Falha ao criar container do Instagram: ${JSON.stringify(containerData)}`, 'INSTAGRAM_CONTAINER_FALHOU');
+    lancarErroMeta(containerData, 'Falha ao criar container do Instagram', 'INSTAGRAM_CONTAINER_FALHOU');
   }
 
   await aguardarContainerPronto(containerData.id, token);
 
   const publishResp = await fetch(`${base}/${contaId}/media_publish`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ creation_id: containerData.id, access_token: token }),
+    headers: cabecalhos,
+    body: new URLSearchParams({ creation_id: containerData.id }),
   });
   const publishData = await publishResp.json();
   if (!publishResp.ok || !publishData.id) {
-    throw new ErroPublicacao(`Falha ao publicar container do Instagram: ${JSON.stringify(publishData)}`, 'INSTAGRAM_PUBLISH_FALHOU');
+    lancarErroMeta(publishData, 'Falha ao publicar container do Instagram', 'INSTAGRAM_PUBLISH_FALHOU');
   }
   return { id: publishData.id };
 }
 
 async function aguardarContainerPronto(creationId, token, { tentativas = 10, intervaloMs = 3000 } = {}) {
   for (let i = 0; i < tentativas; i += 1) {
-    const resp = await fetch(`${graphBase(token)}/${creationId}?fields=status_code&access_token=${token}`);
+    const resp = await fetch(`${graphBase(token)}/${creationId}?fields=status_code`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
     const data = await resp.json();
+    if (data.error) lancarErroMeta(data, 'Falha ao consultar o container do Instagram', 'INSTAGRAM_CONTAINER_ERRO');
     if (data.status_code === 'FINISHED') return;
     if (data.status_code === 'ERROR') {
       throw new ErroPublicacao(`Container do Instagram falhou ao processar: ${JSON.stringify(data)}`, 'INSTAGRAM_CONTAINER_ERRO');
@@ -316,6 +324,19 @@ async function aguardarContainerPronto(creationId, token, { tentativas = 10, int
     await new Promise((resolve) => setTimeout(resolve, intervaloMs));
   }
   throw new ErroPublicacao('Timeout aguardando o container do Instagram ficar pronto (status_code=FINISHED).', 'INSTAGRAM_TIMEOUT');
+}
+
+/**
+ * Converte a resposta de erro da Meta em ErroPublicacao, sem token e sem URL.
+ * Erro de token (revogado, inválido, sem permissão) vira INSTAGRAM_TOKEN_INVALIDO,
+ * que pausa a fila (ver publicarArtigoNasRedes e tokenInstagram.js).
+ */
+function lancarErroMeta(resposta, contexto, codigoPadrao) {
+  const e = (resposta && resposta.error) || {};
+  const detalhe = e.code ? `código ${e.code}${e.error_subcode ? `/${e.error_subcode}` : ''}: ${e.message || ''}` : JSON.stringify(resposta);
+  const erro = new ErroPublicacao(`${contexto} — ${detalhe}`, ehErroDeToken(e) ? 'INSTAGRAM_TOKEN_INVALIDO' : codigoPadrao);
+  erro.erroMeta = { code: e.code, error_subcode: e.error_subcode, message: e.message };
+  throw erro;
 }
 
 /** LinkedIn — UGC Posts API. Requer LINKEDIN_AUTHOR_URN (organização ou pessoa), não só o token. */
@@ -394,7 +415,11 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
       resultados.instagram = await publicarNoInstagram({ imagemUrl: artigo.imagemCapa, legenda });
     } catch (err) {
       erros.instagram = { codigo: err.codigo || 'ERRO_DESCONHECIDO', mensagem: err.message };
-      console.error(`[social] falha ao publicar no Instagram (artigo ${artigo.slug}):`, err.codigo, err.message);
+      log.erro(`[social] falha ao publicar no Instagram (artigo ${artigo.slug}):`, err.codigo, err.message);
+      if (err.codigo === 'INSTAGRAM_TOKEN_INVALIDO') {
+        const m = err.erroMeta || {};
+        await registrarTokenInvalido({ origem: `publicação de ${artigo.slug}`, codigo: m.code, subcodigo: m.error_subcode, mensagem: m.message });
+      }
     }
   }
 
@@ -403,7 +428,7 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
       resultados.linkedin = await publicarNoLinkedIn({ url, titulo: artigo.titulo, legenda });
     } catch (err) {
       erros.linkedin = { codigo: err.codigo || 'ERRO_DESCONHECIDO', mensagem: err.message };
-      console.error(`[social] falha ao publicar no LinkedIn (artigo ${artigo.slug}):`, err.codigo, err.message);
+      log.erro(`[social] falha ao publicar no LinkedIn (artigo ${artigo.slug}):`, err.codigo, err.message);
     }
   }
 
@@ -437,21 +462,21 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
  */
 async function dispararPublicacaoAutomatica(artigoId) {
   if (!autoPublicarLigado()) {
-    console.log(
+    log.info(
       `[social-auto] Artigo ${artigoId} aprovado, mas AUTO_PUBLICAR_REDES não está "true" — publicação automática NÃO disparada. Defina a variável de ambiente para ativar.`
     );
     return { executado: false, motivo: 'AUTO_PUBLICAR_REDES desligado' };
   }
 
-  console.log(`[social-auto] Artigo ${artigoId} aprovado — AUTO_PUBLICAR_REDES=true, iniciando publicação automática.`);
+  log.info(`[social-auto] Artigo ${artigoId} aprovado — AUTO_PUBLICAR_REDES=true, iniciando publicação automática.`);
   try {
     const resultado = await publicarArtigoNasRedes(artigoId, { confirmar: true });
-    console.log(`[social-auto] Resultado para ${artigoId}:`, JSON.stringify({ executado: resultado.executado, parcial: resultado.parcial, erros: resultado.erros }));
+    log.info(`[social-auto] Resultado para ${artigoId}:`, JSON.stringify({ executado: resultado.executado, parcial: resultado.parcial, erros: resultado.erros }));
     return resultado;
   } catch (err) {
     // Falha nas checagens 1/2 (status, URLs, webapp) — não é erro de rede
     // individual (esses já são capturados por rede dentro do orquestrador).
-    console.error(`[social-auto] Publicação automática bloqueada para ${artigoId}: [${err.codigo || 'ERRO'}] ${err.message}`);
+    log.erro(`[social-auto] Publicação automática bloqueada para ${artigoId}: [${err.codigo || 'ERRO'}] ${err.message}`);
     return { executado: false, erro: err.message, codigo: err.codigo };
   }
 }

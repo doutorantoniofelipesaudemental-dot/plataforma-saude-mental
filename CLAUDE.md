@@ -247,6 +247,34 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
 - **Tipo de token decide o host da API**: o token da conta (@doutor.antoniofelipe.smental) é do **Instagram Login** (prefixo `IGAA`) e só funciona em `graph.instagram.com` — em `graph.facebook.com` volta "Cannot parse access token". `graphBase()` em `socialPublisher.js` escolhe pelo prefixo. Cota real medida em 2026-09-23 via `content_publishing_limit`: **100 posts/24h**. **Renovação**: `npm run renovar-token-instagram` detecta o tipo pelo prefixo — IGAA usa `ig_refresh_token` sobre o próprio token (sem app secret; o token precisa ter ≥24h e não ter vencido), `--curto` troca um token recém-saído do login (`ig_exchange_token`, exige `INSTAGRAM_APP_SECRET`); EAA segue o fluxo antigo do Facebook. `-- --verificar` só valida (conta + cota). O script atualiza só o `.env.local`.
 - **Renovação automática semanal** (`backend/lib/tokenInstagram.js`, cron `GET /api/cron/renovar-token-instagram` às segundas 12:00 UTC): renova o token atual com `ig_refresh_token` e guarda o novo **cifrado (AES-256-GCM) no MongoDB** (model `Credencial`, chave `instagram_access_token`). A publicação lê sempre `obterTokenInstagram()` = o renovado, se houver. Não usamos a variável da Vercel via API porque exigiria um token da API da Vercel com poder sobre a conta e o valor só valeria após redeploy. **Chave de cifra derivada do `CRON_SECRET`**: trocar o `CRON_SECRET` torna o token guardado ilegível → cai no da variável até a próxima renovação (logado). **Troca manual do token na Vercel sempre vence**: o doc guarda `origemHash` (SHA-256 do token da variável); se a variável mudar, a cadeia antiga é ignorada. Falha na renovação → log `[token-instagram] FALHA NA RENOVAÇÃO` com código da Meta, prazo restante e ação, e `ultimoErro` gravado no doc; o token anterior segue valendo. Nenhum log contém o token. Validade de 60 dias — renovar antes de vencer, senão a fila para. `publicar_instagram.py` ainda usa graph.facebook.com e não funciona com este token.
 
+### Segredos
+
+**O repositório `plataforma-saude-mental` no GitHub é PÚBLICO** (verificado em 2026-09-24): todo commit, inclusive este arquivo, fica aberto na internet. Secret scanning e Push protection do GitHub estão ativos (são gratuitos só em repositório público — torná-lo privado numa conta pessoal sem plano pago os desliga).
+
+- **Nunca** colar token, senha ou string de conexão em chat (inclusive com IA), issue, PR, commit ou print. Em 2026-09-23 um token do Instagram foi colado num chat e continuou válido mesmo após "remover o app" — trate qualquer segredo exposto como comprometido.
+- **Onde cada segredo fica:**
+
+| Segredo | Produção | Local | Observação |
+| --- | --- | --- | --- |
+| `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_ACCOUNT_ID` | Vercel (Sensitive, Production; o ID também em Preview) | `.env.local` | Token IGAA; renovado semanalmente e guardado **cifrado** no MongoDB (`Credencial`) |
+| `CRON_SECRET` | Vercel (Sensitive) | — | Autentica os crons **e** deriva a chave AES-256-GCM do token no MongoDB — trocá-lo invalida o token guardado (cai no da variável até a próxima renovação) |
+| `ADMIN_TOKEN`, `MONGODB_URI`, `BLOB_READ_WRITE_TOKEN` | Vercel (Sensitive) | `.env`, `.env.local` | — |
+| Chave de cifra do token | **Em lugar nenhum** — derivada em memória do `CRON_SECRET` | — | Nunca no banco nem no repositório |
+
+- **Bloqueio local:** `.husky/pre-commit` roda `scripts/verificar-segredos.js --staged` e **bloqueia o commit** se achar token IGAA/EAA, MongoDB com senha, chaves `sk-`/`sk-ant-`/`r8_`/`vercel_blob_rw_`/`gh*_`, chave privada ou `CRON_SECRET`/`*_TOKEN`/`*_SECRET`/`*_KEY` com valor literal. Só imprime arquivo, linha e tipo — nunca o valor. Histórico inteiro: `npm run verificar-segredos` (2026-09-24: 52 commits, nenhum segredo real). Falso positivo inevitável: `segredos:permitir` na mesma linha; em testes, montar tokens falsos por concatenação.
+- **Logs:** todo log de redes, cron, token, admin e artigos passa por `backend/lib/log.js` (`log.info/aviso/erro`), que mascara o valor exato das variáveis sensíveis e qualquer coisa com cara de token (IGAA…, EAA…, `Bearer …`, `mongodb://user:senha@`, `?access_token=`). Nunca usar `console.*` direto nesses módulos.
+- **Token nunca em URL:** chamadas à Meta mandam o token só no cabeçalho `Authorization: Bearer` (publicação, polling do container, renovação, verificação). Exceção inevitável: as TROCAS de token curto (`ig_exchange_token`/`fb_exchange_token`) no script local, onde a Meta exige parâmetros na URL.
+- **Nenhuma rota devolve token**, nem mascarado. `/api/admin/fila-redes` mostra só origem (`variavel`/`renovado`), impressão digital (SHA-256 truncado em 16 hex), validade e pausa.
+- **Pausa automática:** se a Meta recusar o token (códigos 190, 102, 10, 200–299) na publicação ou na renovação, grava `[token-instagram] ALERTA` e **pausa a fila e a renovação**, sem novas tentativas com aquele token. A pausa cai sozinha quando a impressão digital do token em uso muda (token novo configurado).
+
+**Como trocar o token do Instagram:**
+1. Instagram → Configurações → Apps e sites → remover o app (e, se houve vazamento, trocar a senha da conta).
+2. Gerar um token novo no painel de desenvolvedor da Meta (Instagram Login, prefixo IGAA).
+3. Vercel → Settings → Environment Variables → `INSTAGRAM_ACCESS_TOKEN` (Production) → novo valor; depois **redeploy** de produção.
+4. Conferir: `/api/admin/fila-redes` deve mostrar `origem: "variavel"` com impressão digital nova e sem pausa; localmente, com o token no `.env.local`, `npm run renovar-token-instagram -- --verificar`.
+
+**Em caso de vazamento de qualquer segredo:** (1) revogar/trocar na origem imediatamente (Meta, MongoDB Atlas → Database Access, Vercel, GitHub), antes de qualquer limpeza; (2) atualizar o valor na Vercel e fazer redeploy; (3) confirmar que o valor antigo foi de fato invalidado com uma chamada de leitura; (4) se entrou no git, trocar o segredo é obrigatório — reescrever histórico não basta, o repositório é público e pode ter sido clonado; (5) registrar aqui o que aconteceu e o que mudou.
+
 ## 21. SEÇÃO DE SERVIÇOS E FORMULÁRIO DE CONTATO (Home)
 
 Duas seções novas em `public/index.html`, entre "Como funciona" (`#como-funciona`) e "Artigos" (`#artigos`) — reaproveitam classes/tokens já existentes em `style.css`, nenhum CSS novo foi necessário.

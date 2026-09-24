@@ -5,6 +5,7 @@ const { slugify } = require('../lib/texto');
 const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listarArtigos');
 const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
 const { ehRobo } = require('../lib/robos');
+const { log } = require('../lib/log');
 
 /**
  * Dispara a esteira de publicação automática (Seção 20 do CLAUDE.md) quando
@@ -31,7 +32,7 @@ router.get('/categorias', exigirBanco, async (req, res) => {
     const categorias = await listarCategorias();
     res.json({ categorias });
   } catch (err) {
-    console.error('[artigos] erro ao agregar categorias:', err);
+    log.erro('[artigos] erro ao agregar categorias:', err);
     res.status(500).json({ erro: 'Não foi possível carregar as categorias.' });
   }
 });
@@ -47,7 +48,7 @@ router.get('/', exigirBanco, async (req, res) => {
     const { itens, paginacao } = await listarArtigos(req.query);
     res.json({ itens, paginacao });
   } catch (err) {
-    console.error('[artigos] erro ao listar:', err);
+    log.erro('[artigos] erro ao listar:', err);
     res.status(500).json({ erro: 'Não foi possível carregar os artigos.' });
   }
 });
@@ -79,7 +80,7 @@ router.get('/:slug', exigirBanco, async (req, res) => {
 
     res.json({ artigo, relacionados });
   } catch (err) {
-    console.error('[artigos] erro ao buscar:', err);
+    log.erro('[artigos] erro ao buscar:', err);
     res.status(500).json({ erro: 'Não foi possível carregar o artigo.' });
   }
 });
@@ -116,7 +117,7 @@ router.post('/:slug/enquete', limiteEnquete, exigirBanco, async (req, res) => {
     }
     res.json({ ok: true });
   } catch (err) {
-    console.error('[artigos] erro ao registrar enquete:', err);
+    log.erro('[artigos] erro ao registrar enquete:', err);
     res.status(500).json({ erro: 'Não foi possível registrar sua resposta.' });
   }
 });
@@ -142,7 +143,7 @@ router.post('/:slug/solicitar-narracao', limiteSolicitarNarracao, exigirBanco, a
     }
     res.json({ ok: true });
   } catch (err) {
-    console.error('[artigos] erro ao registrar solicitação de narração:', err);
+    log.erro('[artigos] erro ao registrar solicitação de narração:', err);
     res.status(500).json({ erro: 'Não foi possível registrar seu pedido.' });
   }
 });
@@ -167,7 +168,7 @@ router.post('/:slug/ferramenta-uso', limiteFerramentaUso, exigirBanco, async (re
     }
     res.json({ ok: true });
   } catch (err) {
-    console.error('[artigos] erro ao registrar uso de ferramenta:', err);
+    log.erro('[artigos] erro ao registrar uso de ferramenta:', err);
     res.status(500).json({ erro: 'Não foi possível registrar o uso.' });
   }
 });
@@ -189,7 +190,7 @@ router.post('/', exigirAdmin, exigirBanco, async (req, res) => {
     res.status(201).json({ ok: true, artigo });
   } catch (err) {
     if (tratarErroValidacao(err, res)) return;
-    console.error('[artigos] erro ao criar:', err);
+    log.erro('[artigos] erro ao criar:', err);
     res.status(500).json({ erro: 'Não foi possível criar o artigo.' });
   }
 });
@@ -214,7 +215,7 @@ router.put('/:slug', exigirAdmin, exigirBanco, async (req, res) => {
     res.json({ ok: true, artigo });
   } catch (err) {
     if (tratarErroValidacao(err, res)) return;
-    console.error('[artigos] erro ao atualizar:', err);
+    log.erro('[artigos] erro ao atualizar:', err);
     res.status(500).json({ erro: 'Não foi possível atualizar o artigo.' });
   }
 });
@@ -226,7 +227,7 @@ router.delete('/:slug', exigirAdmin, exigirBanco, async (req, res) => {
     if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
     res.json({ ok: true });
   } catch (err) {
-    console.error('[artigos] erro ao remover:', err);
+    log.erro('[artigos] erro ao remover:', err);
     res.status(500).json({ erro: 'Não foi possível remover o artigo.' });
   }
 });
