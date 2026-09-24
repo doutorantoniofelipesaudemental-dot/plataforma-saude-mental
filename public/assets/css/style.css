@@ -848,7 +848,9 @@ a:hover { color: var(--verde-500); }
 .ferramenta-embutida__resultado h4 { font-family: var(--fonte-titulo); color: var(--verde-900); margin-bottom: 0.5rem; font-size: 1.05rem; }
 .ferramenta-embutida__resultado.nivel-alto { border-left-color: var(--terracota); background: #fdf3ee; }
 .ferramenta-embutida__resultado.nivel-atencao { border-left-color: var(--dourado); background: #fdf8ea; }
-.ferramenta-embutida__resultado .ferramenta-embutida__aviso { font-size: 0.82rem; color: var(--tinta-fraca); margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--linha-suave); }
+/* --tinta-media, não --tinta-fraca: em 13px sobre os fundos de resultado a
+   fraca dava ~3.8:1 (reprova WCAG AA) — e é o aviso de compliance. */
+.ferramenta-embutida__resultado .ferramenta-embutida__aviso { font-size: 0.82rem; color: var(--tinta-media); margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--linha-suave); }
 .ferramenta-embutida__acao { margin-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.5rem; }
 /* CTA secundário: link de texto, mais discreto que o botão principal, mas
    com alvo de toque de 44px (Regra 12). */

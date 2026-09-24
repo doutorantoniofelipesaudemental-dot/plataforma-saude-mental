@@ -97,7 +97,7 @@ async function lerResultado(page, raiz) {
   return page.evaluate((raiz) => {
     const c = document.getElementById(raiz);
     const res = c.querySelector('.ferramenta-embutida__resultado');
-    const texto = res.innerText.replace(/ /g, ' ');
+    const texto = res.innerText.replace(/\u00a0/g, ' ');
     const pontos = texto.match(/(\d+)\s+de\s+(\d+)/);
     return {
       visivel: !res.hidden && res.offsetHeight > 0,
@@ -267,23 +267,55 @@ test.describe('Checklist de Sobrecarga — CTAs e mensagem de cuidado', () => {
     return page.evaluate(() => {
       const cuidado = document.getElementById('cs-cuidado');
       const res = document.getElementById('cs-resultado');
+      // Contraste WCAG AA de cada texto visível do resultado contra o fundo real.
+      const rgb = (c) => c.match(/[\d.]+/g).map(Number);
+      const lum = (c) => {
+        const [r, g, b] = rgb(c).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      };
+      const fundo = (el) => {
+        for (let e = el; e; e = e.parentElement) {
+          const c = getComputedStyle(e).backgroundColor;
+          const v = rgb(c);
+          if (v.length < 4 || v[3] > 0) return c;
+        }
+        return 'rgb(255, 255, 255)';
+      };
+      const reprovados = [...res.querySelectorAll('h4, p, a')]
+        .filter((el) => el.offsetParent !== null && !el.closest('[hidden]') && el.textContent.trim())
+        .map((el) => {
+          const cs = getComputedStyle(el);
+          const [a, b] = [lum(cs.color), lum(fundo(el))];
+          const razao = (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+          const grande = parseFloat(cs.fontSize) >= 24 || (parseFloat(cs.fontSize) >= 18.66 && +cs.fontWeight >= 700);
+          return razao >= (grande ? 3 : 4.5) ? null : `${el.className || el.tagName} ${razao.toFixed(2)}:1`;
+        })
+        .filter(Boolean);
       return {
         titulo: res.querySelector('h4').textContent,
+        texto: document.getElementById('cs-resultado-texto').textContent,
         alto: res.classList.contains('nivel-alto'),
+        atencao: res.classList.contains('nivel-atencao'),
         cuidadoVisivel: !cuidado.hidden && cuidado.offsetHeight > 0,
+        reprovados,
       };
     });
   }
 
-  // Faixas do próprio checklist: 0–2 pontuais, 3–5 atenção, 6–8 e 9–10 nível alto.
-  for (const [marcados, esperaCuidado] of [[0, false], [2, false], [3, false], [5, false], [6, true], [8, true], [10, true]]) {
-    test(`${marcados} itens marcados → mensagem de cuidado ${esperaCuidado ? 'visível' : 'oculta'}`, async ({ page }) => {
+  // Faixas do próprio checklist: 0–2 pontuais (base), 3–5 atenção (âmbar),
+  // 6–8 e 9–10 nível alto (terracota + mensagem de cuidado).
+  const FRASE_ATENCAO = 'Alguns sinais de sobrecarga merecem atenção. Pequenos ajustes na rotina e uma conversa com um profissional podem evitar que isso se agrave.';
+  for (const [marcados, faixa] of [[0, 'base'], [2, 'base'], [3, 'atencao'], [5, 'atencao'], [6, 'alto'], [8, 'alto'], [9, 'alto'], [10, 'alto']]) {
+    test(`${marcados} itens marcados → faixa ${faixa}`, async ({ page }) => {
       await page.route('**/ferramenta-uso', (r) => r.fulfill({ status: 200, body: '{"ok":true}' }));
       await page.goto(`/artigo/${SLUG}`);
       const r = await calcularCom(page, marcados);
       expect(r.titulo).toContain(`${marcados} de 10`);
-      expect(r.alto).toBe(esperaCuidado);
-      expect(r.cuidadoVisivel).toBe(esperaCuidado);
+      expect(r.alto, 'visual nivel-alto').toBe(faixa === 'alto');
+      expect(r.atencao, 'visual nivel-atencao').toBe(faixa === 'atencao');
+      expect(r.cuidadoVisivel, 'mensagem de cuidado').toBe(faixa === 'alto');
+      expect(r.texto.includes(FRASE_ATENCAO), 'frase da faixa intermediária').toBe(faixa === 'atencao');
+      expect(r.reprovados, 'contraste WCAG AA').toEqual([]);
     });
   }
 
@@ -326,7 +358,7 @@ test.describe('Checklist de Sobrecarga — CTAs e mensagem de cuidado', () => {
 
       const cta = page.locator(seletor);
       await expect(cta).toHaveAttribute('href', `/?tipo=${tipo}#contato-servicos`);
-      if (rotulo === 'principal') await expect(cta).toHaveText('Agendar consulta de orientação');
+      if (rotulo === 'principal') await expect(cta).toHaveText('Solicitar consulta de orientação');
       else await expect(cta).toHaveText('Sua equipe está assim? Conheça a consultoria para empresas');
 
       await Promise.all([page.waitForURL((u) => u.pathname === '/'), cta.click()]);
