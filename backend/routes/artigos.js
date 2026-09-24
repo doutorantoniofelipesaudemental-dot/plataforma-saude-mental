@@ -4,6 +4,7 @@ const { exigirBanco, exigirAdmin, tratarErroValidacao, limitarTaxa } = require('
 const { slugify } = require('../lib/texto');
 const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listarArtigos');
 const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
+const { ehRobo } = require('../lib/robos');
 
 /**
  * Dispara a esteira de publicação automática (Seção 20 do CLAUDE.md) quando
@@ -57,11 +58,12 @@ router.get('/', exigirBanco, async (req, res) => {
  */
 router.get('/:slug', exigirBanco, async (req, res) => {
   try {
-    const artigo = await Artigo.findOneAndUpdate(
-      { slug: req.params.slug, publicado: true },
-      { $inc: { visualizacoes: 1 } },
-      { new: true }
-    ).lean();
+    const filtro = { slug: req.params.slug, publicado: true };
+    // Robôs e navegadores automatizados recebem o artigo, mas não contam como
+    // visita — as visualizações ordenam a fila de publicação (lib/robos.js).
+    const artigo = ehRobo(req.get('user-agent'))
+      ? await Artigo.findOne(filtro).lean()
+      : await Artigo.findOneAndUpdate(filtro, { $inc: { visualizacoes: 1 } }, { new: true }).lean();
 
     if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
 
