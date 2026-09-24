@@ -304,7 +304,7 @@ test.describe('Checklist de Sobrecarga — CTAs e mensagem de cuidado', () => {
 
   // Faixas do próprio checklist: 0–2 pontuais (base), 3–5 atenção (âmbar),
   // 6–8 e 9–10 nível alto (terracota + mensagem de cuidado).
-  const FRASE_ATENCAO = 'Alguns sinais de sobrecarga merecem atenção. Pequenos ajustes na rotina e uma conversa com um profissional podem evitar que isso se agrave.';
+  const FRASE_ATENCAO = 'Pequenos ajustes na rotina e uma conversa com um profissional podem evitar que isso se agrave.';
   for (const [marcados, faixa] of [[0, 'base'], [2, 'base'], [3, 'atencao'], [5, 'atencao'], [6, 'alto'], [8, 'alto'], [9, 'alto'], [10, 'alto']]) {
     test(`${marcados} itens marcados → faixa ${faixa}`, async ({ page }) => {
       await page.route('**/ferramenta-uso', (r) => r.fulfill({ status: 200, body: '{"ok":true}' }));
@@ -315,6 +315,8 @@ test.describe('Checklist de Sobrecarga — CTAs e mensagem de cuidado', () => {
       expect(r.atencao, 'visual nivel-atencao').toBe(faixa === 'atencao');
       expect(r.cuidadoVisivel, 'mensagem de cuidado').toBe(faixa === 'alto');
       expect(r.texto.includes(FRASE_ATENCAO), 'frase da faixa intermediária').toBe(faixa === 'atencao');
+      // A versão longa repetia "merecem atenção" do texto original da faixa.
+      expect(r.texto, 'frase longa antiga removida').not.toContain('Alguns sinais de sobrecarga merecem atenção');
       expect(r.reprovados, 'contraste WCAG AA').toEqual([]);
     });
   }
