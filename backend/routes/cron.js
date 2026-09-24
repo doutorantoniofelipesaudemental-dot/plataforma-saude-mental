@@ -1,6 +1,7 @@
 const express = require('express');
 const { exigirBanco, comparacaoSegura } = require('../middleware');
 const { publicarProximoDaFila } = require('../lib/filaRedes');
+const { renovarTokenInstagram } = require('../lib/tokenInstagram');
 
 const router = express.Router();
 
@@ -27,6 +28,21 @@ router.get('/publicar-fila', exigirCron, exigirBanco, async (req, res) => {
   } catch (err) {
     console.error('[fila-redes] erro inesperado:', err);
     res.status(500).json({ erro: 'Falha inesperada na fila de publicação.' });
+  }
+});
+
+/**
+ * GET /api/cron/renovar-token-instagram — semanal. Renova o token do
+ * Instagram Login e guarda o novo cifrado (ver backend/lib/tokenInstagram.js).
+ * Falha de renovação responde 200 de propósito: o motivo vai no corpo e no
+ * log "[token-instagram] FALHA NA RENOVAÇÃO"; 500 fica para erro inesperado.
+ */
+router.get('/renovar-token-instagram', exigirCron, exigirBanco, async (req, res) => {
+  try {
+    res.json(await renovarTokenInstagram());
+  } catch (err) {
+    console.error('[token-instagram] erro inesperado na renovação:', err);
+    res.status(500).json({ erro: 'Falha inesperada na renovação do token.' });
   }
 });
 

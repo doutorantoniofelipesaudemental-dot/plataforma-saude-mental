@@ -23,6 +23,7 @@
   ],
   "crons": [
     { "path": "/api/cron/publicar-fila", "schedule": "0 15 * * *" },
-    { "path": "/api/cron/publicar-fila", "schedule": "0 22 * * *" }
+    { "path": "/api/cron/publicar-fila", "schedule": "0 22 * * *" },
+    { "path": "/api/cron/renovar-token-instagram", "schedule": "0 12 * * 1" }
   ]
 }

@@ -38,14 +38,15 @@
 const db = require('./db');
 const Artigo = require('../models/Artigo');
 const { montarSlides } = require('./carrossel');
+const { obterTokenInstagram } = require('./tokenInstagram');
 
 const BASE_URL = 'https://drsaudemental.vercel.app';
 const GRAPH_API_VERSION = 'v21.0';
 // Tokens do "Instagram Login" (prefixo IGAA) só funcionam em graph.instagram.com
 // — em graph.facebook.com voltam "Cannot parse access token". Tokens do fluxo
 // via Página do Facebook (prefixo EAA) seguem em graph.facebook.com.
-function graphBase() {
-  const host = (process.env.INSTAGRAM_ACCESS_TOKEN || '').startsWith('IGAA') ? 'graph.instagram.com' : 'graph.facebook.com';
+function graphBase(token = process.env.INSTAGRAM_ACCESS_TOKEN || '') {
+  const host = token.startsWith('IGAA') ? 'graph.instagram.com' : 'graph.facebook.com';
   return `https://${host}/${GRAPH_API_VERSION}`;
 }
 const LINKEDIN_API_BASE = 'https://api.linkedin.com/v2';
@@ -274,10 +275,13 @@ function montarPayloads(artigo, url, redes) {
 
 /** Instagram Graph API — fluxo oficial de 2 passos (Regra 16 do CLAUDE.md): cria o container, espera FINISHED, publica. */
 async function publicarNoInstagram({ imagemUrl, legenda }) {
-  const token = requerEnv('INSTAGRAM_ACCESS_TOKEN');
+  requerEnv('INSTAGRAM_ACCESS_TOKEN');
+  // O mais recente: o renovado pelo cron semanal, se houver (ver tokenInstagram.js).
+  const token = await obterTokenInstagram();
   const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
+  const base = graphBase(token);
 
-  const containerResp = await fetch(`${graphBase()}/${contaId}/media`, {
+  const containerResp = await fetch(`${base}/${contaId}/media`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({ image_url: imagemUrl, caption: legenda, access_token: token }),
@@ -289,7 +293,7 @@ async function publicarNoInstagram({ imagemUrl, legenda }) {
 
   await aguardarContainerPronto(containerData.id, token);
 
-  const publishResp = await fetch(`${graphBase()}/${contaId}/media_publish`, {
+  const publishResp = await fetch(`${base}/${contaId}/media_publish`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({ creation_id: containerData.id, access_token: token }),
@@ -303,7 +307,7 @@ async function publicarNoInstagram({ imagemUrl, legenda }) {
 
 async function aguardarContainerPronto(creationId, token, { tentativas = 10, intervaloMs = 3000 } = {}) {
   for (let i = 0; i < tentativas; i += 1) {
-    const resp = await fetch(`${graphBase()}/${creationId}?fields=status_code&access_token=${token}`);
+    const resp = await fetch(`${graphBase(token)}/${creationId}?fields=status_code&access_token=${token}`);
     const data = await resp.json();
     if (data.status_code === 'FINISHED') return;
     if (data.status_code === 'ERROR') {
