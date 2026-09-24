@@ -849,7 +849,32 @@ a:hover { color: var(--verde-500); }
 .ferramenta-embutida__resultado.nivel-alto { border-left-color: var(--terracota); background: #fdf3ee; }
 .ferramenta-embutida__resultado.nivel-atencao { border-left-color: var(--dourado); background: #fdf8ea; }
 .ferramenta-embutida__resultado .ferramenta-embutida__aviso { font-size: 0.82rem; color: var(--tinta-fraca); margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--linha-suave); }
-.ferramenta-embutida__acao { margin-top: 1.25rem; }
+.ferramenta-embutida__acao { margin-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.5rem; }
+/* CTA secundário: link de texto, mais discreto que o botão principal, mas
+   com alvo de toque de 44px (Regra 12). */
+.ferramenta-embutida__secundario {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--verde-700);
+}
+.ferramenta-embutida__secundario:hover { color: var(--verde-500); }
+.ferramenta-embutida__secundario:active { color: var(--verde-800); }
+/* Mensagem de cuidado (nível alto): acolhedora e legível, sem vermelho nem
+   ícone de alerta — o fundo neutro a separa do resultado sem alarmar. */
+.ferramenta-embutida__cuidado {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--raio);
+  background: var(--papel);
+  border: 1px solid var(--linha);
+  color: var(--tinta-media);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.ferramenta-embutida__cuidado a { font-weight: 600; }
 /* Rótulos de ação longos ("Calcular meu nível de…") estouravam a largura no
    mobile por causa do nowrap global de .botao. */
 .ferramenta-embutida .botao { white-space: normal; max-width: 100%; text-align: center; }

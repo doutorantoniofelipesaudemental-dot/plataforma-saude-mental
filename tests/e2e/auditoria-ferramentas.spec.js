@@ -253,6 +253,92 @@ test.describe('Miniaplicativos — cálculo, salvaguardas e CTA', () => {
   });
 });
 
+/* ------------------- Checklist de Sobrecarga: CTAs e cuidado ------------------- */
+
+test.describe('Checklist de Sobrecarga — CTAs e mensagem de cuidado', () => {
+  const SLUG = 'ansiedade-corporativa-sintomas-tratamento';
+  const RAIZ = 'ferramenta-checklist-sobrecarga';
+
+  async function calcularCom(page, marcados) {
+    await page.evaluate(({ raiz, marcados }) => {
+      document.querySelectorAll(`#${raiz} input[type=checkbox]`).forEach((i, k) => { i.checked = k < marcados; });
+    }, { raiz: RAIZ, marcados });
+    await page.click('#cs-calcular');
+    return page.evaluate(() => {
+      const cuidado = document.getElementById('cs-cuidado');
+      const res = document.getElementById('cs-resultado');
+      return {
+        titulo: res.querySelector('h4').textContent,
+        alto: res.classList.contains('nivel-alto'),
+        cuidadoVisivel: !cuidado.hidden && cuidado.offsetHeight > 0,
+      };
+    });
+  }
+
+  // Faixas do próprio checklist: 0–2 pontuais, 3–5 atenção, 6–8 e 9–10 nível alto.
+  for (const [marcados, esperaCuidado] of [[0, false], [2, false], [3, false], [5, false], [6, true], [8, true], [10, true]]) {
+    test(`${marcados} itens marcados → mensagem de cuidado ${esperaCuidado ? 'visível' : 'oculta'}`, async ({ page }) => {
+      await page.route('**/ferramenta-uso', (r) => r.fulfill({ status: 200, body: '{"ok":true}' }));
+      await page.goto(`/artigo/${SLUG}`);
+      const r = await calcularCom(page, marcados);
+      expect(r.titulo).toContain(`${marcados} de 10`);
+      expect(r.alto).toBe(esperaCuidado);
+      expect(r.cuidadoVisivel).toBe(esperaCuidado);
+    });
+  }
+
+  test('mensagem de cuidado: CVV 188 (tel:), chat cvv.org.br em nova aba, SAMU 192, sem ícone', async ({ page }) => {
+    await page.route('**/ferramenta-uso', (r) => r.fulfill({ status: 200, body: '{"ok":true}' }));
+    await page.goto(`/artigo/${SLUG}`);
+    await calcularCom(page, 10);
+    const c = await page.evaluate(() => {
+      const el = document.getElementById('cs-cuidado');
+      const tel = el.querySelector('a[href="tel:188"]');
+      const cvv = el.querySelector('a[href="https://cvv.org.br"]');
+      return {
+        texto: el.textContent,
+        tel: tel?.textContent,
+        cvv: cvv?.textContent,
+        cvvAlvo: cvv?.getAttribute('target'),
+        cvvRel: cvv?.getAttribute('rel') || '',
+        icones: el.querySelectorAll('svg, img').length,
+      };
+    });
+    expect(c.tel).toBe('188');
+    expect(c.cvv).toBe('cvv.org.br');
+    expect(c.cvvAlvo).toBe('_blank');
+    expect(c.cvvRel).toContain('noopener');
+    expect(c.texto).toContain('192 (SAMU)');
+    expect(c.texto).toContain('você não precisa lidar com isso sozinho');
+    expect(c.icones).toBe(0);
+  });
+
+  for (const [rotulo, seletor, tipo] of [
+    ['principal', '#cs-resultado .ferramenta-embutida__acao .botao--primario', 'particular'],
+    ['secundário', '#cs-resultado .ferramenta-embutida__acao .ferramenta-embutida__secundario', 'consultoria-empresa'],
+  ]) {
+    test(`CTA ${rotulo} → Home com ?tipo=${tipo} pré-marcado, sem contar uso extra`, async ({ page }) => {
+      const usos = [];
+      await page.route('**/ferramenta-uso', (r) => { usos.push(1); r.fulfill({ status: 200, body: '{"ok":true}' }); });
+      await page.goto(`/artigo/${SLUG}`);
+      await calcularCom(page, 1);
+      expect(usos, 'um uso por cálculo').toHaveLength(1);
+
+      const cta = page.locator(seletor);
+      await expect(cta).toHaveAttribute('href', `/?tipo=${tipo}#contato-servicos`);
+      if (rotulo === 'principal') await expect(cta).toHaveText('Agendar consulta de orientação');
+      else await expect(cta).toHaveText('Sua equipe está assim? Conheça a consultoria para empresas');
+
+      await Promise.all([page.waitForURL((u) => u.pathname === '/'), cta.click()]);
+      await page.waitForTimeout(1200);
+      const marcado = await page.evaluate(() =>
+        document.querySelector('#formulario-contato-servicos input[name="tipoAtendimento"]:checked')?.value);
+      expect(marcado).toBe(tipo);
+      expect(usos, 'clique no CTA não conta uso').toHaveLength(1);
+    });
+  }
+});
+
 /* --------------------------------- Blog ---------------------------------- */
 
 test.describe('Blog — barra de filtros', () => {
