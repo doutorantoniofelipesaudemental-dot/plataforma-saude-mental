@@ -49,7 +49,9 @@ async function connect() {
         serverSelectionTimeoutMS: 8000,
         socketTimeoutMS: 20000,
         maxPoolSize: 10,
-        dbName: process.env.MONGODB_DB || undefined,
+        // Sem padrão, uma URI sem nome de banco caía em "test" (vazio) e scripts
+        // locais liam 0 artigos sem erro. O banco da aplicação é "drsaudemental".
+        dbName: process.env.MONGODB_DB || 'drsaudemental',
       })
       .catch((err) => {
         // Sem isso uma falha transitória deixaria a promessa rejeitada em cache

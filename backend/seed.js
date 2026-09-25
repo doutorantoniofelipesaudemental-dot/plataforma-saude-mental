@@ -4,6 +4,8 @@
  *   npm run seed          -> insere/atualiza os artigos (idempotente, por slug)
  *   npm run seed:reset    -> apaga TODOS os artigos antes de inserir
  *
+ * Em banco que já tem artigos, os dois exigem `-- --confirmar`.
+ *
  * Nunca toca na coleção de agendamentos.
  */
 const db = require('./lib/db');
@@ -19,8 +21,25 @@ async function main() {
     process.exit(1);
   }
 
-  await db.connect();
-  console.log('  Conectado ao MongoDB.');
+  const conexao = await db.connect();
+  const banco = conexao.connection.db.databaseName;
+  console.log(`  Conectado ao MongoDB (banco "${banco}").`);
+
+  // O seed sobrescreve artigos existentes (e --reset apaga todos). Como db.js
+  // agora aponta para "drsaudemental" por padrão, rodar isto localmente atinge
+  // produção — só prossegue em banco com artigos se pedido explicitamente.
+  const existentes = await Artigo.countDocuments();
+  if (existentes > 0 && !process.argv.includes('--confirmar')) {
+    console.error(`\n  O banco "${banco}" já tem ${existentes} artigo(s).`);
+    console.error(
+      reset
+        ? '  --reset apagaria TODOS eles antes de inserir o seed.'
+        : '  O seed sobrescreveria os que têm o mesmo slug com o texto do seed-artigos.js.'
+    );
+    console.error('  Nada foi alterado. Para prosseguir mesmo assim, repita com --confirmar.\n');
+    await db.mongoose.disconnect();
+    process.exit(1);
+  }
 
   if (reset) {
     const { deletedCount } = await Artigo.deleteMany({});
