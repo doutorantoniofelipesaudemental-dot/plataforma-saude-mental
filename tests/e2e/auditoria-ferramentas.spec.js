@@ -427,3 +427,15 @@ test.describe('Link da bio e reescritas importadas', () => {
     await expect(page.locator('.lead-para')).toContainText('Salas cheias');
   });
 });
+
+test.describe('Páginas institucionais no celular', () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+  for (const url of ['/', '/privacidade', '/instagram']) {
+    test(`${url} sem rolagem horizontal e com a marca nova`, async ({ page }) => {
+      await page.goto(url);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+      await expect(page).toHaveTitle(/Saúde Mental · Doutor Antônio Felipe/);
+      await expect(page.locator('.rodape')).toContainText('Plataforma Integrada de Saúde Mental Doutor Antônio Felipe');
+    });
+  }
+});

@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 app.get('/api/health', async (req, res) => {
   const resposta = {
     ok: true,
-    servico: 'Doutor Saúde Mental',
+    servico: 'Plataforma Integrada de Saúde Mental Doutor Antônio Felipe',
     ambiente: process.env.VERCEL ? 'vercel' : 'local',
     banco: 'desconectado',
   };
@@ -216,7 +216,7 @@ module.exports = app;
 if (!process.env.VERCEL && require.main === module) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
-    console.log(`\n  Doutor Saúde Mental — Dr. Antônio Felipe`);
+    console.log(`\n  Plataforma Integrada de Saúde Mental Doutor Antônio Felipe`);
     console.log(`  Site:  http://localhost:${PORT}`);
     console.log(`  API:   http://localhost:${PORT}/api/health`);
     console.log(`  Banco: ${db.isConfigured() ? 'MONGODB_URI definida' : 'MONGODB_URI ausente'}\n`);

@@ -1,4 +1,4 @@
-# Calendário de 30 Dias — Carrossel Instagram | Doutor Saúde Mental
+# Calendário de 30 Dias — Carrossel Instagram | Plataforma Integrada de Saúde Mental Doutor Antônio Felipe
 
 Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artigos`), organizados nos 7 pilares editoriais do site: **Relatos da Prática, Pais & Famílias, Médicos & Enfermeiros, Geral, Residentes & Estudantes, Empresas & RH e Pacientes & Famílias.**
 
@@ -24,7 +24,7 @@ Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artig
 ### Bloco de hashtags fixas (usar em todos os posts + as "extras" de cada dia)
 
 ```
-#saudemental #psiquiatria #doutorsaudemental #saudementalimporta
+#saudemental #medicinadefamilia #saudementalimporta
 #bemestaremocional #psiquiatra #terapia #cuidadocomamente #saudeemocional
 ```
 

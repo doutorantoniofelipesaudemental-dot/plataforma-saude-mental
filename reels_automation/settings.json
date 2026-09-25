@@ -16,7 +16,7 @@
     "csv_path": "../30_REELS_FACELESS.csv",
     "idioma": "pt-BR",
     "voz_marca": "Clinico-acolhedor: autoridade medica sem frieza, calma sem infantilizacao. Nunca promete cura, resultado garantido ou diagnostico a distancia. Evita aberturas genericas (ex.: 'No mundo atual...') e listas de tres adjetivos.",
-    "hashtags_padrao": ["#saudemental", "#psiquiatria", "#doutorsaudemental", "#reels", "#saudementalimporta"]
+    "hashtags_padrao": ["#saudemental", "#medicinadefamilia", "#reels", "#saudementalimporta"]
   },
   "tts": {
     "engine": "edge-tts",

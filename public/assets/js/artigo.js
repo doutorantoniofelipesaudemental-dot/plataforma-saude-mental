@@ -54,7 +54,7 @@
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Doutor Saúde Mental',
+        name: 'Plataforma Integrada de Saúde Mental Doutor Antônio Felipe',
         url: BASE_URL,
       },
     };
@@ -124,7 +124,7 @@
     try {
       const { artigo, relacionados } = await api(`/artigos/${encodeURIComponent(slug)}`);
 
-      document.title = `${artigo.titulo} — Doutor Saúde Mental`;
+      document.title = `${artigo.titulo} — Saúde Mental · Doutor Antônio Felipe`;
       const meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute('content', artigo.resumo);
       atualizarMetadados(artigo, slug);

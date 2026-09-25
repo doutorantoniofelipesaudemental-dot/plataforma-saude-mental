@@ -195,14 +195,38 @@ async function main() {
   }
   if (args.enviar && !process.env.ADMIN_TOKEN) throw new Error('ADMIN_TOKEN ausente no .env — necessário para --enviar');
 
+  // Trava da cota gratuita: soma o que o Azure já narrou neste mês (UTC), pelo
+  // banco, e para antes de o próximo artigo passar de COTA_GRATUITA_MENSAL.
+  const inicioMes = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1));
+  const [{ usados = 0 } = {}] = await Artigo.aggregate([
+    { $match: { 'narracao.provedor': 'azure', 'narracao.geradaEm': { $gte: inicioMes } } },
+    { $group: { _id: null, usados: { $sum: '$narracao.caracteres' } } },
+  ]);
+  const mes = inicioMes.toISOString().slice(0, 7);
+  const arquivoUso = path.join(PASTA_SAIDA, `uso-azure-${mes}.json`);
+  const lerUso = () => { try { return JSON.parse(fs.readFileSync(arquivoUso, 'utf8')).caracteres || 0; } catch { return 0; } };
+  // Registro local: conta até o que foi sintetizado e não chegou a ser enviado.
+  let usadosNoMes = Math.max(usados, lerUso());
+  if (provedor === 'azure') console.log(`\n  Cota Azure do mês: ${usadosNoMes.toLocaleString('pt-BR')} de ${COTA_GRATUITA_MENSAL.toLocaleString('pt-BR')} caracteres já usados`);
+
   console.log(`\n  Provedor: ${provedor} · ${alvo.length} artigo(s)\n`);
   let caracteres = 0;
   let falhas = 0;
   for (const [i, artigo] of alvo.entries()) {
     const estado = estadoNarracao(artigo).estado;
+    const tamanho = textoParaNarracao(artigo).length;
+    if (provedor === 'azure' && usadosNoMes + tamanho > COTA_GRATUITA_MENSAL) {
+      console.log(`  PARADO antes de ${artigo.slug}: ${tamanho.toLocaleString('pt-BR')} car. passariam a cota do mês (${usadosNoMes.toLocaleString('pt-BR')} usados). Retomar a partir de 1º do mês que vem.`);
+      break;
+    }
     try {
       const g = await gerarMp3(artigo, provedor);
       caracteres += g.texto.length;
+      // Conta o que foi sintetizado (e cobrado), mesmo que o envio falhe depois.
+      if (provedor === 'azure') {
+        usadosNoMes += g.texto.length;
+        fs.writeFileSync(arquivoUso, JSON.stringify({ mes, caracteres: usadosNoMes, atualizadoEm: new Date() }));
+      }
       let envio = '';
       if (args.enviar) {
         const r = await enviar(g);

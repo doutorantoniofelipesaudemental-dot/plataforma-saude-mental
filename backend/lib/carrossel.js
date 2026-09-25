@@ -92,7 +92,8 @@ const EMOJI_CATEGORIA = {
   Geral: '🧠',
 };
 
-const HASHTAGS_BASE = ['saude mental', 'saude mental brasil', 'medicina de familia', 'doutor saude mental'];
+// Sem hashtag de marca (Regra 17): as vagas ficam para temas.
+const HASHTAGS_BASE = ['saude mental', 'saude mental brasil', 'medicina de familia'];
 
 const HASHTAGS_CATEGORIA = {
   'Relatos da Prática': ['relatos da clinica', 'medicina de familia', 'atencao primaria', 'humanizacao em saude'],

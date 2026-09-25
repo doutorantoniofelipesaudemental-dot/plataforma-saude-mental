@@ -1,5 +1,5 @@
 /* =========================================================================
-   Doutor Saúde Mental — Dr. Antônio Felipe
+   Plataforma Integrada de Saúde Mental Doutor Antônio Felipe
    Sistema de design do site
    ========================================================================= */
 
@@ -1157,3 +1157,6 @@ a:hover { color: var(--verde-500); }
 @media (prefers-reduced-motion: reduce) {
   .revelar { opacity: 1; transform: none; }
 }
+
+/* Endereço de e-mail longo no meio do texto não pode abrir rolagem horizontal no celular. */
+a[href^="mailto:"] { overflow-wrap: anywhere; }

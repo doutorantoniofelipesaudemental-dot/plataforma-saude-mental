@@ -2,7 +2,7 @@
   "name": "drsaudemental",
   "version": "1.0.0",
   "private": true,
-  "description": "Site e blog da Doutor Saúde Mental, consultório do Dr. Antônio Felipe",
+  "description": "Site e blog da Plataforma Integrada de Saúde Mental Doutor Antônio Felipe",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

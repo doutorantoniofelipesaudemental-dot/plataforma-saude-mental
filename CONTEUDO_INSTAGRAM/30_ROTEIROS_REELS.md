@@ -1,4 +1,4 @@
-# 30 Roteiros de Reels (30 segundos) | Doutor Saúde Mental
+# 30 Roteiros de Reels (30 segundos) | Plataforma Integrada de Saúde Mental Doutor Antônio Felipe
 
 Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segue a estrutura de vídeo curto testada para retenção: **gancho nos 3 primeiros segundos → desenvolvimento rápido → CTA de agendamento no final.**
 
@@ -20,7 +20,7 @@ Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segu
 ### Hashtags fixas (usar em todos + extras de cada reel)
 
 ```
-#saudemental #psiquiatria #doutorsaudemental #reels #saudementalimporta
+#saudemental #medicinadefamilia #reels #saudementalimporta
 ```
 
 ---
@@ -362,7 +362,7 @@ Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segu
 **Texto na tela:** "TERAPIA NÃO BASTA?" → "QUANDO PROCURAR UM PSIQUIATRA"
 **Áudio sugerido:** trilha calma.
 **Legenda:** Como saber se é hora de somar acompanhamento psiquiátrico à sua psicoterapia. 📖 [LINK] 📅 [LINK BIO]
-**Hashtags extras:** #psicoterapia #psiquiatria
+**Hashtags extras:** #psicoterapia #medicinadefamilia
 
 ---
 

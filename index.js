@@ -10,7 +10,7 @@ module.exports = app;
 if (!process.env.VERCEL) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
-    console.log(`\n  Doutor Saúde Mental — Dr. Antônio Felipe`);
+    console.log(`\n  Plataforma Integrada de Saúde Mental Doutor Antônio Felipe`);
     console.log(`  Site:  http://localhost:${PORT}`);
     console.log(`  API:   http://localhost:${PORT}/api/health\n`);
   });

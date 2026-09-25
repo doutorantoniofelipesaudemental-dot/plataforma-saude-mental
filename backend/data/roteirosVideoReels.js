@@ -11,7 +11,7 @@
  * `backend/models/Artigo.js` (mesmo enum `CATEGORIAS`).
  */
 
-const HASHTAGS_FIXAS = ['#saudemental', '#medicinadefamilia', '#doutorsaudemental', '#reels', '#saudementalimporta'];
+const HASHTAGS_FIXAS = ['#saudemental', '#medicinadefamilia', '#reels', '#saudementalimporta'];
 
 const ROTEIROS_REELS = [
   {

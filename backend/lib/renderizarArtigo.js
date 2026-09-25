@@ -108,7 +108,7 @@ function renderizarArtigoHtml(artigo) {
   const url = `${BASE_URL}/artigo/${encodeURIComponent(artigo.slug)}`;
   const titulo = escapeHtml(artigo.titulo);
   const resumo = escapeHtml(artigo.resumo);
-  const tituloCompleto = `${titulo} — Doutor Saúde Mental`;
+  const tituloCompleto = `${titulo} — Saúde Mental · Doutor Antônio Felipe`;
 
   let html = lerTemplate();
 
@@ -160,7 +160,7 @@ function renderizarArtigoHtml(artigo) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Doutor Saúde Mental',
+      name: 'Plataforma Integrada de Saúde Mental Doutor Antônio Felipe',
       url: BASE_URL,
     },
   };
