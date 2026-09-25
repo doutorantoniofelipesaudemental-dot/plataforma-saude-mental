@@ -55,14 +55,15 @@ async function main() {
   const confirmar = Boolean(args.confirmar);
 
   try {
-    const resultado = await publicarArtigoNasRedes(artigoId, { redes, confirmar });
+    const resultado = await publicarArtigoNasRedes(artigoId, { redes, confirmar, origem: 'cli' });
 
     if (!resultado.executado) {
       log.info(`\n  DRY-RUN — nada foi publicado. ${resultado.motivo}\n`);
       log.info(`  Artigo: ${resultado.artigo.titulo} (${resultado.artigo.slug})`);
       log.info(`  URL:    ${resultado.url}\n`);
-      log.info('  Legenda:\n');
-      log.info(`  ${resultado.legenda.replace(/\n/g, '\n  ')}\n`);
+      log.info(`  Tripla checagem: ${resultado.checagem.aprovado ? 'APROVADA' : `REPROVADA — ${resultado.checagem.motivo}`}\n`);
+      log.info('  Legenda do Instagram:\n');
+      log.info(`  ${resultado.legendaInstagram.replace(/\n/g, '\n  ')}\n`);
       log.info('  Payloads que seriam enviados:\n');
       log.info(JSON.stringify(resultado.payloads, null, 2));
       log.info('\n  Rode de novo com --confirmar para publicar de verdade.\n');

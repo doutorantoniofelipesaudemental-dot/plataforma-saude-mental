@@ -405,3 +405,25 @@ test.describe('Blog — barra de filtros', () => {
     });
   }
 });
+
+test.describe('Link da bio e reescritas importadas', () => {
+  test('/instagram lista, pré-renderizado, os artigos dos posts mais recentes', async ({ page }) => {
+    const resp = await page.goto('/instagram');
+    expect(resp.status()).toBe(200);
+    const lista = page.locator('#lista-instagram');
+    await expect(lista).toHaveAttribute('data-ssr', '1');
+    const links = lista.locator('a.artigo-cartao');
+    expect(await links.count()).toBeGreaterThan(0);
+    await expect(links.first()).toHaveAttribute('href', /^\/artigo\/[a-z0-9-]+$/);
+    // Sem rolagem horizontal no celular.
+    await page.setViewportSize({ width: 390, height: 844 });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  });
+
+  test('artigo reescrito mostra "Atualizado em" e mantém o SSR', async ({ page }) => {
+    await page.goto('/artigo/professores-saude-mental');
+    await expect(page.locator('article')).toHaveAttribute('data-ssr', '1');
+    await expect(page.locator('.artigo-meta', { hasText: 'Atualizado em' })).toBeVisible();
+    await expect(page.locator('.lead-para')).toContainText('Salas cheias');
+  });
+});

@@ -756,6 +756,13 @@ a:hover { color: var(--verde-500); }
 }
 .artigo-narracao__rotulo svg { color: var(--verde-600); flex-shrink: 0; }
 .artigo-narracao audio { width: 100%; display: block; }
+/* Transparência (Res. CFM 2.454/2026): a voz é sintética. */
+.artigo-narracao__aviso {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--verde-800);
+  opacity: 0.7;
+}
 
 /* Enquete de engajamento (fim do artigo) */
 .enquete-card {

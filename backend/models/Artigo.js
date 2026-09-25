@@ -117,6 +117,39 @@ const ArtigoSchema = new mongoose.Schema(
     // status 'publicado'). A fila diária (backend/lib/filaRedes.js) conta
     // estes horários para respeitar o teto de posts/dia e o intervalo mínimo.
     publicadoRedesEm: { type: Date, default: null, index: true },
+    // Capa 4:5 do feed (backend/lib/capaRedes.js) — separada de `imagemCapa`,
+    // que é a capa 1200×630 do site/og:image. `hash` é o SHA-256 do PNG.
+    capaRedes: {
+      url: { type: String, default: '' },
+      hash: { type: String, default: '', index: true },
+      largura: Number,
+      altura: Number,
+      modelo: String,
+      titulo: String,
+      subtitulo: String,
+      geradaEm: Date,
+    },
+    // Narração versionada (backend/lib/narracao.js): hash = SHA-256 de voz +
+    // texto narrado; se o conteúdo mudar, o hash esperado muda e a narração
+    // fica "desatualizada" sozinha. `audioNarracaoUrl` segue como a URL tocada.
+    narracao: {
+      url: String,
+      hash: String,
+      voz: String,
+      caracteres: Number,
+      bytes: Number,
+      geradaEm: Date,
+    },
+    // Linha curta opcional abaixo do título na capa das redes.
+    subtituloRedes: { type: String, default: '', trim: true, maxlength: 120 },
+    // Reescrita aprovada importada (backend/tools/importar-reescritas.js).
+    // A checagem de conteúdo reprova o artigo se um lote em
+    // backend/data/reescritas/ tiver versão dele ainda não importada.
+    reescrita: {
+      lote: String,
+      hash: String,
+      importadaEm: Date,
+    },
   },
   {
     timestamps: { createdAt: 'criadoEm', updatedAt: 'atualizadoEm' },

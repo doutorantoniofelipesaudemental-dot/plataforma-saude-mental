@@ -530,4 +530,15 @@ module.exports = {
   empacotarZip,
   LARGURA,
   ALTURA,
+  // Utilitários de desenho reaproveitados pela capa 4:5 da fila (capaRedes.js).
+  FONTE_SERIF,
+  FONTE_SANS,
+  COR,
+  MARGEM,
+  paraTextoPuro,
+  extrairBlocos,
+  quebrarLinhas,
+  caminhoTexto,
+  caminhoLinhas,
+  larguraTexto,
 };

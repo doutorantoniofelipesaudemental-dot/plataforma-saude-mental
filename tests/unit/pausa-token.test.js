@@ -35,6 +35,22 @@ injetar('models/Artigo.js', {
   findByIdAndUpdate: async () => { throw new Error('não deveria marcar como publicado'); },
 });
 
+// A tripla checagem editorial e a capa 4:5 têm teste próprio
+// (tripla-checagem.test.js); aqui só importa a pausa por token: o post é
+// aprovado e a capa "já existe", para a execução chegar até a Meta.
+injetar('lib/checagemRedes.js', {
+  executarTriplaChecagem: async () => ({
+    aprovado: true, motivo: null,
+    conteudo: { ok: true, falhas: [] }, visual: { ok: true, falhas: [], hash: 'h' }, seguranca: { ok: true, falhas: [] },
+  }),
+});
+injetar('lib/capaRedes.js', {
+  garantirCapaRedes: async () => ({ url: 'https://blob.exemplo/instagram-4x5.png', hash: 'h' }),
+  renderizarCapaRedes: async () => ({ buffer: Buffer.alloc(0), hash: 'h', modelo: 'capa-4x5-v1', titulo: 'Título' }),
+});
+const registros = [];
+injetar('models/RegistroPublicacao.js', { create: async (doc) => registros.push(doc) });
+
 const db = require(path.join(RAIZ, 'lib/db.js'));
 db.connect = async () => {};
 db.isConfigured = () => true;

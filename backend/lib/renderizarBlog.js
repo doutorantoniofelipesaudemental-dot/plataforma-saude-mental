@@ -131,4 +131,4 @@ function renderizarBlogHtml({ itens, paginacao, categoria, busca, categorias }) 
   return html;
 }
 
-module.exports = { renderizarBlogHtml };
+module.exports = { renderizarBlogHtml, montarCartaoArtigo };

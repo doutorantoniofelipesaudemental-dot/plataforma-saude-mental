@@ -1,4 +1,5 @@
 const express = require('express');
+const { estadoNarracao, urlNarracaoTocavel } = require('../lib/narracao');
 const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin, tratarErroValidacao, limitarTaxa } = require('../middleware');
 const { slugify } = require('../lib/texto');
@@ -67,6 +68,10 @@ router.get('/:slug', exigirBanco, async (req, res) => {
       : await Artigo.findOneAndUpdate(filtro, { $inc: { visualizacoes: 1 } }, { new: true }).lean();
 
     if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
+
+    // O player só toca narração que corresponde ao texto atual (lib/narracao.js).
+    artigo.narracaoEstado = estadoNarracao(artigo).estado;
+    artigo.audioNarracaoUrl = urlNarracaoTocavel(artigo);
 
     const relacionados = await Artigo.find({
       _id: { $ne: artigo._id },

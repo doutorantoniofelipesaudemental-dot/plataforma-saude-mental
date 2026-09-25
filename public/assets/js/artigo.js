@@ -138,25 +138,28 @@
 
       // Narração TTS do artigo completo — quando não há áudio, mostra o
       // fallback com botão de "solicitar narração" em vez de sumir.
-      const narracaoHtml = artigo.audioNarracaoUrl
+      const urlAudio = artigo.audioNarracaoUrl;
+      const estadoAudio = artigo.narracaoEstado;
+      const narracaoHtml = urlAudio
         ? `<div class="artigo-narracao">
-             <p class="artigo-narracao__rotulo">
+             <p class="artigo-narracao__rotulo" id="rotulo-narracao">
                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M16 8.2a4.2 4.2 0 0 1 0 7.6"/><path d="M18.6 5.6a7.8 7.8 0 0 1 0 12.8"/></svg>
                Ouvir o artigo completo
              </p>
-             <audio controls preload="none" src="${esc(artigo.audioNarracaoUrl)}">
+             <audio controls preload="none" src="${esc(urlAudio)}" aria-labelledby="rotulo-narracao" aria-describedby="aviso-narracao">
                Seu navegador não suporta áudio incorporado.
-               <a href="${esc(artigo.audioNarracaoUrl)}">Baixar o áudio da narração</a>.
+               <a href="${esc(urlAudio)}">Baixar o áudio da narração</a>.
              </audio>
+             <p class="artigo-narracao__aviso" id="aviso-narracao">Narração em voz sintética.</p>
            </div>`
         : `<div class="artigo-narracao artigo-narracao--indisponivel">
              <p class="artigo-narracao__rotulo">
                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4a1 1 0 0 0 1 1h3l4 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
-               Narração em áudio indisponível para este artigo.
+               ${estadoAudio === 'desatualizada' ? 'A narração está sendo atualizada para a versão atual do texto.' : 'Narração em áudio indisponível para este artigo.'}
              </p>
-             <button type="button" class="botao botao--vazado botao--pequeno" data-solicitar-narracao="${esc(artigo.slug)}">
+             ${estadoAudio === 'desatualizada' ? '' : `<button type="button" class="botao botao--vazado botao--pequeno" data-solicitar-narracao="${esc(artigo.slug)}">
                Solicitar narração em áudio
-             </button>
+             </button>`}
            </div>`;
 
       cabecalho.innerHTML = `
@@ -173,7 +176,12 @@
           <time datetime="${esc(artigo.publicadoEm)}">${esc(formatarData(artigo.publicadoEm))}</time>
           <span aria-hidden="true">•</span>
           <span>${esc(artigo.tempoLeitura || 4)} min de leitura</span>
-        </div>
+        </div>${
+          artigo.reescrita && artigo.reescrita.importadaEm
+            ? `
+        <p class="artigo-meta" style="margin-top:.5rem;"><span>Atualizado em <time datetime="${esc(artigo.reescrita.importadaEm)}">${esc(formatarData(artigo.reescrita.importadaEm))}</time></span></p>`
+            : ''
+        }
         ${capaHtml}
         ${narracaoHtml}`;
 

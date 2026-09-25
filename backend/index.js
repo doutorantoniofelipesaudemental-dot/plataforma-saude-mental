@@ -6,6 +6,7 @@ const Artigo = require('./models/Artigo');
 const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
 const { listarArtigos, listarCategorias } = require('./lib/listarArtigos');
 const { renderizarBlogHtml } = require('./lib/renderizarBlog');
+const { listarPostsRecentes, renderizarInstagramHtml } = require('./lib/renderizarInstagram');
 const { gerarSitemapArtigosXml, gerarSitemapIndexXml } = require('./lib/sitemap');
 const agendamentosRouter = require('./routes/agendamentos');
 const contatoRouter = require('./routes/contato');
@@ -110,6 +111,20 @@ app.get('/blog', async (req, res) => {
   }
 });
 
+/** Link da bio do Instagram: artigos dos posts mais recentes da fila (ver lib/renderizarInstagram.js). */
+app.get('/instagram', async (req, res) => {
+  const shellEstatico = () => res.sendFile(path.join(PUBLIC_DIR, 'instagram.html'));
+  if (!db.isConfigured()) return shellEstatico();
+  try {
+    await db.connect();
+    res.set('Content-Type', 'text/html; charset=utf-8');
+    res.send(renderizarInstagramHtml(await listarPostsRecentes()));
+  } catch (err) {
+    console.error('[instagram] falha ao pré-renderizar, caindo para o shell estático:', err.message);
+    shellEstatico();
+  }
+});
+
 /**
  * Pré-renderiza meta tags OpenGraph/canonical/JSON-LD para bots de preview e
  * crawlers, que não executam o JS que hoje monta o conteúdo do artigo.
@@ -126,7 +141,7 @@ app.get('/artigo/:slug', async (req, res) => {
   try {
     await db.connect();
     const artigo = await Artigo.findOne({ slug: req.params.slug, publicado: true })
-      .select('titulo slug resumo conteudo categoria autor imagemCapa audioNarracaoUrl tempoLeitura publicadoEm atualizadoEm')
+      .select('titulo slug resumo conteudo categoria autor imagemCapa audioNarracaoUrl tempoLeitura publicadoEm atualizadoEm reescrita narracao')
       .lean();
 
     if (!artigo) return shellEstatico();

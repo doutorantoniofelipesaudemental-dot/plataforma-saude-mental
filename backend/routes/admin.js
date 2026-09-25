@@ -6,6 +6,8 @@ const { paraCsv } = require('../lib/csv');
 const { publicarArtigoNasRedes, ErroPublicacao } = require('../lib/socialPublisher');
 const { redesConfiguradas, motivoParaAguardar, listarFila, configuracao } = require('../lib/filaRedes');
 const Artigo = require('../models/Artigo');
+const RegistroPublicacao = require('../models/RegistroPublicacao');
+const { garantirCapaRedes, capaAtualizada } = require('../lib/capaRedes');
 const { resumoToken } = require('../lib/tokenInstagram');
 const { log } = require('../lib/log');
 
@@ -138,7 +140,7 @@ router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req,
   const confirmar = req.body.confirmar === true;
 
   try {
-    const resultado = await publicarArtigoNasRedes(req.params.id, { redes, confirmar });
+    const { capaBuffer, ...resultado } = await publicarArtigoNasRedes(req.params.id, { redes, confirmar, origem: 'admin' });
     res.json(resultado);
   } catch (err) {
     if (err instanceof ErroPublicacao) {
@@ -175,6 +177,76 @@ router.get('/fila-redes', exigirAdmin, exigirBanco, async (req, res) => {
   } catch (err) {
     log.erro('[admin] erro ao consultar a fila de redes:', err);
     res.status(500).json({ erro: 'Não foi possível consultar a fila.' });
+  }
+});
+
+/**
+ * GET /api/admin/previa-redes[?slug=] — prévia do post do feed (do próximo da
+ * fila, sem slug): legenda, capa 4:5 (PNG em base64) e o resultado de cada
+ * uma das três checagens. Nunca publica e nunca grava a capa; registra a
+ * prévia em RegistroPublicacao (origem "previa").
+ */
+router.get('/previa-redes', exigirAdmin, exigirBanco, async (req, res) => {
+  try {
+    const slug = req.query.slug || (await listarFila(1))[0]?.slug;
+    if (!slug) return res.status(404).json({ erro: 'Fila vazia.' });
+    const artigo = await Artigo.findOne({ slug }).select('_id').lean();
+    if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
+    const r = await publicarArtigoNasRedes(String(artigo._id), { redes: ['instagram'], confirmar: false });
+    res.json({
+      slug,
+      checagem: r.checagem,
+      pendencias: r.pendencias,
+      legenda: r.legendaInstagram,
+      capaPngBase64: r.capaBuffer ? r.capaBuffer.toString('base64') : null,
+    });
+  } catch (err) {
+    if (err instanceof ErroPublicacao) return res.status(422).json({ erro: err.message, codigo: err.codigo });
+    log.erro('[admin] erro na prévia de redes:', err);
+    res.status(500).json({ erro: 'Falha inesperada na prévia.' });
+  }
+});
+
+/**
+ * POST /api/admin/capas-redes/gerar — gera e grava no Blob a capa 4:5 dos
+ * artigos da fila que ainda não têm uma atual. Em lotes (body { limite },
+ * padrão 20) por causa do limite de 60s da função: repita até "faltam: 0".
+ */
+router.post('/capas-redes/gerar', exigirAdmin, exigirBanco, async (req, res) => {
+  const limite = Math.min(Math.max(Number(req.body?.limite) || 20, 1), 40);
+  try {
+    const fila = await Artigo.find({ status: 'aprovado', publicado: true })
+      .select('slug titulo categoria subtituloRedes capaRedes')
+      .lean();
+    const pendentes = fila.filter((a) => !capaAtualizada(a));
+    const geradas = [];
+    const erros = [];
+    for (const artigo of pendentes.slice(0, limite)) {
+      try {
+        const capa = await garantirCapaRedes(artigo);
+        geradas.push({ slug: artigo.slug, url: capa.url });
+      } catch (err) {
+        erros.push({ slug: artigo.slug, codigo: err.codigo, erro: err.message });
+        if (err.codigo === 'BLOB_SEM_TOKEN') break;
+      }
+    }
+    res.json({ geradas: geradas.length, erros, faltam: pendentes.length - geradas.length, exemplos: geradas.slice(0, 3) });
+  } catch (err) {
+    log.erro('[admin] erro ao gerar capas das redes:', err);
+    res.status(500).json({ erro: 'Falha inesperada ao gerar as capas.' });
+  }
+});
+
+/** GET /api/admin/registros-publicacao[?slug=&limite=] — trilha de auditoria da tripla checagem. */
+router.get('/registros-publicacao', exigirAdmin, exigirBanco, async (req, res) => {
+  try {
+    const filtro = req.query.slug ? { slug: String(req.query.slug) } : {};
+    const limite = Math.min(Number(req.query.limite) || 20, 100);
+    const registros = await RegistroPublicacao.find(filtro).sort({ data: -1 }).limit(limite).select('-legenda').lean();
+    res.json({ registros });
+  } catch (err) {
+    log.erro('[admin] erro ao listar registros de publicação:', err);
+    res.status(500).json({ erro: 'Não foi possível listar os registros.' });
   }
 });
 

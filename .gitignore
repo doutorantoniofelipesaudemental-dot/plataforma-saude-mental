@@ -25,3 +25,4 @@ playwright-report/
 # Nunca versionar: um backup de Agendamento/Contato conteria dados de
 # pacientes (nome, e-mail, telefone) — LGPD.
 backups/
+narracoes-geradas/

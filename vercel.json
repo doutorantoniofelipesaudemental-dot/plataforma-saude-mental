@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "backend/index.js", "use": "@vercel/node", "config": { "maxDuration": 60 } },
+    { "src": "backend/index.js", "use": "@vercel/node", "config": { "maxDuration": 60, "includeFiles": ["backend/data/reescritas/**", "public/*.html"] } },
     { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
@@ -16,6 +16,7 @@
     { "src": "/sitemap-index.xml", "dest": "/backend/index.js" },
     { "src": "/sitemap-artigos.xml", "dest": "/backend/index.js" },
     { "src": "/blog/?", "dest": "/backend/index.js" },
+    { "src": "/instagram/?", "dest": "/backend/index.js" },
     { "src": "/artigo/[^/]+/?", "dest": "/backend/index.js" },
     { "src": "/privacidade/?", "dest": "/public/privacidade.html" },
     { "src": "/admin/?", "dest": "/public/admin.html" },

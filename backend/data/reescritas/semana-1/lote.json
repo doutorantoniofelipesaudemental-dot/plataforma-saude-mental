@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "tmc-aps",
+    "resumo": "Dores, insônia e cansaço que não passam podem ser sofrimento ligado ao trabalho. O que a ciência mostra, sinais para observar, como falar disso na consulta e como a Atenção Primária pode cuidar.",
+    "tempoLeitura": 5,
+    "arquivo_conteudo": "tmc-aps.html",
+    "manter_ferramenta": true
+  },
+  {
+    "slug": "professores-saude-mental",
+    "resumo": "Burnout, ansiedade e depressão são frequentes entre professores. O tamanho do problema, sinais de alerta, atitudes que protegem e o que depende da escola.",
+    "tempoLeitura": 4,
+    "arquivo_conteudo": "professores-saude-mental.html",
+    "manter_ferramenta": false
+  },
+  {
+    "slug": "burnout-aps",
+    "resumo": "Burnout em médicos e enfermeiros da Atenção Primária: o que é, por que a APS tem riscos próprios, uma autoavaliação rápida e o que as evidências mostram que funciona.",
+    "tempoLeitura": 4,
+    "arquivo_conteudo": "burnout-aps.html",
+    "manter_ferramenta": false
+  },
+  {
+    "slug": "psicofarmacos-mitos-culturais",
+    "resumo": "De onde vêm os mitos sobre remédios para saúde mental, o que a ciência realmente mostra e perguntas para levar à consulta. Uma lista de mito ou fato para guardar.",
+    "tempoLeitura": 4,
+    "arquivo_conteudo": "psicofarmacos-mitos-culturais.html",
+    "manter_ferramenta": false
+  }
+]

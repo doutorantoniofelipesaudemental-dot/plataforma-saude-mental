@@ -19,9 +19,10 @@ const { publicarArtigoNasRedes, ErroPublicacao } = require('./socialPublisher');
 const { estadoPausa } = require('./tokenInstagram');
 
 const HORA_MS = 60 * 60 * 1000;
-// Artigos que falham nas checagens 1/2 (URL fora do ar, capa inacessível)
-// não travam a fila: a execução tenta o próximo, até este limite.
-const MAX_CANDIDATOS_POR_EXECUCAO = 3;
+// Artigo barrado (pré-condição técnica ou tripla checagem editorial — ver
+// checagemRedes.js) não trava a fila: a execução registra o motivo em
+// RegistroPublicacao e tenta o próximo, até este limite.
+const MAX_CANDIDATOS_POR_EXECUCAO = 10;
 // Uma interação real (voto na enquete, uso da ferramenta, pedido de narração)
 // vale mais que uma visualização. Hoje só `visualizacoes` tem dados, então é
 // ela que decide a ordem na prática.
@@ -126,7 +127,7 @@ async function publicarProximoDaFila({ simular = false } = {}) {
   const pulados = [];
   for (const candidato of candidatos) {
     try {
-      const resultado = await publicarArtigoNasRedes(String(candidato._id), { redes, confirmar: true });
+      const resultado = await publicarArtigoNasRedes(String(candidato._id), { redes, confirmar: true, origem: 'cron' });
       if (resultado.executado) {
         return { publicado: true, artigo: candidato.slug, engajamento: candidato.engajamento, resultados: resultado.resultados, erros: resultado.erros, pulados };
       }
@@ -135,7 +136,7 @@ async function publicarProximoDaFila({ simular = false } = {}) {
       return { publicado: false, motivo: 'todas as redes falharam', artigo: candidato.slug, erros: resultado.erros, pulados };
     } catch (err) {
       if (!(err instanceof ErroPublicacao)) throw err;
-      // Checagem 1/2 barrou ESTE artigo (capa ou URL fora do ar): tenta o próximo.
+      // Pré-condição técnica ou tripla checagem barrou ESTE artigo: tenta o próximo.
       pulados.push({ artigo: candidato.slug, codigo: err.codigo, motivo: err.message });
     }
   }

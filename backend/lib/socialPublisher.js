@@ -37,7 +37,12 @@
 
 const db = require('./db');
 const Artigo = require('../models/Artigo');
+const RegistroPublicacao = require('../models/RegistroPublicacao');
 const { montarSlides } = require('./carrossel');
+const { montarLegendaInstagram } = require('./legendaInstagram');
+const { garantirCapaRedes, renderizarCapaRedes } = require('./capaRedes');
+const { executarTriplaChecagem } = require('./checagemRedes');
+const { estadoNarracao, PENDENCIA_NARRACAO } = require('./narracao');
 const { obterTokenInstagram, registrarTokenInvalido, ehErroDeToken } = require('./tokenInstagram');
 const { log } = require('./log');
 
@@ -229,8 +234,13 @@ function montarPacotesMidia(artigo, url, idFerramenta) {
   return { carrossel, reel, stories, youtubeShort };
 }
 
-/** Monta a legenda e os payloads exatos que seriam enviados — nunca executa sozinha. */
-function montarPayloads(artigo, url, redes) {
+/**
+ * Monta os payloads exatos que seriam enviados — nunca executa sozinha. O
+ * Instagram usa a legenda do feed (legendaInstagram.js) e a capa 4:5
+ * (capaRedes.js); o LinkedIn segue com título + resumo + link, que lá é
+ * clicável.
+ */
+function montarPayloads(artigo, url, redes, instagram = {}) {
   const legenda = montarLegenda(artigo, url);
   const payloads = {};
 
@@ -239,7 +249,7 @@ function montarPayloads(artigo, url, redes) {
       passo1CriarContainer: {
         endpoint: `${graphBase()}/${process.env.INSTAGRAM_ACCOUNT_ID || '<INSTAGRAM_ACCOUNT_ID>'}/media`,
         metodo: 'POST',
-        corpo: { image_url: artigo.imagemCapa, caption: legenda },
+        corpo: { image_url: instagram.capaUrl || '<capa 4:5 gravada no Blob ao publicar>', caption: instagram.legenda },
         cabecalho: { Authorization: 'Bearer [REDACTED]' },
       },
       passo2PublicarContainer: {
@@ -374,31 +384,104 @@ async function publicarNoLinkedIn({ url, titulo, legenda }) {
 
 /* =============================== Orquestrador ============================== */
 
+/** Pendências que não reprovam o post, mas ficam no registro (hoje: a narração). */
+function pendenciasDoArtigo(artigo) {
+  const { estado } = estadoNarracao(artigo);
+  return estado === 'ok' ? [] : [PENDENCIA_NARRACAO[estado]];
+}
+
+/** Grava o registro da tentativa. Nunca lança: falha de log não pode derrubar a publicação. */
+async function registrarTentativa({ artigo, origem, resultado, checagem, capaUrl, legenda, redes }) {
+  try {
+    await RegistroPublicacao.create({
+      artigo: artigo._id,
+      slug: artigo.slug,
+      origem,
+      resultado,
+      motivo: checagem?.motivo || '',
+      checagens: checagem
+        ? {
+            conteudo: { ok: checagem.conteudo.ok, falhas: checagem.conteudo.falhas },
+            visual: { ok: checagem.visual.ok, falhas: checagem.visual.falhas },
+            seguranca: { ok: checagem.seguranca.ok, falhas: checagem.seguranca.falhas },
+          }
+        : undefined,
+      pendencias: pendenciasDoArtigo(artigo),
+      capa: { url: capaUrl || '', hash: checagem?.visual?.hash || '' },
+      legenda: legenda || '',
+      redes,
+    });
+  } catch (err) {
+    log.erro(`[social] não foi possível gravar o registro de publicação de ${artigo.slug}:`, err.message);
+  }
+}
+
+/**
+ * Prepara o post do feed e roda a tripla checagem editorial. Publicando de
+ * verdade, garante a capa 4:5 no Blob (gera se faltar) e checa a imagem real
+ * do endereço; na prévia, desenha a capa em memória e não grava nada.
+ */
+async function prepararPostInstagram(artigo, { gravarCapa }) {
+  const legenda = montarLegendaInstagram(artigo);
+  const contarOutrosComHash = (hash) => Artigo.countDocuments({ 'capaRedes.hash': hash, _id: { $ne: artigo._id } });
+
+  if (gravarCapa) {
+    const capaRedes = await garantirCapaRedes(artigo);
+    const comCapa = { ...artigo, capaRedes };
+    const checagem = await executarTriplaChecagem(comCapa, { legenda, contarOutrosComHash });
+    return { legenda, capaUrl: capaRedes.url, checagem };
+  }
+
+  const r = await renderizarCapaRedes(artigo);
+  const capa = { buffer: r.buffer, meta: { modelo: r.modelo, titulo: r.titulo, hash: r.hash } };
+  const checagem = await executarTriplaChecagem(artigo, { legenda, capa, contarOutrosComHash });
+  return { legenda, capaUrl: null, capaBuffer: r.buffer, checagem };
+}
+
 /**
  * @param {string} artigoId
  * @param {object} opcoes
  * @param {('instagram'|'linkedin')[]} [opcoes.redes] - default: as duas.
- * @param {boolean} [opcoes.confirmar] - sem isso, só monta e devolve os payloads (dry-run).
+ * @param {boolean} [opcoes.confirmar] - sem isso, só monta, checa e devolve (prévia).
+ * @param {'cron'|'admin'|'cli'} [opcoes.origem] - vai para o registro de publicação.
  */
-async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedin'], confirmar = false } = {}) {
-  // Checagem 1
+async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedin'], confirmar = false, origem = 'admin' } = {}) {
+  // Pré-condições técnicas (antigas checagens 1 e 2): aprovado, publicado,
+  // URL do artigo e capa do site no ar, miniaplicativo entregue pelo SSR.
   const artigo = await checarStatusAprovado(artigoId);
-
-  // Checagem 2 (inclui o webapp, se houver)
   const { url, idFerramenta } = await checarUrlsAcessiveis(artigo);
 
-  // Checagem 3 — monta sempre (payloads das redes + os 4 pacotes de mídia),
-  // executa a chamada de escrita real só com confirmação explícita.
-  const { legenda, payloads } = montarPayloads(artigo, url, redes);
+  // Tripla checagem editorial (checagemRedes.js) — bloqueante para qualquer rede.
+  let post;
+  try {
+    post = await prepararPostInstagram(artigo, { gravarCapa: confirmar && redes.includes('instagram') });
+  } catch (err) {
+    const motivo = `visual: capa 4:5 indisponível (${err.message})`;
+    if (confirmar) await registrarTentativa({ artigo, origem, resultado: 'reprovado', checagem: { motivo, conteudo: { ok: true, falhas: [] }, visual: { ok: false, falhas: [motivo] }, seguranca: { ok: true, falhas: [] } } });
+    throw new ErroPublicacao(motivo, err.codigo || 'CAPA_INDISPONIVEL');
+  }
+  const { legenda: legendaInstagram, capaUrl, capaBuffer, checagem } = post;
+
+  const { legenda, payloads } = montarPayloads(artigo, url, redes, { legenda: legendaInstagram.texto, capaUrl });
   const pacotesMidia = montarPacotesMidia(artigo, url, idFerramenta);
 
+  if (!checagem.aprovado) {
+    await registrarTentativa({ artigo, origem: confirmar ? origem : 'previa', resultado: confirmar ? 'reprovado' : 'previa', checagem, capaUrl, legenda: legendaInstagram.texto });
+    if (confirmar) throw new ErroPublicacao(`Reprovado na tripla checagem — ${checagem.motivo}`, 'CHECAGEM_REPROVADA');
+  }
+
   if (!confirmar) {
+    if (checagem.aprovado) await registrarTentativa({ artigo, origem: 'previa', resultado: 'previa', checagem, capaUrl, legenda: legendaInstagram.texto });
     return {
       executado: false,
-      motivo: 'Confirmação explícita ausente — rode de novo com confirmar:true (ou --confirmar no CLI) para publicar de verdade.',
+      motivo: 'Prévia — rode de novo com confirmar:true (ou --confirmar no CLI) para publicar de verdade.',
       artigo: { id: String(artigo._id), titulo: artigo.titulo, slug: artigo.slug },
       url,
       idFerramenta,
+      checagem,
+      pendencias: pendenciasDoArtigo(artigo),
+      legendaInstagram: legendaInstagram.texto,
+      capaBuffer,
       legenda,
       payloads,
       pacotesMidia,
@@ -412,7 +495,7 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
 
   if (redes.includes('instagram')) {
     try {
-      resultados.instagram = await publicarNoInstagram({ imagemUrl: artigo.imagemCapa, legenda });
+      resultados.instagram = await publicarNoInstagram({ imagemUrl: capaUrl, legenda: legendaInstagram.texto });
     } catch (err) {
       erros.instagram = { codigo: err.codigo || 'ERRO_DESCONHECIDO', mensagem: err.message };
       log.erro(`[social] falha ao publicar no Instagram (artigo ${artigo.slug}):`, err.codigo, err.message);
@@ -439,6 +522,15 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
   if (publicouAlgumaRede) {
     await Artigo.findByIdAndUpdate(artigoId, { status: 'publicado', publicadoRedesEm: new Date() });
   }
+  await registrarTentativa({
+    artigo,
+    origem,
+    resultado: publicouAlgumaRede ? 'publicado' : 'falha-rede',
+    checagem,
+    capaUrl,
+    legenda: legendaInstagram.texto,
+    redes: { resultados, erros },
+  });
 
   return {
     executado: publicouAlgumaRede,
@@ -446,6 +538,7 @@ async function publicarArtigoNasRedes(artigoId, { redes = ['instagram', 'linkedi
     artigo: { id: String(artigo._id), titulo: artigo.titulo, slug: artigo.slug },
     url,
     idFerramenta,
+    checagem,
     resultados,
     erros: Object.keys(erros).length > 0 ? erros : undefined,
     pacotesMidia,

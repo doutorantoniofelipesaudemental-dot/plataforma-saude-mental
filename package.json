@@ -16,7 +16,9 @@
     "prepare": "husky || true",
     "verificar-segredos": "node scripts/verificar-segredos.js --historico",
     "test:unit": "node --test tests/unit/",
-    "test": "npm run test:unit && npm run test:e2e"
+    "test": "npm run test:unit && npm run test:e2e",
+    "importar-reescritas": "node --env-file-if-exists=.env backend/tools/importar-reescritas.js",
+    "narrar": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js"
   },
   "engines": {
     "node": ">=20"
