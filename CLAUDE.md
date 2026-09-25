@@ -279,6 +279,12 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
 - **Fila:** narração que não está `ok` não reprova o post, mas entra em `pendencias` no registro de publicação.
 - **Edge-TTS:** gratuito e sem chave, mas é o serviço de leitura em voz alta do navegador Edge, sem contrato nem garantia — pode mudar ou sair do ar. Alternativa oficial com a mesma voz: Azure Speech (cobrança por caractere).
 
+### 20-sexies. Diretrizes de operação (dono da conta, 2026-09-25)
+
+- **Fila intocada:** a partir de 2026-09-25, não mexer na fila do Instagram (quantidade, horários, ordem, token, pausa) sem pedido explícito — a Regra 5 do `prompt-mestre-plataforma.md`. As alterações daquele dia (pausa, novo padrão, retomada) foram pedidas.
+- **Fim de fase = push + deploy:** ao fechar cada fase/ciclo de trabalho, rodar os testes, fazer commit descritivo, push na `main` e confirmar o deploy (Regra 12 do prompt-mestre). Dentro da fase, commits locais.
+- O `prompt-mestre-plataforma.md` fica na raiz, **fora do git** (repositório público).
+
 ### Segredos
 
 **O repositório `plataforma-saude-mental` no GitHub é PÚBLICO** (verificado em 2026-09-24): todo commit, inclusive este arquivo, fica aberto na internet. Secret scanning e Push protection do GitHub estão ativos (são gratuitos só em repositório público — torná-lo privado numa conta pessoal sem plano pago os desliga).
