@@ -12,7 +12,7 @@
  * cima"/link em resposta, conforme o recurso disponível na conta).
  */
 
-const HASHTAGS_FIXAS = ['#saudemental', '#psiquiatria', '#doutorsaudemental', '#stories'];
+const HASHTAGS_FIXAS = ['#saudemental', '#medicinadefamilia', '#doutorsaudemental', '#stories'];
 
 const ROTEIROS_STORIES = [
   {

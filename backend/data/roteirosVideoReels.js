@@ -11,7 +11,7 @@
  * `backend/models/Artigo.js` (mesmo enum `CATEGORIAS`).
  */
 
-const HASHTAGS_FIXAS = ['#saudemental', '#psiquiatria', '#doutorsaudemental', '#reels', '#saudementalimporta'];
+const HASHTAGS_FIXAS = ['#saudemental', '#medicinadefamilia', '#doutorsaudemental', '#reels', '#saudementalimporta'];
 
 const ROTEIROS_REELS = [
   {
@@ -200,7 +200,7 @@ const ROTEIROS_REELS = [
     textoTela: ['TERAPIA NÃO BASTA?', 'QUANDO PROCURAR UM PSIQUIATRA'],
     bRoll: 'Divã de consultório de psicoterapia; encaminhamento médico sendo escrito; dois profissionais de saúde conversando sobre um caso; paciente entre duas cadeiras, simbolizando psicólogo e psiquiatra.',
     legenda: 'Como saber se é hora de somar acompanhamento psiquiátrico à sua psicoterapia. 📖 [LINK] 📅 [LINK BIO]',
-    hashtagsExtras: ['#psicoterapia', '#psiquiatria'],
+    hashtagsExtras: ['#psicoterapia'],
   },
   {
     tema: 'Esquecimento normal ou sinal de alerta?',
