@@ -124,9 +124,27 @@ test('inglês: permite burnout, online, home office e feedback; reprova o resto'
   assert.match(mindset.motivo, /inglês na capa: "Mindset"/);
 });
 
+test('"Free Fire" passa como nome próprio; "free" solto não', async () => {
+  const base = montarLegendaInstagram(ARTIGO);
+  const jogo = await checar(ARTIGO, { legenda: comTexto(base, base.texto.replace(LINHA_BIO, `Roblox, Fortnite ou Free Fire.
+
+` + LINHA_BIO)) });
+  assert.ok(!/inglês/.test(jogo.motivo || ''), jogo.motivo);
+  const solto = await checar(ARTIGO, { legenda: comTexto(base, base.texto.replace(LINHA_BIO, `Teste free.
+
+` + LINHA_BIO)) });
+  assert.match(solto.motivo, /inglês na legenda: "free"/);
+});
+
 test('selo da capa: categoria "Geral" vira o tema do título ou some', () => {
   const { textoDoSelo } = require('../../backend/lib/capaRedes');
   assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Saúde mental de professores' }), 'Professores');
   assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Um tema qualquer' }), '');
+  // Limites de palavra (\b) dos padrões de tema — já saíram corrompidos uma vez.
+  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Burnout em médicos' }), 'Médicos & Enfermeiros');
+  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Quando o luto demora' }), 'Luto');
+  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Saúde mental na APS' }), 'Atenção primária');
+  const tags = montarLegendaInstagram({ ...ARTIGO, categoria: 'Geral', titulo: 'Luto no RH' }).partes.hashtags;
+  assert.ok(tags.includes('#luto') && tags.includes('#saudementalnotrabalho'), tags.join(' '));
   assert.equal(textoDoSelo({ categoria: 'Luto & Divórcio', titulo: 'x' }), 'Luto & Divórcio');
 });

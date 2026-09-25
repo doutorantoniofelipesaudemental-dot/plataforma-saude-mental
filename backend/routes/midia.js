@@ -107,6 +107,7 @@ router.put(
         url: enviado.url,
         hash,
         voz: VOZ_NARRACAO,
+        provedor: ['azure', 'edge'].includes(req.get('x-narracao-provedor')) ? req.get('x-narracao-provedor') : 'edge',
         caracteres: Number(req.get('x-narracao-caracteres')) || null,
         bytes: audio.length,
         geradaEm: new Date(),

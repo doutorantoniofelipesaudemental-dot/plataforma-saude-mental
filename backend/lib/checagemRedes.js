@@ -40,6 +40,10 @@ const PALAVRAS_EM_INGLES = [
   'wellbeing', 'self-care', 'selfcare', 'coping', 'healthy', 'mental health', 'stress',
   'coaching',
 ];
+// Nomes próprios em inglês permitidos só na forma exata (Regra 17): "free" solto continua barrado.
+const NOMES_PROPRIOS_PERMITIDOS = [/\bFree Fire\b/g];
+const semNomesProprios = (texto) => NOMES_PROPRIOS_PERMITIDOS.reduce((t, re) => t.replace(re, ' '), String(texto));
+
 const RE_INGLES = new RegExp(`(^|[^\\p{L}])(${PALAVRAS_EM_INGLES.map((p) => p.replace(/[-\s]/g, '[-\\s]')).join('|')})(?=$|[^\\p{L}])`, 'iu');
 
 // Código de Ética Médica / publicidade médica (Res. CFM 2.336/2023).
@@ -99,7 +103,7 @@ function checarConteudo(artigo, legenda) {
   if (RE_URL_SOLTA.test(texto)) falhas.push('URL solta na legenda (não é clicável no Instagram)');
   if (RE_MARCADOR.test(texto)) falhas.push('marcador estrutural na legenda ("Slide 1", "**", colchetes)');
   if (RE_CORROMPIDO.test(texto)) falhas.push('caracteres corrompidos (codificação)');
-  const ingles = texto.match(RE_INGLES);
+  const ingles = semNomesProprios(texto).match(RE_INGLES);
   if (ingles) falhas.push(`palavra em inglês na legenda: "${ingles[2]}"`);
   if (texto.length > LIMITE_LEGENDA_INSTAGRAM) falhas.push(`legenda com ${texto.length} caracteres (limite ${LIMITE_LEGENDA_INSTAGRAM})`);
 
@@ -146,7 +150,7 @@ async function checarVisual(artigo, capa, contarOutrosComHash) {
   if (meta.titulo !== artigo.titulo) falhas.push('capa sem o título atual do artigo');
   if ((await contarOutrosComHash(hash)) > 0) falhas.push('capa repetida (mesmo hash de outro artigo)');
 
-  const ingles = `${artigo.titulo} ${artigo.subtituloRedes || ''} ${textoDoSelo(artigo)}`.match(RE_INGLES);
+  const ingles = semNomesProprios(`${artigo.titulo} ${artigo.subtituloRedes || ''} ${textoDoSelo(artigo)}`).match(RE_INGLES);
   if (ingles) falhas.push(`texto em inglês na capa: "${ingles[2]}"`);
 
   return { ...resultado(falhas), hash };

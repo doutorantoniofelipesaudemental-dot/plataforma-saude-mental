@@ -31,7 +31,7 @@ const ALTURA = 1350;
 const LARGURA_UTIL = LARGURA - MARGEM * 2;
 // Muda sempre que o desenho mudar: capas de um modelo anterior são refeitas
 // pela fila antes de publicar (garantirCapaRedes).
-const MODELO = 'capa-4x5-v2';
+const MODELO = 'capa-4x5-v3';
 const MARCA = 'Dr. Antônio Felipe · Saúde Mental';
 
 const TAMANHOS_TITULO = [
@@ -50,16 +50,16 @@ function tamanhoTitulo(titulo) {
 // do título (o primeiro que casar) ou some.
 const TEMAS_SELO = [
   [/professor|docente|escola/i, 'Professores'],
-  [/m[eé]dic[oa]s?|enfermeir/i, 'Médicos & Enfermeiros'],
+  [/m[eé]dic[oa]s?\b|enfermeir/i, 'Médicos & Enfermeiros'],
   [/resid[eê]ncia|residentes/i, 'Residência médica'],
   [/crian[cç]a|infantil|infância/i, 'Infância'],
   [/adolescen/i, 'Adolescência'],
   [/idos[oa]|envelhec|terceira idade/i, 'Terceira idade'],
   [/cuidador/i, 'Cuidadores'],
   [/gesta[cç]|puerp|materni|amamenta/i, 'Maternidade'],
-  [/trabalh|empresa|gestor|lideran|RH/i, 'Saúde no trabalho'],
-  [/aten[cç][aã]o prim[aá]ria|APS/i, 'Atenção primária'],
-  [/luto/i, 'Luto'],
+  [/trabalh|empresa|gestor|lideran|\bRH\b/i, 'Saúde no trabalho'],
+  [/aten[cç][aã]o prim[aá]ria|\bAPS\b/i, 'Atenção primária'],
+  [/\bluto\b/i, 'Luto'],
   [/ansiedade/i, 'Ansiedade'],
   [/depress/i, 'Depressão'],
 ];

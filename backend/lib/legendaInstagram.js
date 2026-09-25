@@ -110,18 +110,18 @@ function temaSensivel(artigo) {
 // Tema pelo título: vem antes da categoria, que em "Geral" diz pouco.
 const HASHTAGS_TEMA = [
   [/professor|docente|escola/i, ['#professores', '#saudementaldocente']],
-  [/m[eé]dic[oa]s?|enfermeir/i, ['#medicos', '#enfermagem']],
+  [/m[eé]dic[oa]s?\b|enfermeir/i, ['#medicos', '#enfermagem']],
   [/resid[eê]ncia|residentes/i, ['#residenciamedica']],
   [/crian[cç]a|infantil|infância/i, ['#saudementalinfantil']],
   [/adolescen/i, ['#adolescencia']],
   [/idos[oa]|envelhec|terceira idade/i, ['#saudedoidoso']],
-  [/trabalh|empresa|gestor|lideran|RH/i, ['#saudementalnotrabalho']],
+  [/trabalh|empresa|gestor|lideran|\bRH\b/i, ['#saudementalnotrabalho']],
   [/cuidador/i, ['#cuidadores']],
   [/gesta[cç]|puerp|materni|amamenta/i, ['#maternidade']],
-  [/aten[cç][aã]o prim[aá]ria|APS/i, ['#atencaoprimaria']],
+  [/aten[cç][aã]o prim[aá]ria|\bAPS\b/i, ['#atencaoprimaria']],
   [/ansiedade/i, ['#ansiedade']],
   [/depress/i, ['#depressao']],
-  [/luto/i, ['#luto']],
+  [/\bluto\b/i, ['#luto']],
 ];
 
 /** Relato de caso: precisa ser apresentado como narrativa composta (regra de ética do projeto). */

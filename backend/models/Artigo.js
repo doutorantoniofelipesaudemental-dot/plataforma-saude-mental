@@ -136,6 +136,7 @@ const ArtigoSchema = new mongoose.Schema(
       url: String,
       hash: String,
       voz: String,
+      provedor: String,
       caracteres: Number,
       bytes: Number,
       geradaEm: Date,
