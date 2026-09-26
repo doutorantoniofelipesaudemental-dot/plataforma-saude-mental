@@ -22,7 +22,8 @@
     "bot:gerar-posts": "node scripts/bot-gemini.js",
     "bot:gemini": "node scripts/bot-gemini.js",
     "bot:narracoes": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js --pendentes --limite=20 --enviar",
-    "bot:aprovar": "node scripts/bot-aprovar.js"
+    "bot:aprovar": "node scripts/bot-aprovar.js",
+    "bot:publicar": "node scripts/bot-publicar.js"
   },
   "engines": {
     "node": ">=20"

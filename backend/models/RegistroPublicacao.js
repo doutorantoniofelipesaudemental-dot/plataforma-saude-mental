@@ -15,7 +15,7 @@ const RegistroPublicacaoSchema = new mongoose.Schema(
     data: { type: Date, default: Date.now, index: true },
     artigo: { type: mongoose.Schema.Types.ObjectId, ref: 'Artigo', index: true },
     slug: { type: String, index: true },
-    origem: { type: String, enum: ['cron', 'admin', 'cli', 'previa'], default: 'cron' },
+    origem: { type: String, enum: ['cron', 'admin', 'cli', 'previa', 'bot'], default: 'cron' },
     // reprovado: barrado nas checagens; publicado: ao menos uma rede postou;
     // falha-rede: aprovado, mas todas as redes falharam; previa: só simulação.
     resultado: { type: String, enum: ['reprovado', 'publicado', 'falha-rede', 'previa'], required: true, index: true },

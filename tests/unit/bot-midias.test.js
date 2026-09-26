@@ -104,3 +104,16 @@ test('abrir e salvar no editor (CRLF, BOM, espaço no fim) não conta como ediç
   assert.equal(hashTexto(`﻿${original.replace(/\n/g, '\r\n')}  `), hashTexto(original));
   assert.notEqual(hashTexto(original.replace('Texto', 'Outro texto')), hashTexto(original));
 });
+
+test('publicador: legenda ganha identificação e aviso CFM antes das hashtags; bloqueia hashtag de marca', () => {
+  const { montarLegenda, checarTexto } = require('../../scripts/bot-publicar');
+  const { IDENTIFICACAO } = require('../../backend/lib/legendaInstagram');
+  const { AVISO_CFM } = require('../../scripts/bot-gemini');
+  const legenda = montarLegenda('Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\nSe precisar de apoio: CVV 188\n\n#saudemental #ansiedade #trabalho');
+  assert.ok(legenda.includes(`${IDENTIFICACAO}\n\n${AVISO_CFM}\n\n#saudemental`), 'identificação e aviso logo antes das hashtags');
+
+  const aprovado = { slides: [...Array(7)].map(() => ({ texto: 'Slide curto em português.' })) };
+  assert.deepEqual(checarTexto({ aprovado, legenda, artigo: ARTIGO }), []);
+  const comMarca = legenda.replace('#trabalho', '#DrAntomioFelipe');
+  assert.match(checarTexto({ aprovado, legenda: comMarca, artigo: ARTIGO }).join('\n'), /hashtag de marca "#DrAntomioFelipe"/);
+});

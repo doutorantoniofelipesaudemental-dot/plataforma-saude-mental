@@ -238,6 +238,37 @@ router.post('/capas-redes/gerar', exigirAdmin, exigirBanco, async (req, res) => 
 });
 
 /** GET /api/admin/registros-publicacao[?slug=&limite=] — trilha de auditoria da tripla checagem. */
+/**
+ * PUT /api/admin/redes-midia/:slug/:nome — corpo: PNG (image/png, até 4,4 MB).
+ * Recebe as imagens do carrossel desenhadas localmente pelo bot de mídias
+ * (scripts/bot-publicar.js) e grava no Blob em redes/<slug>/<nome>.png, com o
+ * token do Blob de produção. Só aceita PNG e nomes simples.
+ */
+router.put(
+  '/redes-midia/:slug/:nome',
+  exigirAdmin,
+  express.raw({ type: 'image/png', limit: '4400kb' }),
+  async (req, res) => {
+    const { slug, nome } = req.params;
+    if (!/^[a-z0-9-]{1,120}$/.test(slug) || !/^[a-z0-9-]{1,60}$/.test(nome)) {
+      return res.status(400).json({ erro: 'slug ou nome inválido.' });
+    }
+    const png = req.body;
+    if (!Buffer.isBuffer(png) || png.length < 100 || png.readUInt32BE(0) !== 0x89504e47) {
+      return res.status(400).json({ erro: 'Envie um PNG no corpo, com Content-Type: image/png.' });
+    }
+    if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ erro: 'Blob não configurado.' });
+    try {
+      const { put } = require('@vercel/blob');
+      const r = await put(`redes/${slug}/${nome}.png`, png, { access: 'public', contentType: 'image/png', addRandomSuffix: false, allowOverwrite: true });
+      res.json({ url: r.url });
+    } catch (err) {
+      log.erro('[admin] erro ao gravar mídia de redes:', err.message);
+      res.status(500).json({ erro: 'Não foi possível gravar a imagem.' });
+    }
+  }
+);
+
 router.get('/registros-publicacao', exigirAdmin, exigirBanco, async (req, res) => {
   try {
     const filtro = req.query.slug ? { slug: String(req.query.slug) } : {};

@@ -166,6 +166,8 @@ function verificar(d, artigo, fonte) {
   }
   if (/\bAntonio\b/.test(todos)) alertas.push('"Antonio" sem acento');
   if (/#psiquiatria\b/i.test(todos)) alertas.push('#psiquiatria');
+  const marca = todos.match(/#(?:dr|doutor|dra)[\p{L}\d_]*/iu);
+  if (marca) alertas.push(`hashtag de marca "${marca[0]}" (Regra 17)`);
 
   const artes = [...d.ganchos, ...d.carrossel.map((s) => s.texto), ...d.reels.flatMap((r) => r.cenas.map((c) => c.textoTela))].join('\n');
   const ingles = semNomesProprios(artes).match(RE_INGLES);

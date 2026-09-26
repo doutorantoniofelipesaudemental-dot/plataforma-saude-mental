@@ -101,6 +101,8 @@ async function aprovar(slug, { revisado }) {
   }${meta.aprovacao.editadoAposGeracao ? ' — rascunho editado antes da aprovação' : ''}.\n> ${AVISO_CFM}\n`;
   const aprovado = md.replace(/^# RASCUNHO — /, '# APROVADO — ').replace(/\n\n/, `\n\n${registro}\n`);
   fs.writeFileSync(path.join(APROVADOS, `${slug}.md`), aprovado);
+  // Metadados junto do aprovado: é o que o bot-publicar.js lê e onde grava os logs de envio.
+  fs.writeFileSync(path.join(APROVADOS, `${slug}.json`), JSON.stringify(meta, null, 2));
   return { slug, ok: true, editado: meta.aprovacao.editadoAposGeracao, linhas: meta.aprovacao.linhasAlteradas, pendencias };
 }
 

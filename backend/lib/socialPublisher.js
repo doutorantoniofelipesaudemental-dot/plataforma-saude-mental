@@ -320,6 +320,55 @@ async function publicarNoInstagram({ imagemUrl, legenda }) {
   return { id: publishData.id };
 }
 
+/**
+ * Carrossel no Instagram (bot de mídias, scripts/bot-publicar.js) — mesmo
+ * fluxo oficial: um container por imagem (is_carousel_item), o container
+ * CAROUSEL com a legenda, espera FINISHED e publica. Devolve o id e o status
+ * HTTP da publicação para o log.
+ */
+async function publicarCarrosselNoInstagram({ imagensUrls, legenda }) {
+  requerEnv('INSTAGRAM_ACCESS_TOKEN');
+  const token = await obterTokenInstagram();
+  const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
+  const base = graphBase(token);
+  const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
+
+  const filhos = [];
+  for (const imagemUrl of imagensUrls) {
+    const r = await fetch(`${base}/${contaId}/media`, {
+      method: 'POST',
+      headers: cabecalhos,
+      body: new URLSearchParams({ image_url: imagemUrl, is_carousel_item: 'true' }),
+    });
+    const d = await r.json();
+    if (!r.ok || !d.id) lancarErroMeta(d, 'Falha ao criar item do carrossel', 'INSTAGRAM_CONTAINER_FALHOU');
+    filhos.push(d.id);
+  }
+  for (const id of filhos) await aguardarContainerPronto(id, token);
+
+  const r = await fetch(`${base}/${contaId}/media`, {
+    method: 'POST',
+    headers: cabecalhos,
+    body: new URLSearchParams({ media_type: 'CAROUSEL', children: filhos.join(','), caption: legenda }),
+  });
+  const container = await r.json();
+  if (!r.ok || !container.id) lancarErroMeta(container, 'Falha ao criar o container do carrossel', 'INSTAGRAM_CONTAINER_FALHOU');
+  await aguardarContainerPronto(container.id, token);
+
+  const pub = await fetch(`${base}/${contaId}/media_publish`, {
+    method: 'POST',
+    headers: cabecalhos,
+    body: new URLSearchParams({ creation_id: container.id }),
+  });
+  const publicado = await pub.json();
+  if (!pub.ok || !publicado.id) lancarErroMeta(publicado, 'Falha ao publicar o carrossel', 'INSTAGRAM_PUBLISH_FALHOU');
+
+  const link = await fetch(`${base}/${publicado.id}?fields=permalink`, { headers: { Authorization: `Bearer ${token}` } })
+    .then((x) => x.json())
+    .catch(() => ({}));
+  return { id: publicado.id, statusHttp: pub.status, permalink: link.permalink || null, itens: filhos.length };
+}
+
 async function aguardarContainerPronto(creationId, token, { tentativas = 10, intervaloMs = 3000 } = {}) {
   for (let i = 0; i < tentativas; i += 1) {
     const resp = await fetch(`${graphBase(token)}/${creationId}?fields=status_code`, {
@@ -583,6 +632,7 @@ module.exports = {
   montarPayloads,
   montarPacotesMidia,
   publicarNoInstagram,
+  publicarCarrosselNoInstagram,
   publicarNoLinkedIn,
   publicarArtigoNasRedes,
   dispararPublicacaoAutomatica,
