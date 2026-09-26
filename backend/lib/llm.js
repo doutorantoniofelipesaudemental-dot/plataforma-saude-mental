@@ -68,11 +68,13 @@ async function viaGroq({ sistema, usuario, schema }) {
  * Gera um objeto JSON. Tenta o Gemini; se não houver chave ou ele falhar,
  * tenta o Groq. Devolve também qual provedor e modelo responderam.
  */
-async function gerarJson({ sistema, usuario, schema }) {
+async function gerarJson({ sistema, usuario, schema, preferir }) {
   const provedores = [
     process.env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: viaGemini },
     process.env.GROQ_API_KEY && { nome: 'groq', modelo: MODELO_GROQ, fn: viaGroq },
   ].filter(Boolean);
+  // `preferir` põe um provedor na frente (o revisor usa o outro modelo, para um olhar independente).
+  if (preferir) provedores.sort((a, b) => (b.nome === preferir) - (a.nome === preferir));
   if (!provedores.length) throw new Error('Nenhuma chave de LLM: defina GEMINI_API_KEY e/ou GROQ_API_KEY no .env local.');
 
   const falhas = [];

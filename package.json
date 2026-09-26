@@ -21,7 +21,8 @@
     "narrar": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js",
     "bot:gerar-posts": "node scripts/bot-gemini.js",
     "bot:gemini": "node scripts/bot-gemini.js",
-    "bot:narracoes": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js --pendentes --limite=20 --enviar"
+    "bot:narracoes": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js --pendentes --limite=20 --enviar",
+    "bot:aprovar": "node scripts/bot-aprovar.js"
   },
   "engines": {
     "node": ">=20"

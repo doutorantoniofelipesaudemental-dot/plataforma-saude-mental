@@ -87,3 +87,13 @@ test('cliente de LLM sem nenhuma chave explica o que falta', async () => {
   if (antes.g !== undefined) process.env.GEMINI_API_KEY = antes.g;
   if (antes.q !== undefined) process.env.GROQ_API_KEY = antes.q;
 });
+
+test('revisor recebe só o que o modelo escreveu, cada frase com a peça de origem', () => {
+  const { pecasDoRascunho } = require('../../scripts/bot-gemini');
+  const r = rascunho({ legenda: 'Gancho da legenda.\n\nParágrafo do modelo.\n\n🔗 Artigo completo no link da bio\n\nSe precisar de apoio: CVV 188\n\n#saudemental #ansiedade #trabalho' });
+  const pecas = pecasDoRascunho(r);
+  const legenda = pecas.filter((p) => p.id.startsWith('legenda')).map((p) => p.texto);
+  assert.deepEqual(legenda, ['Gancho da legenda.', 'Parágrafo do modelo.']);
+  assert.ok(pecas.some((p) => p.id === 'slide 1'));
+  assert.ok(!pecas.some((p) => /CVV 188|CRM-BA|link da bio/.test(p.texto)), 'linhas fixas ficam de fora');
+});

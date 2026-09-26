@@ -239,14 +239,121 @@ function garantirLinhasFixas(d, artigo) {
   if (ultimo && !ultimo.texto.includes('CVV 188')) ultimo.texto = `${ultimo.texto} Apoio agora: CVV 188 · SAMU 192`;
 }
 
+/* ===================== 2º passe: revisor semântico ===================== */
+
+/**
+ * Cada frase do rascunho, identificada pela peça de onde veio. Linhas fixas
+ * (CVV, identificação, link da bio, hashtags) ficam de fora: não vêm do modelo.
+ */
+function pecasDoRascunho(d) {
+  const p = [];
+  const add = (id, texto) => {
+    const t = String(texto || '')
+      .split('\n')
+      .filter((l) => l.trim() && !/CVV 188|CRM-BA|link da bio|^\s*#/.test(l))
+      .join(' ')
+      .trim();
+    if (t) p.push({ id, texto: t });
+  };
+  d.ganchos.forEach((t, i) => add(`gancho ${i + 1}`, t));
+  d.carrossel.forEach((s, i) => add(`slide ${i + 1}`, s.texto));
+  d.legenda.split(/\n\s*\n/).forEach((t, i) => add(`legenda §${i + 1}`, t));
+  d.reels.forEach((r, i) => r.cenas.forEach((c, j) => add(`Reel ${i + 1}, cena ${j + 1}`, `${c.textoTela}. ${c.fala}`)));
+  d.stories.forEach((s, i) => add(`story ${i + 1}`, s.texto));
+  d.linkedin.forEach((post, i) => post.texto.split(/\n\s*\n/).forEach((t, j) => add(`LinkedIn ${i + 1}, §${j + 1}`, t)));
+  d.youtube.titulos.forEach((t, i) => add(`título YouTube ${i + 1}`, t));
+  d.youtube.shorts.forEach((s, i) => add(`Short ${i + 1}`, `${s.gancho} ${s.desenvolvimento} ${s.cta}`));
+  return p;
+}
+
+const SISTEMA_REVISOR = `Você é revisor de FIDELIDADE de conteúdo médico. Compare cada peça do rascunho com o ARTIGO, que é a única fonte válida.
+
+Aponte somente problemas de sentido:
+- afirmação que o artigo não faz;
+- atribuição incorreta: conceito, dado ou efeito ligado ao público, etapa, estudo ou contexto errado (ex.: o artigo apresenta um conceito como geral e o rascunho o prende a um grupo);
+- número ou faixa distorcidos, sem a ressalva que o artigo dá, ou só pelo limite de cima;
+- generalização, exagero ou mudança de sentido (inclusive tom alarmista);
+- orientação clínica que o artigo não dá.
+
+Não aponte estilo, tamanho, ortografia nem escolhas de formato. Para cada problema, cite o trecho do rascunho e o trecho do artigo que mostra o desvio. Se a peça estiver fiel, não a mencione. Se tudo estiver fiel, devolva a lista vazia. Responda em português do Brasil.`;
+
+const SCHEMA_REVISOR = {
+  type: 'object',
+  properties: {
+    desvios: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          peca: { type: 'string', description: 'identificador da peça, como veio na lista' },
+          trecho: { type: 'string', description: 'trecho do rascunho com o problema' },
+          problema: { type: 'string', description: 'o que está errado, em uma frase' },
+          artigo: { type: 'string', description: 'trecho do artigo que mostra o desvio' },
+          gravidade: { type: 'string', enum: ['alta', 'media', 'baixa'] },
+        },
+        required: ['peca', 'trecho', 'problema', 'artigo', 'gravidade'],
+      },
+    },
+  },
+  required: ['desvios'],
+};
+
+/**
+ * Revisor semântico: um 2º passe de LLM, de preferência com o OUTRO provedor
+ * (o Groq revisa o que o Gemini escreveu e vice-versa). Nunca lança: se não
+ * houver revisor disponível, isso é registrado e a aprovação exige revisão
+ * integral pelo médico.
+ */
+async function revisarFidelidade(d, fonte, provedorQueGerou) {
+  const pecas = pecasDoRascunho(d);
+  const usuario = `ARTIGO:\n${fonte}\n\nPEÇAS DO RASCUNHO:\n${pecas.map((p) => `[${p.id}] ${p.texto}`).join('\n')}`;
+  try {
+    const r = await gerarJson({
+      sistema: SISTEMA_REVISOR,
+      usuario,
+      schema: SCHEMA_REVISOR,
+      preferir: provedorQueGerou === 'gemini' ? 'groq' : 'gemini',
+    });
+    const desvios = (Array.isArray(r.dados?.desvios) ? r.dados.desvios : []).map((x) => ({
+      peca: String(x.peca || ''),
+      trecho: String(x.trecho || ''),
+      problema: String(x.problema || ''),
+      artigo: String(x.artigo || ''),
+      gravidade: ['alta', 'media', 'baixa'].includes(x.gravidade) ? x.gravidade : 'media',
+    }));
+    return { disponivel: true, provedor: r.provedor, modelo: r.modelo, independente: r.provedor !== provedorQueGerou, desvios, pecas: pecas.length };
+  } catch (err) {
+    return { disponivel: false, erro: String(err.message).slice(0, 300), desvios: [], pecas: pecas.length };
+  }
+}
+
 const celula = (s) => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
 
-function markdown(artigo, d, alertas, origem) {
+const AVISO_CFM =
+  'Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
+
+function markdown(artigo, d, alertas, origem, revisao) {
   const l = [];
+  const icone = { alta: '🔴', media: '🟠', baixa: '🟡' };
   l.push(`# RASCUNHO — ${artigo.titulo}`, '');
-  l.push(`> Gerado por ${origem.provedor} (${origem.modelo}) em ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC a partir do artigo \`${artigo.slug}\`. **Revisão humana obrigatória antes de publicar.** Nada foi publicado.`, '');
-  l.push('## Verificação automática', '');
-  l.push(...(alertas.length ? alertas.map((a) => `- ⚠️ ${a}`) : ['- ✅ nenhum alerta (a revisão humana continua obrigatória)']), '');
+  l.push(`> Gerado por ${origem.provedor} (${origem.modelo}) em ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC a partir do artigo \`${artigo.slug}\`. Nada foi publicado.`);
+  l.push(`> ${AVISO_CFM}`);
+  l.push(`> **Aprovar depois de revisar:** \`npm run bot:aprovar -- --slug=${artigo.slug}\``, '');
+  l.push('## 1º passe — verificação estrutural (código)', '');
+  l.push(...(alertas.length ? alertas.map((a) => `- ⚠️ ${a}`) : ['- ✅ nenhum alerta']), '');
+  l.push('## 2º passe — revisor semântico de fidelidade (LLM)', '');
+  if (!revisao.disponivel) {
+    l.push(`- ⚠️ **Revisor indisponível** (${revisao.erro}). A revisão de sentido fica inteira com o médico.`, '');
+  } else {
+    l.push(`> ${revisao.provedor} (${revisao.modelo})${revisao.independente ? ', modelo diferente do que escreveu' : ', mesmo modelo que escreveu (só uma chave disponível)'} · ${revisao.pecas} peças comparadas com o artigo.`, '');
+    l.push(
+      ...(revisao.desvios.length
+        ? revisao.desvios.map((x) => `- ${icone[x.gravidade]} **${x.peca}** — ${x.problema}\n  - Rascunho: "${x.trecho}"\n  - Artigo: "${x.artigo}"`)
+        : ['- ✅ nenhum desvio de sentido apontado']),
+      ''
+    );
+  }
+  l.push('> Os dois passes reduzem o trabalho da revisão, mas não a substituem: um revisor automático também erra.', '');
   l.push('## Ganchos para Reels', '', ...d.ganchos.map((g, i) => `${i + 1}. ${g}`), '');
   l.push('## Carrossel (4:5, 1080 × 1350)', '', '| Slide | Texto | Sugestão visual |', '|---|---|---|');
   d.carrossel.forEach((s, i) => l.push(`| ${i + 1} | ${celula(s.texto)} | ${celula(s.visual)} |`));
@@ -277,10 +384,36 @@ async function gerarRascunho(artigo, { forcar }) {
   origem.dados = normalizar(origem.dados);
   garantirLinhasFixas(origem.dados, artigo);
   const alertas = verificar(origem.dados, artigo, `${artigo.titulo} ${artigo.resumo} ${fonte}`);
+  const revisao = await revisarFidelidade(origem.dados, usuario, origem.provedor);
   fs.mkdirSync(PASTA, { recursive: true });
-  fs.writeFileSync(destino, markdown(artigo, origem.dados, alertas, origem));
-  return { slug: artigo.slug, destino, provedor: origem.provedor, alertas: alertas.length, reservas: origem.falhas };
+  const md = markdown(artigo, origem.dados, alertas, origem, revisao);
+  fs.writeFileSync(destino, md);
+  // Metadados para a aprovação (bot-aprovar.js): o que foi verificado e sobre qual versão do artigo.
+  fs.writeFileSync(
+    path.join(PASTA, `${artigo.slug}.json`),
+    JSON.stringify(
+      {
+        slug: artigo.slug,
+        geradoEm: new Date(),
+        provedor: origem.provedor,
+        modelo: origem.modelo,
+        hashArtigo: hashArtigo(artigo),
+        hashRascunhoGerado: hashTexto(md),
+        alertas,
+        revisor: revisao,
+        aprovacao: null,
+      },
+      null,
+      2
+    )
+  );
+  return { slug: artigo.slug, destino, provedor: origem.provedor, alertas: alertas.length, revisao, reservas: origem.falhas };
 }
+
+const crypto = require('crypto');
+const hashTexto = (t) => crypto.createHash('sha256').update(String(t)).digest('hex');
+/** Versão do artigo que o rascunho usou: mudou o texto, o rascunho precisa ser refeito. */
+const hashArtigo = (a) => hashTexto(`${a.titulo}\n${a.resumo}\n${a.conteudo}`);
 
 async function main() {
   const args = argumentos();
@@ -293,6 +426,7 @@ async function main() {
     return db.mongoose.disconnect();
   }
 
+  const gerados = [];
   for (const slug of slugs) {
     const artigo = await Artigo.findOne({ slug, publicado: true }).lean();
     if (!artigo) {
@@ -302,12 +436,31 @@ async function main() {
     try {
       const r = await gerarRascunho(artigo, { forcar: Boolean(args.forcar) });
       if (r.pulado) console.log(`  ${slug}: ${r.pulado}`);
-      else console.log(`  ${slug}: rascunho por ${r.provedor} · ${r.alertas} alerta(s) · ${path.relative(RAIZ, r.destino)}${r.reservas.length ? ` · reserva usada (${r.reservas.join('; ')})` : ''}`);
+      else {
+        const rev = r.revisao.disponivel
+          ? `${r.revisao.desvios.length} desvio(s) de sentido (revisor ${r.revisao.provedor})`
+          : 'revisor indisponível';
+        console.log(`  ${slug}: rascunho por ${r.provedor} · ${r.alertas} alerta(s) estruturais · ${rev}${r.reservas.length ? ` · reserva usada` : ''}`);
+        gerados.push({ slug, alertas: r.alertas, revisao: r.revisao });
+      }
     } catch (err) {
       console.log(`  ${slug}: FALHOU — ${err.message}`);
     }
   }
   await db.mongoose.disconnect();
+
+  if (gerados.length) {
+    console.log('\n  Resumo do lote — revise cada rascunho em CONTEUDO_INSTAGRAM/rascunhos/ e aprove:\n');
+    for (const g of gerados) {
+      const altos = g.revisao.desvios.filter((x) => x.gravidade === 'alta').length;
+      const situacao =
+        g.alertas || g.revisao.desvios.length || !g.revisao.disponivel
+          ? `⚠️  ${g.alertas} alerta(s), ${g.revisao.desvios.length} desvio(s)${altos ? ` (${altos} de gravidade alta)` : ''}${g.revisao.disponivel ? '' : ', sem revisor'}`
+          : '✅ sem alertas nem desvios';
+      console.log(`  ${situacao.padEnd(46)}  npm run bot:aprovar -- --slug=${g.slug}`);
+    }
+    console.log(`\n  Aprovar o lote inteiro de uma vez: npm run bot:aprovar -- --lote\n  ${AVISO_CFM}\n`);
+  }
 }
 
 if (require.main === module) main().catch(async (err) => {
@@ -320,4 +473,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { verificar, garantirLinhasFixas, normalizar, SCHEMA, SISTEMA };
+module.exports = { verificar, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, AVISO_CFM, SCHEMA, SISTEMA };
