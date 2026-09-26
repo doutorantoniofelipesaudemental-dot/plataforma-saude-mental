@@ -44,7 +44,8 @@ const RegistroPublicacao = require('../backend/models/RegistroPublicacao');
 const { lerAprovado, renderizarSlides } = require('../backend/lib/carrosselAprovado');
 const { publicarCarrosselNoInstagram, publicarNoLinkedIn } = require('../backend/lib/socialPublisher');
 const { estadoPausa, registrarTokenInvalido } = require('../backend/lib/tokenInstagram');
-const { configuracao } = require('../backend/lib/filaRedes');
+// Mesma regra de cadência da fila (contagem unificada fila + bot, filaRedes.js).
+const { motivoParaAguardar } = require('../backend/lib/filaRedes');
 const { IDENTIFICACAO, temaSensivel } = require('../backend/lib/legendaInstagram');
 const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/checagemRedes');
 const { hashArtigo, hashTexto, AVISO_CFM } = require('./bot-gemini');
@@ -56,7 +57,6 @@ const PUBLICADOS = path.join(PASTA, 'publicados');
 const BASE_API = process.env.BOT_API_BASE || 'https://drsaudemental.vercel.app';
 const SITE = 'https://drsaudemental.vercel.app';
 const LIMITE_LEGENDA = 2200;
-const HORA = 60 * 60 * 1000;
 
 function argumentos() {
   const args = {};
@@ -117,24 +117,6 @@ function checarTexto({ aprovado, legenda, artigo }) {
   if (!legenda.includes(IDENTIFICACAO)) falhas.push('legenda sem a identificação do médico');
   if (temaSensivel(artigo) && !legenda.includes('CVV 188')) falhas.push('tema sensível sem CVV 188 na legenda');
   return falhas;
-}
-
-/** Mesma cadência da fila, contando os posts dela e os deste bot. */
-async function motivoParaAguardar() {
-  const { postsPorDia, intervaloMinHoras } = configuracao();
-  const desde = new Date(Date.now() - 24 * HORA);
-  const [daFila, doBot] = await Promise.all([
-    Artigo.find({ publicadoRedesEm: { $gte: desde } }).select('publicadoRedesEm').lean(),
-    RegistroPublicacao.find({ origem: 'bot', resultado: 'publicado', data: { $gte: desde } }).select('data').lean(),
-  ]);
-  const horarios = [...daFila.map((a) => a.publicadoRedesEm), ...doBot.map((r) => r.data)].map((d) => new Date(d).getTime());
-  if (horarios.length >= postsPorDia) return `teto diário da conta atingido (${horarios.length}/${postsPorDia} nas últimas 24h, fila + bot)`;
-  const ultimo = await Artigo.findOne({ publicadoRedesEm: { $ne: null } }).sort({ publicadoRedesEm: -1 }).select('publicadoRedesEm').lean();
-  const ultimoBot = await RegistroPublicacao.findOne({ origem: 'bot', resultado: 'publicado' }).sort({ data: -1 }).select('data').lean();
-  const maisRecente = Math.max(ultimo ? new Date(ultimo.publicadoRedesEm).getTime() : 0, ultimoBot ? new Date(ultimoBot.data).getTime() : 0);
-  const horas = (Date.now() - maisRecente) / HORA;
-  if (maisRecente && horas < intervaloMinHoras) return `intervalo mínimo não cumprido (último post há ${horas.toFixed(1)} h, mínimo ${intervaloMinHoras} h)`;
-  return null;
 }
 
 async function enviarSlide(slug, nome, buffer) {

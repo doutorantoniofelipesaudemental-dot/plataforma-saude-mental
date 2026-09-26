@@ -15,6 +15,7 @@
  * não rodá-los enquanto a fila estiver ativa.
  */
 const Artigo = require('../models/Artigo');
+const RegistroPublicacao = require('../models/RegistroPublicacao');
 const { publicarArtigoNasRedes, ErroPublicacao } = require('./socialPublisher');
 const { estadoPausa } = require('./tokenInstagram');
 
@@ -77,21 +78,38 @@ async function listarFila(limite = 10) {
   ]);
 }
 
-/** Motivo para NÃO publicar agora, ou null se as travas permitem. */
+/**
+ * Motivo para NÃO publicar agora, ou null se as travas permitem.
+ *
+ * Contagem UNIFICADA da conta: posts da fila (`Artigo.publicadoRedesEm`) e
+ * carrosséis do bot de mídias (scripts/bot-publicar.js, gravados em
+ * `registrospublicacao` com origem "bot" e resultado "publicado"). A fila e o
+ * bot chamam esta mesma função — o teto e o intervalo valem para os dois juntos.
+ */
 async function motivoParaAguardar(agora = new Date()) {
   const { postsPorDia, intervaloMinHoras } = configuracao();
+  const desde = new Date(agora - 24 * HORA_MS);
+  const doBot = { origem: 'bot', resultado: 'publicado' };
 
-  const ultimas24h = await Artigo.countDocuments({ publicadoRedesEm: { $gte: new Date(agora - 24 * HORA_MS) } });
+  const [daFila24h, doBot24h] = await Promise.all([
+    Artigo.countDocuments({ publicadoRedesEm: { $gte: desde } }),
+    RegistroPublicacao.countDocuments({ ...doBot, data: { $gte: desde } }),
+  ]);
+  const ultimas24h = daFila24h + doBot24h;
   if (ultimas24h >= postsPorDia) {
-    return `teto diário atingido (${ultimas24h}/${postsPorDia} nas últimas 24h)`;
+    return `teto diário atingido (${ultimas24h}/${postsPorDia} nas últimas 24h: fila ${daFila24h}, bot ${doBot24h})`;
   }
 
-  const ultimo = await Artigo.findOne({ publicadoRedesEm: { $ne: null } })
-    .sort({ publicadoRedesEm: -1 })
-    .select('publicadoRedesEm slug')
-    .lean();
-  if (ultimo) {
-    const horas = (agora - ultimo.publicadoRedesEm) / HORA_MS;
+  const [ultimoFila, ultimoBot] = await Promise.all([
+    Artigo.findOne({ publicadoRedesEm: { $ne: null } }).sort({ publicadoRedesEm: -1 }).select('publicadoRedesEm slug').lean(),
+    RegistroPublicacao.findOne(doBot).sort({ data: -1 }).select('data slug').lean(),
+  ]);
+  const maisRecente = Math.max(
+    ultimoFila ? new Date(ultimoFila.publicadoRedesEm).getTime() : 0,
+    ultimoBot ? new Date(ultimoBot.data).getTime() : 0
+  );
+  if (maisRecente) {
+    const horas = (agora - maisRecente) / HORA_MS;
     if (horas < intervaloMinHoras) {
       return `intervalo mínimo não cumprido (último post há ${horas.toFixed(1)}h, mínimo ${intervaloMinHoras}h)`;
     }

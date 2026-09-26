@@ -49,7 +49,12 @@ injetar('lib/capaRedes.js', {
   renderizarCapaRedes: async () => ({ buffer: Buffer.alloc(0), hash: 'h', modelo: 'capa-4x5-v1', titulo: 'Título' }),
 });
 const registros = [];
-injetar('models/RegistroPublicacao.js', { create: async (doc) => registros.push(doc) });
+injetar('models/RegistroPublicacao.js', {
+  create: async (doc) => registros.push(doc),
+  // Contagem unificada da fila (filaRedes.motivoParaAguardar): nenhum post do bot.
+  countDocuments: async () => 0,
+  findOne: () => ({ sort: () => ({ select: () => ({ lean: async () => null }) }) }),
+});
 
 const db = require(path.join(RAIZ, 'lib/db.js'));
 db.connect = async () => {};
