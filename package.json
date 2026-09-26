@@ -24,7 +24,8 @@
     "bot:narracoes": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js --pendentes --limite=20 --enviar",
     "bot:aprovar": "node scripts/bot-aprovar.js",
     "bot:publicar": "node scripts/bot-publicar.js",
-    "youtube:autorizar": "node scripts/youtube-autorizar.js"
+    "youtube:autorizar": "node scripts/youtube-autorizar.js",
+    "bot:video-carrossel": "node scripts/bot-video-carrossel.js"
   },
   "engines": {
     "node": ">=20"

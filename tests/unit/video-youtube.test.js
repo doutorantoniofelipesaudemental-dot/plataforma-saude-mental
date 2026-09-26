@@ -70,3 +70,16 @@ test('metadados reprovados: limites do YouTube, CFM e hashtag de marca', () => {
   assert.match(validarMetadados({ titulo: 'x'.repeat(101), descricao: 'a <b>', tags: ['x'.repeat(501)] }).join('\n'), /mais de 100[\s\S]*"<"[\s\S]*500 caracteres/);
   assert.match(checarTextoVideo('Tratamento que garante a cura. #DrAntonio').join('\n'), /promessa de cura[\s\S]*hashtag de marca/);
 });
+
+test('vídeo do carrossel: faixas na cor do slide e texto falado sem separadores', () => {
+  const { textoFalado, filtroSlide } = require('../../scripts/bot-video-carrossel');
+  assert.match(filtroSlide(0, 10), /pad=1080:1920.*color=0x0d3330/, 'capa escura');
+  assert.match(filtroSlide(4, 10), /color=0xfaf7f2/, 'miolo claro');
+  assert.match(filtroSlide(9, 10), /color=0x0d3330/, 'último escuro');
+  assert.equal(textoFalado('Apoio agora: CVV 188 · SAMU 192'), 'Apoio agora: CVV 188, SAMU 192');
+});
+
+test('síntese do Azure: texto escapado no SSML', () => {
+  const { escaparXml } = require('../../backend/lib/azureTts');
+  assert.equal(escaparXml('Sono & ansiedade <alerta>'), 'Sono &amp; ansiedade &lt;alerta&gt;');
+});

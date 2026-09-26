@@ -114,8 +114,9 @@ async function aprovar(slug, { revisado }) {
  */
 async function aprovarMidia(slug, { arquivo, peca }) {
   const { inspecionarVideo, validarVideo, sha256Arquivo } = require('../backend/lib/videoRedes');
-  const tipo = String(peca).replace(/-\d+$/, '');
-  if (!['reel', 'short', 'longo'].includes(tipo)) return { ok: false, motivo: 'use --peca=reel-1, reel-2, short-1, short-2 ou longo' };
+  // reel-1, reel-2, reel-carrossel → reel; short-1, short-2 → short; longo → longo.
+  const tipo = (String(peca).match(/^(reel|short|longo)/) || [])[1];
+  if (!tipo) return { ok: false, motivo: 'use --peca=reel-1, reel-2, reel-carrossel, short-1, short-2 ou longo' };
   if (!fs.existsSync(arquivo)) return { ok: false, motivo: `arquivo não encontrado: ${arquivo}` };
   const candidatos = [path.join(APROVADOS, `${slug}.json`), path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'publicados', `${slug}.json`)];
   const arquivoMeta = candidatos.find((c) => fs.existsSync(c));
