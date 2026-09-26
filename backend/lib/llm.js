@@ -26,6 +26,9 @@ const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));
 function ehTemporario(err) {
   const mensagem = String(err?.message);
   if (/exceeded your current quota|quota exceeded|daily limit/i.test(mensagem)) return false;
+  // Groq em modo JSON às vezes gera JSON inválido em respostas longas (400
+  // json_validate_failed): é intermitente, vale tentar de novo.
+  if (/json_validate_failed|Failed to validate JSON/i.test(mensagem)) return true;
   const status = err?.status ?? err?.code ?? err?.error?.code;
   return status === 429 || status === 503 || status === 500 || /429|RESOURCE_EXHAUSTED|overloaded|UNAVAILABLE/i.test(mensagem);
 }
@@ -41,7 +44,7 @@ async function comRepeticao(fn) {
   }
 }
 
-async function viaGemini({ sistema, usuario, schema }, modelo = MODELO_GEMINI) {
+async function viaGemini({ sistema, usuario, schema, temperatura = 0.6 }, modelo = MODELO_GEMINI) {
   const { GoogleGenAI } = require('@google/genai');
   const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   const resposta = await ai.models.generateContent({
@@ -49,7 +52,7 @@ async function viaGemini({ sistema, usuario, schema }, modelo = MODELO_GEMINI) {
     contents: usuario,
     config: {
       systemInstruction: sistema,
-      temperature: 0.6,
+      temperature: temperatura,
       responseMimeType: 'application/json',
       responseJsonSchema: schema,
     },
@@ -57,13 +60,13 @@ async function viaGemini({ sistema, usuario, schema }, modelo = MODELO_GEMINI) {
   return JSON.parse(resposta.text);
 }
 
-async function viaGroq({ sistema, usuario, schema }) {
+async function viaGroq({ sistema, usuario, schema, temperatura = 0.6 }) {
   const Groq = require('groq-sdk');
   const cliente = new (Groq.default || Groq)({ apiKey: process.env.GROQ_API_KEY });
   // Groq não recebe o schema: vai no prompt, e o modo JSON garante JSON válido.
   const resposta = await cliente.chat.completions.create({
     model: MODELO_GROQ,
-    temperature: 0.6,
+    temperature: temperatura,
     response_format: { type: 'json_object' },
     messages: [
       { role: 'system', content: `${sistema}\n\nResponda SOMENTE com um objeto JSON que siga este JSON Schema:\n${JSON.stringify(schema)}` },
@@ -77,7 +80,7 @@ async function viaGroq({ sistema, usuario, schema }) {
  * Gera um objeto JSON. Tenta o Gemini; se não houver chave ou ele falhar,
  * tenta o Groq. Devolve também qual provedor e modelo responderam.
  */
-async function gerarJson({ sistema, usuario, schema, preferir }) {
+async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
   const provedores = [
     process.env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: (p) => viaGemini(p, MODELO_GEMINI) },
     process.env.GEMINI_API_KEY && MODELO_GEMINI_RESERVA !== MODELO_GEMINI && { nome: 'gemini', modelo: MODELO_GEMINI_RESERVA, fn: (p) => viaGemini(p, MODELO_GEMINI_RESERVA) },
@@ -90,7 +93,7 @@ async function gerarJson({ sistema, usuario, schema, preferir }) {
   const falhas = [];
   for (const p of provedores) {
     try {
-      const dados = await comRepeticao(() => p.fn({ sistema, usuario, schema }));
+      const dados = await comRepeticao(() => p.fn({ sistema, usuario, schema, ...(temperatura !== undefined && { temperatura }) }));
       return { dados, provedor: p.nome, modelo: p.modelo, falhas };
     } catch (err) {
       falhas.push(`${p.nome}/${p.modelo}: ${String(err?.message || err).slice(0, 200)}`);

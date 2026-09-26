@@ -161,3 +161,16 @@ test('YouTube: SEO e estrutura do vídeo longo', () => {
   assert.match(alertas, /bloco 1 sem B-roll/);
   assert.match(alertas, /Short 1: 1 tags \(5 a 12\)/);
 });
+
+test('lista numerada não é número inventado; tags coladas e em inglês viram alerta', () => {
+  const { verificarYoutube } = require('../../scripts/bot-gemini');
+  const r = rascunho();
+  r.linkedin[0].texto = 'Três frentes:\n1. Cuidado individual\n2. Pares\n3. Instituição\nLeia o artigo completo no site.';
+  assert.deepEqual(verificar(r, ARTIGO, FONTE), []);
+
+  const yt = rascunho().youtube;
+  yt.longo.tags = ['atencaoprimaria', 'saudework', 'saúde mental', 'burnout', 'aps', 'médicos', 'enfermagem', 'cuidado'];
+  const alertas = verificarYoutube(yt).join('\n');
+  assert.match(alertas, /tags coladas como hashtag \(atencaoprimaria\)/);
+  assert.match(alertas, /tag com inglês \("saudework"\)/);
+});

@@ -186,6 +186,18 @@ function verificarYoutube(yt) {
     if (/https?:\/\/|www\./i.test(m.descricao)) alertas.push(`${nome}: link na descrição (é acrescentado pelo código)`);
     if (m.tags.length < minTags || m.tags.length > maxTags) alertas.push(`${nome}: ${m.tags.length} tags (${minTags} a ${maxTags})`);
     if (m.tags.join(',').length > 500) alertas.push(`${nome}: tags passam de 500 caracteres (limite do YouTube)`);
+    // Tag de YouTube é termo de busca, com espaço e acento — não hashtag colada.
+    // Colada = sem espaço e com um termo de saúde grudado no meio/fim ("saudemental",
+    // "residênciamédica") ou longa demais para ser uma palavra só; "autenticidade" passa.
+    const coladas = m.tags.filter(
+      (t) => !/\s/.test(t) && (t.length >= 16 || /.(sa[uú]de|mental|m[eé]dic|prim[aá]ria|trabalho|medicina|psicol)/i.test(t))
+    );
+    if (coladas.length) alertas.push(`${nome}: tags coladas como hashtag (${coladas.join(', ')}) — use o termo de busca, ex.: "atenção primária"`);
+    // Palavra inglesa inteira ("mental health") ou colada no fim ("saudework") — sem pegar "estresse".
+    const inglesTag = m.tags.find((t) => /\b(work|life|care|health|mind|stress|coach)\b|(work|care|health|mind)$/i.test(t));
+    if (inglesTag) alertas.push(`${nome}: tag com inglês ("${inglesTag}")`);
+    const marcaTag = m.tags.find((t) => /^(dr|dra|doutor)\s?ant|ant[oô]nio\s?felipe/i.test(t));
+    if (marcaTag) alertas.push(`${nome}: tag de marca ("${marcaTag}") — Regra 17: tags são para temas`);
   };
   yt.shorts.forEach((s, i) => checarMeta(`Short ${i + 1}`, s, 5, 12));
 
@@ -227,11 +239,13 @@ function verificar(d, artigo, fonte) {
   // Linhas de apoio ("CVV 188 (ligação gratuita, 24h) · SAMU 192") são fixas: fora da contagem.
   const semTempos = todos
     .replace(/[^\n]*CVV 188[^\n]*/g, ' ')
+    // Numeração de lista ("1. Cuidados individuais") é estrutura, não dado.
+    .replace(/^\s*\d{1,2}[.)]\s/gm, ' ')
     .replace(/\b\d+\s?(?:s|seg|segundos|min|minutos)\b/gi, ' ').replace(/\bslide\s*\d+/gi, ' ');
   // Contagem de estrutura ("6 sinais", "3 atitudes") não é dado; qualquer outro
   // número ("8 horas de sono", "40%") precisa estar no artigo.
   const semContagens = semTempos.replace(
-    /\b\d{1,2}\s+(?:sinais|atitudes|dicas|passos|perguntas|formas|motivos|pontos|mitos|fatos|etapas|perfis|conceitos|práticas|ações|limites|fatores|coisas|minutos de leitura)\b/gi,
+    /\b\d{1,2}\s+(?:sinais|atitudes|dicas|passos|perguntas|formas|motivos|pontos|mitos|fatos|etapas|perfis|conceitos|práticas|ações|limites|fatores|coisas|dimensões|pilares|frentes|tipos|níveis|estratégias|sintomas|minutos de leitura)\b/gi,
     ' '
   );
   const inventados = [
@@ -416,6 +430,8 @@ async function revisarFidelidade(d, fonte, provedorQueGerou) {
       usuario,
       schema: SCHEMA_REVISOR,
       preferir: provedorQueGerou === 'gemini' ? 'groq' : 'gemini',
+      // Revisão conservadora e JSON mais estável.
+      temperatura: 0.2,
     });
     const desvios = (Array.isArray(r.dados?.desvios) ? r.dados.desvios : []).map((x) => ({
       peca: String(x.peca || ''),
@@ -424,7 +440,8 @@ async function revisarFidelidade(d, fonte, provedorQueGerou) {
       artigo: String(x.artigo || ''),
       gravidade: ['alta', 'media', 'baixa'].includes(x.gravidade) ? x.gravidade : 'media',
     }));
-    return { disponivel: true, provedor: r.provedor, modelo: r.modelo, independente: r.provedor !== provedorQueGerou, desvios, pecas: pecas.length };
+    // falhasOutros: por que o provedor preferido (o independente) não respondeu, se for o caso.
+    return { disponivel: true, provedor: r.provedor, modelo: r.modelo, independente: r.provedor !== provedorQueGerou, desvios, pecas: pecas.length, falhasOutros: r.falhas };
   } catch (err) {
     return { disponivel: false, erro: String(err.message).slice(0, 300), desvios: [], pecas: pecas.length };
   }
@@ -457,7 +474,16 @@ function markdown(artigo, d, alertas, origem, revisao) {
   if (!revisao.disponivel) {
     l.push(`- ⚠️ **Revisor indisponível** (${revisao.erro}). A revisão de sentido fica inteira com o médico.`, '');
   } else {
-    l.push(`> ${revisao.provedor} (${revisao.modelo})${revisao.independente ? ', modelo diferente do que escreveu' : ', mesmo modelo que escreveu (só uma chave disponível)'} · ${revisao.pecas} peças comparadas com o artigo.`, '');
+    l.push(
+      `> ${revisao.provedor} (${revisao.modelo})${
+        revisao.independente
+          ? ', provedor diferente do que escreveu'
+          : `, **mesmo provedor que escreveu** — revisão menos independente${
+              revisao.falhasOutros?.length ? ` (o outro falhou: ${revisao.falhasOutros.join(' | ').slice(0, 300)})` : ' (o outro não está configurado)'
+            }`
+      } · ${revisao.pecas} peças comparadas com o artigo.`,
+      ''
+    );
     l.push(
       ...(revisao.desvios.length
         ? revisao.desvios.map((x) => `- ${icone[x.gravidade]} **${x.peca}** — ${x.problema}\n  - Rascunho: "${x.trecho}"\n  - Artigo: "${x.artigo}"`)

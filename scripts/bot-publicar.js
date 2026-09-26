@@ -341,6 +341,8 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar }) {
   if (!metadados) return { slug, ok: false, motivo: `bloco metadados:${peca} não encontrado no aprovado` };
   const descricao = montarDescricaoYoutube({ metadados, slug, sensivel: temaSensivel(artigo), short: tipo === 'short' });
   const falhas = [...checarTextoVideo(`${metadados.titulo}\n${descricao}\n${metadados.tags.join(' ')}`), ...validarMetadados({ titulo: metadados.titulo, descricao, tags: metadados.tags })];
+  const marcaTag = metadados.tags.find((t) => /^(dr|dra|doutor)\s?ant|ant[oô]nio\s?felipe/i.test(t));
+  if (marcaTag) falhas.push(`tag de marca "${marcaTag}" (Regra 17)`);
   if (falhas.length) return { slug, ok: false, motivo: 'metadados reprovados', falhas };
   const privacidade = ['public', 'unlisted', 'private'].includes(process.env.YOUTUBE_PRIVACIDADE) ? process.env.YOUTUBE_PRIVACIDADE : 'public';
   if (!confirmar) {
