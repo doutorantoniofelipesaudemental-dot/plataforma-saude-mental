@@ -41,6 +41,17 @@ function argumentos() {
   return args;
 }
 
+/** Linhas do rascunho que mudaram desde a geração (comparando com a cópia <slug>.gerado.md). */
+function linhasAlteradas(slug, md) {
+  const copia = path.join(RASCUNHOS, `${slug}.gerado.md`);
+  if (!fs.existsSync(copia)) return null;
+  const limpar = (t) => t.replace(/^﻿/, '').replace(/\r\n?/g, '\n').split('\n').map((l) => l.trimEnd());
+  const antes = limpar(fs.readFileSync(copia, 'utf8'));
+  const depois = limpar(md);
+  const vistas = new Set(antes);
+  return depois.filter((l) => l && !vistas.has(l));
+}
+
 function lerMeta(slug) {
   const arquivo = path.join(RASCUNHOS, `${slug}.json`);
   return fs.existsSync(arquivo) ? { arquivo, meta: JSON.parse(fs.readFileSync(arquivo, 'utf8')) } : null;
@@ -77,6 +88,7 @@ async function aprovar(slug, { revisado }) {
     declaracao: AVISO_CFM,
     hashRascunhoAprovado: hashTexto(md),
     editadoAposGeracao: hashTexto(md) !== meta.hashRascunhoGerado,
+    linhasAlteradas: linhasAlteradas(slug, md),
     pendenciasReconhecidas: pendencias,
   };
   fs.writeFileSync(arquivo, JSON.stringify(meta, null, 2));
@@ -87,7 +99,7 @@ async function aprovar(slug, { revisado }) {
   }${meta.aprovacao.editadoAposGeracao ? ' — rascunho editado antes da aprovação' : ''}.\n> ${AVISO_CFM}\n`;
   const aprovado = md.replace(/^# RASCUNHO — /, '# APROVADO — ').replace(/\n\n/, `\n\n${registro}\n`);
   fs.writeFileSync(path.join(APROVADOS, `${slug}.md`), aprovado);
-  return { slug, ok: true, editado: meta.aprovacao.editadoAposGeracao, pendencias };
+  return { slug, ok: true, editado: meta.aprovacao.editadoAposGeracao, linhas: meta.aprovacao.linhasAlteradas, pendencias };
 }
 
 async function main() {
@@ -111,7 +123,10 @@ async function main() {
   console.log('');
   for (const slug of slugs) {
     const r = await aprovar(slug, { revisado: Boolean(args.revisado) });
-    if (r.ok) console.log(`  ✅ ${slug}: aprovado${r.editado ? ' (com edições suas)' : ''} → CONTEUDO_INSTAGRAM/aprovados/${slug}.md`);
+    if (r.ok) {
+      const edicao = r.linhas ? `${r.linhas.length} linha(s) alterada(s) por você` : r.editado ? 'editado (sem cópia do texto gerado para detalhar)' : 'sem edições';
+      console.log(`  ✅ ${slug}: aprovado (${edicao}) → CONTEUDO_INSTAGRAM/aprovados/${slug}.md`);
+    }
     else {
       console.log(`  ⏸  ${slug}: ${r.motivo}`);
       for (const p of r.pendencias || []) console.log(`       - ${p}`);

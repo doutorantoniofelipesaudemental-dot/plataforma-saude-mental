@@ -388,6 +388,8 @@ async function gerarRascunho(artigo, { forcar }) {
   fs.mkdirSync(PASTA, { recursive: true });
   const md = markdown(artigo, origem.dados, alertas, origem, revisao);
   fs.writeFileSync(destino, md);
+  // Cópia do texto gerado: a aprovação compara com ela e diz o que o médico mudou.
+  fs.writeFileSync(path.join(PASTA, `${artigo.slug}.gerado.md`), md);
   // Metadados para a aprovação (bot-aprovar.js): o que foi verificado e sobre qual versão do artigo.
   fs.writeFileSync(
     path.join(PASTA, `${artigo.slug}.json`),
@@ -411,9 +413,21 @@ async function gerarRascunho(artigo, { forcar }) {
 }
 
 const crypto = require('crypto');
-const hashTexto = (t) => crypto.createHash('sha256').update(String(t)).digest('hex');
+// Normaliza antes do hash: abrir e salvar num editor (CRLF, BOM, espaço no fim
+// da linha) não pode contar como "editado".
+const normalizarTexto = (t) =>
+  String(t)
+    .replace(/^﻿/, '')
+    .replace(/\r\n?/g, '\n')
+    .split('\n')
+    .map((l) => l.trimEnd())
+    .join('\n')
+    .trim();
+const hashTexto = (t) => crypto.createHash('sha256').update(normalizarTexto(t)).digest('hex');
 /** Versão do artigo que o rascunho usou: mudou o texto, o rascunho precisa ser refeito. */
-const hashArtigo = (a) => hashTexto(`${a.titulo}\n${a.resumo}\n${a.conteudo}`);
+// Hash exato (sem normalizar): qualquer mudança no artigo conta, e rascunhos
+// já gerados continuam comparáveis.
+const hashArtigo = (a) => crypto.createHash('sha256').update(`${a.titulo}\n${a.resumo}\n${a.conteudo}`).digest('hex');
 
 async function main() {
   const args = argumentos();

@@ -97,3 +97,10 @@ test('revisor recebe só o que o modelo escreveu, cada frase com a peça de orig
   assert.ok(pecas.some((p) => p.id === 'slide 1'));
   assert.ok(!pecas.some((p) => /CVV 188|CRM-BA|link da bio/.test(p.texto)), 'linhas fixas ficam de fora');
 });
+
+test('abrir e salvar no editor (CRLF, BOM, espaço no fim) não conta como edição', () => {
+  const { hashTexto } = require('../../scripts/bot-gemini');
+  const original = '# RASCUNHO\n\n| 5 | Texto do slide |\n';
+  assert.equal(hashTexto(`﻿${original.replace(/\n/g, '\r\n')}  `), hashTexto(original));
+  assert.notEqual(hashTexto(original.replace('Texto', 'Outro texto')), hashTexto(original));
+});
