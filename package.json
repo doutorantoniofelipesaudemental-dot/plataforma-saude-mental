@@ -18,18 +18,23 @@
     "test:unit": "node --test tests/unit/",
     "test": "npm run test:unit && npm run test:e2e",
     "importar-reescritas": "node --env-file-if-exists=.env backend/tools/importar-reescritas.js",
-    "narrar": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js"
+    "narrar": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js",
+    "bot:gerar-posts": "node scripts/bot-gemini.js",
+    "bot:gemini": "node scripts/bot-gemini.js",
+    "bot:narracoes": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js --pendentes --limite=20 --enviar"
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
+    "@google/genai": "^2.24.0",
     "@vercel/blob": "^2.8.0",
     "archiver": "^8.0.0",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "express": "^5.2.1",
     "framer-motion": "^13.3.0",
+    "groq-sdk": "^1.6.0",
     "lucide-react": "^1.46.0",
     "mongoose": "^9.9.5",
     "opentype.js": "^2.0.0",

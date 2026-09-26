@@ -187,4 +187,12 @@ async function executarTriplaChecagem(artigo, { legenda, capa, contarOutrosComHa
   return { aprovado, motivo, conteudo, visual, seguranca };
 }
 
-module.exports = { executarTriplaChecagem, checarConteudo, checarVisual, checarSeguranca, RE_INGLES };
+module.exports = {
+  executarTriplaChecagem,
+  checarConteudo,
+  checarVisual,
+  checarSeguranca,
+  RE_INGLES,
+  TERMOS_CFM,
+  semNomesProprios,
+};
