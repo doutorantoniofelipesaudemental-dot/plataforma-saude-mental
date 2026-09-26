@@ -23,7 +23,8 @@
     "bot:gemini": "node scripts/bot-gemini.js",
     "bot:narracoes": "node --env-file-if-exists=.env backend/tools/narrar-artigos.js --pendentes --limite=20 --enviar",
     "bot:aprovar": "node scripts/bot-aprovar.js",
-    "bot:publicar": "node scripts/bot-publicar.js"
+    "bot:publicar": "node scripts/bot-publicar.js",
+    "youtube:autorizar": "node scripts/youtube-autorizar.js"
   },
   "engines": {
     "node": ">=20"

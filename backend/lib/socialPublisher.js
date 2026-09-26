@@ -369,6 +369,52 @@ async function publicarCarrosselNoInstagram({ imagensUrls, legenda }) {
   return { id: publicado.id, statusHttp: pub.status, permalink: link.permalink || null, itens: filhos.length };
 }
 
+/**
+ * Reel no Instagram a partir de um arquivo local — upload resumível oficial
+ * da Meta: container REELS com upload_type=resumable → envio dos bytes ao
+ * `uri` devolvido (rupload.facebook.com), com "Authorization: OAuth",
+ * "offset" e "file_size" → espera FINISHED (vídeo demora mais) → media_publish.
+ */
+async function publicarReelNoInstagram({ arquivo, legenda, compartilharNoFeed = true }) {
+  requerEnv('INSTAGRAM_ACCESS_TOKEN');
+  const token = await obterTokenInstagram();
+  const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
+  const base = graphBase(token);
+  const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
+
+  const r = await fetch(`${base}/${contaId}/media`, {
+    method: 'POST',
+    headers: cabecalhos,
+    body: new URLSearchParams({ media_type: 'REELS', upload_type: 'resumable', caption: legenda, share_to_feed: String(compartilharNoFeed) }),
+  });
+  const container = await r.json();
+  if (!r.ok || !container.id || !container.uri) lancarErroMeta(container, 'Falha ao criar o container do Reel', 'INSTAGRAM_CONTAINER_FALHOU');
+
+  const bytes = require('fs').readFileSync(arquivo);
+  const envio = await fetch(container.uri, {
+    method: 'POST',
+    headers: { Authorization: `OAuth ${token}`, offset: '0', file_size: String(bytes.length) },
+    body: bytes,
+  });
+  const enviado = await envio.json().catch(() => ({}));
+  if (!envio.ok || enviado.success === false) lancarErroMeta(enviado, 'Falha ao enviar o vídeo do Reel', 'INSTAGRAM_UPLOAD_FALHOU');
+
+  // Processamento de vídeo leva minutos: até 60 × 5 s.
+  await aguardarContainerPronto(container.id, token, { tentativas: 60, intervaloMs: 5000 });
+
+  const pub = await fetch(`${base}/${contaId}/media_publish`, {
+    method: 'POST',
+    headers: cabecalhos,
+    body: new URLSearchParams({ creation_id: container.id }),
+  });
+  const publicado = await pub.json();
+  if (!pub.ok || !publicado.id) lancarErroMeta(publicado, 'Falha ao publicar o Reel', 'INSTAGRAM_PUBLISH_FALHOU');
+  const link = await fetch(`${base}/${publicado.id}?fields=permalink`, { headers: { Authorization: `Bearer ${token}` } })
+    .then((x) => x.json())
+    .catch(() => ({}));
+  return { id: publicado.id, statusHttp: pub.status, permalink: link.permalink || null };
+}
+
 async function aguardarContainerPronto(creationId, token, { tentativas = 10, intervaloMs = 3000 } = {}) {
   for (let i = 0; i < tentativas; i += 1) {
     const resp = await fetch(`${graphBase(token)}/${creationId}?fields=status_code`, {
@@ -633,6 +679,7 @@ module.exports = {
   montarPacotesMidia,
   publicarNoInstagram,
   publicarCarrosselNoInstagram,
+  publicarReelNoInstagram,
   publicarNoLinkedIn,
   publicarArtigoNasRedes,
   dispararPublicacaoAutomatica,

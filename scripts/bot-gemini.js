@@ -59,7 +59,8 @@ Regras inegociáveis:
 10. Não escreva a identificação do médico (CRM, RQE) nem a linha do CVV/SAMU: elas são acrescentadas depois, automaticamente.
 11. Números: cite faixas inteiras e com as ressalvas do artigo (ex.: "de 25% a 74%, em quadros moderados a graves, em estudos de vários países"). Nunca destaque só o limite de cima ("até 74%").
 12. Use os termos do próprio artigo para serviços, públicos e efeitos (ex.: "serviço de saúde do trabalhador da rede de ensino", "proteger crianças e adolescentes"); não acrescente conclusões que ele não tira.
-13. Quantidades exatas: 5 ganchos, 7 a 10 slides, 2 Reels, 5 Stories, 2 posts de LinkedIn (cada um terminando com uma chamada para ler o artigo completo no site), 5 títulos e 2 Shorts.`;
+13. Quantidades exatas: 5 ganchos, 7 a 10 slides, 2 Reels, 5 Stories, 2 posts de LinkedIn (cada um terminando com uma chamada para ler o artigo completo no site), 5 títulos, 2 Shorts e 1 vídeo longo.
+14. YouTube (SEO): título com a palavra-chave no início e até 60 caracteres, sem caça-clique; descrição com a palavra-chave na 1ª frase, sem links (o link é acrescentado depois); tags em português, minúsculas, do tema do artigo. Vídeo longo 16:9 de 8 a 12 min: gancho nos primeiros 30 s, promessa honesta do que o vídeo entrega, blocos com pontos de retenção, recapitulação e CTA; cada bloco com tempo (m:ss–m:ss), fala, sugestão de B-roll (sem pacientes nem pessoas identificáveis) e texto na tela. Capítulos começando em 0:00.`;
 
 const texto = { type: 'string' };
 const SCHEMA = {
@@ -104,10 +105,45 @@ const SCHEMA = {
         titulos: { type: 'array', items: texto, description: '5 títulos até 60 caracteres' },
         shorts: {
           type: 'array',
-          items: { type: 'object', properties: { titulo: texto, gancho: texto, desenvolvimento: texto, cta: texto }, required: ['titulo', 'gancho', 'desenvolvimento', 'cta'] },
+          items: {
+            type: 'object',
+            properties: {
+              titulo: { ...texto, description: 'até 60 caracteres, palavra-chave no início' },
+              gancho: texto,
+              desenvolvimento: texto,
+              cta: texto,
+              descricao: { ...texto, description: 'descrição de SEO: 1ª frase com a palavra-chave, 2 a 3 frases, sem link' },
+              tags: { type: 'array', items: texto, description: '5 a 12 tags de busca em português, minúsculas' },
+            },
+            required: ['titulo', 'gancho', 'desenvolvimento', 'cta', 'descricao', 'tags'],
+          },
+        },
+        longo: {
+          type: 'object',
+          description: 'roteiro de vídeo longo 16:9 (8 a 12 min)',
+          properties: {
+            titulo: { ...texto, description: 'até 60 caracteres, palavra-chave no início, sem caça-clique' },
+            descricao: { ...texto, description: 'descrição de SEO: 2 a 4 parágrafos curtos; 1ª frase com a palavra-chave; sem link' },
+            tags: { type: 'array', items: texto, description: '8 a 15 tags de busca em português, minúsculas' },
+            capitulos: {
+              type: 'array',
+              description: 'capítulos para a descrição: o 1º em 0:00, ao menos 3, cada um com 10 s ou mais',
+              items: { type: 'object', properties: { tempo: { ...texto, description: 'm:ss' }, titulo: texto }, required: ['tempo', 'titulo'] },
+            },
+            roteiro: {
+              type: 'array',
+              description: 'blocos em ordem: gancho (0–30 s), promessa honesta, blocos de conteúdo com pontos de retenção, recapitulação e CTA',
+              items: {
+                type: 'object',
+                properties: { tempo: { ...texto, description: 'm:ss–m:ss' }, bloco: texto, fala: texto, bRoll: texto, textoTela: texto },
+                required: ['tempo', 'bloco', 'fala', 'bRoll', 'textoTela'],
+              },
+            },
+          },
+          required: ['titulo', 'descricao', 'tags', 'capitulos', 'roteiro'],
         },
       },
-      required: ['titulos', 'shorts'],
+      required: ['titulos', 'shorts', 'longo'],
     },
   },
   required: ['ganchos', 'carrossel', 'legenda', 'reels', 'stories', 'linkedin', 'youtube'],
@@ -124,6 +160,51 @@ function argumentos() {
 
 const palavras = (s) => String(s).split(/\s+/).filter((p) => /[\p{L}\d]/u.test(p)).length;
 
+/** "m:ss" ou "h:mm:ss" → segundos (NaN se inválido). */
+function segundos(tempo) {
+  const p = String(tempo).trim().split(':').map(Number);
+  if (p.length < 2 || p.some((n) => !Number.isFinite(n))) return NaN;
+  return p.reduce((total, n) => total * 60 + n, 0);
+}
+
+/**
+ * SEO e estrutura do YouTube: títulos ≤ 60, descrição com a palavra-chave do
+ * título já na 1ª frase, tags (limite de 500 caracteres do YouTube), capítulos
+ * válidos (1º em 0:00, ≥ 3, cada um com ≥ 10 s, em ordem) e duração de 8 a 12
+ * min do longo pelo último tempo do roteiro.
+ */
+function verificarYoutube(yt) {
+  const alertas = [];
+  const palavraChave = (titulo) => String(titulo).split(/[:—–-]/)[0].trim().toLowerCase();
+  const checarMeta = (nome, m, minTags, maxTags) => {
+    if (!m.titulo) alertas.push(`${nome}: sem título`);
+    else if ([...m.titulo].length > 60) alertas.push(`${nome}: título com ${[...m.titulo].length} caracteres (máx. 60)`);
+    const primeiraFrase = String(m.descricao).split(/(?<=[.!?])\s/)[0].toLowerCase();
+    const chave = palavraChave(m.titulo);
+    if (!m.descricao) alertas.push(`${nome}: sem descrição`);
+    else if (chave && !primeiraFrase.includes(chave.split(' ')[0])) alertas.push(`${nome}: 1ª frase da descrição sem a palavra-chave do título ("${chave}")`);
+    if (/https?:\/\/|www\./i.test(m.descricao)) alertas.push(`${nome}: link na descrição (é acrescentado pelo código)`);
+    if (m.tags.length < minTags || m.tags.length > maxTags) alertas.push(`${nome}: ${m.tags.length} tags (${minTags} a ${maxTags})`);
+    if (m.tags.join(',').length > 500) alertas.push(`${nome}: tags passam de 500 caracteres (limite do YouTube)`);
+  };
+  yt.shorts.forEach((s, i) => checarMeta(`Short ${i + 1}`, s, 5, 12));
+
+  const longo = yt.longo;
+  checarMeta('YouTube longo', longo, 8, 15);
+  const caps = longo.capitulos.map((c) => ({ ...c, s: segundos(c.tempo) }));
+  if (caps.length < 3) alertas.push(`YouTube longo: ${caps.length} capítulos (mínimo 3 para o YouTube exibir)`);
+  if (caps.length && caps[0].s !== 0) alertas.push('YouTube longo: o 1º capítulo precisa começar em 0:00');
+  caps.forEach((c, i) => {
+    if (Number.isNaN(c.s)) alertas.push(`YouTube longo: capítulo ${i + 1} com tempo inválido ("${c.tempo}")`);
+    else if (i > 0 && c.s - caps[i - 1].s < 10) alertas.push(`YouTube longo: capítulo ${i + 1} a menos de 10 s do anterior`);
+  });
+  if (!longo.roteiro.length) alertas.push('YouTube longo: sem roteiro');
+  const fim = segundos(String(longo.roteiro.at(-1)?.tempo || '').split(/[–-]/).pop());
+  if (Number.isFinite(fim) && (fim < 8 * 60 || fim > 12 * 60)) alertas.push(`YouTube longo com ${Math.round(fim / 60)} min (8 a 12)`);
+  longo.roteiro.forEach((b, i) => !b.bRoll && alertas.push(`YouTube longo: bloco ${i + 1} sem B-roll`));
+  return alertas;
+}
+
 /** Verificação automática — alertas vão no topo do rascunho; nada é descartado em silêncio. */
 function verificar(d, artigo, fonte) {
   const alertas = [];
@@ -135,7 +216,10 @@ function verificar(d, artigo, fonte) {
     ...d.stories.map((s) => s.texto),
     ...d.linkedin.map((p) => p.texto),
     ...d.youtube.titulos,
-    ...d.youtube.shorts.flatMap((s) => [s.titulo, s.gancho, s.desenvolvimento, s.cta]),
+    ...d.youtube.shorts.flatMap((s) => [s.titulo, s.gancho, s.desenvolvimento, s.cta, s.descricao]),
+    d.youtube.longo.titulo,
+    d.youtube.longo.descricao,
+    ...d.youtube.longo.roteiro.flatMap((b) => [b.fala, b.textoTela]),
   ].join('\n');
 
   // Números fora do artigo (exceto telefones de apoio e registros profissionais).
@@ -180,6 +264,7 @@ function verificar(d, artigo, fonte) {
   if (d.carrossel.length < 7 || d.carrossel.length > 10) alertas.push(`carrossel com ${d.carrossel.length} slides (7 a 10)`);
   d.linkedin.forEach((p, i) => [...p.texto].length > 1300 && alertas.push(`LinkedIn ${i + 1} com ${[...p.texto].length} caracteres (máx. 1.300)`));
   d.youtube.titulos.forEach((t, i) => [...t].length > 60 && alertas.push(`título YouTube ${i + 1} com ${[...t].length} caracteres (máx. 60)`));
+  alertas.push(...verificarYoutube(d.youtube));
   d.reels.forEach((r, i) => (r.duracaoSegundos < 15 || r.duracaoSegundos > 45) && alertas.push(`Reel ${i + 1} com ${r.duracaoSegundos} s (15 a 45)`));
 
   const esperado = { ganchos: [d.ganchos, 5], reels: [d.reels, 2], stories: [d.stories, 5], linkedin: [d.linkedin, 2], títulos: [d.youtube.titulos, 5], shorts: [d.youtube.shorts, 2] };
@@ -220,7 +305,21 @@ function normalizar(d = {}) {
     linkedin: lista(d.linkedin).map((p) => ({ tipo: str(p?.tipo), texto: str(p?.texto) })),
     youtube: {
       titulos: lista(d.youtube?.titulos).map(str),
-      shorts: lista(d.youtube?.shorts).map((s) => ({ titulo: str(s?.titulo), gancho: str(s?.gancho), desenvolvimento: str(s?.desenvolvimento), cta: str(s?.cta) })),
+      shorts: lista(d.youtube?.shorts).map((s) => ({
+        titulo: str(s?.titulo),
+        gancho: str(s?.gancho),
+        desenvolvimento: str(s?.desenvolvimento),
+        cta: str(s?.cta),
+        descricao: str(s?.descricao),
+        tags: lista(s?.tags).map(str).filter(Boolean),
+      })),
+      longo: {
+        titulo: str(d.youtube?.longo?.titulo),
+        descricao: str(d.youtube?.longo?.descricao),
+        tags: lista(d.youtube?.longo?.tags).map(str).filter(Boolean),
+        capitulos: lista(d.youtube?.longo?.capitulos).map((c) => ({ tempo: str(c?.tempo), titulo: str(c?.titulo) })),
+        roteiro: lista(d.youtube?.longo?.roteiro).map((b) => ({ tempo: str(b?.tempo), bloco: str(b?.bloco), fala: str(b?.fala), bRoll: str(b?.bRoll), textoTela: str(b?.textoTela) })),
+      },
     },
   };
 }
@@ -264,7 +363,9 @@ function pecasDoRascunho(d) {
   d.stories.forEach((s, i) => add(`story ${i + 1}`, s.texto));
   d.linkedin.forEach((post, i) => post.texto.split(/\n\s*\n/).forEach((t, j) => add(`LinkedIn ${i + 1}, §${j + 1}`, t)));
   d.youtube.titulos.forEach((t, i) => add(`título YouTube ${i + 1}`, t));
-  d.youtube.shorts.forEach((s, i) => add(`Short ${i + 1}`, `${s.gancho} ${s.desenvolvimento} ${s.cta}`));
+  d.youtube.shorts.forEach((s, i) => add(`Short ${i + 1}`, `${s.gancho} ${s.desenvolvimento} ${s.cta} ${s.descricao}`));
+  add('YouTube longo, título e descrição', `${d.youtube.longo.titulo}. ${d.youtube.longo.descricao}`);
+  d.youtube.longo.roteiro.forEach((b, i) => add(`YouTube longo, bloco ${i + 1} (${b.tempo})`, `${b.textoTela}. ${b.fala}`));
   return p;
 }
 
@@ -329,6 +430,15 @@ async function revisarFidelidade(d, fonte, provedorQueGerou) {
   }
 }
 
+/**
+ * Metadados de vídeo num bloco cercado e marcado, que o publicador lê
+ * (carrosselAprovado.lerMetadadosVideo). O médico pode editar o texto do
+ * bloco antes de aprovar; o formato das chaves deve ser mantido.
+ */
+function blocoMetadados(id, m) {
+  return ['```metadados:' + id, `titulo: ${m.titulo}`, `tags: ${m.tags.join(', ')}`, 'descricao:', m.descricao, '```'].join('\n');
+}
+
 const celula = (s) => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
 
 const AVISO_CFM =
@@ -371,8 +481,29 @@ function markdown(artigo, d, alertas, origem, revisao) {
   l.push('');
   d.linkedin.forEach((p, i) => l.push(`## LinkedIn ${i + 1}: ${p.tipo}`, '', ...p.texto.split('\n').map((x) => `> ${x}`), '>', `> ${IDENTIFICACAO}`, ''));
   l.push('## YouTube', '', '### Títulos', '', ...d.youtube.titulos.map((t, i) => `${i + 1}. ${t}`), '');
-  d.youtube.shorts.forEach((s, i) => l.push(`### Short ${i + 1}: ${s.titulo}`, '', `- **Gancho:** ${s.gancho}`, `- **Desenvolvimento:** ${s.desenvolvimento}`, `- **CTA:** ${s.cta}`, ''));
-  l.push('**Descrição dos Shorts:**', '```', 'Artigo completo: https://drsaudemental.vercel.app/artigo/' + artigo.slug, 'Conteúdo educativo. Não substitui avaliação individual.', 'Apoio agora: CVV 188 (24h, gratuito) · SAMU 192', '', IDENTIFICACAO_COMPLETA, '```', '');
+  d.youtube.shorts.forEach((s, i) =>
+    l.push(
+      `### Short ${i + 1}: ${s.titulo}`,
+      '',
+      `- **Gancho:** ${s.gancho}`,
+      `- **Desenvolvimento:** ${s.desenvolvimento}`,
+      `- **CTA:** ${s.cta}`,
+      '',
+      blocoMetadados(`short-${i + 1}`, s),
+      ''
+    )
+  );
+  const longo = d.youtube.longo;
+  l.push('## YouTube — vídeo longo (16:9)', '', blocoMetadados('longo', longo), '');
+  l.push('### Capítulos', '', ...longo.capitulos.map((c) => `- ${c.tempo} ${c.titulo}`), '');
+  l.push('### Roteiro', '', '| Tempo | Bloco | Fala | B-roll | Texto na tela |', '|---|---|---|---|---|');
+  longo.roteiro.forEach((b) => l.push(`| ${celula(b.tempo)} | ${celula(b.bloco)} | ${celula(b.fala)} | ${celula(b.bRoll)} | ${celula(b.textoTela)} |`));
+  l.push(
+    '',
+    '> Na publicação (npm run bot:publicar), a descrição do YouTube recebe automaticamente: link do artigo, capítulos (no longo),',
+    '> "#Shorts" (nos Shorts), aviso educativo, CVV 188/SAMU 192, identificação completa do médico e o aviso da Res. CFM 2.454/2026.',
+    ''
+  );
   return l.join('\n');
 }
 
@@ -489,4 +620,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { verificar, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, AVISO_CFM, SCHEMA, SISTEMA };
+module.exports = { verificar, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };

@@ -106,8 +106,57 @@ async function aprovar(slug, { revisado }) {
   return { slug, ok: true, editado: meta.aprovacao.editadoAposGeracao, linhas: meta.aprovacao.linhasAlteradas, pendencias };
 }
 
+/**
+ * Aprovação de um ARQUIVO de vídeo (Reel, Short, longo), presa ao SHA-256: o
+ * publicador só envia exatamente o arquivo que o médico aprovou. Exige o
+ * roteiro já aprovado e o vídeo dentro das especificações (videoRedes.js).
+ *   npm run bot:aprovar -- --slug=<slug> --midia=<arquivo.mp4> --peca=reel-1|reel-2|short-1|short-2|longo
+ */
+async function aprovarMidia(slug, { arquivo, peca }) {
+  const { inspecionarVideo, validarVideo, sha256Arquivo } = require('../backend/lib/videoRedes');
+  const tipo = String(peca).replace(/-\d+$/, '');
+  if (!['reel', 'short', 'longo'].includes(tipo)) return { ok: false, motivo: 'use --peca=reel-1, reel-2, short-1, short-2 ou longo' };
+  if (!fs.existsSync(arquivo)) return { ok: false, motivo: `arquivo não encontrado: ${arquivo}` };
+  const candidatos = [path.join(APROVADOS, `${slug}.json`), path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'publicados', `${slug}.json`)];
+  const arquivoMeta = candidatos.find((c) => fs.existsSync(c));
+  if (!arquivoMeta) return { ok: false, motivo: 'roteiro não aprovado — aprove o rascunho antes do vídeo' };
+  const meta = JSON.parse(fs.readFileSync(arquivoMeta, 'utf8'));
+  if (!meta.aprovacao) return { ok: false, motivo: 'roteiro não aprovado — aprove o rascunho antes do vídeo' };
+
+  const info = inspecionarVideo(arquivo);
+  const falhas = validarVideo(info, tipo);
+  if (falhas.length) return { ok: false, motivo: 'vídeo fora das especificações', pendencias: falhas };
+
+  const registro = {
+    peca,
+    tipo,
+    arquivo: path.basename(arquivo),
+    sha256: sha256Arquivo(arquivo),
+    bytes: info.bytes,
+    duracaoSegundos: Math.round(info.duracao),
+    dimensoes: `${info.largura}x${info.altura}`,
+    aprovadoEm: new Date(),
+    responsavel: RESPONSAVEL,
+    declaracao: AVISO_CFM,
+  };
+  meta.aprovacao.midias = [...(meta.aprovacao.midias || []), registro];
+  fs.writeFileSync(arquivoMeta, JSON.stringify(meta, null, 2));
+  return { ok: true, registro };
+}
+
 async function main() {
   const args = argumentos();
+  if (args.midia) {
+    if (!args.slug || !args.peca) return console.log('\n  Use --slug=<slug> --midia=<arquivo.mp4> --peca=reel-1|short-1|longo\n');
+    const r = await aprovarMidia(String(args.slug), { arquivo: String(args.midia), peca: String(args.peca) });
+    if (r.ok) console.log(`\n  ✅ ${args.slug}: ${r.registro.peca} aprovado (${r.registro.arquivo}, ${r.registro.dimensoes}, ${r.registro.duracaoSegundos} s, SHA-256 ${r.registro.sha256.slice(0, 12)}…)\n  ${AVISO_CFM}\n`);
+    else {
+      console.log(`\n  ⏸  ${args.slug}: ${r.motivo}`);
+      for (const p of r.pendencias || []) console.log(`       - ${p}`);
+      console.log('');
+    }
+    return;
+  }
   let slugs;
   if (args.slug) slugs = [String(args.slug)];
   else if (args.lote) {

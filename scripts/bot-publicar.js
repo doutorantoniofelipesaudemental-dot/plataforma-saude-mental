@@ -41,14 +41,16 @@ for (const arquivo of ['.env', '.env.local']) {
 const db = require('../backend/lib/db');
 const Artigo = require('../backend/models/Artigo');
 const RegistroPublicacao = require('../backend/models/RegistroPublicacao');
-const { lerAprovado, renderizarSlides } = require('../backend/lib/carrosselAprovado');
-const { publicarCarrosselNoInstagram, publicarNoLinkedIn } = require('../backend/lib/socialPublisher');
+const { lerAprovado, lerMetadadosVideo, renderizarSlides } = require('../backend/lib/carrosselAprovado');
+const { publicarCarrosselNoInstagram, publicarReelNoInstagram, publicarNoLinkedIn } = require('../backend/lib/socialPublisher');
+const { inspecionarVideo, validarVideo, sha256Arquivo } = require('../backend/lib/videoRedes');
+const { enviarVideo, validarMetadados, credenciaisYoutube } = require('../backend/lib/youtube');
 const { estadoPausa, registrarTokenInvalido } = require('../backend/lib/tokenInstagram');
 // Mesma regra de cadência da fila (contagem unificada fila + bot, filaRedes.js).
 const { motivoParaAguardar } = require('../backend/lib/filaRedes');
 const { IDENTIFICACAO, temaSensivel } = require('../backend/lib/legendaInstagram');
 const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/checagemRedes');
-const { hashArtigo, hashTexto, AVISO_CFM } = require('./bot-gemini');
+const { hashArtigo, hashTexto, AVISO_CFM, IDENTIFICACAO_COMPLETA } = require('./bot-gemini');
 
 const PASTA = path.join(RAIZ, 'CONTEUDO_INSTAGRAM');
 const APROVADOS = path.join(PASTA, 'aprovados');
@@ -241,8 +243,148 @@ async function publicarAprovado(slug, { confirmar, redes }) {
   return { slug, ok: true, instagram: meta.publicacao.instagram, linkedin: meta.publicacao.linkedin, manuais, movido };
 }
 
+/* ============================ Vídeos (Reels, YouTube) ============================ */
+
+const PECA_PADRAO = { reel: 'reel-1', short: 'short-1', longo: 'longo' };
+
+/** O aprovado pode estar em aprovados/ ou, depois do carrossel, em publicados/. */
+function localizar(slug) {
+  for (const pasta of [APROVADOS, PUBLICADOS]) {
+    const md = path.join(pasta, `${slug}.md`);
+    const json = path.join(pasta, `${slug}.json`);
+    if (fs.existsSync(md) && fs.existsSync(json)) return { pasta, md, json };
+  }
+  return null;
+}
+
+/** Descrição final do YouTube: a aprovada + link, capítulos, apoio, identificação e aviso CFM. */
+function montarDescricaoYoutube({ metadados, slug, sensivel, short }) {
+  const partes = [metadados.descricao, `Artigo completo: ${SITE}/artigo/${slug}`];
+  if (metadados.capitulos.length) partes.push(['Capítulos:', ...metadados.capitulos.map((c) => `${c.tempo} ${c.titulo}`)].join('\n'));
+  partes.push(['Conteúdo educativo. Não substitui avaliação individual.', sensivel ? 'Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192' : ''].filter(Boolean).join('\n'));
+  partes.push(IDENTIFICACAO_COMPLETA, AVISO_CFM);
+  if (short) partes.push('#Shorts');
+  return partes.join('\n\n');
+}
+
+function checarTextoVideo(texto) {
+  const falhas = [];
+  for (const [re, motivo] of TERMOS_CFM) {
+    const m = texto.match(re);
+    if (m) falhas.push(`CFM: ${motivo} ("${m[0]}")`);
+  }
+  if (/\bAntonio\b/.test(texto)) falhas.push('"Antonio" sem acento');
+  if (/#psiquiatria\b/i.test(texto)) falhas.push('#psiquiatria');
+  const marca = texto.match(/#(?:dr|doutor|dra)[\p{L}\d_]*/iu);
+  if (marca) falhas.push(`hashtag de marca "${marca[0]}"`);
+  return falhas;
+}
+
+async function publicarVideo(slug, { tipo, peca, arquivo, confirmar }) {
+  const local = localizar(slug);
+  if (!local) return { slug, ok: false, motivo: 'aprovado não encontrado em aprovados/ nem em publicados/' };
+  const meta = JSON.parse(fs.readFileSync(local.json, 'utf8'));
+  if (!meta.aprovacao) return { slug, ok: false, motivo: 'sem aprovação médica do roteiro — rode npm run bot:aprovar' };
+
+  const artigo = await Artigo.findOne({ slug }).lean();
+  if (!artigo) return { slug, ok: false, motivo: 'artigo não existe mais no banco' };
+  if (hashArtigo(artigo) !== meta.hashArtigo) return { slug, ok: false, motivo: 'o artigo mudou depois do rascunho — gere e aprove de novo' };
+
+  // Aprovação do ARQUIVO de vídeo (bot-aprovar --midia): hash precisa bater.
+  if (!arquivo || !fs.existsSync(arquivo)) return { slug, ok: false, motivo: 'informe o vídeo com --arquivo=<caminho do .mp4>' };
+  const hash = sha256Arquivo(arquivo);
+  const aprovada = (meta.aprovacao.midias || []).find((m) => m.peca === peca && m.sha256 === hash);
+  if (!aprovada) {
+    return { slug, ok: false, motivo: `este arquivo não tem aprovação médica como ${peca} — rode npm run bot:aprovar -- --slug=${slug} --midia="${arquivo}" --peca=${peca}` };
+  }
+  const falhasVideo = validarVideo(inspecionarVideo(arquivo), tipo);
+  if (falhasVideo.length) return { slug, ok: false, motivo: 'vídeo fora das especificações', falhas: falhasVideo };
+
+  meta.publicacao = meta.publicacao || { instagram: null, linkedin: [], logs: [] };
+  meta.publicacao.videos = meta.publicacao.videos || {};
+  if (meta.publicacao.videos[peca]) return { slug, ok: false, motivo: `${peca} já publicado em ${meta.publicacao.videos[peca].em}` };
+
+  const registrar = (log) => {
+    meta.publicacao.logs.push({ em: new Date(), ...log });
+    fs.writeFileSync(local.json, JSON.stringify(meta, null, 2));
+  };
+  const md = fs.readFileSync(local.md, 'utf8');
+
+  if (tipo === 'reel') {
+    const legenda = montarLegenda(lerAprovado(md).legenda);
+    const falhas = checarTextoVideo(legenda);
+    if ([...legenda].length > LIMITE_LEGENDA) falhas.push(`legenda com ${[...legenda].length} caracteres`);
+    if (falhas.length) return { slug, ok: false, motivo: 'legenda reprovada', falhas };
+    const aguardar = await motivoParaAguardar();
+    const pausa = await estadoPausa();
+    if (!confirmar) return { slug, ok: true, previa: true, plano: [`Instagram: Reel ${peca} (${path.basename(arquivo)})`], legenda, aguardar, pausa: pausa && pausa.motivo };
+    if (pausa) return { slug, ok: false, motivo: `conta pausada: ${pausa.motivo}` };
+    if (aguardar) return { slug, ok: false, motivo: `aguardando a cadência da conta: ${aguardar}` };
+    try {
+      const r = await publicarReelNoInstagram({ arquivo, legenda });
+      meta.publicacao.videos[peca] = { rede: 'instagram', id: r.id, permalink: r.permalink, statusHttp: r.statusHttp, sha256: hash, em: new Date() };
+      registrar({ rede: 'instagram', peca, status: 'publicado', statusHttp: r.statusHttp, id: r.id, permalink: r.permalink });
+      await RegistroPublicacao.create({ artigo: artigo._id, slug, origem: 'bot', resultado: 'publicado', legenda, redes: { instagram: { id: r.id, permalink: r.permalink, tipo: 'reel' } } });
+      return { slug, ok: true, video: meta.publicacao.videos[peca] };
+    } catch (err) {
+      registrar({ rede: 'instagram', peca, status: 'falhou', codigo: err.codigo || null, erro: String(err.message).slice(0, 300) });
+      if (err.codigo === 'INSTAGRAM_TOKEN_INVALIDO') {
+        const m = err.erroMeta || {};
+        await registrarTokenInvalido({ origem: `bot de mídias (${slug}, ${peca})`, codigo: m.code, subcodigo: m.error_subcode, mensagem: m.message });
+      }
+      return { slug, ok: false, motivo: `Reel falhou: ${err.message}` };
+    }
+  }
+
+  // YouTube: Short ou vídeo longo.
+  const metadados = lerMetadadosVideo(md, peca);
+  if (!metadados) return { slug, ok: false, motivo: `bloco metadados:${peca} não encontrado no aprovado` };
+  const descricao = montarDescricaoYoutube({ metadados, slug, sensivel: temaSensivel(artigo), short: tipo === 'short' });
+  const falhas = [...checarTextoVideo(`${metadados.titulo}\n${descricao}\n${metadados.tags.join(' ')}`), ...validarMetadados({ titulo: metadados.titulo, descricao, tags: metadados.tags })];
+  if (falhas.length) return { slug, ok: false, motivo: 'metadados reprovados', falhas };
+  const privacidade = ['public', 'unlisted', 'private'].includes(process.env.YOUTUBE_PRIVACIDADE) ? process.env.YOUTUBE_PRIVACIDADE : 'public';
+  if (!confirmar) {
+    return { slug, ok: true, previa: true, plano: [`YouTube ${tipo === 'short' ? 'Short' : 'vídeo longo'} ${peca} (${path.basename(arquivo)}), ${privacidade}`], titulo: metadados.titulo, legenda: descricao, tags: metadados.tags, youtubeSemCredencial: !credenciaisYoutube() };
+  }
+  if (!credenciaisYoutube()) return { slug, ok: false, motivo: 'faltam YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN no .env (npm run youtube:autorizar)' };
+  try {
+    const r = await enviarVideo({ arquivo, titulo: metadados.titulo, descricao, tags: metadados.tags, privacidade, short: tipo === 'short' });
+    meta.publicacao.videos[peca] = { rede: 'youtube', id: r.id, link: r.link, statusHttp: r.statusHttp, privacidade: r.privacidade, sha256: hash, em: new Date() };
+    registrar({ rede: 'youtube', peca, status: 'publicado', statusHttp: r.statusHttp, id: r.id, link: r.link, privacidade: r.privacidade });
+    await RegistroPublicacao.create({ artigo: artigo._id, slug, origem: 'bot', resultado: 'publicado', legenda: descricao, redes: { youtube: { id: r.id, link: r.link, tipo, privacidade: r.privacidade } } });
+    return { slug, ok: true, video: meta.publicacao.videos[peca], avisoPrivacidade: r.privacidade !== privacidade ? `o YouTube aplicou "${r.privacidade}" (projeto de API não auditado?)` : null };
+  } catch (err) {
+    registrar({ rede: 'youtube', peca, status: 'falhou', codigo: err.codigo || null, erro: String(err.message).slice(0, 300) });
+    return { slug, ok: false, motivo: `YouTube falhou: ${err.message}` };
+  }
+}
+
+async function mainVideo(args) {
+  const tipo = String(args.tipo);
+  const peca = String(args.peca || PECA_PADRAO[tipo]);
+  const confirmar = Boolean(args.confirmar);
+  if (!args.slug) return console.log('\n  Use --slug=<slug> --tipo=reel|short|longo --arquivo=<.mp4> [--peca=reel-1] [--confirmar].\n');
+  await db.connect();
+  const r = await publicarVideo(String(args.slug), { tipo, peca, arquivo: args.arquivo && String(args.arquivo), confirmar });
+  if (!r.ok) {
+    console.log(`\n  ⏸  ${r.slug}: ${r.motivo}`);
+    for (const f of r.falhas || []) console.log(`       - ${f}`);
+  } else if (r.previa) {
+    console.log(`\n  PRÉVIA (nada será publicado) · ${r.slug}\n     plano: ${r.plano.join(' · ')}`);
+    if (r.titulo) console.log(`     título: ${r.titulo}\n     tags: ${r.tags.join(', ')}`);
+    if (r.youtubeSemCredencial) console.log('     ⚠️  YouTube ainda sem credencial no .env (npm run youtube:autorizar)');
+    if (r.aguardar) console.log(`     cadência da conta: aguardar — ${r.aguardar}`);
+    console.log(`     ${tipo === 'reel' ? 'legenda' : 'descrição'}:\n       ${r.legenda.replace(/\n/g, '\n       ')}`);
+  } else {
+    console.log(`\n  ✅ ${r.slug}: ${peca} publicado → ${r.video.permalink || r.video.link} (HTTP ${r.video.statusHttp})${r.avisoPrivacidade ? `\n     ⚠️  ${r.avisoPrivacidade}` : ''}`);
+  }
+  console.log(`\n  ${AVISO_CFM}\n`);
+  await db.mongoose.disconnect();
+}
+
 async function main() {
   const args = argumentos();
+  if (['reel', 'short', 'longo'].includes(args.tipo)) return mainVideo(args);
   const confirmar = Boolean(args.confirmar);
   const disponiveis = [
     process.env.INSTAGRAM_ACCOUNT_ID && process.env.INSTAGRAM_ACCESS_TOKEN && 'instagram',
@@ -297,4 +439,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { montarLegenda, checarTexto };
+module.exports = { montarLegenda, checarTexto, montarDescricaoYoutube, checarTextoVideo };

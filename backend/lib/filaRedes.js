@@ -89,7 +89,8 @@ async function listarFila(limite = 10) {
 async function motivoParaAguardar(agora = new Date()) {
   const { postsPorDia, intervaloMinHoras } = configuracao();
   const desde = new Date(agora - 24 * HORA_MS);
-  const doBot = { origem: 'bot', resultado: 'publicado' };
+  // Só o que o bot publicou no Instagram (carrossel, Reel): YouTube não ocupa a cota da conta.
+  const doBot = { origem: 'bot', resultado: 'publicado', 'redes.instagram': { $exists: true } };
 
   const [daFila24h, doBot24h] = await Promise.all([
     Artigo.countDocuments({ publicadoRedesEm: { $gte: desde } }),

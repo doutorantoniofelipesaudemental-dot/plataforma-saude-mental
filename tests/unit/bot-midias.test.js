@@ -23,7 +23,28 @@ function rascunho(ajustes = {}) {
     linkedin: ['autoridade', 'educativo'].map((tipo) => ({ tipo, texto: 'Post curto.\nLeia o artigo completo no site.' })),
     youtube: {
       titulos: ['sinais', 'causas', 'cuidado', 'gestão', 'apoio'].map((t) => `Ansiedade no trabalho: ${t}`),
-      shorts: [1, 2].map(() => ({ titulo: 'S', gancho: 'G', desenvolvimento: 'D', cta: 'C' })),
+      shorts: [1, 2].map(() => ({
+        titulo: 'Ansiedade no trabalho: sinais',
+        gancho: 'G',
+        desenvolvimento: 'D',
+        cta: 'C',
+        descricao: 'Ansiedade no trabalho tem sinais que dá para reconhecer. Veja quando buscar ajuda.',
+        tags: ['ansiedade', 'trabalho', 'saúde mental', 'estresse no trabalho', 'burnout'],
+      })),
+      longo: {
+        titulo: 'Ansiedade no trabalho: o que observar',
+        descricao: 'Ansiedade no trabalho aparece no corpo e na rotina. Neste vídeo, os sinais e os caminhos de cuidado.',
+        tags: ['ansiedade', 'trabalho', 'saúde mental', 'estresse', 'burnout', 'rh', 'gestão', 'cuidado'],
+        capitulos: [
+          { tempo: '0:00', titulo: 'Abertura' },
+          { tempo: '1:30', titulo: 'Sinais' },
+          { tempo: '6:00', titulo: 'Cuidado' },
+        ],
+        roteiro: [
+          { tempo: '0:00–0:30', bloco: 'gancho', fala: 'Fala.', bRoll: 'mesa de trabalho', textoTela: 'Sinais de alerta' },
+          { tempo: '0:30–9:00', bloco: 'conteúdo', fala: 'Fala.', bRoll: 'escritório vazio', textoTela: 'Cuidado' },
+        ],
+      },
     },
     ...ajustes,
   };
@@ -64,7 +85,8 @@ test('alerta limites de tamanho e CVV ausente em tema sensível', () => {
 
 test('alerta faixa citada só pelo teto e quantidade errada; CVV entra pelo código', () => {
   const { garantirLinhasFixas } = require('../../scripts/bot-gemini');
-  const r = rascunho({ youtube: { titulos: ['T'], shorts: [] } });
+  const r = rascunho();
+  r.youtube = { ...r.youtube, titulos: ['T'], shorts: [] };
   r.stories[0].texto = 'O burnout atinge até 41% dos trabalhadores.';
   const alertas = verificar(r, ARTIGO, FONTE).join('\n');
   assert.match(alertas, /só pelo limite de cima/);
@@ -116,4 +138,26 @@ test('publicador: legenda ganha identificação e aviso CFM antes das hashtags; 
   assert.deepEqual(checarTexto({ aprovado, legenda, artigo: ARTIGO }), []);
   const comMarca = legenda.replace('#trabalho', '#DrAntomioFelipe');
   assert.match(checarTexto({ aprovado, legenda: comMarca, artigo: ARTIGO }).join('\n'), /hashtag de marca "#DrAntomioFelipe"/);
+});
+
+test('YouTube: SEO e estrutura do vídeo longo', () => {
+  const { verificarYoutube } = require('../../scripts/bot-gemini');
+  const yt = rascunho().youtube;
+  assert.deepEqual(verificarYoutube(yt), []);
+
+  const ruim = JSON.parse(JSON.stringify(yt));
+  ruim.longo.titulo = 'Um título de vídeo longo que passa bastante do limite de sessenta';
+  ruim.longo.descricao = 'Veja em https://exemplo.com.';
+  ruim.longo.capitulos = [{ tempo: '0:05', titulo: 'A' }, { tempo: '0:10', titulo: 'B' }];
+  ruim.longo.roteiro = [{ tempo: '0:00–3:00', bloco: 'x', fala: 'y', bRoll: '', textoTela: 'z' }];
+  ruim.shorts[0].tags = ['a'];
+  const alertas = verificarYoutube(ruim).join('\n');
+  assert.match(alertas, /título com \d+ caracteres/);
+  assert.match(alertas, /link na descrição/);
+  assert.match(alertas, /2 capítulos \(mínimo 3/);
+  assert.match(alertas, /1º capítulo precisa começar em 0:00/);
+  assert.match(alertas, /capítulo 2 a menos de 10 s/);
+  assert.match(alertas, /YouTube longo com 3 min \(8 a 12\)/);
+  assert.match(alertas, /bloco 1 sem B-roll/);
+  assert.match(alertas, /Short 1: 1 tags \(5 a 12\)/);
 });

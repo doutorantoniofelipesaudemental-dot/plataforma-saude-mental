@@ -59,6 +59,27 @@ function lerAprovado(md) {
   return { tituloArtigo, slides, rodapeUltimo, legenda, linkedin };
 }
 
+/**
+ * Metadados de um vídeo (short-1, short-2, longo) no bloco ```metadados:<id>
+ * que o bot-gemini escreve; no longo, também os capítulos ("- m:ss Título").
+ */
+function lerMetadadosVideo(md, id) {
+  const bloco = (md.replace(/\r\n?/g, '\n').match(new RegExp('```metadados:' + id + '\\n([\\s\\S]*?)\\n```')) || [])[1];
+  if (!bloco) return null;
+  const titulo = (bloco.match(/^titulo:\s*(.*)$/m) || [])[1]?.trim() || '';
+  const tags = ((bloco.match(/^tags:\s*(.*)$/m) || [])[1] || '').split(',').map((t) => t.trim()).filter(Boolean);
+  const descricao = (bloco.split(/^descricao:\s*$/m)[1] || '').trim();
+  const capitulos =
+    id === 'longo'
+      ? secao(md, 'Capítulos')
+          .split('\n')
+          .map((l) => l.match(/^-\s*(\d{1,2}:\d{2}(?::\d{2})?)\s+(.+)$/))
+          .filter(Boolean)
+          .map((m) => ({ tempo: m[1], titulo: m[2].trim() }))
+      : [];
+  return { titulo, tags, descricao, capitulos };
+}
+
 function tamanhoPara(texto, faixas) {
   return faixas.find((f) => texto.length <= f.ate).tamanho;
 }
@@ -112,4 +133,4 @@ async function renderizarSlides(aprovado) {
   );
 }
 
-module.exports = { lerAprovado, renderizarSlides, celulas };
+module.exports = { lerAprovado, lerMetadadosVideo, renderizarSlides, celulas };
