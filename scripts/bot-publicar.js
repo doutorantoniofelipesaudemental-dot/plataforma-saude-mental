@@ -170,6 +170,14 @@ async function publicarAprovado(slug, { confirmar, redes }) {
   meta.publicacao = meta.publicacao || { instagram: null, linkedin: [], logs: [] };
   const manuais = ['Reels (roteiro — requer vídeo)', 'Stories (enquetes — a API não publica figurinhas)', 'YouTube Shorts (roteiro — requer vídeo)'];
   const plano = [];
+  // Um carrossel por artigo: um pacote novo (rascunho regenerado para os vídeos)
+  // não republica o carrossel que já está no ar — a fonte é o banco, não o arquivo.
+  const carrosselNoAr = await RegistroPublicacao.findOne({ slug, origem: 'bot', resultado: 'publicado', 'redes.instagram.tipo': 'carrossel' })
+    .select('data redes')
+    .lean();
+  if (carrosselNoAr && !meta.publicacao.instagram) {
+    meta.publicacao.instagram = { ...carrosselNoAr.redes.instagram, em: carrosselNoAr.data, deOutroPacote: true };
+  }
   const querInstagram = redes.includes('instagram') && !meta.publicacao.instagram;
   const linkedinPendente = aprovado.linkedin.find((p) => !meta.publicacao.linkedin.some((x) => x.titulo === p.titulo));
   const querLinkedin = redes.includes('linkedin') && linkedinPendente;
