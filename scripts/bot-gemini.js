@@ -140,13 +140,19 @@ function verificar(d, artigo, fonte) {
 
   // Números fora do artigo (exceto telefones de apoio e registros profissionais).
   const permitidos = new Set(['188', '192', '41322', '26638', ...(fonte.match(/\d+(?:[.,]\d+)?/g) || [])]);
-  const semTempos = todos.replace(/\b\d+\s?(?:s|seg|segundos|min|minutos)\b/gi, ' ').replace(/\bslide\s*\d+/gi, ' ');
-  // Contagem pequena ("6 sinais", "3 atitudes") é estrutura do texto, não dado;
-  // percentual, decimal ou número maior que 10 precisa estar no artigo.
+  // Linhas de apoio ("CVV 188 (ligação gratuita, 24h) · SAMU 192") são fixas: fora da contagem.
+  const semTempos = todos
+    .replace(/[^\n]*CVV 188[^\n]*/g, ' ')
+    .replace(/\b\d+\s?(?:s|seg|segundos|min|minutos)\b/gi, ' ').replace(/\bslide\s*\d+/gi, ' ');
+  // Contagem de estrutura ("6 sinais", "3 atitudes") não é dado; qualquer outro
+  // número ("8 horas de sono", "40%") precisa estar no artigo.
+  const semContagens = semTempos.replace(
+    /\b\d{1,2}\s+(?:sinais|atitudes|dicas|passos|perguntas|formas|motivos|pontos|mitos|fatos|etapas|perfis|conceitos|práticas|ações|limites|fatores|coisas|minutos de leitura)\b/gi,
+    ' '
+  );
   const inventados = [
     ...new Set(
-      (semTempos.match(/\d+(?:[.,]\d+)?(?:\s?%)?/g) || [])
-        .filter((n) => /%|[.,]/.test(n) || Number(n) > 10)
+      (semContagens.match(/\d+(?:[.,]\d+)?(?:\s?%)?/g) || [])
         .map((n) => n.replace(/\s?%$/, ''))
         .filter((n) => !permitidos.has(n))
     ),

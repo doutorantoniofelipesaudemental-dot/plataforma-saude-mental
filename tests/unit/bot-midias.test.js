@@ -22,7 +22,7 @@ function rascunho(ajustes = {}) {
     stories: [1, 2, 3, 4, 5].map(() => ({ texto: 'Enquete', recurso: 'enquete' })),
     linkedin: ['autoridade', 'educativo'].map((tipo) => ({ tipo, texto: 'Post curto.\nLeia o artigo completo no site.' })),
     youtube: {
-      titulos: [1, 2, 3, 4, 5].map((n) => `Ansiedade no trabalho: sinal ${n}`),
+      titulos: ['sinais', 'causas', 'cuidado', 'gestão', 'apoio'].map((t) => `Ansiedade no trabalho: ${t}`),
       shorts: [1, 2].map(() => ({ titulo: 'S', gancho: 'G', desenvolvimento: 'D', cta: 'C' })),
     },
     ...ajustes,
@@ -40,6 +40,10 @@ test('alerta número inventado, termo do CFM, "Antonio" e inglês nas artes', ()
   });
   const alertas = verificar(r, ARTIGO, FONTE).join('\n');
   assert.match(alertas, /números que não estão no artigo: 70/);
+  const pequeno = verificar(rascunho({ legenda: 'Durma 8 horas.\n\n🔗 Artigo completo no link da bio\n\nCVV 188 (24h)\n\n#saudemental #ansiedade #trabalho' }), ARTIGO, FONTE).join('\n');
+  assert.match(pequeno, /números que não estão no artigo: 8/, 'número pequeno inventado também é acusado');
+  const contagem = verificar(rascunho({ ganchos: ['6 sinais de alerta', 'b', 'c', 'd', 'e'] }), ARTIGO, FONTE).join('\n');
+  assert.doesNotMatch(contagem, /números/, 'contagem de estrutura não é dado');
   assert.match(alertas, /CFM: promessa de cura/);
   assert.match(alertas, /"Antonio" sem acento/);
   assert.match(alertas, /inglês nas artes: "Mindset"/);
