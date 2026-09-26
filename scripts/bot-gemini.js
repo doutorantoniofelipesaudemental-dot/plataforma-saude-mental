@@ -56,7 +56,10 @@ Regras inegociáveis:
 7. Hashtags: 3 a 5, em português, de tema. Nunca #psiquiatria nem hashtag de marca.
 8. Escrita humana: proibido "No mundo de hoje", "Em suma", "Vale ressaltar", "Desvendar", "Mergulhar", "Jornada" em excesso, "Não é apenas X, é Y", listas de três adjetivos, travessões em excesso, emoji em toda linha. Frases de tamanhos variados, exemplos concretos do consultório e do trabalho, sem inventar casos reais.
 9. Limites: ganchos com até 10 palavras; slide com até 25 palavras; post de LinkedIn com até 1.300 caracteres; título do YouTube com até 60 caracteres, palavra-chave no início; Reels de 15 a 45 s; Shorts até 60 s.
-10. Não escreva a identificação do médico (CRM, RQE): ela é acrescentada depois, automaticamente.`;
+10. Não escreva a identificação do médico (CRM, RQE) nem a linha do CVV/SAMU: elas são acrescentadas depois, automaticamente.
+11. Números: cite faixas inteiras e com as ressalvas do artigo (ex.: "de 25% a 74%, em quadros moderados a graves, em estudos de vários países"). Nunca destaque só o limite de cima ("até 74%").
+12. Use os termos do próprio artigo para serviços, públicos e efeitos (ex.: "serviço de saúde do trabalhador da rede de ensino", "proteger crianças e adolescentes"); não acrescente conclusões que ele não tira.
+13. Quantidades exatas: 5 ganchos, 7 a 10 slides, 2 Reels, 5 Stories, 2 posts de LinkedIn (cada um terminando com uma chamada para ler o artigo completo no site), 5 títulos e 2 Shorts.`;
 
 const texto = { type: 'string' };
 const SCHEMA = {
@@ -138,7 +141,16 @@ function verificar(d, artigo, fonte) {
   // Números fora do artigo (exceto telefones de apoio e registros profissionais).
   const permitidos = new Set(['188', '192', '41322', '26638', ...(fonte.match(/\d+(?:[.,]\d+)?/g) || [])]);
   const semTempos = todos.replace(/\b\d+\s?(?:s|seg|segundos|min|minutos)\b/gi, ' ').replace(/\bslide\s*\d+/gi, ' ');
-  const inventados = [...new Set((semTempos.match(/\d+(?:[.,]\d+)?/g) || []).filter((n) => !permitidos.has(n)))];
+  // Contagem pequena ("6 sinais", "3 atitudes") é estrutura do texto, não dado;
+  // percentual, decimal ou número maior que 10 precisa estar no artigo.
+  const inventados = [
+    ...new Set(
+      (semTempos.match(/\d+(?:[.,]\d+)?(?:\s?%)?/g) || [])
+        .filter((n) => /%|[.,]/.test(n) || Number(n) > 10)
+        .map((n) => n.replace(/\s?%$/, ''))
+        .filter((n) => !permitidos.has(n))
+    ),
+  ];
   if (inventados.length) alertas.push(`números que não estão no artigo: ${inventados.join(', ')} — conferir`);
   if (/\[DADO A CONFIRMAR\]/.test(todos)) alertas.push('há [DADO A CONFIRMAR] no texto');
 
@@ -154,11 +166,19 @@ function verificar(d, artigo, fonte) {
   if (ingles) alertas.push(`inglês nas artes: "${ingles[2]}"`);
 
   d.ganchos.forEach((g, i) => palavras(g) > 10 && alertas.push(`gancho ${i + 1} com ${palavras(g)} palavras (máx. 10)`));
-  d.carrossel.forEach((s, i) => palavras(s.texto) > 25 && alertas.push(`slide ${i + 1} com ${palavras(s.texto)} palavras (máx. 25)`));
+  // A linha de apoio acrescentada pelo código (garantirLinhasFixas) não conta no limite.
+  const semApoio = (s) => s.replace(' Apoio agora: CVV 188 · SAMU 192', '');
+  d.carrossel.forEach((s, i) => palavras(semApoio(s.texto)) > 25 && alertas.push(`slide ${i + 1} com ${palavras(semApoio(s.texto))} palavras (máx. 25)`));
   if (d.carrossel.length < 7 || d.carrossel.length > 10) alertas.push(`carrossel com ${d.carrossel.length} slides (7 a 10)`);
   d.linkedin.forEach((p, i) => [...p.texto].length > 1300 && alertas.push(`LinkedIn ${i + 1} com ${[...p.texto].length} caracteres (máx. 1.300)`));
   d.youtube.titulos.forEach((t, i) => [...t].length > 60 && alertas.push(`título YouTube ${i + 1} com ${[...t].length} caracteres (máx. 60)`));
   d.reels.forEach((r, i) => (r.duracaoSegundos < 15 || r.duracaoSegundos > 45) && alertas.push(`Reel ${i + 1} com ${r.duracaoSegundos} s (15 a 45)`));
+
+  const esperado = { ganchos: [d.ganchos, 5], reels: [d.reels, 2], stories: [d.stories, 5], linkedin: [d.linkedin, 2], títulos: [d.youtube.titulos, 5], shorts: [d.youtube.shorts, 2] };
+  for (const [nome, [lista, n]] of Object.entries(esperado)) if (lista.length !== n) alertas.push(`${lista.length} ${nome} (esperado ${n})`);
+  const teto = todos.match(/\baté\s+\d+(?:[.,]\d+)?\s?%/i);
+  if (teto) alertas.push(`faixa citada só pelo limite de cima ("${teto[0]}") — use a faixa inteira, com as ressalvas do artigo`);
+  d.linkedin.forEach((p, i) => !/artigo|drsaudemental\.vercel\.app|link/i.test(p.texto.split('\n').slice(-3).join(' ')) && alertas.push(`LinkedIn ${i + 1} sem chamada para o artigo`));
 
   if (temaSensivel(artigo)) {
     if (!d.legenda.includes('CVV 188')) alertas.push('tema sensível: legenda sem CVV 188');
@@ -169,6 +189,48 @@ function verificar(d, artigo, fonte) {
   if (hashtags.length < 3 || hashtags.length > 5) alertas.push(`legenda com ${hashtags.length} hashtags (3 a 5)`);
   if (!d.legenda.includes('link da bio')) alertas.push('legenda sem "link da bio"');
   return alertas;
+}
+
+/**
+ * O modelo às vezes omite um campo (sobretudo o Groq, que não recebe o schema
+ * como restrição). Campo ausente vira lista vazia — a verificação acusa a
+ * quantidade errada em vez de o bot quebrar.
+ */
+function normalizar(d = {}) {
+  const lista = (v) => (Array.isArray(v) ? v : []);
+  const str = (v) => (typeof v === 'string' ? v : '');
+  return {
+    ganchos: lista(d.ganchos).map(str),
+    carrossel: lista(d.carrossel).map((s) => ({ texto: str(s?.texto), visual: str(s?.visual) })),
+    legenda: str(d.legenda),
+    reels: lista(d.reels).map((r) => ({
+      titulo: str(r?.titulo),
+      duracaoSegundos: Number(r?.duracaoSegundos) || 0,
+      cenas: lista(r?.cenas).map((c) => ({ tempo: str(c?.tempo), cena: str(c?.cena), textoTela: str(c?.textoTela), fala: str(c?.fala) })),
+    })),
+    stories: lista(d.stories).map((s) => ({ texto: str(s?.texto), recurso: str(s?.recurso) })),
+    linkedin: lista(d.linkedin).map((p) => ({ tipo: str(p?.tipo), texto: str(p?.texto) })),
+    youtube: {
+      titulos: lista(d.youtube?.titulos).map(str),
+      shorts: lista(d.youtube?.shorts).map((s) => ({ titulo: str(s?.titulo), gancho: str(s?.gancho), desenvolvimento: str(s?.desenvolvimento), cta: str(s?.cta) })),
+    },
+  };
+}
+
+/**
+ * Linhas que não dependem do modelo: em tema sensível, o apoio (CVV 188 /
+ * SAMU 192) entra na legenda e no último slide — como a identificação, é
+ * acrescentado pelo código, para nunca faltar.
+ */
+const LINHA_APOIO = 'Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192';
+function garantirLinhasFixas(d, artigo) {
+  if (!temaSensivel(artigo)) return;
+  if (!d.legenda.includes('CVV 188')) {
+    const i = d.legenda.search(/\n+\s*#/);
+    d.legenda = i < 0 ? `${d.legenda}\n\n${LINHA_APOIO}` : `${d.legenda.slice(0, i)}\n\n${LINHA_APOIO}${d.legenda.slice(i)}`;
+  }
+  const ultimo = d.carrossel.at(-1);
+  if (ultimo && !ultimo.texto.includes('CVV 188')) ultimo.texto = `${ultimo.texto} Apoio agora: CVV 188 · SAMU 192`;
 }
 
 const celula = (s) => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
@@ -206,6 +268,8 @@ async function gerarRascunho(artigo, { forcar }) {
   const fonte = textoParaNarracao(artigo).split('\n').filter((linha, i) => i !== 1).join('\n');
   const usuario = `ARTIGO APROVADO (única fonte permitida):\n\nTítulo: ${artigo.titulo}\nCategoria: ${artigo.categoria}\nResumo: ${artigo.resumo}\n\n${fonte}`;
   const origem = await gerarJson({ sistema: SISTEMA, usuario, schema: SCHEMA });
+  origem.dados = normalizar(origem.dados);
+  garantirLinhasFixas(origem.dados, artigo);
   const alertas = verificar(origem.dados, artigo, `${artigo.titulo} ${artigo.resumo} ${fonte}`);
   fs.mkdirSync(PASTA, { recursive: true });
   fs.writeFileSync(destino, markdown(artigo, origem.dados, alertas, origem));
@@ -250,4 +314,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { verificar, SCHEMA, SISTEMA };
+module.exports = { verificar, garantirLinhasFixas, normalizar, SCHEMA, SISTEMA };

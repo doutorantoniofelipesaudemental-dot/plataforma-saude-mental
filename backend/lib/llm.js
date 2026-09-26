@@ -7,10 +7,10 @@
  *
  * Variáveis (.env local): GEMINI_API_KEY, GROQ_API_KEY e, opcionais,
  * GEMINI_MODEL (padrão gemini-flash-latest) e GROQ_MODEL (padrão
- * llama-3.3-70b-versatile). Sem nenhuma chave, lança um erro explicando.
+ * openai/gpt-oss-120b). Sem nenhuma chave, lança um erro explicando.
  */
 const MODELO_GEMINI = process.env.GEMINI_MODEL || 'gemini-flash-latest';
-const MODELO_GROQ = process.env.GROQ_MODEL || 'llama-3.3-70b-versatile';
+const MODELO_GROQ = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
 const TENTATIVAS = 3;
 
 const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));

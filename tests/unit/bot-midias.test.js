@@ -18,10 +18,13 @@ function rascunho(ajustes = {}) {
     ganchos: ['Ansiedade no trabalho tem sinais claros', 'a', 'b', 'c', 'd'],
     carrossel: [...Array(7)].map((_, i) => ({ texto: i === 6 ? 'Precisa de apoio agora? CVV 188 · SAMU 192' : `Slide ${i + 1} sobre ansiedade de 38% a 41%`, visual: 'fundo verde' })),
     legenda: 'Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\nCVV 188\n\n#saudemental #ansiedade #saudementalnotrabalho',
-    reels: [{ titulo: 'R', duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] }],
-    stories: [{ texto: 'Enquete', recurso: 'enquete' }],
-    linkedin: [{ tipo: 'autoridade', texto: 'Post curto.' }],
-    youtube: { titulos: ['Ansiedade no trabalho: sinais'], shorts: [{ titulo: 'S', gancho: 'G', desenvolvimento: 'D', cta: 'C' }] },
+    reels: [1, 2].map(() => ({ titulo: 'R', duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
+    stories: [1, 2, 3, 4, 5].map(() => ({ texto: 'Enquete', recurso: 'enquete' })),
+    linkedin: ['autoridade', 'educativo'].map((tipo) => ({ tipo, texto: 'Post curto.\nLeia o artigo completo no site.' })),
+    youtube: {
+      titulos: [1, 2, 3, 4, 5].map((n) => `Ansiedade no trabalho: sinal ${n}`),
+      shorts: [1, 2].map(() => ({ titulo: 'S', gancho: 'G', desenvolvimento: 'D', cta: 'C' })),
+    },
     ...ajustes,
   };
 }
@@ -53,6 +56,22 @@ test('alerta limites de tamanho e CVV ausente em tema sensível', () => {
   assert.match(alertas, /carrossel com 5 slides/);
   assert.match(alertas, /legenda sem CVV 188/);
   assert.match(alertas, /último slide sem CVV 188/);
+});
+
+test('alerta faixa citada só pelo teto e quantidade errada; CVV entra pelo código', () => {
+  const { garantirLinhasFixas } = require('../../scripts/bot-gemini');
+  const r = rascunho({ youtube: { titulos: ['T'], shorts: [] } });
+  r.stories[0].texto = 'O burnout atinge até 41% dos trabalhadores.';
+  const alertas = verificar(r, ARTIGO, FONTE).join('\n');
+  assert.match(alertas, /só pelo limite de cima/);
+  assert.match(alertas, /1 títulos \(esperado 5\)/);
+  assert.match(alertas, /0 shorts \(esperado 2\)/);
+
+  const semApoio = rascunho({ legenda: 'Gancho.\n\n🔗 Artigo completo no link da bio\n\n#saudemental #ansiedade #trabalho' });
+  semApoio.carrossel.at(-1).texto = 'Leia o artigo.';
+  garantirLinhasFixas(semApoio, ARTIGO);
+  assert.match(semApoio.legenda, /CVV 188[\s\S]*#saudemental/, 'CVV antes das hashtags');
+  assert.match(semApoio.carrossel.at(-1).texto, /CVV 188 · SAMU 192/);
 });
 
 test('cliente de LLM sem nenhuma chave explica o que falta', async () => {
