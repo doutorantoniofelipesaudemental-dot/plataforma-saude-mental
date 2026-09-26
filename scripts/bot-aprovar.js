@@ -87,7 +87,9 @@ async function aprovar(slug, { revisado }) {
     responsavel: RESPONSAVEL,
     declaracao: AVISO_CFM,
     hashRascunhoAprovado: hashTexto(md),
-    editadoAposGeracao: hashTexto(md) !== meta.hashRascunhoGerado,
+    // Rascunhos gerados antes da normalização guardaram o hash do texto cru:
+    // aceita os dois formatos, para não acusar edição que não houve.
+    editadoAposGeracao: ![hashTexto(md), require('crypto').createHash('sha256').update(md).digest('hex')].includes(meta.hashRascunhoGerado),
     linhasAlteradas: linhasAlteradas(slug, md),
     pendenciasReconhecidas: pendencias,
   };
