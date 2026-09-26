@@ -10,15 +10,24 @@
  * openai/gpt-oss-120b). Sem nenhuma chave, lança um erro explicando.
  */
 const MODELO_GEMINI = process.env.GEMINI_MODEL || 'gemini-flash-latest';
+// Cada modelo do Gemini tem cota gratuita própria: esgotada a do principal, o
+// flash-lite costuma seguir disponível antes de cair no Groq.
+const MODELO_GEMINI_RESERVA = process.env.GEMINI_MODEL_RESERVA || 'gemini-flash-lite-latest';
 const MODELO_GROQ = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
 const TENTATIVAS = 3;
 
 const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));
 
-/** Erro temporário (limite de taxa, sobrecarga) vale nova tentativa; o resto não. */
+/**
+ * Erro temporário (sobrecarga, limite por minuto) vale nova tentativa; cota
+ * gratuita esgotada ("exceeded your current quota") não volta em segundos —
+ * passa direto ao próximo modelo/provedor.
+ */
 function ehTemporario(err) {
+  const mensagem = String(err?.message);
+  if (/exceeded your current quota|quota exceeded|daily limit/i.test(mensagem)) return false;
   const status = err?.status ?? err?.code ?? err?.error?.code;
-  return status === 429 || status === 503 || status === 500 || /429|RESOURCE_EXHAUSTED|overloaded|UNAVAILABLE/i.test(String(err?.message));
+  return status === 429 || status === 503 || status === 500 || /429|RESOURCE_EXHAUSTED|overloaded|UNAVAILABLE/i.test(mensagem);
 }
 
 async function comRepeticao(fn) {
@@ -32,11 +41,11 @@ async function comRepeticao(fn) {
   }
 }
 
-async function viaGemini({ sistema, usuario, schema }) {
+async function viaGemini({ sistema, usuario, schema }, modelo = MODELO_GEMINI) {
   const { GoogleGenAI } = require('@google/genai');
   const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
   const resposta = await ai.models.generateContent({
-    model: MODELO_GEMINI,
+    model: modelo,
     contents: usuario,
     config: {
       systemInstruction: sistema,
@@ -70,7 +79,8 @@ async function viaGroq({ sistema, usuario, schema }) {
  */
 async function gerarJson({ sistema, usuario, schema, preferir }) {
   const provedores = [
-    process.env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: viaGemini },
+    process.env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: (p) => viaGemini(p, MODELO_GEMINI) },
+    process.env.GEMINI_API_KEY && MODELO_GEMINI_RESERVA !== MODELO_GEMINI && { nome: 'gemini', modelo: MODELO_GEMINI_RESERVA, fn: (p) => viaGemini(p, MODELO_GEMINI_RESERVA) },
     process.env.GROQ_API_KEY && { nome: 'groq', modelo: MODELO_GROQ, fn: viaGroq },
   ].filter(Boolean);
   // `preferir` põe um provedor na frente (o revisor usa o outro modelo, para um olhar independente).
@@ -83,10 +93,10 @@ async function gerarJson({ sistema, usuario, schema, preferir }) {
       const dados = await comRepeticao(() => p.fn({ sistema, usuario, schema }));
       return { dados, provedor: p.nome, modelo: p.modelo, falhas };
     } catch (err) {
-      falhas.push(`${p.nome}: ${String(err?.message || err).slice(0, 200)}`);
+      falhas.push(`${p.nome}/${p.modelo}: ${String(err?.message || err).slice(0, 200)}`);
     }
   }
   throw new Error(`Todos os provedores falharam — ${falhas.join(' | ')}`);
 }
 
-module.exports = { gerarJson, MODELO_GEMINI, MODELO_GROQ };
+module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GROQ };
