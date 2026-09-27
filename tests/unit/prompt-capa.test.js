@@ -58,3 +58,17 @@ test('imagem gerada em 16:9 sai exatamente 1200×630', async () => {
   const meta = await sharp(await g.ajustarDimensao(gerada, 'artigo')).metadata();
   assert.deepEqual([meta.width, meta.height], [1200, 630]);
 });
+
+test('auditoria de SEO: meta description limpa; longa é só aviso', () => {
+  const { problemasDescricao } = require('../../scripts/auditoria-seo');
+  const boa = 'Comer ou comprar de forma compulsiva costuma começar como alívio emocional e pode virar um padrão repetitivo.';
+  assert.deepEqual(problemasDescricao(boa), { falhas: [], avisos: [] });
+  assert.deepEqual(problemasDescricao(null).falhas, ['meta description ausente']);
+  assert.match(problemasDescricao('Curta.').falhas[0], /curta demais/);
+  assert.match(problemasDescricao('x '.repeat(100)).avisos[0], /cortada no Google/);
+  assert.equal(problemasDescricao('x '.repeat(100)).falhas.length, 0, 'longa não reprova');
+  assert.match(problemasDescricao(`${boa} <strong>forte</strong>`).falhas.join(), /HTML/);
+  assert.match(problemasDescricao(`**Slide 1 -** ${boa}`).falhas.join(), /marcador estrutural/);
+  assert.match(problemasDescricao(`${boa} &amp;amp; mais`).falhas.join(), /entidade HTML dupla/);
+  assert.match(problemasDescricao(`${boa} undefined`).falhas.join(), /valor vazio/);
+});
