@@ -362,6 +362,27 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
 - **OpenAI sem créditos aborta na hora** (`classificarErroOpenAI` em `tts.js`): a OpenAI usa o mesmo HTTP 429 para "sem saldo" e para "limite de taxa"; o corpo (`insufficient_quota` / "no credits remaining") distingue. Sem saldo → erro imediato com instrução (1,4 s medido contra a API real, antes ~60 s de retry inútil); limite de taxa e 5xx seguem com até 4 tentativas.
 - Testar um provedor sem mexer no Reel publicado: sempre `--saida=<fora de aprovados/>` — o caminho padrão sobrescreveria o `reel-carrossel.mp4` aprovado e o `producao` do .json.
 
+### 20-undecies-ter. Distribuição secundária: habilitar YouTube e LinkedIn (checado em 2026-09-27)
+
+Estado: `YOUTUBE_CLIENT_ID`/`YOUTUBE_CLIENT_SECRET`/`YOUTUBE_REFRESH_TOKEN` **vazias** no `.env`; `LINKEDIN_ACCESS_TOKEN`/`LINKEDIN_AUTHOR_URN` **ausentes**. O código dos dois já existe (20-nonies e 20-octies); falta só credencial.
+
+**YouTube (Shorts e vídeo longo — `bot:publicar --tipo=short|longo`)**
+1. Google Cloud Console → projeto novo → ativar **YouTube Data API v3**.
+2. Tela de consentimento OAuth: tipo **Externo**, escopo `https://www.googleapis.com/auth/youtube.upload`, e a conta Google **dona do canal** como usuária de teste.
+3. **Publicar o app ("Em produção")** na tela de consentimento: em modo "Teste", o Google expira o refresh token em 7 dias e a publicação para sozinha. O app não verificado mostra um aviso na autorização — aceitável, só o dono autoriza.
+4. Credenciais → ID do cliente OAuth do tipo **"App para computador"** → copiar ID e segredo para `YOUTUBE_CLIENT_ID`/`YOUTUBE_CLIENT_SECRET` no `.env` (só local).
+5. `npm run youtube:autorizar` → entrar com a conta dona do canal → o script grava `YOUTUBE_REFRESH_TOKEN` no `.env` sem exibir.
+6. Conferir: `npm run bot:publicar -- --slug=<slug> --tipo=short --arquivo=<.mp4>` (prévia) não pode mais avisar "YouTube ainda sem credencial".
+7. Até a **auditoria de conformidade da API** do Google, todo upload vira "private" (o publicador avisa). Pedir a auditoria no formulário da YouTube API Services. Cota: 1.600 de 10.000 unidades/dia por upload (6 envios/dia).
+
+**LinkedIn (post corporativo — fila e `bot:publicar`)**
+1. LinkedIn Developers → criar app **vinculado a uma Página** do LinkedIn (exigência da plataforma).
+2. Produto conforme o autor: perfil pessoal → **"Share on LinkedIn"** (escopo `w_member_social`, liberação imediata); Página da empresa → **"Community Management API"** (`w_organization_social`, exige aprovação do LinkedIn).
+3. Gerar o token OAuth 2.0 (ferramenta de token do portal) com `openid profile w_member_social` (ou `w_organization_social`). **Validade de 60 dias, sem renovação automática** para apps comuns — anotar a data e renovar antes.
+4. `LINKEDIN_AUTHOR_URN`: pessoa → `urn:li:person:<sub>` (o `sub` de `GET https://api.linkedin.com/v2/userinfo`); Página → `urn:li:organization:<id numérico>`. O token sozinho não diz em nome de quem postar.
+5. Colocar as duas no `.env.local` (bot) **e**, se a fila também deve postar no LinkedIn, na Vercel (Sensitive, Production) + redeploy. **Atenção:** com `LINKEDIN_*` na Vercel, a fila passa a publicar no LinkedIn **sozinha** a cada post (`redesConfiguradas()` em `filaRedes.js`) — decidir isso antes de configurar lá.
+6. O código usa a UGC Posts API (`/v2/ugcPosts`, `X-Restli-Protocol-Version: 2.0.0`) — legada, mas em funcionamento; se o LinkedIn a desligar, migrar para a Posts API (`/rest/posts` + cabeçalho `LinkedIn-Version`).
+
 ### 20-duodecies. Capas ilustradas de artigo — padrão de prompt (2026-09-27)
 
 - **Onde vale:** capa do artigo no site/og:image (**1200×630 exato, 1,91:1** — Seção 19.3, `width`/`height` + `aspect-ratio` fixos) e capa de vídeo vertical (Reels/Shorts, 1080×1920). **Não vale para o 4:5:** carrossel e capa do feed continuam **estritamente tipográficos** (`carrosselAprovado.js`, `capaRedes.js`), com o título na arte comprovado por hash na tripla checagem (20-quater) — ilustração ali quebraria a checagem visual.

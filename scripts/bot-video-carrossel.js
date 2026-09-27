@@ -73,6 +73,14 @@ function textoFalado(texto) {
   return String(texto).replace(/\s*·\s*/g, ', ').replace(/\s+/g, ' ').trim();
 }
 
+/**
+ * O que é falado em cada slide. O PRIMEIRO sempre abre com "Narração em voz
+ * sintética." (transparência, Res. CFM 2.454/2026), em qualquer provedor.
+ */
+function textoNarradoDoSlide(texto, indice) {
+  return indice === 0 ? `${ABERTURA} ${textoFalado(texto)}` : textoFalado(texto);
+}
+
 /** Filtro de um slide: 4:5 centralizado em 9:16, faixa na cor do slide. */
 function filtroSlide(i, total) {
   const cor = i === 0 || i === total - 1 ? COR_ESCURA : COR_CLARA;
@@ -147,7 +155,7 @@ async function main() {
       console.log(`\n  Narrando ${imagens.length} slides (${provedor}, ${voz})…`);
       const audios = [];
       for (const [i, slide] of aprovado.slides.entries()) {
-        const texto = i === 0 ? `${ABERTURA} ${textoFalado(slide.texto)}` : textoFalado(slide.texto);
+        const texto = textoNarradoDoSlide(slide.texto, i);
         const f = path.join(tmp, `audio-${i + 1}.mp3`);
         fs.writeFileSync(f, await sintetizar(texto, { provedor, voz }));
         audios.push({ f, d: (await duracao(f)) + RESPIRO });
@@ -204,4 +212,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { textoFalado, filtroSlide, filtroTrilhaSobVoz, resolverTrilha };
+module.exports = { textoFalado, textoNarradoDoSlide, filtroSlide, filtroTrilhaSobVoz, resolverTrilha };

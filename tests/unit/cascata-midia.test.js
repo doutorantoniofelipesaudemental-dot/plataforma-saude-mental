@@ -201,3 +201,10 @@ test('Kokoro local: corpo no formato da OpenAI em pt-BR, voz pt obrigatória, se
     else process.env.KOKORO_URL = urlOriginal;
   }
 });
+
+test('transparência: o vídeo narrado sempre abre com "Narração em voz sintética." e só uma vez', () => {
+  const { textoNarradoDoSlide } = require('../../scripts/bot-video-carrossel');
+  assert.equal(textoNarradoDoSlide('Saúde mental de professores · o adoecimento silencioso', 0), 'Narração em voz sintética. Saúde mental de professores, o adoecimento silencioso');
+  assert.doesNotMatch(textoNarradoDoSlide('Segundo slide.', 1), /voz sintética/);
+  assert.doesNotMatch(textoNarradoDoSlide('Último slide. Apoio agora: CVV 188 · SAMU 192', 9), /voz sintética/);
+});
