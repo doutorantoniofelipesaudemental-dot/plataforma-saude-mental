@@ -17,11 +17,19 @@ function injetar(modulo, exportado) {
 // Estado em memória: horários de posts da fila e do bot.
 let postsFila = [];
 let postsBot = [];
+// Para listarFila: registros de publicação e artigos aprovados em memória.
+let registros = [];
+let aprovados = [];
 const consulta = (lista) => ({ sort: () => ({ select: () => ({ lean: async () => lista[0] || null }) }) });
 
 injetar('models/Artigo.js', {
   countDocuments: async (f) => postsFila.filter((d) => d >= f.publicadoRedesEm.$gte).length,
   findOne: () => consulta([...postsFila].sort((a, b) => b - a).map((d) => ({ publicadoRedesEm: d }))),
+  // Só o $match importa aqui: aplica o $nin de id/slug sobre os aprovados.
+  aggregate: async (pipeline) => {
+    const { _id, slug } = pipeline[0].$match;
+    return aprovados.filter((a) => !_id.$nin.includes(a._id) && !slug.$nin.includes(a.slug));
+  },
 });
 injetar('models/RegistroPublicacao.js', {
   countDocuments: async (f) => {
@@ -30,16 +38,20 @@ injetar('models/RegistroPublicacao.js', {
     return postsBot.filter((d) => d >= f.data.$gte).length;
   },
   findOne: () => consulta([...postsBot].sort((a, b) => b - a).map((d) => ({ data: d }))),
+  distinct: async (campo, f) =>
+    registros.filter((r) => r.origem === f.origem && r.resultado === f.resultado).map((r) => r[campo]),
 });
 injetar('lib/socialPublisher.js', { publicarArtigoNasRedes: async () => ({}), ErroPublicacao: class extends Error {} });
 injetar('lib/tokenInstagram.js', { estadoPausa: async () => null });
 
-const { motivoParaAguardar } = require(path.join(RAIZ, 'lib/filaRedes.js'));
+const { motivoParaAguardar, listarFila } = require(path.join(RAIZ, 'lib/filaRedes.js'));
 const haHoras = (h) => new Date(AGORA - h * HORA);
 
 beforeEach(() => {
   postsFila = [];
   postsBot = [];
+  registros = [];
+  aprovados = [];
   delete process.env.REDES_POSTS_POR_DIA;
   delete process.env.REDES_INTERVALO_MIN_HORAS;
 });
@@ -64,4 +76,27 @@ test('livre quando os dois estão fora da janela', async () => {
   postsFila = [haHoras(30)];
   postsBot = [haHoras(5)];
   assert.equal(await motivoParaAguardar(AGORA), null);
+});
+
+test('fila ignora artigo que o bot já publicou (por slug ou por id)', async () => {
+  aprovados = [
+    { _id: 'a1', slug: 'saude-mental-residencia' },
+    { _id: 'a2', slug: 'burnout-aps' },
+    { _id: 'a3', slug: 'compulsao-alimentar-compras-compulsivas' },
+    { _id: 'a4', slug: 'tmc-aps' },
+  ];
+  registros = [
+    { origem: 'bot', resultado: 'publicado', artigo: 'a2', slug: 'burnout-aps' },
+    { origem: 'bot', resultado: 'publicado', artigo: 'a4', slug: 'slug-antigo-do-tmc' }, // slug mudou depois: o id ainda barra
+  ];
+  assert.deepEqual((await listarFila()).map((a) => a.slug), ['saude-mental-residencia', 'compulsao-alimentar-compras-compulsivas']);
+});
+
+test('registro do bot sem publicação concluída (ou de outra origem) não tira o artigo da fila', async () => {
+  aprovados = [{ _id: 'a1', slug: 'saude-mental-residencia' }, { _id: 'a2', slug: 'burnout-aps' }];
+  registros = [
+    { origem: 'bot', resultado: 'falha-rede', artigo: 'a1', slug: 'saude-mental-residencia' },
+    { origem: 'previa', resultado: 'previa', artigo: 'a2', slug: 'burnout-aps' },
+  ];
+  assert.deepEqual((await listarFila()).map((a) => a.slug), ['saude-mental-residencia', 'burnout-aps']);
 });

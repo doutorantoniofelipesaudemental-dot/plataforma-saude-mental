@@ -48,11 +48,27 @@ function redesConfiguradas() {
   return redes;
 }
 
-/** Artigos aprovados e ainda não postados, do maior engajamento para o menor. */
+/**
+ * Artigos que o bot de mídias já publicou (carrossel, Reel, Short, LinkedIn).
+ * O bot não mexe em `status`/`publicadoRedesEm` do artigo, então sem isto a
+ * fila postaria o mesmo artigo de novo no feed (burnout-aps, 2026-09-26).
+ * Por id e por slug: o registro guarda os dois.
+ */
+async function jaPublicadosPeloBot() {
+  const filtro = { origem: 'bot', resultado: 'publicado' };
+  const [ids, slugs] = await Promise.all([
+    RegistroPublicacao.distinct('artigo', filtro),
+    RegistroPublicacao.distinct('slug', filtro),
+  ]);
+  return { ids: ids.filter(Boolean), slugs: slugs.filter(Boolean) };
+}
+
+/** Artigos aprovados e ainda não postados (nem pela fila, nem pelo bot), do maior engajamento para o menor. */
 async function listarFila(limite = 10) {
   const soma = (...campos) => ({ $add: campos.map((c) => ({ $ifNull: [`$${c}`, 0] })) });
+  const doBot = await jaPublicadosPeloBot();
   return Artigo.aggregate([
-    { $match: { status: 'aprovado', publicado: true } },
+    { $match: { status: 'aprovado', publicado: true, _id: { $nin: doBot.ids }, slug: { $nin: doBot.slugs } } },
     {
       $addFields: {
         engajamento: {
@@ -162,4 +178,4 @@ async function publicarProximoDaFila({ simular = false } = {}) {
   return { publicado: false, motivo: 'todos os candidatos barrados nas checagens', pulados };
 }
 
-module.exports = { publicarProximoDaFila, listarFila, motivoParaAguardar, redesConfiguradas, configuracao };
+module.exports = { publicarProximoDaFila, listarFila, jaPublicadosPeloBot, motivoParaAguardar, redesConfiguradas, configuracao };

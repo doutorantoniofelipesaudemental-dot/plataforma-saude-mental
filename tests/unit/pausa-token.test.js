@@ -54,6 +54,8 @@ injetar('models/RegistroPublicacao.js', {
   // Contagem unificada da fila (filaRedes.motivoParaAguardar): nenhum post do bot.
   countDocuments: async () => 0,
   findOne: () => ({ sort: () => ({ select: () => ({ lean: async () => null }) }) }),
+  // filaRedes.listarFila exclui o que o bot já publicou: nada aqui.
+  distinct: async () => [],
 });
 
 const db = require(path.join(RAIZ, 'lib/db.js'));
