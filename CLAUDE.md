@@ -348,6 +348,19 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
   - *Dublagem EN/ES:* `--dublar --slug=<slug> --peca=<peça> --idioma=en|es` — só de vídeo com aprovação médica por hash; saída em `<slug>-videos/dublagens/<peça>.<idioma>.mp4`. É **estrutura**: o `bot:publicar` recusa arquivos de `dublagens/` — publicar em outro idioma é decisão do dono da conta (Regra 17: artes em português; identificação CRM/CFM para público de fora do Brasil).
 - **MCP da ElevenLabs** (`.mcp.json` na raiz, versionado): servidor **oficial** `elevenlabs-mcp` via `uvx` (Python) — o nome `@elevenlabs/mcp-server` não é o pacote oficial. A chave entra por `${ELEVENLABS_API_KEY}` do **ambiente do terminal** que abre o Claude Code (o `.env` não é lido pelo MCP); saídas em `narracoes-geradas/elevenlabs`. Pré-requisito: `uv` (`winget install astral-sh.uv`) — instalado em 2026-09-27 (uvx 0.12.19). Perfil padrão do Voice Design (pedido do dono, 2026-09-27): masculina, pt-BR, clínica, calma, empática, segura, cadência serena de **médico de família** — sem "psiquiatra" (Regra 17), mesmo sendo descrição interna, porque fica salva na conta junto com a voz. O Claude Code pede aprovação do servidor do `.mcp.json` na primeira vez.
 
+### 20-undecies-bis. Situação dos provedores de áudio (2026-09-27)
+
+| Provedor | Chave no `.env` | Conectividade | Uso liberado | Observação |
+|---|---|---|---|---|
+| **edge** | não usa | ✅ | ✅ **provedor ativo** | Voz pt-BR-AntonioNeural; usado no Reel publicado de `saude-mental-residencia` |
+| azure | ❌ ausente | — | — | Padrão do `--narrar` quando `--provedor` não é passado: sem chave, falha — passe `--provedor=edge` |
+| elevenlabs | ✅ `ELEVENLABS_API_KEY` | ✅ autenticou | ❌ plano gratuito | Voice Design recusado: HTTP 403 "only available on a paid plan". `ELEVENLABS_VOICE_ID` vazio até desenhar a voz |
+| openai | ✅ `OPENAI_API_KEY` | ✅ autenticou | ❌ sem créditos | HTTP 429 `insufficient_quota` |
+
+- **Fallback ativo: `edge`** até haver plano pago na ElevenLabs ou créditos na OpenAI. Nada no código escolhe o provedor sozinho — a escolha é sempre pela flag `--provedor`.
+- **OpenAI sem créditos aborta na hora** (`classificarErroOpenAI` em `tts.js`): a OpenAI usa o mesmo HTTP 429 para "sem saldo" e para "limite de taxa"; o corpo (`insufficient_quota` / "no credits remaining") distingue. Sem saldo → erro imediato com instrução (1,4 s medido contra a API real, antes ~60 s de retry inútil); limite de taxa e 5xx seguem com até 4 tentativas.
+- Testar um provedor sem mexer no Reel publicado: sempre `--saida=<fora de aprovados/>` — o caminho padrão sobrescreveria o `reel-carrossel.mp4` aprovado e o `producao` do .json.
+
 ### 20-duodecies. Capas ilustradas de artigo — padrão de prompt (2026-09-27)
 
 - **Onde vale:** capa do artigo no site/og:image (**1200×630 exato, 1,91:1** — Seção 19.3, `width`/`height` + `aspect-ratio` fixos) e capa de vídeo vertical (Reels/Shorts, 1080×1920). **Não vale para o 4:5:** carrossel e capa do feed continuam **estritamente tipográficos** (`carrosselAprovado.js`, `capaRedes.js`), com o título na arte comprovado por hash na tripla checagem (20-quater) — ilustração ali quebraria a checagem visual.

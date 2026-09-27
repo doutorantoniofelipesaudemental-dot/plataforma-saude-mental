@@ -57,7 +57,22 @@ function corpoOpenAI(texto, { voz, modelo = process.env.OPENAI_TTS_MODEL || MODE
   return corpo;
 }
 
-async function sintetizarOpenAI(texto, voz) {
+/**
+ * O que fazer com uma resposta de erro da OpenAI:
+ *   'sem-creditos' — 429 de saldo (`insufficient_quota` / "no credits remaining"):
+ *                    esperar não resolve, aborta na hora;
+ *   'repetir'      — 429 de limite de taxa ou 5xx: espera e tenta de novo;
+ *   'falha'        — qualquer outro erro.
+ * A OpenAI usa o MESMO 429 para as duas situações — só o corpo distingue.
+ */
+function classificarErroOpenAI(status, erro = {}) {
+  const semCreditos = erro.code === 'insufficient_quota' || erro.type === 'insufficient_quota' || /no credits remaining|exceeded your current quota/i.test(erro.message || '');
+  if (status === 429 && semCreditos) return 'sem-creditos';
+  if (status === 429 || status >= 500) return 'repetir';
+  return 'falha';
+}
+
+async function sintetizarOpenAI(texto, voz, { esperaMs = 10_000 } = {}) {
   const chave = process.env.OPENAI_API_KEY;
   if (!chave) throw new Error('OPENAI_API_KEY precisa estar no .env local');
   const corpo = corpoOpenAI(texto, { voz });
@@ -68,17 +83,21 @@ async function sintetizarOpenAI(texto, voz) {
       body: JSON.stringify(corpo),
     });
     if (resp.ok) return Buffer.from(await resp.arrayBuffer());
-    if ((resp.status === 429 || resp.status >= 500) && tentativa < 4) {
-      await new Promise((ok) => setTimeout(ok, tentativa * 10_000));
-      continue;
-    }
-    let detalhe = '';
+    let erro = {};
     try {
-      detalhe = (await resp.json()).error?.message || '';
+      erro = (await resp.json()).error || {};
     } catch {
       // corpo sem JSON
     }
-    throw new Error(`OpenAI respondeu HTTP ${resp.status}${detalhe ? ` (${detalhe.slice(0, 200)})` : ''}`);
+    const acao = classificarErroOpenAI(resp.status, erro);
+    if (acao === 'sem-creditos') {
+      throw new Error('OpenAI sem créditos na conta (HTTP 429, insufficient_quota) — adicione saldo em platform.openai.com/settings/organization/billing ou use --provedor=edge');
+    }
+    if (acao === 'repetir' && tentativa < 4) {
+      await new Promise((ok) => setTimeout(ok, tentativa * esperaMs));
+      continue;
+    }
+    throw new Error(`OpenAI respondeu HTTP ${resp.status}${erro.message ? ` (${String(erro.message).slice(0, 200)})` : ''}`);
   }
 }
 
@@ -105,4 +124,4 @@ async function sintetizar(texto, { provedor = 'azure', voz = vozPadrao(provedor)
   return azure.sintetizar(texto, { voz });
 }
 
-module.exports = { sintetizar, validarProvedor, vozPadrao, corpoOpenAI, PROVEDORES, VOZES_OPENAI, LIMITE_OPENAI };
+module.exports = { sintetizar, sintetizarOpenAI, classificarErroOpenAI, validarProvedor, vozPadrao, corpoOpenAI, PROVEDORES, VOZES_OPENAI, LIMITE_OPENAI };

@@ -127,3 +127,35 @@ test('vídeo: trilha baixa sob a voz, cortada no fim com fade; --sem-trilha e --
   assert.equal(resolverTrilha({ 'sem-trilha': true }, 'x'), null);
   assert.throws(() => resolverTrilha({ audio: 'nao/existe.mp3' }, 'x'), /faixa não encontrada/);
 });
+
+test('OpenAI: 429 de saldo aborta na hora; 429 de taxa e 5xx repetem', async () => {
+  assert.equal(tts.classificarErroOpenAI(429, { code: 'insufficient_quota', message: 'You exceeded your current quota' }), 'sem-creditos');
+  assert.equal(tts.classificarErroOpenAI(429, { message: 'You have no credits remaining. Add credits to continue.' }), 'sem-creditos');
+  assert.equal(tts.classificarErroOpenAI(429, { code: 'rate_limit_exceeded', message: 'Rate limit reached' }), 'repetir');
+  assert.equal(tts.classificarErroOpenAI(503, {}), 'repetir');
+  assert.equal(tts.classificarErroOpenAI(401, { message: 'Incorrect API key' }), 'falha');
+
+  const fetchOriginal = global.fetch;
+  const chaveOriginal = process.env.OPENAI_API_KEY;
+  process.env.OPENAI_API_KEY = ['chave', 'de', 'teste'].join('-'); // falsa — segredos:permitir
+  const resposta = (status, erro) => ({ ok: false, status, json: async () => ({ error: erro }) });
+  try {
+    // Sem créditos: UMA chamada, sem espera, mensagem limpa sobre saldo.
+    let chamadas = 0;
+    global.fetch = async () => (chamadas++, resposta(429, { code: 'insufficient_quota', message: 'You have no credits remaining.' }));
+    const inicio = Date.now();
+    await assert.rejects(tts.sintetizarOpenAI('Oi.', 'onyx', { esperaMs: 5000 }), /sem créditos na conta .*--provedor=edge/);
+    assert.equal(chamadas, 1);
+    assert.ok(Date.now() - inicio < 1000, 'não esperou o retry');
+
+    // Limite de taxa: tenta 4 vezes antes de desistir.
+    chamadas = 0;
+    global.fetch = async () => (chamadas++, resposta(429, { code: 'rate_limit_exceeded', message: 'Rate limit reached' }));
+    await assert.rejects(tts.sintetizarOpenAI('Oi.', 'onyx', { esperaMs: 1 }), /HTTP 429 \(Rate limit reached\)/);
+    assert.equal(chamadas, 4);
+  } finally {
+    global.fetch = fetchOriginal;
+    if (chaveOriginal === undefined) delete process.env.OPENAI_API_KEY;
+    else process.env.OPENAI_API_KEY = chaveOriginal; // restaura a do ambiente — segredos:permitir
+  }
+});
