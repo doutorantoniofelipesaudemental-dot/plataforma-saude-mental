@@ -22,10 +22,13 @@ const MODELO_DESIGN = 'eleven_multilingual_ttv_v2';
 const LIMITE_EFEITO_S = 30;
 const IDIOMAS_DUBLAGEM = ['en', 'es'];
 
-// Descrição padrão do Voice Design (a API entende melhor em inglês): voz
-// clínico-acolhedora, sem dramatização (Regra 7: autoridade médica sem frieza).
+// Descrição padrão do Voice Design (a API entende melhor em inglês), no perfil
+// pedido pelo dono em 2026-09-27: masculina, pt-BR, clínica, calma, empática,
+// segura, cadência serena de médico de família. Afirmativa ("steady, even") em
+// vez de "sem dramatização"; sem "psiquiatra" (Regra 17: especialidade que o
+// autor não tem — a descrição fica salva na conta junto com a voz).
 const DESCRICAO_VOZ_PADRAO =
-  'Brazilian Portuguese male voice in his early forties, warm and calm physician explaining with care, clear diction, measured pace, empathetic but professional, grounded and reassuring, no dramatization, studio-quality recording.';
+  'Brazilian Portuguese male voice in his early forties, clinical yet warm, calm, empathetic and confident, the serene cadence of a family physician explaining with care, clear diction, steady and even delivery with gentle pauses, grounded and reassuring, studio-quality recording.';
 const TEXTO_AMOSTRA_PADRAO =
   'Narração em voz sintética. Cuidar da saúde mental na residência não é sinal de fraqueza: é parte da formação. Se você percebe exaustão que não melhora com o descanso, converse com alguém de confiança e procure apoio profissional.';
 
