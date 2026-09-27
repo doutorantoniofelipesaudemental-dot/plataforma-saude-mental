@@ -23,6 +23,8 @@
  * do texto (CFM, idioma, tamanhos, CVV); fila pausada por token; e a MESMA
  * cadência da fila (REDES_POSTS_POR_DIA nas últimas 24h e intervalo mínimo),
  * contando os posts da fila e os deste bot. Nunca publica duas vezes a mesma peça.
+ * Artigo que a fila já postou no feed (`publicadoRedesEm`) não ganha carrossel
+ * nem Reel do bot, a não ser com --forcar (fica anotado no registro).
  *
  * Toda legenda leva a identificação do médico e o aviso da Res. CFM 2.454/2026.
  * Logs de envio (data, rede, id, link, status HTTP) vão para o .json do aprovado
@@ -70,6 +72,22 @@ function argumentos() {
 }
 
 const palavras = (s) => String(s).split(/\s+/).filter((p) => /[\p{L}\d]/u.test(p)).length;
+
+/**
+ * Trava inversa da fila (filaRedes.listarFila já pula o que o bot publicou):
+ * artigo com `publicadoRedesEm` já foi postado no feed pela fila, e um
+ * carrossel ou Reel do bot o repetiria. Só `--forcar` libera.
+ */
+function motivoJaPostadoPelaFila(artigo, { forcar = false } = {}) {
+  if (forcar || !artigo || !artigo.publicadoRedesEm) return null;
+  const em = new Date(artigo.publicadoRedesEm).toISOString().slice(0, 16).replace('T', ' ');
+  return `a fila já postou este artigo no feed em ${em} UTC — use --forcar para publicar mesmo assim`;
+}
+
+/** Nota para o registro de publicação quando --forcar passou por cima da trava. */
+function notaForcado(artigo, forcar) {
+  return forcar && artigo.publicadoRedesEm ? `publicado com --forcar: a fila já tinha postado em ${new Date(artigo.publicadoRedesEm).toISOString()}` : '';
+}
 
 /** Metadados do aprovado; na primeira vez, copia o .json de rascunhos/ (aprovações anteriores a este módulo). */
 function lerMeta(slug) {
@@ -132,7 +150,7 @@ async function enviarSlide(slug, nome, buffer) {
   return corpo.url;
 }
 
-async function publicarAprovado(slug, { confirmar, redes }) {
+async function publicarAprovado(slug, { confirmar, redes, forcar = false }) {
   const lido = lerMeta(slug);
   const arquivoMd = path.join(APROVADOS, `${slug}.md`);
   if (!lido || !fs.existsSync(arquivoMd)) return { slug, ok: false, motivo: 'aprovado não encontrado em CONTEUDO_INSTAGRAM/aprovados/' };
@@ -178,7 +196,9 @@ async function publicarAprovado(slug, { confirmar, redes }) {
   if (carrosselNoAr && !meta.publicacao.instagram) {
     meta.publicacao.instagram = { ...carrosselNoAr.redes.instagram, em: carrosselNoAr.data, deOutroPacote: true };
   }
-  const querInstagram = redes.includes('instagram') && !meta.publicacao.instagram;
+  // A fila já postou o artigo no feed: não repete (o LinkedIn segue normalmente).
+  const bloqueioFila = redes.includes('instagram') && !meta.publicacao.instagram ? motivoJaPostadoPelaFila(artigo, { forcar }) : null;
+  const querInstagram = redes.includes('instagram') && !meta.publicacao.instagram && !bloqueioFila;
   const linkedinPendente = aprovado.linkedin.find((p) => !meta.publicacao.linkedin.some((x) => x.titulo === p.titulo));
   const querLinkedin = redes.includes('linkedin') && linkedinPendente;
   if (querInstagram) plano.push(`Instagram: carrossel com ${slides.length} slides`);
@@ -187,8 +207,9 @@ async function publicarAprovado(slug, { confirmar, redes }) {
   const aguardar = await motivoParaAguardar();
   const pausa = await estadoPausa();
   if (!confirmar) {
-    return { slug, ok: true, previa: true, plano, manuais, legenda, pastaSlides, aguardar, pausa: pausa && pausa.motivo };
+    return { slug, ok: true, previa: true, plano, manuais, legenda, pastaSlides, aguardar, pausa: pausa && pausa.motivo, bloqueioFila };
   }
+  if (bloqueioFila && !querLinkedin) return { slug, ok: false, motivo: `Instagram bloqueado: ${bloqueioFila}` };
 
   // 5) Travas de envio.
   if (querInstagram && pausa) return { slug, ok: false, motivo: `fila/conta pausada: ${pausa.motivo}` };
@@ -215,6 +236,7 @@ async function publicarAprovado(slug, { confirmar, redes }) {
         slug,
         origem: 'bot',
         resultado: 'publicado',
+        motivo: notaForcado(artigo, forcar),
         legenda,
         redes: { instagram: { id: r.id, permalink: r.permalink, tipo: 'carrossel', itens: r.itens } },
       });
@@ -248,7 +270,7 @@ async function publicarAprovado(slug, { confirmar, redes }) {
     fs.renameSync(pastaSlides, path.join(PUBLICADOS, `${slug}-slides`));
     movido = true;
   }
-  return { slug, ok: true, instagram: meta.publicacao.instagram, linkedin: meta.publicacao.linkedin, manuais, movido };
+  return { slug, ok: true, instagram: meta.publicacao.instagram, linkedin: meta.publicacao.linkedin, manuais, movido, bloqueioFila };
 }
 
 /* ============================ Vídeos (Reels, YouTube) ============================ */
@@ -288,7 +310,7 @@ function checarTextoVideo(texto) {
   return falhas;
 }
 
-async function publicarVideo(slug, { tipo, peca, arquivo, confirmar }) {
+async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = false }) {
   const local = localizar(slug);
   if (!local) return { slug, ok: false, motivo: 'aprovado não encontrado em aprovados/ nem em publicados/' };
   const meta = JSON.parse(fs.readFileSync(local.json, 'utf8'));
@@ -319,6 +341,9 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar }) {
   const md = fs.readFileSync(local.md, 'utf8');
 
   if (tipo === 'reel') {
+    // Reel também vai para o feed: mesma trava inversa da fila. YouTube não entra.
+    const bloqueioFila = motivoJaPostadoPelaFila(artigo, { forcar });
+    if (bloqueioFila) return { slug, ok: false, motivo: `Reel bloqueado: ${bloqueioFila}` };
     const legenda = montarLegenda(lerAprovado(md).legenda);
     const falhas = checarTextoVideo(legenda);
     if ([...legenda].length > LIMITE_LEGENDA) falhas.push(`legenda com ${[...legenda].length} caracteres`);
@@ -332,7 +357,7 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar }) {
       const r = await publicarReelNoInstagram({ arquivo, legenda });
       meta.publicacao.videos[peca] = { rede: 'instagram', id: r.id, permalink: r.permalink, statusHttp: r.statusHttp, sha256: hash, em: new Date() };
       registrar({ rede: 'instagram', peca, status: 'publicado', statusHttp: r.statusHttp, id: r.id, permalink: r.permalink });
-      await RegistroPublicacao.create({ artigo: artigo._id, slug, origem: 'bot', resultado: 'publicado', legenda, redes: { instagram: { id: r.id, permalink: r.permalink, tipo: 'reel' } } });
+      await RegistroPublicacao.create({ artigo: artigo._id, slug, origem: 'bot', resultado: 'publicado', motivo: notaForcado(artigo, forcar), legenda, redes: { instagram: { id: r.id, permalink: r.permalink, tipo: 'reel' } } });
       return { slug, ok: true, video: meta.publicacao.videos[peca] };
     } catch (err) {
       registrar({ rede: 'instagram', peca, status: 'falhou', codigo: err.codigo || null, erro: String(err.message).slice(0, 300) });
@@ -373,9 +398,9 @@ async function mainVideo(args) {
   const tipo = String(args.tipo);
   const peca = String(args.peca || PECA_PADRAO[tipo]);
   const confirmar = Boolean(args.confirmar);
-  if (!args.slug) return console.log('\n  Use --slug=<slug> --tipo=reel|short|longo --arquivo=<.mp4> [--peca=reel-1] [--confirmar].\n');
+  if (!args.slug) return console.log('\n  Use --slug=<slug> --tipo=reel|short|longo --arquivo=<.mp4> [--peca=reel-1] [--confirmar] [--forcar].\n');
   await db.connect();
-  const r = await publicarVideo(String(args.slug), { tipo, peca, arquivo: args.arquivo && String(args.arquivo), confirmar });
+  const r = await publicarVideo(String(args.slug), { tipo, peca, arquivo: args.arquivo && String(args.arquivo), confirmar, forcar: Boolean(args.forcar) });
   if (!r.ok) {
     console.log(`\n  ⏸  ${r.slug}: ${r.motivo}`);
     for (const f of r.falhas || []) console.log(`       - ${f}`);
@@ -407,7 +432,7 @@ async function main() {
   else if (args.todos) {
     slugs = fs.existsSync(APROVADOS) ? fs.readdirSync(APROVADOS).filter((f) => f.endsWith('.md')).map((f) => f.slice(0, -3)) : [];
   } else {
-    console.log('\n  Use --slug=<slug> ou --todos [--confirmar] [--redes=instagram,linkedin].\n');
+    console.log('\n  Use --slug=<slug> ou --todos [--confirmar] [--redes=instagram,linkedin] [--forcar].\n');
     return;
   }
   if (!slugs.length) return console.log('\n  Nenhum aprovado pendente de publicação.\n');
@@ -415,7 +440,7 @@ async function main() {
   await db.connect();
   console.log(`\n  ${confirmar ? 'PUBLICAÇÃO' : 'PRÉVIA (nada será publicado)'} · redes com credencial: ${disponiveis.join(', ') || 'nenhuma'} · usadas: ${redes.join(', ') || 'nenhuma'}\n`);
   for (const slug of slugs) {
-    const r = await publicarAprovado(slug, { confirmar, redes });
+    const r = await publicarAprovado(slug, { confirmar, redes, forcar: Boolean(args.forcar) });
     if (!r.ok) {
       console.log(`  ⏸  ${slug}: ${r.motivo}`);
       for (const f of r.falhas || []) console.log(`       - ${f}`);
@@ -426,11 +451,13 @@ async function main() {
       console.log(`     plano: ${r.plano.join(' · ') || 'nada a publicar (já publicado ou sem rede)'}`);
       console.log(`     slides desenhados em: ${path.relative(RAIZ, r.pastaSlides)}`);
       console.log(`     cadência da conta agora: ${r.aguardar ? `aguardar — ${r.aguardar}` : 'livre'}${r.pausa ? ` · PAUSADA: ${r.pausa}` : ''}`);
+      if (r.bloqueioFila) console.log(`     ⚠️  Instagram bloqueado: ${r.bloqueioFila}`);
       console.log(`     manual: ${r.manuais.join('; ')}`);
       console.log(`     legenda (${[...r.legenda].length} car.):\n       ${r.legenda.replace(/\n/g, '\n       ')}\n`);
       continue;
     }
     console.log(`  ✅ ${slug}: ${r.instagram ? `Instagram ${r.instagram.permalink || r.instagram.id} (HTTP ${r.instagram.statusHttp})` : 'Instagram não publicado'}${r.linkedin.length ? ` · LinkedIn ${r.linkedin.length} post(s)` : ''}${r.movido ? ' · movido para publicados/' : ''}`);
+    if (r.bloqueioFila) console.log(`     ⚠️  Instagram bloqueado: ${r.bloqueioFila}`);
     console.log(`     manual: ${r.manuais.join('; ')}`);
   }
   console.log(`\n  ${AVISO_CFM}\n`);
@@ -449,4 +476,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { montarLegenda, checarTexto, montarDescricaoYoutube, checarTextoVideo };
+module.exports = { montarLegenda, checarTexto, montarDescricaoYoutube, checarTextoVideo, motivoJaPostadoPelaFila, notaForcado };

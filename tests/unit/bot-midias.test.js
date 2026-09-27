@@ -174,3 +174,15 @@ test('lista numerada não é número inventado; tags coladas e em inglês viram 
   assert.match(alertas, /tags coladas como hashtag \(atencaoprimaria\)/);
   assert.match(alertas, /tag com inglês \("saudework"\)/);
 });
+
+test('trava inversa: artigo que a fila já postou não ganha carrossel/Reel do bot sem --forcar', () => {
+  const { motivoJaPostadoPelaFila, notaForcado } = require('../../scripts/bot-publicar');
+  const postado = { slug: 'saude-mental-residencia', publicadoRedesEm: new Date('2026-09-27T15:02:00Z') };
+  assert.match(motivoJaPostadoPelaFila(postado), /a fila já postou este artigo no feed em 2026-09-27 15:02 UTC — use --forcar/);
+  assert.equal(motivoJaPostadoPelaFila(postado, { forcar: true }), null);
+  assert.equal(motivoJaPostadoPelaFila({ slug: 'x', publicadoRedesEm: null }), null);
+  // --forcar sobre um artigo já postado fica anotado no registro; sem conflito, nada.
+  assert.match(notaForcado(postado, true), /publicado com --forcar: a fila já tinha postado em 2026-09-27T15:02:00\.000Z/);
+  assert.equal(notaForcado(postado, false), '');
+  assert.equal(notaForcado({ publicadoRedesEm: null }, true), '');
+});
