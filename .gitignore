@@ -33,3 +33,6 @@ CONTEUDO_INSTAGRAM/publicados/
 
 # Trilhas licenciadas: não redistribuir (repositório público)
 assets/audio/*.mp3
+
+# Bases da regressão visual (por sistema, ~11 MB): geradas localmente por npm run test:visual
+tests/e2e/*-snapshots/

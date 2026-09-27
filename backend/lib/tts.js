@@ -5,6 +5,8 @@
  *   azure  (padrão) pt-BR-AntonioNeural, a voz do site. AZURE_SPEECH_KEY /
  *          AZURE_SPEECH_REGION; trava da cota gratuita mensal (azureTts.js).
  *   edge   mesma voz, pelo Edge-TTS (sem chave, sem contrato de serviço).
+ *   elevenlabs voz desenhada (Voice Design) em ELEVENLABS_VOICE_ID, modelo
+ *          eleven_multilingual_v2 (backend/lib/elevenlabs.js). Plano pago para uso comercial.
  *   openai onyx ou echo, via OPENAI_API_KEY (cobrança por caractere). As vozes
  *          da OpenAI são multilíngues: o português sai fluente, mas não é uma
  *          voz nativa pt-BR como a AntonioNeural — ouvir antes de aprovar.
@@ -18,9 +20,10 @@ const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const azure = require('./azureTts');
+const elevenlabs = require('./elevenlabs');
 const { VOZ_NARRACAO } = require('./narracao');
 
-const PROVEDORES = ['azure', 'edge', 'openai'];
+const PROVEDORES = ['azure', 'edge', 'openai', 'elevenlabs'];
 const VOZES_OPENAI = ['onyx', 'echo'];
 const LIMITE_OPENAI = 4096; // caracteres por requisição (/v1/audio/speech)
 const MODELO_OPENAI_PADRAO = 'gpt-4o-mini-tts';
@@ -36,11 +39,14 @@ const EDGE_TTS =
 function validarProvedor(provedor, voz) {
   if (!PROVEDORES.includes(provedor)) throw new Error(`provedor "${provedor}" desconhecido — use ${PROVEDORES.join(', ')}`);
   if (provedor === 'openai' && !VOZES_OPENAI.includes(voz)) throw new Error(`voz "${voz}" não liberada para a OpenAI — use ${VOZES_OPENAI.join(' ou ')}`);
+  if (provedor === 'elevenlabs' && !voz) throw new Error('ELEVENLABS_VOICE_ID ausente — desenhe e salve a voz antes (npm run bot:elevenlabs -- --desenhar-voz)');
 }
 
 /** Voz efetiva de cada provedor (a da OpenAI vem de --voz, padrão onyx). */
 function vozPadrao(provedor) {
-  return provedor === 'openai' ? process.env.OPENAI_TTS_VOZ || 'onyx' : VOZ_NARRACAO;
+  if (provedor === 'openai') return process.env.OPENAI_TTS_VOZ || 'onyx';
+  if (provedor === 'elevenlabs') return process.env.ELEVENLABS_VOICE_ID || '';
+  return VOZ_NARRACAO;
 }
 
 /** Corpo da requisição à OpenAI — separado para ser testado sem rede. */
@@ -94,6 +100,7 @@ function sintetizarEdge(texto, voz) {
 async function sintetizar(texto, { provedor = 'azure', voz = vozPadrao(provedor) } = {}) {
   validarProvedor(provedor, voz);
   if (provedor === 'openai') return sintetizarOpenAI(texto, voz);
+  if (provedor === 'elevenlabs') return elevenlabs.sintetizar(texto, { vozId: voz });
   if (provedor === 'edge') return sintetizarEdge(texto, voz);
   return azure.sintetizar(texto, { voz });
 }

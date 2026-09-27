@@ -136,8 +136,14 @@ function truncar(texto, max) {
  * larga que a área visível, e o excesso é cortado silenciosamente pelo
  * viewBox do SVG, em vez de quebrar para a linha seguinte.
  */
+// Pares que nunca se separam numa quebra de linha: "CVV" numa linha e "188" na
+// outra deixa o telefone de apoio ilegível (slide 9 de saude-mental-residencia).
+const PARES_INSEPARAVEIS = /\b(CVV|SAMU|CRM-BA|RQE)[ \t]+(\d+)/g;
+const colarPares = (texto) => texto.replace(PARES_INSEPARAVEIS, '$1 $2');
+
 function quebrarLinhas(fonte, texto, larguraMaxPx, tamanhoFonte, { maxLinhas = 8 } = {}) {
-  const palavras = texto.split(/\s+/).filter(Boolean);
+  // Quebra só em espaço comum: o espaço inseparável (U+00A0) mantém o par junto.
+  const palavras = colarPares(texto).split(/[ \t\r\n]+/).filter(Boolean);
   const linhas = [];
   let atual = '';
 
@@ -348,7 +354,8 @@ function rodapeMarca(escura) {
 }
 
 function indicadorPagina(indice, total, escura) {
-  const cor = escura ? 'rgba(255,255,255,0.6)' : COR.tintaMedia;
+  // 0.72 = 7.82:1 sobre #0d3330 (AAA); 0.6 dava 5.89:1.
+  const cor = escura ? 'rgba(255,255,255,0.72)' : COR.tintaMedia;
   return caminhoTextoDireita(FONTE_SANS, `${indice + 1}/${total}`, LARGURA - MARGEM, MARGEM + 8, 24, cor);
 }
 

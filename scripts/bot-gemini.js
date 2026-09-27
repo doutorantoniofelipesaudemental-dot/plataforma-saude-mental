@@ -470,6 +470,7 @@ function markdown(artigo, d, alertas, origem, revisao) {
   l.push(`# RASCUNHO — ${artigo.titulo}`, '');
   l.push(`> Gerado por ${origem.provedor} (${origem.modelo}) em ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC a partir do artigo \`${artigo.slug}\`. Nada foi publicado.`);
   l.push(`> ${AVISO_CFM}`);
+  l.push(`> **Ver as artes antes:** \`npm run bot:previa-visual -- --slug=${artigo.slug}\` (folha de contato + dimensões)`);
   l.push(`> **Aprovar depois de revisar:** \`npm run bot:aprovar -- --slug=${artigo.slug}\``, '');
   l.push('## 1º passe — verificação estrutural (código)', '');
   l.push(...(alertas.length ? alertas.map((a) => `- ⚠️ ${a}`) : ['- ✅ nenhum alerta']), '');

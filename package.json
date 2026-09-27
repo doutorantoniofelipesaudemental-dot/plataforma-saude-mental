@@ -26,7 +26,11 @@
     "bot:publicar": "node scripts/bot-publicar.js",
     "youtube:autorizar": "node scripts/youtube-autorizar.js",
     "bot:video-carrossel": "node scripts/bot-video-carrossel.js",
-    "bot:matriz": "node scripts/bot-matriz.js"
+    "bot:matriz": "node scripts/bot-matriz.js",
+    "bot:elevenlabs": "node scripts/bot-elevenlabs.js",
+    "bot:previa-visual": "node scripts/bot-previa-visual.js",
+    "test:visual": "playwright test tests/e2e/visual-miniapps.spec.js",
+    "test:visual:atualizar": "playwright test tests/e2e/visual-miniapps.spec.js --update-snapshots"
   },
   "engines": {
     "node": ">=20"

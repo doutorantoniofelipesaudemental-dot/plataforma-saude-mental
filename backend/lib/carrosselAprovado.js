@@ -84,6 +84,12 @@ function tamanhoPara(texto, faixas) {
   return faixas.find((f) => texto.length <= f.ate).tamanho;
 }
 
+// Rodapé (identificação CRM/RQE do CFM no último slide, rodapé pequeno):
+// 26 px em 1080 ≈ 9,4 pt num celular de 390 pt — 22 px ficava perto de 8 pt,
+// o menor texto da arte justamente no dado obrigatório.
+const TAMANHO_RODAPE = 26;
+const ENTRELINHA_RODAPE = 34;
+
 function svgSlide(slide, indice, total, { rodapeUltimo }) {
   const capa = indice === 0;
   const ultimo = indice === total - 1;
@@ -107,16 +113,16 @@ function svgSlide(slide, indice, total, { rodapeUltimo }) {
   // Identificação em duas linhas fixas (CRM numa, especialidade + RQE na outra): nunca separa "RQE" do número.
   if (ultimo) {
     const i = rodapeUltimo.indexOf(' · Medicina');
-    rodapes.push(...(i > 0 ? [rodapeUltimo.slice(0, i), rodapeUltimo.slice(i + 3)] : quebrarLinhas(FONTE_SANS, rodapeUltimo, LARGURA_UTIL, 22, { maxLinhas: 3 })));
+    rodapes.push(...(i > 0 ? [rodapeUltimo.slice(0, i), rodapeUltimo.slice(i + 3)] : quebrarLinhas(FONTE_SANS, rodapeUltimo, LARGURA_UTIL, TAMANHO_RODAPE, { maxLinhas: 3 })));
   }
-  const yRodape = ALTURA - 150 - (rodapes.length - 1) * 30;
+  const yRodape = ALTURA - 150 - (rodapes.length - 1) * ENTRELINHA_RODAPE;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${LARGURA}" height="${ALTURA}" viewBox="0 0 ${LARGURA} ${ALTURA}">
     <rect width="100%" height="100%" fill="${fundo}" />
     ${caminhoTexto(FONTE_SANS, `${indice + 1}/${total}`, LARGURA - MARGEM - 60, MARGEM + 20, 26, corSuave)}
     ${caminhoLinhas(fonte, linhas, MARGEM, yBloco + tamanho * 0.9, alturaLinha, tamanho, corTexto, { negrito: capa })}
     ${capa ? `<rect x="${MARGEM}" y="${(yBloco + linhas.length * alturaLinha + 20).toFixed(1)}" width="96" height="6" rx="3" fill="${COR.dourado}" />` : ''}
-    ${rodapes.map((r, i) => caminhoTexto(FONTE_SANS, r, MARGEM, yRodape + i * 30, 22, corSuave)).join('')}
+    ${rodapes.map((r, i) => caminhoTexto(FONTE_SANS, r, MARGEM, yRodape + i * ENTRELINHA_RODAPE, TAMANHO_RODAPE, corSuave)).join('')}
     <circle cx="${MARGEM + 10}" cy="${ALTURA - 76 - 8}" r="10" fill="${COR.dourado}" />
     ${caminhoTexto(FONTE_SANS, MARCA, MARGEM + 32, ALTURA - 76, 26, corTexto, { negrito: true })}
   </svg>`;

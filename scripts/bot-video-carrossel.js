@@ -2,7 +2,7 @@
 /**
  * Vídeo 9:16 (Reel) a partir do carrossel APROVADO de um artigo.
  *
- *   npm run bot:video-carrossel -- --slug=<slug> --narrar [--provedor=azure|edge|openai] [--voz=onyx|echo]
+ *   npm run bot:video-carrossel -- --slug=<slug> --narrar [--provedor=azure|edge|openai|elevenlabs] [--voz=onyx|echo]
  *   npm run bot:video-carrossel -- --slug=<slug>                      só trilha (automática, de assets/audio/)
  *   npm run bot:video-carrossel -- --slug=<slug> --audio="<faixa licenciada.mp3>"
  *   ... --sem-trilha   narração pura, sem trilha de fundo
@@ -15,7 +15,8 @@
  *     "Narração em voz sintética." (transparência, como o player do site).
  *     Provedor (backend/lib/tts.js): azure (padrão, pt-BR-AntonioNeural, trava
  *     da cota mensal), edge (mesma voz, sem chave) ou openai (onyx/echo,
- *     OPENAI_API_KEY). A trilha de fundo entra baixa, por baixo da voz.
+ *     OPENAI_API_KEY) ou elevenlabs (voz desenhada em ELEVENLABS_VOICE_ID).
+ *     A trilha de fundo entra baixa, por baixo da voz.
  *   Trilha: --audio, ou a escolhida automaticamente em assets/audio/ pelo slug
  *     (backend/lib/trilhas.js). Precisa ter LICENÇA para uso comercial (a API
  *     não dá acesso à biblioteca de músicas do Instagram). Sem narração, o
@@ -102,7 +103,7 @@ async function main() {
   const args = argumentos();
   const slug = args.slug && String(args.slug);
   if (!slug) {
-    console.log('\n  Use --slug=<slug> [--narrar --provedor=azure|edge|openai --voz=onyx|echo] [--audio="<faixa.mp3>" | --sem-trilha] [--saida=<arquivo.mp4>].\n');
+    console.log('\n  Use --slug=<slug> [--narrar --provedor=azure|edge|openai|elevenlabs --voz=onyx|echo] [--audio="<faixa.mp3>" | --sem-trilha] [--saida=<arquivo.mp4>].\n');
     process.exit(1);
   }
   const provedor = String(args.provedor || 'azure');

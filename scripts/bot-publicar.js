@@ -358,6 +358,11 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
     if (fs.existsSync(padrao)) arquivo = padrao;
   }
   if (!arquivo || !fs.existsSync(arquivo)) return { slug, ok: false, motivo: `informe o vídeo com --arquivo=<caminho do .mp4> (não há ${peca}.mp4 em ${slug}-videos/)` };
+  // Dublagens (EN/ES, bot:elevenlabs --dublar) são estrutura de internacionalização:
+  // publicar em outro idioma é decisão do dono da conta (Regra 17, identificação CFM).
+  if (/[\\/]dublagens[\\/]/.test(path.resolve(arquivo))) {
+    return { slug, ok: false, motivo: 'arquivo de dublagens/ — publicar em outro idioma exige decisão do dono da conta (Regra 17)' };
+  }
   const hash = sha256Arquivo(arquivo);
   const aprovada = (meta.aprovacao.midias || []).find((m) => m.peca === peca && m.sha256 === hash);
   if (!aprovada) {
