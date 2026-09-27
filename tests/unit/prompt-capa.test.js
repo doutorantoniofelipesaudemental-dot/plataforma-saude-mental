@@ -11,6 +11,11 @@ test('tema pelo título, com a categoria como reserva', () => {
   assert.equal(g.detectarTema('TDAH no adulto', 'Geral').id, 'tdah');
   assert.equal(g.detectarTema('Quando pedir ajuda', 'Residentes & Estudantes').id, 'saude-profissional');
   assert.equal(g.detectarTema('Relato: o paciente invisível', 'Relatos da Prática').id, 'geral');
+  // "Pacientes & Famílias" é de adultos: nada de metáfora de infância pela categoria.
+  assert.equal(g.detectarTema('Autoestima: por onde começar a trabalhar de verdade', 'Pacientes & Famílias').id, 'geral');
+  assert.equal(g.detectarTema('Terapia pela primeira vez: o que esperar', 'Pacientes & Famílias').id, 'geral');
+  assert.equal(g.detectarTema('Disciplina positiva: colocando limites sem gritar ou punir', 'Pais & Famílias').id, 'infancia');
+  assert.equal(g.detectarTema('Meu filho está mentindo: o que isso significa', 'Geral').id, 'infancia');
 });
 
 test('todo prompt montado passa no padrão, em todos os temas e formatos', () => {

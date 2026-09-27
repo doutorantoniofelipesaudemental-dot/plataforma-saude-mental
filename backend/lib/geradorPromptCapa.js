@@ -48,7 +48,9 @@ const TEMAS = [
   { id: 'educadores', re: /professor|docente|escola|educador/, metafora: 'A neat stack of books with a glowing desk lamp and a small plant on a calm wooden table' },
   { id: 'maternidade', re: /puerper|materni|gestac|perinatal|lactac|pos-parto/, metafora: 'A soft crescent-shaped cradle of light holding a small glowing orb, surrounded by gentle floating petals' },
   { id: 'terceira-idade', re: /terceira idade|idoso|envelhec/, metafora: 'A quiet wooden bench beneath a rounded tree with softly falling golden leaves' },
-  { id: 'infancia', re: /infancia|adolescen|jovem|jovens|crianc|pais\b|familia/, metafora: 'A small rounded kite rising on a gentle breeze with a soft ribbon trail across a calm sky' },
+  // Sem "familia": a categoria "Pacientes & Famílias" é de adultos (terapia,
+  // autoestima, raiva…) e caía na pipa. "pais" já cobre "Pais & Famílias".
+  { id: 'infancia', re: /infancia|adolescen|jovem|jovens|crianc|filho|filha|pais\b/, metafora: 'A small rounded kite rising on a gentle breeze with a soft ribbon trail across a calm sky' },
   { id: 'migracao', re: /migra|expatri|cultur/, metafora: 'A small paper airplane gliding over a soft rounded map toward a warmly lit home' },
   { id: 'cuidado', re: /cuidador|compaixao|voluntari|terceiro setor/, metafora: 'A small watering can tenderly caring for a blooming garden inside a glass dome' },
 ];
