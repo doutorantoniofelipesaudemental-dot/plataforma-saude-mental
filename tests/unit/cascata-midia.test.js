@@ -159,3 +159,45 @@ test('OpenAI: 429 de saldo aborta na hora; 429 de taxa e 5xx repetem', async () 
     else process.env.OPENAI_API_KEY = chaveOriginal; // restaura a do ambiente — segredos:permitir
   }
 });
+
+test('Kokoro local: corpo no formato da OpenAI em pt-BR, voz pt obrigatória, servidor fora avisa', async () => {
+  assert.deepEqual(tts.corpoKokoro('Narração em voz sintética.', { voz: 'pm_alex' }), {
+    model: 'kokoro',
+    input: 'Narração em voz sintética.',
+    voice: 'pm_alex',
+    response_format: 'mp3',
+    speed: 1.0,
+    lang_code: 'p',
+  });
+  assert.equal(tts.vozPadrao('kokoro'), process.env.KOKORO_VOZ || 'pm_alex');
+  for (const voz of tts.VOZES_KOKORO) assert.doesNotThrow(() => tts.validarProvedor('kokoro', voz));
+  assert.throws(() => tts.validarProvedor('kokoro', 'af_bella'), /não é pt-BR no Kokoro/);
+
+  const fetchOriginal = global.fetch;
+  const urlOriginal = process.env.KOKORO_URL;
+  process.env.KOKORO_URL = 'http://kokoro.teste:8880/';
+  try {
+    let pedido;
+    global.fetch = async (url, opcoes) => {
+      pedido = { url, corpo: JSON.parse(opcoes.body) };
+      return { ok: true, status: 200, arrayBuffer: async () => new TextEncoder().encode('ID3mp3').buffer };
+    };
+    const audio = await tts.sintetizar('Oi.', { provedor: 'kokoro', voz: 'pm_santa' });
+    assert.equal(pedido.url, 'http://kokoro.teste:8880/v1/audio/speech', 'barra final do KOKORO_URL não duplica');
+    assert.equal(pedido.corpo.voice, 'pm_santa');
+    assert.equal(audio.toString(), 'ID3mp3');
+
+    // Conexão recusada: fetch (undici) lança TypeError com cause.code.
+    global.fetch = async () => {
+      throw Object.assign(new TypeError('fetch failed'), { cause: { code: 'ECONNREFUSED' } });
+    };
+    await assert.rejects(tts.sintetizar('Oi.', { provedor: 'kokoro', voz: 'pm_alex' }), /servidor Kokoro não está rodando em http:\/\/kokoro\.teste:8880 \(ECONNREFUSED\) — suba com: docker run/);
+
+    global.fetch = async () => ({ ok: false, status: 400, json: async () => ({ detail: { message: 'Voice not found' } }) });
+    await assert.rejects(tts.sintetizar('Oi.', { provedor: 'kokoro', voz: 'pm_alex' }), /Kokoro respondeu HTTP 400 \(Voice not found\)/);
+  } finally {
+    global.fetch = fetchOriginal;
+    if (urlOriginal === undefined) delete process.env.KOKORO_URL;
+    else process.env.KOKORO_URL = urlOriginal;
+  }
+});

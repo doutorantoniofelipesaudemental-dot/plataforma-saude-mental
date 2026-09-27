@@ -1,10 +1,14 @@
 /**
- * Síntese de voz dos vídeos do bot (scripts/bot-video-carrossel.js), com três
+ * Síntese de voz dos vídeos do bot (scripts/bot-video-carrossel.js), com cinco
  * provedores escolhidos por --provedor:
  *
  *   azure  (padrão) pt-BR-AntonioNeural, a voz do site. AZURE_SPEECH_KEY /
  *          AZURE_SPEECH_REGION; trava da cota gratuita mensal (azureTts.js).
  *   edge   mesma voz, pelo Edge-TTS (sem chave, sem contrato de serviço).
+ *   kokoro servidor LOCAL Kokoro-FastAPI (KOKORO_URL, padrão http://localhost:8880),
+ *          API no formato da OpenAI; vozes pt-BR pm_alex (padrão), pm_santa, pf_dora.
+ *          Custo zero e sem limite, mas o português do Kokoro é declarado "fraco"
+ *          pelo próprio projeto — ouvir antes de aprovar.
  *   elevenlabs voz desenhada (Voice Design) em ELEVENLABS_VOICE_ID, modelo
  *          eleven_multilingual_v2 (backend/lib/elevenlabs.js). Plano pago para uso comercial.
  *   openai onyx ou echo, via OPENAI_API_KEY (cobrança por caractere). As vozes
@@ -23,8 +27,11 @@ const azure = require('./azureTts');
 const elevenlabs = require('./elevenlabs');
 const { VOZ_NARRACAO } = require('./narracao');
 
-const PROVEDORES = ['azure', 'edge', 'openai', 'elevenlabs'];
+const PROVEDORES = ['azure', 'edge', 'kokoro', 'openai', 'elevenlabs'];
 const VOZES_OPENAI = ['onyx', 'echo'];
+// Kokoro v1.0: só estas três são pt-BR (lang_code 'p').
+const VOZES_KOKORO = ['pm_alex', 'pm_santa', 'pf_dora'];
+const KOKORO_URL_PADRAO = 'http://localhost:8880';
 const LIMITE_OPENAI = 4096; // caracteres por requisição (/v1/audio/speech)
 const MODELO_OPENAI_PADRAO = 'gpt-4o-mini-tts';
 // Só os modelos gpt-4o-*-tts aceitam `instructions`.
@@ -39,6 +46,7 @@ const EDGE_TTS =
 function validarProvedor(provedor, voz) {
   if (!PROVEDORES.includes(provedor)) throw new Error(`provedor "${provedor}" desconhecido — use ${PROVEDORES.join(', ')}`);
   if (provedor === 'openai' && !VOZES_OPENAI.includes(voz)) throw new Error(`voz "${voz}" não liberada para a OpenAI — use ${VOZES_OPENAI.join(' ou ')}`);
+  if (provedor === 'kokoro' && !VOZES_KOKORO.includes(voz)) throw new Error(`voz "${voz}" não é pt-BR no Kokoro — use ${VOZES_KOKORO.join(', ')}`);
   if (provedor === 'elevenlabs' && !voz) throw new Error('ELEVENLABS_VOICE_ID ausente — desenhe e salve a voz antes (npm run bot:elevenlabs -- --desenhar-voz)');
 }
 
@@ -46,6 +54,7 @@ function validarProvedor(provedor, voz) {
 function vozPadrao(provedor) {
   if (provedor === 'openai') return process.env.OPENAI_TTS_VOZ || 'onyx';
   if (provedor === 'elevenlabs') return process.env.ELEVENLABS_VOICE_ID || '';
+  if (provedor === 'kokoro') return process.env.KOKORO_VOZ || 'pm_alex';
   return VOZ_NARRACAO;
 }
 
@@ -101,6 +110,39 @@ async function sintetizarOpenAI(texto, voz, { esperaMs = 10_000 } = {}) {
   }
 }
 
+/** Corpo do Kokoro-FastAPI (formato da OpenAI + lang_code) — separado para teste sem rede. */
+function corpoKokoro(texto, { voz }) {
+  return { model: 'kokoro', input: texto, voice: voz, response_format: 'mp3', speed: 1.0, lang_code: 'p' };
+}
+
+async function sintetizarKokoro(texto, voz) {
+  const base = (process.env.KOKORO_URL || KOKORO_URL_PADRAO).replace(/\/+$/, '');
+  let resp;
+  try {
+    resp = await fetch(`${base}/v1/audio/speech`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(corpoKokoro(texto, { voz })),
+    });
+  } catch (err) {
+    // fetch (undici) embrulha o erro de rede em err.cause.
+    const codigo = err.cause?.code || err.code;
+    if (['ECONNREFUSED', 'ECONNRESET', 'ENOTFOUND', 'EHOSTUNREACH'].includes(codigo)) {
+      throw new Error(`servidor Kokoro não está rodando em ${base} (${codigo}) — suba com: docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:latest, ou use --provedor=edge`);
+    }
+    throw err;
+  }
+  if (resp.ok) return Buffer.from(await resp.arrayBuffer());
+  let detalhe = '';
+  try {
+    const j = await resp.json();
+    detalhe = j.detail?.message || (typeof j.detail === 'string' ? j.detail : '') || j.error?.message || '';
+  } catch {
+    // corpo sem JSON
+  }
+  throw new Error(`Kokoro respondeu HTTP ${resp.status}${detalhe ? ` (${String(detalhe).slice(0, 200)})` : ''}`);
+}
+
 function sintetizarEdge(texto, voz) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'edge-tts-'));
   try {
@@ -120,8 +162,9 @@ async function sintetizar(texto, { provedor = 'azure', voz = vozPadrao(provedor)
   validarProvedor(provedor, voz);
   if (provedor === 'openai') return sintetizarOpenAI(texto, voz);
   if (provedor === 'elevenlabs') return elevenlabs.sintetizar(texto, { vozId: voz });
+  if (provedor === 'kokoro') return sintetizarKokoro(texto, voz);
   if (provedor === 'edge') return sintetizarEdge(texto, voz);
   return azure.sintetizar(texto, { voz });
 }
 
-module.exports = { sintetizar, sintetizarOpenAI, classificarErroOpenAI, validarProvedor, vozPadrao, corpoOpenAI, PROVEDORES, VOZES_OPENAI, LIMITE_OPENAI };
+module.exports = { sintetizar, sintetizarOpenAI, sintetizarKokoro, corpoKokoro, VOZES_KOKORO, classificarErroOpenAI, validarProvedor, vozPadrao, corpoOpenAI, PROVEDORES, VOZES_OPENAI, LIMITE_OPENAI };
