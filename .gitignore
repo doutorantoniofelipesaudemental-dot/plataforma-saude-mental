@@ -36,3 +36,6 @@ assets/audio/*.mp3
 
 # Bases da regressão visual (por sistema, ~11 MB): geradas localmente por npm run test:visual
 tests/e2e/*-snapshots/
+
+# Saída de testes locais (ex.: bot:video-carrossel --saida=scratchpad)
+scratchpad/

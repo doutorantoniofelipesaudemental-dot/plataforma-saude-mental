@@ -122,7 +122,13 @@ async function main() {
 
   const aprovado = lerAprovado(fs.readFileSync(path.join(pasta, `${slug}.md`), 'utf8'));
   const slides = await renderizarSlides(aprovado);
-  const saida = args.saida ? path.resolve(String(args.saida)) : path.join(pasta, `${slug}-videos`, 'reel-carrossel.mp4');
+  // --saida sem .mp4 é PASTA (ex.: --saida=scratchpad → scratchpad/reel-carrossel.mp4):
+  // antes virava um arquivo sem extensão e o ffmpeg recusava — depois de gastar a síntese.
+  const saida = !args.saida
+    ? path.join(pasta, `${slug}-videos`, 'reel-carrossel.mp4')
+    : /\.mp4$/i.test(String(args.saida))
+      ? path.resolve(String(args.saida))
+      : path.resolve(String(args.saida), 'reel-carrossel.mp4');
   fs.mkdirSync(path.dirname(saida), { recursive: true });
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'video-carrossel-'));
 
