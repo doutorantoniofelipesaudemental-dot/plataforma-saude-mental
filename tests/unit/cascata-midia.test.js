@@ -208,3 +208,39 @@ test('transparência: o vídeo narrado sempre abre com "Narração em voz sinté
   assert.doesNotMatch(textoNarradoDoSlide('Segundo slide.', 1), /voz sintética/);
   assert.doesNotMatch(textoNarradoDoSlide('Último slide. Apoio agora: CVV 188 · SAMU 192', 9), /voz sintética/);
 });
+
+test('trilha sintetizada: acorde fixo por slug, filtro ffmpeg afirmativo e duração exata', async () => {
+  const ts = require('../../backend/lib/trilhaSintetica');
+  const preset = ts.presetDoSlug('professores-saude-mental');
+  assert.equal(ts.presetDoSlug('professores-saude-mental'), preset, 'determinístico');
+  assert.ok(Object.keys(ts.PRESETS).includes(preset));
+  assert.throws(() => ts.expressaoPad('acorde-inexistente'), /preset de trilha desconhecido/);
+  assert.throws(() => ts.argsTrilhaSintetica({ preset, duracao: 0, destino: 'x.mp3' }), /fora do intervalo/);
+  const args = ts.argsTrilhaSintetica({ preset: 'la-suspenso', duracao: 12, destino: 'saida.mp3' });
+  const filtro = args[args.indexOf('-i') + 1];
+  assert.match(filtro, /^aevalsrc='0\.1\*sin\(2\*PI\*110\*t\)/);
+  assert.match(filtro, /lowpass=f=900/);
+  assert.match(filtro, /atrim=0:12\.00$/);
+  assert.equal(args.at(-1), 'saida.mp3');
+
+  // --trilha=sintetica força a sintética; --sem-trilha deixa só a voz.
+  const { resolverTrilha } = require('../../scripts/bot-video-carrossel');
+  assert.deepEqual(resolverTrilha({ trilha: 'sintetica' }, 'professores-saude-mental'), { arquivo: null, origem: 'sintetica', preset });
+  assert.equal(resolverTrilha({ 'sem-trilha': true }, 'x'), null);
+
+  // Geração real (2 s), se houver ffmpeg nesta máquina.
+  const { execFileSync } = require('child_process');
+  try {
+    execFileSync(process.env.FFMPEG_BIN || 'ffmpeg', ['-version'], { stdio: 'ignore' });
+  } catch {
+    return; // sem ffmpeg: o resto do teste já cobriu a montagem
+  }
+  const destino = path.join(os.tmpdir(), `trilha-teste-${process.pid}.mp3`);
+  try {
+    await ts.gerarTrilhaSintetica({ slug: 'x', duracao: 2, destino, preset: 're-aberto' });
+    const d = Number(execFileSync(process.env.FFPROBE_BIN || 'ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', destino], { encoding: 'utf8' }));
+    assert.ok(Math.abs(d - 2) < 0.15, `duração ${d} s`);
+  } finally {
+    fs.rmSync(destino, { force: true });
+  }
+});

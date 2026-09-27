@@ -5,6 +5,7 @@
  *   npm run bot:video-carrossel -- --slug=<slug> --narrar [--provedor=azure|edge|kokoro|openai|elevenlabs] [--voz=...]
  *   npm run bot:video-carrossel -- --slug=<slug>                      só trilha (automática, de assets/audio/)
  *   npm run bot:video-carrossel -- --slug=<slug> --audio="<faixa licenciada.mp3>"
+ *   ... --trilha=sintetica   força a trilha sintetizada pelo código (mesmo com MP3 em assets/audio/)
  *   ... --sem-trilha   narração pura, sem trilha de fundo
  *   ... --saida="<arquivo.mp4>"   (padrão: <pasta do aprovado>/<slug>-videos/reel-carrossel.mp4)
  *
@@ -40,7 +41,8 @@ for (const arquivo of ['.env', '.env.local']) {
 
 const { lerAprovado, renderizarSlides } = require('../backend/lib/carrosselAprovado');
 const { sintetizar, validarProvedor, vozPadrao } = require('../backend/lib/tts');
-const { escolherTrilha, PASTA_TRILHAS } = require('../backend/lib/trilhas');
+const { escolherTrilha } = require('../backend/lib/trilhas');
+const { gerarTrilhaSintetica, presetDoSlug } = require('../backend/lib/trilhaSintetica');
 
 const exec = promisify(execFile);
 const FFMPEG = process.env.FFMPEG_BIN || 'ffmpeg';
@@ -53,6 +55,8 @@ const ABERTURA = 'Narração em voz sintética.';
 // Trilha por baixo da narração: ~ -18 dB, para não competir com a voz.
 const VOLUME_TRILHA_SOB_VOZ = 0.12;
 const FADE_FINAL = 2;
+// Vídeo sem narração com trilha sintética: tempo de leitura de cada slide.
+const SEGUNDOS_POR_SLIDE = 5;
 
 function argumentos() {
   const args = {};
@@ -87,7 +91,12 @@ function filtroSlide(i, total) {
   return `[${i}:v]scale=1080:1350:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:color=${cor},setsar=1,fps=30,format=yuv420p[v${i}]`;
 }
 
-/** Faixa do vídeo: --audio, ou a automática de assets/audio/ (null com --sem-trilha ou pasta vazia). */
+/**
+ * Faixa do vídeo, nesta ordem: --audio → MP3 licenciado de assets/audio/ →
+ * trilha SINTETIZADA pelo código (backend/lib/trilhaSintetica.js), que nunca
+ * falta. --trilha=sintetica força a sintética; --sem-trilha deixa só a voz.
+ * A sintética volta sem arquivo: é gerada depois, com a duração exata do vídeo.
+ */
 function resolverTrilha(args, slug) {
   if (args.audio) {
     const faixa = path.resolve(String(args.audio));
@@ -95,8 +104,16 @@ function resolverTrilha(args, slug) {
     return { arquivo: faixa, origem: 'manual' };
   }
   if (args['sem-trilha']) return null;
-  const auto = escolherTrilha(slug);
-  return auto ? { arquivo: auto, origem: 'automatica' } : null;
+  const auto = args.trilha === 'sintetica' ? null : escolherTrilha(slug);
+  return auto ? { arquivo: auto, origem: 'automatica' } : { arquivo: null, origem: 'sintetica', preset: presetDoSlug(slug) };
+}
+
+/** Garante o arquivo da trilha: a sintética é gerada agora, com `duracaoS` segundos. */
+async function prepararTrilha(trilha, { slug, duracaoS, tmp }) {
+  if (!trilha || trilha.arquivo) return trilha;
+  const destino = path.join(tmp, `trilha-sintetica-${trilha.preset}.mp3`);
+  await gerarTrilhaSintetica({ slug, duracao: duracaoS, destino, preset: trilha.preset });
+  return { ...trilha, arquivo: destino };
 }
 
 /** Trilha sob a voz: volume baixo, cortada no fim do vídeo, com fade. Entrada [voz], saída [outa]. */
@@ -124,9 +141,9 @@ async function main() {
   const meta = JSON.parse(fs.readFileSync(arquivoMeta, 'utf8'));
   if (!meta.aprovacao) throw new Error('carrossel sem aprovação médica registrada');
 
-  const trilha = resolverTrilha(args, slug);
+  let trilha = resolverTrilha(args, slug);
   if (!args.narrar && !trilha) {
-    throw new Error(`sem narração e sem trilha: use --narrar, --audio="<faixa.mp3>" ou coloque faixas licenciadas em ${path.relative(RAIZ, PASTA_TRILHAS)}`);
+    throw new Error('--sem-trilha sem --narrar deixaria o vídeo mudo: use --narrar, ou tire o --sem-trilha');
   }
 
   const aprovado = lerAprovado(fs.readFileSync(path.join(pasta, `${slug}.md`), 'utf8'));
@@ -166,11 +183,15 @@ async function main() {
       const rotuloVoz = trilha ? 'voz' : 'outa';
       filtros.push(...concatA, `${concatV}concat=n=${imagens.length}:v=1:a=0[outv]`, `${audios.map((_, i) => `[a${i}]`).join('')}concat=n=${audios.length}:v=0:a=1[${rotuloVoz}]`);
       if (trilha) {
+        const total = audios.reduce((soma, a) => soma + a.d, 0);
+        trilha = await prepararTrilha(trilha, { slug, duracaoS: total + 1, tmp });
         entradas.push('-stream_loop', '-1', '-i', trilha.arquivo);
-        filtros.push(...filtroTrilhaSobVoz(imagens.length + audios.length, audios.reduce((soma, a) => soma + a.d, 0)));
+        filtros.push(...filtroTrilhaSobVoz(imagens.length + audios.length, total));
       }
       await exec(FFMPEG, ['-y', ...entradas, '-filter_complex', filtros.join(';'), '-map', '[outv]', '-map', '[outa]', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-r', '30', '-c:a', 'aac', '-b:a', '192k', saida], { maxBuffer: 64 * 1024 * 1024 });
     } else {
+      // Sem narração: a sintética dura SEGUNDOS_POR_SLIDE por slide; a faixa manual/licenciada dita o tempo.
+      trilha = await prepararTrilha(trilha, { slug, duracaoS: imagens.length * SEGUNDOS_POR_SLIDE, tmp });
       const porSlide = (await duracao(trilha.arquivo)) / imagens.length;
       if (porSlide < 2) throw new Error(`faixa curta demais: ${porSlide.toFixed(1)} s por slide (mínimo 2 s)`);
       imagens.forEach((img) => entradas.push('-loop', '1', '-t', porSlide.toFixed(2), '-i', img));
@@ -178,7 +199,9 @@ async function main() {
       filtros.push(`${concatV}concat=n=${imagens.length}:v=1:a=0[outv]`);
       await exec(FFMPEG, ['-y', ...entradas, '-filter_complex', filtros.join(';'), '-map', '[outv]', '-map', `${imagens.length}:a`, '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-r', '30', '-c:a', 'aac', '-b:a', '192k', '-shortest', saida], { maxBuffer: 64 * 1024 * 1024 });
     }
-    if (trilha) {
+    if (trilha?.origem === 'sintetica') {
+      console.log(`\n  Trilha sintetizada pelo código (acorde "${trilha.preset}") — sem licença de terceiros a conferir.`);
+    } else if (trilha) {
       console.log(`\n  Trilha (${trilha.origem === 'manual' ? '--audio' : 'automática'}): ${path.basename(trilha.arquivo)}`);
       console.log('  ⚠️  Confirme que a licença da faixa permite uso comercial em redes sociais.');
     }
@@ -189,7 +212,11 @@ async function main() {
       'reel-carrossel': {
         arquivo: path.relative(RAIZ, saida),
         narracao: args.narrar ? { provedor, voz } : null,
-        trilha: trilha ? { arquivo: path.basename(trilha.arquivo), origem: trilha.origem } : null,
+        trilha: !trilha
+          ? null
+          : trilha.origem === 'sintetica'
+            ? { origem: 'sintetica', preset: trilha.preset }
+            : { arquivo: path.basename(trilha.arquivo), origem: trilha.origem },
         geradoEm: new Date(),
       },
     };
