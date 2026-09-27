@@ -30,7 +30,8 @@
     "bot:elevenlabs": "node scripts/bot-elevenlabs.js",
     "bot:previa-visual": "node scripts/bot-previa-visual.js",
     "test:visual": "playwright test tests/e2e/visual-miniapps.spec.js",
-    "test:visual:atualizar": "playwright test tests/e2e/visual-miniapps.spec.js --update-snapshots"
+    "test:visual:atualizar": "playwright test tests/e2e/visual-miniapps.spec.js --update-snapshots",
+    "proxy:github": "node scripts/proxy-github.js"
   },
   "engines": {
     "node": ">=20"

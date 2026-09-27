@@ -435,3 +435,40 @@ Duas seções novas em `public/index.html`, entre "Como funciona" (`#como-funcio
 - `backend/models/Contato.js`: `nome`, `email`, `telefone`, `tipoAtendimento` (`enum: ['particular','consultoria-empresa']`), `mensagem` (obrigatória, min 10 caracteres — diferente do `mensagem` opcional do `Agendamento`), `consentimentoLGPD`, `status` (`novo`/`em-contato`/`concluido`). Modelo deliberadamente separado de `Agendamento`.
 - `backend/routes/contato.js`: mesmo padrão de `agendamentos.js` — `POST /` público (rate-limit 5/min por IP, honeypot, guarda de duplicidade por e-mail nos últimos 10 min), `GET /` e `PATCH /:id` administrativos (`exigirAdmin` + `exigirBanco`).
 - Registrado em `backend/index.js` como `app.use('/api/contato', contatoRouter)`.
+
+## 22. INFRAESTRUTURA E FERRAMENTAS — ALTERNAR O CLAUDE CODE PARA LITELLM / OPENROUTER (2026-09-27)
+
+**⚠️ Sem suporte da Anthropic.** A documentação oficial do Claude Code ("LLM gateway") diz que a Anthropic "doesn't support routing Claude Code to non-Claude models through any gateway". Com GPT-4o/o3-mini por trás, ferramentas, edição de arquivos, subagentes e pensamento estendido podem falhar ou se comportar diferente. É uso experimental, por conta do dono; para trabalho neste repositório (publicação, fila, CFM), prefira voltar ao login normal.
+
+**Proxy local (GitHub Models):** `litellm.config.yaml` na raiz mapeia os slots — Haiku → `gpt-4o-mini`, Sonnet → `gpt-4o`, Opus → `o3-mini` (`github/<modelo>`, `drop_params: true` porque o o3-mini recusa `temperature`).
+- `npm run proxy:github` (`scripts/proxy-github.js`) sobe em **127.0.0.1:4000** — nunca 0.0.0.0, que exporia o proxy e o token na rede local — com `PYTHONUTF8=1`: no Windows o banner Unicode do LiteLLM derruba a inicialização (`UnicodeEncodeError`, cp1252). Validado em 2026-09-27: `/health/liveliness` ok, `/v1/models` lista os três, `/v1/messages` responde (sem token: erro de credencial do GitHub).
+- Pré-requisito: `litellm` com o extra de proxy (`uv tool install "litellm[proxy]"`); nesta máquina ele já existe no Python 3.14.
+
+**`GITHUB_TOKEN`:** PAT do GitHub com permissão **"Models: read"** (fine-grained, sem acesso a repositório). Só no ambiente do terminal do proxy — nunca no repositório (público), no `.env` versionado nem na Vercel. **Cuidado:** o `gh` CLI dá prioridade ao `GITHUB_TOKEN` do ambiente sobre o login salvo; com um PAT só de Models exportado, `gh` (checagem de deploy, PRs) passa a falhar por falta de permissão. Exportar só no terminal do proxy.
+
+**Alternar o Claude Code (em OUTRO terminal, com o proxy rodando):**
+
+PowerShell:
+```powershell
+$env:ANTHROPIC_BASE_URL = "http://localhost:4000"
+$env:ANTHROPIC_AUTH_TOKEN = "litellm-local"      # o proxy local não exige chave; qualquer valor — segredos:permitir
+$env:ANTHROPIC_DEFAULT_HAIKU_MODEL = "gpt-4o-mini"
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "gpt-4o"
+$env:ANTHROPIC_DEFAULT_OPUS_MODEL = "o3-mini"
+claude
+```
+bash: os mesmos nomes com `export VAR=valor`.
+
+**OpenRouter (sem proxy local):** a OpenRouter expõe um endpoint no formato Anthropic.
+```powershell
+$env:ANTHROPIC_BASE_URL = "https://openrouter.ai/api"
+$env:ANTHROPIC_AUTH_TOKEN = "<OPENROUTER_API_KEY>"
+$env:ANTHROPIC_API_KEY = ""                     # vazio: evita conflito de credencial
+# opcional: $env:ANTHROPIC_DEFAULT_SONNET_MODEL = "<id do modelo na OpenRouter>"
+claude
+```
+Na OpenRouter, a cobrança é por token na conta dela.
+
+**Antes de chavear endpoints — `/logout`:** com `ANTHROPIC_AUTH_TOKEN` definido, a variável já tem prioridade sobre o login do claude.ai (que fica salvo e sem uso). Se a inicialização mostrar aviso de **conflito de autenticação** (duas credenciais), rode `/logout` dentro do Claude Code para apagar o login salvo e deixar só a do gateway. Conferir sempre com `/status` (URL base e origem da credencial).
+
+**Voltar ao normal:** feche o terminal (ou `Remove-Item Env:ANTHROPIC_BASE_URL, Env:ANTHROPIC_AUTH_TOKEN, Env:ANTHROPIC_API_KEY, Env:ANTHROPIC_DEFAULT_HAIKU_MODEL, Env:ANTHROPIC_DEFAULT_SONNET_MODEL, Env:ANTHROPIC_DEFAULT_OPUS_MODEL`), abra `claude` e, se tiver feito `/logout`, faça `/login` de novo. Enquanto o gateway estiver ativo, a assinatura do claude.ai não é usada nem limita o uso.

@@ -1,0 +1,36 @@
+# LiteLLM Proxy — Claude Code apontado para o GitHub Models (CLAUDE.md, "Infraestrutura
+# e ferramentas"). Subir: npm run proxy:github (escuta só em 127.0.0.1:4000).
+#
+# ATENÇÃO: a Anthropic NÃO dá suporte a Claude Code com modelos que não são Claude
+# (docs "LLM gateway"). Ferramentas, edição de arquivos, subagentes e pensamento
+# estendido podem falhar ou se comportar diferente. Uso experimental e por conta própria.
+#
+# Slots do Claude Code → modelo do GitHub Models. O Claude Code pede o nome em
+# model_name (via ANTHROPIC_DEFAULT_*_MODEL); o LiteLLM traduz o formato Anthropic
+# (/v1/messages) para o do provedor.
+#
+# Chave: GITHUB_TOKEN (PAT do GitHub com permissão "Models: read"), lida do AMBIENTE —
+# nunca escrita aqui (repositório público; o pre-commit bloqueia *_TOKEN literal).
+
+model_list:
+  # Slot Haiku (tarefas rápidas, sumários)
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: github/gpt-4o-mini
+      api_key: os.environ/GITHUB_TOKEN
+
+  # Slot Sonnet (padrão da sessão)
+  - model_name: gpt-4o
+    litellm_params:
+      model: github/gpt-4o
+      api_key: os.environ/GITHUB_TOKEN
+
+  # Slot Opus (raciocínio)
+  - model_name: o3-mini
+    litellm_params:
+      model: github/o3-mini
+      api_key: os.environ/GITHUB_TOKEN
+
+litellm_settings:
+  # o3-mini recusa parâmetros como temperature; descartar em vez de devolver erro.
+  drop_params: true
