@@ -148,6 +148,26 @@ function checarTexto({ aprovado, legenda, artigo }) {
   return falhas;
 }
 
+const LIMITE_VIDEO_BLOB = 4400 * 1024; // corpo máximo da função da Vercel
+
+/** Grava o MP4 aprovado no Blob (PUT /api/admin/redes-video) e devolve a URL pública. */
+async function enviarVideoBlob(slug, peca, arquivo, sha256) {
+  if (!process.env.ADMIN_TOKEN) throw new Error('ADMIN_TOKEN ausente no .env (necessário para gravar o vídeo no Blob)');
+  const bytes = fs.readFileSync(arquivo);
+  if (bytes.length > LIMITE_VIDEO_BLOB) {
+    throw new Error(`vídeo com ${(bytes.length / 1024 / 1024).toFixed(1)} MB — o envio pela API do site aceita até 4,4 MB (reduza o bitrate e aprove de novo)`);
+  }
+  const nome = `${peca}-${sha256.slice(0, 12)}`;
+  const r = await fetch(`${BASE_API}/api/admin/redes-video/${slug}/${nome}`, {
+    method: 'PUT',
+    headers: { Authorization: `Bearer ${process.env.ADMIN_TOKEN}`, 'Content-Type': 'video/mp4' },
+    body: bytes,
+  });
+  const corpo = await r.json().catch(() => ({}));
+  if (!r.ok || !corpo.url) throw new Error(`upload do vídeo ${nome} falhou (HTTP ${r.status}: ${corpo.erro || ''})`);
+  return corpo.url;
+}
+
 async function enviarSlide(slug, nome, buffer) {
   const r = await fetch(`${BASE_API}/api/admin/redes-midia/${slug}/${nome}`, {
     method: 'PUT',
@@ -370,7 +390,9 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
     if (pausa) return { slug, ok: false, motivo: `conta pausada: ${pausa.motivo}` };
     if (aguardar) return { slug, ok: false, motivo: `aguardando a cadência da conta: ${aguardar}` };
     try {
-      const r = await publicarReelNoInstagram({ arquivo, legenda });
+      // Instagram Login (IGAA): só video_url público — o MP4 aprovado vai antes para o Blob.
+      const videoUrl = String(process.env.INSTAGRAM_ACCESS_TOKEN || '').startsWith('IGAA') ? await enviarVideoBlob(slug, peca, arquivo, hash) : null;
+      const r = await publicarReelNoInstagram({ arquivo, videoUrl, legenda });
       meta.publicacao.videos[peca] = { rede: 'instagram', id: r.id, permalink: r.permalink, statusHttp: r.statusHttp, sha256: hash, em: new Date() };
       registrar({ rede: 'instagram', peca, status: 'publicado', statusHttp: r.statusHttp, id: r.id, permalink: r.permalink });
       await RegistroPublicacao.create({ artigo: artigo._id, slug, origem: 'bot', resultado: 'publicado', motivo: notaForcado(artigo, forcar), legenda, redes: { instagram: { id: r.id, permalink: r.permalink, tipo: 'reel' } } });

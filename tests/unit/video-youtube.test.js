@@ -83,3 +83,19 @@ test('síntese do Azure: texto escapado no SSML', () => {
   const { escaparXml } = require('../../backend/lib/azureTts');
   assert.equal(escaparXml('Sono & ansiedade <alerta>'), 'Sono &amp; ansiedade &lt;alerta&gt;');
 });
+
+test('Reel: token IGAA usa video_url público; EAA usa upload resumível', () => {
+  const { parametrosContainerReel } = require('../../backend/lib/socialPublisher');
+  const igaa = 'IG' + 'AA' + 'falso';
+  const eaa = 'EA' + 'A' + 'falso';
+  const ig = parametrosContainerReel({ token: igaa, legenda: 'L', videoUrl: 'https://blob.exemplo/reel.mp4' });
+  assert.equal(ig.modo, 'video_url');
+  assert.equal(ig.params.video_url, 'https://blob.exemplo/reel.mp4');
+  assert.equal(ig.params.upload_type, undefined);
+  assert.equal(ig.params.media_type, 'REELS');
+  assert.throws(() => parametrosContainerReel({ token: igaa, legenda: 'L' }), /precisa de um video_url público/);
+  const fb = parametrosContainerReel({ token: eaa, legenda: 'L' });
+  assert.equal(fb.modo, 'resumable');
+  assert.equal(fb.params.upload_type, 'resumable');
+  assert.equal(fb.params.video_url, undefined);
+});

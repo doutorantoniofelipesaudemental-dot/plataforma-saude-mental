@@ -375,29 +375,54 @@ async function publicarCarrosselNoInstagram({ imagensUrls, legenda }) {
  * `uri` devolvido (rupload.facebook.com), com "Authorization: OAuth",
  * "offset" e "file_size" → espera FINISHED (vídeo demora mais) → media_publish.
  */
-async function publicarReelNoInstagram({ arquivo, legenda, compartilharNoFeed = true }) {
+/**
+ * Parâmetros do container do Reel conforme o tipo de token:
+ *   - IGAA (Instagram Login, graph.instagram.com): SÓ `video_url` — a Meta
+ *     baixa o vídeo de um endereço público. O upload resumível é "only for
+ *     apps that have implemented Facebook Login for Business" (docs da Meta);
+ *     tentado com IGAA, volta "código 100: The parameter video_url is required"
+ *     (primeiro Reel real, 2026-09-27).
+ *   - EAA (Facebook Login): upload resumível do arquivo local (rupload).
+ */
+function parametrosContainerReel({ token, legenda, videoUrl, compartilharNoFeed = true }) {
+  const comuns = { media_type: 'REELS', caption: legenda, share_to_feed: String(compartilharNoFeed) };
+  if (String(token).startsWith('IGAA')) {
+    if (!videoUrl) {
+      throw new ErroPublicacao('Token do Instagram Login (IGAA): o Reel precisa de um video_url público (o upload resumível só existe no Facebook Login).', 'INSTAGRAM_VIDEO_URL_AUSENTE');
+    }
+    return { modo: 'video_url', params: { ...comuns, video_url: videoUrl } };
+  }
+  return { modo: 'resumable', params: { ...comuns, upload_type: 'resumable' } };
+}
+
+async function publicarReelNoInstagram({ arquivo, videoUrl = null, legenda, compartilharNoFeed = true }) {
   requerEnv('INSTAGRAM_ACCESS_TOKEN');
   const token = await obterTokenInstagram();
   const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
   const base = graphBase(token);
   const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
+  const { modo, params } = parametrosContainerReel({ token, legenda, videoUrl, compartilharNoFeed });
 
   const r = await fetch(`${base}/${contaId}/media`, {
     method: 'POST',
     headers: cabecalhos,
-    body: new URLSearchParams({ media_type: 'REELS', upload_type: 'resumable', caption: legenda, share_to_feed: String(compartilharNoFeed) }),
+    body: new URLSearchParams(params),
   });
   const container = await r.json();
-  if (!r.ok || !container.id || !container.uri) lancarErroMeta(container, 'Falha ao criar o container do Reel', 'INSTAGRAM_CONTAINER_FALHOU');
+  if (!r.ok || !container.id || (modo === 'resumable' && !container.uri)) {
+    lancarErroMeta(container, 'Falha ao criar o container do Reel', 'INSTAGRAM_CONTAINER_FALHOU');
+  }
 
-  const bytes = require('fs').readFileSync(arquivo);
-  const envio = await fetch(container.uri, {
-    method: 'POST',
-    headers: { Authorization: `OAuth ${token}`, offset: '0', file_size: String(bytes.length) },
-    body: bytes,
-  });
-  const enviado = await envio.json().catch(() => ({}));
-  if (!envio.ok || enviado.success === false) lancarErroMeta(enviado, 'Falha ao enviar o vídeo do Reel', 'INSTAGRAM_UPLOAD_FALHOU');
+  if (modo === 'resumable') {
+    const bytes = require('fs').readFileSync(arquivo);
+    const envio = await fetch(container.uri, {
+      method: 'POST',
+      headers: { Authorization: `OAuth ${token}`, offset: '0', file_size: String(bytes.length) },
+      body: bytes,
+    });
+    const enviado = await envio.json().catch(() => ({}));
+    if (!envio.ok || enviado.success === false) lancarErroMeta(enviado, 'Falha ao enviar o vídeo do Reel', 'INSTAGRAM_UPLOAD_FALHOU');
+  }
 
   // Processamento de vídeo leva minutos: até 60 × 5 s.
   await aguardarContainerPronto(container.id, token, { tentativas: 60, intervaloMs: 5000 });
@@ -680,6 +705,7 @@ module.exports = {
   publicarNoInstagram,
   publicarCarrosselNoInstagram,
   publicarReelNoInstagram,
+  parametrosContainerReel,
   publicarNoLinkedIn,
   publicarArtigoNasRedes,
   dispararPublicacaoAutomatica,

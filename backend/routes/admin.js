@@ -269,6 +269,40 @@ router.put(
   }
 );
 
+/**
+ * PUT /api/admin/redes-video/:slug/:nome — corpo: MP4 (video/mp4, até 4,4 MB,
+ * limite de corpo da função da Vercel). Com token do Instagram Login (IGAA),
+ * o Reel só é publicado a partir de um video_url público: o bot de mídias
+ * envia o vídeo APROVADO (hash conferido no bot:publicar) e recebe a URL do
+ * Blob em redes/<slug>/<nome>.mp4. O nome leva o hash, então não sobrescreve
+ * outra versão.
+ */
+router.put(
+  '/redes-video/:slug/:nome',
+  exigirAdmin,
+  express.raw({ type: 'video/mp4', limit: '4400kb' }),
+  async (req, res) => {
+    const { slug, nome } = req.params;
+    if (!/^[a-z0-9-]{1,120}$/.test(slug) || !/^[a-z0-9-]{1,60}$/.test(nome)) {
+      return res.status(400).json({ erro: 'slug ou nome inválido.' });
+    }
+    const mp4 = req.body;
+    // MP4/ISO BMFF: "ftyp" nos bytes 4–7.
+    if (!Buffer.isBuffer(mp4) || mp4.length < 1024 || mp4.slice(4, 8).toString('latin1') !== 'ftyp') {
+      return res.status(400).json({ erro: 'Envie um MP4 no corpo, com Content-Type: video/mp4 (até 4,4 MB).' });
+    }
+    if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ erro: 'Blob não configurado.' });
+    try {
+      const { put } = require('@vercel/blob');
+      const r = await put(`redes/${slug}/${nome}.mp4`, mp4, { access: 'public', contentType: 'video/mp4', addRandomSuffix: false, allowOverwrite: true });
+      res.json({ url: r.url });
+    } catch (err) {
+      log.erro('[admin] erro ao gravar vídeo de redes:', err.message);
+      res.status(500).json({ erro: 'Não foi possível gravar o vídeo.' });
+    }
+  }
+);
+
 router.get('/registros-publicacao', exigirAdmin, exigirBanco, async (req, res) => {
   try {
     const filtro = req.query.slug ? { slug: String(req.query.slug) } : {};
