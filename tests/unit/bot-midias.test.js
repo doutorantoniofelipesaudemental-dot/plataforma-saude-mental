@@ -186,3 +186,14 @@ test('trava inversa: artigo que a fila já postou não ganha carrossel/Reel do b
   assert.equal(notaForcado(postado, false), '');
   assert.equal(notaForcado({ publicadoRedesEm: null }, true), '');
 });
+
+test('reaprovar: só antes de publicar e sempre com --revisado', () => {
+  const { motivoParaNaoReaprovar } = require('../../scripts/bot-aprovar');
+  const aprovado = { aprovacao: { aprovadoEm: '2026-09-27' } };
+  assert.equal(motivoParaNaoReaprovar({}, { revisado: false }), null, 'nunca aprovado: segue o fluxo normal');
+  assert.equal(motivoParaNaoReaprovar(aprovado, { revisado: true }), null);
+  assert.match(motivoParaNaoReaprovar(aprovado, { revisado: false }), /exige --revisado/);
+  for (const publicacao of [{ instagram: { id: '1' } }, { linkedin: [{ id: 'l' }] }, { videos: { 'reel-carrossel': { id: 'v' } } }]) {
+    assert.match(motivoParaNaoReaprovar({ ...aprovado, publicacao }, { revisado: true }), /já há peça publicada/);
+  }
+});

@@ -5,6 +5,8 @@
  *   npm run bot:aprovar -- --slug=<slug>            aprova um rascunho
  *   npm run bot:aprovar -- --lote                   aprova todos os pendentes
  *   ... --revisado                                  "li e resolvi/aceito os alertas e desvios"
+ *   ... --reaprovar --revisado                      rascunho corrigido DEPOIS de aprovado (nunca após publicar;
+ *                                                   anula aprovações de vídeo feitas sobre o texto antigo)
  *
  * Quem roda este comando é o médico responsável: ele registra a revisão e a
  * responsabilidade final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
@@ -60,12 +62,38 @@ function lerMeta(slug) {
   return fs.existsSync(arquivo) ? { arquivo, meta: JSON.parse(fs.readFileSync(arquivo, 'utf8')) } : null;
 }
 
-async function aprovar(slug, { revisado }) {
+/**
+ * Motivo para NÃO reaprovar (null se pode). Reaprovar = o médico corrigiu o
+ * rascunho depois de aprovado. Nunca depois de publicado (o que está no ar não
+ * muda) e sempre com --revisado.
+ */
+function motivoParaNaoReaprovar(meta, { revisado }) {
+  if (!meta.aprovacao) return null;
+  const pub = meta.publicacao || {};
+  const publicou = pub.instagram || (pub.linkedin || []).length || Object.keys(pub.videos || {}).length;
+  if (publicou) return 'já há peça publicada deste pacote — corrigir o texto agora não muda o que está no ar';
+  if (!revisado) return 'reaprovar exige --revisado (declara que você leu o rascunho corrigido)';
+  return null;
+}
+
+async function aprovar(slug, { revisado, reaprovar = false }) {
   const lido = lerMeta(slug);
   const arquivoMd = path.join(RASCUNHOS, `${slug}.md`);
   if (!lido || !fs.existsSync(arquivoMd)) return { slug, ok: false, motivo: 'rascunho não encontrado — gere com npm run bot:gerar-posts' };
-  const { arquivo, meta } = lido;
-  if (meta.aprovacao) return { slug, ok: false, motivo: `já aprovado em ${meta.aprovacao.aprovadoEm}` };
+  const { arquivo } = lido;
+  // O .json de aprovados/ é o mais completo (produção, publicação); o de rascunhos/ é a base.
+  const arquivoAprovado = path.join(APROVADOS, `${slug}.json`);
+  const meta = reaprovar && fs.existsSync(arquivoAprovado) ? JSON.parse(fs.readFileSync(arquivoAprovado, 'utf8')) : lido.meta;
+  if (meta.aprovacao && !reaprovar) {
+    return { slug, ok: false, motivo: `já aprovado em ${meta.aprovacao.aprovadoEm} — corrigiu o rascunho? npm run bot:aprovar -- --slug=${slug} --reaprovar --revisado` };
+  }
+  const bloqueio = reaprovar ? motivoParaNaoReaprovar(meta, { revisado }) : null;
+  if (bloqueio) return { slug, ok: false, motivo: bloqueio };
+  if (reaprovar && meta.aprovacao) {
+    // Histórico da aprovação anterior; vídeos aprovados sobre o texto antigo deixam de valer.
+    meta.aprovacoesAnteriores = [...(meta.aprovacoesAnteriores || []), { ...meta.aprovacao, substituidaEm: new Date() }];
+    delete meta.aprovacao;
+  }
 
   const artigo = await Artigo.findOne({ slug }).lean();
   if (!artigo) return { slug, ok: false, motivo: 'artigo não existe mais no banco' };
@@ -179,7 +207,7 @@ async function main() {
   await db.connect();
   console.log('');
   for (const slug of slugs) {
-    const r = await aprovar(slug, { revisado: Boolean(args.revisado) });
+    const r = await aprovar(slug, { revisado: Boolean(args.revisado), reaprovar: Boolean(args.reaprovar) });
     if (r.ok) {
       const edicao = r.linhas ? `${r.linhas.length} linha(s) alterada(s) por você` : r.editado ? 'editado (sem cópia do texto gerado para detalhar)' : 'sem edições';
       console.log(`  ✅ ${slug}: aprovado (${edicao}) → CONTEUDO_INSTAGRAM/aprovados/${slug}.md`);
@@ -193,12 +221,16 @@ async function main() {
   await db.mongoose.disconnect();
 }
 
-main().catch(async (err) => {
-  console.error('\n  Falha:', err.message, '\n');
-  try {
-    await db.mongoose.disconnect();
-  } catch {
-    // conexão já pode ter caído.
-  }
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(async (err) => {
+    console.error('\n  Falha:', err.message, '\n');
+    try {
+      await db.mongoose.disconnect();
+    } catch {
+      // conexão já pode ter caído.
+    }
+    process.exit(1);
+  });
+}
+
+module.exports = { motivoParaNaoReaprovar };
