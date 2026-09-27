@@ -353,11 +353,11 @@ Acessibilidade 95-96, Boas Práticas 100 e SEO 100 em todas as combinações, TB
 | Provedor | Chave no `.env` | Conectividade | Uso liberado | Observação |
 |---|---|---|---|---|
 | **edge** | não usa | ✅ | ✅ **provedor ativo** | Voz pt-BR-AntonioNeural; usado no Reel publicado de `saude-mental-residencia` |
-| azure | ❌ ausente | — | — | Padrão do `--narrar` quando `--provedor` não é passado: sem chave, falha — passe `--provedor=edge` |
+| **azure** | ✅ `AZURE_SPEECH_KEY`, região `brazilsouth` | ✅ | ✅ **validado 2026-09-27** | Padrão do `--narrar`. Teste: `saude-mental-residencia`, 9 slides, 67 s, AAC 24 kHz, voz com média −21,3 dB; 848 caracteres na cota do mês (`narracoes-geradas/uso-azure-2026-09.json`, teto 500 mil) |
 | elevenlabs | ✅ `ELEVENLABS_API_KEY` | ✅ autenticou | ❌ plano gratuito | Voice Design recusado: HTTP 403 "only available on a paid plan". `ELEVENLABS_VOICE_ID` vazio até desenhar a voz |
 | openai | ✅ `OPENAI_API_KEY` | ✅ autenticou | ❌ sem créditos | HTTP 429 `insufficient_quota` |
 
-- **Fallback ativo: `edge`** até haver plano pago na ElevenLabs ou créditos na OpenAI. Nada no código escolhe o provedor sozinho — a escolha é sempre pela flag `--provedor`.
+- **Ativos: `azure` (padrão, com trava da cota gratuita) e `edge` (sem chave, mesma voz).** ElevenLabs e OpenAI esperam plano pago/créditos. Nada no código escolhe o provedor sozinho — a escolha é sempre pela flag `--provedor`.
 - **OpenAI sem créditos aborta na hora** (`classificarErroOpenAI` em `tts.js`): a OpenAI usa o mesmo HTTP 429 para "sem saldo" e para "limite de taxa"; o corpo (`insufficient_quota` / "no credits remaining") distingue. Sem saldo → erro imediato com instrução (1,4 s medido contra a API real, antes ~60 s de retry inútil); limite de taxa e 5xx seguem com até 4 tentativas.
 - Testar um provedor sem mexer no Reel publicado: sempre `--saida=<fora de aprovados/>` — o caminho padrão sobrescreveria o `reel-carrossel.mp4` aprovado e o `producao` do .json.
 
