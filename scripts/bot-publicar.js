@@ -50,9 +50,11 @@ const { enviarVideo, validarMetadados, credenciaisYoutube } = require('../backen
 const { estadoPausa, registrarTokenInvalido } = require('../backend/lib/tokenInstagram');
 // Mesma regra de cadência da fila (contagem unificada fila + bot, filaRedes.js).
 const { motivoParaAguardar } = require('../backend/lib/filaRedes');
-const { IDENTIFICACAO, temaSensivel } = require('../backend/lib/legendaInstagram');
+const { temaSensivel } = require('../backend/lib/legendaInstagram');
+const { AVISO_CFM, IDENTIFICACAO, IDENTIFICACAO_COMPLETA, garantirConformidade, faltasConformidade } = require('../backend/lib/conformidadeCfm');
+const { calcularMatriz } = require('../backend/lib/matrizMidia');
 const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/checagemRedes');
-const { hashArtigo, hashTexto, AVISO_CFM, IDENTIFICACAO_COMPLETA } = require('./bot-gemini');
+const { hashArtigo, hashTexto } = require('./bot-gemini');
 
 const PASTA = path.join(RAIZ, 'CONTEUDO_INSTAGRAM');
 const APROVADOS = path.join(PASTA, 'aprovados');
@@ -100,13 +102,20 @@ function lerMeta(slug) {
   return { arquivo, meta: JSON.parse(fs.readFileSync(arquivo, 'utf8')) };
 }
 
-/** Legenda final: a aprovada + identificação + aviso CFM, antes das hashtags. */
-function montarLegenda(legendaAprovada) {
-  const blocos = legendaAprovada.split(/\n\s*\n/);
-  const iHashtags = blocos.findIndex((b) => /^\s*#/.test(b));
-  const fixos = [IDENTIFICACAO, AVISO_CFM].filter((f) => !legendaAprovada.includes(f));
-  if (iHashtags < 0) return [...blocos, ...fixos].join('\n\n');
-  return [...blocos.slice(0, iHashtags), ...fixos, ...blocos.slice(iHashtags)].join('\n\n');
+/** Legenda final: a aprovada + (tema sensível) CVV + identificação + aviso CFM, antes das hashtags. */
+function montarLegenda(legendaAprovada, { sensivel = false } = {}) {
+  return garantirConformidade(legendaAprovada, { sensivel, identificacao: IDENTIFICACAO });
+}
+
+/** Post do LinkedIn: o aprovado + CVV (tema sensível), identificação e aviso CFM. */
+function montarTextoLinkedin(texto, artigo) {
+  return garantirConformidade(texto, { sensivel: temaSensivel(artigo), identificacao: IDENTIFICACAO });
+}
+
+/** Grava o .json do pacote com a matriz multimídia recalculada (backend/lib/matrizMidia.js). */
+function gravarMeta(arquivo, meta) {
+  meta.matriz = calcularMatriz(meta);
+  fs.writeFileSync(arquivo, JSON.stringify(meta, null, 2));
 }
 
 function checarTexto({ aprovado, legenda, artigo }) {
@@ -176,7 +185,7 @@ async function publicarAprovado(slug, { confirmar, redes, forcar = false }) {
 
   // 4) Texto.
   const aprovado = lerAprovado(md);
-  const legenda = montarLegenda(aprovado.legenda);
+  const legenda = montarLegenda(aprovado.legenda, { sensivel: temaSensivel(artigo) });
   const falhas = checarTexto({ aprovado, legenda, artigo });
   if (falhas.length) return { slug, ok: false, motivo: 'reprovado nas checagens de texto', falhas };
 
@@ -218,7 +227,7 @@ async function publicarAprovado(slug, { confirmar, redes, forcar = false }) {
 
   const registrar = (log) => {
     meta.publicacao.logs.push({ em: new Date(), ...log });
-    fs.writeFileSync(arquivo, JSON.stringify(meta, null, 2));
+    gravarMeta(arquivo, meta);
   };
 
   if (querInstagram) {
@@ -252,7 +261,9 @@ async function publicarAprovado(slug, { confirmar, redes, forcar = false }) {
 
   if (querLinkedin) {
     try {
-      const texto = linkedinPendente.texto.includes(AVISO_CFM) ? linkedinPendente.texto : `${linkedinPendente.texto}\n\n${AVISO_CFM}`;
+      const texto = montarTextoLinkedin(linkedinPendente.texto, artigo);
+      const faltas = faltasConformidade(texto, { sensivel: temaSensivel(artigo) });
+      if (faltas.length) throw new Error(`LinkedIn reprovado na conformidade: ${faltas.join('; ')}`);
       const r = await publicarNoLinkedIn({ url: `${SITE}/artigo/${slug}`, titulo: artigo.titulo, legenda: texto });
       meta.publicacao.linkedin.push({ titulo: linkedinPendente.titulo, id: r.id, em: new Date() });
       registrar({ rede: 'linkedin', peca: linkedinPendente.titulo, status: 'publicado', id: r.id });
@@ -265,7 +276,7 @@ async function publicarAprovado(slug, { confirmar, redes, forcar = false }) {
   let movido = false;
   if (meta.publicacao.instagram) {
     fs.mkdirSync(PUBLICADOS, { recursive: true });
-    fs.writeFileSync(arquivo, JSON.stringify(meta, null, 2));
+    gravarMeta(arquivo, meta);
     for (const nome of [`${slug}.md`, `${slug}.json`]) fs.renameSync(path.join(APROVADOS, nome), path.join(PUBLICADOS, nome));
     fs.renameSync(pastaSlides, path.join(PUBLICADOS, `${slug}-slides`));
     movido = true;
@@ -321,7 +332,12 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
   if (hashArtigo(artigo) !== meta.hashArtigo) return { slug, ok: false, motivo: 'o artigo mudou depois do rascunho — gere e aprove de novo' };
 
   // Aprovação do ARQUIVO de vídeo (bot-aprovar --midia): hash precisa bater.
-  if (!arquivo || !fs.existsSync(arquivo)) return { slug, ok: false, motivo: 'informe o vídeo com --arquivo=<caminho do .mp4>' };
+  // Sem --arquivo: o vídeo no lugar padrão (<pasta>/<slug>-videos/<peça>.mp4, onde o bot:video-carrossel grava).
+  if (!arquivo) {
+    const padrao = path.join(local.pasta, `${slug}-videos`, `${peca}.mp4`);
+    if (fs.existsSync(padrao)) arquivo = padrao;
+  }
+  if (!arquivo || !fs.existsSync(arquivo)) return { slug, ok: false, motivo: `informe o vídeo com --arquivo=<caminho do .mp4> (não há ${peca}.mp4 em ${slug}-videos/)` };
   const hash = sha256Arquivo(arquivo);
   const aprovada = (meta.aprovacao.midias || []).find((m) => m.peca === peca && m.sha256 === hash);
   if (!aprovada) {
@@ -336,7 +352,7 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
 
   const registrar = (log) => {
     meta.publicacao.logs.push({ em: new Date(), ...log });
-    fs.writeFileSync(local.json, JSON.stringify(meta, null, 2));
+    gravarMeta(local.json, meta);
   };
   const md = fs.readFileSync(local.md, 'utf8');
 
@@ -344,8 +360,8 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
     // Reel também vai para o feed: mesma trava inversa da fila. YouTube não entra.
     const bloqueioFila = motivoJaPostadoPelaFila(artigo, { forcar });
     if (bloqueioFila) return { slug, ok: false, motivo: `Reel bloqueado: ${bloqueioFila}` };
-    const legenda = montarLegenda(lerAprovado(md).legenda);
-    const falhas = checarTextoVideo(legenda);
+    const legenda = montarLegenda(lerAprovado(md).legenda, { sensivel: temaSensivel(artigo) });
+    const falhas = [...checarTextoVideo(legenda), ...faltasConformidade(legenda, { sensivel: temaSensivel(artigo) })];
     if ([...legenda].length > LIMITE_LEGENDA) falhas.push(`legenda com ${[...legenda].length} caracteres`);
     if (falhas.length) return { slug, ok: false, motivo: 'legenda reprovada', falhas };
     const aguardar = await motivoParaAguardar();
@@ -373,7 +389,11 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
   const metadados = lerMetadadosVideo(md, peca);
   if (!metadados) return { slug, ok: false, motivo: `bloco metadados:${peca} não encontrado no aprovado` };
   const descricao = montarDescricaoYoutube({ metadados, slug, sensivel: temaSensivel(artigo), short: tipo === 'short' });
-  const falhas = [...checarTextoVideo(`${metadados.titulo}\n${descricao}\n${metadados.tags.join(' ')}`), ...validarMetadados({ titulo: metadados.titulo, descricao, tags: metadados.tags })];
+  const falhas = [
+    ...checarTextoVideo(`${metadados.titulo}\n${descricao}\n${metadados.tags.join(' ')}`),
+    ...validarMetadados({ titulo: metadados.titulo, descricao, tags: metadados.tags }),
+    ...faltasConformidade(descricao, { sensivel: temaSensivel(artigo) }),
+  ];
   const marcaTag = metadados.tags.find((t) => /^(dr|dra|doutor)\s?ant|ant[oô]nio\s?felipe/i.test(t));
   if (marcaTag) falhas.push(`tag de marca "${marcaTag}" (Regra 17)`);
   if (falhas.length) return { slug, ok: false, motivo: 'metadados reprovados', falhas };
@@ -476,4 +496,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { montarLegenda, checarTexto, montarDescricaoYoutube, checarTextoVideo, motivoJaPostadoPelaFila, notaForcado };
+module.exports = { montarLegenda, montarTextoLinkedin, checarTexto, montarDescricaoYoutube, checarTextoVideo, motivoJaPostadoPelaFila, notaForcado, gravarMeta };

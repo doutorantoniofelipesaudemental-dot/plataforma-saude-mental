@@ -34,15 +34,11 @@ const { gerarJson } = require('../backend/lib/llm');
 const { textoParaNarracao } = require('../backend/lib/narracao');
 const { temaSensivel, ehRelatoClinico, IDENTIFICACAO } = require('../backend/lib/legendaInstagram');
 const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/checagemRedes');
+// IDENTIFICACAO_COMPLETA e AVISO_CFM: fonte única em backend/lib/conformidadeCfm.js.
+const { AVISO_CFM, IDENTIFICACAO_COMPLETA, APOIO_CURTO } = require('../backend/lib/conformidadeCfm');
+const { calcularMatriz, FORMATOS } = require('../backend/lib/matrizMidia');
 
 const PASTA = path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'rascunhos');
-const IDENTIFICACAO_COMPLETA = [
-  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
-  'Especialista em Medicina de Família e Comunidade · RQE 26638',
-  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
-  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho',
-  'NÃO ESPECIALISTA',
-].join('\n');
 
 const SISTEMA = `Você é a equipe editorial da Plataforma Integrada de Saúde Mental Doutor Antônio Felipe (Instagram @doutor.antoniofelipe.smental). Escreva em português do Brasil, a partir SOMENTE do artigo fornecido.
 
@@ -237,7 +233,10 @@ function verificar(d, artigo, fonte) {
   // Números fora do artigo (exceto telefones de apoio e registros profissionais).
   const permitidos = new Set(['188', '192', '41322', '26638', ...(fonte.match(/\d+(?:[.,]\d+)?/g) || [])]);
   // Linhas de apoio ("CVV 188 (ligação gratuita, 24h) · SAMU 192") são fixas: fora da contagem.
+  // O apoio curto colado ao último slide/Story sai sozinho — o resto do texto continua na contagem.
   const semTempos = todos
+    .split(` ${APOIO_CURTO}`)
+    .join('')
     .replace(/[^\n]*CVV 188[^\n]*/g, ' ')
     // Numeração de lista ("1. Cuidados individuais") é estrutura, não dado.
     .replace(/^\s*\d{1,2}[.)]\s/gm, ' ')
@@ -351,7 +350,10 @@ function garantirLinhasFixas(d, artigo) {
     d.legenda = i < 0 ? `${d.legenda}\n\n${LINHA_APOIO}` : `${d.legenda.slice(0, i)}\n\n${LINHA_APOIO}${d.legenda.slice(i)}`;
   }
   const ultimo = d.carrossel.at(-1);
-  if (ultimo && !ultimo.texto.includes('CVV 188')) ultimo.texto = `${ultimo.texto} Apoio agora: CVV 188 · SAMU 192`;
+  if (ultimo && !ultimo.texto.includes('CVV 188')) ultimo.texto = `${ultimo.texto} ${APOIO_CURTO}`;
+  // Stories: o último quadro também leva o apoio (são publicados à mão, sem outra trava).
+  const ultimoStory = (d.stories || []).at(-1);
+  if (ultimoStory && !ultimoStory.texto.includes('CVV 188')) ultimoStory.texto = `${ultimoStory.texto} ${APOIO_CURTO}`;
 }
 
 /* ===================== 2º passe: revisor semântico ===================== */
@@ -363,7 +365,10 @@ function garantirLinhasFixas(d, artigo) {
 function pecasDoRascunho(d) {
   const p = [];
   const add = (id, texto) => {
+    // O apoio curto colado ao último slide/Story sai antes do filtro: senão a peça inteira sumiria da revisão.
     const t = String(texto || '')
+      .split(` ${APOIO_CURTO}`)
+      .join('')
       .split('\n')
       .filter((l) => l.trim() && !/CVV 188|CRM-BA|link da bio|^\s*#/.test(l))
       .join(' ')
@@ -458,8 +463,6 @@ function blocoMetadados(id, m) {
 
 const celula = (s) => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
 
-const AVISO_CFM =
-  'Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
 
 function markdown(artigo, d, alertas, origem, revisao) {
   const l = [];
@@ -492,6 +495,14 @@ function markdown(artigo, d, alertas, origem, revisao) {
     );
   }
   l.push('> Os dois passes reduzem o trabalho da revisão, mas não a substituem: um revisor automático também erra.', '');
+  l.push(
+    '## Matriz multimídia obrigatória',
+    '',
+    ...FORMATOS.map((f) => `- ${f.rede}: ${f.rotulo}${f.via === 'manual' ? ' (publicação manual; registrar com npm run bot:matriz)' : ''}`),
+    '',
+    '> O artigo só fica "totalmente_concluido" com os seis formatos entregues (npm run bot:matriz -- --slug=<slug>).',
+    ''
+  );
   l.push('## Ganchos para Reels', '', ...d.ganchos.map((g, i) => `${i + 1}. ${g}`), '');
   l.push('## Carrossel (4:5, 1080 × 1350)', '', '| Slide | Texto | Sugestão visual |', '|---|---|---|');
   d.carrossel.forEach((s, i) => l.push(`| ${i + 1} | ${celula(s.texto)} | ${celula(s.visual)} |`));
@@ -504,8 +515,8 @@ function markdown(artigo, d, alertas, origem, revisao) {
   });
   l.push('## Stories', '', '| # | Texto | Recurso |', '|---|---|---|');
   d.stories.forEach((s, i) => l.push(`| ${i + 1} | ${celula(s.texto)} | ${celula(s.recurso)} |`));
-  l.push('');
-  d.linkedin.forEach((p, i) => l.push(`## LinkedIn ${i + 1}: ${p.tipo}`, '', ...p.texto.split('\n').map((x) => `> ${x}`), '>', `> ${IDENTIFICACAO}`, ''));
+  l.push('', `Rodapé do último Story: ${IDENTIFICACAO}`, '');
+  d.linkedin.forEach((p, i) => l.push(`## LinkedIn ${i + 1}: ${p.tipo}`, '', ...p.texto.split('\n').map((x) => `> ${x}`), '>', `> ${IDENTIFICACAO}`, `> ${AVISO_CFM}`, ''));
   l.push('## YouTube', '', '### Títulos', '', ...d.youtube.titulos.map((t, i) => `${i + 1}. ${t}`), '');
   d.youtube.shorts.forEach((s, i) =>
     l.push(
@@ -563,6 +574,8 @@ async function gerarRascunho(artigo, { forcar }) {
         alertas,
         revisor: revisao,
         aprovacao: null,
+        // Matriz multimídia obrigatória (backend/lib/matrizMidia.js): tudo pendente até publicar.
+        matriz: calcularMatriz({}),
       },
       null,
       2

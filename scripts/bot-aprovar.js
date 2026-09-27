@@ -27,6 +27,9 @@ for (const arquivo of ['.env', '.env.local']) {
 const db = require('../backend/lib/db');
 const Artigo = require('../backend/models/Artigo');
 const { hashArtigo, hashTexto, AVISO_CFM } = require('./bot-gemini');
+const { calcularMatriz } = require('../backend/lib/matrizMidia');
+// Todo .json de pacote sai com a matriz multimídia recalculada.
+const jsonComMatriz = (meta) => JSON.stringify({ ...meta, matriz: calcularMatriz(meta) }, null, 2);
 
 const RASCUNHOS = path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'rascunhos');
 const APROVADOS = path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'aprovados');
@@ -93,7 +96,7 @@ async function aprovar(slug, { revisado }) {
     linhasAlteradas: linhasAlteradas(slug, md),
     pendenciasReconhecidas: pendencias,
   };
-  fs.writeFileSync(arquivo, JSON.stringify(meta, null, 2));
+  fs.writeFileSync(arquivo, jsonComMatriz(meta));
 
   fs.mkdirSync(APROVADOS, { recursive: true });
   const registro = `> ✅ **Aprovado** em ${agora.toISOString().slice(0, 16).replace('T', ' ')} UTC por ${RESPONSAVEL}${
@@ -102,7 +105,7 @@ async function aprovar(slug, { revisado }) {
   const aprovado = md.replace(/^# RASCUNHO — /, '# APROVADO — ').replace(/\n\n/, `\n\n${registro}\n`);
   fs.writeFileSync(path.join(APROVADOS, `${slug}.md`), aprovado);
   // Metadados junto do aprovado: é o que o bot-publicar.js lê e onde grava os logs de envio.
-  fs.writeFileSync(path.join(APROVADOS, `${slug}.json`), JSON.stringify(meta, null, 2));
+  fs.writeFileSync(path.join(APROVADOS, `${slug}.json`), jsonComMatriz(meta));
   return { slug, ok: true, editado: meta.aprovacao.editadoAposGeracao, linhas: meta.aprovacao.linhasAlteradas, pendencias };
 }
 
@@ -141,7 +144,7 @@ async function aprovarMidia(slug, { arquivo, peca }) {
     declaracao: AVISO_CFM,
   };
   meta.aprovacao.midias = [...(meta.aprovacao.midias || []), registro];
-  fs.writeFileSync(arquivoMeta, JSON.stringify(meta, null, 2));
+  fs.writeFileSync(arquivoMeta, jsonComMatriz(meta));
   return { ok: true, registro };
 }
 

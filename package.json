@@ -25,7 +25,8 @@
     "bot:aprovar": "node scripts/bot-aprovar.js",
     "bot:publicar": "node scripts/bot-publicar.js",
     "youtube:autorizar": "node scripts/youtube-autorizar.js",
-    "bot:video-carrossel": "node scripts/bot-video-carrossel.js"
+    "bot:video-carrossel": "node scripts/bot-video-carrossel.js",
+    "bot:matriz": "node scripts/bot-matriz.js"
   },
   "engines": {
     "node": ">=20"
