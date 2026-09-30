@@ -93,6 +93,7 @@ const TEMA_RELATO_MIGRANTES = 'Saúde mental de migrantes e expatriados: crônic
 const TEMA_GUIA_ULISSES = 'Saúde mental de migrantes e expatriados: guia psicoeducativo sobre a Síndrome de Ulisses e o Luto Migratório';
 const TEMA_CUIDADOR_IDOSOS = 'Prevenção da Sobrecarga e Burnout do Cuidador Familiar de Idosos na APS';
 const TEMA_PROFESSORES = 'Gestão de Conflitos com Famílias na Inclusão Escolar e Saúde Mental Docente';
+const TEMA_DESCONTINUACAO = 'Síndrome de Descontinuação de Antidepressivos na APS: Raciocínio Clínico, Diagnóstico Diferencial e Protocolo de Desmame Gradual';
 const LOTES = {
   1: [
     { grupo: 'Relatos da Prática', quantidade: 11, temas: [TEMA_RELATO_MIGRANTES] },
@@ -112,6 +113,12 @@ const LOTES = {
     { grupo: 'Empresas & RH', quantidade: 8 },
     { grupo: 'Linhas de Cuidado (Cuidadores & Professores)', quantidade: 6 },
     { grupo: 'Residentes & Estudantes', quantidade: 6 },
+  ],
+  // Lote 4 (20 pautas): fecha lacunas de Relatos da Prática, Residentes & Estudantes e Condições Específicas.
+  4: [
+    { grupo: 'Relatos da Prática', quantidade: 7 },
+    { grupo: 'Residentes & Estudantes', quantidade: 7, temas: [TEMA_DESCONTINUACAO] },
+    { grupo: 'Condições Específicas', quantidade: 6 },
   ],
 };
 

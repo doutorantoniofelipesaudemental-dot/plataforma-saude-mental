@@ -4787,5 +4787,1714 @@
       }
     },
     "redigidaEm": "2026-09-30T09:49:46.457Z"
+  },
+  {
+    "id": "2026-09-30-93-o-som-do-teclado-que-nao-parav",
+    "tipo": "cronica",
+    "titulo": "O som do teclado que não parava na noite de plantão",
+    "pauta": "Esta narrativa composta retrata a rotina exaustiva de um plantão médico onde o volume de registros eletrônicos compete com a escuta humanizada. Inspirada em vivências comuns na Atenção Primária e no Pronto Atendimento, sem paciente real identificável, o texto explora o dilema entre burocracia e empatia. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Profissionais de saúde, médicos e pacientes interessados na dinâmica do atendimento médico.",
+    "angulo": "Foca no conflito entre o preenchimento de sistemas digitais e a necessidade de olhar nos olhos do paciente durante o plantão.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "O eco dos passos vazios no corredor do plantão de domingo",
+        "categoria": "Relatos da Prática",
+        "score": 0.31,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:46.400Z",
+    "aprovadaEm": "2026-09-30T21:58:15.545Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/o-som-do-teclado-que-nao-parava-na-noite-de-plantao.md",
+      "slug": "o-som-do-teclado-que-nao-parava-na-noite-de-plantao",
+      "geradoEm": "2026-09-30T21:58:25.322Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:58:25.322Z"
+  },
+  {
+    "id": "2026-09-30-94-o-peso-do-cracha-na-mesa-de-tr",
+    "tipo": "cronica",
+    "titulo": "O peso do crachá na mesa de triagem no fim do dia",
+    "pauta": "Nesta narrativa composta, acompanhamos o momento de transição em que um médico retira seu crachá após um dia intenso de urgências psiquiátricas e clínicas na rede pública. O texto aborda de forma sensível o impacto emocional acumulado pelos profissionais de saúde na linha de frente, sem expor casos reais. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Equipes multiprofissionais, médicos e leitores que buscam compreender os bastidores do atendimento em saúde.",
+    "angulo": "Aborda a exaustão sutil do cuidador através de um objeto cotidiano de identificação profissional.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "O peso do crachá na mesa de triagem do pronto-socorro",
+        "categoria": "Relatos da Prática",
+        "score": 0.51,
+        "simTitulo": 0.67
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"O peso do crachá na mesa de triagem do pronto-socorro\" (similaridade 0.51, título 0.67)"
+    ],
+    "criadaEm": "2026-09-30T10:23:46.400Z"
+  },
+  {
+    "id": "2026-09-30-95-a-mancha-de-cafe-na-folha-de-p",
+    "tipo": "cronica",
+    "titulo": "A mancha de café na folha de prescrição avulsa",
+    "pauta": "Esta narrativa composta aborda um atendimento de última hora na UBS, onde uma simples folha de papel manchada de café testemunha um desabafo inesperado sobre solidão e medos cotidianos. Inspirada em vivências comuns, sem paciente real identificável, a crônica humaniza a relação médico-paciente. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Público geral interessado em crônicas sobre o cotidiano da prática médica e relações humanas.",
+    "angulo": "Usa um detalhe banal (o café derramado) como metáfora para o transbordamento das emoções na consulta.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "O café frio que esperou a consulta acabar",
+        "categoria": "Relatos da Prática",
+        "score": 0.28,
+        "simTitulo": 0.2
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:46.400Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/a-mancha-de-cafe-na-folha-de-prescricao-avulsa.md",
+      "slug": "a-mancha-de-cafe-na-folha-de-prescricao-avulsa",
+      "geradoEm": "2026-09-30T21:58:40.581Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:58:40.581Z"
+  },
+  {
+    "id": "2026-09-30-96-a-ultima-lampada-acesa-no-corr",
+    "tipo": "cronica",
+    "titulo": "A última lâmpada acesa no corredor do posto de saúde",
+    "pauta": "Nesta narrativa composta, um médico faz a última ronda pelos consultórios vazios de uma unidade básica de saúde ao final do expediente. A história explora os ecos emocionais deixados pelos pacientes que passaram por ali naquele dia, sem expor nenhum caso real. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Pacientes, familiares e profissionais da saúde que valorizam a dimensão humana do cuidado primário.",
+    "angulo": "Descreve o silêncio e a atmosfera reflexiva da unidade após o encerramento dos atendimentos diários.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "A última consulta antes de desistir",
+        "categoria": "Relatos da Prática",
+        "score": 0.27,
+        "simTitulo": 0.2
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:46.400Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/a-ultima-lampada-acesa-no-corredor-do-posto-de-saude.md",
+      "slug": "a-ultima-lampada-acesa-no-corredor-do-posto-de-saude",
+      "geradoEm": "2026-09-30T21:58:48.834Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:58:48.834Z"
+  },
+  {
+    "id": "2026-09-30-97-o-grampo-de-cabelo-esquecido-n",
+    "tipo": "cronica",
+    "titulo": "O grampo de cabelo esquecido na maca de observação",
+    "pauta": "Esta narrativa composta traz a perspectiva de um atendimento de urgência em que um pequeno objeto esquecido em uma maca revela a passagem rápida, porém marcante, de alguém em profundo sofrimento psíquico. Inspirada em vivências comuns na rede pública, sem paciente real identificável. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Leitores em geral sensíveis a relatos da prática médica e ao acolhimento em saúde mental.",
+    "angulo": "Foca nos rastros materiais e emocionais deixados por pacientes anônimos nos espaços de trânsito rápido da emergência.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "O lenço esquecido na cadeira do consultório",
+        "categoria": "Relatos da Prática",
+        "score": 0.21,
+        "simTitulo": 0.22
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:46.400Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/o-grampo-de-cabelo-esquecido-na-maca-de-observacao.md",
+      "slug": "o-grampo-de-cabelo-esquecido-na-maca-de-observacao",
+      "geradoEm": "2026-09-30T21:58:54.370Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:58:54.370Z"
+  },
+  {
+    "id": "2026-09-30-98-o-bilhete-rasgado-e-refeito-na",
+    "tipo": "cronica",
+    "titulo": "O bilhete rasgado e refeito na sala de espera",
+    "pauta": "Nesta narrativa composta, um médico observa de sossego os movimentos de alguém na sala de espera que ensaia escrever e rasgar bilhetes antes de entrar na consulta. A crônica aborda a ambivalência e o medo do julgamento ao buscar ajuda na Atenção Primária, sem paciente real identificável. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Pessoas que hesitam em buscar atendimento psicológico ou psiquiátrico por receio ou vergonha.",
+    "angulo": "Ilumina o processo interno de coragem e hesitação que antecede o momento em que a porta do consultório se abre.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "A sala de espera que respirava em silêncio",
+        "categoria": "Relatos da Prática",
+        "score": 0.38,
+        "simTitulo": 0.44
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"A sala de espera que respirava em silêncio\" (similaridade 0.38, título 0.44)"
+    ],
+    "criadaEm": "2026-09-30T10:23:46.400Z"
+  },
+  {
+    "id": "2026-09-30-99-o-guarda-chuva-esquecido-no-ca",
+    "tipo": "cronica",
+    "titulo": "O guarda-chuva esquecido no canto do consultório médico",
+    "pauta": "Esta narrativa composta relata a história de um objeto esquecido em um dia chuvoso na UBS e o que ele simboliza sobre as trocas silenciosas de afeto e alívio durante a consulta. Baseada em vivências comuns da prática clínica, sem paciente real identificável. O texto final leva o aviso legal do CFM.",
+    "publicoAlvo": "Público geral interessado em narrativas humanizadas sobre o cuidado em saúde e o cotidiano da APS.",
+    "angulo": "Examina como os pequenos esquecimentos cotidianos revelam a vulnerabilidade humana compartilhada entre médico e paciente.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "O lenço esquecido na cadeira do consultório",
+        "categoria": "Relatos da Prática",
+        "score": 0.36,
+        "simTitulo": 0.4
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"O lenço esquecido na cadeira do consultório\" (similaridade 0.36, título 0.40)"
+    ],
+    "criadaEm": "2026-09-30T10:23:46.400Z"
+  },
+  {
+    "id": "2026-09-30-100-o-peso-do-bloco-de-receituario",
+    "tipo": "cronica",
+    "titulo": "O peso do bloco de receituário rasgado na mesa",
+    "pauta": "Esta narrativa composta explora os sentimentos de impotência e humanidade vividos por um médico ao lidar com limites terapêuticos e crises na Atenção Primária, sem paciente real identificável. O texto final traz o aviso legal do CFM. Instrução de redação (CFM): não usar o verbo \"curar\" nem qualquer promessa de cura; quando falar de desfecho, usar \"remissão\" ou \"estabilização\".",
+    "publicoAlvo": "Pacientes, familiares e profissionais de saúde da APS",
+    "angulo": "Foco na vulnerabilidade do profissional diante das limitações do sistema e na empatia mútua.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "O peso do crachá na mesa de triagem do pronto-socorro",
+        "categoria": "Relatos da Prática",
+        "score": 0.29,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:49.773Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "ultimaTentativaRascunho": {
+      "em": "2026-09-30T21:59:08.717Z",
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/o-peso-do-bloco-de-receituario-rasgado-na-mesa.md",
+      "motivo": "ética/CFM: CFM: promessa de cura (\"curar\")"
+    },
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-do-bloco-de-receituario-rasgado-na-mesa.md",
+      "slug": "o-peso-do-bloco-de-receituario-rasgado-na-mesa",
+      "geradoEm": "2026-09-30T22:39:53.518Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:39:53.518Z"
+  },
+  {
+    "id": "2026-09-30-101-a-caneta-que-falhou-no-meio-da",
+    "tipo": "cronica",
+    "titulo": "A caneta que falhou no meio da consulta",
+    "pauta": "Através de uma narrativa composta, esta crônica aborda os pequenos imprevistos do cotidiano clínico que abrem espaço para pausas genuínas de escuta e acolhimento, sem paciente real identificável. O texto final traz o aviso legal do CFM.",
+    "publicoAlvo": "Pessoas interessadas em saúde mental e profissionais da rede pública",
+    "angulo": "A humanização do atendimento através de um detalhe simples e cotidiano do consultório.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "O peso da prancheta e o olhar que escuta na APS",
+        "categoria": "Relatos da Prática",
+        "score": 0.09,
+        "simTitulo": 0
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:49.773Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/a-caneta-que-falhou-no-meio-da-consulta.md",
+      "slug": "a-caneta-que-falhou-no-meio-da-consulta",
+      "geradoEm": "2026-09-30T21:59:25.088Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:59:25.088Z"
+  },
+  {
+    "id": "2026-09-30-102-o-eco-da-ultima-porta-batida-n",
+    "tipo": "cronica",
+    "titulo": "O eco da última porta batida no plantão",
+    "pauta": "Esta narrativa composta retrata o silêncio que se instala após um atendimento difícil no pronto atendimento, refletindo sobre o impacto emocional que certas histórias deixam em quem escuta, sem paciente real identificável. O texto final traz o aviso legal do CFM.",
+    "publicoAlvo": "Equipes de saúde, médicos de família e público geral",
+    "angulo": "A reflexão intimista sobre o pós-atendimento e a digestão emocional do sofrimento alheio.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "A última consulta antes do plantão virar a madrugada",
+        "categoria": "Relatos da Prática",
+        "score": 0.37,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"A última consulta antes do plantão virar a madrugada\" (similaridade 0.37, título 0.36)"
+    ],
+    "criadaEm": "2026-09-30T10:23:49.773Z"
+  },
+  {
+    "id": "2026-09-30-103-o-peso-do-cracha-na-mesa-de-tr",
+    "tipo": "cronica",
+    "titulo": "O peso do crachá na mesa de triagem no fim do dia",
+    "pauta": "Esta crônica literária humanizada apresenta uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na Atenção Primária, sem paciente real identificável. O texto aborda o cansaço acumulado e a sensibilidade necessária para manter o acolhimento humano quando o expediente chega ao fim. Informamos que o texto final leva o aviso legal do Conselho Federal de Medicina.",
+    "publicoAlvo": "Profissionais de saúde, médicos da atenção primária e público geral interessado no lado humano do cuidado",
+    "angulo": "Reflete sobre o esgotamento sutil do cotidiano médico através de um olhar poético e profundamente empático sobre o ato de escutar.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "O peso do crachá na mesa de triagem do pronto-socorro",
+        "categoria": "Relatos da Prática",
+        "score": 0.5,
+        "simTitulo": 0.67
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"O peso do crachá na mesa de triagem do pronto-socorro\" (similaridade 0.50, título 0.67)"
+    ],
+    "criadaEm": "2026-09-30T10:23:52.098Z"
+  },
+  {
+    "id": "2026-09-30-104-o-peso-da-chave-guardada-no-bo",
+    "tipo": "cronica",
+    "titulo": "O peso da chave guardada no bolso da bata branca",
+    "pauta": "Esta narrativa composta retrata o cotidiano de um médico de família diante de um atendimento prolongado pouco antes do encerramento do expediente na unidade básica. A história explora o vínculo construído ao longo dos anos e a escuta atenta que vai muito além dos sintomas físicos, mostrando a importância da presença humana na prática médica diária. Trata-se de uma ficção inspirada em vivências comuns, sem paciente real identificável, e o texto final leva o aviso legal do Conselho Federal de Medicina.",
+    "publicoAlvo": "Pacientes, familiares e profissionais de saúde interessados na humanização do cuidado e na relação médico-paciente.",
+    "angulo": "Foca nos microdetalhes do final de um dia de atendimento na Atenção Primária, valorizando o tempo de escuta como ferramenta terapêutica legítima.",
+    "sensivel": false,
+    "categoria": "Relatos da Prática",
+    "lote": 4,
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "O peso da prancheta e o olhar que escuta na APS",
+        "categoria": "Relatos da Prática",
+        "score": 0.2,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:23:54.249Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-da-chave-guardada-no-bolso-da-bata-branca.md",
+      "slug": "o-peso-da-chave-guardada-no-bolso-da-bata-branca",
+      "geradoEm": "2026-09-30T21:59:29.986Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:59:29.986Z"
+  },
+  {
+    "id": "2026-09-30-105-urgencias-psiquiatricas-pediat",
+    "tipo": "artigo-cientifico",
+    "titulo": "Urgências psiquiátricas pediátricas na emergência: guia para residentes",
+    "pauta": "Este guia prático para residentes e estudantes aborda a avaliação inicial de crianças e adolescentes em crise psiquiátrica no pronto-socorro. O texto detalha o diagnóstico diferencial, a identificação rigorosa de sinais de gravidade e as condutas de primeira linha, garantindo segurança e acolhimento.",
+    "publicoAlvo": "Residentes de Medicina de Família, Pediatria e Estudantes de Medicina",
+    "angulo": "Foco específico no cenário do pronto-socorro pediátrico com ênfase na segurança e de-escalada não farmacológica.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Emergency Service, Hospital\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Child\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática e diretrizes clínicas",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Psychiatric Emergencies\"[Mesh]) AND (\"Pediatrics\"[Mesh]) AND (\"Diagnosis\"[Mesh])",
+        "tipoDeEstudo": "Diretriz de prática clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Child Behavior Disorders\"[Mesh]) AND (\"Emergency Treatment\"[Mesh])",
+        "tipoDeEstudo": "Estudo de coorte e consenso de especialistas",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.39,
+        "simTitulo": 0.33
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial\" (similaridade 0.39, título 0.33)"
+    ],
+    "criadaEm": "2026-09-30T10:24:04.256Z"
+  },
+  {
+    "id": "2026-09-30-106-uso-de-estabilizadores-de-humo",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso de estabilizadores de humor na APS: guia prático para residentes",
+    "pauta": "Abordagem objetiva para médicos de família e residentes sobre a indicação, monitorização laboratorial e ajuste de dose de estabilizadores de humor na atenção primária. O artigo revisa interações medicamentosas comuns e critérios claros para o encaminhamento especializado.",
+    "publicoAlvo": "Médicos residentes de Medicina de Família e Comunidade e estudantes",
+    "angulo": "Enfoque na segurança do manejo de longo prazo dentro da realidade da UBS.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Bipolar Disorder\"[Mesh]) AND (\"Antimanic Agents\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática e diretrizes de tratamento",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"General Practice\"[Mesh]) AND (\"Lithium\"[Mesh]) AND (\"Drug Monitoring\"[Mesh])",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Family Practice\"[Mesh]) AND (\"Anticonvulsants\"[Mesh]) AND (\"Bipolar Disorder\"[Mesh])",
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.29,
+        "simTitulo": 0.2
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:04.256Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-estabilizadores-de-humor-na-aps-guia-pratico-para-res.md",
+      "slug": "uso-de-estabilizadores-de-humor-na-aps-guia-pratico-para-res",
+      "geradoEm": "2026-09-30T21:59:43.404Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:59:43.404Z"
+  },
+  {
+    "id": "2026-09-30-107-sintomas-psicoticos-na-atencao",
+    "tipo": "artigo-cientifico",
+    "titulo": "Sintomas psicóticos na atenção primária: avaliação inicial e conduta",
+    "pauta": "Orientações práticas para o reconhecimento precoce de sintomas psicóticos na UBS, diferenciando quadros orgânicos de transtornos primários. O texto fornece ferramentas de triagem, orientações sobre segurança e o fluxo adequado para investigação e suporte.",
+    "publicoAlvo": "Estudantes de medicina e médicos residentes",
+    "angulo": "Destaque para o diagnóstico diferencial com delirium e intoxicações comuns na comunidade.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Psychotic Disorders\"[Mesh]) AND (\"Diagnosis, Differential\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Early Diagnosis\"[Mesh]) AND (\"Schizophrenia\"[Mesh]) AND (\"General Practice\"[Mesh])",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Physicians, Family\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Triage\"[Mesh])",
+        "tipoDeEstudo": "Estudo transversal e consenso",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial",
+        "categoria": "Médicos & Enfermeiros",
+        "score": 0.37,
+        "simTitulo": 0.43
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial\" (similaridade 0.37, título 0.43)"
+    ],
+    "criadaEm": "2026-09-30T10:24:04.256Z"
+  },
+  {
+    "id": "2026-09-30-108-transtorno-de-estresse-pos-tra",
+    "tipo": "artigo-cientifico",
+    "titulo": "Transtorno de estresse pós-traumático na UBS: rastreio e manejo",
+    "pauta": "Guia clínico voltado para residentes sobre como identificar e manejar o TEPT em pacientes atendidos na atenção primária. Discute instrumentos breves de rastreio, intervenções iniciais baseadas em evidências e critérios para encaminhamento psicológico e psiquiátrico.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade",
+    "angulo": "Integração do trauma na rotina de consultas clínicas gerais da UBS.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Stress Disorders, Post-Traumatic\"[Mesh]) AND (\"Mass Screening\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"General Practice\"[Mesh]) AND (\"Stress Disorders, Post-Traumatic\"[Mesh]) AND (\"Therapy\"[Mesh])",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Physicians, Family\"[Mesh]) AND (\"Psychological Trauma\"[Mesh]) AND (\"Early Intervention (Education)\"[Mesh])",
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Rastreio e manejo da depressão pós-parto na UBS",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.51,
+        "simTitulo": 0.62
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Rastreio e manejo da depressão pós-parto na UBS\" (similaridade 0.51, título 0.62)"
+    ],
+    "criadaEm": "2026-09-30T10:24:04.256Z"
+  },
+  {
+    "id": "2026-09-30-109-avaliacao-de-queixas-cognitiva",
+    "tipo": "artigo-cientifico",
+    "titulo": "Avaliação de queixas cognitivas em idosos na UBS: guia prático",
+    "pauta": "Abordagem sistemática para o estudante e residente investigarem queixas de memória e declínio cognitivo na atenção primária. O artigo aborda testes de rastreio breves, diferenciação entre demência, delirium e depressão, e o suporte às famílias.",
+    "publicoAlvo": "Estudantes de medicina e médicos residentes",
+    "angulo": "Protocolo prático focado na diferenciação etiológica rápida no consultório de clínica geral.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Cognitive Dysfunction\"[Mesh]) AND (\"Mass Screening\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Dementia\"[Mesh]) AND (\"Diagnosis, Differential\"[Mesh]) AND (\"General Practice\"[Mesh])",
+        "tipoDeEstudo": "Diretriz baseada em evidências",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Aged\"[Mesh]) AND (\"Memory Disorders\"[Mesh]) AND (\"Primary Care\"[Mesh])",
+        "tipoDeEstudo": "Estudo de validação de teste diagnóstico",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Avaliação de cefaleia tensional e ansiedade na UBS",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.33,
+        "simTitulo": 0.4
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:04.256Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-queixas-cognitivas-em-idosos-na-ubs-guia-pratic.md",
+      "slug": "avaliacao-de-queixas-cognitivas-em-idosos-na-ubs-guia-pratic",
+      "geradoEm": "2026-09-30T21:59:49.938Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T21:59:49.938Z"
+  },
+  {
+    "id": "2026-09-30-110-uso-de-antidepressivos-em-popu",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso de antidepressivos em populações especiais na APS",
+    "pauta": "Orientações farmacológicas essenciais para residentes sobre a prescrição e o manejo de antidepressivos em gestantes, lactantes, idosos e pacientes com comorbidades clínicas. O texto detalha ajustes de dose, efeitos colaterais comuns e interações farmacológicas.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade e estudantes",
+    "angulo": "Foco em populações clinicamente complexas frequentemente negligenciadas nos grandes ensaios clínicos.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Antidepressive Agents\"[Mesh]) AND (\"Vulnerable Populations\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Pregnancy\"[Mesh]) AND (\"Antidepressive Agents\"[Mesh]) AND (\"Family Practice\"[Mesh])",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Aged\"[Mesh]) AND (\"Depressive Disorder\"[Mesh]) AND (\"Drug Interactions\"[Mesh])",
+        "tipoDeEstudo": "Metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.29,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:04.256Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antidepressivos-em-populacoes-especiais-na-aps.md",
+      "slug": "uso-de-antidepressivos-em-populacoes-especiais-na-aps",
+      "geradoEm": "2026-09-30T22:00:02.127Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:00:02.127Z"
+  },
+  {
+    "id": "2026-09-30-111-manejo-da-recusa-alimentar-e-s",
+    "tipo": "artigo-cientifico",
+    "titulo": "Manejo da recusa alimentar e seletividade grave no pronto atendimento",
+    "pauta": "Guia de conduta para médicos em atendimento de urgência frente a quadros graves de recusa alimentar associados a transtornos psiquiátricos. Aborda critérios de internação hospitalar, rastreio de complicações clínicas imediatas e suporte inicial.",
+    "publicoAlvo": "Residentes de Medicina de Emergência, Pediatria e Clínica Médica",
+    "angulo": "Abordagem integrada entre o risco clínico agudo e a etiologia psiquiátrica subjacente.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Emergency Treatment\"[Mesh]) AND (\"Feeding and Eating Disorders\"[Mesh]) AND (\"Critical Care\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática e diretrizes",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Anorexia Nervosa\"[Mesh]) AND (\"Medical Emergencies\"[Mesh]) AND (\"Hospitalization\"[Mesh])",
+        "tipoDeEstudo": "Diretriz de prática clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Food Refusal\"[Mesh]) AND (\"Adolescent\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh])",
+        "tipoDeEstudo": "Estudo de coorte e consenso",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Seletividade alimentar: quando é fase e quando merece atenção",
+        "categoria": "Pais & Famílias",
+        "score": 0.34,
+        "simTitulo": 0.33
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:04.256Z",
+    "aprovadaEm": "2026-09-30T21:58:15.546Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-recusa-alimentar-e-seletividade-grave-no-pronto-at.md",
+      "slug": "manejo-da-recusa-alimentar-e-seletividade-grave-no-pronto-at",
+      "geradoEm": "2026-09-30T22:00:15.370Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:00:15.370Z"
+  },
+  {
+    "id": "2026-09-30-112-uso-racional-de-antidepressivo",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso racional de antidepressivos na gestação e lactação na UBS",
+    "pauta": "Orienta residentes e médicos de família no manejo seguro da farmacoterapia antidepressiva durante a gravidez e o aleitamento materno. Aborda riscos fetais, escolha da molécula e conduta clínica baseada em evidências na atenção primária.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, Médicos de Família, Estudantes de Medicina",
+    "angulo": "Foco prático na tomada de decisão compartilhada e estratificação de risco gestacional na rotina da UBS.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "antidepressants pregnancy lactation primary care clinical guidelines",
+        "tipoDeEstudo": "Revisão sistemática e diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "selective serotonin reuptake inhibitors pregnancy neonatal outcomes safety",
+        "tipoDeEstudo": "Estudo de coorte e metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Uso de antidepressivos em populações especiais na APS",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.39,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [
+      "artigo científico exige de 3 a 6 referências (consultas PubMed)",
+      "originalidade: paráfrase/redundância de \"Uso de antidepressivos em populações especiais na APS\" (similaridade 0.39, título 0.36)"
+    ],
+    "criadaEm": "2026-09-30T10:24:08.947Z"
+  },
+  {
+    "id": "2026-09-30-113-manejo-de-episodios-de-raiva-e",
+    "tipo": "artigo-cientifico",
+    "titulo": "Manejo de episódios de raiva e agressividade no pronto atendimento",
+    "pauta": "Apresenta um guia prático para residentes e médicos de plantão sobre a abordagem imediata, de-escalação verbal e contenção segura em situações de agudo comportamento agressivo. Destaca a segurança da equipe e a investigação de causas orgânicas e psiquiátricas.",
+    "publicoAlvo": "Residentes de Medicina de Emergência, Médicos de Pronto Atendimento, Estudantes de Medicina",
+    "angulo": "Protocolo focado em técnicas de descalada verbal e conduta farmacológica rápida na sala de emergência.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Aggression\"[MeSH Terms] OR \"Psychomotor Agitation\"[MeSH Terms]) AND \"Emergency Service, Hospital\"[MeSH Terms] AND \"De-escalation\"[Title/Abstract]",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Psychomotor Agitation\"[MeSH Terms] AND \"Emergencies\"[MeSH Terms] AND \"Antipsychotic Agents\"[MeSH Terms] AND \"Clinical Trial\"[Publication Type]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Restraint, Physical\"[MeSH Terms] OR \"Coercion\"[MeSH Terms]) AND \"Emergency Psychiatry\"[MeSH Terms] AND \"Guideline\"[Publication Type]",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "\"Aggression\"[MeSH Terms] AND \"Emergency Medicine\"[MeSH Terms] AND \"Risk Assessment\"[MeSH Terms] AND \"Meta-Analysis\"[Publication Type]",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Manejo do paciente com risco de agressividade no PA",
+        "categoria": "Médicos & Enfermeiros",
+        "score": 0.3,
+        "simTitulo": 0.4
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:08.947Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-episodios-de-raiva-e-agressividade-no-pronto-atend.md",
+      "slug": "manejo-de-episodios-de-raiva-e-agressividade-no-pronto-atend",
+      "geradoEm": "2026-09-30T22:00:28.124Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:00:28.124Z"
+  },
+  {
+    "id": "2026-09-30-114-investigacao-de-fadiga-cronica",
+    "tipo": "artigo-cientifico",
+    "titulo": "Investigação de fadiga crônica e exaustão na atenção primária",
+    "pauta": "Orienta o raciocínio clínico diante do paciente com queixa persistente de cansaço extremo na UBS, diferenciando causas orgânicas, transtornos do humor e burnout. Fornece um fluxograma prático de exames e condutas iniciais.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, Médicos de Família, Estudantes de Medicina",
+    "angulo": "Diferenciação estruturada entre fadiga de origem somática, distúrbios afetivos e sobrecarga crônica na rotina ambulatorial.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Fatigue\"[Mesh] OR \"Fatigue Syndrome, Chronic\"[Mesh]) AND \"Primary Health Care\"[Mesh] AND (\"Diagnosis, Differential\"[Mesh] OR \"Decision Trees\"[Mesh])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Burnout, Professional\"[Mesh] OR \"Depression\"[Mesh]) AND \"Fatigue\"[Mesh] AND \"Primary Health Care\"[Mesh]",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Fatigue Syndrome, Chronic\"[Mesh] AND \"Diagnosis\"[Mesh]) AND \"Primary Health Care\"[Mesh]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Mental Disorders\"[Mesh] OR \"Mood Disorders\"[Mesh]) AND \"Fatigue\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Metaanalysis\"[Publication Type]",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Transtornos somatoformes na UBS: investigação e manejo clínico",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.31,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:08.947Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/investigacao-de-fadiga-cronica-e-exaustao-na-atencao-primari.md",
+      "slug": "investigacao-de-fadiga-cronica-e-exaustao-na-atencao-primari",
+      "geradoEm": "2026-09-30T22:00:34.069Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:00:34.069Z"
+  },
+  {
+    "id": "2026-09-30-115-urgencias-psiquiatricas-na-inf",
+    "tipo": "artigo-cientifico",
+    "titulo": "Urgências psiquiátricas na infância e adolescência no PA",
+    "pauta": "Guia prático para residentes e estudantes abordando a avaliação inicial, diagnóstico diferencial e condutas seguras diante de crises comportamentais e emocionais agudas em menores de idade no pronto atendimento. O texto fornece ferramentas objetivas para a tomada de decisão médica rápida e humanizada na primeira linha.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, residentes de Pediatria, médicos generalistas e estudantes de medicina",
+    "angulo": "Foco específico na realidade de urgências pediátricas psiquiátricas em ambientes de pronto atendimento de baixa e média complexidade.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Emergency Services, Psychiatric\"[Mesh]) AND (\"Child\"[Mesh]) AND (\"Crisis Intervention\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Pediatric Emergency Medicine\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Triage\"[Mesh])",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Psychomotor Agitation\"[Mesh]) AND (\"Adolescent\"[Mesh]) AND (\"Emergency Treatment\"[Mesh])",
+        "tipoDeEstudo": "Ensaio clínico controlado",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.39,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial\" (similaridade 0.39, título 0.36)"
+    ],
+    "criadaEm": "2026-09-30T10:24:15.980Z"
+  },
+  {
+    "id": "2026-09-30-116-uso-racional-de-antipsicoticos",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso racional de antipsicóticos em idosos na APS: guia para residentes",
+    "pauta": "Este artigo traz orientações práticas para residentes e estudantes sobre a prescrição e os riscos do uso de antipsicóticos em pacientes idosos na atenção primária. Aborda o manejo de sintomas comportamentais da demência, os riscos cardiovasculares e cerebrovasculares, e estratégias seguras para desprescrição na UBS.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, médicos generalistas e estudantes de medicina",
+    "angulo": "Foco específico na realidade da atenção primária e na desprescrição segura de antipsicóticos em idosos, preenchendo lacunas comuns na formação prática.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Antipsychotic Agents\"[MeSH] OR \"antipsychotics\") AND (\"Aged\"[MeSH] OR \"elderly\") AND (\"Primary Health Care\"[MeSH] OR \"General Practice\")",
+        "tipoDeEstudo": "Revisão sistemática e diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Inappropriate Prescribing\"[MeSH] OR \"deprescribing\") AND (\"Antipsychotic Agents\"[MeSH]) AND (\"Aged\"[MeSH])",
+        "tipoDeEstudo": "Ensaio clínico randomizado ou diretriz",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Dementia\"[MeSH] AND \"Behavioral Symptoms\"[MeSH]) AND (\"Antipsychotic Agents\"[MeSH] AND \"Adverse Effects\"[MeSH])",
+        "tipoDeEstudo": "Revisão integrativa ou metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.45,
+        "simTitulo": 0.5
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Uso de antipsicóticos na APS: indicações, ajustes e desprescrição\" (similaridade 0.45, título 0.50)"
+    ],
+    "criadaEm": "2026-09-30T10:24:19.005Z"
+  },
+  {
+    "id": "2026-09-30-117-transtorno-dissociativo-de-ide",
+    "tipo": "artigo-cientifico",
+    "titulo": "Transtorno dissociativo de identidade: reconhecimento e manejo clínico na APS",
+    "pauta": "Este artigo orienta médicos de família na identificação de sintomas dissociativos complexos e no estabelecimento de um vínculo seguro na atenção primária. Aborda o diagnóstico diferencial com psicoses e o encaminhamento adequado sem estigmatização.",
+    "publicoAlvo": "Médicos de família, residentes de medicina de família e comunidade e médicos generalistas",
+    "angulo": "Foco prático no manejo longitudinal na APS, diferenciando sintomas dissociativos de quadros psicóticos agudos sem alarmismo.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "\"Dissociative Identity Disorder\"[Mesh] AND \"Primary Health Care\"[Mesh]",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Dissociative Disorders\"[Mesh] AND \"Diagnosis, Differential\"[Mesh] AND \"Psychotic Disorders\"[Mesh]",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "Dissociative identity disorder primary care management clinical practice",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Physician-Patient Relations\"[Mesh] AND \"Dissociative Disorders\"[Mesh] AND \"General Practice\"[Mesh]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      }
+    ],
+    "categoria": "Condições Específicas",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial",
+        "categoria": "Condições Específicas",
+        "score": 0.28,
+        "simTitulo": 0.57
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:25.542Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-dissociativo-de-identidade-reconhecimento-e-manej.md",
+      "slug": "transtorno-dissociativo-de-identidade-reconhecimento-e-manej",
+      "geradoEm": "2026-09-30T22:00:41.106Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:00:41.106Z"
+  },
+  {
+    "id": "2026-09-30-118-disforia-de-genero-e-saude-men",
+    "tipo": "artigo-cientifico",
+    "titulo": "Disforia de gênero e saúde mental: acolhimento e suporte na atenção primária",
+    "pauta": "Apresenta diretrizes baseadas em evidências para o acolhimento humanizado e escuta qualificada de pacientes transgêneros e não-binários na UBS. Discute a redução de danos para o sofrimento psíquico associado e os critérios de encaminhamento especializado.",
+    "publicoAlvo": "Equipes de saúde da família, médicos generalistas e residentes",
+    "angulo": "Enfoque na integralidade do cuidado e na criação de um ambiente seguro na atenção básica, livre de preconceitos.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Gender Dysphoria\"[Mesh] OR \"Transgender Persons\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Mental Health\"[Mesh] OR \"Psychological Distress\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Gender-Affirming Care\"[Mesh] OR \"Transgender Persons\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Practice Guideline\" [Publication Type])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Gender Dysphoria\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"Physicians, Family\"[Mesh]) AND (\"Patient Acceptance of Health Care\"[Mesh] OR \"Empathy\"[Mesh])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Transgender Persons\"[Mesh]) AND (\"Mental Health Services\"[Mesh] OR \"Referral and Consultation\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Condições Específicas",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Acolhimento ao sofrimento psíquico agudo no ambiente laboral",
+        "categoria": "Empresas & RH",
+        "score": 0.22,
+        "simTitulo": 0.14
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:25.542Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a.md",
+      "slug": "disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a",
+      "geradoEm": "2026-09-30T22:00:52.801Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:00:52.801Z"
+  },
+  {
+    "id": "2026-09-30-119-transtorno-explosivo-intermite",
+    "tipo": "artigo-cientifico",
+    "titulo": "Transtorno explosivo intermitente: reconhecimento e manejo farmacológico na APS",
+    "pauta": "Aborda os critérios diagnósticos do transtorno explosivo intermitente e sua diferenciação de outras causas de agressividade na prática ambulatorial. Traz condutas farmacológicas iniciais e intervenções comportamentais breves realizáveis pelo médico de família.",
+    "publicoAlvo": "Médicos generalistas, médicos de família e residentes",
+    "angulo": "Abordagem prática para lidar com episódios de raiva desproporcional no consultório de atenção primária.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "\"Intermittent Explosive Disorder\"[Mesh] AND (\"Primary Health Care\"[Mesh] or \"General Practice\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Intermittent Explosive Disorder\"[Mesh] AND \"Therapeutics\"[Mesh] AND (\"Randomized Controlled Trial\"[Publication Type])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "\"Aggression\"[Mesh] AND \"Diagnosis, Differential\"[Mesh] AND \"Intermittent Explosive Disorder\"[Mesh]",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "\"Intermittent Explosive Disorder\"[Mesh] AND (\"Psychotherapy\"[Mesh] or \"Behavior Therapy\"[Mesh]) AND \"Primary Health Care\"[Mesh]",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Condições Específicas",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial",
+        "categoria": "Condições Específicas",
+        "score": 0.23,
+        "simTitulo": 0.57
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:25.542Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa.md",
+      "slug": "transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa",
+      "geradoEm": "2026-09-30T22:01:04.753Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:01:04.753Z"
+  },
+  {
+    "id": "2026-09-30-120-tricotilomania-e-transtorno-de",
+    "tipo": "artigo-cientifico",
+    "titulo": "Tricotilomania e transtorno de escoriação: diagnóstico e manejo ambulatorial",
+    "pauta": "Orienta o rastreio, diagnóstico e manejo inicial de comportamentos repetitivos focados no corpo na atenção primária. Discute estratégias de reversão de hábitos e o papel do suporte farmacológico em casos selecionados.",
+    "publicoAlvo": "Médicos de família, pediatras e clínicos gerais",
+    "angulo": "Visão integrada sobre transtornos muitas vezes subdiagnosticados que geram grande sofrimento estético e emocional.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Trichotillomania\"[Mesh] OR \"Skin Picking\"[Mesh]) AND (\"Diagnosis\"[Mesh] OR \"Primary Health Care\"[Mesh])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Trichotillomania\"[Mesh] OR \"Excoriation Disorder\"[Mesh]) AND (\"Habit Reversal\"[Mesh] OR \"Cognitive Behavioral Therapy\"[Mesh]) AND (\"Systematic Review\"[Publication Type])",
+        "tipoDeEstudo": "Revisão sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Trichotillomania\"[Mesh] OR \"Skin Picking\"[Mesh]) AND (\"Therapeutics\"[Mesh] OR \"Psychotropic Drugs\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
+        "tipoDeEstudo": "Ensaio clínico randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Trichotillomania\"[Mesh] AND \"Excoriation Disorder\"[Mesh]) AND (\"Disease Management\"[Mesh] OR \"Ambulatory Care\"[Mesh]) AND (\"Meta-Analysis\"[Publication Type])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Condições Específicas",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Transtorno explosivo intermitente: reconhecimento e manejo farmacológico na APS",
+        "categoria": "Condições Específicas",
+        "score": 0.09,
+        "simTitulo": 0.31
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:25.542Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane.md",
+      "slug": "tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane",
+      "geradoEm": "2026-09-30T22:01:10.963Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:01:10.963Z"
+  },
+  {
+    "id": "2026-09-30-121-hipocondria-e-transtorno-de-an",
+    "tipo": "artigo-cientifico",
+    "titulo": "Hipocondria e transtorno de ansiedade de doença: conduta na atenção primária",
+    "pauta": "Discute estratégias para o manejo de pacientes com preocupações excessivas sobre contrair doenças graves, evitando iatrogenia e exames desnecessários. Apresenta técnicas de comunicação empática e estabelecimento de consultas regulares estruturadas. Instrução de redação: expandir a conduta comunicacional (frases-modelo para validar o sofrimento sem reforçar a busca por exames, como negociar o plano de seguimento, como dar o resultado normal, como lidar com pedidos de novos exames e segunda opinião), de modo que o texto tenha no mínimo 700 palavras.",
+    "publicoAlvo": "Médicos de família, residentes e equipes de saúde da UBS",
+    "angulo": "Foco na redução de exames complementares repetitivos e no manejo do vínculo médico-paciente a longo prazo.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Illness Anxiety Disorder\"[Mesh] OR \"Hypochondriasis\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Unnecessary Procedures\"[Mesh] OR \"Diagnostic Tests, Routine\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Illness Anxiety Disorder\"[Mesh]) AND (\"Physician-Patient Relations\"[Mesh] OR \"Communication\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Hypochondriasis\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Practice Guidelines as Topic\"[Mesh])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Illness Anxiety Disorder\"[Mesh] OR \"Hypochondriasis\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Meta-Analysis\" [Publication Type])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Condições Específicas",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Quando um irmão tem doença crônica: cuidando também dos outros filhos",
+        "categoria": "Pais & Famílias",
+        "score": 0.3,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:25.542Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "ultimaTentativaRascunho": {
+      "em": "2026-09-30T22:01:26.242Z",
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a.md",
+      "motivo": "estrutura: texto curto (545 palavras; mínimo 600)"
+    },
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a.md",
+      "slug": "hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a",
+      "geradoEm": "2026-09-30T22:40:01.521Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:40:01.521Z"
+  },
+  {
+    "id": "2026-09-30-122-mutismo-seletivo-na-infancia-i",
+    "tipo": "artigo-cientifico",
+    "titulo": "Mutismo seletivo na infância: identificação precoce e conduta na UBS",
+    "pauta": "Orienta profissionais da atenção primária a reconhecer o mutismo seletivo em crianças durante consultas de rotina. Apresenta orientações práticas para a família e critérios para o encaminhamento oportuno para fonoaudiologia e saúde mental.",
+    "publicoAlvo": "Médicos de família, pediatras e profissionais de saúde da UBS",
+    "angulo": "Diferenciação entre timidez extrema e mutismo seletivo com foco na atuação do médico de família.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Selective Mutism\"[Mesh]) AND (\"Early Diagnosis\"[Mesh] OR \"Primary Health Care\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Selective Mutism\"[Mesh]) AND (\"General Practice\"[Mesh] OR \"Physicians, Family\"[Mesh])",
+        "tipoDeEstudo": "Diretriz Clínica"
+      },
+      {
+        "consultaPubMed": "(\"Selective Mutism\"[Mesh] AND \"Child\"[Mesh]) AND (\"Speech Therapy\"[Mesh] OR \"Mental Health\"[Mesh])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Selective Mutism\"[Mesh]) AND (\"Referral and Consultation\"[Mesh] OR \"Diagnosis, Differential\"[Mesh])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Condições Específicas",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.19,
+        "simTitulo": 0.17
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T10:24:25.542Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta.md",
+      "slug": "mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta",
+      "geradoEm": "2026-09-30T22:01:32.634Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:01:32.634Z"
+  },
+  {
+    "id": "2026-09-30-123-catatonia-na-infancia-e-adoles",
+    "tipo": "artigo-cientifico",
+    "titulo": "Catatonia na Infância e Adolescência: Reconhecimento e Manejo no PA",
+    "pauta": "Guia prático para residentes e médicos de atendimento urgente abordando a identificação rápida da catatonia pediátrica, seus sinais motores e autonômicos, além da conduta terapêutica inicial na emergência médica. O texto destaca a importância do diagnóstico diferencial com quadros psicóticos e neurológicos agudos para evitar complicações graves.",
+    "publicoAlvo": "Residentes de medicina de família, pediatria e médicos de pronto atendimento",
+    "angulo": "Foco específico na apresentação clínica e manejo de urgência da catatonia em pacientes pediátricos, um desafio diagnóstico frequente na emergência.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "catatonia AND child AND adolescent AND emergency",
+        "tipoDeEstudo": "Revisão narrativa",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "catatonia[MeSH Terms] AND management AND emergency department",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "pediatric catatonia diagnosis and treatment",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Catatonia na emergência médica: reconhecimento e manejo inicial",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.43,
+        "simTitulo": 0.55
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Catatonia na emergência médica: reconhecimento e manejo inicial\" (similaridade 0.43, título 0.55)"
+    ],
+    "criadaEm": "2026-09-30T21:54:52.274Z"
+  },
+  {
+    "id": "2026-09-30-124-sindrome-de-abstinencia-de-nic",
+    "tipo": "artigo-cientifico",
+    "titulo": "Síndrome de abstinência de nicotina no PA: manejo rápido para residentes",
+    "pauta": "Este guia prático oferece aos residentes de medicina de família e emergência o passo a passo para reconhecer e manejar a síndrome de abstinência de nicotina aguda no pronto atendimento. Aborda a avaliação dos sintomas de fissura intensa, irritabilidade e ansiedade, além de orientações claras sobre a introdução imediata de terapia de reposição de nicotina e suporte farmacológico de primeira linha. O objetivo é capacitar o médico em formação para aliviar o sofrimento agudo e prevenir o abandono precoce da tentativa de cessação.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, Médicos de Pronto Atendimento e Estudantes de Medicina",
+    "angulo": "Foco específico na conduta de urgência para a abstinência tabágica aguda no ambiente de emergência, uma lacuna comum nos manuais tradicionais.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "\"Tobacco Use Cessation\"[MeSH] AND \"Emergency Service, Hospital\"[MeSH]",
+        "tipoDeEstudo": "Revisão Sistemática e Metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "\"Nicotine Withdrawal\"[MeSH] AND \"Emergency Treatment\"[MeSH]",
+        "tipoDeEstudo": "Diretriz Clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "\"Smoking Cessation\"[MeSH] AND \"Primary Health Care\"[MeSH]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Urgências de abstinência de substâncias no PA: guia rápido",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.39,
+        "simTitulo": 0.4
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Urgências de abstinência de substâncias no PA: guia rápido\" (similaridade 0.39, título 0.40)"
+    ],
+    "criadaEm": "2026-09-30T21:54:55.262Z"
+  },
+  {
+    "id": "2026-09-30-125-uso-de-psicoestimulantes-no-td",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso de psicoestimulantes no TDAH em adultos: guia prático na APS",
+    "pauta": "Este guia prático para residentes e médicos de família aborda a prescrição, o monitoramento e os cuidados cardiovasculares e psiquiátricos no manejo do TDAH em adultos na Atenção Primária à Saúde. O texto detalha a avaliação inicial, a titulação segura e a identificação de comorbidades comuns no atendimento ambulatorial. O objetivo é fornecer uma conduta baseada em evidências para o manejo farmacológico seguro na rotina da UBS.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da APS",
+    "angulo": "Foco exclusivo na prática da atenção primária e do residente, unindo segurança farmacológica e manejo de comorbidades em adultos.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Attention Deficit Disorder with Hyperactivity[Mesh] AND Adult AND General Practice",
+        "tipoDeEstudo": "Diretriz Clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Central Nervous System Stimulants[Mesh] AND Attention Deficit Disorder with Hyperactivity[Mesh] AND Adult[Mesh] AND Safety",
+        "tipoDeEstudo": "Revisão Sistemática e Metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Primary Health Care AND Attention Deficit Disorder with Hyperactivity[Mesh] AND Prescribing Patterns",
+        "tipoDeEstudo": "Ensaio Clínico Controlado",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "TDAH em adultos: sinais que muitas pessoas não reconhecem",
+        "categoria": "Pacientes & Famílias",
+        "score": 0.44,
+        "simTitulo": 0.4
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"TDAH em adultos: sinais que muitas pessoas não reconhecem\" (similaridade 0.44, título 0.40)"
+    ],
+    "criadaEm": "2026-09-30T21:54:58.273Z"
+  },
+  {
+    "id": "2026-09-30-126-uso-de-psicoestimulantes-no-td",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso de psicoestimulantes no TDAH em adultos: guia prático na APS",
+    "pauta": "Aborda a avaliação diagnóstica e a prescrição segura de psicoestimulantes para adultos com TDAH no contexto da Atenção Primária à Saúde. O texto oferece um guia prático para residentes e médicos de família sobre titulação, monitoramento de efeitos adversos e prevenção de desvios de conduta. O material é essencial para qualificar o manejo de transtornos do neurodesenvolvimento na rotina do posto de saúde.",
+    "publicoAlvo": "Residentes de medicina de família e comunidade e estudantes de medicina",
+    "angulo": "Foco específico na realidade de recursos da APS e no manejo longitudinal pelo médico generalista.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Attention Deficit Hyperorder Disorder AND adults AND stimulants AND primary care",
+        "tipoDeEstudo": "Diretriz Clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Methylphenidate AND Lisdexamfetamine AND safety AND primary health care",
+        "tipoDeEstudo": "Revisão Sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Adult ADHD AND pharmacotherapy AND general practice",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "TDAH em adultos: sinais que muitas pessoas não reconhecem",
+        "categoria": "Pacientes & Famílias",
+        "score": 0.43,
+        "simTitulo": 0.4
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"TDAH em adultos: sinais que muitas pessoas não reconhecem\" (similaridade 0.43, título 0.40)"
+    ],
+    "criadaEm": "2026-09-30T21:55:00.909Z"
+  },
+  {
+    "id": "2026-09-30-127-sindrome-de-descontinuacao-de-",
+    "tipo": "artigo-cientifico",
+    "titulo": "Síndrome de descontinuação de antidepressivos na APS: guia prático",
+    "pauta": "Aborda o raciocínio clínico essencial para diferenciar sintomas de abstinência de recaída na atenção primária. Oferece um protocolo estruturado de desmame gradual para residentes e médicos de família.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da APS",
+    "angulo": "Foco específico no manejo prático do desmame e diagnóstico diferencial na rotina da UBS",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "antidepressant discontinuation syndrome AND primary health care",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "antidepressant withdrawal symptoms AND tapering protocols",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "antidepressant discontinuation vs relapse AND general practice",
+        "tipoDeEstudo": "Estudo observacional",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 4,
+    "temaPedido": "Síndrome de Descontinuação de Antidepressivos na APS: Raciocínio Clínico, Diagnóstico Diferencial e Protocolo de Desmame Gradual",
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Síndrome serotoninérgica na emergência: reconhecer para salvar",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.29,
+        "simTitulo": 0.22
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T21:58:11.266Z",
+    "aprovadaEm": "2026-09-30T21:58:15.547Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr.md",
+      "slug": "sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr",
+      "geradoEm": "2026-09-30T22:01:44.606Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T22:01:44.606Z"
   }
 ]
