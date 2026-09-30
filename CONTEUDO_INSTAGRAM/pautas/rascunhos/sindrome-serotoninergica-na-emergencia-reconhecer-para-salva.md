@@ -34,8 +34,6 @@ Se você está no plantão do pronto atendimento, sabe que a pressão para tomar
 
 ## Guia Prático
 
-## Guia Prático
-
 Apresentação clínica:
 - A tríade clássica envolve alterações mentais, disfunção autonômica e hiperatividade neuromuscular.
 - Alterações mentais: ansiedade, agitação, confusão mental e até coma.
@@ -57,16 +55,12 @@ O que fazer imediatamente:
 
 ## Fisiopatologia
 
-## Fisiopatologia
-
 - O sistema serotoninérgico envolve vias complexas no cérebro e na medula espinhal, regulando humor, sono, percepção de dor e tônus autonômico.
 - Quando há um excesso acentuado de serotonina nas fendas sinápticas, ocorre a estimulação hiperativa dos receptores pós-sinápticos, principalmente os subtipos 5-HT1A e 5-HT2A.
 - Essa estimulação em massa gera uma resposta em cascata que afeta o sistema nervoso central e o sistema nervoso autônomo.
 - A rigidez e a hiperreflexia decorrem dessa facilitação excitotóxica na medula espinhal.
 - A hipertermia grave, um dos maiores riscos de mortalidade, resulta da intensa atividade muscular associada à disfunção autonômica.
 - Diferenciar da Síndrome Neuroléptica Maligna é fundamental: enquanto a serotoninérgica surge rápido (geralmente em horas após a alteração da dose), tem hiperreflexia marcante e mioclonia, a maligna surge de forma mais gradual (dias), associada a bloqueadores de dopamina, apresentando hiporreflexia e rigidez em "cano de chumbo".
-
-## Manejo Clínico
 
 ## Manejo Clínico
 

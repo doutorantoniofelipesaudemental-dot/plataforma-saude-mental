@@ -24,7 +24,7 @@ Deixar sua terra, sua língua e seus afetos para trás é um dos maiores desafio
 
 ## Guia Prático
 
-## Guia Prático para o Migrante e sua Família
+### Guia Prático para o Migrante e sua Família
 
 Recomeçar em outro lugar consome muita energia física e mental. Para ajudar você a atravessar essa fase com mais suavidade, reunimos algumas orientações importantes.
 
@@ -37,7 +37,7 @@ Recomeçar em outro lugar consome muita energia física e mental. Para ajudar vo
 
 ## Fisiopatologia
 
-## O que acontece no corpo e na mente
+### O que acontece no corpo e na mente
 
 O termo Síndrome de Ulisses descreve o quadro de estresse crônico e intenso vivenciado por migrantes que enfrentam situações extremas de adversidade, isolamento e incerteza quanto ao futuro. O nome faz referência ao herói grego Ulisses, que sofreu inúmeras provações e perdas longe de sua terra natal.
 
@@ -47,7 +47,7 @@ Com o passar do tempo, esse excesso de alerta desgasta o organismo. É por isso 
 
 ## Manejo Clínico
 
-## Manejo Clínico e Quando Buscar Ajuda Profissional
+### Manejo Clínico e Quando Buscar Ajuda Profissional
 
 Identificar a diferença entre o estresse normal da adaptação e o adoecimento psíquico é fundamental para garantir o seu bem-estar e o da sua família.
 

@@ -32,7 +32,7 @@ Olá, colega médico. Quando nos deparamos com um paciente imóvel, mudo ou que 
 
 ## Guia Prático
 
-## Guia Prático de Reconhecimento e Manejo
+### Guia Prático de Reconhecimento e Manejo
 
 Identificar a catatonia exige um olhar atento e uma avaliação sistemática à beira do leito. Vamos focar nos passos essenciais para o plantão.
 
@@ -51,7 +51,7 @@ Identificar a catatonia exige um olhar atento e uma avaliação sistemática à 
 
 ## Fisiopatologia
 
-## Fisiopatologia da Catatonia
+### Fisiopatologia da Catatonia
 
 Compreender o que acontece no cérebro do paciente catatônico nos ajuda a direcionar o tratamento com mais segurança e tranquilidade.
 
@@ -65,7 +65,7 @@ Embora os mecanismos exatos ainda sejam objeto de estudo, a principal teoria apo
 
 ## Manejo Clínico
 
-## Manejo Clínico na Emergência
+### Manejo Clínico na Emergência
 
 O manejo inicial na sala de emergência ou na unidade básica de saúde deve ser rápido, seguro e focado em reverter o quadro e afastar causas orgânicas.
 

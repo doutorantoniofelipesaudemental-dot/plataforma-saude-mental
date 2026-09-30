@@ -23,7 +23,7 @@ Professor, eu sei que o seu dia a dia na sala de aula tem sido um desafio intens
 
 ## Guia Prático
 
-## Guia Prático para o Manejo de Conflitos
+### Guia Prático para o Manejo de Conflitos
 
 A comunicação clara e o suporte institucional são as ferramentas mais importantes para prevenir o esgotamento docente.
 
@@ -35,7 +35,7 @@ A comunicação clara e o suporte institucional são as ferramentas mais importa
 
 ## Fisiopatologia
 
-## Por Que o Conflito Escolar Adoece?
+### Por Que o Conflito Escolar Adoece?
 
 O cérebro humano interpreta situações de conflito interpessoal prolongado e falta de suporte como ameaças contínuas à sobrevivência. Quando você enfrenta tensões diárias na escola sem uma rede de proteção adequada, o sistema nervoso permanece em estado de alerta crônico.
 
@@ -45,7 +45,7 @@ O cérebro humano interpreta situações de conflito interpessoal prolongado e f
 
 ## Manejo Clínico
 
-## Manejo Clínico e Apoio ao Educador
+### Manejo Clínico e Apoio ao Educador
 
 Cuidar de quem ensina exige uma abordagem que vai muito além do indivíduo, envolvendo a rede de saúde e a estrutura da própria escola.
 

@@ -24,7 +24,7 @@ Cuidar de um familiar idoso que precisa de assistência constante é um ato prof
 
 ## Guia Prático
 
-## Guia Prático para Participar e Apoiar Grupos na APS
+### Guia Prático para Participar e Apoiar Grupos na APS
 
 ### O que você, cuidador, pode fazer
 - **Busque a sua UBS:** Pergunte na sua unidade de saúde sobre a existência de grupos voltados para cuidadores de idosos.
@@ -39,7 +39,7 @@ Cuidar de um familiar idoso que precisa de assistência constante é um ato prof
 
 ## Fisiopatologia
 
-## Por Dentro do Estresse Crônico do Cuidador
+### Por Dentro do Estresse Crônico do Cuidador
 
 O ato de cuidar de forma prolongada, especialmente diante de doenças degenerativas e perda de autonomia do idoso, mantém o corpo do cuidador em estado de alerta constante. Esse desgaste contínuo ativa de forma crônica o eixo do estresse, elevando a produção de hormônios como o cortisol e a adrenalina.
 
@@ -49,7 +49,7 @@ Participar de intervenções grupais estruturadas ajuda a quebrar esse ciclo de 
 
 ## Manejo Clínico
 
-## Manejo Clínico e Condução na Atenção Primária
+### Manejo Clínico e Condução na Atenção Primária
 
 ### Abordagem de Primeira Linha
 - **Intervenção Psicoeducativa em Grupo:** Realizar encontros regulares focados em técnicas de manejo de estresse, resolução de conflitos familiares e educação sobre a condição do idoso.

@@ -35,8 +35,6 @@ Encarar uma situação de agitação psicomotora no pronto atendimento exige cal
 
 ## Guia Prático
 
-## Guia Prático
-
 A abordagem inicial da agitação psicomotora começa muito antes dos medicamentos. O primeiro passo é garantir a segurança do ambiente, afastando objetos cortantes e mantendo uma via de fuga livre para você e para o paciente.
 
 ### Acolhimento e Postura
@@ -59,8 +57,6 @@ A abordagem inicial da agitação psicomotora começa muito antes dos medicament
 
 ## Fisiopatologia
 
-## Fisiopatologia
-
 A agitação psicomotora aguda não é um diagnóstico isolado, mas uma via final comum para diversas condições médicas, psiquiátricas e toxicológicas.
 
 ### Mecanismos Envolvidos
@@ -70,8 +66,6 @@ A agitação psicomotora aguda não é um diagnóstico isolado, mas uma via fina
 - **Causas Orgânicas:** Hipóxia, hipoglicemia, sepse, encefalopatia hepática ou toxinas alteram rapidamente o metabolismo cerebral, gerando delirium e desorganização.
 
 Compreender esses mecanismos nos lembra que o cérebro em agitação está disparando alarmes falsos de perigo iminente. A nossa intervenção visa desligar esse alarme com o menor dano possível.
-
-## Manejo Clínico
 
 ## Manejo Clínico
 

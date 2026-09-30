@@ -75,11 +75,24 @@ function trechosParaRevisaoMedica(md, tipo = 'artigo-cientifico') {
     .map((l) => (l.length > 160 ? `${l.slice(0, 157)}…` : l));
 }
 
+/**
+ * O modelo às vezes abre o texto da seção com um título próprio. Se for o mesmo da seção, sai; se for outro
+ * ("Guia Prático para a Equipe"), vira subtítulo (###), para não haver dois ## seguidos.
+ */
+function semTituloRepetido(texto, titulo) {
+  const t = String(texto).trim();
+  const m = t.match(/^(?:#{1,6}[ \t]*|\*\*)([^\n]+?)(?:\*\*)?[ \t]*\n+/);
+  if (!m) return t;
+  const limpo = m[1].replace(/[*:#]/g, '').trim();
+  const resto = t.slice(m[0].length).trim();
+  return limpo.toLowerCase() === titulo.toLowerCase() ? resto : `### ${limpo}\n\n${resto}`;
+}
+
 function montarCorpo(pauta, d) {
   if (pauta.tipo === 'cronica') {
     return [d.texto.trim()].join('\n');
   }
-  const l = [d.introducao.trim(), '', '## Guia Prático', '', d.guiaPratico.trim(), '', '## Fisiopatologia', '', d.fisiopatologia.trim(), '', '## Manejo Clínico', '', d.manejoClinico.trim()];
+  const l = [d.introducao.trim(), '', '## Guia Prático', '', semTituloRepetido(d.guiaPratico, 'Guia Prático'), '', '## Fisiopatologia', '', semTituloRepetido(d.fisiopatologia, 'Fisiopatologia'), '', '## Manejo Clínico', '', semTituloRepetido(d.manejoClinico, 'Manejo Clínico')];
   if (d.pontosChave?.length) l.push('', '## Pontos-chave', '', ...d.pontosChave.map((p) => `- ${p}`));
   return l.join('\n');
 }

@@ -23,7 +23,7 @@ Se você assumiu o cuidado de um ente querido em cuidados paliativos domiciliare
 
 ## Guia Prático
 
-## Guia Prático para o Cuidador
+### Guia Prático para o Cuidador
 
 Cuidar de alguém com dependência funcional severa exige estratégias reais para evitar o esgotamento total. Aqui estão passos fundamentais que podemos adotar no dia a dia:
 
@@ -35,7 +35,7 @@ Cuidar de alguém com dependência funcional severa exige estratégias reais par
 
 ## Fisiopatologia
 
-## O Impacto da Vigília Ininterrupta no Organismo
+### O Impacto da Vigília Ininterrupta no Organismo
 
 O corpo de quem cuida de um paciente em estágio avançado passa por alterações profundas devido ao estresse crônico e prolongado.
 
@@ -45,7 +45,7 @@ O corpo de quem cuida de um paciente em estágio avançado passa por alteraçõe
 
 ## Manejo Clínico
 
-## Manejo Clínico e Apoio Profissional
+### Manejo Clínico e Apoio Profissional
 
 Na atenção primária, nosso objetivo é identificar o sofrimento do cuidador antes que ocorra o colapso completo. 
 

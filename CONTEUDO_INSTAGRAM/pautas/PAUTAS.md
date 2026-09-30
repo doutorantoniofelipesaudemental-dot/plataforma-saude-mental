@@ -5,11 +5,12 @@
 | Categoria | Propostas | Aprovadas | Redigidas | Rejeitadas | Com problemas |
 |---|---:|---:|---:|---:|---:|
 | Relatos da Prática | 0 | 0 | 17 | 9 | 9 |
-| Residentes & Estudantes | 0 | 0 | 13 | 3 | 3 |
-| Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 4 | 6 | 5 |
+| Residentes & Estudantes | 0 | 0 | 19 | 4 | 4 |
+| Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 10 | 9 | 8 |
 | Pacientes & Famílias | 0 | 0 | 6 | 1 | 1 |
 | Condições Específicas | 0 | 0 | 3 | 2 | 2 |
-| **Total** | 0 | 0 | 43 | 21 | 20 |
+| Empresas & RH | 0 | 0 | 8 | 4 | 4 |
+| **Total** | 0 | 0 | 63 | 29 | 28 |
 
 ## [redigida] O balcão da farmácia e as perguntas não feitas
 
@@ -918,3 +919,452 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-eco-dos-passos-vazios-no-corredor-do-plantao-de-domingo.md` · slug: `o-eco-dos-passos-vazios-no-corredor-do-plantao-de-domingo` · pauta: `2026-09-30-64-o-eco-dos-passos-vazios-no-cor`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "A última consulta antes do plantão virar a madrugada" (similaridade 0.29)
+
+## [rejeitada] Nexo causal ocupacional em transtornos mentais: critérios médicos
+
+- **id:** 2026-09-30-65-nexo-causal-ocupacional-em-tra
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda os critérios científicos e legais para o estabelecimento do nexo causal entre o trabalho e os transtornos mentais, como a depressão e a ansiedade. Guia o médico na condução da investigação clínica e na análise dos fatores organizacionais envolvidos.
+- **público:** Médicos do trabalho, clínicos gerais e profissionais de recursos humanos · **ângulo:** Foco estritamente técnico e clínico na avaliação do nexo causal, sem juridiquês excessivo.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `occupational stress AND mental disorders AND causality` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `burnout AND occupational health AND guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Nexo causal em transtornos mentais relacionados ao trabalho" (similaridade 0.53)
+- ⚠️ **problemas:** artigo científico exige de 3 a 6 referências (consultas PubMed); originalidade: paráfrase/redundância de "Nexo causal em transtornos mentais relacionados ao trabalho" (similaridade 0.53, título 0.62)
+
+## [redigida] Emissão de CAT por adoecimento mental: quando e como proceder
+
+- **id:** 2026-09-30-66-emissao-de-cat-por-adoecimento
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta os profissionais de saúde sobre a obrigatoriedade e os critérios técnicos para a emissão da Comunicação de Acidente de Trabalho em casos de transtornos psiquiátricos relacionados ao emprego. Detalha o papel do médico assistente e do médico do trabalho nesse processo.
+- **público:** Médicos assistentes, médicos do trabalho e equipes de medicina ocupacional · **ângulo:** Esclarece o fluxo médico-legal da CAT com empatia e rigor técnico.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Mental Disorders"[Mesh] OR "Burnout, Psychological"[Mesh] OR "Occupational Stress"[Mesh]) AND ("Workers' Compensation"[Mesh] OR "Occupational Health"[Mesh]) AND ("Review"[Publication Type])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Mental Disorders"[Mesh]) AND ("Occupational Diseases"[Mesh] OR "Occupational Health Physicians"[Mesh]) AND ("Jurisprudence"[Mesh] OR "Legislation, Medical"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Burnout, Psychological"[Mesh] OR "Stress, Psychological"[Mesh]) AND ("Sick Leave"[Mesh] OR "Absenteeism"[Mesh]) AND ("Occupational Health"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Occupational Diseases"[Mesh]) AND ("Mental Disorders"[Mesh]) AND ("Meta-Analysis"[Publication Type])` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/emissao-de-cat-por-adoecimento-mental-quando-e-como-proceder.md` · slug: `emissao-de-cat-por-adoecimento-mental-quando-e-como-proceder` · pauta: `2026-09-30-66-emissao-de-cat-por-adoecimento`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Saúde mental de professores: o adoecimento silencioso de quem forma pessoas" (similaridade 0.18)
+
+## [redigida] Readaptação funcional em saúde mental: estratégias na empresa
+
+- **id:** 2026-09-30-67-readaptacao-funcional-em-saude
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Discute o processo de reabilitação e readaptação de trabalhadores que retornam após afastamentos por transtornos mentais comuns. Apresenta condutas para o dimensionamento de cargas de trabalho e adaptação gradual de funções.
+- **público:** Médicos do trabalho, gestores de RH e lideranças organizacionais · **ângulo:** Enfoque na reinserção laboral sustentável e na prevenção de recaídas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Mental Disorders"[Mesh]) AND ("Return to Work"[Mesh]) AND ("Rehabilitation, Vocational"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Occupational Health"[Mesh]) AND ("Mental Health"[Mesh]) AND ("Workload"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Depressive Disorder"[Mesh]) OR ("Anxiety Disorders"[Mesh]) AND ("Return to Work"[Mesh]) AND ("Workplace"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Occupational Health Physicians"[Mesh]) AND ("Mental Disorders"[Mesh]) AND ("Practice Guideline"[Publication Type])` (Diretriz) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/readaptacao-funcional-em-saude-mental-estrategias-na-empresa.md` · slug: `readaptacao-funcional-em-saude-mental-estrategias-na-empresa` · pauta: `2026-09-30-67-readaptacao-funcional-em-saude`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Afastamento por transtorno mental: o que a empresa precisa saber" (similaridade 0.25)
+
+## [redigida] Prevenção quaternária na medicina do trabalho e saúde mental
+
+- **id:** 2026-09-30-68-prevencao-quaternaria-na-medic
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Explora como evitar a iatrogenia e a medicalização excessiva de queixas comuns de estresse no ambiente corporativo. Discute a importância de diferenciar sofrimento ético e existencial de patologias psiquiátricas.
+- **público:** Médicos do trabalho, médicos de família e gestores de saúde corporativa · **ângulo:** Abordagem crítica sobre o excesso de diagnósticos no ambiente de trabalho.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Quaternary Prevention"[Mesh] AND ("Occupational Health"[Mesh] OR "Occupational Medicine"[Mesh]) AND ("Mental Health"[Mesh] OR "Stress, Psychological"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Medicalization"[Mesh] AND "Burnout, Professional"[Mesh] AND ("Primary Prevention"[Mesh] OR "Quaternary Prevention")` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `"Occupational Health Physicians"[Mesh] AND "Mental Disorders"[Mesh] AND "Diagnostic Errors"[Mesh] AND "Quaternary Prevention"` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `"Stress, Psychological"[Mesh] AND "Workplace"[Mesh] AND "Medicalization"[Mesh] AND "Psychiatry"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/prevencao-quaternaria-na-medicina-do-trabalho-e-saude-mental.md` · slug: `prevencao-quaternaria-na-medicina-do-trabalho-e-saude-mental` · pauta: `2026-09-30-68-prevencao-quaternaria-na-medic`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Prevenção de suicídio no ambiente de trabalho: o papel da empresa" (similaridade 0.25)
+
+## [redigida] Manejo da Síndrome do Esgotamento Profissional na Saúde Ocupacional: Do Rastreio ao Plano de Readaptação
+
+- **id:** 2026-09-30-69-gestao-do-estresse-corporativo
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia para o médico do trabalho e o médico assistente sobre a Síndrome do Esgotamento Profissional (burnout) na saúde ocupacional: como rastrear com instrumentos validados, diferenciar de depressão e ansiedade, definir afastamento ou não, estruturar o plano de readaptação com a empresa e acompanhar o retorno, com atenção ao nexo com o trabalho e ao sigilo médico.
+- **público:** médicos do trabalho, médicos assistentes e gestores de saúde ocupacional · **ângulo:** do rastreio ao plano de readaptação, como um percurso clínico contínuo e não como um evento isolado
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Burnout, Professional"[MeSH] AND "Occupational Health"[MeSH] AND screening` (revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `burnout return to work intervention occupational physician` (revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `burnout diagnostic criteria depression differential diagnosis` (revisão narrativa ou diretriz) [PMID A CONFIRMAR]
+  - PubMed: `work rehabilitation burnout randomized controlled trial` (ensaio clínico randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-sindrome-do-esgotamento-profissional-na-saude-ocup.md` · slug: `manejo-da-sindrome-do-esgotamento-profissional-na-saude-ocup` · pauta: `2026-09-30-69-gestao-do-estresse-corporativo`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Readaptação funcional em saúde mental: estratégias na empresa" (similaridade 0.25)
+
+## [redigida] Acolhimento ao sofrimento psíquico agudo no ambiente laboral
+
+- **id:** 2026-09-30-70-acolhimento-ao-sofrimento-psiq
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta gestores e profissionais de saúde sobre como conduzir o primeiro atendimento ou escuta de um colaborador em crise aguda no trabalho. Aborda posturas acolhedoras e o encaminhamento seguro para a rede de saúde.
+- **público:** Equipes de RH, lideranças e profissionais de saúde ocupacional · **ângulo:** Foco na humanização da escuta imediata e na prevenção de danos maiores.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Psychological First Aid"[Mesh] OR "Mental Health First Aid" OR "Crisis Intervention"[Mesh]) AND ("Workplace"[Mesh] OR "Occupational Health"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Administrative Personnel"[Mesh] OR "Leadership"[Mesh] OR "managers") AND ("Mental Health"[Mesh] OR "Psychological Distress"[Mesh]) AND ("Occupational Health Services"[Mesh] OR "Workplace"[Mesh]) AND ("Practice Guideline"[Publication Type] OR "Guideline"[Publication Type])` (Diretriz Clínica / Guia de Boas Práticas) [PMID A CONFIRMAR]
+  - PubMed: `("Mental Health First Aid" OR "gatekeeper training") AND ("Workplace"[Mesh] OR "Occupational Health"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type] OR "Controlled Clinical Trial"[Publication Type])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Crisis Intervention"[Mesh] OR "early intervention") AND ("Psychological Distress"[Mesh] OR "acute stress") AND ("Workplace"[Mesh] OR "occupational setting") AND ("Referral and Consultation"[Mesh] OR "supportive listening")` (Revisão Sistemática / Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral.md` · slug: `acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral` · pauta: `2026-09-30-70-acolhimento-ao-sofrimento-psiq`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Prevenção de suicídio no ambiente de trabalho: o papel da empresa" (similaridade 0.19)
+
+## [redigida] Impacto da cultura organizacional tóxica na saúde mental dos times
+
+- **id:** 2026-09-30-71-impacto-da-cultura-organizacio
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Examina como fatores como microgerenciamento, assédio moral e metas inatingíveis afetam a saúde mental coletiva. Fornece ferramentas para o diagnóstico precoce de ambientes corporativos adoecedores.
+- **público:** Gestores de RH, diretores de empresas e médicos do trabalho · **ângulo:** Análise sistêmica da toxicidade organizacional sob a ótica da medicina preventiva.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Workplace"[Mesh] OR "Organizational Culture"[Mesh]) AND ("Burnout, Professional"[Mesh] OR "Mental Health"[Mesh]) AND ("Systematic Review"[Publication Type] OR "Meta-Analysis"[Publication Type])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Occupational Stress"[Mesh] AND ("Bullying"[Mesh] OR "Personnel Management"[Mesh]) AND ("Mental Health"[Mesh] OR "Depression"[Mesh])` (Estudo Observacional) [PMID A CONFIRMAR]
+  - PubMed: `"Workplace"[Mesh] AND "Occupational Health"[Mesh] AND ("Burnout, Professional"[Mesh] OR "Anxiety"[Mesh]) AND "Practice Guideline"[Publication Type]` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `"Organizational Culture"[Mesh] AND "Occupational Health Services"[Mesh] AND "Primary Prevention"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/impacto-da-cultura-organizacional-toxica-na-saude-mental-dos.md` · slug: `impacto-da-cultura-organizacional-toxica-na-saude-mental-dos` · pauta: `2026-09-30-71-impacto-da-cultura-organizacio`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Cultura de segurança psicológica: o que é e por que importa" (similaridade 0.21)
+
+## [rejeitada] Programas de retorno ao trabalho após afastamento psiquiátrico
+
+- **id:** 2026-09-30-72-programas-de-retorno-ao-trabal
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Detalha a estruturação de programas eficazes para a reintegração de colaboradores após licenças médicas por transtornos mentais. Enfatiza a importância da articulação entre médico assistente, perito e empresa.
+- **público:** Médicos do trabalho, peritos e gestores de recursos humanos · **ângulo:** Visão integrativa e colaborativa do retorno ao trabalho, reduzindo o estigma.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `return to work interventions AND mental illness AND workplace` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `occupational rehabilitation AND psychiatric disorders` (Ensaio clínico) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Retorno ao trabalho após afastamento psiquiátrico" (similaridade 0.62)
+- ⚠️ **problemas:** artigo científico exige de 3 a 6 referências (consultas PubMed); originalidade: cópia de "Retorno ao trabalho após afastamento psiquiátrico" (similaridade 0.62, título 0.91)
+
+## [rejeitada] Prevenção quaternária na medicina do trabalho e saúde mental
+
+- **id:** 2026-09-30-73-prevencao-quaternaria-na-medic
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda a importância de evitar iatrogenias e medicalização excessiva do sofrimento cotidiano no ambiente de trabalho. Discute como a medicina ocupacional pode acolher a angústia sem transformar conflitos laborais em diagnósticos psiquiátricos desnecessários.
+- **público:** Médicos do trabalho, profissionais de RH e gestores de saúde ocupacional · **ângulo:** Foco na prevenção de excessos diagnósticos e na proteção contra a medicalização precoce do estresse laboral.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `occupational health AND quaternary prevention AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `medicalization of work AND occupational psychiatry AND overdiagnosis` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+  - PubMed: `workplace stress AND appropriate diagnosis AND occupational medicine guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Prevenção quaternária na medicina do trabalho e saúde mental" (similaridade 0.82)
+- ⚠️ **problemas:** originalidade: cópia de "Prevenção quaternária na medicina do trabalho e saúde mental" (similaridade 0.82, título 1.00)
+
+## [rejeitada] Acolhimento ao sofrimento psíquico agudo no ambiente laboral
+
+- **id:** 2026-09-30-74-acolhimento-ao-sofrimento-psiq
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta lideranças e equipes de medicina ocupacional sobre como agir diante de uma crise emocional aguda dentro da empresa. Apresenta condutas iniciais humanizadas, escuta qualificada e critérios para o encaminhamento adequado à rede de saúde.
+- **público:** Profissionais de recursos humanos, médicos do trabalho e líderes de equipes · **ângulo:** Diretrizes práticas de manejo imediato para crises emocionais no espaço corporativo.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `psychological first aid AND workplace AND crisis intervention` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `acute mental health crisis AND occupational setting AND management` (Estudo observacional) [PMID A CONFIRMAR]
+  - PubMed: `emergency mental health protocols AND workplace guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.8)
+- ⚠️ **problemas:** originalidade: cópia de "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.80, título 1.00)
+
+## [redigida] Avaliação de riscos psicossociais no trabalho: ferramentas práticas
+
+- **id:** 2026-09-30-75-avaliacao-de-riscos-psicossoci
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo detalha instrumentos validados para identificar fatores de estresse psicossocial nas organizações antes que ocorram danos clínicos. Aborda como o médico do trabalho pode aplicar escalas de avaliação para guiar planos preventivos corporativos baseados em evidências científicas.
+- **público:** Médicos do trabalho, profissionais de RH, gestores de equipes e líderes corporativos. · **ângulo:** Foco estrito em metodologias de triagem preventiva e mapeamento de riscos psicossociais validadas pela literatura internacional.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `occupational stress AND psychosocial risk factors AND screening tools` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `workplace mental health AND primary prevention AND organizational intervention` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `job strain model AND mental health AND occupational health` (Estudo de coorte) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-riscos-psicossociais-no-trabalho-ferramentas-pr.md` · slug: `avaliacao-de-riscos-psicossociais-no-trabalho-ferramentas-pr` · pauta: `2026-09-30-75-avaliacao-de-riscos-psicossoci`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Avaliação neuropsicológica breve na Atenção Primária" (similaridade 0.24)
+
+## [redigida] Prevenção do absenteísmo psiquiátrico: diretrizes para o médico avaliador
+
+- **id:** 2026-09-30-76-prevencao-do-absenteismo-psiqu
+- **categoria:** Empresas & RH · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Discute o manejo clínico e pericial do afastamento por transtornos mentais comuns, destacando estratégias para evitar a cronificação do adoecimento. Apresenta condutas baseadas em diretrizes para promover uma reinserção laboral segura e humanizada.
+- **público:** Médicos de família e comunidade, médicos do trabalho, peritos e equipes multidisciplinares. · **ângulo:** Enfoque na prevenção da cronificação e na articulação entre licença médica, tratamento e reabilitação profissional.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `absenteeism AND mental disorders AND return to work` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `occupational psychiatry AND mental health leave AND rehabilitation` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `work disability AND depression AND secondary prevention` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/prevencao-do-absenteismo-psiquiatrico-diretrizes-para-o-medi.md` · slug: `prevencao-do-absenteismo-psiquiatrico-diretrizes-para-o-medi` · pauta: `2026-09-30-76-prevencao-do-absenteismo-psiqu`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Prevenção quaternária na medicina do trabalho e saúde mental" (similaridade 0.24)
+
+## [rejeitada] Professores frente à violência escolar: protocolos de apoio emocional
+
+- **id:** 2026-09-30-77-professores-frente-a-violencia
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta práticas e estratégias de suporte psicológico para docentes expostos a episódios de violência no ambiente escolar. Importante para mitigar o desenvolvimento de estresse pós-traumático e burnout nesta população.
+- **público:** Professores e educadores da rede de ensino · **ângulo:** Foco exclusivo no suporte imediato e prevenção de sequelas emocionais em professores vítimas ou testemunhas de violência escolar.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Occupational stress AND school violence AND teachers AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Teacher burnout AND violence exposure AND psychological intervention` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Occupational health AND teachers AND post-traumatic stress` (Diretrizes clínicas) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Conflitos escolares e saúde docente: manejo e apoio na inclusão" (similaridade 0.36)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Conflitos escolares e saúde docente: manejo e apoio na inclusão" (similaridade 0.36, título 0.29)
+
+## [rejeitada] Cuidadores de idosos acamados: manejo do isolamento social e afeto
+
+- **id:** 2026-09-30-78-cuidadores-de-idosos-acamados-
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda o impacto do isolamento social prolongado na saúde mental de cuidadores familiares de idosos acamados ou dependentes totais. Oferece estratégias práticas de autocuidado e preservação de redes de apoio.
+- **público:** Cuidadores familiares de idosos · **ângulo:** Aborda a solidão e o isolamento invisível enfrentado por quem cuida integralmente de um idoso restrito ao leito.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Caregivers AND bedridden elderly AND social isolation AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Family caregivers AND loneliness AND psychological distress AND interventions` (Ensaio clínico) [PMID A CONFIRMAR]
+  - PubMed: `Home care AND caregivers AND support networks AND guidelines` (Diretrizes de prática clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática" (similaridade 0.4)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática" (similaridade 0.40, título 0.31)
+
+## [redigida] Professores e inclusão: manejo da ansiedade na sala de aula inclusiva
+
+- **id:** 2026-09-30-79-professores-e-inclusao-manejo-
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Discute a sobrecarga emocional e a ansiedade vivenciada por professores diante dos desafios da educação inclusiva sem suporte adequado. Fornece ferramentas práticas de manejo do estresse no cotidiano escolar.
+- **público:** Professores e educadores · **ângulo:** Conecta a demanda pedagógica da inclusão escolar com a vivência de ansiedade crônica e insuficiência percebida pelo docente.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Inclusive education AND teachers AND occupational stress AND anxiety` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `Special education needs AND teacher burnout AND coping strategies` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Teachers AND inclusive classrooms AND mental health guidelines` (Diretrizes práticas) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i.md` · slug: `professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i` · pauta: `2026-09-30-79-professores-e-inclusao-manejo-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Conflitos escolares e saúde docente: manejo e apoio na inclusão" (similaridade 0.29)
+
+## [redigida] Cuidadores de jovens com autismo severo: transição para a vida adulta
+
+- **id:** 2026-09-30-80-cuidadores-de-jovens-com-autis
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta familiares sobre os desafios psicológicos e práticos durante a transição de jovens com autismo severo para a vida adulta e o término da rede escolar. Fundamental para planejar o futuro com menos ansiedade.
+- **público:** Cuidadores familiares de pessoas com deficiência · **ângulo:** Foca no marco específico da transição para a vida adulta e no medo do futuro que aflige os cuidadores.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Autism spectrum disorder AND transition to adulthood AND parental stress` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Caregivers AND severe autism AND adult transition AND mental health` (Estudo qualitativo) [PMID A CONFIRMAR]
+  - PubMed: `Family support AND intellectual disability AND adult transition AND guidelines` (Diretrizes clínicas) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid.md` · slug: `cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid` · pauta: `2026-09-30-80-cuidadores-de-jovens-com-autis`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Trauma na infância: como pode afetar a vida adulta" (similaridade 0.3)
+
+## [redigida] Professores iniciantes: prevenção do choque de realidade e exaustão
+
+- **id:** 2026-09-30-81-professores-iniciantes-prevenc
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda o fenômeno do 'choque de realidade' nos primeiros anos de docência e sua relação com o adoecimento mental precoce. Traz orientações baseadas em evidências para mentoria e acolhimento institucional.
+- **público:** Professores em início de carreira · **ângulo:** Direcionado especificamente aos recém-formados na docência, fase de maior vulnerabilidade para o abandono da profissão e transtornos mentais.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Beginning teachers AND reality shock AND burnout AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Novice teachers AND occupational stress AND resilience interventions` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Teacher induction programs AND mental well-being AND guidelines` (Diretrizes de prática) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-iniciantes-prevencao-do-choque-de-realidade-e-ex.md` · slug: `professores-iniciantes-prevencao-do-choque-de-realidade-e-ex` · pauta: `2026-09-30-81-professores-iniciantes-prevenc`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.18)
+
+## [redigida] Cuidadores de pacientes com doenças raras: o fardo invisível
+
+- **id:** 2026-09-30-82-cuidadores-de-pacientes-com-do
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Examina o impacto psicológico singular enfrentado por familiares que cuidam de pacientes com condições raras ou crônicas complexas. Discute estratégias de resiliência e a importância de validar o sofrimento crônico.
+- **público:** Cuidadores familiares de pessoas com condições raras · **ângulo:** Aborda a especificidade do adoecimento e da solidão institucional vivida por quem cuida de patologias raras.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Rare diseases AND family caregivers AND psychological burden AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Chronic complex conditions AND caregivers AND emotional distress AND coping` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `Rare disease caregivers AND support strategies AND guidelines` (Diretrizes clínicas) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel.md` · slug: `cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel` · pauta: `2026-09-30-82-cuidadores-de-pacientes-com-do`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.21)
+
+## [rejeitada] Cuidadores de idosos dependentes: estratégias para prevenir o colapso
+
+- **id:** 2026-09-30-83-cuidadores-de-idosos-dependent
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo científico aborda o manejo do estresse crônico em cuidadores familiares de idosos com alta dependência funcional, trazendo estratégias práticas para a prevenção do esgotamento emocional. O material fundamenta-se em diretrizes clínicas e revisões sistemáticas para orientar profissionais e familiares na identificação precoce do burnout do cuidador. A leitura é essencial para garantir suporte adequado a quem dedica a vida ao cuidado diário.
+- **público:** Cuidadores familiares de idosos dependentes · **ângulo:** Foco exclusivo na transição do cuidado domiciliar intensivo e na prevenção do colapso físico e mental do cuidador familiar, diferenciando-se de abordagens voltadas apenas ao paciente idoso.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `caregiver burden elderly home care systematic review[MeSH Terms]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `family caregiver mental health intervention randomized controlled trial[MeSH Terms]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `burnout in informal caregivers of older adults guidelines[MeSH Terms]` (Diretriz Clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.5)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.50, título 0.46)
+
+## [redigida] Professores e a saúde mental: identificando limites diante da sobrecarga
+
+- **id:** 2026-09-30-84-professores-e-a-saude-mental-i
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo científico analisa os fatores de risco associados ao esgotamento docente e à fadiga por compaixão no ambiente escolar, oferecendo ferramentas baseadas em evidências para o reconhecimento precoce do sofrimento psíquico. O texto discute a importância de redes de apoio institucional e estratégias individuais de autocuidado para educadores. A proposta visa instrumentalizar professores e equipes de saúde a lidarem com a pressão crônica da profissão.
+- **público:** Professores e educadores da rede de ensino · **ângulo:** Integração entre o adoecimento ocupacional docente e o impacto direto do estresse na relação pedagógica, com foco em intervenções práticas na rotina escolar.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `teacher burnout occupational stress systematic review[MeSH Terms]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `educator mental health intervention school environment[MeSH Terms]` (Ensaio Clínico) [PMID A CONFIRMAR]
+  - PubMed: `compassion fatigue in teachers occupational health guidelines[MeSH Terms]` (Diretriz Prática) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-a-saude-mental-identificando-limites-diante-da.md` · slug: `professores-e-a-saude-mental-identificando-limites-diante-da` · pauta: `2026-09-30-84-professores-e-a-saude-mental-i`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.27)
+
+## [redigida] Professores e o luto pedagógico: acolhendo perdas e mudanças na escola
+
+- **id:** 2026-09-30-85-professores-e-o-luto-pedagogic
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo aborda o impacto emocional do luto e de perdas significativas na rotina de professores, oferecendo estratégias baseadas em evidências para o suporte institucional e o autocuidado docente. A discussão é fundamental para prevenir o adoecimento mental prolongado e promover ambientes educacionais mais acolhedores e resilientes.
+- **público:** Professores da educação básica e superior, coordenadores pedagógicos e profissionais de saúde escolar · **ângulo:** Foca especificamente na dimensão pouco discutida do luto pedagógico e perdas na rotina escolar, diferenciando-o do esgotamento profissional comum.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Teachers"[Mesh]) AND ("Grief"[Mesh] OR "Bereavement"[Mesh]) AND ("Occupational Stress"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Faculty"[Mesh]) AND ("Burnout, Professional"[Mesh]) AND ("Mental Health"[Mesh])` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `("Schools"[Mesh]) AND ("Crisis Intervention"[Mesh]) AND ("Adaptation, Psychological"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-.md` · slug: `professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-` · pauta: `2026-09-30-85-professores-e-o-luto-pedagogic`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Professores e a saúde mental: identificando limites diante da sobrecarga" (similaridade 0.25)
+
+## [redigida] Urgências de abstinência de substâncias no PA: guia rápido
+
+- **id:** 2026-09-30-86-urgencias-de-abstinencia-de-su
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este guia prático para residentes e estudantes aborda o reconhecimento e manejo inicial de crises graves de abstinência no pronto atendimento. O texto fornece ferramentas objetivas para estabilização segura e critérios claros de encaminhamento hospitalar.
+- **público:** Residentes de Medicina de Família e Comunidade, médicos generalistas e estudantes de medicina · **ângulo:** Foco exclusivo na tomada de decisão rápida e baseada em evidências dentro da realidade do pronto atendimento brasileiro
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Substance Withdrawal Syndrome"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Guideline"[Publication Type] OR "Practice Guideline"[Publication Type])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Alcohol Withdrawal Delirium"[Mesh]) AND ("Emergency Treatment"[Mesh]) AND ("Systematic Review"[Publication Type])` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Substance-Related Disorders"[Mesh]) AND ("Emergencies"[Mesh]) AND ("Disease Management"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Opioid-Related Disorders"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Metaanalysis"[Publication Type])` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/urgencias-de-abstinencia-de-substancias-no-pa-guia-rapido.md` · slug: `urgencias-de-abstinencia-de-substancias-no-pa-guia-rapido` · pauta: `2026-09-30-86-urgencias-de-abstinencia-de-su`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.33)
+
+## [redigida] Transtornos de personalidade na APS: identificação e manejo
+
+- **id:** 2026-09-30-87-transtornos-de-personalidade-n
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** O artigo capacita estudantes e médicos de família a identificar padrões de personalidade desafiadores na rotina do posto de saúde. Apresenta estratégias de comunicação terapêutica e limites claros para evitar o esgotamento da equipe.
+- **público:** Médicos de família, residentes e internos de medicina · **ângulo:** Enfoque na comunicação clínica empática e na preservação da relação médico-paciente a longo prazo na atenção primária
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Personality Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Clinical Clerkship"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Personality Disorders"[Mesh]/diagnosis AND "Physicians, Family"[Mesh] AND "Communication"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `"Physician-Patient Relations"[Mesh] AND "Personality Disorders"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Burnout, Professional"[Mesh] AND "Personality Disorders"[Mesh] AND "General Practice"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `"Personality Disorders"[Mesh] AND "Delivery of Health Care, Integrated"[Mesh] AND "Practice Guidelines as Topic"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtornos-de-personalidade-na-aps-identificacao-e-manejo.md` · slug: `transtornos-de-personalidade-na-aps-identificacao-e-manejo` · pauta: `2026-09-30-87-transtornos-de-personalidade-n`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Assédio moral no trabalho: identificação e encaminhamento" (similaridade 0.2)
+
+## [redigida] Reações adversas a psicofármacos na UBS: o que monitorar
+
+- **id:** 2026-09-30-88-reacoes-adversas-a-psicofarmac
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este material orienta residentes e médicos generalistas sobre a identificação precoce e o manejo de efeitos colaterais comuns de antidepressivos e estabilizadores de humor. O foco é garantir a adesão ao tratamento sem expor o paciente a riscos desnecessários.
+- **público:** Estudantes de medicina, residentes de MFC e médicos generalistas · **ângulo:** Visão prática voltada para a segurança do paciente e manejo de intercorrências farmacológicas na rede básica
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Antidepressive Agents"[Mesh] OR "Mood Stabilizing Agents"[Mesh]) AND ("Drug-Related Side Effects and Adverse Reactions"[Mesh] OR "Drug Toxicity"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Antidepressive Agents/adverse effects"[Mesh] AND "Primary Health Care"[Mesh] AND "General Practice"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Mood Stabilizing Agents/adverse effects"[Mesh] OR "Lithium/adverse effects"[Mesh]) AND ("Monitoring, Physiologic"[Mesh] OR "Safety Management"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Depressive Disorder/drug therapy"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND "Medication Adherence"[Mesh] AND "Drug-Related Side Effects and Adverse Reactions"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/reacoes-adversas-a-psicofarmacos-na-ubs-o-que-monitorar.md` · slug: `reacoes-adversas-a-psicofarmacos-na-ubs-o-que-monitorar` · pauta: `2026-09-30-88-reacoes-adversas-a-psicofarmac`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.26)
+
+## [redigida] Avaliação de queixas somáticas sem causa orgânica óbvia
+
+- **id:** 2026-09-30-89-avaliacao-de-queixas-somaticas
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Abordagem clínica estruturada para investigar sintomas físicos persistentes sem substrato anatômico claro na atenção primária. O texto ensina a validar o sofrimento do paciente enquanto evita exames complementares excessivos e iatrogenias.
+- **público:** Médicos residentes de MFC, internos e clínicos gerais · **ângulo:** Integração entre propedêutica médica humanizada e manejo psicossocial na consulta de rotina
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Medically Unexplained Symptoms"[Mesh] OR "Somatoform Disorders"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Clinical Protocols"[Mesh] OR "Guideline"[Publication Type])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Somatoform Disorders"[Mesh]) AND ("Physician-Patient Relations"[Mesh]) AND ("Unnecessary Procedures"[Mesh] OR "Diagnostic Tests, Routine"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Symptom Assessment"[Mesh]) AND ("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Somatoform Disorders"[Mesh]) AND ("Psychotherapy"[Mesh] OR "Behavior Therapy"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-queixas-somaticas-sem-causa-organica-obvia.md` · slug: `avaliacao-de-queixas-somaticas-sem-causa-organica-obvia` · pauta: `2026-09-30-89-avaliacao-de-queixas-somaticas`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Avaliação do risco de suicídio na APS: o que o médico deve fazer" (similaridade 0.18)
+
+## [rejeitada] Uso de benzodiazepínicos: estratégias seguras de desprescrição
+
+- **id:** 2026-09-30-90-uso-de-benzodiazepinicos-estra
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para profissionais de saúde conduzirem a redução gradual e segura de benzodiazepínicos em pacientes idosos e crônicos na UBS. O conteúdo aborda protocolos de desmame e manejo dos sintomas de rebote.
+- **público:** Residentes de medicina de família e comunidade e médicos de UBS · **ângulo:** Passo a passo fundamentado em evidências para retirada de medicamentos de alto risco na atenção primária
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Benzodiazepines[MeSH] AND Prescription Withdrawal[MeSH] AND Primary Health Care` (Revisão Sistemática e Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `Substance Withdrawal Syndrome[MeSH] AND Hypnotics and Sedatives[MeSH]` (Diretriz Clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.39)
+- ⚠️ **problemas:** artigo científico exige de 3 a 6 referências (consultas PubMed); originalidade: paráfrase/redundância de "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.39, título 0.36)
+
+## [redigida] Manejo da ideação suicida em populações vulneráveis na UBS
+
+- **id:** 2026-09-30-91-manejo-da-ideacao-suicida-em-p
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Protocolo prático para avaliação rápida de risco de suicídio e condutas imediatas de proteção em grupos de alta vulnerabilidade na atenção primária. Destaca a importância do acolhimento sem julgamentos e da articulação com a rede de apoio.
+- **público:** Médicos residentes, estudantes de medicina e equipes multiprofissionais da UBS · **ângulo:** Ferramenta de suporte direto ao clínico diante de situações de crise aguda na comunidade
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Suicidal Ideation"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Vulnerable Populations"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Suicide"[Mesh] / prevention and control) AND ("Primary Health Care"[Mesh]) AND ("Crisis Intervention"[Mesh])` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Suicidal Ideation"[Mesh]) AND ("Risk Assessment"[Mesh]) AND ("General Practice"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Suicide"[Mesh] / prevention and control) AND ("Vulnerable Populations"[Mesh]) AND ("Community Mental Health Services"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs.md` · slug: `manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs` · pauta: `2026-09-30-91-manejo-da-ideacao-suicida-em-p`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.25)
+
+## [redigida] Avaliação de cefaleia tensional e ansiedade na UBS
+
+- **id:** 2026-09-30-92-avaliacao-de-cefaleia-tensiona
+- **categoria:** Residentes & Estudantes · lote 3
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este guia prático para residentes e estudantes aborda a investigação diferencial entre cefaleia tensional e sintomas ansiosos na Atenção Primária. O texto detalha a anamnese direcionada, os sinais de alerta neurológicos e a conduta terapêutica inicial sem medicalização excessiva.
+- **público:** Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da Atenção Primária · **ângulo:** Integra a queixa física frequente (cefaleia) com o rastreio de sofrimento psíquico, otimizando o tempo de consulta na UBS.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `tension-headache AND anxiety AND primary health care` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `somatization AND primary care AND headache management` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `psychiatric comorbidity in tension-type headache` (Estudo de coorte) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-cefaleia-tensional-e-ansiedade-na-ubs.md` · slug: `avaliacao-de-cefaleia-tensional-e-ansiedade-na-ubs` · pauta: `2026-09-30-92-avaliacao-de-cefaleia-tensiona`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.35)

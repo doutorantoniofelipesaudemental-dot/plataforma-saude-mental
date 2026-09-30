@@ -30,8 +30,6 @@ Olá, colega médico em formação. No ritmo intenso do pronto-socorro, deparar-
 
 ## Guia Prático
 
-## Guia Prático
-
 A identificação rápida do delirium começa com a observação atenta da história trazida pelos acompanhantes. A característica principal é o início agudo e a flutuação dos sintomas ao longo do dia.
 
 * **Converse com quem cuida:** Pergunte sempre como o paciente estava dias antes. A alteração cognitiva foi rápida ou gradual?
@@ -42,16 +40,12 @@ A identificação rápida do delirium começa com a observação atenta da hist�
 
 ## Fisiopatologia
 
-## Fisiopatologia
-
 O delirium reflete uma disfunção cerebral difusa, desencadeada por um estresse físico agudo em um cérebro vulnerável.
 
 * **Desequilíbrio de neurotransmissores:** A deficiência relativa de acetilcolina e o excesso de dopamina desempenham um papel central na gênese dos sintomas agudos.
 * **Neuroinflamação:** Processos infecciosos ou inflamatórios periféricos liberam citocinas que atravessam a barreira hematoencefálica, alterando a atividade neuronal.
 * **Hipóxia e estresse metabólico:** Qualquer queda na oferta de oxigênio ou glicose compromete o metabolismo energético dos neurônios, gerando falhas na comunicação sináptica.
 * **Vulnerabilidade prévia:** Idosos, portadores de demência prévia ou com atrofia cerebral têm menor reserva funcional, o que reduz o limiar para o desenvolvimento do quadro diante de um gatilho sistêmico.
-
-## Manejo Clínico
 
 ## Manejo Clínico
 

@@ -36,7 +36,7 @@ Receber uma urgência psiquiátrica na Unidade Básica de Saúde exige calma, pr
 
 ## Guia Prático
 
-## Guia Prático na UBS
+### Guia Prático na UBS
 
 ### 1. Garanta a segurança do ambiente
 - Mantenha a sala de atendimento com a porta destrancada e uma via de saída livre para você e para a equipe.
@@ -60,7 +60,7 @@ Receber uma urgência psiquiátrica na Unidade Básica de Saúde exige calma, pr
 
 ## Fisiopatologia
 
-## Fisiopatologia e Contexto Clínico
+### Fisiopatologia e Contexto Clínico
 
 As urgências psiquiátricas na atenção primária raramente ocorrem no vazio biológico. Muitas vezes, a descompensação aguda reflete uma interação complexa entre vulnerabilidade neurobiológica, estressores psicossociais agudos e condições médicas gerais.
 
@@ -75,7 +75,7 @@ As urgências psiquiátricas na atenção primária raramente ocorrem no vazio b
 
 ## Manejo Clínico
 
-## Manejo Clínico na Atenção Primária
+### Manejo Clínico na Atenção Primária
 
 ### Condutas de primeira linha
 - Priorize a contenção verbal e ambiental. Muitas crises agudas cedem apenas com um ambiente silencioso, escuta empática e atitude firme, porém acolhedora.

@@ -26,8 +26,6 @@ Receber um bebê transforma a rotina de toda a família. Na Unidade Básica de S
 
 ## Guia Prático
 
-## Guia Prático
-
 A aplicação da Escala de Depressão Pós-Parto de Edimburgo na rotina da UBS é uma ferramenta simples e poderosa. Devemos aplicá-la nas consultas de puerpério, especialmente entre a segunda e a sexta semana após o parto, e repetir no retorno de quarentena ou nos primeiros meses de vida da criança.
 
 ### O que observar
@@ -43,15 +41,11 @@ A aplicação da Escala de Depressão Pós-Parto de Edimburgo na rotina da UBS �
 
 ## Fisiopatologia
 
-## Fisiopatologia
-
 O período pós-parto é marcado por flutuações hormonais abruptas. Há uma queda vertiginosa nos níveis de estrogênio, progesterona e hormônios tireoidianos logo após a dequitação placentária. Essas alterações impactam diretamente os sistemas de neurotransmissores cerebrais, em especial a serotonina e a noradrenalina, que regulam o humor, o sono e a disposição.
 
 Além da base neurobiológica, precisamos olhar para os fatores contextuais e psicossociais. A privação crônica de sono, a sobrecarga física e mental, a falta de rede de apoio e eventuais conflitos conjugais ou histórico pessoal de transtornos de humor funcionam como gatilhos importantes. Eles mantêm o sistema nervoso em um estado constante de alerta e esgotamento, dificultando a recuperação natural do equilíbrio emocional.
 
 É fundamental diferenciar o chamado *blues* puerperal da depressão pós-parto propriamente dita. O *blues* é transitório, surge nos primeiros dias após o parto e costuma desaparecer sozinho em até duas semanas, sem causar prejuízo funcional grave. Já a depressão pós-parto apresenta sintomas mais duraderos, intensos e incapacitantes, exigindo intervenção ativa da equipe de saúde.
-
-## Manejo Clínico
 
 ## Manejo Clínico
 

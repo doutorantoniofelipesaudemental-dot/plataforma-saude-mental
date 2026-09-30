@@ -26,8 +26,6 @@ Olá, colega da atenção primária. Quando atendemos alguém na unidade básica
 
 ## Guia Prático
 
-## Guia Prático
-
 ### O que investigar na APS
 Quando a higiene do sono básica falha, precisamos olhar além. Pergunte sobre dor crônica, ronco alto com apneias testemunhadas, sintomas depressivos, ansiedade e o uso oculto de substâncias, incluindo café em excesso e álcool.
 
@@ -44,8 +42,6 @@ Você não precisa ser terapeuta especializado para iniciar os conceitos básico
 
 ## Fisiopatologia
 
-## Fisiopatologia
-
 ### O modelo dos três fatores
 A insônia crônica costuma ser explicada pelo modelo de Spielman, que divide o processo em três fatores:
 - **Predisposição:** Características individuais, como maior reatividade ao estresse ou histórico familiar.
@@ -54,8 +50,6 @@ A insônia crônica costuma ser explicada pelo modelo de Spielman, que divide o 
 
 ### O ciclo da hiperativação
 Com o tempo, o cérebro aprende a associar o quarto e a cama com frustração, ruminação e alerta. Há uma falha nos mecanismos de desligamento cortical. O sistema nervoso simpático permanece ativado quando deveria desacelerar, impedindo a transição natural para as fases mais profundas do sono.
-
-## Manejo Clínico
 
 ## Manejo Clínico
 

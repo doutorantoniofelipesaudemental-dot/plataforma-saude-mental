@@ -29,8 +29,6 @@ Olá, colega residente ou estudante. Seja muito bem-vindo ao nosso espaço de tr
 
 ## Guia Prático
 
-## Guia Prático
-
 ### Acolhimento e Escuta Inicial
 O primeiro passo é sempre a criação de um vínculo seguro. Receba seu paciente com calma, postura aberta e olhar atento.
 - Permita que a pessoa fale sobre o que a aflige sem interrupções precipitadas nos primeiros minutos.
@@ -49,7 +47,7 @@ Na Atenção Primária, nosso foco não é buscar rótulos complexos, mas entend
 
 ## Fisiopatologia
 
-## Fisiopatologia Simplificada
+### Fisiopatologia Simplificada
 
 Compreender os mecanismos biológicos e sociais por trás do sofrimento mental nos ajuda a explicar os sintomas aos pacientes com mais empatia e clareza.
 
@@ -64,7 +62,7 @@ Nenhum adoecimento mental ocorre no vácuo. A vulnerabilidade genética interage
 
 ## Manejo Clínico
 
-## Manejo Clínico na UBS
+### Manejo Clínico na UBS
 
 O manejo na APS deve ser resolutivo, seguro e pautado em intervenções de primeira linha.
 

@@ -29,7 +29,7 @@ Olá, colega da atenção primária. Vamos conversar sobre uma situação muito 
 
 ## Guia Prático
 
-## Guia Prático para a Equipe
+### Guia Prático para a Equipe
 
 O resgate do paciente que abandonou o tratamento começa muito antes da consulta. Ele exige planejamento e sensibilidade de toda a equipe da unidade básica de saúde.
 
@@ -41,7 +41,7 @@ O resgate do paciente que abandonou o tratamento começa muito antes da consulta
 
 ## Fisiopatologia
 
-## Compreendendo o Processo de Recaída
+### Compreendendo o Processo de Recaída
 
 Para planejar o resgate, precisamos entender o que acontece no cérebro e na vida de quem interrompe o tratamento psiquiátrico de forma brusca.
 
@@ -52,7 +52,7 @@ Para planejar o resgate, precisamos entender o que acontece no cérebro e na vid
 
 ## Manejo Clínico
 
-## Manejo Clínico na Atenção Básica
+### Manejo Clínico na Atenção Básica
 
 O atendimento ao paciente resgatado exige avaliação clínica cuidadosa e condutas seguras baseadas em diretrizes da atenção primária.
 

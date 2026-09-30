@@ -25,7 +25,7 @@ Eu vejo você todos os dias no consultório da Atenção Primária. Você chega 
 
 ## Guia Prático
 
-## Guia Prático para o Cuidar e o Cuidar-se
+### Guia Prático para o Cuidar e o Cuidar-se
 
 Cuidar de alguém com deficiência exige planejamento, mas a sua saúde não pode ser o último item da lista. Aqui estão passos práticos para o seu dia a dia:
 
@@ -38,7 +38,7 @@ Cuidar de alguém com deficiência exige planejamento, mas a sua saúde não pod
 
 ## Fisiopatologia
 
-## O Corpo em Alerta Constante: A Fisiopatologia do Estresse Crônico
+### O Corpo em Alerta Constante: A Fisiopatologia do Estresse Crônico
 
 Quando você vive em estado de vigília contínua, o seu organismo interpreta a rotina como uma ameaça constante. Isso ativa o eixo hipotálamo-hipófise-adrenal, liberando doses diárias e elevadas de hormônios como o cortisol e a adrenalina.
 
@@ -48,7 +48,7 @@ A privação crônica de sono impede a reparação dos tecidos e a limpeza metab
 
 ## Manejo Clínico
 
-## Manejo Clínico e Caminhos na Rede de Saúde
+### Manejo Clínico e Caminhos na Rede de Saúde
 
 Na Atenção Primária e no atendimento de saúde mental, nossa prioridade é acolher o seu sofrimento sem julgamentos e criar um plano terapêutico que caiba na sua realidade.
 

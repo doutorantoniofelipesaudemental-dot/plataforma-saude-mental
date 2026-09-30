@@ -23,7 +23,7 @@ Receber um diagnóstico ou perceber que alguém que amamos está sofrendo pode g
 
 ## Guia Prático
 
-## Guia Prático: O Cuidado em Casa
+### Guia Prático: O Cuidado em Casa
 
 Apoiar alguém que passa por um momento difícil na saúde mental exige paciência, escuta e pequenas atitudes diárias que fazem toda a diferença.
 
@@ -46,7 +46,7 @@ Apoiar alguém que passa por um momento difícil na saúde mental exige paciênc
 
 ## Fisiopatologia
 
-## Compreendendo o Sofrimento: Como o Corpo e a Mente Respondem
+### Compreendendo o Sofrimento: Como o Corpo e a Mente Respondem
 
 Muitas vezes, a família se pergunta por que a pessoa não consegue "simplesmente reagir". Para entender isso, precisamos olhar para o funcionamento do nosso corpo.
 
@@ -63,7 +63,7 @@ Quando explicamos esses mecanismos para a família, o sofrimento deixa de ser vi
 
 ## Manejo Clínico
 
-## Manejo Clínico: O Papel da Atenção Primária e os Caminhos do Tratamento
+### Manejo Clínico: O Papel da Atenção Primária e os Caminhos do Tratamento
 
 O cuidado em saúde mental é construído em rede, tendo a Atenção Primária à Saúde como a principal porta de entrada.
 

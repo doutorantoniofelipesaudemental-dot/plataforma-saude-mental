@@ -27,7 +27,7 @@ Falar sobre o sofrimento extremo e sobre a vontade de desaparecer é um dos maio
 
 ## Guia Prático
 
-## Guia Prático para a Abordagem na UBS
+### Guia Prático para a Abordagem na UBS
 
 ### Como iniciar a conversa
 Você não precisa de rodeios. Quando notar sinais de sofrimento intenso, desesperança ou choro frequente, traga o tema com suavidade e firmeza.
@@ -48,7 +48,7 @@ Após a confirmação da ideação, precisamos entender a dimensão do risco par
 
 ## Fisiopatologia
 
-## Entendendo o Sofrimento e a Crise
+### Entendendo o Sofrimento e a Crise
 
 O comportamento suicida não surge de um único fator, mas da interação compleja entre vulnerabilidade biológica, sofrimento psicológico e eventos vitais estressantes.
 
@@ -59,7 +59,7 @@ O comportamento suicida não surge de um único fator, mas da interação comple
 
 ## Manejo Clínico
 
-## Manejo Clínico e Condutas na APS
+### Manejo Clínico e Condutas na APS
 
 O manejo na Atenção Primária exige rapidez, empatia e articulação com a rede de saúde mental.
 

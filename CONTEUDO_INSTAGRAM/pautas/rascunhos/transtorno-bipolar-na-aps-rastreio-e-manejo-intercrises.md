@@ -34,7 +34,7 @@ Seja muito bem-vindo, colega residente e futuro colega de profissão. Atender um
 
 ## Guia Prático
 
-## Guia Prático para o Atendimento na APS
+### Guia Prático para o Atendimento na APS
 
 Identificar o transtorno bipolar na atenção primária exige um olhar atento aos detalhes da história clínica. Muitas vezes, a pessoa busca ajuda apenas na fase depressiva, esquecendo-se de relatar os momentos de euforia ou irritabilidade intensa.
 
@@ -51,7 +51,7 @@ Identificar o transtorno bipolar na atenção primária exige um olhar atento ao
 
 ## Fisiopatologia
 
-## Fisiopatologia e Mecanismos do Humor
+### Fisiopatologia e Mecanismos do Humor
 
 Compreender a base biológica do transtorno bipolar nos ajuda a explicar ao paciente a importância de um tratamento contínuo, mesmo quando ele está bem.
 
@@ -69,7 +69,7 @@ Compreender a base biológica do transtorno bipolar nos ajuda a explicar ao paci
 
 ## Manejo Clínico
 
-## Manejo Clínico e Segurança na APS
+### Manejo Clínico e Segurança na APS
 
 O manejo do transtorno bipolar na atenção primária exige cautela, escuta ativa e trabalho em rede. O objetivo principal na fase intercrises é prevenir novas recaídas e manter a estabilidade.
 

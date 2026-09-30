@@ -3141,5 +3141,1651 @@
       }
     },
     "redigidaEm": "2026-09-30T06:09:30.707Z"
+  },
+  {
+    "id": "2026-09-30-65-nexo-causal-ocupacional-em-tra",
+    "tipo": "artigo-cientifico",
+    "titulo": "Nexo causal ocupacional em transtornos mentais: critérios médicos",
+    "pauta": "Aborda os critérios científicos e legais para o estabelecimento do nexo causal entre o trabalho e os transtornos mentais, como a depressão e a ansiedade. Guia o médico na condução da investigação clínica e na análise dos fatores organizacionais envolvidos.",
+    "publicoAlvo": "Médicos do trabalho, clínicos gerais e profissionais de recursos humanos",
+    "angulo": "Foco estritamente técnico e clínico na avaliação do nexo causal, sem juridiquês excessivo.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "occupational stress AND mental disorders AND causality",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "burnout AND occupational health AND guidelines",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Nexo causal em transtornos mentais relacionados ao trabalho",
+        "categoria": "Médicos & Enfermeiros",
+        "score": 0.53,
+        "simTitulo": 0.62
+      }
+    },
+    "problemas": [
+      "artigo científico exige de 3 a 6 referências (consultas PubMed)",
+      "originalidade: paráfrase/redundância de \"Nexo causal em transtornos mentais relacionados ao trabalho\" (similaridade 0.53, título 0.62)"
+    ],
+    "criadaEm": "2026-09-30T09:17:16.260Z"
+  },
+  {
+    "id": "2026-09-30-66-emissao-de-cat-por-adoecimento",
+    "tipo": "artigo-cientifico",
+    "titulo": "Emissão de CAT por adoecimento mental: quando e como proceder",
+    "pauta": "Orienta os profissionais de saúde sobre a obrigatoriedade e os critérios técnicos para a emissão da Comunicação de Acidente de Trabalho em casos de transtornos psiquiátricos relacionados ao emprego. Detalha o papel do médico assistente e do médico do trabalho nesse processo.",
+    "publicoAlvo": "Médicos assistentes, médicos do trabalho e equipes de medicina ocupacional",
+    "angulo": "Esclarece o fluxo médico-legal da CAT com empatia e rigor técnico.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Mental Disorders\"[Mesh] OR \"Burnout, Psychological\"[Mesh] OR \"Occupational Stress\"[Mesh]) AND (\"Workers' Compensation\"[Mesh] OR \"Occupational Health\"[Mesh]) AND (\"Review\"[Publication Type])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Mental Disorders\"[Mesh]) AND (\"Occupational Diseases\"[Mesh] OR \"Occupational Health Physicians\"[Mesh]) AND (\"Jurisprudence\"[Mesh] OR \"Legislation, Medical\"[Mesh])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Burnout, Psychological\"[Mesh] OR \"Stress, Psychological\"[Mesh]) AND (\"Sick Leave\"[Mesh] OR \"Absenteeism\"[Mesh]) AND (\"Occupational Health\"[Mesh])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Occupational Diseases\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Meta-Analysis\"[Publication Type])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Saúde mental de professores: o adoecimento silencioso de quem forma pessoas",
+        "categoria": "Geral",
+        "score": 0.18,
+        "simTitulo": 0.31
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:17:16.260Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/emissao-de-cat-por-adoecimento-mental-quando-e-como-proceder.md",
+      "slug": "emissao-de-cat-por-adoecimento-mental-quando-e-como-proceder",
+      "geradoEm": "2026-09-30T09:45:02.141Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:45:02.141Z"
+  },
+  {
+    "id": "2026-09-30-67-readaptacao-funcional-em-saude",
+    "tipo": "artigo-cientifico",
+    "titulo": "Readaptação funcional em saúde mental: estratégias na empresa",
+    "pauta": "Discute o processo de reabilitação e readaptação de trabalhadores que retornam após afastamentos por transtornos mentais comuns. Apresenta condutas para o dimensionamento de cargas de trabalho e adaptação gradual de funções.",
+    "publicoAlvo": "Médicos do trabalho, gestores de RH e lideranças organizacionais",
+    "angulo": "Enfoque na reinserção laboral sustentável e na prevenção de recaídas.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Mental Disorders\"[Mesh]) AND (\"Return to Work\"[Mesh]) AND (\"Rehabilitation, Vocational\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Occupational Health\"[Mesh]) AND (\"Mental Health\"[Mesh]) AND (\"Workload\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Depressive Disorder\"[Mesh]) OR (\"Anxiety Disorders\"[Mesh]) AND (\"Return to Work\"[Mesh]) AND (\"Workplace\"[Mesh])",
+        "tipoDeEstudo": "Metanálise"
+      },
+      {
+        "consultaPubMed": "(\"Occupational Health Physicians\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Practice Guideline\"[Publication Type])",
+        "tipoDeEstudo": "Diretriz"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Afastamento por transtorno mental: o que a empresa precisa saber",
+        "categoria": "Empresas & RH",
+        "score": 0.25,
+        "simTitulo": 0.33
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:17:16.260Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/readaptacao-funcional-em-saude-mental-estrategias-na-empresa.md",
+      "slug": "readaptacao-funcional-em-saude-mental-estrategias-na-empresa",
+      "geradoEm": "2026-09-30T09:45:15.111Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:45:15.111Z"
+  },
+  {
+    "id": "2026-09-30-68-prevencao-quaternaria-na-medic",
+    "tipo": "artigo-cientifico",
+    "titulo": "Prevenção quaternária na medicina do trabalho e saúde mental",
+    "pauta": "Explora como evitar a iatrogenia e a medicalização excessiva de queixas comuns de estresse no ambiente corporativo. Discute a importância de diferenciar sofrimento ético e existencial de patologias psiquiátricas.",
+    "publicoAlvo": "Médicos do trabalho, médicos de família e gestores de saúde corporativa",
+    "angulo": "Abordagem crítica sobre o excesso de diagnósticos no ambiente de trabalho.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "\"Quaternary Prevention\"[Mesh] AND (\"Occupational Health\"[Mesh] OR \"Occupational Medicine\"[Mesh]) AND (\"Mental Health\"[Mesh] OR \"Stress, Psychological\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Medicalization\"[Mesh] AND \"Burnout, Professional\"[Mesh] AND (\"Primary Prevention\"[Mesh] OR \"Quaternary Prevention\")",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "\"Occupational Health Physicians\"[Mesh] AND \"Mental Disorders\"[Mesh] AND \"Diagnostic Errors\"[Mesh] AND \"Quaternary Prevention\"",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "\"Stress, Psychological\"[Mesh] AND \"Workplace\"[Mesh] AND \"Medicalization\"[Mesh] AND \"Psychiatry\"[Mesh]",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Prevenção de suicídio no ambiente de trabalho: o papel da empresa",
+        "categoria": "Empresas & RH",
+        "score": 0.25,
+        "simTitulo": 0.33
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:17:16.260Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/prevencao-quaternaria-na-medicina-do-trabalho-e-saude-mental.md",
+      "slug": "prevencao-quaternaria-na-medicina-do-trabalho-e-saude-mental",
+      "geradoEm": "2026-09-30T09:46:26.332Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:46:26.332Z"
+  },
+  {
+    "id": "2026-09-30-69-gestao-do-estresse-corporativo",
+    "tipo": "artigo-cientifico",
+    "titulo": "Manejo da Síndrome do Esgotamento Profissional na Saúde Ocupacional: Do Rastreio ao Plano de Readaptação",
+    "pauta": "Guia para o médico do trabalho e o médico assistente sobre a Síndrome do Esgotamento Profissional (burnout) na saúde ocupacional: como rastrear com instrumentos validados, diferenciar de depressão e ansiedade, definir afastamento ou não, estruturar o plano de readaptação com a empresa e acompanhar o retorno, com atenção ao nexo com o trabalho e ao sigilo médico.",
+    "publicoAlvo": "médicos do trabalho, médicos assistentes e gestores de saúde ocupacional",
+    "angulo": "do rastreio ao plano de readaptação, como um percurso clínico contínuo e não como um evento isolado",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "\"Burnout, Professional\"[MeSH] AND \"Occupational Health\"[MeSH] AND screening",
+        "tipoDeEstudo": "revisão sistemática"
+      },
+      {
+        "consultaPubMed": "burnout return to work intervention occupational physician",
+        "tipoDeEstudo": "revisão sistemática"
+      },
+      {
+        "consultaPubMed": "burnout diagnostic criteria depression differential diagnosis",
+        "tipoDeEstudo": "revisão narrativa ou diretriz"
+      },
+      {
+        "consultaPubMed": "work rehabilitation burnout randomized controlled trial",
+        "tipoDeEstudo": "ensaio clínico randomizado"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Readaptação funcional em saúde mental: estratégias na empresa",
+        "categoria": "Empresas & RH",
+        "score": 0.25,
+        "simTitulo": 0.27
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:17:16.260Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "ultimaTentativaRascunho": {
+      "em": "2026-09-30T09:50:21.458Z",
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/gestao-do-estresse-corporativo-cronico-intervencoes-baseadas.md",
+      "motivo": "estrutura: texto curto (439 palavras; mínimo 600); originalidade: paráfrase/redundância de \"Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico\" (similaridade 0.35, título 0.29)"
+    },
+    "tituloLongoAutorizado": true,
+    "reescritaDe": "Gestão do estresse corporativo crônico: intervenções baseadas em evidências",
+    "reescritaEm": "2026-09-30T10:13:11.567Z",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-sindrome-do-esgotamento-profissional-na-saude-ocup.md",
+      "slug": "manejo-da-sindrome-do-esgotamento-profissional-na-saude-ocup",
+      "geradoEm": "2026-09-30T10:13:23.302Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T10:13:23.302Z"
+  },
+  {
+    "id": "2026-09-30-70-acolhimento-ao-sofrimento-psiq",
+    "tipo": "artigo-cientifico",
+    "titulo": "Acolhimento ao sofrimento psíquico agudo no ambiente laboral",
+    "pauta": "Orienta gestores e profissionais de saúde sobre como conduzir o primeiro atendimento ou escuta de um colaborador em crise aguda no trabalho. Aborda posturas acolhedoras e o encaminhamento seguro para a rede de saúde.",
+    "publicoAlvo": "Equipes de RH, lideranças e profissionais de saúde ocupacional",
+    "angulo": "Foco na humanização da escuta imediata e na prevenção de danos maiores.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Psychological First Aid\"[Mesh] OR \"Mental Health First Aid\" OR \"Crisis Intervention\"[Mesh]) AND (\"Workplace\"[Mesh] OR \"Occupational Health\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Administrative Personnel\"[Mesh] OR \"Leadership\"[Mesh] OR \"managers\") AND (\"Mental Health\"[Mesh] OR \"Psychological Distress\"[Mesh]) AND (\"Occupational Health Services\"[Mesh] OR \"Workplace\"[Mesh]) AND (\"Practice Guideline\"[Publication Type] OR \"Guideline\"[Publication Type])",
+        "tipoDeEstudo": "Diretriz Clínica / Guia de Boas Práticas"
+      },
+      {
+        "consultaPubMed": "(\"Mental Health First Aid\" OR \"gatekeeper training\") AND (\"Workplace\"[Mesh] OR \"Occupational Health\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type] OR \"Controlled Clinical Trial\"[Publication Type])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Crisis Intervention\"[Mesh] OR \"early intervention\") AND (\"Psychological Distress\"[Mesh] OR \"acute stress\") AND (\"Workplace\"[Mesh] OR \"occupational setting\") AND (\"Referral and Consultation\"[Mesh] OR \"supportive listening\")",
+        "tipoDeEstudo": "Revisão Sistemática / Metanálise"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Prevenção de suicídio no ambiente de trabalho: o papel da empresa",
+        "categoria": "Empresas & RH",
+        "score": 0.19,
+        "simTitulo": 0.17
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:17:16.260Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral.md",
+      "slug": "acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral",
+      "geradoEm": "2026-09-30T09:46:52.949Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:46:52.949Z"
+  },
+  {
+    "id": "2026-09-30-71-impacto-da-cultura-organizacio",
+    "tipo": "artigo-cientifico",
+    "titulo": "Impacto da cultura organizacional tóxica na saúde mental dos times",
+    "pauta": "Examina como fatores como microgerenciamento, assédio moral e metas inatingíveis afetam a saúde mental coletiva. Fornece ferramentas para o diagnóstico precoce de ambientes corporativos adoecedores.",
+    "publicoAlvo": "Gestores de RH, diretores de empresas e médicos do trabalho",
+    "angulo": "Análise sistêmica da toxicidade organizacional sob a ótica da medicina preventiva.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Workplace\"[Mesh] OR \"Organizational Culture\"[Mesh]) AND (\"Burnout, Professional\"[Mesh] OR \"Mental Health\"[Mesh]) AND (\"Systematic Review\"[Publication Type] OR \"Meta-Analysis\"[Publication Type])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Occupational Stress\"[Mesh] AND (\"Bullying\"[Mesh] OR \"Personnel Management\"[Mesh]) AND (\"Mental Health\"[Mesh] OR \"Depression\"[Mesh])",
+        "tipoDeEstudo": "Estudo Observacional"
+      },
+      {
+        "consultaPubMed": "\"Workplace\"[Mesh] AND \"Occupational Health\"[Mesh] AND (\"Burnout, Professional\"[Mesh] OR \"Anxiety\"[Mesh]) AND \"Practice Guideline\"[Publication Type]",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "\"Organizational Culture\"[Mesh] AND \"Occupational Health Services\"[Mesh] AND \"Primary Prevention\"[Mesh]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Cultura de segurança psicológica: o que é e por que importa",
+        "categoria": "Empresas & RH",
+        "score": 0.21,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:17:16.260Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/impacto-da-cultura-organizacional-toxica-na-saude-mental-dos.md",
+      "slug": "impacto-da-cultura-organizacional-toxica-na-saude-mental-dos",
+      "geradoEm": "2026-09-30T09:47:04.095Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:47:04.095Z"
+  },
+  {
+    "id": "2026-09-30-72-programas-de-retorno-ao-trabal",
+    "tipo": "artigo-cientifico",
+    "titulo": "Programas de retorno ao trabalho após afastamento psiquiátrico",
+    "pauta": "Detalha a estruturação de programas eficazes para a reintegração de colaboradores após licenças médicas por transtornos mentais. Enfatiza a importância da articulação entre médico assistente, perito e empresa.",
+    "publicoAlvo": "Médicos do trabalho, peritos e gestores de recursos humanos",
+    "angulo": "Visão integrativa e colaborativa do retorno ao trabalho, reduzindo o estigma.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "return to work interventions AND mental illness AND workplace",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "occupational rehabilitation AND psychiatric disorders",
+        "tipoDeEstudo": "Ensaio clínico",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "copia",
+      "maisProximo": {
+        "titulo": "Retorno ao trabalho após afastamento psiquiátrico",
+        "categoria": "Médicos & Enfermeiros",
+        "score": 0.62,
+        "simTitulo": 0.91
+      }
+    },
+    "problemas": [
+      "artigo científico exige de 3 a 6 referências (consultas PubMed)",
+      "originalidade: cópia de \"Retorno ao trabalho após afastamento psiquiátrico\" (similaridade 0.62, título 0.91)"
+    ],
+    "criadaEm": "2026-09-30T09:17:16.260Z"
+  },
+  {
+    "id": "2026-09-30-73-prevencao-quaternaria-na-medic",
+    "tipo": "artigo-cientifico",
+    "titulo": "Prevenção quaternária na medicina do trabalho e saúde mental",
+    "pauta": "Aborda a importância de evitar iatrogenias e medicalização excessiva do sofrimento cotidiano no ambiente de trabalho. Discute como a medicina ocupacional pode acolher a angústia sem transformar conflitos laborais em diagnósticos psiquiátricos desnecessários.",
+    "publicoAlvo": "Médicos do trabalho, profissionais de RH e gestores de saúde ocupacional",
+    "angulo": "Foco na prevenção de excessos diagnósticos e na proteção contra a medicalização precoce do estresse laboral.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "occupational health AND quaternary prevention AND mental health",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "medicalization of work AND occupational psychiatry AND overdiagnosis",
+        "tipoDeEstudo": "Ensaio clínico controlado",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "workplace stress AND appropriate diagnosis AND occupational medicine guidelines",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "copia",
+      "maisProximo": {
+        "titulo": "Prevenção quaternária na medicina do trabalho e saúde mental",
+        "categoria": "Empresas & RH",
+        "score": 0.82,
+        "simTitulo": 1
+      }
+    },
+    "problemas": [
+      "originalidade: cópia de \"Prevenção quaternária na medicina do trabalho e saúde mental\" (similaridade 0.82, título 1.00)"
+    ],
+    "criadaEm": "2026-09-30T09:24:39.154Z"
+  },
+  {
+    "id": "2026-09-30-74-acolhimento-ao-sofrimento-psiq",
+    "tipo": "artigo-cientifico",
+    "titulo": "Acolhimento ao sofrimento psíquico agudo no ambiente laboral",
+    "pauta": "Orienta lideranças e equipes de medicina ocupacional sobre como agir diante de uma crise emocional aguda dentro da empresa. Apresenta condutas iniciais humanizadas, escuta qualificada e critérios para o encaminhamento adequado à rede de saúde.",
+    "publicoAlvo": "Profissionais de recursos humanos, médicos do trabalho e líderes de equipes",
+    "angulo": "Diretrizes práticas de manejo imediato para crises emocionais no espaço corporativo.",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "psychological first aid AND workplace AND crisis intervention",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "acute mental health crisis AND occupational setting AND management",
+        "tipoDeEstudo": "Estudo observacional",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "emergency mental health protocols AND workplace guidelines",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "copia",
+      "maisProximo": {
+        "titulo": "Acolhimento ao sofrimento psíquico agudo no ambiente laboral",
+        "categoria": "Empresas & RH",
+        "score": 0.8,
+        "simTitulo": 1
+      }
+    },
+    "problemas": [
+      "originalidade: cópia de \"Acolhimento ao sofrimento psíquico agudo no ambiente laboral\" (similaridade 0.80, título 1.00)"
+    ],
+    "criadaEm": "2026-09-30T09:24:39.154Z"
+  },
+  {
+    "id": "2026-09-30-75-avaliacao-de-riscos-psicossoci",
+    "tipo": "artigo-cientifico",
+    "titulo": "Avaliação de riscos psicossociais no trabalho: ferramentas práticas",
+    "pauta": "Este artigo detalha instrumentos validados para identificar fatores de estresse psicossocial nas organizações antes que ocorram danos clínicos. Aborda como o médico do trabalho pode aplicar escalas de avaliação para guiar planos preventivos corporativos baseados em evidências científicas.",
+    "publicoAlvo": "Médicos do trabalho, profissionais de RH, gestores de equipes e líderes corporativos.",
+    "angulo": "Foco estrito em metodologias de triagem preventiva e mapeamento de riscos psicossociais validadas pela literatura internacional.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "occupational stress AND psychosocial risk factors AND screening tools",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "workplace mental health AND primary prevention AND organizational intervention",
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "job strain model AND mental health AND occupational health",
+        "tipoDeEstudo": "Estudo de coorte",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Avaliação neuropsicológica breve na Atenção Primária",
+        "categoria": "Médicos & Enfermeiros",
+        "score": 0.24,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:42.647Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-riscos-psicossociais-no-trabalho-ferramentas-pr.md",
+      "slug": "avaliacao-de-riscos-psicossociais-no-trabalho-ferramentas-pr",
+      "geradoEm": "2026-09-30T09:47:16.167Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:47:16.167Z"
+  },
+  {
+    "id": "2026-09-30-76-prevencao-do-absenteismo-psiqu",
+    "tipo": "artigo-cientifico",
+    "titulo": "Prevenção do absenteísmo psiquiátrico: diretrizes para o médico avaliador",
+    "pauta": "Discute o manejo clínico e pericial do afastamento por transtornos mentais comuns, destacando estratégias para evitar a cronificação do adoecimento. Apresenta condutas baseadas em diretrizes para promover uma reinserção laboral segura e humanizada.",
+    "publicoAlvo": "Médicos de família e comunidade, médicos do trabalho, peritos e equipes multidisciplinares.",
+    "angulo": "Enfoque na prevenção da cronificação e na articulação entre licença médica, tratamento e reabilitação profissional.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "absenteeism AND mental disorders AND return to work",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "occupational psychiatry AND mental health leave AND rehabilitation",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "work disability AND depression AND secondary prevention",
+        "tipoDeEstudo": "Metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Empresas & RH",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Prevenção quaternária na medicina do trabalho e saúde mental",
+        "categoria": "Empresas & RH",
+        "score": 0.24,
+        "simTitulo": 0.17
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:42.647Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/prevencao-do-absenteismo-psiquiatrico-diretrizes-para-o-medi.md",
+      "slug": "prevencao-do-absenteismo-psiquiatrico-diretrizes-para-o-medi",
+      "geradoEm": "2026-09-30T09:47:22.816Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:47:22.816Z"
+  },
+  {
+    "id": "2026-09-30-77-professores-frente-a-violencia",
+    "tipo": "artigo-cientifico",
+    "titulo": "Professores frente à violência escolar: protocolos de apoio emocional",
+    "pauta": "Orienta práticas e estratégias de suporte psicológico para docentes expostos a episódios de violência no ambiente escolar. Importante para mitigar o desenvolvimento de estresse pós-traumático e burnout nesta população.",
+    "publicoAlvo": "Professores e educadores da rede de ensino",
+    "angulo": "Foco exclusivo no suporte imediato e prevenção de sequelas emocionais em professores vítimas ou testemunhas de violência escolar.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Occupational stress AND school violence AND teachers AND mental health",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Teacher burnout AND violence exposure AND psychological intervention",
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Occupational health AND teachers AND post-traumatic stress",
+        "tipoDeEstudo": "Diretrizes clínicas",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Conflitos escolares e saúde docente: manejo e apoio na inclusão",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.36,
+        "simTitulo": 0.29
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Conflitos escolares e saúde docente: manejo e apoio na inclusão\" (similaridade 0.36, título 0.29)"
+    ],
+    "criadaEm": "2026-09-30T09:24:50.141Z"
+  },
+  {
+    "id": "2026-09-30-78-cuidadores-de-idosos-acamados-",
+    "tipo": "artigo-cientifico",
+    "titulo": "Cuidadores de idosos acamados: manejo do isolamento social e afeto",
+    "pauta": "Aborda o impacto do isolamento social prolongado na saúde mental de cuidadores familiares de idosos acamados ou dependentes totais. Oferece estratégias práticas de autocuidado e preservação de redes de apoio.",
+    "publicoAlvo": "Cuidadores familiares de idosos",
+    "angulo": "Aborda a solidão e o isolamento invisível enfrentado por quem cuida integralmente de um idoso restrito ao leito.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Caregivers AND bedridden elderly AND social isolation AND mental health",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Family caregivers AND loneliness AND psychological distress AND interventions",
+        "tipoDeEstudo": "Ensaio clínico",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Home care AND caregivers AND support networks AND guidelines",
+        "tipoDeEstudo": "Diretrizes de prática clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.4,
+        "simTitulo": 0.31
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Grupos de apoio para cuidadores de idosos na APS: eficácia na prática\" (similaridade 0.40, título 0.31)"
+    ],
+    "criadaEm": "2026-09-30T09:24:50.141Z"
+  },
+  {
+    "id": "2026-09-30-79-professores-e-inclusao-manejo-",
+    "tipo": "artigo-cientifico",
+    "titulo": "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva",
+    "pauta": "Discute a sobrecarga emocional e a ansiedade vivenciada por professores diante dos desafios da educação inclusiva sem suporte adequado. Fornece ferramentas práticas de manejo do estresse no cotidiano escolar.",
+    "publicoAlvo": "Professores e educadores",
+    "angulo": "Conecta a demanda pedagógica da inclusão escolar com a vivência de ansiedade crônica e insuficiência percebida pelo docente.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Inclusive education AND teachers AND occupational stress AND anxiety",
+        "tipoDeEstudo": "Estudo transversal",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Special education needs AND teacher burnout AND coping strategies",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Teachers AND inclusive classrooms AND mental health guidelines",
+        "tipoDeEstudo": "Diretrizes práticas",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Conflitos escolares e saúde docente: manejo e apoio na inclusão",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.29,
+        "simTitulo": 0.29
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:50.141Z",
+    "aprovadaEm": "2026-09-30T09:44:52.869Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i.md",
+      "slug": "professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i",
+      "geradoEm": "2026-09-30T09:47:29.933Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:47:29.933Z"
+  },
+  {
+    "id": "2026-09-30-80-cuidadores-de-jovens-com-autis",
+    "tipo": "artigo-cientifico",
+    "titulo": "Cuidadores de jovens com autismo severo: transição para a vida adulta",
+    "pauta": "Orienta familiares sobre os desafios psicológicos e práticos durante a transição de jovens com autismo severo para a vida adulta e o término da rede escolar. Fundamental para planejar o futuro com menos ansiedade.",
+    "publicoAlvo": "Cuidadores familiares de pessoas com deficiência",
+    "angulo": "Foca no marco específico da transição para a vida adulta e no medo do futuro que aflige os cuidadores.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Autism spectrum disorder AND transition to adulthood AND parental stress",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Caregivers AND severe autism AND adult transition AND mental health",
+        "tipoDeEstudo": "Estudo qualitativo",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Family support AND intellectual disability AND adult transition AND guidelines",
+        "tipoDeEstudo": "Diretrizes clínicas",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Trauma na infância: como pode afetar a vida adulta",
+        "categoria": "Pacientes & Famílias",
+        "score": 0.3,
+        "simTitulo": 0.31
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:50.141Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid.md",
+      "slug": "cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid",
+      "geradoEm": "2026-09-30T09:47:43.334Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:47:43.334Z"
+  },
+  {
+    "id": "2026-09-30-81-professores-iniciantes-prevenc",
+    "tipo": "artigo-cientifico",
+    "titulo": "Professores iniciantes: prevenção do choque de realidade e exaustão",
+    "pauta": "Aborda o fenômeno do 'choque de realidade' nos primeiros anos de docência e sua relação com o adoecimento mental precoce. Traz orientações baseadas em evidências para mentoria e acolhimento institucional.",
+    "publicoAlvo": "Professores em início de carreira",
+    "angulo": "Direcionado especificamente aos recém-formados na docência, fase de maior vulnerabilidade para o abandono da profissão e transtornos mentais.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Beginning teachers AND reality shock AND burnout AND mental health",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Novice teachers AND occupational stress AND resilience interventions",
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Teacher induction programs AND mental well-being AND guidelines",
+        "tipoDeEstudo": "Diretrizes de prática",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.18,
+        "simTitulo": 0.15
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:50.141Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-iniciantes-prevencao-do-choque-de-realidade-e-ex.md",
+      "slug": "professores-iniciantes-prevencao-do-choque-de-realidade-e-ex",
+      "geradoEm": "2026-09-30T09:47:54.847Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:47:54.847Z"
+  },
+  {
+    "id": "2026-09-30-82-cuidadores-de-pacientes-com-do",
+    "tipo": "artigo-cientifico",
+    "titulo": "Cuidadores de pacientes com doenças raras: o fardo invisível",
+    "pauta": "Examina o impacto psicológico singular enfrentado por familiares que cuidam de pacientes com condições raras ou crônicas complexas. Discute estratégias de resiliência e a importância de validar o sofrimento crônico.",
+    "publicoAlvo": "Cuidadores familiares de pessoas com condições raras",
+    "angulo": "Aborda a especificidade do adoecimento e da solidão institucional vivida por quem cuida de patologias raras.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Rare diseases AND family caregivers AND psychological burden AND mental health",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Chronic complex conditions AND caregivers AND emotional distress AND coping",
+        "tipoDeEstudo": "Estudo transversal",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Rare disease caregivers AND support strategies AND guidelines",
+        "tipoDeEstudo": "Diretrizes clínicas",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.21,
+        "simTitulo": 0.15
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:50.141Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "ultimaTentativaRascunho": {
+      "em": "2026-09-30T09:48:10.490Z",
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel.md",
+      "motivo": "estrutura: texto curto (536 palavras; mínimo 600)"
+    },
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel.md",
+      "slug": "cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel",
+      "geradoEm": "2026-09-30T09:52:07.773Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:52:07.773Z"
+  },
+  {
+    "id": "2026-09-30-83-cuidadores-de-idosos-dependent",
+    "tipo": "artigo-cientifico",
+    "titulo": "Cuidadores de idosos dependentes: estratégias para prevenir o colapso",
+    "pauta": "Este artigo científico aborda o manejo do estresse crônico em cuidadores familiares de idosos com alta dependência funcional, trazendo estratégias práticas para a prevenção do esgotamento emocional. O material fundamenta-se em diretrizes clínicas e revisões sistemáticas para orientar profissionais e familiares na identificação precoce do burnout do cuidador. A leitura é essencial para garantir suporte adequado a quem dedica a vida ao cuidado diário.",
+    "publicoAlvo": "Cuidadores familiares de idosos dependentes",
+    "angulo": "Foco exclusivo na transição do cuidado domiciliar intensivo e na prevenção do colapso físico e mental do cuidador familiar, diferenciando-se de abordagens voltadas apenas ao paciente idoso.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "caregiver burden elderly home care systematic review[MeSH Terms]",
+        "tipoDeEstudo": "Revisão Sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "family caregiver mental health intervention randomized controlled trial[MeSH Terms]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "burnout in informal caregivers of older adults guidelines[MeSH Terms]",
+        "tipoDeEstudo": "Diretriz Clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.5,
+        "simTitulo": 0.46
+      }
+    },
+    "problemas": [
+      "originalidade: paráfrase/redundância de \"Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional\" (similaridade 0.50, título 0.46)"
+    ],
+    "criadaEm": "2026-09-30T09:24:54.467Z"
+  },
+  {
+    "id": "2026-09-30-84-professores-e-a-saude-mental-i",
+    "tipo": "artigo-cientifico",
+    "titulo": "Professores e a saúde mental: identificando limites diante da sobrecarga",
+    "pauta": "Este artigo científico analisa os fatores de risco associados ao esgotamento docente e à fadiga por compaixão no ambiente escolar, oferecendo ferramentas baseadas em evidências para o reconhecimento precoce do sofrimento psíquico. O texto discute a importância de redes de apoio institucional e estratégias individuais de autocuidado para educadores. A proposta visa instrumentalizar professores e equipes de saúde a lidarem com a pressão crônica da profissão.",
+    "publicoAlvo": "Professores e educadores da rede de ensino",
+    "angulo": "Integração entre o adoecimento ocupacional docente e o impacto direto do estresse na relação pedagógica, com foco em intervenções práticas na rotina escolar.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "teacher burnout occupational stress systematic review[MeSH Terms]",
+        "tipoDeEstudo": "Revisão Sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "educator mental health intervention school environment[MeSH Terms]",
+        "tipoDeEstudo": "Ensaio Clínico",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "compassion fatigue in teachers occupational health guidelines[MeSH Terms]",
+        "tipoDeEstudo": "Diretriz Prática",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.27,
+        "simTitulo": 0.14
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:54.467Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-a-saude-mental-identificando-limites-diante-da.md",
+      "slug": "professores-e-a-saude-mental-identificando-limites-diante-da",
+      "geradoEm": "2026-09-30T09:48:23.113Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:48:23.113Z"
+  },
+  {
+    "id": "2026-09-30-85-professores-e-o-luto-pedagogic",
+    "tipo": "artigo-cientifico",
+    "titulo": "Professores e o luto pedagógico: acolhendo perdas e mudanças na escola",
+    "pauta": "Este artigo aborda o impacto emocional do luto e de perdas significativas na rotina de professores, oferecendo estratégias baseadas em evidências para o suporte institucional e o autocuidado docente. A discussão é fundamental para prevenir o adoecimento mental prolongado e promover ambientes educacionais mais acolhedores e resilientes.",
+    "publicoAlvo": "Professores da educação básica e superior, coordenadores pedagógicos e profissionais de saúde escolar",
+    "angulo": "Foca especificamente na dimensão pouco discutida do luto pedagógico e perdas na rotina escolar, diferenciando-o do esgotamento profissional comum.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Teachers\"[Mesh]) AND (\"Grief\"[Mesh] OR \"Bereavement\"[Mesh]) AND (\"Occupational Stress\"[Mesh])",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Faculty\"[Mesh]) AND (\"Burnout, Professional\"[Mesh]) AND (\"Mental Health\"[Mesh])",
+        "tipoDeEstudo": "Estudo transversal",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "(\"Schools\"[Mesh]) AND (\"Crisis Intervention\"[Mesh]) AND (\"Adaptation, Psychological\"[Mesh])",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Professores e a saúde mental: identificando limites diante da sobrecarga",
+        "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
+        "score": 0.25,
+        "simTitulo": 0.14
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:24:58.259Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-.md",
+      "slug": "professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-",
+      "geradoEm": "2026-09-30T09:48:30.013Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:48:30.013Z"
+  },
+  {
+    "id": "2026-09-30-86-urgencias-de-abstinencia-de-su",
+    "tipo": "artigo-cientifico",
+    "titulo": "Urgências de abstinência de substâncias no PA: guia rápido",
+    "pauta": "Este guia prático para residentes e estudantes aborda o reconhecimento e manejo inicial de crises graves de abstinência no pronto atendimento. O texto fornece ferramentas objetivas para estabilização segura e critérios claros de encaminhamento hospitalar.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, médicos generalistas e estudantes de medicina",
+    "angulo": "Foco exclusivo na tomada de decisão rápida e baseada em evidências dentro da realidade do pronto atendimento brasileiro",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Substance Withdrawal Syndrome\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh]) AND (\"Guideline\"[Publication Type] OR \"Practice Guideline\"[Publication Type])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Alcohol Withdrawal Delirium\"[Mesh]) AND (\"Emergency Treatment\"[Mesh]) AND (\"Systematic Review\"[Publication Type])",
+        "tipoDeEstudo": "Revisão sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Substance-Related Disorders\"[Mesh]) AND (\"Emergencies\"[Mesh]) AND (\"Disease Management\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
+        "tipoDeEstudo": "Ensaio clínico randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Opioid-Related Disorders\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh]) AND (\"Metaanalysis\"[Publication Type])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.33,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:25:05.212Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/urgencias-de-abstinencia-de-substancias-no-pa-guia-rapido.md",
+      "slug": "urgencias-de-abstinencia-de-substancias-no-pa-guia-rapido",
+      "geradoEm": "2026-09-30T09:48:45.240Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:48:45.240Z"
+  },
+  {
+    "id": "2026-09-30-87-transtornos-de-personalidade-n",
+    "tipo": "artigo-cientifico",
+    "titulo": "Transtornos de personalidade na APS: identificação e manejo",
+    "pauta": "O artigo capacita estudantes e médicos de família a identificar padrões de personalidade desafiadores na rotina do posto de saúde. Apresenta estratégias de comunicação terapêutica e limites claros para evitar o esgotamento da equipe.",
+    "publicoAlvo": "Médicos de família, residentes e internos de medicina",
+    "angulo": "Enfoque na comunicação clínica empática e na preservação da relação médico-paciente a longo prazo na atenção primária",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "\"Personality Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Clinical Clerkship\"[Mesh]",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Personality Disorders\"[Mesh]/diagnosis AND \"Physicians, Family\"[Mesh] AND \"Communication\"[Mesh]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "\"Physician-Patient Relations\"[Mesh] AND \"Personality Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh]",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Burnout, Professional\"[Mesh] AND \"Personality Disorders\"[Mesh] AND \"General Practice\"[Mesh]",
+        "tipoDeEstudo": "Metanálise"
+      },
+      {
+        "consultaPubMed": "\"Personality Disorders\"[Mesh] AND \"Delivery of Health Care, Integrated\"[Mesh] AND \"Practice Guidelines as Topic\"[Mesh]",
+        "tipoDeEstudo": "Diretriz"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Assédio moral no trabalho: identificação e encaminhamento",
+        "categoria": "Médicos & Enfermeiros",
+        "score": 0.2,
+        "simTitulo": 0.2
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:25:05.212Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtornos-de-personalidade-na-aps-identificacao-e-manejo.md",
+      "slug": "transtornos-de-personalidade-na-aps-identificacao-e-manejo",
+      "geradoEm": "2026-09-30T09:48:58.715Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:48:58.715Z"
+  },
+  {
+    "id": "2026-09-30-88-reacoes-adversas-a-psicofarmac",
+    "tipo": "artigo-cientifico",
+    "titulo": "Reações adversas a psicofármacos na UBS: o que monitorar",
+    "pauta": "Este material orienta residentes e médicos generalistas sobre a identificação precoce e o manejo de efeitos colaterais comuns de antidepressivos e estabilizadores de humor. O foco é garantir a adesão ao tratamento sem expor o paciente a riscos desnecessários.",
+    "publicoAlvo": "Estudantes de medicina, residentes de MFC e médicos generalistas",
+    "angulo": "Visão prática voltada para a segurança do paciente e manejo de intercorrências farmacológicas na rede básica",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Antidepressive Agents\"[Mesh] OR \"Mood Stabilizing Agents\"[Mesh]) AND (\"Drug-Related Side Effects and Adverse Reactions\"[Mesh] OR \"Drug Toxicity\"[Mesh]) AND \"Primary Health Care\"[Mesh]",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "\"Antidepressive Agents/adverse effects\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"General Practice\"[Mesh]",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Mood Stabilizing Agents/adverse effects\"[Mesh] OR \"Lithium/adverse effects\"[Mesh]) AND (\"Monitoring, Physiologic\"[Mesh] OR \"Safety Management\"[Mesh])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Depressive Disorder/drug therapy\"[Mesh] OR \"Bipolar Disorder/drug therapy\"[Mesh]) AND \"Medication Adherence\"[Mesh] AND \"Drug-Related Side Effects and Adverse Reactions\"[Mesh]",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.26,
+        "simTitulo": 0.2
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:25:05.212Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/reacoes-adversas-a-psicofarmacos-na-ubs-o-que-monitorar.md",
+      "slug": "reacoes-adversas-a-psicofarmacos-na-ubs-o-que-monitorar",
+      "geradoEm": "2026-09-30T09:49:04.928Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:49:04.928Z"
+  },
+  {
+    "id": "2026-09-30-89-avaliacao-de-queixas-somaticas",
+    "tipo": "artigo-cientifico",
+    "titulo": "Avaliação de queixas somáticas sem causa orgânica óbvia",
+    "pauta": "Abordagem clínica estruturada para investigar sintomas físicos persistentes sem substrato anatômico claro na atenção primária. O texto ensina a validar o sofrimento do paciente enquanto evita exames complementares excessivos e iatrogenias.",
+    "publicoAlvo": "Médicos residentes de MFC, internos e clínicos gerais",
+    "angulo": "Integração entre propedêutica médica humanizada e manejo psicossocial na consulta de rotina",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Medically Unexplained Symptoms\"[Mesh] OR \"Somatoform Disorders\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Clinical Protocols\"[Mesh] OR \"Guideline\"[Publication Type])",
+        "tipoDeEstudo": "Diretriz"
+      },
+      {
+        "consultaPubMed": "(\"Somatoform Disorders\"[Mesh]) AND (\"Physician-Patient Relations\"[Mesh]) AND (\"Unnecessary Procedures\"[Mesh] OR \"Diagnostic Tests, Routine\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Symptom Assessment\"[Mesh]) AND (\"Somatoform Disorders\"[Mesh] OR \"Medically Unexplained Symptoms\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Somatoform Disorders\"[Mesh]) AND (\"Psychotherapy\"[Mesh] OR \"Behavior Therapy\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Avaliação do risco de suicídio na APS: o que o médico deve fazer",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.18,
+        "simTitulo": 0.15
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:25:05.212Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "ultimaTentativaRascunho": {
+      "em": "2026-09-30T09:49:24.500Z",
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/avaliacao-de-queixas-somaticas-sem-causa-organica-obvia.md",
+      "motivo": "estrutura: texto curto (522 palavras; mínimo 600)"
+    },
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-queixas-somaticas-sem-causa-organica-obvia.md",
+      "slug": "avaliacao-de-queixas-somaticas-sem-causa-organica-obvia",
+      "geradoEm": "2026-09-30T09:52:14.178Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:52:14.178Z"
+  },
+  {
+    "id": "2026-09-30-90-uso-de-benzodiazepinicos-estra",
+    "tipo": "artigo-cientifico",
+    "titulo": "Uso de benzodiazepínicos: estratégias seguras de desprescrição",
+    "pauta": "Guia prático para profissionais de saúde conduzirem a redução gradual e segura de benzodiazepínicos em pacientes idosos e crônicos na UBS. O conteúdo aborda protocolos de desmame e manejo dos sintomas de rebote.",
+    "publicoAlvo": "Residentes de medicina de família e comunidade e médicos de UBS",
+    "angulo": "Passo a passo fundamentado em evidências para retirada de medicamentos de alto risco na atenção primária",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "Benzodiazepines[MeSH] AND Prescription Withdrawal[MeSH] AND Primary Health Care",
+        "tipoDeEstudo": "Revisão Sistemática e Metanálise",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "Substance Withdrawal Syndrome[MeSH] AND Hypnotics and Sedatives[MeSH]",
+        "tipoDeEstudo": "Diretriz Clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "rejeitada",
+    "rejeicaoAutomatica": "originalidade",
+    "originalidade": {
+      "veredito": "redundante",
+      "maisProximo": {
+        "titulo": "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.39,
+        "simTitulo": 0.36
+      }
+    },
+    "problemas": [
+      "artigo científico exige de 3 a 6 referências (consultas PubMed)",
+      "originalidade: paráfrase/redundância de \"Uso de antipsicóticos na APS: indicações, ajustes e desprescrição\" (similaridade 0.39, título 0.36)"
+    ],
+    "criadaEm": "2026-09-30T09:25:05.212Z"
+  },
+  {
+    "id": "2026-09-30-91-manejo-da-ideacao-suicida-em-p",
+    "tipo": "artigo-cientifico",
+    "titulo": "Manejo da ideação suicida em populações vulneráveis na UBS",
+    "pauta": "Protocolo prático para avaliação rápida de risco de suicídio e condutas imediatas de proteção em grupos de alta vulnerabilidade na atenção primária. Destaca a importância do acolhimento sem julgamentos e da articulação com a rede de apoio.",
+    "publicoAlvo": "Médicos residentes, estudantes de medicina e equipes multiprofissionais da UBS",
+    "angulo": "Ferramenta de suporte direto ao clínico diante de situações de crise aguda na comunidade",
+    "sensivel": true,
+    "referencias": [
+      {
+        "consultaPubMed": "(\"Suicidal Ideation\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Vulnerable Populations\"[Mesh])",
+        "tipoDeEstudo": "Revisão Sistemática"
+      },
+      {
+        "consultaPubMed": "(\"Suicide\"[Mesh] / prevention and control) AND (\"Primary Health Care\"[Mesh]) AND (\"Crisis Intervention\"[Mesh])",
+        "tipoDeEstudo": "Diretriz Clínica"
+      },
+      {
+        "consultaPubMed": "(\"Suicidal Ideation\"[Mesh]) AND (\"Risk Assessment\"[Mesh]) AND (\"General Practice\"[Mesh])",
+        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+      },
+      {
+        "consultaPubMed": "(\"Suicide\"[Mesh] / prevention and control) AND (\"Vulnerable Populations\"[Mesh]) AND (\"Community Mental Health Services\"[Mesh])",
+        "tipoDeEstudo": "Metanálise"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.25,
+        "simTitulo": 0.18
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:25:05.212Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "ultimaTentativaRascunho": {
+      "em": "2026-09-30T09:49:40.686Z",
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs.md",
+      "motivo": "estrutura: texto curto (599 palavras; mínimo 600); ética/CFM: CFM: promessa de resultado garantido (\"Garantia de\"); ética/CFM: CFM: superlativo de autopromoção (\"referência em\")"
+    },
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs.md",
+      "slug": "manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs",
+      "geradoEm": "2026-09-30T09:52:21.054Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:52:21.054Z"
+  },
+  {
+    "id": "2026-09-30-92-avaliacao-de-cefaleia-tensiona",
+    "tipo": "artigo-cientifico",
+    "titulo": "Avaliação de cefaleia tensional e ansiedade na UBS",
+    "pauta": "Este guia prático para residentes e estudantes aborda a investigação diferencial entre cefaleia tensional e sintomas ansiosos na Atenção Primária. O texto detalha a anamnese direcionada, os sinais de alerta neurológicos e a conduta terapêutica inicial sem medicalização excessiva.",
+    "publicoAlvo": "Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da Atenção Primária",
+    "angulo": "Integra a queixa física frequente (cefaleia) com o rastreio de sofrimento psíquico, otimizando o tempo de consulta na UBS.",
+    "sensivel": false,
+    "referencias": [
+      {
+        "consultaPubMed": "tension-headache AND anxiety AND primary health care",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "somatization AND primary care AND headache management",
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "[PMID A CONFIRMAR]"
+      },
+      {
+        "consultaPubMed": "psychiatric comorbidity in tension-type headache",
+        "tipoDeEstudo": "Estudo de coorte",
+        "pmid": "[PMID A CONFIRMAR]"
+      }
+    ],
+    "categoria": "Residentes & Estudantes",
+    "lote": 3,
+    "secoes": [
+      "Guia Prático",
+      "Fisiopatologia",
+      "Manejo Clínico",
+      "Referências"
+    ],
+    "origem": "assistente",
+    "status": "redigida",
+    "originalidade": {
+      "veredito": "original",
+      "maisProximo": {
+        "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
+        "categoria": "Residentes & Estudantes",
+        "score": 0.35,
+        "simTitulo": 0.2
+      }
+    },
+    "problemas": [],
+    "criadaEm": "2026-09-30T09:25:33.162Z",
+    "aprovadaEm": "2026-09-30T09:44:52.870Z",
+    "decididaPor": "Dr. Antônio Felipe",
+    "rascunho": {
+      "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-cefaleia-tensional-e-ansiedade-na-ubs.md",
+      "slug": "avaliacao-de-cefaleia-tensional-e-ansiedade-na-ubs",
+      "geradoEm": "2026-09-30T09:49:46.457Z",
+      "revisaoMedica": "pendente",
+      "checagens": {
+        "humanizacao": true,
+        "etica": true,
+        "originalidade": true
+      }
+    },
+    "redigidaEm": "2026-09-30T09:49:46.457Z"
   }
 ]

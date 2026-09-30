@@ -34,8 +34,6 @@ Olá, colega residente ou médico de família. Na nossa prática diária na Aten
 
 ## Guia Prático
 
-## Guia Prático
-
 ### O que observar na consulta
 - **Indicação inicial:** Reavalie sempre por que o antipsicótico foi iniciado. Muitas vezes, a prescrição ocorreu em um contexto de internação ou transição de cuidado e nunca mais foi revista.
 - **Sintomas extrapiramidais:** Pergunte ativamente sobre rigidez muscular, tremor de repouso, lentidão dos movimentos, acatisia (aquela sensação de pernas inquietas que não deixa a pessoa parar quieta) e distonias.
@@ -46,8 +44,6 @@ Olá, colega residente ou médico de família. Na nossa prática diária na Aten
 - **Reveja a necessidade:** Antes de renovar uma receita de longo prazo, questione se o sintoma-alvo ainda está presente.
 - **Envolva o paciente e a família:** Explique de forma clara os motivos para tentar a redução ou a suspensão do medicamento, ouvindo receios e expectativas.
 - **Planeje a redução:** Nunca retire antipsicóticos de forma abrupta, a menos que haja uma emergência médica, como a síndrome neuroléptica maligna.
-
-## Fisiopatologia
 
 ## Fisiopatologia
 
@@ -62,8 +58,6 @@ O bloqueo na via mesolímbica ajuda a controlar sintomas psicóticos. Já o bloq
 
 ### Perfil metabólico
 Os antipsicóticos atípicos apresentam forte afinidade por outros receptores, como serotoninérgicos (5-HT2C) e histaminérgicos (H1). Esse perfil farmacológico está intimamente ligado ao aumento do apetite, à resistência insulínica e ao ganho de peso ponderal rápido, elevando o risco cardiovascular a longo prazo.
-
-## Manejo Clínico
 
 ## Manejo Clínico
 

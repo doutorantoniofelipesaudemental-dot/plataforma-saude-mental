@@ -107,6 +107,12 @@ const LOTES = {
     { grupo: 'Condições Específicas', quantidade: 3 },
     { grupo: 'Pacientes & Famílias', quantidade: 3 },
   ],
+  // Lote 3 (20 pautas): abre Empresas & RH e reforça Linhas de Cuidado e Residentes & Estudantes.
+  3: [
+    { grupo: 'Empresas & RH', quantidade: 8 },
+    { grupo: 'Linhas de Cuidado (Cuidadores & Professores)', quantidade: 6 },
+    { grupo: 'Residentes & Estudantes', quantidade: 6 },
+  ],
 };
 
 /** Normaliza o plano de um lote para [{ grupo, quantidade, temas }]. */

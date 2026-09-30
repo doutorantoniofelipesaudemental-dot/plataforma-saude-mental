@@ -25,7 +25,7 @@ Conviver com alguém que enfrenta oscilações intensas de humor traz desafios d
 
 ## Guia Prático
 
-## Guia Prático para o Dia a Dia
+### Guia Prático para o Dia a Dia
 
 Apoiar alguém com instabilidade emocional exige construir pontes de diálogo e, ao mesmo tempo, proteger o seu próprio espaço. Algumas atitudes simples ajudam a tornar o ambiente mais seguro para todos.
 
@@ -37,7 +37,7 @@ Apoiar alguém com instabilidade emocional exige construir pontes de diálogo e,
 
 ## Fisiopatologia
 
-## O que Acontece por Trás da Instabilidade
+### O que Acontece por Trás da Instabilidade
 
 Quando falamos em oscilações intensas de humor, estamos lidando com circuitos cerebrais que regulam as emoções e a resposta ao estresse. Não é falta de vontade, frescura ou escolha.
 
@@ -48,7 +48,7 @@ Quando falamos em oscilações intensas de humor, estamos lidando com circuitos 
 
 ## Manejo Clínico
 
-## Manejo Clínico e o Papel da Família
+### Manejo Clínico e o Papel da Família
 
 O suporte familiar é uma base importante para o tratamento, mas a família não substitui a equipe de saúde. O acompanhamento profissional regular é indispensável.
 
