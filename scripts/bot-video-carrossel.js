@@ -52,8 +52,8 @@ const COR_ESCURA = '0x0d3330';
 const COR_CLARA = '0xfaf7f2';
 const RESPIRO = 0.5;
 const ABERTURA = 'Narração em voz sintética.';
-// Trilha por baixo da narração: ~ -18 dB, para não competir com a voz.
-const VOLUME_TRILHA_SOB_VOZ = 0.12;
+// Trilha por baixo da narração: -22 dB (10^(-22/20)), para não competir com a voz.
+const VOLUME_TRILHA_SOB_VOZ = 0.0794;
 const FADE_FINAL = 2;
 // Vídeo sem narração com trilha sintética: tempo de leitura de cada slide.
 const SEGUNDOS_POR_SLIDE = 5;
@@ -132,7 +132,8 @@ async function main() {
     console.log('\n  Use --slug=<slug> [--narrar --provedor=azure|edge|kokoro|openai|elevenlabs --voz=...] [--audio="<faixa.mp3>" | --sem-trilha] [--saida=<arquivo.mp4>].\n');
     process.exit(1);
   }
-  const provedor = String(args.provedor || 'azure');
+  // ElevenLabs (voz acolhedora desenhada) quando há ELEVENLABS_VOICE_ID; senão Azure.
+  const provedor = String(args.provedor || (process.env.ELEVENLABS_VOICE_ID ? 'elevenlabs' : 'azure'));
   const voz = args.voz ? String(args.voz) : vozPadrao(provedor);
   if (args.narrar) validarProvedor(provedor, voz);
   const pasta = PASTAS.find((p) => fs.existsSync(path.join(p, `${slug}.md`)));

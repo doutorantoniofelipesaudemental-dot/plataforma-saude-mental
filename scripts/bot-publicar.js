@@ -50,7 +50,8 @@ const { enviarVideo, validarMetadados, credenciaisYoutube } = require('../backen
 const { estadoPausa, registrarTokenInvalido } = require('../backend/lib/tokenInstagram');
 // Mesma regra de cadência da fila (contagem unificada fila + bot, filaRedes.js).
 const { motivoParaAguardar } = require('../backend/lib/filaRedes');
-const { temaSensivel } = require('../backend/lib/legendaInstagram');
+const { temaSensivel, IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../backend/lib/legendaInstagram');
+const { checarEticaCfm } = require('../backend/lib/checagensAprovacao');
 const { AVISO_CFM, IDENTIFICACAO, IDENTIFICACAO_COMPLETA, garantirConformidade, faltasConformidade } = require('../backend/lib/conformidadeCfm');
 const { calcularMatriz } = require('../backend/lib/matrizMidia');
 const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/checagemRedes');
@@ -104,12 +105,12 @@ function lerMeta(slug) {
 
 /** Legenda final: a aprovada + (tema sensível) CVV + identificação + aviso CFM, antes das hashtags. */
 function montarLegenda(legendaAprovada, { sensivel = false } = {}) {
-  return garantirConformidade(legendaAprovada, { sensivel, identificacao: IDENTIFICACAO });
+  return garantirConformidade(legendaAprovada, { sensivel, identificacao: IDENTIFICACAO_3_LINHAS });
 }
 
 /** Post do LinkedIn: o aprovado + CVV (tema sensível), identificação e aviso CFM. */
 function montarTextoLinkedin(texto, artigo) {
-  return garantirConformidade(texto, { sensivel: temaSensivel(artigo), identificacao: IDENTIFICACAO });
+  return garantirConformidade(texto, { sensivel: temaSensivel(artigo), identificacao: IDENTIFICACAO_3_LINHAS });
 }
 
 /** Grava o .json do pacote com a matriz multimídia recalculada (backend/lib/matrizMidia.js). */
@@ -143,8 +144,10 @@ function checarTexto({ aprovado, legenda, artigo }) {
   const hashtags = legenda.match(/#[\p{L}\d_]+/gu) || [];
   if (hashtags.length < 3 || hashtags.length > 5) falhas.push(`${hashtags.length} hashtags (3 a 5)`);
   if (!legenda.includes(AVISO_CFM)) falhas.push('legenda sem o aviso da Res. CFM 2.454/2026');
-  if (!legenda.includes(IDENTIFICACAO)) falhas.push('legenda sem a identificação do médico');
+  if (!temIdentificacaoSocial(legenda)) falhas.push('legenda sem a identificação do médico');
   if (temaSensivel(artigo) && !legenda.includes('CVV 188')) falhas.push('tema sensível sem CVV 188 na legenda');
+  // Ética médica/CFM (promessa de cura, sensacionalismo, identificação, CVV) — checagensAprovacao.js.
+  falhas.push(...checarEticaCfm(legenda, { contexto: 'social', sensivel: temaSensivel(artigo) }).falhas.map((f) => `ética/CFM: ${f}`));
   return falhas;
 }
 

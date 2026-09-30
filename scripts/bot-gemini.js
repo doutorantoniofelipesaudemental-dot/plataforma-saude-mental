@@ -40,7 +40,7 @@ const { calcularMatriz, FORMATOS } = require('../backend/lib/matrizMidia');
 
 const PASTA = path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'rascunhos');
 
-const SISTEMA = `Você é a equipe editorial da Plataforma Integrada de Saúde Mental Doutor Antônio Felipe (Instagram @doutor.antoniofelipe.smental). Escreva em português do Brasil, a partir SOMENTE do artigo fornecido.
+const SISTEMA = `Você é a equipe editorial do Portal de Saúde Mental Doutor Antônio Felipe Garabito (Instagram @doutor.antoniofelipe.smental). Escreva em português do Brasil, a partir SOMENTE do artigo fornecido.
 
 Regras inegociáveis:
 1. Fidelidade: não invente dados, números, estudos, casos nem falas. Use só o que está no artigo. Se precisar de um número que não está nele, escreva [DADO A CONFIRMAR].
@@ -56,7 +56,10 @@ Regras inegociáveis:
 11. Números: cite faixas inteiras e com as ressalvas do artigo (ex.: "de 25% a 74%, em quadros moderados a graves, em estudos de vários países"). Nunca destaque só o limite de cima ("até 74%").
 12. Use os termos do próprio artigo para serviços, públicos e efeitos (ex.: "serviço de saúde do trabalhador da rede de ensino", "proteger crianças e adolescentes"); não acrescente conclusões que ele não tira.
 13. Quantidades exatas: 5 ganchos, 7 a 10 slides, 2 Reels, 5 Stories, 2 posts de LinkedIn (cada um terminando com uma chamada para ler o artigo completo no site), 5 títulos, 2 Shorts e 1 vídeo longo.
-14. YouTube (SEO): título com a palavra-chave no início e até 60 caracteres, sem caça-clique; descrição com a palavra-chave na 1ª frase, sem links (o link é acrescentado depois); tags em português, minúsculas, do tema do artigo. Vídeo longo 16:9 de 8 a 12 min: gancho nos primeiros 30 s, promessa honesta do que o vídeo entrega, blocos com pontos de retenção, recapitulação e CTA; cada bloco com tempo (m:ss–m:ss), fala, sugestão de B-roll (sem pacientes nem pessoas identificáveis) e texto na tela. Capítulos começando em 0:00.`;
+14. YouTube (SEO): título com a palavra-chave no início e até 60 caracteres, sem caça-clique; descrição com a palavra-chave na 1ª frase, sem links (o link é acrescentado depois); tags em português, minúsculas, do tema do artigo. Vídeo longo 16:9 de 8 a 12 min: gancho nos primeiros 30 s, promessa honesta do que o vídeo entrega, blocos com pontos de retenção, recapitulação e CTA; cada bloco com tempo (m:ss–m:ss), fala, sugestão de B-roll (sem pacientes nem pessoas identificáveis) e texto na tela. Capítulos começando em 0:00.
+15. Tom: acolhedor, empático e terapêutico, falando COM a pessoa ("você", "sua"), sem culpa nem pressa, sem voz de manual, de chatbot ou de burocracia ("prezado usuário", "conforme solicitado", "o indivíduo acometido"). Nunca minimize o sofrimento ("é só pensar positivo", "frescura"). Falas de Reels e do vídeo longo são NARRADAS por voz sintética: frases curtas, fáceis de ouvir, pausas naturais. A narração é mixada com trilha suave a -22 dB, então a voz é sempre o protagonista.
+16. Assinatura: nas mídias sociais a identificação do médico é de 3 linhas (CRM-BA 41322; Medicina de Família e Comunidade com RQE 26638; atuação em PAP e APS). Ela é acrescentada por código: não a escreva.
+17. Peças opcionais do ecossistema (quando o esquema pedir): "podcast" (roteiro de áudio de 3 a 6 min, conversado, para narração), "newsletter" (assunto até 60 caracteres, pré-cabeçalho, 3 a 5 blocos curtos e uma chamada para ler o artigo completo) e "miniapp" (um mini-aplicativo interativo educativo de 3 a 5 perguntas ou passos, ANÔNIMO, que sugere leituras sem coletar nem gravar dado pessoal e sem funcionar como diagnóstico). Mesmas regras de fidelidade e CFM.`;
 
 const texto = { type: 'string' };
 const SCHEMA = {
@@ -143,6 +146,47 @@ const SCHEMA = {
     },
   },
   required: ['ganchos', 'carrossel', 'legenda', 'reels', 'stories', 'linkedin', 'youtube'],
+};
+
+// Peças omnichannel opcionais: entram no rascunho quando o modelo as devolve (retrocompatível
+// com rascunhos e testes antigos, que não as têm). PWA é do site (public/manifest.webmanifest).
+SCHEMA.properties.podcast = {
+  type: 'object',
+  description: 'roteiro de áudio-podcast de 3 a 6 min, conversado, para narração',
+  properties: {
+    titulo: { ...texto, description: 'até 60 caracteres' },
+    abertura: texto,
+    blocos: { type: 'array', items: { type: 'object', properties: { titulo: texto, fala: texto }, required: ['titulo', 'fala'] } },
+    encerramento: texto,
+  },
+  required: ['titulo', 'abertura', 'blocos', 'encerramento'],
+};
+SCHEMA.properties.newsletter = {
+  type: 'object',
+  description: 'newsletter: assunto, pré-cabeçalho e 3 a 5 blocos curtos com chamada para o artigo completo',
+  properties: {
+    assunto: { ...texto, description: 'até 60 caracteres' },
+    preCabecalho: { ...texto, description: 'até 90 caracteres' },
+    blocos: { type: 'array', items: { type: 'object', properties: { titulo: texto, texto }, required: ['titulo', 'texto'] } },
+    chamada: texto,
+  },
+  required: ['assunto', 'preCabecalho', 'blocos', 'chamada'],
+};
+SCHEMA.properties.miniapp = {
+  type: 'object',
+  description: 'mini-aplicativo interativo anônimo: 3 a 5 perguntas ou passos e as leituras/ações sugeridas por resposta',
+  properties: {
+    titulo: texto,
+    passos: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { pergunta: texto, opcoes: { type: 'array', items: texto }, devolutiva: { ...texto, description: 'orientação acolhedora, sem diagnóstico' } },
+        required: ['pergunta', 'opcoes', 'devolutiva'],
+      },
+    },
+  },
+  required: ['titulo', 'passos'],
 };
 
 function argumentos() {
@@ -381,6 +425,16 @@ function pecasDoRascunho(d) {
   d.reels.forEach((r, i) => r.cenas.forEach((c, j) => add(`Reel ${i + 1}, cena ${j + 1}`, `${c.textoTela}. ${c.fala}`)));
   d.stories.forEach((s, i) => add(`story ${i + 1}`, s.texto));
   d.linkedin.forEach((post, i) => post.texto.split(/\n\s*\n/).forEach((t, j) => add(`LinkedIn ${i + 1}, §${j + 1}`, t)));
+  if (d.podcast) {
+    add('Podcast, título e abertura', `${d.podcast.titulo}. ${d.podcast.abertura}`);
+    d.podcast.blocos.forEach((b, i) => add(`Podcast, bloco ${i + 1}`, `${b.titulo}. ${b.fala}`));
+    add('Podcast, encerramento', d.podcast.encerramento);
+  }
+  if (d.newsletter) {
+    add('Newsletter, assunto', `${d.newsletter.assunto}. ${d.newsletter.preCabecalho}`);
+    d.newsletter.blocos.forEach((b, i) => add(`Newsletter, bloco ${i + 1}`, `${b.titulo}. ${b.texto}`));
+  }
+  if (d.miniapp) d.miniapp.passos.forEach((p, i) => add(`Miniapp, passo ${i + 1}`, `${p.pergunta} ${p.devolutiva}`));
   d.youtube.titulos.forEach((t, i) => add(`título YouTube ${i + 1}`, t));
   d.youtube.shorts.forEach((s, i) => add(`Short ${i + 1}`, `${s.gancho} ${s.desenvolvimento} ${s.cta} ${s.descricao}`));
   add('YouTube longo, título e descrição', `${d.youtube.longo.titulo}. ${d.youtube.longo.descricao}`);
@@ -518,6 +572,21 @@ function markdown(artigo, d, alertas, origem, revisao) {
   d.stories.forEach((s, i) => l.push(`| ${i + 1} | ${celula(s.texto)} | ${celula(s.recurso)} |`));
   l.push('', `Rodapé do último Story: ${IDENTIFICACAO}`, '');
   d.linkedin.forEach((p, i) => l.push(`## LinkedIn ${i + 1}: ${p.tipo}`, '', ...p.texto.split('\n').map((x) => `> ${x}`), '>', `> ${IDENTIFICACAO}`, `> ${AVISO_CFM}`, ''));
+  if (d.podcast) {
+    l.push(`## Áudio-podcast: ${d.podcast.titulo}`, '', `**Abertura:** ${d.podcast.abertura}`, '');
+    d.podcast.blocos.forEach((b) => l.push(`### ${b.titulo}`, '', b.fala, ''));
+    l.push(`**Encerramento:** ${d.podcast.encerramento}`, '', '> Narrado por voz sintética (declarar na abertura) com trilha suave a -22 dB.', '');
+  }
+  if (d.newsletter) {
+    l.push(`## Newsletter: ${d.newsletter.assunto}`, '', `*${d.newsletter.preCabecalho}*`, '');
+    d.newsletter.blocos.forEach((b) => l.push(`### ${b.titulo}`, '', b.texto, ''));
+    l.push(d.newsletter.chamada, '');
+  }
+  if (d.miniapp) {
+    l.push(`## Miniapp interativo: ${d.miniapp.titulo}`, '', '> Anônimo: as respostas não saem do aparelho nem são gravadas.', '');
+    d.miniapp.passos.forEach((p, i) => l.push(`${i + 1}. **${p.pergunta}** (${p.opcoes.join(' / ')})`, `   - ${p.devolutiva}`));
+    l.push('');
+  }
   l.push('## YouTube', '', '### Títulos', '', ...d.youtube.titulos.map((t, i) => `${i + 1}. ${t}`), '');
   d.youtube.shorts.forEach((s, i) =>
     l.push(

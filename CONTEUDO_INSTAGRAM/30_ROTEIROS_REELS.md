@@ -1,4 +1,4 @@
-# 30 Roteiros de Reels (30 segundos) | Plataforma Integrada de Saúde Mental Doutor Antônio Felipe
+# 30 Roteiros de Reels (30 segundos) | Portal de Saúde Mental Doutor Antônio Felipe Garabito
 
 Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segue a estrutura de vídeo curto testada para retenção: **gancho nos 3 primeiros segundos → desenvolvimento rápido → CTA de agendamento no final.**
 

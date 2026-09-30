@@ -1,4 +1,4 @@
-# Plataforma Integrada de Saúde Mental Doutor Antônio Felipe
+# Portal de Saúde Mental Doutor Antônio Felipe Garabito
 
 Site institucional + blog da clínica, com formulário de agendamento gravado em
 MongoDB. Backend em Express 5, front-end em HTML/CSS/JS puro (sem build),
@@ -174,7 +174,7 @@ do Atlas (ou `0.0.0.0/0`, já que a Vercel não tem IP fixo nos planos padrão).
 | Campo | Valor |
 |---|---|
 | Nome | Dr. Antônio Felipe |
-| Marca/clínica | Plataforma Integrada de Saúde Mental Doutor Antônio Felipe (forma curta: Saúde Mental · Doutor Antônio Felipe) |
+| Marca/clínica | Portal de Saúde Mental Doutor Antônio Felipe Garabito (forma curta: Saúde Mental · Doutor Antônio Felipe) |
 | Registro | CRM-BA 41322 · RQE 26638 |
 | Especialidade | Medicina de Família e Comunidade |
 | Pós-graduações | Psiquiatria, Saúde Mental, Medicina do Trabalho, Atenção Psicossocial, Neuropsicologia |

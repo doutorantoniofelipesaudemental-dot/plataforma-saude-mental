@@ -18,8 +18,8 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Plataforma Integrada de Saúde Mental",
-    template: "%s · Plataforma Integrada de Saúde Mental",
+    default: "Portal de Saúde Mental Doutor Antônio Felipe Garabito",
+    template: "%s · Portal de Saúde Mental Doutor Antônio Felipe Garabito",
   },
   description:
     "Ferramentas clínicas do Dr. Antônio Felipe para APS, Pronto Atendimento Psiquiátrico, Saúde Ocupacional e Escola.",

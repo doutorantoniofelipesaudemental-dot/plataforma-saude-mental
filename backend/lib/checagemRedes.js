@@ -25,6 +25,7 @@ const {
   ehRelatoClinico,
   RE_NARRATIVA_COMPOSTA,
   IDENTIFICACAO,
+  temIdentificacaoSocial,
   LINHA_BIO,
   CHAMADA_SALVAR,
   CHAMADA_COMPARTILHAR,
@@ -94,7 +95,7 @@ function checarConteudo(artigo, legenda) {
   if ((partes.paragrafos || []).length < 2) falhas.push('menos de 2 parágrafos tirados do artigo');
   if (!texto.includes(CHAMADA_SALVAR) && !texto.includes(CHAMADA_COMPARTILHAR)) falhas.push('sem chamada para salvar ou compartilhar');
   if (!texto.includes(LINHA_BIO)) falhas.push('sem "🔗 Artigo completo no link da bio"');
-  if (!texto.includes(IDENTIFICACAO)) falhas.push('sem a identificação resumida (CRM + especialidade com RQE)');
+  if (!temIdentificacaoSocial(texto)) falhas.push('sem a identificação resumida (CRM + especialidade com RQE)');
 
   const hashtags = texto.match(/#[\p{L}\d_]+/gu) || [];
   if (hashtags.length < 3 || hashtags.length > 5) falhas.push(`${hashtags.length} hashtags (precisa de 3 a 5)`);
@@ -153,7 +154,8 @@ async function checarVisual(artigo, capa, contarOutrosComHash) {
   const ingles = semNomesProprios(`${artigo.titulo} ${artigo.subtituloRedes || ''} ${textoDoSelo(artigo)}`).match(RE_INGLES);
   if (ingles) falhas.push(`texto em inglês na capa: "${ingles[2]}"`);
 
-  return { ...resultado(falhas), hash };
+  // Buffer só para as checagens seguintes: não enumerável, para não ir junto ao registro no banco.
+  return Object.defineProperty({ ...resultado(falhas), hash }, 'buffer', { value: buffer, enumerable: false });
 }
 
 /* ========================== 3. Segurança e ética ========================== */
@@ -176,15 +178,24 @@ async function executarTriplaChecagem(artigo, { legenda, capa, contarOutrosComHa
   const conteudo = checarConteudo(artigo, legenda);
   const visual = await checarVisual(artigo, capa, contarOutrosComHash);
   const seguranca = checarSeguranca(artigo, legenda);
-  const aprovado = conteudo.ok && visual.ok && seguranca.ok;
+  // 4ª etapa: imagem sem marca d'água/ruído, humanização e ética/CFM (checagensAprovacao.js).
+  const { executarChecagensAprovacao } = require('./checagensAprovacao');
+  const aprovacao = await executarChecagensAprovacao({
+    texto: legenda?.texto,
+    imagens: visual.buffer ? [visual.buffer] : [],
+    contexto: 'social',
+    sensivel: temaSensivel(artigo),
+  });
+  const aprovado = conteudo.ok && visual.ok && seguranca.ok && aprovacao.aprovado;
   const motivo = aprovado
     ? null
     : [
         ...conteudo.falhas.map((f) => `conteúdo: ${f}`),
         ...visual.falhas.map((f) => `visual: ${f}`),
         ...seguranca.falhas.map((f) => `segurança: ${f}`),
+        ...(aprovacao.aprovado ? [] : [aprovacao.motivo]),
       ].join('; ');
-  return { aprovado, motivo, conteudo, visual, seguranca };
+  return { aprovado, motivo, conteudo, visual, seguranca, aprovacao: { imagem: aprovacao.imagem, humanizacao: aprovacao.humanizacao, etica: aprovacao.etica } };
 }
 
 module.exports = {

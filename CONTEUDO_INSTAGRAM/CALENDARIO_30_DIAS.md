@@ -1,4 +1,4 @@
-# Calendário de 30 Dias — Carrossel Instagram | Plataforma Integrada de Saúde Mental Doutor Antônio Felipe
+# Calendário de 30 Dias — Carrossel Instagram | Portal de Saúde Mental Doutor Antônio Felipe Garabito
 
 Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artigos`), organizados nos 7 pilares editoriais do site: **Relatos da Prática, Pais & Famílias, Médicos & Enfermeiros, Geral, Residentes & Estudantes, Empresas & RH e Pacientes & Famílias.**
 

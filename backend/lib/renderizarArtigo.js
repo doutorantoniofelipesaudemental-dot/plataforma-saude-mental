@@ -160,7 +160,7 @@ function renderizarArtigoHtml(artigo) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Plataforma Integrada de Saúde Mental Doutor Antônio Felipe',
+      name: 'Portal de Saúde Mental Doutor Antônio Felipe Garabito',
       url: BASE_URL,
     },
   };

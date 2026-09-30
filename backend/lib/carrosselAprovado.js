@@ -11,7 +11,7 @@
  */
 const sharp = require('sharp');
 const { FONTE_SERIF, FONTE_SANS, COR, MARGEM, quebrarLinhas, caminhoTexto, caminhoLinhas } = require('./carrossel');
-const { IDENTIFICACAO } = require('./legendaInstagram');
+const { IDENTIFICACAO, IDENTIFICACAO_3_LINHAS } = require('./legendaInstagram');
 
 const LARGURA = 1080;
 const ALTURA = 1350;
@@ -53,10 +53,12 @@ function lerAprovado(md) {
       const rodape = (visual.match(/Rodapé pequeno:\s*"([^"]+)"/i) || [])[1] || '';
       return { numero: Number(numero), texto, visual, rodape };
     });
-  const rodapeUltimo = (md.match(/^Rodapé do último slide:\s*(.+)$/m) || [])[1] || IDENTIFICACAO;
+  const rodapeUltimo = (md.match(/^Rodapé do último slide:\s*(.+)$/m) || [])[1] || IDENTIFICACAO_3_LINHAS;
+  // Rascunhos legados gravaram a identificação de uma linha: sobem para o padrão de 3 linhas.
+  const rodapeFinal = rodapeUltimo === IDENTIFICACAO ? IDENTIFICACAO_3_LINHAS : rodapeUltimo;
   const legenda = citacao(secao(md, 'Legenda'));
   const linkedin = [...md.matchAll(/^## (LinkedIn \d+: .+)$/gm)].map((m) => ({ titulo: m[1], texto: citacao(secao(md, m[1].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))) }));
-  return { tituloArtigo, slides, rodapeUltimo, legenda, linkedin };
+  return { tituloArtigo, slides, rodapeUltimo: rodapeFinal, legenda, linkedin };
 }
 
 /**
@@ -110,10 +112,13 @@ function svgSlide(slide, indice, total, { rodapeUltimo }) {
 
   const rodapes = [];
   if (slide.rodape) rodapes.push(slide.rodape);
-  // Identificação em duas linhas fixas (CRM numa, especialidade + RQE na outra): nunca separa "RQE" do número.
+  // Identificação sintética em 3 linhas fixas (CRM / especialidade + RQE / atuação): nunca separa "RQE" do número.
+  // Rodapé personalizado no .md, de uma linha só, mantém a quebra automática.
   if (ultimo) {
     const i = rodapeUltimo.indexOf(' · Medicina');
-    rodapes.push(...(i > 0 ? [rodapeUltimo.slice(0, i), rodapeUltimo.slice(i + 3)] : quebrarLinhas(FONTE_SANS, rodapeUltimo, LARGURA_UTIL, TAMANHO_RODAPE, { maxLinhas: 3 })));
+    rodapes.push(...(rodapeUltimo.includes('\n')
+      ? rodapeUltimo.split('\n')
+      : i > 0 ? [rodapeUltimo.slice(0, i), rodapeUltimo.slice(i + 3)] : quebrarLinhas(FONTE_SANS, rodapeUltimo, LARGURA_UTIL, TAMANHO_RODAPE, { maxLinhas: 3 })));
   }
   const yRodape = ALTURA - 150 - (rodapes.length - 1) * ENTRELINHA_RODAPE;
 

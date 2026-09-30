@@ -47,6 +47,7 @@
       datePublished: artigo.publicadoEm,
       dateModified: artigo.atualizadoEm || artigo.publicadoEm,
       image: artigo.imagemCapa || undefined,
+      about: artigo.categoria && artigo.categoria !== 'Geral' ? { '@type': 'MedicalCondition', name: artigo.categoria } : undefined,
       author: {
         '@type': 'Person',
         name: artigo.autor || 'Dr. Antônio Felipe',
@@ -54,7 +55,7 @@
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Plataforma Integrada de Saúde Mental Doutor Antônio Felipe',
+        name: 'Portal de Saúde Mental Doutor Antônio Felipe Garabito',
         url: BASE_URL,
       },
     };

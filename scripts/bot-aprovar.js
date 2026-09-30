@@ -30,6 +30,8 @@ const db = require('../backend/lib/db');
 const Artigo = require('../backend/models/Artigo');
 const { hashArtigo, hashTexto, AVISO_CFM } = require('./bot-gemini');
 const { calcularMatriz } = require('../backend/lib/matrizMidia');
+const { lerAprovado } = require('../backend/lib/carrosselAprovado');
+const { checarHumanizacao, checarEticaCfm } = require('../backend/lib/checagensAprovacao');
 // Todo .json de pacote sai com a matriz multimídia recalculada.
 const jsonComMatriz = (meta) => JSON.stringify({ ...meta, matriz: calcularMatriz(meta) }, null, 2);
 
@@ -101,9 +103,20 @@ async function aprovar(slug, { revisado, reaprovar = false }) {
     return { slug, ok: false, motivo: 'o artigo mudou depois do rascunho — refaça: npm run bot:gerar-posts -- --slug=' + slug + ' --forcar' };
   }
 
+  const md = fs.readFileSync(arquivoMd, 'utf8');
+  // Checagens de humanização e ética/CFM sobre legenda e slides do rascunho. As linhas fixas
+  // (identificação, CVV, aviso) entram por código na publicação e são checadas lá (bot-publicar).
+  const peca = lerAprovado(md);
+  const textoSocial = [peca.legenda, ...peca.slides.map((s) => s.texto)].filter(Boolean).join('\n\n');
+  const checagensTexto = [
+    ...checarHumanizacao(textoSocial).falhas.map((f) => `humanização: ${f}`),
+    ...checarEticaCfm(textoSocial, { contexto: 'social', sensivel: false, exigirIdentificacao: false }).falhas.map((f) => `ética/CFM: ${f}`),
+  ];
+
   const desvios = meta.revisor?.desvios || [];
   const pendencias = [
     ...meta.alertas.map((a) => `estrutural: ${a}`),
+    ...checagensTexto,
     ...desvios.map((x) => `sentido (${x.gravidade}): ${x.peca} — ${x.problema}`),
     ...(meta.revisor?.disponivel ? [] : ['revisor semântico indisponível — revisão de sentido integral pelo médico']),
   ];
@@ -111,7 +124,6 @@ async function aprovar(slug, { revisado, reaprovar = false }) {
     return { slug, ok: false, pendencias, motivo: `${pendencias.length} ponto(s) a revisar. Depois de ler (e corrigir no .md, se preciso): npm run bot:aprovar -- --slug=${slug} --revisado` };
   }
 
-  const md = fs.readFileSync(arquivoMd, 'utf8');
   const agora = new Date();
   meta.aprovacao = {
     aprovadoEm: agora,
