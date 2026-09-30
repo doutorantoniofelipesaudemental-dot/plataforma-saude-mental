@@ -72,6 +72,14 @@ const GRUPOS = {
     tipo: 'artigo-cientifico',
     instrucao: 'suporte a cuidadores familiares (de idosos, de pessoas com transtorno mental ou deficiência) e a professores (sobrecarga, sinais de esgotamento, como acolher e onde buscar ajuda). Psicoeducação em linguagem acessível, com base em literatura; tipo "artigo-cientifico", com 3 a 6 consultas PubMed em "referencias". Deixe claro no "publicoAlvo" se a pauta é para cuidadores ou para professores.',
   },
+  'Condições Específicas': {
+    tipo: 'artigo-cientifico',
+    instrucao: 'artigos científicos e guias clínicos focados no diagnóstico, estadiamento e manejo prático de transtornos psiquiátricos específicos (ex.: TDAH no adulto, transtornos de ansiedade, depressão resistente, somatizações, transtornos de humor) na Atenção Primária e no ambulatório, com condutas baseadas em evidências. Tipo "artigo-cientifico", com 3 a 6 consultas PubMed em "referencias".',
+  },
+  'Empresas & RH': {
+    tipo: 'artigo-cientifico',
+    instrucao: 'artigos orientados à saúde mental ocupacional e à medicina do trabalho: prevenção de burnout, gestão do estresse corporativo, nexo causal, emissão de CAT, readaptação de funções e estratégias de bem-estar psíquico no ambiente de trabalho. Tipo "artigo-cientifico", com 3 a 6 consultas PubMed em "referencias" (e, quando couber, a base normativa, sem inventar número de lei ou norma).',
+  },
   'Pacientes & Famílias': {
     tipo: 'artigo-cientifico',
     instrucao: 'psicoeducação em saúde mental para pacientes e famílias (o que é, sinais, o que ajuda, quando procurar atendimento), em linguagem acolhedora e acessível, sem diagnóstico a distância. Tipo "artigo-cientifico", com 3 a 6 consultas PubMed em "referencias".',
@@ -92,6 +100,13 @@ const LOTES = {
     { grupo: 'Linhas de Cuidado (Cuidadores & Professores)', quantidade: 4, temas: [TEMA_CUIDADOR_IDOSOS, TEMA_PROFESSORES] },
     { grupo: 'Pacientes & Famílias', quantidade: 3, temas: [TEMA_GUIA_ULISSES] },
   ],
+  // Lote 2 (20 pautas): reforça as metas mais distantes (Residentes & Estudantes) e abre Condições Específicas.
+  2: [
+    { grupo: 'Residentes & Estudantes', quantidade: 8 },
+    { grupo: 'Relatos da Prática', quantidade: 6 },
+    { grupo: 'Condições Específicas', quantidade: 3 },
+    { grupo: 'Pacientes & Famílias', quantidade: 3 },
+  ],
 };
 
 /** Normaliza o plano de um lote para [{ grupo, quantidade, temas }]. */
@@ -104,7 +119,8 @@ const slugDe = (s) =>
 function problemasDaProposta(p) {
   const falhas = [];
   if (!TIPOS.includes(p.tipo)) falhas.push(`tipo inválido "${p.tipo}"`);
-  if (!p.titulo || p.titulo.length > 90) falhas.push('título ausente ou com mais de 90 caracteres');
+  // Limite de 90 caracteres; o médico pode autorizar um título mais longo numa pauta (tituloLongoAutorizado), até 180 (limite do modelo Artigo).
+  if (!p.titulo || p.titulo.length > (p.tituloLongoAutorizado ? 180 : 90)) falhas.push(`título ausente ou com mais de ${p.tituloLongoAutorizado ? 180 : 90} caracteres`);
   if (!p.pauta || p.pauta.length < 60) falhas.push('pauta curta demais (mínimo 60 caracteres)');
   if (p.tipo === 'artigo-cientifico') {
     const refs = p.referencias || [];
@@ -203,6 +219,35 @@ function marcarRedigida(registros, id, { arquivo, slug, checagens, agora = new D
   return r;
 }
 
+const SISTEMA_REFERENCIAS = 'Você é bibliotecário científico de um portal de saúde mental. Para a pauta dada, proponha de 3 a 6 CONSULTAS DE BUSCA no PubMed/MEDLINE (termos MeSH quando houver, em inglês) e o tipo de estudo esperado (revisão sistemática, metanálise, ensaio clínico randomizado, diretriz). NUNCA invente PMID, DOI, autor, ano nem número: devolva só as consultas.';
+const SCHEMA_REFERENCIAS = {
+  type: 'object',
+  properties: { referencias: { type: 'array', items: { type: 'object', properties: { consultaPubMed: { type: 'string' }, tipoDeEstudo: { type: 'string' } }, required: ['consultaPubMed', 'tipoDeEstudo'] } } },
+  required: ['referencias'],
+};
+
+/**
+ * Artigos científicos sem as 3 consultas PubMed mínimas (o modelo às vezes as omite quando gera muitas pautas
+ * de uma vez) recebem uma chamada curta só para as referências; depois os problemas são recalculados.
+ * `gerar({sistema, usuario, schema})` devolve o JSON. Devolve as pautas corrigidas.
+ */
+async function completarReferencias(registros, gerar) {
+  const corrigidas = [];
+  for (const r of registros) {
+    if (r.tipo !== 'artigo-cientifico' || !['proposta', 'aprovada'].includes(r.status) || (r.referencias || []).length >= 3) continue;
+    const d = await gerar({ sistema: SISTEMA_REFERENCIAS, usuario: `Pauta: "${r.titulo}". ${r.pauta}
+Público: ${r.publicoAlvo}. Ângulo: ${r.angulo}.`, schema: SCHEMA_REFERENCIAS });
+    const refs = (d.referencias || []).filter((x) => x.consultaPubMed && x.tipoDeEstudo).slice(0, 6);
+    if (refs.length < 3) continue;
+    r.referencias = refs;
+    // Mantém os problemas de originalidade; refaz os demais (estrutura, CFM, tom).
+    const mantidos = (r.problemas || []).filter((x) => /^originalidade|^título já publicado/.test(x));
+    r.problemas = [...problemasDaProposta(r), ...mantidos];
+    corrigidas.push(r);
+  }
+  return corrigidas;
+}
+
 function mudarStatus(registros, id, status, { agora = new Date(), por = 'Dr. Antônio Felipe' } = {}) {
   const r = registros.find((x) => x.id === id);
   if (!r) throw new Error(`pauta "${id}" não encontrada`);
@@ -247,4 +292,4 @@ function gravarRegistros(registros, pasta = PASTA_PAUTAS) {
   fs.writeFileSync(path.join(pasta, 'PAUTAS.md'), renderizarMd(registros));
 }
 
-module.exports = { marcarRedigida, normalizarPlano, reverificarOriginalidade, GRUPOS, LOTES, SISTEMA_IDEACAO, SCHEMA_IDEACAO, SECOES_ARTIGO, TIPOS, problemasDaProposta, criarPropostas, criarDemanda, mudarStatus, renderizarMd, lerRegistros, gravarRegistros, slugDe };
+module.exports = { completarReferencias, marcarRedigida, normalizarPlano, reverificarOriginalidade, GRUPOS, LOTES, SISTEMA_IDEACAO, SCHEMA_IDEACAO, SECOES_ARTIGO, TIPOS, problemasDaProposta, criarPropostas, criarDemanda, mudarStatus, renderizarMd, lerRegistros, gravarRegistros, slugDe };

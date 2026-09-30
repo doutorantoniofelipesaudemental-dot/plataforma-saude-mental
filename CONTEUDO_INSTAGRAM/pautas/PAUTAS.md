@@ -4,11 +4,12 @@
 
 | Categoria | Propostas | Aprovadas | Redigidas | Rejeitadas | Com problemas |
 |---|---:|---:|---:|---:|---:|
-| Relatos da Prática | 0 | 0 | 11 | 0 | 0 |
-| Residentes & Estudantes | 0 | 0 | 5 | 1 | 1 |
+| Relatos da Prática | 0 | 0 | 17 | 9 | 9 |
+| Residentes & Estudantes | 0 | 0 | 13 | 3 | 3 |
 | Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 4 | 6 | 5 |
-| Pacientes & Famílias | 0 | 0 | 3 | 1 | 1 |
-| **Total** | 0 | 0 | 23 | 8 | 7 |
+| Pacientes & Famílias | 0 | 0 | 6 | 1 | 1 |
+| Condições Específicas | 0 | 0 | 3 | 2 | 2 |
+| **Total** | 0 | 0 | 43 | 21 | 20 |
 
 ## [redigida] O balcão da farmácia e as perguntas não feitas
 
@@ -453,3 +454,467 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/saude-mental-de-migrantes-sindrome-de-ulisses-e-luto-migrato.md` · slug: `saude-mental-de-migrantes-sindrome-de-ulisses-e-luto-migrato` · pauta: `2026-09-30-31-saude-mental-de-migrantes-sind`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Luto: quanto tempo é considerado normal?" (similaridade 0.2)
+
+## [redigida] Delirium no pronto-atendimento: avaliação e manejo para residentes
+
+- **id:** 2026-09-30-32-delirium-no-pronto-atendimento
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta residentes e estudantes na identificação rápida de delirium em idosos no pronto-atendimento, diferenciando de demência e quadros psiquiátricos puros. Aborda as ferramentas de triagem rápida e as condutas iniciais de manejo ambiental e farmacológico na primeira hora.
+- **público:** Residentes de Medicina de Família, Clínica Médica e Estudantes de Medicina · **ângulo:** Foco prático no cenário de alta pressão do pronto-socorro, priorizando reversão de gatilhos orgânicos antes do uso de antipsicóticos.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Delirium"[Mesh] AND "Emergencies"[Mesh] AND "Diagnosis"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Delirium"[Mesh] AND "Emergency Service, Hospital"[Mesh] AND "Management"[Subheading]` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `"Confusion Assessment Method"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Estudo de Validação) [PMID A CONFIRMAR]
+  - PubMed: `"Delirium"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid.md` · slug: `delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid` · pauta: `2026-09-30-32-delirium-no-pronto-atendimento`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.22)
+
+## [redigida] Catatonia na emergência médica: reconhecimento e manejo inicial
+
+- **id:** 2026-09-30-33-catatonia-na-emergencia-medica
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Capacita o médico residente a reconhecer os sinais sutis e evidentes de catatonia em pacientes trazidos ao pronto atendimento. Detalha o uso da escala de Bush-Francis e o teste do lorazepam como conduta diagnóstica e terapêutica imediata na UBS ou PA.
+- **público:** Residentes de Psiquiatria, Clínica Médica e Médicos de Emergência · **ângulo:** Enfoque no reconhecimento precoce para evitar complicações fatais como a catatonia letal.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Catatonia"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Catatonia"[Mesh]) AND ("Lorazepam"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Catatonia"[Mesh]) AND ("Diagnosis"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Catatonia"[Mesh]) AND ("Emergencies"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici.md` · slug: `catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici` · pauta: `2026-09-30-33-catatonia-na-emergencia-medica`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Síndrome de abstinência alcoólica: reconhecimento e manejo inicial" (similaridade 0.33)
+
+## [rejeitada] Intoxicação aguda por psicofármacos: conduta no pronto-socorro
+
+- **id:** 2026-09-30-34-intoxicacao-aguda-por-psicofar
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Apresenta o protocolo de atendimento inicial para superdosagem de antidepressivos tricíclicos, lítio e inibidores da recaptação de serotonina. Orienta o estudante e o residente sobre monitorização eletrocardiográfica, critérios de internação e suporte de vida.
+- **público:** Estudantes de medicina, residentes de medicina de emergência e clínica médica · **ângulo:** Abordagem integrada focada na estabilização clínica rápida e prevenção de arritmias letais.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `psychotropic drug overdose emergency management guidelines` (Diretriz Prática) [PMID A CONFIRMAR]
+  - PubMed: `tricyclic antidepressant toxicity ECG changes management` (Revisão Sistemática) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Intoxicação por psicofármacos: conduta inicial no PA" (similaridade 0.43)
+- ⚠️ **problemas:** artigo científico exige de 3 a 6 referências (consultas PubMed); originalidade: paráfrase/redundância de "Intoxicação por psicofármacos: conduta inicial no PA" (similaridade 0.43, título 0.60)
+
+## [redigida] Transtornos somatoformes na UBS: investigação e manejo clínico
+
+- **id:** 2026-09-30-35-transtornos-somatoformes-na-ub
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta o manejo de pacientes com sintomas físicos inexplicáveis e alta frequência de consultas na Atenção Primária à Saúde. Fornece estratégias de comunicação e vínculo para evitar exames complementares desnecessários e iatrogenias.
+- **público:** Residentes de Medicina de Família e Comunidade e Estudantes · **ângulo:** Valorização da relação médico-paciente como principal ferramenta terapêutica na APS.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Primary Health Care"[Mesh] AND "Clinical Management"` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `"Physician-Patient Relations"[Mesh] AND "Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Unnecessary Procedures"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Randomized Controlled Trial"[Publication Type]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic.md` · slug: `transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic` · pauta: `2026-09-30-35-transtornos-somatoformes-na-ub`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Rastreio e manejo da depressão pós-parto na UBS" (similaridade 0.23)
+
+## [redigida] Uso de antipsicóticos na APS: indicações, ajustes e desprescrição
+
+- **id:** 2026-09-30-36-uso-de-antipsicoticos-na-aps-i
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para residentes sobre a prescrição prudente de antipsicóticos em pacientes não psiquiátricos na atenção primária. Aborda efeitos colaterais extrapiramidais metabólicos e critérios seguros para redução e descontinuação gradual.
+- **público:** Médicos residentes de Medicina de Família e Comunidade e clínicos gerais · **ângulo:** Foco na segurança do paciente e manejo de efeitos adversos a longo prazo na comunidade.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh] AND "Inappropriate Prescribing"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Deprescribing"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "General Practice"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `"Antipsychotic Agents/adverse effects"[Mesh] AND "Metabolic Syndrome"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Substance Withdrawal Syndrome"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `"Dyskinesia, Drug-Induced"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Family Practice"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri.md` · slug: `uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri` · pauta: `2026-09-30-36-uso-de-antipsicoticos-na-aps-i`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS" (similaridade 0.18)
+
+## [redigida] Insônia refratária na atenção primária: investigação e conduta
+
+- **id:** 2026-09-30-37-insonia-refrataria-na-atencao-
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda a investigação sistemática de causas secundárias para insônia que não respondeu a medidas de higiene do sono na UBS. Orienta o início da terapia cognitivo-comportamental para insônia (TCC-I) adaptada à APS e o manejo da retirada de hipnóticos.
+- **público:** Residentes de Medicina de Família e Comunidade e estudantes · **ângulo:** Alternativas não farmacológicas estruturadas aplicáveis à realidade do posto de saúde.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Cognitive Behavioral Therapy"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Hypnotics and Sedatives"[Mesh] AND "Substance Withdrawal Syndrome"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `Refractory insomnia primary care cognitive behavioral therapy randomized controlled trial` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "General Practice"[Mesh] AND "Benzodiazepines"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/insonia-refrataria-na-atencao-primaria-investigacao-e-condut.md` · slug: `insonia-refrataria-na-atencao-primaria-investigacao-e-condut` · pauta: `2026-09-30-37-insonia-refrataria-na-atencao-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Insônia na consulta de rotina: além da prescrição automática" (similaridade 0.28)
+
+## [redigida] Abandono de tratamento psiquiátrico: estratégias de resgate na UBS
+
+- **id:** 2026-09-30-38-abandono-de-tratamento-psiquia
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta a equipe da atenção básica sobre como abordar pacientes que abandonaram o uso de psicofármacos e o acompanhamento regular. Discute escuta ativa, busca ativa domiciliar e avaliação de risco de recaída sintomática.
+- **público:** Residentes de Medicina de Família, Enfermagem da APS e Estudantes · **ângulo:** Visão comunitária do cuidado longitudinal e prevenção de descompensações graves.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Patient Dropouts"[Mesh] OR "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Community Mental Health Services"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Mental Health Services"[Mesh]) AND ("House Calls"[Mesh] OR "Community Health Nursing"[Mesh]) AND ("Patient Dropouts"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Psychotropic Drugs"[Mesh] AND "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Disorders"[Mesh] AND "Secondary Prevention"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n.md` · slug: `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` · pauta: `2026-09-30-38-abandono-de-tratamento-psiquia`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Transtornos somatoformes na UBS: investigação e manejo clínico" (similaridade 0.24)
+
+## [redigida] Transtorno bipolar na APS: rastreio e manejo intercrises
+
+- **id:** 2026-09-30-39-transtorno-bipolar-na-aps-rast
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Capacita o residente a identificar o transtorno bipolar mascarado por sintomas depressivos na atenção primária. Aborda o uso seguro de estabilizadores do humor, sinais de alerta para mania induzida por antidepressivos e critérios de referência.
+- **público:** Residentes de Medicina de Família e estudantes de medicina · **ângulo:** Diferenciação clínica fundamental entre depressão unipolar e bipolar no primeiro atendimento.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Bipolar Disorder"[Mesh] OR "Bipolar Disorder/diagnosis"[Mesh] OR "Bipolar Disorder/therapy"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Early Diagnosis"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Bipolar Disorder"[Mesh] OR "Depressive Disorder"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Antidepressive Agents"[Mesh] OR "Antidepressive Agents/adverse effects"[Mesh]) AND ("Bipolar Disorder/chemically induced"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Ambulatory Care"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Bipolar Disorder/therapy"[Mesh]) AND ("Patient Care Management"[Mesh] OR "Intersectoral Collaboration"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises.md` · slug: `transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises` · pauta: `2026-09-30-39-transtorno-bipolar-na-aps-rast`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.24)
+
+## [rejeitada] Síndrome de abstinência alcoólica grave no PA: reconhecimento e manejo
+
+- **id:** 2026-09-30-40-sindrome-de-abstinencia-alcool
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo fornece um guia prático para residentes e estudantes na avaliação inicial e manejo farmacológico da síndrome de abstinência alcoólica grave no pronto-socorro. Aborda o uso de escalas de avaliação, reposição vitamínica e prevenção de complicações neurológicas graves. O conteúdo é essencial para a conduta segura na primeira linha de atendimento.
+- **público:** Residentes de medicina de família e comunidade, médicos generalistas e estudantes de medicina · **ângulo:** Foco estrito no protocolo prático de emergência para o médico generalista no pronto atendimento, sem jargões desnecessários.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Alcohol withdrawal syndrome AND emergency management AND benzodiazepines` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Delirium tremens AND management AND intensive care unit` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Wernicke encephalopathy AND prevention AND thiamine protocol` (Diretriz clínica baseada em evidências) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Síndrome de abstinência alcoólica: reconhecimento e manejo inicial" (similaridade 0.63)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Síndrome de abstinência alcoólica: reconhecimento e manejo inicial" (similaridade 0.63, título 0.83)
+
+## [redigida] Primeiro atendimento em psiquiatria na UBS: guia prático para residentes
+
+- **id:** 2026-09-30-41-primeiro-atendimento-em-psiqui
+- **categoria:** Residentes & Estudantes · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este guia prático capacita residentes e estudantes de medicina a realizarem a avaliação inicial, o diagnóstico diferencial e a conduta de primeira linha em quadros psiquiátricos comuns na Atenção Primária à Saúde. O artigo aborda sinais de gravidade, critérios de encaminhamento seguro e estratégias de comunicação terapêutica para o cotidiano da UBS.
+- **público:** Médicos residentes de medicina de família e comunidade, internos de medicina e estudantes da área da saúde · **ângulo:** Foco estrito no raciocínio clínico de primeira linha e critérios objetivos de encaminhamento no contexto exclusivo da UBS.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Primary Health Care"[MeSH] OR "General Practice"[MeSH]) AND ("Mental Disorders"[MeSH] OR "Psychiatry"[MeSH]) AND "Clinical Protocols"[MeSH]` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `"Physician-Patient Relations"[MeSH] AND "Mental Health"[MeSH] AND "Internship and Residency"[MeSH]` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Triage"[MeSH] AND "Emergency Services, Psychiatric"[MeSH] AND "Primary Health Care"[MeSH]` (Estudo de Coorte) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para.md` · slug: `primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para` · pauta: `2026-09-30-41-primeiro-atendimento-em-psiqui`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Delirium no pronto-atendimento: avaliação e manejo para residentes" (similaridade 0.34)
+
+## [redigida] O peso da prancheta e o olhar que escuta na APS
+
+- **id:** 2026-09-30-42-o-peso-da-prancheta-e-o-olhar-
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta crônica utiliza uma narrativa composta, construída a partir de personagens e situações fictícios inspirados em vivências comuns na Atenção Primária, sem paciente real identificável. O texto aborda o desafio cotidiano de enxergar a pessoa por trás da queixa somática repetitiva, trazendo uma reflexão humanizada e sensível. O texto final desta publicação leva o aviso legal do CFM.
+- **público:** Pacientes, familiares e profissionais de saúde da Atenção Primária. · **ângulo:** Foca na humanização do atendimento cotidiano na UBS, mostrando como a escuta atenta transforma a relação médico-paciente.
+- **tema sensível:** não
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-da-prancheta-e-o-olhar-que-escuta-na-aps.md` · slug: `o-peso-da-prancheta-e-o-olhar-que-escuta-na-aps` · pauta: `2026-09-30-42-o-peso-da-prancheta-e-o-olhar-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.24)
+
+## [redigida] A última consulta antes do plantão virar a madrugada
+
+- **id:** 2026-09-30-43-a-ultima-consulta-antes-do-pla
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Por meio de uma narrativa composta, inspirada em fatos corriqueiros do pronto atendimento sem expor nenhum paciente real identificável, esta crônica retrata o ritmo intenso da emergência médica. O texto aborda a exaustão compartilhada entre quem busca ajuda e quem está do outro lado do balcão, valorizando o acolhimento. O texto final desta publicação leva o aviso legal do CFM.
+- **público:** Público geral, profissionais de saúde e plantonistas. · **ângulo:** Ilumina o lado humano e vulnerável dos profissionais e pacientes nas madrugadas de pronto atendimento psiquiátrico.
+- **tema sensível:** não
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-ultima-consulta-antes-do-plantao-virar-a-madrugada.md` · slug: `a-ultima-consulta-antes-do-plantao-virar-a-madrugada` · pauta: `2026-09-30-43-a-ultima-consulta-antes-do-pla`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "A última consulta antes de desistir" (similaridade 0.26)
+
+## [rejeitada] O silêncio na cadeira da recepção da UBS
+
+- **id:** 2026-09-30-44-o-silencio-na-cadeira-da-recep
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta crônica é uma narrativa composta por personagens e situações fictícios inspirados na realidade dos postos de saúde, sem nenhum paciente real identificável. A história explora os pensamentos de quem aguarda pela primeira consulta em saúde mental, lidando com o medo do julgamento e o estigma. O texto final desta publicação leva o aviso legal do CFM.
+- **público:** Pessoas que hesitam em buscar ajuda psicológica ou psiquiátrica. · **ângulo:** Aborda a barreira invisível da vergonha e do estigma antes mesmo de o paciente cruzar a porta do consultório.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "O lenço esquecido na cadeira do consultório" (similaridade 0.38)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O lenço esquecido na cadeira do consultório" (similaridade 0.38, título 0.25)
+
+## [rejeitada] A xícara trincada na mesa do consultório
+
+- **id:** 2026-09-30-45-a-xicara-trincada-na-mesa-do-c
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Utilizando uma narrativa composta por personagens e situações fictícios inspirados no cotidiano da Atenção Primária, sem paciente real identificável, esta crônica reflete sobre as pequenas marcas que o sofrimento emocional deixa nas famílias. O texto explora a jornada silenciosa de quem cuida de um ente querido adoecido. O texto final desta publicação leva o aviso legal do CFM.
+- **público:** Familiares e cuidadores de pessoas em sofrimento psíquico. · **ângulo:** Foca na perspectiva do cuidador familiar, muitas vezes invisibilizado no processo de adoecimento mental.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "O lenço esquecido na cadeira do consultório" (similaridade 0.38)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O lenço esquecido na cadeira do consultório" (similaridade 0.38, título 0.25)
+
+## [rejeitada] O corredor que parecia mais longo numa segunda-feira
+
+- **id:** 2026-09-30-46-o-corredor-que-parecia-mais-lo
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta crônica apresenta uma narrativa composta, inspirada em vivências corriqueiras do atendimento de urgência e sem paciente real identificável. O texto retrata a angústia de uma segunda-feira típica na saúde pública, equilibrando a pressão institucional com a sensibilidade do cuidado. O texto final desta publicação leva o aviso legal do CFM.
+- **público:** Profissionais da rede pública de saúde e usuários do SUS. · **ângulo:** Mostra como a empatia resiste mesmo em ambientes sobrecarregados e dias de grande fluxo.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "O corredor que parecia não ter fim" (similaridade 0.47)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O corredor que parecia não ter fim" (similaridade 0.47, título 0.50)
+
+## [rejeitada] O bloco de notas esquecido na sala de espera
+
+- **id:** 2026-09-30-47-o-bloco-de-notas-esquecido-na-
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Composta por personagens e situações fictícios inspirados no dia a dia da APS, esta crônica utiliza uma narrativa composta sem paciente real identificável. O texto explora os desabafos e rascunhos emocionais que as pessoas deixam para trás antes de entrarem para a consulta. O texto final desta publicação leva o aviso legal do CFM.
+- **público:** Público geral interessado em saúde mental e autoconhecimento. · **ângulo:** Revela o monólogo interno de quem tenta organizar o caos emocional através da escrita antes de pedir ajuda.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.43)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "A sala de espera que respirava em silêncio" (similaridade 0.43, título 0.44)
+
+## [rejeitada] O peso do crachá na mesa de triagem do pronto-socorro
+
+- **id:** 2026-09-30-48-o-peso-do-cracha-na-mesa-de-tr
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta é uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na rotina de urgência, sem paciente real identificável. A crônica aborda a exaustão de um profissional da segurança pública que buscou atendimento psiquiátrico na emergência e traz o aviso legal do CFM ao final.
+- **público:** Profissionais de segurança pública, trabalhadores de serviços essenciais e público em geral interessado em saúde mental · **ângulo:** Foca na barreira invisível que a farda e o distintivo impõem ao pedir ajuda emocional na emergência.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "O relógio na parede do pronto atendimento" (similaridade 0.38)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O relógio na parede do pronto atendimento" (similaridade 0.38, título 0.20)
+
+## [rejeitada] A luz acesa na sala de vacina quando a UBS já está vazia
+
+- **id:** 2026-09-30-49-a-luz-acesa-na-sala-de-vacina-
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta é uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na Atenção Primária, sem paciente real identificável. O texto retrata o desabafo silencioso de uma técnica de enfermagem lidando com crises de pânico e leva o aviso legal do CFM.
+- **público:** Profissionais de saúde da rede pública, equipes de enfermagem e leitores que valorizam histórias humanas da APS · **ângulo:** Ilumina o sofrimento psíquico de quem passa o dia inteiro cuidando dos outros e esquece de si mesmo.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.36)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "A sala de espera que respirava em silêncio" (similaridade 0.36, título 0.20)
+
+## [redigida] O bilhete amassado no bolso do jaleco do plantão noturno
+
+- **id:** 2026-09-30-50-o-bilhete-amassado-no-bolso-do
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta é uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns no pronto atendimento, sem paciente real identificável. A história explora o impacto emocional de uma perda gestacional silenciosa atendida durante a madrugada e inclui o aviso legal do CFM.
+- **público:** Médicos, residentes, equipes de plantão e leitores sensíveis a dilemas éticos e emocionais da medicina · **ângulo:** Aborda a solidão do médico recém-formado diante de uma urgência psiquiátrica delicada no meio da noite.
+- **tema sensível:** não
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-bilhete-amassado-no-bolso-do-jaleco-do-plantao-noturno.md` · slug: `o-bilhete-amassado-no-bolso-do-jaleco-do-plantao-noturno` · pauta: `2026-09-30-50-o-bilhete-amassado-no-bolso-do`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "A receita dobrada no bolso do casaco" (similaridade 0.33)
+
+## [redigida] A chave que girou devagar na porta da UBS ao amanhecer
+
+- **id:** 2026-09-30-51-a-chave-que-girou-devagar-na-p
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta é uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na rede pública, sem paciente real identificável. A crônica acompanha um idoso que frequenta a unidade mais pela conversa com o agente comunitário do que por remédios, acompanhada do aviso legal do CFM.
+- **público:** Idosos, familiares cuidadores, agentes comunitários de saúde e frequentadores da atenção básica · **ângulo:** Mostra a solidão urbana e o papel transformador da escuta ativa na primeira consulta da manhã.
+- **tema sensível:** não
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-chave-que-girou-devagar-na-porta-da-ubs-ao-amanhecer.md` · slug: `a-chave-que-girou-devagar-na-porta-da-ubs-ao-amanhecer` · pauta: `2026-09-30-51-a-chave-que-girou-devagar-na-p`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "A luz acesa na sala de vacina quando a UBS já está vazia" (similaridade 0.26)
+
+## [rejeitada] O peso do estetoscópio no final do corredor da UBS
+
+- **id:** 2026-09-30-52-o-peso-do-estetoscopio-no-fina
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta narrativa composta retrata uma vivência típica de um dia intenso na Atenção Primária à Saúde, explorando os dilemas e as sutilezas do acolhimento médico diante do sofrimento psíquico não dito. Personagens e situações são fictícios, inspirados em vivências comuns, sem paciente real identificável. O texto final leva o aviso legal do Conselho Federal de Medicina.
+- **público:** Profissionais de saúde e público geral interessado na realidade da prática clínica humanizada. · **ângulo:** Foca na perspectiva íntima do profissional ao lidar com o limite entre o cansaço físico e a escuta terapêutica genuína.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "O corredor que parecia não ter fim" (similaridade 0.37)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O corredor que parecia não ter fim" (similaridade 0.37, título 0.25)
+
+## [rejeitada] A última folha do bloco de receituário no plantão
+
+- **id:** 2026-09-30-53-a-ultima-folha-do-bloco-de-rec
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta narrativa composta retrata o atendimento de uma urgência emocional no final de um plantão de pronto atendimento psiquiátrico, destacando a importância da pausa e do olhar atento antes da prescrição. Personagens e situações são fictícios, inspirados em vivências comuns, sem paciente real identificável. O texto final leva o aviso legal do Conselho Federal de Medicina.
+- **público:** Pessoas que buscam compreender os bastidores do atendimento de urgência em saúde mental e a sensibilidade do cuidado médico. · **ângulo:** Aborda o momento exato em que a técnica médica cede espaço para a pura presença humana e o acolhimento da crise.
+- **tema sensível:** não
+- **originalidade:** redundante · mais próximo: "A última consulta antes do plantão virar a madrugada" (similaridade 0.41)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "A última consulta antes do plantão virar a madrugada" (similaridade 0.41, título 0.36)
+
+## [redigida] O peso do crachá na mesa de triagem do pronto-socorro
+
+- **id:** 2026-09-30-54-o-peso-do-cracha-na-mesa-de-tr
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta narrativa composta retrata o dilema cotidiano de um profissional de saúde no pronto atendimento que precisa equilibrar o rigor técnico da triagem com a exaustão emocional. O texto propõe uma reflexão humanizada sobre o limite da própria empatia e o autocuidado necessário na linha de frente, contendo aviso legal do CFM.
+- **público:** Profissionais de saúde e público geral interessado na dinâmica de urgências · **ângulo:** Foca na perspectiva interna de quem acolhe o sofrimento alheio enquanto lida com os próprios limites invisíveis.
+- **tema sensível:** não
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-do-cracha-na-mesa-de-triagem-do-pronto-socorro.md` · slug: `o-peso-do-cracha-na-mesa-de-triagem-do-pronto-socorro` · pauta: `2026-09-30-54-o-peso-do-cracha-na-mesa-de-tr`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "O relógio na parede do pronto atendimento" (similaridade 0.28)
+
+## [rejeitada] O bilhete amassado no bolso do jaleco do plantão noturno
+
+- **id:** 2026-09-30-55-o-bilhete-amassado-no-bolso-do
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Por meio de uma narrativa composta inspirada no cotidiano da Atenção Primária, acompanhamos o impacto silencioso de um recado deixado por um paciente que marcou a rotina de um plantão difícil. A história humaniza a relação médico-paciente e lembra que por trás de cada prontuário há uma história singular, acompanhada do aviso legal do CFM.
+- **público:** Pacientes, familiares e profissionais que valorizam a humanização do cuidado médico · **ângulo:** Aborda o poder das pequenas conexões humanas e memórias afetivas que sustentam a prática clínica diária.
+- **tema sensível:** não
+- **originalidade:** copia · mais próximo: "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.74)
+- ⚠️ **problemas:** originalidade: cópia de "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.74, título 1.00)
+
+## [redigida] Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial
+
+- **id:** 2026-09-30-56-transtorno-obsessivo-compulsiv
+- **categoria:** Condições Específicas · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este guia aborda a identificação precoce do transtorno obsessivo-compulsivo (TOC) no contexto da Atenção Primária à Saúde, diferenciando rituais cotidianos de sintomas clínicos incapacitantes. O artigo detalha as opções de intervenção farmacológica inicial com inibidores seletivos de recaptação de serotonina e as bases do encaminhamento adequado para psicoterapia estruturada.
+- **público:** Médicos de família, médicos generalistas e residentes de medicina de família e comunidade. · **ângulo:** Foco estrito no manejo viável dentro do consultório de APS, superando a demora diagnóstica comum em transtornos de ansiedade complexos.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Obsessive-Compulsive Disorder[Mesh] AND Primary Health Care[Mesh] AND Diagnosis` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Obsessive-Compulsive Disorder[Mesh] AND General Practice AND Therapeutics` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Serotonin Uptake Inhibitors AND Obsessive-Compulsive Disorder[Mesh] AND Primary Care` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane.md` · slug: `transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane` · pauta: `2026-09-30-56-transtorno-obsessivo-compulsiv`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.32)
+
+## [rejeitada] Transtornos alimentares na atenção primária: rastreio e conduta inicial
+
+- **id:** 2026-09-30-57-transtornos-alimentares-na-ate
+- **categoria:** Condições Específicas · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Apresenta estratégias práticas para o rastreio de anorexia nervosa, bulimia e transtorno da compulsão alimentar periódica em consultas de rotina na UBS. O texto orienta sobre a avaliação de riscos clínicos imediatos, critérios de internação hospitalar e a importância da abordagem multiprofissional integrada.
+- **público:** Médicos de família, profissionais de saúde da atenção básica e equipes multiprofissionais. · **ângulo:** Capacitação do médico generalista para identificar complicações clínicas graves decorrentes de restrições alimentares antes do agravamento extremo.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Feeding and Eating Disorders[Mesh] AND Primary Health Care[Mesh] AND Early Diagnosis` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Anorexia Nervosa[Mesh] AND Bulimia Nervosa[Mesh] AND General Practice` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Binge-Eating Disorder[Mesh] AND Primary Care AND Management` (Estudo de coorte) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Dependência química: rastreio e abordagem inicial na Atenção Primária" (similaridade 0.36)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Dependência química: rastreio e abordagem inicial na Atenção Primária" (similaridade 0.36, título 0.57)
+
+## [rejeitada] Fobia social no ambulatório: diagnóstico diferencial e estratégias
+
+- **id:** 2026-09-30-58-fobia-social-no-ambulatorio-di
+- **categoria:** Condições Específicas · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta o médico clínico e de família na distinção entre timidez acentuada e transtorno de ansiedade social clinicamente significativo. O artigo discute o manejo farmacológico com agentes de primeira linha e intervenções comportamentais breves aplicáveis no cotidiano do ambulatório.
+- **público:** Médicos de família, médicos generalistas e clínicos gerais. · **ângulo:** Ferramentas práticas para anamnese direcionada que reduzem o subdiagnóstico da fobia social em pacientes que buscam atendimento por queixas somáticas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Phobic Disorders[Mesh] AND Primary Health Care[Mesh] AND Diagnosis` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Social Phobia AND General Practice AND Antidepressive Agents` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Anxiety Disorders[Mesh] AND Primary Care AND Disease Management` (Diretriz clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Fobia social: quando encaminhar" (similaridade 0.38)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Fobia social: quando encaminhar" (similaridade 0.38, título 0.44)
+
+## [redigida] Manejo de Sintomas Dissociativos Associados ao Trauma e Estresse Crônico na APS: Guia de Acolhimento e Autorregulação
+
+- **id:** 2026-09-30-59-transtorno-dissociativo-na-aps
+- **categoria:** Condições Específicas · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia para a equipe da APS sobre como reconhecer e acolher sintomas dissociativos (despersonalização, desrealização, "apagões") ligados a trauma e a estresse crônico, com estratégias práticas de acolhimento, técnicas de autorregulação e aterramento que a pessoa pode aprender, sinais que pedem encaminhamento e o cuidado para não retraumatizar na consulta.
+- **público:** médicos e equipes da APS e pessoas em sofrimento por trauma e estresse crônico · **ângulo:** acolhimento seguro e autorregulação como primeiro passo, sem diagnóstico apressado
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `"Dissociative Disorders"[MeSH] AND "Psychological Trauma"[MeSH] AND primary care` (revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `dissociative symptoms trauma-informed care primary care` (revisão narrativa ou diretriz) [PMID A CONFIRMAR]
+  - PubMed: `grounding techniques emotion regulation dissociation randomized` (ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `chronic stress depersonalization derealization treatment` (revisão sistemática) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr.md` · slug: `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` · pauta: `2026-09-30-59-transtorno-dissociativo-na-aps`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.24)
+
+## [redigida] Uso problemático de telas e dependência digital na infância e APS
+
+- **id:** 2026-09-30-60-uso-problematico-de-telas-e-de
+- **categoria:** Condições Específicas · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta o médico da atenção primária a reconhecer os impactos do uso excessivo de dispositivos digitais no neurodesenvolvimento infantil e na saúde mental de adolescentes. Traz diretrizes práticas para a anamnese familiar e intervenções breves no consultório.
+- **público:** Médicos de família e comunidade, pediatras e equipes de saúde da família · **ângulo:** Direcionado ao manejo preventivo e à orientação de pais e responsáveis diretamente no contexto da consulta de puericultura e rotina.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Screen time AND mental health AND child AND adolescent AND primary care` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
+  - PubMed: `Problematic smartphone use AND children AND behavioral addiction AND management` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Digital media use AND pediatric primary care AND guidelines` (Estudo de coorte) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia-.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia-` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Telas na primeira infância: o que as diretrizes recomendam" (similaridade 0.27)
+
+## [redigida] Primeiro episódio psicótico: orientações essenciais para a família
+
+- **id:** 2026-09-30-61-primeiro-episodio-psicotico-or
+- **categoria:** Pacientes & Famílias · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta o núcleo familiar sobre como identificar os primeiros sinais de ruptura com a realidade e qual conduta adotar. Aborda a importância da busca precoce por atendimento médico sem estigmatização. Fornece ferramentas práticas de acolhimento para o ambiente domiciliar.
+- **público:** Familiares e cuidadores de pacientes em sofrimento mental agudo · **ângulo:** Foco exclusivo na perspectiva de suporte e orientação prática para a família durante o momento de maior vulnerabilidade, em linguagem acessível e fundamentada.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("First-Episode Psychosis"[Mesh]) AND ("Family Psychoeducation"[Mesh]) AND ("Caregivers"[Mesh])` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Psychotic Disorders"[Mesh]) AND ("Early Intervention"[Mesh]) AND ("Family Support"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Caregiver Burden"[Mesh]) AND ("First-Episode Psychosis"[Mesh]) AND ("Psychoeducation"[Mesh])` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa.md` · slug: `primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa` · pauta: `2026-09-30-61-primeiro-episodio-psicotico-or`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.31)
+
+## [redigida] Esquecimento comum ou sinal de alerta: conversando sobre memória
+
+- **id:** 2026-09-30-62-esquecimento-comum-ou-sinal-de
+- **categoria:** Pacientes & Famílias · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Ajuda pacientes e familiares a diferenciarem o envelhecimento cognitivo habitual dos sinais clínicos iniciais de declínio cognitivo. Orienta sobre quando buscar avaliação médica especializada na atenção primária. Promove o diálogo aberto sobre perdas de memória sem alarmismo.
+- **público:** Idosos, familiares e cuidadores preocupados com alterações cognitivas · **ângulo:** Diferenciação clara entre lapsos normais de memória e patologias, orientando a família sobre o momento correto de procurar investigação clínica.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Cognitive Dysfunction"[Mesh]) AND ("Early Diagnosis"[Mesh]) AND ("Family Practice"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Memory Disorders"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Caregivers"[Mesh]) AND ("Cognitive Decline"[Mesh]) AND ("Psychoeducation"[Mesh])` (Estudo observacional) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo.md` · slug: `esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo` · pauta: `2026-09-30-62-esquecimento-comum-ou-sinal-de`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Adolescência: diferenciando oscilação normal de sinal de alerta" (similaridade 0.27)
+
+## [redigida] Conviver com a oscilação de humor: limites e apoio familiar
+
+- **id:** 2026-09-30-63-conviver-com-a-oscilacao-de-hu
+- **categoria:** Pacientes & Famílias · lote 2
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda a dinâmica de convivência com flutuações intensas de humor no ambiente doméstico, oferecendo estratégias de comunicação empática. Orienta sobre a importância da adesão ao tratamento e o papel dos familiares como rede de apoio. Evita diagnósticos a distância, focando no suporte cotidiano.
+- **público:** Familiares e pessoas que convivem com instabilidade emocional crônica · **ângulo:** Enfoque nas fronteiras saudáveis do cuidado, mostrando como apoiar sem assumir o papel terapêutico ou anular as próprias necessidades.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Mood Disorders"[Mesh]) AND ("Family Relations"[Mesh]) AND ("Social Support"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Caregivers"[Mesh]) AND ("Adaptation, Psychological"[Mesh]) AND ("Mental Disorders"[Mesh])` (Ensaio clínico) [PMID A CONFIRMAR]
+  - PubMed: `("Family Therapy"[Mesh]) AND ("Mood Disorders"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz baseada em evidências) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar.md` · slug: `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` · pauta: `2026-09-30-63-conviver-com-a-oscilacao-de-hu`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Sinais precoces de depressão: guia de apoio prático para familiares" (similaridade 0.25)
+
+## [redigida] O eco dos passos vazios no corredor do plantão de domingo
+
+- **id:** 2026-09-30-64-o-eco-dos-passos-vazios-no-cor
+- **categoria:** Relatos da Prática · lote 2
+- **tipo:** crônica literária · **origem:** assistente
+- **pauta:** Esta é uma narrativa composta baseada em vivências comuns na Atenção Primária, sem paciente real identificável. O texto retrata a atmosfera de um plantão de domingo à tarde, abordando a solidão compartilhada entre quem busca ajuda e quem está no plantão, e o texto final leva o aviso legal do CFM.
+- **público:** Profissionais de saúde e público geral interessado em crônicas sobre o cotidiano médico · **ângulo:** Reflexão humanizada sobre o peso invisível dos plantões de fim de semana na perspectiva de quem atende
+- **tema sensível:** não
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-eco-dos-passos-vazios-no-corredor-do-plantao-de-domingo.md` · slug: `o-eco-dos-passos-vazios-no-corredor-do-plantao-de-domingo` · pauta: `2026-09-30-64-o-eco-dos-passos-vazios-no-cor`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "A última consulta antes do plantão virar a madrugada" (similaridade 0.29)

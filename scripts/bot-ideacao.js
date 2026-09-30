@@ -153,6 +153,12 @@ async function main() {
 `);
     return;
   }
+  if (args['completar-referencias']) {
+    const corrigidas = await ideacao.completarReferencias(registros, async (q) => (await gerarJson(q)).dados);
+    ideacao.gravarRegistros(registros);
+    console.log(corrigidas.length ? `  ${corrigidas.length} pauta(s) receberam as consultas PubMed:\n${corrigidas.map(resumo).join('\n')}` : '  Nenhuma pauta científica sem referências.');
+    return;
+  }
   if (args.reverificar) {
     const { acervo, indisponivel } = await carregarAcervo();
     if (indisponivel) throw new Error('sem acervo do banco não há como reverificar');
@@ -174,7 +180,7 @@ ${alteradas.map(resumo).join('\n')}` : '  Nenhuma pauta reprovada: todas as prop
     const todas = () => [...mantidas, ...geradas];
     for (const { grupo, quantidade, temas } of ideacao.normalizarPlano(plano)) {
       const g = ideacao.GRUPOS[grupo];
-      const validas = () => todas().filter((r) => r.lote === numero && r.categoria === grupo && r.status !== 'rejeitada').length;
+      const validas = () => todas().filter((r) => r.lote === numero && r.categoria === grupo && r.status !== 'rejeitada' && !r.problemas.length).length;
       let provedor = '';
       // 1) Temas pedidos pelo médico: uma chamada dirigida por tema. Se a trava de originalidade rejeitar,
       //    o motivo (artigo mais próximo) volta ao modelo para ele mudar o ÂNGULO, sem sair do tema.
@@ -217,6 +223,7 @@ ${alteradas.map(resumo).join('\n')}` : '  Nenhuma pauta reprovada: todas as prop
         const recebidas = r.dados.propostas.filter((p) => p.tipo === g.tipo).slice(0, faltam);
         const novas = ideacao.criarPropostas(recebidas, { acervo, existentes: todas(), acervoIndisponivel: indisponivel, categoria: grupo, lote: numero, deslocamento: todas().length });
         geradas.push(...novas);
+        await ideacao.completarReferencias(novas, async (q) => (await gerarJson(q)).dados);
         ideacao.gravarRegistros(todas()); // grava a cada rodada: nada se perde se uma falhar
         const rej = novas.filter((n) => n.status === 'rejeitada');
         if (rej.length) console.log(`  ${grupo}: ${rej.length} pauta(s) rejeitada(s) por originalidade (rodada ${rodada + 1}):
