@@ -62,6 +62,8 @@ const HASHTAGS_CATEGORIA = {
   'Transição de Carreira & Aposentadoria': ['#aposentadoria', '#transicaodecarreira', '#saudedotrabalhador'],
   'Dependências & Adições': ['#dependenciaquimica', '#adicao', '#recuperacao'],
   'Compulsões & Transtornos Alimentares': ['#transtornosalimentares', '#compulsaoalimentar', '#alimentacao'],
+  'Condições Específicas': ['#atencaoprimaria', '#saudementalnaaps', '#manejoclinico'],
+  'Linhas de Cuidado (Cuidadores & Professores)': ['#cuidadores', '#professores', '#saudementaldocente'],
 };
 
 /** HTML → texto, sem as chamadas numéricas de referência (<sup>1</sup>). */
