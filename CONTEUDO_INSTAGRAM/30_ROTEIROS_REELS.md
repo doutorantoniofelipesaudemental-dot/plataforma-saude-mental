@@ -551,3 +551,11 @@ Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segu
 - [ ] Em temas sensíveis (crise, suicídio, violência), manter o aviso do CVV 188 visível
 - [ ] Trocar `[LINK]` e `[LINK BIO]` antes de publicar
 - [ ] Hashtags fixas + hashtags extras do reel
+
+Dr. Antônio Felipe · Médico · CRM-BA 41322
+Especialista em Medicina de Família e Comunidade · RQE 26638
+Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
+NÃO ESPECIALISTA
+
+Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

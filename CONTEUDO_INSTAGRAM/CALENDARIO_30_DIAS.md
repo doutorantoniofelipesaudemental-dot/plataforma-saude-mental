@@ -775,3 +775,11 @@ Encerrando este mês de conteúdo: os sinais de sofrimento psíquico no idoso qu
 - [ ] Incluir hashtags fixas + hashtags extras do dia
 - [ ] Agendar horário de pico (sugestão: 12h ou 19h–21h)
 - [ ] Responder comentários nas primeiras 2 horas (ajuda o alcance)
+
+Dr. Antônio Felipe · Médico · CRM-BA 41322
+Especialista em Medicina de Família e Comunidade · RQE 26638
+Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
+NÃO ESPECIALISTA
+
+Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

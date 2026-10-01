@@ -7,6 +7,7 @@ const path = require('node:path');
 
 const aud = require('../../backend/scripts/auditoriaInstagram');
 const { AVISO_CFM, IDENTIFICACAO_COMPLETA, LINHA_CVV } = require('../../backend/lib/conformidadeCfm');
+const { IDENTIFICACAO_3_LINHAS } = require('../../backend/lib/legendaInstagram');
 
 const codigos = (md) => aud.auditarTexto(md).falhas.map((f) => f.codigo);
 const RODAPE = `${IDENTIFICACAO_COMPLETA}\n\n${AVISO_CFM}`;
@@ -30,11 +31,12 @@ test('menção meta ao veto ("em nenhum lugar o autor é chamado de psiquiatra")
   assert.ok(codigos(veto).includes('cfm'));
 });
 
-test('autocorrigirTexto insere assinatura completa e aviso no fim, uma única vez', () => {
+test('autocorrigirTexto insere a assinatura de 3 linhas e o aviso no fim, uma única vez', () => {
   const md = '## Reel 1: A\n\nTexto simples sobre mentoria.\n';
   const r = aud.autocorrigirTexto(md);
-  assert.deepEqual(r.inseridos, ['assinatura CFM', 'aviso CFM']);
-  assert.ok(r.texto.includes(IDENTIFICACAO_COMPLETA));
+  assert.deepEqual(r.inseridos, ['assinatura CFM (3 linhas)', 'aviso CFM']);
+  assert.ok(r.texto.includes(IDENTIFICACAO_3_LINHAS));
+  assert.ok(!r.texto.includes('Pós-graduação'), 'o bloco de 5 linhas é do portal, não das mídias sociais');
   assert.ok(r.texto.includes(AVISO_CFM));
   const de = codigos(r.texto);
   for (const c of ['crm', 'rqe', 'atuacao', 'aviso-cfm']) assert.ok(!de.includes(c), c);
@@ -42,8 +44,7 @@ test('autocorrigirTexto insere assinatura completa e aviso no fim, uma única ve
 });
 
 test('autocorrigirTexto: só falta a atuação → insere a linha logo após a linha do RQE', () => {
-  const pos = IDENTIFICACAO_COMPLETA.split('\n').find((l) => l.startsWith('Pós-graduação'));
-  const md = `## Stories\n\nMentoria.\n\nDr. Antônio Felipe · Médico · CRM-BA 41322\nEspecialista em Medicina de Família e Comunidade · RQE 26638\n${pos}\n\n${AVISO_CFM}\n`;
+  const md = `## Stories\n\nMentoria.\n\nDr. Antônio Felipe · Médico · CRM-BA 41322\nEspecialista em Medicina de Família e Comunidade · RQE 26638\n\n${AVISO_CFM}\n`;
   const r = aud.autocorrigirTexto(md);
   assert.deepEqual(r.inseridos, ['linha de atuação PAP/APS']);
   assert.match(r.texto, /RQE 26638\nAtuo em Pronto Atendimento Psiquiátrico \(PAP\) e Atenção Primária à Saúde \(APS\)\n/);

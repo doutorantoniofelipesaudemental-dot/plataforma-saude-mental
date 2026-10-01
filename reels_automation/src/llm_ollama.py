@@ -29,7 +29,7 @@ from .utils import PipelineError, slugify, with_retry
 logger = get_logger(__name__)
 
 SYSTEM_PROMPT_TEMPLATE = """Voce e o redator do perfil de Instagram do Dr. Saude Mental \
-(Dr. Antonio Felipe, psiquiatra). Escreva roteiros de Reels faceless (sem rosto \
+(Dr. Antônio Felipe, psiquiatra). Escreva roteiros de Reels faceless (sem rosto \
 aparecendo, so narracao + imagens de apoio).
 
 Voz de marca (obrigatorio seguir): {voz_marca}

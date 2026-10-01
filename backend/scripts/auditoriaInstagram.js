@@ -3,33 +3,35 @@
  * a pasta pautas/ é de artigos e fica de fora). Só lê: não altera nenhum arquivo.
  *
  * Por arquivo:
- *   - identificação: CRM-BA 41322 e RQE 26638;
- *   - atuação: a linha "Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)";
+ *   - assinatura das mídias sociais, no padrão sintético de 3 linhas do CFM (CRM-BA 41322, RQE 26638 e a atuação
+ *     em PAP/APS). O bloco de 5 linhas, com as pós-graduações, é do portal e da landing page: não é exigido aqui;
+ *   - trilha sonora a -22 dB, quando o roteiro informa o volume;
  *   - normas CFM: aviso da Res. CFM 2.454/2026, termos/promessas vetados, sensacionalismo, veto de
  *     "psiquiatra" e CVV 188 em tema sensível (as mesmas regras de backend/lib/checagensAprovacao.js).
- * Por peça (cada Reel, o Carrossel e os Stories):
+ * Por peça (cada Reel/Vídeo, o Carrossel, os Stories e o Podcast):
  *   - CTA de Mentoria (a palavra "mentoria" no texto da peça).
  *
  *   npm run audit:instagram                    (resumo por arquivo)
  *   npm run audit:instagram -- --detalhe       (lista cada falha, inclusive por Reel)
  *   npm run audit:instagram -- --arquivo=aprovados/burnout-aps.md
- *   npm run audit:instagram -- --autocorrigir [--dry-run]  (insere assinatura CFM, atuação PAP/APS, CVV e aviso; depois audita)
+ *   npm run audit:instagram -- --autocorrigir [--dry-run]  (insere a assinatura de 3 linhas, CVV e aviso; depois audita)
  *   npm run audit:instagram -- --falhar       (código de saída 1 se houver falha — para CI)
  */
 const fs = require('fs');
 const path = require('path');
 const { checarEticaCfm } = require('../lib/checagensAprovacao');
-const { AVISO_CFM, IDENTIFICACAO_COMPLETA, LINHA_CVV } = require('../lib/conformidadeCfm');
+const { AVISO_CFM, LINHA_CVV } = require('../lib/conformidadeCfm');
+const { IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../lib/legendaInstagram');
 
 const PASTA = path.join(__dirname, '..', '..', 'CONTEUDO_INSTAGRAM');
 const PASTAS_FORA = new Set(['pautas']);
 
 const RE_ATUACAO = /Atuo em Pronto Atendimento Psiqui[aá]trico[^\n]*Aten[cç][aã]o Prim[aá]ria/i;
 const RE_MENTORIA = /\bmentoria\b/i;
-const LINHA_ATUACAO = IDENTIFICACAO_COMPLETA.split('\n').find((l) => /^Atuo em/.test(l));
-// Rol de pós-graduações, com Terapia Cognitivo-Comportamental (TCC); a versão antiga, sem TCC, é substituída.
-const LINHA_POS = IDENTIFICACAO_COMPLETA.split('\n').find((l) => /^Pós-graduação em/.test(l));
-const RE_LINHA_POS_ANTIGA = /^Pós-graduação em .*$/m;
+const LINHA_ATUACAO = IDENTIFICACAO_3_LINHAS.split('\n').find((l) => /^Atuo em/.test(l));
+// Trilha: o volume combinado é -22 dB (CLAUDE.md). Lê o número que vem depois de "trilha" na mesma linha.
+const RE_TRILHA_DB = /trilha[^\n]*?(-?\s?\d+(?:[.,]\d+)?)\s?dB/gi;
+const VOLUME_TRILHA = 22;
 
 // Falsos positivos do detector de CFM: a menção negada ("sem milagres", "não promete cura") e a menção
 // meta ("em nenhum lugar o autor é chamado de psiquiatra") não são promessa nem título indevido.
@@ -49,7 +51,8 @@ const ehCaixaAlta = (f) => /^sensacionalismo: caixa alta/.test(f);
 /** Formato de uma seção pelo título; ganchos, LinkedIn e YouTube não são roteiros de Instagram. */
 function formatoDoTitulo(titulo) {
   if (/gancho/i.test(titulo)) return null;
-  if (/^reel\b/i.test(titulo)) return 'Reels';
+  if (/^(?:reel|v[ií]deo)\b/i.test(titulo)) return 'Reels';
+  if (/^(?:podcast|[aá]udio-podcast)\b/i.test(titulo)) return 'Podcast';
   if (/^carrossel\b/i.test(titulo)) return 'Carrossel';
   if (/^stor(?:y|ies)\b/i.test(titulo)) return 'Stories';
   return null;
@@ -81,7 +84,11 @@ function auditarTexto(md) {
   if (!/CRM-BA 41322/.test(t)) falhas.push({ codigo: 'crm', mensagem: 'sem CRM-BA 41322' });
   if (!/RQE 26638/.test(t)) falhas.push({ codigo: 'rqe', mensagem: 'sem RQE 26638' });
   if (!RE_ATUACAO.test(t)) falhas.push({ codigo: 'atuacao', mensagem: 'sem a atuação em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária (APS)' });
-  if (!t.includes(LINHA_POS)) falhas.push({ codigo: 'pos-graduacao', mensagem: 'sem a linha de pós-graduações (Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho)' });
+  if (!falhas.length && !temIdentificacaoSocial(t)) falhas.push({ codigo: 'assinatura', mensagem: 'assinatura fora do padrão de 3 linhas das mídias sociais (Dr. Antônio Felipe · Médico · CRM-BA 41322 / Especialista em Medicina de Família e Comunidade · RQE 26638 / Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS))' });
+  for (const m of t.matchAll(RE_TRILHA_DB)) {
+    const db = Math.abs(Number(m[1].replace(/\s/g, '').replace(',', '.')));
+    if (db !== VOLUME_TRILHA) falhas.push({ codigo: 'trilha', mensagem: `trilha a ${m[1].replace(/\s/g, '')} dB (o padrão é -22 dB)` });
+  }
   if (!t.includes(AVISO_CFM)) falhas.push({ codigo: 'aviso-cfm', mensagem: 'sem o aviso da Res. CFM 2.454/2026' });
   const opcoes = { contexto: 'social', exigirIdentificacao: false };
   const base = semNegacoes(t);
@@ -100,17 +107,18 @@ function auditarTexto(md) {
 }
 
 /**
- * Insere o que falta e é padronizado: assinatura completa do CFM (CRM-BA, RQE e atuação), a linha de atuação
- * PAP/APS, o CVV 188 (tema sensível) e o aviso da Res. CFM 2.454/2026 — sempre no fim do arquivo, sem repetir
- * o que já existe. CTA de Mentoria e termos vetados dependem de decisão editorial e ficam para revisão.
+ * Insere o que falta e é padronizado: a assinatura de 3 linhas do CFM para mídias sociais (ou só a linha de
+ * atuação PAP/APS), o CVV 188 (tema sensível) e o aviso da Res. CFM 2.454/2026 — sempre no fim do arquivo, sem
+ * repetir o que já existe. CTA de Mentoria, volume da trilha e termos vetados dependem de decisão editorial e
+ * ficam para revisão.
  */
 function autocorrigirTexto(md) {
   let t = String(md).replace(/\s+$/, '');
   const codigos = new Set(auditarTexto(t).falhas.map((f) => f.codigo));
   const inseridos = [];
-  if (codigos.has('crm') || codigos.has('rqe')) {
-    t += `\n\n${IDENTIFICACAO_COMPLETA}`;
-    inseridos.push('assinatura CFM');
+  if (codigos.has('crm') || codigos.has('rqe') || codigos.has('assinatura')) {
+    t += `\n\n${IDENTIFICACAO_3_LINHAS}`;
+    inseridos.push('assinatura CFM (3 linhas)');
   } else if (codigos.has('atuacao')) {
     const linhas = t.split('\n');
     const i = linhas.findIndex((l) => /Especialista em Medicina de Fam[ií]lia e Comunidade\s*·\s*RQE 26638/.test(l));
@@ -118,17 +126,6 @@ function autocorrigirTexto(md) {
     else linhas.push('', LINHA_ATUACAO);
     t = linhas.join('\n');
     inseridos.push('linha de atuação PAP/APS');
-  }
-  if (!t.includes(LINHA_POS)) {
-    if (RE_LINHA_POS_ANTIGA.test(t)) t = t.replace(RE_LINHA_POS_ANTIGA, LINHA_POS);
-    else {
-      const linhas = t.split('\n');
-      const i = linhas.findIndex((l) => l.startsWith('Atuo em Pronto Atendimento'));
-      if (i >= 0) linhas.splice(i + 1, 0, LINHA_POS);
-      else linhas.push('', LINHA_POS);
-      t = linhas.join('\n');
-    }
-    inseridos.push('pós-graduações (com TCC)');
   }
   if (codigos.has('cvv') && !/CVV 188/.test(t)) { t += `\n\n${LINHA_CVV}`; inseridos.push('CVV 188'); }
   if (!t.includes(AVISO_CFM)) { t += `\n\n${AVISO_CFM}`; inseridos.push('aviso CFM'); }
