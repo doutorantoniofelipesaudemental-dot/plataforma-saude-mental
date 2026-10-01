@@ -177,7 +177,7 @@ do Atlas (ou `0.0.0.0/0`, já que a Vercel não tem IP fixo nos planos padrão).
 | Marca/clínica | Portal de Saúde Mental Doutor Antônio Felipe Garabito (forma curta: Saúde Mental · Doutor Antônio Felipe) |
 | Registro | CRM-BA 41322 · RQE 26638 |
 | Especialidade | Medicina de Família e Comunidade |
-| Pós-graduações | Psiquiatria, Saúde Mental, Medicina do Trabalho, Atenção Psicossocial, Neuropsicologia |
+| Pós-graduações | Psiquiatria, Saúde Mental, Medicina do Trabalho, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia |
 | E-mail | doutor.antoniofelipe.saudemental@gmail.com |
 | Instagram | [@doutor.antoniofelipe.smental](https://instagram.com/doutor.antoniofelipe.smental) |
 

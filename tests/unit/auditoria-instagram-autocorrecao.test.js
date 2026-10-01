@@ -42,7 +42,8 @@ test('autocorrigirTexto insere assinatura completa e aviso no fim, uma única ve
 });
 
 test('autocorrigirTexto: só falta a atuação → insere a linha logo após a linha do RQE', () => {
-  const md = `## Stories\n\nMentoria.\n\nDr. Antônio Felipe · Médico · CRM-BA 41322\nEspecialista em Medicina de Família e Comunidade · RQE 26638\n\n${AVISO_CFM}\n`;
+  const pos = IDENTIFICACAO_COMPLETA.split('\n').find((l) => l.startsWith('Pós-graduação'));
+  const md = `## Stories\n\nMentoria.\n\nDr. Antônio Felipe · Médico · CRM-BA 41322\nEspecialista em Medicina de Família e Comunidade · RQE 26638\n${pos}\n\n${AVISO_CFM}\n`;
   const r = aud.autocorrigirTexto(md);
   assert.deepEqual(r.inseridos, ['linha de atuação PAP/APS']);
   assert.match(r.texto, /RQE 26638\nAtuo em Pronto Atendimento Psiquiátrico \(PAP\) e Atenção Primária à Saúde \(APS\)\n/);

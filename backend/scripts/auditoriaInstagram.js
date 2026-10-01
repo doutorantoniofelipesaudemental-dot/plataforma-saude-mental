@@ -27,6 +27,9 @@ const PASTAS_FORA = new Set(['pautas']);
 const RE_ATUACAO = /Atuo em Pronto Atendimento Psiqui[aá]trico[^\n]*Aten[cç][aã]o Prim[aá]ria/i;
 const RE_MENTORIA = /\bmentoria\b/i;
 const LINHA_ATUACAO = IDENTIFICACAO_COMPLETA.split('\n').find((l) => /^Atuo em/.test(l));
+// Rol de pós-graduações, com Terapia Cognitivo-Comportamental (TCC); a versão antiga, sem TCC, é substituída.
+const LINHA_POS = IDENTIFICACAO_COMPLETA.split('\n').find((l) => /^Pós-graduação em/.test(l));
+const RE_LINHA_POS_ANTIGA = /^Pós-graduação em .*$/m;
 
 // Falsos positivos do detector de CFM: a menção negada ("sem milagres", "não promete cura") e a menção
 // meta ("em nenhum lugar o autor é chamado de psiquiatra") não são promessa nem título indevido.
@@ -78,6 +81,7 @@ function auditarTexto(md) {
   if (!/CRM-BA 41322/.test(t)) falhas.push({ codigo: 'crm', mensagem: 'sem CRM-BA 41322' });
   if (!/RQE 26638/.test(t)) falhas.push({ codigo: 'rqe', mensagem: 'sem RQE 26638' });
   if (!RE_ATUACAO.test(t)) falhas.push({ codigo: 'atuacao', mensagem: 'sem a atuação em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária (APS)' });
+  if (!t.includes(LINHA_POS)) falhas.push({ codigo: 'pos-graduacao', mensagem: 'sem a linha de pós-graduações (Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho)' });
   if (!t.includes(AVISO_CFM)) falhas.push({ codigo: 'aviso-cfm', mensagem: 'sem o aviso da Res. CFM 2.454/2026' });
   const opcoes = { contexto: 'social', exigirIdentificacao: false };
   const base = semNegacoes(t);
@@ -114,6 +118,17 @@ function autocorrigirTexto(md) {
     else linhas.push('', LINHA_ATUACAO);
     t = linhas.join('\n');
     inseridos.push('linha de atuação PAP/APS');
+  }
+  if (!t.includes(LINHA_POS)) {
+    if (RE_LINHA_POS_ANTIGA.test(t)) t = t.replace(RE_LINHA_POS_ANTIGA, LINHA_POS);
+    else {
+      const linhas = t.split('\n');
+      const i = linhas.findIndex((l) => l.startsWith('Atuo em Pronto Atendimento'));
+      if (i >= 0) linhas.splice(i + 1, 0, LINHA_POS);
+      else linhas.push('', LINHA_POS);
+      t = linhas.join('\n');
+    }
+    inseridos.push('pós-graduações (com TCC)');
   }
   if (codigos.has('cvv') && !/CVV 188/.test(t)) { t += `\n\n${LINHA_CVV}`; inseridos.push('CVV 188'); }
   if (!t.includes(AVISO_CFM)) { t += `\n\n${AVISO_CFM}`; inseridos.push('aviso CFM'); }

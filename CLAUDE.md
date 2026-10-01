@@ -19,7 +19,7 @@ Sua missão é gerar código, artigos, interfaces, carrosséis e scripts de míd
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 #### B. IDENTIFICAÇÃO NO INSTAGRAM E MÍDIAS SOCIAIS (PADRÃO SINTÉTICO 3 LINHAS)
