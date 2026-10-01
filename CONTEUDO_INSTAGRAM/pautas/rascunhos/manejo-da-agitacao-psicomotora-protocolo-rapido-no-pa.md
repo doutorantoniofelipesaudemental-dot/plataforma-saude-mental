@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:32:04.548Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Manejo da agitação psicomotora: protocolo rápido no PA
@@ -23,8 +24,8 @@ revisaoMedica: pendente
 > - - **Desregulação Neurotransmissor:** Ocorre frequentemente por hiperatividade dopaminérgica nas vias mesolímbicas ou por hipofunção glutamatérgica associada …
 > - Compreender esses mecanismos nos lembra que o cérebro em agitação está disparando alarmes falsos de perigo iminente. A nossa intervenção visa desligar esse a…
 > - Quando a desescalada verbal não é suficiente para conter o risco iminente de dano ao próprio paciente ou a terceiros, recorremos à farmacoterapia e, em últim…
-> - - **Antipsicóticos de primeira linha:** Haloperidol associado a prometazina [DOSE A CONFIRMAR] via intramuscular ou oral é amplamente utilizado, mas atente p…
-> - - **Benzodiazepínicos:** O lorazepam [DOSE A CONFIRMAR] é preferível em casos de abstinência alcoólica ou uso de estimulantes. Evite benzodiazepínicos isolad…
+> - - **Antipsicóticos de primeira linha:** Haloperidol (2,5 mg VO em agitação leve; 5 mg VO em moderada; 5 mg IM em grave; pode repetir em 0,5 a 4 h; máximo de …
+> - - **Benzodiazepínicos:** O lorazepam (2 mg VO na agitação leve) é preferível em casos de abstinência alcoólica ou uso de estimulantes. Evite benzodiazepínico…
 > - - Monitore continuamente a via aérea, a frequência respiratória e a pressão arterial após a administração dos fármacos.
 > - - A segurança do ambiente e a desescalada verbal são sempre as primeiras condutas na agitação aguda.
 > - - A agitação pode ser sintoma de urgências clínicas graves; sempre exclua causas orgânicas e metabólicas.
@@ -78,8 +79,8 @@ Quando a desescalada verbal não é suficiente para conter o risco iminente de d
 
 ### Escolha Farmacológica Segura
 
-- **Antipsicóticos de primeira linha:** Haloperidol associado a prometazina [DOSE A CONFIRMAR] via intramuscular ou oral é amplamente utilizado, mas atente para o risco de sintomas extrapiramidais e prolongamento do intervalo QT. Opções de segunda geração, como olanzapina [DOSE A CONFIRMAR], apresentam bom perfil de sedação com menor incidência de sintomas extrapiramidais.
-- **Benzodiazepínicos:** O lorazepam [DOSE A CONFIRMAR] é preferível em casos de abstinência alcoólica ou uso de estimulantes. Evite benzodiazepínicos isolados em idosos ou pacientes com delirium, pois podem piorar a confusão mental.
+- **Antipsicóticos de primeira linha:** Haloperidol (2,5 mg VO em agitação leve; 5 mg VO em moderada; 5 mg IM em grave; pode repetir em 0,5 a 4 h; máximo de 30 mg/dia; Project BETA; Roppolo et al., 2020, PMID 33145538) associado a prometazina [DOSE DA PROMETAZINA A CONFIRMAR] via intramuscular ou oral é amplamente utilizado, mas atente para o risco de sintomas extrapiramidais e prolongamento do intervalo QT. Opções de segunda geração, como olanzapina (5 mg em comprimido orodispersível na agitação leve; 5 a 10 mg na moderada; 10 mg IM na grave; máximo de 20 mg/dia; evite benzodiazepínico na hora seguinte à dose; use a menor dose possível em idosos), apresentam bom perfil de sedação com menor incidência de sintomas extrapiramidais.
+- **Benzodiazepínicos:** O lorazepam (2 mg VO na agitação leve) é preferível em casos de abstinência alcoólica ou uso de estimulantes. Evite benzodiazepínicos isolados em idosos ou pacientes com delirium, pois podem piorar a confusão mental.
 
 ### Cuidados com a Sedação Excessiva
 
@@ -97,14 +98,13 @@ Quando a desescalada verbal não é suficiente para conter o risco iminente de d
 - Evite a sedação excessiva e priorize medicamentos com menor risco de complicações respiratórias e extrapiramidais.
 - A contenção mecânica é o último recurso, exigindo monitorização rigorosa e breve duração.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Psychomotor agitation AND emergency department AND pharmacological management` — Diretriz Clínica — [PMID A CONFIRMAR]
-2. `Verbal de-escalation of the agitated patient in the emergency setting` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `Safety and efficacy of antipsychotics in acute agitation` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-
+1. Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007 — Consenso de especialistas
+2. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+3. Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2 — Revisão sistemática Cochrane e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

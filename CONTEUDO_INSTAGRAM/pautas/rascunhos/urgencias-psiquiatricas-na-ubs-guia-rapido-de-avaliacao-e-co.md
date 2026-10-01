@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:28:54.344Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial
@@ -25,7 +26,7 @@ revisaoMedica: pendente
 > - - Hipóxia, hipoglicemia, intoxicação exógena, abstinência de substâncias, infecções sistêmicas (como infecção urinária em idosos) e encefalopatias metabólica…
 > - - Priorize a contenção verbal e ambiental. Muitas crises agudas cedem apenas com um ambiente silencioso, escuta empática e atitude firme, porém acolhedora.
 > - - Se a medicação for necessária para garantir a segurança e o alívio do sofrimento intenso, utilize classes farmacológicas estabelecidas na atenção primária.
-> - - Para agitação psicomotora leve a moderada, considere o uso de antipsicóticos típicos ou atípicos via oral, conforme disponibilidade e perfil do paciente [D…
+> - - Para agitação psicomotora leve a moderada, considere o uso de antipsicóticos típicos ou atípicos via oral, conforme disponibilidade e perfil do paciente. D…
 > - - Benzodiazepínicos via oral podem ser considerados em crises de ansiedade extrema ou abstinência, com cautela pelo risco de desinibição paradoxal, especialm…
 > - - Agitação refratária à contenção verbal e medicamentosa oral na UBS.
 > - - A segurança da equipe e do paciente é sempre a prioridade número um no atendimento de urgência.
@@ -80,8 +81,8 @@ As urgências psiquiátricas na atenção primária raramente ocorrem no vazio b
 ### Condutas de primeira linha
 - Priorize a contenção verbal e ambiental. Muitas crises agudas cedem apenas com um ambiente silencioso, escuta empática e atitude firme, porém acolhedora.
 - Se a medicação for necessária para garantir a segurança e o alívio do sofrimento intenso, utilize classes farmacológicas estabelecidas na atenção primária.
-- Para agitação psicomotora leve a moderada, considere o uso de antipsicóticos típicos ou atípicos via oral, conforme disponibilidade e perfil do paciente [DOSE A CONFIRMAR].
-- Benzodiazepínicos via oral podem ser considerados em crises de ansiedade extrema ou abstinência, com cautela pelo risco de desinibição paradoxal, especialmente em idosos e quadros demenciais [DOSE A CONFIRMAR].
+- Para agitação psicomotora leve a moderada, considere o uso de antipsicóticos típicos ou atípicos via oral, conforme disponibilidade e perfil do paciente. Doses de referência para adultos (Project BETA; Roppolo et al., 2020, PMID 33145538): haloperidol 2,5 mg VO na agitação leve ou 5 mg VO na moderada; olanzapina 5 mg na leve ou 5 a 10 mg na moderada, em comprimido orodispersível; risperidona 1 mg na leve ou 2 mg na moderada. Em idosos, use a menor dose possível.
+- Benzodiazepínicos via oral podem ser considerados em crises de ansiedade extrema ou abstinência, com cautela pelo risco de desinibição paradoxal, especialmente em idosos e quadros demenciais (referência do Project BETA: lorazepam 2 mg VO na agitação leve, com a menor dose possível em idosos).
 
 ### Sinais de gravidade e critérios de encaminhamento
 - Risco iminente de suicídio ou homicídio.
@@ -101,14 +102,13 @@ As urgências psiquiátricas na atenção primária raramente ocorrem no vazio b
 - A contenção verbal e o acolhimento empático resolvem a grande maioria das crises na atenção primária.
 - Identifique sinais de gravidade precocemente para acionar a rede de suporte e garantir o encaminhamento seguro.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Emergency Services, Psychiatric"[MeSH] OR "Mental Disorders/emergency"[MeSH]) AND ("Primary Health Care"[MeSH] OR "General Practice"[MeSH])` — Revisão sistemática e diretriz clínica — [PMID A CONFIRMAR]
-2. `("Psychomotor Agitation"[MeSH]) AND ("Emergency Treatment"[MeSH] OR "Primary Health Care"[MeSH])` — Ensaio clínico controlado — [PMID A CONFIRMAR]
-3. `("Mental Disorders/diagnosis"[MeSH]) AND ("Diagnosis, Differential"[MeSH]) AND ("Physicians, Family"[MeSH])` — Estudo de coorte e diretriz de prática clínica — [PMID A CONFIRMAR]
-
+1. Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007 — Consenso de especialistas
+2. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+3. Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2 — Revisão sistemática Cochrane e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

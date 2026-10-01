@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:29:39.234Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Conflitos escolares e saúde docente: manejo e apoio na inclusão
@@ -51,7 +52,7 @@ Cuidar de quem ensina exige uma abordagem que vai muito além do indivíduo, env
 
 * **Avaliação médica e psicológica:** Se você percebe insônia persistente, choro fácil, desânimo profundo ou crises de ansiedade, busque ajuda profissional. Éfundamental realizar uma avaliação presencial com seu médico de família ou equipe de saúde mental.
 * **Afastamento quando necessário:** Em quadros de esgotamento grave, o afastamento temporário do trabalho não é sinal de fraqueza, mas uma conduta terapêutica essencial para a recuperação.
-* **Abordagem farmacológica:** Quando os sintomas ansiosos ou depressivos incapacitam o docente, o uso de medicamentos da classe dos inibidores seletivos de recaptação de serotonina pode ser indicado pelo médico assistente [DOSE A CONFIRMAR].
+* **Abordagem farmacológica:** Quando os sintomas ansiosos ou depressivos incapacitam o docente, o uso de medicamentos da classe dos inibidores seletivos de recaptação de serotonina pode ser indicado pelo médico assistente, que define a escolha e a dose na avaliação presencial.
 * **Sinais de gravidade:** Ideação de autoextermínio, desesperança extrema ou sintomas psicóticos exigem atendimento imediato. Se você ou um colega passarem por isso, lembre-se de que há ajuda disponível pelo CVV (ligue 188) ou pelo SAMU (192).
 
 ## Pontos-chave
@@ -61,14 +62,13 @@ Cuidar de quem ensina exige uma abordagem que vai muito além do indivíduo, env
 - A mediação de conflitos e o uso de canais oficiais de comunicação protegem o tempo de descanso do educador.
 - Sintomas persistentes de exaustão exigem avaliação médica presencial e, se necessário, afastamento terapêutico.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `teacher burnout AND inclusive education AND parent-teacher relations` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `occupational stress AND teachers AND conflict management` — Ensaio clínico controlado — [PMID A CONFIRMAR]
-3. `mental health AND school teachers AND educational inclusion` — Diretriz clínica — [PMID A CONFIRMAR]
-
+1. Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070 — Revisão sistemática
+2. Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019 — Revisão sistemática e metanálise
+3. Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

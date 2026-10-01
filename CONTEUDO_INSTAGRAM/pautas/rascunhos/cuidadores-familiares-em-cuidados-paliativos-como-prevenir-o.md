@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:34:06.237Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional
@@ -51,7 +52,7 @@ Na atenção primária, nosso objetivo é identificar o sofrimento do cuidador a
 
 * **Avaliação Ativa:** Durante as visitas domiciliares ou consultas na unidade básica, investigamos ativamente sinais de insônia persistente, desesperança, choro frequente e ideação de sobrecarga extrema.
 * **Intervenções de Primeira Linha:** O suporte psicológico estruturado é fundamental para o manejo do luto antecipatório e da ansiedade. Orientamos higiene do sono rigorosa e pausas programadas.
-* **Uso de Fármacos:** Quando há sintomas depressivos ou ansiosos incapacitantes, podemos indicar tratamento farmacológico. As classes mais utilizadas são os inibidores seletivos da recaptação de serotonina, cuja dose e ajuste devem seguir [DOSE A CONFIRMAR] conforme avaliação médica presencial.
+* **Uso de Fármacos:** Quando há sintomas depressivos ou ansiosos incapacitantes, podemos indicar tratamento farmacológico. As classes mais utilizadas são os inibidores seletivos da recaptação de serotonina, cuja dose e ajuste são definidos pelo médico conforme avaliação presencial.
 * **Sinais de Gravidade e Encaminhamento:** Choro incontrolável o dia todo, sensação de que não vai suportar, perda severa de peso ou qualquer pensamento de autodestruição exigem avaliação psiquiátrica urgente. Se você ou alguém próximo estiver em sofrimento agudo, lembre-se de que o Centro de Valorização da Vida atende pelo telefone 188 e o SAMU pelo 192.
 
 ## Pontos-chave
@@ -61,14 +62,13 @@ Na atenção primária, nosso objetivo é identificar o sofrimento do cuidador a
 - Aceitar ajuda prática e dividir tarefas é uma medida essencial para a sobrevivência emocional do cuidador.
 - O acompanhamento médico e psicológico previne o desenvolvimento de transtornos de ansiedade e depressão.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Caregiver Burden"[Mesh]) AND ("Palliative Care"[Mesh] OR "Terminal Care"[Mesh]) AND ("Mental Health"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("caregivers"[Mesh]) AND ("anticipatory grief" OR "compassion fatigue") AND ("home care services"[Mesh])` — Estudo de Coorte — [PMID A CONFIRMAR]
-3. `("family caregivers"[Title/Abstract]) AND ("Palliative Care"[Mesh]) AND ("supportive interventions" OR "psychosocial support")` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-
+1. Yang X, Li X, Jiang S et al.. Effects of Telemedicine on Informal Caregivers of Patients in Palliative Care: Systematic Review and Meta-Analysis. JMIR Mhealth Uhealth. 2024;12:e54244. PMID 38602303. doi:10.2196/54244 — Revisão sistemática e metanálise
+2. Malhotra C, Chaudhry I, Shah SU et al.. Caregivers' Burden and Anticipatory Grief Increases Acute Health Care Use in Older Adults with Severe Dementia. J Am Med Dir Assoc. 2024;25(7):104981. PMID 38599241. doi:10.1016/j.jamda.2024.03.001 — Estudo de coorte
+3. De Vleminck A, Matthys O, Turola E et al.. Impact of a nurse-led and a web-based psychoeducational program for advanced cancer patients and their caregivers: Results of a three-arm randomized controlled trial. Int J Nurs Stud. 2025;171:105192. PMID 40925214. doi:10.1016/j.ijnurstu.2025.105192 — Ensaio clínico randomizado
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:27:54.801Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Avaliação do risco de suicídio na APS: o que o médico deve fazer
@@ -66,7 +67,7 @@ O manejo na Atenção Primária exige rapidez, empatia e articulação com a red
 ### Condutas de primeira linha
 * **Escuta ativa e validação:** Valide o sofrimento do paciente. Diga que ele não está sozinho e que existe tratamento.
 * **Plano de segurança:** Elabore conjuntamente um plano escrito contendo estratégias de enfrentamento pessoal, nomes de familiares de confiança e contatos de emergência.
-* **Abordagem farmacológica:** Se houver transtorno psiquiátrico de base subjacente, como depressão grave ou ansiedade intensa, o tratamento do transtorno é fundamental. Utilize medicações da classe dos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR] com cautela, avaliando o risco de toxicidade em caso de superdosagem e o aumento inicial da ideação.
+* **Abordagem farmacológica:** Se houver transtorno psiquiátrico de base subjacente, como depressão grave ou ansiedade intensa, o tratamento do transtorno é fundamental. Utilize medicações da classe dos inibidores seletivos da recaptação de serotonina, com dose inicial baixa e reavaliação precoce segundo a bula e o protocolo local, com cautela, avaliando o risco de toxicidade em caso de superdosagem e o aumento inicial da ideação.
 
 ### Sinais de gravidade
 * Presença de plano detalhado e intenção explícita de execução.
@@ -86,14 +87,13 @@ O manejo na Atenção Primária exige rapidez, empatia e articulação com a red
 - Casos de alto risco exigem vigilância contínua, remoção de meios letais e encaminhamento protegido.
 - O plano de segurança e o envolvimento da rede de apoio familiar são pilares fundamentais no seguimento na APS.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Suicide risk assessment AND primary care AND screening tools` — Revisão Sistemática e Metanálise — [PMID A CONFIRMAR]
-2. `Clinical management of suicide risk in general practice` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Effectiveness of brief interventions for suicide prevention in primary care` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-
+1. Mann JJ, Michel CA, Auerbach RP. Improving Suicide Prevention Through Evidence-Based Strategies: A Systematic Review. Am J Psychiatry. 2021;178(7):611-624. PMID 33596680. doi:10.1176/appi.ajp.2020.20060864 — Revisão sistemática
+2. US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297 — Diretriz clínica (recomendação do USPSTF)
+3. Bertolote JM, Fleischmann A, De Leo D et al.. Repetition of suicide attempts: data from emergency care settings in five culturally different low- and middle-income countries participating in the WHO SUPRE-MISS Study. Crisis. 2010;31(4):194-201. PMID 20801749. doi:10.1027/0027-5910/a000052 — Ensaio clínico randomizado (estudo WHO SUPRE-MISS)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

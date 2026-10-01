@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:29:57.573Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Saúde mental de migrantes: Síndrome de Ulisses e luto migratório
@@ -62,7 +63,7 @@ Identificar a diferença entre o estresse normal da adaptação e o adoecimento 
 O primeiro passo ao procurar atendimento na unidade básica de saúde é conversar com o médico ou enfermeiro de família. O acolhimento visa escutar a sua história sem julgamentos, validando o seu sofrimento e avaliando a necessidade de suporte psicológico com psicólogos da rede.
 
 ### Abordagem Medicamentosa
-Em casos onde os sintomas de ansiedade intensa ou depressão prejudicam severamente a funcionalidade e o autocuidado, o médico poderá avaliar o uso de medicamentos reguladores da serotonina, como os inibidores seletivos da recaptação de serotonina (ISRS) [DOSE A CONFIRMAR]. Os remédios ajudam a reequilibrar a química cerebral e dão o suporte necessário para que você consiga retomar a terapia e as estratégias de enfrentamento.
+Em casos onde os sintomas de ansiedade intensa ou depressão prejudicam severamente a funcionalidade e o autocuidado, o médico poderá avaliar o uso de medicamentos reguladores da serotonina, como os inibidores seletivos da recaptação de serotonina (ISRS), com dose definida pelo médico. Os remédios ajudam a reequilibrar a química cerebral e dão o suporte necessário para que você consiga retomar a terapia e as estratégias de enfrentamento.
 
 Lembre-se: buscar ajuda médica não diminui a sua coragem. É um ato de cuidado com a sua própria história.
 
@@ -73,14 +74,13 @@ Lembre-se: buscar ajuda médica não diminui a sua coragem. É um ato de cuidado
 - O sofrimento emocional prolongado pode se manifestar no corpo através de insônia, dores e exaustão física.
 - A rede de saúde pública oferece escuta qualificada, grupos de apoio e suporte médico ou psicológico para migrantes.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `transnational mental health AND immigrant health AND Ulysses syndrome` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `acculturative stress AND grief AND migrant populations AND mental health` — Estudo qualitativo — [PMID A CONFIRMAR]
-3. `mental health care access AND immigrants AND primary health care` — Diretriz clínica — [PMID A CONFIRMAR]
-
+1. Achotegui J. [Emigration in hard conditions: the Immigrant Syndrome with chronic and multiple stress (Ulysses' Syndrome)]. Vertex. 2005;16(60):105-13. PMID 15912217 — Artigo de revisão (descrição da síndrome)
+2. Liem A, Renzaho AMN, Hannam K et al.. Acculturative stress and coping among migrant workers: A global mixed-methods systematic review. Appl Psychol Health Well Being. 2021;13(3):491-517. PMID 33811751. doi:10.1111/aphw.12271 — Revisão sistemática de métodos mistos
+3. Agbata EN, Padilla PF, Agbata IN et al.. Migrant Healthcare Guidelines: A Systematic Quality Assessment. J Immigr Minor Health. 2019;21(2):401-413. PMID 29785690. doi:10.1007/s10903-018-0759-9 — Revisão sistemática de diretrizes
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

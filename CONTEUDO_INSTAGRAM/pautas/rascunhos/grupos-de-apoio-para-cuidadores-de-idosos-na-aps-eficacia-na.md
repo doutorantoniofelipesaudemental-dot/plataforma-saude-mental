@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:29:23.258Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Grupos de apoio para cuidadores de idosos na APS: eficácia na prática
@@ -61,7 +62,7 @@ Participar de intervenções grupais estruturadas ajuda a quebrar esse ciclo de 
 
 ### Quando e Como Encaminhar
 - **Encaminhamento Psicológico:** Indicar psicoterapia individual quando o cuidador apresentar sofrimento que ultrapasse o suporte oferecido pelo grupo.
-- **Avaliação Médica:** Caso os sintomas de ansiedade ou depressão sejam graves, avalie a necessidade de intervenção farmacológica com antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, com [DOSE A CONFIRMAR].
+- **Avaliação Médica:** Caso os sintomas de ansiedade ou depressão sejam graves, avalie a necessidade de intervenção farmacológica com antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, com dose e acompanhamento definidos pelo médico.
 - **Rede de Urgência:** Em caso de crise aguda ou risco iminente, oriente a busca imediata pelo atendimento de urgência ou acione os serviços de apoio disponíveis.
 
 ## Pontos-chave
@@ -71,14 +72,13 @@ Participar de intervenções grupais estruturadas ajuda a quebrar esse ciclo de 
 - A escuta ativa e a troca de experiências ajudam a modular a resposta do corpo ao estresse prolongado.
 - Profissionais de saúde devem identificar sinais precoces de exaustão e incentivar a participação comunitária.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `caregiver burden AND primary health care AND support groups AND aged` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `family caregivers AND elderly AND burnout AND intervention studies AND primary care` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `primary care interventions AND caregiver stress AND mental health outcomes` — Metanálise — [PMID A CONFIRMAR]
-
+1. Lauritzen J, Pedersen PU, Sørensen EE et al.. The meaningfulness of participating in support groups for informal caregivers of older adults with dementia: a systematic review. JBI Database System Rev Implement Rep. 2015;13(6):373-433. PMID 26455756. doi:10.11124/jbisrir-2015-2121 — Revisão sistemática
+2. Kwok JYY, Cheung DSK, Zarit S et al.. Multicomponent Intervention for Distressed Informal Caregivers of People With Dementia: A Randomized Clinical Trial. JAMA Netw Open. 2025;8(3):e250069. PMID 40094667. doi:10.1001/jamanetworkopen.2025.0069 — Ensaio clínico randomizado
+3. Brodaty H, Green A, Koschera A. Meta-analysis of psychosocial interventions for caregivers of people with dementia. J Am Geriatr Soc. 2003;51(5):657-64. PMID 12752841. doi:10.1034/j.1600-0579.2003.00210.x — Metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

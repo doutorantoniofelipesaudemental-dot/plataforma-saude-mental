@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:34:41.526Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Psicoeducação em saúde mental na família: orientando para o cuidado
@@ -77,7 +78,7 @@ O médico de família e a equipe multiprofissional estão preparados para escuta
 
 ### Tratamentos de primeira linha
 * **Psicoterapia:** Espaço fundamental para que o paciente desenvolva estratégias de enfrentamento e autoconhecimento.
-* **Intervenções farmacológicas:** Quando indicadas pelo profissional de saúde, classes de medicamentos como os antidepressivos ou moduladores do humor podem ser prescritas para reequilibrar a função neuroquímica [DOSE A CONFIRMAR]. O uso deve ser monitorado de perto.
+* **Intervenções farmacológicas:** Quando indicadas pelo profissional de saúde, classes de medicamentos como os antidepressivos ou moduladores do humor podem ser prescritas para reequilibrar a função neuroquímica, com escolha e dose definidas pelo médico. O uso deve ser monitorado de perto.
 
 ### Como e quando encaminhar
 O encaminhamento para serviços especializados, como o Pronto Atendimento Psiquiátrico ou Centros de Atenção Psicossocial (CAPS), ocorre quando há refratariedade aos tratamentos iniciais ou quando surgem os sinais de gravidade descritos acima. A família participa ativamente desse processo, garantindo que o vínculo com a equipe de saúde seja mantido.
@@ -89,14 +90,13 @@ O encaminhamento para serviços especializados, como o Pronto Atendimento Psiqui
 - O sofrimento mental não é fraqueza, mas uma resposta biológica e emocional que exige cuidado profissional.
 - A Atenção Primária à Saúde é a base para orientar, acolher e direcionar o tratamento de forma humanizada.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `psychoeducation AND family AND mental health AND primary health care` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `mental health literacy AND family caregivers AND psychoeducation` — Ensaio Clínico Controlado — [PMID A CONFIRMAR]
-3. `early recognition AND mental disorders AND family involvement` — Diretriz Clínica — [PMID A CONFIRMAR]
-
+1. Zhao S, Sampson S, Xia J et al.. Psychoeducation (brief) for people with serious mental illness. Cochrane Database Syst Rev. 2015;2015(4):CD010823. PMID 25854522. doi:10.1002/14651858.CD010823.pub2 — Revisão sistemática Cochrane
+2. Xia J, Merinder LB, Belgamwar MR. Psychoeducation for schizophrenia. Cochrane Database Syst Rev. 2011;2011(6):CD002831. PMID 21678337. doi:10.1002/14651858.CD002831.pub2 — Revisão sistemática Cochrane
+3. Münchenberg PS, Yessimova D, Panteli D et al.. Digital Health Interventions for Informal Family Caregivers of People With First-Episode Psychosis: Systematic Review on User Experience and Effectiveness. JMIR Ment Health. 2024;11:e63743. PMID 39607998. doi:10.2196/63743 — Revisão sistemática
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

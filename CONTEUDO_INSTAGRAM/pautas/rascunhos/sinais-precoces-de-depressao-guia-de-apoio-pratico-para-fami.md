@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:34:20.629Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Sinais precoces de depressão: guia de apoio prático para familiares
@@ -52,7 +53,7 @@ Perceber que alguém que amamos está mudando não é fácil. Muitas vezes, as m
 
 * **Primeira linha de cuidado:** A porta de entrada é a Unidade Básica de Saúde. O médico de família e a equipe multiprofissional realizam a avaliação inicial e acompanham o caso de perto.
 * **Psicoterapia e apoio social:** O suporte psicológico e a articulação com recursos da comunidade ajudam a reestruturar a rotina e reduzir o isolamento.
-* **Uso de medicamentos:** Quando indicados, os antidepressivos atuam na regulação dos neurotransmissores. As classes mais comuns incluem os inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR]. O efeito não é imediato e costuma aparecer após algumas semanas de uso contínuo.
+* **Uso de medicamentos:** Quando indicados, os antidepressivos atuam na regulação dos neurotransmissores. As classes mais comuns incluem os inibidores seletivos da recaptação de serotonina, com dose definida pelo médico. O efeito não é imediato e costuma aparecer após algumas semanas de uso contínuo.
 
 ### Sinais de gravidade e quando buscar ajuda urgente
 
@@ -66,14 +67,13 @@ Perceber que alguém que amamos está mudando não é fácil. Muitas vezes, as m
 - Depressão é uma condição médica real, envolvendo alterações biológicas, e não falta de força de vontade.
 - A Unidade Básica de Saúde é o primeiro passo para o diagnóstico e o tratamento humanizado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Depressive Disorder"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Family"[MeSH Terms] AND ("Early Medical Intervention"[MeSH Terms] OR "early recognition")` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Mental Health"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Psychoeducation"[MeSH Terms] AND "Caregivers"[MeSH Terms]` — Ensaio Clínico Controlado Randomizado — [PMID A CONFIRMAR]
-3. `"Primary Health Care"[MeSH Terms] AND "Depressive Disorder"[MeSH Terms] AND "Family Practice"[MeSH Terms]` — Diretriz Clínica — [PMID A CONFIRMAR]
-
+1. US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297 — Diretriz clínica (recomendação do USPSTF)
+2. Lam RW, Kennedy SH, Adams C, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults. Can J Psychiatry. 2024;69(9):641-687. PMID 38711351. doi:10.1177/07067437241245384 — Diretriz clínica (CANMAT)
+3. Shi Y, Shao Y, Li H et al.. Correlates of affiliate stigma among family caregivers of people with mental illness: A systematic review and meta-analysis. J Psychiatr Ment Health Nurs. 2018;26(1-2):49-61. PMID 30472763. doi:10.1111/jpm.12505 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

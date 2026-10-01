@@ -141,9 +141,10 @@
 - **público:** Residentes de Medicina de Família e Comunidade, Médicos de Pronto Atendimento e Estudantes de Medicina · **ângulo:** Foco na tomada de decisão rápida sob pressão no plantão e distinção de outras urgências farmacológicas.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Serotonin syndrome AND emergency treatment AND diagnosis` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `Serotonin syndrome versus neuroleptic malignant syndrome in the emergency department` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `Management of acute serotonin toxicity in primary care and emergency settings` (Ensaio Clínico) [PMID A CONFIRMAR]
+  - PubMed: `Serotonin syndrome AND emergency treatment AND diagnosis` (Revisão) 37309284
+  - PubMed: `Serotonin syndrome versus neuroleptic malignant syndrome in the emergency department` (Revisão) 22563571
+  - PubMed: `Management of acute serotonin toxicity in primary care and emergency settings` (Revisão (manejo)) 38926083
+  - PubMed: `` (Revisão sistemática) 39791184
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-serotoninergica-na-emergencia-reconhecer-para-salva.md` · slug: `sindrome-serotoninergica-na-emergencia-reconhecer-para-salva` · pauta: `2026-09-30-11-sindrome-serotoninergica-na-em`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Síndrome neuroléptica maligna: reconhecimento precoce" (similaridade 0.24)
@@ -172,9 +173,9 @@
 - **público:** Residentes de Medicina de Urgência, Médicos de Pronto Atendimento e Estudantes · **ângulo:** Foco na desescalada verbal e escolha de antipsicóticos e benzodiazepínicos com menor perfil de efeitos adversos graves.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Psychomotor agitation AND emergency department AND pharmacological management` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `Verbal de-escalation of the agitated patient in the emergency setting` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `Safety and efficacy of antipsychotics in acute agitation` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Psychomotor agitation AND emergency department AND pharmacological management` (Consenso de especialistas) 26912127
+  - PubMed: `Verbal de-escalation of the agitated patient in the emergency setting` (Diretriz (Project BETA) e revisão) 33145538
+  - PubMed: `Safety and efficacy of antipsychotics in acute agitation` (Revisão sistemática Cochrane e metanálise) 19588366
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-agitacao-psicomotora-protocolo-rapido-no-pa.md` · slug: `manejo-da-agitacao-psicomotora-protocolo-rapido-no-pa` · pauta: `2026-09-30-13-manejo-da-agitacao-psicomotora`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Intoxicação exógena e agitação: diferenciando causas no PA" (similaridade 0.26)
@@ -188,9 +189,10 @@
 - **público:** Residentes de Medicina de Família e Comunidade e Médicos de UBS · **ângulo:** Aborda a díade mãe-bebê e a segurança do aleitamento materno no uso de antidepressivos.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Postpartum depression AND primary care screening AND Edinburgh scale` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `Antidepressant use during lactation and breastfeeding safety guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `Early intervention for postpartum depression in primary care` (Ensaio Clínico) [PMID A CONFIRMAR]
+  - PubMed: `Postpartum depression AND primary care screening AND Edinburgh scale` (Revisão sistemática (USPSTF)) 26813212
+  - PubMed: `Antidepressant use during lactation and breastfeeding safety guidelines` (Diretriz clínica (Protocolo ABM nº 18)) 26204124
+  - PubMed: `Early intervention for postpartum depression in primary care` (Estudo de validação (amostra brasileira)) 17952250
+  - PubMed: `` (Ensaio clínico randomizado) 39396350
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/rastreio-e-manejo-da-depressao-pos-parto-na-ubs.md` · slug: `rastreio-e-manejo-da-depressao-pos-parto-na-ubs` · pauta: `2026-09-30-14-rastreio-e-manejo-da-depressao`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Depressão pós-parto e ansiedade perinatal: reconhecendo os sinais além do "baby blues"" (similaridade 0.28)
@@ -204,9 +206,9 @@
 - **público:** Residentes de Medicina de Família e Comunidade, Médicos e Estudantes de Medicina · **ângulo:** Desmistifica o receio de perguntar sobre o tema e fornece uma ferramenta prática de triagem e acolhimento.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Suicide risk assessment AND primary care AND screening tools` (Revisão Sistemática e Metanálise) [PMID A CONFIRMAR]
-  - PubMed: `Clinical management of suicide risk in general practice` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `Effectiveness of brief interventions for suicide prevention in primary care` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Suicide risk assessment AND primary care AND screening tools` (Revisão sistemática) 33596680
+  - PubMed: `Clinical management of suicide risk in general practice` (Diretriz clínica (recomendação do USPSTF)) 37338872
+  - PubMed: `Effectiveness of brief interventions for suicide prevention in primary care` (Ensaio clínico randomizado (estudo WHO SUPRE-MISS)) 20801749
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-do-risco-de-suicidio-na-aps-o-que-o-medico-deve-fa.md` · slug: `avaliacao-do-risco-de-suicidio-na-aps-o-que-o-medico-deve-fa` · pauta: `2026-09-30-15-avaliacao-do-risco-de-suicidio`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Como reconhecer sinais de risco de suicídio na consulta de rotina" (similaridade 0.26)
@@ -220,9 +222,9 @@
 - **público:** Cuidadores familiares de crianças, jovens e adultos com Transtorno do Espectro Autista (TEA) e deficiências do neurodesenvolvimento. · **ângulo:** Foca nas demandas específicas do cuidado em deficiências crônicas, indo além de conselhos genéricos ao propor ferramentas viáveis de divisão de tarefas, manejo da privação de sono e navegação na Atenção Primária.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Caregivers"[Mesh] OR "caregiver burden") AND ("Autism Spectrum Disorder"[Mesh] OR "Intellectual Disability"[Mesh]) AND ("interventions" OR "support")` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("caregiver burden"[Title/Abstract]) AND ("stress, psychological"[Mesh]) AND ("coping strategies" OR "respite care")` (Meta-análise) [PMID A CONFIRMAR]
-  - PubMed: `("parental burnout" OR "caregiver stress") AND ("neurodevelopmental disorders"[Mesh]) AND ("mental health"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Caregivers"[Mesh] OR "caregiver burden") AND ("Autism Spectrum Disorder"[Mesh] OR "Intellectual Disability"[Mesh]) AND ("interventions" OR "support")` (Revisão sistemática e metanálise em rede) 39489145
+  - PubMed: `("caregiver burden"[Title/Abstract]) AND ("stress, psychological"[Mesh]) AND ("coping strategies" OR "respite care")` (Revisão sistemática e metanálise) 37668850
+  - PubMed: `("parental burnout" OR "caregiver stress") AND ("neurodevelopmental disorders"[Mesh]) AND ("mental health"[Mesh])` (Ensaio clínico randomizado (métodos mistos)) 39415148
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es.md` · slug: `cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es` · pauta: `2026-09-30-16-cuidadores-de-pessoas-com-auti`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Sobrecarga do cuidador: como identificar na consulta de rotina" (similaridade 0.21)
@@ -251,9 +253,9 @@
 - **público:** Cuidadores familiares que assistem entes queridos em cuidados paliativos domiciliares ou com dependência funcional severa. · **ângulo:** Aborda a intersecção entre medicina de família, cuidados paliativos e saúde mental, com ênfase no reconhecimento do luto antecipatório e na prescrição de suporte ativo para o cuidador durante a fase de terminalidade.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Caregiver Burden"[Mesh]) AND ("Palliative Care"[Mesh] OR "Terminal Care"[Mesh]) AND ("Mental Health"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("caregivers"[Mesh]) AND ("anticipatory grief" OR "compassion fatigue") AND ("home care services"[Mesh])` (Estudo de Coorte) [PMID A CONFIRMAR]
-  - PubMed: `("family caregivers"[Title/Abstract]) AND ("Palliative Care"[Mesh]) AND ("supportive interventions" OR "psychosocial support")` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Caregiver Burden"[Mesh]) AND ("Palliative Care"[Mesh] OR "Terminal Care"[Mesh]) AND ("Mental Health"[Mesh])` (Revisão sistemática e metanálise) 38602303
+  - PubMed: `("caregivers"[Mesh]) AND ("anticipatory grief" OR "compassion fatigue") AND ("home care services"[Mesh])` (Estudo de coorte) 38599241
+  - PubMed: `("family caregivers"[Title/Abstract]) AND ("Palliative Care"[Mesh]) AND ("supportive interventions" OR "psychosocial support")` (Ensaio clínico randomizado) 40925214
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o.md` · slug: `cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o` · pauta: `2026-09-30-18-cuidadores-familiares-em-cuida`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.22)
@@ -267,9 +269,9 @@
 - **público:** Familiares, cuidadores e indivíduos em busca de psicoeducação sobre transtornos de humor · **ângulo:** Foco na ótica da Atenção Primária à Saúde, instrumentalizando a família com ferramentas de validação emocional e desmistificando o preconceito de que depressão é fraqueza de caráter.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Depressive Disorder"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Family"[MeSH Terms] AND ("Early Medical Intervention"[MeSH Terms] OR "early recognition")` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Mental Health"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Psychoeducation"[MeSH Terms] AND "Caregivers"[MeSH Terms]` (Ensaio Clínico Controlado Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `"Primary Health Care"[MeSH Terms] AND "Depressive Disorder"[MeSH Terms] AND "Family Practice"[MeSH Terms]` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Depressive Disorder"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Family"[MeSH Terms] AND ("Early Medical Intervention"[MeSH Terms] OR "early recognition")` (Diretriz clínica (recomendação do USPSTF)) 37338872
+  - PubMed: `("Mental Health"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Psychoeducation"[MeSH Terms] AND "Caregivers"[MeSH Terms]` (Diretriz clínica (CANMAT)) 38711351
+  - PubMed: `"Primary Health Care"[MeSH Terms] AND "Depressive Disorder"[MeSH Terms] AND "Family Practice"[MeSH Terms]` (Revisão sistemática e metanálise) 30472763
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sinais-precoces-de-depressao-guia-de-apoio-pratico-para-fami.md` · slug: `sinais-precoces-de-depressao-guia-de-apoio-pratico-para-fami` · pauta: `2026-09-30-19-sinais-precoces-de-depressao-g`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.19)
@@ -298,9 +300,9 @@
 - **público:** Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos de UBS · **ângulo:** Foco exclusivo na realidade estrutural da Atenção Primária à Saúde, sem idealizar recursos de grandes hospitais.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Emergency Services, Psychiatric"[MeSH] OR "Mental Disorders/emergency"[MeSH]) AND ("Primary Health Care"[MeSH] OR "General Practice"[MeSH])` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Psychomotor Agitation"[MeSH]) AND ("Emergency Treatment"[MeSH] OR "Primary Health Care"[MeSH])` (Ensaio clínico controlado) [PMID A CONFIRMAR]
-  - PubMed: `("Mental Disorders/diagnosis"[MeSH]) AND ("Diagnosis, Differential"[MeSH]) AND ("Physicians, Family"[MeSH])` (Estudo de coorte e diretriz de prática clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Emergency Services, Psychiatric"[MeSH] OR "Mental Disorders/emergency"[MeSH]) AND ("Primary Health Care"[MeSH] OR "General Practice"[MeSH])` (Consenso de especialistas) 26912127
+  - PubMed: `("Psychomotor Agitation"[MeSH]) AND ("Emergency Treatment"[MeSH] OR "Primary Health Care"[MeSH])` (Diretriz (Project BETA) e revisão) 33145538
+  - PubMed: `("Mental Disorders/diagnosis"[MeSH]) AND ("Diagnosis, Differential"[MeSH]) AND ("Physicians, Family"[MeSH])` (Revisão sistemática Cochrane e metanálise) 19588366
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/urgencias-psiquiatricas-na-ubs-guia-rapido-de-avaliacao-e-co.md` · slug: `urgencias-psiquiatricas-na-ubs-guia-rapido-de-avaliacao-e-co` · pauta: `2026-09-30-21-urgencias-psiquiatricas-na-ubs`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Intoxicação por psicofármacos: conduta inicial no PA" (similaridade 0.25)
@@ -344,9 +346,9 @@
 - **público:** Pacientes e Familiares · **ângulo:** Foca na psicoeducação como ferramenta de empoderamento familiar na APS, guiando o manejo precoce e a busca por ajuda de forma humanizada.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `psychoeducation AND family AND mental health AND primary health care` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `mental health literacy AND family caregivers AND psychoeducation` (Ensaio Clínico Controlado) [PMID A CONFIRMAR]
-  - PubMed: `early recognition AND mental disorders AND family involvement` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `psychoeducation AND family AND mental health AND primary health care` (Revisão sistemática Cochrane) 25854522
+  - PubMed: `mental health literacy AND family caregivers AND psychoeducation` (Revisão sistemática Cochrane) 21678337
+  - PubMed: `early recognition AND mental disorders AND family involvement` (Revisão sistemática) 39607998
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/psicoeducacao-em-saude-mental-na-familia-orientando-para-o-c.md` · slug: `psicoeducacao-em-saude-mental-na-familia-orientando-para-o-c` · pauta: `2026-09-30-24-psicoeducacao-em-saude-mental-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda" (similaridade 0.11)
@@ -417,9 +419,9 @@
 - **público:** Cuidadores familiares de idosos, profissionais de saúde da APS e médicos de família · **ângulo:** Foco exclusivo na implementação e nos resultados clínicos de intervenções grupais estruturadas na APS para suporte a cuidadores
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `caregiver burden AND primary health care AND support groups AND aged` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `family caregivers AND elderly AND burnout AND intervention studies AND primary care` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `primary care interventions AND caregiver stress AND mental health outcomes` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `caregiver burden AND primary health care AND support groups AND aged` (Revisão sistemática) 26455756
+  - PubMed: `family caregivers AND elderly AND burnout AND intervention studies AND primary care` (Ensaio clínico randomizado) 40094667
+  - PubMed: `primary care interventions AND caregiver stress AND mental health outcomes` (Metanálise) 12752841
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na.md` · slug: `grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na` · pauta: `2026-09-30-29-grupos-de-apoio-para-cuidadore`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Grupos terapêuticos na APS: uma ferramenta subutilizada" (similaridade 0.3)
@@ -433,9 +435,9 @@
 - **público:** Professores e gestores educacionais · **ângulo:** Foco na mediação institucional de conflitos familia-escola como medida preventiva para o esgotamento docente na educação inclusiva.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `teacher burnout AND inclusive education AND parent-teacher relations` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `occupational stress AND teachers AND conflict management` (Ensaio clínico controlado) [PMID A CONFIRMAR]
-  - PubMed: `mental health AND school teachers AND educational inclusion` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `teacher burnout AND inclusive education AND parent-teacher relations` (Revisão sistemática) 37372657
+  - PubMed: `occupational stress AND teachers AND conflict management` (Revisão sistemática e metanálise) 35256508
+  - PubMed: `mental health AND school teachers AND educational inclusion` (Revisão de escopo) 36078422
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus.md` · slug: `conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus` · pauta: `2026-09-30-30-conflitos-escolares-e-saude-do`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Gestão de conflitos e seu impacto na saúde mental da equipe" (similaridade 0.22)
@@ -449,9 +451,9 @@
 - **público:** Pacientes, migrantes, expatriados e seus familiares · **ângulo:** Foco exclusivo no acolhimento e na psicoeducação de famílias migrantes, diferenciando o estresse migratório comum do adoecimento psíquico, com linguagem acessível e empática.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `transnational mental health AND immigrant health AND Ulysses syndrome` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `acculturative stress AND grief AND migrant populations AND mental health` (Estudo qualitativo) [PMID A CONFIRMAR]
-  - PubMed: `mental health care access AND immigrants AND primary health care` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `transnational mental health AND immigrant health AND Ulysses syndrome` (Artigo de revisão (descrição da síndrome)) 15912217
+  - PubMed: `acculturative stress AND grief AND migrant populations AND mental health` (Revisão sistemática de métodos mistos) 33811751
+  - PubMed: `mental health care access AND immigrants AND primary health care` (Revisão sistemática de diretrizes) 29785690
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/saude-mental-de-migrantes-sindrome-de-ulisses-e-luto-migrato.md` · slug: `saude-mental-de-migrantes-sindrome-de-ulisses-e-luto-migrato` · pauta: `2026-09-30-31-saude-mental-de-migrantes-sind`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Luto: quanto tempo é considerado normal?" (similaridade 0.2)

@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T05:27:35.751Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Rastreio e manejo da depressão pós-parto na UBS
@@ -29,7 +30,7 @@ Receber um bebê transforma a rotina de toda a família. Na Unidade Básica de S
 A aplicação da Escala de Depressão Pós-Parto de Edimburgo na rotina da UBS é uma ferramenta simples e poderosa. Devemos aplicá-la nas consultas de puerpério, especialmente entre a segunda e a sexta semana após o parto, e repetir no retorno de quarentena ou nos primeiros meses de vida da criança.
 
 ### O que observar
-* Pontuação na Escala de Edimburgo igual ou superior a [DADO A CONFIRMAR] sugere rastreio positivo.
+* Pontuação na Escala de Edimburgo igual ou superior a 11 sugere rastreio positivo, o melhor ponto de corte na validação em mães brasileiras (Santos et al., 2007, PMID 17952250). A revisão do USPSTF também avaliou o ponto de corte 13 (O'Connor et al., 2016, PMID 26813212). A escala rastreia, não diagnostica.
 * Atenção especial à questão número 10, que avalia ideação autolesiva.
 * Choro frequente sem motivo aparente, sentimento de incapacidade e culpa excessiva.
 * Dificuldade importante na conexão emocional com o bebê.
@@ -54,7 +55,7 @@ O manejo na Atenção Primária à Saúde baseia-se na escuta qualificada, no ap
 ### Condutas de primeira linha
 * Psicoterapia breve ou estruturada na própria unidade ou via rede de apoio municipal.
 * Orientação rigorosa sobre higiene do sono e divisão de tarefas com a rede de apoio.
-* Intervenção farmacológica com antidepressivos inibidores seletivos da recaptação de serotonina, preferencialmente sertralina ou escitalopram, avaliando a relação risco-benefício para o aleitamento materno. Posologia inicial [DOSE A CONFIRMAR].
+* Intervenção farmacológica com antidepressivos inibidores seletivos da recaptação de serotonina, preferencialmente sertralina ou escitalopram, avaliando a relação risco-benefício para o aleitamento materno. Posologia inicial baixa, com titulação gradual conforme resposta e tolerância, segundo a bula e o Protocolo ABM nº 18 (Sriraman et al., 2015, PMID 26204124).
 
 ### Sinais de gravidade
 * Presença de ideação suicida ou pensamentos de infanticídio.
@@ -71,14 +72,14 @@ O manejo na Atenção Primária à Saúde baseia-se na escuta qualificada, no ap
 - A sertralina e o escitalopram são opções de primeira linha compatíveis com o aleitamento materno.
 - Sinais de psicose ou risco de autolesão exigem encaminhamento imediato e urgente.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Postpartum depression AND primary care screening AND Edinburgh scale` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Antidepressant use during lactation and breastfeeding safety guidelines` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Early intervention for postpartum depression in primary care` — Ensaio Clínico — [PMID A CONFIRMAR]
-
+1. O'Connor E, Rossom RC, Henninger M et al.. Primary Care Screening for and Treatment of Depression in Pregnant and Postpartum Women: Evidence Report and Systematic Review for the US Preventive Services Task Force. JAMA. 2016;315(4):388-406. PMID 26813212. doi:10.1001/jama.2015.18948 — Revisão sistemática (USPSTF)
+2. Sriraman NK, Melvin K, Meltzer-Brody S. ABM Clinical Protocol #18: Use of Antidepressants in Breastfeeding Mothers. Breastfeed Med. 2015;10(6):290-9. PMID 26204124. doi:10.1089/bfm.2015.29002 — Diretriz clínica (Protocolo ABM nº 18)
+3. Santos IS, Matijasevich A, Tavares BF et al.. Validation of the Edinburgh Postnatal Depression Scale (EPDS) in a sample of mothers from the 2004 Pelotas Birth Cohort Study. Cad Saude Publica. 2007;23(11):2577-88. PMID 17952250. doi:10.1590/s0102-311x2007001100005 — Estudo de validação (amostra brasileira)
+4. Husain N, Lunat F, Lovell K et al.. Efficacy of a culturally adapted, cognitive behavioural therapy-based intervention for postnatal depression in British south Asian women (ROSHNI-2): a multicentre, randomised controlled trial. Lancet. 2024;404(10461):1430-1443. PMID 39396350. doi:10.1016/S0140-6736(24)01612-X — Ensaio clínico randomizado
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

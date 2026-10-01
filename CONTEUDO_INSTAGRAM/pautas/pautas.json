@@ -395,18 +395,27 @@
     "referencias": [
       {
         "consultaPubMed": "Serotonin syndrome AND emergency treatment AND diagnosis",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "37309284",
+        "citacao": "Mikkelsen N, Damkier P, Pedersen SA. Serotonin syndrome-A focused review. Basic Clin Pharmacol Toxicol. 2023;133(2):124-129. PMID 37309284. doi:10.1111/bcpt.13912"
       },
       {
         "consultaPubMed": "Serotonin syndrome versus neuroleptic malignant syndrome in the emergency department",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "22563571",
+        "citacao": "Perry PJ, Wilborn CA. Serotonin syndrome vs neuroleptic malignant syndrome: a contrast of causes, diagnoses, and management. Ann Clin Psychiatry. 2012;24(2):155-62. PMID 22563571"
       },
       {
         "consultaPubMed": "Management of acute serotonin toxicity in primary care and emergency settings",
-        "tipoDeEstudo": "Ensaio Clínico",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão (manejo)",
+        "pmid": "38926083",
+        "citacao": "Chiew AL, Isbister GK. Management of serotonin syndrome (toxicity). Br J Clin Pharmacol. 2024;91(3):654-661. PMID 38926083. doi:10.1111/bcp.16152"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "39791184",
+        "citacao": "King E, Rotella JA. Review article: Efficacy of cyproheptadine in the management of serotonin toxicity following deliberate self-poisoning - A systematic review. Emerg Med Australas. 2025;37(1):e14554. PMID 39791184. doi:10.1111/1742-6723.14554"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -511,18 +520,21 @@
     "referencias": [
       {
         "consultaPubMed": "Psychomotor agitation AND emergency department AND pharmacological management",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Consenso de especialistas",
+        "pmid": "26912127",
+        "citacao": "Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007"
       },
       {
         "consultaPubMed": "Verbal de-escalation of the agitated patient in the emergency setting",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       },
       {
         "consultaPubMed": "Safety and efficacy of antipsychotics in acute agitation",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "19588366",
+        "citacao": "Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -577,18 +589,27 @@
     "referencias": [
       {
         "consultaPubMed": "Postpartum depression AND primary care screening AND Edinburgh scale",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática (USPSTF)",
+        "pmid": "26813212",
+        "citacao": "O'Connor E, Rossom RC, Henninger M et al.. Primary Care Screening for and Treatment of Depression in Pregnant and Postpartum Women: Evidence Report and Systematic Review for the US Preventive Services Task Force. JAMA. 2016;315(4):388-406. PMID 26813212. doi:10.1001/jama.2015.18948"
       },
       {
         "consultaPubMed": "Antidepressant use during lactation and breastfeeding safety guidelines",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (Protocolo ABM nº 18)",
+        "pmid": "26204124",
+        "citacao": "Sriraman NK, Melvin K, Meltzer-Brody S. ABM Clinical Protocol #18: Use of Antidepressants in Breastfeeding Mothers. Breastfeed Med. 2015;10(6):290-9. PMID 26204124. doi:10.1089/bfm.2015.29002"
       },
       {
         "consultaPubMed": "Early intervention for postpartum depression in primary care",
-        "tipoDeEstudo": "Ensaio Clínico",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo de validação (amostra brasileira)",
+        "pmid": "17952250",
+        "citacao": "Santos IS, Matijasevich A, Tavares BF et al.. Validation of the Edinburgh Postnatal Depression Scale (EPDS) in a sample of mothers from the 2004 Pelotas Birth Cohort Study. Cad Saude Publica. 2007;23(11):2577-88. PMID 17952250. doi:10.1590/s0102-311x2007001100005"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "39396350",
+        "citacao": "Husain N, Lunat F, Lovell K et al.. Efficacy of a culturally adapted, cognitive behavioural therapy-based intervention for postnatal depression in British south Asian women (ROSHNI-2): a multicentre, randomised controlled trial. Lancet. 2024;404(10461):1430-1443. PMID 39396350. doi:10.1016/S0140-6736(24)01612-X"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -638,18 +659,21 @@
     "referencias": [
       {
         "consultaPubMed": "Suicide risk assessment AND primary care AND screening tools",
-        "tipoDeEstudo": "Revisão Sistemática e Metanálise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "33596680",
+        "citacao": "Mann JJ, Michel CA, Auerbach RP. Improving Suicide Prevention Through Evidence-Based Strategies: A Systematic Review. Am J Psychiatry. 2021;178(7):611-624. PMID 33596680. doi:10.1176/appi.ajp.2020.20060864"
       },
       {
         "consultaPubMed": "Clinical management of suicide risk in general practice",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (recomendação do USPSTF)",
+        "pmid": "37338872",
+        "citacao": "US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297"
       },
       {
         "consultaPubMed": "Effectiveness of brief interventions for suicide prevention in primary care",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Ensaio clínico randomizado (estudo WHO SUPRE-MISS)",
+        "pmid": "20801749",
+        "citacao": "Bertolote JM, Fleischmann A, De Leo D et al.. Repetition of suicide attempts: data from emergency care settings in five culturally different low- and middle-income countries participating in the WHO SUPRE-MISS Study. Crisis. 2010;31(4):194-201. PMID 20801749. doi:10.1027/0027-5910/a000052"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -699,18 +723,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Caregivers\"[Mesh] OR \"caregiver burden\") AND (\"Autism Spectrum Disorder\"[Mesh] OR \"Intellectual Disability\"[Mesh]) AND (\"interventions\" OR \"support\")",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise em rede",
+        "pmid": "39489145",
+        "citacao": "Mo S, Bu F, Bao S et al.. Comparison of effects of interventions to promote the mental health of parents of children with autism: A systematic review and network meta-analysis. Clin Psychol Rev. 2024;114:102508. PMID 39489145. doi:10.1016/j.cpr.2024.102508"
       },
       {
         "consultaPubMed": "(\"caregiver burden\"[Title/Abstract]) AND (\"stress, psychological\"[Mesh]) AND (\"coping strategies\" OR \"respite care\")",
-        "tipoDeEstudo": "Meta-análise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "37668850",
+        "citacao": "Li S, Yong Y, Li Y et al.. Cognitive-Based Interventions for Improving Psychological Health and Well-Being for Parents of Children with Developmental Disabilities: A Systematic Review and Meta-analysis. J Autism Dev Disord. 2023;54(9):3316-3335. PMID 37668850. doi:10.1007/s10803-023-06063-x"
       },
       {
         "consultaPubMed": "(\"parental burnout\" OR \"caregiver stress\") AND (\"neurodevelopmental disorders\"[Mesh]) AND (\"mental health\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Ensaio clínico randomizado (métodos mistos)",
+        "pmid": "39415148",
+        "citacao": "He Y, Wong A, Zhang Y et al.. Effects of Mozart-Orff parent-child music therapy among mothers and their preschool children with autism spectrum disorder: A mixed-methods randomised controlled trial. BMC Pediatr. 2024;24(1):665. PMID 39415148. doi:10.1186/s12887-024-05085-3"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -815,18 +842,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Caregiver Burden\"[Mesh]) AND (\"Palliative Care\"[Mesh] OR \"Terminal Care\"[Mesh]) AND (\"Mental Health\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "38602303",
+        "citacao": "Yang X, Li X, Jiang S et al.. Effects of Telemedicine on Informal Caregivers of Patients in Palliative Care: Systematic Review and Meta-Analysis. JMIR Mhealth Uhealth. 2024;12:e54244. PMID 38602303. doi:10.2196/54244"
       },
       {
         "consultaPubMed": "(\"caregivers\"[Mesh]) AND (\"anticipatory grief\" OR \"compassion fatigue\") AND (\"home care services\"[Mesh])",
-        "tipoDeEstudo": "Estudo de Coorte",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo de coorte",
+        "pmid": "38599241",
+        "citacao": "Malhotra C, Chaudhry I, Shah SU et al.. Caregivers' Burden and Anticipatory Grief Increases Acute Health Care Use in Older Adults with Severe Dementia. J Am Med Dir Assoc. 2024;25(7):104981. PMID 38599241. doi:10.1016/j.jamda.2024.03.001"
       },
       {
         "consultaPubMed": "(\"family caregivers\"[Title/Abstract]) AND (\"Palliative Care\"[Mesh]) AND (\"supportive interventions\" OR \"psychosocial support\")",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "40925214",
+        "citacao": "De Vleminck A, Matthys O, Turola E et al.. Impact of a nurse-led and a web-based psychoeducational program for advanced cancer patients and their caregivers: Results of a three-arm randomized controlled trial. Int J Nurs Stud. 2025;171:105192. PMID 40925214. doi:10.1016/j.ijnurstu.2025.105192"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -881,18 +911,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Depressive Disorder\"[MeSH Terms] OR \"Depression\"[MeSH Terms]) AND \"Family\"[MeSH Terms] AND (\"Early Medical Intervention\"[MeSH Terms] OR \"early recognition\")",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (recomendação do USPSTF)",
+        "pmid": "37338872",
+        "citacao": "US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297"
       },
       {
         "consultaPubMed": "(\"Mental Health\"[MeSH Terms] OR \"Depression\"[MeSH Terms]) AND \"Psychoeducation\"[MeSH Terms] AND \"Caregivers\"[MeSH Terms]",
-        "tipoDeEstudo": "Ensaio Clínico Controlado Randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (CANMAT)",
+        "pmid": "38711351",
+        "citacao": "Lam RW, Kennedy SH, Adams C, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults. Can J Psychiatry. 2024;69(9):641-687. PMID 38711351. doi:10.1177/07067437241245384"
       },
       {
         "consultaPubMed": "\"Primary Health Care\"[MeSH Terms] AND \"Depressive Disorder\"[MeSH Terms] AND \"Family Practice\"[MeSH Terms]",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "30472763",
+        "citacao": "Shi Y, Shao Y, Li H et al.. Correlates of affiliate stigma among family caregivers of people with mental illness: A systematic review and meta-analysis. J Psychiatr Ment Health Nurs. 2018;26(1-2):49-61. PMID 30472763. doi:10.1111/jpm.12505"
       }
     ],
     "categoria": "Pacientes & Famílias",
@@ -997,18 +1030,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Emergency Services, Psychiatric\"[MeSH] OR \"Mental Disorders/emergency\"[MeSH]) AND (\"Primary Health Care\"[MeSH] OR \"General Practice\"[MeSH])",
-        "tipoDeEstudo": "Revisão sistemática e diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Consenso de especialistas",
+        "pmid": "26912127",
+        "citacao": "Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007"
       },
       {
         "consultaPubMed": "(\"Psychomotor Agitation\"[MeSH]) AND (\"Emergency Treatment\"[MeSH] OR \"Primary Health Care\"[MeSH])",
-        "tipoDeEstudo": "Ensaio clínico controlado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       },
       {
         "consultaPubMed": "(\"Mental Disorders/diagnosis\"[MeSH]) AND (\"Diagnosis, Differential\"[MeSH]) AND (\"Physicians, Family\"[MeSH])",
-        "tipoDeEstudo": "Estudo de coorte e diretriz de prática clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "19588366",
+        "citacao": "Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -1162,18 +1198,21 @@
     "referencias": [
       {
         "consultaPubMed": "psychoeducation AND family AND mental health AND primary health care",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane",
+        "pmid": "25854522",
+        "citacao": "Zhao S, Sampson S, Xia J et al.. Psychoeducation (brief) for people with serious mental illness. Cochrane Database Syst Rev. 2015;2015(4):CD010823. PMID 25854522. doi:10.1002/14651858.CD010823.pub2"
       },
       {
         "consultaPubMed": "mental health literacy AND family caregivers AND psychoeducation",
-        "tipoDeEstudo": "Ensaio Clínico Controlado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane",
+        "pmid": "21678337",
+        "citacao": "Xia J, Merinder LB, Belgamwar MR. Psychoeducation for schizophrenia. Cochrane Database Syst Rev. 2011;2011(6):CD002831. PMID 21678337. doi:10.1002/14651858.CD002831.pub2"
       },
       {
         "consultaPubMed": "early recognition AND mental disorders AND family involvement",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "39607998",
+        "citacao": "Münchenberg PS, Yessimova D, Panteli D et al.. Digital Health Interventions for Informal Family Caregivers of People With First-Episode Psychosis: Systematic Review on User Experience and Effectiveness. JMIR Ment Health. 2024;11:e63743. PMID 39607998. doi:10.2196/63743"
       }
     ],
     "categoria": "Pacientes & Famílias",
@@ -1417,18 +1456,21 @@
     "referencias": [
       {
         "consultaPubMed": "caregiver burden AND primary health care AND support groups AND aged",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "26455756",
+        "citacao": "Lauritzen J, Pedersen PU, Sørensen EE et al.. The meaningfulness of participating in support groups for informal caregivers of older adults with dementia: a systematic review. JBI Database System Rev Implement Rep. 2015;13(6):373-433. PMID 26455756. doi:10.11124/jbisrir-2015-2121"
       },
       {
         "consultaPubMed": "family caregivers AND elderly AND burnout AND intervention studies AND primary care",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "40094667",
+        "citacao": "Kwok JYY, Cheung DSK, Zarit S et al.. Multicomponent Intervention for Distressed Informal Caregivers of People With Dementia: A Randomized Clinical Trial. JAMA Netw Open. 2025;8(3):e250069. PMID 40094667. doi:10.1001/jamanetworkopen.2025.0069"
       },
       {
         "consultaPubMed": "primary care interventions AND caregiver stress AND mental health outcomes",
         "tipoDeEstudo": "Metanálise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "pmid": "12752841",
+        "citacao": "Brodaty H, Green A, Koschera A. Meta-analysis of psychosocial interventions for caregivers of people with dementia. J Am Geriatr Soc. 2003;51(5):657-64. PMID 12752841. doi:10.1034/j.1600-0579.2003.00210.x"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -1480,17 +1522,20 @@
       {
         "consultaPubMed": "teacher burnout AND inclusive education AND parent-teacher relations",
         "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "pmid": "37372657",
+        "citacao": "Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070"
       },
       {
         "consultaPubMed": "occupational stress AND teachers AND conflict management",
-        "tipoDeEstudo": "Ensaio clínico controlado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "35256508",
+        "citacao": "Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019"
       },
       {
         "consultaPubMed": "mental health AND school teachers AND educational inclusion",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão de escopo",
+        "pmid": "36078422",
+        "citacao": "Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -1541,18 +1586,21 @@
     "referencias": [
       {
         "consultaPubMed": "transnational mental health AND immigrant health AND Ulysses syndrome",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Artigo de revisão (descrição da síndrome)",
+        "pmid": "15912217",
+        "citacao": "Achotegui J. [Emigration in hard conditions: the Immigrant Syndrome with chronic and multiple stress (Ulysses' Syndrome)]. Vertex. 2005;16(60):105-13. PMID 15912217"
       },
       {
         "consultaPubMed": "acculturative stress AND grief AND migrant populations AND mental health",
-        "tipoDeEstudo": "Estudo qualitativo",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática de métodos mistos",
+        "pmid": "33811751",
+        "citacao": "Liem A, Renzaho AMN, Hannam K et al.. Acculturative stress and coping among migrant workers: A global mixed-methods systematic review. Appl Psychol Health Well Being. 2021;13(3):491-517. PMID 33811751. doi:10.1111/aphw.12271"
       },
       {
         "consultaPubMed": "mental health care access AND immigrants AND primary health care",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática de diretrizes",
+        "pmid": "29785690",
+        "citacao": "Agbata EN, Padilla PF, Agbata IN et al.. Migrant Healthcare Guidelines: A Systematic Quality Assessment. J Immigr Minor Health. 2019;21(2):401-413. PMID 29785690. doi:10.1007/s10903-018-0759-9"
       }
     ],
     "categoria": "Pacientes & Famílias",
