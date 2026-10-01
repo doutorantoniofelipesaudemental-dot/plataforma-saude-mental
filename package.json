@@ -34,7 +34,8 @@
     "test:visual:atualizar": "playwright test tests/e2e/visual-miniapps.spec.js --update-snapshots",
     "proxy:github": "node scripts/proxy-github.js",
     "auditoria:seo": "node scripts/auditoria-seo.js",
-    "ingestao:rascunhos": "node --env-file-if-exists=.env backend/scripts/ingestaoRascunhos.js"
+    "ingestao:rascunhos": "node --env-file-if-exists=.env backend/scripts/ingestaoRascunhos.js",
+    "audit:instagram": "node backend/scripts/auditoriaInstagram.js"
   },
   "engines": {
     "node": ">=20"
