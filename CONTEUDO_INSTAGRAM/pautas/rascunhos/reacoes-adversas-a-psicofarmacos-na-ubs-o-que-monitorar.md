@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:48:58.717Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Reações adversas a psicofármacos na UBS: o que monitorar
@@ -23,7 +24,7 @@ revisaoMedica: pendente
 > - * **Via Serotoninérgica:** Os ISRS elevam a serotonina sináptica. Como o trato gastrointestinal possui uma enorme quantidade de receptores serotoninérgicos, …
 > - * **Mecanismos dos Estabilizadores:** O lítio, por exemplo, possui propriedades químicas semelhantes ao sódio e interfere no equilíbrio hidroeletrolítico ren…
 > - * **Para náuseas por ISRS:** Orientar a tomada do medicamento junto com as refeições ou mudar o horário para a noite, se houver sedação associada.
-> - * **Para monitorização do Lítio:** Solicitar dosagem sérica de lítio, função renal (creatinina, ureia) e TSH periodicamente [DOSE A CONFIRMAR]. Lembre-se de …
+> - * **Para monitorização do Lítio:** Solicitar dosagem sérica de lítio, função renal (creatinina, ureia) e TSH periodicamente. A diretriz CANMAT/ISBD 2018 reco…
 > - * **Síndrome Serotoninérgica:** Febre alta, rigidez muscular, confusão mental, mioclonia e instabilidade autonômica. Exige suspensão imediata da medicação e …
 > - * **Toxicidade por Lítio:** Confusão mental intensa, tremor grosseiro, ataxia, disartria, vômitos persistentes e diarreia profusa. Dosagem sérica urgente e h…
 > - * Encaminhe para a psiquiatria de referência os casos de refratariedade aos tratamentos de primeira linha, suspeita de transtornos complexos, quadros de toxi…
@@ -58,7 +59,7 @@ Os psicofármacos atuam em sistemas de neurotransmissão que estão presentes n�
 
 ### Condutas de primeira linha
 * **Para náuseas por ISRS:** Orientar a tomada do medicamento junto com as refeições ou mudar o horário para a noite, se houver sedação associada.
-* **Para monitorização do Lítio:** Solicitar dosagem sérica de lítio, função renal (creatinina, ureia) e TSH periodicamente [DOSE A CONFIRMAR]. Lembre-se de que a faixa terapêutica estreita exige cuidado rigoroso com interações medicamentosas, como o uso concomitante de AINEs ou diuréticos.
+* **Para monitorização do Lítio:** Solicitar dosagem sérica de lítio, função renal (creatinina, ureia) e TSH periodicamente. A diretriz CANMAT/ISBD 2018 recomenda monitorar a litemia e a função renal pelo menos a cada 3 a 6 meses e também 5 a 7 dias após ajustes de dose do lítio ou de AINEs, bloqueadores de angiotensina, IECA e tiazídicos (PMID 29536616). Lembre-se de que a faixa terapêutica estreita exige cuidado rigoroso com interações medicamentosas, como o uso concomitante de AINEs ou diuréticos.
 
 ### Sinais de gravidade e alerta
 * **Síndrome Serotoninérgica:** Febre alta, rigidez muscular, confusão mental, mioclonia e instabilidade autonômica. Exige suspensão imediata da medicação e suporte clínico.
@@ -75,15 +76,14 @@ Os psicofármacos atuam em sistemas de neurotransmissão que estão presentes n�
 - O lítio exige monitorização rigorosa da função renal e dos níveis séricos para evitar toxicidade.
 - Sinais como rigidez, confusão mental e tremores grosseiros exigem avaliação de urgência.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Antidepressive Agents"[Mesh] OR "Mood Stabilizing Agents"[Mesh]) AND ("Drug-Related Side Effects and Adverse Reactions"[Mesh] OR "Drug Toxicity"[Mesh]) AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Antidepressive Agents/adverse effects"[Mesh] AND "Primary Health Care"[Mesh] AND "General Practice"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Mood Stabilizing Agents/adverse effects"[Mesh] OR "Lithium/adverse effects"[Mesh]) AND ("Monitoring, Physiologic"[Mesh] OR "Safety Management"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-4. `("Depressive Disorder/drug therapy"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND "Medication Adherence"[Mesh] AND "Drug-Related Side Effects and Adverse Reactions"[Mesh]` — Metanálise — [PMID A CONFIRMAR]
-
+1. Gitlin M. Lithium side effects and toxicity: prevalence and management strategies. Int J Bipolar Disord. 2016;4(1):27. PMID 27900734. doi:10.1186/s40345-016-0068-y — Revisão
+2. Phelps J, Coskey OP. Low and very low lithium levels: Thyroid effects are small but still require monitoring. Bipolar Disord. 2023;26(2):129-135. PMID 37704933. doi:10.1111/bdi.13377 — Estudo observacional
+3. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
+4. Bhanu C, Nimmons D, Petersen I et al.. Drug-induced orthostatic hypotension: A systematic review and meta-analysis of randomised controlled trials. PLoS Med. 2021;18(11):e1003821. PMID 34752479. doi:10.1371/journal.pmed.1003821 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

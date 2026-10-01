@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:47:29.936Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Cuidadores de jovens com autismo severo: transição para a vida adulta
@@ -18,8 +19,8 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (4):
 > - * Orientação sobre direitos sociais, benefícios de prestação continuada e encaminhamento para a rede de assistência social (CRAS e CREAS).
 > - * Encaminhar para saúde mental especializada (ambulatórios ou CAPS) quando houver transtornos mentais graves e incapacitantes no cuidador ou crise comportame…
-> - * Para o manejo da ansiedade e da depressão no cuidador, podem ser indicados antidepressivos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRM…
-> - * Para o jovem, o uso de medicações para sintomas comportamentais graves deve ser avaliado por médico especialista, priorizando a menor dose eficaz [DOSE A C…
+> - * Para o manejo da ansiedade e da depressão no cuidador, podem ser indicados antidepressivos inibidores seletivos da recaptação de serotonina, com dose defin…
+> - * Para o jovem, o uso de medicações para sintomas comportamentais graves deve ser avaliado por médico especialista, priorizando a menor dose eficaz e o acomp…
 
 Chegar à idade adulta é um marco importante na vida de qualquer pessoa, mas essa fase traz desafios intensos quando falamos de jovens com autismo severo. Sei que você, cuidador ou familiar, muitas vezes sente um aperto no peito ao pensar no futuro e no término do suporte escolar regular. A rotina muda, as portas que antes estavam abertas parecem se fechar e o medo do que virá amanhã pode gerar uma ansiedade profunda. Aqui na atenção primária e no atendimento diário, escuto muito sobre esse vazio e essa preocupação constante. Vamos caminhar juntos por este momento, conversando sobre como planejar o futuro com mais calma, cuidar da sua própria saúde mental e buscar os apoios necessários para a sua família.
 
@@ -67,8 +68,8 @@ Para o jovem com autismo severo, a transição para a vida adulta representa uma
 * Utilizar os serviços de reabilitação e assistência social para inserção em oficinas protegidas e centros de convivência.
 
 ### Abordagem medicamentosa
-* Para o manejo da ansiedade e da depressão no cuidador, podem ser indicados antidepressivos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR], associados a psicoterapia.
-* Para o jovem, o uso de medicações para sintomas comportamentais graves deve ser avaliado por médico especialista, priorizando a menor dose eficaz [DOSE A CONFIRMAR] e o acompanhamento contínuo dos efeitos colaterais.
+* Para o manejo da ansiedade e da depressão no cuidador, podem ser indicados antidepressivos inibidores seletivos da recaptação de serotonina, com dose definida pelo médico, associados a psicoterapia.
+* Para o jovem, o uso de medicações para sintomas comportamentais graves deve ser avaliado por médico especialista, priorizando a menor dose eficaz e o acompanhamento contínuo dos efeitos colaterais.
 
 ## Pontos-chave
 
@@ -78,14 +79,13 @@ Para o jovem com autismo severo, a transição para a vida adulta representa uma
 - A rede de saúde e assistência social oferece suporte essencial que deve ser acionado precocemente.
 - Avaliação presencial com equipe multiprofissional é indispensável para planejar o futuro com segurança.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Autism spectrum disorder AND transition to adulthood AND parental stress` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `Caregivers AND severe autism AND adult transition AND mental health` — Estudo qualitativo — [PMID A CONFIRMAR]
-3. `Family support AND intellectual disability AND adult transition AND guidelines` — Diretrizes clínicas — [PMID A CONFIRMAR]
-
+1. Mo S, Bu F, Bao S et al.. Comparison of effects of interventions to promote the mental health of parents of children with autism: A systematic review and network meta-analysis. Clin Psychol Rev. 2024;114:102508. PMID 39489145. doi:10.1016/j.cpr.2024.102508 — Revisão sistemática e metanálise em rede
+2. Li S, Yong Y, Li Y et al.. Cognitive-Based Interventions for Improving Psychological Health and Well-Being for Parents of Children with Developmental Disabilities: A Systematic Review and Meta-analysis. J Autism Dev Disord. 2023;54(9):3316-3335. PMID 37668850. doi:10.1007/s10803-023-06063-x — Revisão sistemática e metanálise
+3. Cheak-Zamora NC, Teti M. "You think it's hard now … It gets much harder for our children": Youth with autism and their caregiver's perspectives of health care transition services. Autism. 2014;19(8):992-1001. PMID 25504639. doi:10.1177/1362361314558279 — Estudo qualitativo (transição para a vida adulta)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

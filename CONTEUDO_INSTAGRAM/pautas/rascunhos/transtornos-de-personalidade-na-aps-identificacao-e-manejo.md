@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:48:45.242Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Transtornos de personalidade na APS: identificação e manejo
@@ -49,7 +50,7 @@ Olá, colega. Que bom ter você por aqui no nosso espaço de troca na atenção 
 ### Condutas de primeira linha
 - A base do tratamento na atenção primária é a continuidade do vínculo. Evite interrupções abruptas do seguimento e programe retornos regulares, mesmo que breves, para conter a ansiedade de abandono.
 - Utilize estratégias de comunicação baseadas na escuta ativa e na empatia firme. Diga com clareza o que você pode e o que não pode fazer pelo paciente.
-- Para sintomas específicos de ansiedade, humor deprimido ou impulsividade grave, avalie o uso cauteloso de psicofármacos da classe dos inibidores se recaptura de serotonina ou moduladores do humor, sempre com [DOSE A CONFIRMAR]. Evite o uso prolongado de benzodiazepínicos pelo alto risco de dependência e descontrole impulsivo.
+- Para sintomas específicos de ansiedade, humor deprimido ou impulsividade grave, avalie o uso cauteloso de psicofármacos da classe dos inibidores se recaptura de serotonina ou moduladores do humor, sempre com dose definida pelo médico. Evite o uso prolongado de benzodiazepínicos pelo alto risco de dependência e descontrole impulsivo.
 
 ### Sinais de gravidade e encaminhamento
 - Fique atento a ideação ou comportamentos autolesivos, ameaças de dano a terceiros e quadros de descompensação psicótica aguda.
@@ -63,16 +64,13 @@ Olá, colega. Que bom ter você por aqui no nosso espaço de troca na atenção 
 - A desregulação emocional tem bases neurobiológicas e histórico de sofrimento precoce.
 - Evite o uso de benzodiazepínicos e priorize o seguimento regular com a mesma equipe de referência.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Personality Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Clinical Clerkship"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Personality Disorders"[Mesh]/diagnosis AND "Physicians, Family"[Mesh] AND "Communication"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `"Physician-Patient Relations"[Mesh] AND "Personality Disorders"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-4. `"Burnout, Professional"[Mesh] AND "Personality Disorders"[Mesh] AND "General Practice"[Mesh]` — Metanálise — [PMID A CONFIRMAR]
-5. `"Personality Disorders"[Mesh] AND "Delivery of Health Care, Integrated"[Mesh] AND "Practice Guidelines as Topic"[Mesh]` — Diretriz — [PMID A CONFIRMAR]
-
+1. Stoffers-Winterling J, Taubner S, Renneberg B et al.. [German S3 guidelines on borderline personality disorder]. Nervenarzt. 2023;94(11):1062-1074. PMID 37861697. doi:10.1007/s00115-023-01566-5 — Diretriz clínica (S3 alemã, transtorno borderline)
+2. Omar H, Tejerina-Arreal M, Crawford MJ. Are recommendations for psychological treatment of borderline personality disorder in current U.K. guidelines justified? Systematic review and subgroup analysis. Personal Ment Health. 2014;8(3):228-37. PMID 24990645. doi:10.1002/pmh.1264 — Revisão sistemática
+3. Brazier J, Tumur I, Holmes M et al.. Psychological therapies including dialectical behaviour therapy for borderline personality disorder: a systematic review and preliminary economic evaluation. Health Technol Assess. 2006;10(35):iii, ix-xii, 1-117. PMID 16959171. doi:10.3310/hta10350 — Revisão sistemática e avaliação econômica
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

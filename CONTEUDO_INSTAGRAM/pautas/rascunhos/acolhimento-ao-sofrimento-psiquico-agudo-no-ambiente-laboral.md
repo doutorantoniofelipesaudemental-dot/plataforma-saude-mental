@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:46:40.500Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Acolhimento ao sofrimento psíquico agudo no ambiente laboral
@@ -33,7 +34,7 @@ O primeiro passo diante de um colaborador em sofrimento agudo é garantir um amb
 * **Pratique a escuta ativa:** Não tenha pressa em resolver o problema ou dar conselhos rápidos. Deixe que a pessoa fale no próprio ritmo, sem interromper.
 * **Valide o sentimento:** Evite minimizar a dor com frases feitas. Dizer "isso passa" ou "você é forte" costuma afastar quem sofre. Prefira reconhecer: "percebo que você está passando por um momento muito difícil".
 * **Mantenha a calma:** A regulação emocional é contagiosa. Se você demonstrar tranquilidade e firmeza amorosa, ajuda o sistema nervosa da outra pessoa a desacelerar.
-* **Avalie a gravidade imediata:** Pergunte com suavidade se a pessoa pensa em se machucar. Falar sobre isso não induz o ato; pelo contrário, alivia o peso de carregar esse segredo sozinho. Se houver risco iminente à vida, nunca deixe a pessoa sozinha e acione imediatamente o SAMU [DADO A CONFIRMAR] ou oriente o contato com o CVV 188.
+* **Avalie a gravidade imediata:** Pergunte com suavidade se a pessoa pensa em se machucar. Falar sobre isso não induz o ato; pelo contrário, alivia o peso de carregar esse segredo sozinho. Se houver risco iminente à vida, nunca deixe a pessoa sozinha e acione imediatamente o SAMU (192) ou oriente o contato com o CVV 188.
 
 ## Fisiopatologia
 
@@ -55,7 +56,7 @@ O papel do gestor e da equipe de saúde ocupacional no momento agudo é estabili
 * **Limites do papel corporativo:** Lideranças e equipes de RH acolhem, escutam e direcionam, mas não tratam. O foco deve ser o encaminhamento rápido e humanizado para serviços de saúde.
 * **Conduta de primeira linha:** Ofereça água, permita que a pessoa respire fundo e assegure que o sigilo profissional será rigorosamente mantido. A quebra de sigilo gera desconfiança e agrava o adoecimento.
 * **Avaliação médica presencial:** Todo colaborador em crise aguda deve passar por avaliação médica presencial na atenção primária ou em serviço de pronto atendimento psiquiátrico para diagnóstico diferencial e plano terapêutico.
-* **Intervenções farmacológicas:** Caso haja indicação de contenção farmacológica breve ou manejo de sintomas ansiosos severos no serviço de urgência, utilizam-se medicações sintomáticas da classe dos benzodiazepínicos ou antipsicóticos em baixas doses, sempre sob rigorosa prescrição médica [DOSE A CONFIRMAR].
+* **Intervenções farmacológicas:** Caso haja indicação de contenção farmacológica breve ou manejo de sintomas ansiosos severos no serviço de urgência, utilizam-se medicações sintomáticas da classe dos benzodiazepínicos ou antipsicóticos em baixas doses, sempre sob rigorosa prescrição médica, com as doses do protocolo do serviço de urgência (referência: Project BETA; Roppolo et al., 2020, PMID 33145538).
 * **Plano de retorno:** Após o atendimento agudo, o retorno ao trabalho deve ser planejado em conjunto com o médico assistente e o serviço de medicina do trabalho, respeitando os limites da recuperação.
 
 ## Pontos-chave
@@ -65,15 +66,15 @@ O papel do gestor e da equipe de saúde ocupacional no momento agudo é estabili
 - Lideranças e RH acolhem e direcionam, mas o diagnóstico e o tratamento cabem exclusivamente aos profissionais de saúde.
 - Sempre avalie a presença de ideação autolesiva e acione a rede de urgência, como SAMU 192 ou CVV 188, em caso de risco.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Psychological First Aid"[Mesh] OR "Mental Health First Aid" OR "Crisis Intervention"[Mesh]) AND ("Workplace"[Mesh] OR "Occupational Health"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Administrative Personnel"[Mesh] OR "Leadership"[Mesh] OR "managers") AND ("Mental Health"[Mesh] OR "Psychological Distress"[Mesh]) AND ("Occupational Health Services"[Mesh] OR "Workplace"[Mesh]) AND ("Practice Guideline"[Publication Type] OR "Guideline"[Publication Type])` — Diretriz Clínica / Guia de Boas Práticas — [PMID A CONFIRMAR]
-3. `("Mental Health First Aid" OR "gatekeeper training") AND ("Workplace"[Mesh] OR "Occupational Health"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type] OR "Controlled Clinical Trial"[Publication Type])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Crisis Intervention"[Mesh] OR "early intervention") AND ("Psychological Distress"[Mesh] OR "acute stress") AND ("Workplace"[Mesh] OR "occupational setting") AND ("Referral and Consultation"[Mesh] OR "supportive listening")` — Revisão Sistemática / Metanálise — [PMID A CONFIRMAR]
-
+1. Pollock A, Campbell P, Cheyne J et al.. Interventions to support the resilience and mental health of frontline health and social care professionals during and after a disease outbreak, epidemic or pandemic: a mixed methods systematic review. Cochrane Database Syst Rev. 2020;11(11):CD013779. PMID 33150970. doi:10.1002/14651858.CD013779 — Revisão sistemática Cochrane
+2. Everly GS, Flynn BW. Principles and practical procedures for acute psychological first aid training for personnel without mental health experience. Int J Emerg Ment Health. 2006;8(2):93-100. PMID 16703847 — Artigo de princípios e procedimentos
+3. Linskens EJ, Venables NC, Gustavson AM et al.. Population- and Community-Based Interventions to Prevent Suicide. Crisis. 2022;44(4):330-340. PMID 36052582. doi:10.1027/0227-5910/a000873 — Revisão sistemática
+4. Bowersox NW, Jagusch J, Garlick J et al.. Peer-based interventions targeting suicide prevention: A scoping review. Am J Community Psychol. 2021;68(1-2):232-248. PMID 33720444. doi:10.1002/ajcp.12510 — Revisão de escopo
+5. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

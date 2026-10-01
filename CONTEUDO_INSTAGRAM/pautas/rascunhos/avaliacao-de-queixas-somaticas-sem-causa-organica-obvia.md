@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:52:07.775Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Avaliação de queixas somáticas sem causa orgânica óbvia
@@ -56,7 +57,7 @@ Existe também um viés de hipervigilância corporal. A pessoa passa a monitorar
 O manejo baseia-se na continuidade do cuidado com consultas regulares e espaçadas com o mesmo profissional. Em vez de atendimentos de urgência picados, garanta retornos agendados para fortalecer o vínculo. Isso reduz a necessidade de idas frequentes ao pronto-socorro.
 
 ### Abordagem farmacológica
-Quando há comorbidades associadas, como transtornos de ansiedade ou depressão moderada, o uso de medicamentos pode ser necessário. As classes de primeira linha incluem os antidepressivos inibidores seletivos da recaptação de serotonina ou recaptadores de serotonina e noradrenalina, sempre com [DOSE A CONFIRMAR]. Lembre o paciente de que o efeito não é imediato e que o remédio ajuda a modular a sensibilidade do sistema nervoso.
+Quando há comorbidades associadas, como transtornos de ansiedade ou depressão moderada, o uso de medicamentos pode ser necessário. As classes de primeira linha incluem os antidepressivos inibidores seletivos da recaptação de serotonina ou recaptadores de serotonina e noradrenalina, sempre com dose definida pelo médico. Lembre o paciente de que o efeito não é imediato e que o remédio ajuda a modular a sensibilidade do sistema nervoso.
 
 ### Sinais de gravidade e encaminhamento
 Fique atento a sinais de alarme que exigem nova investigação orgânica, como perda de peso inexplicada, febre persistente, sintomas neurológicos focais ou dor que acorda o paciente à noite. Encaminhe para a psicologia ou psiquiatria se houver sofrimento psíquico grave, ideação suicida ou refratariedade após meses de acompanhamento estruturado na atenção primária.
@@ -68,15 +69,13 @@ Fique atento a sinais de alarme que exigem nova investigação orgânica, como p
 - Investigar o contexto psicossocial e o histórico de estresse crônico na gênese dos sintomas.
 - Garantir consultas regulares com o mesmo profissional para reduzir a peregrinação por pronto-socorros.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Medically Unexplained Symptoms"[Mesh] OR "Somatoform Disorders"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Clinical Protocols"[Mesh] OR "Guideline"[Publication Type])` — Diretriz — [PMID A CONFIRMAR]
-2. `("Somatoform Disorders"[Mesh]) AND ("Physician-Patient Relations"[Mesh]) AND ("Unnecessary Procedures"[Mesh] OR "Diagnostic Tests, Routine"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `("Symptom Assessment"[Mesh]) AND ("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Somatoform Disorders"[Mesh]) AND ("Psychotherapy"[Mesh] OR "Behavior Therapy"[Mesh]) AND ("Primary Health Care"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
-
+1. Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2 — Revisão sistemática Cochrane e metanálise
+2. Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538 — Revisão sistemática e metanálise
+3. Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738 — Metanálise de ensaios clínicos randomizados
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

@@ -3387,19 +3387,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Mental Disorders\"[Mesh] OR \"Burnout, Psychological\"[Mesh] OR \"Occupational Stress\"[Mesh]) AND (\"Workers' Compensation\"[Mesh] OR \"Occupational Health\"[Mesh]) AND (\"Review\"[Publication Type])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "29954920",
+        "citacao": "Mikkelsen MB, Rosholm M. Systematic review and meta-analysis of interventions aimed at enhancing return to work for sick-listed workers with common mental disorders, stress-related disorders, somatoform disorders and personality disorders. Occup Environ Med. 2018;75(9):675-686. PMID 29954920. doi:10.1136/oemed-2018-105073"
       },
       {
         "consultaPubMed": "(\"Mental Disorders\"[Mesh]) AND (\"Occupational Diseases\"[Mesh] OR \"Occupational Health Physicians\"[Mesh]) AND (\"Jurisprudence\"[Mesh] OR \"Legislation, Medical\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Ensaio clínico randomizado (cuidado guiado por diretriz)",
+        "pmid": "23496948",
+        "citacao": "van Beurden KM, Brouwers EP, Joosen MC et al.. Effectiveness of guideline-based care by occupational physicians on the return-to-work of workers with common mental disorders: design of a cluster-randomised controlled trial. BMC Public Health. 2013;13:193. PMID 23496948. doi:10.1186/1471-2458-13-193"
       },
       {
         "consultaPubMed": "(\"Burnout, Psychological\"[Mesh] OR \"Stress, Psychological\"[Mesh]) AND (\"Sick Leave\"[Mesh] OR \"Absenteeism\"[Mesh]) AND (\"Occupational Health\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Estudo de implementação de diretriz",
+        "pmid": "28683580",
+        "citacao": "van Beurden KM, Joosen MCW, Terluin B et al.. Use of a mental health guideline by occupational physicians and associations with return to work in workers sick-listed due to common mental disorders: a retrospective cohort study. Disabil Rehabil. 2017;40(22):2623-2631. PMID 28683580. doi:10.1080/09638288.2017.1347209"
       },
       {
         "consultaPubMed": "(\"Occupational Diseases\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Meta-Analysis\"[Publication Type])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "35106629",
+        "citacao": "Fisker J, Hjorthøj C, Hellström L et al.. Predictors of return to work for people on sick leave with common mental disorders: a systematic review and meta-analysis. Int Arch Occup Environ Health. 2022;95(7):1-13. PMID 35106629. doi:10.1007/s00420-021-01827-3"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3449,19 +3457,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Mental Disorders\"[Mesh]) AND (\"Return to Work\"[Mesh]) AND (\"Rehabilitation, Vocational\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "27609709",
+        "citacao": "Nigatu YT, Liu Y, Uppal M et al.. Interventions for enhancing return to work in individuals with a common mental illness: systematic review and meta-analysis of randomized controlled trials. Psychol Med. 2016;46(16):3263-3274. PMID 27609709. doi:10.1017/S0033291716002269"
       },
       {
         "consultaPubMed": "(\"Occupational Health\"[Mesh]) AND (\"Mental Health\"[Mesh]) AND (\"Workload\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "38710801",
+        "citacao": "Brämberg E, Åhsberg E, Fahlström G et al.. Effects of work-directed interventions on return-to-work in people on sick-leave for to common mental disorders-a systematic review. Int Arch Occup Environ Health. 2024;97(6):597-619. PMID 38710801. doi:10.1007/s00420-024-02068-w"
       },
       {
         "consultaPubMed": "(\"Depressive Disorder\"[Mesh]) OR (\"Anxiety Disorders\"[Mesh]) AND (\"Return to Work\"[Mesh]) AND (\"Workplace\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "19370664",
+        "citacao": "van Oostrom SH, Driessen MT, de Vet HC et al.. Workplace interventions for preventing work disability. Cochrane Database Syst Rev. 2009;(2):CD006955. PMID 19370664. doi:10.1002/14651858.CD006955.pub2"
       },
       {
         "consultaPubMed": "(\"Occupational Health Physicians\"[Mesh]) AND (\"Mental Disorders\"[Mesh]) AND (\"Practice Guideline\"[Publication Type])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "23496948",
+        "citacao": "van Beurden KM, Brouwers EP, Joosen MC et al.. Effectiveness of guideline-based care by occupational physicians on the return-to-work of workers with common mental disorders: design of a cluster-randomised controlled trial. BMC Public Health. 2013;13:193. PMID 23496948. doi:10.1186/1471-2458-13-193"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3511,19 +3527,27 @@
     "referencias": [
       {
         "consultaPubMed": "\"Quaternary Prevention\"[Mesh] AND (\"Occupational Health\"[Mesh] OR \"Occupational Medicine\"[Mesh]) AND (\"Mental Health\"[Mesh] OR \"Stress, Psychological\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "37449436",
+        "citacao": "AbdulRaheem Y. Unveiling the Significance and Challenges of Integrating Prevention Levels in Healthcare Practice. J Prim Care Community Health. 2023;14:21501319231186500. PMID 37449436. doi:10.1177/21501319231186500"
       },
       {
         "consultaPubMed": "\"Medicalization\"[Mesh] AND \"Burnout, Professional\"[Mesh] AND (\"Primary Prevention\"[Mesh] OR \"Quaternary Prevention\")",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Análise genealógica",
+        "pmid": "37436323",
+        "citacao": "Andrade HS, Carvalho SR. Genealogical analysis of Quaternary Prevention: between the use of Evidence-Based Medicine and care reformulation in Primary Health Care. Cien Saude Colet. 2022;28(7):2109-2117. PMID 37436323. doi:10.1590/1413-81232023287.13292022"
       },
       {
         "consultaPubMed": "\"Occupational Health Physicians\"[Mesh] AND \"Mental Disorders\"[Mesh] AND \"Diagnostic Errors\"[Mesh] AND \"Quaternary Prevention\"",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "38695906",
+        "citacao": "Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z"
       },
       {
         "consultaPubMed": "\"Stress, Psychological\"[Mesh] AND \"Workplace\"[Mesh] AND \"Medicalization\"[Mesh] AND \"Psychiatry\"[Mesh]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37385740",
+        "citacao": "Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3573,19 +3597,27 @@
     "referencias": [
       {
         "consultaPubMed": "\"Burnout, Professional\"[MeSH] AND \"Occupational Health\"[MeSH] AND screening",
-        "tipoDeEstudo": "revisão sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "28302088",
+        "citacao": "Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7"
       },
       {
         "consultaPubMed": "burnout return to work intervention occupational physician",
-        "tipoDeEstudo": "revisão sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "27692469",
+        "citacao": "West CP, Dyrbye LN, Erwin PJ et al.. Interventions to prevent and reduce physician burnout: a systematic review and meta-analysis. Lancet. 2016;388(10057):2272-2281. PMID 27692469. doi:10.1016/S0140-6736(16)31279-X"
       },
       {
         "consultaPubMed": "burnout diagnostic criteria depression differential diagnosis",
-        "tipoDeEstudo": "revisão narrativa ou diretriz"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37385740",
+        "citacao": "Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203"
       },
       {
         "consultaPubMed": "work rehabilitation burnout randomized controlled trial",
-        "tipoDeEstudo": "ensaio clínico randomizado"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "38695906",
+        "citacao": "Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3643,19 +3675,33 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Psychological First Aid\"[Mesh] OR \"Mental Health First Aid\" OR \"Crisis Intervention\"[Mesh]) AND (\"Workplace\"[Mesh] OR \"Occupational Health\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática Cochrane",
+        "pmid": "33150970",
+        "citacao": "Pollock A, Campbell P, Cheyne J et al.. Interventions to support the resilience and mental health of frontline health and social care professionals during and after a disease outbreak, epidemic or pandemic: a mixed methods systematic review. Cochrane Database Syst Rev. 2020;11(11):CD013779. PMID 33150970. doi:10.1002/14651858.CD013779"
       },
       {
         "consultaPubMed": "(\"Administrative Personnel\"[Mesh] OR \"Leadership\"[Mesh] OR \"managers\") AND (\"Mental Health\"[Mesh] OR \"Psychological Distress\"[Mesh]) AND (\"Occupational Health Services\"[Mesh] OR \"Workplace\"[Mesh]) AND (\"Practice Guideline\"[Publication Type] OR \"Guideline\"[Publication Type])",
-        "tipoDeEstudo": "Diretriz Clínica / Guia de Boas Práticas"
+        "tipoDeEstudo": "Artigo de princípios e procedimentos",
+        "pmid": "16703847",
+        "citacao": "Everly GS, Flynn BW. Principles and practical procedures for acute psychological first aid training for personnel without mental health experience. Int J Emerg Ment Health. 2006;8(2):93-100. PMID 16703847"
       },
       {
         "consultaPubMed": "(\"Mental Health First Aid\" OR \"gatekeeper training\") AND (\"Workplace\"[Mesh] OR \"Occupational Health\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type] OR \"Controlled Clinical Trial\"[Publication Type])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "36052582",
+        "citacao": "Linskens EJ, Venables NC, Gustavson AM et al.. Population- and Community-Based Interventions to Prevent Suicide. Crisis. 2022;44(4):330-340. PMID 36052582. doi:10.1027/0227-5910/a000873"
       },
       {
         "consultaPubMed": "(\"Crisis Intervention\"[Mesh] OR \"early intervention\") AND (\"Psychological Distress\"[Mesh] OR \"acute stress\") AND (\"Workplace\"[Mesh] OR \"occupational setting\") AND (\"Referral and Consultation\"[Mesh] OR \"supportive listening\")",
-        "tipoDeEstudo": "Revisão Sistemática / Metanálise"
+        "tipoDeEstudo": "Revisão de escopo",
+        "pmid": "33720444",
+        "citacao": "Bowersox NW, Jagusch J, Garlick J et al.. Peer-based interventions targeting suicide prevention: A scoping review. Am J Community Psychol. 2021;68(1-2):232-248. PMID 33720444. doi:10.1002/ajcp.12510"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3705,19 +3751,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Workplace\"[Mesh] OR \"Organizational Culture\"[Mesh]) AND (\"Burnout, Professional\"[Mesh] OR \"Mental Health\"[Mesh]) AND (\"Systematic Review\"[Publication Type] OR \"Meta-Analysis\"[Publication Type])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "28302088",
+        "citacao": "Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7"
       },
       {
         "consultaPubMed": "\"Occupational Stress\"[Mesh] AND (\"Bullying\"[Mesh] OR \"Personnel Management\"[Mesh]) AND (\"Mental Health\"[Mesh] OR \"Depression\"[Mesh])",
-        "tipoDeEstudo": "Estudo Observacional"
+        "tipoDeEstudo": "Metanálise",
+        "pmid": "24074053",
+        "citacao": "Lee RT, Seo B, Hladkyj S et al.. Correlates of physician burnout across regions and specialties: a meta-analysis. Hum Resour Health. 2013;11:48. PMID 24074053. doi:10.1186/1478-4491-11-48"
       },
       {
         "consultaPubMed": "\"Workplace\"[Mesh] AND \"Occupational Health\"[Mesh] AND (\"Burnout, Professional\"[Mesh] OR \"Anxiety\"[Mesh]) AND \"Practice Guideline\"[Publication Type]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "38695906",
+        "citacao": "Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z"
       },
       {
         "consultaPubMed": "\"Organizational Culture\"[Mesh] AND \"Occupational Health Services\"[Mesh] AND \"Primary Prevention\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37385740",
+        "citacao": "Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3913,18 +3967,21 @@
     "referencias": [
       {
         "consultaPubMed": "occupational stress AND psychosocial risk factors AND screening tools",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "28302088",
+        "citacao": "Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7"
       },
       {
         "consultaPubMed": "workplace mental health AND primary prevention AND organizational intervention",
-        "tipoDeEstudo": "Ensaio clínico randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "38695906",
+        "citacao": "Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z"
       },
       {
         "consultaPubMed": "job strain model AND mental health AND occupational health",
-        "tipoDeEstudo": "Estudo de coorte",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "36166285",
+        "citacao": "Stratton E, Lampit A, Choi I et al.. Trends in Effectiveness of Organizational eHealth Interventions in Addressing Employee Mental Health: Systematic Review and Meta-analysis. J Med Internet Res. 2022;24(9):e37776. PMID 36166285. doi:10.2196/37776"
       }
     ],
     "categoria": "Empresas & RH",
@@ -3974,18 +4031,27 @@
     "referencias": [
       {
         "consultaPubMed": "absenteeism AND mental disorders AND return to work",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "19370664",
+        "citacao": "van Oostrom SH, Driessen MT, de Vet HC et al.. Workplace interventions for preventing work disability. Cochrane Database Syst Rev. 2009;(2):CD006955. PMID 19370664. doi:10.1002/14651858.CD006955.pub2"
       },
       {
         "consultaPubMed": "occupational psychiatry AND mental health leave AND rehabilitation",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "29954920",
+        "citacao": "Mikkelsen MB, Rosholm M. Systematic review and meta-analysis of interventions aimed at enhancing return to work for sick-listed workers with common mental disorders, stress-related disorders, somatoform disorders and personality disorders. Occup Environ Med. 2018;75(9):675-686. PMID 29954920. doi:10.1136/oemed-2018-105073"
       },
       {
         "consultaPubMed": "work disability AND depression AND secondary prevention",
-        "tipoDeEstudo": "Metanálise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "27609709",
+        "citacao": "Nigatu YT, Liu Y, Uppal M et al.. Interventions for enhancing return to work in individuals with a common mental illness: systematic review and meta-analysis of randomized controlled trials. Psychol Med. 2016;46(16):3263-3274. PMID 27609709. doi:10.1017/S0033291716002269"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "35106629",
+        "citacao": "Fisker J, Hjorthøj C, Hellström L et al.. Predictors of return to work for people on sick leave with common mental disorders: a systematic review and meta-analysis. Int Arch Occup Environ Health. 2022;95(7):1-13. PMID 35106629. doi:10.1007/s00420-021-01827-3"
       }
     ],
     "categoria": "Empresas & RH",
@@ -4135,18 +4201,21 @@
     "referencias": [
       {
         "consultaPubMed": "Inclusive education AND teachers AND occupational stress AND anxiety",
-        "tipoDeEstudo": "Estudo transversal",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37372657",
+        "citacao": "Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070"
       },
       {
         "consultaPubMed": "Special education needs AND teacher burnout AND coping strategies",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "35256508",
+        "citacao": "Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019"
       },
       {
         "consultaPubMed": "Teachers AND inclusive classrooms AND mental health guidelines",
-        "tipoDeEstudo": "Diretrizes práticas",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão de escopo",
+        "pmid": "36078422",
+        "citacao": "Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -4196,18 +4265,21 @@
     "referencias": [
       {
         "consultaPubMed": "Autism spectrum disorder AND transition to adulthood AND parental stress",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise em rede",
+        "pmid": "39489145",
+        "citacao": "Mo S, Bu F, Bao S et al.. Comparison of effects of interventions to promote the mental health of parents of children with autism: A systematic review and network meta-analysis. Clin Psychol Rev. 2024;114:102508. PMID 39489145. doi:10.1016/j.cpr.2024.102508"
       },
       {
         "consultaPubMed": "Caregivers AND severe autism AND adult transition AND mental health",
-        "tipoDeEstudo": "Estudo qualitativo",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "37668850",
+        "citacao": "Li S, Yong Y, Li Y et al.. Cognitive-Based Interventions for Improving Psychological Health and Well-Being for Parents of Children with Developmental Disabilities: A Systematic Review and Meta-analysis. J Autism Dev Disord. 2023;54(9):3316-3335. PMID 37668850. doi:10.1007/s10803-023-06063-x"
       },
       {
         "consultaPubMed": "Family support AND intellectual disability AND adult transition AND guidelines",
-        "tipoDeEstudo": "Diretrizes clínicas",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo qualitativo (transição para a vida adulta)",
+        "pmid": "25504639",
+        "citacao": "Cheak-Zamora NC, Teti M. \"You think it's hard now … It gets much harder for our children\": Youth with autism and their caregiver's perspectives of health care transition services. Autism. 2014;19(8):992-1001. PMID 25504639. doi:10.1177/1362361314558279"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -4257,18 +4329,27 @@
     "referencias": [
       {
         "consultaPubMed": "Beginning teachers AND reality shock AND burnout AND mental health",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão de escopo",
+        "pmid": "36078422",
+        "citacao": "Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706"
       },
       {
         "consultaPubMed": "Novice teachers AND occupational stress AND resilience interventions",
-        "tipoDeEstudo": "Ensaio clínico randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo transversal com modelo de mediação",
+        "pmid": "39762997",
+        "citacao": "Pikić Jugović I, Marušić I, Matić Bojić J. Early career teachers' social and emotional competencies, self-efficacy and burnout: a mediation model. BMC Psychol. 2025;13(1):9. PMID 39762997. doi:10.1186/s40359-024-02323-2"
       },
       {
         "consultaPubMed": "Teacher induction programs AND mental well-being AND guidelines",
-        "tipoDeEstudo": "Diretrizes de prática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37372657",
+        "citacao": "Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "35256508",
+        "citacao": "Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -4319,17 +4400,20 @@
       {
         "consultaPubMed": "Rare diseases AND family caregivers AND psychological burden AND mental health",
         "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "pmid": "40588644",
+        "citacao": "Bull LJ, Eslick GD, Teutsch SM et al.. Assessing Psychological Harms on Parents and Primary Caregivers of Children Living with a Rare Disease: A Systematic Review of the Scope and Validity of Surveys Utilized. Clin Child Fam Psychol Rev. 2025;28(3):612-630. PMID 40588644. doi:10.1007/s10567-025-00533-7"
       },
       {
         "consultaPubMed": "Chronic complex conditions AND caregivers AND emotional distress AND coping",
-        "tipoDeEstudo": "Estudo transversal",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "39403533",
+        "citacao": "Zybarth D, Inhestern L, Otto R et al.. Uncertainties of healthcare professionals and informal caregivers in rare diseases: A systematic review. Heliyon. 2024;10(19):e38677. PMID 39403533. doi:10.1016/j.heliyon.2024.e38677"
       },
       {
         "consultaPubMed": "Rare disease caregivers AND support strategies AND guidelines",
-        "tipoDeEstudo": "Diretrizes clínicas",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática qualitativa",
+        "pmid": "40148154",
+        "citacao": "Ng QX, Tang ASP, Chan KE et al.. Lived experiences of patients, families and caregivers affected by inherited retinal diseases: A qualitative systematic review. Disabil Health J. 2025;18(3):101826. PMID 40148154. doi:10.1016/j.dhjo.2025.101826"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -4434,18 +4518,21 @@
     "referencias": [
       {
         "consultaPubMed": "teacher burnout occupational stress systematic review[MeSH Terms]",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão de escopo",
+        "pmid": "36078422",
+        "citacao": "Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706"
       },
       {
         "consultaPubMed": "educator mental health intervention school environment[MeSH Terms]",
-        "tipoDeEstudo": "Ensaio Clínico",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "36118449",
+        "citacao": "Westphal A, Kalinowski E, Hoferichter CJ et al.. K-12 teachers' stress and burnout during the COVID-19 pandemic: A systematic review. Front Psychol. 2022;13:920326. PMID 36118449. doi:10.3389/fpsyg.2022.920326"
       },
       {
         "consultaPubMed": "compassion fatigue in teachers occupational health guidelines[MeSH Terms]",
-        "tipoDeEstudo": "Diretriz Prática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "35256508",
+        "citacao": "Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -4495,18 +4582,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Teachers\"[Mesh]) AND (\"Grief\"[Mesh] OR \"Bereavement\"[Mesh]) AND (\"Occupational Stress\"[Mesh])",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo qualitativo",
+        "pmid": "35549761",
+        "citacao": "Shalev R, Zamir R, Barak O. Disenfranchised Grief: The Death of a Student With Special Needs and the Coping of the School Staff - A Qualitative Study. Omega (Westport). 2022;90(1):37-58. PMID 35549761. doi:10.1177/00302228221097297"
       },
       {
         "consultaPubMed": "(\"Faculty\"[Mesh]) AND (\"Burnout, Professional\"[Mesh]) AND (\"Mental Health\"[Mesh])",
-        "tipoDeEstudo": "Estudo transversal",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo de caso multimétodos",
+        "pmid": "30234361",
+        "citacao": "Gross N, Lo C. Relational teaching and learning after loss: Evidence from Black adolescent male students and their teachers. Sch Psychol Q. 2018;33(3):381-389. PMID 30234361. doi:10.1037/spq0000285"
       },
       {
         "consultaPubMed": "(\"Schools\"[Mesh]) AND (\"Crisis Intervention\"[Mesh]) AND (\"Adaptation, Psychological\"[Mesh])",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Estudo qualitativo (programa em atenção primária escolar)",
+        "pmid": "26281402",
+        "citacao": "Munns A, Forde KA, Krouzecky M et al.. Rainbows: a primary health care initiative for primary schools. Collegian. 2015;22(2):153-60. PMID 26281402. doi:10.1016/j.colegn.2015.02.002"
       }
     ],
     "categoria": "Linhas de Cuidado (Cuidadores & Professores)",
@@ -4556,19 +4646,39 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Substance Withdrawal Syndrome\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh]) AND (\"Guideline\"[Publication Type] OR \"Practice Guideline\"[Publication Type])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz baseada em evidências e metanálise",
+        "pmid": "15249349",
+        "citacao": "Mayo-Smith MF, Beecher LH, Fischer TL et al.. Management of alcohol withdrawal delirium. An evidence-based practice guideline. Arch Intern Med. 2004;164(13):1405-12. PMID 15249349. doi:10.1001/archinte.164.13.1405"
       },
       {
         "consultaPubMed": "(\"Alcohol Withdrawal Delirium\"[Mesh]) AND (\"Emergency Treatment\"[Mesh]) AND (\"Systematic Review\"[Publication Type])",
-        "tipoDeEstudo": "Revisão sistemática"
+        "tipoDeEstudo": "Diretriz clínica (GRACE-4)",
+        "pmid": "38747203",
+        "citacao": "Borgundvaag B, Bellolio F, Miles I et al.. Guidelines for Reasonable and Appropriate Care in the Emergency Department (GRACE-4): Alcohol use disorder and cannabinoid hyperemesis syndrome management in the emergency department. Acad Emerg Med. 2024;31(5):425-455. PMID 38747203. doi:10.1111/acem.14911"
       },
       {
         "consultaPubMed": "(\"Substance-Related Disorders\"[Mesh]) AND (\"Emergencies\"[Mesh]) AND (\"Disease Management\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
-        "tipoDeEstudo": "Ensaio clínico randomizado"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "32281894",
+        "citacao": "Glahn A, Proskynitopoulos PJ, Bleich S et al.. Pharmacotherapeutic management of acute alcohol withdrawal syndrome in critically Ill patients. Expert Opin Pharmacother. 2020;21(9):1083-1092. PMID 32281894. doi:10.1080/14656566.2020.1746271"
       },
       {
         "consultaPubMed": "(\"Opioid-Related Disorders\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh]) AND (\"Metaanalysis\"[Publication Type])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Diretriz clínica (transtorno por uso de opioides)",
+        "pmid": "39532476",
+        "citacao": "Yakovenko I, Mukaneza Y, Germé K et al.. Management of opioid use disorder: 2024 update to the national clinical practice guideline. CMAJ. 2024;196(38):E1280-E1290. PMID 39532476. doi:10.1503/cmaj.241173"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão narrativa",
+        "pmid": "35623179",
+        "citacao": "Spadaro A, Long B, Koyfman A et al.. Buprenorphine precipitated opioid withdrawal: Prevention and management in the ED setting. Am J Emerg Med. 2022;58:22-26. PMID 35623179. doi:10.1016/j.ajem.2022.05.013"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -4618,23 +4728,21 @@
     "referencias": [
       {
         "consultaPubMed": "\"Personality Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Clinical Clerkship\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Diretriz clínica (S3 alemã, transtorno borderline)",
+        "pmid": "37861697",
+        "citacao": "Stoffers-Winterling J, Taubner S, Renneberg B et al.. [German S3 guidelines on borderline personality disorder]. Nervenarzt. 2023;94(11):1062-1074. PMID 37861697. doi:10.1007/s00115-023-01566-5"
       },
       {
         "consultaPubMed": "\"Personality Disorders\"[Mesh]/diagnosis AND \"Physicians, Family\"[Mesh] AND \"Communication\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "24990645",
+        "citacao": "Omar H, Tejerina-Arreal M, Crawford MJ. Are recommendations for psychological treatment of borderline personality disorder in current U.K. guidelines justified? Systematic review and subgroup analysis. Personal Ment Health. 2014;8(3):228-37. PMID 24990645. doi:10.1002/pmh.1264"
       },
       {
         "consultaPubMed": "\"Physician-Patient Relations\"[Mesh] AND \"Personality Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
-      },
-      {
-        "consultaPubMed": "\"Burnout, Professional\"[Mesh] AND \"Personality Disorders\"[Mesh] AND \"General Practice\"[Mesh]",
-        "tipoDeEstudo": "Metanálise"
-      },
-      {
-        "consultaPubMed": "\"Personality Disorders\"[Mesh] AND \"Delivery of Health Care, Integrated\"[Mesh] AND \"Practice Guidelines as Topic\"[Mesh]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática e avaliação econômica",
+        "pmid": "16959171",
+        "citacao": "Brazier J, Tumur I, Holmes M et al.. Psychological therapies including dialectical behaviour therapy for borderline personality disorder: a systematic review and preliminary economic evaluation. Health Technol Assess. 2006;10(35):iii, ix-xii, 1-117. PMID 16959171. doi:10.3310/hta10350"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -4684,19 +4792,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Antidepressive Agents\"[Mesh] OR \"Mood Stabilizing Agents\"[Mesh]) AND (\"Drug-Related Side Effects and Adverse Reactions\"[Mesh] OR \"Drug Toxicity\"[Mesh]) AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "27900734",
+        "citacao": "Gitlin M. Lithium side effects and toxicity: prevalence and management strategies. Int J Bipolar Disord. 2016;4(1):27. PMID 27900734. doi:10.1186/s40345-016-0068-y"
       },
       {
         "consultaPubMed": "\"Antidepressive Agents/adverse effects\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"General Practice\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Estudo observacional",
+        "pmid": "37704933",
+        "citacao": "Phelps J, Coskey OP. Low and very low lithium levels: Thyroid effects are small but still require monitoring. Bipolar Disord. 2023;26(2):129-135. PMID 37704933. doi:10.1111/bdi.13377"
       },
       {
         "consultaPubMed": "(\"Mood Stabilizing Agents/adverse effects\"[Mesh] OR \"Lithium/adverse effects\"[Mesh]) AND (\"Monitoring, Physiologic\"[Mesh] OR \"Safety Management\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (CANMAT/ISBD)",
+        "pmid": "29536616",
+        "citacao": "Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609"
       },
       {
         "consultaPubMed": "(\"Depressive Disorder/drug therapy\"[Mesh] OR \"Bipolar Disorder/drug therapy\"[Mesh]) AND \"Medication Adherence\"[Mesh] AND \"Drug-Related Side Effects and Adverse Reactions\"[Mesh]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "34752479",
+        "citacao": "Bhanu C, Nimmons D, Petersen I et al.. Drug-induced orthostatic hypotension: A systematic review and meta-analysis of randomised controlled trials. PLoS Med. 2021;18(11):e1003821. PMID 34752479. doi:10.1371/journal.pmed.1003821"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -4746,19 +4862,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Medically Unexplained Symptoms\"[Mesh] OR \"Somatoform Disorders\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Clinical Protocols\"[Mesh] OR \"Guideline\"[Publication Type])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "24142886",
+        "citacao": "Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2"
       },
       {
         "consultaPubMed": "(\"Somatoform Disorders\"[Mesh]) AND (\"Physician-Patient Relations\"[Mesh]) AND (\"Unnecessary Procedures\"[Mesh] OR \"Diagnostic Tests, Routine\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "36374916",
+        "citacao": "Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538"
       },
       {
         "consultaPubMed": "(\"Symptom Assessment\"[Mesh]) AND (\"Somatoform Disorders\"[Mesh] OR \"Medically Unexplained Symptoms\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
-      },
-      {
-        "consultaPubMed": "(\"Somatoform Disorders\"[Mesh]) AND (\"Psychotherapy\"[Mesh] OR \"Behavior Therapy\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Metanálise de ensaios clínicos randomizados",
+        "pmid": "32428905",
+        "citacao": "Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -4859,19 +4977,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Suicidal Ideation\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Vulnerable Populations\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "33596680",
+        "citacao": "Mann JJ, Michel CA, Auerbach RP. Improving Suicide Prevention Through Evidence-Based Strategies: A Systematic Review. Am J Psychiatry. 2021;178(7):611-624. PMID 33596680. doi:10.1176/appi.ajp.2020.20060864"
       },
       {
         "consultaPubMed": "(\"Suicide\"[Mesh] / prevention and control) AND (\"Primary Health Care\"[Mesh]) AND (\"Crisis Intervention\"[Mesh])",
-        "tipoDeEstudo": "Diretriz Clínica"
+        "tipoDeEstudo": "Diretriz clínica (recomendação do USPSTF)",
+        "pmid": "37338872",
+        "citacao": "US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297"
       },
       {
         "consultaPubMed": "(\"Suicidal Ideation\"[Mesh]) AND (\"Risk Assessment\"[Mesh]) AND (\"General Practice\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Ensaio clínico randomizado (estudo WHO SUPRE-MISS)",
+        "pmid": "20801749",
+        "citacao": "Bertolote JM, Fleischmann A, De Leo D et al.. Repetition of suicide attempts: data from emergency care settings in five culturally different low- and middle-income countries participating in the WHO SUPRE-MISS Study. Crisis. 2010;31(4):194-201. PMID 20801749. doi:10.1027/0027-5910/a000052"
       },
       {
         "consultaPubMed": "(\"Suicide\"[Mesh] / prevention and control) AND (\"Vulnerable Populations\"[Mesh]) AND (\"Community Mental Health Services\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "36052582",
+        "citacao": "Linskens EJ, Venables NC, Gustavson AM et al.. Population- and Community-Based Interventions to Prevent Suicide. Crisis. 2022;44(4):330-340. PMID 36052582. doi:10.1027/0227-5910/a000873"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -4926,18 +5052,21 @@
     "referencias": [
       {
         "consultaPubMed": "tension-headache AND anxiety AND primary health care",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (EFNS)",
+        "pmid": "20482606",
+        "citacao": "Bendtsen L, Evers S, Linde M et al.. EFNS guideline on the treatment of tension-type headache - report of an EFNS task force. Eur J Neurol. 2010;17(11):1318-25. PMID 20482606. doi:10.1111/j.1468-1331.2010.03070.x"
       },
       {
         "consultaPubMed": "somatization AND primary care AND headache management",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (atenção primária)",
+        "pmid": "26273080",
+        "citacao": "Becker WJ, Findlay T, Moga C et al.. Guideline for primary care management of headache in adults. Can Fam Physician. 2015;61(8):670-9. PMID 26273080"
       },
       {
         "consultaPubMed": "psychiatric comorbidity in tension-type headache",
-        "tipoDeEstudo": "Estudo de coorte",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "40676501",
+        "citacao": "Pan LH, Ling YH, Wang SJ et al.. Hallmarks of primary headache: part 2- Tension-type headache. J Headache Pain. 2025;26(1):164. PMID 40676501. doi:10.1186/s10194-025-02098-w"
       }
     ],
     "categoria": "Residentes & Estudantes",

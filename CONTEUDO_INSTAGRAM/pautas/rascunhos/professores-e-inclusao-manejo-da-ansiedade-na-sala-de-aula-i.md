@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:47:22.818Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Professores e inclusão: manejo da ansiedade na sala de aula inclusiva
@@ -16,7 +17,7 @@ revisaoMedica: pendente
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (3):
-> - * **Intervenção Medicamentosa:** Quando indicada pelo profissional de saúde, a classe dos inibidores se recapturação de serotonina [DOSE A CONFIRMAR] pode se…
+> - * **Intervenção Medicamentosa:** Quando indicada pelo profissional de saúde, a classe dos inibidores se recapturação de serotonina, com dose definida pelo mé…
 > - * **Sinais de Gravidade:** Fique atento a sinais de esgotamento extremo, choro frequente sem motivo aparente, desesperança, falta de apetite ou pensamentos d…
 > - * **Encaminhamentos:** O médico de família e comunidade na APS é a porta de entrada para organizar seu plano de cuidado, emitir afastamentos quando necessári…
 
@@ -52,7 +53,7 @@ O manejo da ansiedade em educadores exige uma abordagem integrada, que vai desde
 
 * **Primeira Linha de Cuidado:** A psicoterapia é uma ferramenta essencial para ajudar a ressignificar cobranças excessivas e desenvolver estratégias de enfrentamento diante dos desafios da inclusão.
 * **Avaliação Médica:** Em casos onde os sintomas de ansiedade geram incapacidade, insônia grave ou sofrimento intenso, a avaliação médica presencial é indispensável.
-* **Intervenção Medicamentosa:** Quando indicada pelo profissional de saúde, a classe dos inibidores se recapturação de serotonina [DOSE A CONFIRMAR] pode ser utilizada para modular os neurotransmissores e devolver a estabilidade emocional.
+* **Intervenção Medicamentosa:** Quando indicada pelo profissional de saúde, a classe dos inibidores se recapturação de serotonina, com dose definida pelo médico, pode ser utilizada para modular os neurotransmissores e devolver a estabilidade emocional.
 * **Sinais de Gravidade:** Fique atento a sinais de esgotamento extremo, choro frequente sem motivo aparente, desesperança, falta de apetite ou pensamentos de autolesão. Caso perceba esses sinais, procure ajuda médica imediata e acione o serviço de urgência ou o CVV ligando para 188.
 * **Encaminhamentos:** O médico de família e comunidade na APS é a porta de entrada para organizar seu plano de cuidado, emitir afastamentos quando necessários e articular o suporte da rede de saúde.
 
@@ -63,14 +64,13 @@ O manejo da ansiedade em educadores exige uma abordagem integrada, que vai desde
 - Pequenas pausas e a troca com colegas ajudam a aliviar o peso do cotidiano escolar.
 - A avaliação médica e psicológica presencial é fundamental para o manejo adequado da ansiedade.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Inclusive education AND teachers AND occupational stress AND anxiety` — Estudo transversal — [PMID A CONFIRMAR]
-2. `Special education needs AND teacher burnout AND coping strategies` — Revisão sistemática — [PMID A CONFIRMAR]
-3. `Teachers AND inclusive classrooms AND mental health guidelines` — Diretrizes práticas — [PMID A CONFIRMAR]
-
+1. Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070 — Revisão sistemática
+2. Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019 — Revisão sistemática e metanálise
+3. Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

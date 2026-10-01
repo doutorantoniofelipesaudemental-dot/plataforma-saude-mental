@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:50:21.461Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Cuidadores de pacientes com doenças raras: o fardo invisível
@@ -54,7 +55,7 @@ O sofrimento do cuidador merece escuta atenta e acolhimento na rede de saúde. N
 
 * **Avaliação integral:** Investigamos sintomas de ansiedade, insônia e exaustão extrema. Cada queixa merece ser ouvida com cuidado.
 * **Abordagem terapêutica:** O suporte psicológico é fundamental para ajudar a lidar com a sobrecarga emocional e o isolamento.
-* **Uso de medicamentos:** Em casos de sintomas moderados a graves de ansiedade ou depressão, o uso de medicações das classes dos inibidores seletivos da recaptação de serotonina pode ser avaliado pelo médico, com [DOSE A CONFIRMAR].
+* **Uso de medicamentos:** Em casos de sintomas moderados a graves de ansiedade ou depressão, o uso de medicações das classes dos inibidores seletivos da recaptação de serotonina pode ser avaliado pelo médico, com dose definida na avaliação presencial.
 * **Sinais de gravidade:** Fique atento a pensamentos de desesperança profunda, insônia total persistente ou incapacidade de realizar tarefas básicas. Se isso acontecer, procure ajuda imediatamente.
 * **Encaminhamento:** O suporte especializado em saúde mental e a conexão com assistentes sociais ajudam a estruturar uma rede de apoio mais segura para você e sua família.
 
@@ -65,14 +66,13 @@ O sofrimento do cuidador merece escuta atenta e acolhimento na rede de saúde. N
 - O estresse crônico gera desgaste físico e emocional real, que merece acolhimento médico e terapêutico.
 - O acompanhamento profissional ajuda a manejar sintomas de ansiedade e exaustão extrema com segurança.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Rare diseases AND family caregivers AND psychological burden AND mental health` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `Chronic complex conditions AND caregivers AND emotional distress AND coping` — Estudo transversal — [PMID A CONFIRMAR]
-3. `Rare disease caregivers AND support strategies AND guidelines` — Diretrizes clínicas — [PMID A CONFIRMAR]
-
+1. Bull LJ, Eslick GD, Teutsch SM et al.. Assessing Psychological Harms on Parents and Primary Caregivers of Children Living with a Rare Disease: A Systematic Review of the Scope and Validity of Surveys Utilized. Clin Child Fam Psychol Rev. 2025;28(3):612-630. PMID 40588644. doi:10.1007/s10567-025-00533-7 — Revisão sistemática
+2. Zybarth D, Inhestern L, Otto R et al.. Uncertainties of healthcare professionals and informal caregivers in rare diseases: A systematic review. Heliyon. 2024;10(19):e38677. PMID 39403533. doi:10.1016/j.heliyon.2024.e38677 — Revisão sistemática
+3. Ng QX, Tang ASP, Chan KE et al.. Lived experiences of patients, families and caregivers affected by inherited retinal diseases: A qualitative systematic review. Disabil Health J. 2025;18(3):101826. PMID 40148154. doi:10.1016/j.dhjo.2025.101826 — Revisão sistemática qualitativa
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

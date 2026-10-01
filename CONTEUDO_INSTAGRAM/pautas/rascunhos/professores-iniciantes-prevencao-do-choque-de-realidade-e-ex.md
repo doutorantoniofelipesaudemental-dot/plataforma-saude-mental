@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:47:43.337Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Professores iniciantes: prevenção do choque de realidade e exaustão
@@ -17,7 +18,7 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (4):
 > - * Avaliação médica na Atenção Primária para investigar comorbidades e avaliar a necessidade de suporte farmacológico temporário.
-> - * Uso de medicamentos da classe dos inibidores seletivos de recaptação de serotonina [DOSE A CONFIRMAR] em casos de sintomas ansiosos ou depressivos moderado…
+> - * Uso de medicamentos da classe dos inibidores seletivos de recaptação de serotonina, com dose definida pelo médico, em casos de sintomas ansiosos ou depress…
 > - * Abuso de substâncias, como álcool ou medicamentos, para tentar lidar com a ansiedade.
 > - Ao identificar sinais de gravidade, o encaminhamento para avaliação psiquiátrica e psicológica especializada deve ser realizado sem demora. Se houver risco i…
 
@@ -60,7 +61,7 @@ O cuidado com o professor iniciante deve envolver tanto estratégias pessoais qu
 * Acolhimento institucional através de programas de mentoria estruturados, reduzindo a sensação de solidão na prática pedagógica.
 * Psicoterapia breve para o desenvolvimento de estratégias de enfrentamento e manejo do estresse ocupacional.
 * Avaliação médica na Atenção Primária para investigar comorbidades e avaliar a necessidade de suporte farmacológico temporário.
-* Uso de medicamentos da classe dos inibidores seletivos de recaptação de serotonina [DOSE A CONFIRMAR] em casos de sintomas ansiosos ou depressivos moderados a graves, sempre associados ao acompanhamento clínico.
+* Uso de medicamentos da classe dos inibidores seletivos de recaptação de serotonina, com dose definida pelo médico, em casos de sintomas ansiosos ou depressivos moderados a graves, sempre associados ao acompanhamento clínico.
 
 ### Sinais de Gravidade e Alerta
 * Ideação de autoextermínio ou sentimentos persistentes de desesperança.
@@ -78,14 +79,14 @@ Ao identificar sinais de gravidade, o encaminhamento para avaliação psiquiátr
 - Programas de mentoria e apoio institucional são ferramentas fundamentais de prevenção ao adoecimento.
 - Buscar avaliação na Atenção Primária ajuda a diferenciar o desgaste comum de quadros que exigem tratamento específico.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Beginning teachers AND reality shock AND burnout AND mental health` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `Novice teachers AND occupational stress AND resilience interventions` — Ensaio clínico randomizado — [PMID A CONFIRMAR]
-3. `Teacher induction programs AND mental well-being AND guidelines` — Diretrizes de prática — [PMID A CONFIRMAR]
-
+1. Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
+2. Pikić Jugović I, Marušić I, Matić Bojić J. Early career teachers' social and emotional competencies, self-efficacy and burnout: a mediation model. BMC Psychol. 2025;13(1):9. PMID 39762997. doi:10.1186/s40359-024-02323-2 — Estudo transversal com modelo de mediação
+3. Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070 — Revisão sistemática
+4. Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

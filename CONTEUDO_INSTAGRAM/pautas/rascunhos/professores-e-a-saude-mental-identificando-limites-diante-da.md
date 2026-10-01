@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:48:10.492Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Professores e a saúde mental: identificando limites diante da sobrecarga
@@ -68,7 +69,7 @@ O reconhecimento precoce do sofrimento psíquico na carreira docente é fundamen
 ### Condutas de primeira linha
 - **Avaliação multiprofissional:** O atendimento na Atenção Primária à Saúde deve investigar o impacto ocupacional, oferecendo escuta qualificada e acolhimento.
 - **Psicoterapia:** Abordagens como a terapia cognitivo-comportamental ajudam a ressignificar cobranças excessivas e a desenvolver estratégias de enfrentamento.
-- **Intervenção farmacológica:** Em casos de sintomas moderados a graves de ansiedade ou depressão associados, o uso de antidepressivos da classe dos inibidores seletivos da recaptação de serotonina pode ser indicado pelo médico, com [DOSE A CONFIRMAR].
+- **Intervenção farmacológica:** Em casos de sintomas moderados a graves de ansiedade ou depressão associados, o uso de antidepressivos da classe dos inibidores seletivos da recaptação de serotonina pode ser indicado pelo médico, com dose definida na avaliação presencial.
 
 ### Sinais de gravidade
 - Ideação de autoagressão ou desesperança profunda.
@@ -86,14 +87,13 @@ O reconhecimento precoce do sofrimento psíquico na carreira docente é fundamen
 - Estabelecer limites claros entre trabalho e descanso e buscar apoio coletivo na escola são estratégias fundamentais de autocuidado.
 - O acompanhamento médico e psicológico na rede de saúde é indispensável para o tratamento adequado do adoecimento ocupacional.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `teacher burnout occupational stress systematic review[MeSH Terms]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `educator mental health intervention school environment[MeSH Terms]` — Ensaio Clínico — [PMID A CONFIRMAR]
-3. `compassion fatigue in teachers occupational health guidelines[MeSH Terms]` — Diretriz Prática — [PMID A CONFIRMAR]
-
+1. Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
+2. Westphal A, Kalinowski E, Hoferichter CJ et al.. K-12 teachers' stress and burnout during the COVID-19 pandemic: A systematic review. Front Psychol. 2022;13:920326. PMID 36118449. doi:10.3389/fpsyg.2022.920326 — Revisão sistemática
+3. Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

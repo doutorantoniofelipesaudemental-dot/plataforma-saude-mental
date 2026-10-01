@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:45:02.144Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Readaptação funcional em saúde mental: estratégias na empresa
@@ -66,7 +67,7 @@ O papel da equipe de saúde e da liderança é atuar em rede para garantir que a
 
 * **Articulação com o médico assistente:** Respeite as diretrizes e restrições apontadas no relatório médico externo, integrando-as à realidade da empresa.
 * **Adequação ergonômica cognitiva:** Revise o fluxo de informações, reduza interrupções desnecessárias e garanta clareza nas instruções dadas ao trabalhador.
-* **Apoio farmacológico (quando aplicável):** Se o trabalhador estiver em uso de medicações como antidepressivos da classe dos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR], lembre-se de que efeitos colaterais iniciais podem exigir flexibilidade nos primeiros dias de retorno.
+* **Apoio farmacológico (quando aplicável):** Se o trabalhador estiver em uso de medicações como antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, com dose definida pelo médico, lembre-se de que efeitos colaterais iniciais podem exigir flexibilidade nos primeiros dias de retorno.
 
 ### Sinais de gravidade e recaída
 
@@ -88,15 +89,14 @@ Diante de sinais de gravidade, o trabalhador deve ser imediatamente encaminhado 
 - O estresse crônico altera funções cognitivas, justificando pausas e redução temporária da complexidade das tarefas.
 - Lideranças e RH devem atuar em parceria com a saúde ocupacional para identificar sinais precoces de recaída.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Mental Disorders"[Mesh]) AND ("Return to Work"[Mesh]) AND ("Rehabilitation, Vocational"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Occupational Health"[Mesh]) AND ("Mental Health"[Mesh]) AND ("Workload"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Depressive Disorder"[Mesh]) OR ("Anxiety Disorders"[Mesh]) AND ("Return to Work"[Mesh]) AND ("Workplace"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
-4. `("Occupational Health Physicians"[Mesh]) AND ("Mental Disorders"[Mesh]) AND ("Practice Guideline"[Publication Type])` — Diretriz — [PMID A CONFIRMAR]
-
+1. Nigatu YT, Liu Y, Uppal M et al.. Interventions for enhancing return to work in individuals with a common mental illness: systematic review and meta-analysis of randomized controlled trials. Psychol Med. 2016;46(16):3263-3274. PMID 27609709. doi:10.1017/S0033291716002269 — Revisão sistemática e metanálise
+2. Brämberg E, Åhsberg E, Fahlström G et al.. Effects of work-directed interventions on return-to-work in people on sick-leave for to common mental disorders-a systematic review. Int Arch Occup Environ Health. 2024;97(6):597-619. PMID 38710801. doi:10.1007/s00420-024-02068-w — Revisão sistemática
+3. van Oostrom SH, Driessen MT, de Vet HC et al.. Workplace interventions for preventing work disability. Cochrane Database Syst Rev. 2009;(2):CD006955. PMID 19370664. doi:10.1002/14651858.CD006955.pub2 — Revisão sistemática Cochrane e metanálise
+4. van Beurden KM, Brouwers EP, Joosen MC et al.. Effectiveness of guideline-based care by occupational physicians on the return-to-work of workers with common mental disorders: design of a cluster-randomised controlled trial. BMC Public Health. 2013;13:193. PMID 23496948. doi:10.1186/1471-2458-13-193 — Ensaio clínico randomizado
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

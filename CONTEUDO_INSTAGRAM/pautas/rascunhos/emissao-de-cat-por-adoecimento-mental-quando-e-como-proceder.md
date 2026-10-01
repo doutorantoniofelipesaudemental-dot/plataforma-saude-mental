@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:44:54.653Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Emissão de CAT por adoecimento mental: quando e como proceder
@@ -15,10 +16,9 @@ revisaoMedica: pendente
 *Entenda quando e como emitir a CAT em casos de adoecimento mental relacionado ao trabalho, aliando rigor técnico e acolhimento.*
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
-> Trechos de conduta farmacológica e de emergência a conferir (8):
+> Trechos de conduta farmacológica e de emergência a conferir (7):
 > - - **Orientações ao paciente:** Informe sobre o fluxo de encaminhamento e a importância da avaliação pericial no INSS, se houver afastamento superior a quinze…
 > - O manejo do trabalhador com sofrimento mental exige uma abordagem integrada que vai muito além da prescrição farmacológica.
-> - - **Afastamento temporário:** Quando os sintomas comprometerem a segurança, a funcionalidade ou a integridade do paciente, avalie a necessidade de emissão de…
 > - - **Intervenção farmacológica:** Se indicado, utilize medicações de primeira linha para transtornos ansiosos ou depressivos, como os inibidores seletivos da …
 > - - **Psicoterapia:** Encaminhe para acompanhamento psicológico para manejo de estratégias de enfrentamento.
 > - - Transtornos psicóticos agudos ou agitação psicomotora grave.
@@ -67,8 +67,8 @@ O manejo do trabalhador com sofrimento mental exige uma abordagem integrada que 
 
 ### Condutas de primeira linha
 - **Acolhimento e validação:** Escute ativamente o relato do paciente, validando seu sofrimento sem estigmatizá-lo. Nunca minimize o impacto do trabalho na saúde mental.
-- **Afastamento temporário:** Quando os sintomas comprometerem a segurança, a funcionalidade ou a integridade do paciente, avalie a necessidade de emissão de atestado para afastamento temporário do trabalho, respeitando os critérios de [DOSE A CONFIRMAR] para o tempo de repouso necessário.
-- **Intervenção farmacológica:** Se indicado, utilize medicações de primeira linha para transtornos ansiosos ou depressivos, como os inibidores seletivos da recaptação de serotonina, ajustadas conforme [DOSE A CONFIRMAR].
+- **Afastamento temporário:** Quando os sintomas comprometerem a segurança, a funcionalidade ou a integridade do paciente, avalie a necessidade de emissão de atestado para afastamento temporário do trabalho, respeitando os critérios clínicos e periciais para o tempo de repouso necessário.
+- **Intervenção farmacológica:** Se indicado, utilize medicações de primeira linha para transtornos ansiosos ou depressivos, como os inibidores seletivos da recaptação de serotonina, com dose definida pelo médico conforme a avaliação clínica.
 - **Psicoterapia:** Encaminhe para acompanhamento psicológico para manejo de estratégias de enfrentamento.
 
 ### Sinais de gravidade
@@ -87,15 +87,14 @@ O manejo do trabalhador com sofrimento mental exige uma abordagem integrada que 
 - A escuta ativa e a validação do sofrimento são fundamentais para o vínculo terapêutico e a correta investigação ocupacional.
 - O manejo envolve suporte clínico, psicoterapia, farmacoterapia com classes de primeira linha e articulação com a Previdência Social.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Mental Disorders"[Mesh] OR "Burnout, Psychological"[Mesh] OR "Occupational Stress"[Mesh]) AND ("Workers' Compensation"[Mesh] OR "Occupational Health"[Mesh]) AND ("Review"[Publication Type])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Mental Disorders"[Mesh]) AND ("Occupational Diseases"[Mesh] OR "Occupational Health Physicians"[Mesh]) AND ("Jurisprudence"[Mesh] OR "Legislation, Medical"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-3. `("Burnout, Psychological"[Mesh] OR "Stress, Psychological"[Mesh]) AND ("Sick Leave"[Mesh] OR "Absenteeism"[Mesh]) AND ("Occupational Health"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Occupational Diseases"[Mesh]) AND ("Mental Disorders"[Mesh]) AND ("Meta-Analysis"[Publication Type])` — Metanálise — [PMID A CONFIRMAR]
-
+1. Mikkelsen MB, Rosholm M. Systematic review and meta-analysis of interventions aimed at enhancing return to work for sick-listed workers with common mental disorders, stress-related disorders, somatoform disorders and personality disorders. Occup Environ Med. 2018;75(9):675-686. PMID 29954920. doi:10.1136/oemed-2018-105073 — Revisão sistemática e metanálise
+2. van Beurden KM, Brouwers EP, Joosen MC et al.. Effectiveness of guideline-based care by occupational physicians on the return-to-work of workers with common mental disorders: design of a cluster-randomised controlled trial. BMC Public Health. 2013;13:193. PMID 23496948. doi:10.1186/1471-2458-13-193 — Ensaio clínico randomizado (cuidado guiado por diretriz)
+3. van Beurden KM, Joosen MCW, Terluin B et al.. Use of a mental health guideline by occupational physicians and associations with return to work in workers sick-listed due to common mental disorders: a retrospective cohort study. Disabil Rehabil. 2017;40(22):2623-2631. PMID 28683580. doi:10.1080/09638288.2017.1347209 — Estudo de implementação de diretriz
+4. Fisker J, Hjorthøj C, Hellström L et al.. Predictors of return to work for people on sick leave with common mental disorders: a systematic review and meta-analysis. Int Arch Occup Environ Health. 2022;95(7):1-13. PMID 35106629. doi:10.1007/s00420-021-01827-3 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

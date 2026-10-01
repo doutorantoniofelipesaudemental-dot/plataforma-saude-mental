@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:45:15.113Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Prevenção quaternária na medicina do trabalho e saúde mental
@@ -45,7 +46,7 @@ Contudo, precisamos lembrar que essa cascata neurobiológica é muitas vezes um 
 
 O manejo clínico na saúde ocupacional deve priorizar intervenções que preservem a autonomia e evitem a iatrogenia. A primeira linha de cuidado envolve acolhimento, validação do sofrimento e apoio psicossocial, muitas vezes dispensando o uso de medicamentos.
 
-- **Uso prudente de fármacos:** Se houver sintomas graves de ansiedade ou insônia que impeçam o funcionamento básico, medicamentos das classes dos antidepressivos ou moduladores do sono podem ser considerados por tempo limitado. A dose exata fica [DOSE A CONFIRMAR] conforme a avaliação clínica individual.
+- **Uso prudente de fármacos:** Se houver sintomas graves de ansiedade ou insônia que impeçam o funcionamento básico, medicamentos das classes dos antidepressivos ou moduladores do sono podem ser considerados por tempo limitado. A dose exata fica a critério do médico, conforme a avaliação clínica individual.
 - **Afastamento com cautela:** O afastamento do trabalho deve ser ponderado. Embora necessário em casos de esgotamento severo, o afastamento prolongado pode isolar o trabalhador e dificultar o retorno. O objetivo é ajustar a rota, não romper o vínculo.
 - **Sinais de gravidade:** Fique atento a ideação suicida, episódios psicóticos, quadros depressivos graves com incapacidade total ou risco iminente. Nesses casos, o suporte psiquiátrico especializado é mandatório.
 - **Encaminhamento assertivo:** Encaminhe para a rede de saúde mental e comunique a medicina do trabalho da empresa para ajustes ergonômicos e organizacionais, sempre respeitando o sigilo profissional.
@@ -57,15 +58,14 @@ O manejo clínico na saúde ocupacional deve priorizar intervenções que preser
 - O uso de medicamentos deve ser criterioso, evitando apagar os sinais de alerta que o próprio corpo e a mente emitem.
 - A abordagem clínica precisa olhar para o contexto laboral, buscando soluções que envolvam o ajuste das condições de trabalho e não apenas o afastamento.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Quaternary Prevention"[Mesh] AND ("Occupational Health"[Mesh] OR "Occupational Medicine"[Mesh]) AND ("Mental Health"[Mesh] OR "Stress, Psychological"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Medicalization"[Mesh] AND "Burnout, Professional"[Mesh] AND ("Primary Prevention"[Mesh] OR "Quaternary Prevention")` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `"Occupational Health Physicians"[Mesh] AND "Mental Disorders"[Mesh] AND "Diagnostic Errors"[Mesh] AND "Quaternary Prevention"` — Diretriz — [PMID A CONFIRMAR]
-4. `"Stress, Psychological"[Mesh] AND "Workplace"[Mesh] AND "Medicalization"[Mesh] AND "Psychiatry"[Mesh]` — Metanálise — [PMID A CONFIRMAR]
-
+1. AbdulRaheem Y. Unveiling the Significance and Challenges of Integrating Prevention Levels in Healthcare Practice. J Prim Care Community Health. 2023;14:21501319231186500. PMID 37449436. doi:10.1177/21501319231186500 — Revisão
+2. Andrade HS, Carvalho SR. Genealogical analysis of Quaternary Prevention: between the use of Evidence-Based Medicine and care reformulation in Primary Health Care. Cien Saude Colet. 2022;28(7):2109-2117. PMID 37436323. doi:10.1590/1413-81232023287.13292022 — Análise genealógica
+3. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
+4. Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203 — Revisão sistemática
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

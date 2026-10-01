@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:49:40.688Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Avaliação de cefaleia tensional e ansiedade na UBS
@@ -62,8 +63,8 @@ O manejo da cefaleia tensional associada à ansiedade na Atenção Primária dev
 
 * **Acolhimento e psicoeducação:** Explique a relação entre a tensão muscular, o estresse e a dor. Valide o sofrimento do paciente.
 * **Medidas não farmacológicas:** Oriente higiene do sono, atividade física regular e técnicas simples de respiração ou relaxamento para o dia a dia.
-* **Tratamento farmacológico agudo:** Para crises pontuais, utilize analgésicos simples como dipirona ou paracetamol, com orientação clara sobre o limite de uso semanal [DOSE A CONFIRMAR].
-* **Tratamento preventivo e para ansiedade:** Quando a frequência das crises é alta ou há sintomas ansiosos incapacitantes, considere o uso de antidepressivos moduladores da dor, como os tricíclicos (amitriptilina) ou inibidores reuptake de serotonina, sempre avaliando o perfil do paciente [DOSE A CONFIRMAR].
+* **Tratamento farmacológico agudo:** Para crises pontuais, utilize analgésicos simples como dipirona ou paracetamol, com orientação clara sobre o limite de uso, porque o uso frequente e excessivo de analgésicos favorece a cefaleia por uso excessivo de medicação (EFNS 2010, PMID 20482606).
+* **Tratamento preventivo e para ansiedade:** Quando a frequência das crises é alta ou há sintomas ansiosos incapacitantes, considere o uso de antidepressivos moduladores da dor, como os tricíclicos (amitriptilina) ou inibidores reuptake de serotonina, sempre avaliando o perfil do paciente. A amitriptilina é a primeira escolha para a profilaxia da cefaleia tensional (EFNS 2010, PMID 20482606), com dose inicial baixa e titulação conforme a tolerância, segundo a bula e o protocolo local.
 
 ### Quando e como encaminhar
 
@@ -76,14 +77,13 @@ Encaminhe o paciente para a neurologia se houver sinais de alerta neurológicos,
 - Sinais de alerta neurológicos exigem investigação imediata e afastamento de causas secundárias graves.
 - O tratamento inicial prioriza a psicoeducação e o uso racional de medicamentos, evitando o abuso de analgésicos.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `tension-headache AND anxiety AND primary health care` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `somatization AND primary care AND headache management` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `psychiatric comorbidity in tension-type headache` — Estudo de coorte — [PMID A CONFIRMAR]
-
+1. Bendtsen L, Evers S, Linde M et al.. EFNS guideline on the treatment of tension-type headache - report of an EFNS task force. Eur J Neurol. 2010;17(11):1318-25. PMID 20482606. doi:10.1111/j.1468-1331.2010.03070.x — Diretriz clínica (EFNS)
+2. Becker WJ, Findlay T, Moga C et al.. Guideline for primary care management of headache in adults. Can Fam Physician. 2015;61(8):670-9. PMID 26273080 — Diretriz clínica (atenção primária)
+3. Pan LH, Ling YH, Wang SJ et al.. Hallmarks of primary headache: part 2- Tension-type headache. J Headache Pain. 2025;26(1):164. PMID 40676501. doi:10.1186/s10194-025-02098-w — Revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

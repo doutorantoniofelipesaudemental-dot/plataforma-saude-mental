@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:47:04.097Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Avaliação de riscos psicossociais no trabalho: ferramentas práticas
@@ -54,7 +55,7 @@ O manejo dos riscos psicossociais exige uma atuação integrada entre a medicina
 
 * **Identificação precoce:** Fique atento a sinais como queda de rendimento, absenteísmo frequente, irritabilidade ou queixas somáticas recorrentes na equipe.
 * **Condutas de primeira linha:** Promova rodas de conversa, ajuste cargas de trabalho e ofereça suporte psicológico acessível. A escuta qualificada pelo profissional de saúde é insubstituível.
-* **Uso de fármacos:** Quando houver adoecimento instalado, o tratamento medicamentoso com antidepressivos ou ansiolíticos pode ser necessário. As classes de primeira linha incluem os inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR]. Lembre-se de que o remédio ajuda a reequilibrar a biologia, mas não resolve a causa organizacional do problema.
+* **Uso de fármacos:** Quando houver adoecimento instalado, o tratamento medicamentoso com antidepressivos ou ansiolíticos pode ser necessário. As classes de primeira linha incluem os inibidores seletivos da recaptação de serotonina, com dose definida pelo médico. Lembre-se de que o remédio ajuda a reequilibrar a biologia, mas não resolve a causa organizacional do problema.
 * **Sinais de gravidade:** Ideação suicida, desespero intenso ou incapacidade funcional exigem afastamento imediato e avaliação psiquiátrica presencial urgente.
 * **Encaminhamento:** Encaminhe o colaborador para a rede de saúde mental sempre que houver risco à vida ou refratariedade aos ajustes iniciais. Oriente busca por apoio imediato em crises agudas através do CVV 188 ou do SAMU 192.
 
@@ -65,14 +66,13 @@ O manejo dos riscos psicossociais exige uma atuação integrada entre a medicina
 - Ferramentas validadas como o JCQ e o ERI ajudam a identificar desequilíbrios entre esforço e recompensa.
 - A intervenção exige mudanças organizacionais reais, aliadas ao suporte médico e psicológico adequado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `occupational stress AND psychosocial risk factors AND screening tools` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `workplace mental health AND primary prevention AND organizational intervention` — Ensaio clínico randomizado — [PMID A CONFIRMAR]
-3. `job strain model AND mental health AND occupational health` — Estudo de coorte — [PMID A CONFIRMAR]
-
+1. Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7 — Revisão sistemática e metanálise
+2. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
+3. Stratton E, Lampit A, Choi I et al.. Trends in Effectiveness of Organizational eHealth Interventions in Addressing Employee Mental Health: Systematic Review and Meta-analysis. J Med Internet Res. 2022;24(9):e37776. PMID 36166285. doi:10.2196/37776 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

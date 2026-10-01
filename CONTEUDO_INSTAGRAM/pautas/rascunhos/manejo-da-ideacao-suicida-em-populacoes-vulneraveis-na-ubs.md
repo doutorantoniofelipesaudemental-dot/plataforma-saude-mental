@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:52:14.180Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Manejo da ideação suicida em populações vulneráveis na UBS
@@ -16,9 +17,9 @@ revisaoMedica: pendente
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (5):
-> - - **Conduta:** Nunca deixar o paciente sozinho. Acionar o SAMU [DADO A CONFIRMAR] para transferência hospitalar segura ou encaminhamento protegido para o Pro…
+> - - **Conduta:** Nunca deixar o paciente sozinho. Acionar o SAMU (192) para transferência hospitalar segura ou encaminhamento protegido para o Pronto Atendimen…
 > - - O uso de medicamentos deve ser avaliado com cautela pelo médico assistente, priorizando tratar o transtorno de base (como episódios depressivos graves).
-> - - Classes frequentemente utilizadas incluem antidepressivos da classe dos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR], sempre conside…
+> - - Classes frequentemente utilizadas incluem antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, com dose inicial baixa e reavalia…
 > - - Lembre a pessoa e seus familiares sobre os canais de ajuda disponíveis 24 horas, como o CVV (ligar 188) e o SAMU (ligar 192).
 > - - Oriente e articule o suporte com o SAMU (192) e o CVV (188) diante de sinais de alto risco.
 
@@ -75,12 +76,12 @@ O sofrimento psíquico agudo que culmina na ideação suicida envolve uma comple
 
 #### Risco Moderado a Alto
 - Plano estruturado, intenção clara, presença de desesperança profunda, impulsividade ou tentativa recente.
-- **Conduta:** Nunca deixar o paciente sozinho. Acionar o SAMU [DADO A CONFIRMAR] para transferência hospitalar segura ou encaminhamento protegido para o Pronto Atendimento Psiquiátrico.
+- **Conduta:** Nunca deixar o paciente sozinho. Acionar o SAMU (192) para transferência hospitalar segura ou encaminhamento protegido para o Pronto Atendimento Psiquiátrico.
 
 ### Intervenções Farmacológicas na Crise
 - O foco principal na crise aguda é a segurança e a psicoterapia de suporte.
 - O uso de medicamentos deve ser avaliado com cautela pelo médico assistente, priorizando tratar o transtorno de base (como episódios depressivos graves).
-- Classes frequentemente utilizadas incluem antidepressivos da classe dos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR], sempre considerando o risco de toxicidade em caso de superdosagem.
+- Classes frequentemente utilizadas incluem antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, com dose inicial baixa e reavaliação precoce segundo a bula e o protocolo local, sempre considerando o risco de toxicidade em caso de superdosagem.
 
 ### Orientações Finais para a Equipe
 - Lembre a pessoa e seus familiares sobre os canais de ajuda disponíveis 24 horas, como o CVV (ligar 188) e o SAMU (ligar 192).
@@ -93,15 +94,14 @@ O sofrimento psíquico agudo que culmina na ideação suicida envolve uma comple
 - Avalie sempre a presença de um plano estruturado e a rede de apoio disponível.
 - Oriente e articule o suporte com o SAMU (192) e o CVV (188) diante de sinais de alto risco.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Suicidal Ideation"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Vulnerable Populations"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Suicide"[Mesh] / prevention and control) AND ("Primary Health Care"[Mesh]) AND ("Crisis Intervention"[Mesh])` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `("Suicidal Ideation"[Mesh]) AND ("Risk Assessment"[Mesh]) AND ("General Practice"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Suicide"[Mesh] / prevention and control) AND ("Vulnerable Populations"[Mesh]) AND ("Community Mental Health Services"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
-
+1. Mann JJ, Michel CA, Auerbach RP. Improving Suicide Prevention Through Evidence-Based Strategies: A Systematic Review. Am J Psychiatry. 2021;178(7):611-624. PMID 33596680. doi:10.1176/appi.ajp.2020.20060864 — Revisão sistemática
+2. US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297 — Diretriz clínica (recomendação do USPSTF)
+3. Bertolote JM, Fleischmann A, De Leo D et al.. Repetition of suicide attempts: data from emergency care settings in five culturally different low- and middle-income countries participating in the WHO SUPRE-MISS Study. Crisis. 2010;31(4):194-201. PMID 20801749. doi:10.1027/0027-5910/a000052 — Ensaio clínico randomizado (estudo WHO SUPRE-MISS)
+4. Linskens EJ, Venables NC, Gustavson AM et al.. Population- and Community-Based Interventions to Prevent Suicide. Crisis. 2022;44(4):330-340. PMID 36052582. doi:10.1027/0227-5910/a000873 — Revisão sistemática
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

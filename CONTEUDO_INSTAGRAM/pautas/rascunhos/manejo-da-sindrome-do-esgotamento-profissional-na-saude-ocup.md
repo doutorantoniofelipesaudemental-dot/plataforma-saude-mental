@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T10:13:16.116Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Manejo da Síndrome do Esgotamento Profissional na Saúde Ocupacional: Do Rastreio ao Plano de Readaptação
@@ -59,7 +60,7 @@ O manejo da Síndrome do Esgotamento Profissional exige um percurso contínuo, i
 ### Condutas de Primeira Linha
 - Promova intervenções focadas no estilo de vida, higiene do sono e retomada gradual de atividades prazerosas.
 - Considere o uso de psicoterapia baseada em evidências, como a Terapia Cognitivo-Comportamental.
-- O uso de medicação (como antidepressivos da classe dos inibidores seletivos da recaptação de serotonina) pode ser avaliado se houver sintomas ansiosos ou depressivos graves associados [DOSE A CONFIRMAR], sempre com foco no alívio do sofrimento agudo.
+- O uso de medicação (como antidepressivos da classe dos inibidores seletivos da recaptação de serotonina) pode ser avaliado se houver sintomas ansiosos ou depressivos graves associados, com dose definida pelo médico, sempre com foco no alívio do sofrimento agudo.
 
 ### Quando e Como Afastar
 - O afastamento do trabalho deve ser ponderado com cuidado. Ele é necessário quando o ambiente laboral representa risco iminente à sua saúde mental ou física.
@@ -78,15 +79,14 @@ O manejo da Síndrome do Esgotamento Profissional exige um percurso contínuo, i
 - O afastamento deve ser criterioso, evitando períodos longos que dificultem a reintegração.
 - O plano de readaptação requer diálogo ético com a saúde ocupacional e preservação do sigilo médico.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Burnout, Professional"[MeSH] AND "Occupational Health"[MeSH] AND screening` — revisão sistemática — [PMID A CONFIRMAR]
-2. `burnout return to work intervention occupational physician` — revisão sistemática — [PMID A CONFIRMAR]
-3. `burnout diagnostic criteria depression differential diagnosis` — revisão narrativa ou diretriz — [PMID A CONFIRMAR]
-4. `work rehabilitation burnout randomized controlled trial` — ensaio clínico randomizado — [PMID A CONFIRMAR]
-
+1. Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7 — Revisão sistemática e metanálise
+2. West CP, Dyrbye LN, Erwin PJ et al.. Interventions to prevent and reduce physician burnout: a systematic review and meta-analysis. Lancet. 2016;388(10057):2272-2281. PMID 27692469. doi:10.1016/S0140-6736(16)31279-X — Revisão sistemática e metanálise
+3. Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203 — Revisão sistemática
+4. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

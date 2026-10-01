@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:46:52.951Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Impacto da cultura organizacional tóxica na saúde mental dos times
@@ -62,7 +63,7 @@ O cuidado com quem sofre em um ambiente tóxico vai muito além da consulta méd
 
 * **Orientação de afastamento quando necessário:** Em casos de esgotamento grave, o repouso temporário e o afastamento do ambiente nocivo são fundamentais para a recuperação.
 
-* **Suporte farmacológico prudente:** Quando houver indicação clínica para sintomas de ansiedade intensa ou depressão, utilize classes terapêuticas como os inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR], sempre associados a suporte psicoterapêutico.
+* **Suporte farmacológico prudente:** Quando houver indicação clínica para sintomas de ansiedade intensa ou depressão, utilize classes terapêuticas como os inibidores seletivos da recaptação de serotonina, com dose definida pelo médico, sempre associados a suporte psicoterapêutico.
 
 * **Sinais de gravidade:** Fique atento a ideação suicida, isolamento severo ou crises de pânico recorrentes. Nesses casos, oriente busca imediata de ajuda especializada e suporte de urgência.
 
@@ -75,15 +76,14 @@ O cuidado com quem sofre em um ambiente tóxico vai muito além da consulta méd
 - A medicina preventiva atua identificando sinais precoces de esgotamento no ambiente corporativo.
 - O manejo exige cuidado clínico humanizado e mudanças estruturais na gestão.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Workplace"[Mesh] OR "Organizational Culture"[Mesh]) AND ("Burnout, Professional"[Mesh] OR "Mental Health"[Mesh]) AND ("Systematic Review"[Publication Type] OR "Meta-Analysis"[Publication Type])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Occupational Stress"[Mesh] AND ("Bullying"[Mesh] OR "Personnel Management"[Mesh]) AND ("Mental Health"[Mesh] OR "Depression"[Mesh])` — Estudo Observacional — [PMID A CONFIRMAR]
-3. `"Workplace"[Mesh] AND "Occupational Health"[Mesh] AND ("Burnout, Professional"[Mesh] OR "Anxiety"[Mesh]) AND "Practice Guideline"[Publication Type]` — Diretriz — [PMID A CONFIRMAR]
-4. `"Organizational Culture"[Mesh] AND "Occupational Health Services"[Mesh] AND "Primary Prevention"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-
+1. Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7 — Revisão sistemática e metanálise
+2. Lee RT, Seo B, Hladkyj S et al.. Correlates of physician burnout across regions and specialties: a meta-analysis. Hum Resour Health. 2013;11:48. PMID 24074053. doi:10.1186/1478-4491-11-48 — Metanálise
+3. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
+4. Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203 — Revisão sistemática
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

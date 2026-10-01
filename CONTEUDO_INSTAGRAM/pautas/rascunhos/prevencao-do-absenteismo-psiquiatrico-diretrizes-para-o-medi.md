@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:47:16.169Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Prevenção do absenteísmo psiquiátrico: diretrizes para o médico avaliador
@@ -15,14 +16,13 @@ revisaoMedica: pendente
 *Orientações práticas para médicos avaliadores na prevenção da cronificação e reinserção laboral segura em transtornos mentais comuns.*
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
-> Trechos de conduta farmacológica e de emergência a conferir (8):
+> Trechos de conduta farmacológica e de emergência a conferir (7):
 > - * Garanta que o tratamento medicamentoso e psicoterápico esteja em andamento ativo.
 > - * Estabelecer um plano terapêutico singular que envolva psicoterapia baseada em evidências, como a Terapia Cognitivo-Comportamental, associada ao tratamento …
-> - * Utilizar antidepressivos da classe dos Inibidores Seletivos da Recaptação de Serotonina [DOSE A CONFIRMAR] como primeira escolha para sintomas ansiosos e d…
-> - * Considerar o uso cauteloso de moduladores do sono ou ansiolíticos porcurto período [DOSE A CONFIRMAR], evitando o risco de dependência.
+> - * Utilizar antidepressivos da classe dos Inibidores Seletivos da Recaptação de Serotonina, com dose definida pelo médico, como primeira escolha para sintomas…
+> - * Considerar o uso cauteloso de moduladores do sono ou ansiolíticos por curto período, com dose definida pelo médico, evitando o risco de dependência.
 > - * Ideação suicida ativa ou planos estruturados (orientar busca imediata ao SAMU 192 ou CVV 188).
 > - * Encaminhar para avaliação psiquiátrica especializada quando houver refratariedade aos medicamentos de primeira linha ou comorbidades complexas.
-> - * Estabelecer um retorno gradual, com carga horária reduzida inicialmente [DOSE A CONFIRMAR].
 > - - O tratamento deve combinar intervenções psicossociais, farmacológicas e adaptações laborais.
 
 Olá, colega médico. Quando recebemos no consultório ou na perícia alguém que precisa se afastar do trabalho por sofrimento mental, a nossa responsabilidade vai muito além de apenas assinar um documento. Sabemos que o afastamento prolongado pode, muitas vezes, isolar a pessoa, enfraquecer seus vínculos sociais e acelerar o processo de cronificação do adoecimento. Vamos conversar sobre como podemos agir juntos para que a licença médica seja um instrumento de cuidado e proteção, e não de exclusão. A nossa escuta atenta no momento da avaliação pode mudar o rumo dessa história.
@@ -69,8 +69,8 @@ Por isso, a intervenção precoce visa interromper esse ciclo, promovendo um amb
 
 ### Condutas de Primeira Linha
 * Estabelecer um plano terapêutico singular que envolva psicoterapia baseada em evidências, como a Terapia Cognitivo-Comportamental, associada ao tratamento medicamentoso quando indicado.
-* Utilizar antidepressivos da classe dos Inibidores Seletivos da Recaptação de Serotonina [DOSE A CONFIRMAR] como primeira escolha para sintomas ansiosos e depressivos graves.
-* Considerar o uso cauteloso de moduladores do sono ou ansiolíticos porcurto período [DOSE A CONFIRMAR], evitando o risco de dependência.
+* Utilizar antidepressivos da classe dos Inibidores Seletivos da Recaptação de Serotonina, com dose definida pelo médico, como primeira escolha para sintomas ansiosos e depressivos graves.
+* Considerar o uso cauteloso de moduladores do sono ou ansiolíticos por curto período, com dose definida pelo médico, evitando o risco de dependência.
 
 ### Sinais de Gravidade e Alerta
 * Ideação suicida ativa ou planos estruturados (orientar busca imediata ao SAMU 192 ou CVV 188).
@@ -82,7 +82,7 @@ Por isso, a intervenção precoce visa interromper esse ciclo, promovendo um amb
 * Articular com o médico do trabalho da empresa para planejar a reabilitação profissional e adaptações nas tarefas.
 
 ### Condução da Retorno ao Trabalho
-* Estabelecer um retorno gradual, com carga horária reduzida inicialmente [DOSE A CONFIRMAR].
+* Estabelecer um retorno gradual, com carga horária reduzida inicialmente e ampliada de forma progressiva conforme a evolução.
 * Realizar reavaliações periódicas para monitorar a adaptação e prevenir recaídas.
 
 ## Pontos-chave
@@ -92,14 +92,14 @@ Por isso, a intervenção precoce visa interromper esse ciclo, promovendo um amb
 - A articulação entre médico assistente, perito e médico do trabalho é essencial para a segurança.
 - O tratamento deve combinar intervenções psicossociais, farmacológicas e adaptações laborais.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `absenteeism AND mental disorders AND return to work` — Diretriz clínica — [PMID A CONFIRMAR]
-2. `occupational psychiatry AND mental health leave AND rehabilitation` — Revisão sistemática — [PMID A CONFIRMAR]
-3. `work disability AND depression AND secondary prevention` — Metanálise — [PMID A CONFIRMAR]
-
+1. van Oostrom SH, Driessen MT, de Vet HC et al.. Workplace interventions for preventing work disability. Cochrane Database Syst Rev. 2009;(2):CD006955. PMID 19370664. doi:10.1002/14651858.CD006955.pub2 — Revisão sistemática Cochrane e metanálise
+2. Mikkelsen MB, Rosholm M. Systematic review and meta-analysis of interventions aimed at enhancing return to work for sick-listed workers with common mental disorders, stress-related disorders, somatoform disorders and personality disorders. Occup Environ Med. 2018;75(9):675-686. PMID 29954920. doi:10.1136/oemed-2018-105073 — Revisão sistemática e metanálise
+3. Nigatu YT, Liu Y, Uppal M et al.. Interventions for enhancing return to work in individuals with a common mental illness: systematic review and meta-analysis of randomized controlled trials. Psychol Med. 2016;46(16):3263-3274. PMID 27609709. doi:10.1017/S0033291716002269 — Revisão sistemática e metanálise
+4. Fisker J, Hjorthøj C, Hellström L et al.. Predictors of return to work for people on sick leave with common mental disorders: a systematic review and meta-analysis. Int Arch Occup Environ Health. 2022;95(7):1-13. PMID 35106629. doi:10.1007/s00420-021-01827-3 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

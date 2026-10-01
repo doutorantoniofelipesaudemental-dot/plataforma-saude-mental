@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:48:30.015Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Urgências de abstinência de substâncias no PA: guia rápido
@@ -58,9 +59,9 @@ Quando a substância é retirada de forma abrupta, ocorre um verdadeiro colapso 
 ### Manejo Clínico na Urgência
 
 ### Condutas de primeira linha
-* **Abstinência de Álcool:** O tratamento de escolha para controle sintomático e prevenção de convulsões ou delirium tremens baseia-se no uso de benzodiazepínicos (como Diazepam ou Lorazepam) por via oral ou intravenosa, titulados conforme a escala de avaliação clínica de abstinência [DOSE A CONFIRMAR]. Lembre-se sempre de administrar Tiamina antes da glicose para prevenir a encefalopatia de Wernicke [DOSE A CONFIRMAR].
-* **Abstinência de opioides:** O manejo visa aliviar o desconforto intenso com medicações de suporte sintomático para náuseas, dores musculares e insônia. Em cenários específicos e protocolos institucionais, pode-se avaliar o uso de agonistas parciais sob supervisão especializada [DOSE A CONFIRMAR].
-* **Abstinência de estimulantes (cocaína e crack):** O quadro costuma ser marcado por intensa fissura, fadiga extrema e sintomas depressivos graves. O manejo é essencialmente de suporte, focado na contenção verbal, hidratação, controle da agitação com antipsicóticos de baixa potência se estritamente necessário [DOSE A CONFIRMAR] e vigilância para risco de autoagressão.
+* **Abstinência de Álcool:** O tratamento de escolha para controle sintomático e prevenção de convulsões ou delirium tremens baseia-se no uso de benzodiazepínicos (como Diazepam ou Lorazepam) por via oral ou intravenosa, titulados conforme a escala de avaliação clínica de abstinência, com doses suficientes para manter sonolência leve durante o delirium (Mayo-Smith et al., 2004, PMID 15249349). Lembre-se sempre de administrar Tiamina antes da glicose para prevenir a encefalopatia de Wernicke [DOSE A CONFIRMAR].
+* **Abstinência de opioides:** O manejo visa aliviar o desconforto intenso com medicações de suporte sintomático para náuseas, dores musculares e insônia. Em cenários específicos e protocolos institucionais, pode-se avaliar o uso de agonistas parciais sob supervisão especializada. A buprenorfina só deve ser iniciada quando já houver abstinência moderada (escala COWS acima de 13) e tempo suficiente desde o último opioide agonista pleno, para evitar abstinência precipitada (Spadaro et al., 2022, PMID 35623179); as doses seguem o protocolo local.
+* **Abstinência de estimulantes (cocaína e crack):** O quadro costuma ser marcado por intensa fissura, fadiga extrema e sintomas depressivos graves. O manejo é essencialmente de suporte, focado na contenção verbal, hidratação, controle da agitação com antipsicóticos de baixa potência se estritamente necessário, com dose definida pelo médico segundo o protocolo local (referência: Project BETA; Roppolo et al., 2020, PMID 33145538) e vigilância para risco de autoagressão.
 
 ### Sinais de gravidade
 Fique atento aos seguintes sinais que indicam necessidade de suporte intensivo: instabilidade hemodinâmica grave, crises convulsivas repetidas ou estado de mal epiléptico, hipertermia, alucinações persistentes com desorientação têmporo-espacial e alteração profunda do nível de consciência.
@@ -76,15 +77,16 @@ Encaminhe o paciente para a unidade de terapia intensiva ou para internação ho
 - Administre Tiamina rotineiramente antes de soluções glicosadas para prevenir complicações neurológicas.
 - Identifique prontamente os sinais de gravidade para realizar o encaminhamento hospitalar adequado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Substance Withdrawal Syndrome"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Guideline"[Publication Type] OR "Practice Guideline"[Publication Type])` — Diretriz — [PMID A CONFIRMAR]
-2. `("Alcohol Withdrawal Delirium"[Mesh]) AND ("Emergency Treatment"[Mesh]) AND ("Systematic Review"[Publication Type])` — Revisão sistemática — [PMID A CONFIRMAR]
-3. `("Substance-Related Disorders"[Mesh]) AND ("Emergencies"[Mesh]) AND ("Disease Management"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` — Ensaio clínico randomizado — [PMID A CONFIRMAR]
-4. `("Opioid-Related Disorders"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Metaanalysis"[Publication Type])` — Metanálise — [PMID A CONFIRMAR]
-
+1. Mayo-Smith MF, Beecher LH, Fischer TL et al.. Management of alcohol withdrawal delirium. An evidence-based practice guideline. Arch Intern Med. 2004;164(13):1405-12. PMID 15249349. doi:10.1001/archinte.164.13.1405 — Diretriz baseada em evidências e metanálise
+2. Borgundvaag B, Bellolio F, Miles I et al.. Guidelines for Reasonable and Appropriate Care in the Emergency Department (GRACE-4): Alcohol use disorder and cannabinoid hyperemesis syndrome management in the emergency department. Acad Emerg Med. 2024;31(5):425-455. PMID 38747203. doi:10.1111/acem.14911 — Diretriz clínica (GRACE-4)
+3. Glahn A, Proskynitopoulos PJ, Bleich S et al.. Pharmacotherapeutic management of acute alcohol withdrawal syndrome in critically Ill patients. Expert Opin Pharmacother. 2020;21(9):1083-1092. PMID 32281894. doi:10.1080/14656566.2020.1746271 — Revisão sistemática
+4. Yakovenko I, Mukaneza Y, Germé K et al.. Management of opioid use disorder: 2024 update to the national clinical practice guideline. CMAJ. 2024;196(38):E1280-E1290. PMID 39532476. doi:10.1503/cmaj.241173 — Diretriz clínica (transtorno por uso de opioides)
+5. Spadaro A, Long B, Koyfman A et al.. Buprenorphine precipitated opioid withdrawal: Prevention and management in the ED setting. Am J Emerg Med. 2022;58:22-26. PMID 35623179. doi:10.1016/j.ajem.2022.05.013 — Revisão narrativa
+6. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

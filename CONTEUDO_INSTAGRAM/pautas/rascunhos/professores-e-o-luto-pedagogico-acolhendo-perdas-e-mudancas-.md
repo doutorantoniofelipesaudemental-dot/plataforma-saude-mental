@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:48:23.115Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Professores e o luto pedagógico: acolhendo perdas e mudanças na escola
@@ -73,7 +74,7 @@ Se os sintomas de tristeza profunda, apatia, insônia persistente ou ansiedade s
 
 ### Abordagem terapêutica e farmacológica
 
-A escuta qualificada e a psicoterapia são pilares fundamentais no manejo do luto prolongado. O uso de medicamentos da classe dos inibidores seletivos da recaptação de serotonina (ISRS) pode ser avaliado pelo médico assistente [DOSE A CONFIRMAR] caso haja sintomas ansiosos ou depressivos incapacitantes associados, servindo como suporte para que a pessoa recupere a funcionalidade e possa elaborar o processo de perda com acompanhamento adequado.
+A escuta qualificada e a psicoterapia são pilares fundamentais no manejo do luto prolongado. O uso de medicamentos da classe dos inibidores seletivos da recaptação de serotonina (ISRS) pode ser avaliado pelo médico assistente, com dose definida na avaliação presencial, caso haja sintomas ansiosos ou depressivos incapacitantes associados, servindo como suporte para que a pessoa recupere a funcionalidade e possa elaborar o processo de perda com acompanhamento adequado.
 
 ## Pontos-chave
 
@@ -82,14 +83,13 @@ A escuta qualificada e a psicoterapia são pilares fundamentais no manejo do lut
 - Validar os sentimentos e buscar espaços coletivos de escuta na escola são passos essenciais para a prevenção do adoecimento.
 - Sintomas persistentes que prejudicam a funcionalidade exigem avaliação médica presencial para suporte adequado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Teachers"[Mesh]) AND ("Grief"[Mesh] OR "Bereavement"[Mesh]) AND ("Occupational Stress"[Mesh])` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `("Faculty"[Mesh]) AND ("Burnout, Professional"[Mesh]) AND ("Mental Health"[Mesh])` — Estudo transversal — [PMID A CONFIRMAR]
-3. `("Schools"[Mesh]) AND ("Crisis Intervention"[Mesh]) AND ("Adaptation, Psychological"[Mesh])` — Diretriz clínica — [PMID A CONFIRMAR]
-
+1. Shalev R, Zamir R, Barak O. Disenfranchised Grief: The Death of a Student With Special Needs and the Coping of the School Staff - A Qualitative Study. Omega (Westport). 2022;90(1):37-58. PMID 35549761. doi:10.1177/00302228221097297 — Estudo qualitativo
+2. Gross N, Lo C. Relational teaching and learning after loss: Evidence from Black adolescent male students and their teachers. Sch Psychol Q. 2018;33(3):381-389. PMID 30234361. doi:10.1037/spq0000285 — Estudo de caso multimétodos
+3. Munns A, Forde KA, Krouzecky M et al.. Rainbows: a primary health care initiative for primary schools. Collegian. 2015;22(2):153-60. PMID 26281402. doi:10.1016/j.colegn.2015.02.002 — Estudo qualitativo (programa em atenção primária escolar)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
