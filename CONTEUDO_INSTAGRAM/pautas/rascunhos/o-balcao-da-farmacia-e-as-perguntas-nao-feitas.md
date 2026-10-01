@@ -7,7 +7,8 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T05:24:04.042Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
+revisadoEm: 2026-10-01T03:01:12.798Z
 ---
 
 # O balcão da farmácia e as perguntas não feitas

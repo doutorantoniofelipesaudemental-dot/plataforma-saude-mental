@@ -21,7 +21,7 @@
 - **público:** Público geral, pacientes e familiares · **ângulo:** Foca na escuta ativa durante a renovação de receitas como oportunidade de acolhimento e vínculo.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-balcao-da-farmacia-e-as-perguntas-nao-feitas.md` · slug: `o-balcao-da-farmacia-e-as-perguntas-nao-feitas` · pauta: `2026-09-30-01-o-balcao-da-farmacia-e-as-perg`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Quando o filho adotado pergunta sobre a família biológica" (similaridade 0.2)
 
 ## [redigida] A sala de espera que respirava em silêncio
@@ -33,7 +33,7 @@
 - **público:** Público geral e profissionais da saúde · **ângulo:** Ilumina a dinâmica coletiva de uma sala de espera de unidade básica de saúde antes da consulta.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-sala-de-espera-que-respirava-em-silencio.md` · slug: `a-sala-de-espera-que-respirava-em-silencio` · pauta: `2026-09-30-02-a-sala-de-espera-que-respirava`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O balcão da farmácia e as perguntas não feitas" (similaridade 0.25)
 
 ## [redigida] O lenço esquecido na cadeira do consultório
@@ -45,7 +45,7 @@
 - **público:** Público geral, pacientes e familiares · **ângulo:** Aborda a transição entre a resistência inicial e a abertura emocional na relação médico-paciente.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-lenco-esquecido-na-cadeira-do-consultorio.md` · slug: `o-lenco-esquecido-na-cadeira-do-consultorio` · pauta: `2026-09-30-03-o-lenco-esquecido-na-cadeira-d`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.26)
 
 ## [redigida] O relógio na parede do pronto atendimento
@@ -57,7 +57,7 @@
 - **público:** Público geral e profissionais de urgência · **ângulo:** Enfatiza a urgência subjetiva da crise e o papel apaziguador do acolhimento imediato.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-relogio-na-parede-do-pronto-atendimento.md` · slug: `o-relogio-na-parede-do-pronto-atendimento` · pauta: `2026-09-30-04-o-relogio-na-parede-do-pronto-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.26)
 
 ## [redigida] O café frio que esperou a consulta acabar
@@ -69,7 +69,7 @@
 - **público:** Profissionais de saúde e público geral · **ângulo:** Humaniza o cotidiano do médico de família diante da complexidade social e emocional dos casos.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-cafe-frio-que-esperou-a-consulta-acabar.md` · slug: `o-cafe-frio-que-esperou-a-consulta-acabar` · pauta: `2026-09-30-05-o-cafe-frio-que-esperou-a-cons`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.28)
 
 ## [redigida] A carta que nunca foi enviada ao psiquiatra
@@ -81,7 +81,7 @@
 - **público:** Pacientes, familiares e cuidadores · **ângulo:** Aborda o preconceito internalizado em relação aos cuidados em saúde mental.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-carta-que-nunca-foi-enviada-ao-psiquiatra.md` · slug: `a-carta-que-nunca-foi-enviada-ao-psiquiatra` · pauta: `2026-09-30-06-a-carta-que-nunca-foi-enviada-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O café frio que esperou a consulta acabar" (similaridade 0.27)
 
 ## [redigida] O domingo à tarde em que o telefone não chamou
@@ -93,7 +93,7 @@
 - **público:** Profissionais de saúde e público geral · **ângulo:** Revela o impacto emocional do trabalho de cuidado comunitário na vida pessoal do profissional.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-domingo-a-tarde-em-que-o-telefone-nao-chamou.md` · slug: `o-domingo-a-tarde-em-que-o-telefone-nao-chamou` · pauta: `2026-09-30-07-o-domingo-a-tarde-em-que-o-tel`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O lenço esquecido na cadeira do consultório" (similaridade 0.28)
 
 ## [redigida] A receita dobrada no bolso do casaco
@@ -105,7 +105,7 @@
 - **público:** Homens adultos, familiares e público geral · **ângulo:** Trata das barreiras culturais masculinas na busca por ajuda em saúde mental.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-receita-dobrada-no-bolso-do-casaco.md` · slug: `a-receita-dobrada-no-bolso-do-casaco` · pauta: `2026-09-30-08-a-receita-dobrada-no-bolso-do-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A carta que nunca foi enviada ao psiquiatra" (similaridade 0.26)
 
 ## [redigida] O corredor que parecia não ter fim
@@ -117,7 +117,7 @@
 - **público:** Familiares, cuidadores e público geral · **ângulo:** Foca na experiência do acompanhante e na necessidade de acolher a família na crise.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-corredor-que-parecia-nao-ter-fim.md` · slug: `o-corredor-que-parecia-nao-ter-fim` · pauta: `2026-09-30-09-o-corredor-que-parecia-nao-ter`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O relógio na parede do pronto atendimento" (similaridade 0.27)
 
 ## [redigida] A planta que sobreviveu na janela do posto
@@ -129,7 +129,7 @@
 - **público:** Público geral e profissionais de saúde · **ângulo:** Destaca a importância dos pequenos vínculos cotidianos na construção da saúde mental comunitária.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-planta-que-sobreviveu-na-janela-do-posto.md` · slug: `a-planta-que-sobreviveu-na-janela-do-posto` · pauta: `2026-09-30-10-a-planta-que-sobreviveu-na-jan`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A carta que nunca foi enviada ao psiquiatra" (similaridade 0.26)
 
 ## [redigida] Síndrome serotoninérgica na emergência: reconhecer para salvar
@@ -360,7 +360,7 @@
 - **público:** Profissionais de saúde da APS e leitores interessados em humanização do cuidado · **ângulo:** Foca na barreira do idioma e na comunicação não verbal como ferramentas centrais de acolhimento em saúde mental na APS para migrantes
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs.md` · slug: `o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs` · pauta: `2026-09-30-25-o-idioma-do-afeto-acolhendo-qu`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.19)
 
 ## [rejeitada] Prevenção da sobrecarga e burnout do cuidador familiar de idosos na APS
