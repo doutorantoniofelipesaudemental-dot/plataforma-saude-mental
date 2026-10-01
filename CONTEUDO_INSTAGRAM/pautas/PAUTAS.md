@@ -473,7 +473,7 @@
   - PubMed: `"Delirium"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Ensaio clínico randomizado (pacientes críticos)) 30346242
   - PubMed: `` (Diretriz (Project BETA) e revisão) 33145538
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid.md` · slug: `delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid` · pauta: `2026-09-30-32-delirium-no-pronto-atendimento`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.22)
 
 ## [redigida] Catatonia na emergência médica: reconhecimento e manejo inicial
@@ -491,7 +491,7 @@
   - PubMed: `("Catatonia"[Mesh]) AND ("Emergencies"[Mesh])` (Revisão sistemática) 40123412
   - PubMed: `` (Documento de recursos da APA) 40368005
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici.md` · slug: `catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici` · pauta: `2026-09-30-33-catatonia-na-emergencia-medica`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Síndrome de abstinência alcoólica: reconhecimento e manejo inicial" (similaridade 0.33)
 
 ## [rejeitada] Intoxicação aguda por psicofármacos: conduta no pronto-socorro
@@ -522,7 +522,7 @@
   - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Unnecessary Procedures"[Mesh] AND "Primary Health Care"[Mesh]` (Metanálise de ensaios clínicos randomizados) 32428905
   - PubMed: `"Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Randomized Controlled Trial"[Publication Type]` (Revisão) 24514109
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic.md` · slug: `transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic` · pauta: `2026-09-30-35-transtornos-somatoformes-na-ub`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Rastreio e manejo da depressão pós-parto na UBS" (similaridade 0.23)
 
 ## [redigida] Uso de antipsicóticos na APS: indicações, ajustes e desprescrição
@@ -559,7 +559,7 @@
   - PubMed: `` (Diretriz clínica (desprescrição de BZRA)) 29760253
   - PubMed: `` (Ensaio clínico randomizado (TCC-I digital)) 30264137
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/insonia-refrataria-na-atencao-primaria-investigacao-e-condut.md` · slug: `insonia-refrataria-na-atencao-primaria-investigacao-e-condut` · pauta: `2026-09-30-37-insonia-refrataria-na-atencao-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Insônia na consulta de rotina: além da prescrição automática" (similaridade 0.28)
 
 ## [redigida] Abandono de tratamento psiquiátrico: estratégias de resgate na UBS
@@ -576,7 +576,7 @@
   - PubMed: `("Psychotropic Drugs"[Mesh] AND "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) 35858887
   - PubMed: `("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Disorders"[Mesh] AND "Secondary Prevention"[Mesh])` (Diretriz clínica (CANMAT/ISBD)) 29536616
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n.md` · slug: `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` · pauta: `2026-09-30-38-abandono-de-tratamento-psiquia`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Transtornos somatoformes na UBS: investigação e manejo clínico" (similaridade 0.24)
 
 ## [redigida] Transtorno bipolar na APS: rastreio e manejo intercrises
@@ -594,7 +594,7 @@
   - PubMed: `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Ambulatory Care"[Mesh])` (Revisão sistemática de ensaios e metanálises (lítio)) 34980362
   - PubMed: `("Bipolar Disorder/therapy"[Mesh]) AND ("Patient Care Management"[Mesh] OR "Intersectoral Collaboration"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise em rede (manutenção)) 33177610
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises.md` · slug: `transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises` · pauta: `2026-09-30-39-transtorno-bipolar-na-aps-rast`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.24)
 
 ## [rejeitada] Síndrome de abstinência alcoólica grave no PA: reconhecimento e manejo
@@ -626,7 +626,7 @@
   - PubMed: `"Triage"[MeSH] AND "Emergency Services, Psychiatric"[MeSH] AND "Primary Health Care"[MeSH]` (Diretriz clínica (WFSBP, versão para atenção primária)) 22540422
   - PubMed: `` (Diretriz (Project BETA) e revisão) 33145538
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para.md` · slug: `primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para` · pauta: `2026-09-30-41-primeiro-atendimento-em-psiqui`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Delirium no pronto-atendimento: avaliação e manejo para residentes" (similaridade 0.34)
 
 ## [redigida] O peso da prancheta e o olhar que escuta na APS
@@ -802,7 +802,7 @@
   - PubMed: `Serotonin Uptake Inhibitors AND Obsessive-Compulsive Disorder[Mesh] AND Primary Care` (Metanálise de ensaios clínicos randomizados (dose-resposta)) 19468281
   - PubMed: `` (Revisão sistemática com meta-regressão (dose-resposta)) 34630180
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane.md` · slug: `transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane` · pauta: `2026-09-30-56-transtorno-obsessivo-compulsiv`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.32)
 
 ## [rejeitada] Transtornos alimentares na atenção primária: rastreio e conduta inicial
@@ -848,7 +848,7 @@
   - PubMed: `dissociative symptoms trauma-informed care primary care` (Revisão (guia clínico transdiagnóstico)) 36425778
   - PubMed: `grounding techniques emotion regulation dissociation randomized` (Ensaio clínico randomizado) 40014495
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr.md` · slug: `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` · pauta: `2026-09-30-59-transtorno-dissociativo-na-aps`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.24)
 
 ## [redigida] Uso problemático de telas e dependência digital na infância e APS
@@ -865,7 +865,7 @@
   - PubMed: `Digital media use AND pediatric primary care AND guidelines` (Diretriz clínica (Academia Indiana de Pediatria)) 34969943
   - PubMed: `` (Estudo longitudinal) 41029734
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia-.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia-` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Telas na primeira infância: o que as diretrizes recomendam" (similaridade 0.27)
 
 ## [redigida] Primeiro episódio psicótico: orientações essenciais para a família
@@ -882,7 +882,7 @@
   - PubMed: `("Caregiver Burden"[Mesh]) AND ("First-Episode Psychosis"[Mesh]) AND ("Psychoeducation"[Mesh])` (Ensaio clínico randomizado) 21226941
   - PubMed: `` (Revisão sistemática e metanálise) 25833867
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa.md` · slug: `primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa` · pauta: `2026-09-30-61-primeiro-episodio-psicotico-or`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.31)
 
 ## [redigida] Esquecimento comum ou sinal de alerta: conversando sobre memória
@@ -899,7 +899,7 @@
   - PubMed: `("Caregivers"[Mesh]) AND ("Cognitive Decline"[Mesh]) AND ("Psychoeducation"[Mesh])` (Revisão sistemática e metanálise) 38439609
   - PubMed: `` (Revisão sistemática) 31808211
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo.md` · slug: `esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo` · pauta: `2026-09-30-62-esquecimento-comum-ou-sinal-de`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Adolescência: diferenciando oscilação normal de sinal de alerta" (similaridade 0.27)
 
 ## [redigida] Conviver com a oscilação de humor: limites e apoio familiar
@@ -916,7 +916,7 @@
   - PubMed: `("Family Therapy"[Mesh]) AND ("Mood Disorders"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão sistemática e metanálise) 37997647
   - PubMed: `` (Diretriz clínica (CANMAT/ISBD)) 29536616
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar.md` · slug: `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` · pauta: `2026-09-30-63-conviver-com-a-oscilacao-de-hu`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Sinais precoces de depressão: guia de apoio prático para familiares" (similaridade 0.25)
 
 ## [redigida] O eco dos passos vazios no corredor do plantão de domingo
