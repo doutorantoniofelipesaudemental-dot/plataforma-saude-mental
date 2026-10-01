@@ -1,6 +1,6 @@
 ---
 pautaId: 2026-09-30-60-uso-problematico-de-telas-e-de
-slug: uso-problematico-de-telas-e-dependencia-digital-na-infancia-
+slug: uso-problematico-de-telas-e-dependencia-digital-na-infancia
 titulo: "Uso problemático de telas e dependência digital na infância e APS"
 categoria: "Condições Específicas"
 tipo: artigo-cientifico

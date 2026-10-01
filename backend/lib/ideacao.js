@@ -139,7 +139,7 @@ const LOTES = {
 const normalizarPlano = (plano) => plano.map((x) => (Array.isArray(x) ? { grupo: x[0], quantidade: x[1], temas: [] } : { temas: [], ...x }));
 
 const slugDe = (s) =>
-  String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+  String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60).replace(/-$/, '');
 
 /** O que reprova uma proposta antes de chegar ao médico (estrutura, CFM, tom). */
 function problemasDaProposta(p) {

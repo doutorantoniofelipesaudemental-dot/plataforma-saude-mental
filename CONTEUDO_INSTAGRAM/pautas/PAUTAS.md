@@ -864,7 +864,7 @@
   - PubMed: `Problematic smartphone use AND children AND behavioral addiction AND management` (Revisão sistemática e metanálise) 39923383
   - PubMed: `Digital media use AND pediatric primary care AND guidelines` (Diretriz clínica (Academia Indiana de Pediatria)) 34969943
   - PubMed: `` (Estudo longitudinal) 41029734
-- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia-.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia-` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Telas na primeira infância: o que as diretrizes recomendam" (similaridade 0.27)
 
