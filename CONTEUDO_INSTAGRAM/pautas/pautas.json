@@ -1651,19 +1651,33 @@
     "referencias": [
       {
         "consultaPubMed": "\"Delirium\"[Mesh] AND \"Emergencies\"[Mesh] AND \"Diagnosis\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "36607634",
+        "citacao": "Ormseth CH, LaHue SC, Oldham MA et al.. Predisposing and Precipitating Factors Associated With Delirium: A Systematic Review. JAMA Netw Open. 2023;6(1):e2249950. PMID 36607634. doi:10.1001/jamanetworkopen.2022.49950"
       },
       {
         "consultaPubMed": "\"Delirium\"[Mesh] AND \"Emergency Service, Hospital\"[Mesh] AND \"Management\"[Subheading]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (UTI, PADIS)",
+        "pmid": "30113379",
+        "citacao": "Devlin JW, Skrobik Y, Gélinas C et al.. Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU. Crit Care Med. 2018;46(9):e825-e873. PMID 30113379. doi:10.1097/CCM.0000000000003299"
       },
       {
         "consultaPubMed": "\"Confusion Assessment Method\"[Mesh] AND \"Emergency Service, Hospital\"[Mesh]",
-        "tipoDeEstudo": "Estudo de Validação"
+        "tipoDeEstudo": "Revisão sistemática e metanálise (acurácia do 4AT)",
+        "pmid": "33951145",
+        "citacao": "Tieges Z, Maclullich AMJ, Anand A et al.. Diagnostic accuracy of the 4AT for delirium detection in older adults: systematic review and meta-analysis. Age Ageing. 2021;50(3):733-743. PMID 33951145. doi:10.1093/ageing/afaa224"
       },
       {
         "consultaPubMed": "\"Delirium\"[Mesh] AND \"Antipsychotic Agents\"[Mesh] AND \"Emergency Service, Hospital\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Ensaio clínico randomizado (pacientes críticos)",
+        "pmid": "30346242",
+        "citacao": "Girard TD, Exline MC, Carson SS et al.. Haloperidol and Ziprasidone for Treatment of Delirium in Critical Illness. N Engl J Med. 2018;379(26):2506-2516. PMID 30346242. doi:10.1056/NEJMoa1808217"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -1713,19 +1727,33 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Catatonia\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "22389352",
+        "citacao": "Jaimes-Albornoz W, Serra-Mestres J. Catatonia in the emergency department. Emerg Med J. 2012;29(11):863-7. PMID 22389352. doi:10.1136/emermed-2011-200896"
       },
       {
         "consultaPubMed": "(\"Catatonia\"[Mesh]) AND (\"Lorazepam\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Diretriz clínica (consenso da BAP)",
+        "pmid": "37039129",
+        "citacao": "Rogers JP, Oldham MA, Fricchione G et al.. Evidence-based consensus guidelines for the management of catatonia: Recommendations from the British Association for Psychopharmacology. J Psychopharmacol. 2023;37(4):327-369. PMID 37039129. doi:10.1177/02698811231158232"
       },
       {
         "consultaPubMed": "(\"Catatonia\"[Mesh]) AND (\"Diagnosis\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica",
+        "pmid": "37236789",
+        "citacao": "Rogers JP, Zandi MS, David AS. The diagnosis and treatment of catatonia. Clin Med (Lond). 2023;23(3):242-245. PMID 37236789. doi:10.7861/clinmed.2023-0113"
       },
       {
         "consultaPubMed": "(\"Catatonia\"[Mesh]) AND (\"Emergencies\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "40123412",
+        "citacao": "Redon M, Virolle J, Montastruc F et al.. The use of antipsychotics in the treatment of catatonia: a systematic review. Eur Psychiatry. 2025;68(1):e48. PMID 40123412. doi:10.1192/j.eurpsy.2025.9"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Documento de recursos da APA",
+        "pmid": "40368005",
+        "citacao": "Wilson JE, Oldham MA, Francis A et al.. Catatonia: American Psychiatric Association Resource Document. J Acad Consult Liaison Psychiatry. 2025;66(4):277-299. PMID 40368005. doi:10.1016/j.jaclp.2025.05.001"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -1883,23 +1911,33 @@
     "referencias": [
       {
         "consultaPubMed": "\"Antipsychotic Agents\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Inappropriate Prescribing\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática (prescrição em idosos com demência)",
+        "pmid": "28807433",
+        "citacao": "Walsh KA, Dennehy R, Sinnott C et al.. Influences on Decision-Making Regarding Antipsychotic Prescribing in Nursing Home Residents With Dementia: A Systematic Review and Synthesis of Qualitative Evidence. J Am Med Dir Assoc. 2017;18(10):897.e1-897.e12. PMID 28807433. doi:10.1016/j.jamda.2017.06.032"
       },
       {
         "consultaPubMed": "\"Deprescribing\"[Mesh] AND \"Antipsychotic Agents\"[Mesh] AND \"General Practice\"[Mesh]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (desprescrição de antipsicóticos; esquema de redução a conferir no texto integral)",
+        "pmid": "29358245",
+        "citacao": "Bjerre LM, Farrell B, Hogel M et al.. Deprescribing antipsychotics for behavioural and psychological symptoms of dementia and insomnia: Evidence-based clinical practice guideline. Can Fam Physician. 2018;64(1):17-27. PMID 29358245"
       },
       {
         "consultaPubMed": "\"Antipsychotic Agents/adverse effects\"[Mesh] AND \"Metabolic Syndrome\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37623307",
+        "citacao": "Sepúlveda-Lizcano L, Arenas-Villamizar VV, Jaimes-Duarte EB et al.. Metabolic Adverse Effects of Psychotropic Drug Therapy: A Systematic Review. Eur J Investig Health Psychol Educ. 2023;13(8):1505-1520. PMID 37623307. doi:10.3390/ejihpe13080110"
       },
       {
         "consultaPubMed": "\"Substance Withdrawal Syndrome\"[Mesh] AND \"Antipsychotic Agents\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "32259826",
+        "citacao": "Cosci F, Chouinard G. Acute and Persistent Withdrawal Syndromes Following Discontinuation of Psychotropic Medications. Psychother Psychosom. 2020;89(5):283-306. PMID 32259826. doi:10.1159/000506868"
       },
       {
         "consultaPubMed": "\"Dyskinesia, Drug-Induced\"[Mesh] AND \"Antipsychotic Agents\"[Mesh] AND \"Family Practice\"[Mesh]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Metanálise em rede",
+        "pmid": "23810019",
+        "citacao": "Leucht S, Cipriani A, Spineli L et al.. Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis. Lancet. 2013;382(9896):951-62. PMID 23810019. doi:10.1016/S0140-6736(13)60733-3"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -1949,19 +1987,39 @@
     "referencias": [
       {
         "consultaPubMed": "\"Sleep Initiation and Maintenance Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Cognitive Behavioral Therapy\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "30612061",
+        "citacao": "Cheung JMY, Jarrin DC, Ballot O et al.. A systematic review of cognitive behavioral therapy for insomnia implemented in primary care and community settings. Sleep Med Rev. 2018;44:23-36. PMID 30612061. doi:10.1016/j.smrv.2018.11.001"
       },
       {
         "consultaPubMed": "\"Sleep Initiation and Maintenance Disorders\"[Mesh] AND \"Hypnotics and Sedatives\"[Mesh] AND \"Substance Withdrawal Syndrome\"[Mesh]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (europeia)",
+        "pmid": "28875581",
+        "citacao": "Riemann D, Baglioni C, Bassetti C et al.. European guideline for the diagnosis and treatment of insomnia. J Sleep Res. 2017;26(6):675-700. PMID 28875581. doi:10.1111/jsr.12594"
       },
       {
         "consultaPubMed": "Refractory insomnia primary care cognitive behavioral therapy randomized controlled trial",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Diretriz clínica (ACP)",
+        "pmid": "27136449",
+        "citacao": "Qaseem A, Kansagara D, Forciea MA et al.. Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians. Ann Intern Med. 2016;165(2):125-33. PMID 27136449. doi:10.7326/M15-2175"
       },
       {
         "consultaPubMed": "\"Sleep Initiation and Maintenance Disorders\"[Mesh] AND \"General Practice\"[Mesh] AND \"Benzodiazepines\"[Mesh]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Diretriz clínica (Alliance for Sleep; desprescrição de hipnóticos)",
+        "pmid": "37048577",
+        "citacao": "Watson NF, Benca RM, Krystal AD et al.. Alliance for Sleep Clinical Practice Guideline on Switching or Deprescribing Hypnotic Medications for Insomnia. J Clin Med. 2023;12(7). PMID 37048577. doi:10.3390/jcm12072493"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Diretriz clínica (desprescrição de BZRA)",
+        "pmid": "29760253",
+        "citacao": "Pottie K, Thompson W, Davies S et al.. Deprescribing benzodiazepine receptor agonists: Evidence-based clinical practice guideline. Can Fam Physician. 2018;64(5):339-351. PMID 29760253"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Ensaio clínico randomizado (TCC-I digital)",
+        "pmid": "30264137",
+        "citacao": "Espie CA, Emsley R, Kyle SD et al.. Effect of Digital Cognitive Behavioral Therapy for Insomnia on Health, Psychological Well-being, and Sleep-Related Quality of Life: A Randomized Clinical Trial. JAMA Psychiatry. 2019;76(1):21-30. PMID 30264137. doi:10.1001/jamapsychiatry.2018.2745"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -2011,19 +2069,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Patient Dropouts\"[Mesh] OR \"Medication Adherence\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"Community Mental Health Services\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "31948489",
+        "citacao": "Semahegn A, Torpey K, Manu A et al.. Psychotropic medication non-adherence and its associated factors among patients with major psychiatric disorders: a systematic review and meta-analysis. Syst Rev. 2020;9(1):17. PMID 31948489. doi:10.1186/s13643-020-1274-3"
       },
       {
         "consultaPubMed": "(\"Mental Health Services\"[Mesh]) AND (\"House Calls\"[Mesh] OR \"Community Health Nursing\"[Mesh]) AND (\"Patient Dropouts\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Ensaio clínico randomizado piloto (tratamento domiciliar)",
+        "pmid": "22642735",
+        "citacao": "Dewa CS, Zipursky RB, Chau N et al.. Specialized home treatment versus hospital-based outpatient treatment for first-episode psychosis: a randomized clinical trial. Early Interv Psychiatry. 2009;3(4):304-11. PMID 22642735. doi:10.1111/j.1751-7893.2009.00139.x"
       },
       {
         "consultaPubMed": "(\"Psychotropic Drugs\"[Mesh] AND \"Medication Adherence\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Metanálise",
+        "pmid": "35858887",
+        "citacao": "González de León B, Del Pino-Sedeño T, Serrano-Pérez P et al.. Effectiveness of interventions to improve medication adherence in adults with depressive disorders: a meta-analysis. BMC Psychiatry. 2022;22(1):487. PMID 35858887. doi:10.1186/s12888-022-04120-w"
       },
       {
         "consultaPubMed": "(\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Mental Disorders\"[Mesh] AND \"Secondary Prevention\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (CANMAT/ISBD)",
+        "pmid": "29536616",
+        "citacao": "Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -2073,23 +2139,33 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Bipolar Disorder\"[Mesh] OR \"Bipolar Disorder/diagnosis\"[Mesh] OR \"Bipolar Disorder/therapy\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Mass Screening\"[Mesh] OR \"Early Diagnosis\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (BAP)",
+        "pmid": "26979387",
+        "citacao": "Goodwin GM, Haddad PM, Ferrier IN et al.. Evidence-based guidelines for treating bipolar disorder: Revised third edition recommendations from the British Association for Psychopharmacology. J Psychopharmacol. 2016;30(6):495-553. PMID 26979387. doi:10.1177/0269881116636545"
       },
       {
         "consultaPubMed": "(\"Bipolar Disorder\"[Mesh] OR \"Depressive Disorder\"[Mesh]) AND (\"Diagnosis, Differential\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Diretriz clínica (CANMAT/ISBD)",
+        "pmid": "29536616",
+        "citacao": "Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609"
       },
       {
         "consultaPubMed": "(\"Antidepressive Agents\"[Mesh] OR \"Antidepressive Agents/adverse effects\"[Mesh]) AND (\"Bipolar Disorder/chemically induced\"[Mesh] OR \"Bipolar Disorder/drug therapy\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Diretriz clínica (RANZCP)",
+        "pmid": "33296123",
+        "citacao": "Malhi GS, Bell E, Boyce P et al.. The 2020 Royal Australian and New Zealand College of psychiatrists clinical practice guidelines for mood disorders: Bipolar disorder summary. Bipolar Disord. 2020;22(8):805-821. PMID 33296123. doi:10.1111/bdi.13036"
       },
       {
         "consultaPubMed": "(\"Antimanic Agents\"[Mesh] OR \"Lithium\"[Mesh] OR \"Valproic Acid\"[Mesh]) AND (\"Bipolar Disorder\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"Ambulatory Care\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão sistemática de ensaios e metanálises (lítio)",
+        "pmid": "34980362",
+        "citacao": "Fountoulakis KN, Tohen M, Zarate CA. Lithium treatment of Bipolar disorder in adults: A systematic review of randomized trials and meta-analyses. Eur Neuropsychopharmacol. 2022;54:100-115. PMID 34980362. doi:10.1016/j.euroneuro.2021.10.003"
       },
       {
         "consultaPubMed": "(\"Bipolar Disorder/therapy\"[Mesh]) AND (\"Patient Care Management\"[Mesh] OR \"Intersectoral Collaboration\"[Mesh] OR \"Referral and Consultation\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Metanálise em rede (manutenção)",
+        "pmid": "33177610",
+        "citacao": "Kishi T, Ikuta T, Matsuda Y et al.. Mood stabilizers and/or antipsychotics for bipolar disorder in the maintenance phase: a systematic review and network meta-analysis of randomized controlled trials. Mol Psychiatry. 2020;26(8):4146-4157. PMID 33177610. doi:10.1038/s41380-020-00946-6"
       }
     ],
     "categoria": "Residentes & Estudantes",

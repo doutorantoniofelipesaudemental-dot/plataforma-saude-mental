@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:05:09.566Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Delirium no pronto-atendimento: avaliação e manejo para residentes
@@ -55,7 +56,7 @@ No pronto-socorro, nossa prioridade absoluta é investigar e tratar o fator dese
 * **Revisão de drogas:** Suspenda ou reduza medicamentos com ação anticolinérgica, opioides, benzodiazepínicos e sedativos que possam estar perpetuando o quadro.
 * **Sinais de gravidade:** Quedas súbitas na saturação, instabilidade hemodinâmica, rigidez nucal ou déficits focais exigem investigação neurológica urgente e suporte intensivo.
 * **Manejo farmacológico de resgate:** Reserve os antipsicóticos apenas para situações em que há risco iminente para o paciente ou para a equipe, ou quando o sofrimento psíquico é intenso e as medidas não farmacológicas falharam.
-* **Opções medicamentosas:** Em casos selecionados de agitação grave, pode-se utilizar antipsicóticos de baixa potência como a risperidona ou o haloperidol, sempre por via oral ou conforme a via disponível, utilizando [DOSE A CONFIRMAR] e reavaliando o paciente de perto.
+* **Opções medicamentosas:** Em casos selecionados de agitação grave, pode-se utilizar antipsicóticos de baixa potência como a risperidona ou o haloperidol, sempre por via oral ou conforme a via disponível, utilizando a menor dose possível, sobretudo em idosos, e reavaliando o paciente de perto. Segundo o Project BETA, antipsicóticos em dose baixa são a escolha na agitação com delirium quando os sintomas persistem depois de tratar a causa e de tentar medidas não farmacológicas (Roppolo et al., 2020, PMID 33145538).
 * **Encaminhamento:** Se houver necessidade de investigação complexa não disponível no local ou se a causa base exigir suporte de terapia intensiva, realize o encaminhamento adequado com a história clínica detalhada.
 
 ## Pontos-chave
@@ -65,15 +66,15 @@ No pronto-socorro, nossa prioridade absoluta é investigar e tratar o fator dese
 - Utilize ferramentas rápidas de triagem, como o CAM, e diferencie o quadro da demência crônica.
 - Priorize medidas ambientais e suporte familiar antes de recorrer a intervenções farmacológicas.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Delirium"[Mesh] AND "Emergencies"[Mesh] AND "Diagnosis"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Delirium"[Mesh] AND "Emergency Service, Hospital"[Mesh] AND "Management"[Subheading]` — Diretriz — [PMID A CONFIRMAR]
-3. `"Confusion Assessment Method"[Mesh] AND "Emergency Service, Hospital"[Mesh]` — Estudo de Validação — [PMID A CONFIRMAR]
-4. `"Delirium"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Emergency Service, Hospital"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-
+1. Ormseth CH, LaHue SC, Oldham MA et al.. Predisposing and Precipitating Factors Associated With Delirium: A Systematic Review. JAMA Netw Open. 2023;6(1):e2249950. PMID 36607634. doi:10.1001/jamanetworkopen.2022.49950 — Revisão sistemática
+2. Devlin JW, Skrobik Y, Gélinas C et al.. Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU. Crit Care Med. 2018;46(9):e825-e873. PMID 30113379. doi:10.1097/CCM.0000000000003299 — Diretriz clínica (UTI, PADIS)
+3. Tieges Z, Maclullich AMJ, Anand A et al.. Diagnostic accuracy of the 4AT for delirium detection in older adults: systematic review and meta-analysis. Age Ageing. 2021;50(3):733-743. PMID 33951145. doi:10.1093/ageing/afaa224 — Revisão sistemática e metanálise (acurácia do 4AT)
+4. Girard TD, Exline MC, Carson SS et al.. Haloperidol and Ziprasidone for Treatment of Delirium in Critical Illness. N Engl J Med. 2018;379(26):2506-2516. PMID 30346242. doi:10.1056/NEJMoa1808217 — Ensaio clínico randomizado (pacientes críticos)
+5. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -81,7 +82,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

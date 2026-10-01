@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:06:49.490Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Transtorno bipolar na APS: rastreio e manejo intercrises
@@ -21,7 +22,7 @@ revisaoMedica: pendente
 > - - Observe a presença de sintomas mistos, onde a tristeza profunda vem acompanhada de forte agitação interna e ansiedade extrema.
 > - - O uso isolado de antidepressivos em pacientes com vulnerabilidade bipolar pode hiperestimular vias dopaminérgicas e noradrenérgicas, desencadeando episódio…
 > - - Os estabilizadores do humor e antipsicóticos atuam justamente modulando esses sistemas, promovendo neuroproteção e estabilização dos circuitos afetivos.
-> - - **Estabilizadores do humor:** O tratamento de escolha envolve classes como os sais de lítio ou anticonvulsivantes moduladores do humor, conforme [DOSE A CO…
+> - - **Estabilizadores do humor:** O tratamento de escolha envolve classes como os sais de lítio ou anticonvulsivantes moduladores do humor. Para o lítio, a dir…
 > - - **Antipsicóticos atípicos:** Podem ser utilizados para controle de sintomas agudos ou manutenção, sempre avaliando o perfil metabólico do paciente.
 > - - **Evitar monoterapia com antidepressivos:** Se o uso de um antidepressivo for estritamente necessário em episódios depressivos graves, ele deve vir sempre …
 > - - **Mania induzida:** Fique atento a insônia total, aceleração do pensamento, ideias de grandeza, comportamento de risco e irritabilidade extrema após inicia…
@@ -74,7 +75,7 @@ Compreender a base biológica do transtorno bipolar nos ajuda a explicar ao paci
 O manejo do transtorno bipolar na atenção primária exige cautela, escuta ativa e trabalho em rede. O objetivo principal na fase intercrises é prevenir novas recaídas e manter a estabilidade.
 
 ### Condutas de primeira linha
-- **Estabilizadores do humor:** O tratamento de escolha envolve classes como os sais de lítio ou anticonvulsivantes moduladores do humor, conforme [DOSE A CONFIRMAR].
+- **Estabilizadores do humor:** O tratamento de escolha envolve classes como os sais de lítio ou anticonvulsivantes moduladores do humor. Para o lítio, a diretriz CANMAT/ISBD 2018 sugere litemia-alvo de 0,8 a 1,2 mEq/L no tratamento agudo (0,4 a 0,8 em idosos) e de 0,6 a 1 mEq/L na manutenção, dosada cerca de 5 dias após cada ajuste de dose (PMID 29536616). Para os anticonvulsivantes, a dose segue a bula e o monitoramento específico de cada fármaco.
 - **Antipsicóticos atípicos:** Podem ser utilizados para controle de sintomas agudos ou manutenção, sempre avaliando o perfil metabólico do paciente.
 - **Evitar monoterapia com antidepressivos:** Se o uso de um antidepressivo for estritamente necessário em episódios depressivos graves, ele deve vir sempre associado a um estabilizador do humor para evitar a virada maníaca.
 
@@ -93,16 +94,15 @@ O manejo do transtorno bipolar na atenção primária exige cautela, escuta ativ
 - O tratamento de manutenção baseia-se no uso seguro de estabilizadores do humor e acompanhamento longitudinal.
 - Identifique sinais de gravidade e saiba o momento correto de acionar o suporte especializado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Bipolar Disorder"[Mesh] OR "Bipolar Disorder/diagnosis"[Mesh] OR "Bipolar Disorder/therapy"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Early Diagnosis"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-2. `("Bipolar Disorder"[Mesh] OR "Depressive Disorder"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND ("Primary Health Care"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `("Antidepressive Agents"[Mesh] OR "Antidepressive Agents/adverse effects"[Mesh]) AND ("Bipolar Disorder/chemically induced"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND ("Primary Health Care"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
-4. `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Ambulatory Care"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-5. `("Bipolar Disorder/therapy"[Mesh]) AND ("Patient Care Management"[Mesh] OR "Intersectoral Collaboration"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-
+1. Goodwin GM, Haddad PM, Ferrier IN et al.. Evidence-based guidelines for treating bipolar disorder: Revised third edition recommendations from the British Association for Psychopharmacology. J Psychopharmacol. 2016;30(6):495-553. PMID 26979387. doi:10.1177/0269881116636545 — Diretriz clínica (BAP)
+2. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
+3. Malhi GS, Bell E, Boyce P et al.. The 2020 Royal Australian and New Zealand College of psychiatrists clinical practice guidelines for mood disorders: Bipolar disorder summary. Bipolar Disord. 2020;22(8):805-821. PMID 33296123. doi:10.1111/bdi.13036 — Diretriz clínica (RANZCP)
+4. Fountoulakis KN, Tohen M, Zarate CA. Lithium treatment of Bipolar disorder in adults: A systematic review of randomized trials and meta-analyses. Eur Neuropsychopharmacol. 2022;54:100-115. PMID 34980362. doi:10.1016/j.euroneuro.2021.10.003 — Revisão sistemática de ensaios e metanálises (lítio)
+5. Kishi T, Ikuta T, Matsuda Y et al.. Mood stabilizers and/or antipsychotics for bipolar disorder in the maintenance phase: a systematic review and network meta-analysis of randomized controlled trials. Mol Psychiatry. 2020;26(8):4146-4157. PMID 33177610. doi:10.1038/s41380-020-00946-6 — Metanálise em rede (manutenção)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -110,7 +110,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:06:37.817Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Abandono de tratamento psiquiátrico: estratégias de resgate na UBS
@@ -19,9 +20,9 @@ revisaoMedica: pendente
 > - *   **Vulnerabilidade Estressora:** O cérebro em recuperação ainda responde de forma intensa aos estressores do cotidiano. Sem a proteção farmacológica e o s…
 > - *   **Avaliação de Risco:** Investigue imediatamente ideação suicida, sintomas psicóticos agudos, agitação psicomotora ou incapacidade de autocuidado. Se hou…
 > - *   **Reinício Medicamentoso:** Na maioria das vezes, se o paciente estava bem com o esquema anterior e tolerava bem, podemos reiniciar a mesma classe terapê…
-> - *   Antidepressipvos (Inibidores Seletivos da Reaptação de Serotonina): reiniciar com [DOSE A CONFIRMAR].
-> - *   Estabilizadores de Humor (como sais de lítio ou anticonvulsivantes): dosagem inicial e exames laboratoriais [DOSE A CONFIRMAR].
-> - *   Antipsicóticos (típicos ou atípicos): ajustar conforme o perfil de sintomas e tolerabilidade, [DOSE A CONFIRMAR].
+> - *   Antidepressipvos (Inibidores Seletivos da Reaptação de Serotonina): reiniciar com dose individualizada, conforme a resposta e a tolerância já conhecidas,…
+> - *   Estabilizadores de Humor (como sais de lítio ou anticonvulsivantes): dosagem inicial individualizada e exames laboratoriais de base e de seguimento, segu…
+> - *   Antipsicóticos (típicos ou atípicos): ajustar conforme o perfil de sintomas e a tolerabilidade, com dose individualizada.
 > - *   **Manejo de Efeitos Colaterais:** A principal causa de abandono é o desconforto físico. Valide a queixa e oriente ajustes de horário ou troca de fármaco …
 > - *   **Critérios de Encaminhamento:** Encaminhe para o especialista (Psiquiatria) quando houver refratariedade ao tratamento na atenção básica, incerteza diag…
 
@@ -59,9 +60,9 @@ O atendimento ao paciente resgatado exige avaliação clínica cuidadosa e condu
 *   **Avaliação de Risco:** Investigue imediatamente ideação suicida, sintomas psicóticos agudos, agitação psicomotora ou incapacidade de autocuidado. Se houver risco iminente, acione o suporte adequado (SAMU 192).
 *   **Reinício Medicamentoso:** Na maioria das vezes, se o paciente estava bem com o esquema anterior e tolerava bem, podemos reiniciar a mesma classe terapêutica. Avalie a necessidade de reintrodução gradual para minimizar efeitos colaterais iniciais.
 *   **Classes Terapêuticas Comuns:** 
-    *   Antidepressipvos (Inibidores Seletivos da Reaptação de Serotonina): reiniciar com [DOSE A CONFIRMAR].
-    *   Estabilizadores de Humor (como sais de lítio ou anticonvulsivantes): dosagem inicial e exames laboratoriais [DOSE A CONFIRMAR].
-    *   Antipsicóticos (típicos ou atípicos): ajustar conforme o perfil de sintomas e tolerabilidade, [DOSE A CONFIRMAR].
+    *   Antidepressipvos (Inibidores Seletivos da Reaptação de Serotonina): reiniciar com dose individualizada, conforme a resposta e a tolerância já conhecidas, e reavaliar de forma precoce.
+    *   Estabilizadores de Humor (como sais de lítio ou anticonvulsivantes): dosagem inicial individualizada e exames laboratoriais de base e de seguimento, segundo o protocolo local; no caso do lítio, a litemia orienta a dose (CANMAT/ISBD 2018, PMID 29536616).
+    *   Antipsicóticos (típicos ou atípicos): ajustar conforme o perfil de sintomas e a tolerabilidade, com dose individualizada.
 *   **Manejo de Efeitos Colaterais:** A principal causa de abandono é o desconforto físico. Valide a queixa e oriente ajustes de horário ou troca de fármaco dentro da mesma classe se necessário.
 *   **Critérios de Encaminhamento:** Encaminhe para o especialista (Psiquiatria) quando houver refratariedade ao tratamento na atenção básica, incerteza diagnóstica complexa, risco elevado persistente ou gestantes com quadros graves.
 
@@ -72,15 +73,14 @@ O atendimento ao paciente resgatado exige avaliação clínica cuidadosa e condu
 - Investigar efeitos colaterais incômodos é a chave para recuperar a adesão do paciente.
 - O manejo clínico envolve avaliar riscos imediatos, reintroduzir medicações com cautela e simplificar o esquema terapêutico.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Patient Dropouts"[Mesh] OR "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Community Mental Health Services"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Mental Health Services"[Mesh]) AND ("House Calls"[Mesh] OR "Community Health Nursing"[Mesh]) AND ("Patient Dropouts"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Psychotropic Drugs"[Mesh] AND "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
-4. `("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Disorders"[Mesh] AND "Secondary Prevention"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-
+1. Semahegn A, Torpey K, Manu A et al.. Psychotropic medication non-adherence and its associated factors among patients with major psychiatric disorders: a systematic review and meta-analysis. Syst Rev. 2020;9(1):17. PMID 31948489. doi:10.1186/s13643-020-1274-3 — Revisão sistemática e metanálise
+2. Dewa CS, Zipursky RB, Chau N et al.. Specialized home treatment versus hospital-based outpatient treatment for first-episode psychosis: a randomized clinical trial. Early Interv Psychiatry. 2009;3(4):304-11. PMID 22642735. doi:10.1111/j.1751-7893.2009.00139.x — Ensaio clínico randomizado piloto (tratamento domiciliar)
+3. González de León B, Del Pino-Sedeño T, Serrano-Pérez P et al.. Effectiveness of interventions to improve medication adherence in adults with depressive disorders: a meta-analysis. BMC Psychiatry. 2022;22(1):487. PMID 35858887. doi:10.1186/s12888-022-04120-w — Metanálise
+4. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -88,7 +88,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

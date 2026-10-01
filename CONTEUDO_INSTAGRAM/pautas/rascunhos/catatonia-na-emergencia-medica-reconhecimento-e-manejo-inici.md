@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:05:30.380Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Catatonia na emergência médica: reconhecimento e manejo inicial
@@ -18,11 +19,11 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (11):
 > - Olá, colega médico. Quando nos deparamos com um paciente imóvel, mudo ou que parece alheio ao mundo no pronto atendimento, nosso coração costuma acelerar. A …
 > - - **Posturamento:** Manutenção espontânea de posturas inadequadas ou bizarras contra a gravidade por longos períodos.
-> - 2. **Realize o teste do lorazepam:** Esta é uma manobra diagnóstica e terapêutica de grande valor na emergência. Administre lorazepam por via oral, sublingua…
+> - 2. **Realize o teste do lorazepam:** Esta é uma manobra diagnóstica e terapêutica de grande valor na emergência. Administre lorazepam 1 a 2 mg por via endove…
 > - - **Hipoatividade GABAérgica:** Há uma redução na atividade dos receptores GABA-A em áreas específicas do córtex frontal e dos gânglios da base. Isso explica…
 > - - **Disfunção Dopaminérgica:** Observa-se frequentemente um estado de hipodopaminergia na via nigroestriatal e mesocortical, o que justifica a cautela extrem…
 > - O manejo inicial na sala de emergência ou na unidade básica de saúde deve ser rápido, seguro e focado em reverter o quadro e afastar causas orgânicas.
-> - - **Benzodiazepínicos:** O lorazepam é o fármaco de escolha. Inicie com [DOSE A CONFIRMAR] por via endovenosa ou intramuscular. Se houver resposta parcial, r…
+> - - **Benzodiazepínicos:** O lorazepam é o fármaco de escolha. Inicie com 1 a 2 mg por via endovenosa ou intramuscular. Na maioria dos estudos, a dose usada fo…
 > - - **Encaminhe imediatamente para a Unidade de Terapia Intensiva (UTI):** Se houver sinais de instabilidade autonômica, febre alta, rigidez grave ou se o paci…
 > - - **Eletroconvulsoterapia (ECT):** É o padrão-ouro para casos refratários aos benzodiazepínicos ou na catatonia letal. Acione a equipe de psiquiatria e o hos…
 > - - O teste do lorazepam é uma conduta diagnóstica e terapêutica imediata na emergência.
@@ -46,7 +47,7 @@ Identificar a catatonia exige um olhar atento e uma avaliação sistemática à 
 
 ### Como conduzir a avaliação na emergência
 1. **Aplique a Escala de Bush-Francis (BFCRS):** Utilize os primeiros 14 itens para rastreamento rápido. A presença de dois ou mais critérios já sugere fortemente o quadro.
-2. **Realize o teste do lorazepam:** Esta é uma manobra diagnóstica e terapêutica de grande valor na emergência. Administre lorazepam por via oral, sublingual ou endovenosa [DOSE A CONFIRMAR] e reavalie o paciente após 5 a 15 minutos. A melhora dramática da catatonia confirma o diagnóstico.
+2. **Realize o teste do lorazepam:** Esta é uma manobra diagnóstica e terapêutica de grande valor na emergência. Administre lorazepam 1 a 2 mg por via endovenosa ou intramuscular, ou 2 mg por via oral, e reavalie o paciente após 5 minutos (endovenosa), 15 minutos (intramuscular) ou 30 minutos (oral); a resposta por via oral costuma ser mais lenta. Considera-se resposta positiva uma redução de 50% em uma escala padronizada, como a BFCRS, o que apoia o diagnóstico (Rogers et al., 2023, PMID 37039129).
 3. **Garanta a segurança clínica:** Monitore sinais vitais rigorosamente. A catatonia pode evoluir para a forma letal, marcada por febre alta, instabilidade autonômica e rigidez extrema, exigindo suporte intensivo imediato.
 
 ## Fisiopatologia
@@ -70,7 +71,7 @@ Embora os mecanismos exatos ainda sejam objeto de estudo, a principal teoria apo
 O manejo inicial na sala de emergência ou na unidade básica de saúde deve ser rápido, seguro e focado em reverter o quadro e afastar causas orgânicas.
 
 ### Condutas de Primeira Linha
-- **Benzodiazepínicos:** O lorazepam é o fármaco de escolha. Inicie com [DOSE A CONFIRMAR] por via endovenosa ou intramuscular. Se houver resposta parcial, repita a dose conforme a avaliação clínica. O diazepam também é uma alternativa, mas o lorazepam costuma ter perfil mais previsível.
+- **Benzodiazepínicos:** O lorazepam é o fármaco de escolha. Inicie com 1 a 2 mg por via endovenosa ou intramuscular. Na maioria dos estudos, a dose usada foi de 1 a 4 mg por dia, com relatos de até 16 mg por dia e máximo de 24 mg por dia em alguns protocolos; na catatonia maligna, a diretriz britânica sugere começar com 8 mg por dia e titular conforme a resposta e a tolerância (Rogers et al., 2023, PMID 37039129). Se houver resposta parcial, repita a dose conforme a avaliação clínica. O diazepam também é uma alternativa, mas o lorazepam costuma ter perfil mais previsível.
 - **Suporte Clínico Geral:** Hidratação venosa, prevenção de trombose venosa profunda, proteção de úlceras de pressão e sondagem vesical se houver retenção urinária. Mantenha o paciente em ambiente calmo.
 
 ### Investigação Etiológica
@@ -98,15 +99,15 @@ Fique atento aos sinais de **catatonia letal (ou maligna)**:
 - A febre e a instabilidade autonômica indicam catatonia letal, exigindo transferência urgente para a UTI.
 - Evite o uso de antipsicóticos em altas doses na vigência de catatonia não esclarecida para não agravar o quadro.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Catatonia"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Catatonia"[Mesh]) AND ("Lorazepam"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Catatonia"[Mesh]) AND ("Diagnosis"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-4. `("Catatonia"[Mesh]) AND ("Emergencies"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
-
+1. Jaimes-Albornoz W, Serra-Mestres J. Catatonia in the emergency department. Emerg Med J. 2012;29(11):863-7. PMID 22389352. doi:10.1136/emermed-2011-200896 — Revisão
+2. Rogers JP, Oldham MA, Fricchione G et al.. Evidence-based consensus guidelines for the management of catatonia: Recommendations from the British Association for Psychopharmacology. J Psychopharmacol. 2023;37(4):327-369. PMID 37039129. doi:10.1177/02698811231158232 — Diretriz clínica (consenso da BAP)
+3. Rogers JP, Zandi MS, David AS. The diagnosis and treatment of catatonia. Clin Med (Lond). 2023;23(3):242-245. PMID 37236789. doi:10.7861/clinmed.2023-0113 — Diretriz clínica
+4. Redon M, Virolle J, Montastruc F et al.. The use of antipsychotics in the treatment of catatonia: a systematic review. Eur Psychiatry. 2025;68(1):e48. PMID 40123412. doi:10.1192/j.eurpsy.2025.9 — Revisão sistemática
+5. Wilson JE, Oldham MA, Francis A et al.. Catatonia: American Psychiatric Association Resource Document. J Acad Consult Liaison Psychiatry. 2025;66(4):277-299. PMID 40368005. doi:10.1016/j.jaclp.2025.05.001 — Documento de recursos da APA
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -114,7 +115,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

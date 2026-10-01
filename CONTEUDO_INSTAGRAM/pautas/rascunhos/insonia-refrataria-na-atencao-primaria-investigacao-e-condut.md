@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:06:31.372Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Insônia refratária na atenção primária: investigação e conduta
@@ -18,7 +19,7 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (5):
 > - A base do tratamento da insônia crônica é a TCC-I. Ela apresenta eficácia superior aos medicamentos a médio e longo prazo, sem os riscos de tolerância e depe…
 > - Muitos pacientes chegam usando benzodiazepínicos ou agonistas de receptores de benzodiazepínicos por anos.
-> - - Reduza a dose de forma gradual, por exemplo, diminuindo 10% a 25% da dose a cada [DOSE A CONFIRMAR] semanas.
+> - - Reduza a dose de forma gradual, por exemplo, diminuindo 10% a 25% da dose a cada uma a duas semanas, com intervalos maiores se surgirem sintomas de retirad…
 > - Se houver comorbidades associadas, medicações sedativas de menor risco podem ser consideradas por tempo limitado, sempre associadas à TCC-I. Classes como ant…
 > - Encaminhe para avaliação psiquiátrica especializada ou centros de referência se houver:
 
@@ -59,11 +60,11 @@ A base do tratamento da insônia crônica é a TCC-I. Ela apresenta eficácia su
 ### Retirada gradual de hipnóticos
 Muitos pacientes chegam usando benzodiazepínicos ou agonistas de receptores de benzodiazepínicos por anos. 
 - Explique que a retirada será lenta e negociada.
-- Reduza a dose de forma gradual, por exemplo, diminuindo 10% a 25% da dose a cada [DOSE A CONFIRMAR] semanas.
+- Reduza a dose de forma gradual, por exemplo, diminuindo 10% a 25% da dose a cada uma a duas semanas, com intervalos maiores se surgirem sintomas de retirada; não há consenso sobre o esquema ideal (Watson et al., 2023, PMID 37048577).
 - Ofereça suporte frequente durante esse período para manejar a ansiedade de rebote.
 
 ### Quando usar farmacoterapia de apoio
-Se houver comorbidades associadas, medicações sedativas de menor risco podem ser consideradas por tempo limitado, sempre associadas à TCC-I. Classes como antidepressivos sedativos em baixas doses podem ser avaliadas. A dose exata deve seguir os protocolos clínicos e a avaliação individual [DOSE A CONFIRMAR].
+Se houver comorbidades associadas, medicações sedativas de menor risco podem ser consideradas por tempo limitado, sempre associadas à TCC-I. Classes como antidepressivos sedativos em baixas doses podem ser avaliadas. A dose exata deve seguir a bula, os protocolos clínicos e a avaliação individual.
 
 ### Sinais de gravidade e encaminhamento
 Encaminhe para avaliação psiquiátrica especializada ou centros de referência se houver:
@@ -78,15 +79,16 @@ Encaminhe para avaliação psiquiátrica especializada ou centros de referência
 - O diário do sono é ferramenta essencial para entender o padrão real de repouso.
 - A retirada de hipnóticos deve ser gradual, negociada e acompanhada de perto para evitar abandono.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Cognitive Behavioral Therapy"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Hypnotics and Sedatives"[Mesh] AND "Substance Withdrawal Syndrome"[Mesh]` — Diretriz — [PMID A CONFIRMAR]
-3. `Refractory insomnia primary care cognitive behavioral therapy randomized controlled trial` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "General Practice"[Mesh] AND "Benzodiazepines"[Mesh]` — Metanálise — [PMID A CONFIRMAR]
-
+1. Cheung JMY, Jarrin DC, Ballot O et al.. A systematic review of cognitive behavioral therapy for insomnia implemented in primary care and community settings. Sleep Med Rev. 2018;44:23-36. PMID 30612061. doi:10.1016/j.smrv.2018.11.001 — Revisão sistemática
+2. Riemann D, Baglioni C, Bassetti C et al.. European guideline for the diagnosis and treatment of insomnia. J Sleep Res. 2017;26(6):675-700. PMID 28875581. doi:10.1111/jsr.12594 — Diretriz clínica (europeia)
+3. Qaseem A, Kansagara D, Forciea MA et al.. Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians. Ann Intern Med. 2016;165(2):125-33. PMID 27136449. doi:10.7326/M15-2175 — Diretriz clínica (ACP)
+4. Watson NF, Benca RM, Krystal AD et al.. Alliance for Sleep Clinical Practice Guideline on Switching or Deprescribing Hypnotic Medications for Insomnia. J Clin Med. 2023;12(7). PMID 37048577. doi:10.3390/jcm12072493 — Diretriz clínica (Alliance for Sleep; desprescrição de hipnóticos)
+5. Pottie K, Thompson W, Davies S et al.. Deprescribing benzodiazepine receptor agonists: Evidence-based clinical practice guideline. Can Fam Physician. 2018;64(5):339-351. PMID 29760253 — Diretriz clínica (desprescrição de BZRA)
+6. Espie CA, Emsley R, Kyle SD et al.. Effect of Digital Cognitive Behavioral Therapy for Insomnia on Health, Psychological Well-being, and Sleep-Related Quality of Life: A Randomized Clinical Trial. JAMA Psychiatry. 2019;76(1):21-30. PMID 30264137. doi:10.1001/jamapsychiatry.2018.2745 — Ensaio clínico randomizado (TCC-I digital)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

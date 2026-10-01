@@ -467,10 +467,11 @@
 - **público:** Residentes de Medicina de Família, Clínica Médica e Estudantes de Medicina · **ângulo:** Foco prático no cenário de alta pressão do pronto-socorro, priorizando reversão de gatilhos orgânicos antes do uso de antipsicóticos.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Delirium"[Mesh] AND "Emergencies"[Mesh] AND "Diagnosis"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Delirium"[Mesh] AND "Emergency Service, Hospital"[Mesh] AND "Management"[Subheading]` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `"Confusion Assessment Method"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Estudo de Validação) [PMID A CONFIRMAR]
-  - PubMed: `"Delirium"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `"Delirium"[Mesh] AND "Emergencies"[Mesh] AND "Diagnosis"[Mesh]` (Revisão sistemática) 36607634
+  - PubMed: `"Delirium"[Mesh] AND "Emergency Service, Hospital"[Mesh] AND "Management"[Subheading]` (Diretriz clínica (UTI, PADIS)) 30113379
+  - PubMed: `"Confusion Assessment Method"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Revisão sistemática e metanálise (acurácia do 4AT)) 33951145
+  - PubMed: `"Delirium"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Emergency Service, Hospital"[Mesh]` (Ensaio clínico randomizado (pacientes críticos)) 30346242
+  - PubMed: `` (Diretriz (Project BETA) e revisão) 33145538
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid.md` · slug: `delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid` · pauta: `2026-09-30-32-delirium-no-pronto-atendimento`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.22)
@@ -484,10 +485,11 @@
 - **público:** Residentes de Psiquiatria, Clínica Médica e Médicos de Emergência · **ângulo:** Enfoque no reconhecimento precoce para evitar complicações fatais como a catatonia letal.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Catatonia"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Catatonia"[Mesh]) AND ("Lorazepam"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Catatonia"[Mesh]) AND ("Diagnosis"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Catatonia"[Mesh]) AND ("Emergencies"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Catatonia"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` (Revisão) 22389352
+  - PubMed: `("Catatonia"[Mesh]) AND ("Lorazepam"[Mesh])` (Diretriz clínica (consenso da BAP)) 37039129
+  - PubMed: `("Catatonia"[Mesh]) AND ("Diagnosis"[Mesh])` (Diretriz clínica) 37236789
+  - PubMed: `("Catatonia"[Mesh]) AND ("Emergencies"[Mesh])` (Revisão sistemática) 40123412
+  - PubMed: `` (Documento de recursos da APA) 40368005
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici.md` · slug: `catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici` · pauta: `2026-09-30-33-catatonia-na-emergencia-medica`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Síndrome de abstinência alcoólica: reconhecimento e manejo inicial" (similaridade 0.33)
@@ -532,11 +534,11 @@
 - **público:** Médicos residentes de Medicina de Família e Comunidade e clínicos gerais · **ângulo:** Foco na segurança do paciente e manejo de efeitos adversos a longo prazo na comunidade.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh] AND "Inappropriate Prescribing"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Deprescribing"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "General Practice"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `"Antipsychotic Agents/adverse effects"[Mesh] AND "Metabolic Syndrome"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Substance Withdrawal Syndrome"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `"Dyskinesia, Drug-Induced"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Family Practice"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `"Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh] AND "Inappropriate Prescribing"[Mesh]` (Revisão sistemática (prescrição em idosos com demência)) 28807433
+  - PubMed: `"Deprescribing"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "General Practice"[Mesh]` (Diretriz clínica (desprescrição de antipsicóticos; esquema de redução a conferir no texto integral)) 29358245
+  - PubMed: `"Antipsychotic Agents/adverse effects"[Mesh] AND "Metabolic Syndrome"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão sistemática) 37623307
+  - PubMed: `"Substance Withdrawal Syndrome"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão) 32259826
+  - PubMed: `"Dyskinesia, Drug-Induced"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Family Practice"[Mesh]` (Metanálise em rede) 23810019
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri.md` · slug: `uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri` · pauta: `2026-09-30-36-uso-de-antipsicoticos-na-aps-i`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS" (similaridade 0.18)
@@ -550,10 +552,12 @@
 - **público:** Residentes de Medicina de Família e Comunidade e estudantes · **ângulo:** Alternativas não farmacológicas estruturadas aplicáveis à realidade do posto de saúde.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Cognitive Behavioral Therapy"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Hypnotics and Sedatives"[Mesh] AND "Substance Withdrawal Syndrome"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `Refractory insomnia primary care cognitive behavioral therapy randomized controlled trial` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "General Practice"[Mesh] AND "Benzodiazepines"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Cognitive Behavioral Therapy"[Mesh]` (Revisão sistemática) 30612061
+  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "Hypnotics and Sedatives"[Mesh] AND "Substance Withdrawal Syndrome"[Mesh]` (Diretriz clínica (europeia)) 28875581
+  - PubMed: `Refractory insomnia primary care cognitive behavioral therapy randomized controlled trial` (Diretriz clínica (ACP)) 27136449
+  - PubMed: `"Sleep Initiation and Maintenance Disorders"[Mesh] AND "General Practice"[Mesh] AND "Benzodiazepines"[Mesh]` (Diretriz clínica (Alliance for Sleep; desprescrição de hipnóticos)) 37048577
+  - PubMed: `` (Diretriz clínica (desprescrição de BZRA)) 29760253
+  - PubMed: `` (Ensaio clínico randomizado (TCC-I digital)) 30264137
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/insonia-refrataria-na-atencao-primaria-investigacao-e-condut.md` · slug: `insonia-refrataria-na-atencao-primaria-investigacao-e-condut` · pauta: `2026-09-30-37-insonia-refrataria-na-atencao-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Insônia na consulta de rotina: além da prescrição automática" (similaridade 0.28)
@@ -567,10 +571,10 @@
 - **público:** Residentes de Medicina de Família, Enfermagem da APS e Estudantes · **ângulo:** Visão comunitária do cuidado longitudinal e prevenção de descompensações graves.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Patient Dropouts"[Mesh] OR "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Community Mental Health Services"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Mental Health Services"[Mesh]) AND ("House Calls"[Mesh] OR "Community Health Nursing"[Mesh]) AND ("Patient Dropouts"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Psychotropic Drugs"[Mesh] AND "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
-  - PubMed: `("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Disorders"[Mesh] AND "Secondary Prevention"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Patient Dropouts"[Mesh] OR "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Community Mental Health Services"[Mesh])` (Revisão sistemática e metanálise) 31948489
+  - PubMed: `("Mental Health Services"[Mesh]) AND ("House Calls"[Mesh] OR "Community Health Nursing"[Mesh]) AND ("Patient Dropouts"[Mesh])` (Ensaio clínico randomizado piloto (tratamento domiciliar)) 22642735
+  - PubMed: `("Psychotropic Drugs"[Mesh] AND "Medication Adherence"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) 35858887
+  - PubMed: `("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Disorders"[Mesh] AND "Secondary Prevention"[Mesh])` (Diretriz clínica (CANMAT/ISBD)) 29536616
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n.md` · slug: `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` · pauta: `2026-09-30-38-abandono-de-tratamento-psiquia`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Transtornos somatoformes na UBS: investigação e manejo clínico" (similaridade 0.24)
@@ -584,11 +588,11 @@
 - **público:** Residentes de Medicina de Família e estudantes de medicina · **ângulo:** Diferenciação clínica fundamental entre depressão unipolar e bipolar no primeiro atendimento.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Bipolar Disorder"[Mesh] OR "Bipolar Disorder/diagnosis"[Mesh] OR "Bipolar Disorder/therapy"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Early Diagnosis"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Bipolar Disorder"[Mesh] OR "Depressive Disorder"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Antidepressive Agents"[Mesh] OR "Antidepressive Agents/adverse effects"[Mesh]) AND ("Bipolar Disorder/chemically induced"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
-  - PubMed: `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Ambulatory Care"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Bipolar Disorder/therapy"[Mesh]) AND ("Patient Care Management"[Mesh] OR "Intersectoral Collaboration"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Bipolar Disorder"[Mesh] OR "Bipolar Disorder/diagnosis"[Mesh] OR "Bipolar Disorder/therapy"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Early Diagnosis"[Mesh])` (Diretriz clínica (BAP)) 26979387
+  - PubMed: `("Bipolar Disorder"[Mesh] OR "Depressive Disorder"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz clínica (CANMAT/ISBD)) 29536616
+  - PubMed: `("Antidepressive Agents"[Mesh] OR "Antidepressive Agents/adverse effects"[Mesh]) AND ("Bipolar Disorder/chemically induced"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz clínica (RANZCP)) 33296123
+  - PubMed: `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Ambulatory Care"[Mesh])` (Revisão sistemática de ensaios e metanálises (lítio)) 34980362
+  - PubMed: `("Bipolar Disorder/therapy"[Mesh]) AND ("Patient Care Management"[Mesh] OR "Intersectoral Collaboration"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise em rede (manutenção)) 33177610
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises.md` · slug: `transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises` · pauta: `2026-09-30-39-transtorno-bipolar-na-aps-rast`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.24)

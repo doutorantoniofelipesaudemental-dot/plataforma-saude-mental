@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:06:24.392Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Uso de antipsicóticos na APS: indicações, ajustes e desprescrição
@@ -84,16 +85,15 @@ Os antipsicóticos atípicos apresentam forte afinidade por outros receptores, c
 - Planeje a desprescrição de forma gradual e segura, nunca abrupta, para evitar efeitos rebote.
 - Esteja atento a sinais de alerta como a síndrome neuroléptica maligna e a discinesia tardia.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh] AND "Inappropriate Prescribing"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Deprescribing"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "General Practice"[Mesh]` — Diretriz — [PMID A CONFIRMAR]
-3. `"Antipsychotic Agents/adverse effects"[Mesh] AND "Metabolic Syndrome"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-4. `"Substance Withdrawal Syndrome"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-5. `"Dyskinesia, Drug-Induced"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Family Practice"[Mesh]` — Metanálise — [PMID A CONFIRMAR]
-
+1. Walsh KA, Dennehy R, Sinnott C et al.. Influences on Decision-Making Regarding Antipsychotic Prescribing in Nursing Home Residents With Dementia: A Systematic Review and Synthesis of Qualitative Evidence. J Am Med Dir Assoc. 2017;18(10):897.e1-897.e12. PMID 28807433. doi:10.1016/j.jamda.2017.06.032 — Revisão sistemática (prescrição em idosos com demência)
+2. Bjerre LM, Farrell B, Hogel M et al.. Deprescribing antipsychotics for behavioural and psychological symptoms of dementia and insomnia: Evidence-based clinical practice guideline. Can Fam Physician. 2018;64(1):17-27. PMID 29358245 — Diretriz clínica (desprescrição de antipsicóticos; esquema de redução a conferir no texto integral)
+3. Sepúlveda-Lizcano L, Arenas-Villamizar VV, Jaimes-Duarte EB et al.. Metabolic Adverse Effects of Psychotropic Drug Therapy: A Systematic Review. Eur J Investig Health Psychol Educ. 2023;13(8):1505-1520. PMID 37623307. doi:10.3390/ejihpe13080110 — Revisão sistemática
+4. Cosci F, Chouinard G. Acute and Persistent Withdrawal Syndromes Following Discontinuation of Psychotropic Medications. Psychother Psychosom. 2020;89(5):283-306. PMID 32259826. doi:10.1159/000506868 — Revisão
+5. Leucht S, Cipriani A, Spineli L et al.. Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis. Lancet. 2013;382(9896):951-62. PMID 23810019. doi:10.1016/S0140-6736(13)60733-3 — Metanálise em rede
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -101,7 +101,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
