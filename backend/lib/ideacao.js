@@ -127,6 +127,12 @@ const LOTES = {
     { grupo: 'Linhas de Cuidado (Cuidadores & Professores)', quantidade: 7 },
     { grupo: 'Condições Específicas', quantidade: 3 },
   ],
+  // Lote 6 (18 pautas): reforça Residentes & Estudantes e Condições Específicas e fecha lacunas de Relatos da Prática.
+  6: [
+    { grupo: 'Residentes & Estudantes', quantidade: 8 },
+    { grupo: 'Condições Específicas', quantidade: 6 },
+    { grupo: 'Relatos da Prática', quantidade: 4 },
+  ],
 };
 
 /** Normaliza o plano de um lote para [{ grupo, quantidade, temas }]. */
