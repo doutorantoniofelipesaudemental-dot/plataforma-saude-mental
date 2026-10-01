@@ -29,7 +29,7 @@ Dois tipos de pauta:
 1. "artigo-cientifico": artigo médico de nível científico, com as seções Guia Prático, Fisiopatologia, Manejo Clínico e Referências, fundamentado em literatura indexada no PubMed/MEDLINE (revisões sistemáticas, metanálises, ensaios clínicos, diretrizes). Para cada pauta traga de 3 a 6 "referencias": a consulta de busca no PubMed (com termos MeSH quando houver) e o tipo de estudo esperado. NUNCA invente PMID, DOI, autor, ano nem número: se não tiver certeza, escreva "[PMID A CONFIRMAR]". O médico confere cada referência antes de publicar.
 2. "cronica": crônica literária humanizada (narrativa composta, sem paciente real identificável, declarada como tal), com o aviso legal do CFM. Sem referências obrigatórias.
 
-Regras: sem sensacionalismo nem promessa de cura; nunca apresente o médico como psiquiatra nem como especialista em psiquiatria/saúde mental; tema de suicídio, autolesão e crise leva CVV 188 e SAMU 192 e nunca descreve métodos; tom acolhedor, empático e terapêutico, falando com a pessoa; título honesto, com até 90 caracteres, sem caça-clique; evite repetir pautas já publicadas (lista fornecida). Cada pauta traz: titulo, tipo, pauta (2 a 4 frases: o que o texto entrega e por que importa agora), publicoAlvo, angulo (o diferencial em relação ao que já existe), sensivel (true/false) e, no artigo científico, referencias.`;
+Regras: todo conteúdo com condutas, doses, fluxos ou protocolos (PA, UBS, urgência) deve trazer o aviso de que é orientação geral e que se respeitam sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais; sem sensacionalismo nem promessa de cura; nunca apresente o médico como psiquiatra nem como especialista em psiquiatria/saúde mental; tema de suicídio, autolesão e crise leva CVV 188 e SAMU 192 e nunca descreve métodos; tom acolhedor, empático e terapêutico, falando com a pessoa; título honesto, com até 90 caracteres, sem caça-clique; evite repetir pautas já publicadas (lista fornecida). Cada pauta traz: titulo, tipo, pauta (2 a 4 frases: o que o texto entrega e por que importa agora), publicoAlvo, angulo (o diferencial em relação ao que já existe), sensivel (true/false) e, no artigo científico, referencias.`;
 
 const t = { type: 'string' };
 const SCHEMA_IDEACAO = {
@@ -94,6 +94,7 @@ const TEMA_GUIA_ULISSES = 'Saúde mental de migrantes e expatriados: guia psicoe
 const TEMA_CUIDADOR_IDOSOS = 'Prevenção da Sobrecarga e Burnout do Cuidador Familiar de Idosos na APS';
 const TEMA_PROFESSORES = 'Gestão de Conflitos com Famílias na Inclusão Escolar e Saúde Mental Docente';
 const TEMA_DESCONTINUACAO = 'Síndrome de Descontinuação de Antidepressivos na APS: Raciocínio Clínico, Diagnóstico Diferencial e Protocolo de Desmame Gradual';
+const TEMA_OFF_LABEL = 'Uso Off-Label de Psicofármacos na Atenção Primária: Evidências Científicas, Respaldo Ético e Prática Segura';
 const LOTES = {
   1: [
     { grupo: 'Relatos da Prática', quantidade: 11, temas: [TEMA_RELATO_MIGRANTES] },
@@ -119,6 +120,12 @@ const LOTES = {
     { grupo: 'Relatos da Prática', quantidade: 7 },
     { grupo: 'Residentes & Estudantes', quantidade: 7, temas: [TEMA_DESCONTINUACAO] },
     { grupo: 'Condições Específicas', quantidade: 6 },
+  ],
+  // Lote 5 (20 pautas): reforça Residentes & Estudantes e Linhas de Cuidado, as mais distantes da meta.
+  5: [
+    { grupo: 'Residentes & Estudantes', quantidade: 10, temas: [TEMA_OFF_LABEL] },
+    { grupo: 'Linhas de Cuidado (Cuidadores & Professores)', quantidade: 7 },
+    { grupo: 'Condições Específicas', quantidade: 3 },
   ],
 };
 

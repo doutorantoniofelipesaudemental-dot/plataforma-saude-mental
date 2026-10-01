@@ -5,12 +5,12 @@
 | Categoria | Propostas | Aprovadas | Redigidas | Rejeitadas | Com problemas |
 |---|---:|---:|---:|---:|---:|
 | Relatos da Prática | 0 | 0 | 24 | 14 | 14 |
-| Residentes & Estudantes | 0 | 0 | 26 | 14 | 14 |
-| Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 10 | 9 | 8 |
+| Residentes & Estudantes | 0 | 0 | 36 | 36 | 36 |
+| Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 17 | 19 | 18 |
 | Pacientes & Famílias | 0 | 0 | 6 | 1 | 1 |
-| Condições Específicas | 0 | 0 | 9 | 2 | 2 |
+| Condições Específicas | 0 | 0 | 12 | 3 | 3 |
 | Empresas & RH | 0 | 0 | 8 | 4 | 4 |
-| **Total** | 0 | 0 | 83 | 44 | 43 |
+| **Total** | 0 | 0 | 103 | 77 | 76 |
 
 ## [redigida] O balcão da farmácia e as perguntas não feitas
 
@@ -1872,3 +1872,818 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr.md` · slug: `sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr` · pauta: `2026-09-30-127-sindrome-de-descontinuacao-de-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.29)
+
+## [rejeitada] Urgências psiquiátricas pediátricas na emergência: guia para residentes
+
+- **id:** 2026-09-30-128-urgencias-psiquiatricas-pediat
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para médicos residentes e estudantes lidarem com descompensações comportamentais e emocionais agudas em crianças e adolescentes no pronto-socorro. Aborda avaliação estruturada, exclusão de causas orgânicas e condutas iniciais com segurança e acolhimento.
+- **público:** Residentes de Medicina de Família e Comunidade, Pediatria e Estudantes de Medicina · **ângulo:** Foco exclusivo na população pediátrica em ambiente de urgência, integrando triagem rápida e exclusão de organicidade.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Emergency Psychiatry"[Mesh] OR "Mental Health Emergencies"[Mesh]) AND ("Child"[Mesh] OR "Adolescent"[Mesh]) AND "Emergency Service, Hospital"[Mesh]` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Psychiatric Department, Hospital"[Mesh]) AND ("Child Behavior Disorders"[Mesh] OR "Agitation"[Mesh]) AND "Emergency Treatment"[Mesh]` (Ensaio clínico ou estudo observacional de coorte) [PMID A CONFIRMAR]
+  - PubMed: `("Differential Diagnosis"[Mesh]) AND "Mental Disorders"[Mesh] AND "Pediatric Emergency Medicine"[Mesh]` (Revisão narrativa baseada em evidências) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.39)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.39, título 0.33)
+
+## [rejeitada] Uso de estabilizadores de humor na APS: guia prático para residentes
+
+- **id:** 2026-09-30-129-uso-de-estabilizadores-de-humo
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientações fundamentadas em evidências para o manejo, ajuste de doses e monitoramento de exames laboratoriais no uso de estabilizadores de humor na Atenção Primária. Essencial para residentes que acompanham pacientes com transtorno bipolar fora das crises.
+- **público:** Residentes de Medicina de Família e Comunidade e Médicos da APS · **ângulo:** Abordagem estritamente voltada para a rotina da Atenção Primária à Saúde, focando segurança e seguimento longitudinal.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND "Bipolar Disorder"[Mesh]` (Diretriz clínica e revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Drug Monitoring"[Mesh]) AND ("Lithium"[Mesh] OR "Anticonvulsants"[Mesh]) AND "Primary Care Physicians"[Mesh]` (Estudo de coorte ou ensaio clínico) [PMID A CONFIRMAR]
+  - PubMed: `("Bipolar Disorder"[Mesh]/drug therapy) AND ("Safety"[Mesh] OR "Adverse Effects"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão integrativa) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.83)
+- ⚠️ **problemas:** originalidade: cópia de "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.83, título 1.00)
+
+## [rejeitada] Sintomas psicóticos na atenção primária: avaliação inicial e conduta
+
+- **id:** 2026-09-30-130-sintomas-psicoticos-na-atencao
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Como conduzir o primeiro atendimento a um paciente com sintomas psicóticos na UBS, distinguindo quadros funcionais de orgânicos. Fornece um fluxograma prático de investigação laboratorial, anamnese direcionada e critérios claros de encaminhamento.
+- **público:** Estudantes de Medicina, Residentes de Medicina de Família e Comunidade · **ângulo:** Foco na diferenciação etiológica na APS antes de precipitar o uso de antipsicóticos ou o encaminhamento desnecessário.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Psychotic Disorders"[Mesh] OR "Schizophrenia"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND "Diagnosis, Differential"[Mesh]` (Diretriz clínica internacional) [PMID A CONFIRMAR]
+  - PubMed: `("Early Diagnosis"[Mesh]) AND ("Psychotic Disorders"[Mesh]) AND "Primary Care"[Mesh]` (Revisão sistemática com metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Mental Disorders, Diagnosed"[Mesh]) AND ("Organic Mental Disorders"[Mesh]) AND "Primary Health Care"[Mesh]` (Estudo transversal ou coorte) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.36)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.36, título 0.43)
+
+## [rejeitada] Transtorno de estresse pós-traumático na UBS: rastreio e manejo
+
+- **id:** 2026-09-30-131-transtorno-de-estresse-pos-tra
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Ferramentas práticas de rastreio e conduta terapêutica inicial para o Transtorno de Estresse Pós-Traumático (TEPT) na atenção primária. Aborda intervenções de primeira linha e os limites da atuação do médico generalista.
+- **público:** Residentes de Medicina de Família e Comunidade, Médicos de UBS · **ângulo:** Implementação de escalas breves de rastreio adaptadas para a consulta de rotina na APS.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Stress Disorders, Post-Traumatic"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Early Intervention (Education)"[Mesh])` (Revisão sistemática e diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Stress Disorders, Post-Traumatic"[Mesh]/therapy) AND ("Primary Care"[Mesh]) AND "Therapeutics"[Mesh]` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+  - PubMed: `("Psychotherapy"[Mesh] OR "Antidepressive Agents"[Mesh]) AND ("Stress Disorders, Post-Traumatic"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão narrativa baseada em evidências) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Transtorno de estresse pós-traumático: reconhecimento na APS" (similaridade 0.54)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Transtorno de estresse pós-traumático: reconhecimento na APS" (similaridade 0.54, título 0.62)
+
+## [rejeitada] Avaliação de queixas cognitivas em idosos na UBS: guia prático
+
+- **id:** 2026-09-30-132-avaliacao-de-queixas-cognitiva
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Abordagem sistemática para diferenciar o envelhecimento cognitivo normal do comprometimento cognitivo leve e das demências na UBS. Apresenta testes de rastreio rápidos e conduta diante da queixa de perda de memória.
+- **público:** Residentes de Medicina de Família e Comunidade, Estudantes de Medicina · **ângulo:** Uso de testes cognitivos breves aplicáveis no tempo limitado da consulta de atenção primária.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Cognitive Dysfunction"[Mesh] OR "Dementia"[Mesh] OR "Memory Disorders"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Diagnosis"[Mesh])` (Diretriz clínica baseada em evidências) [PMID A CONFIRMAR]
+  - PubMed: `("Neuropsychological Tests"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Care"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Cognitive Impairment"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND "Family Practice"[Mesh]` (Estudo de validação diagnóstica) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Avaliação de queixas cognitivas em idosos na UBS: guia prático" (similaridade 0.86)
+- ⚠️ **problemas:** originalidade: cópia de "Avaliação de queixas cognitivas em idosos na UBS: guia prático" (similaridade 0.86, título 1.00)
+
+## [rejeitada] Uso de antidepressivos em populações especiais na APS
+
+- **id:** 2026-09-30-133-uso-de-antidepressivos-em-popu
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia de escolha e manejo de antidepressivos considerando comorbidades clínicas prevalentes na atenção primária, como insuficiência renal, hepática e cardiopatias. Foca a segurança farmacológica na prática clínica diária.
+- **público:** Médicos Residentes de Medicina de Família e Comunidade, Estudantes de Medicina · **ângulo:** Cruzamento de interações medicamentosas e comorbidades clínicas comuns na APS na prescrição de antidepressivos.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Antidepressive Agents"[Mesh]/adverse effects) AND ("Comorbidity"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh])` (Revisão sistemática e diretriz) [PMID A CONFIRMAR]
+  - PubMed: `("Cardiovascular Diseases"[Mesh] OR "Kidney Diseases"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND "Drug Interactions"[Mesh]` (Estudo de coorte ou revisão baseada em evidências) [PMID A CONFIRMAR]
+  - PubMed: `("Aged"[Mesh] OR "Multimorbidity"[Mesh]) AND ("Antidepressive Agents"[Mesh]/therapeutic use) AND "Primary Care"[Mesh]` (Revisão integrativa) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Uso de antidepressivos em populações especiais na APS" (similaridade 0.8)
+- ⚠️ **problemas:** originalidade: cópia de "Uso de antidepressivos em populações especiais na APS" (similaridade 0.80, título 1.00)
+
+## [rejeitada] Manejo da recusa alimentar e seletividade grave no pronto atendimento
+
+- **id:** 2026-09-30-134-manejo-da-recusa-alimentar-e-s
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Protocolo prático para residentes e médicos de plantão diante de quadros graves de recusa alimentar, incluindo desnutrição aguda, recusa hídrica e risco de refeeding syndrome. Orienta condutas imediatas e critérios de internação.
+- **público:** Residentes de Pediatria, Clínica Médica e Emergência, Estudantes de Medicina · **ângulo:** Foco na estabilização clínica imediata e na identificação de riscos metabólicos graves no ambiente de pronto-socorro.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Feeding and Eating Disorders"[Mesh] OR "Food Refusal"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Critical Care"[Mesh] OR "Refeeding Syndrome"[Mesh])` (Diretriz clínica e revisão narrativa) [PMID A CONFIRMAR]
+  - PubMed: `("Anorexia Nervosa"[Mesh]) AND ("Emergency Treatment"[Mesh]) AND ("Malnutrition"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Feeding Disorders"[Mesh]/therapy) AND ("Child"[Mesh] OR "Adolescent"[Mesh]) AND "Hospitals, Emergency"[Mesh]` (Estudo observacional ou coorte clínica) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Manejo da recusa alimentar e seletividade grave no pronto atendimento" (similaridade 0.86)
+- ⚠️ **problemas:** originalidade: cópia de "Manejo da recusa alimentar e seletividade grave no pronto atendimento" (similaridade 0.86, título 1.00)
+
+## [rejeitada] Uso racional de antidepressivos na gestação e lactação na UBS
+
+- **id:** 2026-09-30-135-uso-racional-de-antidepressivo
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Diretrizes atualizadas para o manejo de transtornos depressivos e ansiosos em gestantes e lactantes na atenção primária. Analisa riscos e benefícios comparativos para orientar decisões clínicas seguras com a paciente.
+- **público:** Residentes de Medicina de Família e Comunidade, Ginecologia e Obstetrícia, Estudantes · **ângulo:** Equilíbrio entre o risco do transtorno mental não tratado e a exposição fetal/neonatal aos psicofármacos.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Antidepressive Agents"[Mesh]) AND ("Pregnancy"[Mesh] OR "Lactation"[Mesh] OR "Breast Feeding"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Prenatal Care"[Mesh])` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Depressive Disorder"[Mesh]) AND ("Pregnancy Complications"[Mesh]) AND ("Psychotropic Drugs"[Mesh]/safety)` (Diretriz clínica internacional) [PMID A CONFIRMAR]
+  - PubMed: `("Infant, Newborn"[Mesh]) AND ("Antidepressive Agents"[Mesh]/adverse effects) AND "Postnatal Care"[Mesh]` (Estudo de coorte prospectiva) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Uso de antidepressivos em populações especiais na APS" (similaridade 0.41)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de antidepressivos em populações especiais na APS" (similaridade 0.41, título 0.36)
+
+## [rejeitada] Manejo de episódios de raiva e agressividade no pronto atendimento
+
+- **id:** 2026-09-30-136-manejo-de-episodios-de-raiva-e
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Estratégias de descalada verbal, contenção mecânica e farmacológica segura para pacientes agitados ou agressivos no pronto-socorro. Enfatiza a proteção da equipe e a preservação da dignidade do paciente.
+- **público:** Residentes de Emergência, Clínica Médica, Psiquiatria e Equipe de Plantão · **ângulo:** Integração entre técnicas de comunicação não-violenta (descalada verbal) e protocolo farmacológico de emergência.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Aggression"[Mesh] OR "Psychomotor Agitation"[Mesh] OR "Anger"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Restraint, Physical"[Mesh] OR "Psychotropic Drugs"[Mesh])` (Diretriz clínica e revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("De-Escalation"[Mesh] OR "Communication"[Mesh]) AND ("Emergency Department"[Mesh]) AND "Violence"[Mesh]` (Revisão narrativa baseada em evidências) [PMID A CONFIRMAR]
+  - PubMed: `("Antipsychotic Agents"[Mesh]) AND ("Agitation"[Mesh]/drug therapy) AND "Emergency Treatment"[Mesh]` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Manejo de episódios de raiva e agressividade no pronto atendimento" (similaridade 0.78)
+- ⚠️ **problemas:** originalidade: cópia de "Manejo de episódios de raiva e agressividade no pronto atendimento" (similaridade 0.78, título 1.00)
+
+## [rejeitada] Investigação de fadiga crônica e exaustão na atenção primária
+
+- **id:** 2026-09-30-137-investigacao-de-fadiga-cronica
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Roteiro diagnóstico estruturado para investigar queixas inespecíficas de fadiga crônica na UBS, distinguindo causas clínicas, endócrinas, reumatológicas e psiquiátricas (como depressão e burnout).
+- **público:** Residentes de Medicina de Família e Comunidade, Estudantes de Medicina · **ângulo:** Abordagem ampla para uma queixa extremamente comum na APS, evitando exames desnecessários e valorizando o sofrimento psíquico.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Fatigue"[Mesh] OR "Fatigue Syndrome, Chronic"[Mesh] OR "Burnout, Psychological"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND "Diagnosis, Differential"[Mesh]` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Asthenia"[Mesh]) AND ("Biomarkers"[Mesh] OR "Diagnostic Tests, Routine"[Mesh]) AND "Primary Care"[Mesh]` (Estudo de coorte diagnóstica) [PMID A CONFIRMAR]
+  - PubMed: `("Mental Disorders"[Mesh]) AND ("Chronic Fatigue"[Mesh]) AND "Family Practice"[Mesh]` (Revisão integrativa baseada em evidências) [PMID A CONFIRMAR]
+- **originalidade:** copia · mais próximo: "Investigação de fadiga crônica e exaustão na atenção primária" (similaridade 0.75)
+- ⚠️ **problemas:** originalidade: cópia de "Investigação de fadiga crônica e exaustão na atenção primária" (similaridade 0.75, título 1.00)
+
+## [rejeitada] Uso de Lítio na APS: Guia Prático para Residentes
+
+- **id:** 2026-09-30-138-uso-de-litio-na-aps-guia-prati
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientação detalhada para médicos residentes sobre o manejo seguro do lítio na atenção primária, incluindo exames laboratoriais pré-tratamento, monitorização de níveis séricos e prevenção de toxicidade renal e tireoidiana. Essencial para o manejo longitudinal de pacientes com transtorno bipolar na comunidade.
+- **público:** Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos de UBS · **ângulo:** Foco estrito na segurança do manejo longitudinal na rede básica, com protocolos práticos para requisição de exames e ajuste de doses.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Lithium AND primary care AND monitoring AND guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Lithium toxicity AND primary health care AND prevention` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Bipolar disorder AND maintenance therapy AND lithium AND safety` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.45)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.45, título 0.67)
+
+## [redigida] Manejo da Insônia em Plantões: Abordagem no Pronto-Atendimento
+
+- **id:** 2026-09-30-139-manejo-da-insonia-em-plantoes-
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia rápido para residentes e internos lidarem com queixas agudas de insônia na emergência, evitando a prescrição inadequada de benzodiazepínicos e priorizando intervenções breves e higiene do sono. Aborda critérios para liberação segura e orientação de retorno à APS.
+- **público:** Residentes de medicina de emergência, internos e médicos de plantão · **ângulo:** Evita a prescrição automática de depressores do sistema nervoso central no plantão, oferecendo alternativas de manejo imediato.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Insomnia AND emergency department AND management AND guidelines` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Short-term insomnia AND acute management AND primary care` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Sedative hypnotics AND emergency department AND prescribing patterns` (Estudo Observacional) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendiment.md` · slug: `manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendiment` · pauta: `2026-09-30-139-manejo-da-insonia-em-plantoes-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Insônia refratária na atenção primária: investigação e conduta" (similaridade 0.32)
+
+## [redigida] Crise de Ansiedade vs Infarto: Diagnóstico Diferencial no PA
+
+- **id:** 2026-09-30-140-crise-de-ansiedade-vs-infarto-
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Protocolo prático para diferenciar rapidamente quadros de ataque de pânico e síndromes coronarianas agudas no pronto-socorro. Aborda exames de triagem essenciais e a condução segura do paciente com sintomas somáticos intensos. Instrução de redação: maior densidade semiológica (caracterização da dor torácica, sintomas associados, fatores de risco, sinais de alarme, achados de exame físico e ECG que orientam o diagnóstico diferencial) e no mínimo 700 palavras.
+- **público:** Médicos residentes, internos e plantonistas de pronto-socorro · **ângulo:** Ênfase na exclusão rápida de patologias orgânicas graves antes de rotular o sintoma como puramente psiquiátrico.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Panic attack AND myocardial infarction AND differential diagnosis AND emergency` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Chest pain AND panic disorder AND emergency department AND protocol` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Somatic symptoms AND emergency department AND cardiac evaluation` (Estudo Observacional) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa.md` · slug: `crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa` · pauta: `2026-09-30-140-crise-de-ansiedade-vs-infarto-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Alta do PA Psiquiátrico: o que garante que o paciente não volte em crise" (similaridade 0.25)
+
+## [redigida] Manejo de Efeitos Colaterais Extrapiramidais no Plantão
+
+- **id:** 2026-09-30-141-manejo-de-efeitos-colaterais-e
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia de reconhecimento e tratamento imediato de distonia aguda, acatisia e parkinsonismo induzidos por antipsicóticos na emergência. Fundamental para residentes que lidam com pacientes em uso de neurolépticos.
+- **público:** Residentes de psiquiatria, medicina de emergência e médicos plantonistas · **ângulo:** Abordagem prática passo a passo para o alívio rápido dos sintomas extrapiramidais no cenário de urgência.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Extrapyramidal symptoms AND acute management AND emergency department` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Acute dystonia AND antipsychotics AND treatment protocol` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Akathisia AND emergency recognition AND management` (Estudo de Coorte) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-efeitos-colaterais-extrapiramidais-no-plantao.md` · slug: `manejo-de-efeitos-colaterais-extrapiramidais-no-plantao` · pauta: `2026-09-30-141-manejo-de-efeitos-colaterais-e`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.2)
+
+## [rejeitada] Investigação de Fadiga e Astenia Crônica na UBS
+
+- **id:** 2026-09-30-142-investigacao-de-fadiga-e-asten
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Roteiro sistemático para o atendimento de pacientes com queixas persistentes de cansaço na atenção primária, integrando causas clínicas, metabólicas e transtornos do humor. Orienta a escolha racional de exames complementares.
+- **público:** Residentes de Medicina de Família e Comunidade e médicos de UBS · **ângulo:** Integração do rastreio de somatização e transtornos depressivos leves na investigação de queixas orgânicas inespecíficas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Fatigue AND primary care AND diagnostic approach AND guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Chronic fatigue AND primary health care AND depression screening` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Unexplained fatigue AND general practice AND clinical evaluation` (Estudo Observacional) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Investigação de fadiga crônica e exaustão na atenção primária" (similaridade 0.57)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Investigação de fadiga crônica e exaustão na atenção primária" (similaridade 0.57, título 0.44)
+
+## [rejeitada] Uso de Antidepressivos em Idosos na APS: Cuidados e Ajustes
+
+- **id:** 2026-09-30-143-uso-de-antidepressivos-em-idos
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientações fundamentais para a prescrição e o manejo de inibidores da recaptação de serotonina e tricíclicos na população idosa, considerando interações medicamentosas, risco de quedas e hiponatremia.
+- **público:** Residentes de geriatria, medicina de família e médicos de atenção primária · **ângulo:** Foco na farmacocinética geriátrica e na prevenção de eventos adversos graves decorrentes da polifarmácia.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Antidepressants AND elderly AND adverse effects AND primary care` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Depression in older adults AND pharmacotherapy AND guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Hyponatremia AND SSRI AND elderly AND primary health care` (Estudo de Coorte) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Uso de antidepressivos em populações especiais na APS" (similaridade 0.38)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de antidepressivos em populações especiais na APS" (similaridade 0.38, título 0.55)
+
+## [redigida] Abordagem da Dor Crônica e Sofrimento Psíquico na UBS
+
+- **id:** 2026-09-30-144-abordagem-da-dor-cronica-e-sof
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Estratégias clínicas para o manejo integrado de pacientes com dor crônica refratária e comorbidades psiquiátricas na atenção primária. Aborda o uso seguro de coadjuvantes analgésicos e a abordagem biopsicossocial.
+- **público:** Residentes de Medicina de Família e Comunidade e médicos generalistas · **ângulo:** Abordagem prática da interface entre dor crônica, ansiedade e depressão sem recorrer ao uso excessivo de opioides.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Chronic pain AND depression AND primary care AND management` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Pain management AND psychiatric comorbidities AND primary health care` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Antidepressants for chronic pain AND efficacy AND safety` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs.md` · slug: `abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs` · pauta: `2026-09-30-144-abordagem-da-dor-cronica-e-sof`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Automutilação em adolescentes: abordagem na consulta" (similaridade 0.27)
+
+## [redigida] Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro
+
+- **id:** 2026-09-30-145-avaliacao-inicial-de-sintomas-
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia para residentes sobre o acolhimento, investigação e exclusão de causas neurológicas orgânicas em pacientes com déficits motores ou sensoriais funcionais agudos. Orienta como conduzir a comunicação sem invalidar o paciente. Instrução de redação: maior densidade semiológica (sinais neurológicos positivos de transtorno funcional, inconsistências no exame, diferenciação de AVC, crises epilépticas e causas orgânicas, sinais de alarme) e no mínimo 700 palavras.
+- **público:** Residentes de neurologia, medicina de emergência e médicos plantonistas · **ângulo:** Orientações práticas para o diagnóstico diferencial rápido e a conduta humanizada no ambiente de urgência.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Conversion disorder AND emergency department AND clinical assessment` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Functional neurological disorder AND acute management AND guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Motor functional neurological symptoms AND emergency care` (Estudo Observacional) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro.md` · slug: `avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro` · pauta: `2026-09-30-145-avaliacao-inicial-de-sintomas-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Delirium no pronto-atendimento: avaliação e manejo para residentes" (similaridade 0.35)
+
+## [redigida] Manejo da Hiperventilação e Ataque de Pânico no Plantão
+
+- **id:** 2026-09-30-146-manejo-da-hiperventilacao-e-at
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Protocolo rápido para o atendimento de pacientes com síndrome de hiperventilação aguda no pronto-socorro. Desmistifica o uso de sacos de papel e orienta manobras respiratórias seguras e acolhimento adequado.
+- **público:** Internos, residentes de emergência e equipes de triagem e plantão · **ângulo:** Atualização baseada em evidências sobre condutas obsoletas e condutas recomendadas na emergência.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Hyperventilation syndrome AND emergency department AND acute management` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Panic attack AND acute breathing exercises AND emergency protocols` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Respiratory alkalosis AND panic disorder AND clinical presentation` (Estudo Observacional) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao.md` · slug: `manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao` · pauta: `2026-09-30-146-manejo-da-hiperventilacao-e-at`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Manejo de Efeitos Colaterais Extrapiramidais no Plantão" (similaridade 0.23)
+
+## [redigida] Desmame Seguro de Benzodiazepínicos na Atenção Primária
+
+- **id:** 2026-09-30-147-desmame-seguro-de-benzodiazepi
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para médicos de família e residentes realizarem a redução gradual e segura de benzodiazepínicos em pacientes usuários crônicos na UBS. Apresenta esquemas de conversão e manejo de sintomas de abstinência.
+- **público:** Residentes de Medicina de Família e Comunidade e médicos generalistas · **ângulo:** Protocolo passo a passo para manejo de expectativas do paciente e redução de riscos na comunidade.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Benzodiazepine discontinuation AND primary care AND tapering protocol` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Benzodiazepine withdrawal AND primary health care AND guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Long-term benzodiazepine use AND tapering strategies AND efficacy` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/desmame-seguro-de-benzodiazepinicos-na-atencao-primaria.md` · slug: `desmame-seguro-de-benzodiazepinicos-na-atencao-primaria` · pauta: `2026-09-30-147-desmame-seguro-de-benzodiazepi`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Uso de benzodiazepínicos na urgência psiquiátrica" (similaridade 0.27)
+
+## [redigida] Uso de inibidores seletivos da recaptação de serotonina na UBS
+
+- **id:** 2026-09-30-148-uso-de-inibidores-seletivos-da
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para residentes e estudantes sobre a escolha, ajuste de dose e manejo de efeitos colaterais de ISRS na atenção primária. Importante para padronizar condutas seguras e baseadas em evidências no primeiro atendimento.
+- **público:** Residentes de Medicina de Família e Comunidade e estudantes de medicina · **ângulo:** Foco estrito no manejo prático em ambiente de UBS, considerando interações medicamentosas comuns na atenção primária.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Serotonin Uptake Inhibitors"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Depressive Disorder"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Drug Interactions"[Mesh]) AND ("Serotonin Uptake Inhibitors"[Mesh]) AND ("Primary Care"[Title/Abstract])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-u.md` · slug: `uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-u` · pauta: `2026-09-30-148-uso-de-inibidores-seletivos-da`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Mutismo seletivo na infância: identificação precoce e conduta na UBS" (similaridade 0.17)
+
+## [rejeitada] Avaliação de ideação suicida no pronto atendimento: conduta
+
+- **id:** 2026-09-30-149-avaliacao-de-ideacao-suicida-n
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientações fundamentadas para estudantes e residentes realizarem triagem, estratificação de risco e conduta imediata diante de ideação suicida no PA. Essencial para garantir a segurança do paciente e o suporte adequado na crise.
+- **público:** Residentes de medicina de emergência, clínica médica e estudantes de medicina · **ângulo:** Abordagem focada no ambiente de pronto-socorro, priorizando a segurança imediata e o fluxo de encaminhamento psiquiátrico.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Suicidal Ideation"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Triage"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Suicide"[Mesh]/prevention and control) AND ("Emergency Medicine"[Mesh])` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Risk Assessment"[Mesh]) AND ("Suicidal Ideation"[Mesh]) AND ("Emergency Department"[Title/Abstract])` (Estudo Observacional) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Manejo da ideação suicida em populações vulneráveis na UBS" (similaridade 0.48)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Manejo da ideação suicida em populações vulneráveis na UBS" (similaridade 0.48, título 0.33)
+
+## [rejeitada] Manejo de reações extrapiramidais agudas no pronto-socorro
+
+- **id:** 2026-09-30-150-manejo-de-reacoes-extrapiramid
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Conduta rápida para residentes reconhecerem e tratarem distonia aguda, acatisia e parkinsonismo induzidos por neurolépticos no plantão. Fundamental para o alívio imediato do paciente e segurança na prescrição de emergência.
+- **público:** Médicos residentes de plantão, medicina de emergência e estudantes · **ângulo:** Direcionado ao reconhecimento visual rápido e manejo farmacológico imediato na sala de emergência.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Basal Ganglia Diseases"[Mesh] OR "Dyskinesia, Drug-Induced"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Antipsychotic Agents"[Mesh]/adverse effects) AND ("Dystonia"[Mesh] OR "Akathisia, Drug-Induced"[Mesh])` (Ensaio Clínico) [PMID A CONFIRMAR]
+  - PubMed: `("Extrapyramidal Symptoms"[Mesh]) AND ("Emergency Treatment"[Mesh])` (Diretriz Clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Manejo de Efeitos Colaterais Extrapiramidais no Plantão" (similaridade 0.45)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Manejo de Efeitos Colaterais Extrapiramidais no Plantão" (similaridade 0.45, título 0.36)
+
+## [rejeitada] Uso de metilfenidato no TDAH em adultos: guia prático na APS
+
+- **id:** 2026-09-30-151-uso-de-metilfenidato-no-tdah-e
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientações fundamentadas para médicos residentes e estudantes sobre a prescrição e o monitoramento seguro de psicoestimulantes para adultos com TDAH na atenção primária. Aborda titulação de doses, rastreio de comorbidades clínicas e psiquiátricas, e avaliação de risco de dependência e eventos cardiovasculares. O material visa garantir uma prática clínica segura, resolutiva e baseada em evidências no cenário da UBS.
+- **público:** Residentes de Medicina de Família e Comunidade, médicos de APS e estudantes de medicina · **ângulo:** Foco estrito na realidade de atendimento da Atenção Primária à Saúde, articulando segurança cardiovascular e controle de abuso.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Attention Deficit Disorder with Hyperactivity"[Mesh]) AND ("Adult"[Mesh]) AND ("Methylphenidate"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `("Attention Deficit Hyperactivity Disorder"[Mesh]) AND ("Cardiovascular System"[Mesh]) AND ("Methylphenidate"[Mesh]) AND ("Safety"[Mesh])` (Ensaio clínico randomizado e metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Substance-Related Disorders"[Mesh]) AND ("Methylphenidate"[Mesh]) AND ("Prescription Drug Misuse"[Mesh]) AND ("Adult"[Mesh])` (Estudo de coorte e revisão integrativa) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "TDAH em adultos: sinais que muitas pessoas não reconhecem" (similaridade 0.45)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "TDAH em adultos: sinais que muitas pessoas não reconhecem" (similaridade 0.45, título 0.40)
+
+## [rejeitada] Manejo de recusas alimentares psicogênicas no pronto atendimento
+
+- **id:** 2026-09-30-152-manejo-de-recusas-alimentares-
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia de raciocínio clínico para residentes e internos diante de recusas alimentares graves de etiologia psiquiátrica ou somatoforme no pronto-socorro. Discute a avaliação inicial de estabilidade hemodinâmica, exclusão de emergências clínicas, diferenciação com transtornos alimentares agudos e critérios de internação hospitalar. Oferece condutas práticas de desescalada e abordagem multidisciplinar na urgência.
+- **público:** Médicos residentes de emergência, residentes de medicina de família e estudantes em estágio no PA · **ângulo:** Abordagem focada na interface entre urgência clínica e psiquiátrica, priorizando a segurança orgânica imediata no plantão.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Feeding and Eating Disorders"[Mesh]) AND ("Emergencies"[Mesh]) AND ("Hospitals, Emergency Service"[Mesh])` (Diretriz clínica e revisão narrativa) [PMID A CONFIRMAR]
+  - PubMed: `("Refusal to Eat"[Mesh]) AND ("Emergency Treatment"[Mesh]) AND ("Diagnosis, Differential"[Mesh])` (Estudo transversal e série de casos) [PMID A CONFIRMAR]
+  - PubMed: `("Anorexia Nervosa"[Mesh]) AND ("Refeeding Syndrome"[Mesh]) AND ("Critical Care"[Mesh])` (Revisão sistemática com metanálise) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Manejo da recusa alimentar e seletividade grave no pronto atendimento" (similaridade 0.57)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Manejo da recusa alimentar e seletividade grave no pronto atendimento" (similaridade 0.57, título 0.77)
+
+## [rejeitada] Professores frente ao luto na escola: acolhendo perdas
+
+- **id:** 2026-09-30-153-professores-frente-ao-luto-na-
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta orientadores e docentes sobre como lidar com a perda de alunos ou colegas de trabalho no ambiente escolar, oferecendo estratégias para a escuta sensível, ritos de passagem e a preservação da saúde mental coletiva da comunidade escolar.
+- **público:** Professores e educadores da rede básica e superior · **ângulo:** Foco na pedagogia do luto e no suporte prático para a gestão de crises institucionais por perdas significativas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `grief AND school teachers AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `bereavement support in educational settings` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `teacher psychological distress following student death` (Estudo observacional) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Professores e o luto pedagógico: acolhendo perdas e mudanças na escola" (similaridade 0.62)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Professores e o luto pedagógico: acolhendo perdas e mudanças na escola" (similaridade 0.62, título 0.77)
+
+## [rejeitada] Cuidadores de idosos e a culpa parental invertida
+
+- **id:** 2026-09-30-154-cuidadores-de-idosos-e-a-culpa
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Analisa o fenômeno emocional em que filhos cuidadores experimentam sentimentos intensos de culpa ao assumirem o papel de autoridade e cuidado sobre seus pais idosos, oferecendo ferramentas de psicoeducação e manejo emocional na APS.
+- **público:** Cuidadores familiares de idosos · **ângulo:** Abordagem focada no conflito de papéis geracionais e na reestruturação da culpa no cotidiano do cuidado.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `caregiver guilt AND elderly parents AND psychological burden` (Revisão qualitativa) [PMID A CONFIRMAR]
+  - PubMed: `family caregivers AND role reversal AND mental health` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `interventions for caregiver guilt in primary care` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática" (similaridade 0.39)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática" (similaridade 0.39, título 0.36)
+
+## [redigida] Professores e o ciberbullying: impactos na saúde mental
+
+- **id:** 2026-09-30-155-professores-e-o-ciberbullying-
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Discute o assédio digital direcionado a educadores por parte de alunos e responsáveis, identificando os sinais precoces de adoecimento psíquico decorrentes e apontando caminhos institucionais e de autocuidado.
+- **público:** Professores e equipes pedagógicas · **ângulo:** Inovação ao tratar especificamente da violência digital contra docentes e suas repercussões psiquiátricas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `cyberbullying against teachers AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `teacher online harassment AND occupational stress` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `coping strategies for teachers facing cyberbullying` (Diretriz de intervenção) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-ciberbullying-impactos-na-saude-mental.md` · slug: `professores-e-o-ciberbullying-impactos-na-saude-mental` · pauta: `2026-09-30-155-professores-e-o-ciberbullying-`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Professores e a saúde mental: identificando limites diante da sobrecarga" (similaridade 0.31)
+
+## [redigida] Cuidadores de pacientes com sequelas de AVC em casa
+
+- **id:** 2026-09-30-156-cuidadores-de-pacientes-com-se
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta familiares que assumem o cuidado diário de pacientes pós-acidente vascular cerebral, abordando o manejo da dependência física severa, a prevenção de lesões musculoesqueléticas e o suporte emocional frente à mudança brusca de rotina.
+- **público:** Cuidadores familiares de pacientes neurológicos · **ângulo:** Integração entre o cuidado físico do paciente hemiplégico/acamado e a preservação da saúde mental do cuidador.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `stroke caregivers AND burden AND psychological distress` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
+  - PubMed: `family caregivers of stroke survivors AND support interventions` (Ensaio clínico) [PMID A CONFIRMAR]
+  - PubMed: `home care challenges in stroke survivors and caregivers` (Estudo qualitativo) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-sequelas-de-avc-em-casa.md` · slug: `cuidadores-de-pacientes-com-sequelas-de-avc-em-casa` · pauta: `2026-09-30-156-cuidadores-de-pacientes-com-se`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.26)
+
+## [redigida] Professores de educação infantil e a regulação emocional
+
+- **id:** 2026-09-30-157-professores-de-educacao-infant
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Examina a alta exigência de autorregulação emocional impuesta aos professores da primeira infância, que frequentemente precisam gerenciar crises comportamentais de crianças pequenas enquanto reprimem suas próprias frustrações.
+- **público:** Professores da educação infantil · **ângulo:** Foco na fadiga de regulação emocional específica do ambiente pré-escolar e berçários.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `early childhood teachers AND emotional exhaustion AND burnout` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `emotional labor in kindergarten teachers` (Revisão integrativa) [PMID A CONFIRMAR]
+  - PubMed: `mindfulness interventions for preschool teachers` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-de-educacao-infantil-e-a-regulacao-emocional.md` · slug: `professores-de-educacao-infantil-e-a-regulacao-emocional` · pauta: `2026-09-30-157-professores-de-educacao-infant`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Professores e o ciberbullying: impactos na saúde mental" (similaridade 0.27)
+
+## [rejeitada] Cuidadores de idosos em solidão: a rede de apoio
+
+- **id:** 2026-09-30-158-cuidadores-de-idosos-em-solida
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda o isolamento social vivenciado por cuidadores familiares que abrem mão de sua vida social e profissional para cuidar de idosos, fornecendo estratégias práticas para resgatar vínculos comunitários e familiares.
+- **público:** Cuidadores familiares de idosos · **ângulo:** Enfoque na solidão subjetiva do cuidador solitário e na construção de redes comunitárias de suporte.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `family caregivers AND social isolation AND elderly care` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `community support networks for informal caregivers` (Estudo qualitativo) [PMID A CONFIRMAR]
+  - PubMed: `loneliness among dementia and elderly caregivers` (Estudo observacional) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática" (similaridade 0.53)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Grupos de apoio para cuidadores de idosos na APS: eficácia na prática" (similaridade 0.53, título 0.55)
+
+## [redigida] Professores de EJA: lidando com histórias de superação
+
+- **id:** 2026-09-30-159-professores-de-eja-lidando-com
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Discute a sobrecarga emocional de docentes da Educação de Jovens e Adultos (EJA), que frequentemente acolhem vivências profundas de trauma social, exclusão e vulnerabilidade trazidas pelos estudantes em sala de aula.
+- **público:** Professores da Educação de Jovens e Adultos (EJA) · **ângulo:** Análise do impacto do trauma vicário em professores que atuam com populações adultas vulnerabilizadas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `adult educators AND secondary traumatic stress AND resilience` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `teachers in adult education AND mental health challenges` (Revisão narrativa) [PMID A CONFIRMAR]
+  - PubMed: `trauma-informed pedagogy for adult educators` (Diretriz prática) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-de-eja-lidando-com-historias-de-superacao.md` · slug: `professores-de-eja-lidando-com-historias-de-superacao` · pauta: `2026-09-30-159-professores-de-eja-lidando-com`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.27)
+
+## [redigida] Cuidadores de pacientes com Alzheimer avançado e o luto antecipatório
+
+- **id:** 2026-09-30-160-cuidadores-de-pacientes-com-al
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo discute o fenômeno do luto antecipatório em cuidadores familiares de idosos com demência avançada, oferecendo ferramentas clínicas para identificação precoce do sofrimento e suporte na Atenção Primária. O texto explora a transição dos papéis familiares e a necessidade de intervenções empáticas direcionadas à saúde mental do cuidador.
+- **público:** Cuidadores familiares e profissionais de saúde da APS · **ângulo:** Foco específico na manifestação clínica do luto antecipatório antes mesmo do falecimento, diferenciando-o da depressão comum e propondo escuta ativa no consultório.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `caregivers AND anticipatory grief AND dementia` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `family caregivers AND Alzheimer disease AND psychological distress` (Estudo observacional) [PMID A CONFIRMAR]
+  - PubMed: `primary health care AND support for dementia caregivers` (Diretriz clínica) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-alzheimer-avancado-e-o-luto-ante.md` · slug: `cuidadores-de-pacientes-com-alzheimer-avancado-e-o-luto-ante` · pauta: `2026-09-30-160-cuidadores-de-pacientes-com-al`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.32)
+
+## [rejeitada] Professores do ensino médio e a gestão de crises de ansiedade na escola
+
+- **id:** 2026-09-30-161-professores-do-ensino-medio-e-
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda estratégias práticas baseadas em evidências para que professores possam reconhecer e manejar crises agudas de ansiedade e ataques de pânico em sala de aula. O guia destaca a importância de um ambiente seguro, técnicas de regulação emocional e os limites da atuação pedagógica frente ao encaminhamento médico.
+- **público:** Professores, educadores e equipes escolares · **ângulo:** Enfoque na primeira resposta pedagógica e no manejo imediato dentro do espaço escolar, preservando o aluno e prevenindo a desregulação coletiva da turma.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `teachers AND panic attack AND school environment` (Revisão integrativa) [PMID A CONFIRMAR]
+  - PubMed: `school teachers AND anxiety management AND students` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+  - PubMed: `mental health literacy AND educators AND guidelines` (Diretriz baseada em evidências) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Saúde mental de professores: gestão em instituições de ensino" (similaridade 0.42)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Saúde mental de professores: gestão em instituições de ensino" (similaridade 0.42, título 0.46)
+
+## [rejeitada] Cuidadores de crianças com transtornos do neurodesenvolvimento: fadiga por compaixão
+
+- **id:** 2026-09-30-162-cuidadores-de-criancas-com-tra
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Analisa o impacto da fadiga por compaixão e da exaustão crônica em pais e cuidadores de crianças com condições complexas do neurodesenvolvimento. Discute sinais clínicos de alerta, o impacto na dinâmica familiar e estratégias de autocuidado e suporte comunitário na rede de saúde.
+- **público:** Cuidadores familiares e equipes multiprofissionais · **ângulo:** Diferenciação conceitual clara entre burnout parental, fadiga por compaixão e depressão, oferecendo um roteiro de rastreio prático para médicos generalistas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `compassion fatigue AND parents AND neurodevelopmental disorders` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `caregiver burden AND autism spectrum disorder AND chronic stress` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `family support interventions AND neurodevelopmental disabilities` (Metanálise) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.35)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.35, título 0.36)
+
+## [rejeitada] Professores e o manejo do estresse pós-traumático escolar: apoio na APS
+
+- **id:** 2026-09-30-163-professores-e-o-manejo-do-estr
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo orienta professores sobre como identificar e manejar sinais precoces de estresse pós-traumático decorrente de eventos críticos no ambiente escolar. A abordagem baseia-se em evidências da literatura para fornecer suporte emocional adequado, respeitando os fluxos institucionais e de saúde locais.
+- **público:** Professores e profissionais da educação · **ângulo:** Foco na atuação do professor como elo de identificação primária de trauma na escola, articulando com a rede de saúde.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `school teachers AND psychological trauma AND mental health AND primary health care` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `occupational stress AND educators AND post-traumatic stress disorder AND intervention` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+  - PubMed: `teachers AND secondary traumatic stress AND resilience AND guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Transtorno de estresse pós-traumático: reconhecimento na APS" (similaridade 0.42)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Transtorno de estresse pós-traumático: reconhecimento na APS" (similaridade 0.42, título 0.57)
+
+## [redigida] Cuidadores familiares de dependentes químicos: manejo da codependência na APS
+
+- **id:** 2026-09-30-164-cuidadores-familiares-de-depen
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Abordamos estratégias clínicas e práticas para apoiar cuidadores familiares de pessoas com transtornos por uso de substâncias, focando na prevenção da exaustão emocional. O texto oferece diretrizes psicoeducativas fundamentadas em evidências para uso na atenção primária e apoio domiciliar.
+- **público:** Cuidadores familiares de pessoas com transtorno por uso de substâncias · **ângulo:** Direcionado ao manejo específico da sobrecarga e codependência em familiares de dependentes químicos, tema pouco explorado nos guias gerais de cuidadores.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `family caregivers AND substance-related disorders AND burnout AND primary health care` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `codependency AND family caregivers AND psychological intervention AND mental health` (Ensaio clínico) [PMID A CONFIRMAR]
+  - PubMed: `substance use disorders AND family support AND clinical guidelines` (Diretriz baseada em evidências) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-familiares-de-dependentes-quimicos-manejo-da-code.md` · slug: `cuidadores-familiares-de-dependentes-quimicos-manejo-da-code` · pauta: `2026-09-30-164-cuidadores-familiares-de-depen`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.28)
+
+## [rejeitada] Professores e a regulação emocional: estratégias para o manejo do estresse
+
+- **id:** 2026-09-30-165-professores-e-a-regulacao-emoc
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo apresenta diretrizes práticas baseadas em evidências para que professores possam reconhecer e manejar o estresse ocupacional e desenvolver estratégias de regulação emocional em sala de aula. O conteúdo aborda a identificação precoce de gatilhos de exaustão e ferramentas de autocuidado fundamentais para a preservação da saúde mental docente. A publicação orienta práticas aplicáveis no cotidiano escolar, respeitando os protocolos de suporte institucional locais.
+- **público:** Professores da rede de ensino · **ângulo:** Foco exclusivo na regulação emocional ativa do educador como ferramenta de prevenção primária ao burnout docente.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `teacher burnout AND emotional regulation AND occupational stress` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `teachers AND mental health AND school environment AND coping strategies` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+  - PubMed: `occupational health AND educators AND stress management interventions` (Diretriz clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Professores de educação infantil e a regulação emocional" (similaridade 0.44)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Professores de educação infantil e a regulação emocional" (similaridade 0.44, título 0.55)
+
+## [rejeitada] Transtorno da Compulsão Alimentar na APS: Rastreio e Manejo
+
+- **id:** 2026-09-30-166-transtorno-da-compulsao-alimen
+- **categoria:** Condições Específicas · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda a identificação precoce do transtorno da compulsão alimentar periódica (TCAP) no contexto da atenção primária, diferenciando-o da obesidade comum. Oferece estratégias práticas de manejo comportamental e farmacológico para o médico de família, visando o cuidado integral. Orientações gerais que respeitam os protocolos locais de saúde.
+- **público:** Médicos de família, residentes e profissionais da Atenção Primária à Saúde · **ângulo:** Foco na operacionalização do rastreio de TCAP na rotina de consultas de rotina na UBS, indo além do manejo puramente nutricional.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Binge Eating Disorder AND Primary Health Care` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Binge Eating Disorder AND General Practice AND Diagnosis` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Pharmacotherapy for Binge Eating Disorder AND Clinical Trials` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda" (similaridade 0.53)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda" (similaridade 0.53, título 0.33)
+
+## [redigida] Disforia Sensorial e Sobrecarga no Transtorno do Espectro Autista
+
+- **id:** 2026-09-30-167-disforia-sensorial-e-sobrecarg
+- **categoria:** Condições Específicas · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Discute o impacto das alterações de processamento sensorial na desregulação comportamental e ansiedade em adultos e adolescentes com TEA no ambulatório. Orienta o médico generalista no reconhecimento de crises de sobrecarga sensorial e adaptação do ambiente de atendimento. Condutas fundamentadas em evidências com respeito às diretrizes institucionais.
+- **público:** Médicos de família, pediatras e clínicos gerais da rede pública e privada · **ângulo:** Abordagem prática para manejo da sobrecarga sensorial diretamente no consultório e orientação às famílias na APS.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Autism Spectrum Disorder AND Sensory Overload AND Management` (Revisão Integrativa) [PMID A CONFIRMAR]
+  - PubMed: `Sensory Processing in Autism AND Primary Care` (Estudo Observacional) [PMID A CONFIRMAR]
+  - PubMed: `Autism Meltdown AND Emergency and Primary Care` (Diretriz Prática) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/disforia-sensorial-e-sobrecarga-no-transtorno-do-espectro-au.md` · slug: `disforia-sensorial-e-sobrecarga-no-transtorno-do-espectro-au` · pauta: `2026-09-30-167-disforia-sensorial-e-sobrecarg`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Disforia de gênero e saúde mental: acolhimento e suporte na atenção primária" (similaridade 0.23)
+
+## [redigida] Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta
+
+- **id:** 2026-09-30-168-acatisia-induzida-por-antipsic
+- **categoria:** Condições Específicas · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Apresenta os critérios para o reconhecimento precoce da acatisia aguda e tardia decorrente do uso de antagonistas dopaminérgicos na prática clínica. Orienta o diagnóstico diferencial com agitação psicomotora e ansiedade, detalhando o manejo farmacológico e não farmacológico. Segue protocolos alinhados à rotina de pronto atendimento e ambulatório.
+- **público:** Médicos generalistas, residentes de medicina de família e plantonistas de emergência · **ângulo:** Enfoque na diferenciação clínica sutil entre acatisia e piora psiquiátrica primária, evitando iatrogenias comuns.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Antipsychotic-Induced Akathisia AND Diagnosis AND Management` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Akathisia vs Agitation AND Emergency Psychiatry` (Diretriz Clínica) [PMID A CONFIRMAR]
+  - PubMed: `Treatment of Akathisia AND Clinical Trials` (Metanálise) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/acatisia-induzida-por-antipsicoticos-diagnostico-e-conduta.md` · slug: `acatisia-induzida-por-antipsicoticos-diagnostico-e-conduta` · pauta: `2026-09-30-168-acatisia-induzida-por-antipsic`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.21)
+
+## [redigida] Transtorno da Fluência na Fala na Infância: Manejo Inicial na APS
+
+- **id:** 2026-09-30-169-transtorno-da-fluencia-na-fala
+- **categoria:** Condições Específicas · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda o reconhecimento precoce da gagueira desenvolvimental na atenção primária, oferecendo orientações práticas para médicos de família sobre quando intervir e como encaminhar. É essencial para evitar o sofrimento psíquico infantil e garantir suporte adequado.
+- **público:** Médicos de família, pediatras e residentes da atenção primária. · **ângulo:** Foco na atuação do médico generalista no acolhimento e orientação parental inicial antes do especialista.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Stuttering AND primary care AND child` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Developmental stuttering AND early intervention AND guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Speech fluency disorders AND primary healthcare` (Estudo de coorte) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-da-fluencia-na-fala-na-infancia-manejo-inicial-na.md` · slug: `transtorno-da-fluencia-na-fala-na-infancia-manejo-inicial-na` · pauta: `2026-09-30-169-transtorno-da-fluencia-na-fala`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.26)
+
+## [rejeitada] Uso de Benzodiazepínicos na Emergência: Manejo de Agudos
+
+- **id:** 2026-09-30-170-uso-de-benzodiazepinicos-na-em
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este guia prático para residentes aborda o manejo seguro e baseado em evidências do uso de benzodiazepínicos em situações de emergência no pronto atendimento. O texto discute indicações precisas, dosagens iniciais, monitoramento de efeitos adversos e condutas diante de intoxicações agudas. A proposta visa instrumentalizar o médico em formação para decisões rápidas e seguras no plantão.
+- **público:** Residentes de Medicina de Família e Comunidade, residentes de Clínica Médica e estudantes de medicina. · **ângulo:** Foco específico na tomada de decisão rápida e segura pelo residente em ambiente de pronto atendimento.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Benzodiazepines AND emergency department AND management AND guidelines` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Acute benzodiazepine overdose AND clinical management AND emergency` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Sedation practices AND emergency medicine AND safety protocols` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Desmame Seguro de Benzodiazepínicos na Atenção Primária" (similaridade 0.35)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Desmame Seguro de Benzodiazepínicos na Atenção Primária" (similaridade 0.35, título 0.20)
+
+## [rejeitada] Delirium Tremens no Pronto-Atendimento: Reconhecimento e Conduta
+
+- **id:** 2026-09-30-171-delirium-tremens-no-pronto-ate
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientações práticas para residentes e médicos de plantão sobre o reconhecimento precoce e o tratamento intensivo do delirium tremens no pronto-socorro. O artigo aborda a escala de avaliação clínica, reposição eletrolítica, suporte farmacológico de primeira linha e critérios estritos de internação em UTI. O conteúdo reforça a importância da intervenção imediata para reduzir a morbimortalidade associada.
+- **público:** Residentes de Medicina de Família e Comunidade, plantonistas de pronto-socorro e estudantes de medicina. · **ângulo:** Abordagem passo a passo para o reconhecimento de sinais de gravidade e manejo farmacológico imediato no plantão.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Delirium tremens AND management AND emergency department` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
+  - PubMed: `Alcohol withdrawal syndrome AND severe AND clinical guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Benzodiazepines AND alcohol withdrawal AND intensive care` (Ensaio clínico) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Delirium tremens: reconhecimento e conduta de urgência" (similaridade 0.62)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Delirium tremens: reconhecimento e conduta de urgência" (similaridade 0.62, título 0.73)
+
+## [rejeitada] Síndrome serotoninérgica aguda no plantão: reconhecimento e manejo
+
+- **id:** 2026-09-30-172-sindrome-serotoninergica-aguda
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para residentes e médicos de urgência identificarem os sintomas autonômicos, neuromusculares e alteração do estado mental da toxicidade por serotonina. Aborda o diagnóstico diferencial com neuroléptico maligno e as condutas de suporte imediato no pronto-socorro, respeitando protocolos locais.
+- **público:** Residentes de medicina de família, médicos generalistas e residentes de urgência e emergência · **ângulo:** Foco exclusivo na tomada de decisão rápida no pronto atendimento diante de combinações comuns de antidepressivos.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `serotonin syndrome emergency management AND clinical protocol` (Revisão narrativa) [PMID A CONFIRMAR]
+  - PubMed: `diagnosis and treatment of serotonin syndrome in emergency department` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `serotonin toxicity vs neuroleptic malignant syndrome differential diagnosis` (Estudo comparativo) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.43)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.43, título 0.36)
+
+## [redigida] Distonia aguda por antipsicóticos na emergência: manejo prático
+
+- **id:** 2026-09-30-173-distonia-aguda-por-antipsicoti
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientações fundamentadas para médicos residentes e plantonistas sobre o reconhecimento precoce e a reversão imediata de reações distônicas agudas induzidas por bloqueadores dopaminérgicos. Detalha a administração correta de anticolinérgicos e os cuidados no pronto atendimento, alinhado à rede de saúde.
+- **público:** Médicos residentes, plantonistas de pronto-socorro e equipes de urgência · **ângulo:** Enfoque prático e direto no passo a passo do alívio sintomático rápido no box de emergência.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `acute dystonic reaction antipsychotic emergency treatment` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `extrapyramidal symptoms emergency department management guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `antipsychotic-induced acute dystonia management in adults` (Ensaio clínico) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/distonia-aguda-por-antipsicoticos-na-emergencia-manejo-prati.md` · slug: `distonia-aguda-por-antipsicoticos-na-emergencia-manejo-prati` · pauta: `2026-09-30-173-distonia-aguda-por-antipsicoti`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta" (similaridade 0.27)
+
+## [rejeitada] Síndrome neuroléptica maligna no PA: reconhecimento e conduta
+
+- **id:** 2026-09-30-174-sindrome-neuroleptica-maligna-
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Guia prático para residentes e estudantes abordarem a suspeita de síndrome neuroléptica maligna no pronto-socorro, detalhando sinais de gravidade, diagnóstico diferencial rigoroso e condutas imediatas de suporte e suspensão do agente causal. Orientações gerais que respeitam protocolos hospitalares locais.
+- **público:** Residentes de Medicina de Família e Comunidade, residentes de Clínica Médica, médicos generalistas e estudantes de medicina · **ângulo:** Enfoque pragmático voltado para o plantão de emergência, destacando os critérios diagnósticos diferenciais com outras urgências clínicas e farmacológicas.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `neuroleptic malignant syndrome emergency management clinical review` (Revisão narrativa / Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `neuroleptic malignant syndrome differential diagnosis intensive care` (Estudo de coorte / Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `dopamine antagonist toxicity malignant syndrome emergency department` (Diretriz de prática clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Síndrome neuroléptica maligna: reconhecimento precoce" (similaridade 0.64)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Síndrome neuroléptica maligna: reconhecimento precoce" (similaridade 0.64, título 0.80)
+
+## [rejeitada] Uso de Zolpidem e Hipnóticos na APS: Guia para Residentes
+
+- **id:** 2026-09-30-175-uso-de-zolpidem-e-hipnoticos-n
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orientacoes baseadas em evidencias para residentes e estudantes abordarem o uso cronico de hipnoticos na atencao primaria, incluindo avaliacao clinica, riscos associados e estrategias seguras para reducao gradual e manejo da insonia.
+- **público:** Medicos residentes em medicina de familia e comunidade, internos de medicina e medicos da atencao primaria. · **ângulo:** Foco pratico voltado para o cotidiano da UBS e do ambulatorio docente, integrando seguranca do paciente e desprescricao.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Hypnotics AND primary health care AND prescription drug misuse` (Revisao Sistematica) [PMID A CONFIRMAR]
+  - PubMed: `Zolpidem withdrawal AND primary care guidelines` (Diretriz Clinica) [PMID A CONFIRMAR]
+  - PubMed: `Insomnia management AND general practice AND tapering strategies` (Ensaio Clinico Randomizado) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.38)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.38, título 0.20)
+
+## [rejeitada] Professores e a fadiga por compaixão: sinais e estratégias
+
+- **id:** 2026-09-30-176-professores-e-a-fadiga-por-com
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo discute o fenômeno da fadiga por compaixão em professores expostos cronicamente ao sofrimento emocional de seus alunos. O texto apresenta ferramentas práticas para o reconhecimento precoce dos sintomas e intervenções baseadas em evidências para o autocuidado docente na rede de ensino. Orientações gerais que respeitam os protocolos e fluxos de saúde ocupacional locais.
+- **público:** Professores · **ângulo:** Foca especificamente na fadiga por compaixão no ambiente escolar, diferenciando-a do burnout clássico e propondo estratégias de resiliência.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `compassion fatigue AND teachers AND burnout` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `occupational stress AND educators AND mental health` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+  - PubMed: `secondary traumatic stress AND school teachers` (Estudo observacional) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37, título 0.40)
+
+## [rejeitada] Professores e a fadiga por compaixão: sinais e estratégias
+
+- **id:** 2026-09-30-177-professores-e-a-fadiga-por-com
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Este artigo aborda a fadiga por compaixão em professores que acolhem alunos em sofrimento emocional severo, detalhando sinais de exaustão empática e estratégias práticas de autocuidado e preservação docente. O conteúdo é voltado para a psicoeducação baseada em evidências na atenção primária e escolar, visando prevenir o esgotamento crônico. Orientações gerais devem respeitar os protocolos da rede de saúde e diretrizes locais.
+- **público:** Professores da rede de ensino básica e superior, além de profissionais de saúde que atendem educadores. · **ângulo:** Foco específico na fadiga por compaixão docente e no custo emocional do acolhimento a alunos traumatizados.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `compassion fatigue AND teachers AND burnout` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `teachers secondary traumatic stress AND emotional exhaustion` (Estudo transversal) [PMID A CONFIRMAR]
+  - PubMed: `occupational health AND teachers AND coping strategies` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37, título 0.40)
+
+## [rejeitada] Professores e o assédio moral institucional: impactos na saúde mental
+
+- **id:** 2026-09-30-178-professores-e-o-assedio-moral-
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Aborda o impacto do assédio moral organizacional na saúde mental de professores, oferecendo estratégias de reconhecimento de sintomas de adoecimento psíquico e caminhos de proteção na rede de saúde. Importa para subsidiar o médico na escuta qualificada e no suporte ocupacional docente.
+- **público:** Professores da rede de ensino e médicos da Atenção Primária · **ângulo:** Foco específico na dinâmica do assédio institucional e seu reflexo no adoecimento docente, indo além do esgotamento geral.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `("Teachers"[MeSH] OR "Faculty") AND ("Occupational Stress"[MeSH] OR "Bullying"[MeSH] OR "Burnout, Professional"[MeSH]) AND ("Mental Health"[MeSH])` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `("Workplace Violence"[MeSH] OR "Mobbing") AND ("Mental Disorders"[MeSH]) AND ("School Teachers")` (Estudo Observacional) [PMID A CONFIRMAR]
+  - PubMed: `("Occupational Health"[MeSH]) AND ("Faculty"[MeSH]) AND ("Psychological Distress"[MeSH])` (Diretriz Clínica) [PMID A CONFIRMAR]
+- **originalidade:** redundante · mais próximo: "Assédio moral no trabalho: como prevenir institucionalmente" (similaridade 0.54)
+- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Assédio moral no trabalho: como prevenir institucionalmente" (similaridade 0.54, título 0.50)
+
+## [redigida] Professores e o suporte aos alunos com ideação suicida: guia na APS
+
+- **id:** 2026-09-30-179-professores-e-o-suporte-aos-al
+- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta o corpo docente na identificação de sinais de alerta para comportamento suicida entre adolescentes e no fluxo adequado de encaminhamento para a rede de saúde. A pauta capacita professores a agirem com segurança diante de crises no ambiente escolar sem assumir papel terapêutico individual. Orientações gerais que respeitam os protocolos locais de urgência e saúde mental.
+- **público:** Professores e educadores do ensino fundamental e médio · **ângulo:** Foca na interface entre a escola e a Atenção Primária no manejo inicial do risco de suicídio, preenchendo lacunas na capacitação pedagógica em saúde mental.
+- **tema sensível:** sim (CVV 188 obrigatório)
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `School teachers AND suicide prevention AND mental health literacy` (Revisão Sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Gatekeeper training AND suicide prevention AND school personnel` (Ensaio Clínico Controlado) [PMID A CONFIRMAR]
+  - PubMed: `Adolescent suicide risk AND school-based intervention AND primary health care` (Diretrizes Práticas) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-suporte-aos-alunos-com-ideacao-suicida-guia-.md` · slug: `professores-e-o-suporte-aos-alunos-com-ideacao-suicida-guia-` · pauta: `2026-09-30-179-professores-e-o-suporte-aos-al`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Manejo da ideação suicida em populações vulneráveis na UBS" (similaridade 0.32)
+
+## [redigida] Uso Off-Label de Psicofármacos na UBS: Evidências e Prática
+
+- **id:** 2026-09-30-180-uso-off-label-de-psicofarmacos
+- **categoria:** Residentes & Estudantes · lote 5
+- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
+- **pauta:** Orienta residentes e médicos de família sobre a prescrição off-label de psicotrópicos na Atenção Primária, ponderando respaldo científico, implicações éticas e segurança clínica. O guia detalha critérios de escolha, monitoramento de efeitos adversos e documentação adequada no prontuário.
+- **público:** Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da Atenção Primária à Saúde. · **ângulo:** Foco estrito na realidade da UBS, abordando a responsabilidade médico-legal e a tomada de decisão baseada em evidências para usos não rotulados na atenção básica.
+- **tema sensível:** não
+- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
+  - PubMed: `Off-label use AND psychotropics AND primary care AND clinical practice` (Revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `Prescribing off-label AND mental health AND family practice AND guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
+  - PubMed: `Psychotropic drugs off-label prescribing AND safety AND efficacy AND primary health care` (Ensaio clínico controlado) [PMID A CONFIRMAR]
+- **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-off-label-de-psicofarmacos-na-ubs-evidencias-e-pratica.md` · slug: `uso-off-label-de-psicofarmacos-na-ubs-evidencias-e-pratica` · pauta: `2026-09-30-180-uso-off-label-de-psicofarmacos`
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **originalidade:** original · mais próximo: "Reações adversas a psicofármacos na UBS: o que monitorar" (similaridade 0.24)

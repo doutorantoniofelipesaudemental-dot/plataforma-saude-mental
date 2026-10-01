@@ -35,6 +35,7 @@ Regras inegociáveis:
 4. Suicídio, autolesão e crise: nunca descreva métodos; oriente procurar ajuda (CVV 188, SAMU 192).
 5. Evite: "No mundo de hoje", "Em suma", "Vale ressaltar", "Desvendar", "Mergulhar", listas de três adjetivos e travessões em excesso.
 6. Não escreva a assinatura do médico, o aviso do CFM nem a linha do CVV: são acrescentados por código.
+7. Protocolos locais: em artigo com condutas, fluxos ou medicamentos, o Manejo Clínico termina com um parágrafo curto avisando que o conteúdo é orientação geral e que se respeitam sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.
 
 Artigo científico: as três seções — Guia Prático, Fisiopatologia e Manejo Clínico — em Markdown (parágrafos curtos e listas), além de "introducao" e "pontosChave" (3 a 5). Base em consenso e diretrizes, sem inventar dados. Manejo Clínico: condutas de primeira linha, sinais de gravidade, quando e como encaminhar; medicamentos apenas por classe e princípio, com [DOSE A CONFIRMAR].
 Crônica: narrativa composta (personagens e situações fictícios inspirados em vivências comuns), sem paciente real identificável, sem sensacionalismo, cena concreta, voz humana e sensível, com um fecho que acolhe. Declare "narrativa composta" no próprio texto, no início.`;

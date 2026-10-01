@@ -29,6 +29,7 @@ Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (
 
 #### C. REGRAS ESTRITAS DE CONTEÚDO E AUTOMAÇÃO
 - VETO ABSOLUTO: É estritamente PROIBIDO apresentar o Dr. Antônio Felipe como "psiquiatra" ou "especialista em psiquiatria/saúde mental".
+- PROTOCOLOS LOCAIS: Todo conteúdo com condutas, doses, fluxos ou protocolos deve trazer o aviso de que é orientação geral e que se respeitam sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.
 - ÁUDIO OBRIGATÓRIO: 100% dos artigos do portal/blog devem possuir narração em áudio no topo da página.
 - PESQUISAS DE OPINIÃO: Inserir widgets de enquetes/pesquisas anônimas nos artigos.
 - TRILHA SONORA: Mixagem de áudio nos carrosséis com música suave a -22dB.
