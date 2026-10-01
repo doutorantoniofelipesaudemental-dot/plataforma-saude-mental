@@ -78,7 +78,7 @@ O manejo do trabalhador com sofrimento mental exige uma abordagem integrada que 
 
 ### Quando e como encaminhar
 - Encaminhe para serviços especializados de saúde mental ou emergências psiquiátricas diante de sinais de gravidade.
-- Oriente o paciente sobre a emissão da CAT e forneça os laudos médicos detalhados necessários para a perícia médica da Previdência Social, garantindo a proteção social e o direito à estabilidade provisória quando couber, conforme [DADO A CONFIRMAR] da legislação vigente.
+- Oriente o paciente sobre a emissão da CAT e forneça os laudos médicos detalhados necessários para a perícia médica da Previdência Social, garantindo a proteção social e o direito à estabilidade provisória quando couber, conforme o art. 118 da Lei nº 8.213/1991, que garante a manutenção do contrato de trabalho por no mínimo 12 meses após a cessação do auxílio-doença acidentário (conferir a redação literal no texto oficial da lei).
 
 ## Pontos-chave
 
