@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:06:10.007Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Transtornos somatoformes na UBS: investigação e manejo clínico
@@ -22,7 +23,7 @@ revisaoMedica: pendente
 > - - **Abordagem não farmacológica:** Aconselhamento estruturado, técnicas de respiração e relaxamento, além de incentivo à atividade física regular.
 > - - **Sinais de gravidade e bandeiras vermelhas:** Perda de peso inexplicada, febre persistente, sinais neurológicos focais, dor noturna progressiva ou alteraç…
 > - - **Quando e como encaminhar:** Encaminhe para a psicologia ou psiquiatria da rede quando houver falha terapêutica após vínculo estabelecido, risco de automu…
-> - - O uso de psicofármacos deve ser criterioso, reservado para comorbidades claras e sempre com [DOSE A CONFIRMAR].
+> - - O uso de psicofármacos deve ser criterioso, reservado para comorbidades claras e sempre com dose definida pelo médico.
 
 Olá, colega da Atenção Primária. É muito comum recebermos no consultório pessoas que trazem dores e desconfortos intensos, mas cujos exames complementares não mostram alterações orgânicas graves. Muitas vezes, esses pacientes peregrinam por diferentes serviços, acumulam prescrições e sentem que ninguém acredita no seu sofrimento. Como médicos de família e comunidade, sabemos que a dor é real, mesmo quando não encontramos um marcador laboratorial ou de imagem correspondente. O nosso maior instrumento de trabalho não é o aparelho de ausculta ou o bloco de pedidos de exames, mas sim a relação que construímos com cada pessoa que senta à nossa frente. Vamos conversar sobre como acolher esses quadros na rotina do posto de saúde e do pronto atendimento.
 
@@ -53,7 +54,7 @@ Os sintomas somatoformes envolvem uma complexa intersecção entre o sistema ner
 
 O manejo exige paciência, consistência e uma abordagem multiprofissional sempre que possível.
 
-- **Abordagem farmacológica de primeira linha:** Quando há comorbidade ansiosa ou depressiva evidente, ou dor crônica refratária, os inibidores seletivos da recaptação de serotonina (ISRS) ou antidepressivos duais (como a duloxetina) podem auxiliar. Utilize a menor dose efetiva e ajuste gradualmente. [DOSE A CONFIRMAR]. Evite o uso prolongado de benzodiazepínicos pelo alto risco de dependência e piora da somatização.
+- **Abordagem farmacológica de primeira linha:** Quando há comorbidade ansiosa ou depressiva evidente, ou dor crônica refratária, os inibidores seletivos da recaptação de serotonina (ISRS) ou antidepressivos duais (como a duloxetina) podem auxiliar. Utilize a menor dose efetiva e ajuste gradualmente, conforme a bula e o protocolo local. Evite o uso prolongado de benzodiazepínicos pelo alto risco de dependência e piora da somatização.
 - **Abordagem não farmacológica:** Aconselhamento estruturado, técnicas de respiração e relaxamento, além de incentivo à atividade física regular.
 - **Sinais de gravidade e bandeiras vermelhas:** Perda de peso inexplicada, febre persistente, sinais neurológicos focais, dor noturna progressiva ou alteração anatômica evidente ao exame físico exigem reavaliação e investigação direcionada.
 - **Quando e como encaminhar:** Encaminhe para a psicologia ou psiquiatria da rede quando houver falha terapêutica após vínculo estabelecido, risco de automutilação, ideação suicida ou sofrimento psíquico incapacitante. Lembre-se de manter o acompanhamento longitudinal na APS, mesmo após o encaminhamento.
@@ -63,17 +64,16 @@ O manejo exige paciência, consistência e uma abordagem multiprofissional sempr
 - A dor relatada é sempre real e merece validação, independentemente dos resultados dos exames complementares.
 - A relação médico-paciente fortalecida é a principal ferramenta terapêutica para reduzir a peregrinação médica.
 - Consultas regulares agendadas evitam idas desnecessárias ao pronto atendimento e diminuem a iatrogenia.
-- O uso de psicofármacos deve ser criterioso, reservado para comorbidades claras e sempre com [DOSE A CONFIRMAR].
+- O uso de psicofármacos deve ser criterioso, reservado para comorbidades claras e sempre com dose definida pelo médico.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Primary Health Care"[Mesh] AND "Clinical Management"` — Diretriz — [PMID A CONFIRMAR]
-2. `"Physician-Patient Relations"[Mesh] AND "Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Unnecessary Procedures"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-4. `"Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Randomized Controlled Trial"[Publication Type]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-
+1. Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2 — Revisão sistemática Cochrane e metanálise
+2. Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538 — Revisão sistemática e metanálise
+3. Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738 — Metanálise de ensaios clínicos randomizados
+4. Gormley KJ. Medically unexplained symptoms: the need for effective communication and an integrated care strategy. Br J Community Nurs. 2014;19(2):86-90. PMID 24514109. doi:10.12968/bjcn.2014.19.2.86 — Revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

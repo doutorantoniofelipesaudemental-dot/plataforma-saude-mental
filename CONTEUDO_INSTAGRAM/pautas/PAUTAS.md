@@ -517,10 +517,10 @@
 - **público:** Residentes de Medicina de Família e Comunidade e Estudantes · **ângulo:** Valorização da relação médico-paciente como principal ferramenta terapêutica na APS.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Primary Health Care"[Mesh] AND "Clinical Management"` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `"Physician-Patient Relations"[Mesh] AND "Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Unnecessary Procedures"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Randomized Controlled Trial"[Publication Type]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Primary Health Care"[Mesh] AND "Clinical Management"` (Revisão sistemática Cochrane e metanálise) 24142886
+  - PubMed: `"Physician-Patient Relations"[Mesh] AND "Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão sistemática e metanálise) 36374916
+  - PubMed: `("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND "Unnecessary Procedures"[Mesh] AND "Primary Health Care"[Mesh]` (Metanálise de ensaios clínicos randomizados) 32428905
+  - PubMed: `"Somatoform Disorders"[Mesh] AND "Primary Health Care"[Mesh] AND "Randomized Controlled Trial"[Publication Type]` (Revisão) 24514109
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic.md` · slug: `transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic` · pauta: `2026-09-30-35-transtornos-somatoformes-na-ub`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Rastreio e manejo da depressão pós-parto na UBS" (similaridade 0.23)
@@ -621,9 +621,10 @@
 - **público:** Médicos residentes de medicina de família e comunidade, internos de medicina e estudantes da área da saúde · **ângulo:** Foco estrito no raciocínio clínico de primeira linha e critérios objetivos de encaminhamento no contexto exclusivo da UBS.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Primary Health Care"[MeSH] OR "General Practice"[MeSH]) AND ("Mental Disorders"[MeSH] OR "Psychiatry"[MeSH]) AND "Clinical Protocols"[MeSH]` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `"Physician-Patient Relations"[MeSH] AND "Mental Health"[MeSH] AND "Internship and Residency"[MeSH]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Triage"[MeSH] AND "Emergency Services, Psychiatric"[MeSH] AND "Primary Health Care"[MeSH]` (Estudo de Coorte) [PMID A CONFIRMAR]
+  - PubMed: `("Primary Health Care"[MeSH] OR "General Practice"[MeSH]) AND ("Mental Disorders"[MeSH] OR "Psychiatry"[MeSH]) AND "Clinical Protocols"[MeSH]` (Revisão) 38856993
+  - PubMed: `"Physician-Patient Relations"[MeSH] AND "Mental Health"[MeSH] AND "Internship and Residency"[MeSH]` (Diretriz clínica (CANMAT)) 38711351
+  - PubMed: `"Triage"[MeSH] AND "Emergency Services, Psychiatric"[MeSH] AND "Primary Health Care"[MeSH]` (Diretriz clínica (WFSBP, versão para atenção primária)) 22540422
+  - PubMed: `` (Diretriz (Project BETA) e revisão) 33145538
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para.md` · slug: `primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para` · pauta: `2026-09-30-41-primeiro-atendimento-em-psiqui`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Delirium no pronto-atendimento: avaliação e manejo para residentes" (similaridade 0.34)
@@ -796,9 +797,10 @@
 - **público:** Médicos de família, médicos generalistas e residentes de medicina de família e comunidade. · **ângulo:** Foco estrito no manejo viável dentro do consultório de APS, superando a demora diagnóstica comum em transtornos de ansiedade complexos.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Obsessive-Compulsive Disorder[Mesh] AND Primary Health Care[Mesh] AND Diagnosis` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `Obsessive-Compulsive Disorder[Mesh] AND General Practice AND Therapeutics` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `Serotonin Uptake Inhibitors AND Obsessive-Compulsive Disorder[Mesh] AND Primary Care` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `Obsessive-Compulsive Disorder[Mesh] AND Primary Health Care[Mesh] AND Diagnosis` (Revisão) 39418554
+  - PubMed: `Obsessive-Compulsive Disorder[Mesh] AND General Practice AND Therapeutics` (Diretriz clínica (WFSBP, versão para atenção primária)) 22540422
+  - PubMed: `Serotonin Uptake Inhibitors AND Obsessive-Compulsive Disorder[Mesh] AND Primary Care` (Metanálise de ensaios clínicos randomizados (dose-resposta)) 19468281
+  - PubMed: `` (Revisão sistemática com meta-regressão (dose-resposta)) 34630180
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane.md` · slug: `transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane` · pauta: `2026-09-30-56-transtorno-obsessivo-compulsiv`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.32)
@@ -842,10 +844,9 @@
 - **público:** médicos e equipes da APS e pessoas em sofrimento por trauma e estresse crônico · **ângulo:** acolhimento seguro e autorregulação como primeiro passo, sem diagnóstico apressado
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Dissociative Disorders"[MeSH] AND "Psychological Trauma"[MeSH] AND primary care` (revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `dissociative symptoms trauma-informed care primary care` (revisão narrativa ou diretriz) [PMID A CONFIRMAR]
-  - PubMed: `grounding techniques emotion regulation dissociation randomized` (ensaio clínico randomizado) [PMID A CONFIRMAR]
-  - PubMed: `chronic stress depersonalization derealization treatment` (revisão sistemática) [PMID A CONFIRMAR]
+  - PubMed: `"Dissociative Disorders"[MeSH] AND "Psychological Trauma"[MeSH] AND primary care` (Revisão sistemática) 37431255
+  - PubMed: `dissociative symptoms trauma-informed care primary care` (Revisão (guia clínico transdiagnóstico)) 36425778
+  - PubMed: `grounding techniques emotion regulation dissociation randomized` (Ensaio clínico randomizado) 40014495
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr.md` · slug: `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` · pauta: `2026-09-30-59-transtorno-dissociativo-na-aps`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.24)
@@ -859,9 +860,10 @@
 - **público:** Médicos de família e comunidade, pediatras e equipes de saúde da família · **ângulo:** Direcionado ao manejo preventivo e à orientação de pais e responsáveis diretamente no contexto da consulta de puericultura e rotina.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Screen time AND mental health AND child AND adolescent AND primary care` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
-  - PubMed: `Problematic smartphone use AND children AND behavioral addiction AND management` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `Digital media use AND pediatric primary care AND guidelines` (Estudo de coorte) [PMID A CONFIRMAR]
+  - PubMed: `Screen time AND mental health AND child AND adolescent AND primary care` (Revisão sistemática e metanálise) 40660635
+  - PubMed: `Problematic smartphone use AND children AND behavioral addiction AND management` (Revisão sistemática e metanálise) 39923383
+  - PubMed: `Digital media use AND pediatric primary care AND guidelines` (Diretriz clínica (Academia Indiana de Pediatria)) 34969943
+  - PubMed: `` (Estudo longitudinal) 41029734
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia-.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia-` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Telas na primeira infância: o que as diretrizes recomendam" (similaridade 0.27)
@@ -875,9 +877,10 @@
 - **público:** Familiares e cuidadores de pacientes em sofrimento mental agudo · **ângulo:** Foco exclusivo na perspectiva de suporte e orientação prática para a família durante o momento de maior vulnerabilidade, em linguagem acessível e fundamentada.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("First-Episode Psychosis"[Mesh]) AND ("Family Psychoeducation"[Mesh]) AND ("Caregivers"[Mesh])` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
-  - PubMed: `("Psychotic Disorders"[Mesh]) AND ("Early Intervention"[Mesh]) AND ("Family Support"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Caregiver Burden"[Mesh]) AND ("First-Episode Psychosis"[Mesh]) AND ("Psychoeducation"[Mesh])` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("First-Episode Psychosis"[Mesh]) AND ("Family Psychoeducation"[Mesh]) AND ("Caregivers"[Mesh])` (Revisão sistemática e metanálise) 39854977
+  - PubMed: `("Psychotic Disorders"[Mesh]) AND ("Early Intervention"[Mesh]) AND ("Family Support"[Mesh])` (Diretriz clínica (RANZCP)) 27106681
+  - PubMed: `("Caregiver Burden"[Mesh]) AND ("First-Episode Psychosis"[Mesh]) AND ("Psychoeducation"[Mesh])` (Ensaio clínico randomizado) 21226941
+  - PubMed: `` (Revisão sistemática e metanálise) 25833867
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa.md` · slug: `primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa` · pauta: `2026-09-30-61-primeiro-episodio-psicotico-or`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.31)
@@ -891,9 +894,10 @@
 - **público:** Idosos, familiares e cuidadores preocupados com alterações cognitivas · **ângulo:** Diferenciação clara entre lapsos normais de memória e patologias, orientando a família sobre o momento correto de procurar investigação clínica.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Cognitive Dysfunction"[Mesh]) AND ("Early Diagnosis"[Mesh]) AND ("Family Practice"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Memory Disorders"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Caregivers"[Mesh]) AND ("Cognitive Decline"[Mesh]) AND ("Psychoeducation"[Mesh])` (Estudo observacional) [PMID A CONFIRMAR]
+  - PubMed: `("Cognitive Dysfunction"[Mesh]) AND ("Early Diagnosis"[Mesh]) AND ("Family Practice"[Mesh])` (Revisão) 25274571
+  - PubMed: `("Memory Disorders"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão sistemática Cochrane e metanálise) 29923184
+  - PubMed: `("Caregivers"[Mesh]) AND ("Cognitive Decline"[Mesh]) AND ("Psychoeducation"[Mesh])` (Revisão sistemática e metanálise) 38439609
+  - PubMed: `` (Revisão sistemática) 31808211
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo.md` · slug: `esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo` · pauta: `2026-09-30-62-esquecimento-comum-ou-sinal-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Adolescência: diferenciando oscilação normal de sinal de alerta" (similaridade 0.27)
@@ -907,9 +911,10 @@
 - **público:** Familiares e pessoas que convivem com instabilidade emocional crônica · **ângulo:** Enfoque nas fronteiras saudáveis do cuidado, mostrando como apoiar sem assumir o papel terapêutico ou anular as próprias necessidades.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Mood Disorders"[Mesh]) AND ("Family Relations"[Mesh]) AND ("Social Support"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Caregivers"[Mesh]) AND ("Adaptation, Psychological"[Mesh]) AND ("Mental Disorders"[Mesh])` (Ensaio clínico) [PMID A CONFIRMAR]
-  - PubMed: `("Family Therapy"[Mesh]) AND ("Mood Disorders"[Mesh]) AND ("Primary Health Care"[Mesh])` (Diretriz baseada em evidências) [PMID A CONFIRMAR]
+  - PubMed: `("Mood Disorders"[Mesh]) AND ("Family Relations"[Mesh]) AND ("Social Support"[Mesh])` (Revisão sistemática Cochrane e metanálise) 17943843
+  - PubMed: `("Caregivers"[Mesh]) AND ("Adaptation, Psychological"[Mesh]) AND ("Mental Disorders"[Mesh])` (Revisão sistemática) 29727072
+  - PubMed: `("Family Therapy"[Mesh]) AND ("Mood Disorders"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão sistemática e metanálise) 37997647
+  - PubMed: `` (Diretriz clínica (CANMAT/ISBD)) 29536616
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar.md` · slug: `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` · pauta: `2026-09-30-63-conviver-com-a-oscilacao-de-hu`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Sinais precoces de depressão: guia de apoio prático para familiares" (similaridade 0.25)

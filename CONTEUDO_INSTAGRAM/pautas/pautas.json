@@ -1849,19 +1849,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Somatoform Disorders\"[Mesh] OR \"Medically Unexplained Symptoms\"[Mesh]) AND \"Primary Health Care\"[Mesh] AND \"Clinical Management\"",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "24142886",
+        "citacao": "Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2"
       },
       {
         "consultaPubMed": "\"Physician-Patient Relations\"[Mesh] AND \"Somatoform Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "36374916",
+        "citacao": "Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538"
       },
       {
         "consultaPubMed": "(\"Somatoform Disorders\"[Mesh] OR \"Medically Unexplained Symptoms\"[Mesh]) AND \"Unnecessary Procedures\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Metanálise de ensaios clínicos randomizados",
+        "pmid": "32428905",
+        "citacao": "Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738"
       },
       {
         "consultaPubMed": "\"Somatoform Disorders\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Randomized Controlled Trial\"[Publication Type]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "24514109",
+        "citacao": "Gormley KJ. Medically unexplained symptoms: the need for effective communication and an integrated care strategy. Br J Community Nurs. 2014;19(2):86-90. PMID 24514109. doi:10.12968/bjcn.2014.19.2.86"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -2265,18 +2273,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Primary Health Care\"[MeSH] OR \"General Practice\"[MeSH]) AND (\"Mental Disorders\"[MeSH] OR \"Psychiatry\"[MeSH]) AND \"Clinical Protocols\"[MeSH]",
-        "tipoDeEstudo": "Diretriz Clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "38856993",
+        "citacao": "Simon GE, Moise N, Mohr DC. Management of Depression in Adults: A Review. JAMA. 2024;332(2):141-152. PMID 38856993. doi:10.1001/jama.2024.5756"
       },
       {
         "consultaPubMed": "\"Physician-Patient Relations\"[MeSH] AND \"Mental Health\"[MeSH] AND \"Internship and Residency\"[MeSH]",
-        "tipoDeEstudo": "Revisão Sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (CANMAT)",
+        "pmid": "38711351",
+        "citacao": "Lam RW, Kennedy SH, Adams C, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults. Can J Psychiatry. 2024;69(9):641-687. PMID 38711351. doi:10.1177/07067437241245384"
       },
       {
         "consultaPubMed": "\"Triage\"[MeSH] AND \"Emergency Services, Psychiatric\"[MeSH] AND \"Primary Health Care\"[MeSH]",
-        "tipoDeEstudo": "Estudo de Coorte",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (WFSBP, versão para atenção primária)",
+        "pmid": "22540422",
+        "citacao": "Bandelow B, Sher L, Bunevicius R et al.. Guidelines for the pharmacological treatment of anxiety disorders, obsessive-compulsive disorder and posttraumatic stress disorder in primary care. Int J Psychiatry Clin Pract. 2012;16(2):77-84. PMID 22540422. doi:10.3109/13651501.2012.667114"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -2764,18 +2781,27 @@
     "referencias": [
       {
         "consultaPubMed": "Obsessive-Compulsive Disorder[Mesh] AND Primary Health Care[Mesh] AND Diagnosis",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "39418554",
+        "citacao": "Semenya AM, Bhatnagar P. Diagnosis and Management of Obsessive-Compulsive Disorder in the Primary Care Setting. Am Fam Physician. 2024;110(4):385-392. PMID 39418554"
       },
       {
         "consultaPubMed": "Obsessive-Compulsive Disorder[Mesh] AND General Practice AND Therapeutics",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (WFSBP, versão para atenção primária)",
+        "pmid": "22540422",
+        "citacao": "Bandelow B, Sher L, Bunevicius R et al.. Guidelines for the pharmacological treatment of anxiety disorders, obsessive-compulsive disorder and posttraumatic stress disorder in primary care. Int J Psychiatry Clin Pract. 2012;16(2):77-84. PMID 22540422. doi:10.3109/13651501.2012.667114"
       },
       {
         "consultaPubMed": "Serotonin Uptake Inhibitors AND Obsessive-Compulsive Disorder[Mesh] AND Primary Care",
-        "tipoDeEstudo": "Ensaio clínico randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Metanálise de ensaios clínicos randomizados (dose-resposta)",
+        "pmid": "19468281",
+        "citacao": "Bloch MH, McGuire J, Landeros-Weisenberger A et al.. Meta-analysis of the dose-response relationship of SSRI in obsessive-compulsive disorder. Mol Psychiatry. 2009;15(8):850-5. PMID 19468281. doi:10.1038/mp.2009.50"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática com meta-regressão (dose-resposta)",
+        "pmid": "34630180",
+        "citacao": "Xu J, Hao Q, Qian R et al.. Optimal Dose of Serotonin Reuptake Inhibitors for Obsessive-Compulsive Disorder in Adults: A Systematic Review and Dose-Response Meta-Analysis. Front Psychiatry. 2021;12:717999. PMID 34630180. doi:10.3389/fpsyt.2021.717999"
       }
     ],
     "categoria": "Condições Específicas",
@@ -2925,19 +2951,21 @@
     "referencias": [
       {
         "consultaPubMed": "\"Dissociative Disorders\"[MeSH] AND \"Psychological Trauma\"[MeSH] AND primary care",
-        "tipoDeEstudo": "revisão sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37431255",
+        "citacao": "Wang S, Zheng S, Zhang X et al.. The Treatment of Depersonalization-Derealization Disorder: A Systematic Review. J Trauma Dissociation. 2023;25(1):6-29. PMID 37431255. doi:10.1080/15299732.2023.2231920"
       },
       {
         "consultaPubMed": "dissociative symptoms trauma-informed care primary care",
-        "tipoDeEstudo": "revisão narrativa ou diretriz"
+        "tipoDeEstudo": "Revisão (guia clínico transdiagnóstico)",
+        "pmid": "36425778",
+        "citacao": "Şar V. Dissociation Across Cultures: A Transdiagnostic Guide for Clinical Assessment and Management. Alpha Psychiatry. 2022;23(3):95-103. PMID 36425778. doi:10.5152/alphapsychiatry.2022.21556"
       },
       {
         "consultaPubMed": "grounding techniques emotion regulation dissociation randomized",
-        "tipoDeEstudo": "ensaio clínico randomizado"
-      },
-      {
-        "consultaPubMed": "chronic stress depersonalization derealization treatment",
-        "tipoDeEstudo": "revisão sistemática"
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "40014495",
+        "citacao": "Brand BL, Schielke HJ, Putnam K et al.. A randomized controlled trial assists individuals with complex trauma and dissociation in Finding Solid Ground. Psychol Trauma. 2025;17(8):1717-1727. PMID 40014495. doi:10.1037/tra0001871"
       }
     ],
     "categoria": "Condições Específicas",
@@ -2996,17 +3024,26 @@
       {
         "consultaPubMed": "Screen time AND mental health AND child AND adolescent AND primary care",
         "tipoDeEstudo": "Revisão sistemática e metanálise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "pmid": "40660635",
+        "citacao": "Lai NM, Lim YS, Chaiyakunapruk N et al.. Review Article: The effectiveness of school-based interventions for reducing screen time - a systematic review and meta-analysis. Child Adolesc Ment Health. 2025;30(3):223-237. PMID 40660635. doi:10.1111/camh.70022"
       },
       {
         "consultaPubMed": "Problematic smartphone use AND children AND behavioral addiction AND management",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "39923383",
+        "citacao": "Ru Y, Norlizah HC, Nasuha Burhanuddin NA et al.. The correlation between mindfulness and problematic smartphone use: A meta-analysis. Addict Behav. 2025;164:108272. PMID 39923383. doi:10.1016/j.addbeh.2025.108272"
       },
       {
         "consultaPubMed": "Digital media use AND pediatric primary care AND guidelines",
-        "tipoDeEstudo": "Estudo de coorte",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (Academia Indiana de Pediatria)",
+        "pmid": "34969943",
+        "citacao": "Gupta P, Shah D, Bedi N et al.. Indian Academy of Pediatrics Guidelines on Screen Time and Digital Wellness in Infants, Children and Adolescents. Indian Pediatr. 2021;59(3):235-244. PMID 34969943"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Estudo longitudinal",
+        "pmid": "41029734",
+        "citacao": "Li Y, Lin YF, Wu H et al.. Changes in smartphone dependence and depressive and anxiety symptoms among Chinese adolescents. BMC Med. 2025;23(1):523. PMID 41029734. doi:10.1186/s12916-025-04372-9"
       }
     ],
     "categoria": "Condições Específicas",
@@ -3057,17 +3094,26 @@
       {
         "consultaPubMed": "(\"First-Episode Psychosis\"[Mesh]) AND (\"Family Psychoeducation\"[Mesh]) AND (\"Caregivers\"[Mesh])",
         "tipoDeEstudo": "Revisão sistemática e metanálise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "pmid": "39854977",
+        "citacao": "Gleeson JFM, Ludwig K, Stiles BJ et al.. Systematic review and meta-analysis of family-based interventions for early psychosis: Carer and patient outcomes. Schizophr Res. 2025;276:57-78. PMID 39854977. doi:10.1016/j.schres.2025.01.006"
       },
       {
         "consultaPubMed": "(\"Psychotic Disorders\"[Mesh]) AND (\"Early Intervention\"[Mesh]) AND (\"Family Support\"[Mesh])",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (RANZCP)",
+        "pmid": "27106681",
+        "citacao": "Galletly C, Castle D, Dark F et al.. Royal Australian and New Zealand College of Psychiatrists clinical practice guidelines for the management of schizophrenia and related disorders. Aust N Z J Psychiatry. 2016;50(5):410-72. PMID 27106681. doi:10.1177/0004867416641195"
       },
       {
         "consultaPubMed": "(\"Caregiver Burden\"[Mesh]) AND (\"First-Episode Psychosis\"[Mesh]) AND (\"Psychoeducation\"[Mesh])",
         "tipoDeEstudo": "Ensaio clínico randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "pmid": "21226941",
+        "citacao": "Breitborde NJ, Moreno FA, Mai-Dixon N et al.. Multifamily group psychoeducation and cognitive remediation for first-episode psychosis: a randomized controlled trial. BMC Psychiatry. 2011;11:9. PMID 21226941. doi:10.1186/1471-244X-11-9"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "25833867",
+        "citacao": "Yesufu-Udechuku A, Harrison B, Mayo-Wilson E et al.. Interventions to improve the experience of caring for people with severe mental illness: systematic review and meta-analysis. Br J Psychiatry. 2015;206(4):268-74. PMID 25833867. doi:10.1192/bjp.bp.114.147561"
       }
     ],
     "categoria": "Pacientes & Famílias",
@@ -3117,18 +3163,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Cognitive Dysfunction\"[Mesh]) AND (\"Early Diagnosis\"[Mesh]) AND (\"Family Practice\"[Mesh])",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "25274571",
+        "citacao": "Blackburn DJ, Wakefield S, Shanks MF et al.. Memory difficulties are not always a sign of incipient dementia: a review of the possible causes of loss of memory efficiency. Br Med Bull. 2014;112(1):71-81. PMID 25274571. doi:10.1093/bmb/ldu029"
       },
       {
         "consultaPubMed": "(\"Memory Disorders\"[Mesh]) AND (\"Aged\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "29923184",
+        "citacao": "Birks JS, Harvey RJ. Donepezil for dementia due to Alzheimer's disease. Cochrane Database Syst Rev. 2018;6(6):CD001190. PMID 29923184. doi:10.1002/14651858.CD001190.pub3"
       },
       {
         "consultaPubMed": "(\"Caregivers\"[Mesh]) AND (\"Cognitive Decline\"[Mesh]) AND (\"Psychoeducation\"[Mesh])",
-        "tipoDeEstudo": "Estudo observacional",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "38439609",
+        "citacao": "Gao Y, Liu Y, Li Y. Safety and efficacy of acetylcholinesterase inhibitors for Alzheimer's disease: A systematic review and meta-analysis. Adv Clin Exp Med. 2024;33(11):1179-1187. PMID 38439609. doi:10.17219/acem/176051"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "31808211",
+        "citacao": "Frias CE, Garcia-Pascual M, Montoro M et al.. Effectiveness of a psychoeducational intervention for caregivers of People With Dementia with regard to burden, anxiety and depression: A systematic review. J Adv Nurs. 2020;76(3):787-802. PMID 31808211. doi:10.1111/jan.14286"
       }
     ],
     "categoria": "Pacientes & Famílias",
@@ -3178,18 +3233,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Mood Disorders\"[Mesh]) AND (\"Family Relations\"[Mesh]) AND (\"Social Support\"[Mesh])",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "17943843",
+        "citacao": "Justo LP, Soares BG, Calil HM. Family interventions for bipolar disorder. Cochrane Database Syst Rev. 2007;2007(4):CD005167. PMID 17943843. doi:10.1002/14651858.CD005167.pub2"
       },
       {
         "consultaPubMed": "(\"Caregivers\"[Mesh]) AND (\"Adaptation, Psychological\"[Mesh]) AND (\"Mental Disorders\"[Mesh])",
-        "tipoDeEstudo": "Ensaio clínico",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "29727072",
+        "citacao": "Soo SA, Zhang ZW, Khong SJ et al.. Randomized Controlled Trials of Psychoeducation Modalities in the Management of Bipolar Disorder: A Systematic Review. J Clin Psychiatry. 2018;79(3). PMID 29727072. doi:10.4088/JCP.17r11750"
       },
       {
         "consultaPubMed": "(\"Family Therapy\"[Mesh]) AND (\"Mood Disorders\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Diretriz baseada em evidências",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "37997647",
+        "citacao": "Sampogna G, Brohan E, Luciano M et al.. Psychosocial interventions for carers of people with severe mental and substance use disorders: a systematic review and meta-analysis. Eur Psychiatry. 2023;66(1):e98. PMID 37997647. doi:10.1192/j.eurpsy.2023.2472"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Diretriz clínica (CANMAT/ISBD)",
+        "pmid": "29536616",
+        "citacao": "Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609"
       }
     ],
     "categoria": "Pacientes & Famílias",

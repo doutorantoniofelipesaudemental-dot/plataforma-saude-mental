@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:09:19.212Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Conviver com a oscilação de humor: limites e apoio familiar
@@ -53,7 +54,7 @@ Quando falamos em oscilações intensas de humor, estamos lidando com circuitos 
 O suporte familiar é uma base importante para o tratamento, mas a família não substitui a equipe de saúde. O acompanhamento profissional regular é indispensável.
 
 * **Adesão ao tratamento:** Incentive com carinho o uso correto dos medicamentos prescritos e o comparecimento às consultas e psicoterapias.
-* **Fármacos de controle:** Em muitas situações, o médico utiliza estabilizadores de humor ou moduladores da atividade cerebral (como lítio ou anticonvulsivantes em classes específicas, [DOSE A CONFIRMAR]) para reduzir a frequência e a intensidade das crises.
+* **Fármacos de controle:** Em muitas situações, o médico utiliza estabilizadores de humor ou moduladores da atividade cerebral (como lítio ou anticonvulsivantes em classes específicas, com dose e exames definidos pelo médico) para reduzir a frequência e a intensidade das crises.
 * **Sinais de gravidade:** Fique atento a falas de desesperança extrema, ameaças de autoagressão, perda total do contato com a realidade ou recusa absoluta de autocuidado.
 * **Onde buscar ajuda:** Em caso de crise grave, procure o pronto atendimento mais próximo, acione o SAMU (192) ou ligue para o CVV (188) para apoio imediato em sofrimento psíquico.
 * **Cuidado com quem cuida:** Avalie também a sua própria saúde mental. Procure grupos de apoio para familiares e reserve momentos para o seu descanso.
@@ -66,14 +67,14 @@ O suporte familiar é uma base importante para o tratamento, mas a família não
 - O tratamento médico contínuo e a psicoterapia são pilares fundamentais para a estabilidade.
 - Cuidar de si mesmo é uma necessidade para quem está na posição de cuidador.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Mood Disorders"[Mesh]) AND ("Family Relations"[Mesh]) AND ("Social Support"[Mesh])` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `("Caregivers"[Mesh]) AND ("Adaptation, Psychological"[Mesh]) AND ("Mental Disorders"[Mesh])` — Ensaio clínico — [PMID A CONFIRMAR]
-3. `("Family Therapy"[Mesh]) AND ("Mood Disorders"[Mesh]) AND ("Primary Health Care"[Mesh])` — Diretriz baseada em evidências — [PMID A CONFIRMAR]
-
+1. Justo LP, Soares BG, Calil HM. Family interventions for bipolar disorder. Cochrane Database Syst Rev. 2007;2007(4):CD005167. PMID 17943843. doi:10.1002/14651858.CD005167.pub2 — Revisão sistemática Cochrane e metanálise
+2. Soo SA, Zhang ZW, Khong SJ et al.. Randomized Controlled Trials of Psychoeducation Modalities in the Management of Bipolar Disorder: A Systematic Review. J Clin Psychiatry. 2018;79(3). PMID 29727072. doi:10.4088/JCP.17r11750 — Revisão sistemática
+3. Sampogna G, Brohan E, Luciano M et al.. Psychosocial interventions for carers of people with severe mental and substance use disorders: a systematic review and meta-analysis. Eur Psychiatry. 2023;66(1):e98. PMID 37997647. doi:10.1192/j.eurpsy.2023.2472 — Revisão sistemática e metanálise
+4. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

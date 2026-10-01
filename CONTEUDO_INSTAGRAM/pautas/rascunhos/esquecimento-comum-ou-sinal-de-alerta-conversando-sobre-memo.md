@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:09:05.407Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Esquecimento comum ou sinal de alerta: conversando sobre memória
@@ -83,7 +84,7 @@ O encaminhamento para avaliação especializada com neurologista ou geriatra é 
 
 O tratamento combina medidas não farmacológicas, como estímulo cognitivo, atividade física adaptada e suporte familiar, com o uso de medicamentos em casos específicos.
 
-* **Classes de medicamentos:** Em quadros de demência diagnosticados, podem ser utilizadas classes de fármacos como os inibidores da acetilcolinesterase e moduladores de receptores específicos, sempre com [DOSE A CONFIRMAR] e acompanhamento médico rigoroso.
+* **Classes de medicamentos:** Em quadros de demência diagnosticados, podem ser utilizadas classes de fármacos como os inibidores da acetilcolinesterase e moduladores de receptores específicos, sempre com dose definida pelo médico e acompanhamento rigoroso.
 * **Papel do cuidador:** O suporte à família e aos cuidadores é parte fundamental do manejo clínico, garantindo orientação e prevenção do esgotamento físico e emocional.
 
 ## Pontos-chave
@@ -93,14 +94,14 @@ O tratamento combina medidas não farmacológicas, como estímulo cognitivo, ati
 - A atenção primária é a porta de entrada ideal para avaliar os sintomas com acolhimento e escuta qualificada.
 - O diagnóstico precoce permite planejar o cuidado, organizar o ambiente e iniciar tratamentos adequados com mais qualidade de vida.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Cognitive Dysfunction"[Mesh]) AND ("Early Diagnosis"[Mesh]) AND ("Family Practice"[Mesh])` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `("Memory Disorders"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Health Care"[Mesh])` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `("Caregivers"[Mesh]) AND ("Cognitive Decline"[Mesh]) AND ("Psychoeducation"[Mesh])` — Estudo observacional — [PMID A CONFIRMAR]
-
+1. Blackburn DJ, Wakefield S, Shanks MF et al.. Memory difficulties are not always a sign of incipient dementia: a review of the possible causes of loss of memory efficiency. Br Med Bull. 2014;112(1):71-81. PMID 25274571. doi:10.1093/bmb/ldu029 — Revisão
+2. Birks JS, Harvey RJ. Donepezil for dementia due to Alzheimer's disease. Cochrane Database Syst Rev. 2018;6(6):CD001190. PMID 29923184. doi:10.1002/14651858.CD001190.pub3 — Revisão sistemática Cochrane e metanálise
+3. Gao Y, Liu Y, Li Y. Safety and efficacy of acetylcholinesterase inhibitors for Alzheimer's disease: A systematic review and meta-analysis. Adv Clin Exp Med. 2024;33(11):1179-1187. PMID 38439609. doi:10.17219/acem/176051 — Revisão sistemática e metanálise
+4. Frias CE, Garcia-Pascual M, Montoro M et al.. Effectiveness of a psychoeducational intervention for caregivers of People With Dementia with regard to burden, anxiety and depression: A systematic review. J Adv Nurs. 2020;76(3):787-802. PMID 31808211. doi:10.1111/jan.14286 — Revisão sistemática
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

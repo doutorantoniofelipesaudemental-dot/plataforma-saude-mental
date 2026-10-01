@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:08:53.833Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Primeiro episódio psicótico: orientações essenciais para a família
@@ -17,7 +18,7 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (5):
 > - * **Não entre em confronto:** Tentar convencer a pessoa de que ela está 'errada' ou 'louca' só aumenta a desconfiança e a agitação. Valide o sofrimento dela …
-> - * **Uso de medicamentos:** Quando necessário, o tratamento de primeira linha inclui medicamentos antipsicóticos (típicos ou atípicos), cuja escolha e [DOSE A…
+> - * **Uso de medicamentos:** Quando necessário, o tratamento de primeira linha inclui medicamentos antipsicóticos (típicos ou atípicos), cuja escolha e dose de…
 > - * **Risco imediato:** Agitação psicomotora extrema, ameaças de agressão a si mesmo ou a terceiros.
 > - * **Como agir nestes casos:** Acione imediatamente os serviços de emergência médica ou dirija-se ao pronto atendimento mais próximo. Nunca hesite em pedir su…
 > - - O tratamento envolve suporte familiar, ambiente seguro e, quando indicado pelo médico, o uso de medicamentos antipsicóticos.
@@ -53,7 +54,7 @@ Perceber que alguém que amamos começou a enxergar ou a acreditar em coisas que
 ### Condutas iniciais e segurança
 
 * **Avaliação médica obrigatória:** Todo quadro de ruptura com a realidade exige avaliação presencial com equipe de saúde para descartar causas orgânicas, como uso de substâncias, infecções ou problemas metabólicos.
-* **Uso de medicamentos:** Quando necessário, o tratamento de primeira linha inclui medicamentos antipsicóticos (típicos ou atípicos), cuja escolha e [DOSE A CONFIRMAR] devem ser definidas exclusivamente pelo médico após exame físico e mental completo.
+* **Uso de medicamentos:** Quando necessário, o tratamento de primeira linha inclui medicamentos antipsicóticos (típicos ou atípicos), cuja escolha e dose devem ser definidas exclusivamente pelo médico após exame físico e mental completo.
 * **Apoio familiar contínuo:** A família atua como ponte fundamental para a adesão ao plano terapêutico e para a redução do estresse ambiental.
 
 ### Sinais de gravidade e quando buscar urgência
@@ -69,14 +70,14 @@ Perceber que alguém que amamos começou a enxergar ou a acreditar em coisas que
 - A busca precoce por avaliação médica presencial é essencial para o sucesso do cuidado.
 - O tratamento envolve suporte familiar, ambiente seguro e, quando indicado pelo médico, o uso de medicamentos antipsicóticos.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("First-Episode Psychosis"[Mesh]) AND ("Family Psychoeducation"[Mesh]) AND ("Caregivers"[Mesh])` — Revisão sistemática e metanálise — [PMID A CONFIRMAR]
-2. `("Psychotic Disorders"[Mesh]) AND ("Early Intervention"[Mesh]) AND ("Family Support"[Mesh])` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `("Caregiver Burden"[Mesh]) AND ("First-Episode Psychosis"[Mesh]) AND ("Psychoeducation"[Mesh])` — Ensaio clínico randomizado — [PMID A CONFIRMAR]
-
+1. Gleeson JFM, Ludwig K, Stiles BJ et al.. Systematic review and meta-analysis of family-based interventions for early psychosis: Carer and patient outcomes. Schizophr Res. 2025;276:57-78. PMID 39854977. doi:10.1016/j.schres.2025.01.006 — Revisão sistemática e metanálise
+2. Galletly C, Castle D, Dark F et al.. Royal Australian and New Zealand College of Psychiatrists clinical practice guidelines for the management of schizophrenia and related disorders. Aust N Z J Psychiatry. 2016;50(5):410-72. PMID 27106681. doi:10.1177/0004867416641195 — Diretriz clínica (RANZCP)
+3. Breitborde NJ, Moreno FA, Mai-Dixon N et al.. Multifamily group psychoeducation and cognitive remediation for first-episode psychosis: a randomized controlled trial. BMC Psychiatry. 2011;11:9. PMID 21226941. doi:10.1186/1471-244X-11-9 — Ensaio clínico randomizado
+4. Yesufu-Udechuku A, Harrison B, Mayo-Wilson E et al.. Interventions to improve the experience of caring for people with severe mental illness: systematic review and meta-analysis. Br J Psychiatry. 2015;206(4):268-74. PMID 25833867. doi:10.1192/bjp.bp.114.147561 — Revisão sistemática e metanálise
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

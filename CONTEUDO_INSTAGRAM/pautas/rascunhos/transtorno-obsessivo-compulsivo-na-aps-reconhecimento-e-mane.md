@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:07:54.693Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial
@@ -55,8 +56,8 @@ Compreender o mecanismo biológico do TOC nos ajuda a explicar o quadro ao pacie
 
 O tratamento do TOC na atenção primária exige paciência, pois a resposta terapêutica costuma ser mais lenta do que em outros transtornos de ansiedade.
 
-* **Inibidores Seletivos da Recaptação de Serotonina (ISRS):** São a base do tratamento medicamentoso. Utiliza-se medicações como Fluoxetina, Sertralina, Citalopram ou Paroxetina [DOSE A CONFIRMAR].
-* **Ajustes de dose específicos:** No TOC, frequentemente precisamos de doses mais altas do que as usadas para depressão ou transtorno de pânico. Aumente a dose de forma gradual conforme a tolerabilidade do paciente [DOSE A CONFIRMAR].
+* **Inibidores Seletivos da Recaptação de Serotonina (ISRS):** São a base do tratamento medicamentoso. Utiliza-se medicações como Fluoxetina, Sertralina, Citalopram ou Paroxetina, com início em dose baixa e titulação gradual, segundo a bula e o protocolo local.
+* **Ajustes de dose específicos:** No TOC, frequentemente precisamos de doses mais altas do que as usadas para depressão ou transtorno de pânico. Aumente a dose de forma gradual conforme a tolerabilidade do paciente. Uma metanálise de doses fixas mostrou maior eficácia com doses mais altas, ao custo de mais abandonos por efeitos adversos (Bloch et al., 2010, PMID 19468281), e uma revisão com meta-regressão estimou o ponto de maior eficácia em cerca de 40 mg de fluoxetina ou equivalente (Xu et al., 2021, PMID 34630180).
 * **Janela temporal:** Oriente o paciente que a melhora clínica pode demorar de oito a doze semanas para se tornar evidente, sendo necessário manter o tratamento de forma contínua.
 * **Psicoterapia estruturada:** A Terapia Cognitivo-Comportamental (TCC), com foco específico na técnica de Prevenção de Resposta e Exposição (PER), é o padrão-ouro. O encaminhamento deve ser feito o mais cedo possível.
 * **Sinais de gravidade e quando encaminhar:** Encaminhe para a psiquiatria e rede especializada se houver ideação suicida ativa, incapacidade total para o autocuidado, comorbidades graves resistentes, risco de autolesão ou refratariedade após uso adequado de pelo menos dois ISRS em doses plenas por tempo suficiente.
@@ -69,14 +70,14 @@ O tratamento do TOC na atenção primária exige paciência, pois a resposta ter
 - A psicoterapia estruturada com foco em exposição e prevenção de resposta é essencial e deve ser associada precocemente.
 - Sinais como ideação suicida ou refratariedade a dois ISRS indicam a necessidade de encaminhamento especializado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Obsessive-Compulsive Disorder[Mesh] AND Primary Health Care[Mesh] AND Diagnosis` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `Obsessive-Compulsive Disorder[Mesh] AND General Practice AND Therapeutics` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `Serotonin Uptake Inhibitors AND Obsessive-Compulsive Disorder[Mesh] AND Primary Care` — Ensaio clínico randomizado — [PMID A CONFIRMAR]
-
+1. Semenya AM, Bhatnagar P. Diagnosis and Management of Obsessive-Compulsive Disorder in the Primary Care Setting. Am Fam Physician. 2024;110(4):385-392. PMID 39418554 — Revisão
+2. Bandelow B, Sher L, Bunevicius R et al.. Guidelines for the pharmacological treatment of anxiety disorders, obsessive-compulsive disorder and posttraumatic stress disorder in primary care. Int J Psychiatry Clin Pract. 2012;16(2):77-84. PMID 22540422. doi:10.3109/13651501.2012.667114 — Diretriz clínica (WFSBP, versão para atenção primária)
+3. Bloch MH, McGuire J, Landeros-Weisenberger A et al.. Meta-analysis of the dose-response relationship of SSRI in obsessive-compulsive disorder. Mol Psychiatry. 2009;15(8):850-5. PMID 19468281. doi:10.1038/mp.2009.50 — Metanálise de ensaios clínicos randomizados (dose-resposta)
+4. Xu J, Hao Q, Qian R et al.. Optimal Dose of Serotonin Reuptake Inhibitors for Obsessive-Compulsive Disorder in Adults: A Systematic Review and Dose-Response Meta-Analysis. Front Psychiatry. 2021;12:717999. PMID 34630180. doi:10.3389/fpsyt.2021.717999 — Revisão sistemática com meta-regressão (dose-resposta)
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

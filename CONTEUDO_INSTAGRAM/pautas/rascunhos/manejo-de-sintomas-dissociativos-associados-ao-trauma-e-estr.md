@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:15:26.808Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Manejo de Sintomas Dissociativos Associados ao Trauma e Estresse Crônico na APS: Guia de Acolhimento e Autorregulação
@@ -16,7 +17,7 @@ revisaoMedica: pendente
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (5):
-> - * Medicamentos da classe dos antidepressivos (como os inibidores seletivos da recaptação de serotonina) podem ser considerados [DOSE A CONFIRMAR] se houver s…
+> - * Medicamentos da classe dos antidepressivos (como os inibidores seletivos da recaptação de serotonina) podem ser considerados, com dose definida pelo médico…
 > - * O uso de ansiolíticos benzodiazepínicos deve ser evitado ou cercado de extrema cautela, pois podem piorar a confusão mental e gerar dependência.
 > - * Risco iminente à integridade física (oriente ligar para o SAMU 192 ou procurar o CVV 188).
 > - * Nesses casos, o encaminhamento para a saúde mental especializada ou para o suporte de urgência psiquiátrica deve ser feito de forma articulada e humanizada.
@@ -67,7 +68,7 @@ O manejo inicial na APS baseia-se na criação de segurança e na psychoeducaç�
 
 #### Abordagem Medicamentosa
 * Não existe medicação específica aprovada exclusivamente para a dissociação.
-* Medicamentos da classe dos antidepressivos (como os inibidores seletivos da recaptação de serotonina) podem ser considerados [DOSE A CONFIRMAR] se houver sintomas ansiosos ou depressivos marcantes.
+* Medicamentos da classe dos antidepressivos (como os inibidores seletivos da recaptação de serotonina) podem ser considerados, com dose definida pelo médico, se houver sintomas ansiosos ou depressivos marcantes.
 * O uso de ansiolíticos benzodiazepínicos deve ser evitado ou cercado de extrema cautela, pois podem piorar a confusão mental e gerar dependência.
 
 #### Sinais de Gravidade e Quando Encaminhar
@@ -83,15 +84,13 @@ O manejo inicial na APS baseia-se na criação de segurança e na psychoeducaç�
 - Técnicas de aterramento ajudam a reconectar a pessoa com o presente e com o próprio corpo.
 - Sinais de crise grave exigem suporte imediato da rede de urgência, priorizando a vida.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Dissociative Disorders"[MeSH] AND "Psychological Trauma"[MeSH] AND primary care` — revisão sistemática — [PMID A CONFIRMAR]
-2. `dissociative symptoms trauma-informed care primary care` — revisão narrativa ou diretriz — [PMID A CONFIRMAR]
-3. `grounding techniques emotion regulation dissociation randomized` — ensaio clínico randomizado — [PMID A CONFIRMAR]
-4. `chronic stress depersonalization derealization treatment` — revisão sistemática — [PMID A CONFIRMAR]
-
+1. Wang S, Zheng S, Zhang X et al.. The Treatment of Depersonalization-Derealization Disorder: A Systematic Review. J Trauma Dissociation. 2023;25(1):6-29. PMID 37431255. doi:10.1080/15299732.2023.2231920 — Revisão sistemática
+2. Şar V. Dissociation Across Cultures: A Transdiagnostic Guide for Clinical Assessment and Management. Alpha Psychiatry. 2022;23(3):95-103. PMID 36425778. doi:10.5152/alphapsychiatry.2022.21556 — Revisão (guia clínico transdiagnóstico)
+3. Brand BL, Schielke HJ, Putnam K et al.. A randomized controlled trial assists individuals with complex trauma and dissociation in Finding Solid Ground. Psychol Trauma. 2025;17(8):1717-1727. PMID 40014495. doi:10.1037/tra0001871 — Ensaio clínico randomizado
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

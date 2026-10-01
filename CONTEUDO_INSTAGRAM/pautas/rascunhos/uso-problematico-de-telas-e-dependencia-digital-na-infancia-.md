@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:08:26.049Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Uso problemático de telas e dependência digital na infância e APS
@@ -18,7 +19,7 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (3):
 > - - **Uso de medicamentos:** Não existe medicação específica para dependência digital. Fármacos só devem ser considerados se houver comorbidades psiquiátricas …
 > - - **Critérios de encaminhamento:** Encaminhe para psicologia ou psiquiatria infantil quando houver prejuízo funcional grave, isolamento social profundo, idea…
-> - - Investigue comorbidades como ansiedade e TDAH, reservando intervenções medicamentosas apenas para casos específicos com [DOSE A CONFIRMAR].
+> - - Investigue comorbidades como ansiedade e TDAH, reservando intervenções medicamentosas apenas para casos específicos, com dose definida pelo especialista.
 
 Olá, colega. Na nossa rotina na atenção primária e no atendimento às famílias, temos visto uma queixa cada vez mais comum e que gera muita angústia nos pais: o tempo que as crianças e os adolescentes passam diante das telas. Celulares, tablets e videogames ocupam um espaço enorme no dia a dia. Como médico de família e comunidade, sei que a consulta de puericultura é o momento ideal para conversarmos sobre isso de forma aberta, sem julgamentos, acolhendo as dúvidas legítimas dos responsáveis e oferecendo um olhar atento para o neurodesenvolvimento e a saúde mental dos nossos pacientes mais jovens. Vamos juntos organizar essa escuta e o manejo no consultório.
 
@@ -50,7 +51,7 @@ Olá, colega. Na nossa rotina na atenção primária e no atendimento às famíl
 - **Identificação precoce:** Use as consultas de rotina para rastrear o tempo de tela e o impacto na dinâmica familiar, mesmo antes que surjam queixas graves.
 - **Intervenção breve:** Ofereça orientações claras e um plano de redução gradual do tempo de uso, negociando combinados realistas entre pais e filhos.
 - **Investigação de comorbidades:** Avalie se o uso problemático de telas não está mascarando ou agravando quadros de TDAH, transtornos de ansiedade, depressão ou transtornos do espectro autista.
-- **Uso de medicamentos:** Não existe medicação específica para dependência digital. Fármacos só devem ser considerados se houver comorbidades psiquiátricas diagnosticadas e refratárias às intervenções não farmacológicas. Nesses casos, priorize classes como inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR] para ansiedade grave ou moduladores específicos conforme avaliação especializada.
+- **Uso de medicamentos:** Não existe medicação específica para dependência digital. Fármacos só devem ser considerados se houver comorbidades psiquiátricas diagnosticadas e refratárias às intervenções não farmacológicas. Nesses casos, priorize classes como inibidores seletivos da recaptação de serotonina, com dose definida pelo especialista, para ansiedade grave ou moduladores específicos conforme avaliação especializada.
 - **Critérios de encaminhamento:** Encaminhe para psicologia ou psiquiatria infantil quando houver prejuízo funcional grave, isolamento social profundo, ideação autolítica ou resistência extrema da família às orientações iniciais.
 
 ## Pontos-chave
@@ -58,16 +59,16 @@ Olá, colega. Na nossa rotina na atenção primária e no atendimento às famíl
 - A consulta de puericultura é a oportunidade ideal para rastrear o uso de telas e orientar os pais.
 - O excesso de dispositivos prejudica a atenção, a linguagem, o sono e a regulação emocional das crianças.
 - Oriente limites claros, zonas livres de tecnologia no quarto e o resgate de brincadeiras ativas.
-- Investigue comorbidades como ansiedade e TDAH, reservando intervenções medicamentosas apenas para casos específicos com [DOSE A CONFIRMAR].
+- Investigue comorbidades como ansiedade e TDAH, reservando intervenções medicamentosas apenas para casos específicos, com dose definida pelo especialista.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Screen time AND mental health AND child AND adolescent AND primary care` — Revisão sistemática e metanálise — [PMID A CONFIRMAR]
-2. `Problematic smartphone use AND children AND behavioral addiction AND management` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `Digital media use AND pediatric primary care AND guidelines` — Estudo de coorte — [PMID A CONFIRMAR]
-
+1. Lai NM, Lim YS, Chaiyakunapruk N et al.. Review Article: The effectiveness of school-based interventions for reducing screen time - a systematic review and meta-analysis. Child Adolesc Ment Health. 2025;30(3):223-237. PMID 40660635. doi:10.1111/camh.70022 — Revisão sistemática e metanálise
+2. Ru Y, Norlizah HC, Nasuha Burhanuddin NA et al.. The correlation between mindfulness and problematic smartphone use: A meta-analysis. Addict Behav. 2025;164:108272. PMID 39923383. doi:10.1016/j.addbeh.2025.108272 — Revisão sistemática e metanálise
+3. Gupta P, Shah D, Bedi N et al.. Indian Academy of Pediatrics Guidelines on Screen Time and Digital Wellness in Infants, Children and Adolescents. Indian Pediatr. 2021;59(3):235-244. PMID 34969943 — Diretriz clínica (Academia Indiana de Pediatria)
+4. Li Y, Lin YF, Wu H et al.. Changes in smartphone dependence and depressive and anxiety symptoms among Chinese adolescents. BMC Med. 2025;23(1):523. PMID 41029734. doi:10.1186/s12916-025-04372-9 — Estudo longitudinal
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

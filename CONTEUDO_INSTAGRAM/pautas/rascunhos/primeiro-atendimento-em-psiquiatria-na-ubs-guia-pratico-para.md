@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T06:07:02.905Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Primeiro atendimento em psiquiatria na UBS: guia prático para residentes
@@ -18,7 +19,7 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (8):
 > - - Observe a comunicação não verbal: postura, tom de voz, contato visual e grau de agitação ou lentificação.
 > - - Quando indicado o uso de psicofármacos, utilize medicamentos de primeira linha, iniciando com doses baixas e aumentando de forma gradual.
-> - - Classes comuns: Inibidores Seletivos da Recaptação de Serotonina (ISRS) para ansiedade e depressão [DOSE A CONFIRMAR].
+> - - Classes comuns: Inibidores Seletivos da Recaptação de Serotonina (ISRS) para ansiedade e depressão, com dose inicial baixa e titulação gradual segundo a bu…
 > - - Agitação psicomotora intensa sem resposta a medidas verbais.
 > - O encaminhamento para o ambulatório especializado ou CAPS deve ser criterioso e reservado para casos específicos.
 > - - Indicações: refratariedade a duas tentativas com medicações de primeira linha em doses adequadas e tempo hábil, dúvida diagnóstica complexa ou risco grave.
@@ -70,7 +71,7 @@ O manejo na APS deve ser resolutivo, seguro e pautado em intervenções de prime
 - Psicoeducação: explique o diagnóstico de forma simples, desmistificando o sofrimento mental e orientando sobre o tratamento.
 - Intervenções psicossociais breves e ativação de redes de apoio comunitário.
 - Quando indicado o uso de psicofármacos, utilize medicamentos de primeira linha, iniciando com doses baixas e aumentando de forma gradual.
-- Classes comuns: Inibidores Seletivos da Recaptação de Serotonina (ISRS) para ansiedade e depressão [DOSE A CONFIRMAR].
+- Classes comuns: Inibidores Seletivos da Recaptação de Serotonina (ISRS) para ansiedade e depressão, com dose inicial baixa e titulação gradual segundo a bula e o protocolo local (CANMAT 2023, PMID 38711351; WFSBP 2012, PMID 22540422).
 
 ### Sinais de Gravidade e Riscos
 Fique atento aos seguintes sinais que exigem reavaliação imediata:
@@ -91,14 +92,14 @@ O encaminhamento para o ambulatório especializado ou CAPS deve ser criterioso e
 - Pergunte abertamente sobre pensamentos de morte para avaliar o risco com segurança.
 - Utilize intervenções de primeira linha e reserve os encaminhamentos para casos refratários ou graves.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Primary Health Care"[MeSH] OR "General Practice"[MeSH]) AND ("Mental Disorders"[MeSH] OR "Psychiatry"[MeSH]) AND "Clinical Protocols"[MeSH]` — Diretriz Clínica — [PMID A CONFIRMAR]
-2. `"Physician-Patient Relations"[MeSH] AND "Mental Health"[MeSH] AND "Internship and Residency"[MeSH]` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `"Triage"[MeSH] AND "Emergency Services, Psychiatric"[MeSH] AND "Primary Health Care"[MeSH]` — Estudo de Coorte — [PMID A CONFIRMAR]
-
+1. Simon GE, Moise N, Mohr DC. Management of Depression in Adults: A Review. JAMA. 2024;332(2):141-152. PMID 38856993. doi:10.1001/jama.2024.5756 — Revisão
+2. Lam RW, Kennedy SH, Adams C, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults. Can J Psychiatry. 2024;69(9):641-687. PMID 38711351. doi:10.1177/07067437241245384 — Diretriz clínica (CANMAT)
+3. Bandelow B, Sher L, Bunevicius R et al.. Guidelines for the pharmacological treatment of anxiety disorders, obsessive-compulsive disorder and posttraumatic stress disorder in primary care. Int J Psychiatry Clin Pract. 2012;16(2):77-84. PMID 22540422. doi:10.3109/13651501.2012.667114 — Diretriz clínica (WFSBP, versão para atenção primária)
+4. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
