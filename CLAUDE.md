@@ -33,4 +33,5 @@ Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (
 - ÁUDIO OBRIGATÓRIO: 100% dos artigos do portal/blog devem possuir narração em áudio no topo da página.
 - PESQUISAS DE OPINIÃO: Inserir widgets de enquetes/pesquisas anônimas nos artigos.
 - TRILHA SONORA: Mixagem de áudio nos carrosséis com música suave a -22dB.
+- PACOTE MULTIMÍDIA OBRIGATÓRIO: Carrossel + Reel + Stories (com enquete) + Chamada ao Áudio Narrado (padrão em `CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md`).
 - PRESERVAÇÃO DE AUTOMAÇÕES: Manter intactos os scripts Node.js, a checagem de hash e o arquivo client_secret.json.
