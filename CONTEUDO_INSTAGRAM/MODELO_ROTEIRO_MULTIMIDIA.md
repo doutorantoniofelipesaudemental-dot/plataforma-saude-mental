@@ -79,7 +79,7 @@ Cuidar de quem cuida também é parte do cuidado. Salve para ler depois e compar
 
 ---
 
-## Áudio Narrado do Portal (podcast, 3 minutos)
+## Podcast (Áudio Narrado do Portal, 3 minutos)
 
 **Obrigatório:** é a narração do artigo do Portal, a mesma que fica no topo da página. Cada peça acima aponta para ela com a chamada padrão: `🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/[slug]`.
 
