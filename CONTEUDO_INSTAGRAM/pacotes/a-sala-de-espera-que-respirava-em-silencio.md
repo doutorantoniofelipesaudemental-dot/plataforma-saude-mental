@@ -46,6 +46,7 @@ Pacote multimídia da crônica "A sala de espera que respirava em silêncio" (Re
 
 ### Legenda
 Chegar até a unidade de saúde já exige uma coragem imensa. Se você carrega uma dor em silêncio, saiba que existe uma rede de cuidado pronta para acolher. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-sala-de-espera-que-respirava-em-silencio
 
 #saudemental #medicinadefamilia #estigma #atencaoprimaria
 
@@ -54,7 +55,7 @@ Chegar até a unidade de saúde já exige uma coragem imensa. Se você carrega u
 ## Reel / Vídeo (vertical 9:16, 30 s)
 
 **Trilha de fundo:** piano minimalista, -22 dB, com corte limpo no convite final.
-**Texto na tela:** "O SILÊNCIO DA SALA DE ESPERA" → "CADA UM CARREGA UM MUNDO" → "VOCÊ NÃO ESTÁ SOZINHO"
+**Texto na tela:** "O silêncio da sala de espera" → "Cada um carrega um mundo" → "Você não está sozinho"
 **Direção visual:** abertura em 3D na fileira de cadeiras; meio em ilustração 2D com silhuetas sem rosto; fecho em 3D com a porta entreaberta e a faixa de luz.
 
 ### Roteiro de narração
@@ -65,6 +66,7 @@ Chegar até a unidade de saúde já exige uma coragem imensa. Se você carrega u
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** O cuidado começa quando você percebe que não está sozinho com a sua dor. Se esse silêncio é seu, procure a unidade de saúde. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-sala-de-espera-que-respirava-em-silencio
 **Hashtags extras:** #saudemental #estigma
 
 ---
@@ -77,7 +79,7 @@ Chegar até a unidade de saúde já exige uma coragem imensa. Se você carrega u
 | 2 | Você já esperou uma consulta de saúde mental sem conseguir olhar para ninguém ao redor? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: chegar até a unidade de saúde já exige coragem. | Teste: Verdadeiro / Falso (resposta: verdadeiro) |
 | 4 | Você não está sozinho com a sua dor. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre acolhimento na sua prática ou na sua equipe? Veja a mentoria no link do perfil. | Link |
+| 5 | Quer conversar sobre acolhimento na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-sala-de-espera-que-respirava-em-silencio | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo azul-claro com ilustração 2D da fileira de cadeiras; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.

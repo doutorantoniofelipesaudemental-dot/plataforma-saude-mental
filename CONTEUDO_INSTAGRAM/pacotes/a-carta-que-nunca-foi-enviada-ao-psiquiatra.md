@@ -46,6 +46,7 @@ Pacote multimídia da crônica "A carta que nunca foi enviada ao psiquiatra" (Re
 
 ### Legenda
 Muita gente guarda um papel no bolso por medo do que vão dizer. Você não precisa carregar isso sozinho. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-carta-que-nunca-foi-enviada-ao-psiquiatra
 
 #saudemental #medicinadefamilia #estigma #cuidadoemsaude
 
@@ -54,7 +55,7 @@ Muita gente guarda um papel no bolso por medo do que vão dizer. Você não prec
 ## Reel / Vídeo (vertical 9:16, 30 s)
 
 **Trilha de fundo:** piano lo-fi suave, -22 dB, com corte limpo no convite final.
-**Texto na tela:** "O PAPEL NO BOLSO" → "PEDIR AJUDA NÃO É FRAQUEZA" → "VOCÊ NÃO ESTÁ SOZINHO"
+**Texto na tela:** "O papel no bolso" → "Pedir ajuda não é fraqueza" → "Você não está sozinho"
 **Direção visual:** abertura em 3D no papel dobrado; meio em ilustração 2D com o consultório sem rostos; fecho com a lanterna acesa em 3D.
 
 ### Roteiro de narração
@@ -65,6 +66,7 @@ Muita gente guarda um papel no bolso por medo do que vão dizer. Você não prec
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** O medo do que vão dizer atrasa o cuidado de muita gente. Se isso é com você, procure a unidade de saúde. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-carta-que-nunca-foi-enviada-ao-psiquiatra
 **Hashtags extras:** #saudemental #estigma
 
 ---
@@ -77,7 +79,7 @@ Muita gente guarda um papel no bolso por medo do que vão dizer. Você não prec
 | 2 | Você já adiou procurar ajuda por medo do que iriam pensar? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: procurar ajuda especializada é sinal de fraqueza. | Teste: Verdadeiro / Falso (resposta: falso) |
 | 4 | Cuidamos da pressão e do joelho sem vergonha. A mente também merece o mesmo cuidado. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre estigma e cuidado na sua prática ou na sua equipe? Veja a mentoria no link do perfil. | Link |
+| 5 | Quer conversar sobre estigma e cuidado na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-carta-que-nunca-foi-enviada-ao-psiquiatra | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo em tom areia com ilustração 2D do papel dobrado; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.

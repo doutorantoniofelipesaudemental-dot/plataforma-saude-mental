@@ -46,6 +46,7 @@ Pacote multimídia da crônica "A planta que sobreviveu na janela do posto" (Rel
 
 ### Legenda
 A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuida de alguém, lembre-se de cuidar de você também. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto
 
 #saudemental #medicinadefamilia #cuidadores #atencaoprimaria
 
@@ -54,7 +55,7 @@ A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuid
 ## Reel / Vídeo (vertical 9:16, 30 s)
 
 **Trilha de fundo:** violão suave, -22 dB, com corte limpo no convite final.
-**Texto na tela:** "UM GOLE D'ÁGUA POR DIA" → "ESCUTAR SEM PRESSA" → "NINGUÉM CARREGA TUDO SOZINHO"
+**Texto na tela:** "Um gole d'água por dia" → "Escutar sem pressa" → "Ninguém carrega tudo sozinho"
 **Direção visual:** abertura em 3D na suculenta da janela; meio em ilustração 2D da sala de espera, sem rostos; fecho em 3D com o copinho regando o vaso.
 
 ### Roteiro de narração
@@ -65,6 +66,7 @@ A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuid
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** Quem cuida de muita gente precisa de cuidado também. Procure um espaço de escuta na sua comunidade. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto
 **Hashtags extras:** #saudemental #cuidadores
 
 ---
@@ -77,7 +79,7 @@ A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuid
 | 2 | Você cuida de alguém e já deixou o seu próprio cuidado para depois? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: cuidar de si é egoísmo para quem cuida dos outros. | Teste: Verdadeiro / Falso (resposta: falso) |
 | 4 | Ninguém precisa carregar tudo sozinho. Procure um espaço de escuta na sua comunidade. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre cuidado e escuta na sua prática ou na sua equipe? Veja a mentoria no link do perfil. | Link |
+| 5 | Quer conversar sobre cuidado e escuta na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo verde-claro com ilustração 2D do vaso; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.

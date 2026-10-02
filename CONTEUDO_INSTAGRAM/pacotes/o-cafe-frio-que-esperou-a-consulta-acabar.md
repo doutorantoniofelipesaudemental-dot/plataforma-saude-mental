@@ -46,6 +46,7 @@ Pacote multimídia da crônica "O café frio que esperou a consulta acabar" (Rel
 
 ### Legenda
 Nem toda dor cabe em quinze minutos. Quando alguém tem um lugar seguro para falar, o cuidado muda. Salve para ler depois e compartilhe com quem cuida de gente. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-cafe-frio-que-esperou-a-consulta-acabar
 
 #saudemental #medicinadefamilia #escuta #atencaoprimaria
 
@@ -54,7 +55,7 @@ Nem toda dor cabe em quinze minutos. Quando alguém tem um lugar seguro para fal
 ## Reel / Vídeo (vertical 9:16, 30 s)
 
 **Trilha de fundo:** piano e violoncelo suaves, -22 dB, com corte limpo no convite final.
-**Texto na tela:** "O CAFÉ ESFRIOU" → "A ESCUTA NÃO TEM PRESSA" → "UM LUGAR SEGURO PARA FALAR"
+**Texto na tela:** "O café esfriou" → "A escuta não tem pressa" → "Um lugar seguro para falar"
 **Direção visual:** abertura em 3D na xícara fumegante; meio em ilustração 2D do consultório, sem rostos; fecho em 3D com a xícara fria e a luz do fim da manhã.
 
 ### Roteiro de narração
@@ -65,6 +66,7 @@ Nem toda dor cabe em quinze minutos. Quando alguém tem um lugar seguro para fal
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** A escuta não tem pressa, e o café frio é só o sinal de que alguém foi visto por inteiro. Para mentoria e consultoria em saúde mental, o link está no perfil.
+🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-cafe-frio-que-esperou-a-consulta-acabar
 **Hashtags extras:** #saudemental #escuta
 
 ---
@@ -77,7 +79,7 @@ Nem toda dor cabe em quinze minutos. Quando alguém tem um lugar seguro para fal
 | 2 | Você já sentiu que a sua dor não cabia no tempo de uma consulta? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: só vale a pena cuidar do que cabe nos números do exame. | Teste: Verdadeiro / Falso (resposta: falso) |
 | 4 | Todo mundo precisa de um lugar seguro para falar. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre escuta e tempo de consulta na sua prática ou na sua equipe? Veja a mentoria no link do perfil. | Link |
+| 5 | Quer conversar sobre escuta e tempo de consulta na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-cafe-frio-que-esperou-a-consulta-acabar | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo creme com ilustração 2D da xícara; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.
