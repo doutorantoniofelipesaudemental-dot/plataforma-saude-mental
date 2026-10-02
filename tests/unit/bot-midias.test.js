@@ -2,7 +2,7 @@
 // sem chamar nenhuma API: o rascunho é um objeto fixo e a verificação roda sobre ele.
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { verificar } = require('../../scripts/bot-gemini');
+const { verificar, verificarPacoteMultimidia, garantirChamadaAudio } = require('../../scripts/bot-gemini');
 
 const ARTIGO = {
   slug: 'teste',
@@ -11,15 +11,22 @@ const ARTIGO = {
   categoria: 'Empresas & RH',
   conteudo: '<p>Uma revisão encontrou ansiedade em 38% a 41% dos trabalhadores.</p>',
 };
+const CHAMADA = '🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/teste';
 const FONTE = `${ARTIGO.titulo} ${ARTIGO.resumo} Uma revisão encontrou ansiedade em 38% a 41% dos trabalhadores.`;
 
 function rascunho(ajustes = {}) {
   return {
     ganchos: ['Ansiedade no trabalho tem sinais claros', 'a', 'b', 'c', 'd'],
     carrossel: [...Array(7)].map((_, i) => ({ texto: i === 6 ? 'Precisa de apoio agora? CVV 188 · SAMU 192' : `Slide ${i + 1} sobre ansiedade de 38% a 41%`, visual: 'fundo verde' })),
-    legenda: 'Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\nCVV 188\n\n#saudemental #ansiedade #saudementalnotrabalho',
-    reels: [1, 2].map(() => ({ titulo: 'R', duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
-    stories: [1, 2, 3, 4, 5].map(() => ({ texto: 'Enquete', recurso: 'enquete' })),
+    legenda: `Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\n${CHAMADA}\n\nCVV 188\n\n#saudemental #ansiedade #saudementalnotrabalho`,
+    reels: [1, 2].map(() => ({ titulo: 'R', legenda: `Reel curto sobre sinais.${'\n\n'}${CHAMADA}`, duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
+    stories: [
+      { texto: 'Você já sentiu isso?', recurso: 'Enquete: Sim / Não' },
+      { texto: 'Sinais de alerta', recurso: 'Nenhum' },
+      { texto: 'Qual a sua dúvida?', recurso: 'Caixa de perguntas: o que você quer saber?' },
+      { texto: 'Cuidar cedo ajuda', recurso: 'Nenhum' },
+      { texto: `Leia o artigo no Portal. ${CHAMADA}`, recurso: 'Link para o Portal (artigo e áudio)' },
+    ],
     linkedin: ['autoridade', 'educativo'].map((tipo) => ({ tipo, texto: 'Post curto.\nLeia o artigo completo no site.' })),
     youtube: {
       titulos: ['sinais', 'causas', 'cuidado', 'gestão', 'apoio'].map((t) => `Ansiedade no trabalho: ${t}`),
@@ -196,4 +203,27 @@ test('reaprovar: só antes de publicar e sempre com --revisado', () => {
   for (const publicacao of [{ instagram: { id: '1' } }, { linkedin: [{ id: 'l' }] }, { videos: { 'reel-carrossel': { id: 'v' } } }]) {
     assert.match(motivoParaNaoReaprovar({ ...aprovado, publicacao }, { revisado: true }), /já há peça publicada/);
   }
+});
+
+test('pacote multimídia: alerta quando falta enquete, caixa de perguntas ou a chamada ao áudio', () => {
+  assert.deepEqual(verificarPacoteMultimidia(rascunho(), ARTIGO), []);
+  const incompleto = rascunho({
+    stories: [1, 2, 3, 4, 5].map(() => ({ texto: 'Dica', recurso: 'Nenhum' })),
+    legenda: 'Gancho.',
+    reels: [{ titulo: 'R', legenda: '', duracaoSegundos: 30, cenas: [] }],
+  });
+  const alertas = verificarPacoteMultimidia(incompleto, ARTIGO).join(' | ');
+  for (const esperado of ['sem enquete', 'sem caixa de perguntas', 'último Story sem a chamada', 'legenda do Carrossel sem a chamada', 'Reel 1 sem legenda']) {
+    assert.ok(alertas.includes(esperado), `faltou o alerta: ${esperado}`);
+  }
+});
+
+test('garantirChamadaAudio acrescenta a chamada antes das hashtags e é idempotente', () => {
+  const d = rascunho({ legenda: 'Texto.\n\n#saude #mental #aps', reels: [{ titulo: 'R', legenda: 'Frase.', duracaoSegundos: 30, cenas: [] }], stories: [{ texto: 'Fim', recurso: 'Link' }] });
+  garantirChamadaAudio(d, ARTIGO);
+  garantirChamadaAudio(d, ARTIGO);
+  assert.equal(d.legenda.split('🎧').length - 1, 1);
+  assert.ok(d.legenda.indexOf(CHAMADA) < d.legenda.indexOf('#saude'));
+  assert.ok(d.reels[0].legenda.endsWith(CHAMADA));
+  assert.ok(d.stories[0].texto.endsWith(CHAMADA));
 });

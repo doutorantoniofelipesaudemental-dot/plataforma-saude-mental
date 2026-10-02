@@ -38,6 +38,13 @@ const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/chec
 const { AVISO_CFM, IDENTIFICACAO_COMPLETA, APOIO_CURTO } = require('../backend/lib/conformidadeCfm');
 const { calcularMatriz, FORMATOS } = require('../backend/lib/matrizMidia');
 
+// Pacote Multimídia obrigatório (CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md):
+// Carrossel + Reel + Stories (com enquete e caixa de perguntas) + chamada ao áudio narrado do Portal.
+const SITE_PORTAL = 'https://drsaudemental.vercel.app';
+const PREFIXO_AUDIO = '🎧 Ouça o artigo narrado no Portal:';
+const RE_CHAMADA_AUDIO = /🎧 Ouça o artigo narrado no Portal: \S+/g;
+const chamadaAudio = (slug) => `${PREFIXO_AUDIO} ${SITE_PORTAL}/artigo/${slug}`;
+
 const PASTA = path.join(RAIZ, 'CONTEUDO_INSTAGRAM', 'rascunhos');
 
 const SISTEMA = `Você é a equipe editorial do Portal de Saúde Mental Doutor Antônio Felipe Garabito (Instagram @doutor.antoniofelipe.smental). Escreva em português do Brasil, a partir SOMENTE do artigo fornecido.
@@ -59,7 +66,8 @@ Regras inegociáveis:
 14. YouTube (SEO): título com a palavra-chave no início e até 60 caracteres, sem caça-clique; descrição com a palavra-chave na 1ª frase, sem links (o link é acrescentado depois); tags em português, minúsculas, do tema do artigo. Vídeo longo 16:9 de 8 a 12 min: gancho nos primeiros 30 s, promessa honesta do que o vídeo entrega, blocos com pontos de retenção, recapitulação e CTA; cada bloco com tempo (m:ss–m:ss), fala, sugestão de B-roll (sem pacientes nem pessoas identificáveis) e texto na tela. Capítulos começando em 0:00.
 15. Tom: acolhedor, empático e terapêutico, falando COM a pessoa ("você", "sua"), sem culpa nem pressa, sem voz de manual, de chatbot ou de burocracia ("prezado usuário", "conforme solicitado", "o indivíduo acometido"). Nunca minimize o sofrimento ("é só pensar positivo", "frescura"). Falas de Reels e do vídeo longo são NARRADAS por voz sintética: frases curtas, fáceis de ouvir, pausas naturais. A narração é mixada com trilha suave a -22 dB, então a voz é sempre o protagonista.
 16. Assinatura: nas mídias sociais a identificação do médico é de 3 linhas (CRM-BA 41322; Medicina de Família e Comunidade com RQE 26638; atuação em PAP e APS). Ela é acrescentada por código: não a escreva.
-17. Peças opcionais do ecossistema (quando o esquema pedir): "podcast" (roteiro de áudio de 3 a 6 min, conversado, para narração), "newsletter" (assunto até 60 caracteres, pré-cabeçalho, 3 a 5 blocos curtos e uma chamada para ler o artigo completo) e "miniapp" (um mini-aplicativo interativo educativo de 3 a 5 perguntas ou passos, ANÔNIMO, que sugere leituras sem coletar nem gravar dado pessoal e sem funcionar como diagnóstico). Mesmas regras de fidelidade e CFM.`;
+17. Peças opcionais do ecossistema (quando o esquema pedir): "podcast" (roteiro de áudio de 3 a 6 min, conversado, para narração), "newsletter" (assunto até 60 caracteres, pré-cabeçalho, 3 a 5 blocos curtos e uma chamada para ler o artigo completo) e "miniapp" (um mini-aplicativo interativo educativo de 3 a 5 perguntas ou passos, ANÔNIMO, que sugere leituras sem coletar nem gravar dado pessoal e sem funcionar como diagnóstico). Mesmas regras de fidelidade e CFM.
+18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 5 Stories interativos + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete "Sim / Não" (recurso começa com "Enquete: Sim / Não"), ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.`;
 
 const texto = { type: 'string' };
 const SCHEMA = {
@@ -79,18 +87,19 @@ const SCHEMA = {
         type: 'object',
         properties: {
           titulo: texto,
+          legenda: { ...texto, description: 'legenda do Reel: 2 a 3 frases, sem hashtags, sem link' },
           duracaoSegundos: { type: 'number' },
           cenas: {
             type: 'array',
             items: { type: 'object', properties: { tempo: texto, cena: texto, textoTela: texto, fala: texto }, required: ['tempo', 'cena', 'textoTela', 'fala'] },
           },
         },
-        required: ['titulo', 'duracaoSegundos', 'cenas'],
+        required: ['titulo', 'legenda', 'duracaoSegundos', 'cenas'],
       },
     },
     stories: {
       type: 'array',
-      description: '5 Stories em sequência, com enquete ou teste quando fizer sentido (evite caixa de pergunta)',
+      description: '5 Stories interativos em sequência: ao menos 1 enquete "Sim / Não", ao menos 1 caixa de perguntas e o último quadro com chamada para o Portal',
       items: { type: 'object', properties: { texto, recurso: texto }, required: ['texto', 'recurso'] },
     },
     linkedin: {
@@ -257,6 +266,33 @@ function verificarYoutube(yt) {
   return alertas;
 }
 
+/**
+ * Pacote Multimídia obrigatório: Carrossel, Reel, Stories (com enquete e caixa
+ * de perguntas) e chamada ao áudio narrado em cada peça. Componente faltando vira alerta no topo do rascunho.
+ */
+function verificarPacoteMultimidia(d, artigo) {
+  const alertas = [];
+  const chamada = chamadaAudio(artigo.slug);
+  if (!d.carrossel.length) alertas.push('pacote incompleto: sem Carrossel');
+  if (!d.reels.length) alertas.push('pacote incompleto: sem Reel');
+  if (!d.stories.length) alertas.push('pacote incompleto: sem Stories');
+  if (d.stories.length) {
+    const recursos = d.stories.map((s) => `${s.recurso} ${s.texto}`);
+    if (!recursos.some((r) => /enquete/i.test(r))) alertas.push('Stories sem enquete (mínimo 1 enquete "Sim / Não")');
+    if (!recursos.some((r) => /caixa de pergunta/i.test(r))) alertas.push('Stories sem caixa de perguntas (mínimo 1)');
+    if (!/portal|artigo/i.test(recursos.at(-1))) alertas.push('último Story sem chamada para o Portal');
+    if (!d.stories.at(-1).texto.includes(chamada)) alertas.push('último Story sem a chamada ao áudio narrado (🎧)');
+  }
+  if (!d.legenda.includes(chamada)) alertas.push('legenda do Carrossel sem a chamada ao áudio narrado (🎧)');
+  d.reels.forEach((r, i) => {
+    const legenda = r.legenda || '';
+    if (!legenda.trim()) alertas.push(`Reel ${i + 1} sem legenda`);
+    if (!legenda.includes(chamada)) alertas.push(`legenda do Reel ${i + 1} sem a chamada ao áudio narrado (🎧)`);
+    r.cenas.forEach((c, j) => /\b[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ]{6,}\b.*\b[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ]{3,}\b/.test(c.textoTela) && alertas.push(`Reel ${i + 1}, cena ${j + 1}: texto na tela em CAIXA ALTA (use caixa mista)`));
+  });
+  return alertas;
+}
+
 /** Verificação automática — alertas vão no topo do rascunho; nada é descartado em silêncio. */
 function verificar(d, artigo, fonte) {
   const alertas = [];
@@ -264,6 +300,7 @@ function verificar(d, artigo, fonte) {
     ...d.ganchos,
     ...d.carrossel.map((s) => s.texto),
     d.legenda,
+    ...d.reels.map((r) => r.legenda),
     ...d.reels.flatMap((r) => r.cenas.flatMap((c) => [c.textoTela, c.fala])),
     ...d.stories.map((s) => s.texto),
     ...d.linkedin.map((p) => p.texto),
@@ -272,7 +309,9 @@ function verificar(d, artigo, fonte) {
     d.youtube.longo.titulo,
     d.youtube.longo.descricao,
     ...d.youtube.longo.roteiro.flatMap((b) => [b.fala, b.textoTela]),
-  ].join('\n');
+  ]
+    .join('\n')
+    .replace(RE_CHAMADA_AUDIO, '');
 
   // Números fora do artigo (exceto telefones de apoio e registros profissionais).
   const permitidos = new Set(['188', '192', '41322', '26638', ...(fonte.match(/\d+(?:[.,]\d+)?/g) || [])]);
@@ -338,6 +377,7 @@ function verificar(d, artigo, fonte) {
   const hashtags = d.legenda.match(/#[\p{L}\d_]+/gu) || [];
   if (hashtags.length < 3 || hashtags.length > 5) alertas.push(`legenda com ${hashtags.length} hashtags (3 a 5)`);
   if (!d.legenda.includes('link da bio')) alertas.push('legenda sem "link da bio"');
+  alertas.push(...verificarPacoteMultimidia(d, artigo));
   return alertas;
 }
 
@@ -355,6 +395,7 @@ function normalizar(d = {}) {
     legenda: str(d.legenda),
     reels: lista(d.reels).map((r) => ({
       titulo: str(r?.titulo),
+      legenda: str(r?.legenda),
       duracaoSegundos: Number(r?.duracaoSegundos) || 0,
       cenas: lista(r?.cenas).map((c) => ({ tempo: str(c?.tempo), cena: str(c?.cena), textoTela: str(c?.textoTela), fala: str(c?.fala) })),
     })),
@@ -400,6 +441,25 @@ function garantirLinhasFixas(d, artigo) {
   if (ultimoStory && !ultimoStory.texto.includes('CVV 188')) ultimoStory.texto = `${ultimoStory.texto} ${APOIO_CURTO}`;
 }
 
+/**
+ * Chamada ao áudio narrado do Portal em todas as peças (legenda do Carrossel,
+ * legenda de cada Reel e último Story). Como a identificação, vem do código e não do
+ * modelo, com o link do artigo. Idempotente: não repete onde já está.
+ */
+function garantirChamadaAudio(d, artigo) {
+  const chamada = chamadaAudio(artigo.slug);
+  const antesDasHashtags = (texto) => {
+    const i = texto.search(/\n+\s*#/);
+    return i < 0 ? `${texto.trim()}\n\n${chamada}`.trim() : `${texto.slice(0, i)}\n\n${chamada}${texto.slice(i)}`;
+  };
+  if (!d.legenda.includes(chamada)) d.legenda = antesDasHashtags(d.legenda);
+  d.reels.forEach((r) => {
+    if (r.legenda.trim() && !r.legenda.includes(chamada)) r.legenda = antesDasHashtags(r.legenda);
+  });
+  const ultimoStory = d.stories.at(-1);
+  if (ultimoStory && !ultimoStory.texto.includes(chamada)) ultimoStory.texto = `${ultimoStory.texto} ${chamada}`;
+}
+
 /* ===================== 2º passe: revisor semântico ===================== */
 
 /**
@@ -415,6 +475,8 @@ function pecasDoRascunho(d) {
       .join('')
       .split('\n')
       .filter((l) => l.trim() && !/CVV 188|CRM-BA|link da bio|^\s*#/.test(l))
+      .map((l) => l.replace(RE_CHAMADA_AUDIO, '').trim())
+      .filter(Boolean)
       .join(' ')
       .trim();
     if (t) p.push({ id, texto: t });
@@ -566,7 +628,7 @@ function markdown(artigo, d, alertas, origem, revisao) {
   d.reels.forEach((r, i) => {
     l.push(`## Reel ${i + 1}: ${r.titulo} (${r.duracaoSegundos} s)`, '', '| Tempo | Cena | Texto na tela | Fala |', '|---|---|---|---|');
     r.cenas.forEach((c) => l.push(`| ${celula(c.tempo)} | ${celula(c.cena)} | ${celula(c.textoTela)} | ${celula(c.fala)} |`));
-    l.push('');
+    l.push('', '**Legenda do Reel:**', '', ...r.legenda.split('\n').map((x) => `> ${x}`), '');
   });
   l.push('## Stories', '', '| # | Texto | Recurso |', '|---|---|---|');
   d.stories.forEach((s, i) => l.push(`| ${i + 1} | ${celula(s.texto)} | ${celula(s.recurso)} |`));
@@ -622,6 +684,7 @@ async function gerarRascunho(artigo, { forcar }) {
   const usuario = `ARTIGO APROVADO (única fonte permitida):\n\nTítulo: ${artigo.titulo}\nCategoria: ${artigo.categoria}\nResumo: ${artigo.resumo}\n\n${fonte}`;
   const origem = await gerarJson({ sistema: SISTEMA, usuario, schema: SCHEMA });
   origem.dados = normalizar(origem.dados);
+  garantirChamadaAudio(origem.dados, artigo);
   garantirLinhasFixas(origem.dados, artigo);
   const alertas = verificar(origem.dados, artigo, `${artigo.titulo} ${artigo.resumo} ${fonte}`);
   const revisao = await revisarFidelidade(origem.dados, usuario, origem.provedor);
@@ -729,4 +792,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { verificar, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
+module.exports = { verificar, verificarPacoteMultimidia, garantirChamadaAudio, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
