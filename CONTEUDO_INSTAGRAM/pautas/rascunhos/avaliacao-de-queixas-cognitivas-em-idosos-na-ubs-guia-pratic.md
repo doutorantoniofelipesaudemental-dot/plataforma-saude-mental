@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T21:59:43.407Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Avaliação de queixas cognitivas em idosos na UBS: guia prático
@@ -18,8 +19,8 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (7):
 > - * Infecções, desidratação, distúrbios eletrolíticos ou o uso de novos medicamentos alteram a neurotransmissão, principalmente a via colinérgica.
 > - * Faça uma revisão rigorosa de medicamentos em uso, suspendendo ou substituindo drogas com forte efeito anticolinérgico.
-> - * Se houver suspeita de depressão associada, inicie terapia medicamentosa com inibidores seletivos da recaptação de serotonina, como a sertralina [DOSE A CON…
-> - * Em casos de declínio leve ou demência inicial, o uso de inibidores da acetilcolinesterase, como a donepezila [DOSE A CONFIRMAR], pode ser avaliado, idealme…
+> - * Se houver suspeita de depressão associada, inicie terapia medicamentosa com inibidores seletivos da recaptação de serotonina, como a sertralina, com dose i…
+> - * Em casos de declínio leve ou demência inicial, o uso de inibidores da acetilcolinesterase, como a donepezila, com dose definida pelo médico e acompanhament…
 > - * Agitação intensa, alucinações persecutórias ou risco de fuga exigem avaliação imediata.
 > - * Encaminhe para geriatria, neurologia ou psiquiatria se houver dúvida diagnóstica significativa, quadros de início precoce antes dos 65 anos, ou sintomas co…
 > - - Revise os medicamentos em uso para afastar causas iatrogênicas e solicite exames laboratoriais básicos.
@@ -71,8 +72,8 @@ O manejo na atenção primária foca na diferenciação diagnóstica, no control
 ### Condutas de Primeira Linha
 * Solicite exames laboratoriais básicos para afixar causas reversíveis: hemograma, função renal, eletrólitos, glicemia, tireotrofina (TSH) e vitamina B12.
 * Faça uma revisão rigorosa de medicamentos em uso, suspendendo ou substituindo drogas com forte efeito anticolinérgico.
-* Se houver suspeita de depressão associada, inicie terapia medicamentosa com inibidores seletivos da recaptação de serotonina, como a sertralina [DOSE A CONFIRMAR], monitorando a resposta.
-* Em casos de declínio leve ou demência inicial, o uso de inibidores da acetilcolinesterase, como a donepezila [DOSE A CONFIRMAR], pode ser avaliado, idealmente em contrarreferência ou parceria com a rede especializada.
+* Se houver suspeita de depressão associada, inicie terapia medicamentosa com inibidores seletivos da recaptação de serotonina, como a sertralina, com dose inicial baixa e titulação gradual segundo a bula e o protocolo local, monitorando a resposta.
+* Em casos de declínio leve ou demência inicial, o uso de inibidores da acetilcolinesterase, como a donepezila, com dose definida pelo médico e acompanhamento da resposta e dos efeitos adversos, pode ser avaliado, idealmente em contrarreferência ou parceria com a rede especializada.
 
 ### Sinais de Gravidade
 * Agitação intensa, alucinações persecutórias ou risco de fuga exigem avaliação imediata.
@@ -89,13 +90,16 @@ O manejo na atenção primária foca na diferenciação diagnóstica, no control
 - Diferencie delirium (agudo e flutuante), demência (progressivo) e depressão (apatia e queixas focadas).
 - Revise os medicamentos em uso para afastar causas iatrogênicas e solicite exames laboratoriais básicos.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Primary Health Care"[Mesh]) AND ("Cognitive Dysfunction"[Mesh]) AND ("Mass Screening"[Mesh])` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `("Dementia"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND ("General Practice"[Mesh])` — Diretriz baseada em evidências — [PMID A CONFIRMAR]
-3. `("Aged"[Mesh]) AND ("Memory Disorders"[Mesh]) AND ("Primary Care"[Mesh])` — Estudo de validação de teste diagnóstico — [PMID A CONFIRMAR]
+1. Davis DH, Creavin ST, Yip JL et al.. Montreal Cognitive Assessment for the detection of dementia. Cochrane Database Syst Rev. 2021;7(7):CD010775. PMID 34255351. doi:10.1002/14651858.CD010775.pub3 — Revisão sistemática Cochrane (acurácia do MoCA)
+2. Creavin ST, Wisniewski S, Noel-Storr AH et al.. Mini-Mental State Examination (MMSE) for the detection of dementia in clinically unevaluated people aged 65 and over in community and primary care populations. Cochrane Database Syst Rev. 2016;2016(1):CD011145. PMID 26760674. doi:10.1002/14651858.CD011145.pub2 — Revisão sistemática Cochrane e metanálise (acurácia do MEEM)
+3. undefined, Owens DK, Davidson KW et al.. Screening for Cognitive Impairment in Older Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2020;323(8):757-763. PMID 32096858. doi:10.1001/jama.2020.0435 — Diretriz clínica (recomendação do USPSTF)
+4. Birks JS, Harvey RJ. Donepezil for dementia due to Alzheimer's disease. Cochrane Database Syst Rev. 2018;6(6):CD001190. PMID 29923184. doi:10.1002/14651858.CD001190.pub3 — Revisão sistemática Cochrane e metanálise (donepezila)
+5. Blackburn DJ, Wakefield S, Shanks MF et al.. Memory difficulties are not always a sign of incipient dementia: a review of the possible causes of loss of memory efficiency. Br Med Bull. 2014;112(1):71-81. PMID 25274571. doi:10.1093/bmb/ldu029 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

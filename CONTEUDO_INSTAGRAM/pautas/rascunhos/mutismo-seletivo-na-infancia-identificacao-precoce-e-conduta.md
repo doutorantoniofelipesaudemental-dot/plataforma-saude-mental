@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:01:26.246Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Mutismo seletivo na infância: identificação precoce e conduta na UBS
@@ -67,7 +68,7 @@ O manejo do mutismo seletivo na Atenção Primária baseia-se na escuta qualific
 ### Quando e para onde encaminhar
 - Encaminhe para a fonoaudiologia se houver suspeita concomitante de atraso de linguagem, transtornos dos sons da fala ou dificuldades de comunicação associadas.
 - Encaminhe para a saúde mental especializada da rede, como o CAPS Infantil ou psicologia clínica, quando houver impacto funcional grave, sofrimento intenso ou ausência de melhora com as orientações iniciais.
-- O uso de medicação psicotrópica, como os inibidores seletivos da recaptação de serotonina, fica reservado para casos moderados a graves refratários, avaliados pelo especialista, com [DOSE A CONFIRMAR].
+- O uso de medicação psicotrópica, como os inibidores seletivos da recaptação de serotonina, fica reservado para casos moderados a graves refratários, avaliados pelo especialista, com dose definida pelo especialista (a revisão de Manassis et al., 2015, PMID 26560144, aponta evidência limitada e a necessidade de estudos sobre dose e momento da medicação).
 
 ### Sinais de gravidade
 - Presença de isolamento social profundo, recusa alimentar associada à ansiedade ou sintomas depressivos intensos.
@@ -80,14 +81,14 @@ O manejo do mutismo seletivo na Atenção Primária baseia-se na escuta qualific
 - A atuação na UBS envolve acolher a família, desculpabilizar os pais e evitar pressões diretas para a criança falar.
 - O encaminhamento oportuno para fonoaudiologia e saúde mental garante suporte adequado para os casos moderados e graves.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Selective Mutism"[Mesh]) AND ("Early Diagnosis"[Mesh] OR "Primary Health Care"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Selective Mutism"[Mesh]) AND ("General Practice"[Mesh] OR "Physicians, Family"[Mesh])` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `("Selective Mutism"[Mesh] AND "Child"[Mesh]) AND ("Speech Therapy"[Mesh] OR "Mental Health"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Selective Mutism"[Mesh]) AND ("Referral and Consultation"[Mesh] OR "Diagnosis, Differential"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
+1. Manassis K, Oerbeck B, Overgaard KR. The use of medication in selective mutism: a systematic review. Eur Child Adolesc Psychiatry. 2015;25(6):571-8. PMID 26560144. doi:10.1007/s00787-015-0794-1 — Revisão sistemática
+2. Koskela M, Ståhlberg T, Yunus WMAWM et al.. Long-term outcomes of selective mutism: a systematic literature review. BMC Psychiatry. 2023;23(1):779. PMID 37875905. doi:10.1186/s12888-023-05279-6 — Revisão sistemática
+3. Hua A, Major N. Selective mutism. Curr Opin Pediatr. 2016;28(1):114-20. PMID 26709680. doi:10.1097/MOP.0000000000000300 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

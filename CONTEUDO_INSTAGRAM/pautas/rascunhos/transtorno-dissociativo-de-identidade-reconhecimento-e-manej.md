@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:00:34.072Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Transtorno dissociativo de identidade: reconhecimento e manejo clínico na APS
@@ -59,7 +60,7 @@ O manejo do transtorno dissociativo de identidade na APS exige paciência, const
 
 #### Condutas de Primeira Linha
 - **Abordagem psicoterapêutica:** O tratamento de escolha é a psicoterapia especializada de longo prazo. O papel do médico de família é manter a retaguarda clínica, garantindo a continuidade do cuidado.
-- **Manejo farmacológico:** Não existem medicamentos específicos aprovados para o transtorno dissociativo de identidade. Os fármacos devem ser reservados para comorbidades, como sintomas depressivos graves, ansiedade intensa ou insônia persistente. Utilize antidepressivos da classe dos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR] com cautela, iniciando com doses baixas. Evite o uso prolongado de benzodiazepínicos pelo risco de desinibição comportamental e dependência.
+- **Manejo farmacológico:** Não existem medicamentos específicos aprovados para o transtorno dissociativo de identidade. Os fármacos devem ser reservados para comorbidades, como sintomas depressivos graves, ansiedade intensa ou insônia persistente. Utilize antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, com dose definida pelo médico e com cautela, iniciando com doses baixas. Evite o uso prolongado de benzodiazepínicos pelo risco de desinibição comportamental e dependência.
 
 #### Sinais de Gravidade e Quando Encaminhar
 - Presença de ideação ou comportamento de automutilação grave e risco iminente de suicídio.
@@ -74,14 +75,14 @@ O manejo do transtorno dissociativo de identidade na APS exige paciência, const
 - O manejo medicamentoso deve focar apenas nas comorbidades, priorizando antidepressivos em doses baixas e evitando benzodiazepínicos.
 - O médico de família atua como garantidor do vínculo seguro e da continuidade do cuidado longitudinal.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Dissociative Identity Disorder"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Dissociative Disorders"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Psychotic Disorders"[Mesh]` — Diretriz — [PMID A CONFIRMAR]
-3. `Dissociative identity disorder primary care management clinical practice` — Revisão Sistemática — [PMID A CONFIRMAR]
-4. `"Physician-Patient Relations"[Mesh] AND "Dissociative Disorders"[Mesh] AND "General Practice"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
+1. Griffiths TA, Dimitrova LI, Linington M et al.. Effectiveness of phase-oriented treatment for trauma-related dissociative disorders: a systematic review. Eur J Psychotraumatol. 2025;16(1):2545734. PMID 40891466. doi:10.1080/20008066.2025.2545734 — Revisão sistemática
+2. Şar V. Dissociation Across Cultures: A Transdiagnostic Guide for Clinical Assessment and Management. Alpha Psychiatry. 2022;23(3):95-103. PMID 36425778. doi:10.5152/alphapsychiatry.2022.21556 — Revisão (guia clínico transdiagnóstico)
+3. Brand BL, Schielke HJ, Putnam K et al.. A randomized controlled trial assists individuals with complex trauma and dissociation in Finding Solid Ground. Psychol Trauma. 2025;17(8):1717-1727. PMID 40014495. doi:10.1037/tra0001871 — Ensaio clínico randomizado
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

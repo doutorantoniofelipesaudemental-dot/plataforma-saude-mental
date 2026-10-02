@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T21:59:49.942Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Uso de antidepressivos em populações especiais na APS
@@ -26,11 +27,11 @@ revisaoMedica: pendente
 > - Em gestantes, o aumento do volume plasmático e a alteração da clearance renal modificam a concentração sérica dos medicamentos ao longo dos trimestres. Além …
 > - Em pacientes com comorbidades clínicas, como cardiopatias ou doenças metabólicas, precisamos considerar os efeitos secundários dos antidepressivos. Fármacos …
 > - - **Classe de primeira linha:** Os Inibidores Seletivos da Recaptação de Serotonina (ISRS), especialmente a sertralina ou o citalopram, costumam ser as escol…
-> - - **Ajustes:** [DOSE A CONFIRMAR] conforme diretrizes atuais. Evite a paroxetina no primeiro trimestre pelo risco potencial malformativo cardiovascular.
+> - - **Ajustes:** Use a menor dose eficaz, conforme diretrizes atuais. Evite a paroxetina no primeiro trimestre pelo risco potencial malformativo cardiovascular.
 > - - **Lactação:** A sertralina passa em menor quantidade para o leite materno e é frequentemente preferida. Monitore o bebê quanto a sonolência excessiva ou ir…
 > - - **Conduta:** Cuidado redobrado com polifarmácia e interações medicamentosas. Evite tricíclicos pelo risco anticolinérgico.
 > - - **Classe de primeira linha:** ISRS com menor perfil de interação pelo citocromo P450, como a sertralina ou o citalopram.
-> - - **Ajustes:** Iniciar com [DOSE A CONFIRMAR], metade da dose usada em adultos jovens, com titulação lenta.
+> - - **Ajustes:** Iniciar com dose reduzida, metade da dose usada em adultos jovens, com titulação lenta.
 > - - **Sinais de alerta:** Fique atento à hiponatremia (SIADH), muito comum com ISRS em idosos, além de risco de quedas e sangramentos gastrointestinais.
 > - - **Cardiopatas:** Evite tricíclicos e inibidores da recaptação de serotonina e noradrenalina (IRSN) em doses elevadas que possam alterar a pressão arterial …
 > - - **Encaminhamento:** Encaminhe para avaliação especializada presencial se houver refratariedade ao tratamento inicial, ideação suicida grave, sintomas psicó…
@@ -71,13 +72,13 @@ Em pacientes com comorbidades clínicas, como cardiopatias ou doenças metabóli
 ### 1. Gestantes e Lactantes
 - **Conduta:** O tratamento deve ser individualizado, pesando o risco do transtorno mental não tratado versus a exposição fetal.
 - **Classe de primeira linha:** Os Inibidores Seletivos da Recaptação de Serotonina (ISRS), especialmente a sertralina ou o citalopram, costumam ser as escolhas preferenciais devido ao perfil de segurança mais estudado.
-- **Ajustes:** [DOSE A CONFIRMAR] conforme diretrizes atuais. Evite a paroxetina no primeiro trimestre pelo risco potencial malformativo cardiovascular.
+- **Ajustes:** Use a menor dose eficaz, conforme diretrizes atuais. Evite a paroxetina no primeiro trimestre pelo risco potencial malformativo cardiovascular.
 - **Lactação:** A sertralina passa em menor quantidade para o leite materno e é frequentemente preferida. Monitore o bebê quanto a sonolência excessiva ou irritabilidade.
 
 ### 2. Idosos
 - **Conduta:** Cuidado redobrado com polifarmácia e interações medicamentosas. Evite tricíclicos pelo risco anticolinérgico.
 - **Classe de primeira linha:** ISRS com menor perfil de interação pelo citocromo P450, como a sertralina ou o citalopram.
-- **Ajustes:** Iniciar com [DOSE A CONFIRMAR], metade da dose usada em adultos jovens, com titulação lenta.
+- **Ajustes:** Iniciar com dose reduzida, metade da dose usada em adultos jovens, com titulação lenta.
 - **Sinais de alerta:** Fique atento à hiponatremia (SIADH), muito comum com ISRS em idosos, além de risco de quedas e sangramentos gastrointestinais.
 
 ### 3. Pacientes com Comorbidades Clínicas
@@ -93,13 +94,14 @@ Em pacientes com comorbidades clínicas, como cardiopatias ou doenças metabóli
 - Sempre avalie as comorbidades clínicas e possíveis interações medicamentosas antes de prescrever.
 - Oriente avaliação presencial e retornos frequentes para garantir a segurança e a adesão ao tratamento.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Primary Health Care"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Vulnerable Populations"[Mesh])` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `("Pregnancy"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Family Practice"[Mesh])` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `("Aged"[Mesh]) AND ("Depressive Disorder"[Mesh]) AND ("Drug Interactions"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
+1. Fabiano N, Wong S, Gupta A et al.. Safety of psychotropic medications in pregnancy: an umbrella review. Mol Psychiatry. 2024;30(1):327-335. PMID 39266712. doi:10.1038/s41380-024-02697-0 — Revisão guarda-chuva (umbrella review)
+2. Desaunay P, Eude LG, Dreyfus M et al.. Benefits and Risks of Antidepressant Drugs During Pregnancy: A Systematic Review of Meta-analyses. Paediatr Drugs. 2023;25(3):247-265. PMID 36853497. doi:10.1007/s40272-023-00561-2 — Revisão sistemática de metanálises
+3. Behlke LM, Lenze EJ, Carney RM. The Cardiovascular Effects of Newer Antidepressants in Older Adults and Those With or At High Risk for Cardiovascular Diseases. CNS Drugs. 2020;34(11):1133-1147. PMID 33064291. doi:10.1007/s40263-020-00763-z — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

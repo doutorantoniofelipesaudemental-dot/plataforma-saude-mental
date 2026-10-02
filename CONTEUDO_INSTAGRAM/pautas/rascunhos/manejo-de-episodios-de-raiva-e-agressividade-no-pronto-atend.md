@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:00:15.374Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Manejo de episódios de raiva e agressividade no pronto atendimento
@@ -72,8 +73,8 @@ O manejo clínico divide-se em desescalada verbal, investigação diagnóstica e
 
 ### Intervenção Farmacológica
 Quando a conduta verbal falha e o paciente permanece em risco, o uso de medicação é indicado. As classes mais utilizadas incluem os antipsicóticos de primeira e segunda geração associados ou não a benzodiazepínicos.
-* **Antipsicóticos:** Opções como haloperidol associado a prometazina via intramuscular costumam ser utilizadas para sedação rápida. Risperidona ou olanzapina via oral podem ser tentadas se o paciente aceitar colaboração [DOSE A CONFIRMAR].
-* **Benzodiazepínicos:** O lorazepam ou o diazepam são úteis quando há suspeita clara de abstinência alcoólica ou uso de estimulantes, mas devem ser evitados isoladamente em idosos ou pacientes com delirium por risco de paradoxo ou piora da confusão [DOSE A CONFIRMAR].
+* **Antipsicóticos:** Opções como haloperidol associado a prometazina via intramuscular costumam ser utilizadas para sedação rápida. Risperidona ou olanzapina via oral podem ser tentadas se o paciente aceitar colaboração. Doses de referência para adultos (Project BETA; Roppolo et al., 2020, PMID 33145538): haloperidol 2,5 mg VO na agitação leve ou 5 mg VO na moderada; olanzapina 5 mg na leve ou 5 a 10 mg na moderada, em comprimido orodispersível; risperidona 1 mg na leve ou 2 mg na moderada. A combinação de haloperidol e prometazina por via intramuscular tem evidência de eficácia (Huf et al., 2009, PMID 19588366), com a dose da prometazina segundo o protocolo local.
+* **Benzodiazepínicos:** O lorazepam ou o diazepam são úteis quando há suspeita clara de abstinência alcoólica ou uso de estimulantes, mas devem ser evitados isoladamente em idosos ou pacientes com delirium por risco de paradoxo ou piora da confusão (referência do Project BETA: lorazepam 2 mg VO na agitação leve, com a menor dose possível em idosos).
 
 ### Sinais de Gravidade e Encaminhamento
 * Agitação refratária a múltiplas medicações.
@@ -88,15 +89,14 @@ Quando a conduta verbal falha e o paciente permanece em risco, o uso de medicaç
 - Sempre investigue causas orgânicas, como hipoglicemia e hipóxia, por trás de quadros agudos de agitação.
 - O uso de medicamentos visa aliviar o sofrimento do paciente e garantir a segurança, nunca punir.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Aggression"[MeSH Terms] OR "Psychomotor Agitation"[MeSH Terms]) AND "Emergency Service, Hospital"[MeSH Terms] AND "De-escalation"[Title/Abstract]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Psychomotor Agitation"[MeSH Terms] AND "Emergencies"[MeSH Terms] AND "Antipsychotic Agents"[MeSH Terms] AND "Clinical Trial"[Publication Type]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Restraint, Physical"[MeSH Terms] OR "Coercion"[MeSH Terms]) AND "Emergency Psychiatry"[MeSH Terms] AND "Guideline"[Publication Type]` — Diretriz — [PMID A CONFIRMAR]
-4. `"Aggression"[MeSH Terms] AND "Emergency Medicine"[MeSH Terms] AND "Risk Assessment"[MeSH Terms] AND "Meta-Analysis"[Publication Type]` — Metanálise — [PMID A CONFIRMAR]
-
+1. Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007 — Consenso de especialistas
+2. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+3. Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2 — Revisão sistemática Cochrane e metanálise
+4. Del Casale A, Arena JF, Napoli C et al.. A Comprehensive Understanding of Psychomotor Agitation: From Causes to Hospital Care. Curr Neuropharmacol. 2025;23(13):1666-1682. PMID 40265437. doi:10.2174/011570159X340145250109080932 — Revisão
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

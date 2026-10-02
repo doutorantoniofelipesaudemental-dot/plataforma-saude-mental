@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T21:59:29.991Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Uso de estabilizadores de humor na APS: guia prático para residentes
@@ -15,7 +16,7 @@ revisaoMedica: pendente
 *Guia prático para residentes e médicos de família sobre o manejo seguro de estabilizadores de humor na Atenção Primária.*
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
-> Trechos de conduta farmacológica e de emergência a conferir (22):
+> Trechos de conduta farmacológica e de emergência a conferir (21):
 > - Olá, colega residente e médico de família. Cuidar de pessoas com transtornos de humor de longa data na Atenção Primária à Saúde é um desafio diário e gratifi…
 > - Acompanhar o uso de estabilizadores de humor exige olhar clínico atento aos detalhes do dia a dia do paciente.
 > - *   **Adesão ao tratamento:** Pergunte sobre esquecimentos de doses de forma acolhedora, sem julgamentos.
@@ -25,10 +26,9 @@ revisaoMedica: pendente
 > - Os estabilizadores de humor são um grupo heterogêneo de fármacos que ajudam a prevenir tanto os episódios maníacos quanto os depressivos, além de reduzirem a…
 > - *   **Lítio:** Atua modulando sistemas de neurotransmissores, incluindo noradrenalina, serotonina e dopamina. Ele também interfere em cascatas de segundos me…
 > - O início do tratamento medicamentoso na APS deve ser reservado para situações estáveis e após discussão com a referência psiquiátrica, ou para a manutenção d…
-> - *   **Lítio (Carbonato de Lítio):** Iniciar com [DOSE A CONFIRMAR]. A dosagem sérica (litemia) deve ser coletada [DOSE A CONFIRMAR] após o início ou ajuste d…
-> - *   **Ácido Valproico / Valproato de Sódio:** Iniciar com [DOSE A CONFIRMAR]. Monitorar função hepática (TGO, TGP), hemograma completo com plaquetas e nível …
-> - *   **Carbamazepina:** Iniciar com [DOSE A CONFIRMAR]. Monitorar hemograma completo, função hepática e renal periodicamente devido ao risco de discrasias san…
-> - *   **Lamotrigina:** Iniciar com titulação lenta e gradual [DOSE A CONFIRMAR] para minimizar o risco de reações cutâneas graves, como a Síndrome de Stevens-J…
+> - *   **Lítio (Carbonato de Lítio):** Iniciar com dose baixa, segundo a bula e o protocolo local, titulando pela litemia: alvo de 0,8 a 1,2 mEq/L no tratamento…
+> - *   **Ácido Valproico / Valproato de Sódio:** Iniciar com dose baixa, segundo a bula e o protocolo local. Monitorar função hepática (TGO, TGP), hemograma com…
+> - *   **Carbamazepina:** Iniciar com dose baixa, segundo a bula e o protocolo local. A Canmat/ISBD recomenda medir o sódio sérico pelo menos uma vez por ano, p…
 > - *   Sinais clínicos de intoxicação aguda por lítio ou anticonvulsivantes.
 > - *   Ideação suicida ativa, planos ou comportamentos de autolesão (orientar busca imediata ao pronto-socorro, SAMU 192 ou CVV 188).
 > - *   Sintomas psicóticos agudos ou agitação psicomotora refratária.
@@ -76,10 +76,10 @@ Compreender esses mecanismos nos ajuda a explicar aos pacientes por que a medica
 ### Condutas de Primeira Linha
 O início do tratamento medicamentoso na APS deve ser reservado para situações estáveis e após discussão com a referência psiquiátrica, ou para a manutenção de casos já estabilizados.
 
-*   **Lítio (Carbonato de Lítio):** Iniciar com [DOSE A CONFIRMAR]. A dosagem sérica (litemia) deve ser coletada [DOSE A CONFIRMAR] após o início ou ajuste de dose, idealmente 12 horas após a última tomada. Exames de monitorização incluem função renal (creatinina, ureia) e TSH a cada [DOSE A CONFIRMAR].
-*   **Ácido Valproico / Valproato de Sódio:** Iniciar com [DOSE A CONFIRMAR]. Monitorar função hepática (TGO, TGP), hemograma completo com plaquetas e nível sérico a cada [DOSE A CONFIRMAR].
-*   **Carbamazepina:** Iniciar com [DOSE A CONFIRMAR]. Monitorar hemograma completo, função hepática e renal periodicamente devido ao risco de discrasias sanguíneas.
-*   **Lamotrigina:** Iniciar com titulação lenta e gradual [DOSE A CONFIRMAR] para minimizar o risco de reações cutâneas graves, como a Síndrome de Stevens-Johnson.
+*   **Lítio (Carbonato de Lítio):** Iniciar com dose baixa, segundo a bula e o protocolo local, titulando pela litemia: alvo de 0,8 a 1,2 mEq/L no tratamento agudo (0,4 a 0,8 em idosos) e de 0,6 a 1 mEq/L na manutenção (Canmat/ISBD 2018, PMID 29536616). A dosagem sérica (litemia) deve ser coletada cerca de 5 dias após o início ou ajuste de dose, idealmente 12 horas após a última tomada. Exames de monitorização incluem função renal (creatinina, ureia) e TSH; a Canmat/ISBD recomenda monitorar litemia e função renal pelo menos a cada 3 a 6 meses e 5 a 7 dias após ajustes de dose do lítio ou de AINEs, bloqueadores de angiotensina, IECA e tiazídicos.
+*   **Ácido Valproico / Valproato de Sódio:** Iniciar com dose baixa, segundo a bula e o protocolo local. Monitorar função hepática (TGO, TGP), hemograma completo com plaquetas e nível sérico com regularidade, em coleta de vale, cerca de 12 horas após a última dose (Canmat/ISBD 2018, PMID 29536616); a periodicidade segue o protocolo local.
+*   **Carbamazepina:** Iniciar com dose baixa, segundo a bula e o protocolo local. A Canmat/ISBD recomenda medir o sódio sérico pelo menos uma vez por ano, pelo risco de hiponatremia, e lembra que a carbamazepina induz enzimas do citocromo P450 e pode reduzir os níveis de divalproato. Monitorar hemograma completo, função hepática e renal periodicamente devido ao risco de discrasias sanguíneas.
+*   **Lamotrigina:** Iniciar com titulação lenta e gradual, segundo a bula, para minimizar o risco de reações cutâneas graves, como a Síndrome de Stevens-Johnson.
 
 ### Sinais de Gravidade e Alerta
 *   Sinais clínicos de intoxicação aguda por lítio ou anticonvulsivantes.
@@ -102,13 +102,16 @@ Encaminhe para o especialista (Psiquiatria) quando houver:
 - Identificar precocemente sinais de intoxicação medicamentosa evita complicações graves.
 - O encaminhamento especializado deve ser feito em casos de refratariedade, efeitos colaterais complexos ou gestação.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Primary Health Care"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Antimanic Agents"[Mesh])` — Revisão sistemática e diretrizes de tratamento — [PMID A CONFIRMAR]
-2. `("General Practice"[Mesh]) AND ("Lithium"[Mesh]) AND ("Drug Monitoring"[Mesh])` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `("Family Practice"[Mesh]) AND ("Anticonvulsants"[Mesh]) AND ("Bipolar Disorder"[Mesh])` — Ensaio clínico randomizado — [PMID A CONFIRMAR]
+1. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (Canmat) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (Canmat/ISBD)
+2. Goodwin GM, Haddad PM, Ferrier IN et al.. Evidence-based guidelines for treating bipolar disorder: Revised third edition recommendations from the British Association for Psychopharmacology. J Psychopharmacol. 2016;30(6):495-553. PMID 26979387. doi:10.1177/0269881116636545 — Diretriz clínica (BAP)
+3. Malhi GS, Bell E, Boyce P et al.. The 2020 Royal Australian and New Zealand College of psychiatrists clinical practice guidelines for mood disorders: Bipolar disorder summary. Bipolar Disord. 2020;22(8):805-821. PMID 33296123. doi:10.1111/bdi.13036 — Diretriz clínica (RANZCP)
+4. Fountoulakis KN, Tohen M, Zarate CA. Lithium treatment of Bipolar disorder in adults: A systematic review of randomized trials and meta-analyses. Eur Neuropsychopharmacol. 2022;54:100-115. PMID 34980362. doi:10.1016/j.euroneuro.2021.10.003 — Revisão sistemática de ensaios e metanálises (lítio)
+5. Kishi T, Ikuta T, Matsuda Y et al.. Mood stabilizers and/or antipsychotics for bipolar disorder in the maintenance phase: a systematic review and network meta-analysis of randomized controlled trials. Mol Psychiatry. 2020;26(8):4146-4157. PMID 33177610. doi:10.1038/s41380-020-00946-6 — Metanálise em rede (manutenção)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

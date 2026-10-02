@@ -1545,9 +1545,11 @@
 - **público:** Médicos residentes de Medicina de Família e Comunidade e estudantes · **ângulo:** Enfoque na segurança do manejo de longo prazo dentro da realidade da UBS.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Primary Health Care"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Antimanic Agents"[Mesh])` (Revisão sistemática e diretrizes de tratamento) [PMID A CONFIRMAR]
-  - PubMed: `("General Practice"[Mesh]) AND ("Lithium"[Mesh]) AND ("Drug Monitoring"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Family Practice"[Mesh]) AND ("Anticonvulsants"[Mesh]) AND ("Bipolar Disorder"[Mesh])` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
+  - PubMed: `("Primary Health Care"[Mesh]) AND ("Bipolar Disorder"[Mesh]) AND ("Antimanic Agents"[Mesh])` (Diretriz clínica (CANMAT/ISBD)) 29536616
+  - PubMed: `("General Practice"[Mesh]) AND ("Lithium"[Mesh]) AND ("Drug Monitoring"[Mesh])` (Diretriz clínica (BAP)) 26979387
+  - PubMed: `("Family Practice"[Mesh]) AND ("Anticonvulsants"[Mesh]) AND ("Bipolar Disorder"[Mesh])` (Diretriz clínica (RANZCP)) 33296123
+  - PubMed: `` (Revisão sistemática de ensaios e metanálises (lítio)) 34980362
+  - PubMed: `` (Metanálise em rede (manutenção)) 33177610
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-estabilizadores-de-humor-na-aps-guia-pratico-para-res.md` · slug: `uso-de-estabilizadores-de-humor-na-aps-guia-pratico-para-res` · pauta: `2026-09-30-106-uso-de-estabilizadores-de-humo`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.29)
@@ -1607,9 +1609,9 @@
 - **público:** Residentes de Medicina de Família e Comunidade e estudantes · **ângulo:** Foco em populações clinicamente complexas frequentemente negligenciadas nos grandes ensaios clínicos.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Primary Health Care"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Vulnerable Populations"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Pregnancy"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Family Practice"[Mesh])` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Aged"[Mesh]) AND ("Depressive Disorder"[Mesh]) AND ("Drug Interactions"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Primary Health Care"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Vulnerable Populations"[Mesh])` (Revisão guarda-chuva (umbrella review)) 39266712
+  - PubMed: `("Pregnancy"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Family Practice"[Mesh])` (Revisão sistemática de metanálises) 36853497
+  - PubMed: `("Aged"[Mesh]) AND ("Depressive Disorder"[Mesh]) AND ("Drug Interactions"[Mesh])` (Revisão sistemática) 33064291
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antidepressivos-em-populacoes-especiais-na-aps.md` · slug: `uso-de-antidepressivos-em-populacoes-especiais-na-aps` · pauta: `2026-09-30-110-uso-de-antidepressivos-em-popu`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.29)
@@ -1653,10 +1655,10 @@
 - **público:** Residentes de Medicina de Emergência, Médicos de Pronto Atendimento, Estudantes de Medicina · **ângulo:** Protocolo focado em técnicas de descalada verbal e conduta farmacológica rápida na sala de emergência.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Aggression"[MeSH Terms] OR "Psychomotor Agitation"[MeSH Terms]) AND "Emergency Service, Hospital"[MeSH Terms] AND "De-escalation"[Title/Abstract]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Psychomotor Agitation"[MeSH Terms] AND "Emergencies"[MeSH Terms] AND "Antipsychotic Agents"[MeSH Terms] AND "Clinical Trial"[Publication Type]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Restraint, Physical"[MeSH Terms] OR "Coercion"[MeSH Terms]) AND "Emergency Psychiatry"[MeSH Terms] AND "Guideline"[Publication Type]` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `"Aggression"[MeSH Terms] AND "Emergency Medicine"[MeSH Terms] AND "Risk Assessment"[MeSH Terms] AND "Meta-Analysis"[Publication Type]` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Aggression"[MeSH Terms] OR "Psychomotor Agitation"[MeSH Terms]) AND "Emergency Service, Hospital"[MeSH Terms] AND "De-escalation"[Title/Abstract]` (Consenso de especialistas) 26912127
+  - PubMed: `"Psychomotor Agitation"[MeSH Terms] AND "Emergencies"[MeSH Terms] AND "Antipsychotic Agents"[MeSH Terms] AND "Clinical Trial"[Publication Type]` (Diretriz (Project BETA) e revisão) 33145538
+  - PubMed: `("Restraint, Physical"[MeSH Terms] OR "Coercion"[MeSH Terms]) AND "Emergency Psychiatry"[MeSH Terms] AND "Guideline"[Publication Type]` (Revisão sistemática Cochrane e metanálise) 19588366
+  - PubMed: `"Aggression"[MeSH Terms] AND "Emergency Medicine"[MeSH Terms] AND "Risk Assessment"[MeSH Terms] AND "Meta-Analysis"[Publication Type]` (Revisão) 40265437
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-episodios-de-raiva-e-agressividade-no-pronto-atend.md` · slug: `manejo-de-episodios-de-raiva-e-agressividade-no-pronto-atend` · pauta: `2026-09-30-113-manejo-de-episodios-de-raiva-e`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Manejo do paciente com risco de agressividade no PA" (similaridade 0.3)
@@ -1670,10 +1672,9 @@
 - **público:** Residentes de Medicina de Família e Comunidade, Médicos de Família, Estudantes de Medicina · **ângulo:** Diferenciação estruturada entre fadiga de origem somática, distúrbios afetivos e sobrecarga crônica na rotina ambulatorial.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Fatigue"[Mesh] OR "Fatigue Syndrome, Chronic"[Mesh]) AND "Primary Health Care"[Mesh] AND ("Diagnosis, Differential"[Mesh] OR "Decision Trees"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Burnout, Professional"[Mesh] OR "Depression"[Mesh]) AND "Fatigue"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Fatigue Syndrome, Chronic"[Mesh] AND "Diagnosis"[Mesh]) AND "Primary Health Care"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Mental Disorders"[Mesh] OR "Mood Disorders"[Mesh]) AND "Fatigue"[Mesh] AND "Primary Health Care"[Mesh] AND "Metaanalysis"[Publication Type]` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Fatigue"[Mesh] OR "Fatigue Syndrome, Chronic"[Mesh]) AND "Primary Health Care"[Mesh] AND ("Diagnosis, Differential"[Mesh] OR "Decision Trees"[Mesh])` (Revisão sistemática Cochrane e metanálise) 39697147
+  - PubMed: `("Burnout, Professional"[Mesh] OR "Depression"[Mesh]) AND "Fatigue"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão sistemática) 33024295
+  - PubMed: `("Fatigue Syndrome, Chronic"[Mesh] AND "Diagnosis"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão sistemática) 39940333
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/investigacao-de-fadiga-cronica-e-exaustao-na-atencao-primari.md` · slug: `investigacao-de-fadiga-cronica-e-exaustao-na-atencao-primari` · pauta: `2026-09-30-114-investigacao-de-fadiga-cronica`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Transtornos somatoformes na UBS: investigação e manejo clínico" (similaridade 0.31)
@@ -1717,10 +1718,9 @@
 - **público:** Médicos de família, residentes de medicina de família e comunidade e médicos generalistas · **ângulo:** Foco prático no manejo longitudinal na APS, diferenciando sintomas dissociativos de quadros psicóticos agudos sem alarmismo.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Dissociative Identity Disorder"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Dissociative Disorders"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Psychotic Disorders"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `Dissociative identity disorder primary care management clinical practice` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Physician-Patient Relations"[Mesh] AND "Dissociative Disorders"[Mesh] AND "General Practice"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
+  - PubMed: `"Dissociative Identity Disorder"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão sistemática) 40891466
+  - PubMed: `"Dissociative Disorders"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Psychotic Disorders"[Mesh]` (Revisão (guia clínico transdiagnóstico)) 36425778
+  - PubMed: `Dissociative identity disorder primary care management clinical practice` (Ensaio clínico randomizado) 40014495
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-dissociativo-de-identidade-reconhecimento-e-manej.md` · slug: `transtorno-dissociativo-de-identidade-reconhecimento-e-manej` · pauta: `2026-09-30-117-transtorno-dissociativo-de-ide`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.28)
@@ -1734,10 +1734,9 @@
 - **público:** Equipes de saúde da família, médicos generalistas e residentes · **ângulo:** Enfoque na integralidade do cuidado e na criação de um ambiente seguro na atenção básica, livre de preconceitos.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Gender Dysphoria"[Mesh] OR "Transgender Persons"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Health"[Mesh] OR "Psychological Distress"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Gender-Affirming Care"[Mesh] OR "Transgender Persons"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Practice Guideline" [Publication Type])` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Gender Dysphoria"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh]) AND ("Patient Acceptance of Health Care"[Mesh] OR "Empathy"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Transgender Persons"[Mesh]) AND ("Mental Health Services"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Gender Dysphoria"[Mesh] OR "Transgender Persons"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Health"[Mesh] OR "Psychological Distress"[Mesh])` (Diretriz clínica (Endocrine Society)) 28945902
+  - PubMed: `("Gender-Affirming Care"[Mesh] OR "Transgender Persons"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Practice Guideline" [Publication Type])` (Diretriz clínica (declaração da Academia de Saúde do Adolescente)) 37179471
+  - PubMed: `("Gender Dysphoria"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh]) AND ("Patient Acceptance of Health Care"[Mesh] OR "Empathy"[Mesh])` (Revisão) 32990485
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a.md` · slug: `disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a` · pauta: `2026-09-30-118-disforia-de-genero-e-saude-men`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.22)
@@ -1751,10 +1750,9 @@
 - **público:** Médicos generalistas, médicos de família e residentes · **ângulo:** Abordagem prática para lidar com episódios de raiva desproporcional no consultório de atenção primária.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Intermittent Explosive Disorder"[Mesh] AND ("Primary Health Care"[Mesh] or "General Practice"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Intermittent Explosive Disorder"[Mesh] AND "Therapeutics"[Mesh] AND ("Randomized Controlled Trial"[Publication Type])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `"Aggression"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Intermittent Explosive Disorder"[Mesh]` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `"Intermittent Explosive Disorder"[Mesh] AND ("Psychotherapy"[Mesh] or "Behavior Therapy"[Mesh]) AND "Primary Health Care"[Mesh]` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `"Intermittent Explosive Disorder"[Mesh] AND ("Primary Health Care"[Mesh] or "General Practice"[Mesh])` (Revisão sistemática e metanálise) 39821512
+  - PubMed: `"Intermittent Explosive Disorder"[Mesh] AND "Therapeutics"[Mesh] AND ("Randomized Controlled Trial"[Publication Type])` (Revisão) 22535310
+  - PubMed: `"Aggression"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Intermittent Explosive Disorder"[Mesh]` (Revisão) 27569016
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa.md` · slug: `transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa` · pauta: `2026-09-30-119-transtorno-explosivo-intermite`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.23)
@@ -1768,10 +1766,10 @@
 - **público:** Médicos de família, pediatras e clínicos gerais · **ângulo:** Visão integrada sobre transtornos muitas vezes subdiagnosticados que geram grande sofrimento estético e emocional.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Trichotillomania"[Mesh] OR "Skin Picking"[Mesh]) AND ("Diagnosis"[Mesh] OR "Primary Health Care"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Trichotillomania"[Mesh] OR "Excoriation Disorder"[Mesh]) AND ("Habit Reversal"[Mesh] OR "Cognitive Behavioral Therapy"[Mesh]) AND ("Systematic Review"[Publication Type])` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Trichotillomania"[Mesh] OR "Skin Picking"[Mesh]) AND ("Therapeutics"[Mesh] OR "Psychotropic Drugs"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Trichotillomania"[Mesh] AND "Excoriation Disorder"[Mesh]) AND ("Disease Management"[Mesh] OR "Ambulatory Care"[Mesh]) AND ("Meta-Analysis"[Publication Type])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Trichotillomania"[Mesh] OR "Skin Picking"[Mesh]) AND ("Diagnosis"[Mesh] OR "Primary Health Care"[Mesh])` (Revisão) 40928501
+  - PubMed: `("Trichotillomania"[Mesh] OR "Excoriation Disorder"[Mesh]) AND ("Habit Reversal"[Mesh] OR "Cognitive Behavioral Therapy"[Mesh]) AND ("Systematic Review"[Publication Type])` (Revisão) 35681955
+  - PubMed: `("Trichotillomania"[Mesh] OR "Skin Picking"[Mesh]) AND ("Therapeutics"[Mesh] OR "Psychotropic Drugs"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Revisão narrativa) 38126097
+  - PubMed: `("Trichotillomania"[Mesh] AND "Excoriation Disorder"[Mesh]) AND ("Disease Management"[Mesh] OR "Ambulatory Care"[Mesh]) AND ("Meta-Analysis"[Publication Type])` (Revisão sistemática) 28761349
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane.md` · slug: `tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane` · pauta: `2026-09-30-120-tricotilomania-e-transtorno-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Transtorno explosivo intermitente: reconhecimento e manejo farmacológico na APS" (similaridade 0.09)
@@ -1785,10 +1783,10 @@
 - **público:** Médicos de família, residentes e equipes de saúde da UBS · **ângulo:** Foco na redução de exames complementares repetitivos e no manejo do vínculo médico-paciente a longo prazo.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Unnecessary Procedures"[Mesh] OR "Diagnostic Tests, Routine"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Illness Anxiety Disorder"[Mesh]) AND ("Physician-Patient Relations"[Mesh] OR "Communication"[Mesh]) AND ("Primary Health Care"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Practice Guidelines as Topic"[Mesh])` (Diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Meta-Analysis" [Publication Type])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Unnecessary Procedures"[Mesh] OR "Diagnostic Tests, Routine"[Mesh])` (Revisão sistemática e metanálise) 17084495
+  - PubMed: `("Illness Anxiety Disorder"[Mesh]) AND ("Physician-Patient Relations"[Mesh] OR "Communication"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão sistemática Cochrane e metanálise) 24142886
+  - PubMed: `("Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Practice Guidelines as Topic"[Mesh])` (Revisão sistemática e metanálise) 36374916
+  - PubMed: `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Meta-Analysis" [Publication Type])` (Metanálise de ensaios clínicos randomizados) 32428905
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a.md` · slug: `hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a` · pauta: `2026-09-30-121-hipocondria-e-transtorno-de-an`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Quando um irmão tem doença crônica: cuidando também dos outros filhos" (similaridade 0.3)
@@ -1802,10 +1800,9 @@
 - **público:** Médicos de família, pediatras e profissionais de saúde da UBS · **ângulo:** Diferenciação entre timidez extrema e mutismo seletivo com foco na atuação do médico de família.
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Selective Mutism"[Mesh]) AND ("Early Diagnosis"[Mesh] OR "Primary Health Care"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Selective Mutism"[Mesh]) AND ("General Practice"[Mesh] OR "Physicians, Family"[Mesh])` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Selective Mutism"[Mesh] AND "Child"[Mesh]) AND ("Speech Therapy"[Mesh] OR "Mental Health"[Mesh])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-  - PubMed: `("Selective Mutism"[Mesh]) AND ("Referral and Consultation"[Mesh] OR "Diagnosis, Differential"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
+  - PubMed: `("Selective Mutism"[Mesh]) AND ("Early Diagnosis"[Mesh] OR "Primary Health Care"[Mesh])` (Revisão sistemática) 26560144
+  - PubMed: `("Selective Mutism"[Mesh]) AND ("General Practice"[Mesh] OR "Physicians, Family"[Mesh])` (Revisão sistemática) 37875905
+  - PubMed: `("Selective Mutism"[Mesh] AND "Child"[Mesh]) AND ("Speech Therapy"[Mesh] OR "Mental Health"[Mesh])` (Revisão) 26709680
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta.md` · slug: `mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta` · pauta: `2026-09-30-122-mutismo-seletivo-na-infancia-i`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.19)
@@ -1879,9 +1876,11 @@
 - **público:** Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da APS · **ângulo:** Foco específico no manejo prático do desmame e diagnóstico diferencial na rotina da UBS
 - **tema sensível:** não
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `antidepressant discontinuation syndrome AND primary health care` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `antidepressant withdrawal symptoms AND tapering protocols` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `antidepressant discontinuation vs relapse AND general practice` (Estudo observacional) [PMID A CONFIRMAR]
+  - PubMed: `antidepressant discontinuation syndrome AND primary health care` (Revisão sistemática e metanálise) 38851198
+  - PubMed: `antidepressant withdrawal symptoms AND tapering protocols` (Revisão sistemática) 25721705
+  - PubMed: `antidepressant discontinuation vs relapse AND general practice` (Revisão sistemática) 30016772
+  - PubMed: `` (Ensaio clínico randomizado em clusters) 38913372
+  - PubMed: `` (Revisão) 32259826
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr.md` · slug: `sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr` · pauta: `2026-09-30-127-sindrome-de-descontinuacao-de-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.29)

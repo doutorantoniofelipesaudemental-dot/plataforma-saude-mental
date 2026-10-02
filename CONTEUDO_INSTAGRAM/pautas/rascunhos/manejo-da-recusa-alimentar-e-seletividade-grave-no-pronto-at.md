@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:00:02.130Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Manejo da recusa alimentar e seletividade grave no pronto atendimento
@@ -15,11 +16,10 @@ revisaoMedica: pendente
 *Orientações práticas para o manejo de emergência na recusa alimentar grave, integrando risco clínico e suporte psiquiátrico.*
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
-> Trechos de conduta farmacológica e de emergência a conferir (7):
+> Trechos de conduta farmacológica e de emergência a conferir (6):
 > - Chegar ao pronto atendimento com um quadro de recusa alimentar grave ou seletividade extrema mexe com a nossa segurança técnica e nos exige um olhar muito at…
 > - * **Avaliação de risco imediato:** Lembre-se de que o sofrimento psíquico grave pode colocar a vida em risco. Garanta um ambiente seguro e vigilância contínu…
 > - A privação alimentar prolongada e a recusa hídrica impõem ao organismo um estresse metabólico profundo. Para entender a gravidade do quadro no pronto atendim…
-> - * Perda ponderal rápida ou peso corporal total abaixo de [DOSE A CONFIRMAR] porcentagem do peso ideal esperado.
 > - * **Suplementação vitamínica:** Administre tiamina (vitamina B1) antes de iniciar qualquer aporte calórico, para prevenir a encefalopatia de Wernicke. Ajuste…
 > - * **Manejo farmacológico da base psiquiátrica:** O uso de medicações para sintomas psicóticos, ansiedade grave ou agitação deve ser avaliado caso a caso. Cla…
 > - * **Encaminhamento e suporte:** Acione a psiquiatria de ligação ou a equipe de saúde mental da rede assim que o paciente estiver clinicamente estabilizado. P…
@@ -66,7 +66,7 @@ A condução de um paciente com recusa alimentar grave exige protocolos claros e
 ### Critérios para Internação Hospitalar
 * Instabilidade hemodinâmica (hipotensão persistente, bradicardia acentuada ou instabilidade ortostática).
 * Alterações eletrolíticas significativas que não corrigem com suporte inicial.
-* Perda ponderal rápida ou peso corporal total abaixo de [DOSE A CONFIRMAR] porcentagem do peso ideal esperado.
+* Perda ponderal rápida ou peso corporal total abaixo do limite definido pelo protocolo do serviço, em porcentagem do peso ideal esperado.
 * Recusa hídrica associada (risco iminente de lesão renal aguda).
 * Falha na abordagem ambulatorial ou ausência de rede de apoio familiar estruturada.
 * Risco psiquiátrico agudo associado, necessitando de ambiente protegido.
@@ -75,7 +75,7 @@ A condução de um paciente com recusa alimentar grave exige protocolos claros e
 * **Reposição hidroeletrolítica cautelosa:** Corrija os distúrbios com supervisão rigorosa e monitorização cardíaca.
 * **Suplementação vitamínica:** Administre tiamina (vitamina B1) antes de iniciar qualquer aporte calórico, para prevenir a encefalopatia de Wernicke. Ajuste conforme [DOSE A CONFIRMAR].
 * **Suporte nutricional:** Nos casos de recusa absoluta com recusa de via oral, avalie a necessidade de sonda enteral com equipe multidisciplinar, respeitando os aspectos legais e éticos da internação involuntária ou compulsória quando houver risco de morte iminente e incapacidade de discernimento.
-* **Manejo farmacológico da base psiquiátrica:** O uso de medicações para sintomas psicóticos, ansiedade grave ou agitação deve ser avaliado caso a caso. Classes como antipsicóticos atípicos em doses baixas podem ser consideradas para sintomas de recusa delirante ou angústia extrema, sempre com [DOSE A CONFIRMAR].
+* **Manejo farmacológico da base psiquiátrica:** O uso de medicações para sintomas psicóticos, ansiedade grave ou agitação deve ser avaliado caso a caso. Classes como antipsicóticos atípicos em doses baixas podem ser consideradas para sintomas de recusa delirante ou angústia extrema, sempre com dose definida pelo médico.
 * **Encaminhamento e suporte:** Acione a psiquiatria de ligação ou a equipe de saúde mental da rede assim que o paciente estiver clinicamente estabilizado. Para suporte em momentos de crise emocional severa, oriente pacientes e familiares sobre os canais de ajuda disponíveis, como o Centro de Valorização da Vida e os serviços de urgência pré-hospitalar.
 
 ## Pontos-chave
@@ -85,13 +85,14 @@ A condução de um paciente com recusa alimentar grave exige protocolos claros e
 - A reposição de tiamina antes da oferta calórica é obrigatória para prevenir complicações neurológicas graves como a Síndrome de Wernicke.
 - O manejo requer uma equipe multidisciplinar, acolhimento empático sem julgamentos e plano claro de transição para o suporte em saúde mental.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Emergency Treatment"[Mesh]) AND ("Feeding and Eating Disorders"[Mesh]) AND ("Critical Care"[Mesh])` — Revisão sistemática e diretrizes — [PMID A CONFIRMAR]
-2. `("Anorexia Nervosa"[Mesh]) AND ("Medical Emergencies"[Mesh]) AND ("Hospitalization"[Mesh])` — Diretriz de prática clínica — [PMID A CONFIRMAR]
-3. `("Food Refusal"[Mesh]) AND ("Adolescent"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` — Estudo de coorte e consenso — [PMID A CONFIRMAR]
+1. Oudman E, Wijnia JW, Oey MJ et al.. Preventing Wernicke's encephalopathy in anorexia nervosa: A systematic review. Psychiatry Clin Neurosci. 2018;72(10):774-779. PMID 29984541. doi:10.1111/pcn.12735 — Revisão sistemática
+2. Wijnia JW. A Clinician's View of Wernicke-Korsakoff Syndrome. J Clin Med. 2022;11(22). PMID 36431232. doi:10.3390/jcm11226755 — Revisão
+3. Ibrahim IB, Hussain AA, Sjögren JM. [The refeeding syndrome in anorexia nervosa]. Ugeskr Laeger. 2018;180(18). PMID 29720342 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

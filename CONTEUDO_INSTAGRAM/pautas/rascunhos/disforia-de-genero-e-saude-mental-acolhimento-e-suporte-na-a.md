@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:00:41.108Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Disforia de gênero e saúde mental: acolhimento e suporte na atenção primária
@@ -58,7 +59,7 @@ A exposição contínua a ambientes hostis mantém o eixo hipotálamo-pituitári
 ### Manejo Clínico e Redução de Danos
 
 ### Abordagem Inicial e Primeira Linha
-* O manejo na atenção primária deve focar na escuta empática, no tratamento de comorbidades psiquiátricas e na prevenção do suicídio. Para sintomas ansiosos ou depressivos graves, utilize medicamentos de primeira linha, como os inibidores seletivos da recaptação de serotonina, com [DOSE A CONFIRMAR].
+* O manejo na atenção primária deve focar na escuta empática, no tratamento de comorbidades psiquiátricas e na prevenção do suicídio. Para sintomas ansiosos ou depressivos graves, utilize medicamentos de primeira linha, como os inibidores seletivos da recaptação de serotonina, com dose definida pelo médico.
 * Adote estratégias de redução de danos para pacientes que utilizam terapias hormonais sem acompanhamento, fornecendo orientações claras sobre exames laboratoriais de rotina e monitoramento clínico, sem julgamentos.
 
 ### Sinais de Gravidade
@@ -77,14 +78,14 @@ A exposição contínua a ambientes hostis mantém o eixo hipotálamo-pituitári
 - A atenção primária deve focar na escuta qualificada, no manejo de comorbidades e em estratégias de redução de danos.
 - O encaminhamento para serviços especializados deve ser feito de forma organizada, mantendo a referência do cuidado na unidade básica.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Gender Dysphoria"[Mesh] OR "Transgender Persons"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mental Health"[Mesh] OR "Psychological Distress"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Gender-Affirming Care"[Mesh] OR "Transgender Persons"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Practice Guideline" [Publication Type])` — Diretriz — [PMID A CONFIRMAR]
-3. `("Gender Dysphoria"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh]) AND ("Patient Acceptance of Health Care"[Mesh] OR "Empathy"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Transgender Persons"[Mesh]) AND ("Mental Health Services"[Mesh] OR "Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
+1. Hembree WC, Cohen-Kettenis PT, Gooren L et al.. Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2017;102(11):3869-3903. PMID 28945902. doi:10.1210/jc.2017-01658 — Diretriz clínica (Endocrine Society)
+2. Pemde HK, Bansal U, Bhattacharya P et al.. Adolescent Health Academy Statement on the Care of Transgender Children, Adolescents, and Youth. Indian Pediatr. 2023;60(10):843-854. PMID 37179471 — Diretriz clínica (declaração da Academia de Saúde do Adolescente)
+3. Prince JCJ, Safer JD. Endocrine treatment of transgender individuals: current guidelines and strategies. Expert Rev Endocrinol Metab. 2020;15(6):395-403. PMID 32990485. doi:10.1080/17446651.2020.1825075 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

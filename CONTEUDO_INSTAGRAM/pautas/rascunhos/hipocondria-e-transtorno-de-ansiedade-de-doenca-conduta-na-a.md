@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:39:53.521Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Hipocondria e transtorno de ansiedade de doença: conduta na atenção primária
@@ -19,10 +20,10 @@ revisaoMedica: pendente
 > - A abordagem longitudinal com consultas estruturadas é a intervenção de maior evidência. O médico de família deve ser a referência central do cuidado, evitand…
 > - Quando os sintomas ansiosos são incapacitantes ou há comorbidade com transtorno depressivo, o uso de medicamentos pode ser necessário. Os inibidores seletivo…
 > - - Classe: Antidepressivos ISRS (exemplo: Sertralina ou Fluoxetina).
-> - - Dose: [DOSE A CONFIRMAR], iniciando com doses baixas e aumentando lentamente para evitar a exacerbação inicial da ansiedade.
+> - - Dose: definida pelo médico, iniciando com doses baixas e aumentando lentamente para evitar a exacerbação inicial da ansiedade.
 > - - Risco de autolesão ou crises agudas de desespero (orientar CVV 188 e SAMU 192).
 > - Encaminhe para a psiquiatria ou psicologia especializada quando houver refratariedade ao manejo clínico longitudinal na UBS após meses de acompanhamento estr…
-> - - O uso de ISRS [DOSE A CONFIRMAR] é indicado quando há ansiedade incapacitante ou comorbidade depressiva.
+> - - O uso de ISRS, com dose definida pelo médico, é indicado quando há ansiedade incapacitante ou comorbidade depressiva.
 
 Olá, colega da atenção primária. Você certamente já atendeu aquela pessoa que chega ao consultório carregando uma pasta cheia de exames normais, mas com o coração apertado, convencida de que esconde uma doença grave não diagnosticada. O transtorno de ansiedade de doença, conhecido antigamente como hipocondria, é um desafio real no dia a dia da UBS e do pronto atendimento. O sofrimento de quem vive isso é imenso e real, não é invenção nem busca por atenção vazia. Nosso papel como médicos de família e equipe de saúde não é afastar esse paciente ou rotulá-lo como 'difícil', mas construir uma relação de confiança que ajude a acalmar o corpo e a mente, evitando a roda-viva de exames desnecessários e intervenções iatrogênicas. Vamos conversar sobre como fazer isso na prática.
 
@@ -68,7 +69,7 @@ A abordagem longitudinal com consultas estruturadas é a intervenção de maior 
 ### Abordagem farmacológica
 Quando os sintomas ansiosos são incapacitantes ou há comorbidade com transtorno depressivo, o uso de medicamentos pode ser necessário. Os inibidores seletivos da recaptação de serotonina (ISRS), como classe terapêutica, são os fármacos de primeira linha.
 - Classe: Antidepressivos ISRS (exemplo: Sertralina ou Fluoxetina).
-- Dose: [DOSE A CONFIRMAR], iniciando com doses baixas e aumentando lentamente para evitar a exacerbação inicial da ansiedade.
+- Dose: definida pelo médico, iniciando com doses baixas e aumentando lentamente para evitar a exacerbação inicial da ansiedade.
 
 ### Sinais de gravidade
 - Presença de sintomas psicóticos ou delírios somáticos fixos (onde a crença na doença atinge grau delirante).
@@ -83,16 +84,17 @@ Encaminhe para a psiquiatria ou psicologia especializada quando houver refratari
 - Validar o sofrimento do paciente sem reforçar a crença em doenças graves reduz a busca excessiva por exames.
 - Consultas regulares e agendadas previamente substituem a ida ao pronto-socorro motivada por sintomas somáticos.
 - Exames complementares normais devem ser entregues com clareza, fechando portas para investigações repetitivas.
-- O uso de ISRS [DOSE A CONFIRMAR] é indicado quando há ansiedade incapacitante ou comorbidade depressiva.
+- O uso de ISRS, com dose definida pelo médico, é indicado quando há ansiedade incapacitante ou comorbidade depressiva.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Unnecessary Procedures"[Mesh] OR "Diagnostic Tests, Routine"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Illness Anxiety Disorder"[Mesh]) AND ("Physician-Patient Relations"[Mesh] OR "Communication"[Mesh]) AND ("Primary Health Care"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Practice Guidelines as Topic"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-4. `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Meta-Analysis" [Publication Type])` — Metanálise — [PMID A CONFIRMAR]
+1. Marcus DK, Gurley JR, Marchi MM et al.. Cognitive and perceptual variables in hypochondriasis and health anxiety: a systematic review. Clin Psychol Rev. 2006;27(2):127-39. PMID 17084495. doi:10.1016/j.cpr.2006.09.003 — Revisão sistemática e metanálise
+2. Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2 — Revisão sistemática Cochrane e metanálise
+3. Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538 — Revisão sistemática e metanálise
+4. Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738 — Metanálise de ensaios clínicos randomizados
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

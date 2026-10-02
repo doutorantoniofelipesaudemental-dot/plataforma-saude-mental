@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:00:28.127Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Investigação de fadiga crônica e exaustão na atenção primária
@@ -16,7 +17,7 @@ revisaoMedica: pendente
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (4):
-> - * Se houver quadro ansioso ou depressivo associado, considere iniciar antidepressivos inibidores seletivos da recaptação de serotonina, [DOSE A CONFIRMAR], e…
+> - * Se houver quadro ansioso ou depressivo associado, considere iniciar antidepressivos inibidores seletivos da recaptação de serotonina, com dose definida pel…
 > - * Evite o uso crônico de benzodiazepínicos para tratar insônia relacionada à fadiga.
 > - * Encaminhe para a Psiquiatria se houver refratariedade ao tratamento inicial ou ideação suicida grave.
 > - * Encaminhe para Especialidades Médicas se houver suspeita de doenças reumatológicas, autoimunes ou neoplásicas.
@@ -68,7 +69,7 @@ O manejo exige paciência e um plano terapêutico compartilhado com o paciente. 
 * Oriente higiene do sono e atividade física gradual, respeitando os limites individuais.
 
 ### Tratamento Medicamentoso
-* Se houver quadro ansioso ou depressivo associado, considere iniciar antidepressivos inibidores seletivos da recaptação de serotonina, [DOSE A CONFIRMAR], em conjunto com suporte psicológico.
+* Se houver quadro ansioso ou depressivo associado, considere iniciar antidepressivos inibidores seletivos da recaptação de serotonina, com dose definida pelo médico, em conjunto com suporte psicológico.
 * Evite o uso crônico de benzodiazepínicos para tratar insônia relacionada à fadiga.
 
 ### Sinais de Gravidade
@@ -89,14 +90,14 @@ O manejo exige paciência e um plano terapêutico compartilhado com o paciente. 
 - Exames básicos incluem hemograma, glicemia, função tireoidiana, ferritina e B12.
 - O manejo envolve validar o sofrimento, orientar mudanças graduais e tratar comorbidades psiquiátricas quando presentes.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Fatigue"[Mesh] OR "Fatigue Syndrome, Chronic"[Mesh]) AND "Primary Health Care"[Mesh] AND ("Diagnosis, Differential"[Mesh] OR "Decision Trees"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-2. `("Burnout, Professional"[Mesh] OR "Depression"[Mesh]) AND "Fatigue"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `("Fatigue Syndrome, Chronic"[Mesh] AND "Diagnosis"[Mesh]) AND "Primary Health Care"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Mental Disorders"[Mesh] OR "Mood Disorders"[Mesh]) AND "Fatigue"[Mesh] AND "Primary Health Care"[Mesh] AND "Metaanalysis"[Publication Type]` — Metanálise — [PMID A CONFIRMAR]
+1. Larun L, Brurberg KG, Odgaard-Jensen J et al.. Exercise therapy for chronic fatigue syndrome. Cochrane Database Syst Rev. 2024;12(12):CD003200. PMID 39697147. doi:10.1002/14651858.CD003200.pub9 — Revisão sistemática Cochrane e metanálise
+2. Sarzi-Puttini P, Giorgi V, Marotto D et al.. Fibromyalgia: an update on clinical characteristics, aetiopathogenesis and treatment. Nat Rev Rheumatol. 2020;16(11):645-660. PMID 33024295. doi:10.1038/s41584-020-00506-w — Revisão sistemática
+3. Dorczok MC, Mittmann G, Mossaheb N et al.. Dietary Supplementation for Fatigue Symptoms in Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS)-A Systematic Review. Nutrients. 2025;17(3). PMID 39940333. doi:10.3390/nu17030475 — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

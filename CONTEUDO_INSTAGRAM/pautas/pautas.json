@@ -5572,18 +5572,33 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Bipolar Disorder\"[Mesh]) AND (\"Antimanic Agents\"[Mesh])",
-        "tipoDeEstudo": "Revisão sistemática e diretrizes de tratamento",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (CANMAT/ISBD)",
+        "pmid": "29536616",
+        "citacao": "Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609"
       },
       {
         "consultaPubMed": "(\"General Practice\"[Mesh]) AND (\"Lithium\"[Mesh]) AND (\"Drug Monitoring\"[Mesh])",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (BAP)",
+        "pmid": "26979387",
+        "citacao": "Goodwin GM, Haddad PM, Ferrier IN et al.. Evidence-based guidelines for treating bipolar disorder: Revised third edition recommendations from the British Association for Psychopharmacology. J Psychopharmacol. 2016;30(6):495-553. PMID 26979387. doi:10.1177/0269881116636545"
       },
       {
         "consultaPubMed": "(\"Family Practice\"[Mesh]) AND (\"Anticonvulsants\"[Mesh]) AND (\"Bipolar Disorder\"[Mesh])",
-        "tipoDeEstudo": "Ensaio clínico randomizado",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Diretriz clínica (RANZCP)",
+        "pmid": "33296123",
+        "citacao": "Malhi GS, Bell E, Boyce P et al.. The 2020 Royal Australian and New Zealand College of psychiatrists clinical practice guidelines for mood disorders: Bipolar disorder summary. Bipolar Disord. 2020;22(8):805-821. PMID 33296123. doi:10.1111/bdi.13036"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão sistemática de ensaios e metanálises (lítio)",
+        "pmid": "34980362",
+        "citacao": "Fountoulakis KN, Tohen M, Zarate CA. Lithium treatment of Bipolar disorder in adults: A systematic review of randomized trials and meta-analyses. Eur Neuropsychopharmacol. 2022;54:100-115. PMID 34980362. doi:10.1016/j.euroneuro.2021.10.003"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Metanálise em rede (manutenção)",
+        "pmid": "33177610",
+        "citacao": "Kishi T, Ikuta T, Matsuda Y et al.. Mood stabilizers and/or antipsychotics for bipolar disorder in the maintenance phase: a systematic review and network meta-analysis of randomized controlled trials. Mol Psychiatry. 2020;26(8):4146-4157. PMID 33177610. doi:10.1038/s41380-020-00946-6"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -5794,18 +5809,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Primary Health Care\"[Mesh]) AND (\"Antidepressive Agents\"[Mesh]) AND (\"Vulnerable Populations\"[Mesh])",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão guarda-chuva (umbrella review)",
+        "pmid": "39266712",
+        "citacao": "Fabiano N, Wong S, Gupta A et al.. Safety of psychotropic medications in pregnancy: an umbrella review. Mol Psychiatry. 2024;30(1):327-335. PMID 39266712. doi:10.1038/s41380-024-02697-0"
       },
       {
         "consultaPubMed": "(\"Pregnancy\"[Mesh]) AND (\"Antidepressive Agents\"[Mesh]) AND (\"Family Practice\"[Mesh])",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática de metanálises",
+        "pmid": "36853497",
+        "citacao": "Desaunay P, Eude LG, Dreyfus M et al.. Benefits and Risks of Antidepressant Drugs During Pregnancy: A Systematic Review of Meta-analyses. Paediatr Drugs. 2023;25(3):247-265. PMID 36853497. doi:10.1007/s40272-023-00561-2"
       },
       {
         "consultaPubMed": "(\"Aged\"[Mesh]) AND (\"Depressive Disorder\"[Mesh]) AND (\"Drug Interactions\"[Mesh])",
-        "tipoDeEstudo": "Metanálise",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "33064291",
+        "citacao": "Behlke LM, Lenze EJ, Carney RM. The Cardiovascular Effects of Newer Antidepressants in Older Adults and Those With or At High Risk for Cardiovascular Diseases. CNS Drugs. 2020;34(11):1133-1147. PMID 33064291. doi:10.1007/s40263-020-00763-z"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -5962,19 +5980,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Aggression\"[MeSH Terms] OR \"Psychomotor Agitation\"[MeSH Terms]) AND \"Emergency Service, Hospital\"[MeSH Terms] AND \"De-escalation\"[Title/Abstract]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Consenso de especialistas",
+        "pmid": "26912127",
+        "citacao": "Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007"
       },
       {
         "consultaPubMed": "\"Psychomotor Agitation\"[MeSH Terms] AND \"Emergencies\"[MeSH Terms] AND \"Antipsychotic Agents\"[MeSH Terms] AND \"Clinical Trial\"[Publication Type]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Diretriz (Project BETA) e revisão",
+        "pmid": "33145538",
+        "citacao": "Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138"
       },
       {
         "consultaPubMed": "(\"Restraint, Physical\"[MeSH Terms] OR \"Coercion\"[MeSH Terms]) AND \"Emergency Psychiatry\"[MeSH Terms] AND \"Guideline\"[Publication Type]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "19588366",
+        "citacao": "Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2"
       },
       {
         "consultaPubMed": "\"Aggression\"[MeSH Terms] AND \"Emergency Medicine\"[MeSH Terms] AND \"Risk Assessment\"[MeSH Terms] AND \"Meta-Analysis\"[Publication Type]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "40265437",
+        "citacao": "Del Casale A, Arena JF, Napoli C et al.. A Comprehensive Understanding of Psychomotor Agitation: From Causes to Hospital Care. Curr Neuropharmacol. 2025;23(13):1666-1682. PMID 40265437. doi:10.2174/011570159X340145250109080932"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -6024,19 +6050,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Fatigue\"[Mesh] OR \"Fatigue Syndrome, Chronic\"[Mesh]) AND \"Primary Health Care\"[Mesh] AND (\"Diagnosis, Differential\"[Mesh] OR \"Decision Trees\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "39697147",
+        "citacao": "Larun L, Brurberg KG, Odgaard-Jensen J et al.. Exercise therapy for chronic fatigue syndrome. Cochrane Database Syst Rev. 2024;12(12):CD003200. PMID 39697147. doi:10.1002/14651858.CD003200.pub9"
       },
       {
         "consultaPubMed": "(\"Burnout, Professional\"[Mesh] OR \"Depression\"[Mesh]) AND \"Fatigue\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "33024295",
+        "citacao": "Sarzi-Puttini P, Giorgi V, Marotto D et al.. Fibromyalgia: an update on clinical characteristics, aetiopathogenesis and treatment. Nat Rev Rheumatol. 2020;16(11):645-660. PMID 33024295. doi:10.1038/s41584-020-00506-w"
       },
       {
         "consultaPubMed": "(\"Fatigue Syndrome, Chronic\"[Mesh] AND \"Diagnosis\"[Mesh]) AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
-      },
-      {
-        "consultaPubMed": "(\"Mental Disorders\"[Mesh] OR \"Mood Disorders\"[Mesh]) AND \"Fatigue\"[Mesh] AND \"Primary Health Care\"[Mesh] AND \"Metaanalysis\"[Publication Type]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "39940333",
+        "citacao": "Dorczok MC, Mittmann G, Mossaheb N et al.. Dietary Supplementation for Fatigue Symptoms in Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS)-A Systematic Review. Nutrients. 2025;17(3). PMID 39940333. doi:10.3390/nu17030475"
       }
     ],
     "categoria": "Residentes & Estudantes",
@@ -6186,19 +6214,21 @@
     "referencias": [
       {
         "consultaPubMed": "\"Dissociative Identity Disorder\"[Mesh] AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "40891466",
+        "citacao": "Griffiths TA, Dimitrova LI, Linington M et al.. Effectiveness of phase-oriented treatment for trauma-related dissociative disorders: a systematic review. Eur J Psychotraumatol. 2025;16(1):2545734. PMID 40891466. doi:10.1080/20008066.2025.2545734"
       },
       {
         "consultaPubMed": "\"Dissociative Disorders\"[Mesh] AND \"Diagnosis, Differential\"[Mesh] AND \"Psychotic Disorders\"[Mesh]",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão (guia clínico transdiagnóstico)",
+        "pmid": "36425778",
+        "citacao": "Şar V. Dissociation Across Cultures: A Transdiagnostic Guide for Clinical Assessment and Management. Alpha Psychiatry. 2022;23(3):95-103. PMID 36425778. doi:10.5152/alphapsychiatry.2022.21556"
       },
       {
         "consultaPubMed": "Dissociative identity disorder primary care management clinical practice",
-        "tipoDeEstudo": "Revisão Sistemática"
-      },
-      {
-        "consultaPubMed": "\"Physician-Patient Relations\"[Mesh] AND \"Dissociative Disorders\"[Mesh] AND \"General Practice\"[Mesh]",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Ensaio clínico randomizado",
+        "pmid": "40014495",
+        "citacao": "Brand BL, Schielke HJ, Putnam K et al.. A randomized controlled trial assists individuals with complex trauma and dissociation in Finding Solid Ground. Psychol Trauma. 2025;17(8):1717-1727. PMID 40014495. doi:10.1037/tra0001871"
       }
     ],
     "categoria": "Condições Específicas",
@@ -6248,19 +6278,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Gender Dysphoria\"[Mesh] OR \"Transgender Persons\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Mental Health\"[Mesh] OR \"Psychological Distress\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Diretriz clínica (Endocrine Society)",
+        "pmid": "28945902",
+        "citacao": "Hembree WC, Cohen-Kettenis PT, Gooren L et al.. Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2017;102(11):3869-3903. PMID 28945902. doi:10.1210/jc.2017-01658"
       },
       {
         "consultaPubMed": "(\"Gender-Affirming Care\"[Mesh] OR \"Transgender Persons\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Practice Guideline\" [Publication Type])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Diretriz clínica (declaração da Academia de Saúde do Adolescente)",
+        "pmid": "37179471",
+        "citacao": "Pemde HK, Bansal U, Bhattacharya P et al.. Adolescent Health Academy Statement on the Care of Transgender Children, Adolescents, and Youth. Indian Pediatr. 2023;60(10):843-854. PMID 37179471"
       },
       {
         "consultaPubMed": "(\"Gender Dysphoria\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"Physicians, Family\"[Mesh]) AND (\"Patient Acceptance of Health Care\"[Mesh] OR \"Empathy\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
-      },
-      {
-        "consultaPubMed": "(\"Transgender Persons\"[Mesh]) AND (\"Mental Health Services\"[Mesh] OR \"Referral and Consultation\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "32990485",
+        "citacao": "Prince JCJ, Safer JD. Endocrine treatment of transgender individuals: current guidelines and strategies. Expert Rev Endocrinol Metab. 2020;15(6):395-403. PMID 32990485. doi:10.1080/17446651.2020.1825075"
       }
     ],
     "categoria": "Condições Específicas",
@@ -6310,19 +6342,21 @@
     "referencias": [
       {
         "consultaPubMed": "\"Intermittent Explosive Disorder\"[Mesh] AND (\"Primary Health Care\"[Mesh] or \"General Practice\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "39821512",
+        "citacao": "Liu F, Yin X, Jiang W. Comprehensive Review and Meta-Analysis of Psychological and Pharmacological Treatment for Intermittent Explosive Disorder: Insights From Both Case Studies and Randomized Controlled Trials. Clin Psychol Psychother. 2025;32(1):e70016. PMID 39821512. doi:10.1002/cpp.70016"
       },
       {
         "consultaPubMed": "\"Intermittent Explosive Disorder\"[Mesh] AND \"Therapeutics\"[Mesh] AND (\"Randomized Controlled Trial\"[Publication Type])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "22535310",
+        "citacao": "Coccaro EF. Intermittent explosive disorder as a disorder of impulsive aggression for DSM-5. Am J Psychiatry. 2012;169(6):577-88. PMID 22535310. doi:10.1176/appi.ajp.2012.11081259"
       },
       {
         "consultaPubMed": "\"Aggression\"[Mesh] AND \"Diagnosis, Differential\"[Mesh] AND \"Intermittent Explosive Disorder\"[Mesh]",
-        "tipoDeEstudo": "Diretriz"
-      },
-      {
-        "consultaPubMed": "\"Intermittent Explosive Disorder\"[Mesh] AND (\"Psychotherapy\"[Mesh] or \"Behavior Therapy\"[Mesh]) AND \"Primary Health Care\"[Mesh]",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "27569016",
+        "citacao": "Zapata JP, Palacio JD. Intermittent Explosive Disorder: A Controversial Diagnosis. Rev Colomb Psiquiatr. 2015;45(3):214-23. PMID 27569016. doi:10.1016/j.rcp.2015.11.001"
       }
     ],
     "categoria": "Condições Específicas",
@@ -6372,19 +6406,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Trichotillomania\"[Mesh] OR \"Skin Picking\"[Mesh]) AND (\"Diagnosis\"[Mesh] OR \"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "40928501",
+        "citacao": "DuBois MC, Feler BM, Flessner CA et al.. Trichotillomania and its treatment: an updated review and recommendations. Expert Rev Neurother. 2025;25(11):1335-1345. PMID 40928501. doi:10.1080/14737175.2025.2557395"
       },
       {
         "consultaPubMed": "(\"Trichotillomania\"[Mesh] OR \"Excoriation Disorder\"[Mesh]) AND (\"Habit Reversal\"[Mesh] OR \"Cognitive Behavioral Therapy\"[Mesh]) AND (\"Systematic Review\"[Publication Type])",
-        "tipoDeEstudo": "Revisão sistemática"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "35681955",
+        "citacao": "Lee DK, Lipner SR. The Potential of N-Acetylcysteine for Treatment of Trichotillomania, Excoriation Disorder, Onychophagia, and Onychotillomania: An Updated Literature Review. Int J Environ Res Public Health. 2022;19(11). PMID 35681955. doi:10.3390/ijerph19116370"
       },
       {
         "consultaPubMed": "(\"Trichotillomania\"[Mesh] OR \"Skin Picking\"[Mesh]) AND (\"Therapeutics\"[Mesh] OR \"Psychotropic Drugs\"[Mesh]) AND (\"Randomized Controlled Trial\"[Publication Type])",
-        "tipoDeEstudo": "Ensaio clínico randomizado"
+        "tipoDeEstudo": "Revisão narrativa",
+        "pmid": "38126097",
+        "citacao": "Christensen RE, Tan I, Jafferany M. Recent advances in trichotillomania: a narrative review. Acta Dermatovenerol Alp Pannonica Adriat. 2023;32(4):151-157. PMID 38126097"
       },
       {
         "consultaPubMed": "(\"Trichotillomania\"[Mesh] AND \"Excoriation Disorder\"[Mesh]) AND (\"Disease Management\"[Mesh] OR \"Ambulatory Care\"[Mesh]) AND (\"Meta-Analysis\"[Publication Type])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "28761349",
+        "citacao": "Lochner C, Roos A, Stein DJ. Excoriation (skin-picking) disorder: a systematic review of treatment options. Neuropsychiatr Dis Treat. 2017;13:1867-1872. PMID 28761349. doi:10.2147/NDT.S121138"
       }
     ],
     "categoria": "Condições Específicas",
@@ -6434,19 +6476,27 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Illness Anxiety Disorder\"[Mesh] OR \"Hypochondriasis\"[Mesh]) AND (\"Primary Health Care\"[Mesh] OR \"General Practice\"[Mesh]) AND (\"Unnecessary Procedures\"[Mesh] OR \"Diagnostic Tests, Routine\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "17084495",
+        "citacao": "Marcus DK, Gurley JR, Marchi MM et al.. Cognitive and perceptual variables in hypochondriasis and health anxiety: a systematic review. Clin Psychol Rev. 2006;27(2):127-39. PMID 17084495. doi:10.1016/j.cpr.2006.09.003"
       },
       {
         "consultaPubMed": "(\"Illness Anxiety Disorder\"[Mesh]) AND (\"Physician-Patient Relations\"[Mesh] OR \"Communication\"[Mesh]) AND (\"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
+        "tipoDeEstudo": "Revisão sistemática Cochrane e metanálise",
+        "pmid": "24142886",
+        "citacao": "Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2"
       },
       {
         "consultaPubMed": "(\"Hypochondriasis\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Practice Guidelines as Topic\"[Mesh])",
-        "tipoDeEstudo": "Diretriz"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "36374916",
+        "citacao": "Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538"
       },
       {
         "consultaPubMed": "(\"Illness Anxiety Disorder\"[Mesh] OR \"Hypochondriasis\"[Mesh]) AND (\"Primary Health Care\"[Mesh]) AND (\"Meta-Analysis\" [Publication Type])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Metanálise de ensaios clínicos randomizados",
+        "pmid": "32428905",
+        "citacao": "Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738"
       }
     ],
     "categoria": "Condições Específicas",
@@ -6501,19 +6551,21 @@
     "referencias": [
       {
         "consultaPubMed": "(\"Selective Mutism\"[Mesh]) AND (\"Early Diagnosis\"[Mesh] OR \"Primary Health Care\"[Mesh])",
-        "tipoDeEstudo": "Revisão Sistemática"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "26560144",
+        "citacao": "Manassis K, Oerbeck B, Overgaard KR. The use of medication in selective mutism: a systematic review. Eur Child Adolesc Psychiatry. 2015;25(6):571-8. PMID 26560144. doi:10.1007/s00787-015-0794-1"
       },
       {
         "consultaPubMed": "(\"Selective Mutism\"[Mesh]) AND (\"General Practice\"[Mesh] OR \"Physicians, Family\"[Mesh])",
-        "tipoDeEstudo": "Diretriz Clínica"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "37875905",
+        "citacao": "Koskela M, Ståhlberg T, Yunus WMAWM et al.. Long-term outcomes of selective mutism: a systematic literature review. BMC Psychiatry. 2023;23(1):779. PMID 37875905. doi:10.1186/s12888-023-05279-6"
       },
       {
         "consultaPubMed": "(\"Selective Mutism\"[Mesh] AND \"Child\"[Mesh]) AND (\"Speech Therapy\"[Mesh] OR \"Mental Health\"[Mesh])",
-        "tipoDeEstudo": "Ensaio Clínico Randomizado"
-      },
-      {
-        "consultaPubMed": "(\"Selective Mutism\"[Mesh]) AND (\"Referral and Consultation\"[Mesh] OR \"Diagnosis, Differential\"[Mesh])",
-        "tipoDeEstudo": "Metanálise"
+        "tipoDeEstudo": "Revisão",
+        "pmid": "26709680",
+        "citacao": "Hua A, Major N. Selective mutism. Curr Opin Pediatr. 2016;28(1):114-20. PMID 26709680. doi:10.1097/MOP.0000000000000300"
       }
     ],
     "categoria": "Condições Específicas",
@@ -6763,18 +6815,33 @@
     "referencias": [
       {
         "consultaPubMed": "antidepressant discontinuation syndrome AND primary health care",
-        "tipoDeEstudo": "Revisão sistemática",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática e metanálise",
+        "pmid": "38851198",
+        "citacao": "Henssler J, Schmidt Y, Schmidt U et al.. Incidence of antidepressant discontinuation symptoms: a systematic review and meta-analysis. Lancet Psychiatry. 2024;11(7):526-535. PMID 38851198. doi:10.1016/S2215-0366(24)00133-0"
       },
       {
         "consultaPubMed": "antidepressant withdrawal symptoms AND tapering protocols",
-        "tipoDeEstudo": "Diretriz clínica",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "25721705",
+        "citacao": "Fava GA, Gatti A, Belaise C et al.. Withdrawal Symptoms after Selective Serotonin Reuptake Inhibitor Discontinuation: A Systematic Review. Psychother Psychosom. 2015;84(2):72-81. PMID 25721705. doi:10.1159/000370338"
       },
       {
         "consultaPubMed": "antidepressant discontinuation vs relapse AND general practice",
-        "tipoDeEstudo": "Estudo observacional",
-        "pmid": "[PMID A CONFIRMAR]"
+        "tipoDeEstudo": "Revisão sistemática",
+        "pmid": "30016772",
+        "citacao": "Fava GA, Benasi G, Lucente M et al.. Withdrawal Symptoms after Serotonin-Noradrenaline Reuptake Inhibitor Discontinuation: Systematic Review. Psychother Psychosom. 2018;87(4):195-203. PMID 30016772. doi:10.1159/000491524"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Ensaio clínico randomizado em clusters",
+        "pmid": "38913372",
+        "citacao": "Kendrick T, Stuart B, Bowers H. Internet and Telephone Support for Discontinuing Long-Term Antidepressants: The REDUCE Cluster Randomized Trial. JAMA Netw Open. 2024;7(6):e2418383. PMID 38913372. doi:10.1001/jamanetworkopen.2024.18383"
+      },
+      {
+        "consultaPubMed": "",
+        "tipoDeEstudo": "Revisão",
+        "pmid": "32259826",
+        "citacao": "Cosci F, Chouinard G. Acute and Persistent Withdrawal Syndromes Following Discontinuation of Psychotropic Medications. Psychother Psychosom. 2020;89(5):283-306. PMID 32259826. doi:10.1159/000506868"
       }
     ],
     "categoria": "Residentes & Estudantes",

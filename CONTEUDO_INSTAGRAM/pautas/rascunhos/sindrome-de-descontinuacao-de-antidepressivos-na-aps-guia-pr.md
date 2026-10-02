@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:01:32.637Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Síndrome de descontinuação de antidepressivos na APS: guia prático
@@ -25,7 +26,7 @@ revisaoMedica: pendente
 > - - **Redução inicial:** Diminua cerca de [DOSE A CONFIRMAR] da dose total a cada duas a quatro semanas.
 > - - **Fase final:** Nas menores doses, reduza ainda mais devagar, utilizando formulações líquidas quando disponíveis ou espaçando os dias de tomada conforme a …
 > - - Pode ser empregado o uso temporário de medicamentos sintomáticos para náuseas, insônia ou ansiedade aguda.
-> - - Se necessário, utilize ansiolíticos benzodiazepínicos em curto prazo [DOSE A CONFIRMAR], avaliando riscos de dependência, ou retorne à dose anterior do ant…
+> - - Se necessário, utilize ansiolíticos benzodiazepínicos em curto prazo, com dose definida pelo médico, avaliando riscos de dependência, ou retorne à dose ant…
 > - Encaminhe para avaliação psiquiátrica especializada na rede de apoio se houver:
 > - - Ideação suicida ativa ou risco iminente de autolesão (oriente também ligar para o CVV 188 ou SAMU 192)
 > - - Sintomas psicóticos ou agitação psicomotora grave
@@ -78,7 +79,7 @@ O planejamento do desmame deve ser gradual e individualizado. Evite reduções l
 ### Manejo farmacológico de suporte
 Em casos de sintomas graves e incapacitantes que não respondem ao reajuste lento:
 - Pode ser empregado o uso temporário de medicamentos sintomáticos para náuseas, insônia ou ansiedade aguda.
-- Se necessário, utilize ansiolíticos benzodiazepínicos em curto prazo [DOSE A CONFIRMAR], avaliando riscos de dependência, ou retorne à dose anterior do antidepressivo para estabilização.
+- Se necessário, utilize ansiolíticos benzodiazepínicos em curto prazo, com dose definida pelo médico, avaliando riscos de dependência, ou retorne à dose anterior do antidepressivo para estabilização.
 
 ### Sinais de gravidade e encaminhamento
 Encaminhe para avaliação psiquiátrica especializada na rede de apoio se houver:
@@ -93,13 +94,16 @@ Encaminhe para avaliação psiquiátrica especializada na rede de apoio se houve
 - O desmame deve ser lento, progressivo e individualizado, especialmente nas menores doses.
 - Acolher o sofrimento do paciente e validar suas queixas fortalece o vínculo terapêutico na APS.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `antidepressant discontinuation syndrome AND primary health care` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `antidepressant withdrawal symptoms AND tapering protocols` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `antidepressant discontinuation vs relapse AND general practice` — Estudo observacional — [PMID A CONFIRMAR]
+1. Henssler J, Schmidt Y, Schmidt U et al.. Incidence of antidepressant discontinuation symptoms: a systematic review and meta-analysis. Lancet Psychiatry. 2024;11(7):526-535. PMID 38851198. doi:10.1016/S2215-0366(24)00133-0 — Revisão sistemática e metanálise
+2. Fava GA, Gatti A, Belaise C et al.. Withdrawal Symptoms after Selective Serotonin Reuptake Inhibitor Discontinuation: A Systematic Review. Psychother Psychosom. 2015;84(2):72-81. PMID 25721705. doi:10.1159/000370338 — Revisão sistemática
+3. Fava GA, Benasi G, Lucente M et al.. Withdrawal Symptoms after Serotonin-Noradrenaline Reuptake Inhibitor Discontinuation: Systematic Review. Psychother Psychosom. 2018;87(4):195-203. PMID 30016772. doi:10.1159/000491524 — Revisão sistemática
+4. Kendrick T, Stuart B, Bowers H. Internet and Telephone Support for Discontinuing Long-Term Antidepressants: The REDUCE Cluster Randomized Trial. JAMA Netw Open. 2024;7(6):e2418383. PMID 38913372. doi:10.1001/jamanetworkopen.2024.18383 — Ensaio clínico randomizado em clusters
+5. Cosci F, Chouinard G. Acute and Persistent Withdrawal Syndromes Following Discontinuation of Psychotropic Medications. Psychother Psychosom. 2020;89(5):283-306. PMID 32259826. doi:10.1159/000506868 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 

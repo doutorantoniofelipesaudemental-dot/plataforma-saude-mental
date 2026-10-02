@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T22:00:52.808Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
 # Transtorno explosivo intermitente: reconhecimento e manejo farmacológico na APS
@@ -17,8 +18,8 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (5):
 > - *   Valide o sofrimento trazido pela dificuldade de gerenciar a raiva, sem minimizar a gravidade dos atos.
-> - *   **Inibidores Seletivos da Recaptação de Serotonina (ISRS):** Classes como a sertralina ou fluoxetina [DOSE A CONFIRMAR] ajudam a modular a irritabilidade…
-> - *   **Reguladores do humor:** Compostos como o divalproato de sódio ou a carbamazepina [DOSE A CONFIRMAR] podem ser considerados em casos específicos com ins…
+> - *   **Inibidores Seletivos da Recaptação de Serotonina (ISRS):** Classes como a sertralina ou fluoxetina, com dose definida pelo médico, ajudam a modular a i…
+> - *   **Reguladores do humor:** Compostos como o divalproato de sódio ou a carbamazepina, com dose definida pelo médico, podem ser considerados em casos especí…
 > - *   Encaminhe com urgência para avaliação psiquiátrica especializada quando houver risco iminente de agredir a si ou aos outros, ideação suicida associada ou…
 > - - O manejo combina psicoeducação, estratégias comportamentais para identificar gatilhos e o uso criterioso de medicamentos.
 
@@ -69,8 +70,8 @@ O manejo exige paciência e constância. O primeiro passo é excluir diagnóstic
 
 A medicação pode ser útil para reduzir a impulsividade e a frequência das explosões, sempre combinada com suporte psicoterápico.
 
-*   **Inibidores Seletivos da Recaptação de Serotonina (ISRS):** Classes como a sertralina ou fluoxetina [DOSE A CONFIRMAR] ajudam a modular a irritabilidade crônica e a impulsividade.
-*   **Reguladores do humor:** Compostos como o divalproato de sódio ou a carbamazepina [DOSE A CONFIRMAR] podem ser considerados em casos específicos com instabilidade acentuada.
+*   **Inibidores Seletivos da Recaptação de Serotonina (ISRS):** Classes como a sertralina ou fluoxetina, com dose definida pelo médico, ajudam a modular a irritabilidade crônica e a impulsividade.
+*   **Reguladores do humor:** Compostos como o divalproato de sódio ou a carbamazepina, com dose definida pelo médico, podem ser considerados em casos específicos com instabilidade acentuada.
 
 ### Sinais de gravidade e encaminhamento
 
@@ -84,14 +85,14 @@ A medicação pode ser útil para reduzir a impulsividade e a frequência das ex
 - A avaliação na atenção primária deve excluir causas orgânicas, uso de substâncias e outros transtornos psiquiátricos.
 - O manejo combina psicoeducação, estratégias comportamentais para identificar gatilhos e o uso criterioso de medicamentos.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Intermittent Explosive Disorder"[Mesh] AND ("Primary Health Care"[Mesh] or "General Practice"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Intermittent Explosive Disorder"[Mesh] AND "Therapeutics"[Mesh] AND ("Randomized Controlled Trial"[Publication Type])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `"Aggression"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Intermittent Explosive Disorder"[Mesh]` — Diretriz — [PMID A CONFIRMAR]
-4. `"Intermittent Explosive Disorder"[Mesh] AND ("Psychotherapy"[Mesh] or "Behavior Therapy"[Mesh]) AND "Primary Health Care"[Mesh]` — Metanálise — [PMID A CONFIRMAR]
+1. Liu F, Yin X, Jiang W. Comprehensive Review and Meta-Analysis of Psychological and Pharmacological Treatment for Intermittent Explosive Disorder: Insights From Both Case Studies and Randomized Controlled Trials. Clin Psychol Psychother. 2025;32(1):e70016. PMID 39821512. doi:10.1002/cpp.70016 — Revisão sistemática e metanálise
+2. Coccaro EF. Intermittent explosive disorder as a disorder of impulsive aggression for DSM-5. Am J Psychiatry. 2012;169(6):577-88. PMID 22535310. doi:10.1176/appi.ajp.2012.11081259 — Revisão
+3. Zapata JP, Palacio JD. Intermittent Explosive Disorder: A Controversial Diagnosis. Rev Colomb Psiquiatr. 2015;45(3):214-23. PMID 27569016. doi:10.1016/j.rcp.2015.11.001 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
 ---
 
