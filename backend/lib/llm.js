@@ -22,32 +22,33 @@ const MODELO_GEMINI_RESERVA = process.env.GEMINI_MODEL_RESERVA || 'gemini-flash-
 const MODELO_GEMINI_LITE = process.env.GEMINI_MODEL_LITE || 'gemini-flash-lite-latest';
 const MODELO_GROQ = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
 const MODELO_OPENAI = process.env.OPENAI_MODEL || 'gpt-5-mini';
-const TENTATIVAS = 3;
+// Falha que passa IMEDIATAMENTE ao próximo degrau da cadeia (sem esperar nem repetir): cota ou créditos
+// esgotados, limite de requisições (429), alta demanda/indisponibilidade (503, 500, overloaded). Cada degrau
+// tem cota própria, então esperar no mesmo modelo só atrasa a geração.
+const TENTATIVAS = 2;
+const ESPERA_REPETICAO_MS = 3_000;
 
 const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));
 
 /**
- * Erro temporário (sobrecarga, limite por minuto) vale nova tentativa; cota
- * gratuita esgotada ("exceeded your current quota") não volta em segundos —
- * passa direto ao próximo modelo/provedor.
+ * Só vale repetir no MESMO degrau o que é intermitente e não depende de cota nem de capacidade do modelo:
+ * JSON inválido do Groq em modo JSON (400 json_validate_failed) e queda de conexão. Todo o resto
+ * (429, 503, cota, créditos) passa direto ao próximo modelo/provedor.
  */
-function ehTemporario(err) {
+function deveRepetir(err) {
   const mensagem = String(err?.message);
   if (/exceeded your current quota|quota exceeded|daily limit|insufficient_quota|no credits remaining/i.test(mensagem)) return false;
-  // Groq em modo JSON às vezes gera JSON inválido em respostas longas (400
-  // json_validate_failed): é intermitente, vale tentar de novo.
   if (/json_validate_failed|Failed to validate JSON/i.test(mensagem)) return true;
-  const status = err?.status ?? err?.code ?? err?.error?.code;
-  return status === 429 || status === 503 || status === 500 || /429|RESOURCE_EXHAUSTED|overloaded|UNAVAILABLE/i.test(mensagem);
+  return /ECONNRESET|ETIMEDOUT|ECONNREFUSED|EAI_AGAIN|fetch failed|socket hang up|terminated/i.test(mensagem);
 }
 
-async function comRepeticao(fn) {
+async function comRepeticao(fn, espera = ESPERA_REPETICAO_MS) {
   for (let tentativa = 1; ; tentativa++) {
     try {
       return await fn();
     } catch (err) {
-      if (tentativa >= TENTATIVAS || !ehTemporario(err)) throw err;
-      await esperar(tentativa * 10_000);
+      if (tentativa >= TENTATIVAS || !deveRepetir(err)) throw err;
+      await esperar(espera);
     }
   }
 }
@@ -118,25 +119,29 @@ async function viaOpenAI({ sistema, usuario, schema }) {
 }
 
 /**
- * Gera um objeto JSON. Tenta o Gemini; se não houver chave ou ele falhar,
- * tenta o Groq. Devolve também qual provedor e modelo responderam.
+ * Cadeia de provedores na ordem de tentativa, só com os que têm chave no ambiente:
+ * Gemini principal -> Gemini reserva -> Gemini lite -> Groq -> OpenAI (paga, último recurso).
  */
-async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
-  const provedores = [
-    process.env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: (p) => viaGemini(p, MODELO_GEMINI) },
-    process.env.GEMINI_API_KEY && MODELO_GEMINI_RESERVA !== MODELO_GEMINI && { nome: 'gemini', modelo: MODELO_GEMINI_RESERVA, fn: (p) => viaGemini(p, MODELO_GEMINI_RESERVA) },
-    process.env.GEMINI_API_KEY && MODELO_GEMINI_LITE !== MODELO_GEMINI && MODELO_GEMINI_LITE !== MODELO_GEMINI_RESERVA && { nome: 'gemini', modelo: MODELO_GEMINI_LITE, fn: (p) => viaGemini(p, MODELO_GEMINI_LITE) },
-    process.env.GROQ_API_KEY && { nome: 'groq', modelo: MODELO_GROQ, fn: viaGroq },
-    process.env.OPENAI_API_KEY && { nome: 'openai', modelo: MODELO_OPENAI, fn: viaOpenAI },
+function montarProvedores(env = process.env) {
+  return [
+    env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: (p) => viaGemini(p, MODELO_GEMINI) },
+    env.GEMINI_API_KEY && MODELO_GEMINI_RESERVA !== MODELO_GEMINI && { nome: 'gemini', modelo: MODELO_GEMINI_RESERVA, fn: (p) => viaGemini(p, MODELO_GEMINI_RESERVA) },
+    env.GEMINI_API_KEY && MODELO_GEMINI_LITE !== MODELO_GEMINI && MODELO_GEMINI_LITE !== MODELO_GEMINI_RESERVA && { nome: 'gemini', modelo: MODELO_GEMINI_LITE, fn: (p) => viaGemini(p, MODELO_GEMINI_LITE) },
+    env.GROQ_API_KEY && { nome: 'groq', modelo: MODELO_GROQ, fn: viaGroq },
+    env.OPENAI_API_KEY && { nome: 'openai', modelo: MODELO_OPENAI, fn: viaOpenAI },
   ].filter(Boolean);
-  // `preferir` põe um provedor na frente (o revisor usa o outro modelo, para um olhar independente).
-  if (preferir) provedores.sort((a, b) => (b.nome === preferir) - (a.nome === preferir));
-  if (!provedores.length) throw new Error('Nenhuma chave de LLM: defina GEMINI_API_KEY, GROQ_API_KEY e/ou OPENAI_API_KEY no .env local.');
+}
 
+/**
+ * Percorre os provedores em ordem e devolve o primeiro que responder. Falha de cota, crédito ou capacidade
+ * (429, 503...) passa na hora ao próximo degrau; só JSON inválido e queda de conexão repetem uma vez.
+ * `falhas` lista, na ordem, quem não respondeu e por quê.
+ */
+async function executarCadeia(provedores, parametros, { espera } = {}) {
   const falhas = [];
   for (const p of provedores) {
     try {
-      const dados = await comRepeticao(() => p.fn({ sistema, usuario, schema, ...(temperatura !== undefined && { temperatura }) }));
+      const dados = await comRepeticao(() => p.fn(parametros), espera);
       return { dados, provedor: p.nome, modelo: p.modelo, falhas };
     } catch (err) {
       falhas.push(`${p.nome}/${p.modelo}: ${String(err?.message || err).slice(0, 200)}`);
@@ -145,4 +150,15 @@ async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
   throw new Error(`Todos os provedores falharam — ${falhas.join(' | ')}`);
 }
 
-module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GEMINI_LITE, MODELO_GROQ, MODELO_OPENAI, ehTemporario };
+/**
+ * Gera um objeto JSON percorrendo a cadeia de provedores. Devolve também qual provedor e modelo responderam.
+ */
+async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
+  const provedores = montarProvedores();
+  // `preferir` põe um provedor na frente (o revisor usa o outro modelo, para um olhar independente).
+  if (preferir) provedores.sort((a, b) => (b.nome === preferir) - (a.nome === preferir));
+  if (!provedores.length) throw new Error('Nenhuma chave de LLM: defina GEMINI_API_KEY, GROQ_API_KEY e/ou OPENAI_API_KEY no .env local.');
+  return executarCadeia(provedores, { sistema, usuario, schema, ...(temperatura !== undefined && { temperatura }) });
+}
+
+module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GEMINI_LITE, MODELO_GROQ, MODELO_OPENAI, montarProvedores, executarCadeia, deveRepetir };

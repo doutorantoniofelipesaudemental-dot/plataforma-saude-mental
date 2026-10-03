@@ -523,7 +523,7 @@ function ajustarGancho(gancho) {
   }
   let ajustado = escolhidas.join(' ').replace(/[,;:\s-]+$/, '');
   if (!/[.!?…]$/.test(ajustado)) ajustado += '…';
-  return { texto: ajustado, ajustado: true, de: palavras(texto), para: palavras(ajustado) };
+  return { texto: ajustado, ajustado: true, de: palavras(texto), para: palavras(ajustado), original: texto };
 }
 
 /** Aplica o ajuste aos 5 ganchos do rascunho e devolve os avisos (um por gancho alterado). */
@@ -531,7 +531,7 @@ function ajustarGanchos(d) {
   const avisos = [];
   d.ganchos = d.ganchos.map((g, i) => {
     const r = ajustarGancho(g);
-    if (r.ajustado) avisos.push(`gancho ${i + 1} ajustado automaticamente de ${r.de} para ${r.para} palavras (conferir o sentido): "${r.texto}"`);
+    if (r.ajustado) avisos.push(`gancho ${i + 1} ajustado automaticamente de ${r.de} para ${r.para} palavras (conferir o sentido): "${r.texto}" | original: "${r.original}"`);
     return r.texto;
   });
   return avisos;
