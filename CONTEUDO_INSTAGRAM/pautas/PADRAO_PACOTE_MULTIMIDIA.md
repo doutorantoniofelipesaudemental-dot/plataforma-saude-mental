@@ -17,7 +17,8 @@ Toda pauta do Instagram sai como pacote com os quatro formatos abaixo, ancorados
 - [ ] Campo **Movimento**: tecnologia citada nominalmente (Lottie, GSAP ou Three.js/3D) e o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
 
 **3. Stories sequenciais**
-- [ ] De 4 a 5 quadros recomendados (mínimo 3), com pelo menos 1 enquete "Sim / Não", 1 caixa de perguntas e 1 chamada direta para o artigo no Portal.
+- [ ] De 4 a 5 quadros recomendados (mínimo 3), com pelo menos 1 enquete, 1 caixa de perguntas e 1 chamada direta para o artigo no Portal.
+- [ ] A enquete tem duas opções: o clássico "Sim / Não" ou opções descritivas e acolhedoras (ex.: "Sinto-me esgotado / Tenho conseguido me cuidar"), sempre sem rotular nem pressionar a pessoa. O recurso começa por "Enquete:".
 - [ ] A caixa de perguntas traz a isenção: "Esta caixa não atende emergências: em crise, ligue 188 ou 192."
 - [ ] Trilha igual em todos os quadros, a -22 dB.
 

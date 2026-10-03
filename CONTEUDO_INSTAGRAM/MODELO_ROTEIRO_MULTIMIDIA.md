@@ -69,7 +69,7 @@ Cuidar de quem cuida também é parte do cuidado. Salve para ler depois e compar
 
 ## Stories
 
-**Obrigatório:** de 4 a 5 quadros recomendados (mínimo 3), com no mínimo **1 enquete "Sim / Não"**, **1 caixa de perguntas** e **1 chamada direta para o artigo no Portal** (artigo e áudio narrado).
+**Obrigatório:** de 4 a 5 quadros recomendados (mínimo 3), com no mínimo **1 enquete** (duas opções: "Sim / Não" ou descritivas e acolhedoras, como "Sinto-me esgotado / Tenho conseguido me cuidar"), **1 caixa de perguntas** e **1 chamada direta para o artigo no Portal** (artigo e áudio narrado).
 
 | # | Texto | Recurso |
 |---|---|---|

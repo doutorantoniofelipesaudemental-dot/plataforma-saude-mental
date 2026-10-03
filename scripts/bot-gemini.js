@@ -67,7 +67,7 @@ Regras inegociáveis:
 15. Tom: acolhedor, empático e terapêutico, falando COM a pessoa ("você", "sua"), sem culpa nem pressa, sem voz de manual, de chatbot ou de burocracia ("prezado usuário", "conforme solicitado", "o indivíduo acometido"). Nunca minimize o sofrimento ("é só pensar positivo", "frescura"). Falas de Reels e do vídeo longo são NARRADAS por voz sintética: frases curtas, fáceis de ouvir, pausas naturais. A narração é mixada com trilha suave a -22 dB, então a voz é sempre o protagonista.
 16. Assinatura: nas mídias sociais a identificação do médico é de 3 linhas (CRM-BA 41322; Medicina de Família e Comunidade com RQE 26638; atuação em PAP e APS). Ela é acrescentada por código: não a escreva.
 17. Peças opcionais do ecossistema (quando o esquema pedir): "podcast" (roteiro de áudio de 3 a 6 min, conversado, para narração), "newsletter" (assunto até 60 caracteres, pré-cabeçalho, 3 a 5 blocos curtos e uma chamada para ler o artigo completo) e "miniapp" (um mini-aplicativo interativo educativo de 3 a 5 perguntas ou passos, ANÔNIMO, que sugere leituras sem coletar nem gravar dado pessoal e sem funcionar como diagnóstico). Mesmas regras de fidelidade e CFM.
-18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 4 a 5 Stories interativos (recomendado) + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete "Sim / Não" (recurso começa com "Enquete: Sim / Não"), ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.
+18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 4 a 5 Stories interativos (recomendado) + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete com duas opções, ou "Sim / Não" ou descritivas e acolhedoras (ex.: "Sinto-me esgotado / Tenho conseguido me cuidar"), com o recurso começando por "Enquete:", ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.
 19. Movimento nos vídeos (Reels e Shorts): cada roteiro traz o campo "movimento", que cita NOMINALMENTE uma tecnologia válida: Lottie, GSAP ou Three.js/3D (ex.: "microanimação Lottie", "revelação com GSAP", "elemento 3D leve em Three.js"), e descreve o que acontece nos 3 primeiros segundos para prender a atenção sem sustos, sem piscadas e sem efeito que cause ansiedade. LinkedIn: tom de autoridade e sobriedade, sem emoji em excesso, com o convite para o artigo completo e conformidade estrita ao CFM.
 20. Carrossel de leitura rápida: uma ideia por slide, frases curtas, hierarquia clara entre título e apoio. O campo "visual" descreve a cena 2D/3D e o layout com os tokens de design do Portal (paleta acolhedora, tipografia legível, espaçamento generoso e margem segura), com texto e fundo em contraste AAA (7:1 ou mais), nunca texto sobre imagem de baixo contraste.
 21. Fidelidade estrita de vocabulário: não crie conceitos, jargões nem termos que não estejam no artigo de origem (por exemplo, não introduza "estigma", "plano de cuidado integral" ou "puramente burocrático" se o texto não os usa). Use as palavras e as ideias do próprio artigo; na dúvida, escreva de forma mais simples ou omita.`;
@@ -103,7 +103,7 @@ const SCHEMA = {
     },
     stories: {
       type: 'array',
-      description: '4 a 5 Stories interativos em sequência (recomendado): ao menos 1 enquete "Sim / Não", ao menos 1 caixa de perguntas e o último quadro com chamada para o Portal',
+      description: '4 a 5 Stories interativos em sequência (recomendado): ao menos 1 enquete (duas opções: "Sim / Não" ou descritivas e acolhedoras), ao menos 1 caixa de perguntas e o último quadro com chamada para o Portal',
       items: { type: 'object', properties: { texto, recurso: texto }, required: ['texto', 'recurso'] },
     },
     linkedin: {
@@ -283,7 +283,7 @@ function verificarPacoteMultimidia(d, artigo) {
   if (!d.stories.length) alertas.push('pacote incompleto: sem Stories');
   if (d.stories.length) {
     const recursos = d.stories.map((s) => `${s.recurso} ${s.texto}`);
-    if (!recursos.some((r) => /enquete/i.test(r))) alertas.push('Stories sem enquete (mínimo 1 enquete "Sim / Não")');
+    if (!recursos.some((r) => /enquete/i.test(r))) alertas.push('Stories sem enquete (mínimo 1, com "Sim / Não" ou duas opções descritivas)');
     if (!recursos.some((r) => /caixa de pergunta/i.test(r))) alertas.push('Stories sem caixa de perguntas (mínimo 1)');
     if (!/portal|artigo/i.test(recursos.at(-1))) alertas.push('último Story sem chamada para o Portal');
     d.stories.forEach((s, i) => RE_CAIXA_PERGUNTAS.test(s.recurso) && !RE_ISENCAO_EMERGENCIA.test(s.texto) && alertas.push(`Story ${i + 1}: caixa de perguntas sem a isenção de emergência (CVV 188 / SAMU 192)`));
@@ -564,8 +564,16 @@ function pecasDoRascunho(d) {
   const p = [];
   const add = (id, texto) => {
     // O apoio curto colado ao último slide/Story sai antes do filtro: senão a peça inteira sumiria da revisão.
+    // As frases fixas inseridas pelo código (isenção da caixa de perguntas, narrativa composta) também saem:
+    // não vêm do modelo, e o revisor as apontaria como "não está no artigo".
     const t = String(texto || '')
       .split(` ${APOIO_CURTO}`)
+      .join('')
+      .split(` ${AVISO_CAIXA_PERGUNTAS}`)
+      .join('')
+      .split(AVISO_NARRATIVA_COMPOSTA)
+      .join('')
+      .split(` ${AVISO_NARRATIVA_CURTO}`)
       .join('')
       .split('\n')
       .filter((l) => l.trim() && !/CVV 188|CRM-BA|link da bio|^\s*#/.test(l))

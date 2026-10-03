@@ -328,3 +328,21 @@ test('verificar: termo caça-clique ("Descubra") gera alerta de tom', () => {
   assert.ok(verificar(d, ARTIGO, FONTE).some((x) => x.startsWith('tom: termo caça-clique')));
   assert.ok(!verificar(rascunho(), ARTIGO, FONTE).some((x) => x.startsWith('tom:')));
 });
+
+test('enquete com opções descritivas e acolhedoras é aceita sem aviso falso; sem enquete continua alertando', () => {
+  const d = rascunho();
+  d.stories[0] = { texto: 'Como está sua energia hoje?', recurso: 'Enquete: Sinto-me esgotado / Tenho conseguido me cuidar' };
+  assert.deepEqual(verificarPacoteMultimidia(d, ARTIGO), []);
+
+  const sem = rascunho();
+  sem.stories[0] = { texto: 'Dica', recurso: 'Nenhum' };
+  assert.ok(verificarPacoteMultimidia(sem, ARTIGO).some((x) => x.includes('Stories sem enquete (mínimo 1, com "Sim / Não" ou duas opções descritivas)')));
+});
+
+test('revisor não recebe as frases fixas inseridas pelo código (isenção da caixa de perguntas e narrativa composta)', () => {
+  const { pecasDoRascunho } = require('../../scripts/bot-gemini');
+  const d = rascunho({ stories: [{ texto: 'Como está você? Narrativa composta: personagens fictícios.', recurso: 'Enquete: A / B' }, { texto: 'Mande sua dúvida. Esta caixa não atende emergências: em crise, ligue 188 ou 192.', recurso: 'Caixa de perguntas: qual?' }] });
+  const stories = pecasDoRascunho(d).filter((p) => p.id.startsWith('story'));
+  assert.equal(stories[0].texto, 'Como está você?');
+  assert.equal(stories[1].texto, 'Mande sua dúvida.');
+});
