@@ -181,7 +181,7 @@ const PROMESSA_OU_SENSACIONALISMO = [
   [/\b(?:atenç[aã]o|urgente|alerta)!{2,}/i, 'alarmismo'],
 ];
 
-const SIGLAS_PERMITIDAS = new Set(['CRM', 'CRM-BA', 'RQE', 'CVV', 'SAMU', 'CFM', 'APS', 'PAP', 'OMS', 'LGPD', 'TDAH', 'TEA', 'TOC', 'TAG', 'IA', 'BA', 'CID', 'DSM', 'SUS', 'ISRS', 'NÃO', 'ESPECIALISTA', 'PMID', 'DOI', 'MEDLINE', 'PUBMED', 'ISRSN', 'RASCUNHO', 'CONFIRMAR']);
+const SIGLAS_PERMITIDAS = new Set(['CRM', 'CRM-BA', 'RQE', 'CVV', 'SAMU', 'CFM', 'APS', 'PAP', 'OMS', 'LGPD', 'TDAH', 'TEA', 'TOC', 'TAG', 'IA', 'BA', 'CID', 'DSM', 'SUS', 'ISRS', 'NÃO', 'ESPECIALISTA', 'PMID', 'DOI', 'MEDLINE', 'PUBMED', 'ISRSN', 'RASCUNHO', 'CONFIRMAR', 'CANMAT', 'USPSTF']);
 
 const RE_SENSIVEL = /suic[ií]d|autoextermin|tirar (?:a )?(?:minha |a própria )?vida|automutila|(?:me|se) machuc|pensamentos? de morte|overdose|desejo de morrer|n[aã]o (?:quero|queria) mais viver|ideac[aã]o/i;
 

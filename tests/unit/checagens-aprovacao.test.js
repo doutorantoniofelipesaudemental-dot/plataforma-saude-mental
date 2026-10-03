@@ -191,3 +191,9 @@ test('humanização: termo estigmatizante citado para ser combatido não reprova
   assert.deepStrictEqual(checarHumanizacao(`Depressão não é frescura nem drama.${longo}`).falhas, []);
   assert.ok(checarHumanizacao(`Isso é fraqueza de caráter, só isso.${longo}`).falhas.some((f) => /invalidante/.test(f)));
 });
+
+test('siglas de diretrizes (CANMAT, USPSTF) não contam como caixa alta de sensacionalismo', () => {
+  const texto = 'Segundo as diretrizes CANMAT e USPSTF, o rastreio deve seguir o protocolo local. CANMAT recomenda reavaliação; USPSTF sugere acompanhamento presencial.';
+  const r = checarEticaCfm(texto, { contexto: 'social', exigirIdentificacao: false, sensivel: false });
+  assert.ok(!r.falhas.some((f) => f.includes('caixa alta')), JSON.stringify(r.falhas));
+});

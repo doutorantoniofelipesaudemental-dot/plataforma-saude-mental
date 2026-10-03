@@ -286,6 +286,7 @@ function verificarPacoteMultimidia(d, artigo) {
     if (!recursos.some((r) => /enquete/i.test(r))) alertas.push('Stories sem enquete (mínimo 1 enquete "Sim / Não")');
     if (!recursos.some((r) => /caixa de pergunta/i.test(r))) alertas.push('Stories sem caixa de perguntas (mínimo 1)');
     if (!/portal|artigo/i.test(recursos.at(-1))) alertas.push('último Story sem chamada para o Portal');
+    d.stories.forEach((s, i) => RE_CAIXA_PERGUNTAS.test(s.recurso) && !RE_ISENCAO_EMERGENCIA.test(s.texto) && alertas.push(`Story ${i + 1}: caixa de perguntas sem a isenção de emergência (CVV 188 / SAMU 192)`));
     if (!d.stories.at(-1).texto.includes(chamada)) alertas.push('último Story sem a chamada ao áudio narrado (🎧)');
   }
   if (!d.legenda.includes(chamada)) alertas.push('legenda do Carrossel sem a chamada ao áudio narrado (🎧)');
@@ -348,6 +349,9 @@ function verificar(d, artigo, fonte) {
   ];
   if (inventados.length) alertas.push(`números que não estão no artigo: ${inventados.join(', ')} — conferir`);
   if (/\[DADO A CONFIRMAR\]/.test(todos)) alertas.push('há [DADO A CONFIRMAR] no texto');
+
+  const cacaClique = todos.match(/\b(descubra|você precisa saber|ninguém te conta|segredos?|truque|inacreditável|imperdível)\b/i);
+  if (cacaClique) alertas.push(`tom: termo caça-clique ("${cacaClique[0]}"); use linguagem acolhedora e sem isca`);
 
   for (const [re, motivo] of TERMOS_CFM) {
     const m = todos.match(re);
@@ -535,6 +539,19 @@ function ajustarGanchos(d) {
     return r.texto;
   });
   return avisos;
+}
+
+/**
+ * Isenção de emergência na caixa de perguntas: qualquer Story com caixa de perguntas avisa que ela não atende
+ * crise (CVV 188 / SAMU 192). Vem do código, não do modelo. Idempotente.
+ */
+const AVISO_CAIXA_PERGUNTAS = 'Esta caixa não atende emergências: em crise, ligue 188 ou 192.';
+const RE_CAIXA_PERGUNTAS = /caixa de pergunta/i;
+const RE_ISENCAO_EMERGENCIA = /não atende emergências/i;
+function garantirAvisoCaixaPerguntas(d) {
+  for (const s of d.stories) {
+    if (RE_CAIXA_PERGUNTAS.test(s.recurso) && !RE_ISENCAO_EMERGENCIA.test(s.texto)) s.texto = `${s.texto} ${AVISO_CAIXA_PERGUNTAS}`;
+  }
 }
 
 /* ===================== 2º passe: revisor semântico ===================== */
@@ -763,6 +780,7 @@ async function gerarRascunho(artigo, { forcar }) {
   const origem = await gerarJson({ sistema: SISTEMA, usuario, schema: SCHEMA });
   origem.dados = normalizar(origem.dados);
   garantirNarrativaComposta(origem.dados, artigo);
+  garantirAvisoCaixaPerguntas(origem.dados);
   garantirChamadaAudio(origem.dados, artigo);
   garantirLinhasFixas(origem.dados, artigo);
   const ajustesGanchos = ajustarGanchos(origem.dados);
@@ -794,7 +812,7 @@ async function gerarRascunho(artigo, { forcar }) {
       2
     )
   );
-  return { slug: artigo.slug, destino, provedor: origem.provedor, alertas: alertas.length, revisao, reservas: origem.falhas };
+  return { slug: artigo.slug, destino, provedor: origem.provedor, modelo: origem.modelo, alertas: alertas.length, ganchosAjustados: ajustesGanchos.length, revisao, reservas: origem.falhas };
 }
 
 const crypto = require('crypto');
@@ -839,7 +857,7 @@ async function main() {
         const rev = r.revisao.disponivel
           ? `${r.revisao.desvios.length} desvio(s) de sentido (revisor ${r.revisao.provedor})`
           : 'revisor indisponível';
-        console.log(`  ${slug}: rascunho por ${r.provedor} · ${r.alertas} alerta(s) estruturais · ${rev}${r.reservas.length ? ` · reserva usada` : ''}`);
+        console.log(`  ${slug}: rascunho por ${r.provedor} (${r.modelo}) · ${r.alertas} alerta(s) estruturais · ${r.ganchosAjustados} gancho(s) ajustado(s) · ${rev}${r.reservas.length ? ` · ${r.reservas.length} degrau(s) falharam antes: ${r.reservas.map((f) => f.split(':')[0]).join(', ')}` : ''}`);
         gerados.push({ slug, alertas: r.alertas, revisao: r.revisao });
       }
     } catch (err) {
@@ -872,4 +890,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { ajustarGancho, ajustarGanchos, gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
+module.exports = { garantirAvisoCaixaPerguntas, ajustarGancho, ajustarGanchos, gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };

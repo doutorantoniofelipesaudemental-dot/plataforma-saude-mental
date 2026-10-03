@@ -2,7 +2,7 @@
 // sem chamar nenhuma API: o rascunho é um objeto fixo e a verificação roda sobre ele.
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, ajustarGancho, ajustarGanchos } = require('../../scripts/bot-gemini');
+const { verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, garantirAvisoCaixaPerguntas, ajustarGancho, ajustarGanchos } = require('../../scripts/bot-gemini');
 
 const ARTIGO = {
   slug: 'teste',
@@ -23,7 +23,7 @@ function rascunho(ajustes = {}) {
     stories: [
       { texto: 'Você já sentiu isso?', recurso: 'Enquete: Sim / Não' },
       { texto: 'Sinais de alerta', recurso: 'Nenhum' },
-      { texto: 'Qual a sua dúvida?', recurso: 'Caixa de perguntas: o que você quer saber?' },
+      { texto: 'Qual a sua dúvida? Esta caixa não atende emergências: em crise, ligue 188 ou 192.', recurso: 'Caixa de perguntas: o que você quer saber?' },
       { texto: 'Cuidar cedo ajuda', recurso: 'Nenhum' },
       { texto: `Leia o artigo no Portal. ${CHAMADA}`, recurso: 'Link para o Portal (artigo e áudio)' },
     ],
@@ -306,4 +306,25 @@ test('ajustarGanchos: ajusta só os ganchos longos e devolve um aviso por ajuste
   assert.equal(avisos.length, 1);
   assert.match(avisos[0], /gancho 2 ajustado automaticamente de 13 para 6 palavras/);
   assert.ok(!verificar(d, ARTIGO, FONTE).some((x) => x.includes('palavras (máx. 10)')));
+});
+
+test('garantirAvisoCaixaPerguntas: só a caixa de perguntas recebe a isenção de emergência, uma única vez', () => {
+  const d = rascunho({ stories: [{ texto: 'Enquete', recurso: 'Enquete: Sim / Não' }, { texto: 'Mande sua dúvida.', recurso: 'Caixa de perguntas: qual é a sua dúvida?' }] });
+  garantirAvisoCaixaPerguntas(d);
+  garantirAvisoCaixaPerguntas(d);
+  assert.doesNotMatch(d.stories[0].texto, /emergências/);
+  assert.equal((d.stories[1].texto.match(/não atende emergências/g) || []).length, 1);
+  assert.match(d.stories[1].texto, /188 ou 192/);
+});
+
+test('verificarPacoteMultimidia: caixa de perguntas sem isenção de emergência gera alerta', () => {
+  const d = rascunho();
+  d.stories[3] = { texto: 'Mande a sua dúvida.', recurso: 'Caixa de perguntas: qual é a sua dúvida?' };
+  assert.ok(verificarPacoteMultimidia(d, ARTIGO).some((x) => x.includes('caixa de perguntas sem a isenção de emergência')));
+});
+
+test('verificar: termo caça-clique ("Descubra") gera alerta de tom', () => {
+  const d = rascunho({ ganchos: ['Descubra o cuidado humanizado na rotina', 'a', 'b', 'c', 'd'] });
+  assert.ok(verificar(d, ARTIGO, FONTE).some((x) => x.startsWith('tom: termo caça-clique')));
+  assert.ok(!verificar(rascunho(), ARTIGO, FONTE).some((x) => x.startsWith('tom:')));
 });

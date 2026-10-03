@@ -42,6 +42,17 @@ test('503, 429 e cota esgotada passam NA HORA ao próximo degrau, sem repetir ne
   assert.match(r.falhas[0], /^gemini\/a: .*high demand/);
 });
 
+test('500 (erro interno) também passa na hora ao próximo degrau, sem repetir', async () => {
+  let n = 0;
+  const provedores = [
+    { nome: 'gemini', modelo: 'a', fn: async () => { n++; throw erro('Internal error encountered.', 500); } },
+    { nome: 'groq', modelo: 'b', fn: async () => ({ ok: true }) },
+  ];
+  const r = await executarCadeia(provedores, {}, { espera: 5_000 });
+  assert.equal(n, 1);
+  assert.equal(r.provedor, 'groq');
+});
+
 test('"no credits remaining" (OpenAI) é permanente: não repete e a falha final lista todos os degraus', async () => {
   let chamadasOpenai = 0;
   const provedores = [
@@ -90,6 +101,7 @@ test('deveRepetir: só falha intermitente repete; cota, crédito e capacidade n�
   assert.equal(deveRepetir(erro('fetch failed')), true);
   assert.equal(deveRepetir(erro('read ECONNRESET')), true);
   assert.equal(deveRepetir(erro('high demand', 503)), false);
+  assert.equal(deveRepetir(erro('Internal error encountered.', 500)), false);
   assert.equal(deveRepetir(erro('Rate limit reached', 429)), false);
   assert.equal(deveRepetir(erro('You exceeded your current quota', 429)), false);
   assert.equal(deveRepetir(erro('insufficient_quota', 429)), false);
