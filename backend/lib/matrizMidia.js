@@ -12,7 +12,7 @@
 const FORMATOS = [
   { id: 'instagram.carrossel', rede: 'Instagram', rotulo: 'Carrossel (PNG 4:5)', via: 'api' },
   { id: 'instagram.reel', rede: 'Instagram', rotulo: 'Reel (vertical 9:16)', via: 'api' },
-  { id: 'instagram.stories', rede: 'Instagram', rotulo: 'Stories (5 quadros com enquete)', via: 'manual' },
+  { id: 'instagram.stories', rede: 'Instagram', rotulo: 'Stories (4 a 5 quadros, com enquete e caixa de perguntas)', via: 'manual' },
   { id: 'youtube.short', rede: 'YouTube', rotulo: 'Short (vertical 9:16)', via: 'api' },
   { id: 'youtube.longo', rede: 'YouTube', rotulo: 'Vídeo longo (16:9, SEO e capítulos)', via: 'api' },
   { id: 'linkedin.post', rede: 'LinkedIn', rotulo: 'Post corporativo', via: 'api' },

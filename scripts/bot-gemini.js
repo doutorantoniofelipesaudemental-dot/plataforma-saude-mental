@@ -62,13 +62,15 @@ Regras inegociáveis:
 10. Não escreva a identificação do médico (CRM, RQE) nem a linha do CVV/SAMU: elas são acrescentadas depois, automaticamente.
 11. Números: cite faixas inteiras e com as ressalvas do artigo (ex.: "de 25% a 74%, em quadros moderados a graves, em estudos de vários países"). Nunca destaque só o limite de cima ("até 74%").
 12. Use os termos do próprio artigo para serviços, públicos e efeitos (ex.: "serviço de saúde do trabalhador da rede de ensino", "proteger crianças e adolescentes"); não acrescente conclusões que ele não tira.
-13. Quantidades exatas: 5 ganchos, 7 a 10 slides, 2 Reels, 5 Stories, 2 posts de LinkedIn (cada um terminando com uma chamada para ler o artigo completo no site), 5 títulos, 2 Shorts e 1 vídeo longo.
+13. Quantidades exatas: 5 ganchos, 7 a 10 slides, 2 Reels, 4 a 5 Stories (recomendado), 2 posts de LinkedIn (cada um terminando com uma chamada para ler o artigo completo no site), 5 títulos, 2 Shorts e 1 vídeo longo.
 14. YouTube (SEO): título com a palavra-chave no início e até 60 caracteres, sem caça-clique; descrição com a palavra-chave na 1ª frase, sem links (o link é acrescentado depois); tags em português, minúsculas, do tema do artigo. Vídeo longo 16:9 de 8 a 12 min: gancho nos primeiros 30 s, promessa honesta do que o vídeo entrega, blocos com pontos de retenção, recapitulação e CTA; cada bloco com tempo (m:ss–m:ss), fala, sugestão de B-roll (sem pacientes nem pessoas identificáveis) e texto na tela. Capítulos começando em 0:00.
 15. Tom: acolhedor, empático e terapêutico, falando COM a pessoa ("você", "sua"), sem culpa nem pressa, sem voz de manual, de chatbot ou de burocracia ("prezado usuário", "conforme solicitado", "o indivíduo acometido"). Nunca minimize o sofrimento ("é só pensar positivo", "frescura"). Falas de Reels e do vídeo longo são NARRADAS por voz sintética: frases curtas, fáceis de ouvir, pausas naturais. A narração é mixada com trilha suave a -22 dB, então a voz é sempre o protagonista.
 16. Assinatura: nas mídias sociais a identificação do médico é de 3 linhas (CRM-BA 41322; Medicina de Família e Comunidade com RQE 26638; atuação em PAP e APS). Ela é acrescentada por código: não a escreva.
 17. Peças opcionais do ecossistema (quando o esquema pedir): "podcast" (roteiro de áudio de 3 a 6 min, conversado, para narração), "newsletter" (assunto até 60 caracteres, pré-cabeçalho, 3 a 5 blocos curtos e uma chamada para ler o artigo completo) e "miniapp" (um mini-aplicativo interativo educativo de 3 a 5 perguntas ou passos, ANÔNIMO, que sugere leituras sem coletar nem gravar dado pessoal e sem funcionar como diagnóstico). Mesmas regras de fidelidade e CFM.
-18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 5 Stories interativos + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete "Sim / Não" (recurso começa com "Enquete: Sim / Não"), ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.
-19. Movimento nos vídeos (Reels e Shorts): cada roteiro traz o campo "movimento": recurso de animação ou 3D (microanimação Lottie/GSAP, gráfico 2D animado ou elemento 3D leve) e o que acontece nos 3 primeiros segundos para prender a atenção sem sustos, sem piscadas e sem efeito que cause ansiedade. LinkedIn: tom de autoridade e sobriedade, sem emoji em excesso, com o convite para o artigo completo e conformidade estrita ao CFM.`;
+18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 4 a 5 Stories interativos (recomendado) + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete "Sim / Não" (recurso começa com "Enquete: Sim / Não"), ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.
+19. Movimento nos vídeos (Reels e Shorts): cada roteiro traz o campo "movimento", que cita NOMINALMENTE uma tecnologia válida: Lottie, GSAP ou Three.js/3D (ex.: "microanimação Lottie", "revelação com GSAP", "elemento 3D leve em Three.js"), e descreve o que acontece nos 3 primeiros segundos para prender a atenção sem sustos, sem piscadas e sem efeito que cause ansiedade. LinkedIn: tom de autoridade e sobriedade, sem emoji em excesso, com o convite para o artigo completo e conformidade estrita ao CFM.
+20. Carrossel de leitura rápida: uma ideia por slide, frases curtas, hierarquia clara entre título e apoio. O campo "visual" descreve a cena 2D/3D e o layout com os tokens de design do Portal (paleta acolhedora, tipografia legível, espaçamento generoso e margem segura), com texto e fundo em contraste AAA (7:1 ou mais), nunca texto sobre imagem de baixo contraste.
+21. Fidelidade estrita de vocabulário: não crie conceitos, jargões nem termos que não estejam no artigo de origem (por exemplo, não introduza "estigma", "plano de cuidado integral" ou "puramente burocrático" se o texto não os usa). Use as palavras e as ideias do próprio artigo; na dúvida, escreva de forma mais simples ou omita.`;
 
 const texto = { type: 'string' };
 const SCHEMA = {
@@ -78,7 +80,7 @@ const SCHEMA = {
     carrossel: {
       type: 'array',
       description: '7 a 10 slides: capa com gancho, desenvolvimento, slide de salvar/compartilhar e CTA final',
-      items: { type: 'object', properties: { texto, visual: texto }, required: ['texto', 'visual'] },
+      items: { type: 'object', properties: { texto, visual: { ...texto, description: 'cena 2D/3D e layout com tokens de design do Portal, contraste AAA' } }, required: ['texto', 'visual'] },
     },
     legenda: { ...texto, description: 'legenda do carrossel: gancho na 1ª linha, 2 a 4 parágrafos curtos, CTA, "🔗 Artigo completo no link da bio", 3 a 5 hashtags' },
     reels: {
@@ -89,7 +91,7 @@ const SCHEMA = {
         properties: {
           titulo: texto,
           legenda: { ...texto, description: 'legenda do Reel: 2 a 3 frases, sem hashtags, sem link' },
-          movimento: { ...texto, description: 'recurso de movimento (Lottie/GSAP/2D animado/3D leve) e o gancho visual dos 3 primeiros segundos' },
+          movimento: { ...texto, description: 'cite nominalmente a tecnologia (Lottie, GSAP ou Three.js/3D) e descreva o gancho visual dos 3 primeiros segundos' },
           duracaoSegundos: { type: 'number' },
           cenas: {
             type: 'array',
@@ -101,7 +103,7 @@ const SCHEMA = {
     },
     stories: {
       type: 'array',
-      description: '5 Stories interativos em sequência: ao menos 1 enquete "Sim / Não", ao menos 1 caixa de perguntas e o último quadro com chamada para o Portal',
+      description: '4 a 5 Stories interativos em sequência (recomendado): ao menos 1 enquete "Sim / Não", ao menos 1 caixa de perguntas e o último quadro com chamada para o Portal',
       items: { type: 'object', properties: { texto, recurso: texto }, required: ['texto', 'recurso'] },
     },
     linkedin: {
@@ -122,7 +124,7 @@ const SCHEMA = {
               gancho: texto,
               desenvolvimento: texto,
               cta: texto,
-              movimento: { ...texto, description: 'recurso de movimento (Lottie/GSAP/2D animado/3D leve) e o gancho visual dos 3 primeiros segundos' },
+              movimento: { ...texto, description: 'cite nominalmente a tecnologia (Lottie, GSAP ou Three.js/3D) e descreva o gancho visual dos 3 primeiros segundos' },
               descricao: { ...texto, description: 'descrição de SEO: 1ª frase com a palavra-chave, 2 a 3 frases, sem link' },
               tags: { type: 'array', items: texto, description: '5 a 12 tags de busca em português, minúsculas' },
             },
@@ -291,11 +293,11 @@ function verificarPacoteMultimidia(d, artigo) {
     const legenda = r.legenda || '';
     if (!legenda.trim()) alertas.push(`Reel ${i + 1} sem legenda`);
     if (!legenda.includes(chamada)) alertas.push(`legenda do Reel ${i + 1} sem a chamada ao áudio narrado (🎧)`);
-    if (!/lottie|gsap|3d|anima|motion/i.test(r.movimento || '')) alertas.push(`Reel ${i + 1} sem especificação de movimento (Lottie/GSAP/3D) e gancho visual dos 3 primeiros segundos`);
+    if (!/lottie|gsap|three|3d/i.test(r.movimento || '')) alertas.push(`Reel ${i + 1} sem movimento com tecnologia nominal (Lottie, GSAP ou Three.js/3D) e gancho visual dos 3 primeiros segundos`);
     r.cenas.forEach((c, j) => /\b[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ]{6,}\b.*\b[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ]{3,}\b/.test(c.textoTela) && alertas.push(`Reel ${i + 1}, cena ${j + 1}: texto na tela em CAIXA ALTA (use caixa mista)`));
   });
   (d.youtube?.shorts || []).forEach((s, i) => {
-    if (!/lottie|gsap|3d|anima|motion/i.test(s.movimento || '')) alertas.push(`Short ${i + 1} sem especificação de movimento (Lottie/GSAP/3D) e gancho visual dos 3 primeiros segundos`);
+    if (!/lottie|gsap|three|3d/i.test(s.movimento || '')) alertas.push(`Short ${i + 1} sem movimento com tecnologia nominal (Lottie, GSAP ou Three.js/3D) e gancho visual dos 3 primeiros segundos`);
   });
   return alertas;
 }
@@ -364,13 +366,14 @@ function verificar(d, artigo, fonte) {
   // A linha de apoio acrescentada pelo código (garantirLinhasFixas) não conta no limite.
   const semApoio = (s) => s.replace(' Apoio agora: CVV 188 · SAMU 192', '');
   d.carrossel.forEach((s, i) => palavras(semApoio(s.texto)) > 25 && alertas.push(`slide ${i + 1} com ${palavras(semApoio(s.texto))} palavras (máx. 25)`));
+  if (d.stories.length < 4 || d.stories.length > 5) alertas.push(`${d.stories.length} stories (recomendado 4 a 5)`);
   if (d.carrossel.length < 7 || d.carrossel.length > 10) alertas.push(`carrossel com ${d.carrossel.length} slides (7 a 10)`);
   d.linkedin.forEach((p, i) => [...p.texto].length > 1300 && alertas.push(`LinkedIn ${i + 1} com ${[...p.texto].length} caracteres (máx. 1.300)`));
   d.youtube.titulos.forEach((t, i) => [...t].length > 60 && alertas.push(`título YouTube ${i + 1} com ${[...t].length} caracteres (máx. 60)`));
   alertas.push(...verificarYoutube(d.youtube));
   d.reels.forEach((r, i) => (r.duracaoSegundos < 15 || r.duracaoSegundos > 45) && alertas.push(`Reel ${i + 1} com ${r.duracaoSegundos} s (15 a 45)`));
 
-  const esperado = { ganchos: [d.ganchos, 5], reels: [d.reels, 2], stories: [d.stories, 5], linkedin: [d.linkedin, 2], títulos: [d.youtube.titulos, 5], shorts: [d.youtube.shorts, 2] };
+  const esperado = { ganchos: [d.ganchos, 5], reels: [d.reels, 2], linkedin: [d.linkedin, 2], títulos: [d.youtube.titulos, 5], shorts: [d.youtube.shorts, 2] };
   for (const [nome, [lista, n]] of Object.entries(esperado)) if (lista.length !== n) alertas.push(`${lista.length} ${nome} (esperado ${n})`);
   const teto = todos.match(/\baté\s+\d+(?:[.,]\d+)?\s?%/i);
   if (teto) alertas.push(`faixa citada só pelo limite de cima ("${teto[0]}") — use a faixa inteira, com as ressalvas do artigo`);
@@ -802,4 +805,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { verificar, verificarPacoteMultimidia, garantirChamadaAudio, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
+module.exports = { gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };

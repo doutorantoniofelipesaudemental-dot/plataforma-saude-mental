@@ -229,12 +229,16 @@ test('garantirChamadaAudio acrescenta a chamada antes das hashtags e é idempote
   assert.ok(d.stories[0].texto.endsWith(CHAMADA));
 });
 
-test('vídeos: alerta quando Reel ou Short não especificam movimento (Lottie/GSAP/3D)', () => {
+test('vídeos: alerta quando Reel ou Short não citam tecnologia de movimento (Lottie, GSAP ou Three.js/3D)', () => {
   assert.deepEqual(verificarPacoteMultimidia(rascunho(), ARTIGO), []);
   const d = rascunho();
   d.reels[0].movimento = '';
   d.youtube.shorts[1].movimento = 'Nenhum';
   const alertas = verificarPacoteMultimidia(d, ARTIGO).join(' | ');
-  assert.ok(alertas.includes('Reel 1 sem especificação de movimento'));
-  assert.ok(alertas.includes('Short 2 sem especificação de movimento'));
+  assert.ok(alertas.includes('Reel 1 sem movimento com tecnologia nominal'));
+  assert.ok(alertas.includes('Short 2 sem movimento com tecnologia nominal'));
+  // Descrição vaga, sem citar Lottie, GSAP ou Three.js/3D, não basta.
+  const vago = rascunho();
+  vago.reels[1].movimento = 'Gráfico suave simulando a transição de um balcão para uma sala de conversa';
+  assert.ok(verificarPacoteMultimidia(vago, ARTIGO).join(' | ').includes('Reel 2 sem movimento com tecnologia nominal'));
 });
