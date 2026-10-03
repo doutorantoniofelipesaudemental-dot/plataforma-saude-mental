@@ -2,7 +2,7 @@
 // sem chamar nenhuma API: o rascunho é um objeto fixo e a verificação roda sobre ele.
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { verificar, verificarPacoteMultimidia, garantirChamadaAudio } = require('../../scripts/bot-gemini');
+const { verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta } = require('../../scripts/bot-gemini');
 
 const ARTIGO = {
   slug: 'teste',
@@ -241,4 +241,22 @@ test('vídeos: alerta quando Reel ou Short não citam tecnologia de movimento (L
   const vago = rascunho();
   vago.reels[1].movimento = 'Gráfico suave simulando a transição de um balcão para uma sala de conversa';
   assert.ok(verificarPacoteMultimidia(vago, ARTIGO).join(' | ').includes('Reel 2 sem movimento com tecnologia nominal'));
+});
+
+test('garantirNarrativaComposta injeta o aviso em crônica, é idempotente e não toca em artigo científico', () => {
+  const cronica = { ...ARTIGO, categoria: 'Relatos da Prática' };
+  const d = rascunho({ legenda: 'Texto.\n\n#saude #mental #aps', reels: [{ titulo: 'R', legenda: 'Frase.', duracaoSegundos: 30, cenas: [] }], stories: [{ texto: 'Início', recurso: 'Nenhum' }, { texto: 'Fim', recurso: 'Link' }] });
+  garantirNarrativaComposta(d, cronica);
+  garantirNarrativaComposta(d, cronica);
+  assert.equal((d.legenda.match(/Narrativa composta/g) || []).length, 1);
+  assert.ok(d.legenda.indexOf('Narrativa composta') < d.legenda.indexOf('#saude'));
+  assert.match(d.reels[0].legenda, /Narrativa composta/);
+  assert.match(d.stories[0].texto, /Narrativa composta/);
+  assert.doesNotMatch(d.stories[1].texto, /Narrativa composta/);
+  assert.ok(!verificar(d, cronica, FONTE).join(' | ').includes('narrativa composta'));
+
+  const cientifico = rascunho({ legenda: 'Texto.\n\n#saude #mental #aps' });
+  const antes = JSON.stringify(cientifico);
+  garantirNarrativaComposta(cientifico, ARTIGO);
+  assert.equal(JSON.stringify(cientifico), antes);
 });

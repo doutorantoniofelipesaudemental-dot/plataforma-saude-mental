@@ -472,6 +472,28 @@ function garantirChamadaAudio(d, artigo) {
   if (ultimoStory && !ultimoStory.texto.includes(chamada)) ultimoStory.texto = `${ultimoStory.texto} ${chamada}`;
 }
 
+/**
+ * Aviso de narrativa composta (sigilo médico e Res. CFM): em crônica ou relato clínico, personagens e
+ * situações são fictícios. Como a identificação e o CVV, vem do código e não do modelo: entra na legenda
+ * do Carrossel, na de cada Reel e no primeiro Story, se ainda não estiver lá. Idempotente.
+ */
+const AVISO_NARRATIVA_COMPOSTA = 'Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.';
+const AVISO_NARRATIVA_CURTO = 'Narrativa composta: personagens fictícios.';
+const RE_JA_DIZ_COMPOSTA = /narrativa composta/i;
+function garantirNarrativaComposta(d, artigo) {
+  if (!ehRelatoClinico(artigo)) return;
+  const antesDasHashtags = (texto) => {
+    const i = texto.search(/\n+\s*#/);
+    return i < 0 ? `${texto.trim()}\n\n${AVISO_NARRATIVA_COMPOSTA}`.trim() : `${texto.slice(0, i)}\n\n${AVISO_NARRATIVA_COMPOSTA}${texto.slice(i)}`;
+  };
+  if (!RE_JA_DIZ_COMPOSTA.test(d.legenda)) d.legenda = antesDasHashtags(d.legenda);
+  d.reels.forEach((r) => {
+    if (r.legenda.trim() && !RE_JA_DIZ_COMPOSTA.test(r.legenda)) r.legenda = antesDasHashtags(r.legenda);
+  });
+  const primeiro = d.stories[0];
+  if (primeiro && !RE_JA_DIZ_COMPOSTA.test(primeiro.texto)) primeiro.texto = `${primeiro.texto} ${AVISO_NARRATIVA_CURTO}`;
+}
+
 /* ===================== 2º passe: revisor semântico ===================== */
 
 /**
@@ -697,6 +719,7 @@ async function gerarRascunho(artigo, { forcar }) {
   const usuario = `ARTIGO APROVADO (única fonte permitida):\n\nTítulo: ${artigo.titulo}\nCategoria: ${artigo.categoria}\nResumo: ${artigo.resumo}\n\n${fonte}`;
   const origem = await gerarJson({ sistema: SISTEMA, usuario, schema: SCHEMA });
   origem.dados = normalizar(origem.dados);
+  garantirNarrativaComposta(origem.dados, artigo);
   garantirChamadaAudio(origem.dados, artigo);
   garantirLinhasFixas(origem.dados, artigo);
   const alertas = verificar(origem.dados, artigo, `${artigo.titulo} ${artigo.resumo} ${fonte}`);
@@ -805,4 +828,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
+module.exports = { gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };

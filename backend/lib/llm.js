@@ -6,13 +6,18 @@
  * montadas a partir do artigo, sem IA, para a checagem provar a fidelidade).
  *
  * Variáveis (.env local): GEMINI_API_KEY, GROQ_API_KEY e, opcionais,
- * GEMINI_MODEL (padrão gemini-flash-latest) e GROQ_MODEL (padrão
- * openai/gpt-oss-120b). Sem nenhuma chave, lança um erro explicando.
+ * GEMINI_MODEL (padrão gemini-3.8-flash), GEMINI_MODEL_RESERVA (padrão
+ * gemini-flash-latest), GEMINI_MODEL_LITE (padrão gemini-flash-lite-latest) e
+ * GROQ_MODEL (padrão openai/gpt-oss-120b). Ordem de tentativa: principal,
+ * reserva, lite, Groq. Sem nenhuma chave, lança um erro explicando.
+ * (Os modelos gemini-1.5-pro, 2.0-flash e 2.5-* não estão mais disponíveis e os
+ * "pro" não têm cota gratuita: conferido em out/2026.)
  */
-const MODELO_GEMINI = process.env.GEMINI_MODEL || 'gemini-flash-latest';
-// Cada modelo do Gemini tem cota gratuita própria: esgotada a do principal, o
-// flash-lite costuma seguir disponível antes de cair no Groq.
-const MODELO_GEMINI_RESERVA = process.env.GEMINI_MODEL_RESERVA || 'gemini-flash-lite-latest';
+const MODELO_GEMINI = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+// Cada modelo do Gemini tem cota gratuita própria: esgotada (ou sob alta demanda) a do principal,
+// a reserva e depois o flash-lite costumam seguir disponíveis antes de cair no Groq.
+const MODELO_GEMINI_RESERVA = process.env.GEMINI_MODEL_RESERVA || 'gemini-flash-latest';
+const MODELO_GEMINI_LITE = process.env.GEMINI_MODEL_LITE || 'gemini-flash-lite-latest';
 const MODELO_GROQ = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
 const TENTATIVAS = 3;
 
@@ -84,6 +89,7 @@ async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
   const provedores = [
     process.env.GEMINI_API_KEY && { nome: 'gemini', modelo: MODELO_GEMINI, fn: (p) => viaGemini(p, MODELO_GEMINI) },
     process.env.GEMINI_API_KEY && MODELO_GEMINI_RESERVA !== MODELO_GEMINI && { nome: 'gemini', modelo: MODELO_GEMINI_RESERVA, fn: (p) => viaGemini(p, MODELO_GEMINI_RESERVA) },
+    process.env.GEMINI_API_KEY && MODELO_GEMINI_LITE !== MODELO_GEMINI && MODELO_GEMINI_LITE !== MODELO_GEMINI_RESERVA && { nome: 'gemini', modelo: MODELO_GEMINI_LITE, fn: (p) => viaGemini(p, MODELO_GEMINI_LITE) },
     process.env.GROQ_API_KEY && { nome: 'groq', modelo: MODELO_GROQ, fn: viaGroq },
   ].filter(Boolean);
   // `preferir` põe um provedor na frente (o revisor usa o outro modelo, para um olhar independente).
@@ -102,4 +108,4 @@ async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
   throw new Error(`Todos os provedores falharam — ${falhas.join(' | ')}`);
 }
 
-module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GROQ };
+module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GEMINI_LITE, MODELO_GROQ };
