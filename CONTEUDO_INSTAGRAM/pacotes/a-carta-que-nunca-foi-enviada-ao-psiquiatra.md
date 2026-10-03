@@ -56,6 +56,7 @@ Muita gente guarda um papel no bolso por medo do que vão dizer. Você não prec
 
 **Trilha de fundo:** piano lo-fi suave, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "O papel no bolso" → "Pedir ajuda não é fraqueza" → "Você não está sozinho"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie de um papel dobrado que se desdobra devagar, sem sustos nem piscadas; no meio, revelação do texto em linha do tempo com GSAP; no fecho, elemento 3D leve em Three.js de uma lanterna acesa.
 **Direção visual:** abertura em 3D no papel dobrado; meio em ilustração 2D com o consultório sem rostos; fecho com a lanterna acesa em 3D.
 
 ### Roteiro de narração

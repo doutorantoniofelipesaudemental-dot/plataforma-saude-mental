@@ -56,6 +56,7 @@ Chegar até a unidade de saúde já exige uma coragem imensa. Se você carrega u
 
 **Trilha de fundo:** piano minimalista, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "O silêncio da sala de espera" → "Cada um carrega um mundo" → "Você não está sozinho"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie de um círculo que expande e contrai no ritmo de uma respiração calma, sem sustos nem piscadas; no meio, entrada do texto com GSAP; no fecho, elemento 3D leve em Three.js de uma porta que se abre.
 **Direção visual:** abertura em 3D na fileira de cadeiras; meio em ilustração 2D com silhuetas sem rosto; fecho em 3D com a porta entreaberta e a faixa de luz.
 
 ### Roteiro de narração

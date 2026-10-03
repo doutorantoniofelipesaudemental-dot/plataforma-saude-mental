@@ -56,6 +56,7 @@ Pedir ajuda não é fraqueza. Se você se reconhece nessa história, procure a s
 
 **Trilha de fundo:** piano suave, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "O papel no bolso" → "Cuidar de si não é desistir" → "Você não precisa carregar tudo sozinho"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie de um papel dobrado em quatro que sai aos poucos do bolso do casaco, sem sustos nem piscadas; no meio, revelação do texto com GSAP; no fecho, elemento 3D leve em Three.js do casaco na cadeira.
 **Direção visual:** abertura em 3D no casaco com o papel; meio em ilustração 2D da sala de atendimento, sem rostos; fecho em 3D com a mão pegando o casaco.
 
 ### Roteiro de narração

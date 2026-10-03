@@ -56,6 +56,7 @@ O corpo e o olhar também transmitem acolhimento, mesmo quando as palavras não 
 
 **Trilha de fundo:** violão e piano suaves, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "O idioma do afeto" → "O corpo também fala" → "Acolher não precisa de dicionário"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie de dois balões de fala vazios que se aproximam até se encontrar, sem sustos nem piscadas; no meio, entrada do texto com GSAP; no fecho, elemento 3D leve em Three.js de uma mão estendida.
 **Direção visual:** abertura em 3D no copo de água; meio em ilustração 2D do desenho no papel, sem rostos; fecho em 3D com as duas cadeiras lado a lado e luz quente.
 
 ### Roteiro de narração

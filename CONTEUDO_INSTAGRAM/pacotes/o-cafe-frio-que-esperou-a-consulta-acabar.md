@@ -56,6 +56,7 @@ Nem toda dor cabe em quinze minutos. Quando alguém tem um lugar seguro para fal
 
 **Trilha de fundo:** piano e violoncelo suaves, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "O café esfriou" → "A escuta não tem pressa" → "Um lugar seguro para falar"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie do vapor que sobe da xícara e se dissipa devagar, sem sustos nem piscadas; no meio, revelação do texto com GSAP; no fecho, elemento 3D leve em Three.js de duas xícaras sobre a mesa.
 **Direção visual:** abertura em 3D na xícara fumegante; meio em ilustração 2D do consultório, sem rostos; fecho em 3D com a xícara fria e a luz do fim da manhã.
 
 ### Roteiro de narração

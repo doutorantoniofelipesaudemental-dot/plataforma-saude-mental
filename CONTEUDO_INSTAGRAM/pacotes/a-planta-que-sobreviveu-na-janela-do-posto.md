@@ -56,6 +56,7 @@ A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuid
 
 **Trilha de fundo:** violão suave, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "Um gole d'água por dia" → "Escutar sem pressa" → "Ninguém carrega tudo sozinho"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie de uma gota d'água caindo sobre uma folha de suculenta, sem sustos nem piscadas; no meio, entrada do texto com GSAP; no fecho, elemento 3D leve em Three.js do vasinho na janela.
 **Direção visual:** abertura em 3D na suculenta da janela; meio em ilustração 2D da sala de espera, sem rostos; fecho em 3D com o copinho regando o vaso.
 
 ### Roteiro de narração

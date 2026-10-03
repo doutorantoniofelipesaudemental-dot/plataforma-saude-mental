@@ -56,6 +56,7 @@ Na crise, o tempo parece não passar. Se você está sofrendo agora, procure um 
 
 **Trilha de fundo:** piano lento e ambiente suave, -22 dB, com corte limpo no convite final.
 **Texto na tela:** "O relógio parece parado" → "Acolher é emprestar o nosso ritmo" → "CVV 188 · SAMU 192"
+**Movimento (obrigatório):** nos 3 primeiros segundos, microanimação Lottie do ponteiro de um relógio de parede que desacelera até quase parar, sem sustos nem piscadas; no meio, revelação do texto com GSAP; no fecho, elemento 3D leve em Three.js de um relógio e de um copo d'água.
 **Direção visual:** abertura em 3D no relógio; meio em ilustração 2D da sala de espera, sem rostos; fecho em 3D com o copo d'água e a faixa de luz quente.
 
 ### Roteiro de narração
