@@ -81,6 +81,8 @@ Lembre-se: buscar ajuda médica não diminui a sua coragem. É um ato de cuidado
 1. Achotegui J. [Emigration in hard conditions: the Immigrant Syndrome with chronic and multiple stress (Ulysses' Syndrome)]. Vertex. 2005;16(60):105-13. PMID 15912217 — Artigo de revisão (descrição da síndrome)
 2. Liem A, Renzaho AMN, Hannam K et al.. Acculturative stress and coping among migrant workers: A global mixed-methods systematic review. Appl Psychol Health Well Being. 2021;13(3):491-517. PMID 33811751. doi:10.1111/aphw.12271 — Revisão sistemática de métodos mistos
 3. Agbata EN, Padilla PF, Agbata IN et al.. Migrant Healthcare Guidelines: A Systematic Quality Assessment. J Immigr Minor Health. 2019;21(2):401-413. PMID 29785690. doi:10.1007/s10903-018-0759-9 — Revisão sistemática de diretrizes
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

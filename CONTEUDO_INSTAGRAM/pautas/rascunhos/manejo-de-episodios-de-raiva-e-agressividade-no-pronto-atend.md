@@ -97,6 +97,8 @@ Quando a conduta verbal falha e o paciente permanece em risco, o uso de medicaç
 2. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
 3. Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2 — Revisão sistemática Cochrane e metanálise
 4. Del Casale A, Arena JF, Napoli C et al.. A Comprehensive Understanding of Psychomotor Agitation: From Causes to Hospital Care. Curr Neuropharmacol. 2025;23(13):1666-1682. PMID 40265437. doi:10.2174/011570159X340145250109080932 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

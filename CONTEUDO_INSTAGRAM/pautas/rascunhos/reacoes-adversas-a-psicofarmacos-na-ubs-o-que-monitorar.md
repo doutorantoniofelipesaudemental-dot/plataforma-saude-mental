@@ -84,6 +84,8 @@ Os psicofármacos atuam em sistemas de neurotransmissão que estão presentes n�
 2. Phelps J, Coskey OP. Low and very low lithium levels: Thyroid effects are small but still require monitoring. Bipolar Disord. 2023;26(2):129-135. PMID 37704933. doi:10.1111/bdi.13377 — Estudo observacional
 3. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
 4. Bhanu C, Nimmons D, Petersen I et al.. Drug-induced orthostatic hypotension: A systematic review and meta-analysis of randomised controlled trials. PLoS Med. 2021;18(11):e1003821. PMID 34752479. doi:10.1371/journal.pmed.1003821 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

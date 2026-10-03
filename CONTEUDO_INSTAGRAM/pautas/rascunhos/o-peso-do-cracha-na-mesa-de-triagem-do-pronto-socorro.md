@@ -30,6 +30,8 @@ Sair da sala de triagem por alguns minutos para respirar fundo não é fraqueza.
 
 Quando voltei para a mesa, olhei para a próxima pessoa que aguardava na cadeira. Um senhor idoso, com as mãos trêmulas, segurando um papel amassado. Respirei fundo, deixei de lado o peso acumulado das horas anteriores e tentei me reconectar com o presente. A empatia não é um poço sem fundo; ela precisa ser reposta com pausas, limites saudáveis e acolhimento mútuo entre a equipe. Se você também trabalha na saúde e sente que o seu copo está transbordando, saiba que você não está sozinho nessa caminhada.
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Aviso legal: esta crônica é uma narrativa composta. Personagens, falas e situações são fictícios, inspirados em vivências comuns do cuidado em saúde, e não retratam nenhum paciente real identificável (sigilo médico e Res. CFM).

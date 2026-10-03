@@ -78,6 +78,8 @@ O encaminhamento para serviços especializados de saúde mental ou para o servi�
 1. Mo S, Bu F, Bao S et al.. Comparison of effects of interventions to promote the mental health of parents of children with autism: A systematic review and network meta-analysis. Clin Psychol Rev. 2024;114:102508. PMID 39489145. doi:10.1016/j.cpr.2024.102508 — Revisão sistemática e metanálise em rede
 2. Li S, Yong Y, Li Y et al.. Cognitive-Based Interventions for Improving Psychological Health and Well-Being for Parents of Children with Developmental Disabilities: A Systematic Review and Meta-analysis. J Autism Dev Disord. 2023;54(9):3316-3335. PMID 37668850. doi:10.1007/s10803-023-06063-x — Revisão sistemática e metanálise
 3. He Y, Wong A, Zhang Y et al.. Effects of Mozart-Orff parent-child music therapy among mothers and their preschool children with autism spectrum disorder: A mixed-methods randomised controlled trial. BMC Pediatr. 2024;24(1):665. PMID 39415148. doi:10.1186/s12887-024-05085-3 — Ensaio clínico randomizado (métodos mistos)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

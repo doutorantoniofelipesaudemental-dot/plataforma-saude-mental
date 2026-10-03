@@ -74,6 +74,8 @@ Perceber que alguém que amamos está mudando não é fácil. Muitas vezes, as m
 1. US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297 — Diretriz clínica (recomendação do USPSTF)
 2. Lam RW, Kennedy SH, Adams C, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults. Can J Psychiatry. 2024;69(9):641-687. PMID 38711351. doi:10.1177/07067437241245384 — Diretriz clínica (CANMAT)
 3. Shi Y, Shao Y, Li H et al.. Correlates of affiliate stigma among family caregivers of people with mental illness: A systematic review and meta-analysis. J Psychiatr Ment Health Nurs. 2018;26(1-2):49-61. PMID 30472763. doi:10.1111/jpm.12505 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

@@ -79,6 +79,8 @@ O tratamento do TOC na atenção primária exige paciência, pois a resposta ter
 2. Bandelow B, Sher L, Bunevicius R et al.. Guidelines for the pharmacological treatment of anxiety disorders, obsessive-compulsive disorder and posttraumatic stress disorder in primary care. Int J Psychiatry Clin Pract. 2012;16(2):77-84. PMID 22540422. doi:10.3109/13651501.2012.667114 — Diretriz clínica (WFSBP, versão para atenção primária)
 3. Bloch MH, McGuire J, Landeros-Weisenberger A et al.. Meta-analysis of the dose-response relationship of SSRI in obsessive-compulsive disorder. Mol Psychiatry. 2009;15(8):850-5. PMID 19468281. doi:10.1038/mp.2009.50 — Metanálise de ensaios clínicos randomizados (dose-resposta)
 4. Xu J, Hao Q, Qian R et al.. Optimal Dose of Serotonin Reuptake Inhibitors for Obsessive-Compulsive Disorder in Adults: A Systematic Review and Dose-Response Meta-Analysis. Front Psychiatry. 2021;12:717999. PMID 34630180. doi:10.3389/fpsyt.2021.717999 — Revisão sistemática com meta-regressão (dose-resposta)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -86,7 +88,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

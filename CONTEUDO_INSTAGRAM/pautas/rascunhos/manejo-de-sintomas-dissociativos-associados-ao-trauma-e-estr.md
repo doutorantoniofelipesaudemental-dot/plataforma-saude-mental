@@ -92,6 +92,8 @@ O manejo inicial na APS baseia-se na criação de segurança e na psychoeducaç�
 1. Wang S, Zheng S, Zhang X et al.. The Treatment of Depersonalization-Derealization Disorder: A Systematic Review. J Trauma Dissociation. 2023;25(1):6-29. PMID 37431255. doi:10.1080/15299732.2023.2231920 — Revisão sistemática
 2. Şar V. Dissociation Across Cultures: A Transdiagnostic Guide for Clinical Assessment and Management. Alpha Psychiatry. 2022;23(3):95-103. PMID 36425778. doi:10.5152/alphapsychiatry.2022.21556 — Revisão (guia clínico transdiagnóstico)
 3. Brand BL, Schielke HJ, Putnam K et al.. A randomized controlled trial assists individuals with complex trauma and dissociation in Finding Solid Ground. Psychol Trauma. 2025;17(8):1717-1727. PMID 40014495. doi:10.1037/tra0001871 — Ensaio clínico randomizado
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

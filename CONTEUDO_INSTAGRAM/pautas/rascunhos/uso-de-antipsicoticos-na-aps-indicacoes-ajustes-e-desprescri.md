@@ -94,6 +94,8 @@ Os antipsicóticos atípicos apresentam forte afinidade por outros receptores, c
 3. Sepúlveda-Lizcano L, Arenas-Villamizar VV, Jaimes-Duarte EB et al.. Metabolic Adverse Effects of Psychotropic Drug Therapy: A Systematic Review. Eur J Investig Health Psychol Educ. 2023;13(8):1505-1520. PMID 37623307. doi:10.3390/ejihpe13080110 — Revisão sistemática
 4. Cosci F, Chouinard G. Acute and Persistent Withdrawal Syndromes Following Discontinuation of Psychotropic Medications. Psychother Psychosom. 2020;89(5):283-306. PMID 32259826. doi:10.1159/000506868 — Revisão
 5. Leucht S, Cipriani A, Spineli L et al.. Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis. Lancet. 2013;382(9896):951-62. PMID 23810019. doi:10.1016/S0140-6736(13)60733-3 — Metanálise em rede
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

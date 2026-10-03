@@ -109,6 +109,8 @@ Fique atento aos sinais de **catatonia letal (ou maligna)**:
 3. Rogers JP, Zandi MS, David AS. The diagnosis and treatment of catatonia. Clin Med (Lond). 2023;23(3):242-245. PMID 37236789. doi:10.7861/clinmed.2023-0113 — Diretriz clínica
 4. Redon M, Virolle J, Montastruc F et al.. The use of antipsychotics in the treatment of catatonia: a systematic review. Eur Psychiatry. 2025;68(1):e48. PMID 40123412. doi:10.1192/j.eurpsy.2025.9 — Revisão sistemática
 5. Wilson JE, Oldham MA, Francis A et al.. Catatonia: American Psychiatric Association Resource Document. J Acad Consult Liaison Psychiatry. 2025;66(4):277-299. PMID 40368005. doi:10.1016/j.jaclp.2025.05.001 — Documento de recursos da APA
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

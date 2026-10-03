@@ -75,6 +75,8 @@ O grande objetivo do plantão é a desescalada da crise e a prevenção de iatro
 2. `self-harm AND borderline personality disorder AND emergency management` — Diretriz Clínica — [PMID A CONFIRMAR]
 3. `psychopharmacology AND borderline personality disorder AND acute crisis` — Ensaio Clínico — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

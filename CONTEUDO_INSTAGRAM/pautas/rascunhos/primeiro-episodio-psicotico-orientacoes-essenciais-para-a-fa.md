@@ -79,6 +79,8 @@ Perceber que alguém que amamos começou a enxergar ou a acreditar em coisas que
 2. Galletly C, Castle D, Dark F et al.. Royal Australian and New Zealand College of Psychiatrists clinical practice guidelines for the management of schizophrenia and related disorders. Aust N Z J Psychiatry. 2016;50(5):410-72. PMID 27106681. doi:10.1177/0004867416641195 — Diretriz clínica (RANZCP)
 3. Breitborde NJ, Moreno FA, Mai-Dixon N et al.. Multifamily group psychoeducation and cognitive remediation for first-episode psychosis: a randomized controlled trial. BMC Psychiatry. 2011;11:9. PMID 21226941. doi:10.1186/1471-244X-11-9 — Ensaio clínico randomizado
 4. Yesufu-Udechuku A, Harrison B, Mayo-Wilson E et al.. Interventions to improve the experience of caring for people with severe mental illness: systematic review and meta-analysis. Br J Psychiatry. 2015;206(4):268-74. PMID 25833867. doi:10.1192/bjp.bp.114.147561 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

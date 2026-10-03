@@ -76,6 +76,8 @@ Fique atento a sinais de alarme que exigem nova investigação orgânica, como p
 1. Rosendal M, Blankenstein AH, Morriss R et al.. Enhanced care by generalists for functional somatic symptoms and disorders in primary care. Cochrane Database Syst Rev. 2013;2013(10):CD008142. PMID 24142886. doi:10.1002/14651858.CD008142.pub2 — Revisão sistemática Cochrane e metanálise
 2. Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538 — Revisão sistemática e metanálise
 3. Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738 — Metanálise de ensaios clínicos randomizados
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

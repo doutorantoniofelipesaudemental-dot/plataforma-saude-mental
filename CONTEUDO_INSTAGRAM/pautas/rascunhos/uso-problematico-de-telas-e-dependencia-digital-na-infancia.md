@@ -70,6 +70,8 @@ Olá, colega. Na nossa rotina na atenção primária e no atendimento às famíl
 2. Ru Y, Norlizah HC, Nasuha Burhanuddin NA et al.. The correlation between mindfulness and problematic smartphone use: A meta-analysis. Addict Behav. 2025;164:108272. PMID 39923383. doi:10.1016/j.addbeh.2025.108272 — Revisão sistemática e metanálise
 3. Gupta P, Shah D, Bedi N et al.. Indian Academy of Pediatrics Guidelines on Screen Time and Digital Wellness in Infants, Children and Adolescents. Indian Pediatr. 2021;59(3):235-244. PMID 34969943 — Diretriz clínica (Academia Indiana de Pediatria)
 4. Li Y, Lin YF, Wu H et al.. Changes in smartphone dependence and depressive and anxiety symptoms among Chinese adolescents. BMC Med. 2025;23(1):523. PMID 41029734. doi:10.1186/s12916-025-04372-9 — Estudo longitudinal
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

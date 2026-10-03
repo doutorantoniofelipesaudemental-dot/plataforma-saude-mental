@@ -116,6 +116,8 @@ Olá, colega. Na nossa rotina na Unidade Básica de Saúde, frequentemente nos d
 2. `Prescribing off-label AND mental health AND family practice AND guidelines` — Diretriz clínica — [PMID A CONFIRMAR]
 3. `Psychotropic drugs off-label prescribing AND safety AND efficacy AND primary health care` — Ensaio clínico controlado — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

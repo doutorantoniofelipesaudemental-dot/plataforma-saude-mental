@@ -97,6 +97,8 @@ Diante de sinais de gravidade, o trabalhador deve ser imediatamente encaminhado 
 2. Brämberg E, Åhsberg E, Fahlström G et al.. Effects of work-directed interventions on return-to-work in people on sick-leave for to common mental disorders-a systematic review. Int Arch Occup Environ Health. 2024;97(6):597-619. PMID 38710801. doi:10.1007/s00420-024-02068-w — Revisão sistemática
 3. van Oostrom SH, Driessen MT, de Vet HC et al.. Workplace interventions for preventing work disability. Cochrane Database Syst Rev. 2009;(2):CD006955. PMID 19370664. doi:10.1002/14651858.CD006955.pub2 — Revisão sistemática Cochrane e metanálise
 4. van Beurden KM, Brouwers EP, Joosen MC et al.. Effectiveness of guideline-based care by occupational physicians on the return-to-work of workers with common mental disorders: design of a cluster-randomised controlled trial. BMC Public Health. 2013;13:193. PMID 23496948. doi:10.1186/1471-2458-13-193 — Ensaio clínico randomizado
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

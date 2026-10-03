@@ -94,6 +94,8 @@ O manejo na Atenção Primária exige rapidez, empatia e articulação com a red
 1. Mann JJ, Michel CA, Auerbach RP. Improving Suicide Prevention Through Evidence-Based Strategies: A Systematic Review. Am J Psychiatry. 2021;178(7):611-624. PMID 33596680. doi:10.1176/appi.ajp.2020.20060864 — Revisão sistemática
 2. US Preventive Services Task Force; Barry MJ, Nicholson WK, Silverstein M, et al. Screening for Depression and Suicide Risk in Adults: US Preventive Services Task Force Recommendation Statement. JAMA. 2023;329(23):2057-2067. PMID 37338872. doi:10.1001/jama.2023.9297 — Diretriz clínica (recomendação do USPSTF)
 3. Bertolote JM, Fleischmann A, De Leo D et al.. Repetition of suicide attempts: data from emergency care settings in five culturally different low- and middle-income countries participating in the WHO SUPRE-MISS Study. Crisis. 2010;31(4):194-201. PMID 20801749. doi:10.1027/0027-5910/a000052 — Ensaio clínico randomizado (estudo WHO SUPRE-MISS)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

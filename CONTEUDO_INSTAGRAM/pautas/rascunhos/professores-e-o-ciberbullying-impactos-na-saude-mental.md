@@ -85,6 +85,8 @@ Este conteúdo oferece orientação geral e respeita sempre os protocolos hospit
 2. `teacher online harassment AND occupational stress` — Estudo transversal — [PMID A CONFIRMAR]
 3. `coping strategies for teachers facing cyberbullying` — Diretriz de intervenção — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

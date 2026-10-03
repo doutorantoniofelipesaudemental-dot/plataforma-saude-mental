@@ -99,6 +99,8 @@ Este conteúdo é uma orientação geral para a prática clínica de emergência
 2. `extrapyramidal symptoms emergency department management guidelines` — Diretriz clínica — [PMID A CONFIRMAR]
 3. `antipsychotic-induced acute dystonia management in adults` — Ensaio clínico — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

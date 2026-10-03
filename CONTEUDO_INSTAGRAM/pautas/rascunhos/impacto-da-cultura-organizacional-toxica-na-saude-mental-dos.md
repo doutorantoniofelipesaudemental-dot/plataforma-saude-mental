@@ -84,6 +84,8 @@ O cuidado com quem sofre em um ambiente tóxico vai muito além da consulta méd
 2. Lee RT, Seo B, Hladkyj S et al.. Correlates of physician burnout across regions and specialties: a meta-analysis. Hum Resour Health. 2013;11:48. PMID 24074053. doi:10.1186/1478-4491-11-48 — Metanálise
 3. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
 4. Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203 — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

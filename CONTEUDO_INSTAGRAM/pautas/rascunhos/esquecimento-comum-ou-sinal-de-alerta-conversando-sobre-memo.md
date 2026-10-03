@@ -103,6 +103,8 @@ O tratamento combina medidas não farmacológicas, como estímulo cognitivo, ati
 2. Birks JS, Harvey RJ. Donepezil for dementia due to Alzheimer's disease. Cochrane Database Syst Rev. 2018;6(6):CD001190. PMID 29923184. doi:10.1002/14651858.CD001190.pub3 — Revisão sistemática Cochrane e metanálise
 3. Gao Y, Liu Y, Li Y. Safety and efficacy of acetylcholinesterase inhibitors for Alzheimer's disease: A systematic review and meta-analysis. Adv Clin Exp Med. 2024;33(11):1179-1187. PMID 38439609. doi:10.17219/acem/176051 — Revisão sistemática e metanálise
 4. Frias CE, Garcia-Pascual M, Montoro M et al.. Effectiveness of a psychoeducational intervention for caregivers of People With Dementia with regard to burden, anxiety and depression: A systematic review. J Adv Nurs. 2020;76(3):787-802. PMID 31808211. doi:10.1111/jan.14286 — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

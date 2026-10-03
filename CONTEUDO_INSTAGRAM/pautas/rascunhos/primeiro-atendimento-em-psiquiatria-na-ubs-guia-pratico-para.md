@@ -101,6 +101,8 @@ O encaminhamento para o ambulatório especializado ou CAPS deve ser criterioso e
 2. Lam RW, Kennedy SH, Adams C, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 Update on Clinical Guidelines for Management of Major Depressive Disorder in Adults. Can J Psychiatry. 2024;69(9):641-687. PMID 38711351. doi:10.1177/07067437241245384 — Diretriz clínica (CANMAT)
 3. Bandelow B, Sher L, Bunevicius R et al.. Guidelines for the pharmacological treatment of anxiety disorders, obsessive-compulsive disorder and posttraumatic stress disorder in primary care. Int J Psychiatry Clin Pract. 2012;16(2):77-84. PMID 22540422. doi:10.3109/13651501.2012.667114 — Diretriz clínica (WFSBP, versão para atenção primária)
 4. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

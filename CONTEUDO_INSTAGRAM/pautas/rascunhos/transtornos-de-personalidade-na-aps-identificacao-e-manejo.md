@@ -71,6 +71,8 @@ Olá, colega. Que bom ter você por aqui no nosso espaço de troca na atenção 
 1. Stoffers-Winterling J, Taubner S, Renneberg B et al.. [German S3 guidelines on borderline personality disorder]. Nervenarzt. 2023;94(11):1062-1074. PMID 37861697. doi:10.1007/s00115-023-01566-5 — Diretriz clínica (S3 alemã, transtorno borderline)
 2. Omar H, Tejerina-Arreal M, Crawford MJ. Are recommendations for psychological treatment of borderline personality disorder in current U.K. guidelines justified? Systematic review and subgroup analysis. Personal Ment Health. 2014;8(3):228-37. PMID 24990645. doi:10.1002/pmh.1264 — Revisão sistemática
 3. Brazier J, Tumur I, Holmes M et al.. Psychological therapies including dialectical behaviour therapy for borderline personality disorder: a systematic review and preliminary economic evaluation. Health Technol Assess. 2006;10(35):iii, ix-xii, 1-117. PMID 16959171. doi:10.3310/hta10350 — Revisão sistemática e avaliação econômica
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

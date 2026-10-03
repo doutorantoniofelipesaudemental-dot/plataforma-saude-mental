@@ -32,6 +32,8 @@ Conversamos sobre caminhos possíveis para cuidar da sua rotina e do seu descans
 
 Quando ela se levantou para ir embora, a caneta já havia voltado a funcionar. Anotei as orientações finais, mas o papel mais importante daquela manhã já estava preenchido pelo vínculo que criamos. Se você também sente que o peso do dia a dia está difícil de carregar, saiba que não precisa caminhar sozinho. Procure a unidade de saúde mais próxima para conversar com sua equipe de referência. Sempre haverá alguém disposto a parar, escutar e segurar a ponta com você.
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Aviso legal: esta crônica é uma narrativa composta. Personagens, falas e situações são fictícios, inspirados em vivências comuns do cuidado em saúde, e não retratam nenhum paciente real identificável (sigilo médico e Res. CFM).

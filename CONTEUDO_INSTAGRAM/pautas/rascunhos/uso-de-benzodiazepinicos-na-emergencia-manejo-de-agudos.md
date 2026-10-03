@@ -84,6 +84,8 @@ Este conteúdo é uma orientação geral para a prática médica e educacional, 
 2. `"Sedation" AND "Emergency Department" AND "Safety Guidelines"` — Diretriz Clínica — [PMID A CONFIRMAR]
 3. `"Acute Agitation" AND "Benzodiazepine Use" AND "Adverse Effects"` — Ensaio Clínico — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

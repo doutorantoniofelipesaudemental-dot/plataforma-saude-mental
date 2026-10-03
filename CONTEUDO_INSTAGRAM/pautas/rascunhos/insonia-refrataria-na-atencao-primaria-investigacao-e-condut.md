@@ -90,6 +90,8 @@ Encaminhe para avaliação psiquiátrica especializada ou centros de referência
 4. Watson NF, Benca RM, Krystal AD et al.. Alliance for Sleep Clinical Practice Guideline on Switching or Deprescribing Hypnotic Medications for Insomnia. J Clin Med. 2023;12(7). PMID 37048577. doi:10.3390/jcm12072493 — Diretriz clínica (Alliance for Sleep; desprescrição de hipnóticos)
 5. Pottie K, Thompson W, Davies S et al.. Deprescribing benzodiazepine receptor agonists: Evidence-based clinical practice guideline. Can Fam Physician. 2018;64(5):339-351. PMID 29760253 — Diretriz clínica (desprescrição de BZRA)
 6. Espie CA, Emsley R, Kyle SD et al.. Effect of Digital Cognitive Behavioral Therapy for Insomnia on Health, Psychological Well-being, and Sleep-Related Quality of Life: A Randomized Clinical Trial. JAMA Psychiatry. 2019;76(1):21-30. PMID 30264137. doi:10.1001/jamapsychiatry.2018.2745 — Ensaio clínico randomizado (TCC-I digital)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -97,7 +99,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

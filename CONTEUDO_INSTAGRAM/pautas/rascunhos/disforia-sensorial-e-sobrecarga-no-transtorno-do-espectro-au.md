@@ -72,6 +72,8 @@ Lembramos que este conteúdo é uma orientação geral para a prática clínica 
 2. `Sensory Processing in Autism AND Primary Care` — Estudo Observacional — [PMID A CONFIRMAR]
 3. `Autism Meltdown AND Emergency and Primary Care` — Diretriz Prática — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

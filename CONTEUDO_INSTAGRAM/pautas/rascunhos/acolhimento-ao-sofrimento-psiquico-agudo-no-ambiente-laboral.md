@@ -75,6 +75,8 @@ O papel do gestor e da equipe de saúde ocupacional no momento agudo é estabili
 3. Linskens EJ, Venables NC, Gustavson AM et al.. Population- and Community-Based Interventions to Prevent Suicide. Crisis. 2022;44(4):330-340. PMID 36052582. doi:10.1027/0227-5910/a000873 — Revisão sistemática
 4. Bowersox NW, Jagusch J, Garlick J et al.. Peer-based interventions targeting suicide prevention: A scoping review. Am J Community Psychol. 2021;68(1-2):232-248. PMID 33720444. doi:10.1002/ajcp.12510 — Revisão de escopo
 5. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

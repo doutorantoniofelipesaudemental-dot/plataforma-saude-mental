@@ -87,6 +87,8 @@ O manejo da Síndrome do Esgotamento Profissional exige um percurso contínuo, i
 2. West CP, Dyrbye LN, Erwin PJ et al.. Interventions to prevent and reduce physician burnout: a systematic review and meta-analysis. Lancet. 2016;388(10057):2272-2281. PMID 27692469. doi:10.1016/S0140-6736(16)31279-X — Revisão sistemática e metanálise
 3. Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203 — Revisão sistemática
 4. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -94,7 +96,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

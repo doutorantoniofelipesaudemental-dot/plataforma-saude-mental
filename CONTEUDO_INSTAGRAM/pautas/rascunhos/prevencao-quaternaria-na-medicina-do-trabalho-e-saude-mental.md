@@ -66,6 +66,8 @@ O manejo clínico na saúde ocupacional deve priorizar intervenções que preser
 2. Andrade HS, Carvalho SR. Genealogical analysis of Quaternary Prevention: between the use of Evidence-Based Medicine and care reformulation in Primary Health Care. Cien Saude Colet. 2022;28(7):2109-2117. PMID 37436323. doi:10.1590/1413-81232023287.13292022 — Análise genealógica
 3. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
 4. Cohen C, Pignata S, Bezak E et al.. Workplace interventions to improve well-being and reduce burnout for nurses, physicians and allied healthcare professionals: a systematic review. BMJ Open. 2023;13(6):e071203. PMID 37385740. doi:10.1136/bmjopen-2022-071203 — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

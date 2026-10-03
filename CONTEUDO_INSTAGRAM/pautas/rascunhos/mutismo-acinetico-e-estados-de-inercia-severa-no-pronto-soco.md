@@ -96,6 +96,8 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 2. `catatonia and akinetic mutism differential diagnosis emergency` — Estudo de coorte — [PMID A CONFIRMAR]
 3. `management of severe catatonia in emergency departments` — Diretriz clínica — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

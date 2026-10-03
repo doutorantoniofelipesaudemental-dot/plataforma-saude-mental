@@ -69,6 +69,8 @@ Na atenção primária, nosso objetivo é identificar o sofrimento do cuidador a
 1. Yang X, Li X, Jiang S et al.. Effects of Telemedicine on Informal Caregivers of Patients in Palliative Care: Systematic Review and Meta-Analysis. JMIR Mhealth Uhealth. 2024;12:e54244. PMID 38602303. doi:10.2196/54244 — Revisão sistemática e metanálise
 2. Malhotra C, Chaudhry I, Shah SU et al.. Caregivers' Burden and Anticipatory Grief Increases Acute Health Care Use in Older Adults with Severe Dementia. J Am Med Dir Assoc. 2024;25(7):104981. PMID 38599241. doi:10.1016/j.jamda.2024.03.001 — Estudo de coorte
 3. De Vleminck A, Matthys O, Turola E et al.. Impact of a nurse-led and a web-based psychoeducational program for advanced cancer patients and their caregivers: Results of a three-arm randomized controlled trial. Int J Nurs Stud. 2025;171:105192. PMID 40925214. doi:10.1016/j.ijnurstu.2025.105192 — Ensaio clínico randomizado
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

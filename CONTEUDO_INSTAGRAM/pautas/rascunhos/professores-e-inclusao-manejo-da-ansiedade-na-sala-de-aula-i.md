@@ -71,6 +71,8 @@ O manejo da ansiedade em educadores exige uma abordagem integrada, que vai desde
 1. Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070 — Revisão sistemática
 2. Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019 — Revisão sistemática e metanálise
 3. Agyapong B, Obuobi-Donkor G, Burback L et al.. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

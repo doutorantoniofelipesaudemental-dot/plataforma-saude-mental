@@ -87,6 +87,8 @@ Ao identificar sinais de gravidade, o encaminhamento para avaliação psiquiátr
 2. Pikić Jugović I, Marušić I, Matić Bojić J. Early career teachers' social and emotional competencies, self-efficacy and burnout: a mediation model. BMC Psychol. 2025;13(1):9. PMID 39762997. doi:10.1186/s40359-024-02323-2 — Estudo transversal com modelo de mediação
 3. Nwoko JC, Emeto TI, Malau-Aduli AEO et al.. A Systematic Review of the Factors That Influence Teachers' Occupational Wellbeing. Int J Environ Res Public Health. 2023;20(12). PMID 37372657. doi:10.3390/ijerph20126070 — Revisão sistemática
 4. Paudel NR, Adhikari BA, Prakash KC et al.. Effectiveness of interventions on the stress management of schoolteachers: a systematic review and meta-analysis. Occup Environ Med. 2022;79(7):477-485. PMID 35256508. doi:10.1136/oemed-2021-108019 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

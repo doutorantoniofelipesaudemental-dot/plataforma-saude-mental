@@ -104,6 +104,8 @@ O manejo do transtorno bipolar na atenção primária exige cautela, escuta ativ
 3. Malhi GS, Bell E, Boyce P et al.. The 2020 Royal Australian and New Zealand College of psychiatrists clinical practice guidelines for mood disorders: Bipolar disorder summary. Bipolar Disord. 2020;22(8):805-821. PMID 33296123. doi:10.1111/bdi.13036 — Diretriz clínica (RANZCP)
 4. Fountoulakis KN, Tohen M, Zarate CA. Lithium treatment of Bipolar disorder in adults: A systematic review of randomized trials and meta-analyses. Eur Neuropsychopharmacol. 2022;54:100-115. PMID 34980362. doi:10.1016/j.euroneuro.2021.10.003 — Revisão sistemática de ensaios e metanálises (lítio)
 5. Kishi T, Ikuta T, Matsuda Y et al.. Mood stabilizers and/or antipsychotics for bipolar disorder in the maintenance phase: a systematic review and network meta-analysis of randomized controlled trials. Mol Psychiatry. 2020;26(8):4146-4157. PMID 33177610. doi:10.1038/s41380-020-00946-6 — Metanálise em rede (manutenção)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

@@ -89,6 +89,8 @@ Este conteúdo é uma orientação geral para a prática clínica e respeita sem
 2. `Short-term insomnia AND acute management AND primary care` — Diretriz Clínica — [PMID A CONFIRMAR]
 3. `Sedative hypnotics AND emergency department AND prescribing patterns` — Estudo Observacional — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

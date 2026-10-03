@@ -100,6 +100,8 @@ Por isso, a intervenção precoce visa interromper esse ciclo, promovendo um amb
 2. Mikkelsen MB, Rosholm M. Systematic review and meta-analysis of interventions aimed at enhancing return to work for sick-listed workers with common mental disorders, stress-related disorders, somatoform disorders and personality disorders. Occup Environ Med. 2018;75(9):675-686. PMID 29954920. doi:10.1136/oemed-2018-105073 — Revisão sistemática e metanálise
 3. Nigatu YT, Liu Y, Uppal M et al.. Interventions for enhancing return to work in individuals with a common mental illness: systematic review and meta-analysis of randomized controlled trials. Psychol Med. 2016;46(16):3263-3274. PMID 27609709. doi:10.1017/S0033291716002269 — Revisão sistemática e metanálise
 4. Fisker J, Hjorthøj C, Hellström L et al.. Predictors of return to work for people on sick leave with common mental disorders: a systematic review and meta-analysis. Int Arch Occup Environ Health. 2022;95(7):1-13. PMID 35106629. doi:10.1007/s00420-021-01827-3 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
@@ -107,7 +109,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 Dr. Antônio Felipe · Médico · CRM-BA 41322
 Especialista em Medicina de Família e Comunidade · RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho.
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
 NÃO ESPECIALISTA
 
 Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).

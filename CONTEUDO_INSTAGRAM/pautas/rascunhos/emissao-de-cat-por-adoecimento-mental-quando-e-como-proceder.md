@@ -95,6 +95,8 @@ O manejo do trabalhador com sofrimento mental exige uma abordagem integrada que 
 2. van Beurden KM, Brouwers EP, Joosen MC et al.. Effectiveness of guideline-based care by occupational physicians on the return-to-work of workers with common mental disorders: design of a cluster-randomised controlled trial. BMC Public Health. 2013;13:193. PMID 23496948. doi:10.1186/1471-2458-13-193 — Ensaio clínico randomizado (cuidado guiado por diretriz)
 3. van Beurden KM, Joosen MCW, Terluin B et al.. Use of a mental health guideline by occupational physicians and associations with return to work in workers sick-listed due to common mental disorders: a retrospective cohort study. Disabil Rehabil. 2017;40(22):2623-2631. PMID 28683580. doi:10.1080/09638288.2017.1347209 — Estudo de implementação de diretriz
 4. Fisker J, Hjorthøj C, Hellström L et al.. Predictors of return to work for people on sick leave with common mental disorders: a systematic review and meta-analysis. Int Arch Occup Environ Health. 2022;95(7):1-13. PMID 35106629. doi:10.1007/s00420-021-01827-3 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

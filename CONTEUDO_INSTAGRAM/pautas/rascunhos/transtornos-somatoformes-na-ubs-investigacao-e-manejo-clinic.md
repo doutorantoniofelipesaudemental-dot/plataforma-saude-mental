@@ -75,6 +75,8 @@ O manejo exige paciência, consistência e uma abordagem multiprofissional sempr
 2. Byrne AK, Scantlebury A, Jones K et al.. Communication interventions for medically unexplained symptom conditions in general practice: A systematic review and meta-analysis of randomised controlled trials. PLoS One. 2022;17(11):e0277538. PMID 36374916. doi:10.1371/journal.pone.0277538 — Revisão sistemática e metanálise
 3. Abbass A, Town J, Holmes H et al.. Short-Term Psychodynamic Psychotherapy for Functional Somatic Disorders: A Meta-Analysis of Randomized Controlled Trials. Psychother Psychosom. 2020;89(6):363-370. PMID 32428905. doi:10.1159/000507738 — Metanálise de ensaios clínicos randomizados
 4. Gormley KJ. Medically unexplained symptoms: the need for effective communication and an integrated care strategy. Br J Community Nurs. 2014;19(2):86-90. PMID 24514109. doi:10.12968/bjcn.2014.19.2.86 — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

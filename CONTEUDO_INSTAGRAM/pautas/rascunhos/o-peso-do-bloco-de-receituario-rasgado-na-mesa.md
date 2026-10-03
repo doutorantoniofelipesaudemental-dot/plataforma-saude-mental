@@ -38,6 +38,8 @@ O alívio nos ombros de dona Laura foi imediato. O choro dela, represado por mes
 
 Aquele papel rasgado ficou ali na mesa como um lembrete do meu próprio tamanho. A medicina de família nos ensina todos os dias a suportar o limite do que podemos consertar. Cuidar de alguém não significa ter todas as respostas ou entregar uma solução mágica a cada queixa. Cuidar, muitas vezes, é ter a coragem de largar a caneta, reconhecer a própria vulnerabilidade e simplesmente permanecer presente enquanto o outro encontra fôlego para respirar.
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Aviso legal: esta crônica é uma narrativa composta. Personagens, falas e situações são fictícios, inspirados em vivências comuns do cuidado em saúde, e não retratam nenhum paciente real identificável (sigilo médico e Res. CFM).

@@ -80,6 +80,8 @@ O manejo na Atenção Primária à Saúde baseia-se na escuta qualificada, no ap
 2. Sriraman NK, Melvin K, Meltzer-Brody S. ABM Clinical Protocol #18: Use of Antidepressants in Breastfeeding Mothers. Breastfeed Med. 2015;10(6):290-9. PMID 26204124. doi:10.1089/bfm.2015.29002 — Diretriz clínica (Protocolo ABM nº 18)
 3. Santos IS, Matijasevich A, Tavares BF et al.. Validation of the Edinburgh Postnatal Depression Scale (EPDS) in a sample of mothers from the 2004 Pelotas Birth Cohort Study. Cad Saude Publica. 2007;23(11):2577-88. PMID 17952250. doi:10.1590/s0102-311x2007001100005 — Estudo de validação (amostra brasileira)
 4. Husain N, Lunat F, Lovell K et al.. Efficacy of a culturally adapted, cognitive behavioural therapy-based intervention for postnatal depression in British south Asian women (ROSHNI-2): a multicentre, randomised controlled trial. Lancet. 2024;404(10461):1430-1443. PMID 39396350. doi:10.1016/S0140-6736(24)01612-X — Ensaio clínico randomizado
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

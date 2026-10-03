@@ -112,6 +112,8 @@ Este conteúdo é uma orientação geral para a prática clínica na Atenção P
 2. `("Depressive Disorder"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Primary Health Care"[Mesh])` — Diretriz Clínica — [PMID A CONFIRMAR]
 3. `("Drug Interactions"[Mesh]) AND ("Serotonin Uptake Inhibitors"[Mesh]) AND ("Primary Care"[Title/Abstract])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

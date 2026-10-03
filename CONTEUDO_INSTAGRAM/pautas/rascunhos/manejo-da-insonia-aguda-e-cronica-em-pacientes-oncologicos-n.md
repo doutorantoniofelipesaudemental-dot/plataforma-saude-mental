@@ -92,6 +92,8 @@ Este conteúdo serve como orientação geral para a prática clínica na atenç�
 2. `insomnia AND palliative care AND pharmacological management` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
 3. `cognitive behavioral therapy for insomnia AND cancer patients` — Diretriz Prática — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

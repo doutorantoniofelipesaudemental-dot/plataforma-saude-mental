@@ -46,6 +46,8 @@ Quando ela se levantou para ir embora, o passo já não era tão arrastado. Aper
 
 Na nossa prática diária, cuidar vai muito além da farmacologia. O som do estetoscópio na mesa de madeira escura nos lembra que a escuta atenta e o toque respeitoso são as ferramentas mais potentes que temos para devolver a dignidade a quem sofre.
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Aviso legal: esta crônica é uma narrativa composta. Personagens, falas e situações são fictícios, inspirados em vivências comuns do cuidado em saúde, e não retratam nenhum paciente real identificável (sigilo médico e Res. CFM).

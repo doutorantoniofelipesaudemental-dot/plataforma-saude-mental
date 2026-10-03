@@ -100,6 +100,8 @@ Chega ao pronto-socorro uma pessoa de meia-idade ou idosa, trazida por familiare
 2. `dissociative amnesia vs transient global amnesia emergency differential diagnosis` — Estudo de coorte — [PMID A CONFIRMAR]
 3. `acute memory loss emergency department protocols` — Diretriz clínica — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

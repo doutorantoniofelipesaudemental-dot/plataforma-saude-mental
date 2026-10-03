@@ -82,6 +82,8 @@ O atendimento ao paciente resgatado exige avaliação clínica cuidadosa e condu
 2. Dewa CS, Zipursky RB, Chau N et al.. Specialized home treatment versus hospital-based outpatient treatment for first-episode psychosis: a randomized clinical trial. Early Interv Psychiatry. 2009;3(4):304-11. PMID 22642735. doi:10.1111/j.1751-7893.2009.00139.x — Ensaio clínico randomizado piloto (tratamento domiciliar)
 3. González de León B, Del Pino-Sedeño T, Serrano-Pérez P et al.. Effectiveness of interventions to improve medication adherence in adults with depressive disorders: a meta-analysis. BMC Psychiatry. 2022;22(1):487. PMID 35858887. doi:10.1186/s12888-022-04120-w — Metanálise
 4. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

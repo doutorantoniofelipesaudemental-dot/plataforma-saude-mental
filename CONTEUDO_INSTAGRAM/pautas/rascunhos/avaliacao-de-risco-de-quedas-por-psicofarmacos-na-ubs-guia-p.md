@@ -107,6 +107,8 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 3. `Medication Reconciliation[MeSH] AND Accidental Falls[MeSH] AND Aged[MeSH]` — Diretriz — [PMID A CONFIRMAR]
 4. `Psychotropic Drugs[MeSH] AND Accidental Falls[MeSH] AND Risk Assessment[MeSH]` — Metanálise — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

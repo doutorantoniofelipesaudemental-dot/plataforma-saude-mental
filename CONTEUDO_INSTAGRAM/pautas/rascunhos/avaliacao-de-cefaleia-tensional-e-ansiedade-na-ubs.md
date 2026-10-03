@@ -84,6 +84,8 @@ Encaminhe o paciente para a neurologia se houver sinais de alerta neurológicos,
 1. Bendtsen L, Evers S, Linde M et al.. EFNS guideline on the treatment of tension-type headache - report of an EFNS task force. Eur J Neurol. 2010;17(11):1318-25. PMID 20482606. doi:10.1111/j.1468-1331.2010.03070.x — Diretriz clínica (EFNS)
 2. Becker WJ, Findlay T, Moga C et al.. Guideline for primary care management of headache in adults. Can Fam Physician. 2015;61(8):670-9. PMID 26273080 — Diretriz clínica (atenção primária)
 3. Pan LH, Ling YH, Wang SJ et al.. Hallmarks of primary headache: part 2- Tension-type headache. J Headache Pain. 2025;26(1):164. PMID 40676501. doi:10.1186/s10194-025-02098-w — Revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

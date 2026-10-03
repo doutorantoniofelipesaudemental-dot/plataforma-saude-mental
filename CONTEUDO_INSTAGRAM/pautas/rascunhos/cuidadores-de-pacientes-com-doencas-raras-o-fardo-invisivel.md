@@ -73,6 +73,8 @@ O sofrimento do cuidador merece escuta atenta e acolhimento na rede de saúde. N
 1. Bull LJ, Eslick GD, Teutsch SM et al.. Assessing Psychological Harms on Parents and Primary Caregivers of Children Living with a Rare Disease: A Systematic Review of the Scope and Validity of Surveys Utilized. Clin Child Fam Psychol Rev. 2025;28(3):612-630. PMID 40588644. doi:10.1007/s10567-025-00533-7 — Revisão sistemática
 2. Zybarth D, Inhestern L, Otto R et al.. Uncertainties of healthcare professionals and informal caregivers in rare diseases: A systematic review. Heliyon. 2024;10(19):e38677. PMID 39403533. doi:10.1016/j.heliyon.2024.e38677 — Revisão sistemática
 3. Ng QX, Tang ASP, Chan KE et al.. Lived experiences of patients, families and caregivers affected by inherited retinal diseases: A qualitative systematic review. Disabil Health J. 2025;18(3):101826. PMID 40148154. doi:10.1016/j.dhjo.2025.101826 — Revisão sistemática qualitativa
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

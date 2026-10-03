@@ -98,6 +98,8 @@ Quando e como encaminhar:
 2. Perry PJ, Wilborn CA. Serotonin syndrome vs neuroleptic malignant syndrome: a contrast of causes, diagnoses, and management. Ann Clin Psychiatry. 2012;24(2):155-62. PMID 22563571 — Revisão
 3. Chiew AL, Isbister GK. Management of serotonin syndrome (toxicity). Br J Clin Pharmacol. 2024;91(3):654-661. PMID 38926083. doi:10.1111/bcp.16152 — Revisão (manejo)
 4. King E, Rotella JA. Review article: Efficacy of cyproheptadine in the management of serotonin toxicity following deliberate self-poisoning - A systematic review. Emerg Med Australas. 2025;37(1):e14554. PMID 39791184. doi:10.1111/1742-6723.14554 — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

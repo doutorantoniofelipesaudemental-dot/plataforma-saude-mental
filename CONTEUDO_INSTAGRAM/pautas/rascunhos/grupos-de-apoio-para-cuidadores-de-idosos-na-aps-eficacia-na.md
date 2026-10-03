@@ -79,6 +79,8 @@ Participar de intervenções grupais estruturadas ajuda a quebrar esse ciclo de 
 1. Lauritzen J, Pedersen PU, Sørensen EE et al.. The meaningfulness of participating in support groups for informal caregivers of older adults with dementia: a systematic review. JBI Database System Rev Implement Rep. 2015;13(6):373-433. PMID 26455756. doi:10.11124/jbisrir-2015-2121 — Revisão sistemática
 2. Kwok JYY, Cheung DSK, Zarit S et al.. Multicomponent Intervention for Distressed Informal Caregivers of People With Dementia: A Randomized Clinical Trial. JAMA Netw Open. 2025;8(3):e250069. PMID 40094667. doi:10.1001/jamanetworkopen.2025.0069 — Ensaio clínico randomizado
 3. Brodaty H, Green A, Koschera A. Meta-analysis of psychosocial interventions for caregivers of people with dementia. J Am Geriatr Soc. 2003;51(5):657-64. PMID 12752841. doi:10.1034/j.1600-0579.2003.00210.x — Metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

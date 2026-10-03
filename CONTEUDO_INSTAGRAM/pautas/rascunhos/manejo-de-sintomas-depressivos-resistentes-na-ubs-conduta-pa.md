@@ -80,6 +80,8 @@ Este conteúdo constitui orientação geral para a prática clínica diária. Re
 4. `("Depressive Disorder"[Mesh] OR "depression") AND ("Diagnosis, Differential"[Mesh] OR "reassessment") AND ("Primary Health Care"[Mesh]) AND ("Patient Care Management"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
 5. `("Depressive Disorder, Treatment-Resistant"[Mesh]) AND ("Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

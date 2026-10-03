@@ -99,6 +99,8 @@ Este conteúdo oferece orientações gerais para a prática clínica e deve semp
 3. `("Panic Attack"[Mesh]) AND ("Emergency Department, Hospital"[Mesh]) AND ("Cognitive Behavioral Therapy"[Mesh] OR "Psychotherapy"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
 4. `("Panic Disorder"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Benzodiazepines"[Mesh] OR "Anti-Anxiety Agents"[Mesh]) AND ("Comparative Effectiveness Research"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

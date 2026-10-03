@@ -96,6 +96,8 @@ Este conteúdo é uma orientação geral e educativa. Respeite sempre os protoco
 2. `family caregivers of stroke survivors AND support interventions` — Ensaio clínico — [PMID A CONFIRMAR]
 3. `home care challenges in stroke survivors and caregivers` — Estudo qualitativo — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

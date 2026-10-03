@@ -76,6 +76,8 @@ O suporte familiar é uma base importante para o tratamento, mas a família não
 2. Soo SA, Zhang ZW, Khong SJ et al.. Randomized Controlled Trials of Psychoeducation Modalities in the Management of Bipolar Disorder: A Systematic Review. J Clin Psychiatry. 2018;79(3). PMID 29727072. doi:10.4088/JCP.17r11750 — Revisão sistemática
 3. Sampogna G, Brohan E, Luciano M et al.. Psychosocial interventions for carers of people with severe mental and substance use disorders: a systematic review and meta-analysis. Eur Psychiatry. 2023;66(1):e98. PMID 37997647. doi:10.1192/j.eurpsy.2023.2472 — Revisão sistemática e metanálise
 4. Yatham LN, Kennedy SH, Parikh SV et al.. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. PMID 29536616. doi:10.1111/bdi.12609 — Diretriz clínica (CANMAT/ISBD)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

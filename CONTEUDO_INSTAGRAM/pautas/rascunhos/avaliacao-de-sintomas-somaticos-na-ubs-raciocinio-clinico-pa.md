@@ -99,6 +99,8 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 3. `("Somatic Symptom Disorder"[Mesh]) AND ("Delivery of Health Care"[Mesh] OR "Primary Health Care"[Mesh]) AND ("Guideline"[Publication Type])` — Diretriz — [PMID A CONFIRMAR]
 4. `("Communication"[Mesh]) AND ("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms") AND ("Primary Health Care"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
 
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

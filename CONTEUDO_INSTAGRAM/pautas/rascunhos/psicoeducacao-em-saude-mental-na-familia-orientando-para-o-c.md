@@ -97,6 +97,8 @@ O encaminhamento para serviços especializados, como o Pronto Atendimento Psiqui
 1. Zhao S, Sampson S, Xia J et al.. Psychoeducation (brief) for people with serious mental illness. Cochrane Database Syst Rev. 2015;2015(4):CD010823. PMID 25854522. doi:10.1002/14651858.CD010823.pub2 — Revisão sistemática Cochrane
 2. Xia J, Merinder LB, Belgamwar MR. Psychoeducation for schizophrenia. Cochrane Database Syst Rev. 2011;2011(6):CD002831. PMID 21678337. doi:10.1002/14651858.CD002831.pub2 — Revisão sistemática Cochrane
 3. Münchenberg PS, Yessimova D, Panteli D et al.. Digital Health Interventions for Informal Family Caregivers of People With First-Episode Psychosis: Systematic Review on User Experience and Effectiveness. JMIR Ment Health. 2024;11:e63743. PMID 39607998. doi:10.2196/63743 — Revisão sistemática
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

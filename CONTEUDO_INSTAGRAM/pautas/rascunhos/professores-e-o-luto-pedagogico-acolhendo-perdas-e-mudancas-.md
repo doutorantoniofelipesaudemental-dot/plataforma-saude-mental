@@ -90,6 +90,8 @@ A escuta qualificada e a psicoterapia são pilares fundamentais no manejo do lut
 1. Shalev R, Zamir R, Barak O. Disenfranchised Grief: The Death of a Student With Special Needs and the Coping of the School Staff - A Qualitative Study. Omega (Westport). 2022;90(1):37-58. PMID 35549761. doi:10.1177/00302228221097297 — Estudo qualitativo
 2. Gross N, Lo C. Relational teaching and learning after loss: Evidence from Black adolescent male students and their teachers. Sch Psychol Q. 2018;33(3):381-389. PMID 30234361. doi:10.1037/spq0000285 — Estudo de caso multimétodos
 3. Munns A, Forde KA, Krouzecky M et al.. Rainbows: a primary health care initiative for primary schools. Collegian. 2015;22(2):153-60. PMID 26281402. doi:10.1016/j.colegn.2015.02.002 — Estudo qualitativo (programa em atenção primária escolar)
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

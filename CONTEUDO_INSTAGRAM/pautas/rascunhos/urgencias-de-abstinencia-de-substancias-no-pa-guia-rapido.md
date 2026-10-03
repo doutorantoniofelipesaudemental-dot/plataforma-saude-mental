@@ -87,6 +87,8 @@ Encaminhe o paciente para a unidade de terapia intensiva ou para internação ho
 4. Yakovenko I, Mukaneza Y, Germé K et al.. Management of opioid use disorder: 2024 update to the national clinical practice guideline. CMAJ. 2024;196(38):E1280-E1290. PMID 39532476. doi:10.1503/cmaj.241173 — Diretriz clínica (transtorno por uso de opioides)
 5. Spadaro A, Long B, Koyfman A et al.. Buprenorphine precipitated opioid withdrawal: Prevention and management in the ED setting. Am J Emerg Med. 2022;58:22-26. PMID 35623179. doi:10.1016/j.ajem.2022.05.013 — Revisão narrativa
 6. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

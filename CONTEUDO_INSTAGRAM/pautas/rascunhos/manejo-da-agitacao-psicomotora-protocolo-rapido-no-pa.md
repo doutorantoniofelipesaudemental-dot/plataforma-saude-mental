@@ -105,6 +105,8 @@ Quando a desescalada verbal não é suficiente para conter o risco iminente de d
 1. Garriga M, Pacchiarotti I, Kasper S et al.. Assessment and management of agitation in psychiatry: Expert consensus. World J Biol Psychiatry. 2016;17(2):86-128. PMID 26912127. doi:10.3109/15622975.2015.1132007 — Consenso de especialistas
 2. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
 3. Huf G, Alexander J, Allen MH. Haloperidol plus promethazine for psychosis-induced aggression. Cochrane Database Syst Rev. 2009;(3):CD005146. PMID 19588366. doi:10.1002/14651858.CD005146.pub2 — Revisão sistemática Cochrane e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

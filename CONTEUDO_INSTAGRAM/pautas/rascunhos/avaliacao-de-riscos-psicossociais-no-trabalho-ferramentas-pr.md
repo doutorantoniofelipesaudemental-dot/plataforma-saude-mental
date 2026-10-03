@@ -73,6 +73,8 @@ O manejo dos riscos psicossociais exige uma atuação integrada entre a medicina
 1. Aronsson G, Theorell T, Grape T et al.. A systematic review including meta-analysis of work environment and burnout symptoms. BMC Public Health. 2017;17(1):264. PMID 28302088. doi:10.1186/s12889-017-4153-7 — Revisão sistemática e metanálise
 2. Aust B, Leduc C, Cresswell-Smith J et al.. The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. Int Arch Occup Environ Health. 2024;97(5):485-522. PMID 38695906. doi:10.1007/s00420-024-02065-z — Revisão sistemática
 3. Stratton E, Lampit A, Choi I et al.. Trends in Effectiveness of Organizational eHealth Interventions in Addressing Employee Mental Health: Systematic Review and Meta-analysis. J Med Internet Res. 2022;24(9):e37776. PMID 36166285. doi:10.2196/37776 — Revisão sistemática e metanálise
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192

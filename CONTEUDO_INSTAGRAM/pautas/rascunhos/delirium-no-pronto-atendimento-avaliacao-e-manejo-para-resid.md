@@ -76,6 +76,8 @@ No pronto-socorro, nossa prioridade absoluta é investigar e tratar o fator dese
 3. Tieges Z, Maclullich AMJ, Anand A et al.. Diagnostic accuracy of the 4AT for delirium detection in older adults: systematic review and meta-analysis. Age Ageing. 2021;50(3):733-743. PMID 33951145. doi:10.1093/ageing/afaa224 — Revisão sistemática e metanálise (acurácia do 4AT)
 4. Girard TD, Exline MC, Carson SS et al.. Haloperidol and Ziprasidone for Treatment of Delirium in Critical Illness. N Engl J Med. 2018;379(26):2506-2516. PMID 30346242. doi:10.1056/NEJMoa1808217 — Ensaio clínico randomizado (pacientes críticos)
 5. Roppolo LP, Morris DW, Khan F et al.. Improving the management of acutely agitated patients in the emergency department through implementation of Project BETA (Best Practices in the Evaluation and Treatment of Agitation). J Am Coll Emerg Physicians Open. 2020;1(5):898-907. PMID 33145538. doi:10.1002/emp2.12138 — Diretriz (Project BETA) e revisão
+> *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
+
 ---
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
