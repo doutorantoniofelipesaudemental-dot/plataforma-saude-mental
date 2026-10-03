@@ -35,3 +35,13 @@ Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (
 - TRILHA SONORA: Mixagem de áudio nos carrosséis com música suave a -22dB.
 - PACOTE MULTIMÍDIA OBRIGATÓRIO: Carrossel + Reel + Stories (com enquete) + Chamada ao Áudio Narrado (padrão em `CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md`).
 - PRESERVAÇÃO DE AUTOMAÇÕES: Manter intactos os scripts Node.js, a checagem de hash e o arquivo client_secret.json.
+
+### 2. DESIGN & MOTION (SKILLS DE APOIO: PORTAL, MINIAPPS E MULTIMÍDIA)
+Uso estratégico das skills abaixo (referências externas, ainda não instaladas nem auditadas neste repositório: conferir o conteúdo e a licença antes de instalar). Nenhuma sobrepõe as regras do CFM, de acessibilidade e de LGPD.
+- **Design DNA (`zanwei/design-dna`):** extrair tokens visuais (paleta acolhedora, tipografia legível, espaçamentos) de referências de alto padrão e manter a consistência entre Portal, miniapps e peças sociais.
+- **Genjutsu (`AThevon/genjutsu`):** direção de arte e refinamento de UI/UX, com contraste AAA e alvos de toque de 44 px (os testes E2E já exigem os dois).
+- **GSAP (`greensock/gsap-skills`):** animações de linha do tempo e `ScrollTrigger` para transições, revelações de conteúdo e interações nos miniapps clínicos. Respeitar `prefers-reduced-motion`.
+- **Motion Design (`lottiefiles/motion-design-skill`):** microinterações em Lottie/SVG leves (áudio narrado, respiração guiada, checklists, feedbacks). Sem efeito que cause ansiedade, piscadas ou som automático.
+- **Three.js (`CloudAI-X/threejs-skills`):** elementos 3D interativos e leves em matérias clínicas e anatômicas, com alternativa estática e sem bloquear a leitura em celular.
+- **Mídias sociais:** Reels e Shorts exigem especificação de movimento (microanimação Lottie/GSAP ou elemento 3D) com gancho visual nos 3 primeiros segundos; LinkedIn segue os tokens de Design DNA/Genjutsu, com tom de autoridade e conformidade estrita ao CFM. Detalhes em `CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md`.
+
