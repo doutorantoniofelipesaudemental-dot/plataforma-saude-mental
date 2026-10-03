@@ -19,7 +19,7 @@ function rascunho(ajustes = {}) {
     ganchos: ['Ansiedade no trabalho tem sinais claros', 'a', 'b', 'c', 'd'],
     carrossel: [...Array(7)].map((_, i) => ({ texto: i === 6 ? 'Precisa de apoio agora? CVV 188 · SAMU 192' : `Slide ${i + 1} sobre ansiedade de 38% a 41%`, visual: 'fundo verde' })),
     legenda: `Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\n${CHAMADA}\n\nCVV 188\n\n#saudemental #ansiedade #saudementalnotrabalho`,
-    reels: [1, 2].map(() => ({ titulo: 'R', legenda: `Reel curto sobre sinais.${'\n\n'}${CHAMADA}`, duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
+    reels: [1, 2].map(() => ({ titulo: 'R', movimento: 'Microanimação Lottie: relógio gira nos 3 primeiros segundos', legenda: `Reel curto sobre sinais.${'\n\n'}${CHAMADA}`, duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
     stories: [
       { texto: 'Você já sentiu isso?', recurso: 'Enquete: Sim / Não' },
       { texto: 'Sinais de alerta', recurso: 'Nenhum' },
@@ -35,6 +35,7 @@ function rascunho(ajustes = {}) {
         gancho: 'G',
         desenvolvimento: 'D',
         cta: 'C',
+        movimento: 'Elemento 3D leve de um relógio; gancho visual nos 3 primeiros segundos',
         descricao: 'Ansiedade no trabalho tem sinais que dá para reconhecer. Veja quando buscar ajuda.',
         tags: ['ansiedade', 'trabalho', 'saúde mental', 'estresse no trabalho', 'burnout'],
       })),
@@ -226,4 +227,14 @@ test('garantirChamadaAudio acrescenta a chamada antes das hashtags e é idempote
   assert.ok(d.legenda.indexOf(CHAMADA) < d.legenda.indexOf('#saude'));
   assert.ok(d.reels[0].legenda.endsWith(CHAMADA));
   assert.ok(d.stories[0].texto.endsWith(CHAMADA));
+});
+
+test('vídeos: alerta quando Reel ou Short não especificam movimento (Lottie/GSAP/3D)', () => {
+  assert.deepEqual(verificarPacoteMultimidia(rascunho(), ARTIGO), []);
+  const d = rascunho();
+  d.reels[0].movimento = '';
+  d.youtube.shorts[1].movimento = 'Nenhum';
+  const alertas = verificarPacoteMultimidia(d, ARTIGO).join(' | ');
+  assert.ok(alertas.includes('Reel 1 sem especificação de movimento'));
+  assert.ok(alertas.includes('Short 2 sem especificação de movimento'));
 });

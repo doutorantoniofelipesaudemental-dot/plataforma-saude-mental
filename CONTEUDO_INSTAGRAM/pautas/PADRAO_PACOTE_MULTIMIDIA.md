@@ -13,6 +13,7 @@ Toda pauta do Instagram sai como pacote com os quatro formatos abaixo, ancorados
 - [ ] Roteiro por cena com direção visual 2D/3D, sem rostos de pessoas reais.
 - [ ] Narração em áudio ancorada no artigo; trilha de fundo a -22 dB.
 - [ ] Texto na tela em caixa mista (nunca em CAIXA ALTA).
+- [ ] Campo **Movimento**: recurso de animação (microanimação Lottie/GSAP, gráfico 2D animado ou 3D leve) e o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
 
 **3. Stories sequenciais**
 - [ ] Pelo menos 1 enquete, 1 caixa de perguntas e 1 chamada/link para o Portal.
@@ -22,6 +23,10 @@ Toda pauta do Instagram sai como pacote com os quatro formatos abaixo, ancorados
 - [ ] Narração do artigo existente e publicada no topo da página.
 - [ ] Chamada em TODAS as peças (legenda, Reel, Stories, áudio):
   `🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/[slug]`
+
+**5. LinkedIn (quando houver)**
+- [ ] Post ou carrossel institucional com tokens visuais do Design DNA/Genjutsu (paleta, tipografia e espaçamento do Portal), tom de autoridade e sobriedade.
+- [ ] Termina com o convite para o artigo completo e segue o mesmo bloco de conformidade.
 
 ## Conformidade (todas as peças)
 - [ ] Assinatura de 3 linhas (CRM-BA 41322, RQE 26638, PAP e APS); sem "psiquiatra" como título do autor.

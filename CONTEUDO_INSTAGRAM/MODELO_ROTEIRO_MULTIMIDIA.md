@@ -5,6 +5,7 @@ Modelo completo de uma pauta em quatro formatos **obrigatórios**: Carrossel, Re
 ## Como usar
 
 - **Formatos obrigatórios:** Carrossel, Reel, Stories e Áudio Narrado do Portal, todos ancorados no mesmo artigo.
+- **LinkedIn (quando houver):** post ou carrossel institucional com os tokens visuais do Design DNA/Genjutsu, tom de autoridade e o mesmo bloco de conformidade.
 - **Chamada ao áudio (em todas as peças):** `🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/[slug]`. Troque `[slug]` pelo slug do artigo.
 - **Trilha de fundo:** sempre a -22 dB, para a voz ficar clara por cima.
 - **Assinatura de mídias sociais:** o padrão de 3 linhas, uma única vez, no fim do arquivo. O bloco de 5 linhas, com as pós-graduações, é só do portal e da landing page.
@@ -48,6 +49,7 @@ Cuidar de quem cuida também é parte do cuidado. Salve para ler depois e compar
 
 **Trilha de fundo:** lo-fi suave, -22 dB, com corte limpo no convite final.
 **Texto na tela (caixa mista, nunca em CAIXA ALTA):** "Esgotamento não é fraqueza" → "Crise aguda pede avaliação" → "Falar cedo ajuda"
+**Movimento (obrigatório):** especifique o recurso de animação (microanimação Lottie/GSAP, gráfico 2D animado ou elemento 3D leve) e o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
 **Roteiro visual:** cada cena traz a direção visual em animação 2D (infográficos, ilustração plana) e/ou 3D suave (objetos, ambientes), sem rostos de pessoas reais. **Narração:** em áudio, ancorada no texto do artigo do Portal.
 
 - 0-3s, gancho: "Cansaço de plantão e crise aguda são a mesma coisa?"

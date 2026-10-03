@@ -67,7 +67,8 @@ Regras inegociáveis:
 15. Tom: acolhedor, empático e terapêutico, falando COM a pessoa ("você", "sua"), sem culpa nem pressa, sem voz de manual, de chatbot ou de burocracia ("prezado usuário", "conforme solicitado", "o indivíduo acometido"). Nunca minimize o sofrimento ("é só pensar positivo", "frescura"). Falas de Reels e do vídeo longo são NARRADAS por voz sintética: frases curtas, fáceis de ouvir, pausas naturais. A narração é mixada com trilha suave a -22 dB, então a voz é sempre o protagonista.
 16. Assinatura: nas mídias sociais a identificação do médico é de 3 linhas (CRM-BA 41322; Medicina de Família e Comunidade com RQE 26638; atuação em PAP e APS). Ela é acrescentada por código: não a escreva.
 17. Peças opcionais do ecossistema (quando o esquema pedir): "podcast" (roteiro de áudio de 3 a 6 min, conversado, para narração), "newsletter" (assunto até 60 caracteres, pré-cabeçalho, 3 a 5 blocos curtos e uma chamada para ler o artigo completo) e "miniapp" (um mini-aplicativo interativo educativo de 3 a 5 perguntas ou passos, ANÔNIMO, que sugere leituras sem coletar nem gravar dado pessoal e sem funcionar como diagnóstico). Mesmas regras de fidelidade e CFM.
-18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 5 Stories interativos + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete "Sim / Não" (recurso começa com "Enquete: Sim / Não"), ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.`;
+18. Pacote multimídia obrigatório (nunca entregue carrossel isolado): Carrossel + 2 Reels + 5 Stories interativos + chamada ao áudio narrado do Portal. Stories: ao menos 1 enquete "Sim / Não" (recurso começa com "Enquete: Sim / Não"), ao menos 1 caixa de perguntas (recurso começa com "Caixa de perguntas:" e traz uma pergunta aberta sobre o tema) e o último quadro convida a ouvir/ler o artigo no Portal (recurso "Link para o Portal (artigo e áudio)"). Cada Reel traz uma "legenda" de 2 a 3 frases, sem hashtags. Reels: textoTela em caixa mista (nunca em CAIXA ALTA) e a cena descreve a animação 2D/3D, sem rostos de pessoas reais. A linha "🎧 Ouça o artigo narrado no Portal: <link>" fecha as legendas do Carrossel e dos Reels e o último Story; ela é acrescentada por código: não escreva o link nem a linha.
+19. Movimento nos vídeos (Reels e Shorts): cada roteiro traz o campo "movimento": recurso de animação ou 3D (microanimação Lottie/GSAP, gráfico 2D animado ou elemento 3D leve) e o que acontece nos 3 primeiros segundos para prender a atenção sem sustos, sem piscadas e sem efeito que cause ansiedade. LinkedIn: tom de autoridade e sobriedade, sem emoji em excesso, com o convite para o artigo completo e conformidade estrita ao CFM.`;
 
 const texto = { type: 'string' };
 const SCHEMA = {
@@ -88,13 +89,14 @@ const SCHEMA = {
         properties: {
           titulo: texto,
           legenda: { ...texto, description: 'legenda do Reel: 2 a 3 frases, sem hashtags, sem link' },
+          movimento: { ...texto, description: 'recurso de movimento (Lottie/GSAP/2D animado/3D leve) e o gancho visual dos 3 primeiros segundos' },
           duracaoSegundos: { type: 'number' },
           cenas: {
             type: 'array',
             items: { type: 'object', properties: { tempo: texto, cena: texto, textoTela: texto, fala: texto }, required: ['tempo', 'cena', 'textoTela', 'fala'] },
           },
         },
-        required: ['titulo', 'legenda', 'duracaoSegundos', 'cenas'],
+        required: ['titulo', 'legenda', 'movimento', 'duracaoSegundos', 'cenas'],
       },
     },
     stories: {
@@ -120,10 +122,11 @@ const SCHEMA = {
               gancho: texto,
               desenvolvimento: texto,
               cta: texto,
+              movimento: { ...texto, description: 'recurso de movimento (Lottie/GSAP/2D animado/3D leve) e o gancho visual dos 3 primeiros segundos' },
               descricao: { ...texto, description: 'descrição de SEO: 1ª frase com a palavra-chave, 2 a 3 frases, sem link' },
               tags: { type: 'array', items: texto, description: '5 a 12 tags de busca em português, minúsculas' },
             },
-            required: ['titulo', 'gancho', 'desenvolvimento', 'cta', 'descricao', 'tags'],
+            required: ['titulo', 'gancho', 'desenvolvimento', 'cta', 'movimento', 'descricao', 'tags'],
           },
         },
         longo: {
@@ -288,7 +291,11 @@ function verificarPacoteMultimidia(d, artigo) {
     const legenda = r.legenda || '';
     if (!legenda.trim()) alertas.push(`Reel ${i + 1} sem legenda`);
     if (!legenda.includes(chamada)) alertas.push(`legenda do Reel ${i + 1} sem a chamada ao áudio narrado (🎧)`);
+    if (!/lottie|gsap|3d|anima|motion/i.test(r.movimento || '')) alertas.push(`Reel ${i + 1} sem especificação de movimento (Lottie/GSAP/3D) e gancho visual dos 3 primeiros segundos`);
     r.cenas.forEach((c, j) => /\b[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ]{6,}\b.*\b[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ]{3,}\b/.test(c.textoTela) && alertas.push(`Reel ${i + 1}, cena ${j + 1}: texto na tela em CAIXA ALTA (use caixa mista)`));
+  });
+  (d.youtube?.shorts || []).forEach((s, i) => {
+    if (!/lottie|gsap|3d|anima|motion/i.test(s.movimento || '')) alertas.push(`Short ${i + 1} sem especificação de movimento (Lottie/GSAP/3D) e gancho visual dos 3 primeiros segundos`);
   });
   return alertas;
 }
@@ -396,6 +403,7 @@ function normalizar(d = {}) {
     reels: lista(d.reels).map((r) => ({
       titulo: str(r?.titulo),
       legenda: str(r?.legenda),
+      movimento: str(r?.movimento),
       duracaoSegundos: Number(r?.duracaoSegundos) || 0,
       cenas: lista(r?.cenas).map((c) => ({ tempo: str(c?.tempo), cena: str(c?.cena), textoTela: str(c?.textoTela), fala: str(c?.fala) })),
     })),
@@ -408,6 +416,7 @@ function normalizar(d = {}) {
         gancho: str(s?.gancho),
         desenvolvimento: str(s?.desenvolvimento),
         cta: str(s?.cta),
+        movimento: str(s?.movimento),
         descricao: str(s?.descricao),
         tags: lista(s?.tags).map(str).filter(Boolean),
       })),
@@ -628,7 +637,7 @@ function markdown(artigo, d, alertas, origem, revisao) {
   d.reels.forEach((r, i) => {
     l.push(`## Reel ${i + 1}: ${r.titulo} (${r.duracaoSegundos} s)`, '', '| Tempo | Cena | Texto na tela | Fala |', '|---|---|---|---|');
     r.cenas.forEach((c) => l.push(`| ${celula(c.tempo)} | ${celula(c.cena)} | ${celula(c.textoTela)} | ${celula(c.fala)} |`));
-    l.push('', '**Legenda do Reel:**', '', ...r.legenda.split('\n').map((x) => `> ${x}`), '');
+    l.push('', `**Movimento (3 s iniciais):** ${r.movimento}`, '', '**Legenda do Reel:**', '', ...r.legenda.split('\n').map((x) => `> ${x}`), '');
   });
   l.push('## Stories', '', '| # | Texto | Recurso |', '|---|---|---|');
   d.stories.forEach((s, i) => l.push(`| ${i + 1} | ${celula(s.texto)} | ${celula(s.recurso)} |`));
@@ -657,6 +666,7 @@ function markdown(artigo, d, alertas, origem, revisao) {
       `- **Gancho:** ${s.gancho}`,
       `- **Desenvolvimento:** ${s.desenvolvimento}`,
       `- **CTA:** ${s.cta}`,
+      `- **Movimento (3 s iniciais):** ${s.movimento}`,
       '',
       blocoMetadados(`short-${i + 1}`, s),
       ''
