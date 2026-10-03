@@ -46,6 +46,7 @@ Pacote multimídia da crônica "A receita dobrada no bolso do casaco" (Relatos d
 
 ### Legenda
 Pedir ajuda não é fraqueza. Se você se reconhece nessa história, procure a sua unidade de saúde e permita-se ser cuidado. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-receita-dobrada-no-bolso-do-casaco
 
 #saudemental #medicinadefamilia #saudedohomem #atencaoprimaria
@@ -67,6 +68,7 @@ Pedir ajuda não é fraqueza. Se você se reconhece nessa história, procure a s
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** Muitos homens guardam o cuidado no bolso por vergonha. Se isso é com você, procure a unidade de saúde. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-receita-dobrada-no-bolso-do-casaco
 **Hashtags extras:** #saudemental #saudedohomem
 
@@ -80,7 +82,7 @@ Pedir ajuda não é fraqueza. Se você se reconhece nessa história, procure a s
 | 2 | Você já tratou cansaço, sono ruim ou irritação como "coisa do trabalho" e deixou para depois? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: pedir ajuda é sinal de fraqueza. | Teste: Verdadeiro / Falso (resposta: falso) |
 | 4 | Cuidar de si não é desistir. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre saúde mental na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-receita-dobrada-no-bolso-do-casaco | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
+| 5 | Quer conversar sobre saúde mental na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. Esta caixa não atende emergências: em crise, ligue 188 ou 192. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-receita-dobrada-no-bolso-do-casaco | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo azul-acinzentado com ilustração 2D do papel dobrado; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.

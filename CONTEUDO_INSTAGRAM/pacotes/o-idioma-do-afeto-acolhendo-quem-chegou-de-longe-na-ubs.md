@@ -46,6 +46,7 @@ Pacote multimídia da crônica "O idioma do afeto: acolhendo quem chegou de long
 
 ### Legenda
 O corpo e o olhar também transmitem acolhimento, mesmo quando as palavras não chegam. Se você atende alguém que chegou de longe, lembre-se de que a escuta começa antes da língua. Salve para ler depois e compartilhe com quem cuida de gente. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs
 
 #saudemental #medicinadefamilia #acolhimento #atencaoprimaria
@@ -67,6 +68,7 @@ O corpo e o olhar também transmitem acolhimento, mesmo quando as palavras não 
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** Quando falta o idioma, sobram gestos, olhar e presença. Acolher começa antes da palavra. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs
 **Hashtags extras:** #saudemental #acolhimento
 
@@ -80,7 +82,7 @@ O corpo e o olhar também transmitem acolhimento, mesmo quando as palavras não 
 | 2 | Você já se sentiu sem palavras num serviço de saúde, por causa do idioma ou do medo? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: o cuidado só começa quando as duas pessoas falam o mesmo idioma. | Teste: Verdadeiro / Falso (resposta: falso) |
 | 4 | O corpo e o olhar também transmitem acolhimento. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre acolhimento de pessoas migrantes na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
+| 5 | Quer conversar sobre acolhimento de pessoas migrantes na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. Esta caixa não atende emergências: em crise, ligue 188 ou 192. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo areia com ilustração 2D do desenho no papel; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.

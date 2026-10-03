@@ -46,6 +46,7 @@ Pacote multimídia da crônica "O relógio na parede do pronto atendimento" (Rel
 
 ### Legenda
 Na crise, o tempo parece não passar. Se você está sofrendo agora, procure um serviço de saúde, converse com alguém de confiança ou ligue para o CVV 188. Em risco imediato, o SAMU é o 192. Salve e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-relogio-na-parede-do-pronto-atendimento
 
 #saudemental #medicinadefamilia #crise #acolhimento
@@ -67,6 +68,7 @@ Na crise, o tempo parece não passar. Se você está sofrendo agora, procure um 
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** Acolher uma crise é emprestar o ritmo a quem perdeu o compasso. Se você precisa de ajuda agora, ligue para o CVV 188. Em risco imediato, SAMU 192. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-relogio-na-parede-do-pronto-atendimento
 **Hashtags extras:** #saudemental #crise
 
@@ -80,7 +82,7 @@ Na crise, o tempo parece não passar. Se você está sofrendo agora, procure um 
 | 2 | Você já sentiu que o tempo não passava enquanto esperava por ajuda? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: na crise, ser escutado sem julgamento ajuda a desacelerar. | Teste: Verdadeiro / Falso (resposta: verdadeiro) |
 | 4 | Se a dor ficar insuportável, existe ajuda agora: CVV 188. Em risco imediato, SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre acolhimento na urgência na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-relogio-na-parede-do-pronto-atendimento | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
+| 5 | Quer conversar sobre acolhimento na urgência na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. Esta caixa não atende emergências: em crise, ligue 188 ou 192. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-relogio-na-parede-do-pronto-atendimento | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo azul-noturno com ilustração 2D do relógio; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto. O story 4 com o CVV 188 e o SAMU 192 em destaque.

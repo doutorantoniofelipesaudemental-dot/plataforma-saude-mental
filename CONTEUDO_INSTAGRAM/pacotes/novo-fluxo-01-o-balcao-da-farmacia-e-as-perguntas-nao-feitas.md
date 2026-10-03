@@ -53,6 +53,7 @@ Pacote 01 do novo fluxo editorial (lote piloto), montado a partir da crônica "O
 
 ### Legenda
 Muita gente guarda uma pergunta sobre o próprio remédio e não sabe a quem fazer. Se isso é com você, converse com a equipe da sua unidade de saúde, sem pressa e sem vergonha. Não suspenda nenhum medicamento por conta própria. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-balcao-da-farmacia-e-as-perguntas-nao-feitas
 
 #saudemental #medicinadefamilia #atencaoprimaria #cuidado
@@ -67,13 +68,14 @@ Muita gente guarda uma pergunta sobre o próprio remédio e não sabe a quem faz
 **Direção visual:** abertura em 3D no balcão; meio em ilustração 2D, sem rostos; fecho em 3D com luz âmbar.
 
 ### Roteiro de narração
-- 0-3s, gancho: "Dona Maria segurou a caixinha por alguns segundos antes de falar."
+- 0-3s, gancho: "Dona Maria segurou a caixinha um instante antes de falar."
 - 4-12s: "Narrativa composta, personagem fictícia. Ela queria saber se aquele remédio ia acompanhá-la para sempre."
 - 13-22s: "Atrás de uma renovação de receita, existem receios sobre dependência, efeitos que ninguém explicou e medo de ser sinal de fraqueza."
 - 23-27s: "A conversa calma mostrou que o remédio é um apoio, e que o cuidado inclui sono, rotina e escuta."
 - 28-30s, convite: "Ouça o artigo narrado no Portal, pelo link do perfil."
 
 **Legenda:** Atrás de uma renovação de receita pode existir uma pergunta guardada há meses. Converse com a equipe que cuida de você e não suspenda nenhum remédio por conta própria. Para mentoria, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-balcao-da-farmacia-e-as-perguntas-nao-feitas
 **Hashtags extras:** #saudemental #medicinadefamilia
 
@@ -88,7 +90,7 @@ Muita gente guarda uma pergunta sobre o próprio remédio e não sabe a quem faz
 | 1 | Na fila da farmácia, uma pergunta ficou presa. Narrativa composta, personagem fictícia. | Nenhum |
 | 2 | Você já teve uma dúvida sobre o seu remédio e não perguntou a ninguém? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: tomar remédio para ansiedade é sinal de fraqueza. | Teste: Verdadeiro / Falso (resposta: falso) |
-| 4 | Ficou com alguma dúvida sobre o cuidado e o tratamento? Mande para a gente. | Caixa de perguntas: qual é a sua dúvida? |
+| 4 | Ficou com alguma dúvida sobre o cuidado e o tratamento? Mande para a gente. Esta caixa não atende emergências: em crise, ligue 188 ou 192. | Caixa de perguntas: qual é a sua dúvida? |
 | 5 | Leia o artigo completo no Portal, pelo link. Quer conversar sobre saúde mental na sua prática? Veja a mentoria no link do perfil. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-balcao-da-farmacia-e-as-perguntas-nao-feitas Se precisar de apoio agora: CVV 188 ou SAMU 192. | Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.

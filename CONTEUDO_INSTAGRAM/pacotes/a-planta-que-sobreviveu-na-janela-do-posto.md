@@ -46,6 +46,7 @@ Pacote multimídia da crônica "A planta que sobreviveu na janela do posto" (Rel
 
 ### Legenda
 A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuida de alguém, lembre-se de cuidar de você também. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto
 
 #saudemental #medicinadefamilia #cuidadores #atencaoprimaria
@@ -60,13 +61,14 @@ A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuid
 **Direção visual:** abertura em 3D na suculenta da janela; meio em ilustração 2D da sala de espera, sem rostos; fecho em 3D com o copinho regando o vaso.
 
 ### Roteiro de narração
-- 0-3s, gancho: "Uma planta sobrevive na janela de um posto com um gole d'água por dia."
+- 0-3s, gancho: "Uma planta sobreviveu na janela do posto com pouca água."
 - 4-12s: "Narrativa composta, personagens fictícios. Dona Joana chegou cansada de cuidar de todo mundo e sem forças para pensar em si."
 - 13-22s: "Não existem palavras mágicas. O cuidado começa ao sentar perto, escutar sem pressa e validar o sofrimento."
 - 23-27s: "A saúde mental cresce no solo da escuta e dos pequenos cuidados de todo dia."
 - 28-30s, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
 **Legenda:** Quem cuida de muita gente precisa de cuidado também. Procure um espaço de escuta na sua comunidade. Para mentoria e consultoria em saúde mental, o link está no perfil.
+Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto
 **Hashtags extras:** #saudemental #cuidadores
 
@@ -80,7 +82,7 @@ A saúde mental cresce no solo da escuta e do acolhimento diário. Se você cuid
 | 2 | Você cuida de alguém e já deixou o seu próprio cuidado para depois? | Enquete: Sim / Não |
 | 3 | Verdadeiro ou falso: cuidar de si é egoísmo para quem cuida dos outros. | Teste: Verdadeiro / Falso (resposta: falso) |
 | 4 | Ninguém precisa carregar tudo sozinho. Procure um espaço de escuta na sua comunidade. Se precisar de apoio agora: CVV 188 ou SAMU 192. | Nenhum |
-| 5 | Quer conversar sobre cuidado e escuta na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
+| 5 | Quer conversar sobre cuidado e escuta na sua prática ou na sua equipe? Veja a mentoria no link do perfil. Mande sua dúvida na caixa de perguntas. Esta caixa não atende emergências: em crise, ligue 188 ou 192. 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/a-planta-que-sobreviveu-na-janela-do-posto | Caixa de perguntas: qual é a sua dúvida sobre o tema? + Link para o Portal (artigo e áudio) |
 
 **Trilha de fundo:** instrumental suave, -22 dB, igual em todos os stories.
 **Direção visual:** fundo verde-claro com ilustração 2D do vaso; no story 3, o selo "Verdadeiro/Falso" em 3D leve; fonte grande e contraste alto.
