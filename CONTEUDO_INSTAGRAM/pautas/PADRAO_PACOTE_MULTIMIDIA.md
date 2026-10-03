@@ -5,7 +5,8 @@ Toda pauta do Instagram sai como pacote com os quatro formatos abaixo, ancorados
 ## Checklist
 
 **1. Carrossel rico (4:5, 1080 × 1350)**
-- [ ] Visual 2D e/ou 3D em cada slide; texto de arte com no máximo 25 palavras por slide.
+- [ ] Leitura rápida: uma ideia por slide, texto de arte com no máximo 25 palavras.
+- [ ] Visual 2D e/ou 3D com tokens de design do Portal e contraste AAA (7:1 ou mais).
 - [ ] Conteúdo conforme o artigo e as diretrizes atualizadas, sem números inventados.
 - [ ] Último slide com a assinatura de 3 linhas e, em tema sensível, CVV 188 / SAMU 192.
 
@@ -13,10 +14,10 @@ Toda pauta do Instagram sai como pacote com os quatro formatos abaixo, ancorados
 - [ ] Roteiro por cena com direção visual 2D/3D, sem rostos de pessoas reais.
 - [ ] Narração em áudio ancorada no artigo; trilha de fundo a -22 dB.
 - [ ] Texto na tela em caixa mista (nunca em CAIXA ALTA).
-- [ ] Campo **Movimento**: recurso de animação (microanimação Lottie/GSAP, gráfico 2D animado ou 3D leve) e o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
+- [ ] Campo **Movimento**: tecnologia citada nominalmente (Lottie, GSAP ou Three.js/3D) e o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
 
 **3. Stories sequenciais**
-- [ ] Pelo menos 1 enquete, 1 caixa de perguntas e 1 chamada/link para o Portal.
+- [ ] De 4 a 5 quadros recomendados (mínimo 3), com pelo menos 1 enquete "Sim / Não", 1 caixa de perguntas e 1 chamada direta para o artigo no Portal.
 - [ ] Trilha igual em todos os quadros, a -22 dB.
 
 **4. Áudio Narrado do Portal**

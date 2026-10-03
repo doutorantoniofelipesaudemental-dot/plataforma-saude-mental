@@ -17,6 +17,8 @@ Modelo completo de uma pauta em quatro formatos **obrigatórios**: Carrossel, Re
 
 ## Carrossel (4:5, 1080 × 1350)
 
+**Padrão obrigatório:** leitura rápida (uma ideia por slide, frases curtas, hierarquia clara entre título e apoio), contraste AAA (7:1 ou mais entre texto e fundo, nunca texto sobre imagem de baixo contraste) e tokens de design do Portal (paleta acolhedora, tipografia legível, espaçamento generoso, margem segura).
+
 **Trilha de fundo:** lo-fi suave, piano, -22 dB.
 **Narração:** voz humanizada, calma, no ritmo de quem conversa com um colega.
 **Estilo visual:** ilustrações 3D em tons suaves e infográficos 2D.
@@ -49,7 +51,7 @@ Cuidar de quem cuida também é parte do cuidado. Salve para ler depois e compar
 
 **Trilha de fundo:** lo-fi suave, -22 dB, com corte limpo no convite final.
 **Texto na tela (caixa mista, nunca em CAIXA ALTA):** "Esgotamento não é fraqueza" → "Crise aguda pede avaliação" → "Falar cedo ajuda"
-**Movimento (obrigatório):** especifique o recurso de animação (microanimação Lottie/GSAP, gráfico 2D animado ou elemento 3D leve) e o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
+**Movimento (obrigatório):** cite nominalmente a tecnologia (Lottie, GSAP ou Three.js/3D) e descreva o gancho visual dos 3 primeiros segundos, sem sustos nem piscadas. Vale também para YouTube Shorts.
 **Roteiro visual:** cada cena traz a direção visual em animação 2D (infográficos, ilustração plana) e/ou 3D suave (objetos, ambientes), sem rostos de pessoas reais. **Narração:** em áudio, ancorada no texto do artigo do Portal.
 
 - 0-3s, gancho: "Cansaço de plantão e crise aguda são a mesma coisa?"
@@ -67,7 +69,7 @@ Cuidar de quem cuida também é parte do cuidado. Salve para ler depois e compar
 
 ## Stories
 
-**Obrigatório:** no mínimo **1 enquete**, **1 caixa de perguntas** e **1 chamada/link para o Portal** (artigo e áudio narrado).
+**Obrigatório:** de 4 a 5 quadros recomendados (mínimo 3), com no mínimo **1 enquete "Sim / Não"**, **1 caixa de perguntas** e **1 chamada direta para o artigo no Portal** (artigo e áudio narrado).
 
 | # | Texto | Recurso |
 |---|---|---|
