@@ -8,8 +8,10 @@
  * Variáveis (.env local): GEMINI_API_KEY, GROQ_API_KEY e, opcionais,
  * GEMINI_MODEL (padrão gemini-3.8-flash), GEMINI_MODEL_RESERVA (padrão
  * gemini-flash-latest), GEMINI_MODEL_LITE (padrão gemini-flash-lite-latest) e
- * GROQ_MODEL (padrão openai/gpt-oss-120b). Ordem de tentativa: principal,
- * reserva, lite, Groq. Sem nenhuma chave, lança um erro explicando.
+ * GROQ_MODEL (padrão openai/gpt-oss-120b) e OPENAI_MODEL (padrão gpt-5-mini).
+ * Ordem de tentativa: principal, reserva, lite, Groq e, por último (pago), OpenAI —
+ * só entram os provedores com chave no .env. Todos recebem o MESMO prompt de
+ * sistema (regras de fidelidade e CFM) e o mesmo schema. Sem nenhuma chave, lança um erro explicando.
  * (Os modelos gemini-1.5-pro, 2.0-flash e 2.5-* não estão mais disponíveis e os
  * "pro" não têm cota gratuita: conferido em out/2026.)
  */
@@ -19,6 +21,7 @@ const MODELO_GEMINI = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const MODELO_GEMINI_RESERVA = process.env.GEMINI_MODEL_RESERVA || 'gemini-flash-latest';
 const MODELO_GEMINI_LITE = process.env.GEMINI_MODEL_LITE || 'gemini-flash-lite-latest';
 const MODELO_GROQ = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
+const MODELO_OPENAI = process.env.OPENAI_MODEL || 'gpt-5-mini';
 const TENTATIVAS = 3;
 
 const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));
@@ -30,7 +33,7 @@ const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));
  */
 function ehTemporario(err) {
   const mensagem = String(err?.message);
-  if (/exceeded your current quota|quota exceeded|daily limit/i.test(mensagem)) return false;
+  if (/exceeded your current quota|quota exceeded|daily limit|insufficient_quota|no credits remaining/i.test(mensagem)) return false;
   // Groq em modo JSON às vezes gera JSON inválido em respostas longas (400
   // json_validate_failed): é intermitente, vale tentar de novo.
   if (/json_validate_failed|Failed to validate JSON/i.test(mensagem)) return true;
@@ -82,6 +85,39 @@ async function viaGroq({ sistema, usuario, schema, temperatura = 0.6 }) {
 }
 
 /**
+ * OpenAI (pago, último recurso): API REST direta, sem SDK. O schema vai no prompt, como no Groq, e o modo
+ * JSON garante JSON válido. Os modelos gpt-5 só aceitam a temperatura padrão, por isso não a enviamos.
+ */
+async function viaOpenAI({ sistema, usuario, schema }) {
+  const controle = new AbortController();
+  const limite = setTimeout(() => controle.abort(), 180_000);
+  try {
+    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      signal: controle.signal,
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
+      body: JSON.stringify({
+        model: MODELO_OPENAI,
+        response_format: { type: 'json_object' },
+        messages: [
+          { role: 'system', content: `${sistema}\n\nResponda SOMENTE com um objeto JSON que siga este JSON Schema:\n${JSON.stringify(schema)}` },
+          { role: 'user', content: usuario },
+        ],
+      }),
+    });
+    const corpo = await resp.json().catch(() => ({}));
+    if (!resp.ok) {
+      const err = new Error(`OpenAI ${resp.status}: ${corpo?.error?.message || corpo?.error?.code || ''}`.slice(0, 300));
+      err.status = resp.status;
+      throw err;
+    }
+    return JSON.parse(corpo.choices[0].message.content);
+  } finally {
+    clearTimeout(limite);
+  }
+}
+
+/**
  * Gera um objeto JSON. Tenta o Gemini; se não houver chave ou ele falhar,
  * tenta o Groq. Devolve também qual provedor e modelo responderam.
  */
@@ -91,10 +127,11 @@ async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
     process.env.GEMINI_API_KEY && MODELO_GEMINI_RESERVA !== MODELO_GEMINI && { nome: 'gemini', modelo: MODELO_GEMINI_RESERVA, fn: (p) => viaGemini(p, MODELO_GEMINI_RESERVA) },
     process.env.GEMINI_API_KEY && MODELO_GEMINI_LITE !== MODELO_GEMINI && MODELO_GEMINI_LITE !== MODELO_GEMINI_RESERVA && { nome: 'gemini', modelo: MODELO_GEMINI_LITE, fn: (p) => viaGemini(p, MODELO_GEMINI_LITE) },
     process.env.GROQ_API_KEY && { nome: 'groq', modelo: MODELO_GROQ, fn: viaGroq },
+    process.env.OPENAI_API_KEY && { nome: 'openai', modelo: MODELO_OPENAI, fn: viaOpenAI },
   ].filter(Boolean);
   // `preferir` põe um provedor na frente (o revisor usa o outro modelo, para um olhar independente).
   if (preferir) provedores.sort((a, b) => (b.nome === preferir) - (a.nome === preferir));
-  if (!provedores.length) throw new Error('Nenhuma chave de LLM: defina GEMINI_API_KEY e/ou GROQ_API_KEY no .env local.');
+  if (!provedores.length) throw new Error('Nenhuma chave de LLM: defina GEMINI_API_KEY, GROQ_API_KEY e/ou OPENAI_API_KEY no .env local.');
 
   const falhas = [];
   for (const p of provedores) {
@@ -108,4 +145,4 @@ async function gerarJson({ sistema, usuario, schema, preferir, temperatura }) {
   throw new Error(`Todos os provedores falharam — ${falhas.join(' | ')}`);
 }
 
-module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GEMINI_LITE, MODELO_GROQ };
+module.exports = { gerarJson, MODELO_GEMINI, MODELO_GEMINI_RESERVA, MODELO_GEMINI_LITE, MODELO_GROQ, MODELO_OPENAI, ehTemporario };

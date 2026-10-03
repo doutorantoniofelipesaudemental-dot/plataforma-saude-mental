@@ -2,7 +2,7 @@
 // sem chamar nenhuma API: o rascunho é um objeto fixo e a verificação roda sobre ele.
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta } = require('../../scripts/bot-gemini');
+const { verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, ajustarGancho, ajustarGanchos } = require('../../scripts/bot-gemini');
 
 const ARTIGO = {
   slug: 'teste',
@@ -109,13 +109,16 @@ test('alerta faixa citada só pelo teto e quantidade errada; CVV entra pelo cód
 });
 
 test('cliente de LLM sem nenhuma chave explica o que falta', async () => {
-  const antes = { g: process.env.GEMINI_API_KEY, q: process.env.GROQ_API_KEY };
+  // Sem nenhuma das três chaves (inclusive a da OpenAI, que o ambiente pode ter): nunca chama API de verdade.
+  const antes = { g: process.env.GEMINI_API_KEY, q: process.env.GROQ_API_KEY, o: process.env.OPENAI_API_KEY };
   delete process.env.GEMINI_API_KEY;
   delete process.env.GROQ_API_KEY;
+  delete process.env.OPENAI_API_KEY;
   const { gerarJson } = require('../../backend/lib/llm');
-  await assert.rejects(gerarJson({ sistema: 's', usuario: 'u', schema: {} }), /GEMINI_API_KEY e\/ou GROQ_API_KEY/);
+  await assert.rejects(gerarJson({ sistema: 's', usuario: 'u', schema: {} }), /GEMINI_API_KEY, GROQ_API_KEY e\/ou OPENAI_API_KEY/);
   if (antes.g !== undefined) process.env.GEMINI_API_KEY = antes.g;
   if (antes.q !== undefined) process.env.GROQ_API_KEY = antes.q;
+  if (antes.o !== undefined) process.env.OPENAI_API_KEY = antes.o;
 });
 
 test('revisor recebe só o que o modelo escreveu, cada frase com a peça de origem', () => {
@@ -259,4 +262,48 @@ test('garantirNarrativaComposta injeta o aviso em crônica, é idempotente e nã
   const antes = JSON.stringify(cientifico);
   garantirNarrativaComposta(cientifico, ARTIGO);
   assert.equal(JSON.stringify(cientifico), antes);
+});
+
+test('ajustarGancho: não mexe em gancho de até 10 palavras', () => {
+  const g = 'Você já guardou uma pergunta sobre o seu remédio?';
+  assert.deepEqual(ajustarGancho(g), { texto: g, ajustado: false });
+});
+
+test('ajustarGancho: corta na última pausa natural, sem reticências quando termina em pontuação forte', () => {
+  const r = ajustarGancho('O remédio vai ficar para sempre? Muitas pessoas guardam essa dúvida em silêncio');
+  assert.equal(r.texto, 'O remédio vai ficar para sempre?');
+  assert.equal(r.ajustado, true);
+
+  const v = ajustarGancho('Existe um espaço seguro, sem julgamentos, na sua unidade de saúde hoje');
+  assert.equal(v.texto, 'Existe um espaço seguro, sem julgamentos…');
+});
+
+test('ajustarGancho: sem pausa natural, corta nas 10 primeiras e tira palavra de ligação solta no fim', () => {
+  const r = ajustarGancho('Uma pergunta guardada há meses pode mudar a forma como cuidamos de nós');
+  assert.equal(r.texto, 'Uma pergunta guardada há meses pode mudar a forma…');
+  assert.ok(!/ (como|a|de|que)…$/.test(r.texto));
+});
+
+test('ajustarGancho: resultado sempre tem até 10 palavras e é estável se aplicado de novo', () => {
+  const longos = [
+    'O cansaço que não passa com o sono pode esconder muito mais do que parece à primeira vista',
+    'Você já percebeu que o cansaço do dia a dia talvez seja outra coisa bem diferente',
+    'Por trás de uma renovação de receita existe uma dúvida que ninguém perguntou ainda',
+  ];
+  for (const g of longos) {
+    const r = ajustarGancho(g);
+    assert.ok(r.ajustado);
+    assert.ok(r.para <= 10, `"${r.texto}" tem ${r.para} palavras`);
+    assert.deepEqual(ajustarGancho(r.texto), { texto: r.texto, ajustado: false });
+  }
+});
+
+test('ajustarGanchos: ajusta só os ganchos longos e devolve um aviso por ajuste', () => {
+  const d = rascunho({ ganchos: ['Curto e direto', 'O remédio vai ficar para sempre? Muitas pessoas guardam essa dúvida em silêncio', 'b', 'c', 'd'] });
+  const avisos = ajustarGanchos(d);
+  assert.equal(d.ganchos[0], 'Curto e direto');
+  assert.equal(d.ganchos[1], 'O remédio vai ficar para sempre?');
+  assert.equal(avisos.length, 1);
+  assert.match(avisos[0], /gancho 2 ajustado automaticamente de 13 para 6 palavras/);
+  assert.ok(!verificar(d, ARTIGO, FONTE).some((x) => x.includes('palavras (máx. 10)')));
 });

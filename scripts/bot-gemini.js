@@ -494,6 +494,49 @@ function garantirNarrativaComposta(d, artigo) {
   if (primeiro && !RE_JA_DIZ_COMPOSTA.test(primeiro.texto)) primeiro.texto = `${primeiro.texto} ${AVISO_NARRATIVA_CURTO}`;
 }
 
+/**
+ * Ajuste determinístico dos ganchos (limite de 10 palavras, regra 9). O modelo costuma passar de 10 por uma
+ * palavra. Em vez de só alertar, o código corta SEM mudar o sentido: (1) prefere terminar na última pausa
+ * natural (vírgula, ponto, interrogação...) que deixe ao menos 5 palavras; (2) senão, corta nas 10 primeiras
+ * e descarta palavras de ligação soltas no fim (de, que, para...); (3) quando o corte é no meio da frase,
+ * termina em "…" para sinalizar. Cada ajuste vira um aviso no rascunho para o médico conferir o resultado.
+ */
+const MAX_PALAVRAS_GANCHO = 10;
+const PALAVRAS_DE_LIGACAO = new Set(['a', 'o', 'as', 'os', 'um', 'uma', 'de', 'da', 'do', 'das', 'dos', 'em', 'na', 'no', 'nas', 'nos', 'e', 'ou', 'que', 'para', 'por', 'com', 'sem', 'sobre', 'se', 'ao', 'à', 'como', 'mas', 'até', 'pela', 'pelo', 'sua', 'seu', 'suas', 'seus', 'minha', 'meu']);
+function ajustarGancho(gancho) {
+  const texto = String(gancho).trim();
+  if (palavras(texto) <= MAX_PALAVRAS_GANCHO) return { texto, ajustado: false };
+  const lista = texto.split(/\s+/).filter(Boolean);
+  const primeiras = [];
+  for (const w of lista) {
+    if (palavras(primeiras.join(' ')) + (/[\p{L}\d]/u.test(w) ? 1 : 0) > MAX_PALAVRAS_GANCHO) break;
+    primeiras.push(w);
+  }
+  // 1) última pausa natural que preserve pelo menos 5 palavras
+  let corte = -1;
+  for (let i = primeiras.length - 1; i >= 4; i--) if (/[,;:.!?]$/.test(primeiras[i])) { corte = i; break; }
+  let escolhidas = corte >= 0 ? primeiras.slice(0, corte + 1) : [...primeiras];
+  const terminaEmPontuacaoForte = corte >= 0 && /[.!?]$/.test(escolhidas.at(-1));
+  // 2) sem pausa natural: tira palavras de ligação soltas no fim
+  if (!terminaEmPontuacaoForte) {
+    while (escolhidas.length > 5 && PALAVRAS_DE_LIGACAO.has(escolhidas.at(-1).replace(/[^\p{L}]/gu, '').toLowerCase())) escolhidas.pop();
+  }
+  let ajustado = escolhidas.join(' ').replace(/[,;:\s-]+$/, '');
+  if (!/[.!?…]$/.test(ajustado)) ajustado += '…';
+  return { texto: ajustado, ajustado: true, de: palavras(texto), para: palavras(ajustado) };
+}
+
+/** Aplica o ajuste aos 5 ganchos do rascunho e devolve os avisos (um por gancho alterado). */
+function ajustarGanchos(d) {
+  const avisos = [];
+  d.ganchos = d.ganchos.map((g, i) => {
+    const r = ajustarGancho(g);
+    if (r.ajustado) avisos.push(`gancho ${i + 1} ajustado automaticamente de ${r.de} para ${r.para} palavras (conferir o sentido): "${r.texto}"`);
+    return r.texto;
+  });
+  return avisos;
+}
+
 /* ===================== 2º passe: revisor semântico ===================== */
 
 /**
@@ -722,7 +765,8 @@ async function gerarRascunho(artigo, { forcar }) {
   garantirNarrativaComposta(origem.dados, artigo);
   garantirChamadaAudio(origem.dados, artigo);
   garantirLinhasFixas(origem.dados, artigo);
-  const alertas = verificar(origem.dados, artigo, `${artigo.titulo} ${artigo.resumo} ${fonte}`);
+  const ajustesGanchos = ajustarGanchos(origem.dados);
+  const alertas = [...ajustesGanchos, ...verificar(origem.dados, artigo, `${artigo.titulo} ${artigo.resumo} ${fonte}`)];
   const revisao = await revisarFidelidade(origem.dados, usuario, origem.provedor);
   fs.mkdirSync(PASTA, { recursive: true });
   const md = markdown(artigo, origem.dados, alertas, origem, revisao);
@@ -828,4 +872,4 @@ if (require.main === module) main().catch(async (err) => {
   process.exit(1);
 });
 
-module.exports = { gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
+module.exports = { ajustarGancho, ajustarGanchos, gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };
