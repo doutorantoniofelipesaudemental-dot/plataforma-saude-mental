@@ -26,6 +26,8 @@ const CATEGORIAS = [
   'Transição de Carreira & Aposentadoria',
   'Dependências & Adições',
   'Compulsões & Transtornos Alimentares',
+  'Condições Específicas',
+  'Linhas de Cuidado (Cuidadores & Professores)',
 ];
 
 // Fluxo de aprovação para publicação nas redes sociais (backend/lib/socialPublisher.js)

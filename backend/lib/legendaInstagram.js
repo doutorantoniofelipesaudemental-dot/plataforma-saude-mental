@@ -17,6 +17,14 @@
 const { paraTextoPuro } = require('./carrossel');
 
 const IDENTIFICACAO = 'Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638';
+// Padrão sintético do CFM para mídias sociais (3 linhas). A versão de uma linha acima
+// continua aceita em conteúdo legado (temIdentificacaoSocial) e via `legado: true`.
+const IDENTIFICACAO_3_LINHAS = [
+  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
+  'Especialista em Medicina de Família e Comunidade · RQE 26638',
+  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
+].join('\n');
+const temIdentificacaoSocial = (t) => String(t).includes(IDENTIFICACAO_3_LINHAS) || String(t).includes(IDENTIFICACAO);
 const LINHA_BIO = '🔗 Artigo completo no link da bio';
 const LINHA_CVV = 'Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192';
 const CHAMADA_SALVAR = 'Salve para ler depois.';
@@ -54,6 +62,8 @@ const HASHTAGS_CATEGORIA = {
   'Transição de Carreira & Aposentadoria': ['#aposentadoria', '#transicaodecarreira', '#saudedotrabalhador'],
   'Dependências & Adições': ['#dependenciaquimica', '#adicao', '#recuperacao'],
   'Compulsões & Transtornos Alimentares': ['#transtornosalimentares', '#compulsaoalimentar', '#alimentacao'],
+  'Condições Específicas': ['#atencaoprimaria', '#saudementalnaaps', '#manejoclinico'],
+  'Linhas de Cuidado (Cuidadores & Professores)': ['#cuidadores', '#professores', '#saudementaldocente'],
 };
 
 /** HTML → texto, sem as chamadas numéricas de referência (<sup>1</sup>). */
@@ -140,7 +150,7 @@ function hashtagsDoArtigo(artigo) {
  * Nunca lança: se o artigo não tiver texto para um gancho, a parte fica vazia
  * e a checagem de conteúdo reprova.
  */
-function montarLegendaInstagram(artigo) {
+function montarLegendaInstagram(artigo, { legado = false } = {}) {
   const paragrafos = paragrafosDoArtigo(artigo.conteudo);
   const frasesAbertura = frases(paragrafos[0]);
   const resumo = resumoSemAssinatura(artigo.resumo);
@@ -179,7 +189,7 @@ function montarLegendaInstagram(artigo) {
 
   const blocos = [gancho, paragrafo1, paragrafo2, avisoComposta, chamada, LINHA_BIO];
   if (sensivel) blocos.push(LINHA_CVV);
-  blocos.push(IDENTIFICACAO, hashtags.join(' '));
+  blocos.push(legado ? IDENTIFICACAO : IDENTIFICACAO_3_LINHAS, hashtags.join(' '));
 
   return {
     texto: blocos.filter(Boolean).join('\n\n'),
@@ -196,6 +206,8 @@ module.exports = {
   ehRelatoClinico,
   RE_NARRATIVA_COMPOSTA,
   IDENTIFICACAO,
+  IDENTIFICACAO_3_LINHAS,
+  temIdentificacaoSocial,
   LINHA_BIO,
   LINHA_CVV,
   CHAMADA_SALVAR,

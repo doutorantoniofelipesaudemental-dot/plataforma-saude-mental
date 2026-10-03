@@ -1,0 +1,14 @@
+{
+  "name": "Portal de Saúde Mental Doutor Antônio Felipe Garabito",
+  "short_name": "Saúde Mental",
+  "description": "Informação e cuidado em saúde mental, com respiração guiada, ajuda rápida (CVV 188 e SAMU 192) e plano de cuidado anônimo.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#faf7f2",
+  "theme_color": "#0d3330",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

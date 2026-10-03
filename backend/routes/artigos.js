@@ -7,6 +7,7 @@ const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listar
 const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
 const { ehRobo } = require('../lib/robos');
 const { log } = require('../lib/log');
+const { checarOriginalidade } = require('../lib/originalidade');
 
 /**
  * Dispara a esteira de publicação automática (Seção 20 do CLAUDE.md) quando
@@ -185,6 +186,15 @@ router.post('/', exigirAdmin, exigirBanco, async (req, res) => {
   try {
     const dados = { ...req.body };
     if (dados.slug) dados.slug = slugify(dados.slug);
+
+    // Originalidade: nenhum artigo novo pode copiar, parafrasear ou repetir o tema de um já existente.
+    if (dados.titulo) {
+      const acervo = await Artigo.find({}).select('titulo resumo categoria tags').lean();
+      const originalidade = checarOriginalidade({ titulo: dados.titulo, resumo: dados.resumo, categoria: dados.categoria, tags: dados.tags }, acervo);
+      if (!originalidade.ok) {
+        return res.status(409).json({ erro: `Artigo rejeitado por originalidade: ${originalidade.motivos[0]}`, originalidade });
+      }
+    }
     const artigo = await Artigo.create(dados);
 
     // Criar já com status:'aprovado' também conta como transição (não havia

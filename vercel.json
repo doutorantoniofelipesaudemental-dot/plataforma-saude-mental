@@ -11,7 +11,8 @@
       "dest": "/public/assets/$1",
       "headers": { "Cache-Control": "public, max-age=86400, must-revalidate" }
     },
-    { "src": "/(favicon.svg|robots.txt|sitemap.xml)", "dest": "/public/$1" },
+    { "src": "/(favicon.svg|manifest.webmanifest|robots.txt|sitemap.xml)", "dest": "/public/$1" },
+    { "src": "/sw.js", "dest": "/public/sw.js", "headers": { "Cache-Control": "public, max-age=0, must-revalidate", "Service-Worker-Allowed": "/" } },
     { "src": "/google79736b5242e37404.html", "dest": "/public/google79736b5242e37404.html" },
     { "src": "/sitemap-index.xml", "dest": "/backend/index.js" },
     { "src": "/sitemap-artigos.xml", "dest": "/backend/index.js" },

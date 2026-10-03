@@ -343,6 +343,16 @@ function pillCategoria(categoria, x, y, escura) {
     ${caminhoTexto(FONTE_SANS, texto, x + 28, y + 34, tamanhoFonte, COR.branco, { negrito: true })}`;
 }
 
+// Fundo em gradiente suave (diagonal, sem faixas): escuro verde-900→#124440; claro areia→#efe7d8.
+// Mantém o contraste do texto (branco sobre #124440 ≈ 12:1).
+function fundoGradiente(escura) {
+  const [de, ate] = escura ? [COR.verdeEscuro, '#124440'] : [COR.areia, '#efe7d8'];
+  const id = escura ? 'gEscuro' : 'gClaro';
+  return `
+    <defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${de}" /><stop offset="1" stop-color="${ate}" /></linearGradient></defs>
+    <rect width="100%" height="100%" fill="url(#${id})" />`;
+}
+
 function rodapeMarca(escura) {
   const y = ALTURA - 76;
   const cor = escura ? 'rgba(255,255,255,0.75)' : COR.tintaMedia;
@@ -372,7 +382,7 @@ function renderizarSlideCapa(slide, indice, total) {
   const yInicio = (ALTURA - blocoAltura) / 2 - 40;
 
   return `
-    <rect width="100%" height="100%" fill="${COR.verdeEscuro}" />
+    ${fundoGradiente(true)}
     ${pillCategoria(slide.categoria, MARGEM, 90, true)}
     ${indicadorPagina(indice, total, true)}
     ${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, yInicio, alturaLinha, tamanho, COR.branco, { negrito: true })}
@@ -410,7 +420,7 @@ function renderizarSlideConteudo(slide, indice, total, categoria) {
   const yTexto = yBloco + alturaTitulo + tamanhoTexto * 0.9;
 
   return `
-    <rect width="100%" height="100%" fill="${COR.areia}" />
+    ${fundoGradiente(false)}
     ${pillCategoria(categoria, MARGEM, 90, false)}
     ${indicadorPagina(indice, total, false)}
     ${
@@ -433,7 +443,7 @@ function renderizarSlideCta(slide, indice, total) {
   );
 
   return `
-    <rect width="100%" height="100%" fill="${COR.verdeEscuro}" />
+    ${fundoGradiente(true)}
     ${pillCategoria(slide.categoria, MARGEM, 90, true)}
     ${indicadorPagina(indice, total, true)}
     ${caminhoLinhas(FONTE_SERIF, linhas1, MARGEM, 560, 74, 62, COR.branco, { negrito: true })}

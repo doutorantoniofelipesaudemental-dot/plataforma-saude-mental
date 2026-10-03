@@ -1,0 +1,74 @@
+{
+  "versao": 1,
+  "atualizadoEm": "2026-09-30",
+  "baseAtual": 251,
+  "metaTotal": 372,
+  "novosPlanejados": 121,
+  "observacao": "Os tetos por categoria somam 370; os outros 2 artigos para chegar a 372 ainda não foram alocados a nenhuma categoria (ver naoAlocados).",
+  "naoAlocados": 2,
+  "categorias": [
+    {
+      "nome": "Relatos da Prática",
+      "meta": 80,
+      "novos": 30,
+      "tipo": "cronica",
+      "categoriasNoBanco": ["Relatos da Prática"]
+    },
+    {
+      "nome": "Pacientes & Famílias",
+      "meta": 60,
+      "novos": 18,
+      "categoriasNoBanco": ["Pacientes & Famílias"]
+    },
+    {
+      "nome": "Empresas & RH",
+      "meta": 60,
+      "novos": 12,
+      "categoriasNoBanco": ["Empresas & RH"]
+    },
+    {
+      "nome": "Residentes & Estudantes",
+      "meta": 30,
+      "novos": 28,
+      "categoriasNoBanco": ["Residentes & Estudantes"]
+    },
+    {
+      "nome": "Condições Específicas",
+      "meta": 30,
+      "novos": 15,
+      "categoriasNoBanco": [
+        "Dependências & Adições",
+        "Compulsões & Transtornos Alimentares",
+        "Luto & Divórcio",
+        "Ansiedade Social & Timidez",
+        "Saúde Mental na Terceira Idade",
+        "Transição de Carreira & Aposentadoria",
+        "Terceiro Setor & Causas Sociais",
+        "Pós-Graduação & Concursos",
+        "Neurodivergência na Vida Adulta",
+        "Infância & Adolescência",
+        "Maternidade, Puerpério & Lactação",
+        "Trabalho Doméstico & Cuidados do Lar",
+        "Migrantes & Expatriados"
+      ]
+    },
+    {
+      "nome": "Linhas de Cuidado (Cuidadores & Professores)",
+      "meta": 20,
+      "novos": 18,
+      "categoriasNoBanco": ["Cuidadores & Famílias", "Educadores & Professores"]
+    },
+    {
+      "nome": "Médicos & Enfermeiros",
+      "meta": 50,
+      "novos": 0,
+      "categoriasNoBanco": ["Médicos & Enfermeiros"]
+    },
+    {
+      "nome": "Pais & Famílias",
+      "meta": 40,
+      "novos": 0,
+      "categoriasNoBanco": ["Pais & Famílias"]
+    }
+  ]
+}

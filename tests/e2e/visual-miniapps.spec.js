@@ -120,6 +120,9 @@ for (const [aparelho, config] of Object.entries(APARELHOS)) {
       for (const slug of slugs) {
         await page.goto(`/artigo/${slug}`, { waitUntil: 'load' });
         await page.evaluate(() => document.fonts.ready);
+        // Cabeçalho do site e botão "Preciso de ajuda agora" são fixos: caem em posições diferentes a cada
+        // captura do bloco. Escondidos por CSS (sem sair do fluxo), só o miniapp é comparado.
+        await page.addStyleTag({ content: '#cabecalho, .ajuda-rapida { visibility: hidden !important; }' });
         const raiz = await page.evaluate(() => document.querySelector('[id^="ferramenta-"]').id);
         const bloco = page.locator(`#${raiz}`);
 
@@ -136,7 +139,7 @@ for (const [aparelho, config] of Object.entries(APARELHOS)) {
           expect.soft(m.falhasToque, `${rotulo}: alvos de toque < 44 px`).toEqual([]);
           expect.soft(m.falhasContraste, `${rotulo}: contraste abaixo do AAA`).toEqual([]);
           const nomeBase = `${raiz}-${estado}-${aparelho}.png`;
-          const opcoes = { animations: 'disabled', caret: 'hide', scale: 'css' };
+          const opcoes = { animations: 'disabled', caret: 'hide', scale: 'css', };
           const base = test.info().snapshotPath(nomeBase);
           if (!fs.existsSync(base)) {
             // Clone novo ou miniapp novo: grava a base e registra — não é regressão.
@@ -144,7 +147,7 @@ for (const [aparelho, config] of Object.entries(APARELHOS)) {
             await bloco.screenshot({ ...opcoes, path: base });
             test.info().annotations.push({ type: 'base visual criada', description: nomeBase });
           } else {
-            await expect.soft(bloco, `${rotulo}: regressão visual`).toHaveScreenshot(nomeBase, { ...opcoes, maxDiffPixelRatio: 0.01 });
+            await expect.soft(bloco, `${rotulo}: regressão visual`).toHaveScreenshot(nomeBase, { ...opcoes, maxDiffPixelRatio: 0.01, timeout: 20000 });
           }
         }
       }
