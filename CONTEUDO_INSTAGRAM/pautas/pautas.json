@@ -3229,7 +3229,7 @@
     "pauta": "Aborda a dinâmica de convivência com flutuações intensas de humor no ambiente doméstico, oferecendo estratégias de comunicação empática. Orienta sobre a importância da adesão ao tratamento e o papel dos familiares como rede de apoio. Evita diagnósticos a distância, focando no suporte cotidiano.",
     "publicoAlvo": "Familiares e pessoas que convivem com instabilidade emocional crônica",
     "angulo": "Enfoque nas fronteiras saudáveis do cuidado, mostrando como apoiar sem assumir o papel terapêutico ou anular as próprias necessidades.",
-    "sensivel": false,
+    "sensivel": true,
     "referencias": [
       {
         "consultaPubMed": "(\"Mood Disorders\"[Mesh]) AND (\"Family Relations\"[Mesh]) AND (\"Social Support\"[Mesh])",
