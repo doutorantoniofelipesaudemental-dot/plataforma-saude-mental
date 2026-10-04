@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T21:58:20.039Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # O som do teclado que não parava na noite de plantão

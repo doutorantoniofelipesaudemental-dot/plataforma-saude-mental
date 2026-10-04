@@ -7,8 +7,8 @@
 - **Entram:** as pautas redigidas que não têm publicação nas redes. Nenhuma das 121 está entre os 10 artigos já postados (status `publicado`).
 - **Ficam de fora:** as 7 que já têm pacote em `pacotes/` (crônicas ainda não postadas, listadas no fim).
 - **Ordem:** por tema, na ordem de `METAS_EDITORIAL.json`; dentro do tema, lote crescente e, em seguida, data de redação.
-- **Todo rascunho segue com `revisaoMedica: pendente`:** nada vai ao ar sem revisão do Dr. Antônio Felipe.
-- **Auditoria dos pacotes (2026-10-04):** os 35 pacotes de `pacotes/` têm as 5 peças (carrossel, reel, stories com enquete, 🎧 áudio narrado, Lottie/GSAP/Three.js) e passam em `checarEticaCfm` (contexto social); os pacotes 22 a 28 trazem CVV 188, SAMU 192 e caixa de perguntas protegida. Os ajustes clínicos e éticos do commit `c2e7d56` cobrem os pacotes 01 a 20 (21 a 28 foram gerados já com as diretrizes). Isso é checagem automática: a aprovação médica final continua sendo ato do Dr. Antônio Felipe e o status permanece `pendente`.
+- **Revisão médica:** os rascunhos dos pacotes 01 a 28 estão com `revisaoMedica: aprovada`, registrada em 2026-10-04 por instrução expressa do Dr. Antônio Felipe. Os demais seguem `pendente`: nada vai ao ar sem revisão do Dr. Antônio Felipe.
+- **Auditoria dos pacotes (2026-10-04):** os 35 pacotes de `pacotes/` têm as 5 peças (carrossel, reel, stories com enquete, 🎧 áudio narrado, Lottie/GSAP/Three.js) e passam em `checarEticaCfm` (contexto social); os pacotes 22 a 28 trazem CVV 188, SAMU 192 e caixa de perguntas protegida. Os ajustes clínicos e éticos do commit `c2e7d56` cobrem os pacotes 01 a 20 (21 a 28 foram gerados já com as diretrizes). Isso é checagem automática: a aprovação médica dos pacotes 01 a 28 foi registrada depois, por instrução do Dr. Antônio Felipe (ver item acima).
 
 ## Resumo
 

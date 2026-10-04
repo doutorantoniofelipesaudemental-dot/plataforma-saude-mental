@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-10-01T00:28:18.259Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # A luz acesa na sala de vacina quando a UBS já está vazia

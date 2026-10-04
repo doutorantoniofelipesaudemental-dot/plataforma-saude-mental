@@ -273,7 +273,7 @@
   - PubMed: `("Mental Health"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Psychoeducation"[MeSH Terms] AND "Caregivers"[MeSH Terms]` (Diretriz clínica (CANMAT)) 38711351
   - PubMed: `"Primary Health Care"[MeSH Terms] AND "Depressive Disorder"[MeSH Terms] AND "Family Practice"[MeSH Terms]` (Revisão sistemática e metanálise) 30472763
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sinais-precoces-de-depressao-guia-de-apoio-pratico-para-fami.md` · slug: `sinais-precoces-de-depressao-guia-de-apoio-pratico-para-fami` · pauta: `2026-09-30-19-sinais-precoces-de-depressao-g`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.19)
 
 ## [rejeitada] Crise de pânico em casa: o que a família deve e não deve fazer
@@ -350,7 +350,7 @@
   - PubMed: `mental health literacy AND family caregivers AND psychoeducation` (Revisão sistemática Cochrane) 21678337
   - PubMed: `early recognition AND mental disorders AND family involvement` (Revisão sistemática) 39607998
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/psicoeducacao-em-saude-mental-na-familia-orientando-para-o-c.md` · slug: `psicoeducacao-em-saude-mental-na-familia-orientando-para-o-c` · pauta: `2026-09-30-24-psicoeducacao-em-saude-mental-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda" (similaridade 0.11)
 
 ## [redigida] O idioma do afeto: acolhendo quem chegou de longe na UBS
@@ -455,7 +455,7 @@
   - PubMed: `acculturative stress AND grief AND migrant populations AND mental health` (Revisão sistemática de métodos mistos) 33811751
   - PubMed: `mental health care access AND immigrants AND primary health care` (Revisão sistemática de diretrizes) 29785690
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/saude-mental-de-migrantes-sindrome-de-ulisses-e-luto-migrato.md` · slug: `saude-mental-de-migrantes-sindrome-de-ulisses-e-luto-migrato` · pauta: `2026-09-30-31-saude-mental-de-migrantes-sind`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Luto: quanto tempo é considerado normal?" (similaridade 0.2)
 
 ## [redigida] Delirium no pronto-atendimento: avaliação e manejo para residentes
@@ -638,7 +638,7 @@
 - **público:** Pacientes, familiares e profissionais de saúde da Atenção Primária. · **ângulo:** Foca na humanização do atendimento cotidiano na UBS, mostrando como a escuta atenta transforma a relação médico-paciente.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-da-prancheta-e-o-olhar-que-escuta-na-aps.md` · slug: `o-peso-da-prancheta-e-o-olhar-que-escuta-na-aps` · pauta: `2026-09-30-42-o-peso-da-prancheta-e-o-olhar-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.24)
 
 ## [redigida] A última consulta antes do plantão virar a madrugada
@@ -650,7 +650,7 @@
 - **público:** Público geral, profissionais de saúde e plantonistas. · **ângulo:** Ilumina o lado humano e vulnerável dos profissionais e pacientes nas madrugadas de pronto atendimento psiquiátrico.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-ultima-consulta-antes-do-plantao-virar-a-madrugada.md` · slug: `a-ultima-consulta-antes-do-plantao-virar-a-madrugada` · pauta: `2026-09-30-43-a-ultima-consulta-antes-do-pla`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A última consulta antes de desistir" (similaridade 0.26)
 
 ## [rejeitada] O silêncio na cadeira da recepção da UBS
@@ -706,7 +706,7 @@
 - **público:** Médicos, residentes, equipes de plantão e leitores sensíveis a dilemas éticos e emocionais da medicina · **ângulo:** Aborda a solidão do médico recém-formado diante de uma urgência psiquiátrica delicada no meio da noite.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-bilhete-amassado-no-bolso-do-jaleco-do-plantao-noturno.md` · slug: `o-bilhete-amassado-no-bolso-do-jaleco-do-plantao-noturno` · pauta: `2026-09-30-50-o-bilhete-amassado-no-bolso-do`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A receita dobrada no bolso do casaco" (similaridade 0.33)
 
 ## [redigida] A chave que girou devagar na porta da UBS ao amanhecer
@@ -718,7 +718,7 @@
 - **público:** Idosos, familiares cuidadores, agentes comunitários de saúde e frequentadores da atenção básica · **ângulo:** Mostra a solidão urbana e o papel transformador da escuta ativa na primeira consulta da manhã.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-chave-que-girou-devagar-na-porta-da-ubs-ao-amanhecer.md` · slug: `a-chave-que-girou-devagar-na-porta-da-ubs-ao-amanhecer` · pauta: `2026-09-30-51-a-chave-que-girou-devagar-na-p`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A luz acesa na sala de vacina quando a UBS já está vazia" (similaridade 0.26)
 
 ## [rejeitada] O peso do estetoscópio no final do corredor da UBS
@@ -752,7 +752,7 @@
 - **público:** Profissionais de saúde e público geral interessado na dinâmica de urgências · **ângulo:** Foca na perspectiva interna de quem acolhe o sofrimento alheio enquanto lida com os próprios limites invisíveis.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-do-cracha-na-mesa-de-triagem-do-pronto-socorro.md` · slug: `o-peso-do-cracha-na-mesa-de-triagem-do-pronto-socorro` · pauta: `2026-09-30-54-o-peso-do-cracha-na-mesa-de-tr`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O relógio na parede do pronto atendimento" (similaridade 0.28)
 
 ## [redigida] Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial
@@ -895,7 +895,7 @@
 - **público:** Profissionais de saúde e público geral interessado em crônicas sobre o cotidiano médico · **ângulo:** Reflexão humanizada sobre o peso invisível dos plantões de fim de semana na perspectiva de quem atende
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-eco-dos-passos-vazios-no-corredor-do-plantao-de-domingo.md` · slug: `o-eco-dos-passos-vazios-no-corredor-do-plantao-de-domingo` · pauta: `2026-09-30-64-o-eco-dos-passos-vazios-no-cor`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A última consulta antes do plantão virar a madrugada" (similaridade 0.29)
 
 ## [rejeitada] Nexo causal ocupacional em transtornos mentais: critérios médicos
@@ -926,7 +926,7 @@
   - PubMed: `("Burnout, Psychological"[Mesh] OR "Stress, Psychological"[Mesh]) AND ("Sick Leave"[Mesh] OR "Absenteeism"[Mesh]) AND ("Occupational Health"[Mesh])` (Estudo de implementação de diretriz) 28683580
   - PubMed: `("Occupational Diseases"[Mesh]) AND ("Mental Disorders"[Mesh]) AND ("Meta-Analysis"[Publication Type])` (Revisão sistemática e metanálise) 35106629
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/emissao-de-cat-por-adoecimento-mental-quando-e-como-proceder.md` · slug: `emissao-de-cat-por-adoecimento-mental-quando-e-como-proceder` · pauta: `2026-09-30-66-emissao-de-cat-por-adoecimento`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Saúde mental de professores: o adoecimento silencioso de quem forma pessoas" (similaridade 0.18)
 
 ## [redigida] Readaptação funcional em saúde mental: estratégias na empresa
@@ -1328,7 +1328,7 @@
 - **público:** Profissionais de saúde, médicos e pacientes interessados na dinâmica do atendimento médico. · **ângulo:** Foca no conflito entre o preenchimento de sistemas digitais e a necessidade de olhar nos olhos do paciente durante o plantão.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-som-do-teclado-que-nao-parava-na-noite-de-plantao.md` · slug: `o-som-do-teclado-que-nao-parava-na-noite-de-plantao` · pauta: `2026-09-30-93-o-som-do-teclado-que-nao-parav`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O eco dos passos vazios no corredor do plantão de domingo" (similaridade 0.31)
 
 ## [rejeitada] O peso do crachá na mesa de triagem no fim do dia
@@ -1351,7 +1351,7 @@
 - **público:** Público geral interessado em crônicas sobre o cotidiano da prática médica e relações humanas. · **ângulo:** Usa um detalhe banal (o café derramado) como metáfora para o transbordamento das emoções na consulta.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-mancha-de-cafe-na-folha-de-prescricao-avulsa.md` · slug: `a-mancha-de-cafe-na-folha-de-prescricao-avulsa` · pauta: `2026-09-30-95-a-mancha-de-cafe-na-folha-de-p`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O café frio que esperou a consulta acabar" (similaridade 0.28)
 
 ## [redigida] A última lâmpada acesa no corredor do posto de saúde
@@ -1363,7 +1363,7 @@
 - **público:** Pacientes, familiares e profissionais da saúde que valorizam a dimensão humana do cuidado primário. · **ângulo:** Descreve o silêncio e a atmosfera reflexiva da unidade após o encerramento dos atendimentos diários.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-ultima-lampada-acesa-no-corredor-do-posto-de-saude.md` · slug: `a-ultima-lampada-acesa-no-corredor-do-posto-de-saude` · pauta: `2026-09-30-96-a-ultima-lampada-acesa-no-corr`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A última consulta antes de desistir" (similaridade 0.27)
 
 ## [redigida] O grampo de cabelo esquecido na maca de observação
@@ -1375,7 +1375,7 @@
 - **público:** Leitores em geral sensíveis a relatos da prática médica e ao acolhimento em saúde mental. · **ângulo:** Foca nos rastros materiais e emocionais deixados por pacientes anônimos nos espaços de trânsito rápido da emergência.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-grampo-de-cabelo-esquecido-na-maca-de-observacao.md` · slug: `o-grampo-de-cabelo-esquecido-na-maca-de-observacao` · pauta: `2026-09-30-97-o-grampo-de-cabelo-esquecido-n`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O lenço esquecido na cadeira do consultório" (similaridade 0.21)
 
 ## [rejeitada] O bilhete rasgado e refeito na sala de espera
@@ -1409,7 +1409,7 @@
 - **público:** Pacientes, familiares e profissionais de saúde da APS · **ângulo:** Foco na vulnerabilidade do profissional diante das limitações do sistema e na empatia mútua.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-do-bloco-de-receituario-rasgado-na-mesa.md` · slug: `o-peso-do-bloco-de-receituario-rasgado-na-mesa` · pauta: `2026-09-30-100-o-peso-do-bloco-de-receituario`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O peso do crachá na mesa de triagem do pronto-socorro" (similaridade 0.29)
 
 ## [redigida] A caneta que falhou no meio da consulta
@@ -1421,7 +1421,7 @@
 - **público:** Pessoas interessadas em saúde mental e profissionais da rede pública · **ângulo:** A humanização do atendimento através de um detalhe simples e cotidiano do consultório.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-caneta-que-falhou-no-meio-da-consulta.md` · slug: `a-caneta-que-falhou-no-meio-da-consulta` · pauta: `2026-09-30-101-a-caneta-que-falhou-no-meio-da`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O peso da prancheta e o olhar que escuta na APS" (similaridade 0.09)
 
 ## [rejeitada] O eco da última porta batida no plantão
@@ -1444,7 +1444,7 @@
 - **público:** Pacientes, familiares e profissionais de saúde interessados na humanização do cuidado e na relação médico-paciente. · **ângulo:** Foca nos microdetalhes do final de um dia de atendimento na Atenção Primária, valorizando o tempo de escuta como ferramenta terapêutica legítima.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-da-chave-guardada-no-bolso-da-bata-branca.md` · slug: `o-peso-da-chave-guardada-no-bolso-da-bata-branca` · pauta: `2026-09-30-104-o-peso-da-chave-guardada-no-bo`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O peso da prancheta e o olhar que escuta na APS" (similaridade 0.2)
 
 ## [rejeitada] Urgências psiquiátricas pediátricas na emergência: guia para residentes
@@ -2784,7 +2784,7 @@
 - **público:** Profissionais da saúde, médicos de família e leitores interessados na humanização do cuidado na APS · **ângulo:** Foca na atmosfera intimista e nos desafios emocionais de adentrar o domicílio do paciente solitário, distanciando-se de abordagens puramente técnicas.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-eco-da-campainha-da-ultima-casa-na-visita-domiciliar.md` · slug: `o-eco-da-campainha-da-ultima-casa-na-visita-domiciliar` · pauta: `2026-10-01-208-o-eco-da-campainha-da-ultima-c`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A última consulta antes de desistir" (similaridade 0.22)
 
 ## [redigida] A luz acesa na sala de vacina quando a UBS já está vazia
@@ -2796,7 +2796,7 @@
 - **público:** Trabalhadores da atenção básica, gestores em saúde e leitores em busca de crônicas humanizadas · **ângulo:** Destaca a beleza melancólica dos bastidores da atenção primária e a resiliência diária dos profissionais de saúde.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-luz-acesa-na-sala-de-vacina-quando-a-ubs-ja-esta-vazia.md` · slug: `a-luz-acesa-na-sala-de-vacina-quando-a-ubs-ja-esta-vazia` · pauta: `2026-10-01-210-a-luz-acesa-na-sala-de-vacina-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.3)
 
 ## [rejeitada] O silêncio do corredor na última consulta da tarde na UBS
@@ -2830,7 +2830,7 @@
 - **público:** Profissionais da saúde, médicos de família, residentes e leitores interessados na humanização da Atenção Primária. · **ângulo:** Foca na sensibilidade do exame físico como instrumento de vínculo e validação do sofrimento emocional na terceira idade.
 - **tema sensível:** não
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-som-do-estetoscopio-na-mesa-de-madeira-escura.md` · slug: `o-som-do-estetoscopio-na-mesa-de-madeira-escura` · pauta: `2026-10-01-214-o-som-do-estetoscopio-na-mesa-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O som do teclado que não parava na noite de plantão" (similaridade 0.23)
 
 ## [redigida] A luz amarela do abajur na triagem do plantão
@@ -2842,7 +2842,7 @@
 - **público:** Equipes de pronto atendimento, médicos generalistas, residentes e o público em geral. · **ângulo:** Destaca a importância do olhar empático e da pausa terapêutica em meio ao ritmo frenético da emergência médica.
 - **tema sensível:** sim (CVV 188 obrigatório)
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-luz-amarela-do-abajur-na-triagem-do-plantao.md` · slug: `a-luz-amarela-do-abajur-na-triagem-do-plantao` · pauta: `2026-10-01-215-a-luz-amarela-do-abajur-na-tri`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.26)
 
 ## [rejeitada] Manejo da Catatonia no Pronto-Socorro: Guia para Residentes

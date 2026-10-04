@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-10-01T00:28:23.894Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # O som do estetoscópio na mesa de madeira escura

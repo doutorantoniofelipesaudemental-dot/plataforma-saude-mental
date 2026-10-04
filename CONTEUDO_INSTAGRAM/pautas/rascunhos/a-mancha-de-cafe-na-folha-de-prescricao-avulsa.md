@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T21:58:25.325Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # A mancha de café na folha de prescrição avulsa

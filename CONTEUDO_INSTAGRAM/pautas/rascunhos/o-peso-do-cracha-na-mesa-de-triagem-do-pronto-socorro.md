@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T06:09:37.993Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # O peso do crachá na mesa de triagem do pronto-socorro

@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T22:39:30.051Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # O peso do bloco de receituário rasgado na mesa

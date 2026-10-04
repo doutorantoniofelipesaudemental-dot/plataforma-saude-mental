@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T06:07:23.682Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # O bilhete amassado no bolso do jaleco do plantão noturno
