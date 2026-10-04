@@ -1658,7 +1658,7 @@
     "pauta": "Orienta residentes e estudantes na identificação rápida de delirium em idosos no pronto-atendimento, diferenciando de demência e quadros psiquiátricos puros. Aborda as ferramentas de triagem rápida e as condutas iniciais de manejo ambiental e farmacológico na primeira hora.",
     "publicoAlvo": "Residentes de Medicina de Família, Clínica Médica e Estudantes de Medicina",
     "angulo": "Foco prático no cenário de alta pressão do pronto-socorro, priorizando reversão de gatilhos orgânicos antes do uso de antipsicóticos.",
-    "sensivel": false,
+    "sensivel": true,
     "referencias": [
       {
         "consultaPubMed": "\"Delirium\"[Mesh] AND \"Emergencies\"[Mesh] AND \"Diagnosis\"[Mesh]",
@@ -1734,7 +1734,7 @@
     "pauta": "Capacita o médico residente a reconhecer os sinais sutis e evidentes de catatonia em pacientes trazidos ao pronto atendimento. Detalha o uso da escala de Bush-Francis e o teste do lorazepam como conduta diagnóstica e terapêutica imediata na UBS ou PA.",
     "publicoAlvo": "Residentes de Psiquiatria, Clínica Médica e Médicos de Emergência",
     "angulo": "Enfoque no reconhecimento precoce para evitar complicações fatais como a catatonia letal.",
-    "sensivel": false,
+    "sensivel": true,
     "referencias": [
       {
         "consultaPubMed": "(\"Catatonia\"[Mesh]) AND (\"Emergency Service, Hospital\"[Mesh])",

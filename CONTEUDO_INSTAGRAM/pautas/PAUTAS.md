@@ -465,7 +465,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Orienta residentes e estudantes na identificação rápida de delirium em idosos no pronto-atendimento, diferenciando de demência e quadros psiquiátricos puros. Aborda as ferramentas de triagem rápida e as condutas iniciais de manejo ambiental e farmacológico na primeira hora.
 - **público:** Residentes de Medicina de Família, Clínica Médica e Estudantes de Medicina · **ângulo:** Foco prático no cenário de alta pressão do pronto-socorro, priorizando reversão de gatilhos orgânicos antes do uso de antipsicóticos.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `"Delirium"[Mesh] AND "Emergencies"[Mesh] AND "Diagnosis"[Mesh]` (Revisão sistemática) 36607634
   - PubMed: `"Delirium"[Mesh] AND "Emergency Service, Hospital"[Mesh] AND "Management"[Subheading]` (Diretriz clínica (UTI, PADIS)) 30113379
@@ -483,7 +483,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Capacita o médico residente a reconhecer os sinais sutis e evidentes de catatonia em pacientes trazidos ao pronto atendimento. Detalha o uso da escala de Bush-Francis e o teste do lorazepam como conduta diagnóstica e terapêutica imediata na UBS ou PA.
 - **público:** Residentes de Psiquiatria, Clínica Médica e Médicos de Emergência · **ângulo:** Enfoque no reconhecimento precoce para evitar complicações fatais como a catatonia letal.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("Catatonia"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` (Revisão) 22389352
   - PubMed: `("Catatonia"[Mesh]) AND ("Lorazepam"[Mesh])` (Diretriz clínica (consenso da BAP)) 37039129
