@@ -8,6 +8,7 @@ status: rascunho
 geradoEm: 2026-09-30T09:44:54.653Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
 revisaoMedica: pendente
+sensivel: true
 referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
@@ -38,7 +39,7 @@ A emissão da CAT por adoecimento mental é um direito do trabalhador e um dever
 
 ### Quem pode e deve emitir a CAT
 - O médico assistente, seja da rede pública ou privada, tem autonomia para emitir a CAT quando identificar nexo entre o agravo e o trabalho.
-- O empregador é o principal obrigado a emitir o documento até o primeiro dia útil seguinte ao do óbito ou imediatamente em caso de doença relacionada ao trabalho. Na recusa ou omissão, o próprio trabalhador, o sindicato, o médico assistente ou autoridades públicas podem fazê-lo.
+- A empresa é a principal obrigada a emitir o documento, até o primeiro dia útil seguinte ao da ocorrência e, em caso de morte, de imediato (Lei nº 8.213/1991, art. 22). Na doença relacionada ao trabalho, considera-se ocorrência a data do início da incapacidade laborativa ou do diagnóstico (art. 23). Na omissão da empresa, a CAT pode ser emitida pelo próprio trabalhador, por seus dependentes, pela entidade sindical, pelo médico que o assistiu ou por autoridade pública (art. 22, § 2º).
 
 ### O que fazer
 - **Documentação clara:** Registre no prontuário a hipótese diagnóstica, a Classificação Internacional de Doenças correspondente e o relato do paciente sobre o trabalho.
@@ -78,11 +79,11 @@ O manejo do trabalhador com sofrimento mental exige uma abordagem integrada que 
 
 ### Quando e como encaminhar
 - Encaminhe para serviços especializados de saúde mental ou emergências psiquiátricas diante de sinais de gravidade.
-- Oriente o paciente sobre a emissão da CAT e forneça os laudos médicos detalhados necessários para a perícia médica da Previdência Social, garantindo a proteção social e o direito à estabilidade provisória quando couber, conforme o art. 118 da Lei nº 8.213/1991, que garante a manutenção do contrato de trabalho por no mínimo 12 meses após a cessação do auxílio-doença acidentário (conferir a redação literal no texto oficial da lei).
+- Oriente o paciente sobre a emissão da CAT e forneça os laudos médicos detalhados necessários para a perícia médica da Previdência Social, garantindo a proteção social e o direito à estabilidade provisória quando couber, conforme o art. 118 da Lei nº 8.213/1991, que garante a manutenção do contrato de trabalho por no mínimo 12 meses após a cessação do auxílio-doença acidentário.
 
 ## Pontos-chave
 
-- O médico assistente tem autonomia e dever ético de emitir a CAT quando identificar nexo entre o adoecimento psíquico e o trabalho.
+- O médico assistente pode emitir a CAT quando, após avaliação individualizada, houver suspeita fundamentada de relação entre o adoecimento e o trabalho, conforme a Resolução CFM nº 1.488/1998, que trata das condutas do médico que atende o trabalhador. A conclusão do nexo depende de avaliação médica individualizada e, quando cabível, de perícia.
 - O estresse laboral crônico desregula o eixo HPA e impacta a neurobiologia, gerando quadros como depressão, ansiedade e burnout.
 - A escuta ativa e a validação do sofrimento são fundamentais para o vínculo terapêutico e a correta investigação ocupacional.
 - O manejo envolve suporte clínico, psicoterapia, farmacoterapia com classes de primeira linha e articulação com a Previdência Social.

@@ -63,7 +63,7 @@
 
 | # | Pauta | Tipo | Sensível | Lote | Artigo no banco |
 |---|---|---|---|---|---|
-| 028 | Emissão de CAT por adoecimento mental: quando e como proceder | científico | não | 3 | ainda não criado |
+| 028 | Emissão de CAT por adoecimento mental: quando e como proceder | científico | sim | 3 | ainda não criado |
 | 029 | Readaptação funcional em saúde mental: estratégias na empresa | científico | não | 3 | ainda não criado |
 | 030 | Prevenção quaternária na medicina do trabalho e saúde mental | científico | não | 3 | ainda não criado |
 | 031 | Acolhimento ao sofrimento psíquico agudo no ambiente laboral | científico | sim | 3 | ainda não criado |

@@ -4,13 +4,13 @@
 
 | Categoria | Propostas | Aprovadas | Redigidas | Rejeitadas | Com problemas |
 |---|---:|---:|---:|---:|---:|
-| Relatos da Prática | 0 | 0 | 28 | 18 | 18 |
-| Residentes & Estudantes | 0 | 0 | 44 | 47 | 47 |
-| Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 17 | 19 | 18 |
+| Relatos da Prática | 0 | 0 | 28 | 12 | 12 |
+| Residentes & Estudantes | 0 | 0 | 44 | 33 | 33 |
+| Linhas de Cuidado (Cuidadores & Professores) | 0 | 0 | 17 | 18 | 17 |
 | Pacientes & Famílias | 0 | 0 | 6 | 1 | 1 |
-| Condições Específicas | 0 | 0 | 18 | 9 | 9 |
-| Empresas & RH | 0 | 0 | 8 | 4 | 4 |
-| **Total** | 0 | 0 | 121 | 98 | 97 |
+| Condições Específicas | 0 | 0 | 18 | 4 | 4 |
+| Empresas & RH | 0 | 0 | 8 | 2 | 2 |
+| **Total** | 0 | 0 | 121 | 70 | 69 |
 
 ## [redigida] O balcão da farmácia e as perguntas não feitas
 
@@ -697,28 +697,6 @@
 - **originalidade:** redundante · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.43)
 - ⚠️ **problemas:** originalidade: paráfrase/redundância de "A sala de espera que respirava em silêncio" (similaridade 0.43, título 0.44)
 
-## [rejeitada] O peso do crachá na mesa de triagem do pronto-socorro
-
-- **id:** 2026-09-30-48-o-peso-do-cracha-na-mesa-de-tr
-- **categoria:** Relatos da Prática · lote 2
-- **tipo:** crônica literária · **origem:** assistente
-- **pauta:** Esta é uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na rotina de urgência, sem paciente real identificável. A crônica aborda a exaustão de um profissional da segurança pública que buscou atendimento psiquiátrico na emergência e traz o aviso legal do CFM ao final.
-- **público:** Profissionais de segurança pública, trabalhadores de serviços essenciais e público em geral interessado em saúde mental · **ângulo:** Foca na barreira invisível que a farda e o distintivo impõem ao pedir ajuda emocional na emergência.
-- **tema sensível:** não
-- **originalidade:** redundante · mais próximo: "O relógio na parede do pronto atendimento" (similaridade 0.38)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O relógio na parede do pronto atendimento" (similaridade 0.38, título 0.20)
-
-## [rejeitada] A luz acesa na sala de vacina quando a UBS já está vazia
-
-- **id:** 2026-09-30-49-a-luz-acesa-na-sala-de-vacina-
-- **categoria:** Relatos da Prática · lote 2
-- **tipo:** crônica literária · **origem:** assistente
-- **pauta:** Esta é uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na Atenção Primária, sem paciente real identificável. O texto retrata o desabafo silencioso de uma técnica de enfermagem lidando com crises de pânico e leva o aviso legal do CFM.
-- **público:** Profissionais de saúde da rede pública, equipes de enfermagem e leitores que valorizam histórias humanas da APS · **ângulo:** Ilumina o sofrimento psíquico de quem passa o dia inteiro cuidando dos outros e esquece de si mesmo.
-- **tema sensível:** não
-- **originalidade:** redundante · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.36)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "A sala de espera que respirava em silêncio" (similaridade 0.36, título 0.20)
-
 ## [redigida] O bilhete amassado no bolso do jaleco do plantão noturno
 
 - **id:** 2026-09-30-50-o-bilhete-amassado-no-bolso-do
@@ -776,17 +754,6 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-peso-do-cracha-na-mesa-de-triagem-do-pronto-socorro.md` · slug: `o-peso-do-cracha-na-mesa-de-triagem-do-pronto-socorro` · pauta: `2026-09-30-54-o-peso-do-cracha-na-mesa-de-tr`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "O relógio na parede do pronto atendimento" (similaridade 0.28)
-
-## [rejeitada] O bilhete amassado no bolso do jaleco do plantão noturno
-
-- **id:** 2026-09-30-55-o-bilhete-amassado-no-bolso-do
-- **categoria:** Relatos da Prática · lote 2
-- **tipo:** crônica literária · **origem:** assistente
-- **pauta:** Por meio de uma narrativa composta inspirada no cotidiano da Atenção Primária, acompanhamos o impacto silencioso de um recado deixado por um paciente que marcou a rotina de um plantão difícil. A história humaniza a relação médico-paciente e lembra que por trás de cada prontuário há uma história singular, acompanhada do aviso legal do CFM.
-- **público:** Pacientes, familiares e profissionais que valorizam a humanização do cuidado médico · **ângulo:** Aborda o poder das pequenas conexões humanas e memórias afetivas que sustentam a prática clínica diária.
-- **tema sensível:** não
-- **originalidade:** copia · mais próximo: "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.74)
-- ⚠️ **problemas:** originalidade: cópia de "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.74, título 1.00)
 
 ## [redigida] Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial
 
@@ -875,7 +842,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Orienta o núcleo familiar sobre como identificar os primeiros sinais de ruptura com a realidade e qual conduta adotar. Aborda a importância da busca precoce por atendimento médico sem estigmatização. Fornece ferramentas práticas de acolhimento para o ambiente domiciliar.
 - **público:** Familiares e cuidadores de pacientes em sofrimento mental agudo · **ângulo:** Foco exclusivo na perspectiva de suporte e orientação prática para a família durante o momento de maior vulnerabilidade, em linguagem acessível e fundamentada.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("First-Episode Psychosis"[Mesh]) AND ("Family Psychoeducation"[Mesh]) AND ("Caregivers"[Mesh])` (Revisão sistemática e metanálise) 39854977
   - PubMed: `("Psychotic Disorders"[Mesh]) AND ("Early Intervention"[Mesh]) AND ("Family Support"[Mesh])` (Diretriz clínica (RANZCP)) 27106681
@@ -909,7 +876,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Aborda a dinâmica de convivência com flutuações intensas de humor no ambiente doméstico, oferecendo estratégias de comunicação empática. Orienta sobre a importância da adesão ao tratamento e o papel dos familiares como rede de apoio. Evita diagnósticos a distância, focando no suporte cotidiano.
 - **público:** Familiares e pessoas que convivem com instabilidade emocional crônica · **ângulo:** Enfoque nas fronteiras saudáveis do cuidado, mostrando como apoiar sem assumir o papel terapêutico ou anular as próprias necessidades.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("Mood Disorders"[Mesh]) AND ("Family Relations"[Mesh]) AND ("Social Support"[Mesh])` (Revisão sistemática Cochrane e metanálise) 17943843
   - PubMed: `("Caregivers"[Mesh]) AND ("Adaptation, Psychological"[Mesh]) AND ("Mental Disorders"[Mesh])` (Revisão sistemática) 29727072
@@ -952,7 +919,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Orienta os profissionais de saúde sobre a obrigatoriedade e os critérios técnicos para a emissão da Comunicação de Acidente de Trabalho em casos de transtornos psiquiátricos relacionados ao emprego. Detalha o papel do médico assistente e do médico do trabalho nesse processo.
 - **público:** Médicos assistentes, médicos do trabalho e equipes de medicina ocupacional · **ângulo:** Esclarece o fluxo médico-legal da CAT com empatia e rigor técnico.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("Mental Disorders"[Mesh] OR "Burnout, Psychological"[Mesh] OR "Occupational Stress"[Mesh]) AND ("Workers' Compensation"[Mesh] OR "Occupational Health"[Mesh]) AND ("Review"[Publication Type])` (Revisão sistemática e metanálise) 29954920
   - PubMed: `("Mental Disorders"[Mesh]) AND ("Occupational Diseases"[Mesh] OR "Occupational Health Physicians"[Mesh]) AND ("Jurisprudence"[Mesh] OR "Legislation, Medical"[Mesh])` (Ensaio clínico randomizado (cuidado guiado por diretriz)) 23496948
@@ -1061,36 +1028,6 @@
   - PubMed: `occupational rehabilitation AND psychiatric disorders` (Ensaio clínico) [PMID A CONFIRMAR]
 - **originalidade:** copia · mais próximo: "Retorno ao trabalho após afastamento psiquiátrico" (similaridade 0.62)
 - ⚠️ **problemas:** artigo científico exige de 3 a 6 referências (consultas PubMed); originalidade: cópia de "Retorno ao trabalho após afastamento psiquiátrico" (similaridade 0.62, título 0.91)
-
-## [rejeitada] Prevenção quaternária na medicina do trabalho e saúde mental
-
-- **id:** 2026-09-30-73-prevencao-quaternaria-na-medic
-- **categoria:** Empresas & RH · lote 3
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Aborda a importância de evitar iatrogenias e medicalização excessiva do sofrimento cotidiano no ambiente de trabalho. Discute como a medicina ocupacional pode acolher a angústia sem transformar conflitos laborais em diagnósticos psiquiátricos desnecessários.
-- **público:** Médicos do trabalho, profissionais de RH e gestores de saúde ocupacional · **ângulo:** Foco na prevenção de excessos diagnósticos e na proteção contra a medicalização precoce do estresse laboral.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `occupational health AND quaternary prevention AND mental health` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `medicalization of work AND occupational psychiatry AND overdiagnosis` (Ensaio clínico controlado) [PMID A CONFIRMAR]
-  - PubMed: `workplace stress AND appropriate diagnosis AND occupational medicine guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Prevenção quaternária na medicina do trabalho e saúde mental" (similaridade 0.82)
-- ⚠️ **problemas:** originalidade: cópia de "Prevenção quaternária na medicina do trabalho e saúde mental" (similaridade 0.82, título 1.00)
-
-## [rejeitada] Acolhimento ao sofrimento psíquico agudo no ambiente laboral
-
-- **id:** 2026-09-30-74-acolhimento-ao-sofrimento-psiq
-- **categoria:** Empresas & RH · lote 3
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Orienta lideranças e equipes de medicina ocupacional sobre como agir diante de uma crise emocional aguda dentro da empresa. Apresenta condutas iniciais humanizadas, escuta qualificada e critérios para o encaminhamento adequado à rede de saúde.
-- **público:** Profissionais de recursos humanos, médicos do trabalho e líderes de equipes · **ângulo:** Diretrizes práticas de manejo imediato para crises emocionais no espaço corporativo.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `psychological first aid AND workplace AND crisis intervention` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `acute mental health crisis AND occupational setting AND management` (Estudo observacional) [PMID A CONFIRMAR]
-  - PubMed: `emergency mental health protocols AND workplace guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.8)
-- ⚠️ **problemas:** originalidade: cópia de "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.80, título 1.00)
 
 ## [redigida] Avaliação de riscos psicossociais no trabalho: ferramentas práticas
 
@@ -1436,7 +1373,7 @@
 - **tipo:** crônica literária · **origem:** assistente
 - **pauta:** Esta narrativa composta traz a perspectiva de um atendimento de urgência em que um pequeno objeto esquecido em uma maca revela a passagem rápida, porém marcante, de alguém em profundo sofrimento psíquico. Inspirada em vivências comuns na rede pública, sem paciente real identificável. O texto final leva o aviso legal do CFM.
 - **público:** Leitores em geral sensíveis a relatos da prática médica e ao acolhimento em saúde mental. · **ângulo:** Foca nos rastros materiais e emocionais deixados por pacientes anônimos nos espaços de trânsito rápido da emergência.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/o-grampo-de-cabelo-esquecido-na-maca-de-observacao.md` · slug: `o-grampo-de-cabelo-esquecido-na-maca-de-observacao` · pauta: `2026-09-30-97-o-grampo-de-cabelo-esquecido-n`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "O lenço esquecido na cadeira do consultório" (similaridade 0.21)
@@ -1497,17 +1434,6 @@
 - **tema sensível:** não
 - **originalidade:** redundante · mais próximo: "A última consulta antes do plantão virar a madrugada" (similaridade 0.37)
 - ⚠️ **problemas:** originalidade: paráfrase/redundância de "A última consulta antes do plantão virar a madrugada" (similaridade 0.37, título 0.36)
-
-## [rejeitada] O peso do crachá na mesa de triagem no fim do dia
-
-- **id:** 2026-09-30-103-o-peso-do-cracha-na-mesa-de-tr
-- **categoria:** Relatos da Prática · lote 4
-- **tipo:** crônica literária · **origem:** assistente
-- **pauta:** Esta crônica literária humanizada apresenta uma narrativa composta por personagens e situações fictícios inspirados em vivências comuns na Atenção Primária, sem paciente real identificável. O texto aborda o cansaço acumulado e a sensibilidade necessária para manter o acolhimento humano quando o expediente chega ao fim. Informamos que o texto final leva o aviso legal do Conselho Federal de Medicina.
-- **público:** Profissionais de saúde, médicos da atenção primária e público geral interessado no lado humano do cuidado · **ângulo:** Reflete sobre o esgotamento sutil do cotidiano médico através de um olhar poético e profundamente empático sobre o ato de escutar.
-- **tema sensível:** não
-- **originalidade:** redundante · mais próximo: "O peso do crachá na mesa de triagem do pronto-socorro" (similaridade 0.5)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "O peso do crachá na mesa de triagem do pronto-socorro" (similaridade 0.50, título 0.67)
 
 ## [redigida] O peso da chave guardada no bolso da bata branca
 
@@ -1852,21 +1778,6 @@
 - **originalidade:** redundante · mais próximo: "TDAH em adultos: sinais que muitas pessoas não reconhecem" (similaridade 0.44)
 - ⚠️ **problemas:** originalidade: paráfrase/redundância de "TDAH em adultos: sinais que muitas pessoas não reconhecem" (similaridade 0.44, título 0.40)
 
-## [rejeitada] Uso de psicoestimulantes no TDAH em adultos: guia prático na APS
-
-- **id:** 2026-09-30-126-uso-de-psicoestimulantes-no-td
-- **categoria:** Residentes & Estudantes · lote 4
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Aborda a avaliação diagnóstica e a prescrição segura de psicoestimulantes para adultos com TDAH no contexto da Atenção Primária à Saúde. O texto oferece um guia prático para residentes e médicos de família sobre titulação, monitoramento de efeitos adversos e prevenção de desvios de conduta. O material é essencial para qualificar o manejo de transtornos do neurodesenvolvimento na rotina do posto de saúde.
-- **público:** Residentes de medicina de família e comunidade e estudantes de medicina · **ângulo:** Foco específico na realidade de recursos da APS e no manejo longitudinal pelo médico generalista.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Attention Deficit Hyperorder Disorder AND adults AND stimulants AND primary care` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `Methylphenidate AND Lisdexamfetamine AND safety AND primary health care` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `Adult ADHD AND pharmacotherapy AND general practice` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "TDAH em adultos: sinais que muitas pessoas não reconhecem" (similaridade 0.43)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "TDAH em adultos: sinais que muitas pessoas não reconhecem" (similaridade 0.43, título 0.40)
-
 ## [redigida] Síndrome de descontinuação de antidepressivos na APS: guia prático
 
 - **id:** 2026-09-30-127-sindrome-de-descontinuacao-de-
@@ -1884,156 +1795,6 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr.md` · slug: `sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr` · pauta: `2026-09-30-127-sindrome-de-descontinuacao-de-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.29)
-
-## [rejeitada] Urgências psiquiátricas pediátricas na emergência: guia para residentes
-
-- **id:** 2026-09-30-128-urgencias-psiquiatricas-pediat
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Guia prático para médicos residentes e estudantes lidarem com descompensações comportamentais e emocionais agudas em crianças e adolescentes no pronto-socorro. Aborda avaliação estruturada, exclusão de causas orgânicas e condutas iniciais com segurança e acolhimento.
-- **público:** Residentes de Medicina de Família e Comunidade, Pediatria e Estudantes de Medicina · **ângulo:** Foco exclusivo na população pediátrica em ambiente de urgência, integrando triagem rápida e exclusão de organicidade.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Emergency Psychiatry"[Mesh] OR "Mental Health Emergencies"[Mesh]) AND ("Child"[Mesh] OR "Adolescent"[Mesh]) AND "Emergency Service, Hospital"[Mesh]` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Psychiatric Department, Hospital"[Mesh]) AND ("Child Behavior Disorders"[Mesh] OR "Agitation"[Mesh]) AND "Emergency Treatment"[Mesh]` (Ensaio clínico ou estudo observacional de coorte) [PMID A CONFIRMAR]
-  - PubMed: `("Differential Diagnosis"[Mesh]) AND "Mental Disorders"[Mesh] AND "Pediatric Emergency Medicine"[Mesh]` (Revisão narrativa baseada em evidências) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.39)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.39, título 0.33)
-
-## [rejeitada] Uso de estabilizadores de humor na APS: guia prático para residentes
-
-- **id:** 2026-09-30-129-uso-de-estabilizadores-de-humo
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Orientações fundamentadas em evidências para o manejo, ajuste de doses e monitoramento de exames laboratoriais no uso de estabilizadores de humor na Atenção Primária. Essencial para residentes que acompanham pacientes com transtorno bipolar fora das crises.
-- **público:** Residentes de Medicina de Família e Comunidade e Médicos da APS · **ângulo:** Abordagem estritamente voltada para a rotina da Atenção Primária à Saúde, focando segurança e seguimento longitudinal.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Antimanic Agents"[Mesh] OR "Lithium"[Mesh] OR "Valproic Acid"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND "Bipolar Disorder"[Mesh]` (Diretriz clínica e revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Drug Monitoring"[Mesh]) AND ("Lithium"[Mesh] OR "Anticonvulsants"[Mesh]) AND "Primary Care Physicians"[Mesh]` (Estudo de coorte ou ensaio clínico) [PMID A CONFIRMAR]
-  - PubMed: `("Bipolar Disorder"[Mesh]/drug therapy) AND ("Safety"[Mesh] OR "Adverse Effects"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão integrativa) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.83)
-- ⚠️ **problemas:** originalidade: cópia de "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.83, título 1.00)
-
-## [rejeitada] Sintomas psicóticos na atenção primária: avaliação inicial e conduta
-
-- **id:** 2026-09-30-130-sintomas-psicoticos-na-atencao
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Como conduzir o primeiro atendimento a um paciente com sintomas psicóticos na UBS, distinguindo quadros funcionais de orgânicos. Fornece um fluxograma prático de investigação laboratorial, anamnese direcionada e critérios claros de encaminhamento.
-- **público:** Estudantes de Medicina, Residentes de Medicina de Família e Comunidade · **ângulo:** Foco na diferenciação etiológica na APS antes de precipitar o uso de antipsicóticos ou o encaminhamento desnecessário.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Psychotic Disorders"[Mesh] OR "Schizophrenia"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND "Diagnosis, Differential"[Mesh]` (Diretriz clínica internacional) [PMID A CONFIRMAR]
-  - PubMed: `("Early Diagnosis"[Mesh]) AND ("Psychotic Disorders"[Mesh]) AND "Primary Care"[Mesh]` (Revisão sistemática com metanálise) [PMID A CONFIRMAR]
-  - PubMed: `("Mental Disorders, Diagnosed"[Mesh]) AND ("Organic Mental Disorders"[Mesh]) AND "Primary Health Care"[Mesh]` (Estudo transversal ou coorte) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.36)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.36, título 0.43)
-
-## [rejeitada] Transtorno de estresse pós-traumático na UBS: rastreio e manejo
-
-- **id:** 2026-09-30-131-transtorno-de-estresse-pos-tra
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Ferramentas práticas de rastreio e conduta terapêutica inicial para o Transtorno de Estresse Pós-Traumático (TEPT) na atenção primária. Aborda intervenções de primeira linha e os limites da atuação do médico generalista.
-- **público:** Residentes de Medicina de Família e Comunidade, Médicos de UBS · **ângulo:** Implementação de escalas breves de rastreio adaptadas para a consulta de rotina na APS.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Stress Disorders, Post-Traumatic"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Early Intervention (Education)"[Mesh])` (Revisão sistemática e diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Stress Disorders, Post-Traumatic"[Mesh]/therapy) AND ("Primary Care"[Mesh]) AND "Therapeutics"[Mesh]` (Ensaio clínico controlado) [PMID A CONFIRMAR]
-  - PubMed: `("Psychotherapy"[Mesh] OR "Antidepressive Agents"[Mesh]) AND ("Stress Disorders, Post-Traumatic"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão narrativa baseada em evidências) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Transtorno de estresse pós-traumático: reconhecimento na APS" (similaridade 0.54)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Transtorno de estresse pós-traumático: reconhecimento na APS" (similaridade 0.54, título 0.62)
-
-## [rejeitada] Avaliação de queixas cognitivas em idosos na UBS: guia prático
-
-- **id:** 2026-09-30-132-avaliacao-de-queixas-cognitiva
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Abordagem sistemática para diferenciar o envelhecimento cognitivo normal do comprometimento cognitivo leve e das demências na UBS. Apresenta testes de rastreio rápidos e conduta diante da queixa de perda de memória.
-- **público:** Residentes de Medicina de Família e Comunidade, Estudantes de Medicina · **ângulo:** Uso de testes cognitivos breves aplicáveis no tempo limitado da consulta de atenção primária.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Cognitive Dysfunction"[Mesh] OR "Dementia"[Mesh] OR "Memory Disorders"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Mass Screening"[Mesh] OR "Diagnosis"[Mesh])` (Diretriz clínica baseada em evidências) [PMID A CONFIRMAR]
-  - PubMed: `("Neuropsychological Tests"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Care"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Cognitive Impairment"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND "Family Practice"[Mesh]` (Estudo de validação diagnóstica) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Avaliação de queixas cognitivas em idosos na UBS: guia prático" (similaridade 0.86)
-- ⚠️ **problemas:** originalidade: cópia de "Avaliação de queixas cognitivas em idosos na UBS: guia prático" (similaridade 0.86, título 1.00)
-
-## [rejeitada] Uso de antidepressivos em populações especiais na APS
-
-- **id:** 2026-09-30-133-uso-de-antidepressivos-em-popu
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Guia de escolha e manejo de antidepressivos considerando comorbidades clínicas prevalentes na atenção primária, como insuficiência renal, hepática e cardiopatias. Foca a segurança farmacológica na prática clínica diária.
-- **público:** Médicos Residentes de Medicina de Família e Comunidade, Estudantes de Medicina · **ângulo:** Cruzamento de interações medicamentosas e comorbidades clínicas comuns na APS na prescrição de antidepressivos.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Antidepressive Agents"[Mesh]/adverse effects) AND ("Comorbidity"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh])` (Revisão sistemática e diretriz) [PMID A CONFIRMAR]
-  - PubMed: `("Cardiovascular Diseases"[Mesh] OR "Kidney Diseases"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND "Drug Interactions"[Mesh]` (Estudo de coorte ou revisão baseada em evidências) [PMID A CONFIRMAR]
-  - PubMed: `("Aged"[Mesh] OR "Multimorbidity"[Mesh]) AND ("Antidepressive Agents"[Mesh]/therapeutic use) AND "Primary Care"[Mesh]` (Revisão integrativa) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Uso de antidepressivos em populações especiais na APS" (similaridade 0.8)
-- ⚠️ **problemas:** originalidade: cópia de "Uso de antidepressivos em populações especiais na APS" (similaridade 0.80, título 1.00)
-
-## [rejeitada] Manejo da recusa alimentar e seletividade grave no pronto atendimento
-
-- **id:** 2026-09-30-134-manejo-da-recusa-alimentar-e-s
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Protocolo prático para residentes e médicos de plantão diante de quadros graves de recusa alimentar, incluindo desnutrição aguda, recusa hídrica e risco de refeeding syndrome. Orienta condutas imediatas e critérios de internação.
-- **público:** Residentes de Pediatria, Clínica Médica e Emergência, Estudantes de Medicina · **ângulo:** Foco na estabilização clínica imediata e na identificação de riscos metabólicos graves no ambiente de pronto-socorro.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Feeding and Eating Disorders"[Mesh] OR "Food Refusal"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Critical Care"[Mesh] OR "Refeeding Syndrome"[Mesh])` (Diretriz clínica e revisão narrativa) [PMID A CONFIRMAR]
-  - PubMed: `("Anorexia Nervosa"[Mesh]) AND ("Emergency Treatment"[Mesh]) AND ("Malnutrition"[Mesh])` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("Feeding Disorders"[Mesh]/therapy) AND ("Child"[Mesh] OR "Adolescent"[Mesh]) AND "Hospitals, Emergency"[Mesh]` (Estudo observacional ou coorte clínica) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Manejo da recusa alimentar e seletividade grave no pronto atendimento" (similaridade 0.86)
-- ⚠️ **problemas:** originalidade: cópia de "Manejo da recusa alimentar e seletividade grave no pronto atendimento" (similaridade 0.86, título 1.00)
-
-## [rejeitada] Uso racional de antidepressivos na gestação e lactação na UBS
-
-- **id:** 2026-09-30-135-uso-racional-de-antidepressivo
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Diretrizes atualizadas para o manejo de transtornos depressivos e ansiosos em gestantes e lactantes na atenção primária. Analisa riscos e benefícios comparativos para orientar decisões clínicas seguras com a paciente.
-- **público:** Residentes de Medicina de Família e Comunidade, Ginecologia e Obstetrícia, Estudantes · **ângulo:** Equilíbrio entre o risco do transtorno mental não tratado e a exposição fetal/neonatal aos psicofármacos.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Antidepressive Agents"[Mesh]) AND ("Pregnancy"[Mesh] OR "Lactation"[Mesh] OR "Breast Feeding"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Prenatal Care"[Mesh])` (Revisão sistemática e metanálise) [PMID A CONFIRMAR]
-  - PubMed: `("Depressive Disorder"[Mesh]) AND ("Pregnancy Complications"[Mesh]) AND ("Psychotropic Drugs"[Mesh]/safety)` (Diretriz clínica internacional) [PMID A CONFIRMAR]
-  - PubMed: `("Infant, Newborn"[Mesh]) AND ("Antidepressive Agents"[Mesh]/adverse effects) AND "Postnatal Care"[Mesh]` (Estudo de coorte prospectiva) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Uso de antidepressivos em populações especiais na APS" (similaridade 0.41)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de antidepressivos em populações especiais na APS" (similaridade 0.41, título 0.36)
-
-## [rejeitada] Manejo de episódios de raiva e agressividade no pronto atendimento
-
-- **id:** 2026-09-30-136-manejo-de-episodios-de-raiva-e
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Estratégias de descalada verbal, contenção mecânica e farmacológica segura para pacientes agitados ou agressivos no pronto-socorro. Enfatiza a proteção da equipe e a preservação da dignidade do paciente.
-- **público:** Residentes de Emergência, Clínica Médica, Psiquiatria e Equipe de Plantão · **ângulo:** Integração entre técnicas de comunicação não-violenta (descalada verbal) e protocolo farmacológico de emergência.
-- **tema sensível:** sim (CVV 188 obrigatório)
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Aggression"[Mesh] OR "Psychomotor Agitation"[Mesh] OR "Anger"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Restraint, Physical"[Mesh] OR "Psychotropic Drugs"[Mesh])` (Diretriz clínica e revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `("De-Escalation"[Mesh] OR "Communication"[Mesh]) AND ("Emergency Department"[Mesh]) AND "Violence"[Mesh]` (Revisão narrativa baseada em evidências) [PMID A CONFIRMAR]
-  - PubMed: `("Antipsychotic Agents"[Mesh]) AND ("Agitation"[Mesh]/drug therapy) AND "Emergency Treatment"[Mesh]` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Manejo de episódios de raiva e agressividade no pronto atendimento" (similaridade 0.78)
-- ⚠️ **problemas:** originalidade: cópia de "Manejo de episódios de raiva e agressividade no pronto atendimento" (similaridade 0.78, título 1.00)
-
-## [rejeitada] Investigação de fadiga crônica e exaustão na atenção primária
-
-- **id:** 2026-09-30-137-investigacao-de-fadiga-cronica
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Roteiro diagnóstico estruturado para investigar queixas inespecíficas de fadiga crônica na UBS, distinguindo causas clínicas, endócrinas, reumatológicas e psiquiátricas (como depressão e burnout).
-- **público:** Residentes de Medicina de Família e Comunidade, Estudantes de Medicina · **ângulo:** Abordagem ampla para uma queixa extremamente comum na APS, evitando exames desnecessários e valorizando o sofrimento psíquico.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Fatigue"[Mesh] OR "Fatigue Syndrome, Chronic"[Mesh] OR "Burnout, Psychological"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND "Diagnosis, Differential"[Mesh]` (Revisão sistemática e diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `("Asthenia"[Mesh]) AND ("Biomarkers"[Mesh] OR "Diagnostic Tests, Routine"[Mesh]) AND "Primary Care"[Mesh]` (Estudo de coorte diagnóstica) [PMID A CONFIRMAR]
-  - PubMed: `("Mental Disorders"[Mesh]) AND ("Chronic Fatigue"[Mesh]) AND "Family Practice"[Mesh]` (Revisão integrativa baseada em evidências) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Investigação de fadiga crônica e exaustão na atenção primária" (similaridade 0.75)
-- ⚠️ **problemas:** originalidade: cópia de "Investigação de fadiga crônica e exaustão na atenção primária" (similaridade 0.75, título 1.00)
 
 ## [rejeitada] Uso de Lítio na APS: Guia Prático para Residentes
 
@@ -2532,21 +2293,6 @@
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.26)
 
-## [rejeitada] Uso de Benzodiazepínicos na Emergência: Manejo de Agudos
-
-- **id:** 2026-09-30-170-uso-de-benzodiazepinicos-na-em
-- **categoria:** Residentes & Estudantes · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Este guia prático para residentes aborda o manejo seguro e baseado em evidências do uso de benzodiazepínicos em situações de emergência no pronto atendimento. O texto discute indicações precisas, dosagens iniciais, monitoramento de efeitos adversos e condutas diante de intoxicações agudas. A proposta visa instrumentalizar o médico em formação para decisões rápidas e seguras no plantão.
-- **público:** Residentes de Medicina de Família e Comunidade, residentes de Clínica Médica e estudantes de medicina. · **ângulo:** Foco específico na tomada de decisão rápida e segura pelo residente em ambiente de pronto atendimento.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `Benzodiazepines AND emergency department AND management AND guidelines` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `Acute benzodiazepine overdose AND clinical management AND emergency` (Diretriz clínica) [PMID A CONFIRMAR]
-  - PubMed: `Sedation practices AND emergency medicine AND safety protocols` (Ensaio clínico controlado) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Desmame Seguro de Benzodiazepínicos na Atenção Primária" (similaridade 0.35)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Desmame Seguro de Benzodiazepínicos na Atenção Primária" (similaridade 0.35, título 0.20)
-
 ## [rejeitada] Delirium Tremens no Pronto-Atendimento: Reconhecimento e Conduta
 
 - **id:** 2026-09-30-171-delirium-tremens-no-pronto-ate
@@ -2635,21 +2381,6 @@
   - PubMed: `compassion fatigue AND teachers AND burnout` (Revisão sistemática) [PMID A CONFIRMAR]
   - PubMed: `occupational stress AND educators AND mental health` (Ensaio clínico controlado) [PMID A CONFIRMAR]
   - PubMed: `secondary traumatic stress AND school teachers` (Estudo observacional) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37, título 0.40)
-
-## [rejeitada] Professores e a fadiga por compaixão: sinais e estratégias
-
-- **id:** 2026-09-30-177-professores-e-a-fadiga-por-com
-- **categoria:** Linhas de Cuidado (Cuidadores & Professores) · lote 5
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Este artigo aborda a fadiga por compaixão em professores que acolhem alunos em sofrimento emocional severo, detalhando sinais de exaustão empática e estratégias práticas de autocuidado e preservação docente. O conteúdo é voltado para a psicoeducação baseada em evidências na atenção primária e escolar, visando prevenir o esgotamento crônico. Orientações gerais devem respeitar os protocolos da rede de saúde e diretrizes locais.
-- **público:** Professores da rede de ensino básica e superior, além de profissionais de saúde que atendem educadores. · **ângulo:** Foco específico na fadiga por compaixão docente e no custo emocional do acolhimento a alunos traumatizados.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `compassion fatigue AND teachers AND burnout` (Revisão sistemática) [PMID A CONFIRMAR]
-  - PubMed: `teachers secondary traumatic stress AND emotional exhaustion` (Estudo transversal) [PMID A CONFIRMAR]
-  - PubMed: `occupational health AND teachers AND coping strategies` (Ensaio clínico controlado) [PMID A CONFIRMAR]
 - **originalidade:** redundante · mais próximo: "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37)
 - ⚠️ **problemas:** originalidade: paráfrase/redundância de "Fadiga da compaixão em quem trabalha por uma causa" (similaridade 0.37, título 0.40)
 
@@ -2933,51 +2664,6 @@
 - **originalidade:** redundante · mais próximo: "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.62)
 - ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de estabilizadores de humor na APS: guia prático para residentes" (similaridade 0.62, título 0.80)
 
-## [rejeitada] Disforia Sensorial e Sobrecarga no Transtorno do Espectro Autista
-
-- **id:** 2026-10-01-196-disforia-sensorial-e-sobrecarg
-- **categoria:** Condições Específicas · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Aborda a identificação e o manejo prático da hipersensibilidade sensorial em adultos com autismo na Atenção Primária. O artigo traz estratégias de regulação e adaptação para reduzir crises de sobrecarga no ambiente ambulatorial.
-- **público:** Médicos de família, residentes e equipes multiprofissionais da APS · **ângulo:** Foco específico na desregulação sensorial em adultos no contexto da atenção básica, muitas vezes confundida com transtornos de ansiedade.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `("Sensory Processing"[MeSH] OR "Sensory Overload") AND ("Autism Spectrum Disorder"[MeSH] OR "Autistic Disorder") AND "Primary Health Care"[MeSH]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Adult Autism" AND "Sensory Sensitivity" AND "Management"` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `"Sensory Overload" AND "Emergency Treatment" OR "Ambulatory Care"` (Ensaio Clínico Prático) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Disforia Sensorial e Sobrecarga no Transtorno do Espectro Autista" (similaridade 0.85)
-- ⚠️ **problemas:** originalidade: cópia de "Disforia Sensorial e Sobrecarga no Transtorno do Espectro Autista" (similaridade 0.85, título 1.00)
-
-## [rejeitada] Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta
-
-- **id:** 2026-10-01-197-acatisia-induzida-por-antipsic
-- **categoria:** Condições Específicas · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Orienta o reconhecimento precoce da acatisia aguda e tardia associada ao uso de antipsicóticos na prática clínica. Discute o diagnóstico diferencial com a agitação psicomotora e o manejo terapêutico baseado em evidências.
-- **público:** Médicos de família, médicos generalistas e plantonistas de pronto atendimento · **ângulo:** Enfatiza a diferenciação crucial entre acatisia e piora da ansiedade ou agitação psiquiátrica na UBS e no PA.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Antipsychotic-Induced Akathisia"[MeSH] AND "Diagnosis" AND "Management"` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Akathisia" AND "Emergency Department" AND "Treatment Guidelines"` (Diretriz de Prática Clínica) [PMID A CONFIRMAR]
-  - PubMed: `"Extrapyramidal Symptoms" AND "Antipsychotics" AND "Primary Care"` (Estudo Observacional) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta" (similaridade 0.84)
-- ⚠️ **problemas:** originalidade: cópia de "Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta" (similaridade 0.84, título 1.00)
-
-## [rejeitada] Transtorno da Fluência na Fala na Infância: Manejo Inicial na APS
-
-- **id:** 2026-10-01-198-transtorno-da-fluencia-na-fala
-- **categoria:** Condições Específicas · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Orienta o médico da família na identificação precoce da gagueira do desenvolvimento e da gagueira persistente na infância. Apresenta condutas de escuta qualificada, orientação parental e critérios claros para encaminhamento oportuno à fonoaudiologia.
-- **público:** Médicos de família, pediatras da atenção básica e residentes · **ângulo:** Visão voltada para a atuação do médico generalista no acolhimiento da família e desmistificação de mitos sobre a fluência infantil.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Stuttering"[MeSH] AND "Child" AND "Early Diagnosis" AND "Primary Health Care"` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Developmental Stuttering" AND "Management" AND "Pediatric Primary Care"` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `"Fluency Disorders" AND "Childhood" AND "Speech Therapy Referral"` (Estudo de Coorte) [PMID A CONFIRMAR]
-- **originalidade:** copia · mais próximo: "Transtorno da Fluência na Fala na Infância: Manejo Inicial na APS" (similaridade 0.75)
-- ⚠️ **problemas:** originalidade: cópia de "Transtorno da Fluência na Fala na Infância: Manejo Inicial na APS" (similaridade 0.75, título 1.00)
-
 ## [redigida] Uso de Benzodiazepínicos na Emergência: Manejo de Agudos
 
 - **id:** 2026-10-01-199-uso-de-benzodiazepinicos-na-em
@@ -2993,36 +2679,6 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos.md` · slug: `uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos` · pauta: `2026-10-01-199-uso-de-benzodiazepinicos-na-em`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "Uso de benzodiazepínicos na urgência psiquiátrica" (similaridade 0.32)
-
-## [rejeitada] Delirium Tremens no Pronto-Atendimento: Reconhecimento e Conduta
-
-- **id:** 2026-10-01-200-delirium-tremens-no-pronto-ate
-- **categoria:** Condições Específicas · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Guia prático para o reconhecimento imediato e a conduta médica diante de quadros de delirium tremens no pronto-socorro. Aborda suporte clínico intensivo, reposição vitamínica e protocolos de hidratação e sedação controlada.
-- **público:** Médicos plantonistas, residentes e equipes de pronto atendimento · **ângulo:** Foco na agilidade do diagnóstico diferencial e na prevenção de complicações fatais na emergência.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Delirium Tremens"[MeSH] AND "Emergency Treatment" AND "Protocol"` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Alcohol Withdrawal Syndrome" AND "Severe" AND "Intensive Care" OR "Emergency Department"` (Diretriz de Prática Clínica) [PMID A CONFIRMAR]
-  - PubMed: `"Benzodiazepines" AND "Delirium Tremens" AND "Clinical Management"` (Estudo Coorte Retrospectivo) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Delirium tremens: reconhecimento e conduta de urgência" (similaridade 0.6)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Delirium tremens: reconhecimento e conduta de urgência" (similaridade 0.60, título 0.73)
-
-## [rejeitada] Síndrome serotoninérgica aguda no plantão: reconhecimento e manejo
-
-- **id:** 2026-10-01-201-sindrome-serotoninergica-aguda
-- **categoria:** Condições Específicas · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Detalha os critérios diagnósticos da síndrome serotoninérgica e o manejo imediato no ambiente de urgência. Aborda a suspensão do agente desencadeante, medidas de suporte clínico e tratamento farmacológico de suporte.
-- **público:** Médicos plantonistas, médicos de família e equipes de emergência · **ângulo:** Destaca a identificação da tríade clássica (alterações neuromusculares, autonômicas e do estado mental) associada ao uso de inibidores da recaptação de serotonina.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `"Serotonin Syndrome"[MeSH] AND "Emergency Treatment" AND "Diagnosis"` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `"Serotonin Toxicity" AND "Antidepressants" AND "Clinical Management Guidelines"` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `"Neuromuscular Excitability" AND "Serotonin Syndrome" AND "Emergency Department"` (Estudo Observacional) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.45)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.45, título 0.36)
 
 ## [redigida] Transtorno de Personalidade Esquizotípica na APS: Rastreio e Manejo
 
@@ -3131,17 +2787,6 @@
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "A última consulta antes de desistir" (similaridade 0.22)
 
-## [rejeitada] O peso do crachá na mesa de triagem do pronto-socorro
-
-- **id:** 2026-10-01-209-o-peso-do-cracha-na-mesa-de-tr
-- **categoria:** Relatos da Prática · lote 6
-- **tipo:** crônica literária · **origem:** assistente
-- **pauta:** Uma narrativa composta sobre o instante de pausa em que o plantonista reflete sobre o fluxo intenso de demandas emocionais no plantão de urgência. Este texto utiliza personagens fictícios inspirados na rotina médica e inclui o aviso legal do CFM.
-- **público:** Equipes de pronto atendimento, médicos residentes e o público geral sensível à saúde mental · **ângulo:** Explora o impacto sutil do esgotamento invisível que se acumula por trás da rotina burocrática e técnica da emergência.
-- **tema sensível:** não
-- **originalidade:** copia · mais próximo: "O peso do crachá na mesa de triagem do pronto-socorro" (similaridade 0.7)
-- ⚠️ **problemas:** originalidade: cópia de "O peso do crachá na mesa de triagem do pronto-socorro" (similaridade 0.70, título 1.00)
-
 ## [redigida] A luz acesa na sala de vacina quando a UBS já está vazia
 
 - **id:** 2026-10-01-210-a-luz-acesa-na-sala-de-vacina-
@@ -3153,17 +2798,6 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/a-luz-acesa-na-sala-de-vacina-quando-a-ubs-ja-esta-vazia.md` · slug: `a-luz-acesa-na-sala-de-vacina-quando-a-ubs-ja-esta-vazia` · pauta: `2026-10-01-210-a-luz-acesa-na-sala-de-vacina-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "A sala de espera que respirava em silêncio" (similaridade 0.3)
-
-## [rejeitada] O bilhete amassado no bolso do jaleco do plantão noturno
-
-- **id:** 2026-10-01-211-o-bilhete-amassado-no-bolso-do
-- **categoria:** Relatos da Prática · lote 6
-- **tipo:** crônica literária · **origem:** assistente
-- **pauta:** Uma narrativa composta sobre um pequeno gesto de afeto ou um desabafo deixado por um paciente em meio ao caos de um plantão de urgência. Este texto utiliza personagens fictícios inspirados em vivências reais e inclui o aviso legal do CFM.
-- **público:** Profissionais de saúde de plantão, médicos e leitores apreciadores de literatura médica humanizada · **ângulo:** Ilumina a humanidade por trás dos registros clínicos formais e o impacto das pequenas interações esquecidas.
-- **tema sensível:** não
-- **originalidade:** copia · mais próximo: "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.82)
-- ⚠️ **problemas:** originalidade: cópia de "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.82, título 1.00)
 
 ## [rejeitada] O silêncio do corredor na última consulta da tarde na UBS
 
@@ -3211,21 +2845,6 @@
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
 - **originalidade:** original · mais próximo: "O bilhete amassado no bolso do jaleco do plantão noturno" (similaridade 0.26)
 
-## [rejeitada] Uso de Antipsicóticos de Depósito na APS: Guia Prático para Residentes
-
-- **id:** 2026-10-01-216-uso-de-antipsicoticos-de-depos
-- **categoria:** Residentes & Estudantes · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Este guia prático fornece orientações essenciais para residentes e estudantes sobre a indicação, administração e monitoramento de antipsicóticos injetáveis de longa ação na atenção primária. Aborda a adesão ao tratamento na esquizofrenia, manejo de efeitos adversos e a coordenação do cuidado longitudinal na UBS.
-- **público:** Residentes de Medicina de Família e Comunidade, estudantes de medicina e médicos da APS. · **ângulo:** Foco exclusivo na operacionalização segura de injetáveis de depósito no âmbito da atenção primária, integrando manejo clínico e adesão.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `antipsychotic agents, depot[MeSH Terms] AND primary health care[MeSH Terms]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `schizophrenia[MeSH Terms] AND long-acting injectable antipsychotics[Title/Abstract] AND primary care[Title/Abstract]` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `medication adherence[MeSH Terms] AND antipsychotic agents, depot[MeSH Terms] AND family practice[MeSH Terms]` (Ensaio Clínico Controlado) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.36)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.36, título 0.55)
-
 ## [rejeitada] Manejo da Catatonia no Pronto-Socorro: Guia para Residentes
 
 - **id:** 2026-10-01-217-manejo-da-catatonia-no-pronto-
@@ -3240,21 +2859,6 @@
   - PubMed: `Lorazepam challenge test AND catatonia AND safety` (Ensaio clínico) [PMID A CONFIRMAR]
 - **originalidade:** redundante · mais próximo: "Catatonia na emergência médica: reconhecimento e manejo inicial" (similaridade 0.35)
 - ⚠️ **problemas:** originalidade: paráfrase/redundância de "Catatonia na emergência médica: reconhecimento e manejo inicial" (similaridade 0.35, título 0.36)
-
-## [rejeitada] Uso de Antipsicóticos de Depósito na APS: Guia Prático para Residentes
-
-- **id:** 2026-10-01-218-uso-de-antipsicoticos-de-depos
-- **categoria:** Residentes & Estudantes · lote 6
-- **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
-- **pauta:** Este guia prático fornece aos residentes e estudantes orientações fundamentadas sobre a indicação, o manejo e a manutenção de antipsicóticos injetáveis de longa ação na Atenção Primária à Saúde. O texto aborda a adesão terapêutica, o monitoramento de efeitos adversos e a articulação com a rede de saúde para garantir um seguimento seguro e humanizado.
-- **público:** Residentes de Medicina de Família e Comunidade, médicos generalistas e estudantes de medicina · **ângulo:** Foco exclusivo na aplicabilidade prática e segurança do manejo de antipsicóticos de depósito no contexto da UBS, respeitando protocolos locais.
-- **tema sensível:** não
-- **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
-  - PubMed: `antipsychotic agents, depot[MeSH] AND primary health care[MeSH]` (Revisão Sistemática) [PMID A CONFIRMAR]
-  - PubMed: `schizophrenia[MeSH] AND delayed-action preparations[MeSH] AND community mental health services[MeSH]` (Diretriz Clínica) [PMID A CONFIRMAR]
-  - PubMed: `antipsychotic depot compliance AND primary care` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
-- **originalidade:** redundante · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.37)
-- ⚠️ **problemas:** originalidade: paráfrase/redundância de "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.37, título 0.55)
 
 ## [redigida] Uso de Antipsicóticos de Depósito na APS: Guia Prático para Residentes
 
