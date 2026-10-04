@@ -146,7 +146,7 @@
   - PubMed: `Management of acute serotonin toxicity in primary care and emergency settings` (Revisão (manejo)) 38926083
   - PubMed: `` (Revisão sistemática) 39791184
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-serotoninergica-na-emergencia-reconhecer-para-salva.md` · slug: `sindrome-serotoninergica-na-emergencia-reconhecer-para-salva` · pauta: `2026-09-30-11-sindrome-serotoninergica-na-em`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Síndrome neuroléptica maligna: reconhecimento precoce" (similaridade 0.24)
 
 ## [rejeitada] Tratamento da insônia crônica na APS: além do benzodiazepínico
@@ -1220,7 +1220,7 @@
   - PubMed: `` (Revisão narrativa) 35623179
   - PubMed: `` (Diretriz (Project BETA) e revisão) 33145538
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/urgencias-de-abstinencia-de-substancias-no-pa-guia-rapido.md` · slug: `urgencias-de-abstinencia-de-substancias-no-pa-guia-rapido` · pauta: `2026-09-30-86-urgencias-de-abstinencia-de-su`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Urgências psiquiátricas na UBS: Guia rápido de avaliação e conduta inicial" (similaridade 0.33)
 
 ## [redigida] Transtornos de personalidade na APS: identificação e manejo
@@ -1236,7 +1236,7 @@
   - PubMed: `"Personality Disorders"[Mesh]/diagnosis AND "Physicians, Family"[Mesh] AND "Communication"[Mesh]` (Revisão sistemática) 24990645
   - PubMed: `"Physician-Patient Relations"[Mesh] AND "Personality Disorders"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão sistemática e avaliação econômica) 16959171
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtornos-de-personalidade-na-aps-identificacao-e-manejo.md` · slug: `transtornos-de-personalidade-na-aps-identificacao-e-manejo` · pauta: `2026-09-30-87-transtornos-de-personalidade-n`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Assédio moral no trabalho: identificação e encaminhamento" (similaridade 0.2)
 
 ## [redigida] Reações adversas a psicofármacos na UBS: o que monitorar
