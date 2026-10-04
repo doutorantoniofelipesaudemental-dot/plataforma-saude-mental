@@ -540,7 +540,7 @@
   - PubMed: `"Substance Withdrawal Syndrome"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão) 32259826
   - PubMed: `"Dyskinesia, Drug-Induced"[Mesh] AND "Antipsychotic Agents"[Mesh] AND "Family Practice"[Mesh]` (Metanálise em rede) 23810019
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri.md` · slug: `uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri` · pauta: `2026-09-30-36-uso-de-antipsicoticos-na-aps-i`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS" (similaridade 0.18)
 
 ## [redigida] Insônia refratária na atenção primária: investigação e conduta
@@ -619,7 +619,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Este guia prático capacita residentes e estudantes de medicina a realizarem a avaliação inicial, o diagnóstico diferencial e a conduta de primeira linha em quadros psiquiátricos comuns na Atenção Primária à Saúde. O artigo aborda sinais de gravidade, critérios de encaminhamento seguro e estratégias de comunicação terapêutica para o cotidiano da UBS.
 - **público:** Médicos residentes de medicina de família e comunidade, internos de medicina e estudantes da área da saúde · **ângulo:** Foco estrito no raciocínio clínico de primeira linha e critérios objetivos de encaminhamento no contexto exclusivo da UBS.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("Primary Health Care"[MeSH] OR "General Practice"[MeSH]) AND ("Mental Disorders"[MeSH] OR "Psychiatry"[MeSH]) AND "Clinical Protocols"[MeSH]` (Revisão) 38856993
   - PubMed: `"Physician-Patient Relations"[MeSH] AND "Mental Health"[MeSH] AND "Internship and Residency"[MeSH]` (Diretriz clínica (CANMAT)) 38711351
