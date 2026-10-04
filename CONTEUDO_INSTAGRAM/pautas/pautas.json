@@ -3089,7 +3089,7 @@
     "pauta": "Orienta o núcleo familiar sobre como identificar os primeiros sinais de ruptura com a realidade e qual conduta adotar. Aborda a importância da busca precoce por atendimento médico sem estigmatização. Fornece ferramentas práticas de acolhimento para o ambiente domiciliar.",
     "publicoAlvo": "Familiares e cuidadores de pacientes em sofrimento mental agudo",
     "angulo": "Foco exclusivo na perspectiva de suporte e orientação prática para a família durante o momento de maior vulnerabilidade, em linguagem acessível e fundamentada.",
-    "sensivel": false,
+    "sensivel": true,
     "referencias": [
       {
         "consultaPubMed": "(\"First-Episode Psychosis\"[Mesh]) AND (\"Family Psychoeducation\"[Mesh]) AND (\"Caregivers\"[Mesh])",

@@ -54,7 +54,7 @@
 | 022 | Saúde mental de migrantes: Síndrome de Ulisses e luto migratório | científico | não | 1 | ainda não criado |
 | 023 | Sinais precoces de depressão: guia de apoio prático para familiares | científico | não | 1 | ainda não criado |
 | 024 | Psicoeducação em saúde mental na família: orientando para o cuidado | científico | não | 1 | ainda não criado |
-| 025 | Primeiro episódio psicótico: orientações essenciais para a família | científico | não | 2 | rascunho, fora do site |
+| 025 | Primeiro episódio psicótico: orientações essenciais para a família | científico | sim | 2 | rascunho, fora do site |
 | 026 | Esquecimento comum ou sinal de alerta: conversando sobre memória | científico | não | 2 | rascunho, fora do site |
 | 027 | Conviver com a oscilação de humor: limites e apoio familiar | científico | não | 2 | rascunho, fora do site |
 
