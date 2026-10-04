@@ -5,3 +5,7 @@ Gerado em 2026-10-04 a partir de `CONTEUDO_INSTAGRAM/pacotes/`. Contém **soment
 - `agenda.csv`: data sugerida, pacote, classe (normal ou sensível) e arquivos de texto. Pacotes sensíveis ficam só em dias úteis, para acompanhar a caixa de perguntas protegida.
 - Antes de agendar: produzir as artes e vídeos, conferir o link do áudio narrado de cada artigo (🎧) e a aprovação final do Dr. Antônio Felipe.
 - A legenda de cada peça deve ser conferida em conjunto com o pacote de origem (Stories e roteiros ficam no pacote).
+
+## Extensão: pacotes 029 a 045 (a partir de 02/11/2026)
+
+Acrescentados em 2026-10-04 ao `agenda.csv`, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (031, 037, 038, 039, 040, 041 e 042) só em dias úteis. Linhas marcadas "BLOQUEADO" têm o rascunho do artigo com revisão médica pendente e não devem ser agendadas antes da aprovação.

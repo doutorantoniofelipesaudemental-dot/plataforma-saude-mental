@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T06:06:24.392Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
@@ -25,7 +25,7 @@ referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed;
 > - O bloqueio dos receptores D2 nessa via reduz a neurotransmissão da dopamina, o que mexe diretamente com o controle motor voluntário. É exatamente isso que de…
 > - Os antipsicóticos atípicos apresentam forte afinidade por outros receptores, como serotoninérgicos (5-HT2C) e histaminérgicos (H1). Esse perfil farmacológico…
 > - - **Escolha criteriosa:** Se o uso for estritamente necessário em pacientes não psiquiátricos, prefira as menores doses eficazes e pelo menor tempo possível.
-> - - Reduza a dose de forma gradual, por exemplo, diminuindo cerca de [DOSE A CONFIRMAR] a cada duas a quatro semanas, conforme a resposta clínica e a tolerabil…
+> - - Reduza a dose de forma lenta e gradual, em etapas pequenas, com o intervalo entre elas definido pelo médico…
 > - - **Síndrome Neuroléptica Maligna:** Febre alta inexplicada, rigidez muscular extrema, alteração do estado mental e instabilidade autonômica. É uma emergênci…
 > - - Encaminhe para a avaliação especializada em psiquiatria se houver retorno de sintomas psicóticos graves, agitação refratária ou insucesso repetido na tenta…
 > - - Reavalie sempre a indicação original de antipsicóticos em uso prolongado na Atenção Primária.
@@ -68,7 +68,7 @@ Os antipsicóticos atípicos apresentam forte afinidade por outros receptores, c
 
 ### Protocolo de desprescrição gradual
 - A descontinuação deve ser lenta para evitar sintomas de abstinência colinérgica, rebote dopaminérgico ou recaída do quadro original.
-- Reduza a dose de forma gradual, por exemplo, diminuindo cerca de [DOSE A CONFIRMAR] a cada duas a quatro semanas, conforme a resposta clínica e a tolerabilidade.
+- Reduza a dose de forma lenta e gradual, em etapas pequenas, com o intervalo entre elas definido pelo médico conforme a resposta clínica e a tolerabilidade. Não há esquema único para todos os casos: siga o protocolo local e a supervisão médica.
 - Monitore o paciente semanalmente ou quinzenalmente durante o processo de desmaneio.
 
 ### Sinais de gravidade e alerta

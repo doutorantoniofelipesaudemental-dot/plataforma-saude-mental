@@ -1986,12 +1986,13 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri.md",
       "slug": "uso-de-antipsicoticos-na-aps-indicacoes-ajustes-e-desprescri",
       "geradoEm": "2026-09-30T06:06:31.370Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
         "originalidade": true
-      }
+      },
+      "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-04)"
     },
     "redigidaEm": "2026-09-30T06:06:31.370Z"
   },
@@ -2280,7 +2281,7 @@
     "pauta": "Este guia prático capacita residentes e estudantes de medicina a realizarem a avaliação inicial, o diagnóstico diferencial e a conduta de primeira linha em quadros psiquiátricos comuns na Atenção Primária à Saúde. O artigo aborda sinais de gravidade, critérios de encaminhamento seguro e estratégias de comunicação terapêutica para o cotidiano da UBS.",
     "publicoAlvo": "Médicos residentes de medicina de família e comunidade, internos de medicina e estudantes da área da saúde",
     "angulo": "Foco estrito no raciocínio clínico de primeira linha e critérios objetivos de encaminhamento no contexto exclusivo da UBS.",
-    "sensivel": false,
+    "sensivel": true,
     "referencias": [
       {
         "consultaPubMed": "(\"Primary Health Care\"[MeSH] OR \"General Practice\"[MeSH]) AND (\"Mental Disorders\"[MeSH] OR \"Psychiatry\"[MeSH]) AND \"Clinical Protocols\"[MeSH]",
