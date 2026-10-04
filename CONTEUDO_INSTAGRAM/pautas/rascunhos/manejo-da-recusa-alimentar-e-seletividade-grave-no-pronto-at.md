@@ -73,7 +73,7 @@ A condução de um paciente com recusa alimentar grave exige protocolos claros e
 
 ### Condutas de Primeira Linha
 * **Reposição hidroeletrolítica cautelosa:** Corrija os distúrbios com supervisão rigorosa e monitorização cardíaca.
-* **Suplementação vitamínica:** Administre tiamina (vitamina B1) antes de iniciar qualquer aporte calórico, para prevenir a encefalopatia de Wernicke. Ajuste conforme [DOSE A CONFIRMAR].
+* **Suplementação vitamínica:** Administre tiamina (vitamina B1) antes de iniciar qualquer aporte calórico, para prevenir a encefalopatia de Wernicke. Dose e via conforme o protocolo do serviço.
 * **Suporte nutricional:** Nos casos de recusa absoluta com recusa de via oral, avalie a necessidade de sonda enteral com equipe multidisciplinar, respeitando os aspectos legais e éticos da internação involuntária ou compulsória quando houver risco de morte iminente e incapacidade de discernimento.
 * **Manejo farmacológico da base psiquiátrica:** O uso de medicações para sintomas psicóticos, ansiedade grave ou agitação deve ser avaliado caso a caso. Classes como antipsicóticos atípicos em doses baixas podem ser consideradas para sintomas de recusa delirante ou angústia extrema, sempre com dose definida pelo médico.
 * **Encaminhamento e suporte:** Acione a psiquiatria de ligação ou a equipe de saúde mental da rede assim que o paciente estiver clinicamente estabilizado. Para suporte em momentos de crise emocional severa, oriente pacientes e familiares sobre os canais de ajuda disponíveis, como o Centro de Valorização da Vida e os serviços de urgência pré-hospitalar.
