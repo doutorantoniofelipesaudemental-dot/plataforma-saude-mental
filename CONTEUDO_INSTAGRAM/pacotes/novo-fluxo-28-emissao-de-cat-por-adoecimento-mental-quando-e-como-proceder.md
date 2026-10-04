@@ -198,6 +198,10 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 
 ## Conformidade
 
+**Chancela de origem:** Conteúdo Educativo / Orientação Geral que respeita os protocolos locais e as diretrizes de saúde ocupacional.
+
+Este material não orienta leigos a diagnosticar colegas ou equipes, não promete metas corporativas (redução de afastamentos, de custos ou de absenteísmo) e não estabelece nexo causal automático: a relação entre adoecimento e trabalho só é definida por avaliação médica individualizada e, quando cabível, perícia.
+
 Este é um conteúdo educativo, sem personagens nem casos reais. É uma orientação geral e não faz diagnóstico, não estabelece relação entre adoecimento e trabalho e não substitui a avaliação médica individualizada, a perícia, a orientação jurídica nem a consulta presencial. As escolhas terapêuticas devem respeitar sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais e as diretrizes de saúde ocupacional. Nenhuma medicação deve ser iniciada, trocada ou suspensa sem orientação médica individualizada. O tema é sensível: ideias ou planos de se machucar, surto com perda de contato com a realidade, agitação intensa ou incapacidade total de se cuidar pedem emergência (SAMU 192 ou pronto atendimento); o CVV 188 oferece apoio emocional 24 horas. Informações de saúde são dados pessoais sensíveis e sigilosos. Não faz prescrição.
 
 Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
