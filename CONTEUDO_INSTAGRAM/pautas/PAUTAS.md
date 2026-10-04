@@ -943,7 +943,7 @@
   - PubMed: `("Depressive Disorder"[Mesh]) OR ("Anxiety Disorders"[Mesh]) AND ("Return to Work"[Mesh]) AND ("Workplace"[Mesh])` (Revisão sistemática Cochrane e metanálise) 19370664
   - PubMed: `("Occupational Health Physicians"[Mesh]) AND ("Mental Disorders"[Mesh]) AND ("Practice Guideline"[Publication Type])` (Ensaio clínico randomizado) 23496948
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/readaptacao-funcional-em-saude-mental-estrategias-na-empresa.md` · slug: `readaptacao-funcional-em-saude-mental-estrategias-na-empresa` · pauta: `2026-09-30-67-readaptacao-funcional-em-saude`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Afastamento por transtorno mental: o que a empresa precisa saber" (similaridade 0.25)
 
 ## [redigida] Prevenção quaternária na medicina do trabalho e saúde mental
@@ -960,7 +960,7 @@
   - PubMed: `"Occupational Health Physicians"[Mesh] AND "Mental Disorders"[Mesh] AND "Diagnostic Errors"[Mesh] AND "Quaternary Prevention"` (Revisão sistemática) 38695906
   - PubMed: `"Stress, Psychological"[Mesh] AND "Workplace"[Mesh] AND "Medicalization"[Mesh] AND "Psychiatry"[Mesh]` (Revisão sistemática) 37385740
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/prevencao-quaternaria-na-medicina-do-trabalho-e-saude-mental.md` · slug: `prevencao-quaternaria-na-medicina-do-trabalho-e-saude-mental` · pauta: `2026-09-30-68-prevencao-quaternaria-na-medic`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Prevenção de suicídio no ambiente de trabalho: o papel da empresa" (similaridade 0.25)
 
 ## [redigida] Manejo da Síndrome do Esgotamento Profissional na Saúde Ocupacional: Do Rastreio ao Plano de Readaptação
@@ -977,7 +977,7 @@
   - PubMed: `burnout diagnostic criteria depression differential diagnosis` (Revisão sistemática) 37385740
   - PubMed: `work rehabilitation burnout randomized controlled trial` (Revisão sistemática) 38695906
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-sindrome-do-esgotamento-profissional-na-saude-ocup.md` · slug: `manejo-da-sindrome-do-esgotamento-profissional-na-saude-ocup` · pauta: `2026-09-30-69-gestao-do-estresse-corporativo`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Readaptação funcional em saúde mental: estratégias na empresa" (similaridade 0.25)
 
 ## [redigida] Acolhimento ao sofrimento psíquico agudo no ambiente laboral
@@ -995,7 +995,7 @@
   - PubMed: `("Crisis Intervention"[Mesh] OR "early intervention") AND ("Psychological Distress"[Mesh] OR "acute stress") AND ("Workplace"[Mesh] OR "occupational setting") AND ("Referral and Consultation"[Mesh] OR "supportive listening")` (Revisão de escopo) 33720444
   - PubMed: `` (Diretriz (Project BETA) e revisão) 33145538
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral.md` · slug: `acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral` · pauta: `2026-09-30-70-acolhimento-ao-sofrimento-psiq`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Prevenção de suicídio no ambiente de trabalho: o papel da empresa" (similaridade 0.19)
 
 ## [redigida] Impacto da cultura organizacional tóxica na saúde mental dos times
@@ -1012,7 +1012,7 @@
   - PubMed: `"Workplace"[Mesh] AND "Occupational Health"[Mesh] AND ("Burnout, Professional"[Mesh] OR "Anxiety"[Mesh]) AND "Practice Guideline"[Publication Type]` (Revisão sistemática) 38695906
   - PubMed: `"Organizational Culture"[Mesh] AND "Occupational Health Services"[Mesh] AND "Primary Prevention"[Mesh]` (Revisão sistemática) 37385740
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/impacto-da-cultura-organizacional-toxica-na-saude-mental-dos.md` · slug: `impacto-da-cultura-organizacional-toxica-na-saude-mental-dos` · pauta: `2026-09-30-71-impacto-da-cultura-organizacio`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Cultura de segurança psicológica: o que é e por que importa" (similaridade 0.21)
 
 ## [rejeitada] Programas de retorno ao trabalho após afastamento psiquiátrico
@@ -1042,7 +1042,7 @@
   - PubMed: `workplace mental health AND primary prevention AND organizational intervention` (Revisão sistemática) 38695906
   - PubMed: `job strain model AND mental health AND occupational health` (Revisão sistemática e metanálise) 36166285
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-riscos-psicossociais-no-trabalho-ferramentas-pr.md` · slug: `avaliacao-de-riscos-psicossociais-no-trabalho-ferramentas-pr` · pauta: `2026-09-30-75-avaliacao-de-riscos-psicossoci`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Avaliação neuropsicológica breve na Atenção Primária" (similaridade 0.24)
 
 ## [redigida] Prevenção do absenteísmo psiquiátrico: diretrizes para o médico avaliador
@@ -1059,7 +1059,7 @@
   - PubMed: `work disability AND depression AND secondary prevention` (Revisão sistemática e metanálise) 27609709
   - PubMed: `` (Revisão sistemática e metanálise) 35106629
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/prevencao-do-absenteismo-psiquiatrico-diretrizes-para-o-medi.md` · slug: `prevencao-do-absenteismo-psiquiatrico-diretrizes-para-o-medi` · pauta: `2026-09-30-76-prevencao-do-absenteismo-psiqu`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Prevenção quaternária na medicina do trabalho e saúde mental" (similaridade 0.24)
 
 ## [rejeitada] Professores frente à violência escolar: protocolos de apoio emocional

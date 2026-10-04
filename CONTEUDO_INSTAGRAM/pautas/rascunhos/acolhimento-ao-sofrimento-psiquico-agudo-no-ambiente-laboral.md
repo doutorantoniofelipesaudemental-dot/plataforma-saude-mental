@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T09:46:40.500Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
@@ -17,10 +17,10 @@ referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed;
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (4):
-> - * **Avalie a gravidade imediata:** Pergunte com suavidade se a pessoa pensa em se machucar. Falar sobre isso não induz o ato; pelo contrário, alivia o peso d…
+> - * **Diante de risco à vida:** Se a pessoa falar em se machucar, nunca a deixe sozinha e acione imediatamente o SAMU (192)…
 > - * **Limites do papel corporativo:** Lideranças e equipes de RH acolhem, escutam e direcionam, mas não tratam. O foco deve ser o encaminhamento rápido e human…
 > - * **Intervenções farmacológicas:** Caso haja indicação de contenção farmacológica breve ou manejo de sintomas ansiosos severos no serviço de urgência, utiliz…
-> - - Sempre avalie a presença de ideação autolesiva e acione a rede de urgência, como SAMU 192 ou CVV 188, em caso de risco.
+> - - Diante de fala sobre se machucar, não deixe a pessoa sozinha e acione a rede de urgência, SAMU 192; o CVV 188 oferece apoio emocional. A avaliação do risco cabe ao profissional de saúde.
 
 Quando um colaborador chega ao limite emocional no ambiente de trabalho, o impacto reverbera por toda a equipe. Como médico de família e comunidade, vejo com frequência o momento em que a crise aguda se manifesta na rotina laboral. Gestores, líderes de recursos humanos e profissionais de saúde ocupacional muitas vezes se sentem perdidos diante de uma crise psíquica. O medo de errar, de agravar a situação ou de invadir a privacidade do colega paralisa quem está por perto. Vamos conversar sobre como transformar esse primeiro instante em um espaço de segurança, escuta genuína e cuidado ético.
 
@@ -34,7 +34,7 @@ O primeiro passo diante de um colaborador em sofrimento agudo é garantir um amb
 * **Pratique a escuta ativa:** Não tenha pressa em resolver o problema ou dar conselhos rápidos. Deixe que a pessoa fale no próprio ritmo, sem interromper.
 * **Valide o sentimento:** Evite minimizar a dor com frases feitas. Dizer "isso passa" ou "você é forte" costuma afastar quem sofre. Prefira reconhecer: "percebo que você está passando por um momento muito difícil".
 * **Mantenha a calma:** A regulação emocional é contagiosa. Se você demonstrar tranquilidade e firmeza amorosa, ajuda o sistema nervosa da outra pessoa a desacelerar.
-* **Avalie a gravidade imediata:** Pergunte com suavidade se a pessoa pensa em se machucar. Falar sobre isso não induz o ato; pelo contrário, alivia o peso de carregar esse segredo sozinho. Se houver risco iminente à vida, nunca deixe a pessoa sozinha e acione imediatamente o SAMU (192) ou oriente o contato com o CVV 188.
+* **Diante de risco à vida:** Se a pessoa falar em se machucar, nunca a deixe sozinha e acione imediatamente o SAMU (192). O CVV 188 oferece apoio emocional 24 horas. A avaliação do risco é feita por profissional de saúde.
 
 ## Fisiopatologia
 
