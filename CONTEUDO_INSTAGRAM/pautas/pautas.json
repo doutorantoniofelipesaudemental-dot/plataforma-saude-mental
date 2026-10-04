@@ -5253,7 +5253,7 @@
     "pauta": "Esta narrativa composta traz a perspectiva de um atendimento de urgência em que um pequeno objeto esquecido em uma maca revela a passagem rápida, porém marcante, de alguém em profundo sofrimento psíquico. Inspirada em vivências comuns na rede pública, sem paciente real identificável. O texto final leva o aviso legal do CFM.",
     "publicoAlvo": "Leitores em geral sensíveis a relatos da prática médica e ao acolhimento em saúde mental.",
     "angulo": "Foca nos rastros materiais e emocionais deixados por pacientes anônimos nos espaços de trânsito rápido da emergência.",
-    "sensivel": false,
+    "sensivel": true,
     "categoria": "Relatos da Prática",
     "lote": 4,
     "origem": "assistente",

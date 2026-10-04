@@ -2,7 +2,7 @@
 
 Pacote 19 do novo fluxo editorial (Lote 6), montado a partir da crônica "A luz acesa na sala de vacina quando a UBS já está vazia" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências cotidianas da Atenção Primária. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.**
 
-A crônica é sobre o trabalho de bastidores de uma técnica de enfermagem que fica além do horário na sala de vacina, e sobre a entrega diária que passa invisível. Não traz sintomas, conduta, dose ou protocolo clínico, e a pauta (não sensível) está bem classificada. Por ter vacinação no centro da cena, o pacote **não acrescenta nenhuma afirmação sobre vacinas** (esquema, eficácia, segurança ou calendário): usa só o que o artigo diz ("nenhuma criança do bairro sem a sua gotinha de proteção", "conferir lote por lote", "temperatura da geladeira térmica"). A única adição é uma frase genérica de orientação ("para saber sobre vacinas e campanhas, procure a sua unidade de saúde") na legenda do Instagram, no podcast e na conformidade. O apoio (CVV 188 e SAMU 192) aparece em todas as peças. **Pontos para o revisor:** (a) "Dona Maria" é, de novo, o nome da personagem (agora técnica de enfermagem): já aparece em pelo menos cinco crônicas (Pacotes 06, 13, 15, 16 e 19, com perfis diferentes) e convém variar; (b) "seu João" (hipertensão) também reaparece, como nos Pacotes 08 e 09; (c) a frase "gestores cobram metas nas reuniões de segunda-feira" não foi usada para generalizar sobre gestores, para não soar como crítica à gestão; (d) a crônica cita "gotinha" de proteção: conferir se a expressão deve ser mantida.
+A crônica é sobre o trabalho de bastidores de uma técnica de enfermagem que fica além do horário na sala de vacina, e sobre a entrega diária que passa invisível. Não traz sintomas, conduta, dose ou protocolo clínico, e a pauta (não sensível) está bem classificada. Por ter vacinação no centro da cena, o pacote **não acrescenta nenhuma afirmação sobre vacinas** (esquema, eficácia, segurança ou calendário): usa só o que o artigo diz ("nenhuma criança do bairro sem a sua gotinha de proteção", "conferir lote por lote", "temperatura da geladeira térmica"). A única adição é uma frase genérica de orientação ("para saber sobre vacinas e campanhas, procure a sua unidade de saúde") na legenda do Instagram, no podcast e na conformidade. O apoio (CVV 188 e SAMU 192) aparece em todas as peças. **Pontos para o revisor:** (a) nomes: a técnica de enfermagem, antes "Dona Maria", passou a se chamar "Rita" (a crônica a descreve como técnica de enfermagem, e por isso não foi usada a forma "Enfermeira Rita", que designaria outra categoria profissional); (b) "seu João" (hipertensão, citado de passagem) ainda aparece, como no Pacote 08: convém variar o nome; (c) a frase "gestores cobram metas nas reuniões de segunda-feira" não foi usada para generalizar sobre gestores, para não soar como crítica à gestão; (d) a crônica cita "gotinha" de proteção: conferir se a expressão deve ser mantida.
 
 ## Estilo geral
 
@@ -34,8 +34,8 @@ A crônica é sobre o trabalho de bastidores de uma técnica de enfermagem que f
 - **Narração:** "Aproximei-me devagar, para não assustar quem estivesse lá dentro."
 - **Direção visual (2D):** janela basculante com vento suave e sombras no corredor.
 
-### Slide 4: Dona Maria
-- **Texto:** "Dona Maria, a técnica de enfermagem mais antiga, conferia as fichas de imunização acumuladas ao longo da semana."
+### Slide 4: Rita
+- **Texto:** "Rita, a técnica de enfermagem mais antiga, conferia as fichas de imunização acumuladas ao longo da semana."
 - **Narração:** "Na mesa, um copo de café que esfriou há muito tempo."
 - **Direção visual (2D):** prancheta com fichas e copo de café, sem rostos.
 
@@ -56,7 +56,7 @@ A crônica é sobre o trabalho de bastidores de uma técnica de enfermagem que f
 
 ### Slide 8: invisível e firme
 - **Texto:** "Não há tapete vermelho nem aplausos no fim do expediente. Existe a certeza de estar na linha de frente da vida das pessoas."
-- **Narração:** "A luz se apagou. Dona Maria trancou a porta e caminhou em direção ao ponto de ônibus."
+- **Narração:** "A luz se apagou. Rita trancou a porta e caminhou em direção ao ponto de ônibus."
 - **Direção visual (2D):** porta trancada, luz apagada, ponto de ônibus ao fundo.
 
 ### Slide 9: assinatura ética e convite
@@ -84,7 +84,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 ### Roteiro de narração
 - 0-3s, gancho: "A luz acesa chamou a minha atenção."
 - 4-12s: "Narrativa composta, personagens fictícios. O corredor da unidade estava em silêncio quando notei um facho de luz sob a porta da sala de vacina."
-- 13-22s: "Dona Maria, técnica de enfermagem, conferia lote por lote para a campanha da semana seguinte, e a temperatura da geladeira térmica."
+- 13-22s: "Rita, técnica de enfermagem, conferia lote por lote para a campanha da semana seguinte, e a temperatura da geladeira térmica."
 - 23-27s: "A saúde pública também acontece nesses pequenos intervalos."
 - 28-30s, convite: "Ouça o artigo narrado no Portal, pelo link do perfil. Em crise: CVV 188."
 
@@ -136,8 +136,8 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 ### Roteiro de narração
 - 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre uma luz acesa na sala de vacina de uma unidade vazia. A história é uma narrativa composta, com personagens fictícios, inspirada em vivências cotidianas da Atenção Primária."
 - 0:20-1:00, o corredor: "O corredor da unidade básica já estava em silêncio. As portas das salas batiam de leve com a corrente de ar da janela da recepção. Eram quase sete horas da noite de uma sexta-feira longa. Eu caminhava pelo corredor escuro, pronto para pegar a mochila e encerrar mais um plantão exaustivo, quando notei um facho de luz amarelada saindo por baixo da porta da sala de vacina."
-- 1:00-1:50, Dona Maria: "Aproximei-me devagar, para não assustar quem estivesse lá dentro. Dona Maria, nossa técnica de enfermagem mais antiga, estava sentada na cadeira de curativos, com os óculos na ponta do nariz, segurando uma prancheta com as fichas de imunização da semana. Na mesa, um copo de café frio. Ela conferia lote por lote, checando se faltava algum insumo para a campanha da semana seguinte, garantindo que nenhuma criança do bairro ficasse sem a sua gotinha de proteção. Disse que faltava apenas conferir a temperatura da geladeira térmica."
-- 1:50-2:30, os pequenos intervalos: "Fiquei no batente da porta, conversando fiado sobre o cansaço da semana e sobre o caso do seu João, que demorou a aceitar o diagnóstico de hipertensão e hoje faz questão de mostrar que aferiu a pressão em casa. A gente fala muito de indicadores, de metas e de estatísticas. Mas a saúde pública acontece nesses pequenos intervalos: na luz acesa quando o prédio já está vazio, na paciência de escutar uma história pela décima vez, na decisão silenciosa de ficar cinco minutos a mais. Não há tapete vermelho nem aplausos no fim do expediente. A luz se apagou, Dona Maria trancou a porta e foi caminhando para o ponto de ônibus. Na segunda-feira, estaremos de volta, abrindo as portas e acendendo as luzes."
+- 1:00-1:50, Rita: "Aproximei-me devagar, para não assustar quem estivesse lá dentro. Rita, nossa técnica de enfermagem mais antiga, estava sentada na cadeira de curativos, com os óculos na ponta do nariz, segurando uma prancheta com as fichas de imunização da semana. Na mesa, um copo de café frio. Ela conferia lote por lote, checando se faltava algum insumo para a campanha da semana seguinte, garantindo que nenhuma criança do bairro ficasse sem a sua gotinha de proteção. Disse que faltava apenas conferir a temperatura da geladeira térmica."
+- 1:50-2:30, os pequenos intervalos: "Fiquei no batente da porta, conversando fiado sobre o cansaço da semana e sobre o caso do seu João, que demorou a aceitar o diagnóstico de hipertensão e hoje faz questão de mostrar que aferiu a pressão em casa. A gente fala muito de indicadores, de metas e de estatísticas. Mas a saúde pública acontece nesses pequenos intervalos: na luz acesa quando o prédio já está vazio, na paciência de escutar uma história pela décima vez, na decisão silenciosa de ficar cinco minutos a mais. Não há tapete vermelho nem aplausos no fim do expediente. A luz se apagou, Rita trancou a porta e foi caminhando para o ponto de ônibus. Na segunda-feira, estaremos de volta, abrindo as portas e acendendo as luzes."
 - 2:30-2:50, o recado: "Para saber sobre vacinas e campanhas, procure a sua unidade de saúde. Se o cansaço do dia a dia está pesado, converse com a sua equipe ou com alguém de confiança. Em crise, ligue para o CVV, no 188, ou para o SAMU, no 192."
 - 2:50-3:00, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
@@ -173,7 +173,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 |---|---|---|---|---|
 | 0:00-0:30 | Gancho | O corredor da unidade básica já estava em silêncio. Eram quase sete horas da noite quando notei um facho de luz amarelada saindo por baixo da porta da sala de vacina. Narrativa composta. | Animação 2D de um corredor escuro com uma porta iluminada. | A luz acesa na sala de vacina |
 | 0:30-3:00 | Promessa honesta | Neste vídeo, vamos refletir sobre o trabalho que acontece nos bastidores da Atenção Primária e passa invisível, a partir de uma narrativa composta. | Ilustração 2D de fichas e prancheta, sem imagens de vacinação. | Bastidores da atenção básica |
-| 3:00-7:00 | Desenvolvimento | Dona Maria conferia lote por lote, checando insumos para que nenhuma criança do bairro ficasse sem a sua gotinha de proteção. O trabalho na atenção básica nunca termina de verdade: muda de forma e pulsa nas entrelinhas da rotina. | Geladeira térmica e insumos em 2D. | A saúde pública nos detalhes |
+| 3:00-7:00 | Desenvolvimento | Rita conferia lote por lote, checando insumos para que nenhuma criança do bairro ficasse sem a sua gotinha de proteção. O trabalho na atenção básica nunca termina de verdade: muda de forma e pulsa nas entrelinhas da rotina. | Geladeira térmica e insumos em 2D. | A saúde pública nos detalhes |
 | 7:00-9:30 | Recapitulação | A saúde pública acontece na paciência, na escuta e na decisão silenciosa de ficar cinco minutos a mais para garantir que tudo está em ordem. | Conversa no batente da porta, em 2D, sem rostos. | Pequenos intervalos |
 | 9:30-10:00 | CTA | Na segunda-feira, estaremos de volta. Para saber sobre vacinas, procure a sua unidade de saúde. Em crise: CVV 188, SAMU 192. Leia o artigo completo no Portal. | Amanhecer em uma unidade, em 2D. | Recomeçando o ciclo |
 

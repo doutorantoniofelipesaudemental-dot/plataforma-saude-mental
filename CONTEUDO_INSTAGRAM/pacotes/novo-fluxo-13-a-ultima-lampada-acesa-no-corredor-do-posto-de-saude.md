@@ -1,6 +1,6 @@
 # Pacote de redes | A última lâmpada acesa no corredor do posto de saúde
 
-Pacote 13 do novo fluxo editorial (Lote 4), montado a partir da crônica "A última lâmpada acesa no corredor do posto de saúde" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns da Atenção Primária. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.** O texto lembra uma paciente em luto pela perda do companheiro, com "nó na garganta": a pauta está cadastrada como "não sensível", mas o pacote traz aviso de conteúdo sensível e mantém o apoio (CVV 188 e SAMU 192) em todas as peças. Não há conduta, dose ou protocolo clínico no texto. **Pontos para o revisor:** (1) o nome "dona Maria" também aparece na crônica do Pacote 06 (outra personagem, idosa em noite de plantão) e o luto lembra o da "Dona Marta" do Pacote 12; convém variar nomes ou perfis entre as crônicas; (2) sugestão de reclassificar a pauta como sensível.
+Pacote 13 do novo fluxo editorial (Lote 4), montado a partir da crônica "A última lâmpada acesa no corredor do posto de saúde" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns da Atenção Primária. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.** O texto lembra uma paciente em luto pela perda do companheiro, com "nó na garganta": a pauta está cadastrada como "não sensível", mas o pacote traz aviso de conteúdo sensível e mantém o apoio (CVV 188 e SAMU 192) em todas as peças. Não há conduta, dose ou protocolo clínico no texto. **Pontos para o revisor:** (1) nomes: a personagem passou de "dona Maria" para "dona Antônia", para não repetir a "Dona Maria" do Pacote 06 (idosa em noite de plantão); o luto ainda lembra o da "Dona Marta" do Pacote 12, e convém variar o perfil; (2) sugestão de reclassificar a pauta como sensível.
 
 ## Estilo geral
 
@@ -33,7 +33,7 @@ Pacote 13 do novo fluxo editorial (Lote 4), montado a partir da crônica "A últ
 - **Direção visual (2D):** portas de consultórios alinhadas, iluminação que diminui aos poucos.
 
 ### Slide 4: a cadeira
-- **Texto:** "No consultório três, a cadeira ainda guarda o formato do corpo de dona Maria."
+- **Texto:** "No consultório três, a cadeira ainda guarda o formato do corpo de dona Antônia."
 - **Narração:** "Ela tentava explicar o nó na garganta que carrega desde a perda do companheiro."
 - **Direção visual (2D):** cadeira vazia ao lado da mesa, luz lateral suave, sem rostos.
 
@@ -82,7 +82,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 ### Roteiro de narração
 - 0-3s, gancho: "O que fica no posto depois que a última porta fecha?"
 - 4-12s: "Narrativa composta, personagens fictícios. As luzes do corredor se apagam, uma a uma."
-- 13-22s: "No consultório três, a cadeira ainda guarda a conversa com dona Maria sobre o luto e o respeito ao próprio tempo."
+- 13-22s: "No consultório três, a cadeira ainda guarda a conversa com dona Antônia sobre o luto e o respeito ao próprio tempo."
 - 23-27s: "Não levamos só diagnósticos para casa. Levamos rostos, nomes e suspiros."
 - 28-30s, convite: "Ouça o artigo narrado no Portal, pelo link do perfil. Em crise: CVV 188."
 
@@ -134,7 +134,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 ### Roteiro de narração
 - 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre a última lâmpada acesa no corredor de um posto de saúde. A história é uma narrativa composta, com personagens fictícios, inspirada em vivências comuns da Atenção Primária. O tema é sensível: fala de luto."
 - 0:20-1:00, o corredor: "O silêncio que se instala na unidade básica depois que a última porta fecha tem uma textura própria. As luzes vão se apagando uma a uma, guiando meus passos lentos pelo piso frio de cerâmica branca. Minutos antes, havia passos apressados, choros abafados, conversas na sala de espera e aquela mistura de expectativa e alívio que define o nosso dia a dia."
-- 1:00-1:50, dona Maria: "Olho para a porta do consultório três. A cadeira ainda guarda o formato do corpo de dona Maria. Ela esteve aqui há pouco, com as mãos juntas sobre o colo, tentando encontrar palavras para explicar o nó na garganta que carrega desde a perda do companheiro. Lembro do brilho discreto nos olhos dela quando conversamos sobre dar pequenos passos, respeitando o próprio tempo de luto."
+- 1:00-1:50, dona Antônia: "Olho para a porta do consultório três. A cadeira ainda guarda o formato do corpo de dona Antônia. Ela esteve aqui há pouco, com as mãos juntas sobre o colo, tentando encontrar palavras para explicar o nó na garganta que carrega desde a perda do companheiro. Lembro do brilho discreto nos olhos dela quando conversamos sobre dar pequenos passos, respeitando o próprio tempo de luto."
 - 1:50-2:30, o que levamos: "Na sala de procedimentos, o cheiro de álcool e o silêncio dos equipos lembram a urgência de cada dor que nos procura buscando abrigo. Ser médico de família e comunidade é conviver com a fronteira invisível entre a vulnerabilidade humana e a busca por alívio. Não levamos apenas diagnósticos para casa: levamos rostos, nomes, suspiros e a responsabilidade silenciosa de fazer o melhor com o que temos. Apago a última lâmpada. Cuidar não é apenas receitar remédios ou ajustar doses: é estar presente, oferecer escuta e segurar a mão de quem se sente perdido no escuro."
 - 2:30-2:50, o recado: "Se você carrega um luto ou um peso que parece grande demais, procure a sua unidade de saúde e converse com a sua equipe de referência. Em crise, ligue para o CVV, no 188, ou para o SAMU, no 192."
 - 2:50-3:00, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
@@ -171,7 +171,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 |---|---|---|---|---|
 | 0:00-1:40 | Abertura | O silêncio que se instala na unidade básica depois que a última porta fecha tem uma textura própria. Neste vídeo, vamos acompanhar uma crônica em narrativa composta sobre o peso humano do cuidado. Tema sensível: luto. | Plano aberto 16:9 de um corredor vazio com luz suave ao fundo, sem pessoas. | A última lâmpada acesa |
 | 1:40-4:00 | O corredor | As luzes vão se apagando uma a uma. Minutos antes, havia passos apressados, choros abafados e conversas. Na sala de procedimentos, o cheiro de álcool e o silêncio lembram a urgência de cada dor que busca abrigo. | Sala de procedimentos em repouso e bancos de espera vazios, sem pessoas. | Os ecos do dia |
-| 4:00-6:30 | O consultório | No consultório três, a cadeira ainda guarda o formato do corpo de dona Maria, que tentava explicar o nó na garganta desde a perda do companheiro. Conversamos sobre pequenos passos, respeitando o tempo do luto. | Cadeira vazia ao lado da mesa, luz de fim de tarde. | O respeito ao tempo do luto |
+| 4:00-6:30 | O consultório | No consultório três, a cadeira ainda guarda o formato do corpo de dona Antônia, que tentava explicar o nó na garganta desde a perda do companheiro. Conversamos sobre pequenos passos, respeitando o tempo do luto. | Cadeira vazia ao lado da mesa, luz de fim de tarde. | O respeito ao tempo do luto |
 | 6:30-8:50 | O médico de família | Ser médico de família e comunidade é conviver com a fronteira entre a vulnerabilidade humana e a busca por alívio. Não levamos só diagnósticos para casa: levamos rostos, nomes, suspiros e a responsabilidade de fazer o melhor com o que temos. | Fichas e prontuários estilizados sobre a mesa, 2D. | Além do diagnóstico |
 | 8:50-10:00 | Recapitulação e CTA | Cuidar é estar presente e oferecer escuta a quem se sente perdido no escuro. Amanhã cedo, as portas se abrem de novo. Em crise: CVV 188, SAMU 192. Leia o artigo completo no Portal. | Última luz que se apaga e luz da manhã na recepção. | Recomeçar o ciclo do cuidado |
 

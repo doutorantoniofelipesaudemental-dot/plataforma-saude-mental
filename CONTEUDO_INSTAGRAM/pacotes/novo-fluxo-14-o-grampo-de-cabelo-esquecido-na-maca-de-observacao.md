@@ -2,7 +2,7 @@
 
 Pacote 14 do novo fluxo editorial (Lote 4), montado a partir da crônica "O grampo de cabelo esquecido na maca de observação" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns da rede pública. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.**
 
-**Tema sensível (a pauta está cadastrada como "não sensível" e deve ser reclassificada).** A crônica trata de uma paciente em crise aguda, em sofrimento psíquico intenso, que dizia não encontrar mais forças para continuar. Por isso este pacote segue as regras de mensagem segura: sem imagens ou descrição da crise, sem método, sem alarmismo, sem romantizar a dor e sem prometer resolução; o apoio (CVV 188 e SAMU 192) aparece em todas as peças e em destaque no fecho. As falas do artigo sobre a dor foram mantidas só no essencial e não são usadas em ganchos nem como imagem. **Pontos para o revisor:** (1) confirmar se as frases da paciente ("o mundo parecia desabar", "já não encontrava forças para continuar") podem aparecer nas peças ou devem ficar só no artigo (neste pacote ficaram só no artigo); (2) confirmar o texto de apoio para risco imediato (pronto atendimento ou SAMU 192).
+**Tema sensível (pauta reclassificada oficialmente como Sensível, por decisão do Dr. Antônio Felipe).** A crônica trata de uma paciente em crise aguda, em sofrimento psíquico intenso, que dizia não encontrar mais forças para continuar. Por isso este pacote segue as regras de mensagem segura: sem imagens ou descrição da crise, sem método, sem alarmismo, sem romantizar a dor e sem prometer resolução; o apoio (CVV 188 e SAMU 192) aparece em todas as peças e em destaque no fecho. As expressões mais pesadas da crônica (por exemplo, a pessoa "se apresentar em pedaços" e o "pico de angústia") ficam restritas ao artigo-fonte; nas peças de redes o foco é a rede de apoio (alguém de confiança, a unidade de saúde, o CVV e o SAMU). As falas do artigo sobre a dor foram mantidas só no essencial e não são usadas em ganchos nem como imagem. **Pontos para o revisor:** (1) confirmar se as frases da paciente ("o mundo parecia desabar", "já não encontrava forças para continuar") podem aparecer nas peças ou devem ficar só no artigo (neste pacote ficaram só no artigo); (2) confirmar o texto de apoio para risco imediato (pronto atendimento ou SAMU 192).
 
 ## Estilo geral
 
@@ -50,12 +50,12 @@ Pacote 14 do novo fluxo editorial (Lote 4), montado a partir da crônica "O gram
 - **Direção visual (3D):** duas cadeiras vazias em uma sala serena, luz quente e suave, com alternativa estática.
 
 ### Slide 7: a pessoa inteira
-- **Texto:** "O cuidado vai muito além da prescrição. Ele reside em enxergar a pessoa inteira, mesmo quando ela se apresenta em pedaços."
+- **Texto:** "O cuidado vai muito além da prescrição. Ele reside em enxergar a pessoa inteira."
 - **Narração:** "Guardei o grampo na gaveta, junto de outros objetos esquecidos."
 - **Direção visual (2D):** gaveta entreaberta com pequenos objetos, luz âmbar.
 
 ### Slide 8: apoio e convite
-- **Texto:** "Se a dor estiver pesada demais, você não precisa carregar esse peso sozinho. CVV 188, 24h. Risco imediato: pronto atendimento ou SAMU 192."
+- **Texto:** "Se a dor estiver pesada demais, você não precisa carregar esse peso sozinho. Procure alguém de confiança e a sua unidade de saúde. CVV 188, 24h. Risco imediato: pronto atendimento ou SAMU 192."
 - **Visual:** fundo em tom petróleo profundo, texto em branco puro, margens generosas; assinatura oficial do Dr. Antônio Felipe, com CVV 188 e SAMU 192 no rodapé do slide.
 
 ### Legenda
@@ -110,7 +110,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 ## LinkedIn (tom de autoridade, tokens de design do Portal)
 
 ### LinkedIn 1: para gestores e RH
-> Nesta crônica composta, após a saída de uma paciente em crise aguda, um grampo de cabelo permanece na maca de observação de um pronto atendimento psiquiátrico. O objeto lembra que, entre fluxos, medicações e prontuários, há uma pessoa inteira, e que escuta atenta e um espaço seguro, sem julgamentos, fazem parte do cuidado. Tema sensível. Leia o artigo completo no Portal.
+> Nesta crônica composta, após a saída de uma paciente em crise aguda, um grampo de cabelo permanece na maca de observação de um pronto atendimento psiquiátrico. O objeto lembra que, entre fluxos, medicações e prontuários, há uma pessoa inteira, e que escuta atenta e um espaço seguro, sem julgamentos, fazem parte do cuidado. Tema sensível. Se precisar de apoio: CVV 188 / SAMU 192. Leia o artigo completo no Portal.
 >
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
@@ -132,7 +132,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 - 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre um grampo de cabelo esquecido em uma maca de observação. A história é uma narrativa composta, com personagens fictícios, inspirada em vivências comuns da rede pública. O tema é sensível: fala de sofrimento psíquico. Se precisar, pause e cuide de você."
 - 0:20-1:00, a cena: "O plantão no pronto atendimento psiquiátrico seguia o ritmo de sempre: portas que se abrem, passos apressados no corredor, conversas abafadas. Entre um atendimento e outro, entrei na sala de observação, onde minutos antes estivera uma paciente em crise. O espaço estava vazio, pronto para o próximo caso. Sobre o lençol de papel amassado, restava um grampo de cabelo prateado, levemente torto nas pontas."
 - 1:00-1:50, o grampo: "Aquele objeto miúdo parecia contar uma história silenciosa sobre quem acabara de passar por ali. Na urgência, lidamos o tempo todo com fluxos, medicações, sinais vitais e prontuários eletrônicos que podem reduzir o sofrimento a códigos e hipóteses. Precisamos correr para dar conta da demanda e garantir a segurança de quem chega vulnerável. Mas, às vezes, são pequenos rastros que nos lembram da humanidade por trás de cada leito."
-- 1:50-2:30, o cuidado: "Não havia promessas fáceis, nem palavras mágicas. O que oferecemos foi o que tínhamos de mais humano: escuta atenta, um espaço seguro onde ela pudesse desabar sem julgamentos e o cuidado necessário para atravessar aquele pico de angústia. Guardei o grampo na gaveta, junto de outros pequenos objetos esquecidos ao longo dos anos. O cuidado verdadeiro vai muito além da prescrição: reside em enxergar a pessoa inteira, mesmo quando ela se apresenta em pedaços."
+- 1:50-2:30, o cuidado: "Não havia promessas fáceis, nem palavras mágicas. O que oferecemos foi o que tínhamos de mais humano: escuta atenta, um espaço seguro, sem julgamentos, e o cuidado necessário naquele momento. Guardei o grampo na gaveta, junto de outros pequenos objetos esquecidos ao longo dos anos. O cuidado verdadeiro vai muito além da prescrição: reside em enxergar a pessoa inteira."
 - 2:30-2:50, o recado: "Se você ou alguém que você ama estiver passando por uma dor que parece pesada demais, saiba que existe ajuda e que você não precisa carregar esse peso sozinho. Procure a unidade de saúde mais próxima ou ligue para o CVV, no 188, que atende 24 horas. Em risco imediato, procure o pronto atendimento ou ligue para o SAMU, no 192."
 - 2:50-3:00, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
@@ -169,7 +169,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 | 0:00-1:30 | Gancho e promessa | Entre passos apressados no corredor da emergência, uma sala de observação fica vazia. Sobre o papel amassado, restou um grampo de cabelo torto. Hoje vamos refletir sobre o cuidado que vai além da prescrição. Narrativa composta, tema sensível. | Plano suave de um ambiente sereno, sem pessoas, tons acolhedores. | O cuidado além da receita |
 | 1:30-3:45 | A rotina na urgência | Na urgência, lidamos com fluxos, medicações, sinais vitais e prontuários, e precisamos garantir a segurança de quem chega vulnerável. Essa agilidade é necessária, mas pode reduzir a pessoa a códigos e hipóteses. | Gráficos 2D abstratos do fluxo de atendimento, sem pessoas. | Técnica e presença |
 | 3:45-6:10 | A pessoa por trás do prontuário | O grampo esquecido contava uma história silenciosa. Não havia promessas fáceis nem palavras mágicas: o que tínhamos de mais humano era a escuta atenta. | Sala de acolhimento vazia em 3D minimalista, luz natural suave. | Escuta atenta |
-| 6:10-8:20 | A escuta sem julgamentos | Oferecemos um espaço seguro onde ela pudesse desabar sem julgamentos, e o cuidado necessário para atravessar aquele pico de angústia. O cuidado vai além da prescrição: enxerga a pessoa inteira. | Linhas contínuas que se reorganizam com calma, 2D. | Sem julgamentos |
+| 6:10-8:20 | A escuta sem julgamentos | Oferecemos um espaço seguro, sem julgamentos, e o cuidado necessário naquele momento. O cuidado vai além da prescrição: enxerga a pessoa inteira. | Linhas contínuas que se reorganizam com calma, 2D. | Sem julgamentos |
 | 8:20-9:30 | Recapitulação e CTA | A passagem pela emergência é rápida, mas a esperança de dias melhores pode começar em um gesto de acolhimento. Se a dor estiver pesada demais, procure a unidade de saúde mais próxima ou ligue para o CVV, 188. Em risco imediato: SAMU, 192. Leia o artigo completo no Portal. | Tela final limpa com os canais de apoio. | Existe ajuda: CVV 188 · SAMU 192 |
 
 ---

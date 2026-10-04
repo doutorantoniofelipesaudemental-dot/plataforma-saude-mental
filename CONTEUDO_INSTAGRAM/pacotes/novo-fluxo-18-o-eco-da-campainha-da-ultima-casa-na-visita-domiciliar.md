@@ -1,8 +1,8 @@
 # Pacote de redes | O eco da campainha da última casa na visita domiciliar
 
-Pacote 18 do novo fluxo editorial (Lote 6), montado a partir da crônica "O eco da campainha da última casa na visita domiciliar" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns da Atenção Primária. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.**
+Pacote 18 do novo fluxo editorial (Lote 6), montado a partir da crônica "O eco da campainha da última casa na visita domiciliar" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta inspirada na prática clínica: personagens e situações fictícios. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.**
 
-**Ponto clínico a conferir.** A crônica diz que seu Manoel "não reclamava de dor no peito ou da falta de ar que às vezes o limitava": ou seja, o texto reconhece que ele tem falta de ar ocasional, mas não descreve nenhuma avaliação disso, e a conversa se concentra na solidão e no vínculo (plano combinado: visitas mais frequentes da agente comunitária e retorno à unidade para "avaliar o bem-estar geral"). Para as peças não passarem a ideia de que "a queixa não era física" ou de que a falta de ar não importa, o pacote não usa essa formulação, lembra que dor no peito, falta de ar ou piora súbita pedem avaliação imediata, e mantém o apoio (CVV 188 e SAMU 192) em todas as peças. **Pontos para o revisor:** (a) decidir se a crônica deve explicitar que a falta de ar foi avaliada; (b) a abertura do artigo diz "inspirada em vivências **reais**", o que contradiz o aviso de narrativa composta: as peças usam "vivências comuns", e o artigo deve ser ajustado; (c) "seu Manoel" repete o nome do Pacote 11 (paciente com dor no peito e a filha), e o idoso solitário com filhos longe repete o perfil dos Pacotes 08 (seu João) e 09 (seu João): convém variar nomes e perfis; (d) a pauta está como "não sensível", mas fala de solidão prolongada e luto pela companheira: sugestão de reclassificar como sensível; (e) a revisão semântica automática (Groq) falhou nesta geração e foi feita pelo mesmo modelo que escreveu: a fidelidade foi conferida manualmente.
+**Ponto clínico a conferir.** A crônica diz que seu Raimundo "não reclamava de dor no peito ou da falta de ar que às vezes o limitava": ou seja, o texto reconhece que ele tem falta de ar ocasional, e a conversa se concentra na solidão e no vínculo. Por decisão do Dr. Antônio Felipe, a crônica passou a incluir o agendamento, na própria unidade, de uma avaliação clínica da falta de ar ocasional (pneumológica ou cardiológica, conforme a indicação), além das visitas mais frequentes da agente comunitária e do retorno à unidade, e a orientação de procurar o pronto atendimento ou o SAMU se a falta de ar piorar ou surgir dor no peito. Para as peças não passarem a ideia de que "a queixa não era física" ou de que a falta de ar não importa, o pacote não usa essa formulação, lembra que dor no peito, falta de ar ou piora súbita pedem avaliação imediata, e mantém o apoio (CVV 188 e SAMU 192) em todas as peças. **Pontos para o revisor:** (a) conferir o texto do agendamento da avaliação da falta de ar (a crônica não descreve o resultado de nenhuma avaliação); (b) a abertura do artigo foi padronizada para "narrativa composta inspirada na prática clínica", sem a alegação de "vivências reais"; (c) nomes: o personagem passou de "seu Manoel" para "seu Raimundo", para não repetir o "seu Manoel" do Pacote 11; o idoso solitário com filhos longe ainda lembra o perfil do Pacote 08 (seu João) e do Pacote 09 (agora seu Joaquim), e convém variar o perfil; (d) a pauta está como "não sensível", mas fala de solidão prolongada e luto pela companheira: sugestão de reclassificar como sensível; (e) a revisão semântica automática (Groq) falhou nesta geração e foi feita pelo mesmo modelo que escreveu: a fidelidade foi conferida manualmente.
 
 ## Estilo geral
 
@@ -25,12 +25,12 @@ Pacote 18 do novo fluxo editorial (Lote 6), montado a partir da crônica "O eco 
 - **Direção visual (3D):** porta simples e campainha ao entardecer, luz âmbar, tons creme.
 
 ### Slide 2: aviso e contexto
-- **Texto:** "Narrativa composta: personagens fictícios, inspirados em vivências comuns da Atenção Primária. Fala de solidão e luto."
+- **Texto:** "Narrativa composta inspirada na prática clínica: personagens fictícios. Fala de solidão e luto."
 - **Narração:** "Esta é uma narrativa composta. Não retrata nenhuma pessoa real."
 - **Direção visual (2D):** texto centralizado, fundo neutro de alto contraste.
 
 ### Slide 3: a casa
-- **Texto:** "Seu Manoel morava sozinho desde que a companheira partiu. A casa parecia encolhida, com penumbra mansa e cheiro de café requentado."
+- **Texto:** "Seu Raimundo morava sozinho desde que a companheira partiu. A casa parecia encolhida, com penumbra mansa e cheiro de café requentado."
 - **Narração:** "Entrar na casa de alguém é um ato que pede delicadeza."
 - **Direção visual (2D):** interior em penumbra suave, sem rostos e sem detalhes identificáveis.
 
@@ -50,7 +50,7 @@ Pacote 18 do novo fluxo editorial (Lote 6), montado a partir da crônica "O eco 
 - **Direção visual (2D):** ícones minimalistas de equipe e comunidade.
 
 ### Slide 7: o combinado
-- **Texto:** "Não há promessas de resolução imediata. Combinamos visitas mais frequentes da agente comunitária e um retorno à unidade para avaliar o bem-estar geral."
+- **Texto:** "Não há promessas de resolução imediata. Combinamos visitas mais frequentes da agente comunitária, um retorno à unidade e o agendamento da avaliação da falta de ar ocasional (pneumológica ou cardiológica, conforme a indicação)."
 - **Narração:** "Ninguém precisa carregar esse peso sozinho."
 - **Direção visual (2D):** calendário simples e uma porta que se abre, tons quentes.
 
@@ -83,9 +83,9 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 
 ### Roteiro de narração
 - 0-3s, gancho: "O som da campainha ecoou tempo demais."
-- 4-12s: "Narrativa composta, personagem fictício. Seu Manoel morava sozinho desde que a companheira partiu, e a casa parecia encolhida."
+- 4-12s: "Narrativa composta, personagem fictício. Seu Raimundo morava sozinho desde que a companheira partiu, e a casa parecia encolhida."
 - 13-22s: "A queixa dele era difusa: o peso dos dias iguais e a ausência de vozes. Conversamos sobre a oficina e os filhos que moram longe."
-- 23-27s: "O vínculo com a equipe é uma ferramenta terapêutica. Combinamos visitas mais frequentes e um retorno à unidade. Falta de ar ou dor no peito: avaliação imediata, SAMU 192."
+- 23-27s: "O vínculo com a equipe é uma ferramenta terapêutica. Combinamos visitas mais frequentes, um retorno e o agendamento da avaliação da falta de ar na unidade. Se piorar ou vier dor no peito: SAMU 192."
 - 28-30s, convite: "Ouça o artigo narrado no Portal, pelo link do perfil. Em crise: CVV 188."
 
 **Legenda:** Uma visita domiciliar, uma casa em silêncio e o valor do vínculo, sem promessa de resolução imediata. Dor no peito, falta de ar ou piora súbita pedem avaliação imediata: pronto atendimento ou SAMU, 192. Em crise: CVV 188. Para mentoria, o link está no perfil.
@@ -115,7 +115,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 ## LinkedIn (tom de autoridade, tokens de design do Portal)
 
 ### LinkedIn 1: para gestores e RH
-> A visita domiciliar mostra dimensões do sofrimento que nem sempre aparecem no consultório. Nesta crônica composta, o médico entra na casa de um idoso que mora sozinho e encontra, mais do que uma queixa clínica, o peso dos dias iguais e a ausência de vozes. O vínculo com a equipe, com visitas mais frequentes da agente comunitária e retorno à unidade, aparece como parte do cuidado, sem promessa de resolução imediata. Leia o artigo completo no Portal.
+> A visita domiciliar mostra dimensões do sofrimento que nem sempre aparecem no consultório. Nesta crônica composta, o médico entra na casa de um idoso que mora sozinho e encontra, mais do que uma queixa clínica, o peso dos dias iguais e a ausência de vozes. O vínculo com a equipe, com visitas mais frequentes da agente comunitária, retorno à unidade e agendamento da avaliação da falta de ar ocasional, aparece como parte do cuidado, sem promessa de resolução imediata. Leia o artigo completo no Portal.
 >
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
@@ -134,10 +134,10 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 **Voz:** do Dr. Antônio Felipe, em tom de conversa. Se for narração sintética, declarar na abertura.
 
 ### Roteiro de narração
-- 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre o eco de uma campainha na última casa de uma visita domiciliar. A história é uma narrativa composta, com personagens fictícios, inspirada em vivências comuns da Atenção Primária. O tema é sensível: fala de solidão e de luto."
-- 0:20-1:00, a chegada: "O sol já começava a baixar quando apertei a campainha da última casa da rua. O som agudo ecoou por um instante longo demais, quebrando o silêncio pesado da tarde. Eu estava ali para mais uma visita domiciliar, daquelas que envolvem mais do que checar receitas ou medir a pressão. Seu Manoel morava sozinho desde que a companheira partiu, há alguns anos. A casa parecia ter encolhido em volta dele, tomada por uma penumbra mansa e pelo cheiro de café requentado."
-- 1:00-1:50, a queixa: "Entrar na casa de alguém pede delicadeza: é um território feito de memórias, dores e silêncios. Seu Manoel suspirou fundo. Não reclamava de dor no peito, nem da falta de ar que às vezes o limitava. A queixa dele era outra, mais difusa: o peso dos dias todos iguais, a ausência de vozes no corredor, o vazio que a aposentadoria e o isolamento foram trazendo devagar."
-- 1:50-2:30, o vínculo: "Sentamos à mesa da cozinha, onde ele guardava remédios e retratos antigos. Conversamos sobre o tempo em que trabalhava na oficina mecânica e sobre os filhos que moram longe e ligam nos fins de semana. Na Atenção Primária, a gente aprende que o cuidado não cabe apenas em uma caixa de comprimidos, e que o vínculo com a comunidade é uma ferramenta terapêutica poderosa. Não há promessas mágicas de resolução imediata. Combinamos que a agente comunitária passaria lá com mais frequência e alinhamos um retorno à unidade para avaliar o bem-estar geral."
+- 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre o eco de uma campainha na última casa de uma visita domiciliar. A história é uma narrativa composta, com personagens fictícios, inspirada na prática clínica. O tema é sensível: fala de solidão e de luto."
+- 0:20-1:00, a chegada: "O sol já começava a baixar quando apertei a campainha da última casa da rua. O som agudo ecoou por um instante longo demais, quebrando o silêncio pesado da tarde. Eu estava ali para mais uma visita domiciliar, daquelas que envolvem mais do que checar receitas ou medir a pressão. Seu Raimundo morava sozinho desde que a companheira partiu, há alguns anos. A casa parecia ter encolhido em volta dele, tomada por uma penumbra mansa e pelo cheiro de café requentado."
+- 1:00-1:50, a queixa: "Entrar na casa de alguém pede delicadeza: é um território feito de memórias, dores e silêncios. Seu Raimundo suspirou fundo. Não reclamava de dor no peito, nem da falta de ar que às vezes o limitava. A queixa dele era outra, mais difusa: o peso dos dias todos iguais, a ausência de vozes no corredor, o vazio que a aposentadoria e o isolamento foram trazendo devagar."
+- 1:50-2:30, o vínculo: "Sentamos à mesa da cozinha, onde ele guardava remédios e retratos antigos. Conversamos sobre o tempo em que trabalhava na oficina mecânica e sobre os filhos que moram longe e ligam nos fins de semana. Na Atenção Primária, a gente aprende que o cuidado não cabe apenas em uma caixa de comprimidos, e que o vínculo com a comunidade é uma ferramenta terapêutica poderosa. Não há promessas mágicas de resolução imediata. Combinamos que a agente comunitária passaria lá com mais frequência e alinhamos um retorno à unidade para avaliar o bem-estar geral. Combinamos também o agendamento, na própria unidade, de uma avaliação clínica da falta de ar ocasional, com encaminhamento à pneumologia ou à cardiologia conforme a indicação."
 - 2:30-2:50, o recado: "Dor no peito, falta de ar ou piora súbita pedem avaliação imediata: procure o pronto atendimento ou ligue para o SAMU, no 192. Se você se sente sozinho, procure a sua unidade de saúde e converse com a sua equipe de referência. Em crise, ligue para o CVV, no 188."
 - 2:50-3:00, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
@@ -172,10 +172,10 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 | Tempo | Bloco | Fala | B-roll | Texto na tela |
 |---|---|---|---|---|
 | 0:00-0:30 | Gancho | O sol já começava a baixar quando apertei a campainha da última casa da rua. O som agudo ecoou, quebrando o silêncio. Narrativa composta. | Animação 2D de uma rua tranquila ao entardecer. | O eco da campainha |
-| 0:30-2:00 | Promessa honesta | Neste vídeo, vamos refletir sobre uma narrativa composta, inspirada em vivências comuns da Atenção Primária, e sobre o valor da visita domiciliar. Tema sensível: solidão e luto. | Mesa de conversa acolhedora, em 2D, sem rostos. | A visita domiciliar |
-| 2:00-5:00 | Desenvolvimento 1 | Seu Manoel morava sozinho desde que a companheira partiu. A queixa dele era difusa: o peso dos dias iguais e a ausência de vozes. Conversamos sobre a oficina e os filhos que moram longe. | Elementos gráficos suaves do isolamento, sem rostos. | O sofrimento que se disfarça |
+| 0:30-2:00 | Promessa honesta | Neste vídeo, vamos refletir sobre uma narrativa composta inspirada na prática clínica, e sobre o valor da visita domiciliar. Tema sensível: solidão e luto. | Mesa de conversa acolhedora, em 2D, sem rostos. | A visita domiciliar |
+| 2:00-5:00 | Desenvolvimento 1 | Seu Raimundo morava sozinho desde que a companheira partiu. A queixa dele era difusa: o peso dos dias iguais e a ausência de vozes. Conversamos sobre a oficina e os filhos que moram longe. | Elementos gráficos suaves do isolamento, sem rostos. | O sofrimento que se disfarça |
 | 5:00-8:00 | Desenvolvimento 2 | Na APS, o cuidado não cabe em uma caixa de comprimidos. O vínculo é uma ferramenta terapêutica poderosa. Dor no peito, falta de ar ou piora súbita pedem avaliação imediata. | Equipe de saúde em ícones 2D. | O vínculo que cuida |
-| 8:00-10:00 | Recapitulação e CTA | Combinamos visitas mais frequentes da agente comunitária e um retorno à unidade, sem promessa de resolução imediata. Em crise: CVV 188, SAMU 192. Leia o artigo completo no Portal. | Tela final com chamada para o Portal. | Escutar o que o silêncio esconde |
+| 8:00-10:00 | Recapitulação e CTA | Combinamos visitas mais frequentes da agente comunitária, um retorno à unidade e o agendamento da avaliação da falta de ar ocasional, sem promessa de resolução imediata. Em crise: CVV 188, SAMU 192. Leia o artigo completo no Portal. | Tela final com chamada para o Portal. | Escutar o que o silêncio esconde |
 
 ---
 

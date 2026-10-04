@@ -38,7 +38,7 @@
 | 011 | O som do teclado que não parava na noite de plantão | crônica | não | 4 | ainda não criado |
 | 012 | A mancha de café na folha de prescrição avulsa | crônica | não | 4 | ainda não criado |
 | 013 | A última lâmpada acesa no corredor do posto de saúde | crônica | não | 4 | ainda não criado |
-| 014 | O grampo de cabelo esquecido na maca de observação | crônica | não | 4 | ainda não criado |
+| 014 | O grampo de cabelo esquecido na maca de observação | crônica | sim | 4 | ainda não criado |
 | 015 | A caneta que falhou no meio da consulta | crônica | não | 4 | ainda não criado |
 | 016 | O peso da chave guardada no bolso da bata branca | crônica | não | 4 | ainda não criado |
 | 017 | O peso do bloco de receituário rasgado na mesa | crônica | não | 4 | ainda não criado |

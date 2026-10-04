@@ -2,7 +2,7 @@
 
 Pacote 16 do novo fluxo editorial (Lote 4), montado a partir da crônica "O peso da chave guardada no bolso da bata branca" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns da Atenção Primária. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.**
 
-**Ponto clínico a conferir com prioridade.** A paciente da crônica chega com "uma dor no peito que vinha e ia há dias" e pressão arterial que "teimava em subir mesmo com os remédios". O texto não descreve a avaliação da dor no peito; diz apenas que "conversamos sobre a pressão", "ajustamos o cuidado, revisamos os remédios" e combinamos retorno em uma semana, e dá mais espaço ao sofrimento emocional ("a dor física era apenas a ponta de um iceberg"). Para as peças não passarem a ideia de que dor no peito é "só emocional", o pacote: (1) não usa a frase do iceberg como se a dor física fosse dispensável; (2) lembra, em todas as peças, que dor no peito, falta de ar ou piora súbita pedem avaliação imediata; (3) mantém o apoio (CVV 188 e SAMU 192). **Pontos para o revisor:** (a) decidir se a crônica deve explicitar que a dor no peito foi avaliada, ou se é aceitável como está; (b) a personagem "Dona Maria" já aparece em pelo menos quatro crônicas (Pacotes 06, 13, 15 e 16, com perfis diferentes), e o "filho desempregado" também aparece no Pacote 05 (Dona Lourdes): convém variar nomes e situações; (c) sugestão de reclassificar a pauta como sensível.
+**Ponto clínico a conferir com prioridade.** A paciente da crônica chega com "uma dor no peito que vinha e ia há dias" e pressão arterial que "teimava em subir mesmo com os remédios". Por decisão do Dr. Antônio Felipe, a crônica foi ajustada para deixar claro que o exame físico, a avaliação da dor no peito, a aferição da pressão e a revisão e o ajuste dos remédios da hipertensão vieram **antes** de qualquer conversa sobre a sobrecarga emocional, e que o retorno foi combinado para a semana seguinte. Para as peças não passarem a ideia de que dor no peito é "só emocional", o pacote: (1) não usa a frase do iceberg como se a dor física fosse dispensável; (2) lembra, em todas as peças, que dor no peito, falta de ar ou piora súbita pedem avaliação imediata; (3) mantém o apoio (CVV 188 e SAMU 192). **Pontos para o revisor:** (a) conferir se a formulação do exame e do ajuste da medicação, sem citar exames complementares, é suficiente; (b) nomes: a personagem passou de "Dona Maria" para "Dona Francisca"; o "filho desempregado" ainda aparece também no Pacote 05 (Dona Lourdes), e convém variar a situação; (c) sugestão de reclassificar a pauta como sensível.
 
 ## Estilo geral
 
@@ -31,7 +31,7 @@ Pacote 16 do novo fluxo editorial (Lote 4), montado a partir da crônica "O peso
 
 ### Slide 3: a porta
 - **Texto:** "O consultório estava silencioso. Faltavam dez minutos para o fim do expediente, e a porta se abriu de leve."
-- **Narração:** "Dona Maria não tinha consulta marcada para aquele horário."
+- **Narração:** "Dona Francisca não tinha consulta marcada para aquele horário."
 - **Direção visual (2D):** relógio estilizado e luz da tarde passando pela janela.
 
 ### Slide 4: o horário
@@ -40,13 +40,13 @@ Pacote 16 do novo fluxo editorial (Lote 4), montado a partir da crônica "O peso
 - **Direção visual (2D):** silhueta com xale de lã sentada à mesa, sem rostos.
 
 ### Slide 5: a queixa
-- **Texto:** "Ela falou de uma dor no peito que ia e vinha há dias e da pressão que teimava em subir, mesmo com os remédios."
-- **Narração:** "Aos poucos, apareceu também o silêncio pesado da casa e o filho que perdeu o emprego."
+- **Texto:** "Ela falou de uma dor no peito que ia e vinha há dias e da pressão que teimava em subir, mesmo com os remédios. Primeiro vieram o exame físico, a pressão e a revisão dos remédios."
+- **Narração:** "Só depois apareceu o silêncio pesado da casa e o filho que perdeu o emprego."
 - **Direção visual (2D):** camadas leves e sutis, tom respeitoso, sem exagero.
 
 ### Slide 6: o que faltava
 - **Texto:** "Não faltavam comprimidos na caixinha. Faltava paz, e escutar que ela não precisava carregar o mundo sozinha."
-- **Narração:** "Conversamos sobre a pressão, revisamos os remédios e combinamos um retorno na semana seguinte."
+- **Narração:** "O exame e o ajuste dos remédios vieram primeiro. Combinamos o retorno para a semana seguinte."
 - **Direção visual (2D):** card com espaçamento generoso, frase em destaque.
 
 ### Slide 7: a escuta
@@ -59,7 +59,7 @@ Pacote 16 do novo fluxo editorial (Lote 4), montado a partir da crônica "O peso
 - **Visual:** fundo em tom petróleo, texto em branco, margens generosas; assinatura oficial do Dr. Antônio Felipe, com CVV 188 e SAMU 192 no rodapé do slide.
 
 ### Legenda
-No fim do expediente, uma consulta que não estava marcada e uma escuta que o relógio não cabia. Esta crônica fala de uma paciente que chega com dor no peito e pressão alta e que também carrega o silêncio da casa e a preocupação com o filho. A dor física não é dispensada: a consulta revisou os remédios e combinou retorno, e ainda sobrou espaço para falar do medo e do cansaço. Dor no peito, falta de ar ou piora súbita pedem avaliação imediata: procure o pronto atendimento ou ligue para o SAMU, 192. Se você tem enfrentado dias difíceis, procure a sua equipe de saúde, converse com quem está perto e permita-se ser cuidado. Em crise, ligue para o CVV, 188. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
+No fim do expediente, uma consulta que não estava marcada e uma escuta que o relógio não cabia. Esta crônica fala de uma paciente que chega com dor no peito e pressão alta e que também carrega o silêncio da casa e a preocupação com o filho. A dor física não é dispensada: a consulta começou pelo exame físico, pela avaliação da dor no peito e pela revisão dos remédios da pressão, e só depois abriu espaço para falar do medo e do cansaço. Dor no peito, falta de ar ou piora súbita pedem avaliação imediata: procure o pronto atendimento ou ligue para o SAMU, 192. Se você tem enfrentado dias difíceis, procure a sua equipe de saúde, converse com quem está perto e permita-se ser cuidado. Em crise, ligue para o CVV, 188. Salve para ler depois e compartilhe com quem precisa. Para mentoria e consultoria em saúde mental, o link está no perfil.
 Narrativa composta: personagens e situações fictícios, inspirados em vivências comuns do cuidado em saúde. Nenhum paciente real é retratado.
 🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/o-peso-da-chave-guardada-no-bolso-da-bata-branca
 
@@ -78,8 +78,8 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 
 ### Roteiro de narração
 - 0-3s, gancho: "A prática médica raramente cabe nos minutos do relógio."
-- 4-12s: "Narrativa composta, personagem fictícia. Faltavam dez minutos para o fim do expediente quando Dona Maria entrou, sem consulta marcada."
-- 13-22s: "Ela falou de dor no peito e de pressão alta. Revisamos os remédios, combinamos o retorno e conversamos sobre o medo e o cansaço."
+- 4-12s: "Narrativa composta, personagem fictícia. Faltavam dez minutos para o fim do expediente quando Dona Francisca entrou, sem consulta marcada."
+- 13-22s: "Ela falou de dor no peito e de pressão alta. Primeiro, o exame, a avaliação e o ajuste dos remédios. Depois, conversamos sobre o medo e o cansaço, e combinamos o retorno."
 - 23-27s: "Dor no peito, falta de ar ou piora súbita pedem avaliação imediata: SAMU, 192."
 - 28-30s, convite: "Ouça o artigo narrado no Portal, pelo link do perfil. Em crise: CVV 188."
 
@@ -110,7 +110,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 ## LinkedIn (tom de autoridade, tokens de design do Portal)
 
 ### LinkedIn 1: para gestores e RH
-> A prática médica na Atenção Primária raramente cabe nos minutos marcados pelo relógio. Nesta crônica composta, uma paciente chega com dor no peito e pressão alta no fim do expediente, e a consulta revisa os remédios, combina retorno e abre espaço para o medo e o cansaço. O estetoscópio é importante, e a escuta atenta é o instrumento mais poderoso que temos. Leia o artigo completo no Portal.
+> A prática médica na Atenção Primária raramente cabe nos minutos marcados pelo relógio. Nesta crônica composta, uma paciente chega com dor no peito e pressão alta no fim do expediente, e a consulta começa pelo exame físico, pela avaliação da dor e pela revisão dos remédios, combina retorno e só então abre espaço para o medo e o cansaço. O estetoscópio é importante, e a escuta atenta é o instrumento mais poderoso que temos. Leia o artigo completo no Portal.
 >
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
@@ -130,9 +130,9 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 
 ### Roteiro de narração
 - 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre o peso de uma chave no bolso de uma bata branca. A história é uma narrativa composta, com personagens fictícios, inspirada em vivências comuns da Atenção Primária."
-- 0:20-1:00, a cena: "O consultório estava silencioso. O relógio marcava dez minutos para o fim do expediente, e a luz da tarde desenhava listras douradas sobre a mesa de madeira. Eu já havia fechado o prontuário do penúltimo paciente e me preparava para tirar a bata. Senti o peso da chave de casa no bolso, um lembrete de que o dia estava terminando. Foi então que a porta se abriu de leve. Dona Maria não tinha consulta marcada para aquele horário."
-- 1:00-1:50, a queixa: "Com seus setenta anos e passos lentos, ela buscava os meus olhos com timidez e urgência. A prática médica raramente cabe nos minutos marcados pelo relógio, e eu sabia disso. Convidei-a a entrar, puxei a cadeira e ouvi. Ela começou falando de uma dor no peito que vinha e ia há dias e da pressão que teimava em subir, mesmo com os remédios. Aos poucos, apareceu o silêncio pesado da casa desde que o filho mais velho perdeu o emprego."
-- 1:50-2:30, a escuta: "Não faltavam comprimidos na caixinha: faltava paz. Faltava ouvir que ela não precisava carregar o mundo sozinha. Conversamos sobre a pressão, ajustamos o cuidado, revisamos os remédios e combinamos um retorno para a semana seguinte. Mas conversamos muito mais sobre o medo, o cansaço e a importância de pedir ajuda dentro de casa. Ela saiu com uma leveza nos ombros que não tinha quando entrou. O estetoscópio é importante, mas a escuta atenta é o instrumento mais poderoso que temos."
+- 0:20-1:00, a cena: "O consultório estava silencioso. O relógio marcava dez minutos para o fim do expediente, e a luz da tarde desenhava listras douradas sobre a mesa de madeira. Eu já havia fechado o prontuário do penúltimo paciente e me preparava para tirar a bata. Senti o peso da chave de casa no bolso, um lembrete de que o dia estava terminando. Foi então que a porta se abriu de leve. Dona Francisca não tinha consulta marcada para aquele horário."
+- 1:00-1:50, a queixa: "Com seus setenta anos e passos lentos, ela buscava os meus olhos com timidez e urgência. A prática médica raramente cabe nos minutos marcados pelo relógio, e eu sabia disso. Convidei-a a entrar, puxei a cadeira e ouvi. Ela começou falando de uma dor no peito que vinha e ia há dias e da pressão que teimava em subir, mesmo com os remédios. Antes de tudo, examinei, aferi a pressão e avaliei a dor no peito. Só depois, aos poucos, apareceu o silêncio pesado da casa desde que o filho mais velho perdeu o emprego."
+- 1:50-2:30, a escuta: "Não faltavam comprimidos na caixinha: faltava paz. Faltava ouvir que ela não precisava carregar o mundo sozinha. Revisamos e ajustamos os remédios da hipertensão e combinamos um retorno para a semana seguinte. Mas conversamos muito mais sobre o medo, o cansaço e a importância de pedir ajuda dentro de casa. Ela saiu com uma leveza nos ombros que não tinha quando entrou. O estetoscópio é importante, mas a escuta atenta é o instrumento mais poderoso que temos."
 - 2:30-2:50, o recado: "Dor no peito, falta de ar ou piora súbita pedem avaliação imediata: procure o pronto atendimento ou ligue para o SAMU, no 192. Se você tem enfrentado dias difíceis, procure a sua equipe de saúde e permita-se ser cuidado. Em crise, ligue para o CVV, no 188."
 - 2:50-3:00, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
 
@@ -143,7 +143,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 **Short 1 (vertical 9:16, até 60 s)**
 - **Título:** O peso da chave guardada no bolso da bata
 - **Gancho:** Faltavam dez minutos para o fim do expediente quando a porta se abriu.
-- **Desenvolvimento:** Dona Maria chegou sem consulta marcada, com dor no peito e pressão alta, e carregava também o silêncio da casa e a preocupação com o filho. Narrativa composta.
+- **Desenvolvimento:** Dona Francisca chegou sem consulta marcada, com dor no peito e pressão alta, e carregava também o silêncio da casa e a preocupação com o filho. Narrativa composta.
 - **CTA:** Leia o artigo completo no Portal. Dor no peito pede avaliação imediata: SAMU 192. Em crise: CVV 188.
 - **Movimento (3 s iniciais):** elemento 3D leve em Three.js de uma chave sobre uma mesa de madeira, com alternativa estática.
 - **Tags:** atenção primária, escuta atenta, saúde mental, relatos da prática, acolhimento
@@ -168,7 +168,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 |---|---|---|---|---|
 | 0:00-0:30 | Gancho | O consultório estava silencioso e o relógio marcava dez minutos para o fim do expediente quando a porta se abriu. Narrativa composta. | Animação 2D de um consultório ao entardecer. | O último atendimento |
 | 0:30-2:30 | Promessa honesta | Neste vídeo, vamos refletir sobre o peso e a beleza da escuta atenta na Atenção Primária, a partir de uma narrativa composta, inspirada em vivências comuns. | Gráficos sutis em tons quentes. | A escuta na prática |
-| 2:30-5:30 | Conteúdo principal | Dona Maria chegou com dor no peito que vinha e ia há dias e com a pressão que teimava em subir. Revisamos os remédios e combinamos retorno, e conversamos também sobre o silêncio da casa e a preocupação com o filho. | Ilustrações abstratas de cuidado na comunidade, sem rostos. | Mais que remédios |
+| 2:30-5:30 | Conteúdo principal | Dona Francisca chegou com dor no peito que vinha e ia há dias e com a pressão que teimava em subir. Primeiro vieram o exame, a avaliação da dor e o ajuste dos remédios, com retorno combinado; depois, conversamos sobre o silêncio da casa e a preocupação com o filho. | Ilustrações abstratas de cuidado na comunidade, sem rostos. | Mais que remédios |
 | 5:30-8:00 | Aprofundamento | O estetoscópio é importante, mas a escuta atenta é o instrumento mais poderoso que temos. Dor no peito, falta de ar ou piora súbita pedem avaliação imediata. | Transições suaves em GSAP. | A escuta e o cuidado |
 | 8:00-10:00 | Recapitulação e CTA | Se você tem enfrentado dias difíceis, não precisa carregar tudo sozinho. Procure a sua equipe de saúde. Em crise: CVV 188, SAMU 192. Leia o artigo completo no Portal. | Card final com convite para o Portal. | Permita-se ser cuidado |
 

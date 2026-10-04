@@ -1,6 +1,6 @@
 # Pacote de redes | O eco dos passos vazios no corredor do plantão de domingo
 
-Pacote 09 do novo fluxo editorial, montado a partir da crônica "O eco dos passos vazios no corredor do plantão de domingo" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns na Atenção Primária e nos plantões de urgência. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.** O texto fala de solidão e cita aperto no peito: por isso a legenda e os Stories lembram que aperto no peito, falta de ar ou piora súbita pedem avaliação imediata, e o apoio (CVV 188 e SAMU 192) aparece nas peças. **Ponto para o revisor:** o personagem "seu João" também protagoniza o Pacote 08 (idoso solitário na UBS, com rádio quebrado e filho em outro estado); aqui ele aparece com chapéu e horta. Convém decidir se são o mesmo personagem ou se um dos nomes deve mudar, para o público não ler as duas crônicas como a mesma história.
+Pacote 09 do novo fluxo editorial, montado a partir da crônica "O eco dos passos vazios no corredor do plantão de domingo" (Relatos da Prática), seguindo `MODELO_ROTEIRO_MULTIMIDIA.md` e `pautas/PADRAO_PACOTE_MULTIMIDIA.md`. A crônica é uma narrativa composta: personagens e situações fictícios, inspirados em vivências comuns na Atenção Primária e nos plantões de urgência. **Atenção: a revisão médica do artigo-fonte ainda está PENDENTE (`revisaoMedica: pendente`). Este pacote não pode ser postado antes da aprovação do Dr. Antônio Felipe.** O texto fala de solidão e cita aperto no peito: por isso a legenda e os Stories lembram que aperto no peito, falta de ar ou piora súbita pedem avaliação imediata, e o apoio (CVV 188 e SAMU 192) aparece nas peças. **Nomes (governança nominal):** o personagem passou de "seu João" para "seu Joaquim", para não ser lido como o "seu João" do Pacote 08 (idoso solitário na UBS, com rádio quebrado e filho em outro estado).
 
 ## Estilo geral
 
@@ -37,8 +37,8 @@ Pacote 09 do novo fluxo editorial, montado a partir da crônica "O eco dos passo
 - **Narração:** "Lá fora, o vazio. Dentro da sala, o transbordamento emocional."
 - **Direção visual (2D):** porta entreaberta, luz âmbar, traços suaves.
 
-### Slide 5: seu João
-- **Texto:** "Seu João trouxe apenas o silêncio de quem passou o fim de semana sem trocar uma palavra."
+### Slide 5: seu Joaquim
+- **Texto:** "Seu Joaquim trouxe apenas o silêncio de quem passou o fim de semana sem trocar uma palavra."
 - **Narração:** "A casa grande parecia pequena demais para tanto eco."
 - **Direção visual (2D):** silhueta sentada, ombros curvados, chapéu de aba gasta nas mãos.
 
@@ -82,7 +82,7 @@ Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192
 ### Roteiro de narração
 - 0-3s, gancho: "O peso invisível dos plantões de domingo."
 - 4-12s: "Narrativa composta, personagem fictício. O relógio marcava dezessete horas e quinze minutos, e o corredor estava em silêncio."
-- 13-22s: "Seu João trouxe o silêncio de quem passou o fim de semana sem falar com ninguém. Falamos da chuva, da horta e da saudade do fim de domingo."
+- 13-22s: "Seu Joaquim trouxe o silêncio de quem passou o fim de semana sem falar com ninguém. Falamos da chuva, da horta e da saudade do fim de domingo."
 - 23-27s: "A medicina na ponta é feita de presença. Ele saiu um pouco mais leve."
 - 28-30s, convite: "Ouça o artigo narrado no Portal, pelo link do perfil. Em crise: CVV 188."
 
@@ -134,7 +134,7 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 ### Roteiro de narração
 - 0:00-0:20, vinheta e abertura: "Você está ouvindo uma conversa sobre o eco dos passos vazios no corredor de um plantão de domingo. A história é uma narrativa composta, com personagens fictícios, inspirada em vivências comuns da Atenção Primária e dos plantões de urgência."
 - 0:20-1:00, a cena: "O relógio da sala de atendimento marcava dezessete horas e quinze minutos daquele domingo cinzento. A luz do dia rareava pela janela. No corredor, o silêncio era denso, e só o som do meu próprio passo ecoava pelo piso frio. Trabalhar no fim de semana tem uma textura diferente: há uma solidão peculiar no ar, compartilhada em silêncio entre quem procura ajuda e quem está ali para escutar."
-- 1:00-1:50, seu João: "Seu João sentou na cadeira à minha frente, com os ombros curvados pelo cansaço. Não trazia laudo complexo nem exame alterado. Trazia o silêncio de quem passou o fim de semana inteiro sem trocar uma palavra com ninguém. A casa grande parecia pequena demais para tanto eco. A pressão estava normal, mas o coração dele batia num ritmo pesado, cansado da rotina."
+- 1:00-1:50, seu Joaquim: "Seu Joaquim sentou na cadeira à minha frente, com os ombros curvados pelo cansaço. Não trazia laudo complexo nem exame alterado. Trazia o silêncio de quem passou o fim de semana inteiro sem trocar uma palavra com ninguém. A casa grande parecia pequena demais para tanto eco. A pressão estava normal, mas o coração dele batia num ritmo pesado, cansado da rotina."
 - 1:50-2:30, a presença: "Entendi que o meu papel ia além da prescrição ou da checagem de sinais vitais. A medicina que a gente faz na ponta é feita de presença. Conversamos sobre a chuva que ameaçava cair, sobre a horta no quintal e sobre a saudade que apertava o peito quando o sol se punha no domingo. Ele se levantou um pouco mais leve. Voltei para a mesa, olhei para a prancheta vazia, e o eco dos passos já não parecia tão solitário."
 - 2:30-2:50, o recado: "Se você sente aperto no peito e os dias difíceis parecem não ter fim, saiba que não precisa carregar tudo sozinho. Procure a sua unidade de saúde e converse com a sua equipe de referência. Aperto no peito, falta de ar ou piora súbita pedem avaliação imediata: ligue para o SAMU, no 192. Para conversar, o CVV atende no 188."
 - 2:50-3:00, convite: "Para mentoria e consultoria em saúde mental, acesse o link do perfil."
@@ -165,13 +165,13 @@ Narrativa composta: personagens e situações fictícios, inspirados em vivênci
 - **Título:** O eco dos passos vazios no plantão de domingo
 - **Tags:** saúde mental, acolhimento, atenção primária, plantão, escuta, medicina de família, relatos da prática, solidão
 - **Descrição:** Uma narrativa sobre a solidão compartilhada na saúde e o valor da escuta na Atenção Primária. Refletimos sobre o peso invisível dos plantões de fim de semana e a importância de buscar apoio. Narrativa composta.
-- **Capítulos:** 0:00 O silêncio do plantão · 2:00 A história de seu João · 5:00 A medicina feita de presença · 8:00 A importância de buscar ajuda
+- **Capítulos:** 0:00 O silêncio do plantão · 2:00 A história de seu Joaquim · 5:00 A medicina feita de presença · 8:00 A importância de buscar ajuda
 
 | Tempo | Bloco | Fala | B-roll | Texto na tela |
 |---|---|---|---|---|
 | 0:00-0:30 | Gancho | O relógio marcava dezessete horas e quinze minutos de um domingo cinzento. No corredor, o silêncio era denso. | Animação 3D sutil de um corredor com luz de entardecer. | O eco dos passos vazios |
 | 0:30-2:00 | Promessa honesta | Neste vídeo, vamos refletir sobre o peso invisível dos plantões de fim de semana e sobre o valor da escuta. Narrativa composta. | Gráficos suaves apresentando o tema. | Escuta e cuidado |
-| 2:00-5:00 | Conteúdo 1 | Trabalhar no fim de semana tem uma textura diferente. Há uma solidão peculiar entre quem procura ajuda e quem escuta. Seu João trazia o silêncio de quem passou o fim de semana sem falar com ninguém. | Ilustração abstrata de acolhimento e escuta. | A solidão compartilhada |
+| 2:00-5:00 | Conteúdo 1 | Trabalhar no fim de semana tem uma textura diferente. Há uma solidão peculiar entre quem procura ajuda e quem escuta. Seu Joaquim trazia o silêncio de quem passou o fim de semana sem falar com ninguém. | Ilustração abstrata de acolhimento e escuta. | A solidão compartilhada |
 | 5:00-8:00 | Conteúdo 2 | A pressão estava normal, mas o coração dele batia num ritmo pesado. A medicina na ponta é feita de presença, de emprestar escuta a quem precisa. | Cenas abstratas de empatia, sem rostos. | A medicina feita de presença |
 | 8:00-10:00 | Recapitulação e CTA | Conversar sobre coisas simples aliviou o peso daquele plantão. Se você sente aperto no peito, lembre-se de que não precisa carregar tudo sozinho. Em crise: CVV 188, SAMU 192. Leia o artigo completo no Portal. | Tela final com orientações acolhedoras e design do Portal. | Procure apoio |
 
