@@ -1,0 +1,93 @@
+/* Extras de UX terapêutica: modo escuro, ajuda rápida (CVV/SAMU), respiração guiada
+   e "Meu Plano de Cuidado". Carregado depois de style.css. */
+
+/* ------------------------------ Modo escuro ------------------------------ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    color-scheme: dark;
+    --papel: #12201e;
+    --areia-50: #0f1a18;
+    --areia-100: #15231f;
+    --areia-200: #1d2f2a;
+    --tinta: #e8f0ed;
+    --tinta-media: #b7c7c1;
+    --tinta-fraca: #93a8a0;
+    --linha: rgba(255, 255, 255, 0.14);
+    --linha-suave: rgba(255, 255, 255, 0.08);
+    --verde-100: #cfe6df;
+  }
+}
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+  --papel: #12201e;
+  --areia-50: #0f1a18;
+  --areia-100: #15231f;
+  --areia-200: #1d2f2a;
+  --tinta: #e8f0ed;
+  --tinta-media: #b7c7c1;
+  --tinta-fraca: #93a8a0;
+  --linha: rgba(255, 255, 255, 0.14);
+  --linha-suave: rgba(255, 255, 255, 0.08);
+  --verde-100: #cfe6df;
+}
+
+body, .secao, .cartao { transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease; }
+
+.tema-botao {
+  position: fixed; left: 1rem; bottom: 1rem; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--linha); background: var(--papel); color: var(--tinta);
+  cursor: pointer; font-size: 1.15rem; line-height: 1; box-shadow: var(--sombra-m);
+}
+.tema-botao:focus-visible { outline: 3px solid var(--dourado); outline-offset: 2px; }
+
+/* --------------------- Botão fixo de ajuda rápida ------------------------ */
+.ajuda-rapida { position: fixed; right: 1rem; bottom: 1rem; z-index: 70; font-family: var(--fonte-texto); }
+.ajuda-rapida > summary {
+  list-style: none; cursor: pointer; min-height: 44px; padding: 0.7rem 1.1rem;
+  border-radius: 999px; background: var(--terracota); color: #fff; font-weight: 600;
+  font-size: 0.95rem; box-shadow: var(--sombra-g);
+}
+.ajuda-rapida > summary::-webkit-details-marker { display: none; }
+.ajuda-rapida > summary:focus-visible { outline: 3px solid var(--dourado); outline-offset: 2px; }
+.ajuda-rapida__painel {
+  position: absolute; right: 0; bottom: calc(100% + 0.6rem); width: min(19rem, calc(100vw - 2rem));
+  background: var(--papel); color: var(--tinta); border: 1px solid var(--linha);
+  border-radius: var(--raio); box-shadow: var(--sombra-g); padding: 1rem;
+  animation: ajuda-entra 200ms ease both;
+}
+.ajuda-rapida__painel p { margin: 0 0 0.7rem; font-size: 0.9rem; color: var(--tinta-media); }
+.ajuda-rapida__painel a {
+  display: block; margin-top: 0.5rem; padding: 0.7rem 0.9rem; border-radius: 10px;
+  background: var(--verde-900); color: #fff; text-decoration: none; font-weight: 600;
+}
+.ajuda-rapida__painel a small { display: block; font-weight: 400; opacity: 0.85; }
+@keyframes ajuda-entra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ----------------------------- Respiração guiada ------------------------- */
+.respiracao { text-align: center; }
+.respiracao__esfera {
+  width: 11rem; height: 11rem; margin: 1.5rem auto; border-radius: 50%;
+  display: grid; place-items: center; color: #fff; font-weight: 600;
+  background: radial-gradient(circle at 35% 30%, var(--verde-500), var(--verde-700));
+  box-shadow: 0 0 0 10px rgba(140, 196, 184, 0.18);
+  transform: scale(0.72); transition: transform 4s ease-in-out;
+}
+.respiracao[data-fase="inspire"] .respiracao__esfera { transform: scale(1); transition-duration: 4s; }
+.respiracao[data-fase="segure"] .respiracao__esfera { transform: scale(1); }
+.respiracao[data-fase="expire"] .respiracao__esfera { transform: scale(0.72); transition-duration: 6s; }
+.respiracao__estado { min-height: 1.6em; }
+@media (prefers-reduced-motion: reduce) {
+  .respiracao__esfera { transition: none; }
+  .ajuda-rapida__painel { animation: none; }
+  body, .secao, .cartao { transition: none; }
+}
+
+/* ------------------------- Meu Plano de Cuidado -------------------------- */
+.plano__pergunta { border: 1px solid var(--linha); border-radius: var(--raio); padding: 1rem 1.2rem; margin: 0 0 1rem; background: var(--papel); }
+.plano__pergunta legend { font-weight: 600; padding: 0 0.4rem; }
+.plano__pergunta label { display: flex; gap: 0.6rem; align-items: center; padding: 0.4rem 0; min-height: 44px; cursor: pointer; }
+.plano__resultado { margin-top: 1.5rem; padding: 1.4rem; border-radius: var(--raio-g); background: var(--verde-50); color: #17211f; }
+.plano__resultado a { color: var(--verde-700); font-weight: 600; }
+.plano__resultado ul { padding-left: 1.2rem; }
+[hidden] { display: none !important; }

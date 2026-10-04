@@ -122,7 +122,7 @@ test('voz: provedores e vozes liberados; OpenAI com instruções só no gpt-4o-m
 test('vídeo: trilha baixa sob a voz, cortada no fim com fade; --sem-trilha e --audio inexistente', () => {
   const { filtroTrilhaSobVoz, resolverTrilha } = require('../../scripts/bot-video-carrossel');
   const [bg, mix] = filtroTrilhaSobVoz(20, 45.5);
-  assert.equal(bg, '[20:a]volume=0.12,atrim=0:45.50,afade=t=out:st=43.50:d=2[bg]');
+  assert.equal(bg, '[20:a]volume=0.0794,atrim=0:45.50,afade=t=out:st=43.50:d=2[bg]');
   assert.equal(mix, '[voz][bg]amix=inputs=2:duration=first:normalize=0[outa]');
   assert.equal(resolverTrilha({ 'sem-trilha': true }, 'x'), null);
   assert.throws(() => resolverTrilha({ audio: 'nao/existe.mp3' }, 'x'), /faixa não encontrada/);

@@ -73,8 +73,9 @@ function corpoTts(texto, { modelo = process.env.ELEVENLABS_MODEL || MODELO_TTS }
     text: texto,
     model_id: modelo,
     language_code: 'pt',
-    // Estável e pouco "atuado": leitura clínica, não interpretação dramática.
-    voice_settings: { stability: 0.6, similarity_boost: 0.8, style: 0.15, use_speaker_boost: true },
+    // Empático e profissional: estável o bastante para leitura clínica, com um pouco
+    // de estilo para soar acolhedor (sem interpretação dramática).
+    voice_settings: { stability: 0.55, similarity_boost: 0.8, style: 0.3, use_speaker_boost: true },
   };
 }
 

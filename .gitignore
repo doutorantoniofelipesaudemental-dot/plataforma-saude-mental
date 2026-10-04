@@ -39,3 +39,14 @@ tests/e2e/*-snapshots/
 
 # Saída de testes locais (ex.: bot:video-carrossel --saida=scratchpad)
 scratchpad/
+
+# Rascunhos reprovados nas checagens automáticas (versões antigas, não entram no repositório)
+CONTEUDO_INSTAGRAM/pautas/rascunhos/_reprovados/
+
+# Credenciais OAuth e configs/scripts locais do fallback LiteLLM
+client_secret*.json*
+litellm-config.yaml
+Start-ClaudeFallback.ps1
+
+# Pacote local de reescritas (não versionar)
+reescritas-semana-1.zip

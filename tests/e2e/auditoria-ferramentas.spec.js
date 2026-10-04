@@ -435,7 +435,7 @@ test.describe('Páginas institucionais no celular', () => {
       await page.goto(url);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
       await expect(page).toHaveTitle(/Saúde Mental · Doutor Antônio Felipe/);
-      await expect(page.locator('.rodape')).toContainText('Plataforma Integrada de Saúde Mental Doutor Antônio Felipe');
+      await expect(page.locator('.rodape')).toContainText('Portal de Saúde Mental Doutor Antônio Felipe Garabito');
     });
   }
 });

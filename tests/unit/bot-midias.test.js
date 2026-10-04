@@ -2,7 +2,7 @@
 // sem chamar nenhuma API: o rascunho é um objeto fixo e a verificação roda sobre ele.
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { verificar } = require('../../scripts/bot-gemini');
+const { verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, garantirAvisoCaixaPerguntas, ajustarGancho, ajustarGanchos } = require('../../scripts/bot-gemini');
 
 const ARTIGO = {
   slug: 'teste',
@@ -11,15 +11,22 @@ const ARTIGO = {
   categoria: 'Empresas & RH',
   conteudo: '<p>Uma revisão encontrou ansiedade em 38% a 41% dos trabalhadores.</p>',
 };
+const CHAMADA = '🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/teste';
 const FONTE = `${ARTIGO.titulo} ${ARTIGO.resumo} Uma revisão encontrou ansiedade em 38% a 41% dos trabalhadores.`;
 
 function rascunho(ajustes = {}) {
   return {
     ganchos: ['Ansiedade no trabalho tem sinais claros', 'a', 'b', 'c', 'd'],
     carrossel: [...Array(7)].map((_, i) => ({ texto: i === 6 ? 'Precisa de apoio agora? CVV 188 · SAMU 192' : `Slide ${i + 1} sobre ansiedade de 38% a 41%`, visual: 'fundo verde' })),
-    legenda: 'Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\nCVV 188\n\n#saudemental #ansiedade #saudementalnotrabalho',
-    reels: [1, 2].map(() => ({ titulo: 'R', duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
-    stories: [1, 2, 3, 4, 5].map(() => ({ texto: 'Enquete', recurso: 'enquete' })),
+    legenda: `Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\n${CHAMADA}\n\nCVV 188\n\n#saudemental #ansiedade #saudementalnotrabalho`,
+    reels: [1, 2].map(() => ({ titulo: 'R', movimento: 'Microanimação Lottie: relógio gira nos 3 primeiros segundos', legenda: `Reel curto sobre sinais.${'\n\n'}${CHAMADA}`, duracaoSegundos: 30, cenas: [{ tempo: '0–3 s', cena: 'mesa', textoTela: 'Sinais de alerta', fala: 'Fala.' }] })),
+    stories: [
+      { texto: 'Você já sentiu isso?', recurso: 'Enquete: Sim / Não' },
+      { texto: 'Sinais de alerta', recurso: 'Nenhum' },
+      { texto: 'Qual a sua dúvida? Esta caixa não atende emergências: em crise, ligue 188 ou 192.', recurso: 'Caixa de perguntas: o que você quer saber?' },
+      { texto: 'Cuidar cedo ajuda', recurso: 'Nenhum' },
+      { texto: `Leia o artigo no Portal. ${CHAMADA}`, recurso: 'Link para o Portal (artigo e áudio)' },
+    ],
     linkedin: ['autoridade', 'educativo'].map((tipo) => ({ tipo, texto: 'Post curto.\nLeia o artigo completo no site.' })),
     youtube: {
       titulos: ['sinais', 'causas', 'cuidado', 'gestão', 'apoio'].map((t) => `Ansiedade no trabalho: ${t}`),
@@ -28,6 +35,7 @@ function rascunho(ajustes = {}) {
         gancho: 'G',
         desenvolvimento: 'D',
         cta: 'C',
+        movimento: 'Elemento 3D leve de um relógio; gancho visual nos 3 primeiros segundos',
         descricao: 'Ansiedade no trabalho tem sinais que dá para reconhecer. Veja quando buscar ajuda.',
         tags: ['ansiedade', 'trabalho', 'saúde mental', 'estresse no trabalho', 'burnout'],
       })),
@@ -101,13 +109,16 @@ test('alerta faixa citada só pelo teto e quantidade errada; CVV entra pelo cód
 });
 
 test('cliente de LLM sem nenhuma chave explica o que falta', async () => {
-  const antes = { g: process.env.GEMINI_API_KEY, q: process.env.GROQ_API_KEY };
+  // Sem nenhuma das três chaves (inclusive a da OpenAI, que o ambiente pode ter): nunca chama API de verdade.
+  const antes = { g: process.env.GEMINI_API_KEY, q: process.env.GROQ_API_KEY, o: process.env.OPENAI_API_KEY };
   delete process.env.GEMINI_API_KEY;
   delete process.env.GROQ_API_KEY;
+  delete process.env.OPENAI_API_KEY;
   const { gerarJson } = require('../../backend/lib/llm');
-  await assert.rejects(gerarJson({ sistema: 's', usuario: 'u', schema: {} }), /GEMINI_API_KEY e\/ou GROQ_API_KEY/);
+  await assert.rejects(gerarJson({ sistema: 's', usuario: 'u', schema: {} }), /GEMINI_API_KEY, GROQ_API_KEY e\/ou OPENAI_API_KEY/);
   if (antes.g !== undefined) process.env.GEMINI_API_KEY = antes.g;
   if (antes.q !== undefined) process.env.GROQ_API_KEY = antes.q;
+  if (antes.o !== undefined) process.env.OPENAI_API_KEY = antes.o;
 });
 
 test('revisor recebe só o que o modelo escreveu, cada frase com a peça de origem', () => {
@@ -129,7 +140,7 @@ test('abrir e salvar no editor (CRLF, BOM, espaço no fim) não conta como ediç
 
 test('publicador: legenda ganha identificação e aviso CFM antes das hashtags; bloqueia hashtag de marca', () => {
   const { montarLegenda, checarTexto } = require('../../scripts/bot-publicar');
-  const { IDENTIFICACAO } = require('../../backend/lib/legendaInstagram');
+  const { IDENTIFICACAO_3_LINHAS: IDENTIFICACAO } = require('../../backend/lib/legendaInstagram');
   const { AVISO_CFM } = require('../../scripts/bot-gemini');
   const legenda = montarLegenda('Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\nSe precisar de apoio: CVV 188\n\n#saudemental #ansiedade #trabalho');
   assert.ok(legenda.includes(`${IDENTIFICACAO}\n\n${AVISO_CFM}\n\n#saudemental`), 'identificação e aviso logo antes das hashtags');
@@ -196,4 +207,142 @@ test('reaprovar: só antes de publicar e sempre com --revisado', () => {
   for (const publicacao of [{ instagram: { id: '1' } }, { linkedin: [{ id: 'l' }] }, { videos: { 'reel-carrossel': { id: 'v' } } }]) {
     assert.match(motivoParaNaoReaprovar({ ...aprovado, publicacao }, { revisado: true }), /já há peça publicada/);
   }
+});
+
+test('pacote multimídia: alerta quando falta enquete, caixa de perguntas ou a chamada ao áudio', () => {
+  assert.deepEqual(verificarPacoteMultimidia(rascunho(), ARTIGO), []);
+  const incompleto = rascunho({
+    stories: [1, 2, 3, 4, 5].map(() => ({ texto: 'Dica', recurso: 'Nenhum' })),
+    legenda: 'Gancho.',
+    reels: [{ titulo: 'R', legenda: '', duracaoSegundos: 30, cenas: [] }],
+  });
+  const alertas = verificarPacoteMultimidia(incompleto, ARTIGO).join(' | ');
+  for (const esperado of ['sem enquete', 'sem caixa de perguntas', 'último Story sem a chamada', 'legenda do Carrossel sem a chamada', 'Reel 1 sem legenda']) {
+    assert.ok(alertas.includes(esperado), `faltou o alerta: ${esperado}`);
+  }
+});
+
+test('garantirChamadaAudio acrescenta a chamada antes das hashtags e é idempotente', () => {
+  const d = rascunho({ legenda: 'Texto.\n\n#saude #mental #aps', reels: [{ titulo: 'R', legenda: 'Frase.', duracaoSegundos: 30, cenas: [] }], stories: [{ texto: 'Fim', recurso: 'Link' }] });
+  garantirChamadaAudio(d, ARTIGO);
+  garantirChamadaAudio(d, ARTIGO);
+  assert.equal(d.legenda.split('🎧').length - 1, 1);
+  assert.ok(d.legenda.indexOf(CHAMADA) < d.legenda.indexOf('#saude'));
+  assert.ok(d.reels[0].legenda.endsWith(CHAMADA));
+  assert.ok(d.stories[0].texto.endsWith(CHAMADA));
+});
+
+test('vídeos: alerta quando Reel ou Short não citam tecnologia de movimento (Lottie, GSAP ou Three.js/3D)', () => {
+  assert.deepEqual(verificarPacoteMultimidia(rascunho(), ARTIGO), []);
+  const d = rascunho();
+  d.reels[0].movimento = '';
+  d.youtube.shorts[1].movimento = 'Nenhum';
+  const alertas = verificarPacoteMultimidia(d, ARTIGO).join(' | ');
+  assert.ok(alertas.includes('Reel 1 sem movimento com tecnologia nominal'));
+  assert.ok(alertas.includes('Short 2 sem movimento com tecnologia nominal'));
+  // Descrição vaga, sem citar Lottie, GSAP ou Three.js/3D, não basta.
+  const vago = rascunho();
+  vago.reels[1].movimento = 'Gráfico suave simulando a transição de um balcão para uma sala de conversa';
+  assert.ok(verificarPacoteMultimidia(vago, ARTIGO).join(' | ').includes('Reel 2 sem movimento com tecnologia nominal'));
+});
+
+test('garantirNarrativaComposta injeta o aviso em crônica, é idempotente e não toca em artigo científico', () => {
+  const cronica = { ...ARTIGO, categoria: 'Relatos da Prática' };
+  const d = rascunho({ legenda: 'Texto.\n\n#saude #mental #aps', reels: [{ titulo: 'R', legenda: 'Frase.', duracaoSegundos: 30, cenas: [] }], stories: [{ texto: 'Início', recurso: 'Nenhum' }, { texto: 'Fim', recurso: 'Link' }] });
+  garantirNarrativaComposta(d, cronica);
+  garantirNarrativaComposta(d, cronica);
+  assert.equal((d.legenda.match(/Narrativa composta/g) || []).length, 1);
+  assert.ok(d.legenda.indexOf('Narrativa composta') < d.legenda.indexOf('#saude'));
+  assert.match(d.reels[0].legenda, /Narrativa composta/);
+  assert.match(d.stories[0].texto, /Narrativa composta/);
+  assert.doesNotMatch(d.stories[1].texto, /Narrativa composta/);
+  assert.ok(!verificar(d, cronica, FONTE).join(' | ').includes('narrativa composta'));
+
+  const cientifico = rascunho({ legenda: 'Texto.\n\n#saude #mental #aps' });
+  const antes = JSON.stringify(cientifico);
+  garantirNarrativaComposta(cientifico, ARTIGO);
+  assert.equal(JSON.stringify(cientifico), antes);
+});
+
+test('ajustarGancho: não mexe em gancho de até 10 palavras', () => {
+  const g = 'Você já guardou uma pergunta sobre o seu remédio?';
+  assert.deepEqual(ajustarGancho(g), { texto: g, ajustado: false });
+});
+
+test('ajustarGancho: corta na última pausa natural, sem reticências quando termina em pontuação forte', () => {
+  const r = ajustarGancho('O remédio vai ficar para sempre? Muitas pessoas guardam essa dúvida em silêncio');
+  assert.equal(r.texto, 'O remédio vai ficar para sempre?');
+  assert.equal(r.ajustado, true);
+
+  const v = ajustarGancho('Existe um espaço seguro, sem julgamentos, na sua unidade de saúde hoje');
+  assert.equal(v.texto, 'Existe um espaço seguro, sem julgamentos…');
+});
+
+test('ajustarGancho: sem pausa natural, corta nas 10 primeiras e tira palavra de ligação solta no fim', () => {
+  const r = ajustarGancho('Uma pergunta guardada há meses pode mudar a forma como cuidamos de nós');
+  assert.equal(r.texto, 'Uma pergunta guardada há meses pode mudar a forma…');
+  assert.ok(!/ (como|a|de|que)…$/.test(r.texto));
+});
+
+test('ajustarGancho: resultado sempre tem até 10 palavras e é estável se aplicado de novo', () => {
+  const longos = [
+    'O cansaço que não passa com o sono pode esconder muito mais do que parece à primeira vista',
+    'Você já percebeu que o cansaço do dia a dia talvez seja outra coisa bem diferente',
+    'Por trás de uma renovação de receita existe uma dúvida que ninguém perguntou ainda',
+  ];
+  for (const g of longos) {
+    const r = ajustarGancho(g);
+    assert.ok(r.ajustado);
+    assert.ok(r.para <= 10, `"${r.texto}" tem ${r.para} palavras`);
+    assert.deepEqual(ajustarGancho(r.texto), { texto: r.texto, ajustado: false });
+  }
+});
+
+test('ajustarGanchos: ajusta só os ganchos longos e devolve um aviso por ajuste', () => {
+  const d = rascunho({ ganchos: ['Curto e direto', 'O remédio vai ficar para sempre? Muitas pessoas guardam essa dúvida em silêncio', 'b', 'c', 'd'] });
+  const avisos = ajustarGanchos(d);
+  assert.equal(d.ganchos[0], 'Curto e direto');
+  assert.equal(d.ganchos[1], 'O remédio vai ficar para sempre?');
+  assert.equal(avisos.length, 1);
+  assert.match(avisos[0], /gancho 2 ajustado automaticamente de 13 para 6 palavras/);
+  assert.ok(!verificar(d, ARTIGO, FONTE).some((x) => x.includes('palavras (máx. 10)')));
+});
+
+test('garantirAvisoCaixaPerguntas: só a caixa de perguntas recebe a isenção de emergência, uma única vez', () => {
+  const d = rascunho({ stories: [{ texto: 'Enquete', recurso: 'Enquete: Sim / Não' }, { texto: 'Mande sua dúvida.', recurso: 'Caixa de perguntas: qual é a sua dúvida?' }] });
+  garantirAvisoCaixaPerguntas(d);
+  garantirAvisoCaixaPerguntas(d);
+  assert.doesNotMatch(d.stories[0].texto, /emergências/);
+  assert.equal((d.stories[1].texto.match(/não atende emergências/g) || []).length, 1);
+  assert.match(d.stories[1].texto, /188 ou 192/);
+});
+
+test('verificarPacoteMultimidia: caixa de perguntas sem isenção de emergência gera alerta', () => {
+  const d = rascunho();
+  d.stories[3] = { texto: 'Mande a sua dúvida.', recurso: 'Caixa de perguntas: qual é a sua dúvida?' };
+  assert.ok(verificarPacoteMultimidia(d, ARTIGO).some((x) => x.includes('caixa de perguntas sem a isenção de emergência')));
+});
+
+test('verificar: termo caça-clique ("Descubra") gera alerta de tom', () => {
+  const d = rascunho({ ganchos: ['Descubra o cuidado humanizado na rotina', 'a', 'b', 'c', 'd'] });
+  assert.ok(verificar(d, ARTIGO, FONTE).some((x) => x.startsWith('tom: termo caça-clique')));
+  assert.ok(!verificar(rascunho(), ARTIGO, FONTE).some((x) => x.startsWith('tom:')));
+});
+
+test('enquete com opções descritivas e acolhedoras é aceita sem aviso falso; sem enquete continua alertando', () => {
+  const d = rascunho();
+  d.stories[0] = { texto: 'Como está sua energia hoje?', recurso: 'Enquete: Sinto-me esgotado / Tenho conseguido me cuidar' };
+  assert.deepEqual(verificarPacoteMultimidia(d, ARTIGO), []);
+
+  const sem = rascunho();
+  sem.stories[0] = { texto: 'Dica', recurso: 'Nenhum' };
+  assert.ok(verificarPacoteMultimidia(sem, ARTIGO).some((x) => x.includes('Stories sem enquete (mínimo 1, com "Sim / Não" ou duas opções descritivas)')));
+});
+
+test('revisor não recebe as frases fixas inseridas pelo código (isenção da caixa de perguntas e narrativa composta)', () => {
+  const { pecasDoRascunho } = require('../../scripts/bot-gemini');
+  const d = rascunho({ stories: [{ texto: 'Como está você? Narrativa composta: personagens fictícios.', recurso: 'Enquete: A / B' }, { texto: 'Mande sua dúvida. Esta caixa não atende emergências: em crise, ligue 188 ou 192.', recurso: 'Caixa de perguntas: qual?' }] });
+  const stories = pecasDoRascunho(d).filter((p) => p.id.startsWith('story'));
+  assert.equal(stories[0].texto, 'Como está você?');
+  assert.equal(stories[1].texto, 'Mande sua dúvida.');
 });

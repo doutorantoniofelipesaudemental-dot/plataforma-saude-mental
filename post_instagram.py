@@ -1,6 +1,6 @@
 """Geracao de legendas com Claude + publicacao no Instagram via Composio.
 
-Plataforma Dr. Antonio Felipe (Dr. Saude Mental).
+Plataforma Dr. Antônio Felipe (Dr. Saude Mental).
 
 Fluxo do dia:
     1. Anthropic (claude-opus-5, thinking adaptativo) gera a legenda
@@ -75,7 +75,7 @@ PILARES = [
     "rotina, produtividade e saude mental",
 ]
 
-SISTEMA_LEGENDA = """Voce escreve legendas de Instagram para a Plataforma Dr. Antonio Felipe \
+SISTEMA_LEGENDA = """Voce escreve legendas de Instagram para a Plataforma Dr. Antônio Felipe \
 (Dr. Saude Mental), um consultorio de saude mental online.
 
 Voz de marca: clinico-acolhedora. Autoridade medica sem frieza, calma sem \

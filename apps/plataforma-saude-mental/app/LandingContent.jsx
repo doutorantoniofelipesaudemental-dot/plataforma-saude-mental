@@ -134,7 +134,7 @@ export default function LandingContent() {
           variants={item}
           className="max-w-2xl font-serif text-4xl font-bold leading-tight text-verde-escuro sm:text-5xl"
         >
-          Plataforma Integrada de Saúde Mental
+          Portal de Saúde Mental Doutor Antônio Felipe Garabito
         </motion.h1>
 
         <motion.p variants={item} className="max-w-2xl text-lg leading-relaxed text-tinta-media">
