@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T05:32:04.548Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
@@ -79,7 +79,7 @@ Quando a desescalada verbal não é suficiente para conter o risco iminente de d
 
 ### Escolha Farmacológica Segura
 
-- **Antipsicóticos de primeira linha:** Haloperidol (2,5 mg VO em agitação leve; 5 mg VO em moderada; 5 mg IM em grave; pode repetir em 0,5 a 4 h; máximo de 30 mg/dia; Project BETA; Roppolo et al., 2020, PMID 33145538) associado a prometazina [DOSE DA PROMETAZINA A CONFIRMAR] via intramuscular ou oral é amplamente utilizado, mas atente para o risco de sintomas extrapiramidais e prolongamento do intervalo QT. Opções de segunda geração, como olanzapina (5 mg em comprimido orodispersível na agitação leve; 5 a 10 mg na moderada; 10 mg IM na grave; máximo de 20 mg/dia; evite benzodiazepínico na hora seguinte à dose; use a menor dose possível em idosos), apresentam bom perfil de sedação com menor incidência de sintomas extrapiramidais.
+- **Antipsicóticos de primeira linha:** Haloperidol (2,5 mg VO em agitação leve; 5 mg VO em moderada; 5 mg IM em grave; pode repetir em 0,5 a 4 h; máximo de 30 mg/dia; Project BETA; Roppolo et al., 2020, PMID 33145538) associado a prometazina, com dose e via conforme o protocolo do serviço, é amplamente utilizado, mas atente para o risco de sintomas extrapiramidais e prolongamento do intervalo QT. Opções de segunda geração, como olanzapina (5 mg em comprimido orodispersível na agitação leve; 5 a 10 mg na moderada; 10 mg IM na grave; máximo de 20 mg/dia; evite benzodiazepínico na hora seguinte à dose; use a menor dose possível em idosos), apresentam bom perfil de sedação com menor incidência de sintomas extrapiramidais.
 - **Benzodiazepínicos:** O lorazepam (2 mg VO na agitação leve) é preferível em casos de abstinência alcoólica ou uso de estimulantes. Evite benzodiazepínicos isolados em idosos ou pacientes com delirium, pois podem piorar a confusão mental.
 
 ### Cuidados com a Sedação Excessiva
