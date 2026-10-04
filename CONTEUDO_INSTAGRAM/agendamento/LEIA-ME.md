@@ -8,4 +8,4 @@ Gerado em 2026-10-04 a partir de `CONTEUDO_INSTAGRAM/pacotes/`. Contém **soment
 
 ## Extensão: pacotes 029 a 045 (a partir de 02/11/2026)
 
-Acrescentados em 2026-10-04 ao `agenda.csv`, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (031, 037, 038, 039, 040, 041 e 042) só em dias úteis. Linhas marcadas "BLOQUEADO" têm o rascunho do artigo com revisão médica pendente e não devem ser agendadas antes da aprovação.
+Acrescentados em 2026-10-04 ao `agenda.csv`, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (031, 037, 038, 039, 040, 041 e 042) só em dias úteis. Em 2026-10-04 o rascunho 039 foi aprovado e a linha do pacote 039 deixou de estar bloqueada; linhas marcadas "BLOQUEADO", se surgirem, indicam rascunho com revisão médica pendente.

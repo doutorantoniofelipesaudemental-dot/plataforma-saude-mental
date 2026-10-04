@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T09:48:30.015Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
@@ -59,7 +59,7 @@ Quando a substância é retirada de forma abrupta, ocorre um verdadeiro colapso 
 ### Manejo Clínico na Urgência
 
 ### Condutas de primeira linha
-* **Abstinência de Álcool:** O tratamento de escolha para controle sintomático e prevenção de convulsões ou delirium tremens baseia-se no uso de benzodiazepínicos (como Diazepam ou Lorazepam) por via oral ou intravenosa, titulados conforme a escala de avaliação clínica de abstinência, com doses suficientes para manter sonolência leve durante o delirium (Mayo-Smith et al., 2004, PMID 15249349). Lembre-se sempre de administrar Tiamina antes da glicose para prevenir a encefalopatia de Wernicke [DOSE A CONFIRMAR].
+* **Abstinência de Álcool:** O tratamento de escolha para controle sintomático e prevenção de convulsões ou delirium tremens baseia-se no uso de benzodiazepínicos (como Diazepam ou Lorazepam) por via oral ou intravenosa, titulados conforme a escala de avaliação clínica de abstinência, com doses suficientes para manter sonolência leve durante o delirium (Mayo-Smith et al., 2004, PMID 15249349). Lembre-se sempre de administrar Tiamina antes da glicose para prevenir a encefalopatia de Wernicke (dose e via conforme o protocolo do serviço).
 * **Abstinência de opioides:** O manejo visa aliviar o desconforto intenso com medicações de suporte sintomático para náuseas, dores musculares e insônia. Em cenários específicos e protocolos institucionais, pode-se avaliar o uso de agonistas parciais sob supervisão especializada. A buprenorfina só deve ser iniciada quando já houver abstinência moderada (escala COWS acima de 13) e tempo suficiente desde o último opioide agonista pleno, para evitar abstinência precipitada (Spadaro et al., 2022, PMID 35623179); as doses seguem o protocolo local.
 * **Abstinência de estimulantes (cocaína e crack):** O quadro costuma ser marcado por intensa fissura, fadiga extrema e sintomas depressivos graves. O manejo é essencialmente de suporte, focado na contenção verbal, hidratação, controle da agitação com antipsicóticos de baixa potência se estritamente necessário, com dose definida pelo médico segundo o protocolo local (referência: Project BETA; Roppolo et al., 2020, PMID 33145538) e vigilância para risco de autoagressão.
 
