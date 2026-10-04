@@ -139,7 +139,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Guia prático para residentes e médicos de pronto atendimento identificarem rapidamente a tríade clínica da síndrome serotoninérgica e realizarem o manejo clínico imediato. O texto aborda o diagnóstico diferencial com neuroléptica maligna e os critérios de gravidade para internação.
 - **público:** Residentes de Medicina de Família e Comunidade, Médicos de Pronto Atendimento e Estudantes de Medicina · **ângulo:** Foco na tomada de decisão rápida sob pressão no plantão e distinção de outras urgências farmacológicas.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `Serotonin syndrome AND emergency treatment AND diagnosis` (Revisão) 37309284
   - PubMed: `Serotonin syndrome versus neuroleptic malignant syndrome in the emergency department` (Revisão) 22563571
@@ -177,7 +177,7 @@
   - PubMed: `Verbal de-escalation of the agitated patient in the emergency setting` (Diretriz (Project BETA) e revisão) 33145538
   - PubMed: `Safety and efficacy of antipsychotics in acute agitation` (Revisão sistemática Cochrane e metanálise) 19588366
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-agitacao-psicomotora-protocolo-rapido-no-pa.md` · slug: `manejo-da-agitacao-psicomotora-protocolo-rapido-no-pa` · pauta: `2026-09-30-13-manejo-da-agitacao-psicomotora`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Intoxicação exógena e agitação: diferenciando causas no PA" (similaridade 0.26)
 
 ## [redigida] Rastreio e manejo da depressão pós-parto na UBS
@@ -194,7 +194,7 @@
   - PubMed: `Early intervention for postpartum depression in primary care` (Estudo de validação (amostra brasileira)) 17952250
   - PubMed: `` (Ensaio clínico randomizado) 39396350
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/rastreio-e-manejo-da-depressao-pos-parto-na-ubs.md` · slug: `rastreio-e-manejo-da-depressao-pos-parto-na-ubs` · pauta: `2026-09-30-14-rastreio-e-manejo-da-depressao`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Depressão pós-parto e ansiedade perinatal: reconhecendo os sinais além do "baby blues"" (similaridade 0.28)
 
 ## [redigida] Avaliação do risco de suicídio na APS: o que o médico deve fazer
@@ -210,7 +210,7 @@
   - PubMed: `Clinical management of suicide risk in general practice` (Diretriz clínica (recomendação do USPSTF)) 37338872
   - PubMed: `Effectiveness of brief interventions for suicide prevention in primary care` (Ensaio clínico randomizado (estudo WHO SUPRE-MISS)) 20801749
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-do-risco-de-suicidio-na-aps-o-que-o-medico-deve-fa.md` · slug: `avaliacao-do-risco-de-suicidio-na-aps-o-que-o-medico-deve-fa` · pauta: `2026-09-30-15-avaliacao-do-risco-de-suicidio`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Como reconhecer sinais de risco de suicídio na consulta de rotina" (similaridade 0.26)
 
 ## [redigida] Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico
@@ -304,7 +304,7 @@
   - PubMed: `("Psychomotor Agitation"[MeSH]) AND ("Emergency Treatment"[MeSH] OR "Primary Health Care"[MeSH])` (Diretriz (Project BETA) e revisão) 33145538
   - PubMed: `("Mental Disorders/diagnosis"[MeSH]) AND ("Diagnosis, Differential"[MeSH]) AND ("Physicians, Family"[MeSH])` (Revisão sistemática Cochrane e metanálise) 19588366
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/urgencias-psiquiatricas-na-ubs-guia-rapido-de-avaliacao-e-co.md` · slug: `urgencias-psiquiatricas-na-ubs-guia-rapido-de-avaliacao-e-co` · pauta: `2026-09-30-21-urgencias-psiquiatricas-na-ubs`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Intoxicação por psicofármacos: conduta inicial no PA" (similaridade 0.25)
 
 ## [rejeitada] Cuidadores de pessoas com demência: manejo do estresse e sintomas comportamentais
