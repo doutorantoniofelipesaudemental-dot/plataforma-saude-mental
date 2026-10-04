@@ -7,6 +7,7 @@
 - **Entram:** as pautas redigidas que não têm publicação nas redes. Nenhuma das 121 está entre os 10 artigos já postados (status `publicado`).
 - **Ficam de fora:** as 7 que já têm pacote em `pacotes/` (crônicas ainda não postadas, listadas no fim).
 - **Ordem:** por tema, na ordem de `METAS_EDITORIAL.json`; dentro do tema, lote crescente e, em seguida, data de redação.
+- **Bloco Empresas & RH (Lote 3), pacotes 29 a 35 criados em 2026-10-04:** 5 peças em cada um (carrossel de 10 slides, reel com Lottie/GSAP, 6 Stories com enquete, 🎧 áudio narrado e podcast), chancela de saúde ocupacional, CVV 188 e SAMU 192; a 031 é sensível, com caixa de perguntas protegida. Passam em `checarEticaCfm`. Os rascunhos dos artigos seguem com `revisaoMedica: pendente` e os pacotes não podem ir ao ar antes da aprovação do Dr. Antônio Felipe. Pautas 022 a 026 passaram a `sensivel: true`.
 - **Revisão médica:** os rascunhos dos pacotes 01 a 28 estão com `revisaoMedica: aprovada`, registrada em 2026-10-04 por instrução expressa do Dr. Antônio Felipe. Os demais seguem `pendente`: nada vai ao ar sem revisão do Dr. Antônio Felipe.
 - **Auditoria dos pacotes (2026-10-04):** os 35 pacotes de `pacotes/` têm as 5 peças (carrossel, reel, stories com enquete, 🎧 áudio narrado, Lottie/GSAP/Three.js) e passam em `checarEticaCfm` (contexto social); os pacotes 22 a 28 trazem CVV 188, SAMU 192 e caixa de perguntas protegida. Os ajustes clínicos e éticos do commit `c2e7d56` cobrem os pacotes 01 a 20 (21 a 28 foram gerados já com as diretrizes). Isso é checagem automática: a aprovação médica dos pacotes 01 a 28 foi registrada depois, por instrução do Dr. Antônio Felipe (ver item acima).
 
@@ -52,11 +53,11 @@
 
 | # | Pauta | Tipo | Sensível | Lote | Artigo no banco |
 |---|---|---|---|---|---|
-| 022 | Saúde mental de migrantes: Síndrome de Ulisses e luto migratório | científico | não | 1 | ainda não criado |
-| 023 | Sinais precoces de depressão: guia de apoio prático para familiares | científico | não | 1 | ainda não criado |
-| 024 | Psicoeducação em saúde mental na família: orientando para o cuidado | científico | não | 1 | ainda não criado |
+| 022 | Saúde mental de migrantes: Síndrome de Ulisses e luto migratório | científico | sim | 1 | ainda não criado |
+| 023 | Sinais precoces de depressão: guia de apoio prático para familiares | científico | sim | 1 | ainda não criado |
+| 024 | Psicoeducação em saúde mental na família: orientando para o cuidado | científico | sim | 1 | ainda não criado |
 | 025 | Primeiro episódio psicótico: orientações essenciais para a família | científico | sim | 2 | rascunho, fora do site |
-| 026 | Esquecimento comum ou sinal de alerta: conversando sobre memória | científico | não | 2 | rascunho, fora do site |
+| 026 | Esquecimento comum ou sinal de alerta: conversando sobre memória | científico | sim | 2 | rascunho, fora do site |
 | 027 | Conviver com a oscilação de humor: limites e apoio familiar | científico | não | 2 | rascunho, fora do site |
 
 ## Empresas & RH (8)

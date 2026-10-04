@@ -25,7 +25,7 @@ Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artig
 
 ```
 #saudemental #medicinadefamilia #saudementalimporta
-#bemestaremocional #psiquiatra #terapia #cuidadocomamente #saudeemocional
+#bemestaremocional #terapia #cuidadocomamente #saudeemocional
 ```
 
 ### CTA padrão de agendamento (variar a chamada, manter o link)

@@ -267,7 +267,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Este artigo detalha para familiares como identificar alterações sutis de humor, sono, energia e autocuidado que antecedem o agravamento de um quadro depressivo. Demonstra como oferecer escuta qualificada sem cobranças de 'força de vontade' e esclarece os critérios objetivos para buscar a Unidade Básica de Saúde. A intervenção precoce reduz o tempo de sofrimento e previne o isolamento grave.
 - **público:** Familiares, cuidadores e indivíduos em busca de psicoeducação sobre transtornos de humor · **ângulo:** Foco na ótica da Atenção Primária à Saúde, instrumentalizando a família com ferramentas de validação emocional e desmistificando o preconceito de que depressão é fraqueza de caráter.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("Depressive Disorder"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Family"[MeSH Terms] AND ("Early Medical Intervention"[MeSH Terms] OR "early recognition")` (Diretriz clínica (recomendação do USPSTF)) 37338872
   - PubMed: `("Mental Health"[MeSH Terms] OR "Depression"[MeSH Terms]) AND "Psychoeducation"[MeSH Terms] AND "Caregivers"[MeSH Terms]` (Diretriz clínica (CANMAT)) 38711351
@@ -344,7 +344,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Este artigo aborda a psicoeducação em saúde mental voltada para pacientes e familiares, explicando o que é o processo, os principais sinais de sofrimento psíquico a observar, estratégias de apoio cotidiano e o momento adequado para buscar atendimento profissional. O texto foca em construir uma linguagem acessível e acolhedora, promovendo o entendimento sem estigma ou diagnósticos precipitados.
 - **público:** Pacientes e Familiares · **ângulo:** Foca na psicoeducação como ferramenta de empoderamento familiar na APS, guiando o manejo precoce e a busca por ajuda de forma humanizada.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `psychoeducation AND family AND mental health AND primary health care` (Revisão sistemática Cochrane) 25854522
   - PubMed: `mental health literacy AND family caregivers AND psychoeducation` (Revisão sistemática Cochrane) 21678337
@@ -449,7 +449,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Este artigo oferece um guia psicoeducativo para pacientes e familiares sobre a Síndrome de Ulisses e o luto migratório, abordando os desafios emocionais de recomeçar em outro país. O texto explica o que é o estresse crônico da migração, apresenta sinais de alerta e orienta sobre como buscar suporte adequado na rede de saúde.
 - **público:** Pacientes, migrantes, expatriados e seus familiares · **ângulo:** Foco exclusivo no acolhimento e na psicoeducação de famílias migrantes, diferenciando o estresse migratório comum do adoecimento psíquico, com linguagem acessível e empática.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `transnational mental health AND immigrant health AND Ulysses syndrome` (Artigo de revisão (descrição da síndrome)) 15912217
   - PubMed: `acculturative stress AND grief AND migrant populations AND mental health` (Revisão sistemática de métodos mistos) 33811751
@@ -859,7 +859,7 @@
 - **tipo:** artigo médico (PubMed/MEDLINE) · **origem:** assistente
 - **pauta:** Ajuda pacientes e familiares a diferenciarem o envelhecimento cognitivo habitual dos sinais clínicos iniciais de declínio cognitivo. Orienta sobre quando buscar avaliação médica especializada na atenção primária. Promove o diálogo aberto sobre perdas de memória sem alarmismo.
 - **público:** Idosos, familiares e cuidadores preocupados com alterações cognitivas · **ângulo:** Diferenciação clara entre lapsos normais de memória e patologias, orientando a família sobre o momento correto de procurar investigação clínica.
-- **tema sensível:** não
+- **tema sensível:** sim (CVV 188 obrigatório)
 - **seções:** Guia Prático · Fisiopatologia · Manejo Clínico · Referências
   - PubMed: `("Cognitive Dysfunction"[Mesh]) AND ("Early Diagnosis"[Mesh]) AND ("Family Practice"[Mesh])` (Revisão) 25274571
   - PubMed: `("Memory Disorders"[Mesh]) AND ("Aged"[Mesh]) AND ("Primary Health Care"[Mesh])` (Revisão sistemática Cochrane e metanálise) 29923184
