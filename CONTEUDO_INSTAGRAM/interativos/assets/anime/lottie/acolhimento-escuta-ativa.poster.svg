@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Duas formas, uma verde e uma âmbar, lado a lado, com um anel suave ao redor: escuta ativa">
+<circle cx="200" cy="200" r="150" fill="#F7C95E" opacity=".35"/>
+<circle cx="200" cy="200" r="100" fill="none" stroke="#B8741A" stroke-width="6" opacity=".5"/>
+<circle cx="164" cy="200" r="65" fill="#25493A"/><circle cx="236" cy="200" r="65" fill="#B8741A"/>
+</svg>
