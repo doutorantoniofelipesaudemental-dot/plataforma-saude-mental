@@ -1253,7 +1253,7 @@
   - PubMed: `("Mood Stabilizing Agents/adverse effects"[Mesh] OR "Lithium/adverse effects"[Mesh]) AND ("Monitoring, Physiologic"[Mesh] OR "Safety Management"[Mesh])` (Diretriz clínica (CANMAT/ISBD)) 29536616
   - PubMed: `("Depressive Disorder/drug therapy"[Mesh] OR "Bipolar Disorder/drug therapy"[Mesh]) AND "Medication Adherence"[Mesh] AND "Drug-Related Side Effects and Adverse Reactions"[Mesh]` (Revisão sistemática e metanálise) 34752479
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/reacoes-adversas-a-psicofarmacos-na-ubs-o-que-monitorar.md` · slug: `reacoes-adversas-a-psicofarmacos-na-ubs-o-que-monitorar` · pauta: `2026-09-30-88-reacoes-adversas-a-psicofarmac`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.26)
 
 ## [redigida] Avaliação de queixas somáticas sem causa orgânica óbvia
@@ -1269,7 +1269,7 @@
   - PubMed: `("Somatoform Disorders"[Mesh]) AND ("Physician-Patient Relations"[Mesh]) AND ("Unnecessary Procedures"[Mesh] OR "Diagnostic Tests, Routine"[Mesh])` (Revisão sistemática e metanálise) 36374916
   - PubMed: `("Symptom Assessment"[Mesh]) AND ("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Metanálise de ensaios clínicos randomizados) 32428905
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-queixas-somaticas-sem-causa-organica-obvia.md` · slug: `avaliacao-de-queixas-somaticas-sem-causa-organica-obvia` · pauta: `2026-09-30-89-avaliacao-de-queixas-somaticas`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Avaliação do risco de suicídio na APS: o que o médico deve fazer" (similaridade 0.18)
 
 ## [rejeitada] Uso de benzodiazepínicos: estratégias seguras de desprescrição
@@ -1300,7 +1300,7 @@
   - PubMed: `("Suicidal Ideation"[Mesh]) AND ("Risk Assessment"[Mesh]) AND ("General Practice"[Mesh])` (Ensaio clínico randomizado (estudo WHO SUPRE-MISS)) 20801749
   - PubMed: `("Suicide"[Mesh] / prevention and control) AND ("Vulnerable Populations"[Mesh]) AND ("Community Mental Health Services"[Mesh])` (Revisão sistemática) 36052582
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs.md` · slug: `manejo-da-ideacao-suicida-em-populacoes-vulneraveis-na-ubs` · pauta: `2026-09-30-91-manejo-da-ideacao-suicida-em-p`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.25)
 
 ## [redigida] Avaliação de cefaleia tensional e ansiedade na UBS
@@ -1316,7 +1316,7 @@
   - PubMed: `somatization AND primary care AND headache management` (Diretriz clínica (atenção primária)) 26273080
   - PubMed: `psychiatric comorbidity in tension-type headache` (Revisão) 40676501
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-cefaleia-tensional-e-ansiedade-na-ubs.md` · slug: `avaliacao-de-cefaleia-tensional-e-ansiedade-na-ubs` · pauta: `2026-09-30-92-avaliacao-de-cefaleia-tensiona`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.35)
 
 ## [redigida] O som do teclado que não parava na noite de plantão
@@ -1477,7 +1477,7 @@
   - PubMed: `` (Revisão sistemática de ensaios e metanálises (lítio)) 34980362
   - PubMed: `` (Metanálise em rede (manutenção)) 33177610
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-estabilizadores-de-humor-na-aps-guia-pratico-para-res.md` · slug: `uso-de-estabilizadores-de-humor-na-aps-guia-pratico-para-res` · pauta: `2026-09-30-106-uso-de-estabilizadores-de-humo`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.29)
 
 ## [rejeitada] Sintomas psicóticos na atenção primária: avaliação inicial e conduta
@@ -1523,7 +1523,7 @@
   - PubMed: `("Dementia"[Mesh]) AND ("Diagnosis, Differential"[Mesh]) AND ("General Practice"[Mesh])` (Diretriz baseada em evidências) [PMID A CONFIRMAR]
   - PubMed: `("Aged"[Mesh]) AND ("Memory Disorders"[Mesh]) AND ("Primary Care"[Mesh])` (Estudo de validação de teste diagnóstico) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-queixas-cognitivas-em-idosos-na-ubs-guia-pratic.md` · slug: `avaliacao-de-queixas-cognitivas-em-idosos-na-ubs-guia-pratic` · pauta: `2026-09-30-109-avaliacao-de-queixas-cognitiva`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Avaliação de cefaleia tensional e ansiedade na UBS" (similaridade 0.33)
 
 ## [redigida] Uso de antidepressivos em populações especiais na APS
@@ -1539,7 +1539,7 @@
   - PubMed: `("Pregnancy"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Family Practice"[Mesh])` (Revisão sistemática de metanálises) 36853497
   - PubMed: `("Aged"[Mesh]) AND ("Depressive Disorder"[Mesh]) AND ("Drug Interactions"[Mesh])` (Revisão sistemática) 33064291
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antidepressivos-em-populacoes-especiais-na-aps.md` · slug: `uso-de-antidepressivos-em-populacoes-especiais-na-aps` · pauta: `2026-09-30-110-uso-de-antidepressivos-em-popu`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.29)
 
 ## [redigida] Manejo da recusa alimentar e seletividade grave no pronto atendimento
@@ -1555,7 +1555,7 @@
   - PubMed: `("Anorexia Nervosa"[Mesh]) AND ("Medical Emergencies"[Mesh]) AND ("Hospitalization"[Mesh])` (Diretriz de prática clínica) [PMID A CONFIRMAR]
   - PubMed: `("Food Refusal"[Mesh]) AND ("Adolescent"[Mesh]) AND ("Emergency Service, Hospital"[Mesh])` (Estudo de coorte e consenso) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-recusa-alimentar-e-seletividade-grave-no-pronto-at.md` · slug: `manejo-da-recusa-alimentar-e-seletividade-grave-no-pronto-at` · pauta: `2026-09-30-111-manejo-da-recusa-alimentar-e-s`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Seletividade alimentar: quando é fase e quando merece atenção" (similaridade 0.34)
 
 ## [rejeitada] Uso racional de antidepressivos na gestação e lactação na UBS
@@ -1586,7 +1586,7 @@
   - PubMed: `("Restraint, Physical"[MeSH Terms] OR "Coercion"[MeSH Terms]) AND "Emergency Psychiatry"[MeSH Terms] AND "Guideline"[Publication Type]` (Revisão sistemática Cochrane e metanálise) 19588366
   - PubMed: `"Aggression"[MeSH Terms] AND "Emergency Medicine"[MeSH Terms] AND "Risk Assessment"[MeSH Terms] AND "Meta-Analysis"[Publication Type]` (Revisão) 40265437
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-episodios-de-raiva-e-agressividade-no-pronto-atend.md` · slug: `manejo-de-episodios-de-raiva-e-agressividade-no-pronto-atend` · pauta: `2026-09-30-113-manejo-de-episodios-de-raiva-e`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Manejo do paciente com risco de agressividade no PA" (similaridade 0.3)
 
 ## [redigida] Investigação de fadiga crônica e exaustão na atenção primária
@@ -1602,7 +1602,7 @@
   - PubMed: `("Burnout, Professional"[Mesh] OR "Depression"[Mesh]) AND "Fatigue"[Mesh] AND "Primary Health Care"[Mesh]` (Revisão sistemática) 33024295
   - PubMed: `("Fatigue Syndrome, Chronic"[Mesh] AND "Diagnosis"[Mesh]) AND "Primary Health Care"[Mesh]` (Revisão sistemática) 39940333
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/investigacao-de-fadiga-cronica-e-exaustao-na-atencao-primari.md` · slug: `investigacao-de-fadiga-cronica-e-exaustao-na-atencao-primari` · pauta: `2026-09-30-114-investigacao-de-fadiga-cronica`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **originalidade:** original · mais próximo: "Transtornos somatoformes na UBS: investigação e manejo clínico" (similaridade 0.31)
 
 ## [rejeitada] Urgências psiquiátricas na infância e adolescência no PA

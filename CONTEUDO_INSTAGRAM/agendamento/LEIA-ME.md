@@ -12,4 +12,4 @@ Acrescentados em 2026-10-04 ao `agenda.csv`, com as mesmas regras: só texto, se
 
 ## Extensão: pacotes 046 a 060 (a partir de 19/11/2026)
 
-Acrescentados em 2026-10-04 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (048, 049, 054, 058 e 059) só em dias úteis. Linhas marcadas BLOQUEADO têm o rascunho do artigo com revisão médica pendente (051 a 060) e não devem ser agendadas antes da aprovação.
+Acrescentados em 2026-10-04 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (048, 049, 054, 058 e 059) só em dias úteis. Em 2026-10-04 os rascunhos 051 a 060 foram aprovados e as linhas correspondentes foram liberadas; linhas marcadas BLOQUEADO, se surgirem, indicam rascunho com revisão médica pendente.
