@@ -1,0 +1,84 @@
+/* Estilos do carrossel animado 4:5 (1080 x 1350). Tokens do Portal: verde-salvia, creme e ambar; contraste AAA. */
+:root{
+  --creme:#F6F0E2; --creme-2:#EBE2CC; --tinta:#1B2A22; --salvia:#25493A; --salvia-claro:#9DB8A6;
+  --ambar:#B8741A; --ambar-claro:#F7C95E; --petroleo:#0F3B45; --branco:#FFFFFF;
+  --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:#14201A;color:var(--branco);font-family:var(--sans);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;overflow:hidden;padding-top:56px}
+.wrap{width:calc(1080px*var(--s,.5));height:calc(1350px*var(--s,.5));position:relative;flex:none}
+.stage{width:1080px;height:1350px;transform:scale(var(--s,.5));transform-origin:0 0;position:absolute;left:0;top:0;overflow:hidden;border-radius:28px;background:var(--creme);touch-action:pan-y}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:150px 90px 170px;color:var(--tinta);background:var(--creme)}
+.slide.active{display:flex}
+.slide.dark{background:var(--petroleo);color:var(--branco)}
+.slide>*{position:relative;z-index:1}
+canvas#dust{position:absolute;inset:0;z-index:0;pointer-events:none}
+.progress{position:absolute;top:34px;left:60px;right:60px;display:flex;gap:8px;z-index:5}
+.progress i{flex:1;height:8px;border-radius:4px;background:rgba(27,42,34,.22);overflow:hidden}
+.progress i b{display:block;height:100%;width:0;background:var(--salvia)}
+.progress i.done b{width:100%}
+.stage.dark-ui .progress i{background:rgba(255,255,255,.3)}
+.stage.dark-ui .progress i b{background:var(--ambar-claro)}
+.tag{font-size:32px;letter-spacing:.01em;font-weight:700;color:var(--salvia);margin-bottom:34px}
+.dark .tag{color:var(--ambar-claro)}
+h1,h2{font-family:var(--serif);line-height:1.18;font-weight:700}
+h1{font-size:70px}
+h2{font-size:62px;margin-bottom:30px}
+p.t{font-size:46px;line-height:1.42}
+p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(--salvia)}
+.dark p.n{color:var(--ambar-claro)}
+.hl{background:linear-gradient(transparent 60%,rgba(247,201,94,.75) 60%);padding:0 4px}
+.dark .hl{background:none;color:var(--ambar-claro)}
+.w{display:inline-block;white-space:nowrap}
+.l{display:inline-block}
+.art{width:100%;display:block;margin:0 auto}
+.art *{vector-effect:non-scaling-stroke}
+.rv{animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}}
+@keyframes drop{0%{opacity:0;transform:translateY(-90px)}60%{opacity:1;transform:translateY(10px)}80%{transform:translateY(-4px)}}
+@keyframes fade{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes breathe{0%,100%{transform:scale(.7)}50%{transform:scale(1)}}
+@keyframes ring{from{transform:scale(.3);opacity:.7}to{transform:scale(1.5);opacity:0}}
+@keyframes slideL{from{opacity:0;transform:translateX(-120px)}}
+@keyframes slideR{from{opacity:0;transform:translateX(120px)}}
+@keyframes pop{from{opacity:0;transform:scale(.85)}}
+@keyframes door{from{transform:scaleX(1)}to{transform:scaleX(.3)}}
+@keyframes water{from{transform:scaleY(0)}}
+@keyframes glow{from{opacity:0;transform:scale(.6)}}
+@keyframes grad{0%{background-position:0 50%}100%{background-position:200% 50%}}
+@keyframes caret{50%{opacity:0}}
+.draw{stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.6s ease-in-out backwards}
+.cap{display:inline-block}
+.grad{background:linear-gradient(90deg,var(--salvia),var(--ambar),var(--salvia));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 8s linear infinite}
+.breath{transform-origin:center;transform-box:fill-box;animation:breathe 8s ease-in-out infinite}
+.ringc{transform-origin:center;transform-box:fill-box;animation:ring 4s ease-out infinite backwards}
+.wl{transform-origin:50% 100%;transform-box:fill-box;animation:water 2.4s ease-out .6s backwards}
+.door{transform-origin:left center;transform-box:fill-box;animation:door 2.4s ease-in-out .5s both}
+.beat{stroke-dasharray:1;animation:draw 3.2s linear infinite}
+.num{display:flex;gap:30px;margin-top:40px}
+.num div{flex:1;border:4px solid var(--ambar-claro);border-radius:24px;padding:28px 20px;text-align:center}
+.num strong{display:block;font-size:130px;line-height:1;color:var(--ambar-claro);font-family:var(--serif)}
+.num span{font-size:34px}
+.lst{list-style:none;padding:0;margin-top:20px;display:grid;gap:26px}
+.lst li{font-size:42px;line-height:1.3;display:flex;gap:24px;align-items:flex-start}
+.lst svg{flex:none;width:56px;height:56px;margin-top:2px}
+.sig{font-size:38px;line-height:1.45}
+.sig b{font-family:var(--serif);font-size:44px}
+.sub{font-size:30px;line-height:1.4;margin-top:30px;opacity:1}
+.foot{position:absolute;left:90px;right:90px;bottom:60px;font-size:30px;font-weight:700;display:flex;justify-content:space-between;color:var(--salvia);z-index:2}
+.dark .foot{color:var(--ambar-claro)}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;padding:0 16px}
+.controls button{min-width:48px;min-height:48px;padding:0 20px;border-radius:24px;border:2px solid var(--creme);background:var(--salvia);color:#fff;font:700 18px var(--sans);cursor:pointer}
+.controls button:focus-visible{outline:4px solid var(--ambar-claro);outline-offset:2px}
+.controls button[aria-pressed="true"]{background:var(--ambar-claro);color:var(--tinta)}
+.count{color:#fff;font:600 18px var(--sans);min-width:70px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .grad{color:var(--salvia);background:none}
+  .door{transform:scaleX(.3)}
+  .beat{stroke-dasharray:none}
+  .breath{transform:scale(.85)}
+}
