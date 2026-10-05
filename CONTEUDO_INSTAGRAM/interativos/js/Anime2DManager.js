@@ -5,7 +5,7 @@
  *   var anime = new Anime2DManager({ lottie: window.lottie, gsap: window.gsap });  // ambos opcionais
  *   anime.addLottie(el, { path: 'assets/anime/lottie/acolhimento.json', poster: 'assets/anime/lottie/acolhimento.png' });
  *   anime.rig(svg, { eyes: '.olho', blinkEvery: 4200, gesture: '.mao' });          // piscar e gesto de acolhimento
- *   anime.watchLoops(document, '.breath, .ringc, .beat');                          // loops CSS
+ *   anime.watchLoops(document, '.breath, .beat');                          // loops CSS
  *
  * Com prefers-reduced-motion: reduce: nada em loop; Lottie mostra o quadro estatico (poster ou frame 0).
  * Sem Lottie/GSAP carregados, cai para CSS e Web Animations API, sem erro.
@@ -48,6 +48,7 @@
       container: container, renderer: 'svg', loop: o.loop !== false, autoplay: !this.reduced,
       path: o.path, animationData: o.animationData
     });
+    entry.anim.addEventListener('data_failed', poster);   // JSON inacessivel (ex.: file://): cai para o poster
     if (this.reduced) entry.anim.addEventListener('DOMLoaded', function () { entry.anim.goToAndStop(0, true); });
     this._lotties.push(entry);
     return entry;
