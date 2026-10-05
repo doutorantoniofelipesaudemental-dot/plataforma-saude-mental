@@ -226,7 +226,7 @@
   - PubMed: `("caregiver burden"[Title/Abstract]) AND ("stress, psychological"[Mesh]) AND ("coping strategies" OR "respite care")` (Revisão sistemática e metanálise) 37668850
   - PubMed: `("parental burnout" OR "caregiver stress") AND ("neurodevelopmental disorders"[Mesh]) AND ("mental health"[Mesh])` (Ensaio clínico randomizado (métodos mistos)) 39415148
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es.md` · slug: `cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es` · pauta: `2026-09-30-16-cuidadores-de-pessoas-com-auti`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 64 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-64-cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-estresse-cronico.md`
 - **originalidade:** original · mais próximo: "Sobrecarga do cuidador: como identificar na consulta de rotina" (similaridade 0.21)
 
@@ -258,7 +258,7 @@
   - PubMed: `("caregivers"[Mesh]) AND ("anticipatory grief" OR "compassion fatigue") AND ("home care services"[Mesh])` (Estudo de coorte) 38599241
   - PubMed: `("family caregivers"[Title/Abstract]) AND ("Palliative Care"[Mesh]) AND ("supportive interventions" OR "psychosocial support")` (Ensaio clínico randomizado) 40925214
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o.md` · slug: `cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o` · pauta: `2026-09-30-18-cuidadores-familiares-em-cuida`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 65 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-65-cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o-colapso-emocional.md`
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.22)
 
@@ -425,7 +425,7 @@
   - PubMed: `family caregivers AND elderly AND burnout AND intervention studies AND primary care` (Ensaio clínico randomizado) 40094667
   - PubMed: `primary care interventions AND caregiver stress AND mental health outcomes` (Metanálise) 12752841
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na.md` · slug: `grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na` · pauta: `2026-09-30-29-grupos-de-apoio-para-cuidadore`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 66 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-66-grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na-pratica.md`
 - **originalidade:** original · mais próximo: "Grupos terapêuticos na APS: uma ferramenta subutilizada" (similaridade 0.3)
 
@@ -442,7 +442,7 @@
   - PubMed: `occupational stress AND teachers AND conflict management` (Revisão sistemática e metanálise) 35256508
   - PubMed: `mental health AND school teachers AND educational inclusion` (Revisão de escopo) 36078422
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus.md` · slug: `conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus` · pauta: `2026-09-30-30-conflitos-escolares-e-saude-do`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 67 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-67-conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclusao.md`
 - **originalidade:** original · mais próximo: "Gestão de conflitos e seu impacto na saúde mental da equipe" (similaridade 0.22)
 
@@ -1112,7 +1112,7 @@
   - PubMed: `Special education needs AND teacher burnout AND coping strategies` (Revisão sistemática e metanálise) 35256508
   - PubMed: `Teachers AND inclusive classrooms AND mental health guidelines` (Revisão de escopo) 36078422
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i.md` · slug: `professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i` · pauta: `2026-09-30-79-professores-e-inclusao-manejo-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 68 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-68-professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-inclusiva.md`
 - **originalidade:** original · mais próximo: "Conflitos escolares e saúde docente: manejo e apoio na inclusão" (similaridade 0.29)
 
@@ -1129,7 +1129,7 @@
   - PubMed: `Caregivers AND severe autism AND adult transition AND mental health` (Revisão sistemática e metanálise) 37668850
   - PubMed: `Family support AND intellectual disability AND adult transition AND guidelines` (Estudo qualitativo (transição para a vida adulta)) 25504639
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid.md` · slug: `cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid` · pauta: `2026-09-30-80-cuidadores-de-jovens-com-autis`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 69 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-69-cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vida-adulta.md`
 - **originalidade:** original · mais próximo: "Trauma na infância: como pode afetar a vida adulta" (similaridade 0.3)
 
@@ -1147,7 +1147,7 @@
   - PubMed: `Teacher induction programs AND mental well-being AND guidelines` (Revisão sistemática) 37372657
   - PubMed: `` (Revisão sistemática e metanálise) 35256508
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-iniciantes-prevencao-do-choque-de-realidade-e-ex.md` · slug: `professores-iniciantes-prevencao-do-choque-de-realidade-e-ex` · pauta: `2026-09-30-81-professores-iniciantes-prevenc`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 70 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-70-professores-iniciantes-prevencao-do-choque-de-realidade-e-exaustao.md`
 - **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.18)
 

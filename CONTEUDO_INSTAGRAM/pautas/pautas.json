@@ -780,7 +780,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es.md",
       "slug": "cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es",
       "geradoEm": "2026-09-30T05:34:06.236Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -788,7 +788,8 @@
       }
     },
     "redigidaEm": "2026-09-30T05:34:06.236Z",
-    "pacote": 64
+    "pacote": 64,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-17-esgotamento-docente-e-sobrecar",
@@ -900,7 +901,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o.md",
       "slug": "cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o",
       "geradoEm": "2026-09-30T05:34:20.627Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -908,7 +909,8 @@
       }
     },
     "redigidaEm": "2026-09-30T05:34:20.627Z",
-    "pacote": 65
+    "pacote": 65,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-19-sinais-precoces-de-depressao-g",
@@ -1514,7 +1516,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na.md",
       "slug": "grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na",
       "geradoEm": "2026-09-30T05:29:39.233Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -1522,7 +1524,8 @@
       }
     },
     "redigidaEm": "2026-09-30T05:29:39.233Z",
-    "pacote": 66
+    "pacote": 66,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-30-conflitos-escolares-e-saude-do",
@@ -1580,7 +1583,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus.md",
       "slug": "conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus",
       "geradoEm": "2026-09-30T05:29:57.572Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -1588,7 +1591,8 @@
       }
     },
     "redigidaEm": "2026-09-30T05:29:57.572Z",
-    "pacote": 67
+    "pacote": 67,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-31-saude-mental-de-migrantes-sind",
@@ -4101,7 +4105,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i.md",
       "slug": "professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i",
       "geradoEm": "2026-09-30T09:47:29.933Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -4109,7 +4113,8 @@
       }
     },
     "redigidaEm": "2026-09-30T09:47:29.933Z",
-    "pacote": 68
+    "pacote": 68,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-80-cuidadores-de-jovens-com-autis",
@@ -4166,7 +4171,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid.md",
       "slug": "cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid",
       "geradoEm": "2026-09-30T09:47:43.334Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -4174,7 +4179,8 @@
       }
     },
     "redigidaEm": "2026-09-30T09:47:43.334Z",
-    "pacote": 69
+    "pacote": 69,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-81-professores-iniciantes-prevenc",
@@ -4237,7 +4243,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-iniciantes-prevencao-do-choque-de-realidade-e-ex.md",
       "slug": "professores-iniciantes-prevencao-do-choque-de-realidade-e-ex",
       "geradoEm": "2026-09-30T09:47:54.847Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -4245,7 +4251,8 @@
       }
     },
     "redigidaEm": "2026-09-30T09:47:54.847Z",
-    "pacote": 70
+    "pacote": 70,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-82-cuidadores-de-pacientes-com-do",
