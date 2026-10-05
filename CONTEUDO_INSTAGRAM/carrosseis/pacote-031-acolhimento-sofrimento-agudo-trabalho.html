@@ -130,14 +130,15 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 <!-- 5 CALMA -->
 <section class="slide" data-dust="1" aria-label="Slide 5 de 10">
   <div class="tag rv">3 · Manter a calma</div>
-  <svg class="art" viewBox="0 0 500 360" style="width:78%" aria-hidden="true">
-    <circle class="breath" cx="250" cy="170" r="140" fill="#9DB8A6"/>
-    <circle class="breath" cx="250" cy="170" r="90" fill="#F6F0E2" style="animation-delay:.3s"/>
-    <g transform="translate(220 100)">
-      <path pathLength="1" class="draw" d="M0 0 L12 120 H48 L60 0 Z" fill="none" stroke="#25493A" stroke-width="5" stroke-linejoin="round"/>
-      <rect class="wl" x="6" y="55" width="48" height="62" fill="#7FB2C4" opacity=".85"/>
-    </g>
-  </svg>
+  <div style="position:relative;width:78%;aspect-ratio:500/360;margin:0 auto">
+    <div id="lottie-respiracao" style="position:absolute;inset:0"></div>
+    <svg viewBox="0 0 500 360" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+      <g transform="translate(220 100)">
+        <path pathLength="1" class="draw" d="M0 0 L12 120 H48 L60 0 Z" fill="none" stroke="#25493A" stroke-width="5" stroke-linejoin="round"/>
+        <rect class="wl" x="6" y="55" width="48" height="62" fill="#7FB2C4" opacity=".85"/>
+      </g>
+    </svg>
+  </div>
   <p class="t rv" style="animation-delay:1s;margin-top:20px">A calma de quem acolhe ajuda quem está em sofrimento. Ofereça água, deixe a pessoa respirar no seu tempo e <span class="hl">garanta o sigilo</span>.</p>
 </section>
 
@@ -217,18 +218,21 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
   // Sem arquivos, o botao aparece desabilitado ("indisponivel").
   var audio=new AudioPlayer({bgm:null,voiceovers:{}});
   // Loops decorativos CSS ficam congelados em movimento reduzido. O 3D (Scene3DManager) nao e usado neste carrossel.
-  anime.watchLoops(document,'.breath,.beat,.grad');
+  anime.watchLoops(document,'.beat,.grad');
   // Lottie 2D do slide 4 (escuta ativa). lottie-web e carregado so se houver movimento permitido; sem a biblioteca,
   // sem rede ou com movimento reduzido, mostra o poster estatico.
-  var lot=null;
+  var lots=[
+    {id:'lottie-escuta',slide:3,name:'acolhimento-escuta-ativa',alt:'Duas formas lado a lado com um anel suave ao redor, representando a escuta ativa'},
+    {id:'lottie-respiracao',slide:4,name:'respiracao-guiada',alt:'Círculos suaves que se expandem e recolhem devagar, como uma respiração calma'}
+  ];
   (function(){
-    var box=document.getElementById('lottie-escuta');
+    var base='../interativos/assets/anime/lottie/';
     function mount(){
       anime.lottie=window.lottie||null;
-      lot=anime.addLottie(box,{path:'../interativos/assets/anime/lottie/acolhimento-escuta-ativa.json',
-        poster:'../interativos/assets/anime/lottie/acolhimento-escuta-ativa.poster.svg',
-        alt:'Duas formas lado a lado com um anel suave ao redor, representando a escuta ativa'});
-      if(lot.anim && !slides[cur].contains(box)) lot.anim.pause();
+      lots.forEach(function(l){
+        l.entry=anime.addLottie(document.getElementById(l.id),{path:base+l.name+'.json',poster:base+l.name+'.poster.svg',alt:l.alt});
+        if(l.entry.anim && l.slide!==cur) l.entry.anim.pause();
+      });
     }
     if(anime.reduced){mount();return;}
     var sc=document.createElement('script');
@@ -327,7 +331,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
     [].forEach.call(prog.children,function(c,i){c.classList.toggle('done',i<cur);var b=c.firstChild;b.style.transition='none';b.style.width=i<cur?'100%':'0'});
     count.textContent=(cur+1)+' / '+N;
     runType(sl); dust(!!sl.dataset.dust); audio.playSlide(cur);
-    if(lot&&lot.anim&&!reduce){ if(sl.contains(document.getElementById('lottie-escuta'))) lot.anim.play(); else lot.anim.pause(); }
+    if(!reduce) lots.forEach(function(l){ if(l.entry&&l.entry.anim){ if(l.slide===cur) l.entry.anim.play(); else l.entry.anim.pause(); } });
     if(timer) schedule();
   }
   function schedule(){
