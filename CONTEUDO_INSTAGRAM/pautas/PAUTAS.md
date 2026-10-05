@@ -770,6 +770,7 @@
   - PubMed: `` (Revisão sistemática com meta-regressão (dose-resposta)) 34630180
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane.md` · slug: `transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane` · pauta: `2026-09-30-56-transtorno-obsessivo-compulsiv`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
+- **pacote:** 61 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-61-transtorno-obsessivo-compulsivo-na-aps.md`
 - **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.32)
 
 ## [rejeitada] Transtornos alimentares na atenção primária: rastreio e conduta inicial
@@ -816,6 +817,7 @@
   - PubMed: `grounding techniques emotion regulation dissociation randomized` (Ensaio clínico randomizado) 40014495
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr.md` · slug: `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` · pauta: `2026-09-30-59-transtorno-dissociativo-na-aps`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
+- **pacote:** 62 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-62-sintomas-dissociativos-associados-ao-trauma.md`
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.24)
 
 ## [redigida] Uso problemático de telas e dependência digital na infância e APS
@@ -833,6 +835,7 @@
   - PubMed: `` (Estudo longitudinal) 41029734
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
+- **pacote:** 63 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-63-uso-problematico-de-telas-na-infancia-e-aps.md`
 - **originalidade:** original · mais próximo: "Telas na primeira infância: o que as diretrizes recomendam" (similaridade 0.27)
 
 ## [redigida] Primeiro episódio psicótico: orientações essenciais para a família
