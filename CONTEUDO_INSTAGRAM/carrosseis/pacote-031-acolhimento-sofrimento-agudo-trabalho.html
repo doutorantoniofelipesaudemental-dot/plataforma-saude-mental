@@ -122,14 +122,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 <!-- 4 ESCUTAR -->
 <section class="slide" aria-label="Slide 4 de 10">
   <div class="tag rv">2 · Escutar sem pressa</div>
-  <svg class="art" viewBox="0 0 400 200" style="width:60%;height:230px" aria-hidden="true">
-    <g fill="none" stroke="#25493A" stroke-width="5">
-      <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:0s"/>
-      <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:1.3s"/>
-      <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:2.6s"/>
-    </g>
-    <circle cx="200" cy="100" r="22" fill="#B8741A"/>
-  </svg>
+  <div id="lottie-escuta" class="rv" style="width:360px;height:360px;margin:-20px auto -10px"></div>
   <p class="t" data-words="Ouça no ritmo da pessoa, sem interromper e sem conselhos rápidos. Evite frases como “isso passa” ou “você é forte”. Prefira:" data-step="0.12"></p>
   <p class="t rv" style="animation-delay:3.4s;margin-top:20px"><span class="hl">“percebo que você está passando por um momento muito difícil”.</span></p>
 </section>
@@ -224,7 +217,26 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
   // Sem arquivos, o botao aparece desabilitado ("indisponivel").
   var audio=new AudioPlayer({bgm:null,voiceovers:{}});
   // Loops decorativos CSS ficam congelados em movimento reduzido. O 3D (Scene3DManager) nao e usado neste carrossel.
-  anime.watchLoops(document,'.breath,.ringc,.beat,.grad');
+  anime.watchLoops(document,'.breath,.beat,.grad');
+  // Lottie 2D do slide 4 (escuta ativa). lottie-web e carregado so se houver movimento permitido; sem a biblioteca,
+  // sem rede ou com movimento reduzido, mostra o poster estatico.
+  var lot=null;
+  (function(){
+    var box=document.getElementById('lottie-escuta');
+    function mount(){
+      anime.lottie=window.lottie||null;
+      lot=anime.addLottie(box,{path:'../interativos/assets/anime/lottie/acolhimento-escuta-ativa.json',
+        poster:'../interativos/assets/anime/lottie/acolhimento-escuta-ativa.poster.svg',
+        alt:'Duas formas lado a lado com um anel suave ao redor, representando a escuta ativa'});
+      if(lot.anim && !slides[cur].contains(box)) lot.anim.pause();
+    }
+    if(anime.reduced){mount();return;}
+    var sc=document.createElement('script');
+    sc.src='https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js';
+    sc.integrity='sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==';
+    sc.crossOrigin='anonymous'; sc.onload=mount; sc.onerror=mount;
+    document.head.appendChild(sc);
+  })();
   var slides=[].slice.call(document.querySelectorAll('.slide')), N=slides.length, cur=0;
   var stage=document.getElementById('stage'), wrap=document.getElementById('wrap');
   var prog=document.getElementById('progress'), count=document.getElementById('count');
@@ -315,6 +327,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
     [].forEach.call(prog.children,function(c,i){c.classList.toggle('done',i<cur);var b=c.firstChild;b.style.transition='none';b.style.width=i<cur?'100%':'0'});
     count.textContent=(cur+1)+' / '+N;
     runType(sl); dust(!!sl.dataset.dust); audio.playSlide(cur);
+    if(lot&&lot.anim&&!reduce){ if(sl.contains(document.getElementById('lottie-escuta'))) lot.anim.play(); else lot.anim.pause(); }
     if(timer) schedule();
   }
   function schedule(){
