@@ -13,7 +13,7 @@
 }
 *{box-sizing:border-box;margin:0}
 html,body{height:100%}
-body{background:#14201A;color:var(--branco);font-family:var(--sans);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;overflow:hidden}
+body{background:#14201A;color:var(--branco);font-family:var(--sans);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;overflow:hidden;padding-top:56px}
 .wrap{width:calc(1080px*var(--s,.5));height:calc(1350px*var(--s,.5));position:relative;flex:none}
 .stage{width:1080px;height:1350px;transform:scale(var(--s,.5));transform-origin:0 0;position:absolute;left:0;top:0;overflow:hidden;border-radius:28px;background:var(--creme);touch-action:pan-y}
 .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:150px 90px 170px;color:var(--tinta);background:var(--creme)}
@@ -27,7 +27,7 @@ canvas#dust{position:absolute;inset:0;z-index:0;pointer-events:none}
 .progress i.done b{width:100%}
 .stage.dark-ui .progress i{background:rgba(255,255,255,.3)}
 .stage.dark-ui .progress i b{background:var(--ambar-claro)}
-.tag{font-size:30px;letter-spacing:.04em;font-weight:700;color:var(--salvia);margin-bottom:34px}
+.tag{font-size:32px;letter-spacing:.01em;font-weight:700;color:var(--salvia);margin-bottom:34px}
 .dark .tag{color:var(--ambar-claro)}
 h1,h2{font-family:var(--serif);line-height:1.18;font-weight:700}
 h1{font-size:70px}
@@ -99,7 +99,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
 <!-- 1 CAPA -->
 <section class="slide" data-dust="1" aria-label="Slide 1 de 10">
-  <div class="tag rv">PACOTE 31 · CONTEÚDO EDUCATIVO</div>
+  <div class="tag rv">Pacote 31 · Conteúdo educativo</div>
   <h1 data-letters="Alguém passa mal emocionalmente no trabalho: como acolher com cuidado, sem tratar."></h1>
   <div data-room="cover" style="margin-top:20px;width:78%;align-self:center"></div>
   <p class="n rv" style="animation-delay:2.6s;margin-top:20px">O primeiro instante pode ser um espaço de segurança e escuta.</p>
@@ -107,21 +107,21 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
 <!-- 2 AVISO -->
 <section class="slide" aria-label="Slide 2 de 10">
-  <div class="tag rv">AVISO E CONTEXTO</div>
+  <div class="tag rv">Aviso e contexto</div>
   <p class="t" data-type="Conteúdo educativo, orientação geral. Não faz diagnóstico, não estabelece relação com o trabalho e não substitui a avaliação médica individualizada. Em emergência: SAMU 192. Apoio: CVV 188."></p>
   <p class="n rv" style="animation-delay:5.5s">Cada caso exige avaliação individualizada.</p>
 </section>
 
 <!-- 3 LUGAR RESERVADO -->
 <section class="slide" aria-label="Slide 3 de 10">
-  <div class="tag rv">1 · UM LUGAR RESERVADO</div>
+  <div class="tag rv">1 · Um lugar reservado</div>
   <div data-room="draw"></div>
   <p class="t rv" style="animation-delay:1.8s;margin-top:40px">Convide a pessoa, com voz calma e respeito, para um lugar reservado, longe de olhares. <span class="hl">Segurança física e emocional vêm primeiro.</span></p>
 </section>
 
 <!-- 4 ESCUTAR -->
 <section class="slide" aria-label="Slide 4 de 10">
-  <div class="tag rv">2 · ESCUTAR SEM PRESSA</div>
+  <div class="tag rv">2 · Escutar sem pressa</div>
   <svg class="art" viewBox="0 0 400 200" style="width:60%;height:230px" aria-hidden="true">
     <g fill="none" stroke="#25493A" stroke-width="5">
       <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:0s"/>
@@ -136,7 +136,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
 <!-- 5 CALMA -->
 <section class="slide" data-dust="1" aria-label="Slide 5 de 10">
-  <div class="tag rv">3 · MANTER A CALMA</div>
+  <div class="tag rv">3 · Manter a calma</div>
   <svg class="art" viewBox="0 0 500 360" style="width:78%" aria-hidden="true">
     <circle class="breath" cx="250" cy="170" r="140" fill="#9DB8A6"/>
     <circle class="breath" cx="250" cy="170" r="90" fill="#F6F0E2" style="animation-delay:.3s"/>
@@ -150,7 +150,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
 <!-- 6 CORPO -->
 <section class="slide" aria-label="Slide 6 de 10">
-  <div class="tag rv">4 · O CORPO TAMBÉM SENTE</div>
+  <div class="tag rv">4 · O corpo também sente</div>
   <svg class="art" viewBox="0 0 800 220" style="height:230px" aria-hidden="true">
     <path pathLength="1" class="beat" d="M0 110 H200 L230 110 L260 40 L300 180 L330 110 H480 L510 110 L540 60 L575 160 L600 110 H800" fill="none" stroke="#25493A" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
   </svg>
@@ -160,7 +160,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
 <!-- 7 RISCO -->
 <section class="slide dark" aria-label="Slide 7 de 10">
-  <div class="tag rv">5 · QUANDO A VIDA PODE ESTAR EM RISCO</div>
+  <div class="tag rv">5 · Quando a vida pode estar em risco</div>
   <h2 class="rv" style="animation-delay:.2s">Se a pessoa falar em se machucar, não a deixe sozinha e acione o SAMU, 192.</h2>
   <div class="num">
     <div style="animation:slideL .9s .8s backwards"><strong>192</strong><span>SAMU, emergência</span></div>
@@ -171,26 +171,26 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
 <!-- 8 ENCAMINHAR -->
 <section class="slide" aria-label="Slide 8 de 10">
-  <div class="tag rv">6 · ACOLHER E ENCAMINHAR</div>
+  <div class="tag rv">6 · Acolher e encaminhar</div>
   <div data-room="door"></div>
   <p class="t rv" style="animation-delay:1.2s;font-size:40px;margin-top:30px">RH e gestores <span class="hl">acolhem, escutam, respeitam o sigilo e encaminham</span> ao serviço de saúde. Não diagnosticam, não tratam e não definem a relação com o trabalho. Depois, o retorno é planejado com a saúde ocupacional.</p>
 </section>
 
 <!-- 9 GRAVIDADE -->
 <section class="slide dark" aria-label="Slide 9 de 10">
-  <div class="tag rv">7 · SINAIS DE GRAVIDADE</div>
+  <div class="tag rv">7 · Sinais de gravidade</div>
   <h2 class="rv" style="animation-delay:.1s">Atenção imediata</h2>
   <ul class="lst">
     <li class="rv" style="animation-delay:.6s"><svg viewBox="0 0 56 56" aria-hidden="true"><circle pathLength="1" class="draw" style="animation-delay:.6s" cx="28" cy="28" r="24" fill="none" stroke="#F7C95E" stroke-width="4"/><path pathLength="1" class="draw" style="animation-delay:1s" d="M16 29 L25 38 L41 18" fill="none" stroke="#F7C95E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ideias ou planos de se machucar</span></li>
     <li class="rv" style="animation-delay:1.6s"><svg viewBox="0 0 56 56" aria-hidden="true"><circle pathLength="1" class="draw" style="animation-delay:1.6s" cx="28" cy="28" r="24" fill="none" stroke="#F7C95E" stroke-width="4"/><path pathLength="1" class="draw" style="animation-delay:2s" d="M16 29 L25 38 L41 18" fill="none" stroke="#F7C95E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Surto com perda de contato com a realidade ou agitação intensa</span></li>
     <li class="rv" style="animation-delay:2.6s"><svg viewBox="0 0 56 56" aria-hidden="true"><circle pathLength="1" class="draw" style="animation-delay:2.6s" cx="28" cy="28" r="24" fill="none" stroke="#F7C95E" stroke-width="4"/><path pathLength="1" class="draw" style="animation-delay:3s" d="M16 29 L25 38 L41 18" fill="none" stroke="#F7C95E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Incapacidade total de se cuidar</span></li>
   </ul>
-  <p class="t rv" style="animation-delay:3.4s;margin-top:40px;font-size:42px">Ligue <b style="color:var(--ambar-claro)">SAMU 192</b> ou vá ao pronto atendimento. Apoio emocional: <b style="color:var(--ambar-claro)">CVV 188</b>, 24h.</p>
+  <p class="t rv" style="animation-delay:3.4s;margin-top:30px;font-size:38px">Ligue <b style="color:var(--ambar-claro)">SAMU 192</b> ou vá ao pronto atendimento. Apoio emocional: <b style="color:var(--ambar-claro)">CVV 188</b>, 24h. Depois, o cuidado segue na rede de atenção psicossocial (RAPS), como a UBS e o CAPS.</p>
 </section>
 
 <!-- 10 ASSINATURA -->
 <section class="slide" aria-label="Slide 10 de 10">
-  <div class="tag rv">ASSINATURA ÉTICA E AVISO</div>
+  <div class="tag rv">Assinatura ética e aviso</div>
   <p class="t rv" style="animation-delay:.2s;font-size:40px">Nenhuma medicação deve ser iniciada, trocada ou suspensa sem orientação médica individualizada. Orientação geral; respeita os protocolos locais e as diretrizes de saúde ocupacional.</p>
   <div class="sig rv" style="animation-delay:1.2s;margin-top:44px;border-left:8px solid var(--ambar);padding-left:28px">
     <b class="grad">Dr. Antônio Felipe · Médico · CRM-BA 41322</b><br>
@@ -211,9 +211,20 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
   <button id="auto" aria-pressed="false">Automático: desligado</button>
 </div>
 
+<script src="../interativos/js/AudioPlayer.js"></script>
+<script src="../interativos/js/Anime2DManager.js"></script>
+<script src="../interativos/js/Scene3DManager.js"></script>
 <script>
 (function(){
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Motores reutilizaveis (CONTEUDO_INSTAGRAM/interativos/js). Anime2D concentra a trava de movimento reduzido.
+  var anime=new Anime2DManager();
+  var reduce=anime.reduced;
+  // Audio: inicia mutado. Quando houver trilha e narracao, informe os arquivos de interativos/assets/audio/, ex.:
+  //   bgm:'../interativos/assets/audio/bgm/<trilha>.mp3', voiceovers:{0:'../interativos/assets/audio/voiceover/pacote-031/slide-01.mp3'}
+  // Sem arquivos, o botao aparece desabilitado ("indisponivel").
+  var audio=new AudioPlayer({bgm:null,voiceovers:{}});
+  // Loops decorativos CSS ficam congelados em movimento reduzido. O 3D (Scene3DManager) nao e usado neste carrossel.
+  anime.watchLoops(document,'.breath,.ringc,.beat,.grad');
   var slides=[].slice.call(document.querySelectorAll('.slide')), N=slides.length, cur=0;
   var stage=document.getElementById('stage'), wrap=document.getElementById('wrap');
   var prog=document.getElementById('progress'), count=document.getElementById('count');
@@ -303,7 +314,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
     stage.classList.toggle('dark-ui',sl.classList.contains('dark'));
     [].forEach.call(prog.children,function(c,i){c.classList.toggle('done',i<cur);var b=c.firstChild;b.style.transition='none';b.style.width=i<cur?'100%':'0'});
     count.textContent=(cur+1)+' / '+N;
-    runType(sl); dust(!!sl.dataset.dust);
+    runType(sl); dust(!!sl.dataset.dust); audio.playSlide(cur);
     if(timer) schedule();
   }
   function schedule(){
@@ -334,7 +345,7 @@ p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(
 
   // Escala 4:5
   function fit(){
-    var s=Math.min(window.innerWidth/1080,(window.innerHeight-90)/1350);
+    var s=Math.min(window.innerWidth/1080,(window.innerHeight-150)/1350);
     document.documentElement.style.setProperty('--s',Math.max(s,.2));
   }
   window.addEventListener('resize',fit); fit();
