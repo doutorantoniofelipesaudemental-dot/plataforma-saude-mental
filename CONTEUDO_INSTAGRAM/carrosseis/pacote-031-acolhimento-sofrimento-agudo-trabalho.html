@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrossel animado - Pacote 31</title>
+<meta name="description" content="Carrossel animado 4:5 (1080 x 1350) do Pacote 31: acolhimento ao sofrimento psíquico agudo no ambiente laboral. Conteúdo educativo, orientação geral.">
+<style>
+:root{
+  --creme:#F6F0E2; --creme-2:#EBE2CC; --tinta:#1B2A22; --salvia:#25493A; --salvia-claro:#9DB8A6;
+  --ambar:#B8741A; --ambar-claro:#F7C95E; --petroleo:#0F3B45; --branco:#FFFFFF;
+  --serif:Georgia,"Times New Roman",serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:#14201A;color:var(--branco);font-family:var(--sans);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;overflow:hidden}
+.wrap{width:calc(1080px*var(--s,.5));height:calc(1350px*var(--s,.5));position:relative;flex:none}
+.stage{width:1080px;height:1350px;transform:scale(var(--s,.5));transform-origin:0 0;position:absolute;left:0;top:0;overflow:hidden;border-radius:28px;background:var(--creme);touch-action:pan-y}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:150px 90px 170px;color:var(--tinta);background:var(--creme)}
+.slide.active{display:flex}
+.slide.dark{background:var(--petroleo);color:var(--branco)}
+.slide>*{position:relative;z-index:1}
+canvas#dust{position:absolute;inset:0;z-index:0;pointer-events:none}
+.progress{position:absolute;top:34px;left:60px;right:60px;display:flex;gap:8px;z-index:5}
+.progress i{flex:1;height:8px;border-radius:4px;background:rgba(27,42,34,.22);overflow:hidden}
+.progress i b{display:block;height:100%;width:0;background:var(--salvia)}
+.progress i.done b{width:100%}
+.stage.dark-ui .progress i{background:rgba(255,255,255,.3)}
+.stage.dark-ui .progress i b{background:var(--ambar-claro)}
+.tag{font-size:30px;letter-spacing:.04em;font-weight:700;color:var(--salvia);margin-bottom:34px}
+.dark .tag{color:var(--ambar-claro)}
+h1,h2{font-family:var(--serif);line-height:1.18;font-weight:700}
+h1{font-size:70px}
+h2{font-size:62px;margin-bottom:30px}
+p.t{font-size:46px;line-height:1.42}
+p.n{font-size:34px;line-height:1.35;margin-top:34px;font-style:italic;color:var(--salvia)}
+.dark p.n{color:var(--ambar-claro)}
+.hl{background:linear-gradient(transparent 60%,rgba(247,201,94,.75) 60%);padding:0 4px}
+.dark .hl{background:none;color:var(--ambar-claro)}
+.w{display:inline-block;white-space:nowrap}
+.l{display:inline-block}
+.art{width:100%;display:block;margin:0 auto}
+.art *{vector-effect:non-scaling-stroke}
+.rv{animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}}
+@keyframes drop{0%{opacity:0;transform:translateY(-90px)}60%{opacity:1;transform:translateY(10px)}80%{transform:translateY(-4px)}}
+@keyframes fade{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes breathe{0%,100%{transform:scale(.7)}50%{transform:scale(1)}}
+@keyframes ring{from{transform:scale(.3);opacity:.7}to{transform:scale(1.5);opacity:0}}
+@keyframes slideL{from{opacity:0;transform:translateX(-120px)}}
+@keyframes slideR{from{opacity:0;transform:translateX(120px)}}
+@keyframes pop{from{opacity:0;transform:scale(.85)}}
+@keyframes door{from{transform:scaleX(1)}to{transform:scaleX(.3)}}
+@keyframes water{from{transform:scaleY(0)}}
+@keyframes glow{from{opacity:0;transform:scale(.6)}}
+@keyframes grad{0%{background-position:0 50%}100%{background-position:200% 50%}}
+@keyframes caret{50%{opacity:0}}
+.draw{stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.6s ease-in-out backwards}
+.cap{display:inline-block}
+.grad{background:linear-gradient(90deg,var(--salvia),var(--ambar),var(--salvia));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 8s linear infinite}
+.breath{transform-origin:center;transform-box:fill-box;animation:breathe 8s ease-in-out infinite}
+.ringc{transform-origin:center;transform-box:fill-box;animation:ring 4s ease-out infinite backwards}
+.wl{transform-origin:50% 100%;transform-box:fill-box;animation:water 2.4s ease-out .6s backwards}
+.door{transform-origin:left center;transform-box:fill-box;animation:door 2.4s ease-in-out .5s both}
+.beat{stroke-dasharray:1;animation:draw 3.2s linear infinite}
+.num{display:flex;gap:30px;margin-top:40px}
+.num div{flex:1;border:4px solid var(--ambar-claro);border-radius:24px;padding:28px 20px;text-align:center}
+.num strong{display:block;font-size:130px;line-height:1;color:var(--ambar-claro);font-family:var(--serif)}
+.num span{font-size:34px}
+.lst{list-style:none;padding:0;margin-top:20px;display:grid;gap:26px}
+.lst li{font-size:42px;line-height:1.3;display:flex;gap:24px;align-items:flex-start}
+.lst svg{flex:none;width:56px;height:56px;margin-top:2px}
+.sig{font-size:38px;line-height:1.45}
+.sig b{font-family:var(--serif);font-size:44px}
+.sub{font-size:30px;line-height:1.4;margin-top:30px;opacity:1}
+.foot{position:absolute;left:90px;right:90px;bottom:60px;font-size:30px;font-weight:700;display:flex;justify-content:space-between;color:var(--salvia);z-index:2}
+.dark .foot{color:var(--ambar-claro)}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;padding:0 16px}
+.controls button{min-width:48px;min-height:48px;padding:0 20px;border-radius:24px;border:2px solid var(--creme);background:var(--salvia);color:#fff;font:700 18px var(--sans);cursor:pointer}
+.controls button:focus-visible{outline:4px solid var(--ambar-claro);outline-offset:2px}
+.controls button[aria-pressed="true"]{background:var(--ambar-claro);color:var(--tinta)}
+.count{color:#fff;font:600 18px var(--sans);min-width:70px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .grad{color:var(--salvia);background:none}
+  .door{transform:scaleX(.3)}
+  .beat{stroke-dasharray:none}
+  .breath{transform:scale(.85)}
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+<div class="stage" id="stage" role="region" aria-roledescription="carrossel" aria-label="Acolhimento ao sofrimento psíquico agudo no trabalho">
+<canvas id="dust" width="1080" height="1350" aria-hidden="true"></canvas>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- 1 CAPA -->
+<section class="slide" data-dust="1" aria-label="Slide 1 de 10">
+  <div class="tag rv">PACOTE 31 · CONTEÚDO EDUCATIVO</div>
+  <h1 data-letters="Alguém passa mal emocionalmente no trabalho: como acolher com cuidado, sem tratar."></h1>
+  <div data-room="cover" style="margin-top:20px;width:78%;align-self:center"></div>
+  <p class="n rv" style="animation-delay:2.6s;margin-top:20px">O primeiro instante pode ser um espaço de segurança e escuta.</p>
+</section>
+
+<!-- 2 AVISO -->
+<section class="slide" aria-label="Slide 2 de 10">
+  <div class="tag rv">AVISO E CONTEXTO</div>
+  <p class="t" data-type="Conteúdo educativo, orientação geral. Não faz diagnóstico, não estabelece relação com o trabalho e não substitui a avaliação médica individualizada. Em emergência: SAMU 192. Apoio: CVV 188."></p>
+  <p class="n rv" style="animation-delay:5.5s">Cada caso exige avaliação individualizada.</p>
+</section>
+
+<!-- 3 LUGAR RESERVADO -->
+<section class="slide" aria-label="Slide 3 de 10">
+  <div class="tag rv">1 · UM LUGAR RESERVADO</div>
+  <div data-room="draw"></div>
+  <p class="t rv" style="animation-delay:1.8s;margin-top:40px">Convide a pessoa, com voz calma e respeito, para um lugar reservado, longe de olhares. <span class="hl">Segurança física e emocional vêm primeiro.</span></p>
+</section>
+
+<!-- 4 ESCUTAR -->
+<section class="slide" aria-label="Slide 4 de 10">
+  <div class="tag rv">2 · ESCUTAR SEM PRESSA</div>
+  <svg class="art" viewBox="0 0 400 200" style="width:60%;height:230px" aria-hidden="true">
+    <g fill="none" stroke="#25493A" stroke-width="5">
+      <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:0s"/>
+      <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:1.3s"/>
+      <circle class="ringc" cx="200" cy="100" r="90" style="animation-delay:2.6s"/>
+    </g>
+    <circle cx="200" cy="100" r="22" fill="#B8741A"/>
+  </svg>
+  <p class="t" data-words="Ouça no ritmo da pessoa, sem interromper e sem conselhos rápidos. Evite frases como “isso passa” ou “você é forte”. Prefira:" data-step="0.12"></p>
+  <p class="t rv" style="animation-delay:3.4s;margin-top:20px"><span class="hl">“percebo que você está passando por um momento muito difícil”.</span></p>
+</section>
+
+<!-- 5 CALMA -->
+<section class="slide" data-dust="1" aria-label="Slide 5 de 10">
+  <div class="tag rv">3 · MANTER A CALMA</div>
+  <svg class="art" viewBox="0 0 500 360" style="width:78%" aria-hidden="true">
+    <circle class="breath" cx="250" cy="170" r="140" fill="#9DB8A6"/>
+    <circle class="breath" cx="250" cy="170" r="90" fill="#F6F0E2" style="animation-delay:.3s"/>
+    <g transform="translate(220 100)">
+      <path pathLength="1" class="draw" d="M0 0 L12 120 H48 L60 0 Z" fill="none" stroke="#25493A" stroke-width="5" stroke-linejoin="round"/>
+      <rect class="wl" x="6" y="55" width="48" height="62" fill="#7FB2C4" opacity=".85"/>
+    </g>
+  </svg>
+  <p class="t rv" style="animation-delay:1s;margin-top:20px">A calma de quem acolhe ajuda quem está em sofrimento. Ofereça água, deixe a pessoa respirar no seu tempo e <span class="hl">garanta o sigilo</span>.</p>
+</section>
+
+<!-- 6 CORPO -->
+<section class="slide" aria-label="Slide 6 de 10">
+  <div class="tag rv">4 · O CORPO TAMBÉM SENTE</div>
+  <svg class="art" viewBox="0 0 800 220" style="height:230px" aria-hidden="true">
+    <path pathLength="1" class="beat" d="M0 110 H200 L230 110 L260 40 L300 180 L330 110 H480 L510 110 L540 60 L575 160 L600 110 H800" fill="none" stroke="#25493A" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  </svg>
+  <p class="t rv" style="animation-delay:.5s;margin-top:30px">Em uma crise, podem surgir sintomas no corpo, como palpitações, falta de ar e tremores. Isso é real e assusta. <span class="hl">Só a avaliação médica diferencia</span> uma crise emocional de um problema clínico.</p>
+  <p class="n rv" style="animation-delay:1.8s">Na dúvida, avaliação médica presencial.</p>
+</section>
+
+<!-- 7 RISCO -->
+<section class="slide dark" aria-label="Slide 7 de 10">
+  <div class="tag rv">5 · QUANDO A VIDA PODE ESTAR EM RISCO</div>
+  <h2 class="rv" style="animation-delay:.2s">Se a pessoa falar em se machucar, não a deixe sozinha e acione o SAMU, 192.</h2>
+  <div class="num">
+    <div style="animation:slideL .9s .8s backwards"><strong>192</strong><span>SAMU, emergência</span></div>
+    <div style="animation:slideR .9s .8s backwards"><strong>188</strong><span>CVV, apoio 24 horas</span></div>
+  </div>
+  <p class="n rv" style="animation-delay:1.8s">Nunca deixe a pessoa sozinha.</p>
+</section>
+
+<!-- 8 ENCAMINHAR -->
+<section class="slide" aria-label="Slide 8 de 10">
+  <div class="tag rv">6 · ACOLHER E ENCAMINHAR</div>
+  <div data-room="door"></div>
+  <p class="t rv" style="animation-delay:1.2s;font-size:40px;margin-top:30px">RH e gestores <span class="hl">acolhem, escutam, respeitam o sigilo e encaminham</span> ao serviço de saúde. Não diagnosticam, não tratam e não definem a relação com o trabalho. Depois, o retorno é planejado com a saúde ocupacional.</p>
+</section>
+
+<!-- 9 GRAVIDADE -->
+<section class="slide dark" aria-label="Slide 9 de 10">
+  <div class="tag rv">7 · SINAIS DE GRAVIDADE</div>
+  <h2 class="rv" style="animation-delay:.1s">Atenção imediata</h2>
+  <ul class="lst">
+    <li class="rv" style="animation-delay:.6s"><svg viewBox="0 0 56 56" aria-hidden="true"><circle pathLength="1" class="draw" style="animation-delay:.6s" cx="28" cy="28" r="24" fill="none" stroke="#F7C95E" stroke-width="4"/><path pathLength="1" class="draw" style="animation-delay:1s" d="M16 29 L25 38 L41 18" fill="none" stroke="#F7C95E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ideias ou planos de se machucar</span></li>
+    <li class="rv" style="animation-delay:1.6s"><svg viewBox="0 0 56 56" aria-hidden="true"><circle pathLength="1" class="draw" style="animation-delay:1.6s" cx="28" cy="28" r="24" fill="none" stroke="#F7C95E" stroke-width="4"/><path pathLength="1" class="draw" style="animation-delay:2s" d="M16 29 L25 38 L41 18" fill="none" stroke="#F7C95E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Surto com perda de contato com a realidade ou agitação intensa</span></li>
+    <li class="rv" style="animation-delay:2.6s"><svg viewBox="0 0 56 56" aria-hidden="true"><circle pathLength="1" class="draw" style="animation-delay:2.6s" cx="28" cy="28" r="24" fill="none" stroke="#F7C95E" stroke-width="4"/><path pathLength="1" class="draw" style="animation-delay:3s" d="M16 29 L25 38 L41 18" fill="none" stroke="#F7C95E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Incapacidade total de se cuidar</span></li>
+  </ul>
+  <p class="t rv" style="animation-delay:3.4s;margin-top:40px;font-size:42px">Ligue <b style="color:var(--ambar-claro)">SAMU 192</b> ou vá ao pronto atendimento. Apoio emocional: <b style="color:var(--ambar-claro)">CVV 188</b>, 24h.</p>
+</section>
+
+<!-- 10 ASSINATURA -->
+<section class="slide" aria-label="Slide 10 de 10">
+  <div class="tag rv">ASSINATURA ÉTICA E AVISO</div>
+  <p class="t rv" style="animation-delay:.2s;font-size:40px">Nenhuma medicação deve ser iniciada, trocada ou suspensa sem orientação médica individualizada. Orientação geral; respeita os protocolos locais e as diretrizes de saúde ocupacional.</p>
+  <div class="sig rv" style="animation-delay:1.2s;margin-top:44px;border-left:8px solid var(--ambar);padding-left:28px">
+    <b class="grad">Dr. Antônio Felipe · Médico · CRM-BA 41322</b><br>
+    Especialista em Medicina de Família e Comunidade · RQE 26638<br>
+    Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
+  </div>
+  <p class="sub rv" style="animation-delay:1.8s">🎧 Ouça o artigo narrado no Portal: drsaudemental.vercel.app/artigo/acolhimento-ao-sofrimento-psiquico-agudo-no-ambiente-laboral</p>
+  <p class="sub rv" style="animation-delay:2.2s;font-size:26px">Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).</p>
+  <div class="foot"><span>CVV 188</span><span>SAMU 192</span></div>
+</section>
+</div>
+</div>
+
+<div class="controls" role="group" aria-label="Controles do carrossel">
+  <button id="prev" aria-label="Slide anterior">◀ Anterior</button>
+  <span class="count" id="count" aria-live="polite">1 / 10</span>
+  <button id="next" aria-label="Próximo slide">Próximo ▶</button>
+  <button id="auto" aria-pressed="false">Automático: desligado</button>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slides=[].slice.call(document.querySelectorAll('.slide')), N=slides.length, cur=0;
+  var stage=document.getElementById('stage'), wrap=document.getElementById('wrap');
+  var prog=document.getElementById('progress'), count=document.getElementById('count');
+  var autoBtn=document.getElementById('auto'), timer=null, DUR=9000;
+
+  // Barras de progresso
+  slides.forEach(function(){var i=document.createElement('i');i.appendChild(document.createElement('b'));prog.appendChild(i)});
+
+  // Efeitos de texto
+  function split(el,txt,mode,step){
+    el.setAttribute('aria-label',txt); el.textContent='';
+    var d=0;
+    txt.split(' ').forEach(function(word,wi,arr){
+      var w=document.createElement('span'); w.className='w'; w.setAttribute('aria-hidden','true');
+      if(mode==='letters'){
+        word.split('').forEach(function(ch){
+          var s=document.createElement('span'); s.className='l'; s.textContent=ch;
+          s.style.animation='drop .9s cubic-bezier(.3,.7,.3,1) '+(d*step).toFixed(2)+'s backwards'; d++; w.appendChild(s);
+        });
+      } else {
+        w.textContent=word; w.style.animation='rise .7s ease '+(d*step).toFixed(2)+'s backwards'; d++;
+      }
+      el.appendChild(w); if(wi<arr.length-1) el.appendChild(document.createTextNode(' '));
+    });
+  }
+  document.querySelectorAll('[data-letters]').forEach(function(e){split(e,e.dataset.letters,'letters',0.035)});
+  document.querySelectorAll('[data-words]').forEach(function(e){split(e,e.dataset.words,'words',parseFloat(e.dataset.step)||.1)});
+  document.querySelectorAll('[data-type]').forEach(function(e){
+    var t=e.dataset.type; e.setAttribute('aria-label',t); e.textContent='';
+    var vis=document.createElement('span'); vis.setAttribute('aria-hidden','true'); e.appendChild(vis);
+    e._t=t; e._v=vis;
+  });
+  var typeTimer=null;
+  function runType(sl){
+    clearInterval(typeTimer);
+    var e=sl.querySelector('[data-type]'); if(!e) return;
+    if(reduce){e._v.textContent=e._t;return;}
+    var i=0; e._v.textContent='';
+    typeTimer=setInterval(function(){ i+=1; e._v.textContent=e._t.slice(0,i)+'█'.replace('█',i<e._t.length?'|':''); if(i>=e._t.length){clearInterval(typeTimer);e._v.textContent=e._t;} },22);
+  }
+
+  // Cena: sala reservada (traço a traço)
+  function room(kind){
+    var S='#25493A', st='fill="none" stroke="'+S+'" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" pathLength="1"';
+    var dl=function(n){return ' style="animation-delay:'+n+'s"'};
+    var d=kind==='draw';
+    var cls=function(){return (d||kind==='door')?'draw':''};
+    var sw='<svg class="art" viewBox="0 0 800 480" aria-hidden="true">'+
+      '<defs><radialGradient id="g'+kind+'"><stop offset="0" stop-color="#F7C95E" stop-opacity=".9"/><stop offset="1" stop-color="#F7C95E" stop-opacity="0"/></radialGradient></defs>'+
+      '<circle class="gl" cx="400" cy="120" r="170" fill="url(#g'+kind+')" style="transform-origin:center;transform-box:fill-box;animation:glow 2.4s ease-out '+(d?1.2:.3)+'s backwards"/>'+
+      '<g '+st+'>'+
+      '<rect class="'+cls()+'" x="300" y="40" width="200" height="150" rx="6"'+dl(0)+' pathLength="1"/>'+
+      '<path class="'+cls()+'" d="M400 40 V190 M300 115 H500"'+dl(.3)+'/>'+
+      '<path class="'+cls()+'" d="M30 420 H770"'+dl(.5)+'/>'+
+      '<path class="'+cls()+'" d="M120 230 V420 M120 320 H235 M235 320 V420"'+dl(.8)+'/>'+
+      '<path class="'+cls()+'" d="M680 230 V420 M680 320 H565 M565 320 V420"'+dl(1.1)+'/>'+
+      '<path class="'+cls()+'" d="M335 370 H465 M345 370 V420 M455 370 V420"'+dl(1.3)+'/>'+
+      '<path class="'+cls()+'" d="M385 370 L392 315 H408 L415 370 Z"'+dl(1.5)+'/>'+
+      '</g>'+
+      (kind==='door'?'<rect x="700" y="170" width="85" height="250" rx="6" fill="#B8741A" opacity=".22"/><rect class="door" x="700" y="170" width="85" height="250" rx="6" fill="#B8741A"/>':'')+
+      '</svg>';
+    return sw;
+  }
+  document.querySelectorAll('[data-room]').forEach(function(e){e.innerHTML=room(e.dataset.room);e.querySelectorAll('.draw').forEach(function(p){p.setAttribute('pathLength','1')})});
+
+  // Poeira suave (canvas)
+  var cv=document.getElementById('dust'), cx=cv.getContext('2d'), ps=[], raf=0;
+  for(var i=0;i<38;i++) ps.push({x:Math.random()*1080,y:Math.random()*1350,r:3+Math.random()*7,v:.12+Math.random()*.3,a:.12+Math.random()*.18,p:Math.random()*6});
+  function frame(t){
+    cx.clearRect(0,0,1080,1350);
+    ps.forEach(function(p){
+      p.y-=p.v; p.x+=Math.sin(t/2200+p.p)*.35; if(p.y<-10){p.y=1360;p.x=Math.random()*1080}
+      cx.beginPath(); cx.fillStyle='rgba(184,116,26,'+p.a+')'; cx.arc(p.x,p.y,p.r,0,6.283); cx.fill();
+    });
+    raf=requestAnimationFrame(frame);
+  }
+  function dust(on){
+    cancelAnimationFrame(raf); cx.clearRect(0,0,1080,1350);
+    if(on && !reduce && !document.hidden) raf=requestAnimationFrame(frame);
+  }
+
+  // Navegação
+  function go(n){
+    cur=(n+N)%N;
+    slides.forEach(function(s,i){s.classList.toggle('active',i===cur)});
+    var sl=slides[cur];
+    stage.classList.toggle('dark-ui',sl.classList.contains('dark'));
+    [].forEach.call(prog.children,function(c,i){c.classList.toggle('done',i<cur);var b=c.firstChild;b.style.transition='none';b.style.width=i<cur?'100%':'0'});
+    count.textContent=(cur+1)+' / '+N;
+    runType(sl); dust(!!sl.dataset.dust);
+    if(timer) schedule();
+  }
+  function schedule(){
+    clearTimeout(timer);
+    var b=prog.children[cur].firstChild;
+    requestAnimationFrame(function(){b.style.transition='width '+DUR+'ms linear';b.style.width='100%'});
+    timer=setTimeout(function(){ if(cur<N-1) go(cur+1); else toggleAuto(false); },DUR);
+  }
+  function toggleAuto(on){
+    if(on===undefined) on=!timer;
+    autoBtn.setAttribute('aria-pressed',on);
+    autoBtn.textContent='Automático: '+(on?'ligado':'desligado');
+    if(on){timer=1;schedule()} else {clearTimeout(timer);timer=null;var b=prog.children[cur].firstChild;b.style.transition='none';b.style.width='0'}
+  }
+  document.getElementById('next').onclick=function(){go(cur+1)};
+  document.getElementById('prev').onclick=function(){go(cur-1)};
+  autoBtn.onclick=function(){toggleAuto()};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight')go(cur+1); else if(e.key==='ArrowLeft')go(cur-1);
+  });
+  var x0=null;
+  stage.addEventListener('pointerdown',function(e){x0=e.clientX});
+  stage.addEventListener('pointerup',function(e){
+    if(x0===null)return; var dx=e.clientX-x0; x0=null;
+    if(Math.abs(dx)>50) go(cur+(dx<0?1:-1));
+  });
+  document.addEventListener('visibilitychange',function(){dust(!!slides[cur].dataset.dust)});
+
+  // Escala 4:5
+  function fit(){
+    var s=Math.min(window.innerWidth/1080,(window.innerHeight-90)/1350);
+    document.documentElement.style.setProperty('--s',Math.max(s,.2));
+  }
+  window.addEventListener('resize',fit); fit();
+  go(0);
+})();
+</script>
+</body>
+</html>
