@@ -9,7 +9,7 @@
  *     slides: [ {tipo:'capa', tag:'Pacote 61 · Conteúdo educativo', titulo:'...', nota:'...'}, ... ]
  *   });
  *
- * Tipos de slide: capa, aviso, sala, palavras, escuta, respiracao, batimento, simples, alerta, gravidade, assinatura.
+ * Tipos de slide: capa, aviso, sala, porta, palavras, escuta, respiracao, batimento, simples, alerta, gravidade, assinatura.
  * Campos comuns: tag, texto, hl (trecho em destaque; padrao: ultima frase), nota (frase curta em italico).
  */
 (function (root) {
@@ -45,7 +45,7 @@
   function room(kind) {
     var S = '#25493A', st = 'fill="none" stroke="' + S + '" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"';
     var dl = function (n) { return ' style="animation-delay:' + n + 's"'; };
-    var d = kind === 'draw', cls = d ? 'draw' : '';
+    var d = kind === 'draw', cls = (d || kind === 'door') ? 'draw' : '';
     return '<svg class="art" viewBox="0 0 800 480" aria-hidden="true">' +
       '<defs><radialGradient id="g' + kind + '"><stop offset="0" stop-color="#F7C95E" stop-opacity=".9"/><stop offset="1" stop-color="#F7C95E" stop-opacity="0"/></radialGradient></defs>' +
       '<circle cx="400" cy="120" r="170" fill="url(#g' + kind + ')" style="transform-origin:center;transform-box:fill-box;animation:glow 2.4s ease-out ' + (d ? 1.2 : .3) + 's backwards"/>' +
@@ -57,7 +57,7 @@
       '<path class="' + cls + '" pathLength="1" d="M680 230 V420 M680 320 H565 M565 320 V420"' + dl(1.1) + '/>' +
       '<path class="' + cls + '" pathLength="1" d="M335 370 H465 M345 370 V420 M455 370 V420"' + dl(1.3) + '/>' +
       '<path class="' + cls + '" pathLength="1" d="M385 370 L392 315 H408 L415 370 Z"' + dl(1.5) + '/>' +
-      '</g></svg>';
+      '</g>' + (kind === 'door' ? '<rect x="700" y="170" width="85" height="250" rx="6" fill="#B8741A" opacity=".22"/><rect class="door" x="700" y="170" width="85" height="250" rx="6" fill="#B8741A"/>' : '') + '</svg>';
   }
 
   var B = {
@@ -80,8 +80,13 @@
         (s.nota ? '<p class="n rv" style="animation-delay:3.4s">' + esc(s.nota) + '</p>' : '');
     },
     escuta: function (s) {
-      return '<div class="tag rv">' + esc(s.tag) + '</div><div data-lottie="escuta" class="rv" style="width:360px;height:360px;margin:-20px auto -10px"></div>' +
-        '<p class="t rv" style="animation-delay:.8s">' + comDestaque(s.texto, s.hl) + '</p>';
+      var topo = '<div class="tag rv">' + esc(s.tag) + '</div><div data-lottie="escuta" class="rv" style="width:360px;height:360px;margin:-20px auto -10px"></div>';
+      if (s.destaque) return topo + '<p class="t" data-words="' + esc(s.texto) + '" data-step="0.12"></p><p class="t rv" style="animation-delay:3.4s;margin-top:20px"><span class="hl">' + esc(s.destaque) + '</span></p>';
+      return topo + '<p class="t rv" style="animation-delay:.8s">' + comDestaque(s.texto, s.hl) + '</p>';
+    },
+    porta: function (s) {
+      return '<div class="tag rv">' + esc(s.tag) + '</div>' + room('door') +
+        '<p class="t rv" style="animation-delay:1.2s;font-size:40px;margin-top:30px">' + comDestaque(s.texto, s.hl) + '</p>';
     },
     respiracao: function (s) {
       return '<div class="tag rv">' + esc(s.tag) + '</div>' +

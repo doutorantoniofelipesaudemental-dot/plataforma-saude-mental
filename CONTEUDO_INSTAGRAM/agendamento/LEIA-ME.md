@@ -21,3 +21,7 @@ Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem 
 ## Extensão: pacotes 064 a 070 (a partir de 08/12/2026)
 
 Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Em 2026-10-05, por instrução do Dr. Antônio Felipe, os rascunhos das pautas 16, 18, 29, 30, 79, 80 e 81 (pacotes 064 a 070) foram aprovados (`revisaoMedica: aprovada`) e as sete linhas foram liberadas ("aguardando arte/vídeo e agendamento manual"). Nenhum dos sete é sensível.
+
+## Extensão: pacotes 071 a 080 (a partir de 15/12/2026)
+
+Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Os rascunhos das pautas 82, 84, 85, 117, 118, 119, 120, 121, 122 e 127 (pacotes 071 a 080) estão com `revisaoMedica: pendente`, e as dez linhas ficam **BLOQUEADAS** até a aprovação do Dr. Antônio Felipe; após aprovar, troque o status para "aguardando arte/vídeo e agendamento manual". Os pacotes de temas delicados (074, 075, 076, 079 e 080) foram colocados em dias úteis. O rascunho 127 (pacote 080) traz o marcador "[DOSE A CONFIRMAR]" no artigo, que deve ser resolvido ou removido antes de publicar.
