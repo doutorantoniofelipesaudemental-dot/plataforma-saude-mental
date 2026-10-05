@@ -17,3 +17,7 @@ Acrescentados em 2026-10-04 ao agenda.csv, com as mesmas regras: só texto, sem 
 ## Extensão: pacotes 061 a 063 (a partir de 04/12/2026)
 
 Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Os rascunhos 056, 059 e 060 (pacotes 061, 062 e 063) têm `revisaoMedica: aprovada`, e as linhas estão liberadas. O pacote 062 é sensível e fica em dia útil (07/12). A pauta 056 (TOC) vira o pacote 061, a 060 (telas) o 063 e a 059 (sintomas dissociativos) o 062; 06/12 ficou livre.
+
+## Extensão: pacotes 064 a 070 (a partir de 08/12/2026)
+
+Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Os rascunhos das pautas 16, 18, 29, 30, 79, 80 e 81 (pacotes 064 a 070) estão com `revisaoMedica: pendente`, e as sete linhas ficam **BLOQUEADAS** até a aprovação do Dr. Antônio Felipe; após aprovar, troque o status para "aguardando arte/vídeo e agendamento manual". Nenhum dos sete é sensível.
