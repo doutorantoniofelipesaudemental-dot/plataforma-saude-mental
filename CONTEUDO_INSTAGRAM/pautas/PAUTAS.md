@@ -227,6 +227,7 @@
   - PubMed: `("parental burnout" OR "caregiver stress") AND ("neurodevelopmental disorders"[Mesh]) AND ("mental health"[Mesh])` (Ensaio clínico randomizado (métodos mistos)) 39415148
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es.md` · slug: `cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-es` · pauta: `2026-09-30-16-cuidadores-de-pessoas-com-auti`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 64 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-64-cuidadores-de-pessoas-com-autismo-e-deficiencia-manejo-do-estresse-cronico.md`
 - **originalidade:** original · mais próximo: "Sobrecarga do cuidador: como identificar na consulta de rotina" (similaridade 0.21)
 
 ## [rejeitada] Esgotamento docente e sobrecarga escolar: guia de intervenções práticas
@@ -258,6 +259,7 @@
   - PubMed: `("family caregivers"[Title/Abstract]) AND ("Palliative Care"[Mesh]) AND ("supportive interventions" OR "psychosocial support")` (Ensaio clínico randomizado) 40925214
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o.md` · slug: `cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o` · pauta: `2026-09-30-18-cuidadores-familiares-em-cuida`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 65 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-65-cuidadores-familiares-em-cuidados-paliativos-como-prevenir-o-colapso-emocional.md`
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.22)
 
 ## [redigida] Sinais precoces de depressão: guia de apoio prático para familiares
@@ -424,6 +426,7 @@
   - PubMed: `primary care interventions AND caregiver stress AND mental health outcomes` (Metanálise) 12752841
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na.md` · slug: `grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na` · pauta: `2026-09-30-29-grupos-de-apoio-para-cuidadore`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 66 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-66-grupos-de-apoio-para-cuidadores-de-idosos-na-aps-eficacia-na-pratica.md`
 - **originalidade:** original · mais próximo: "Grupos terapêuticos na APS: uma ferramenta subutilizada" (similaridade 0.3)
 
 ## [redigida] Conflitos escolares e saúde docente: manejo e apoio na inclusão
@@ -440,6 +443,7 @@
   - PubMed: `mental health AND school teachers AND educational inclusion` (Revisão de escopo) 36078422
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus.md` · slug: `conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclus` · pauta: `2026-09-30-30-conflitos-escolares-e-saude-do`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 67 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-67-conflitos-escolares-e-saude-docente-manejo-e-apoio-na-inclusao.md`
 - **originalidade:** original · mais próximo: "Gestão de conflitos e seu impacto na saúde mental da equipe" (similaridade 0.22)
 
 ## [redigida] Saúde mental de migrantes: Síndrome de Ulisses e luto migratório
@@ -770,7 +774,7 @@
   - PubMed: `` (Revisão sistemática com meta-regressão (dose-resposta)) 34630180
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane.md` · slug: `transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane` · pauta: `2026-09-30-56-transtorno-obsessivo-compulsiv`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
-- **pacote:** 61 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-61-transtorno-obsessivo-compulsivo-na-aps.md`
+- **pacote:** 61 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-61-transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-manejo-inicial.md`
 - **originalidade:** original · mais próximo: "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial" (similaridade 0.32)
 
 ## [rejeitada] Transtornos alimentares na atenção primária: rastreio e conduta inicial
@@ -817,7 +821,7 @@
   - PubMed: `grounding techniques emotion regulation dissociation randomized` (Ensaio clínico randomizado) 40014495
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr.md` · slug: `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` · pauta: `2026-09-30-59-transtorno-dissociativo-na-aps`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
-- **pacote:** 62 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-62-sintomas-dissociativos-associados-ao-trauma.md`
+- **pacote:** 62 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-62-manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estresse-cronico-na-aps-guia-de-acolhimento-e-autorregulacao.md`
 - **originalidade:** original · mais próximo: "Cuidadores de pessoas com autismo e deficiência: manejo do estresse crônico" (similaridade 0.24)
 
 ## [redigida] Uso problemático de telas e dependência digital na infância e APS
@@ -835,7 +839,7 @@
   - PubMed: `` (Estudo longitudinal) 41029734
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-problematico-de-telas-e-dependencia-digital-na-infancia.md` · slug: `uso-problematico-de-telas-e-dependencia-digital-na-infancia` · pauta: `2026-09-30-60-uso-problematico-de-telas-e-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
-- **pacote:** 63 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-63-uso-problematico-de-telas-na-infancia-e-aps.md`
+- **pacote:** 63 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-63-uso-problematico-de-telas-e-dependencia-digital-na-infancia-e-aps.md`
 - **originalidade:** original · mais próximo: "Telas na primeira infância: o que as diretrizes recomendam" (similaridade 0.27)
 
 ## [redigida] Primeiro episódio psicótico: orientações essenciais para a família
@@ -1109,6 +1113,7 @@
   - PubMed: `Teachers AND inclusive classrooms AND mental health guidelines` (Revisão de escopo) 36078422
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i.md` · slug: `professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-i` · pauta: `2026-09-30-79-professores-e-inclusao-manejo-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 68 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-68-professores-e-inclusao-manejo-da-ansiedade-na-sala-de-aula-inclusiva.md`
 - **originalidade:** original · mais próximo: "Conflitos escolares e saúde docente: manejo e apoio na inclusão" (similaridade 0.29)
 
 ## [redigida] Cuidadores de jovens com autismo severo: transição para a vida adulta
@@ -1125,6 +1130,7 @@
   - PubMed: `Family support AND intellectual disability AND adult transition AND guidelines` (Estudo qualitativo (transição para a vida adulta)) 25504639
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid.md` · slug: `cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vid` · pauta: `2026-09-30-80-cuidadores-de-jovens-com-autis`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 69 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-69-cuidadores-de-jovens-com-autismo-severo-transicao-para-a-vida-adulta.md`
 - **originalidade:** original · mais próximo: "Trauma na infância: como pode afetar a vida adulta" (similaridade 0.3)
 
 ## [redigida] Professores iniciantes: prevenção do choque de realidade e exaustão
@@ -1142,6 +1148,7 @@
   - PubMed: `` (Revisão sistemática e metanálise) 35256508
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-iniciantes-prevencao-do-choque-de-realidade-e-ex.md` · slug: `professores-iniciantes-prevencao-do-choque-de-realidade-e-ex` · pauta: `2026-09-30-81-professores-iniciantes-prevenc`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 70 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-70-professores-iniciantes-prevencao-do-choque-de-realidade-e-exaustao.md`
 - **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.18)
 
 ## [redigida] Cuidadores de pacientes com doenças raras: o fardo invisível
