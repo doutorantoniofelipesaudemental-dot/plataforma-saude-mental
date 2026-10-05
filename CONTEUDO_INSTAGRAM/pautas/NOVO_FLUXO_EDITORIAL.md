@@ -186,3 +186,4 @@
 ## Lote piloto
 
 - **Pacote 01:** primeira pauta da fila (item 001). Arquivo: `pacotes/novo-fluxo-01-<slug>.md`.
+- **Condições Específicas, pacotes 61 a 63 criados em 2026-10-05** (061 Transtorno obsessivo-compulsivo na APS, 062 Sintomas dissociativos associados ao trauma, tema sensível, 063 Uso problemático de telas na infância): 5 peças em cada um, sem fármacos nem doses nas peças públicas, CVV 188 e SAMU 192, RAPS no 062, caixa de perguntas protegida no 062. Rascunhos das pautas 056, 059 e 060 com `revisaoMedica: aprovada`. Os nomes dos arquivos seguem o padrão curto pedido pelo Dr. Antônio Felipe, e não o título completo. Proposta do lote 61 a 70: `MAPEAMENTO_LOTE_PACOTES_061_070.md`.

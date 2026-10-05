@@ -13,3 +13,7 @@ Acrescentados em 2026-10-04 ao `agenda.csv`, com as mesmas regras: só texto, se
 ## Extensão: pacotes 046 a 060 (a partir de 19/11/2026)
 
 Acrescentados em 2026-10-04 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (048, 049, 054, 058 e 059) só em dias úteis. Em 2026-10-04 os rascunhos 051 a 060 foram aprovados e as linhas correspondentes foram liberadas; linhas marcadas BLOQUEADO, se surgirem, indicam rascunho com revisão médica pendente.
+
+## Extensão: pacotes 061 a 063 (a partir de 04/12/2026)
+
+Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Os rascunhos 056, 059 e 060 (pacotes 061, 062 e 063) têm `revisaoMedica: aprovada`, e as linhas estão liberadas. O pacote 062 é sensível e fica em dia útil (07/12). A pauta 056 (TOC) vira o pacote 061, a 060 (telas) o 063 e a 059 (sintomas dissociativos) o 062; 06/12 ficou livre.
