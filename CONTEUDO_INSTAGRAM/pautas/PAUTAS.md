@@ -1165,6 +1165,7 @@
   - PubMed: `Rare disease caregivers AND support strategies AND guidelines` (Revisão sistemática qualitativa) 40148154
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel.md` · slug: `cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel` · pauta: `2026-09-30-82-cuidadores-de-pacientes-com-do`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 71 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-71-cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel.md`
 - **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.21)
 
 ## [rejeitada] Cuidadores de idosos dependentes: estratégias para prevenir o colapso
@@ -1196,6 +1197,7 @@
   - PubMed: `compassion fatigue in teachers occupational health guidelines[MeSH Terms]` (Revisão sistemática e metanálise) 35256508
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-a-saude-mental-identificando-limites-diante-da.md` · slug: `professores-e-a-saude-mental-identificando-limites-diante-da` · pauta: `2026-09-30-84-professores-e-a-saude-mental-i`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 72 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-72-professores-e-a-saude-mental-identificando-limites-diante-da-sobrecarga.md`
 - **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.27)
 
 ## [redigida] Professores e o luto pedagógico: acolhendo perdas e mudanças na escola
@@ -1212,6 +1214,7 @@
   - PubMed: `("Schools"[Mesh]) AND ("Crisis Intervention"[Mesh]) AND ("Adaptation, Psychological"[Mesh])` (Estudo qualitativo (programa em atenção primária escolar)) 26281402
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-.md` · slug: `professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-` · pauta: `2026-09-30-85-professores-e-o-luto-pedagogic`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 73 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-73-professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-na-escola.md`
 - **originalidade:** original · mais próximo: "Professores e a saúde mental: identificando limites diante da sobrecarga" (similaridade 0.25)
 
 ## [redigida] Urgências de abstinência de substâncias no PA: guia rápido
@@ -1659,6 +1662,7 @@
   - PubMed: `Dissociative identity disorder primary care management clinical practice` (Ensaio clínico randomizado) 40014495
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-dissociativo-de-identidade-reconhecimento-e-manej.md` · slug: `transtorno-dissociativo-de-identidade-reconhecimento-e-manej` · pauta: `2026-09-30-117-transtorno-dissociativo-de-ide`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 74 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-74-transtorno-dissociativo-de-identidade-reconhecimento-e-manejo-clinico-na-aps.md`
 - **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.28)
 
 ## [redigida] Disforia de gênero e saúde mental: acolhimento e suporte na atenção primária
@@ -1675,6 +1679,7 @@
   - PubMed: `("Gender Dysphoria"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh]) AND ("Patient Acceptance of Health Care"[Mesh] OR "Empathy"[Mesh])` (Revisão) 32990485
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a.md` · slug: `disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a` · pauta: `2026-09-30-118-disforia-de-genero-e-saude-men`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 75 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-75-disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-atencao-primaria.md`
 - **originalidade:** original · mais próximo: "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.22)
 
 ## [redigida] Transtorno explosivo intermitente: reconhecimento e manejo farmacológico na APS
@@ -1691,6 +1696,7 @@
   - PubMed: `"Aggression"[Mesh] AND "Diagnosis, Differential"[Mesh] AND "Intermittent Explosive Disorder"[Mesh]` (Revisão) 27569016
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa.md` · slug: `transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa` · pauta: `2026-09-30-119-transtorno-explosivo-intermite`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 76 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-76-transtorno-explosivo-intermitente-reconhecimento-e-manejo-farmacologico-na-aps.md`
 - **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.23)
 
 ## [redigida] Tricotilomania e transtorno de escoriação: diagnóstico e manejo ambulatorial
@@ -1708,6 +1714,7 @@
   - PubMed: `("Trichotillomania"[Mesh] AND "Excoriation Disorder"[Mesh]) AND ("Disease Management"[Mesh] OR "Ambulatory Care"[Mesh]) AND ("Meta-Analysis"[Publication Type])` (Revisão sistemática) 28761349
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane.md` · slug: `tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane` · pauta: `2026-09-30-120-tricotilomania-e-transtorno-de`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 77 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-77-tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-manejo-ambulatorial.md`
 - **originalidade:** original · mais próximo: "Transtorno explosivo intermitente: reconhecimento e manejo farmacológico na APS" (similaridade 0.09)
 
 ## [redigida] Hipocondria e transtorno de ansiedade de doença: conduta na atenção primária
@@ -1725,6 +1732,7 @@
   - PubMed: `("Illness Anxiety Disorder"[Mesh] OR "Hypochondriasis"[Mesh]) AND ("Primary Health Care"[Mesh]) AND ("Meta-Analysis" [Publication Type])` (Metanálise de ensaios clínicos randomizados) 32428905
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a.md` · slug: `hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a` · pauta: `2026-09-30-121-hipocondria-e-transtorno-de-an`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 78 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-78-hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-atencao-primaria.md`
 - **originalidade:** original · mais próximo: "Quando um irmão tem doença crônica: cuidando também dos outros filhos" (similaridade 0.3)
 
 ## [redigida] Mutismo seletivo na infância: identificação precoce e conduta na UBS
@@ -1741,6 +1749,7 @@
   - PubMed: `("Selective Mutism"[Mesh] AND "Child"[Mesh]) AND ("Speech Therapy"[Mesh] OR "Mental Health"[Mesh])` (Revisão) 26709680
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta.md` · slug: `mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta` · pauta: `2026-09-30-122-mutismo-seletivo-na-infancia-i`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 79 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-79-mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta-na-ubs.md`
 - **originalidade:** original · mais próximo: "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes" (similaridade 0.19)
 
 ## [rejeitada] Catatonia na Infância e Adolescência: Reconhecimento e Manejo no PA
@@ -1804,6 +1813,7 @@
   - PubMed: `` (Revisão) 32259826
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr.md` · slug: `sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr` · pauta: `2026-09-30-127-sindrome-de-descontinuacao-de-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 80 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-80-sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pratico.md`
 - **originalidade:** original · mais próximo: "Síndrome serotoninérgica na emergência: reconhecer para salvar" (similaridade 0.29)
 
 ## [rejeitada] Uso de Lítio na APS: Guia Prático para Residentes
