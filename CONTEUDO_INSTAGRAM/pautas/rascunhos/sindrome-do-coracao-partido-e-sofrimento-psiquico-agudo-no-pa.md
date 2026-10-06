@@ -59,13 +59,12 @@ Quando você atende um paciente no pronto atendimento com dor no peito intensa e
 - Os exames imitam um infarto, mas as artérias coronárias geralmente não apresentam obstruções.
 - O manejo exige cooperação estreita entre a emergência, a cardiologia e o suporte emocional humanizado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `takotsubo cardiomyopathy[MeSH Terms] AND psychological stress[MeSH Terms]` — Metanálise — [PMID A CONFIRMAR]
-2. `broken heart syndrome emergency department clinical management` — Revisão integrativa — [PMID A CONFIRMAR]
-3. `acute emotional stress cardiovascular complications guidelines` — Diretriz clínica — [PMID A CONFIRMAR]
+1. Assad J, Femia G, Pender P et al. Takotsubo Syndrome: A Review of Presentation, Diagnosis and Management. Clin Med Insights Cardiol. 2022;16:11795468211065782. PMID 35002350. doi:10.1177/11795468211065782 — Revisão
+2. Steptoe A, Kivimäki M. Stress and cardiovascular disease. Nat Rev Cardiol. 2012;9(6):360-70. PMID 22473079. doi:10.1038/nrcardio.2012.45 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

@@ -90,14 +90,12 @@ Este conteúdo oferece orientações gerais para a prática clínica e deve semp
 - Priorize técnicas de respiração diafragmática e controle ambiental antes de recorrer a medicações.
 - O tratamento medicamentoso agudo é apenas para contenção; o seguimento longitudinal na atenção primária é indispensável.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Panic Disorder"[Mesh] OR "Panic Attack"[Mesh]) AND ("Emergency Service, Hospital"[Mesh] OR "Emergency Medicine"[Mesh]) AND ("Diagnosis, Differential"[Mesh] OR "Triage"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-2. `("Panic Attack"[Mesh] OR "Panic Disorder"[Mesh]) AND ("Emergency Treatment"[Mesh] OR "Crisis Intervention"[Mesh]) AND ("Systematic Review"[Publication Type] OR "Meta-Analysis"[Publication Type])` — Revisão Sistemática — [PMID A CONFIRMAR]
-3. `("Panic Attack"[Mesh]) AND ("Emergency Department, Hospital"[Mesh]) AND ("Cognitive Behavioral Therapy"[Mesh] OR "Psychotherapy"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-4. `("Panic Disorder"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Benzodiazepines"[Mesh] OR "Anti-Anxiety Agents"[Mesh]) AND ("Comparative Effectiveness Research"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
+1. Manjunatha N, Ram D. Panic disorder in general medical practice- A narrative review. J Family Med Prim Care. 2022;11(3):861-869. PMID 35495823. doi:10.4103/jfmpc.jfmpc_888_21 — Revisão narrativa
+2. Campbell KA, Madva EN, Villegas AC et al. Non-cardiac Chest Pain: A Review for the Consultation-Liaison Psychiatrist. Psychosomatics. 2016;58(3):252-265. PMID 28196622. doi:10.1016/j.psym.2016.12.003 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

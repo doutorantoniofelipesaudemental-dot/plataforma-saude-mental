@@ -76,13 +76,13 @@ Este conteúdo é uma orientação geral para a prática médica e educacional, 
 - A via oral é sempre a mais segura; a via intravenosa exige monitorização respiratória rigorosa.
 - A associação de benzodiazepínicos com opioides eleva drasticamente o risco de depressão respiratória fatal.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Benzodiazepines"[MeSH] AND "Emergency Service, Hospital"[MeSH] AND "Acute Management"` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Sedation" AND "Emergency Department" AND "Safety Guidelines"` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `"Acute Agitation" AND "Benzodiazepine Use" AND "Adverse Effects"` — Ensaio Clínico — [PMID A CONFIRMAR]
+1. Casey MF, Elder NM, Fenn A et al. Comparative Safety of Medications for Severe Agitation: A Geriatric Emergency Department Guidelines 2.0 Systematic Review. J Am Geriatr Soc. 2025;73(9):2893-2904. PMID 40275439. doi:10.1111/jgs.19485 — Revisão sistemática
+2. Uribe ES, Rodríguez CAB, Juárez MEN et al. "Pharmacological management of acute agitation in psychiatric patients: an umbrella review". BMC Psychiatry. 2025;25(1):273. PMID 40133850. doi:10.1186/s12888-024-06426-3 — Revisão sistemática (umbrella)
+3. Springer B. Hyperactive Delirium with Severe Agitation. Emerg Med Clin North Am. 2023;42(1):41-52. PMID 37977752. doi:10.1016/j.emc.2023.06.011 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

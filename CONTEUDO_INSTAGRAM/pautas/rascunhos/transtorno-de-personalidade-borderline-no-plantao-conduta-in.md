@@ -67,13 +67,12 @@ O grande objetivo do plantão é a desescalada da crise e a prevenção de iatro
 - Reserve a internação hospitalar apenas para situações de risco vital inenarrável e falha da rede de suporte.
 - Conecte o paciente à sua rede de atendimento regular (CAPS e atenção primária) antes da alta do plantão.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `borderline personality disorder AND emergency department AND crisis intervention` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `self-harm AND borderline personality disorder AND emergency management` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `psychopharmacology AND borderline personality disorder AND acute crisis` — Ensaio Clínico — [PMID A CONFIRMAR]
+1. Besch V, Debbané M, Greiner C et al. Emergency psychiatric management of borderline personality disorder: Towards an articulation of modalities for personalised integrative care. Encephale. 2020;46(6):463-470. PMID 32571544. doi:10.1016/j.encep.2020.04.013 — Revisão
+2. Vandyk A, Bentz A, Bissonette S et al. Why go to the emergency department? Perspectives from persons with borderline personality disorder. Int J Ment Health Nurs. 2019;28(3):757-765. PMID 30779279. doi:10.1111/inm.12580 — Artigo original
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

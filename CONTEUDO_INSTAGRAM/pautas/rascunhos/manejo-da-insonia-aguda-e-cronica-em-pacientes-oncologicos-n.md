@@ -84,13 +84,12 @@ Este conteúdo serve como orientação geral para a prática clínica na atenç�
 - Fármacos sedativos como trazodona em baixas doses são preferíveis aos benzodiazepínicos na APS.
 - Sinais de sofrimento psiquiátrico grave exigem suporte multidisciplinar e encaminhamento especializado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `sleep disturbance AND cancer AND primary care AND management` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `insomnia AND palliative care AND pharmacological management` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `cognitive behavioral therapy for insomnia AND cancer patients` — Diretriz Prática — [PMID A CONFIRMAR]
+1. Grassi L, Zachariae R, Caruso R et al. Insomnia in adult patients with cancer: ESMO Clinical Practice Guideline. ESMO Open. 2023;8(6):102047. PMID 38158225. doi:10.1016/j.esmoop.2023.102047 — Diretriz clínica
+2. Edinger JD, Arnedt JT, Bertisch SM et al. Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2021;17(2):255-262. PMID 33164742. doi:10.5664/jcsm.8986 — Diretriz clínica
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
