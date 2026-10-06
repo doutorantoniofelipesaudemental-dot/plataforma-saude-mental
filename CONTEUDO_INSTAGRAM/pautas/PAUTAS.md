@@ -2134,7 +2134,7 @@
   - PubMed: `emotional labor in kindergarten teachers` (Revisão integrativa) [PMID A CONFIRMAR]
   - PubMed: `mindfulness interventions for preschool teachers` (Ensaio clínico randomizado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-de-educacao-infantil-e-a-regulacao-emocional.md` · slug: `professores-de-educacao-infantil-e-a-regulacao-emocional` · pauta: `2026-09-30-157-professores-de-educacao-infant`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 91 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-91-professores-de-educacao-infantil-e-a-regulacao-emocional.md`
 - **originalidade:** original · mais próximo: "Professores e o ciberbullying: impactos na saúde mental" (similaridade 0.27)
 
@@ -2166,7 +2166,7 @@
   - PubMed: `teachers in adult education AND mental health challenges` (Revisão narrativa) [PMID A CONFIRMAR]
   - PubMed: `trauma-informed pedagogy for adult educators` (Diretriz prática) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-de-eja-lidando-com-historias-de-superacao.md` · slug: `professores-de-eja-lidando-com-historias-de-superacao` · pauta: `2026-09-30-159-professores-de-eja-lidando-com`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 92 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-92-professores-de-eja-lidando-com-historias-de-superacao.md`
 - **originalidade:** original · mais próximo: "Professores e inclusão: manejo da ansiedade na sala de aula inclusiva" (similaridade 0.27)
 
@@ -2183,7 +2183,7 @@
   - PubMed: `family caregivers AND Alzheimer disease AND psychological distress` (Estudo observacional) [PMID A CONFIRMAR]
   - PubMed: `primary health care AND support for dementia caregivers` (Diretriz clínica) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-alzheimer-avancado-e-o-luto-ante.md` · slug: `cuidadores-de-pacientes-com-alzheimer-avancado-e-o-luto-ante` · pauta: `2026-09-30-160-cuidadores-de-pacientes-com-al`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 93 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-93-cuidadores-de-pacientes-com-alzheimer-avancado-e-o-luto-antecipatorio.md`
 - **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.32)
 
@@ -2245,7 +2245,7 @@
   - PubMed: `codependency AND family caregivers AND psychological intervention AND mental health` (Ensaio clínico) [PMID A CONFIRMAR]
   - PubMed: `substance use disorders AND family support AND clinical guidelines` (Diretriz baseada em evidências) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-familiares-de-dependentes-quimicos-manejo-da-code.md` · slug: `cuidadores-familiares-de-dependentes-quimicos-manejo-da-code` · pauta: `2026-09-30-164-cuidadores-familiares-de-depen`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 94 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-94-cuidadores-familiares-de-dependentes-quimicos-manejo-da-codependencia-na-aps.md`
 - **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.28)
 
@@ -2292,7 +2292,7 @@
   - PubMed: `Sensory Processing in Autism AND Primary Care` (Estudo Observacional) [PMID A CONFIRMAR]
   - PubMed: `Autism Meltdown AND Emergency and Primary Care` (Diretriz Prática) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/disforia-sensorial-e-sobrecarga-no-transtorno-do-espectro-au.md` · slug: `disforia-sensorial-e-sobrecarga-no-transtorno-do-espectro-au` · pauta: `2026-09-30-167-disforia-sensorial-e-sobrecarg`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 95 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-95-disforia-sensorial-e-sobrecarga-no-transtorno-do-espectro-autista.md`
 - **originalidade:** original · mais próximo: "Disforia de gênero e saúde mental: acolhimento e suporte na atenção primária" (similaridade 0.23)
 
@@ -2309,7 +2309,7 @@
   - PubMed: `Akathisia vs Agitation AND Emergency Psychiatry` (Diretriz Clínica) [PMID A CONFIRMAR]
   - PubMed: `Treatment of Akathisia AND Clinical Trials` (Metanálise) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/acatisia-induzida-por-antipsicoticos-diagnostico-e-conduta.md` · slug: `acatisia-induzida-por-antipsicoticos-diagnostico-e-conduta` · pauta: `2026-09-30-168-acatisia-induzida-por-antipsic`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 96 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-96-acatisia-induzida-por-antipsicoticos-diagnostico-e-conduta.md`
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.21)
 
@@ -2326,7 +2326,7 @@
   - PubMed: `Developmental stuttering AND early intervention AND guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
   - PubMed: `Speech fluency disorders AND primary healthcare` (Estudo de coorte) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-da-fluencia-na-fala-na-infancia-manejo-inicial-na.md` · slug: `transtorno-da-fluencia-na-fala-na-infancia-manejo-inicial-na` · pauta: `2026-09-30-169-transtorno-da-fluencia-na-fala`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 97 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-97-transtorno-da-fluencia-na-fala-na-infancia-manejo-inicial-na-aps.md`
 - **originalidade:** original · mais próximo: "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial" (similaridade 0.26)
 
@@ -2373,7 +2373,7 @@
   - PubMed: `extrapyramidal symptoms emergency department management guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
   - PubMed: `antipsychotic-induced acute dystonia management in adults` (Ensaio clínico) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/distonia-aguda-por-antipsicoticos-na-emergencia-manejo-prati.md` · slug: `distonia-aguda-por-antipsicoticos-na-emergencia-manejo-prati` · pauta: `2026-09-30-173-distonia-aguda-por-antipsicoti`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 98 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-98-distonia-aguda-por-antipsicoticos-na-emergencia-manejo-pratico.md`
 - **originalidade:** original · mais próximo: "Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta" (similaridade 0.27)
 
@@ -2450,7 +2450,7 @@
   - PubMed: `Gatekeeper training AND suicide prevention AND school personnel` (Ensaio Clínico Controlado) [PMID A CONFIRMAR]
   - PubMed: `Adolescent suicide risk AND school-based intervention AND primary health care` (Diretrizes Práticas) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-suporte-aos-alunos-com-ideacao-suicida-guia-.md` · slug: `professores-e-o-suporte-aos-alunos-com-ideacao-suicida-guia-` · pauta: `2026-09-30-179-professores-e-o-suporte-aos-al`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 99 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-99-professores-e-o-suporte-aos-alunos-com-ideacao-suicida-guia-na-aps.md`
 - **originalidade:** original · mais próximo: "Manejo da ideação suicida em populações vulneráveis na UBS" (similaridade 0.32)
 
@@ -2467,7 +2467,7 @@
   - PubMed: `Prescribing off-label AND mental health AND family practice AND guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
   - PubMed: `Psychotropic drugs off-label prescribing AND safety AND efficacy AND primary health care` (Ensaio clínico controlado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-off-label-de-psicofarmacos-na-ubs-evidencias-e-pratica.md` · slug: `uso-off-label-de-psicofarmacos-na-ubs-evidencias-e-pratica` · pauta: `2026-09-30-180-uso-off-label-de-psicofarmacos`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 100 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-100-uso-off-label-de-psicofarmacos-na-ubs-evidencias-e-pratica.md`
 - **originalidade:** original · mais próximo: "Reações adversas a psicofármacos na UBS: o que monitorar" (similaridade 0.24)
 

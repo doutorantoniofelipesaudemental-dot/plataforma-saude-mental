@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:02:12.070Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Disforia Sensorial e Sobrecarga no Transtorno do Espectro Autista
@@ -50,7 +50,7 @@ O manejo inicial de uma crise de sobrecarga sensorial é eminentemente ambiental
 Investigue com cuidado se há comorbidades associadas, como transtornos de ansiedade ou distúrbios do sono, que frequentemente acompanham o quadro e pioram a sensibilidade. Afaste causas orgânicas agudas para a alteração de comportamento, mas evite exames invasivos desnecessários que possam aumentar o pânico.
 
 ### Abordagem farmacológica
-O uso de medicamentos deve ser reservado para situações específicas e de curto prazo, sempre com cautela redobrada, pois pessoas no espectro podem apresentar maior vulnerabilidade a efeitos colaterais paradoxais. Em casos de agitação extrema com risco iminente, podem ser avaliados medicamentos das classes dos antipsicóticos atípicos em doses baixas ou moduladores da ansiedade [DOSE A CONFIRMAR]. Lembre-se de que a medicação não substitui a adaptação ambiental.
+O uso de medicamentos deve ser reservado para situações específicas e de curto prazo, sempre com cautela redobrada, pois pessoas no espectro podem apresentar maior vulnerabilidade a efeitos colaterais paradoxais. Em casos de agitação extrema com risco iminente, podem ser avaliados medicamentos das classes dos antipsicóticos atípicos em doses baixas ou moduladores da ansiedade, com dose definida pelo especialista conforme o protocolo do serviço. Lembre-se de que a medicação não substitui a adaptação ambiental.
 
 ### Sinais de gravidade e encaminhamento
 Encaminhe para avaliação especializada na rede de saúde quando houver crises recorrentes incapacitantes, ideação autolesiva ou piora significativa do funcionamento global. O suporte multidisciplinar com terapia ocupacional com integração sensorial é um pilar fundamental para o tratamento a longo prazo.

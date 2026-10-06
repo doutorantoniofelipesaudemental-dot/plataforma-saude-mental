@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:02:48.288Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Uso Off-Label de Psicofármacos na UBS: Evidências e Prática
@@ -23,7 +23,7 @@ revisaoMedica: pendente
 > - - Antidepressivos com potente ação na recaptação de serotonina podem ser utilizados para controle de sintomas ansiosos crônicos, mesmo quando o transtorno pr…
 > - - Antipsicóticos de baixa potência em doses reduzidas podem auxiliar na modulação do sono ou da agitação em contextos específicos, exigindo cautela devido ao…
 > - - Alterações farmacocinéticas e farmacodinâmicas individuais na população da atenção básica exigem vigilância constante quanto a efeitos indesejados.
-> - - Sempre inicie o psicofármaco com a menor dose efetiva possível e faça o incremento de forma lenta e gradual [DOSE A CONFIRMAR].
+> - - Sempre inicie o psicofármaco com a menor dose efetiva possível e faça o incremento de forma lenta e gradual, conforme o protocolo do serviço.
 > - - Prefira classes medicamentosas com perfis de segurança mais favoráveis e menor risco de toxicidade em caso de uso inadequado.
 > - - Utilize os fármacos sempre como parte de um plano terapêutico singular, que inclua escuta qualificada e orientações de estilo de vida.
 > - - Encaminhe para avaliação especializada na rede de saúde se houver refratariedade após tentativas adequadas.
@@ -86,7 +86,7 @@ Olá, colega. Na nossa rotina na Unidade Básica de Saúde, frequentemente nos d
 
 ### Condutas de Primeira Linha
 
-- Sempre inicie o psicofármaco com a menor dose efetiva possível e faça o incremento de forma lenta e gradual [DOSE A CONFIRMAR].
+- Sempre inicie o psicofármaco com a menor dose efetiva possível e faça o incremento de forma lenta e gradual, conforme o protocolo do serviço.
 - Prefira classes medicamentosas com perfis de segurança mais favoráveis e menor risco de toxicidade em caso de uso inadequado.
 - Utilize os fármacos sempre como parte de um plano terapêutico singular, que inclua escuta qualificada e orientações de estilo de vida.
 

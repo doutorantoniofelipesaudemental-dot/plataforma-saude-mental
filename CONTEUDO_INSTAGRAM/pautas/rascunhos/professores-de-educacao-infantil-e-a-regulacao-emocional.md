@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:01:13.624Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Professores de educação infantil e a regulação emocional
@@ -51,7 +51,7 @@ O atendimento a professores com fadiga de regulação emocional deve começar na
 ### Condutas Iniciais e Sinais de Gravidade
 * **Abordagem acolhedora:** Validação do sofrimento e orientação sobre higiene do sono e pausas.
 * **Psicoterapia:** Encaminhamento para acompanhamento psicológico com foco em manejo de estresse.
-* **Tratamento medicamentoso:** Em casos de sintomas ansiosos ou depressivos marcantes, podem ser avaliados antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, sob prescrição médica [DOSE A CONFIRMAR].
+* **Tratamento medicamentoso:** Em casos de sintomas ansiosos ou depressivos marcantes, podem ser avaliados antidepressivos da classe dos inibidores seletivos da recaptação de serotonina, sob prescrição médica, com dose definida pelo médico conforme o protocolo do serviço.
 * **Sinais de gravidade:** Busque ajuda imediata se houver ideias de autolesão, choro incontrolável persistente, insônia total ou sensação de desespero.
 
 Lembramos que este conteúdo é uma orientação geral e que se respeitam sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais.

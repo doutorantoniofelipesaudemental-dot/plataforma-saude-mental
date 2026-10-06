@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:01:29.633Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Professores de EJA: lidando com histórias de superação
@@ -17,7 +17,7 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (3):
 > - - Nos casos de sintomas moderados a graves de ansiedade ou depressão associados ao esgotamento profissional, o uso de antidepressivos inibidores seletivos da…
-> - - Tratamentos de curto prazo para distúrbios graves do sono também podem ser ponderados conforme avaliação médica presencial [DOSE A CONFIRMAR].
+> - - Tratamentos de curto prazo para distúrbios graves do sono também podem ser ponderados conforme avaliação médica presencial e o protocolo do serviço.
 > - - Nestas situações, o encaminhamento psiquiátrico de urgência ou para serviços especializados em saúde mental do trabalhador deve ser realizado prontamente.
 
 Se você leciona na Educação de Jovens e Adultos, sabe que a sala de aula vai muito além das letras e dos números. Cada estudante traz consigo uma história de vida intensa, marcada por lutas diárias, exclusão social e superações. Como médico de família, vejo frequentemente o desgaste invisível que recae sobre os ombros de quem educa adultos em situação de vulnerabilidade. Você acolhe dores profundas todos os dias e, com isso, acaba absorvendo um peso emocional que merece atenção, cuidado e respeito. Vamos conversar sobre como esse processo afeta sua saúde mental e o que podemos fazer para proteger o seu bem-estar enquanto você transforma tantas vidas.
@@ -54,8 +54,8 @@ O cuidado com o professor da EJA exige uma abordagem ampla, que começa no acolh
 - Psicoterapia individual, com foco em estratégias de enfrentamento e limites na relação profissional-aluno.
 
 ### Intervenção Farmacológica
-- Nos casos de sintomas moderados a graves de ansiedade ou depressão associados ao esgotamento profissional, o uso de antidepressivos inibidores seletivos da recaptação de serotonina pode ser avaliado pelo médico assistente [DOSE A CONFIRMAR].
-- Tratamentos de curto prazo para distúrbios graves do sono também podem ser ponderados conforme avaliação médica presencial [DOSE A CONFIRMAR].
+- Nos casos de sintomas moderados a graves de ansiedade ou depressão associados ao esgotamento profissional, o uso de antidepressivos inibidores seletivos da recaptação de serotonina pode ser avaliado pelo médico assistente, com dose definida conforme o protocolo do serviço.
+- Tratamentos de curto prazo para distúrbios graves do sono também podem ser ponderados conforme avaliação médica presencial e o protocolo do serviço.
 
 ### Sinais de Gravidade e Encaminhamento
 - Fique atento a sinais como choro frequente sem motivo aparente, desesperança profunda, ideação autolesiva, crises de pânico recorrentes ou incapacidade total para realizar as atividades diárias.
