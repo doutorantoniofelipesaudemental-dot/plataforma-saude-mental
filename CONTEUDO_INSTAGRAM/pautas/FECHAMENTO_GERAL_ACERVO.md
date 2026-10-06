@@ -37,15 +37,32 @@ As três frentes (artigos com trilha, carrosséis, vozes) foram **homologadas po
 - `RELATORIO_SANEAMENTO_REFERENCIAS_081_100.md` e `..._101_114.md`: como as referências foram localizadas.
 - `ROTEIRO_ESCUTA_CARROSSEIS.md`: roteiro de escuta e como alternar a voz com `?revisao=1`.
 
-## 5. Como reverter
+## 5. Backup dos áudios: tripla redundância (2026-10-06)
+
+Os MP3 de `narracoes-geradas/` (versões só de voz, versões com trilha e as vozes Francisca e Thalita dos 17 artigos) **não estão no repositório de propósito**. Em 2026-10-06 foi feito um backup compactado deles, com **837 arquivos (495 MB)**, e ele existe hoje em **três lugares**:
+
+| # | Cópia | Local | Verificação |
+|---|---|---|---|
+| 1 | Disco principal | `C:\DRSAUDEMENTALackupsackup_narracoes_audio_2026-10-06.zip` | origem do backup; `testzip` OK, 837 arquivos, tamanhos e amostra de 25 hashes conferidos |
+| 2 | Outro disco da máquina | `E:ackups-drsaudementalackup_narracoes_audio_2026-10-06.zip` | SHA-256 idêntico ao da cópia 1; `testzip` OK |
+| 3 | Google Drive (fora da máquina) | pasta `backups-drsaudemental/` do Drive do Dr. Antônio Felipe | MD5 idêntico ao das cópias locais; tamanho exato; `rclone check` com 0 diferenças |
+
+- **Identificadores do arquivo:** tamanho 518.892.555 bytes; SHA-256 `7630441c65238c039fab4722b21c96c02f7197a612aca66d046ab0d328e64481`; MD5 `1e6dbd10b14a1ce2b043c346942d2eee` (o Drive guarda só o MD5).
+- **Envio ao Drive:** feito com o `rclone` (instalado pelo `winget`), com o acesso restrito `drive.file`, em que o programa só enxerga o que ele mesmo enviou. O envio repetiu uma passada sozinho perto do fim (retentativa normal), terminou sem erro e sem duplicar o arquivo.
+- **Credencial:** o acesso do `rclone` fica em `%APPDATA%cloneclone.conf`, **fora do repositório**. Para revogar, use a página de segurança da conta Google (permissões de apps de terceiros).
+- **Aviso do `rclone`:** o acesso compartilhado dele com o Google será aposentado ainda em 2026; backups futuros podem exigir uma credencial própria. O envio de hoje não foi afetado.
+- **O que o backup não cobre:** áudios gerados depois de 2026-10-06. Para atualizá-lo, repetir o processo (compactar, copiar para `E:` e para o Drive, e conferir o hash).
+- **Como restaurar:** baixar o zip de qualquer uma das três cópias, conferir o hash e extrair em `narracoes-geradas/`.
+
+## 6. Como reverter
 
 - **Áudios dos artigos:** as versões só com voz e as vozes Francisca e Thalita dos 17 artigos estão em `narracoes-geradas/` (fora do Git, só nesta máquina). O reenvio de qualquer uma é possível a qualquer momento.
 - **Voz de um carrossel sensível:** trocar `voiceover-francisca/` por `voiceover/` no campo `voiceovers` do HTML (os arquivos do Antônio foram mantidos).
 - **Trilha de um carrossel:** remover o campo `bgm` do HTML.
 
-## 6. Limites e pendências conhecidas
+## 7. Limites e pendências conhecidas
 
-- **Backup local:** os MP3 de `narracoes-geradas/` não estão no repositório de propósito; **se esta máquina for perdida, só restam as versões que estão no ar** no armazenamento do portal.
+- **Backup dos áudios:** existe em três cópias (seção 5); o que não está coberto são os áudios gerados depois de 2026-10-06, e o Drive depende de um acesso do `rclone` que pode precisar de credencial própria no futuro.
 - **Trilha:** sintética e original, não uma faixa licenciada; mantida por decisão do médico.
 - **Provedor dos 4 artigos mais antigos** (`burnout-aps`, `professores-saude-mental`, `psicofarmacos-mitos-culturais`, `tmc-aps`): registrados como `edge`, sem confirmação do provedor original; é só metadado.
 - **Navegador:** os artigos foram conferidos pelo HTML e por amostra, e os carrosséis foram abertos no navegador ao longo do dia.
