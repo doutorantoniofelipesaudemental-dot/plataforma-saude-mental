@@ -8,7 +8,7 @@ Data: 2026-10-06. Resume o que foi feito e verificado neste ciclo e o que segue 
 - **Alcance:** esse arquivo é a base do shell estático e da página pré-renderizada de todos os artigos publicados (251), então todos herdam a nota.
 - **Trava:** teste novo em `tests/unit/assinatura-cfm.test.js` compara a nota com a fonte única `AVISO_CFM` e exige que a página pré-renderizada a traga. Suíte: 197 testes, todos passando.
 - **No ar:** conferido pelo HTML em 3 artigos (`alimentacao-criancas`, `relato-territorio-segredos`, `dependencia-quimica`): nota presente, citação da Resolução 2.454/2026 e player de áudio. Os demais não foram abertos um a um.
-- **Fora do alcance desta mudança:** `index.html`, `blog.html` e `instagram.html` não receberam a nota.
+- **Demais páginas públicas:** em 2026-10-06 a mesma nota entrou no rodapé de `index.html`, `blog.html` e `instagram.html` (PR #38), e o teste passou a cobrir as quatro páginas. `privacidade.html` (página legal, sem conteúdo educativo) e `admin.html` (área restrita) não receberam a nota.
 
 ## 2. Áudio narrado dos artigos do portal
 
@@ -46,5 +46,4 @@ Data: 2026-10-06. Resume o que foi feito e verificado neste ciclo e o que segue 
 2. **Áudio narrado e trilha dos 114 carrosséis:** não gerados (são mídias diferentes dos áudios dos artigos).
 3. **Referências dos Lotes 81 a 114:** leitura integral pelo Dr. Antônio Felipe; a pauta 155 tem uma referência parcial.
 4. **Rascunho dos `linkedin.txt` dos pacotes 001 a 006:** aguarda revisão do Dr. Antônio Felipe.
-5. **Nota de IA nas demais páginas públicas** (início, blog, Instagram), se desejado.
-6. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
+5. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
