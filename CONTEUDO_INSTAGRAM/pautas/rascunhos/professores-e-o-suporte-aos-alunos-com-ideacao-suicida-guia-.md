@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:02:36.947Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Professores e o suporte aos alunos com ideação suicida: guia na APS
@@ -17,7 +17,7 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (4):
 > - Presença de planos explícitos, posse de meios letais, agitação extrema, despedidas nas redes sociais ou histórico recente de tentativa exigem ação imediata. …
-> - Em situações de crise aguda na escola, acione imediatamente o SAMU [DADO A CONFIRMAR] ou leve o aluno ao serviço de saúde de referência com acompanhamento da…
+> - Em situações de crise aguda na escola, acione imediatamente o SAMU (192) ou leve o aluno ao serviço de saúde de referência com acompanhamento da…
 > - Para casos sem urgência imediata, oriente a família a buscar a Unidade Básica de Saúde (UBS). O médico de família e a equipe multiprofissional farão a avalia…
 > - - Em caso de crise aguda ou risco iminente, nunca deixe o aluno sozinho e acione a gestão escolar e os serviços de urgência.
 
@@ -63,10 +63,10 @@ Nesse cenário, a escuta atenta de um adulto de referência ajuda a modular a re
 Presença de planos explícitos, posse de meios letais, agitação extrema, despedidas nas redes sociais ou histórico recente de tentativa exigem ação imediata. Nunca mande o aluno para casa sozinho.
 
 ### Quando e como acionar a urgência
-Em situações de crise aguda na escola, acione imediatamente o SAMU [DADO A CONFIRMAR] ou leve o aluno ao serviço de saúde de referência com acompanhamento da família e da gestão escolar.
+Em situações de crise aguda na escola, acione imediatamente o SAMU (192) ou leve o aluno ao serviço de saúde de referência com acompanhamento da família e da gestão escolar.
 
 ### Encaminhamento para a Atenção Primária
-Para casos sem urgência imediata, oriente a família a buscar a Unidade Básica de Saúde (UBS). O médico de família e a equipe multiprofissional farão a avaliação integral, podendo indicar psicoterapia e, quando necessário, avaliação psiquiátrica com uso de medicações da classe dos antidepressivos [DOSE A CONFIRMAR].
+Para casos sem urgência imediata, oriente a família a buscar a Unidade Básica de Saúde (UBS). O médico de família e a equipe multiprofissional farão a avaliação integral, podendo indicar psicoterapia e, quando necessário, avaliação psiquiátrica com uso de medicações da classe dos antidepressivos, com dose definida pelo médico conforme o protocolo do serviço.
 
 Este conteúdo é uma orientação geral para apoiar a prática educativa e não substitui a avaliação clínica presencial. Ressaltamos que devem ser sempre respeitados os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais.
 

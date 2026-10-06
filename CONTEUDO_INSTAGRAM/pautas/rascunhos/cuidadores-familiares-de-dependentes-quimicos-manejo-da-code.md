@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:01:42.173Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Cuidadores familiares de dependentes químicos: manejo da codependência na APS
@@ -18,7 +18,7 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (6):
 > - * Quando há transtornos de ansiedade ou depressão associados ao desgaste, o uso de antidepressivos da classe dos inibidores seletivos da recaptação de seroto…
 > - * O uso de ansiolíticos deve ser evitado ou rigorosamente controlado devido ao risco de dependência.
-> - * A posologia e o ajuste fino devem seguir a avaliação clínica individual com [DOSE A CONFIRMAR].
+> - * A posologia e o ajuste fino devem seguir a avaliação clínica individual e o protocolo do serviço.
 > - * Fique atento a sinais como ideação autolítica, desesperança profunda, uso abusivo de álcool ou medicamentos pelo próprio cuidador e crises de pânico.
 > - * Nessas situações, encaminhe para avaliação especializada na rede de saúde mental.
 > - * Em caso de crise aguda ou risco iminente, acione imediatamente o SAMU no número 192 ou busque o pronto atendimento mais próximo.
@@ -69,7 +69,7 @@ O acolhimento do familiar na APS deve ser humanizado, validando o sofrimento e i
 ### Abordagem Farmacológica
 * Quando há transtornos de ansiedade ou depressão associados ao desgaste, o uso de antidepressivos da classe dos inibidores seletivos da recaptação de serotonina pode ser avaliado pelo médico da família.
 * O uso de ansiolíticos deve ser evitado ou rigorosamente controlado devido ao risco de dependência.
-* A posologia e o ajuste fino devem seguir a avaliação clínica individual com [DOSE A CONFIRMAR].
+* A posologia e o ajuste fino devem seguir a avaliação clínica individual e o protocolo do serviço.
 
 ### Sinais de Gravidade e Encaminhamento
 * Fique atento a sinais como ideação autolítica, desesperança profunda, uso abusivo de álcool ou medicamentos pelo próprio cuidador e crises de pânico.

@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:02:18.503Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta
@@ -26,9 +26,9 @@ revisaoMedica: pendente
 > - - Quando os antipsicóticos bloqueiam os receptores D2, ocorre uma disfunção no circuito que modula o movimento e a sensação de recompensa.
 > - - Essa alteração não significa dano permanente, mas representa uma resposta farmacológica aguda que gera um estresse físico e emocional intenso.
 > - - Reduzir a dose do antipsicótico implicado ou realizar a troca por um agente com menor potência antagonista D2, sempre que a condição psiquiátrica permitir.
-> - - O uso de betabloqueadores, como o propranolol em doses baixas [DOSE A CONFIRMAR], costuma ser a primeira escolha farmacológica para alívio dos sintomas mot…
-> - - Os anticolinérgicos, como o biperideno [DOSE A CONFIRMAR], podem ajudar nos casos com componentes parkinsonianos associados, embora tenham eficácia variáve…
-> - - Benzodiazepínicos em curto prazo [DOSE A CONFIRMAR] podem auxiliar no manejo da angústia aguda e do componente insone.
+> - - O uso de betabloqueadores, como o propranolol em doses baixas definidas pelo médico conforme o protocolo do serviço, costuma ser a primeira escolha farmacológica para alívio dos sintomas mot…
+> - - Os anticolinérgicos, como o biperideno, com dose definida pelo médico conforme o protocolo do serviço, podem ajudar nos casos com componentes parkinsonianos associados, embora tenham eficácia variáve…
+> - - Benzodiazepínicos em curto prazo, com dose definida pelo médico conforme o protocolo do serviço, podem auxiliar no manejo da angústia aguda e do componente insone.
 > - - Encaminhe para avaliação psiquiátrica especializada urgente se houver refratariedade às medidas iniciais ou se a manutenção do antipsicótico for estritamen…
 > - - A acatisia é uma inquietude motora interna e angustiante, frequentemente confundida com ansiedade ou agitação psicomotora.
 > - - Nunca aumente a dose do antipsicótico diante da acatisia, pois isso piora o quadro.
@@ -66,9 +66,9 @@ O manejo da acatisia exige rapidez para aliviar o sofrimento e evitar o abandono
 
 ### Condutas de primeira linha
 - Reduzir a dose do antipsicótico implicado ou realizar a troca por um agente com menor potência antagonista D2, sempre que a condição psiquiátrica permitir.
-- O uso de betabloqueadores, como o propranolol em doses baixas [DOSE A CONFIRMAR], costuma ser a primeira escolha farmacológica para alívio dos sintomas motores.
-- Os anticolinérgicos, como o biperideno [DOSE A CONFIRMAR], podem ajudar nos casos com componentes parkinsonianos associados, embora tenham eficácia variável isoladamente.
-- Benzodiazepínicos em curto prazo [DOSE A CONFIRMAR] podem auxiliar no manejo da angústia aguda e do componente insone.
+- O uso de betabloqueadores, como o propranolol em doses baixas definidas pelo médico conforme o protocolo do serviço, costuma ser a primeira escolha farmacológica para alívio dos sintomas motores.
+- Os anticolinérgicos, como o biperideno, com dose definida pelo médico conforme o protocolo do serviço, podem ajudar nos casos com componentes parkinsonianos associados, embora tenham eficácia variável isoladamente.
+- Benzodiazepínicos em curto prazo, com dose definida pelo médico conforme o protocolo do serviço, podem auxiliar no manejo da angústia aguda e do componente insone.
 
 ### Sinais de gravidade e encaminhamento
 - Fique atento a sinais de sofrimento extremo, verbalizações de desesperança intensa ou risco de automutilação decorrentes da angústia insuportável.

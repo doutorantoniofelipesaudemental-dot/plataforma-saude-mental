@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:01:35.388Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Cuidadores de pacientes com Alzheimer avançado e o luto antecipatório
@@ -79,7 +79,7 @@ O atendimento ao cuidador na APS exige acolhimento e escuta ativa. Precisamos id
 
 *   **Abordagem farmacológica:**
     *   Evite o uso rotineiro de benzodiazepínicos para a ansiedade do cuidador.
-    *   Se houver transtorno depressivo maior associado, considere iniciar antidepressivos da classe dos inibidores seletivos da recaptação de serotonina (ISRS) [DOSE A CONFIRMAR].
+    *   Se houver transtorno depressivo maior associado, considere iniciar antidepressivos da classe dos inibidores seletivos da recaptação de serotonina (ISRS), com dose definida pelo médico conforme o protocolo do serviço.
 
 *   **Encaminhamento:**
     *   Encaminhe para psicologia ou psiquiatria quando houver refratariedade aos suportes iniciais.

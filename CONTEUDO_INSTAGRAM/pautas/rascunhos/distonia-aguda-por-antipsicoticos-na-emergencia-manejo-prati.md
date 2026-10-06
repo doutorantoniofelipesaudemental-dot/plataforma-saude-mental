@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:02:30.138Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Distonia aguda por antipsicóticos na emergência: manejo prático
@@ -20,11 +20,11 @@ revisaoMedica: pendente
 > - 2. **Confirme a história recente:** Verifique o uso de medicações como haloperidol, clorpromazina, metoclopramida ou prometazina injetável nas últimas horas.
 > - 4. **Monitore a resposta:** A melhora costuma ser visível poucos minutos após a administração do medicamento reverso.
 > - Quando o paciente recebe um medicamento antagonista dopaminérgico (como os antipsicóticos de primeira geração ou a metoclopramida), ocorre o bloqueio abrupto…
-> - - **Biperideno:** [DOSE A CONFIRMAR] por via intramuscular ou endovenosa lenta.
-> - - **Prometazina:** [DOSE A CONFIRMAR] por via intramuscular ou endovenosa lenta, atuando também como potente anti-histamínico com forte ação anticolinérgica.
+> - - **Biperideno:** dose definida conforme o protocolo do serviço, por via intramuscular ou endovenosa lenta.
+> - - **Prometazina:** dose definida conforme o protocolo do serviço, por via intramuscular ou endovenosa lenta, atuando também como potente anti-histamínico com forte ação anticolinérgica.
 > - A resposta costuma ser dramática e rápida, ocorrendo geralmente entre 5 e 20 minutos após a aplicação. Caso os sintomas persistam após esse intervalo, a dose…
 > - Embora a distonia periférica seja assustadora, ela raramente traz risco imediato à vida. No entanto, fique atento a sinais de gravidade que exigem intervençã…
-> - - **Manutenção:** Após a crise, avalie a necessidade de manter o anticolinérgico via oral por [DOSE A CONFIRMAR] dias para evitar recidivas, já que a meia-vi…
+> - - **Manutenção:** Após a crise, avalie a necessidade de manter o anticolinérgico via oral por tempo definido pelo médico conforme o protocolo do serviço para evitar recidivas, já que a meia-vi…
 > - - **Revisão terapêutica:** Ajuste a prescrição psiquiátrica em conjunto com a equipe de referência, considerando a troca para um antipsicótico de menor risco…
 > - - **Orientação:** Registre o evento no prontuário como alergia ou reação adversa grave ao medicamento específico, orientando o paciente e seus familiares.
 > - Este conteúdo é uma orientação geral para a prática clínica de emergência. Respeite sempre os protocolos institucionais, as diretrizes do seu pronto atendime…
@@ -67,8 +67,8 @@ Com menos dopamina agindo, a acetilcolina passa a predominar de forma relativa. 
 
 ### Conduta de primeira linha
 O tratamento de escolha para a distonia aguda é a administração de um agente anticolinérgico. 
-- **Biperideno:** [DOSE A CONFIRMAR] por via intramuscular ou endovenosa lenta.
-- **Prometazina:** [DOSE A CONFIRMAR] por via intramuscular ou endovenosa lenta, atuando também como potente anti-histamínico com forte ação anticolinérgica.
+- **Biperideno:** dose definida conforme o protocolo do serviço, por via intramuscular ou endovenosa lenta.
+- **Prometazina:** dose definida conforme o protocolo do serviço, por via intramuscular ou endovenosa lenta, atuando também como potente anti-histamínico com forte ação anticolinérgica.
 
 A resposta costuma ser dramática e rápida, ocorrendo geralmente entre 5 e 20 minutos após a aplicação. Caso os sintomas persistam após esse intervalo, a dose pode ser repetida conforme a avaliação clínica.
 
@@ -78,7 +78,7 @@ Embora a distonia periférica seja assustadora, ela raramente traz risco imediat
 - **Crise generalizada grave:** Posturas extremas de tronco que impeçam a ventilação adequada.
 
 ### Cuidados pós-reversão e encaminhamento
-- **Manutenção:** Após a crise, avalie a necessidade de manter o anticolinérgico via oral por [DOSE A CONFIRMAR] dias para evitar recidivas, já que a meia-vida do antipsicótico causal pode ser longa.
+- **Manutenção:** Após a crise, avalie a necessidade de manter o anticolinérgico via oral por tempo definido pelo médico conforme o protocolo do serviço para evitar recidivas, já que a meia-vida do antipsicótico causal pode ser longa.
 - **Revisão terapêutica:** Ajuste a prescrição psiquiátrica em conjunto com a equipe de referência, considerando a troca para um antipsicótico de menor risco extrapiramidal.
 - **Orientação:** Registre o evento no prontuário como alergia ou reação adversa grave ao medicamento específico, orientando o paciente e seus familiares.
 

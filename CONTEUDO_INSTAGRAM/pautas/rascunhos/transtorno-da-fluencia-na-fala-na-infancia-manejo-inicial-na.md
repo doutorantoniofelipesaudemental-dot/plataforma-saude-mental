@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:02:24.452Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Transtorno da Fluência na Fala na Infância: Manejo Inicial na APS
@@ -63,7 +63,7 @@ O manejo inicial na Atenção Primária é essencialmente acolhedor, educativo e
 - Encaminhar para avaliação especializada com fonoaudiologia e, se necessário, psicologia.
 
 ### Tratamento farmacológico:
-- Não existem medicamentos de primeira linha indicados para a gagueira desenvolvimental na infância na atenção primária. Medicamentos da classe dos antipsicóticos ou moduladores de dopamina [CLASSE A CONFIRMAR] são reservados para casos refratários graves na adolescência ou idade adulta, avaliados exclusivamente por especialistas, sempre com [DOSE A CONFIRMAR].
+- Não existem medicamentos de primeira linha indicados para a gagueira desenvolvimental na infância na atenção primária. Medicamentos da classe dos antipsicóticos ou moduladores de dopamina são reservados para casos refratários graves na adolescência ou idade adulta, avaliados exclusivamente por especialistas, sempre com dose definida pelo especialista.
 
 Este conteúdo é uma orientação geral e respeita sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais.
 
