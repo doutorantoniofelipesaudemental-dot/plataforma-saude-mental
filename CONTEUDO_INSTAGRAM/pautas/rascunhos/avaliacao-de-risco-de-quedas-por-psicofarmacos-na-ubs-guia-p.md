@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:25:10.943Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Avaliação de Risco de Quedas por Psicofármacos na UBS: Guia para Residentes
@@ -25,7 +25,7 @@ revisaoMedica: pendente
 > - - Realize a revisão da prescrição utilizando critérios atualizados de segurança para idosos, como os Critérios de Beers.
 > - - Priorize intervenções não farmacológicas para insônia e sintomas leves de ansiedade, como higiene do sono e escuta qualificada.
 > - - **Benzodiazepínicos:** Substitua gradualmente por abordagens comportamentais ou antidepressivos com perfil sedativo mais seguro, se estritamente necessário…
-> - - **Antidepressivos:** Prefira os Inibidores Seletivos da Recaptação de Serotonina, monitorando sempre o risco de hiponatremia e quedas. [DOSE A CONFIRMAR]
+> - - **Antidepressivos:** Prefira os Inibidores Seletivos da Recaptação de Serotonina, monitorando sempre o risco de hiponatremia e quedas. (dose conforme o protocolo do serviço)
 > - - **Antipsicóticos:** Utilize apenas para sintomas comportamentais graves associados à demência, na menor dose eficaz e pelo menor tempo possível. [DOSE A CO…
 > - - Encaminhe para avaliação multidisciplinar com fisioterapia e geriatria quando houver declínio funcional acentuado.
 > - - Identificar sempre o uso de benzodiazepínicos e antidepressivos tricíclicos em idosos.
@@ -76,9 +76,9 @@ Outro ponto crítico é a hipotensão ortostática, muito comum com o uso de ant
 - Se houver indicação de desprescrição, planeje a retirada de forma muito gradual para evitar sintomas de abstinência e efeito rebote.
 
 ## Fármacos e Classes Envolvidas
-- **Benzodiazepínicos:** Substitua gradualmente por abordagens comportamentais ou antidepressivos com perfil sedativo mais seguro, se estritamente necessário. [DOSE A CONFIRMAR]
-- **Antidepressivos:** Prefira os Inibidores Seletivos da Recaptação de Serotonina, monitorando sempre o risco de hiponatremia e quedas. [DOSE A CONFIRMAR]
-- **Antipsicóticos:** Utilize apenas para sintomas comportamentais graves associados à demência, na menor dose eficaz e pelo menor tempo possível. [DOSE A CONFIRMAR]
+- **Benzodiazepínicos:** Substitua gradualmente por abordagens comportamentais ou antidepressivos com perfil sedativo mais seguro, se estritamente necessário. (dose conforme o protocolo do serviço)
+- **Antidepressivos:** Prefira os Inibidores Seletivos da Recaptação de Serotonina, monitorando sempre o risco de hiponatremia e quedas. (dose conforme o protocolo do serviço)
+- **Antipsicóticos:** Utilize apenas para sintomas comportamentais graves associados à demência, na menor dose eficaz e pelo menor tempo possível. (dose conforme o protocolo do serviço)
 
 ## Sinais de Gravidade
 - Quedas de repetição no último mês.

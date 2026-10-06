@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:25:23.778Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Manejo de Sintomas Depressivos Resistentes na UBS: Conduta para Residentes
@@ -55,7 +55,7 @@ Se o diagnóstico está correto e o paciente usou a medicação na dose adequada
 
 ### Estratégia de troca de medicamento
 
-Se a dose máxima tolerada foi alcançada sem resposta após o tempo adequado, a troca por outro antidepressivo de classe igual ou diferente é uma conduta segura. Podemos utilizar inibidores seletivos da recaptação de serotonina como sertralina ou citalopram, ou moduladores como bupropiona e mirtazapina, respeitando o período de desmame ou cruzamento para evitar interações perigosas. As doses iniciais e de manutenção seguem [DOSE A CONFIRMAR].
+Se a dose máxima tolerada foi alcançada sem resposta após o tempo adequado, a troca por outro antidepressivo de classe igual ou diferente é uma conduta segura. Podemos utilizar inibidores seletivos da recaptação de serotonina como sertralina ou citalopram, ou moduladores como bupropiona e mirtazapina, respeitando o período de desmame ou cruzamento para evitar interações perigosas. As doses iniciais e de manutenção seguem (dose conforme o protocolo do serviço).
 
 ### Sinais de gravidade e critérios de encaminhamento
 

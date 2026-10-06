@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:27:15.173Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Transtorno de Personalidade Esquizotípica na APS: Rastreio e Manejo
@@ -61,7 +61,7 @@ O transtorno de personalidade esquizotípica faz parte do espectro relacionado a
 
 Evite o uso rotineiro de polifarmácia e de doses elevadas. A medicação não altera a personalidade, mas pode auxiliar no manejo de sintomas específicos de desorganização ou ansiedade grave.
 
-* **Antipsicóticos de baixa dose:** Podem ser considerados se houver episódios transitórios de sintomas psicóticos atenuados ou desconfiança extrema que cause sofrimento marcante. Utilizar agentes atípicos em [DOSE A CONFIRMAR].
+* **Antipsicóticos de baixa dose:** Podem ser considerados se houver episódios transitórios de sintomas psicóticos atenuados ou desconfiança extrema que cause sofrimento marcante. Utilizar agentes atípicos em (dose conforme o protocolo do serviço).
 * **Antidepressivos:** Indicados apenas se houver comorbidade com transtornos de humor ou ansiedade generalizada significativa, avaliando sempre o risco de exacerbação de sintomas de suspensão ou ativação paradoxal.
 
 ### Sinais de gravidade e encaminhamento

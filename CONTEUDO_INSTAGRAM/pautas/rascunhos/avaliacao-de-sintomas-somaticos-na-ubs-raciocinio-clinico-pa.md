@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:26:06.243Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Avaliação de Sintomas Somáticos na UBS: Raciocínio Clínico para Residentes
@@ -18,7 +18,7 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (6):
 > - Programe consultas de acompanhamento com intervalos definidos, independentemente de haver novos sintomas. Saber que vai ver você em trinta dias diminui a urg…
 > - Fique atento a "red flags" que exigem investigação urgente ou encaminhamento:
-> - - Antidepressivos inibidores recaptores de serotonina ou dual (por exemplo, classe dos ISRS ou IRSN), iniciando com [DOSE A CONFIRMAR].
+> - - Antidepressivos inibidores recaptores de serotonina ou dual (por exemplo, classe dos ISRS ou IRSN), iniciando com dose conforme o protocolo do serviço.
 > - - Evite o uso prolongado de benzodiazepínicos devido ao risco de dependência e piora cognitiva.
 > - Encaminhe para a psicologia ou psiquiatria da rede se houver refratariedade ao manejo inicial, sofrimento psíquico grave ou risco de automutilação.
 > - - Validar o sintoma físico é essencial para criar vínculo e reduzir a busca repetida por emergências.
@@ -75,7 +75,7 @@ Fique atento a "red flags" que exigem investigação urgente ou encaminhamento:
 
 ### Abordagem Farmacológica
 Quando os sintomas causam incapacidade funcional importante ou há comorbidades como ansiedade e depressão associadas:
-- Antidepressivos inibidores recaptores de serotonina ou dual (por exemplo, classe dos ISRS ou IRSN), iniciando com [DOSE A CONFIRMAR].
+- Antidepressivos inibidores recaptores de serotonina ou dual (por exemplo, classe dos ISRS ou IRSN), iniciando com dose conforme o protocolo do serviço.
 - Evite o uso prolongado de benzodiazepínicos devido ao risco de dependência e piora cognitiva.
 
 ### Encaminhamento

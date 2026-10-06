@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:28:36.929Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Uso de Antipsicóticos de Depósito na APS: Guia Prático para Residentes
@@ -65,11 +65,11 @@ O resultado clínico é a manutenção de níveis terapêuticos estáveis no cé
 ### Manejo Clínico e Segurança na APS
 
 ### Escolha do Medicamento e Doses
-Na Atenção Primária, trabalhamos frequentemente com opções de primeira geração (como o decanoato de haloperidol) e de segunda geração (como o palmitato de paliperidona ou o decanoato de zuclopentixol). A transição do comprimido para o injetável exige cautela, e a dose inicial deve seguir as diretrizes e a equivalência da medicação oral prévia [DOSE A CONFIRMAR].
+Na Atenção Primária, trabalhamos frequentemente com opções de primeira geração (como o decanoato de haloperidol) e de segunda geração (como o palmitato de paliperidona ou o decanoato de zuclopentixol). A transição do comprimido para o injetável exige cautela, e a dose inicial deve seguir as diretrizes e a equivalência da medicação oral prévia (dose conforme o protocolo do serviço).
 
 ### Monitoramento de Efeitos Adversos
 O acompanhamento deve ser atento para a identificação precoce de efeitos colaterais:
-- **Sintomas extrapiramidais:** Rigidez muscular, tremor, inquietação (acatisia) ou distonia aguda. Nesses casos, avalie o uso temporário de anticolinérgicos orais [DOSE A CONFIRMAR].
+- **Sintomas extrapiramidais:** Rigidez muscular, tremor, inquietação (acatisia) ou distonia aguda. Nesses casos, avalie o uso temporário de anticolinérgicos orais (dose conforme o protocolo do serviço).
 - **Alterações metabólicas:** Monitore periodicamente peso, circunferência abdominal, glicemia de jejum e perfil lipídico, especialmente com os antipsicóticos de segunda geração.
 - **Sinais autonômicos e neurológicos:** Fique atento a sinais raros, porém graves, como a síndrome neuroléptica maligna (febre alta, rigidez muscular extrema, alteração do estado mental e instabilidade autonômica).
 

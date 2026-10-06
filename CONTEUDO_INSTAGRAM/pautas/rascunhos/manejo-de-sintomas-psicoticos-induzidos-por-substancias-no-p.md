@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:26:25.087Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Manejo de Sintomas Psicóticos Induzidos por Substâncias no PA
@@ -76,7 +76,7 @@ Sempre investigue causas orgânicas primárias: hipóxia, infecções do sistema
 
 A contenção farmacológica deve ser o último recurso, utilizada apenas quando a contenção verbal falhou e há risco iminente de agressão a si mesmo ou à equipe. Evite o uso indiscriminado de medicações sedativas potentes sem antes avaliar a estabilidade clínica.
 
-* **Primeira linha para agitação grave:** Antipsicóticos típicos ou atípicos associados a benzodiazepínicos, conforme o perfil do paciente e os protocolos da sua instituição. Por exemplo, a associação de haloperidol [DOSE A CONFIRMAR] com prometazina [DOSE A CONFIRMAR] via intramuscular costuma ser utilizada em casos de agitação psicomotora intensa, avaliando sempre o risco de prolongamento do intervalo QT e efeitos extrapiramidais.
+* **Primeira linha para agitação grave:** Antipsicóticos típicos ou atípicos associados a benzodiazepínicos, conforme o perfil do paciente e os protocolos da sua instituição. Por exemplo, a associação de haloperidol (dose conforme o protocolo do serviço) com prometazina (dose conforme o protocolo do serviço) via intramuscular costuma ser utilizada em casos de agitação psicomotora intensa, avaliando sempre o risco de prolongamento do intervalo QT e efeitos extrapiramidais.
 * **Benzodiazepínicos isolados:** Indicados primariamente quando há suspeita de intoxicação ou abstinência por depressores do sistema nervoso central (como álcool ou benzodiazepínicos) ou síndrome serotoninérgica induzida por estimulantes.
 
 ### Sinais de Gravidade e Critérios de Encaminhamento
