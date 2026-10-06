@@ -15,35 +15,18 @@ Data: 2026-10-06. Resume o que foi feito e verificado neste ciclo e o que segue 
 - **Voz e provedor:** Azure Speech, `pt-BR-AntonioNeural`, camada gratuita (500.000 caracteres/mês).
 - **Lote de outubro de 2026:** 230 artigos sintetizados, 0 falhas, **499.917 de 500.000 caracteres** usados. A ferramenta parou sozinha antes de `sindrome-neuroleptica-maligna` para não estourar a cota. Log do lote: `narracoes-geradas/_lote-2026-10.log`.
 - **Envio para produção:** 230 MP3 enviados sem sintetizar de novo, 0 falhas (`narracoes-geradas/_envio-2026-10.log`).
-- **Cobertura:** **234 de 251** artigos publicados com áudio em dia (4 de antes mais os 230 desta rodada); nenhum com áudio antigo; **17 sem áudio**.
+- **Cobertura:** **251 de 251** artigos publicados com áudio em dia (4 de antes, 230 do lote Azure e 17 do lote Edge-TTS de 2026-10-06); nenhum com áudio antigo e nenhum sem áudio.
 - **Verificado no servidor:** o arquivo de áudio de `alimentacao-criancas` responde 200 com `audio/mpeg`, e a API registra provedor Azure e 3.760 caracteres.
 - **Observação:** a chave da ElevenLabs foi rejeitada (401) e `ELEVENLABS_VOICE_ID` não está definido; não foi usada.
 - **Os arquivos de áudio não estão no Git:** `narracoes-geradas/` é ignorado de propósito; eles vão direto para o armazenamento do portal.
 
-### 17 artigos ainda sem áudio (23.486 caracteres, cabem na cota de 1º de novembro)
+### Os 17 artigos restantes: gerados com Edge-TTS e enviados em 2026-10-06
 
-- sindrome-neuroleptica-maligna (1.739 car.)
-- sindrome-panico-o-que-e (987)
-- sobrecarga-docente-descompressao (2.353)
-- solidao-diferenca-estar-sozinho (878)
-- tcc-quando-indicar-aps (1.723)
-- tdah-adultos-sinais (824)
-- tempo-tela-bebes-primeira-infancia (1.383)
-- tept-aps (1.687)
-- terapia-online-funciona (742)
-- terapia-primeira-vez-o-que-esperar (964)
-- toc-sinais-consulta (1.830)
-- trabalho-domestico-invisivel-estresse (1.844)
-- trabalho-noturno-turnos-saude-mental (1.513)
-- transicao-carreira-aposentadoria-identidade (2.044)
-- trauma-infancia-adulto (827)
-- vergonha-culpa-diferenca (768)
-- violencia-domestica-impacto-criancas (1.380)
+Depois de a cota gratuita do Azure se esgotar, os 17 artigos que faltavam (23.486 caracteres) foram sintetizados com Edge-TTS (mesma voz `pt-BR-AntonioNeural`, sem consumir a cota do Azure) e enviados para produção, registrados com o provedor `edge`: 17 de 17, 0 falhas (`narracoes-geradas/_lote-edge-2026-10.log` e `_envio-edge-2026-10.log`). Conferido no servidor em 3 deles (`sindrome-neuroleptica-maligna`, `tept-aps`, `violencia-domestica-impacto-criancas`): o arquivo responde 200 com `audio/mpeg`, o banco registra provedor `edge` e o player está na página. A estimativa da ferramenta mostra 251 ok, 0 legado, 0 desatualizada, 0 ausente.
 
 ## 3. Pendências abertas
 
-1. **Áudio dos 17 artigos acima:** retomar a partir de 1º de novembro (`npm run narrar -- --pendentes --enviar`), ou usar outro provedor (Edge-TTS) antes disso.
-2. **Áudio narrado e trilha dos 114 carrosséis:** não gerados (são mídias diferentes dos áudios dos artigos).
-3. **Referências dos Lotes 81 a 114:** leitura integral pelo Dr. Antônio Felipe; a pauta 155 tem uma referência parcial.
-4. **Rascunho dos `linkedin.txt` dos pacotes 001 a 006:** aguarda revisão do Dr. Antônio Felipe.
-5. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
+1. **Áudio narrado e trilha dos 114 carrosséis:** não gerados (são mídias diferentes dos áudios dos artigos).
+2. **Referências dos Lotes 81 a 114:** leitura integral pelo Dr. Antônio Felipe; a pauta 155 tem uma referência parcial.
+3. **Rascunho dos `linkedin.txt` dos pacotes 001 a 006:** aguarda revisão do Dr. Antônio Felipe.
+4. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
