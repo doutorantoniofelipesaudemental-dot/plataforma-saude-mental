@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T23:58:39.358Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Manejo da Insônia em Plantões: Abordagem no Pronto-Atendimento
@@ -62,7 +62,7 @@ Quando a insônia agudizada chega ao pronto-socorro, nossa conduta deve ser segu
 
 * **Validação e escuta:** Garanta à pessoa que ela está em um ambiente seguro e que o corpo vai conseguir descansar assim que a tensão diminuir.
 * **Orientações ambientais:** Sugira um ambiente escuro, silencioso, sem telas e com temperatura confortável para o restante da noite.
-* **Uso parcimonioso de fármacos:** Se houver necessidade extrema de intervenção medicamentosa devido a um quadro de agitação associada, prefira classes com menor potencial de dependência sob supervisão estrita, com [DOSE A CONFIRMAR] conforme o protocolo da instituição. Evite ao máximo a prescrição de benzodiazepínicos para uso contínuo em casa.
+* **Uso parcimonioso de fármacos:** Se houver necessidade extrema de intervenção medicamentosa devido a um quadro de agitação associada, prefira classes com menor potencial de dependência sob supervisão estrita, com dose e via definidas conforme o protocolo da instituição. Evite ao máximo a prescrição de benzodiazepínicos para uso contínuo em casa.
 
 ### Sinais de gravidade
 

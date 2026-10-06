@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T23:59:44.923Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Manejo de Efeitos Colaterais Extrapiramidais no Plantão
@@ -63,9 +63,9 @@ Para entender o quadro clínico, vale lembrar o que os antipsicóticos fazem nos
 
 O tratamento na urgência depende do tipo de efeito colateral observado.
 
-* **Para Distonia Aguda**: O alívio deve ser rápido. Utilize anticolinérgicos como biperideno ou prometazina por via intramuscular ou intravenosa lenta. A dose padrão deve seguir [DOSE A CONFIRMAR]. Fique atento a eventuais distonias laríngeas, que podem comprometer a via aérea e exigem ação imediata.
-* **Para Acatisia**: Muitas vezes ela é confundida com piora da agitação psiquiátrica, o que leva a um erro comum de aumentar o antipsicótico. Reduza a dose do neuroléptico se possível. Utilize betabloqueadores como propranolol ou benzodiazepínicos para o alívio da angústia. Ajuste conforme [DOSE A CONFIRMAR].
-* **Para Parkinsonismo Agudo**: Considere a redução do antipsicótico, a troca por uma medicação de menor potência extrapiramidal ou o uso temporário de anticolinérgicos orais, conforme [DOSE A CONFIRMAR].
+* **Para Distonia Aguda**: O alívio deve ser rápido. Utilize anticolinérgicos como biperideno ou prometazina por via intramuscular ou intravenosa lenta. Dose, via e intervalo conforme o protocolo do serviço. Fique atento a eventuais distonias laríngeas, que podem comprometer a via aérea e exigem ação imediata.
+* **Para Acatisia**: Muitas vezes ela é confundida com piora da agitação psiquiátrica, o que leva a um erro comum de aumentar o antipsicótico. Reduza a dose do neuroléptico se possível. Utilize betabloqueadores como propranolol ou benzodiazepínicos para o alívio da angústia. Dose e ajuste conforme o protocolo do serviço.
+* **Para Parkinsonismo Agudo**: Considere a redução do antipsicótico, a troca por uma medicação de menor potência extrapiramidal ou o uso temporário de anticolinérgicos orais, conforme o protocolo do serviço.
 * **Sinais de Gravidade**: Febre, instabilidade autonômica e rigidez extrema apontam para Síndrome Neuroléptica Maligna. Suspenda o antipsicótico imediatamente, hidrate o paciente e acione o suporte avançado.
 * **Encaminhamento**: Pacientes com reações graves, refratárias ou com risco de aspiração devem ser mantidos em observação rigorosa no pronto-socorro até a estabilização completa.
 

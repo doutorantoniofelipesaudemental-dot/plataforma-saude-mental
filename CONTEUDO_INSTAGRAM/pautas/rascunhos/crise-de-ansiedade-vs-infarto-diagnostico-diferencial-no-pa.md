@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:17:40.675Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Crise de Ansiedade vs Infarto: Diagnóstico Diferencial no PA
@@ -16,7 +16,7 @@ revisaoMedica: pendente
 
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (4):
-> - - Ofereça oxigênio apenas se saturação menor que [DOSE A CONFIRMAR] ou se houver dispneia franca.
+> - - Ofereça oxigênio apenas se saturação abaixo do limite definido pelo protocolo do serviço ou se houver dispneia franca.
 > - - Evite sedar o paciente com benzodiazepínicos antes de afastar causas clínicas graves de agitação e dispneia.
 > - - Se confirmada a estabilidade clínica, após ECG seriado normal e troponina negativa seriada, avalie o uso cauteloso de benzodiazepínicos de curta ação [DOSE…
 > - Este conteúdo oferece orientação geral para a prática médica de urgência, respeitando sempre os protocolos hospitalares, do Pronto Atendimento e da rede de s…
@@ -69,9 +69,9 @@ Exclua sempre a causa orgânica primeiro. Todo paciente com dor torácica aguda 
 
 ### Conduta Farmacológica Inicial na Dúvida
 - Monitore sinais vitais e mantenha acesso venoso periférico.
-- Ofereça oxigênio apenas se saturação menor que [DOSE A CONFIRMAR] ou se houver dispneia franca.
+- Ofereça oxigênio apenas se saturação abaixo do limite definido pelo protocolo do serviço ou se houver dispneia franca.
 - Evite sedar o paciente com benzodiazepínicos antes de afastar causas clínicas graves de agitação e dispneia.
-- Se confirmada a estabilidade clínica, após ECG seriado normal e troponina negativa seriada, avalie o uso cauteloso de benzodiazepínicos de curta ação [DOSE A CONFIRMAR] para alívio do pânico agudo e reavaliação conjunta com a psiquiatria ambulatorial.
+- Se confirmada a estabilidade clínica, após ECG seriado normal e troponina negativa seriada, avalie o uso cauteloso de benzodiazepínicos de curta ação, com dose e via conforme o protocolo do serviço para alívio do pânico agudo e reavaliação conjunta com a psiquiatria ambulatorial.
 
 Este conteúdo oferece orientação geral para a prática médica de urgência, respeitando sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais.
 

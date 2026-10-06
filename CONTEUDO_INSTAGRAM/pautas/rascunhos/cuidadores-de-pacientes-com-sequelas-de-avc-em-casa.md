@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:01:07.730Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Cuidadores de pacientes com sequelas de AVC em casa
@@ -76,8 +76,8 @@ O esforço físico repetido sobrecarrega a coluna e as articulações do cuidado
 - Encaminhe o cuidador para acolhimento em saúde mental na rede básica ao notar sintomas persistentes de ansiedade ou depressión.
 
 ### Suporte Farmacológico
-- Medicamentos para espasticidade ou dor neuropática no paciente devem ser avaliados por médico assistente, utilizando classes como relaxantes musculares ou moduladores da dor com [DOSE A CONFIRMAR].
-- Sintomas ansiosos ou depressivos severos no cuidador requerem avaliação médica presencial, podendo incluir antidepressivos da classe dos inibidores seletivos da recaptação de serotonina com [DOSE A CONFIRMAR].
+- Medicamentos para espasticidade ou dor neuropática no paciente devem ser avaliados por médico assistente, utilizando classes como relaxantes musculares ou moduladores da dor com dose definida pelo médico assistente.
+- Sintomas ansiosos ou depressivos severos no cuidador requerem avaliação médica presencial, podendo incluir antidepressivos da classe dos inibidores seletivos da recaptação de serotonina com dose definida pelo médico assistente.
 
 Este conteúdo é uma orientação geral e educativa. Respeite sempre os protocolos do hospital, do Pronto Atendimento e da rede de saúde da sua região.
 

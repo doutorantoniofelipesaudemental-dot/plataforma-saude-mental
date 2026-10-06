@@ -1,5 +1,7 @@
 # Dossiê de revisão clínica: marcadores de dose dos rascunhos do Lote 81 a 90
 
+**Status (2026-10-05):** as propostas abaixo foram **aplicadas** nos 10 rascunhos por instrução do Dr. Antônio Felipe, e os rascunhos foram aprovados (`revisaoMedica: aprovada`) e as linhas da agenda liberadas. As **referências continuam pendentes de conferência** (consultas de busca do PubMed, sem PMID). O texto original dos trechos está preservado no histórico do repositório.
+
 Documento de apoio à decisão do Dr. Antônio Felipe. Lista, por rascunho, cada ocorrência de `[DOSE A CONFIRMAR]` no corpo do artigo (arquivo e linha), o trecho exato, uma **proposta de redação sem posologia**, no estilo já usado nos rascunhos 058, 044 e 127 ("dose e via conforme o protocolo do serviço"), e as referências pendentes. **Nada foi alterado nos artigos nem na agenda**: as propostas são sugestões para você aprovar, ajustar ou recusar. Os pacotes 81 a 90 não citam nenhum medicamento, classe nem dose e seguem **BLOQUEADOS** na agenda até a correção e a sua aprovação.
 
 **Correção de contagem:** os documentos anteriores (cabeçalhos dos pacotes 81 a 90 e `MAPEAMENTO_LOTE_PACOTES_081_090.md`) contaram também as repetições do marcador no quadro "Trechos de conduta farmacológica e de emergência a conferir" que abre cada rascunho. Os números abaixo contam só o corpo do artigo; o quadro de abertura repete as mesmas linhas e deve ser atualizado depois da correção.

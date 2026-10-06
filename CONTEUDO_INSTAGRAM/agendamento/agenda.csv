@@ -79,13 +79,23 @@ data,dia,pacote,titulo,classe,pecas_de_texto,status
 2026-12-22,ter,78,"Hipocondria e transtorno de ansiedade de doença: conduta na atenção primária",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
 2026-12-23,qua,79,"Mutismo seletivo na infância: identificação precoce e conduta na UBS",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
 2026-12-24,qui,80,"Síndrome de descontinuação de antidepressivos na APS: guia prático",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
-2026-12-25,sex,82,"Crise de Ansiedade vs Infarto: Diagnóstico Diferencial no PA",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2026-12-26,sáb,89,"Professores e o ciberbullying: impactos na saúde mental",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2026-12-27,dom,90,"Cuidadores de pacientes com sequelas de AVC em casa",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2026-12-28,seg,83,"Manejo de Efeitos Colaterais Extrapiramidais no Plantão",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2026-12-29,ter,85,"Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2026-12-30,qua,86,"Manejo da Hiperventilação e Ataque de Pânico no Plantão",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2026-12-31,qui,87,"Desmame Seguro de Benzodiazepínicos na Atenção Primária",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2027-01-01,sex,88,"Uso de inibidores seletivos da recaptação de serotonina na UBS",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2027-01-02,sáb,81,"Manejo da Insônia em Plantões: Abordagem no Pronto-Atendimento",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
-2027-01-03,dom,84,"Abordagem da Dor Crônica e Sofrimento Psíquico na UBS",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e dose a confirmar no rascunho
+2026-12-25,sex,82,"Crise de Ansiedade vs Infarto: Diagnóstico Diferencial no PA",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2026-12-26,sáb,89,"Professores e o ciberbullying: impactos na saúde mental",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2026-12-27,dom,90,"Cuidadores de pacientes com sequelas de AVC em casa",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2026-12-28,seg,83,"Manejo de Efeitos Colaterais Extrapiramidais no Plantão",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2026-12-29,ter,85,"Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2026-12-30,qua,86,"Manejo da Hiperventilação e Ataque de Pânico no Plantão",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2026-12-31,qui,87,"Desmame Seguro de Benzodiazepínicos na Atenção Primária",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2027-01-01,sex,88,"Uso de inibidores seletivos da recaptação de serotonina na UBS",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2027-01-02,sáb,81,"Manejo da Insônia em Plantões: Abordagem no Pronto-Atendimento",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2027-01-03,dom,84,"Abordagem da Dor Crônica e Sofrimento Psíquico na UBS",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,aguardando arte/vídeo e agendamento manual
+2027-01-04,seg,99,"Professores e o suporte aos alunos com ideação suicida: guia na APS",sensivel,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-05,ter,94,"Cuidadores familiares de dependentes químicos: manejo da codependência na APS",sensivel,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-06,qua,96,"Acatisia Induzida por Antipsicóticos: Diagnóstico e Conduta",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-07,qui,98,"Distonia aguda por antipsicóticos na emergência: manejo prático",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-08,sex,97,"Transtorno da Fluência na Fala na Infância: Manejo Inicial na APS",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-09,sáb,91,"Professores de educação infantil e a regulação emocional",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-10,dom,92,"Professores de EJA: lidando com histórias de superação",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-11,seg,93,"Cuidadores de pacientes com Alzheimer avançado e o luto antecipatório",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-12,ter,95,"Disforia Sensorial e Sobrecarga no Transtorno do Espectro Autista",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho
+2027-01-13,qua,100,"Uso Off-Label de Psicofármacos na UBS: Evidências e Prática",normal,carrossel_legenda.txt+reel_legenda.txt+linkedin.txt,BLOQUEADO: revisão médica pendente e marcadores a confirmar no rascunho

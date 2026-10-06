@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:00:06.765Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Abordagem da Dor Crônica e Sofrimento Psíquico na UBS
@@ -55,7 +55,7 @@ Ocorre um fenômeno chamado sensitização central. O sistema nervoso fica hiper
 
 ### Condutas de Primeira Linha
 
-O manejo da dor crônica refratária com comorbidades psiquiátricas exige o uso de moduladores da dor. Os antidepressivos tricíclicos, como a amitriptilina, e os dualísticos, como a duloxetina, são excelentes escolhas para tratar simultaneamente a dor neuropática ou musculoesquelética e os sintomas ansiosos ou depressivos, respeitando [DOSE A CONFIRMAR]. Os gabapentinóides, como a pregabalina ou a gabapentina, também entram como moduladores importantes em [DOSE A CONFIRMAR].
+O manejo da dor crônica refratária com comorbidades psiquiátricas exige o uso de moduladores da dor. Os antidepressivos tricíclicos, como a amitriptilina, e os dualísticos, como a duloxetina, são excelentes escolhas para tratar simultaneamente a dor neuropática ou musculoesquelética e os sintomas ansiosos ou depressivos, com dose e titulação definidas pelo médico conforme o protocolo do serviço. Os gabapentinóides, como a pregabalina ou a gabapentina, também entram como moduladores importantes, com dose definida pelo médico conforme o protocolo do serviço.
 
 ### Abordagem Não Farmacológica
 
