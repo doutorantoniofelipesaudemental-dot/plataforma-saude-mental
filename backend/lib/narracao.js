@@ -62,7 +62,7 @@ function textoParaNarracao(artigo) {
 
 // Vozes aceitas para narrar um artigo. A padrao e VOZ_NARRACAO; outra voz da lista pode ser
 // escolhida artigo a artigo (gravada em `narracao.voz`) sem que o artigo fique "desatualizado".
-const VOZES_NARRACAO = ['pt-BR-AntonioNeural', 'pt-BR-FranciscaNeural'];
+const VOZES_NARRACAO = ['pt-BR-AntonioNeural', 'pt-BR-FranciscaNeural', 'pt-BR-ThalitaMultilingualNeural'];
 
 /** Voz com que a narracao gravada do artigo foi feita (a padrao, se nao houver ou nao for reconhecida). */
 function vozDaNarracao(artigo) {

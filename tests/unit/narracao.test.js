@@ -71,6 +71,13 @@ test('voz por artigo: a voz gravada em narracao.voz vale, desde que seja uma das
   const texto = textoParaNarracao(ARTIGO);
   const francisca = 'pt-BR-FranciscaNeural';
   assert.ok(VOZES_NARRACAO.includes(francisca));
+  const thalita = 'pt-BR-ThalitaMultilingualNeural';
+  assert.ok(VOZES_NARRACAO.includes(thalita));
+  // outra voz da lista também vale, com o hash dela
+  const comThalita = { ...ARTIGO, narracao: { url: 'https://x/t.mp3', hash: hashNarracao(texto, thalita), voz: thalita } };
+  assert.strictEqual(vozDaNarracao(comThalita), thalita);
+  assert.strictEqual(estadoNarracao(comThalita).estado, 'ok');
+  assert.notStrictEqual(hashNarracao(texto, thalita), hashNarracao(texto, francisca));
   // sem voz gravada, ou com voz desconhecida, vale a padrão
   assert.strictEqual(vozDaNarracao(ARTIGO), 'pt-BR-AntonioNeural');
   assert.strictEqual(vozDaNarracao({ ...ARTIGO, narracao: { voz: 'qualquer-outra' } }), 'pt-BR-AntonioNeural');
