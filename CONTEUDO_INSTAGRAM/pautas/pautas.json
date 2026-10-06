@@ -4314,7 +4314,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel.md",
       "slug": "cuidadores-de-pacientes-com-doencas-raras-o-fardo-invisivel",
       "geradoEm": "2026-09-30T09:52:07.773Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -4322,7 +4322,8 @@
       }
     },
     "redigidaEm": "2026-09-30T09:52:07.773Z",
-    "pacote": 71
+    "pacote": 71,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-83-cuidadores-de-idosos-dependent",
@@ -4429,7 +4430,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-a-saude-mental-identificando-limites-diante-da.md",
       "slug": "professores-e-a-saude-mental-identificando-limites-diante-da",
       "geradoEm": "2026-09-30T09:48:23.113Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -4437,7 +4438,8 @@
       }
     },
     "redigidaEm": "2026-09-30T09:48:23.113Z",
-    "pacote": 72
+    "pacote": 72,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-85-professores-e-o-luto-pedagogic",
@@ -4494,7 +4496,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-.md",
       "slug": "professores-e-o-luto-pedagogico-acolhendo-perdas-e-mudancas-",
       "geradoEm": "2026-09-30T09:48:30.013Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -4502,7 +4504,8 @@
       }
     },
     "redigidaEm": "2026-09-30T09:48:30.013Z",
-    "pacote": 73
+    "pacote": 73,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-86-urgencias-de-abstinencia-de-su",
@@ -6119,7 +6122,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-dissociativo-de-identidade-reconhecimento-e-manej.md",
       "slug": "transtorno-dissociativo-de-identidade-reconhecimento-e-manej",
       "geradoEm": "2026-09-30T22:00:41.106Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6127,7 +6130,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:00:41.106Z",
-    "pacote": 74
+    "pacote": 74,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-118-disforia-de-genero-e-saude-men",
@@ -6184,7 +6188,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a.md",
       "slug": "disforia-de-genero-e-saude-mental-acolhimento-e-suporte-na-a",
       "geradoEm": "2026-09-30T22:00:52.801Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6192,7 +6196,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:00:52.801Z",
-    "pacote": 75
+    "pacote": 75,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-119-transtorno-explosivo-intermite",
@@ -6249,7 +6254,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa.md",
       "slug": "transtorno-explosivo-intermitente-reconhecimento-e-manejo-fa",
       "geradoEm": "2026-09-30T22:01:04.753Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6257,7 +6262,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:01:04.753Z",
-    "pacote": 76
+    "pacote": 76,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-120-tricotilomania-e-transtorno-de",
@@ -6320,7 +6326,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane.md",
       "slug": "tricotilomania-e-transtorno-de-escoriacao-diagnostico-e-mane",
       "geradoEm": "2026-09-30T22:01:10.963Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6328,7 +6334,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:01:10.963Z",
-    "pacote": 77
+    "pacote": 77,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-121-hipocondria-e-transtorno-de-an",
@@ -6396,7 +6403,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a.md",
       "slug": "hipocondria-e-transtorno-de-ansiedade-de-doenca-conduta-na-a",
       "geradoEm": "2026-09-30T22:40:01.521Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6404,7 +6411,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:40:01.521Z",
-    "pacote": 78
+    "pacote": 78,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-122-mutismo-seletivo-na-infancia-i",
@@ -6461,7 +6469,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta.md",
       "slug": "mutismo-seletivo-na-infancia-identificacao-precoce-e-conduta",
       "geradoEm": "2026-09-30T22:01:32.634Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6469,7 +6477,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:01:32.634Z",
-    "pacote": 79
+    "pacote": 79,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-123-catatonia-na-infancia-e-adoles",
@@ -6689,7 +6698,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr.md",
       "slug": "sindrome-de-descontinuacao-de-antidepressivos-na-aps-guia-pr",
       "geradoEm": "2026-09-30T22:01:44.606Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6697,7 +6706,8 @@
       }
     },
     "redigidaEm": "2026-09-30T22:01:44.606Z",
-    "pacote": 80
+    "pacote": 80,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05)"
   },
   {
     "id": "2026-09-30-138-uso-de-litio-na-aps-guia-prati",
