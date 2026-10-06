@@ -98,13 +98,13 @@ Lembre-se de que este texto é uma orientação geral para a prática clínica e
 - Utilize a sedação de forma judiciosa e reserve a contenção farmacológica para situações de risco iminente.
 - Em casos de crises graves ou risco de autolesão, oriente o acionamento imediato de recursos de urgência e apoio, como SAMU e CVV.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `substance-induced psychosis AND emergency department AND management` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `acute behavioral disturbance AND emergency department AND consensus guidelines` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `methamphetamine-induced psychosis AND treatment AND emergency care` — Estudo Observacional — [PMID A CONFIRMAR]
+1. Myran DT, Harrison LD, Pugliese M et al. Transition to Schizophrenia Spectrum Disorder Following Emergency Department Visits Due to Substance Use With and Without Psychosis. JAMA Psychiatry. 2023;80(11):1169-1174. PMID 37755727. doi:10.1001/jamapsychiatry.2023.3582 — Estudo de coorte
+2. Rognli EB, Heiberg IH, Jacobsen BK et al. Transition From Substance-Induced Psychosis to Schizophrenia Spectrum Disorder or Bipolar Disorder. Am J Psychiatry. 2023;180(6):437-444. PMID 37132221. doi:10.1176/appi.ajp.22010076 — Artigo original
+3. Barbic D, Whyte M, Sidhu G et al. One-year mortality of emergency department patients with substance-induced psychosis. PLoS One. 2022;17(6):e0270307. PMID 35727766. doi:10.1371/journal.pone.0270307 — Artigo original
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

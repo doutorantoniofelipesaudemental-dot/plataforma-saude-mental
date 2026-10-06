@@ -88,13 +88,13 @@ Reforçamos que este conteúdo é uma orientação geral para a prática clínic
 - O monitoramento regular na UBS deve incluir efeitos extrapiramidais e parâmetros metabólicos.
 - A busca ativa articulada com agentes comunitários é essencial para evitar o abandono do seguimento.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `antipsychotic agents depot OR long-acting injectable primary health care` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `schizophrenia adherence long-acting injectable antipsychotics general practice` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `community mental health services depot antipsychotics clinical management` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
+1. Krishna A, Goicochea S, Shah R et al. A Comprehensive Guide to Long-Acting Injectable Antipsychotics for Primary Care Clinicians. J Am Board Fam Med. 2024;37(4):773-783. PMID 39455270. doi:10.3122/jabfm.2022.220425R2 — Revisão
+2. Aymerich C, Salazar de Pablo G, Pacho M et al. All-cause mortality risk in long-acting injectable versus oral antipsychotics in schizophrenia: a systematic review and meta-analysis. Mol Psychiatry. 2024;30(1):263-271. PMID 39174648. doi:10.1038/s41380-024-02694-3 — Revisão sistemática e metanálise
+3. Olagunju AT, Clark SR, Baune BT. Long-acting atypical antipsychotics in schizophrenia: A systematic review and meta-analyses of effects on functional outcome. Aust N Z J Psychiatry. 2019;53(6):509-527. PMID 30957510. doi:10.1177/0004867419837358 — Revisão sistemática e metanálise
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

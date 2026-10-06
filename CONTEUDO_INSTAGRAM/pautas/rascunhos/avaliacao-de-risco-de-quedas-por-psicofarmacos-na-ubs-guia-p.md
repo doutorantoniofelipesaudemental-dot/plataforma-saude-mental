@@ -98,14 +98,12 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 - A desprescrição deve ser gradual e compartilhada com o paciente e familiares.
 - Medidas não farmacológicas para insônia e ansiedade devem ser estimuladas na UBS.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Accidental Falls[MeSH] AND Psychotropic Drugs[MeSH] AND Aged[MeSH]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Inappropriate Prescribing[MeSH] AND Accidental Falls[MeSH] AND Primary Health Care[MeSH]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `Medication Reconciliation[MeSH] AND Accidental Falls[MeSH] AND Aged[MeSH]` — Diretriz — [PMID A CONFIRMAR]
-4. `Psychotropic Drugs[MeSH] AND Accidental Falls[MeSH] AND Risk Assessment[MeSH]` — Metanálise — [PMID A CONFIRMAR]
+1. Seppala LJ, Petrovic M, Ryg J et al. STOPPFall (Screening Tool of Older Persons Prescriptions in older adults with high fall risk): a Delphi study by the EuGMS Task and Finish Group on Fall-Risk-Increasing Drugs. Age Ageing. 2021;50(4):1189-1199. PMID 33349863. doi:10.1093/ageing/afaa249 — Consenso Delphi (ferramenta de prescrição)
+2. Dills H, Shah K, Messinger-Rapport B et al. Deprescribing Medications for Chronic Diseases Management in Primary Care Settings: A Systematic Review of Randomized Controlled Trials. J Am Med Dir Assoc. 2018;19(11):923-935.e2. PMID 30108032. doi:10.1016/j.jamda.2018.06.021 — Revisão sistemática
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

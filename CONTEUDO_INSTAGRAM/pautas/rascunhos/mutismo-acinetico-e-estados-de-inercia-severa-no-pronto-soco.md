@@ -88,13 +88,12 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 - A investigação laboratorial e de imagem é obrigatória para excluir infecções, intoxicações e lesões estruturais.
 - O suporte clínico rigoroso e a suspensão de agentes desencadeantes são pilares fundamentais no pronto-socorro.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `akinetic mutism[MeSH Terms] AND emergency treatment[MeSH Terms]` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `catatonia and akinetic mutism differential diagnosis emergency` — Estudo de coorte — [PMID A CONFIRMAR]
-3. `management of severe catatonia in emergency departments` — Diretriz clínica — [PMID A CONFIRMAR]
+1. Wilson JE, Oldham MA, Francis A et al. Catatonia: American Psychiatric Association Resource Document. J Acad Consult Liaison Psychiatry. 2025;66(4):277-299. PMID 40368005. doi:10.1016/j.jaclp.2025.05.001 — Documento de recursos da APA (revisão)
+2. Fusunyan M, Praschan N, Fricchione G et al. Akinetic Mutism and Coronavirus Disease 2019: A Narrative Review. J Acad Consult Liaison Psychiatry. 2021;62(6):625-633. PMID 34461295. doi:10.1016/j.jaclp.2021.08.009 — Revisão narrativa
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

@@ -71,13 +71,12 @@ Este conteúdo é uma orientação geral para a prática clínica na Atenção P
 - Evite a medicalização desnecessária, reservando fármacos apenas para sintomas incapacitantes.
 - Monitore sinais de gravidade como ideação suicida e incapacidade de autocuidado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `"Adjustment Disorders"[Mesh] AND "Primary Health Care"[Mesh]` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Adjustment Disorders/diagnosis"[Mesh] AND "General Practice"[Mesh]` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `"Psychotherapy, Brief"[Mesh] AND "Adjustment Disorders"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
+1. Geer K. Adjustment Disorder: Diagnosis and Treatment in Primary Care. Prim Care. 2023;50(1):83-88. PMID 36822730. doi:10.1016/j.pop.2022.10.006 — Revisão
+2. Casey P. Adjustment disorder: epidemiology, diagnosis and treatment. CNS Drugs. 2009;23(11):927-38. PMID 19845414. doi:10.2165/11311000-000000000-00000 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

@@ -90,14 +90,13 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 - A sensibilização central explica como o sistema nervoso amplifica a percepção da dor.
 - Consultas regulares e programadas trazem segurança ao paciente com sintomas persistentes.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Somatic Symptom Disorders"[Mesh] OR "Medically Unexplained Symptoms"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Clinical Reasoning"[Mesh] OR "Physician-Patient Relations"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `"Physician-Patient Relations"[Mesh] AND "Unnecessary Procedures"[Mesh] AND "Primary Health Care"[Mesh] AND "Somatoform Disorders"[Mesh]` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Somatic Symptom Disorder"[Mesh]) AND ("Delivery of Health Care"[Mesh] OR "Primary Health Care"[Mesh]) AND ("Guideline"[Publication Type])` — Diretriz — [PMID A CONFIRMAR]
-4. `("Communication"[Mesh]) AND ("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms") AND ("Primary Health Care"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
+1. Henningsen P. Management of somatic symptom disorder. Dialogues Clin Neurosci. 2018;20(1):23-31. PMID 29946208. doi:10.31887/DCNS.2018.20.1/phenningsen — Revisão
+2. Leaviss J, Davis S, Ren S et al. Behavioural modification interventions for medically unexplained symptoms in primary care: systematic reviews and economic evaluation. Health Technol Assess. 2020;24(46):1-490. PMID 32975190. doi:10.3310/hta24460 — Revisão sistemática
+3. Swainston K, Thursby S, Bell B et al. What psychological interventions are effective for the management of persistent physical symptoms (PPS)? A systematic review and meta-analysis. Br J Health Psychol. 2022;28(1):80-97. PMID 35837827. doi:10.1111/bjhp.12613 — Revisão sistemática e metanálise
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

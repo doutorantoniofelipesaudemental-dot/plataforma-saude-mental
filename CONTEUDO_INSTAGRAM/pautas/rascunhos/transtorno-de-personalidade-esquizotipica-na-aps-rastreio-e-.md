@@ -78,13 +78,12 @@ Este conteúdo é uma orientação geral para a prática clínica e assistencial
 - O uso de medicações deve ser parcimonioso, focado em sintomas específicos e em baixas doses.
 - O reconhecimento de sinais de gravidade garante o encaminhamento seguro para a rede especializada.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `schizotypal personality disorder[MeSH Terms] AND primary health care[MeSH Terms]` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `schizotypal personality disorder diagnosis management primary care` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `personality disorders in primary care clinical management` — Ensaio clínico controlado — [PMID A CONFIRMAR]
+1. Kirchner SK, Roeh A, Nolden J et al. Diagnosis and treatment of schizotypal personality disorder: evidence from a systematic review. NPJ Schizophr. 2018;4(1):20. PMID 30282970. doi:10.1038/s41537-018-0062-8 — Revisão sistemática
+
 
 ---
 

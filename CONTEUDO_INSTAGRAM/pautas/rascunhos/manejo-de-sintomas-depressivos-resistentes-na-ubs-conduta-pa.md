@@ -70,15 +70,11 @@ Este conteúdo constitui orientação geral para a prática clínica diária. Re
 - Considere a otimização da dose ou a troca segura de antidepressivo na atenção primária.
 - Encaminhe para o especialista em casos de refratariedade a duas tentativas ou sinais de gravidade.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Depressive Disorder, Treatment-Resistant"[Mesh] OR "treatment resistant depression") AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh]) AND ("Disease Management"[Mesh] OR "Therapeutics"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Antidepressive Agents"[Mesh] OR "antidepressant") AND ("Drug Therapy, Combination"[Mesh] OR "dose optimization" OR "switch") AND ("Primary Health Care"[Mesh])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
-3. `("Depressive Disorder, Treatment-Resistant"[Mesh]) AND ("Practice Guidelines as Topic"[Mesh] OR "Guideline"[Publication Type]) AND ("Primary Health Care"[Mesh])` — Diretriz — [PMID A CONFIRMAR]
-4. `("Depressive Disorder"[Mesh] OR "depression") AND ("Diagnosis, Differential"[Mesh] OR "reassessment") AND ("Primary Health Care"[Mesh]) AND ("Patient Care Management"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-5. `("Depressive Disorder, Treatment-Resistant"[Mesh]) AND ("Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh])` — Metanálise — [PMID A CONFIRMAR]
+1. Rizvi SJ, Grima E, Tan M et al. Treatment-resistant depression in primary care across Canada. Can J Psychiatry. 2014;59(7):349-57. PMID 25007419. doi:10.1177/070674371405900702 — Artigo original
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

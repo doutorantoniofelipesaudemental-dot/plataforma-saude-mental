@@ -92,13 +92,13 @@ Chega ao pronto-socorro uma pessoa de meia-idade ou idosa, trazida por familiare
 - Quadros dissociativos agudos envolvem perda de dados biográficos e exigem acolhimento empático sem estigmas.
 - O manejo da AGT é baseado em observação clínica e tranquilização, pois o quadro é autolimitado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `transient global amnesia[MeSH Terms] AND emergency service, hospital[MeSH Terms]` — Revisão integrativa — [PMID A CONFIRMAR]
-2. `dissociative amnesia vs transient global amnesia emergency differential diagnosis` — Estudo de coorte — [PMID A CONFIRMAR]
-3. `acute memory loss emergency department protocols` — Diretriz clínica — [PMID A CONFIRMAR]
+1. Ropper AH. Transient Global Amnesia. N Engl J Med. 2023;388(7):635-640. PMID 36791163. doi:10.1056/NEJMra2213867 — Revisão
+2. Miller TD, Butler CR. Acute-onset amnesia: transient global amnesia and other causes. Pract Neurol. 2022;22(3):201-208. PMID 35504698. doi:10.1136/practneurol-2020-002826 — Revisão
+3. Arena JE, Rabinstein AA. Transient global amnesia. Mayo Clin Proc. 2015;90(2):264-72. PMID 25659242. doi:10.1016/j.mayocp.2014.12.001 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
