@@ -77,13 +77,11 @@ Este conteúdo oferece orientação geral e respeita sempre os protocolos hospit
 - Guardar provas materiais, comunicar a gestão e buscar ajuda médica são passos essenciais para a proteção do educador.
 - O tratamento envolve psicoterapia, suporte medicamentoso com antidepressivos, com dose definida pelo médico, e, se necessário, afastamento temporário.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referência localizada no PubMed/MEDLINE (PMID e DOI conferidos no registro da base). As buscas por estudos sobre ciberbullying contra professores da educação básica não encontraram fonte adequada; leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `cyberbullying against teachers AND mental health` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `teacher online harassment AND occupational stress` — Estudo transversal — [PMID A CONFIRMAR]
-3. `coping strategies for teachers facing cyberbullying` — Diretriz de intervenção — [PMID A CONFIRMAR]
+1. Oksanen A, Celuch M, Latikka R et al. Hate and harassment in academia: the rising concern of the online environment. High Educ (Dordr). 2021;84(3):541-567. PMID 34840344. doi:10.1007/s10734-021-00787-4 — Artigo original (Fonte parcial: o estudo trata de assédio online contra professores e pesquisadores universitários na Finlândia, não de professores da educação básica; a adequação ao artigo fica com o revisor.)
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
