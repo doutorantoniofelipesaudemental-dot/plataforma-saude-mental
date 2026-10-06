@@ -153,6 +153,22 @@
 
     var anime = new root.Anime2DManager(), reduce = anime.reduced;
     var audio = new root.AudioPlayer({ bgm: cfg.bgm || null, voiceovers: cfg.voiceovers || {} });
+    // Modo de revisao (?revisao=1), uso interno: botao discreto para alternar entre a voz principal e a alternativa.
+    // Sem o parametro, ou sem voiceoversAlt no config, nada aparece para o publico.
+    if (cfg.voiceoversAlt && /(?:^|[?&])revisao=1(?:&|$)/.test(root.location.search)) {
+      var vozes = cfg.vozes || { principal: 'principal', alternativa: 'alternativa' };
+      var usaAlt = false, bv = document.createElement('button');
+      bv.type = 'button'; bv.id = 'voz-revisao';
+      var pintaVoz = function () {
+        var nome = usaAlt ? vozes.alternativa : vozes.principal;
+        bv.textContent = 'Voz: ' + nome + ' (revisão)';
+        bv.setAttribute('aria-pressed', String(usaAlt));
+        bv.setAttribute('aria-label', 'Alternar a voz da narração. Voz atual: ' + nome);
+      };
+      bv.addEventListener('click', function () { usaAlt = !usaAlt; audio.setVoiceovers(usaAlt ? cfg.voiceoversAlt : (cfg.voiceovers || {})); pintaVoz(); });
+      pintaVoz();
+      document.querySelector('.controls').appendChild(bv);
+    }
     anime.watchLoops(document, '.beat,.grad');
     var slides = [].slice.call(document.querySelectorAll('.slide')), cur = 0;
     var stage = document.getElementById('stage'), prog = document.getElementById('progress'), count = document.getElementById('count');

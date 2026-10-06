@@ -12,6 +12,8 @@ Eu não consigo ouvir áudio: a conferência feita foi técnica (arquivos carreg
 
 Em 2026-10-06 os 28 carrosséis sensíveis passaram a usar a voz da **Francisca**; os demais seguem com a do Antônio. O painel `interativos/painel-comparacao-vozes.html` (pelo mesmo servidor local, em `http://localhost:8000/interativos/painel-comparacao-vozes.html`) mostra as duas vozes lado a lado: se algum carrossel soar melhor com a voz anterior, anote, e eu volto o caminho dele.
 
+**Alternar a voz dentro do próprio carrossel:** nos 28 sensíveis, acrescente `?revisao=1` ao endereço (por exemplo, `.../carrosseis/pacote-105-manejo-de-sintomas-psicoticos-induzidos-por-subs.html?revisao=1`). Aparece o botão "Voz: Francisca (revisão)", que alterna entre as duas vozes e refaz a fala do slide. O público não vê esse botão.
+
 ## O que verificar
 
 - **Voz:** pronúncia de "SAMU", "CVV 188", nomes de serviços (UBS, CAPS, RAPS), termos como "pronto atendimento"; entonação em frases curtas.
