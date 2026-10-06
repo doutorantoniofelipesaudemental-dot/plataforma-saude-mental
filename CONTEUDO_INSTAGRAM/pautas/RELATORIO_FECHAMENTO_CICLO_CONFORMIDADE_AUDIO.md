@@ -41,13 +41,19 @@ Depois de a cota gratuita do Azure se esgotar, os 17 artigos que faltavam (23.48
 - **Modo de revisão (`?revisao=1`), uso interno:** nos 28 carrosséis sensíveis, abrir a página com `?revisao=1` no final do endereço mostra um botão extra, "Voz: Francisca (revisão)", que alterna entre a Francisca (principal) e o Antônio (alternativa) e refaz a fala do slide atual; a escolha continua ao avançar. Sem o parâmetro, ou nos outros 86 carrosséis, **nada aparece para o público**. Implementado no motor (`CarrosselAnimado.js`, com `AudioPlayer.setVoiceovers`) e no campo `voiceoversAlt` do config dos 28; protegido por 4 testes novos (`tests/unit/carrosseis-vozes.test.js`). Verificado no navegador: sem o parâmetro não há botão; com ele, o botão aparece (48 px), a troca funciona nos dois sentidos e o pacote 110, não sensível, não mostra botão. Exemplo: `http://localhost:8000/carrosseis/pacote-105-manejo-de-sintomas-psicoticos-induzidos-por-subs.html?revisao=1`.
 - **Não ouvido por mim:** a escolha foi do Dr. Antônio Felipe; a conferência que fiz foi técnica.
 
-## 5. Decisões do Dr. Antônio Felipe (2026-10-06)
+## 5. Voz Francisca em 17 artigos do portal (2026-10-06)
+
+- **O que está no ar:** 17 artigos passaram a ser narrados com `pt-BR-FranciscaNeural` (Edge-TTS), por decisão do Dr. Antônio Felipe: `sindrome-neuroleptica-maligna`, `sindrome-panico-o-que-e`, `sobrecarga-docente-descompressao`, `solidao-diferenca-estar-sozinho`, `tcc-quando-indicar-aps`, `tdah-adultos-sinais`, `tempo-tela-bebes-primeira-infancia`, `tept-aps`, `terapia-online-funciona`, `terapia-primeira-vez-o-que-esperar`, `toc-sinais-consulta`, `trabalho-domestico-invisivel-estresse`, `trabalho-noturno-turnos-saude-mental`, `transicao-carreira-aposentadoria-identidade`, `trauma-infancia-adulto`, `vergonha-culpa-diferenca`, `violencia-domestica-impacto-criancas`. Os outros 234 seguem com a voz Antônio.
+- **Mudança no portal (PR #48):** a narração agora pode ter a voz escolhida artigo a artigo. O hash passa a considerar a voz gravada em `narracao.voz` (entre `pt-BR-AntonioNeural` e `pt-BR-FranciscaNeural`), e a rota `PUT /api/artigos/:slug/midia/narracao` aceita o cabeçalho opcional `X-Narracao-Voz` (voz desconhecida recebe 400; sem o cabeçalho, nada muda). Teste novo em `tests/unit/narracao.test.js`.
+- **Envio:** 17 de 17 com resposta 200, 0 falhas (`narracoes-geradas/_envio-francisca-2026-10.log`); antes do envio foi conferido que o texto de cada artigo ainda era o mesmo que foi sintetizado.
+- **Verificado no portal:** a estimativa da ferramenta mostra 251 ok, 0 legado, 0 desatualizada e 0 ausente; em 3 artigos (`tept-aps`, `violencia-domestica-impacto-criancas`, `sindrome-neuroleptica-maligna`) a API registra estado `ok`, voz Francisca e provedor `edge`, o MP3 responde 200 como `audio/mpeg` e o player está na página. **Não ouvi os áudios.**
+
+## 6. Decisões do Dr. Antônio Felipe (2026-10-06)
 
 - **Referências dos Lotes 81 a 114:** todas as 77 foram **mantidas** (inclusive a referência parcial da pauta 155). Registrado na planilha `CURADORIA_REFERENCIAS_081_114.csv`, nos 34 pacotes e rascunhos e no `pautas.json`.
 - **LinkedIn dos pacotes 001 a 006:** os seis textos foram **aprovados** (`REVISAO_LINKEDIN_001_006.md`).
 
-## 6. Pendências abertas
+## 7. Pendências abertas
 
 1. **Ouvir a trilha e a narração dos carrosséis** (roteiro em `ROTEIRO_ESCUTA_CARROSSEIS.md`; comparação das duas vozes nos sensíveis em `interativos/painel-comparacao-vozes.html`) e confirmar se a trilha sintética fica ou é trocada por uma faixa licenciada.
 2. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
-3. **Áudio alternativo dos 17 artigos (Francisca), gerado só localmente:** os 17 artigos que estão no ar com a voz Antônio (Edge-TTS) também foram sintetizados com `pt-BR-FranciscaNeural` (17 de 17, 23.486 caracteres, 0 falhas) em `narracoes-geradas/voz-francisca/` (fora do Git). **Não foram enviados ao portal.** Para colocá-los no ar é preciso decidir, antes, como registrar a voz no portal: o hash de narração do portal leva em conta a voz fixa `pt-BR-AntonioNeural` (`VOZ_NARRACAO`), então um áudio em outra voz seria tratado como desatualizado até esse ponto ser ajustado.
