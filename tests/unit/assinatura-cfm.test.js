@@ -51,11 +51,13 @@ test('HTMLs do portal: as 5 linhas aparecem, cada uma no seu lugar, com NÃO ESP
   }
 });
 
-test('template público do artigo traz a nota de transparência de IA (Res. CFM 2.454/2026), igual à fonte única', () => {
+test('páginas públicas (início, blog, artigo e Instagram) trazem a nota de transparência de IA (Res. CFM 2.454/2026), igual à fonte única', () => {
   const { AVISO_CFM } = require('../../backend/lib/conformidadeCfm');
-  const html = ler('public/artigo.html');
-  assert.ok(html.includes(AVISO_CFM), 'artigo.html: falta a nota de IA com a Resolução CFM 2.454/2026');
-  assert.ok(html.includes('id="nota-ia"'), 'artigo.html: a nota de IA perdeu o id nota-ia');
+  for (const pagina of ['index.html', 'blog.html', 'artigo.html', 'instagram.html']) {
+    const html = ler(`public/${pagina}`);
+    assert.ok(html.includes(AVISO_CFM), `${pagina}: falta a nota de IA com a Resolução CFM 2.454/2026`);
+    assert.strictEqual((html.match(/id="nota-ia"/g) || []).length, 1, `${pagina}: a nota de IA deve aparecer uma só vez (id nota-ia)`);
+  }
   // A página pré-renderizada parte do mesmo template, então herda a nota.
   const { renderizarArtigoHtml } = require('../../backend/lib/renderizarArtigo');
   const pre = renderizarArtigoHtml({
