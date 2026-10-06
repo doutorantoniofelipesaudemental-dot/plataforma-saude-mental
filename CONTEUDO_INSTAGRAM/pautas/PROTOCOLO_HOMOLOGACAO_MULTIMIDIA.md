@@ -1,14 +1,14 @@
 # Protocolo de homologação multimídia: artigos com trilha, carrosséis e vozes
 
-Data da verificação: 2026-10-06, sobre a `main` no commit `1d441a7`. Este documento reúne a **checagem técnica** das três frentes (feita por mim; os artigos, os arquivos dos carrosséis e as vozes registradas foram reverificados na checagem final) e deixa em branco a **homologação**, que é do Dr. Antônio Felipe. **Ninguém ouviu os áudios**: a avaliação de voz, de ritmo e do volume da música sob a voz é auditiva e só o médico faz. Nada aqui valida o conteúdo clínico.
+Data da verificação: 2026-10-06, sobre a `main` no commit `1d441a7`. Este documento reúne a **checagem técnica** das três frentes (feita por mim; os artigos, os arquivos dos carrosséis e as vozes registradas foram reverificados na checagem final) e registra a **homologação**, que é do Dr. Antônio Felipe (seção 6). **Eu não ouvi os áudios**: a avaliação de voz, de ritmo e do volume da música sob a voz é auditiva, e a escuta que sustenta a homologação é responsabilidade do médico. Nada aqui valida o conteúdo clínico.
 
 ## 1. Resumo
 
 | Frente | Escopo | Checagem técnica | Escuta e homologação |
 |---|---|---|---|
-| A. Artigos com trilha | 251 artigos publicados do portal | 251 de 251 sem problema | pendente (Dr. Antônio Felipe) |
-| B. Carrosséis | 114 carrosséis (pacotes 001 a 114) | 114 de 114 sem arquivo faltando; 4 testes de proteção | pendente (Dr. Antônio Felipe) |
-| C. Vozes | 3 vozes nos 17 artigos; 2 vozes nos 28 carrosséis sensíveis | painéis montados e testados | pendente (Dr. Antônio Felipe) |
+| A. Artigos com trilha | 251 artigos publicados do portal | 251 de 251 sem problema | **homologado** (Dr. Antônio Felipe, 2026-10-06) |
+| B. Carrosséis | 114 carrosséis (pacotes 001 a 114) | 114 de 114 sem arquivo faltando; 4 testes de proteção | **homologado** (Dr. Antônio Felipe, 2026-10-06) |
+| C. Vozes | 3 vozes nos 17 artigos; 2 vozes nos 28 carrosséis sensíveis | painéis montados e testados | **homologado** (Dr. Antônio Felipe, 2026-10-06) |
 
 ## 2. Frente A: artigos com trilha de fundo
 
@@ -62,21 +62,20 @@ Tempo estimado: cerca de 1 hora para o essencial.
 
 O que anotar: pronúncia de SAMU, CVV 188, UBS, CAPS e RAPS; ritmo; volume da música sob a voz; tom acolhedor, sem alarmismo.
 
-## 6. Homologação (a preencher pelo Dr. Antônio Felipe)
+## 6. Homologação (registrada por instrução do Dr. Antônio Felipe, 2026-10-06)
 
-Marque uma opção por frente, com data e observações. **Em branco até a sua decisão.**
+Em 2026-10-06 o Dr. Antônio Felipe determinou o registro do **aceite definitivo** dos 251 artigos com trilha e dos 114 carrosséis animados, nas três frentes, **no estado em que estão no ar hoje**. O registro abaixo foi feito por mim a partir dessa instrução; **não ouvi os áudios e não verifiquei que a escuta tenha ocorrido**, o que é responsabilidade do médico.
 
-| Frente | Resultado | Data | Observações / o que ajustar |
+| Frente | Resultado | Data | Estado homologado |
 |---|---|---|---|
-| A. Artigos com trilha | ☐ homologado ☐ com ressalvas ☐ reprovado | | |
-| B. Carrosséis | ☐ homologado ☐ com ressalvas ☐ reprovado | | |
-| C. Vozes (definitiva por artigo/carrossel) | ☐ homologado ☐ com ressalvas ☐ reprovado | | |
-| Trilha de fundo (música) | ☐ mantém ☐ ajustar volume ☐ trocar por faixa licenciada | | |
+| A. Artigos com trilha | ☑ homologado ☐ com ressalvas ☐ reprovado | 2026-10-06 | 251 artigos com a voz do Antônio e a trilha de fundo a -22 dB |
+| B. Carrosséis | ☑ homologado ☐ com ressalvas ☐ reprovado | 2026-10-06 | 114 carrosséis com narração por slide e trilha de fundo |
+| C. Vozes | ☑ homologado ☐ com ressalvas ☐ reprovado | 2026-10-06 | artigos: Antônio (todos os 251, inclusive os 17 que passaram por Francisca e Thalita); carrosséis: Francisca nos 28 sensíveis e Antônio nos 86 |
+| Trilha de fundo (música) | ☑ mantém ☐ ajustar volume ☐ trocar por faixa licenciada | 2026-10-06 | trilha sintética original (`suave.mp3`), mantida como está; decorre da homologação das frentes A e B, que a incluem |
 
-Se houver ressalva ou reprovação, diga o item (artigo, pacote ou frente) e o que mudar: eu regenero e reenvio só o que for apontado, com a mesma verificação deste protocolo.
+A homologação cobre o estado técnico descrito neste protocolo (commit `0ef4bd5` da `main`). Qualquer mudança posterior de voz, de trilha ou de texto de artigo exige nova verificação e nova decisão. Os áudios anteriores (voz pura, e as vozes Francisca e Thalita dos 17 artigos) continuam guardados em `narracoes-geradas/` (fora do Git), para reversão.
 
 ## 7. Pendências que continuam abertas
 
-- Escuta e homologação das três frentes (seção 6).
-- Dado incerto: provedor original dos 4 artigos mais antigos (seção 2).
-- Trilha sintética: decidir se fica ou se é trocada por uma faixa licenciada.
+- Dado incerto: provedor original dos 4 artigos mais antigos (seção 2), hoje registrados como `edge`; é só metadado e não afeta o áudio.
+- A trilha é sintética e original, não uma faixa licenciada; a decisão de mantê-la está registrada na seção 6.
