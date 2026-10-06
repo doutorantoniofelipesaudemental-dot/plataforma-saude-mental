@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:25:59.866Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Abordagem de Transtornos de Pânico no Pronto-Socorro: Guia para Residentes
@@ -17,7 +17,7 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (5):
 > - Se as manobras respiratórias e o acolhimento não forem suficientes para reduzir a agitação intensa, podemos lançar mão de intervenções farmacológicas de curt…
-> - - Benzodiazepínicos de curta ou média ação, como o lorazepam ou diazepam por via oral, podem ser considerados para alívio rápido, com [DOSE A CONFIRMAR] conf…
+> - - Benzodiazepínicos de curta ou média ação, como o lorazepam ou diazepam por via oral, podem ser considerados para alívio rápido, com dose conforme o protocolo do serviço conf…
 > - - Evite o uso repetido de benzodiazepínicos no pronto-socorro para prevenir tolerância e dependência.
 > - - O ponto mais importante: o tratamento definitivo do pânico acontece na atenção primária, com psicoterapia e antidepressivos inibidores seletivos da recapta…
 > - - O tratamento medicamentoso agudo é apenas para contenção; o seguimento longitudinal na atenção primária é indispensável.
@@ -71,7 +71,7 @@ Para explicar ao paciente e entender nossa conduta, pense no transtorno de pâni
 Se as manobras respiratórias e o acolhimento não forem suficientes para reduzir a agitação intensa, podemos lançar mão de intervenções farmacológicas de curto prazo.
 
 ### Intervenção Medicamentosa na Crise
-- Benzodiazepínicos de curta ou média ação, como o lorazepam ou diazepam por via oral, podem ser considerados para alívio rápido, com [DOSE A CONFIRMAR] conforme protocolo institucional.
+- Benzodiazepínicos de curta ou média ação, como o lorazepam ou diazepam por via oral, podem ser considerados para alívio rápido, com dose conforme o protocolo do serviço institucional.
 - Evite o uso repetido de benzodiazepínicos no pronto-socorro para prevenir tolerância e dependência.
 - Lembre-se de que a medicação resolve a crise aguda, mas não trata o transtorno de pânico.
 

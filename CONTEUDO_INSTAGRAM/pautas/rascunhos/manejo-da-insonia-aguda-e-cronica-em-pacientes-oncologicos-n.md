@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:26:47.388Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Manejo da Insônia Aguda e Crônica em Pacientes Oncológicos na APS
@@ -19,8 +19,8 @@ revisaoMedica: pendente
 > - - **Causas secundárias:** Dor mal controlada, dispneia, náuseas noturnas, urgência urinária, ondas de calor ou sintomas ansiosos e depressivos.
 > - - **Efeitos de medicações:** Corticosteróides, muito usados como adjuvantes em onco-hematologia ou antiêmicos, são potentes causadores de insônia e agitação.
 > - Quando a medicação for necessária, escolha fármacos com perfil de segurança favorável para evitar sedação residual excessiva, quedas ou delirium, especialmen…
-> - - **Antidepressivos sedativos:** Trazodona em doses baixas [DOSE A CONFIRMAR] ou mirtazapina [DOSE A CONFIRMAR] são úteis quando há comorbidade com ansiedade…
-> - - **Agonistas de receptores de melatonina:** Ramelteon [DOSE A CONFIRMAR] pode ser considerado por ter baixo potencial de dependência e poucos efeitos colate…
+> - - **Antidepressivos sedativos:** Trazodona em doses baixas (dose conforme o protocolo do serviço) ou mirtazapina (dose conforme o protocolo do serviço) são úteis quando há comorbidade com ansiedade…
+> - - **Agonistas de receptores de melatonina:** Ramelteon (dose conforme o protocolo do serviço) pode ser considerado por ter baixo potencial de dependência e poucos efeitos colate…
 > - - **Benzodiazepínicos e Z-drugs:** Devem ser evitados para uso crônico pelo risco de tolerância, dependência, quedas e declínio cognitivo, sendo reservados p…
 > - Encaminhe para avaliação psiquiátrica especializada ou cuidados paliativos avançados os casos de:
 > - - O manejo não farmacológico deve ser flexível, adaptado à fadiga e à realidade clínica do paciente.
@@ -64,8 +64,8 @@ As abordagens comportamentais devem ser adaptadas à realidade clínica e à ene
 
 ### Intervenções farmacológicas
 Quando a medicação for necessária, escolha fármacos com perfil de segurança favorável para evitar sedação residual excessiva, quedas ou delirium, especialmente em idosos e pacientes debilitados.
-- **Antidepressivos sedativos:** Trazodona em doses baixas [DOSE A CONFIRMAR] ou mirtazapina [DOSE A CONFIRMAR] são úteis quando há comorbidade com ansiedade, depressão ou perda de peso.
-- **Agonistas de receptores de melatonina:** Ramelteon [DOSE A CONFIRMAR] pode ser considerado por ter baixo potencial de dependência e poucos efeitos colaterais sistêmicos.
+- **Antidepressivos sedativos:** Trazodona em doses baixas (dose conforme o protocolo do serviço) ou mirtazapina (dose conforme o protocolo do serviço) são úteis quando há comorbidade com ansiedade, depressão ou perda de peso.
+- **Agonistas de receptores de melatonina:** Ramelteon (dose conforme o protocolo do serviço) pode ser considerado por ter baixo potencial de dependência e poucos efeitos colaterais sistêmicos.
 - **Benzodiazepínicos e Z-drugs:** Devem ser evitados para uso crônico pelo risco de tolerância, dependência, quedas e declínio cognitivo, sendo reservados para crises agudas de curta duração e com estrito monitoramento.
 
 ### Sinais de gravidade e encaminhamento

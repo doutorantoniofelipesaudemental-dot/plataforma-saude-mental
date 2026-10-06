@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:27:42.739Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Mutismo Acinético e Estados de Inércia Severa no Pronto-Socorro
@@ -70,7 +70,7 @@ Muitas vezes, a barreira entre uma lesão estrutural do sistema nervoso central 
 
 ### Condutas de Primeira Linha
 
-* Se houver suspeita de catatonia associada, o uso de benzodiazepínicos como o lorazepam pode ser considerado para teste diagnóstico e terapêutico inicial, com [DOSE A CONFIRMAR].
+* Se houver suspeita de catatonia associada, o uso de benzodiazepínicos como o lorazepam pode ser considerado para teste diagnóstico e terapêutico inicial, com dose conforme o protocolo do serviço.
 * Suspenda imediatamente medicamentos que possam ter desencadeado o quadro, como antipsicóticos, se houver suspeita de síndrome neuroléptica maligna.
 * Garanta suporte clínico rigoroso, hidratação venosa e prevenção de complicações tromboembólicas.
 

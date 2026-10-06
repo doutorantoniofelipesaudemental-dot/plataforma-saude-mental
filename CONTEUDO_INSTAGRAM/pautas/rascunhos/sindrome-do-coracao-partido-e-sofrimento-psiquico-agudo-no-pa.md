@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:27:30.651Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Síndrome do Coração Partido e Sofrimento Psíquico Agudo no PA
@@ -45,8 +45,8 @@ Quando você atende um paciente no pronto atendimento com dor no peito intensa e
 
 - **Investigação inicial:** Solicite eletrocardiograma de doze derivações, dosagem de troponina e ecocardiograma transtorácico de urgência para confirmar a alteração típica da contratilidade ventricular.
 - **Avaliação cardiológica:** Realize a estratificação em conjunto com a equipe de cardiologia para afastar obstruções coronarianas obstrutivas críticas por meio de cinecoronariografia quando indicado.
-- **Suporte hemodinâmico:** Nos casos com instabilidade, utilize medicações de suporte conforme a necessidade clínica, lembrando que o uso de inotrópicos tradicionais pode agravar a obstrução via de saída se houver hiperdinamismo basal [DOSE A CONFIRMAR].
-- **Tratamento farmacológico de suporte:** Considere o uso de inibidores da enzima conversor de angiotensina e betabloqueadores em doses ajustadas para a fase de recuperação do miocárdio [DOSE A CONFIRMAR].
+- **Suporte hemodinâmico:** Nos casos com instabilidade, utilize medicações de suporte conforme a necessidade clínica, lembrando que o uso de inotrópicos tradicionais pode agravar a obstrução via de saída se houver hiperdinamismo basal (dose conforme o protocolo do serviço).
+- **Tratamento farmacológico de suporte:** Considere o uso de inibidores da enzima conversor de angiotensina e betabloqueadores em doses ajustadas para a fase de recuperação do miocárdio (dose conforme o protocolo do serviço).
 - **Acolhimento psiquiátrico na crise:** Ofereça escuta ativa e empática, evitando julgamentos sobre a intensidade do sofrimento do paciente.
 - **Sinais de gravidade:** Fique atento a choque cardiogênico, edema agudo de pulmão grave, arritmias ventriculares malignas e ruptura de parede livre.
 - **Critérios de encaminhamento:** Encaminhe imediatamente para a unidade de terapia intensiva os pacientes que apresentarem instabilidade hemodinâmica ou sinais de congestão refratária.

@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:26:39.622Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Transtorno de Personalidade Borderline no Plantão: Conduta Inicial
@@ -53,7 +53,7 @@ Na prática, isso significa que o sistema de alarme emocional dessas pessoas dis
 O grande objetivo do plantão é a desescalada da crise e a prevenção de iatrogenias, especialmente a polifarmácia e internações psiquiátricas desnecessárias que podem reforçar comportamentos regressivos.
 
 * **Abordagem não farmacológica como primeira escolha:** A palavra e a presença são os melhores remédios. Técnicas de aterramento (focar nos sentidos, respirar junto) ajudam a reconectar o paciente ao momento presente.
-* **Uso parcimonioso de medicamentos:** Evite o uso rotineiro de benzodiazepínicos, pois eles podem aumentar a desinibição e a impulsividade, além de criarem dependência. Se a agitação psicomotora for extrema e colocar em risco a segurança, prefira antipsicóticos atípicos em doses baixas, como a quetiapina [DOSE A CONFIRMAR] ou a olanzapina [DOSE A CONFIRMAR]. Lembre-se de que o objetivo não é apagar o paciente, mas apenas baixar o pico da angústia.
+* **Uso parcimonioso de medicamentos:** Evite o uso rotineiro de benzodiazepínicos, pois eles podem aumentar a desinibição e a impulsividade, além de criarem dependência. Se a agitação psicomotora for extrema e colocar em risco a segurança, prefira antipsicóticos atípicos em doses baixas, como a quetiapina (dose conforme o protocolo do serviço) ou a olanzapina (dose conforme o protocolo do serviço). Lembre-se de que o objetivo não é apagar o paciente, mas apenas baixar o pico da angústia.
 * **Sinais de gravidade e critérios de internação:** A internação hospitalar deve ser evitada sempre que possível. Ela é reservada para situações de risco vital iminente que não puderam ser contidas, falha absoluta de rede de apoio fora do hospital ou sintomas psicóticos persistentes.
 * **Como e quando encaminhar:** O plano de alta deve ser feito ainda na emergência, conectando o paciente ao seu seguimento ambulatorial regular, como o Centro de Atenção Psicossocial (CAPS) ou o médico de família de referência, garantindo continuidade do cuidado.
 

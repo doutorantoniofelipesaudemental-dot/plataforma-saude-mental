@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:27:22.471Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Amnésia Global Transitória no Pronto-Socorro: Diagnóstico Diferencial Psiquiátrico
@@ -78,7 +78,7 @@ Chega ao pronto-socorro uma pessoa de meia-idade ou idosa, trazida por familiare
 - Para a AGT confirmada, a conduta principal é a observação clínica, o repouso e a tranquilização da pessoa e dos familiares.
 - Não há indicação de medicamentos específicos, anticoagulação ou terapias invasivas para a AGT pura.
 - Para quadros dissociativos agudos, evite estimulação excessiva, ofereça um ambiente calmo, escuta empática e suporte emocional.
-- Se houver agitação grave ou sofrimento psíquico intenso associado ao quadro dissociativo, o uso prudente de medicações sintomáticas pode ser avaliado, priorizando classes como benzodiazepínicos de curta ação em doses mínimas [DOSE A CONFIRMAR] ou antipsicóticos atípicos em baixas doses [DOSE A CONFIRMAR], apenas se estritamente necessário para contenção do sofrimento agudo e após exclusão de causas orgânicas.
+- Se houver agitação grave ou sofrimento psíquico intenso associado ao quadro dissociativo, o uso prudente de medicações sintomáticas pode ser avaliado, priorizando classes como benzodiazepínicos de curta ação em doses mínimas (dose conforme o protocolo do serviço) ou antipsicóticos atípicos em baixas doses (dose conforme o protocolo do serviço), apenas se estritamente necessário para contenção do sofrimento agudo e após exclusão de causas orgânicas.
 
 ### Encaminhamento e Transição de Cuidado
 - Pacientes com AGT típica recuperam-se por completo e podem receber alta após a resolução do quadro e exclusão de urgências, com orientação de retorno se houver novos episódios.

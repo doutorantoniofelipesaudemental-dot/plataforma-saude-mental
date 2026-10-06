@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:27:55.507Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Transtorno de Adaptação na APS: Diagnóstico e Conduta para Residentes
@@ -58,7 +58,7 @@ O manejo do transtorno de adaptação na APS é essencialmente psicossocial e de
 - **Psicoeducação:** Explique ao paciente que os sintomas são uma resposta compreensível do organismo a um momento muito difícil. Isso reduz a culpa e a sensação de estar enlouquecendo.
 - **Intervenções breves:** Agende retornos mais curtos na UBS a cada duas ou três semanas para acompanhar a evolução. Ofereça um espaço seguro de escuta.
 - **Mobilização da rede de apoio:** Incentive o paciente a conversar com familiares e amigos de confiança. Conecte-o aos recursos comunitários disponíveis.
-- **Manejo farmacológico sintomático:** Evite antidepressivos de rotina para quadros leves e moderados. Se a insônia for incapacitante e gerar sofrimento extremo, pode-se avaliar o uso temporário de medicação para dormir em dose baixa por [DOSE A CONFIRMAR]. Em casos de ansiedade aguda e paralisante, um ansiolítico em curto prazo pode ser considerado, sempre com cautela e [DOSE A CONFIRMAR]. Lembre-se: benzodiazepínicos devem ser evitados pelo risco de dependência e por atrapalhar o processo natural de luto e adaptação.
+- **Manejo farmacológico sintomático:** Evite antidepressivos de rotina para quadros leves e moderados. Se a insônia for incapacitante e gerar sofrimento extremo, pode-se avaliar o uso temporário de medicação para dormir em dose baixa por tempo e dose conforme o protocolo do serviço. Em casos de ansiedade aguda e paralisante, um ansiolítico em curto prazo pode ser considerado, sempre com cautela e dose conforme o protocolo do serviço. Lembre-se: benzodiazepínicos devem ser evitados pelo risco de dependência e por atrapalhar o processo natural de luto e adaptação.
 - **Sinais de gravidade:** Fique atento ao surgimento de ideação suicida, sintomas psicóticos, uso abusivo de álcool ou outras substâncias, ou incapacidade total para o autocuidado.
 - **Quando e como encaminhar:** Encaminhe para a psicologia da rede se não houver melhora após algumas consultas de suporte na UBS. Encaminhe para a psiquiatria se houver risco iminente, refratariedade ou necessidade de medicações complexas.
 

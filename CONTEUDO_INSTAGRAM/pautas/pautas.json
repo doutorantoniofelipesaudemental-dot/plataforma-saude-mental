@@ -9083,7 +9083,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-risco-de-quedas-por-psicofarmacos-na-ubs-guia-p.md",
       "slug": "avaliacao-de-risco-de-quedas-por-psicofarmacos-na-ubs-guia-p",
       "geradoEm": "2026-10-01T00:25:23.773Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9091,7 +9091,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:25:23.773Z",
-    "pacote": 101
+    "pacote": 101,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-182-manejo-de-sintomas-depressivos",
@@ -9150,7 +9151,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-depressivos-resistentes-na-ubs-conduta-pa.md",
       "slug": "manejo-de-sintomas-depressivos-resistentes-na-ubs-conduta-pa",
       "geradoEm": "2026-10-01T00:25:59.861Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9158,7 +9159,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:25:59.861Z",
-    "pacote": 102
+    "pacote": 102,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-183-crise-dissociativa-no-pronto-a",
@@ -9259,7 +9261,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/abordagem-de-transtornos-de-panico-no-pronto-socorro-guia-pa.md",
       "slug": "abordagem-de-transtornos-de-panico-no-pronto-socorro-guia-pa",
       "geradoEm": "2026-10-01T00:26:06.238Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9267,7 +9269,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:26:06.238Z",
-    "pacote": 103
+    "pacote": 103,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-185-uso-de-antipsicoticos-em-pacie",
@@ -9460,7 +9463,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-sintomas-somaticos-na-ubs-raciocinio-clinico-pa.md",
       "slug": "avaliacao-de-sintomas-somaticos-na-ubs-raciocinio-clinico-pa",
       "geradoEm": "2026-10-01T00:26:25.083Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9468,7 +9471,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:26:25.083Z",
-    "pacote": 104
+    "pacote": 104,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-189-uso-de-antipsicoticos-em-pacie",
@@ -9572,7 +9576,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-psicoticos-induzidos-por-substancias-no-p.md",
       "slug": "manejo-de-sintomas-psicoticos-induzidos-por-substancias-no-p",
       "geradoEm": "2026-10-01T00:26:39.618Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9580,7 +9584,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:26:39.618Z",
-    "pacote": 105
+    "pacote": 105,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-191-transtorno-de-personalidade-bo",
@@ -9634,7 +9639,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-de-personalidade-borderline-no-plantao-conduta-in.md",
       "slug": "transtorno-de-personalidade-borderline-no-plantao-conduta-in",
       "geradoEm": "2026-10-01T00:26:47.384Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9642,7 +9647,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:26:47.384Z",
-    "pacote": 106
+    "pacote": 106,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-192-transtorno-depressivo-resisten",
@@ -9796,7 +9802,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-insonia-aguda-e-cronica-em-pacientes-oncologicos-n.md",
       "slug": "manejo-da-insonia-aguda-e-cronica-em-pacientes-oncologicos-n",
       "geradoEm": "2026-10-01T00:26:59.788Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9804,7 +9810,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:26:59.788Z",
-    "pacote": 107
+    "pacote": 107,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-195-uso-de-anticonvulsivantes-como",
@@ -9913,7 +9920,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos.md",
       "slug": "uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos",
       "geradoEm": "2026-10-01T00:36:37.639Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9921,7 +9928,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:36:37.639Z",
-    "pacote": 108
+    "pacote": 108,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-202-transtorno-de-personalidade-es",
@@ -9975,7 +9983,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-de-personalidade-esquizotipica-na-aps-rastreio-e-.md",
       "slug": "transtorno-de-personalidade-esquizotipica-na-aps-rastreio-e-",
       "geradoEm": "2026-10-01T00:27:22.467Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -9983,7 +9991,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:27:22.467Z",
-    "pacote": 109
+    "pacote": 109,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-203-amnesia-global-transitoria-no-",
@@ -10037,7 +10046,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/amnesia-global-transitoria-no-pronto-socorro-diagnostico-dif.md",
       "slug": "amnesia-global-transitoria-no-pronto-socorro-diagnostico-dif",
       "geradoEm": "2026-10-01T00:27:30.647Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -10045,7 +10054,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:27:30.647Z",
-    "pacote": 110
+    "pacote": 110,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-204-transtorno-de-deficit-de-atenc",
@@ -10149,7 +10159,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-do-coracao-partido-e-sofrimento-psiquico-agudo-no-pa.md",
       "slug": "sindrome-do-coracao-partido-e-sofrimento-psiquico-agudo-no-pa",
       "geradoEm": "2026-10-01T00:27:42.736Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -10157,7 +10167,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:27:42.736Z",
-    "pacote": 111
+    "pacote": 111,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-206-mutismo-acinetico-e-estados-de",
@@ -10211,7 +10222,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/mutismo-acinetico-e-estados-de-inercia-severa-no-pronto-soco.md",
       "slug": "mutismo-acinetico-e-estados-de-inercia-severa-no-pronto-soco",
       "geradoEm": "2026-10-01T00:27:55.502Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -10219,7 +10230,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:27:55.502Z",
-    "pacote": 112
+    "pacote": 112,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-207-transtorno-de-adaptacao-na-aps",
@@ -10273,7 +10285,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-de-adaptacao-na-aps-diagnostico-e-conduta-para-re.md",
       "slug": "transtorno-de-adaptacao-na-aps-diagnostico-e-conduta-para-re",
       "geradoEm": "2026-10-01T00:28:07.632Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -10281,7 +10293,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:28:07.632Z",
-    "pacote": 113
+    "pacote": 113,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-10-01-208-o-eco-da-campainha-da-ultima-c",
@@ -10595,7 +10608,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antipsicoticos-de-deposito-na-aps-guia-pratico-para-r.md",
       "slug": "uso-de-antipsicoticos-de-deposito-na-aps-guia-pratico-para-r",
       "geradoEm": "2026-10-01T00:28:51.579Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -10603,6 +10616,7 @@
       }
     },
     "redigidaEm": "2026-10-01T00:28:51.579Z",
-    "pacote": 114
+    "pacote": 114,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   }
 ]

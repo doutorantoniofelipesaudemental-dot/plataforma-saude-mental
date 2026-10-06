@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:36:30.622Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Uso de Benzodiazepínicos na Emergência: Manejo de Agudos
@@ -23,7 +23,7 @@ revisaoMedica: pendente
 > - Os benzodiazepínicos exercem seu efeito ansiolítico, sedativo e miorrelaxante ao se ligarem aos receptores GABA-A no sistema nervoso central. Essa ligação po…
 > - Embora essa inibição rápida seja excelente para conter crises convulsivas ou estados de pânico agudo, ela traz vulnerabilidades metabólicas e clínicas import…
 > - A escolha do benzodiazepínico deve considerar a função hepática, a idade, o perfil de meia-vida e a via disponível. Fármacos de meia-vida longa e com metaból…
-> - - **Diazepam:** Início de ação rápido por via venosa. Possui metabólitos ativos de longa duração. Equivalência aproximada: [DOSE A CONFIRMAR].
+> - - **Diazepam:** Início de ação rápido por via venosa. Possui metabólitos ativos de longa duração. Equivalência aproximada: conforme o protocolo do serviço.
 > - - **Lorazepam:** Início intermediário, sem metabólitos ativos significativos, sendo uma opção mais segura em idosos ou hepatopatas. Equivalência aproximada: …
 > - - **Midazolam:** Ação muito rápida, ideal para procedimentos de urgência ou via intramuscular profunda quando o acesso venoso é impossível. Risco elevado de …
 > - Fique atento a sinais de intoxicação aguda, bradipneia, cianose, queda abrupta do nível de consciência e hipotensão severa. Na vigência desses sinais, suspen…
@@ -59,13 +59,13 @@ A escolha do benzodiazepínico deve considerar a função hepática, a idade, o 
 
 ### Perfil dos Agentes
 
-- **Diazepam:** Início de ação rápido por via venosa. Possui metabólitos ativos de longa duração. Equivalência aproximada: [DOSE A CONFIRMAR].
-- **Lorazepam:** Início intermediário, sem metabólitos ativos significativos, sendo uma opção mais segura em idosos ou hepatopatas. Equivalência aproximada: [DOSE A CONFIRmar].
-- **Midazolam:** Ação muito rápida, ideal para procedimentos de urgência ou via intramuscular profunda quando o acesso venoso é impossível. Risco elevado de apneia. Equivalência aproximada: [DOSE A CONFIRMAR].
+- **Diazepam:** Início de ação rápido por via venosa. Possui metabólitos ativos de longa duração. Equivalência aproximada: conforme o protocolo do serviço.
+- **Lorazepam:** Início intermediário, sem metabólitos ativos significativos, sendo uma opção mais segura em idosos ou hepatopatas. Equivalência aproximada: conforme o protocolo do serviço.
+- **Midazolam:** Ação muito rápida, ideal para procedimentos de urgência ou via intramuscular profunda quando o acesso venoso é impossível. Risco elevado de apneia. Equivalência aproximada: conforme o protocolo do serviço.
 
 ### Sinais de Gravidade e Quando Encaminhar
 
-Fique atento a sinais de intoxicação aguda, bradipneia, cianose, queda abrupta do nível de consciência e hipotensão severa. Na vigência desses sinais, suspenda imediatamente a administração, garanta suporte ventilatório com oxigênio suplementar e tenha o antídoto flumazenil [DOSE A CONFIRMAR] disponível para uso restrito a casos selecionados de reversão de toxicidade grave, avaliando o risco de precipitação de abstinência ou convulsões.
+Fique atento a sinais de intoxicação aguda, bradipneia, cianose, queda abrupta do nível de consciência e hipotensão severa. Na vigência desses sinais, suspenda imediatamente a administração, garanta suporte ventilatório com oxigênio suplementar e tenha o antídoto flumazenil (dose conforme o protocolo do serviço) disponível para uso restrito a casos selecionados de reversão de toxicidade grave, avaliando o risco de precipitação de abstinência ou convulsões.
 
 Este conteúdo é uma orientação geral para a prática médica e educacional, devendo respeitar sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais.
 

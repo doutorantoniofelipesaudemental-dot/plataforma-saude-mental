@@ -2485,7 +2485,7 @@
   - PubMed: `Medication Reconciliation[MeSH] AND Accidental Falls[MeSH] AND Aged[MeSH]` (Diretriz) [PMID A CONFIRMAR]
   - PubMed: `Psychotropic Drugs[MeSH] AND Accidental Falls[MeSH] AND Risk Assessment[MeSH]` (Metanálise) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-risco-de-quedas-por-psicofarmacos-na-ubs-guia-p.md` · slug: `avaliacao-de-risco-de-quedas-por-psicofarmacos-na-ubs-guia-p` · pauta: `2026-10-01-181-avaliacao-de-risco-de-quedas-p`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 101 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-101-avaliacao-de-risco-de-quedas-por-psicofarmacos-na-ubs-guia-para-residentes.md`
 - **originalidade:** original · mais próximo: "Delirium no pronto-atendimento: avaliação e manejo para residentes" (similaridade 0.34)
 
@@ -2504,7 +2504,7 @@
   - PubMed: `("Depressive Disorder"[Mesh] OR "depression") AND ("Diagnosis, Differential"[Mesh] OR "reassessment") AND ("Primary Health Care"[Mesh]) AND ("Patient Care Management"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
   - PubMed: `("Depressive Disorder, Treatment-Resistant"[Mesh]) AND ("Referral and Consultation"[Mesh]) AND ("Primary Health Care"[Mesh] OR "Physicians, Family"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-depressivos-resistentes-na-ubs-conduta-pa.md` · slug: `manejo-de-sintomas-depressivos-resistentes-na-ubs-conduta-pa` · pauta: `2026-10-01-182-manejo-de-sintomas-depressivos`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 102 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-102-manejo-de-sintomas-depressivos-resistentes-na-ubs-conduta-para-residentes.md`
 - **originalidade:** original · mais próximo: "Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro" (similaridade 0.2)
 
@@ -2536,7 +2536,7 @@
   - PubMed: `("Panic Attack"[Mesh]) AND ("Emergency Department, Hospital"[Mesh]) AND ("Cognitive Behavioral Therapy"[Mesh] OR "Psychotherapy"[Mesh]) AND ("Randomized Controlled Trial"[Publication Type])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
   - PubMed: `("Panic Disorder"[Mesh]) AND ("Emergency Service, Hospital"[Mesh]) AND ("Benzodiazepines"[Mesh] OR "Anti-Anxiety Agents"[Mesh]) AND ("Comparative Effectiveness Research"[Mesh])` (Revisão Sistemática) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/abordagem-de-transtornos-de-panico-no-pronto-socorro-guia-pa.md` · slug: `abordagem-de-transtornos-de-panico-no-pronto-socorro-guia-pa` · pauta: `2026-10-01-184-abordagem-de-transtornos-de-pa`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 103 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-103-abordagem-de-transtornos-de-panico-no-pronto-socorro-guia-para-residentes.md`
 - **originalidade:** original · mais próximo: "Manejo da Hiperventilação e Ataque de Pânico no Plantão" (similaridade 0.31)
 
@@ -2596,7 +2596,7 @@
   - PubMed: `("Somatic Symptom Disorder"[Mesh]) AND ("Delivery of Health Care"[Mesh] OR "Primary Health Care"[Mesh]) AND ("Guideline"[Publication Type])` (Diretriz) [PMID A CONFIRMAR]
   - PubMed: `("Communication"[Mesh]) AND ("Somatoform Disorders"[Mesh] OR "Medically Unexplained Symptoms") AND ("Primary Health Care"[Mesh])` (Metanálise) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-de-sintomas-somaticos-na-ubs-raciocinio-clinico-pa.md` · slug: `avaliacao-de-sintomas-somaticos-na-ubs-raciocinio-clinico-pa` · pauta: `2026-10-01-188-avaliacao-de-sintomas-somatico`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 104 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-104-avaliacao-de-sintomas-somaticos-na-ubs-raciocinio-clinico-para-residentes.md`
 - **originalidade:** original · mais próximo: "Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro" (similaridade 0.33)
 
@@ -2628,7 +2628,7 @@
   - PubMed: `acute behavioral disturbance AND emergency department AND consensus guidelines` (Diretriz Clínica) [PMID A CONFIRMAR]
   - PubMed: `methamphetamine-induced psychosis AND treatment AND emergency care` (Estudo Observacional) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-sintomas-psicoticos-induzidos-por-substancias-no-p.md` · slug: `manejo-de-sintomas-psicoticos-induzidos-por-substancias-no-p` · pauta: `2026-10-01-190-manejo-de-sintomas-psicoticos-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 105 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-105-manejo-de-sintomas-psicoticos-induzidos-por-substancias-no-pa.md`
 - **originalidade:** original · mais próximo: "Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro" (similaridade 0.27)
 
@@ -2645,7 +2645,7 @@
   - PubMed: `self-harm AND borderline personality disorder AND emergency management` (Diretriz Clínica) [PMID A CONFIRMAR]
   - PubMed: `psychopharmacology AND borderline personality disorder AND acute crisis` (Ensaio Clínico) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-de-personalidade-borderline-no-plantao-conduta-in.md` · slug: `transtorno-de-personalidade-borderline-no-plantao-conduta-in` · pauta: `2026-10-01-191-transtorno-de-personalidade-bo`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 106 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-106-transtorno-de-personalidade-borderline-no-plantao-conduta-inicial.md`
 - **originalidade:** original · mais próximo: "Transtornos de personalidade na APS: identificação e manejo" (similaridade 0.33)
 
@@ -2692,7 +2692,7 @@
   - PubMed: `insomnia AND palliative care AND pharmacological management` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
   - PubMed: `cognitive behavioral therapy for insomnia AND cancer patients` (Diretriz Prática) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-insonia-aguda-e-cronica-em-pacientes-oncologicos-n.md` · slug: `manejo-da-insonia-aguda-e-cronica-em-pacientes-oncologicos-n` · pauta: `2026-10-01-194-manejo-da-insonia-aguda-e-cron`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 107 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-107-manejo-da-insonia-aguda-e-cronica-em-pacientes-oncologicos-na-aps.md`
 - **originalidade:** original · mais próximo: "Manejo da Insônia em Plantões: Abordagem no Pronto-Atendimento" (similaridade 0.34)
 
@@ -2724,7 +2724,7 @@
   - PubMed: `"Sedation" AND "Emergency Department" AND "Safety Guidelines"` (Diretriz Clínica) [PMID A CONFIRMAR]
   - PubMed: `"Acute Agitation" AND "Benzodiazepine Use" AND "Adverse Effects"` (Ensaio Clínico) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos.md` · slug: `uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos` · pauta: `2026-10-01-199-uso-de-benzodiazepinicos-na-em`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 108 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-108-uso-de-benzodiazepinicos-na-emergencia-manejo-de-agudos.md`
 - **originalidade:** original · mais próximo: "Uso de benzodiazepínicos na urgência psiquiátrica" (similaridade 0.32)
 
@@ -2741,7 +2741,7 @@
   - PubMed: `schizotypal personality disorder diagnosis management primary care` (Diretriz clínica) [PMID A CONFIRMAR]
   - PubMed: `personality disorders in primary care clinical management` (Ensaio clínico controlado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-de-personalidade-esquizotipica-na-aps-rastreio-e-.md` · slug: `transtorno-de-personalidade-esquizotipica-na-aps-rastreio-e-` · pauta: `2026-10-01-202-transtorno-de-personalidade-es`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 109 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-109-transtorno-de-personalidade-esquizotipica-na-aps-rastreio-e-manejo.md`
 - **originalidade:** original · mais próximo: "Transtornos de personalidade na APS: identificação e manejo" (similaridade 0.31)
 
@@ -2758,7 +2758,7 @@
   - PubMed: `dissociative amnesia vs transient global amnesia emergency differential diagnosis` (Estudo de coorte) [PMID A CONFIRMAR]
   - PubMed: `acute memory loss emergency department protocols` (Diretriz clínica) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/amnesia-global-transitoria-no-pronto-socorro-diagnostico-dif.md` · slug: `amnesia-global-transitoria-no-pronto-socorro-diagnostico-dif` · pauta: `2026-10-01-203-amnesia-global-transitoria-no-`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 110 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-110-amnesia-global-transitoria-no-pronto-socorro-diagnostico-diferencial-psiquiatrico.md`
 - **originalidade:** original · mais próximo: "Crise de Ansiedade vs Infarto: Diagnóstico Diferencial no PA" (similaridade 0.19)
 
@@ -2790,7 +2790,7 @@
   - PubMed: `broken heart syndrome emergency department clinical management` (Revisão integrativa) [PMID A CONFIRMAR]
   - PubMed: `acute emotional stress cardiovascular complications guidelines` (Diretriz clínica) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/sindrome-do-coracao-partido-e-sofrimento-psiquico-agudo-no-pa.md` · slug: `sindrome-do-coracao-partido-e-sofrimento-psiquico-agudo-no-pa` · pauta: `2026-10-01-205-sindrome-do-coracao-broken-e-s`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 111 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-111-sindrome-do-coracao-partido-e-sofrimento-psiquico-agudo-no-pa.md`
 - **originalidade:** original · mais próximo: "Acolhimento ao sofrimento psíquico agudo no ambiente laboral" (similaridade 0.3)
 
@@ -2807,7 +2807,7 @@
   - PubMed: `catatonia and akinetic mutism differential diagnosis emergency` (Estudo de coorte) [PMID A CONFIRMAR]
   - PubMed: `management of severe catatonia in emergency departments` (Diretriz clínica) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/mutismo-acinetico-e-estados-de-inercia-severa-no-pronto-soco.md` · slug: `mutismo-acinetico-e-estados-de-inercia-severa-no-pronto-soco` · pauta: `2026-10-01-206-mutismo-acinetico-e-estados-de`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 112 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-112-mutismo-acinetico-e-estados-de-inercia-severa-no-pronto-socorro.md`
 - **originalidade:** original · mais próximo: "Mutismo seletivo na infância: identificação precoce e conduta na UBS" (similaridade 0.23)
 
@@ -2824,7 +2824,7 @@
   - PubMed: `"Adjustment Disorders/diagnosis"[Mesh] AND "General Practice"[Mesh]` (Diretriz Clínica) [PMID A CONFIRMAR]
   - PubMed: `"Psychotherapy, Brief"[Mesh] AND "Adjustment Disorders"[Mesh]` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/transtorno-de-adaptacao-na-aps-diagnostico-e-conduta-para-re.md` · slug: `transtorno-de-adaptacao-na-aps-diagnostico-e-conduta-para-re` · pauta: `2026-10-01-207-transtorno-de-adaptacao-na-aps`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 113 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-113-transtorno-de-adaptacao-na-aps-diagnostico-e-conduta-para-residentes.md`
 - **originalidade:** original · mais próximo: "Famílias recompostas: apoiando a adaptação dos filhos" (similaridade 0.34)
 
@@ -2926,6 +2926,6 @@
   - PubMed: `schizophrenia adherence long-acting injectable antipsychotics general practice` (Diretriz Clínica) [PMID A CONFIRMAR]
   - PubMed: `community mental health services depot antipsychotics clinical management` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-antipsicoticos-de-deposito-na-aps-guia-pratico-para-r.md` · slug: `uso-de-antipsicoticos-de-deposito-na-aps-guia-pratico-para-r` · pauta: `2026-10-01-219-uso-de-antipsicoticos-de-depos`
-- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 114 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-114-uso-de-antipsicoticos-de-deposito-na-aps-guia-pratico-para-residentes.md`
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.35)
