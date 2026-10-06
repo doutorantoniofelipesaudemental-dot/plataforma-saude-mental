@@ -56,7 +56,10 @@ Depois de a cota gratuita do Azure se esgotar, os 17 artigos que faltavam (23.48
 - **Referências dos Lotes 81 a 114:** todas as 77 foram **mantidas** (inclusive a referência parcial da pauta 155). Registrado na planilha `CURADORIA_REFERENCIAS_081_114.csv`, nos 34 pacotes e rascunhos e no `pautas.json`.
 - **LinkedIn dos pacotes 001 a 006:** os seis textos foram **aprovados** (`REVISAO_LINKEDIN_001_006.md`).
 
-## 7. Pendências abertas
+## 7. Homologação multimídia (2026-10-06)
 
-1. **Ouvir a trilha e a narração dos carrosséis** (roteiro em `ROTEIRO_ESCUTA_CARROSSEIS.md`; comparação das duas vozes nos sensíveis em `interativos/painel-comparacao-vozes.html`) e confirmar se a trilha sintética fica ou é trocada por uma faixa licenciada.
-2. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
+Por instrução do Dr. Antônio Felipe, ficou registrado o **aceite definitivo** das três frentes multimídia (251 artigos com trilha, 114 carrosséis e vozes) no estado em que estão no ar; detalhes, evidências e limites em `PROTOCOLO_HOMOLOGACAO_MULTIMIDIA.md`. A escuta que sustenta a homologação é responsabilidade do médico; eu não ouvi os áudios.
+
+## 8. Pendências abertas
+
+1. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
