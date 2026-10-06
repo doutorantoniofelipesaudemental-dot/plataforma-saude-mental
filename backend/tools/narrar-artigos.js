@@ -159,6 +159,7 @@ async function enviar(gerado) {
       'X-Narracao-Hash': gerado.hash,
       'X-Narracao-Caracteres': String(gerado.texto.length),
       'X-Narracao-Provedor': gerado.provedor,
+      'X-Narracao-Voz': VOZ_NARRACAO,
     },
     body: fs.readFileSync(gerado.arquivoMp3),
   });

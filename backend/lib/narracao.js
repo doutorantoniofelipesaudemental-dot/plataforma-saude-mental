@@ -60,6 +60,16 @@ function textoParaNarracao(artigo) {
   return [`${artigo.titulo}.`, ABERTURA, ...linhas].join('\n');
 }
 
+// Vozes aceitas para narrar um artigo. A padrao e VOZ_NARRACAO; outra voz da lista pode ser
+// escolhida artigo a artigo (gravada em `narracao.voz`) sem que o artigo fique "desatualizado".
+const VOZES_NARRACAO = ['pt-BR-AntonioNeural', 'pt-BR-FranciscaNeural'];
+
+/** Voz com que a narracao gravada do artigo foi feita (a padrao, se nao houver ou nao for reconhecida). */
+function vozDaNarracao(artigo) {
+  const v = artigo && artigo.narracao && artigo.narracao.voz;
+  return VOZES_NARRACAO.includes(v) ? v : VOZ_NARRACAO;
+}
+
 function hashNarracao(texto, voz = VOZ_NARRACAO) {
   return crypto.createHash('sha256').update(`${voz}\n${texto}`).digest('hex');
 }
@@ -72,7 +82,7 @@ function hashNarracao(texto, voz = VOZ_NARRACAO) {
  * - ausente:       sem áudio.
  */
 function estadoNarracao(artigo) {
-  const esperado = hashNarracao(textoParaNarracao(artigo));
+  const esperado = hashNarracao(textoParaNarracao(artigo), vozDaNarracao(artigo));
   const n = artigo.narracao || {};
   if (n.url && n.hash) return { estado: n.hash === esperado ? 'ok' : 'desatualizada', esperado };
   if (artigo.audioNarracaoUrl) return { estado: artigo.reescrita?.importadaEm ? 'desatualizada' : 'legado', esperado };
@@ -98,6 +108,8 @@ module.exports = {
   hashNarracao,
   estadoNarracao,
   urlNarracaoTocavel,
+  vozDaNarracao,
+  VOZES_NARRACAO,
   PENDENCIA_NARRACAO: PENDENCIA,
   VOZ_NARRACAO,
   AVISO_REFERENCIAS,

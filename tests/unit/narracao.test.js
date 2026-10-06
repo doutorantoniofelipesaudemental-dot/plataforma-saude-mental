@@ -6,6 +6,8 @@ const {
   hashNarracao,
   estadoNarracao,
   urlNarracaoTocavel,
+  vozDaNarracao,
+  VOZES_NARRACAO,
   AVISO_REFERENCIAS,
 } = require('../../backend/lib/narracao');
 
@@ -63,4 +65,29 @@ test('áudio antigo sem hash: toca se o artigo não foi reescrito, não toca se 
   assert.equal(urlNarracaoTocavel(reescrito), '');
 
   assert.equal(estadoNarracao(ARTIGO).estado, 'ausente');
+});
+
+test('voz por artigo: a voz gravada em narracao.voz vale, desde que seja uma das aceitas', () => {
+  const texto = textoParaNarracao(ARTIGO);
+  const francisca = 'pt-BR-FranciscaNeural';
+  assert.ok(VOZES_NARRACAO.includes(francisca));
+  // sem voz gravada, ou com voz desconhecida, vale a padrão
+  assert.strictEqual(vozDaNarracao(ARTIGO), 'pt-BR-AntonioNeural');
+  assert.strictEqual(vozDaNarracao({ ...ARTIGO, narracao: { voz: 'qualquer-outra' } }), 'pt-BR-AntonioNeural');
+  // áudio da Francisca com o hash dela: está em dia (não vira "desatualizada")
+  const comFrancisca = { ...ARTIGO, narracao: { url: 'https://x/a.mp3', hash: hashNarracao(texto, francisca), voz: francisca } };
+  assert.strictEqual(vozDaNarracao(comFrancisca), francisca);
+  assert.strictEqual(estadoNarracao(comFrancisca).estado, 'ok');
+  assert.strictEqual(urlNarracaoTocavel(comFrancisca), 'https://x/a.mp3');
+  // o hash da Francisca é diferente do hash do Antônio (a voz entra no hash)
+  assert.notStrictEqual(hashNarracao(texto, francisca), hashNarracao(texto));
+  // se o texto mudar, a narração dela também fica desatualizada
+  const mudou = { ...comFrancisca, conteudo: comFrancisca.conteudo + '<p>Novo parágrafo.</p>' };
+  assert.strictEqual(estadoNarracao(mudou).estado, 'desatualizada');
+  // o comportamento de antes não muda: hash com a voz padrão e voz gravada igual à padrão
+  const padrao = { ...ARTIGO, narracao: { url: 'https://x/b.mp3', hash: hashNarracao(texto), voz: 'pt-BR-AntonioNeural' } };
+  assert.strictEqual(estadoNarracao(padrao).estado, 'ok');
+  // hash da Francisca gravado, mas voz gravada ausente: lê como voz padrão e fica desatualizada
+  const semVoz = { ...ARTIGO, narracao: { url: 'https://x/c.mp3', hash: hashNarracao(texto, francisca) } };
+  assert.strictEqual(estadoNarracao(semVoz).estado, 'desatualizada');
 });

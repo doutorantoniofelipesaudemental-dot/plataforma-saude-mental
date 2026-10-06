@@ -1,7 +1,7 @@
 const express = require('express');
 const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin } = require('../middleware');
-const { estadoNarracao, VOZ_NARRACAO } = require('../lib/narracao');
+const { textoParaNarracao, hashNarracao, VOZ_NARRACAO, VOZES_NARRACAO } = require('../lib/narracao');
 const { log } = require('../lib/log');
 
 const router = express.Router();
@@ -67,7 +67,8 @@ router.put('/:slug/midia/capa', exigirAdmin, exigirBanco, validarUrlDeMidia, asy
 /**
  * PUT /api/artigos/:slug/midia/narracao — corpo: o MP3 (audio/mpeg, até
  * 4,4 MB, o limite de corpo das funções da Vercel). Cabeçalhos:
- * X-Narracao-Hash (hash do texto narrado, lib/narracao.js), X-Narracao-Caracteres.
+ * X-Narracao-Hash (hash do texto narrado com a voz, lib/narracao.js), X-Narracao-Caracteres e,
+ * opcionalmente, X-Narracao-Voz (uma de VOZES_NARRACAO; sem ele, a voz padrão).
  * Recusa com 409 se o texto do artigo mudou depois de o áudio ser gerado —
  * nunca grava uma narração que já nasceria desatualizada. Grava no Blob,
  * em `narracao` e em `audioNarracaoUrl`, sem mexer em `atualizadoEm`.
@@ -89,7 +90,10 @@ router.put(
       const artigo = await Artigo.findOne({ slug: req.params.slug }).lean();
       if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
 
-      const { esperado } = estadoNarracao(artigo);
+      // Voz do áudio: padrão VOZ_NARRACAO; outra voz da lista (VOZES_NARRACAO) só com o cabeçalho X-Narracao-Voz.
+      const voz = String(req.get('x-narracao-voz') || VOZ_NARRACAO);
+      if (!VOZES_NARRACAO.includes(voz)) return res.status(400).json({ erro: 'Voz de narração não reconhecida.', aceitas: VOZES_NARRACAO });
+      const esperado = hashNarracao(textoParaNarracao(artigo), voz);
       const hash = String(req.get('x-narracao-hash') || '');
       if (hash !== esperado) {
         return res.status(409).json({ erro: 'O texto do artigo mudou depois de o áudio ser gerado — gere a narração de novo.', esperado });
@@ -106,7 +110,7 @@ router.put(
       const narracao = {
         url: enviado.url,
         hash,
-        voz: VOZ_NARRACAO,
+        voz,
         provedor: ['azure', 'edge'].includes(req.get('x-narracao-provedor')) ? req.get('x-narracao-provedor') : 'edge',
         caracteres: Number(req.get('x-narracao-caracteres')) || null,
         bytes: audio.length,
