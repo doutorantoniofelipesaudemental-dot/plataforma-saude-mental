@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T22:01:32.637Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed; leitura integral e aprovação pendentes)
 ---
 
@@ -23,7 +23,7 @@ referenciasPubMed: conferidas em 2026-10-01 (PMID e DOI nos registros do PubMed;
 > - Com o uso prolongado de antidepressivos, o sistema nervoso central passa por adaptações neuroquímicas para lidar com a presença constante da medicação. No ca…
 > - Quando retiramos o fármaco de forma abrupta ou rápida demais, o cérebro fica em um estado de descompasso transitório. A queda abrupta na disponibilidade do n…
 > - O planejamento do desmame deve ser gradual e individualizado. Evite reduções lineares no final da curva, pois a ocupação dos receptores não é linear. Quanto …
-> - - **Redução inicial:** Diminua cerca de [DOSE A CONFIRMAR] da dose total a cada duas a quatro semanas.
+> - - **Redução inicial:** Diminua a dose de forma gradual, em proporção e intervalo definidos pelo médico conforme o protocolo do serviço.
 > - - **Fase final:** Nas menores doses, reduza ainda mais devagar, utilizando formulações líquidas quando disponíveis ou espaçando os dias de tomada conforme a …
 > - - Pode ser empregado o uso temporário de medicamentos sintomáticos para náuseas, insônia ou ansiedade aguda.
 > - - Se necessário, utilize ansiolíticos benzodiazepínicos em curto prazo, com dose definida pelo médico, avaliando riscos de dependência, ou retorne à dose ant…
@@ -73,7 +73,7 @@ O planejamento do desmame deve ser gradual e individualizado. Evite reduções l
 
 ### Protocolo estruturado de redução
 - **Avaliação inicial:** Confirme se o paciente está clinicamente estável há pelo menos seis a doze meses antes de tentar a suspensão.
-- **Redução inicial:** Diminua cerca de [DOSE A CONFIRMAR] da dose total a cada duas a quatro semanas.
+- **Redução inicial:** Diminua a dose de forma gradual, em proporção e intervalo definidos pelo médico conforme o protocolo do serviço.
 - **Fase final:** Nas menores doses, reduza ainda mais devagar, utilizando formulações líquidas quando disponíveis ou espaçando os dias de tomada conforme a meia-vida do fármaco (por exemplo, fluoxetina possui meia-vida longa e facilita o processo, enquanto paroxetina e venlafaxina exigem maior cautela pelo perfil de alta abstinência).
 
 ### Manejo farmacológico de suporte
