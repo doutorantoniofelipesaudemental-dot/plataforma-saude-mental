@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:01:02.034Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Professores e o ciberbullying: impactos na saúde mental
@@ -20,7 +20,7 @@ revisaoMedica: pendente
 > - - Avaliação para o uso de medicações reguladoras da ansiedade e do humor, como os antidepressivos inibidores seletivos da recaptação de serotonina [DOSE A CO…
 > - - Encaminhar para o atendimento psiquiátrico especializado quando houver refratariedade aos medicamentos de primeira linha ou risco iminente.
 > - - Acionar a rede de proteção e serviços de urgência em situações de crise aguda.
-> - - O tratamento envolve psicoterapia, suporte medicamentoso com antidepressivos [DOSE A CONFIRMAR] e, se necessário, afastamento temporário.
+> - - O tratamento envolve psicoterapia, suporte medicamentoso com antidepressivos, com dose definida pelo médico, e, se necessário, afastamento temporário.
 
 Ser professor exige entrega diária, escuta atenta e muita resiliência. Mas a sala de aula há tempos extrapolou os muros da escola. Hoje, o ambiente virtual muitas vezes se transforma em um espaço de exposição indevida, ameaças e ataques direcionados a educadores por parte de alunos e responsáveis. A violência digital contra professores é uma realidade dolorosa e que deixa marcas profundas. Se você tem enfrentado ofensas nas redes sociais, montagens constrangedoras ou campanhas de difamação, saiba que você não está sozinho nessa situação. O sofrimento que você sente é real, legítimo e merece toda a nossa atenção.
 
@@ -56,7 +56,7 @@ O acompanhamento profissional é fundamental para quem sofre os impactos psiqui�
 
 ### Condutas de primeira linha
 - Psicoterapia breve para o desenvolvimento de estratégias de enfrentamento e ressignificação do trauma.
-- Avaliação para o uso de medicações reguladoras da ansiedade e do humor, como os antidepressivos inibidores seletivos da recaptação de serotonina [DOSE A CONFIRMAR], em casos de sintomas moderados a graves.
+- Avaliação para o uso de medicações reguladoras da ansiedade e do humor, como os antidepressivos inibidores seletivos da recaptação de serotonina, com dose definida pelo médico, em casos de sintomas moderados a graves.
 - Afastamento temporário das atividades laborais por meio de atestado médico quando houver esgotamento severo ou síndrome de burnout.
 
 ### Sinais de gravidade
@@ -75,7 +75,7 @@ Este conteúdo oferece orientação geral e respeita sempre os protocolos hospit
 - A violência digital contra professores é uma forma grave de adoecimento psíquico que exige acolhimento e suporte institucional.
 - O estresse crônico gerado pelo ciberbullying altera o sistema nervoso, provocando ansiedade, depressão e sintomas físicos.
 - Guardar provas materiais, comunicar a gestão e buscar ajuda médica são passos essenciais para a proteção do educador.
-- O tratamento envolve psicoterapia, suporte medicamentoso com antidepressivos [DOSE A CONFIRMAR] e, se necessário, afastamento temporário.
+- O tratamento envolve psicoterapia, suporte medicamentoso com antidepressivos, com dose definida pelo médico, e, se necessário, afastamento temporário.
 
 ## Referências (a confirmar)
 

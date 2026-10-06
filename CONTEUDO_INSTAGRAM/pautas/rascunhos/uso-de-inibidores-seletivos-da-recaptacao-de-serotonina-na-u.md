@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:00:55.664Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Uso de inibidores seletivos da recaptação de serotonina na UBS
@@ -23,7 +23,7 @@ revisaoMedica: pendente
 > - * Citalopram e escitalopram são bem tolerados, mas exigem atenção ao intervalo QT em doses mais altas.
 > - * Comece sempre com a menor dose terapêutica para minimizar efeitos colaterais iniciais e melhorar a tolerabilidade.
 > - * Reavalie o paciente em duas a quatro semanas após o início ou ajuste da dose.
-> - * Doses iniciais e máximas devem seguir os protocolos locais [DOSE A CONFIRMAR].
+> - * Doses iniciais e máximas devem seguir os protocolos locais.
 > - * Os ISRS bloqueiam o transportador presináptico de serotonina.
 > - * Inicie com a classe dos ISRS conforme o perfil clínico.
 > - * Monitore sintomas de ideação autolesiva ou suicida, mantendo rede de apoio ativa e acionando o CVV (188) ou o SAMU (192) em caso de crise grave.
@@ -50,7 +50,7 @@ A escolha do ISRS na UBS deve considerar o perfil de efeitos colaterais, as como
 * Comece sempre com a menor dose terapêutica para minimizar efeitos colaterais iniciais e melhorar a tolerabilidade.
 * Explique ao paciente que a melhora não é imediata. O efeito terapêutico costuma aparecer entre duas e quatro semanas.
 * Reavalie o paciente em duas a quatro semanas após o início ou ajuste da dose.
-* Doses iniciais e máximas devem seguir os protocolos locais [DOSE A CONFIRMAR].
+* Doses iniciais e máximas devem seguir os protocolos locais.
 
 ### Manejo de efeitos colaterais
 
@@ -88,7 +88,7 @@ O manejo seguro na Atenção Primária exige vigilância constante e acolhimento
 
 * Fique atento a sinais de virada maníaca, especialmente em pacientes com transtorno bipolar não diagnosticado.
 * Monitore sintomas de ideação autolesiva ou suicida, mantendo rede de apoio ativa e acionando o CVV (188) ou o SAMU (192) em caso de crise grave.
-* Esteja alerta para a síndrome serotoninérgica, caracterizada por alteração do estado mental, hiperreflexia, mioclonia e instabilidade autonômica, decorrente do uso combinado de agentes serotoninérgicos [DOSE A CONFIRMAR].
+* Esteja alerta para a síndrome serotoninérgica, caracterizada por alteração do estado mental, hiperreflexia, mioclonia e instabilidade autonômica, decorrente do uso combinado de agentes serotoninérgicos.
 
 ### Quando encaminhar
 

@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:18:08.283Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro
@@ -75,7 +75,7 @@ Cuidado para não rotular precipitadamente como conversivo quadros que exigem ne
 Explique o diagnóstico de forma positiva. Diga que o sistema nervoso está sobrecarregado e 'travou' por falha na comunicação entre áreas cerebrais, e não por falta de esforço físico. Evite termos que sugiram invenção.
 
 ### Conduta Farmacológica e Encaminhamento
-Evite o uso rotineiro de benzodiazepínicos injetáveis em crises conversivas, pois podem prolongar a sedação e dificultar a avaliação. Se houver comorbidade ansiosa ou depressiva grave associada, considere iniciar tratamento de base com antidepressivo modulador (por exemplo, inibidor seletivo da recaptação de serotonina) [DOSE A CONFIRMAR]. Encaminhe para seguimento ambulatorial com neurologia e psiquiatria/psicologia.
+Evite o uso rotineiro de benzodiazepínicos injetáveis em crises conversivas, pois podem prolongar a sedação e dificultar a avaliação. Se houver comorbidade ansiosa ou depressiva grave associada, considere iniciar tratamento de base com antidepressivo modulador (por exemplo, inibidor seletivo da recaptação de serotonina), com dose definida pelo médico conforme o protocolo do serviço. Encaminhe para seguimento ambulatorial com neurologia e psiquiatria/psicologia.
 
 Este conteúdo é uma orientação geral para a prática clínica de urgência, respeitando sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde locais.
 

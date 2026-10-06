@@ -6811,7 +6811,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendiment.md",
       "slug": "manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendiment",
       "geradoEm": "2026-09-30T23:59:19.762Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6819,7 +6819,8 @@
       }
     },
     "redigidaEm": "2026-09-30T23:59:19.762Z",
-    "pacote": 81
+    "pacote": 81,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-140-crise-de-ansiedade-vs-infarto-",
@@ -6878,7 +6879,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa.md",
       "slug": "crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa",
       "geradoEm": "2026-10-01T00:18:08.279Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6886,7 +6887,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:18:08.279Z",
-    "pacote": 82
+    "pacote": 82,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-141-manejo-de-efeitos-colaterais-e",
@@ -6940,7 +6942,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-efeitos-colaterais-extrapiramidais-no-plantao.md",
       "slug": "manejo-de-efeitos-colaterais-extrapiramidais-no-plantao",
       "geradoEm": "2026-10-01T00:00:06.762Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -6948,7 +6950,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:00:06.762Z",
-    "pacote": 83
+    "pacote": 83,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-142-investigacao-de-fadiga-e-asten",
@@ -7102,7 +7105,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs.md",
       "slug": "abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs",
       "geradoEm": "2026-10-01T00:00:18.791Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7110,7 +7113,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:00:18.791Z",
-    "pacote": 84
+    "pacote": 84,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-145-avaliacao-inicial-de-sintomas-",
@@ -7169,7 +7173,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro.md",
       "slug": "avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro",
       "geradoEm": "2026-10-01T00:18:15.435Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7177,7 +7181,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:18:15.435Z",
-    "pacote": 85
+    "pacote": 85,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-146-manejo-da-hiperventilacao-e-at",
@@ -7231,7 +7236,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao.md",
       "slug": "manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao",
       "geradoEm": "2026-10-01T00:00:49.471Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7239,7 +7244,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:00:49.471Z",
-    "pacote": 86
+    "pacote": 86,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-147-desmame-seguro-de-benzodiazepi",
@@ -7293,7 +7299,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/desmame-seguro-de-benzodiazepinicos-na-atencao-primaria.md",
       "slug": "desmame-seguro-de-benzodiazepinicos-na-atencao-primaria",
       "geradoEm": "2026-10-01T00:00:55.661Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7301,7 +7307,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:00:55.661Z",
-    "pacote": 87
+    "pacote": 87,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-148-uso-de-inibidores-seletivos-da",
@@ -7355,7 +7362,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-u.md",
       "slug": "uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-u",
       "geradoEm": "2026-10-01T00:01:02.030Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7363,7 +7370,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:01:02.030Z",
-    "pacote": 88
+    "pacote": 88,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-149-avaliacao-de-ideacao-suicida-n",
@@ -7717,7 +7725,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-ciberbullying-impactos-na-saude-mental.md",
       "slug": "professores-e-o-ciberbullying-impactos-na-saude-mental",
       "geradoEm": "2026-10-01T00:01:07.727Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7725,7 +7733,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:01:07.727Z",
-    "pacote": 89
+    "pacote": 89,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-156-cuidadores-de-pacientes-com-se",
@@ -7779,7 +7788,7 @@
       "arquivo": "CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-sequelas-de-avc-em-casa.md",
       "slug": "cuidadores-de-pacientes-com-sequelas-de-avc-em-casa",
       "geradoEm": "2026-10-01T00:01:13.621Z",
-      "revisaoMedica": "pendente",
+      "revisaoMedica": "aprovada",
       "checagens": {
         "humanizacao": true,
         "etica": true,
@@ -7787,7 +7796,8 @@
       }
     },
     "redigidaEm": "2026-10-01T00:01:13.621Z",
-    "pacote": 90
+    "pacote": 90,
+    "aprovadaPor": "Dr. Antônio Felipe (instrução de 2026-10-05; marcadores de dose resolvidos conforme o dossiê, referências pendentes de conferência)"
   },
   {
     "id": "2026-09-30-157-professores-de-educacao-infant",
@@ -7848,7 +7858,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:01:29.629Z"
+    "redigidaEm": "2026-10-01T00:01:29.629Z",
+    "pacote": 91
   },
   {
     "id": "2026-09-30-158-cuidadores-de-idosos-em-solida",
@@ -7959,7 +7970,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:01:35.385Z"
+    "redigidaEm": "2026-10-01T00:01:35.385Z",
+    "pacote": 92
   },
   {
     "id": "2026-09-30-160-cuidadores-de-pacientes-com-al",
@@ -8020,7 +8032,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:01:42.170Z"
+    "redigidaEm": "2026-10-01T00:01:42.170Z",
+    "pacote": 93
   },
   {
     "id": "2026-09-30-161-professores-do-ensino-medio-e-",
@@ -8231,7 +8244,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:02:12.065Z"
+    "redigidaEm": "2026-10-01T00:02:12.065Z",
+    "pacote": 94
   },
   {
     "id": "2026-09-30-165-professores-e-a-regulacao-emoc",
@@ -8392,7 +8406,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:02:18.500Z"
+    "redigidaEm": "2026-10-01T00:02:18.500Z",
+    "pacote": 95
   },
   {
     "id": "2026-09-30-168-acatisia-induzida-por-antipsic",
@@ -8453,7 +8468,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:02:24.449Z"
+    "redigidaEm": "2026-10-01T00:02:24.449Z",
+    "pacote": 96
   },
   {
     "id": "2026-09-30-169-transtorno-da-fluencia-na-fala",
@@ -8514,7 +8530,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:02:30.135Z"
+    "redigidaEm": "2026-10-01T00:02:30.135Z",
+    "pacote": 97
   },
   {
     "id": "2026-09-30-171-delirium-tremens-no-pronto-ate",
@@ -8675,7 +8692,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:02:36.944Z"
+    "redigidaEm": "2026-10-01T00:02:36.944Z",
+    "pacote": 98
   },
   {
     "id": "2026-09-30-174-sindrome-neuroleptica-maligna-",
@@ -8936,7 +8954,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:02:48.285Z"
+    "redigidaEm": "2026-10-01T00:02:48.285Z",
+    "pacote": 99
   },
   {
     "id": "2026-09-30-180-uso-off-label-de-psicofarmacos",
@@ -8998,7 +9017,8 @@
         "originalidade": true
       }
     },
-    "redigidaEm": "2026-10-01T00:03:02.499Z"
+    "redigidaEm": "2026-10-01T00:03:02.499Z",
+    "pacote": 100
   },
   {
     "id": "2026-10-01-181-avaliacao-de-risco-de-quedas-p",

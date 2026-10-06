@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:00:37.975Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Manejo da Hiperventilação e Ataque de Pânico no Plantão
@@ -17,7 +17,7 @@ revisaoMedica: pendente
 > **RASCUNHO — não publicar sem revisão do Dr. Antônio Felipe.** Passar nas checagens automáticas não valida o conteúdo clínico.
 > Trechos de conduta farmacológica e de emergência a conferir (4):
 > - O atendimento de emergência exige excluir causas orgânicas graves antes de fechar o diagnóstico de crise de pânico ou hiperventilação pura. Afaste síndromes …
-> - - Benzodiazepínicos de curta ou média ação podem ser avaliados para alívio rápido da agitação aguda, como o lorazepam [DOSE A CONFIRMAR] via oral ou sublingual.
+> - - Benzodiazepínicos de curta ou média ação podem ser avaliados para alívio rápido da agitação aguda, como o lorazepam, com dose e via conforme o protocolo do serviço.
 > - - Este conteúdo é uma orientação geral para a prática clínica de emergência. Respeite sempre os protocolos institucionais, do seu Pronto Atendimento e da red…
 > - - Utilize medicamentos com cautela apenas quando as intervenções verbais e respiratórias forem insuficientes.
 
@@ -66,7 +66,7 @@ O atendimento de emergência exige excluir causas orgânicas graves antes de fec
 
 ### Tratamento Medicamentoso
 - Caso a ansiedade extrema impeça a colaboração com os exercícios respiratórios, considere o uso de medicações.
-- Benzodiazepínicos de curta ou média ação podem ser avaliados para alívio rápido da agitação aguda, como o lorazepam [DOSE A CONFIRMAR] via oral ou sublingual.
+- Benzodiazepínicos de curta ou média ação podem ser avaliados para alívio rápido da agitação aguda, como o lorazepam, com dose e via conforme o protocolo do serviço.
 - Lembre-se do risco de sedação excessiva e depressão respiratória, monitorando o paciente de perto após a administração.
 
 ### Sinais de Gravidade e Encaminhamento

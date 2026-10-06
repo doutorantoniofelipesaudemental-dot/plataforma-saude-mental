@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:00:49.474Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: pendente
+revisaoMedica: aprovada
 ---
 
 # Desmame Seguro de Benzodiazepínicos na Atenção Primária
@@ -18,7 +18,7 @@ revisaoMedica: pendente
 > Trechos de conduta farmacológica e de emergência a conferir (13):
 > - Olá, colega. Que bom ter você aqui para conversarmos sobre um desafio muito comum na nossa prática diária na unidade básica de saúde. O uso prolongado de ben…
 > - Investigue há quanto tempo a pessoa usa a medicação, qual o motivo inicial da prescrição e se há tentativas prévias de parada. Identifique o medicamento em u…
-> - A regra de ouro é a paciência. Reduza de [DOSE A CONFIRMAR] a cada duas ou quatro semanas. Se surgirem sintomas intensos de abstinência, estabilize a dose no…
+> - A regra de ouro é a paciência. Reduza a dose de forma gradual, na proporção e no intervalo definidos pelo médico conforme o protocolo do serviço. Se surgirem sintomas intensos de abstinência, estabilize a dose no…
 > - Esses medicamentos atuam potencializando o principal neurotransmissor inibidor do sistema nervoso central, o GABA. Eles aumentam a frequência de abertura dos…
 > - Com o uso contínuo, o cérebro percebe esse excesso de inibição e tenta se defender. Ele reduz a sensibilidade e o número de receptores GABA, além de aumentar…
 > - Quando retiramos a medicação de forma abrupta, o freio que o medicamento trazia desaparece, mas o cérebro ainda está adaptado à sua presença. O resultado é u…
@@ -43,7 +43,7 @@ Antes de propor qualquer mudança, precisamos conversar bastante com a pessoa. E
 Investigue há quanto tempo a pessoa usa a medicação, qual o motivo inicial da prescrição e se há tentativas prévias de parada. Identifique o medicamento em uso e calcule a dose equivalente se for necessário realizar a conversão para diazepam, que facilita reduções graduais por conta de sua meia-vida longa.
 
 ### 3. O Passo a Passo da Redução
-A regra de ouro é a paciência. Reduza de [DOSE A CONFIRMAR] a cada duas ou quatro semanas. Se surgirem sintomas intensos de abstinência, estabilize a dose no patamar anterior por mais tempo e só então retome o plano. O ritmo deve ser ditado pelos sintomas e pelo conforto do paciente, nunca pelo calendário.
+A regra de ouro é a paciência. Reduza a dose de forma gradual, na proporção e no intervalo definidos pelo médico conforme o protocolo do serviço. Se surgirem sintomas intensos de abstinência, estabilize a dose no patamar anterior por mais tempo e só então retome o plano. O ritmo deve ser ditado pelos sintomas e pelo conforto do paciente, nunca pelo calendário.
 
 ### 4. Estratégias Não Farmacológicas
 O desmame não acontece no vácuo. Ofereça suporte com técnicas de higiene do sono, orientações sobre manejo da ansiedade e, sempre que possível, caminhe junto com a psicologia da equipe. Validar o sofrimento emocional sem recorrer ao comprimido fortalece a autonomia do paciente.
@@ -66,7 +66,7 @@ Quando retiramos a medicação de forma abrupta, o freio que o medicamento trazi
 ### Manejo Clínico e Segurança na Comunidade
 
 ### Conversão e Substituição
-Para facilitar cortes pequenos e seguros, prefira a conversão para o diazepam por causa de sua meia-vida longa e disponibilidade de apresentações em gotas. Utilize tabelas de equivalência consagradas para definir a dose inicial equivalente, ajustando conforme a resposta clínica [DOSE A CONFIRMAR].
+Para facilitar cortes pequenos e seguros, prefira a conversão para o diazepam por causa de sua meia-vida longa e disponibilidade de apresentações em gotas. Utilize tabelas de equivalência consagradas para definir a dose inicial equivalente, ajustando conforme a resposta clínica e o protocolo do serviço.
 
 ### Sintomas de Abstinência e Condutas
 Sintomas leves como irritabilidade, insônia transitória e tensão muscular são esperados e devem ser manejados com orientação e acolhimento. Caso ocorram sinais de gravidade, como confusão mental, alucinações, hipertensão arterial significativa ou risco de convulsão, interrompa a redução, aumente temporariamente a dose para o patamar seguro anterior e avalie necessidade de suporte mais intensivo.
