@@ -37,3 +37,7 @@ Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem 
 ## Extensão: pacotes 101 a 114 (a partir de 14/01/2027)
 
 Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Pacotes sensíveis (105 e 106) só em dias úteis. Em 2026-10-05, por instrução do Dr. Antônio Felipe, os rascunhos das pautas 181, 182, 184, 188, 190, 191, 194, 199, 202, 203, 205, 206, 207 e 219 (pacotes 101 a 114) foram aprovados (`revisaoMedica: aprovada`) depois de os marcadores serem substituídos por redação sem posologia (dossiê `DOSSIER_REVISAO_LOTES_101_114.md`), e as 14 linhas foram liberadas ("aguardando arte/vídeo e agendamento manual"). Com isso, **nenhuma linha da agenda está bloqueada**. As referências desses artigos foram localizadas no PubMed em 2026-10-05 (31 referências para os 14 artigos), com leitura integral pendente; ver `RELATORIO_SANEAMENTO_REFERENCIAS_101_114.md`. A linha só é liberada depois da aprovação do rascunho pelo Dr. Antônio Felipe.
+
+## Atualização: LinkedIn dos pacotes 001 a 006
+
+Em 2026-10-05 foram criados, como rascunho, o `linkedin.txt` dos pacotes 001 a 006 (que só tinham legenda de carrossel e de reel), escritos a partir das legendas já aprovadas, e as seis linhas da agenda passaram a listar a peça. O texto ainda aguarda a revisão do Dr. Antônio Felipe, como as demais peças antes de agendar.
