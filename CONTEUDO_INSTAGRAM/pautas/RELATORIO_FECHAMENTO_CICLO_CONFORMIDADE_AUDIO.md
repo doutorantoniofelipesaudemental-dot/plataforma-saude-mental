@@ -24,9 +24,16 @@ Data: 2026-10-06. Resume o que foi feito e verificado neste ciclo e o que segue 
 
 Depois de a cota gratuita do Azure se esgotar, os 17 artigos que faltavam (23.486 caracteres) foram sintetizados com Edge-TTS (mesma voz `pt-BR-AntonioNeural`, sem consumir a cota do Azure) e enviados para produção, registrados com o provedor `edge`: 17 de 17, 0 falhas (`narracoes-geradas/_lote-edge-2026-10.log` e `_envio-edge-2026-10.log`). Conferido no servidor em 3 deles (`sindrome-neuroleptica-maligna`, `tept-aps`, `violencia-domestica-impacto-criancas`): o arquivo responde 200 com `audio/mpeg`, o banco registra provedor `edge` e o player está na página. A estimativa da ferramenta mostra 251 ok, 0 legado, 0 desatualizada, 0 ausente.
 
-## 3. Pendências abertas
+## 3. Narração dos 114 carrosséis animados
 
-1. **Áudio narrado e trilha dos 114 carrosséis:** não gerados (são mídias diferentes dos áudios dos artigos).
+- **O que foi feito (2026-10-06):** 1.107 falas, uma por slide, sintetizadas com Edge-TTS (`pt-BR-AntonioNeural`, 88.509 caracteres, sem consumir a cota do Azure): **0 falhas**. Os MP3 ficam em `CONTEUDO_INSTAGRAM/interativos/assets/audio/voiceover/pacote-NNN/slide-NN.mp3` (cerca de 46 MB) e cada HTML de `carrosseis/` passou a trazer o mapa `voiceovers` do motor `AudioPlayer.js`.
+- **O que é narrado:** a narração do roteiro aprovado de cada pacote (frases curtas); nos slides de alerta e de gravidade, o texto inteiro, com os canais CVV 188 e SAMU 192; no último slide, o aviso de que nenhum medicamento deve ser iniciado, trocado ou suspenso sem orientação médica. Nenhum texto narrado cita medicamento, classe ou dose.
+- **Verificado no navegador (servidor local):** os 114 carrosséis carregam sem erro; as 1.107 falas respondem 200 como `audio/mpeg` e apontam para slides que existem; em `pacote-105`, ao ligar o áudio e avançar, a narração disparada é a do slide 1, 2 e 3. O áudio continua começando desligado, como já era o desenho do motor.
+- **Não feito:** trilha de fundo (música a -22 dB); o motor aceita `bgm`, mas nenhuma trilha foi gerada ou escolhida. Também não ouvi os arquivos: a conferência foi técnica, não de qualidade da voz.
+
+## 4. Pendências abertas
+
+1. **Trilha de fundo dos 114 carrosséis** (música suave a -22 dB): não gerada. A narração por slide já está feita (seção 3).
 2. **Referências dos Lotes 81 a 114:** leitura integral pelo Dr. Antônio Felipe; a pauta 155 tem uma referência parcial.
 3. **Rascunho dos `linkedin.txt` dos pacotes 001 a 006:** aguarda revisão do Dr. Antônio Felipe.
 4. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
