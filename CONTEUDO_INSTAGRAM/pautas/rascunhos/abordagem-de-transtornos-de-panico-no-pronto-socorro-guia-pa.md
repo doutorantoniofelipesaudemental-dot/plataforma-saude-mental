@@ -92,7 +92,7 @@ Este conteúdo oferece orientações gerais para a prática clínica e deve semp
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Manjunatha N, Ram D. Panic disorder in general medical practice- A narrative review. J Family Med Prim Care. 2022;11(3):861-869. PMID 35495823. doi:10.4103/jfmpc.jfmpc_888_21 — Revisão narrativa
 2. Campbell KA, Madva EN, Villegas AC et al. Non-cardiac Chest Pain: A Review for the Consultation-Liaison Psychiatrist. Psychosomatics. 2016;58(3):252-265. PMID 28196622. doi:10.1016/j.psym.2016.12.003 — Revisão

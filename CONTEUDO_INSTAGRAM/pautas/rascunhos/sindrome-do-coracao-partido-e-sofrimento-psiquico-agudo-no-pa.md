@@ -61,7 +61,7 @@ Quando você atende um paciente no pronto atendimento com dor no peito intensa e
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Assad J, Femia G, Pender P et al. Takotsubo Syndrome: A Review of Presentation, Diagnosis and Management. Clin Med Insights Cardiol. 2022;16:11795468211065782. PMID 35002350. doi:10.1177/11795468211065782 — Revisão
 2. Steptoe A, Kivimäki M. Stress and cardiovascular disease. Nat Rev Cardiol. 2012;9(6):360-70. PMID 22473079. doi:10.1038/nrcardio.2012.45 — Revisão

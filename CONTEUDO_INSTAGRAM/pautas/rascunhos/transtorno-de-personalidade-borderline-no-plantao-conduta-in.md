@@ -69,7 +69,7 @@ O grande objetivo do plantão é a desescalada da crise e a prevenção de iatro
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Besch V, Debbané M, Greiner C et al. Emergency psychiatric management of borderline personality disorder: Towards an articulation of modalities for personalised integrative care. Encephale. 2020;46(6):463-470. PMID 32571544. doi:10.1016/j.encep.2020.04.013 — Revisão
 2. Vandyk A, Bentz A, Bissonette S et al. Why go to the emergency department? Perspectives from persons with borderline personality disorder. Int J Ment Health Nurs. 2019;28(3):757-765. PMID 30779279. doi:10.1111/inm.12580 — Artigo original

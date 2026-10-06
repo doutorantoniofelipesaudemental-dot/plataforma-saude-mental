@@ -100,7 +100,7 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Seppala LJ, Petrovic M, Ryg J et al. STOPPFall (Screening Tool of Older Persons Prescriptions in older adults with high fall risk): a Delphi study by the EuGMS Task and Finish Group on Fall-Risk-Increasing Drugs. Age Ageing. 2021;50(4):1189-1199. PMID 33349863. doi:10.1093/ageing/afaa249 — Consenso Delphi (ferramenta de prescrição)
 2. Dills H, Shah K, Messinger-Rapport B et al. Deprescribing Medications for Chronic Diseases Management in Primary Care Settings: A Systematic Review of Randomized Controlled Trials. J Am Med Dir Assoc. 2018;19(11):923-935.e2. PMID 30108032. doi:10.1016/j.jamda.2018.06.021 — Revisão sistemática

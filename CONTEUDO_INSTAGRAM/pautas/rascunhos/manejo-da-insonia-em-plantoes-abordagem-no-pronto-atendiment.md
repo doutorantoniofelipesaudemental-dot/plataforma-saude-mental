@@ -83,7 +83,7 @@ Este conteúdo é uma orientação geral para a prática clínica e respeita sem
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Riemann D, Espie CA, Altena E et al. The European Insomnia Guideline: An update on the diagnosis and treatment of insomnia 2023. J Sleep Res. 2023;32(6):e14035. PMID 38016484. doi:10.1111/jsr.14035 — Diretriz clínica
 2. Riemann D, Baglioni C, Bassetti C et al. European guideline for the diagnosis and treatment of insomnia. J Sleep Res. 2017;26(6):675-700. PMID 28875581. doi:10.1111/jsr.12594 — Diretriz clínica

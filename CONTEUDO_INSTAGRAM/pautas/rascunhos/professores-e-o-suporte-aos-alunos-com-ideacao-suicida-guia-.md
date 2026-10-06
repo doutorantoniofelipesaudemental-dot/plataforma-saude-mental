@@ -79,7 +79,7 @@ Este conteúdo é uma orientação geral para apoiar a prática educativa e não
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Wasserman D, Hoven CW, Wasserman C et al. School-based suicide prevention programmes: the SEYLE cluster-randomised, controlled trial. Lancet. 2015;385(9977):1536-1544. PMID 25579833. doi:10.1016/S0140-6736(14)61213-7 — Ensaio clínico randomizado em cluster
 

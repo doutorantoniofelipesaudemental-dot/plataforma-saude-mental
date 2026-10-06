@@ -1,6 +1,6 @@
 # Dossiê de revisão clínica: marcadores dos rascunhos do Lote 91 a 100
 
-**Status (2026-10-05):** as correções abaixo foram **aplicadas** nos 10 rascunhos por instrução do Dr. Antônio Felipe, que também os aprovou (`revisaoMedica: aprovada`) e liberou as linhas da agenda. Este dossiê registra, para cada marcador, o trecho original (arquivo e linha) e a redação aplicada, sempre **sem posologia**, no estilo "dose e via conforme o protocolo do serviço" já usado nos rascunhos 058, 044, 127 e do Lote 81 a 90. As referências foram **localizadas no PubMed em 2026-10-05** (ver `RELATORIO_SANEAMENTO_REFERENCIAS_081_100.md`), com leitura integral pendente. O texto original está preservado no histórico do repositório.
+**Status (2026-10-05):** as correções abaixo foram **aplicadas** nos 10 rascunhos por instrução do Dr. Antônio Felipe, que também os aprovou (`revisaoMedica: aprovada`) e liberou as linhas da agenda. Este dossiê registra, para cada marcador, o trecho original (arquivo e linha) e a redação aplicada, sempre **sem posologia**, no estilo "dose e via conforme o protocolo do serviço" já usado nos rascunhos 058, 044, 127 e do Lote 81 a 90. As referências foram **localizadas no PubMed em 2026-10-05** (ver `RELATORIO_SANEAMENTO_REFERENCIAS_081_100.md`), mantidas por decisão do Dr. Antônio Felipe em 2026-10-06. O texto original está preservado no histórico do repositório.
 
 ## Resumo
 

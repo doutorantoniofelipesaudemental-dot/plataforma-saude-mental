@@ -90,7 +90,7 @@ Reforçamos que este conteúdo é uma orientação geral para a prática clínic
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Krishna A, Goicochea S, Shah R et al. A Comprehensive Guide to Long-Acting Injectable Antipsychotics for Primary Care Clinicians. J Am Board Fam Med. 2024;37(4):773-783. PMID 39455270. doi:10.3122/jabfm.2022.220425R2 — Revisão
 2. Aymerich C, Salazar de Pablo G, Pacho M et al. All-cause mortality risk in long-acting injectable versus oral antipsychotics in schizophrenia: a systematic review and meta-analysis. Mol Psychiatry. 2024;30(1):263-271. PMID 39174648. doi:10.1038/s41380-024-02694-3 — Revisão sistemática e metanálise

@@ -65,7 +65,7 @@ Lembramos que este conteúdo é uma orientação geral e que se respeitam sempre
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Li S, Li Y, Lv H et al. The prevalence and correlates of burnout among Chinese preschool teachers. BMC Public Health. 2020;20(1):160. PMID 32013939. doi:10.1186/s12889-020-8287-7 — Estudo transversal
 2. Zhao N, Huo M, Van Den Noortgate W. Exploring burnout among preschool teachers in rural China: a job demands-resources model perspective. Front Psychol. 2023;14:1253774. PMID 37885751. doi:10.3389/fpsyg.2023.1253774 — Estudo transversal

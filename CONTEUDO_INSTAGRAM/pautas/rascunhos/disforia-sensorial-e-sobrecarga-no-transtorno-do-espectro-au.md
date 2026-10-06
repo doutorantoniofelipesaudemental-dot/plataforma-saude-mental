@@ -66,7 +66,7 @@ Lembramos que este conteúdo é uma orientação geral para a prática clínica 
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Poulsen R, Williams Z, Dwyer P et al. How auditory processing influences the autistic profile: A review. Autism Res. 2024;17(12):2452-2470. PMID 39552096. doi:10.1002/aur.3259 — Revisão
 2. Lai MC, Kassee C, Besney R et al. Prevalence of co-occurring mental health diagnoses in the autism population: a systematic review and meta-analysis. Lancet Psychiatry. 2019;6(10):819-829. PMID 31447415. doi:10.1016/S2215-0366(19)30289-5 — Revisão sistemática e metanálise

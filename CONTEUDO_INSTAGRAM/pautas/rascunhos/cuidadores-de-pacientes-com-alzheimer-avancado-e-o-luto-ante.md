@@ -95,7 +95,7 @@ Este conteúdo oferece orientação geral e respeita sempre os protocolos hospit
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Bermejo Gómez I, Gallego-Alberto L, Losada Baltar A et al. Anticipatory grief in family caregivers of persons with dementia. Psychosocial correlates and impact on caregiver's health: A literature review. Rev Esp Geriatr Gerontol. 2023;58(4):101374. PMID 37246011. doi:10.1016/j.regg.2023.05.001 — Revisão (artigo em espanhol)
 2. Dehpour T, Koffman J. Assessment of anticipatory grief in informal caregivers of dependants with dementia: a systematic review. Aging Ment Health. 2023;27(1):110-123. PMID 35168426. doi:10.1080/13607863.2022.2032599 — Revisão sistemática

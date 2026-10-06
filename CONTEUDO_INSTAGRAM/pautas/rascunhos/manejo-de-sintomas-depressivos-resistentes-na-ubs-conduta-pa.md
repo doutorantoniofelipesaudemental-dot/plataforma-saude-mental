@@ -72,7 +72,7 @@ Este conteúdo constitui orientação geral para a prática clínica diária. Re
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Rizvi SJ, Grima E, Tan M et al. Treatment-resistant depression in primary care across Canada. Can J Psychiatry. 2014;59(7):349-57. PMID 25007419. doi:10.1177/070674371405900702 — Artigo original
 

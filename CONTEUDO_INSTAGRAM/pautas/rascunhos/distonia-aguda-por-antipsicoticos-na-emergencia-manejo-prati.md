@@ -93,7 +93,7 @@ Este conteúdo é uma orientação geral para a prática clínica de emergência
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Vanegas-Arroyave N, Caroff SN, Citrome L et al. An Evidence-Based Update on Anticholinergic Use for Drug-Induced Movement Disorders. CNS Drugs. 2024;38(4):239-254. PMID 38502289. doi:10.1007/s40263-024-01078-z — Revisão
 2. Duma SR, Fung VS. Drug-induced movement disorders. Aust Prescr. 2019;42(2):56-61. PMID 31048939. doi:10.18773/austprescr.2019.014 — Revisão

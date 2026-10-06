@@ -76,7 +76,7 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Laiho A, Elovaara H, Kaisamatti K et al. Stuttering interventions for children, adolescents, and adults: a systematic review as a part of clinical guidelines. J Commun Disord. 2022;99:106242. PMID 35751980. doi:10.1016/j.jcomdis.2022.106242 — Revisão sistemática
 2. Nippold MA. Stuttering in Preschool Children: Direct Versus Indirect Treatment. Lang Speech Hear Serv Sch. 2018;49(1):4-12. PMID 29322186. doi:10.1044/2017_LSHSS-17-0066 — Revisão

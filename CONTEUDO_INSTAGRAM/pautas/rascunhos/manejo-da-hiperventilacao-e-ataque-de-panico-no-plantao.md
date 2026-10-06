@@ -84,7 +84,7 @@ O atendimento de emergência exige excluir causas orgânicas graves antes de fec
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Nardi AE, Valença AM, Nascimento I et al. Panic disorder and hyperventilation. Arq Neuropsiquiatr. 1999;57(4):932-936. PMID 10683682. doi:10.1590/s0004-282x1999000600006 — Estudo experimental
 2. Meuret AE, Ritz T. Hyperventilation in panic disorder and asthma: empirical evidence and clinical strategies. Int J Psychophysiol. 2010;78(1):68-79. PMID 20685222. doi:10.1016/j.ijpsycho.2010.05.006 — Revisão

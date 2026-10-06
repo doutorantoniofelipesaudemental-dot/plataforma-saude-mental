@@ -85,7 +85,7 @@ Este conteúdo é uma orientação geral para a prática clínica e assistencial
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Gerolymos C, Barazer R, Yon DK et al. Drug Efficacy in the Treatment of Antipsychotic-Induced Akathisia: A Systematic Review and Network Meta-Analysis. JAMA Netw Open. 2024;7(3):e241527. PMID 38451521. doi:10.1001/jamanetworkopen.2024.1527 — Revisão sistemática e metanálise em rede
 2. Wu H, Siafis S, Wang D et al. Antipsychotic-induced akathisia in adults with acute schizophrenia: A systematic review and dose-response meta-analysis. Eur Neuropsychopharmacol. 2023;72:40-49. PMID 37075639. doi:10.1016/j.euroneuro.2023.03.015 — Revisão sistemática e metanálise

@@ -1,6 +1,6 @@
 # Revisão dos rascunhos de LinkedIn: pacotes 001 a 006
 
-Estes seis textos foram **escritos por mim em 2026-10-05** a partir das legendas já aprovadas de cada crônica e **aguardam a sua aprovação**. Abaixo, cada um ao lado da legenda do carrossel de origem. Marque `aprova`, `ajusta` (com a mudança) ou `refaz`.
+Estes seis textos foram **escritos por mim em 2026-10-05** a partir das legendas já aprovadas de cada crônica e **foram aprovados pelo Dr. Antônio Felipe em 2026-10-06**. Abaixo, cada um ao lado da legenda do carrossel de origem. Marque `aprova`, `ajusta` (com a mudança) ou `refaz`.
 
 ## Pacote 001: O balcão da farmácia e as perguntas não feitas
 
@@ -17,7 +17,7 @@ Estes seis textos foram **escritos por mim em 2026-10-05** a partir das legendas
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
 
-- Decisão: ☐ aprova  ☐ ajusta  ☐ refaz
+- Decisão: ☑ aprova  ☐ ajusta  ☐ refaz (aprovado pelo Dr. Antônio Felipe em 2026-10-06)
 - Comentário: 
 
 Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrativa composta; identificação e nota de IA; CVV 188 e SAMU 192 onde o tema pede; nenhuma menção a medicamento.
@@ -37,7 +37,7 @@ Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrati
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
 
-- Decisão: ☐ aprova  ☐ ajusta  ☐ refaz
+- Decisão: ☑ aprova  ☐ ajusta  ☐ refaz (aprovado pelo Dr. Antônio Felipe em 2026-10-06)
 - Comentário: 
 
 Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrativa composta; identificação e nota de IA; CVV 188 e SAMU 192 onde o tema pede; nenhuma menção a medicamento.
@@ -57,7 +57,7 @@ Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrati
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
 
-- Decisão: ☐ aprova  ☐ ajusta  ☐ refaz
+- Decisão: ☑ aprova  ☐ ajusta  ☐ refaz (aprovado pelo Dr. Antônio Felipe em 2026-10-06)
 - Comentário: 
 
 Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrativa composta; identificação e nota de IA; CVV 188 e SAMU 192 onde o tema pede; nenhuma menção a medicamento.
@@ -77,7 +77,7 @@ Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrati
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
 
-- Decisão: ☐ aprova  ☐ ajusta  ☐ refaz
+- Decisão: ☑ aprova  ☐ ajusta  ☐ refaz (aprovado pelo Dr. Antônio Felipe em 2026-10-06)
 - Comentário: 
 
 Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrativa composta; identificação e nota de IA; CVV 188 e SAMU 192 onde o tema pede; nenhuma menção a medicamento.
@@ -97,7 +97,7 @@ Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrati
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
 
-- Decisão: ☐ aprova  ☐ ajusta  ☐ refaz
+- Decisão: ☑ aprova  ☐ ajusta  ☐ refaz (aprovado pelo Dr. Antônio Felipe em 2026-10-06)
 - Comentário: 
 
 Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrativa composta; identificação e nota de IA; CVV 188 e SAMU 192 onde o tema pede; nenhuma menção a medicamento.
@@ -117,7 +117,7 @@ Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrati
 > Dr. Antônio Felipe · Médico · CRM-BA 41322 · Medicina de Família e Comunidade · RQE 26638
 > Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
 
-- Decisão: ☐ aprova  ☐ ajusta  ☐ refaz
+- Decisão: ☑ aprova  ☐ ajusta  ☐ refaz (aprovado pelo Dr. Antônio Felipe em 2026-10-06)
 - Comentário: 
 
 Pontos a conferir: tom de autoridade sem promessa de resultado; aviso de narrativa composta; identificação e nota de IA; CVV 188 e SAMU 192 onde o tema pede; nenhuma menção a medicamento.
