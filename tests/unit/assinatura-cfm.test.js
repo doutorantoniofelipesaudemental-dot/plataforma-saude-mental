@@ -50,3 +50,17 @@ test('HTMLs do portal: as 5 linhas aparecem, cada uma no seu lugar, com NÃO ESP
     assert.ok(!/com pós-graduações em Psiquiatria/.test(html), `${pagina}: ainda tem a bio antiga sem "NÃO ESPECIALISTA"`);
   }
 });
+
+test('template público do artigo traz a nota de transparência de IA (Res. CFM 2.454/2026), igual à fonte única', () => {
+  const { AVISO_CFM } = require('../../backend/lib/conformidadeCfm');
+  const html = ler('public/artigo.html');
+  assert.ok(html.includes(AVISO_CFM), 'artigo.html: falta a nota de IA com a Resolução CFM 2.454/2026');
+  assert.ok(html.includes('id="nota-ia"'), 'artigo.html: a nota de IA perdeu o id nota-ia');
+  // A página pré-renderizada parte do mesmo template, então herda a nota.
+  const { renderizarArtigoHtml } = require('../../backend/lib/renderizarArtigo');
+  const pre = renderizarArtigoHtml({
+    titulo: 'Teste', slug: 'teste', resumo: 'Resumo', conteudo: '<p>Texto</p>', categoria: 'Teste', autor: 'Dr. Antônio Felipe',
+    tempoLeitura: 1, publicadoEm: new Date('2026-10-05'), atualizadoEm: new Date('2026-10-05'),
+  });
+  assert.ok(pre.includes(AVISO_CFM), 'página pré-renderizada sem a nota de IA');
+});
