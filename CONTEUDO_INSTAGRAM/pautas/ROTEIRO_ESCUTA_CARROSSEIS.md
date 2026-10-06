@@ -8,6 +8,10 @@ Eu não consigo ouvir áudio: a conferência feita foi técnica (arquivos carreg
 2. A trilha (`interativos/assets/audio/bgm/suave.mp3`, sintética, 96 s em loop) é a **mesma** em todos: ouvir em um já vale para os 114, mas confira o volume dela sob a voz em um sensível.
 3. Marque cada item da lista abaixo ao ouvir.
 
+## Comparar as duas vozes nos sensíveis
+
+Abra `interativos/painel-comparacao-vozes.html` (pelo mesmo servidor local, em `http://localhost:8000/interativos/painel-comparacao-vozes.html`): cada fala dos 28 sensíveis tem a voz atual (Antônio) e a alternativa (Francisca) lado a lado. Anote por carrossel qual prefere.
+
 ## O que verificar
 
 - **Voz:** pronúncia de "SAMU", "CVV 188", nomes de serviços (UBS, CAPS, RAPS), termos como "pronto atendimento"; entonação em frases curtas.

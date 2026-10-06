@@ -32,9 +32,17 @@ Depois de a cota gratuita do Azure se esgotar, os 17 artigos que faltavam (23.48
 - **Trilha de fundo (2026-10-06):** faixa instrumental original, sintetizada localmente (pad ambiente em Lá menor, 96 s, loop contínuo, estéreo, MP3 de 128 kbit/s, 1,5 MB), sem serviço externo, sem créditos e sem questão de licença: `CONTEUDO_INSTAGRAM/interativos/assets/audio/bgm/suave.mp3`, ligada aos 114 HTML pelo campo `bgm`. Masterizada com pico em -5,9 dBFS: com os 15% de ganho que o `AudioPlayer.js` aplica à trilha, o pico fica em torno de -22 dB no conjunto; sob a narração ela cai para 8%. Conferido no navegador em `pacote-105` (trilha e falas são carregadas, sem erro); a emenda do loop foi medida nas amostras e não tem salto.
 - **Não feito:** não ouvi os arquivos (narração e trilha): a conferência foi técnica, não de qualidade. Como a trilha é sintética, vale o Dr. Antônio Felipe ouvir e decidir se mantém ou troca por uma faixa licenciada.
 
-## 4. Pendências abertas
+## 4. Voz alternativa nos carrosséis sensíveis (comparação auditiva)
 
-1. **Ouvir a trilha e a narração dos carrosséis** e decidir se a trilha sintética fica ou é trocada por uma faixa licenciada.
+- **O que foi feito (2026-10-06):** as 273 falas dos 28 carrosséis sensíveis foram sintetizadas também com **`pt-BR-FranciscaNeural`** (Edge-TTS, sem consumir cota do Azure): 0 falhas, 12 MB, em `CONTEUDO_INSTAGRAM/interativos/assets/audio/voiceover-francisca/pacote-NNN/slide-NN.mp3`. Os arquivos da voz atual (`pt-BR-AntonioNeural`) não foram tocados.
+- **Nada mudou no que o público vê:** os 114 carrosséis continuam apontando para a voz de Antônio. A voz de Francisca é **alternativa, não vinculada**.
+- **Painel de comparação:** `CONTEUDO_INSTAGRAM/interativos/painel-comparacao-vozes.html` (uso interno, `noindex`) lista cada fala dos 28 carrosséis com os dois players lado a lado e o link para abrir o carrossel. Verificado no navegador: 28 blocos, 546 áudios (as duas vozes) respondem 200 como `audio/mpeg`, 28 de 28 links abrem, sem rolagem horizontal.
+- **Como trocar a voz de um carrossel (se for a escolha):** substituir `voiceover/` por `voiceover-francisca/` nos caminhos do campo `voiceovers` do HTML do carrossel. Posso fazer em lote, para os 28 ou só para os que você indicar.
+- **Não ouvido por mim:** a escolha de voz é auditiva e é do Dr. Antônio Felipe.
+
+## 5. Pendências abertas
+
+1. **Ouvir a trilha e a narração dos carrosséis** (roteiro em `ROTEIRO_ESCUTA_CARROSSEIS.md`; comparação das duas vozes nos sensíveis em `interativos/painel-comparacao-vozes.html`) e decidir a voz e se a trilha sintética fica ou é trocada por uma faixa licenciada.
 2. **Referências dos Lotes 81 a 114:** leitura integral pelo Dr. Antônio Felipe; a pauta 155 tem uma referência parcial.
 3. **Rascunho dos `linkedin.txt` dos pacotes 001 a 006:** aguarda revisão do Dr. Antônio Felipe.
 4. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
