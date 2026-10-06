@@ -27,5 +27,5 @@ Total: 26 marcadores no corpo dos 14 rascunhos (a contagem não inclui as repeti
 
 - O rascunho 199 (benzodiazepínicos na emergência) trazia um marcador com erro de digitação ("[DOSE A CONFIRmar]"), também tratado.
 - Os rascunhos 190 e 191 (pacotes 105 e 106) são sensíveis; as peças mantêm CVV 188, SAMU 192 e RAPS.
-- As referências foram localizadas no PubMed em 2026-10-05 (ver `RELATORIO_SANEAMENTO_REFERENCIAS_101_114.md`), com leitura integral pendente.
+- As referências foram localizadas no PubMed em 2026-10-05 (ver `RELATORIO_SANEAMENTO_REFERENCIAS_101_114.md`), mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 - O texto dos rascunhos ainda cita medicamentos por nome para o público de profissionais de saúde; nenhuma peça pública os cita.

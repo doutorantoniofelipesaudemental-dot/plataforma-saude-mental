@@ -101,3 +101,7 @@ Total: 31 referências em 14 artigos.
 ## Observação
 
 A busca do PubMed devolve só identificadores, e os registros foram lidos um a um. Itens sem tipo de estudo claro no registro foram rotulados como "Artigo original".
+
+## Decisão do Dr. Antônio Felipe (2026-10-06)
+
+Por instrução do Dr. Antônio Felipe, **todas as referências deste relatório foram mantidas** como estão. A decisão foi registrada na planilha `CURADORIA_REFERENCIAS_081_114.csv` (coluna `decisao`) e nos pacotes, rascunhos e `pautas.json`.

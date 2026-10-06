@@ -90,7 +90,7 @@ Este conteúdo é uma orientação geral e educativa. Respeite sempre os protoco
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Bakas T, McCarthy MJ, Miller EL. Systematic Review of the Evidence for Stroke Family Caregiver and Dyad Interventions. Stroke. 2022;53(6):2093-2102. PMID 35264010. doi:10.1161/STROKEAHA.121.034090 — Revisão sistemática
 2. Zhang XY, Sha KH, Ma XY et al. Dyadic psycho-social interventions for stroke survivors and family caregivers: A systematic review and meta-analysis of randomized controlled trials. J Adv Nurs. 2023;79(10):3707-3726. PMID 37439492. doi:10.1111/jan.15781 — Revisão sistemática e metanálise

@@ -90,7 +90,7 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Wilson JE, Oldham MA, Francis A et al. Catatonia: American Psychiatric Association Resource Document. J Acad Consult Liaison Psychiatry. 2025;66(4):277-299. PMID 40368005. doi:10.1016/j.jaclp.2025.05.001 — Documento de recursos da APA (revisão)
 2. Fusunyan M, Praschan N, Fricchione G et al. Akinetic Mutism and Coronavirus Disease 2019: A Narrative Review. J Acad Consult Liaison Psychiatry. 2021;62(6):625-633. PMID 34461295. doi:10.1016/j.jaclp.2021.08.009 — Revisão narrativa

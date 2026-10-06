@@ -78,7 +78,7 @@ Este conteúdo é uma orientação geral para a prática médica e educacional, 
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Casey MF, Elder NM, Fenn A et al. Comparative Safety of Medications for Severe Agitation: A Geriatric Emergency Department Guidelines 2.0 Systematic Review. J Am Geriatr Soc. 2025;73(9):2893-2904. PMID 40275439. doi:10.1111/jgs.19485 — Revisão sistemática
 2. Uribe ES, Rodríguez CAB, Juárez MEN et al. "Pharmacological management of acute agitation in psychiatric patients: an umbrella review". BMC Psychiatry. 2025;25(1):273. PMID 40133850. doi:10.1186/s12888-024-06426-3 — Revisão sistemática (umbrella)

@@ -94,7 +94,7 @@ Chega ao pronto-socorro uma pessoa de meia-idade ou idosa, trazida por familiare
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Ropper AH. Transient Global Amnesia. N Engl J Med. 2023;388(7):635-640. PMID 36791163. doi:10.1056/NEJMra2213867 — Revisão
 2. Miller TD, Butler CR. Acute-onset amnesia: transient global amnesia and other causes. Pract Neurol. 2022;22(3):201-208. PMID 35504698. doi:10.1136/practneurol-2020-002826 — Revisão

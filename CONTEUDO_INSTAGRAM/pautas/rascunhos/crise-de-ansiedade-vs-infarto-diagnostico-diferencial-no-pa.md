@@ -84,7 +84,7 @@ Este conteúdo oferece orientação geral para a prática médica de urgência, 
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Gulati M, Levy PD, Mukherjee D et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-e454. PMID 34709879. doi:10.1161/CIR.0000000000001029 — Diretriz clínica
 2. Katerndahl D. Panic plaques: panic disorder & coronary artery disease in patients with chest pain. J Am Board Fam Pract. 2004;17(2):114-126. PMID 15082670. doi:10.3122/jabfm.17.2.114 — Revisão sistemática

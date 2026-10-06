@@ -72,7 +72,7 @@ Lembramos que este conteúdo é uma orientação geral e que se respeitam sempre
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Agyapong B, Obuobi-Donkor G, Burback L et al. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
 2. Berger E, Nott D. Predictors of compassion fatigue and compassion satisfaction among Australian teachers. Psychol Trauma. 2023;16(8):1309-1318. PMID 37561440. doi:10.1037/tra0001573 — Estudo transversal

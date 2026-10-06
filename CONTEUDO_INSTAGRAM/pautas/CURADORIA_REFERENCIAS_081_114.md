@@ -2,6 +2,8 @@
 
 Painel para o **Dr. Antônio Felipe** ler as fontes e decidir. Os dados vêm da seção "Referências" de cada pacote; as colunas `decisao` e `comentario` do arquivo `CURADORIA_REFERENCIAS_081_114.csv` estão em branco de propósito. **Nada aqui foi lido integralmente por mim**: a leitura e a escolha final são suas.
 
+> **Decisão (2026-10-06):** o Dr. Antônio Felipe decidiu **manter todas as 77 referências** (inclusive a referência parcial da pauta 089). A coluna `decisao` do CSV está preenchida com "mantém" em todas as linhas.
+
 ## Como usar
 
 1. Abra `CURADORIA_REFERENCIAS_081_114.csv` no Excel ou no Google Planilhas (UTF-8).

@@ -87,7 +87,7 @@ Reforçamos que este conteúdo tem caráter de orientação geral e que se respe
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Orford J, Velleman R, Natera G et al. Addiction in the family is a major but neglected contributor to the global burden of adult ill-health. Soc Sci Med. 2013;78:70-77. PMID 23268776. doi:10.1016/j.socscimed.2012.11.036 — Revisão
 

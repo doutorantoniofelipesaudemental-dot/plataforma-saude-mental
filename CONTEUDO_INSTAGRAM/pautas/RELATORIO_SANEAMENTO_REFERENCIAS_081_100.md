@@ -144,3 +144,7 @@ A busca do PubMed usada devolve só os identificadores, e os registros foram lid
 ## Atualização: pauta 155 (pacote 89)
 
 Em 2026-10-05, novas buscas no PubMed ("cyberbullying" e "teachers", "online harassment" e docentes) devolveram quase só estudos com estudantes. A única fonte próxima foi: Oksanen A, Celuch M, Latikka R et al. Hate and harassment in academia: the rising concern of the online environment. High Educ (Dordr). 2021;84(3):541-567. PMID 34840344. doi:10.1007/s10734-021-00787-4. Fonte parcial: o estudo trata de assédio online contra professores e pesquisadores universitários na Finlândia, não de professores da educação básica; a adequação ao artigo fica com o revisor. Por isso a pauta 155 passa a ter **1 referência parcial** (total de 46 referências para os 20 artigos), e as buscas por fontes sobre professores da educação básica seguem sem resultado.
+
+## Decisão do Dr. Antônio Felipe (2026-10-06)
+
+Por instrução do Dr. Antônio Felipe, **todas as referências deste relatório foram mantidas** como estão. A decisão foi registrada na planilha `CURADORIA_REFERENCIAS_081_114.csv` (coluna `decisao`) e nos pacotes, rascunhos e `pautas.json`.

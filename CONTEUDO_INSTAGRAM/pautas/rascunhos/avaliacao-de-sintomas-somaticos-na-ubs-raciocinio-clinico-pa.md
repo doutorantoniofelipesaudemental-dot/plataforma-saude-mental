@@ -92,7 +92,7 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Henningsen P. Management of somatic symptom disorder. Dialogues Clin Neurosci. 2018;20(1):23-31. PMID 29946208. doi:10.31887/DCNS.2018.20.1/phenningsen — Revisão
 2. Leaviss J, Davis S, Ren S et al. Behavioural modification interventions for medically unexplained symptoms in primary care: systematic reviews and economic evaluation. Health Technol Assess. 2020;24(46):1-490. PMID 32975190. doi:10.3310/hta24460 — Revisão sistemática

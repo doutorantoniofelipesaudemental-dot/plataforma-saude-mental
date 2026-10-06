@@ -100,7 +100,7 @@ Lembre-se de que este texto é uma orientação geral para a prática clínica e
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Myran DT, Harrison LD, Pugliese M et al. Transition to Schizophrenia Spectrum Disorder Following Emergency Department Visits Due to Substance Use With and Without Psychosis. JAMA Psychiatry. 2023;80(11):1169-1174. PMID 37755727. doi:10.1001/jamapsychiatry.2023.3582 — Estudo de coorte
 2. Rognli EB, Heiberg IH, Jacobsen BK et al. Transition From Substance-Induced Psychosis to Schizophrenia Spectrum Disorder or Bipolar Disorder. Am J Psychiatry. 2023;180(6):437-444. PMID 37132221. doi:10.1176/appi.ajp.22010076 — Artigo original

@@ -80,7 +80,7 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Bair MJ, Robinson RL, Katon W et al. Depression and pain comorbidity: a literature review. Arch Intern Med. 2003;163(20):2433-2445. PMID 14609780. doi:10.1001/archinte.163.20.2433 — Revisão
 2. Dowell D, Ragan KR, Jones CM et al. CDC Clinical Practice Guideline for Prescribing Opioids for Pain - United States, 2022. MMWR Recomm Rep. 2022;71(3):1-95. PMID 36327391. doi:10.15585/mmwr.rr7103a1 — Diretriz clínica

@@ -79,7 +79,7 @@ Este conteúdo oferece orientação geral e respeita sempre os protocolos hospit
 
 ## Referências
 
-> Referência localizada no PubMed/MEDLINE (PMID e DOI conferidos no registro da base). As buscas por estudos sobre ciberbullying contra professores da educação básica não encontraram fonte adequada; leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referência localizada no PubMed/MEDLINE (PMID e DOI conferidos no registro da base). As buscas por estudos sobre ciberbullying contra professores da educação básica não encontraram fonte adequada; fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Oksanen A, Celuch M, Latikka R et al. Hate and harassment in academia: the rising concern of the online environment. High Educ (Dordr). 2021;84(3):541-567. PMID 34840344. doi:10.1007/s10734-021-00787-4 — Artigo original (Fonte parcial: o estudo trata de assédio online contra professores e pesquisadores universitários na Finlândia, não de professores da educação básica; a adequação ao artigo fica com o revisor.)
 

@@ -110,7 +110,7 @@ Olá, colega. Na nossa rotina na Unidade Básica de Saúde, frequentemente nos d
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Sharma AN, Arango C, Coghill D et al. BAP Position Statement: Off-label prescribing of psychotropic medication to children and adolescents. J Psychopharmacol. 2016;30(5):416-421. PMID 27098018. doi:10.1177/0269881116636107 — Declaração de consenso
 2. Morales DR, Guthrie B. Off-label prescribing of antidepressants. BMJ. 2017;356:j849. PMID 28223288. doi:10.1136/bmj.j849 — Editorial

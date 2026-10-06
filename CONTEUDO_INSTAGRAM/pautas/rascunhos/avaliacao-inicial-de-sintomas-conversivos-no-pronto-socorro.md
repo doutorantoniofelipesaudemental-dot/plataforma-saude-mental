@@ -89,7 +89,7 @@ Este conteúdo é uma orientação geral para a prática clínica de urgência, 
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Finkelstein SA, Cortel-LeBlanc MA, Cortel-LeBlanc A et al. Functional neurological disorder in the emergency department. Acad Emerg Med. 2021;28(6):685-696. PMID 33866653. doi:10.1111/acem.14263 — Revisão narrativa
 2. Bennett K, Diamond C, Hoeritzauer I et al. A practical review of functional neurological disorder (FND) for the general physician. Clin Med (Lond). 2021;21(1):28-36. PMID 33479065. doi:10.7861/clinmed.2020-0987 — Revisão

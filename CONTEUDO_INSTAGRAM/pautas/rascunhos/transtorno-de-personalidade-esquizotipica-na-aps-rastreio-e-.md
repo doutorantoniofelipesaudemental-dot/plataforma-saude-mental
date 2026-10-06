@@ -80,7 +80,7 @@ Este conteúdo é uma orientação geral para a prática clínica e assistencial
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Kirchner SK, Roeh A, Nolden J et al. Diagnosis and treatment of schizotypal personality disorder: evidence from a systematic review. NPJ Schizophr. 2018;4(1):20. PMID 30282970. doi:10.1038/s41537-018-0062-8 — Revisão sistemática
 

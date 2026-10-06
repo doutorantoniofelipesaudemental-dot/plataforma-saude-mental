@@ -85,7 +85,7 @@ Este conteúdo é uma orientação geral baseada em diretrizes clínicas, devend
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Tannenbaum C, Martin P, Tamblyn R et al. Reduction of inappropriate benzodiazepine prescriptions among older adults through direct patient education: the EMPOWER cluster randomized trial. JAMA Intern Med. 2014;174(6):890-898. PMID 24733354. doi:10.1001/jamainternmed.2014.949 — Ensaio clínico randomizado em cluster
 2. Baandrup L, Ebdrup BH, Rasmussen JØ et al. Pharmacological interventions for benzodiazepine discontinuation in chronic benzodiazepine users. Cochrane Database Syst Rev. 2018;3(3):CD011481. PMID 29543325. doi:10.1002/14651858.CD011481.pub2 — Revisão sistemática Cochrane e metanálise

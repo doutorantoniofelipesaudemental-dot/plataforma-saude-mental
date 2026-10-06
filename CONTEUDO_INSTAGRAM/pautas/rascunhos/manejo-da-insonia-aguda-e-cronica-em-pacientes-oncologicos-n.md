@@ -86,7 +86,7 @@ Este conteúdo serve como orientação geral para a prática clínica na atenç�
 
 ## Referências
 
-> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Fontes mantidas por decisão do Dr. Antônio Felipe em 2026-10-06.
 
 1. Grassi L, Zachariae R, Caruso R et al. Insomnia in adult patients with cancer: ESMO Clinical Practice Guideline. ESMO Open. 2023;8(6):102047. PMID 38158225. doi:10.1016/j.esmoop.2023.102047 — Diretriz clínica
 2. Edinger JD, Arnedt JT, Bertisch SM et al. Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2021;17(2):255-262. PMID 33164742. doi:10.5664/jcsm.8986 — Diretriz clínica
