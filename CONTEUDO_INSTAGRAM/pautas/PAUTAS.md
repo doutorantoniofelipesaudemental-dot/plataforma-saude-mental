@@ -1845,6 +1845,7 @@
   - PubMed: `Sedative hypnotics AND emergency department AND prescribing patterns` (Estudo Observacional) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendiment.md` · slug: `manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendiment` · pauta: `2026-09-30-139-manejo-da-insonia-em-plantoes-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 81 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-81-manejo-da-insonia-em-plantoes-abordagem-no-pronto-atendimento.md`
 - **originalidade:** original · mais próximo: "Insônia refratária na atenção primária: investigação e conduta" (similaridade 0.32)
 
 ## [redigida] Crise de Ansiedade vs Infarto: Diagnóstico Diferencial no PA
@@ -1861,6 +1862,7 @@
   - PubMed: `Somatic symptoms AND emergency department AND cardiac evaluation` (Estudo Observacional) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa.md` · slug: `crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa` · pauta: `2026-09-30-140-crise-de-ansiedade-vs-infarto-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 82 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-82-crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa.md`
 - **originalidade:** original · mais próximo: "Alta do PA Psiquiátrico: o que garante que o paciente não volte em crise" (similaridade 0.25)
 
 ## [redigida] Manejo de Efeitos Colaterais Extrapiramidais no Plantão
@@ -1877,6 +1879,7 @@
   - PubMed: `Akathisia AND emergency recognition AND management` (Estudo de Coorte) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-de-efeitos-colaterais-extrapiramidais-no-plantao.md` · slug: `manejo-de-efeitos-colaterais-extrapiramidais-no-plantao` · pauta: `2026-09-30-141-manejo-de-efeitos-colaterais-e`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 83 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-83-manejo-de-efeitos-colaterais-extrapiramidais-no-plantao.md`
 - **originalidade:** original · mais próximo: "Uso de antipsicóticos na APS: indicações, ajustes e desprescrição" (similaridade 0.2)
 
 ## [rejeitada] Investigação de Fadiga e Astenia Crônica na UBS
@@ -1923,6 +1926,7 @@
   - PubMed: `Antidepressants for chronic pain AND efficacy AND safety` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs.md` · slug: `abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs` · pauta: `2026-09-30-144-abordagem-da-dor-cronica-e-sof`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 84 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-84-abordagem-da-dor-cronica-e-sofrimento-psiquico-na-ubs.md`
 - **originalidade:** original · mais próximo: "Automutilação em adolescentes: abordagem na consulta" (similaridade 0.27)
 
 ## [redigida] Avaliação Inicial de Sintomas Conversivos no Pronto-Socorro
@@ -1939,6 +1943,7 @@
   - PubMed: `Motor functional neurological symptoms AND emergency care` (Estudo Observacional) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro.md` · slug: `avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro` · pauta: `2026-09-30-145-avaliacao-inicial-de-sintomas-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 85 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-85-avaliacao-inicial-de-sintomas-conversivos-no-pronto-socorro.md`
 - **originalidade:** original · mais próximo: "Delirium no pronto-atendimento: avaliação e manejo para residentes" (similaridade 0.35)
 
 ## [redigida] Manejo da Hiperventilação e Ataque de Pânico no Plantão
@@ -1955,6 +1960,7 @@
   - PubMed: `Respiratory alkalosis AND panic disorder AND clinical presentation` (Estudo Observacional) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao.md` · slug: `manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao` · pauta: `2026-09-30-146-manejo-da-hiperventilacao-e-at`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 86 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-86-manejo-da-hiperventilacao-e-ataque-de-panico-no-plantao.md`
 - **originalidade:** original · mais próximo: "Manejo de Efeitos Colaterais Extrapiramidais no Plantão" (similaridade 0.23)
 
 ## [redigida] Desmame Seguro de Benzodiazepínicos na Atenção Primária
@@ -1971,6 +1977,7 @@
   - PubMed: `Long-term benzodiazepine use AND tapering strategies AND efficacy` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/desmame-seguro-de-benzodiazepinicos-na-atencao-primaria.md` · slug: `desmame-seguro-de-benzodiazepinicos-na-atencao-primaria` · pauta: `2026-09-30-147-desmame-seguro-de-benzodiazepi`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 87 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-87-desmame-seguro-de-benzodiazepinicos-na-atencao-primaria.md`
 - **originalidade:** original · mais próximo: "Uso de benzodiazepínicos na urgência psiquiátrica" (similaridade 0.27)
 
 ## [redigida] Uso de inibidores seletivos da recaptação de serotonina na UBS
@@ -1987,6 +1994,7 @@
   - PubMed: `("Drug Interactions"[Mesh]) AND ("Serotonin Uptake Inhibitors"[Mesh]) AND ("Primary Care"[Title/Abstract])` (Ensaio Clínico Randomizado) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-u.md` · slug: `uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-u` · pauta: `2026-09-30-148-uso-de-inibidores-seletivos-da`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 88 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-88-uso-de-inibidores-seletivos-da-recaptacao-de-serotonina-na-ubs.md`
 - **originalidade:** original · mais próximo: "Mutismo seletivo na infância: identificação precoce e conduta na UBS" (similaridade 0.17)
 
 ## [rejeitada] Avaliação de ideação suicida no pronto atendimento: conduta
@@ -2093,6 +2101,7 @@
   - PubMed: `coping strategies for teachers facing cyberbullying` (Diretriz de intervenção) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/professores-e-o-ciberbullying-impactos-na-saude-mental.md` · slug: `professores-e-o-ciberbullying-impactos-na-saude-mental` · pauta: `2026-09-30-155-professores-e-o-ciberbullying-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 89 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-89-professores-e-o-ciberbullying-impactos-na-saude-mental.md`
 - **originalidade:** original · mais próximo: "Professores e a saúde mental: identificando limites diante da sobrecarga" (similaridade 0.31)
 
 ## [redigida] Cuidadores de pacientes com sequelas de AVC em casa
@@ -2109,6 +2118,7 @@
   - PubMed: `home care challenges in stroke survivors and caregivers` (Estudo qualitativo) [PMID A CONFIRMAR]
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/cuidadores-de-pacientes-com-sequelas-de-avc-em-casa.md` · slug: `cuidadores-de-pacientes-com-sequelas-de-avc-em-casa` · pauta: `2026-09-30-156-cuidadores-de-pacientes-com-se`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: pendente**
+- **pacote:** 90 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-90-cuidadores-de-pacientes-com-sequelas-de-avc-em-casa.md`
 - **originalidade:** original · mais próximo: "Cuidadores familiares em cuidados paliativos: como prevenir o colapso emocional" (similaridade 0.26)
 
 ## [redigida] Professores de educação infantil e a regulação emocional

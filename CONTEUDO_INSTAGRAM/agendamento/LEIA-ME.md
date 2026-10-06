@@ -25,3 +25,7 @@ Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem 
 ## Extensão: pacotes 071 a 080 (a partir de 15/12/2026)
 
 Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Em 2026-10-05, por instrução do Dr. Antônio Felipe, os rascunhos das pautas 82, 84, 85, 117, 118, 119, 120, 121, 122 e 127 (pacotes 071 a 080) foram aprovados (`revisaoMedica: aprovada`) e as dez linhas foram liberadas ("aguardando arte/vídeo e agendamento manual"). O marcador de dose do rascunho 127 (pacote 080) foi substituído por "proporção e intervalo definidos pelo médico conforme o protocolo do serviço", sem posologia. Os pacotes de temas delicados (074, 075, 076, 079 e 080) continuam em dias úteis.
+
+## Extensão: pacotes 081 a 090 (a partir de 25/12/2026)
+
+Acrescentados em 2026-10-05 ao agenda.csv, com as mesmas regras: só texto, sem artes, vídeos nem áudio; nada foi publicado nem agendado. Os rascunhos das pautas 139, 140, 141, 144, 145, 146, 147, 148, 155 e 156 (pacotes 081 a 090) estão com `revisaoMedica: pendente` **e contêm marcadores "[DOSE A CONFIRMAR]"** (de 1 a 3 por rascunho), e as dez linhas ficam **BLOQUEADAS** até que os marcadores sejam resolvidos nos artigos e o Dr. Antônio Felipe aprove. As referências desses rascunhos são apenas consultas de busca do PubMed, sem PMID. Os pacotes de temas de urgência ou delicados (082, 083, 085, 086, 087 e 088) foram colocados em dias úteis. Nenhuma peça cita medicamentos, classes ou doses.
