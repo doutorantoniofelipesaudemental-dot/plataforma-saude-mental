@@ -29,11 +29,12 @@ Depois de a cota gratuita do Azure se esgotar, os 17 artigos que faltavam (23.48
 - **O que foi feito (2026-10-06):** 1.107 falas, uma por slide, sintetizadas com Edge-TTS (`pt-BR-AntonioNeural`, 88.509 caracteres, sem consumir a cota do Azure): **0 falhas**. Os MP3 ficam em `CONTEUDO_INSTAGRAM/interativos/assets/audio/voiceover/pacote-NNN/slide-NN.mp3` (cerca de 46 MB) e cada HTML de `carrosseis/` passou a trazer o mapa `voiceovers` do motor `AudioPlayer.js`.
 - **O que é narrado:** a narração do roteiro aprovado de cada pacote (frases curtas); nos slides de alerta e de gravidade, o texto inteiro, com os canais CVV 188 e SAMU 192; no último slide, o aviso de que nenhum medicamento deve ser iniciado, trocado ou suspenso sem orientação médica. Nenhum texto narrado cita medicamento, classe ou dose.
 - **Verificado no navegador (servidor local):** os 114 carrosséis carregam sem erro; as 1.107 falas respondem 200 como `audio/mpeg` e apontam para slides que existem; em `pacote-105`, ao ligar o áudio e avançar, a narração disparada é a do slide 1, 2 e 3. O áudio continua começando desligado, como já era o desenho do motor.
-- **Não feito:** trilha de fundo (música a -22 dB); o motor aceita `bgm`, mas nenhuma trilha foi gerada ou escolhida. Também não ouvi os arquivos: a conferência foi técnica, não de qualidade da voz.
+- **Trilha de fundo (2026-10-06):** faixa instrumental original, sintetizada localmente (pad ambiente em Lá menor, 96 s, loop contínuo, estéreo, MP3 de 128 kbit/s, 1,5 MB), sem serviço externo, sem créditos e sem questão de licença: `CONTEUDO_INSTAGRAM/interativos/assets/audio/bgm/suave.mp3`, ligada aos 114 HTML pelo campo `bgm`. Masterizada com pico em -5,9 dBFS: com os 15% de ganho que o `AudioPlayer.js` aplica à trilha, o pico fica em torno de -22 dB no conjunto; sob a narração ela cai para 8%. Conferido no navegador em `pacote-105` (trilha e falas são carregadas, sem erro); a emenda do loop foi medida nas amostras e não tem salto.
+- **Não feito:** não ouvi os arquivos (narração e trilha): a conferência foi técnica, não de qualidade. Como a trilha é sintética, vale o Dr. Antônio Felipe ouvir e decidir se mantém ou troca por uma faixa licenciada.
 
 ## 4. Pendências abertas
 
-1. **Trilha de fundo dos 114 carrosséis** (música suave a -22 dB): não gerada. A narração por slide já está feita (seção 3).
+1. **Ouvir a trilha e a narração dos carrosséis** e decidir se a trilha sintética fica ou é trocada por uma faixa licenciada.
 2. **Referências dos Lotes 81 a 114:** leitura integral pelo Dr. Antônio Felipe; a pauta 155 tem uma referência parcial.
 3. **Rascunho dos `linkedin.txt` dos pacotes 001 a 006:** aguarda revisão do Dr. Antônio Felipe.
 4. **Conferência no navegador** das páginas de artigo (a verificação foi pelo HTML, por amostra).
