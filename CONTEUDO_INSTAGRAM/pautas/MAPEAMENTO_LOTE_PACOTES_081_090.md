@@ -40,15 +40,15 @@ Proposta de seleção das 10 próximas pautas redigidas que ainda não têm paco
 
 ## Marcadores "[DOSE A CONFIRMAR]" nos rascunhos
 
-Os rascunhos abaixo ainda contêm marcadores de dose no texto do artigo, que devem ser resolvidos (como foi feito nos rascunhos 058, 044 e 127) antes da aprovação:
+Contagem corrigida (somente o corpo do artigo; ver `DOSSIER_REVISAO_LOTES_081_090.md`):
 
 - Pacote 81 (pauta 139): 1 marcador
-- Pacote 82 (pauta 140): 3 marcadores
+- Pacote 82 (pauta 140): 2 marcadores
 - Pacote 83 (pauta 141): 3 marcadores
-- Pacote 84 (pauta 144): 2 marcadores
+- Pacote 84 (pauta 144): 1 marcador
 - Pacote 85 (pauta 145): 1 marcador
-- Pacote 86 (pauta 146): 2 marcadores
-- Pacote 87 (pauta 147): 3 marcadores
-- Pacote 88 (pauta 148): 3 marcadores
-- Pacote 89 (pauta 155): 3 marcadores
+- Pacote 86 (pauta 146): 1 marcador
+- Pacote 87 (pauta 147): 2 marcadores
+- Pacote 88 (pauta 148): 2 marcadores
+- Pacote 89 (pauta 155): 2 marcadores
 - Pacote 90 (pauta 156): 2 marcadores
