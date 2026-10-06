@@ -85,13 +85,11 @@ Reforçamos que este conteúdo tem caráter de orientação geral e que se respe
 - Grupos de apoio mútuo e a equipe da atenção primária são fundamentais para reduzir a sobrecarga do familiar.
 - Sintomas intensos de ansiedade ou desespero exigem avaliação profissional e suporte imediato através da rede de saúde.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `family caregivers AND substance-related disorders AND burnout AND primary health care` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `codependency AND family caregivers AND psychological intervention AND mental health` — Ensaio clínico — [PMID A CONFIRMAR]
-3. `substance use disorders AND family support AND clinical guidelines` — Diretriz baseada em evidências — [PMID A CONFIRMAR]
+1. Orford J, Velleman R, Natera G et al. Addiction in the family is a major but neglected contributor to the global burden of adult ill-health. Soc Sci Med. 2013;78:70-77. PMID 23268776. doi:10.1016/j.socscimed.2012.11.036 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

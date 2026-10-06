@@ -64,13 +64,12 @@ Lembramos que este conteúdo é uma orientação geral para a prática clínica 
 - O manejo prioriza a segurança e o silêncio, reservando fármacos apenas para situações estritamente necessárias.
 - O suporte continuado com terapia ocupacional e equipe multidisciplinar é essencial para a prevenção de novas crises.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Autism Spectrum Disorder AND Sensory Overload AND Management` — Revisão Integrativa — [PMID A CONFIRMAR]
-2. `Sensory Processing in Autism AND Primary Care` — Estudo Observacional — [PMID A CONFIRMAR]
-3. `Autism Meltdown AND Emergency and Primary Care` — Diretriz Prática — [PMID A CONFIRMAR]
+1. Poulsen R, Williams Z, Dwyer P et al. How auditory processing influences the autistic profile: A review. Autism Res. 2024;17(12):2452-2470. PMID 39552096. doi:10.1002/aur.3259 — Revisão
+2. Lai MC, Kassee C, Besney R et al. Prevalence of co-occurring mental health diagnoses in the autism population: a systematic review and meta-analysis. Lancet Psychiatry. 2019;6(10):819-829. PMID 31447415. doi:10.1016/S2215-0366(19)30289-5 — Revisão sistemática e metanálise
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

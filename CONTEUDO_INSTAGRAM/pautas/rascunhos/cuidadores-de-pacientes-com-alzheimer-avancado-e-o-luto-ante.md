@@ -93,13 +93,14 @@ Este conteúdo oferece orientação geral e respeita sempre os protocolos hospit
 - A escuta ativa na Atenção Primária ajuda a validar o sofrimento e prevenir a exaustão extrema do cuidador.
 - O suporte deve envolver divisão de tarefas, grupos de apoio e, quando necessário, avaliação médica presencial para tratamento adequado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `caregivers AND anticipatory grief AND dementia` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `family caregivers AND Alzheimer disease AND psychological distress` — Estudo observacional — [PMID A CONFIRMAR]
-3. `primary health care AND support for dementia caregivers` — Diretriz clínica — [PMID A CONFIRMAR]
+1. Bermejo Gómez I, Gallego-Alberto L, Losada Baltar A et al. Anticipatory grief in family caregivers of persons with dementia. Psychosocial correlates and impact on caregiver's health: A literature review. Rev Esp Geriatr Gerontol. 2023;58(4):101374. PMID 37246011. doi:10.1016/j.regg.2023.05.001 — Revisão (artigo em espanhol)
+2. Dehpour T, Koffman J. Assessment of anticipatory grief in informal caregivers of dependants with dementia: a systematic review. Aging Ment Health. 2023;27(1):110-123. PMID 35168426. doi:10.1080/13607863.2022.2032599 — Revisão sistemática
+3. Malhotra C, Chaudhry I, Shah SU et al. Caregivers' Burden and Anticipatory Grief Increases Acute Health Care Use in Older Adults with Severe Dementia. J Am Med Dir Assoc. 2024;25(7):104981. PMID 38599241. doi:10.1016/j.jamda.2024.03.001 — Estudo de coorte
+
 
 ---
 

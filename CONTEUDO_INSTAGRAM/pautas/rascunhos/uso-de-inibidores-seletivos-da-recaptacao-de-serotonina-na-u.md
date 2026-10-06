@@ -104,13 +104,11 @@ Este conteúdo é uma orientação geral para a prática clínica na Atenção P
 - Efeitos colaterais iniciais são comuns e devem ser antecipados para garantir a adesão.
 - A interrupção do tratamento deve ser gradual para evitar sintomas de abstinência.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `("Serotonin Uptake Inhibitors"[Mesh]) AND ("Primary Health Care"[Mesh] OR "General Practice"[Mesh])` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `("Depressive Disorder"[Mesh]) AND ("Antidepressive Agents"[Mesh]) AND ("Primary Health Care"[Mesh])` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `("Drug Interactions"[Mesh]) AND ("Serotonin Uptake Inhibitors"[Mesh]) AND ("Primary Care"[Title/Abstract])` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
+1. Cipriani A, Furukawa TA, Salanti G et al. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis. Lancet. 2018;391(10128):1357-1366. PMID 29477251. doi:10.1016/S0140-6736(17)32802-7 — Revisão sistemática e metanálise em rede
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

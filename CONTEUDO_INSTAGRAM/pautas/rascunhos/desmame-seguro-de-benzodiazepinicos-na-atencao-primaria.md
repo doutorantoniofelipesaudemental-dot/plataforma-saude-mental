@@ -83,13 +83,13 @@ Este conteúdo é uma orientação geral baseada em diretrizes clínicas, devend
 - Sintomas leves de abstinência são esperados, mas sinais de gravidade exigem pausa na redução.
 - O suporte não farmacológico e a atenção às comorbidades são fundamentais para o sucesso do processo.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Benzodiazepine discontinuation AND primary care AND tapering protocol` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Benzodiazepine withdrawal AND primary health care AND guidelines` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Long-term benzodiazepine use AND tapering strategies AND efficacy` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
+1. Tannenbaum C, Martin P, Tamblyn R et al. Reduction of inappropriate benzodiazepine prescriptions among older adults through direct patient education: the EMPOWER cluster randomized trial. JAMA Intern Med. 2014;174(6):890-898. PMID 24733354. doi:10.1001/jamainternmed.2014.949 — Ensaio clínico randomizado em cluster
+2. Baandrup L, Ebdrup BH, Rasmussen JØ et al. Pharmacological interventions for benzodiazepine discontinuation in chronic benzodiazepine users. Cochrane Database Syst Rev. 2018;3(3):CD011481. PMID 29543325. doi:10.1002/14651858.CD011481.pub2 — Revisão sistemática Cochrane e metanálise
+3. Peng L, Morford KL, Levander XA. Benzodiazepines and Related Sedatives. Med Clin North Am. 2022;106(1):113-129. PMID 34823725. doi:10.1016/j.mcna.2021.08.012 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

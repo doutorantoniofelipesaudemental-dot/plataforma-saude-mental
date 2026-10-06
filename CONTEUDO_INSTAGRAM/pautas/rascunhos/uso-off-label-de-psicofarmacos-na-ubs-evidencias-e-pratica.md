@@ -108,13 +108,12 @@ Olá, colega. Na nossa rotina na Unidade Básica de Saúde, frequentemente nos d
 - O monitoramento rigoroso e a prescrição com doses iniciais baixas garantem maior segurança clínica.
 - O encaminhamento especializado deve ser considerado diante de refratariedade ou alta complexidade na atenção básica.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Off-label use AND psychotropics AND primary care AND clinical practice` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `Prescribing off-label AND mental health AND family practice AND guidelines` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `Psychotropic drugs off-label prescribing AND safety AND efficacy AND primary health care` — Ensaio clínico controlado — [PMID A CONFIRMAR]
+1. Sharma AN, Arango C, Coghill D et al. BAP Position Statement: Off-label prescribing of psychotropic medication to children and adolescents. J Psychopharmacol. 2016;30(5):416-421. PMID 27098018. doi:10.1177/0269881116636107 — Declaração de consenso
+2. Morales DR, Guthrie B. Off-label prescribing of antidepressants. BMJ. 2017;356:j849. PMID 28223288. doi:10.1136/bmj.j849 — Editorial
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

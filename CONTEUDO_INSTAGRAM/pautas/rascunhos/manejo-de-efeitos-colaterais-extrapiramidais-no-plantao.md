@@ -78,13 +78,13 @@ Este conteúdo é uma orientação geral para a prática clínica e deve respeit
 - Sempre exclua causas graves como a Síndrome Neuroléptica Maligna diante de febre e rigidez extrema.
 - Ajuste as condutas conforme os protocolos locais e as diretrizes do seu serviço.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Extrapyramidal symptoms AND acute management AND emergency department` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Acute dystonia AND antipsychotics AND treatment protocol` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Akathisia AND emergency recognition AND management` — Estudo de Coorte — [PMID A CONFIRMAR]
+1. Vanegas-Arroyave N, Caroff SN, Citrome L et al. An Evidence-Based Update on Anticholinergic Use for Drug-Induced Movement Disorders. CNS Drugs. 2024;38(4):239-254. PMID 38502289. doi:10.1007/s40263-024-01078-z — Revisão
+2. Ali T, Sisay M, Tariku M et al. Antipsychotic-induced extrapyramidal side effects: A systematic review and meta-analysis of observational studies. PLoS One. 2021;16(9):e0257129. PMID 34506552. doi:10.1371/journal.pone.0257129 — Revisão sistemática e metanálise
+3. Ware MR, Feller DB, Hall KL. Neuroleptic Malignant Syndrome: Diagnosis and Management. Prim Care Companion CNS Disord. 2018;20(1). PMID 29325237. doi:10.4088/PCC.17r02185 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

@@ -83,13 +83,12 @@ Este conteúdo é uma orientação geral para a prática clínica e assistencial
 - O propranolol é uma opção frequente de primeira linha para o alívio dos sintomas.
 - Acolher a queixa do paciente com empatia evita o abandono do tratamento de saúde mental.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Antipsychotic-Induced Akathisia AND Diagnosis AND Management` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Akathisia vs Agitation AND Emergency Psychiatry` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Treatment of Akathisia AND Clinical Trials` — Metanálise — [PMID A CONFIRMAR]
+1. Gerolymos C, Barazer R, Yon DK et al. Drug Efficacy in the Treatment of Antipsychotic-Induced Akathisia: A Systematic Review and Network Meta-Analysis. JAMA Netw Open. 2024;7(3):e241527. PMID 38451521. doi:10.1001/jamanetworkopen.2024.1527 — Revisão sistemática e metanálise em rede
+2. Wu H, Siafis S, Wang D et al. Antipsychotic-induced akathisia in adults with acute schizophrenia: A systematic review and dose-response meta-analysis. Eur Neuropsychopharmacol. 2023;72:40-49. PMID 37075639. doi:10.1016/j.euroneuro.2023.03.015 — Revisão sistemática e metanálise
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

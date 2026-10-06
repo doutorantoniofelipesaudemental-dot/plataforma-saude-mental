@@ -91,13 +91,13 @@ Este conteúdo é uma orientação geral para a prática clínica de emergência
 - O tratamento de primeira linha é feito com anticolinérgicos como biperideno ou prometazina via parenteral.
 - A resposta clínica costuma ser rápida, ocorrendo poucos minutos após a administração do medicamento de resgate.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `acute dystonic reaction antipsychotic emergency treatment` — Revisão sistemática — [PMID A CONFIRMAR]
-2. `extrapyramidal symptoms emergency department management guidelines` — Diretriz clínica — [PMID A CONFIRMAR]
-3. `antipsychotic-induced acute dystonia management in adults` — Ensaio clínico — [PMID A CONFIRMAR]
+1. Vanegas-Arroyave N, Caroff SN, Citrome L et al. An Evidence-Based Update on Anticholinergic Use for Drug-Induced Movement Disorders. CNS Drugs. 2024;38(4):239-254. PMID 38502289. doi:10.1007/s40263-024-01078-z — Revisão
+2. Duma SR, Fung VS. Drug-induced movement disorders. Aust Prescr. 2019;42(2):56-61. PMID 31048939. doi:10.18773/austprescr.2019.014 — Revisão
+3. Ali T, Sisay M, Tariku M et al. Antipsychotic-induced extrapyramidal side effects: A systematic review and meta-analysis of observational studies. PLoS One. 2021;16(9):e0257129. PMID 34506552. doi:10.1371/journal.pone.0257129 — Revisão sistemática e metanálise
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
