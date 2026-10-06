@@ -82,13 +82,12 @@ Este conteúdo oferece orientação geral para a prática médica de urgência, 
 - A dor isquêmica costuma ser em aperto difuso, enquanto a ansiedade gera dor pontual com formigamentos.
 - Sinais de instabilidade e alterações ao ECG exigem conduta imediata para suporte cardíaco avançado.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Panic attack AND myocardial infarction AND differential diagnosis AND emergency` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Chest pain AND panic disorder AND emergency department AND protocol` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Somatic symptoms AND emergency department AND cardiac evaluation` — Estudo Observacional — [PMID A CONFIRMAR]
+1. Gulati M, Levy PD, Mukherjee D et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-e454. PMID 34709879. doi:10.1161/CIR.0000000000001029 — Diretriz clínica
+2. Katerndahl D. Panic plaques: panic disorder & coronary artery disease in patients with chest pain. J Am Board Fam Pract. 2004;17(2):114-126. PMID 15082670. doi:10.3122/jabfm.17.2.114 — Revisão sistemática
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

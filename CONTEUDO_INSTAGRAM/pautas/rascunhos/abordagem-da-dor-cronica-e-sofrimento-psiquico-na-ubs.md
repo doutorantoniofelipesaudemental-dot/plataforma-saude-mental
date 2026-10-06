@@ -78,13 +78,12 @@ Este conteúdo é uma orientação geral e respeita sempre os protocolos hospita
 - Antidepressivos moduladores da dor ajudam tanto no humor quanto na intensidade dolorosa.
 - O foco do tratamento deve ser a funcionalidade e a qualidade de vida do paciente.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Chronic pain AND depression AND primary care AND management` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Pain management AND psychiatric comorbidities AND primary health care` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Antidepressants for chronic pain AND efficacy AND safety` — Ensaio Clínico Randomizado — [PMID A CONFIRMAR]
+1. Bair MJ, Robinson RL, Katon W et al. Depression and pain comorbidity: a literature review. Arch Intern Med. 2003;163(20):2433-2445. PMID 14609780. doi:10.1001/archinte.163.20.2433 — Revisão
+2. Dowell D, Ragan KR, Jones CM et al. CDC Clinical Practice Guideline for Prescribing Opioids for Pain - United States, 2022. MMWR Recomm Rep. 2022;71(3):1-95. PMID 36327391. doi:10.15585/mmwr.rr7103a1 — Diretriz clínica
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

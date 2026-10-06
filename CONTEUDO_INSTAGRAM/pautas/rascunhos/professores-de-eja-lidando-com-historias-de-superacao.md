@@ -70,13 +70,14 @@ Lembramos que este conteúdo é uma orientação geral e que se respeitam sempre
 - Estabelecer limites saudáveis e rituais de transição protege a saúde emocional.
 - Sintomas persistentes de exaustão, ansiedade ou tristeza exigem avaliação médica e psicológica presencial.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `adult educators AND secondary traumatic stress AND resilience` — Estudo transversal — [PMID A CONFIRMAR]
-2. `teachers in adult education AND mental health challenges` — Revisão narrativa — [PMID A CONFIRMAR]
-3. `trauma-informed pedagogy for adult educators` — Diretriz prática — [PMID A CONFIRMAR]
+1. Agyapong B, Obuobi-Donkor G, Burback L et al. Stress, Burnout, Anxiety and Depression among Teachers: A Scoping Review. Int J Environ Res Public Health. 2022;19(17). PMID 36078422. doi:10.3390/ijerph191710706 — Revisão de escopo
+2. Berger E, Nott D. Predictors of compassion fatigue and compassion satisfaction among Australian teachers. Psychol Trauma. 2023;16(8):1309-1318. PMID 37561440. doi:10.1037/tra0001573 — Estudo transversal
+3. Castro Schepers O. Exploring the demographics of teachers who experience secondary traumatic stress. BMC Psychol. 2023;11(1):181. PMID 37322560. doi:10.1186/s40359-023-01217-z — Estudo transversal
+
 
 ---
 

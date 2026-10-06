@@ -87,13 +87,13 @@ Este conteúdo é uma orientação geral para a prática clínica de urgência, 
 - Comunique o diagnóstico explicando que houve uma falha temporária na comunicação cerebral, evitando rotular o paciente.
 - Evite sedativos desnecessários e garanta um plano claro de seguimento ambulatorial e suporte psicológico.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Conversion disorder AND emergency department AND clinical assessment` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Functional neurological disorder AND acute management AND guidelines` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Motor functional neurological symptoms AND emergency care` — Estudo Observacional — [PMID A CONFIRMAR]
+1. Finkelstein SA, Cortel-LeBlanc MA, Cortel-LeBlanc A et al. Functional neurological disorder in the emergency department. Acad Emerg Med. 2021;28(6):685-696. PMID 33866653. doi:10.1111/acem.14263 — Revisão narrativa
+2. Bennett K, Diamond C, Hoeritzauer I et al. A practical review of functional neurological disorder (FND) for the general physician. Clin Med (Lond). 2021;21(1):28-36. PMID 33479065. doi:10.7861/clinmed.2020-0987 — Revisão
+3. Aybek S, Perez DL. Diagnosis and management of functional neurological disorder. BMJ. 2022;376:o64. PMID 35074803. doi:10.1136/bmj.o64 — Revisão
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

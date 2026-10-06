@@ -88,13 +88,13 @@ Este conteúdo é uma orientação geral e educativa. Respeite sempre os protoco
 - A sobrecarga emocional do cuidador é real e precisa de acolhimento na rede de saúde.
 - Sinais de agravamento físico ou mental exigem avaliação presencial rápida.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `stroke caregivers AND burden AND psychological distress` — Revisão sistemática e metanálise — [PMID A CONFIRMAR]
-2. `family caregivers of stroke survivors AND support interventions` — Ensaio clínico — [PMID A CONFIRMAR]
-3. `home care challenges in stroke survivors and caregivers` — Estudo qualitativo — [PMID A CONFIRMAR]
+1. Bakas T, McCarthy MJ, Miller EL. Systematic Review of the Evidence for Stroke Family Caregiver and Dyad Interventions. Stroke. 2022;53(6):2093-2102. PMID 35264010. doi:10.1161/STROKEAHA.121.034090 — Revisão sistemática
+2. Zhang XY, Sha KH, Ma XY et al. Dyadic psycho-social interventions for stroke survivors and family caregivers: A systematic review and meta-analysis of randomized controlled trials. J Adv Nurs. 2023;79(10):3707-3726. PMID 37439492. doi:10.1111/jan.15781 — Revisão sistemática e metanálise
+3. Mou H, Lam SKK, Chien WT. The effects of a family-focused dyadic psychoeducational intervention for stroke survivors and their family caregivers: A randomised controlled trial. Int J Nurs Stud. 2023;143:104504. PMID 37149953. doi:10.1016/j.ijnurstu.2023.104504 — Ensaio clínico randomizado
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

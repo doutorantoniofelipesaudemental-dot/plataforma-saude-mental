@@ -81,13 +81,13 @@ Este conteúdo é uma orientação geral para a prática clínica e respeita sem
 - Priorize a escuta qualificada, o acolhimento e a higiene do sono.
 - Oriente o seguimento e a continuidade do cuidado na Atenção Primária à Saúde.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Insomnia AND emergency department AND management AND guidelines` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Short-term insomnia AND acute management AND primary care` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Sedative hypnotics AND emergency department AND prescribing patterns` — Estudo Observacional — [PMID A CONFIRMAR]
+1. Riemann D, Espie CA, Altena E et al. The European Insomnia Guideline: An update on the diagnosis and treatment of insomnia 2023. J Sleep Res. 2023;32(6):e14035. PMID 38016484. doi:10.1111/jsr.14035 — Diretriz clínica
+2. Riemann D, Baglioni C, Bassetti C et al. European guideline for the diagnosis and treatment of insomnia. J Sleep Res. 2017;26(6):675-700. PMID 28875581. doi:10.1111/jsr.12594 — Diretriz clínica
+3. Qaseem A, Kansagara D, Forciea MA et al. Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians. Ann Intern Med. 2016;165(2):125-133. PMID 27136449. doi:10.7326/M15-2175 — Diretriz clínica
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 

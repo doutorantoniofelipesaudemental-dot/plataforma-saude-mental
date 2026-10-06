@@ -77,13 +77,12 @@ Este conteúdo é uma orientação geral para apoiar a prática educativa e não
 - Em caso de crise aguda ou risco iminente, nunca deixe o aluno sozinho e acione a gestão escolar e os serviços de urgência.
 - A articulação entre a escola, a família e a Atenção Primária garante o suporte seguro e adequado ao adolescente.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `School teachers AND suicide prevention AND mental health literacy` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Gatekeeper training AND suicide prevention AND school personnel` — Ensaio Clínico Controlado — [PMID A CONFIRMAR]
-3. `Adolescent suicide risk AND school-based intervention AND primary health care` — Diretrizes Práticas — [PMID A CONFIRMAR]
+1. Wasserman D, Hoven CW, Wasserman C et al. School-based suicide prevention programmes: the SEYLE cluster-randomised, controlled trial. Lancet. 2015;385(9977):1536-1544. PMID 25579833. doi:10.1016/S0140-6736(14)61213-7 — Ensaio clínico randomizado em cluster
+
 
 ---
 

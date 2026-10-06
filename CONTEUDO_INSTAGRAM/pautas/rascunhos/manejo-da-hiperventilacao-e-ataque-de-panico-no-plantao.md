@@ -82,13 +82,13 @@ O atendimento de emergência exige excluir causas orgânicas graves antes de fec
 - Exclua causas orgânicas graves antes de atribuir os sintomas exclusivamente à ansiedade.
 - Utilize medicamentos com cautela apenas quando as intervenções verbais e respiratórias forem insuficientes.
 
-## Referências (a confirmar)
+## Referências
 
-> Consultas PubMed/MEDLINE sugeridas na pauta. Nenhuma referência foi verificada: o médico confere e substitui pelas citações reais (PMID/DOI) antes de publicar.
+> Referências localizadas no PubMed/MEDLINE (PMID e DOI conferidos nos registros da base). Leitura integral e escolha final das fontes ficam com o Dr. Antônio Felipe.
 
-1. `Hyperventilation syndrome AND emergency department AND acute management` — Revisão Sistemática — [PMID A CONFIRMAR]
-2. `Panic attack AND acute breathing exercises AND emergency protocols` — Diretriz Clínica — [PMID A CONFIRMAR]
-3. `Respiratory alkalosis AND panic disorder AND clinical presentation` — Estudo Observacional — [PMID A CONFIRMAR]
+1. Nardi AE, Valença AM, Nascimento I et al. Panic disorder and hyperventilation. Arq Neuropsiquiatr. 1999;57(4):932-936. PMID 10683682. doi:10.1590/s0004-282x1999000600006 — Estudo experimental
+2. Meuret AE, Ritz T. Hyperventilation in panic disorder and asthma: empirical evidence and clinical strategies. Int J Psychophysiol. 2010;78(1):68-79. PMID 20685222. doi:10.1016/j.ijpsycho.2010.05.006 — Revisão
+3. Foldes-Busque G, Marchand A, Landry P. Early detection and treatment of panic disorder with or without agoraphobia: update. Can Fam Physician. 2007;53(10):1686-1693. PMID 17934032 — Revisão (artigo em francês, com resumo em inglês)
 
 > *Nota de Diretriz Clínica: As orientações e escolhas terapêuticas apresentadas devem obrigatoriamente respeitar os protocolos locais e institucionais de saúde, priorizando a avaliação e o acompanhamento em consulta presencial.*
 
