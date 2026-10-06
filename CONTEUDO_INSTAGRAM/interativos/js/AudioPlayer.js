@@ -129,6 +129,12 @@
     this._play(v);
   };
 
+  /** Troca o mapa de narracoes (ex.: modo de revisao, voz alternativa) e, com o audio ligado, refaz a fala do slide ativo. */
+  AudioPlayer.prototype.setVoiceovers = function (mapa) {
+    this.voiceovers = mapa || {};
+    if (!this.muted) { this.stopVoiceover(); this._startVoice(this._slide); }
+  };
+
   /** Chamar a cada troca de slide: encerra a narracao anterior e inicia a do slide ativo. */
   AudioPlayer.prototype.playSlide = function (i) {
     this._slide = i;
