@@ -175,6 +175,8 @@
 
 ## Fora da fila: já têm pacote (ainda não postados)
 
+Os sete pacotes abaixo ficam em `CONTEUDO_INSTAGRAM/pacotes/especiais/` (movidos de `pacotes/` em 2026-10-05, sem alteração de conteúdo).
+
 - A sala de espera que respirava em silêncio (`a-sala-de-espera-que-respirava-em-silencio`)
 - O café frio que esperou a consulta acabar (`o-cafe-frio-que-esperou-a-consulta-acabar`)
 - A carta que nunca foi enviada ao psiquiatra (`a-carta-que-nunca-foi-enviada-ao-psiquiatra`)
