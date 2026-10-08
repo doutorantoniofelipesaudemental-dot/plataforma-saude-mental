@@ -6,20 +6,14 @@ export const metadata = {
     'Dr. Antonio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
 };
 
-// Numero no formato internacional, so digitos (ex.: 5571999999999). Definido
-// em NEXT_PUBLIC_WHATSAPP_NUMERO para nao hardcodar dado de contato; sem ele,
-// o botao de agendamento cai para o e-mail do consultorio.
-const WHATSAPP_NUMERO = process.env.NEXT_PUBLIC_WHATSAPP_NUMERO;
-const MENSAGEM = encodeURIComponent('Olá, Dr. Antonio Felipe. Gostaria de agendar uma consulta.');
-const AGENDAMENTO = WHATSAPP_NUMERO
-  ? `https://wa.me/${WHATSAPP_NUMERO}?text=${MENSAGEM}`
-  : 'mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta';
+// Canal unico de agendamento: e-mail do consultorio (sem WhatsApp, por diretriz).
+const AGENDAMENTO = 'mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta';
 
 const BOTOES = [
   {
     emoji: '🟢',
     label: 'Agendamento de Consulta Médica',
-    detalhe: 'Atendimento clínico pelo WhatsApp',
+    detalhe: 'Solicite seu horário por e-mail',
     href: AGENDAMENTO,
     externo: true,
     destaque: true,
@@ -28,14 +22,13 @@ const BOTOES = [
     emoji: '🏢',
     label: 'Mentoria e Consultoria em Saúde Mental',
     detalhe: 'Para empresas e instituições de ensino',
-    href: '/mentoria',
+    href: '/#servicos',
   },
   {
     emoji: '🎙️',
     label: 'Portal de Saúde Mental & Narrações em Áudio',
     detalhe: 'Artigos com narração no topo da página',
-    href: 'https://drantoniofelipemedico.com.br',
-    externo: true,
+    href: '/',
   },
   {
     emoji: '📱',
