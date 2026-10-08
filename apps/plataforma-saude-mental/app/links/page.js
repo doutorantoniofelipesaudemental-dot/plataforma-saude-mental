@@ -6,7 +6,7 @@ export const metadata = {
     'Dr. Antonio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
 };
 
-// Canal unico de agendamento: e-mail do consultorio (sem WhatsApp, por diretriz).
+// Canal unico de agendamento: e-mail do consultorio.
 const AGENDAMENTO = 'mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta';
 
 const BOTOES = [

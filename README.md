@@ -190,6 +190,6 @@ Estes pontos ainda estão com valor genérico no código e precisam ser
 trocados antes de ir ao ar:
 
 - **Endereço do consultório** — a home diz que é informado na confirmação.
-- **Telefone/WhatsApp** — não há número no site ainda.
+- **Telefone** — não há número no site ainda (contato apenas por e-mail).
 - **Horários de atendimento** — "seg–sex, 8h–19h" é um exemplo.
 - **Valores e convênios** — o FAQ remete ao contato de confirmação.
