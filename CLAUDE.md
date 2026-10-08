@@ -56,8 +56,8 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - Pós-Graduações: Psiquiatria • Saúde Mental & Atenção Psicossocial • Medicina do Trabalho • Neuropsicologia • Terapia Cognitivo-Comportamental (Não especialista)
 - Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe
 
-#### B. CONTATO E CONVERSÃO (SEM WHATSAPP)
-- PROIBIDO incluir botões, formulários ou links wa.me de WhatsApp no portal, na /links ou nas páginas estáticas. Única ocorrência permitida: a string técnica de robôs em `backend/lib/robos.js`.
+#### B. CONTATO E CONVERSÃO (SEM MENSAGERIA DE TERCEIROS)
+- PROIBIDO incluir botões, formulários, rótulos ou links de mensageria de terceiros (tipo wa.me) no portal, na /links ou nas páginas estáticas (manter apenas o rótulo "Telefone"). Única ocorrência permitida: a string técnica de robôs em `backend/lib/robos.js`.
 - Agendamento de consulta SOMENTE por e-mail do consultório: `mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta`.
 - Instagram: SOMENTE o perfil oficial https://instagram.com/doutor.antoniofelipe.smental.
 
