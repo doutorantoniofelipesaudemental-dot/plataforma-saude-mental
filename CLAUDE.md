@@ -74,3 +74,12 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 #### E. SEGURANÇA
 - `upload_r2.py` fica só local (está no `.gitignore`); `client_secret.json` e credenciais de API nunca entram no repositório.
 - Não colar chaves/segredos em chats ou arquivos versionados; se expostas, revogar.
+
+#### F. PADRÃO DE CARROSSÉIS E PACOTES DO INSTAGRAM
+- Slides 4:5 (1080x1350), paleta azul-marinho + dourado + branco, alto contraste e leitura mobile; máximo de 25 palavras de arte por slide (a assinatura obrigatória do último slide é exceção).
+- Nas artes: "Dr. Antonio Felipe" (sem acento). Na legenda (`legenda.txt`) e textos de apoio: "Antônio" (com acento), pois as constantes éticas e os testes do backend exigem o texto oficial.
+- Legenda validada por `checarEticaCfm` (contexto `social`) antes de entregar, com: aviso de IA (Res. CFM 2.454/2026), orientação geral/protocolos locais e "Em crise: CVV 188 · SAMU 192".
+- Último slide: assinatura de 3 linhas (CRM-BA 41322, RQE 26638, PAP e APS) sem quebras órfãs.
+- Carrossel de lançamento da /links (7 slides): capa (cérebro dourado + chamada), agendamento por e-mail, mentoria B2B, portal com áudios, conteúdos educativos, CTA para o link da bio e assinatura.
+- Salvar em `C:\DRSAUDEMENTAL\carrosseis-instagram\<nome-do-post>\` (pasta no `.gitignore`, fora do Git).
+- Só quando o escopo pedir o Pacote Multimídia Completo: gerar também roteiro de Reel, Stories interativos (com enquete) e chamadas para os artigos narrados (ver `CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md`).
