@@ -18,11 +18,11 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Portal de Saúde Mental Doutor Antonio Felipe Garabito",
-    template: "%s · Portal de Saúde Mental Doutor Antonio Felipe Garabito",
+    default: "Portal de Saúde Mental Doutor Antônio Felipe Garabito",
+    template: "%s · Portal de Saúde Mental Doutor Antônio Felipe Garabito",
   },
   description:
-    "Ferramentas clínicas do Dr. Antonio Felipe para APS, Pronto Atendimento Psiquiátrico, Saúde Ocupacional e Escola.",
+    "Ferramentas clínicas do Dr. Antônio Felipe para APS, Pronto Atendimento Psiquiátrico, Saúde Ocupacional e Escola.",
 };
 
 export default function RootLayout({ children }) {

@@ -52,7 +52,7 @@ export default async function ArtigoPage({ params }) {
           {metadata.titulo}
         </h1>
         <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-tinta-media">
-          <span>Dr. Antonio Felipe</span>
+          <span>Dr. Antônio Felipe</span>
           <span aria-hidden="true">·</span>
           <time dateTime={metadata.publicadoEm}>{formatarData(metadata.publicadoEm)}</time>
           <span aria-hidden="true">·</span>
@@ -66,7 +66,7 @@ export default async function ArtigoPage({ params }) {
 
       <div className="mt-12 rounded-2xl bg-verde-escuro p-6 text-white">
         <p className="mb-3 text-sm font-medium text-slate-200">
-          Quer conversar sobre isso com o Dr. Antonio Felipe?
+          Quer conversar sobre isso com o Dr. Antônio Felipe?
         </p>
         <Link
           href="/"

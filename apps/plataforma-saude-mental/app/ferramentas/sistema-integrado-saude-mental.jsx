@@ -109,7 +109,7 @@ export default function SistemaIntegradoSaudeMental() {
               <Brain className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold tracking-tight">Portal de Saúde Mental Doutor Antonio Felipe Garabito</h1>
+              <h1 className="text-xl font-bold tracking-tight">Portal de Saúde Mental Doutor Antônio Felipe Garabito</h1>
               <p className="text-xs text-slate-300">APS · Pronto Atendimento Psiquiátrico · Saúde Ocupacional · Escola</p>
             </div>
           </div>

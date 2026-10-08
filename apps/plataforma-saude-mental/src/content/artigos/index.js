@@ -7,7 +7,7 @@
 // ARTIGOS_SITE_ANTERIOR: os 65 artigos originais do site anterior
 // (dr-antoniofelipe-saudemental.netlify.app), migrados de
 // backend/seed-artigos.js e convertidos para MDX preservando o texto
-// original do Dr. Antonio Felipe — nenhuma reescrita, so reformatacao de
+// original do Dr. Antônio Felipe — nenhuma reescrita, so reformatacao de
 // marcacao (HTML -> componentes Lead/Callout/RefsNote + <CallToTool/>).
 //
 // So slug + categoria/eixo aqui, para roteamento: titulo, resumo e demais
