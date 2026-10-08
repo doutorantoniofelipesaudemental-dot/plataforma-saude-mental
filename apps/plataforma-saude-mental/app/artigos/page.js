@@ -5,7 +5,7 @@ import CartaoArtigoAnimado from '../CartaoArtigoAnimado';
 export const metadata = {
   title: 'Artigos',
   description:
-    'Vol. 2 dos 12 eixos da Matriz Editorial de Saúde Mental, e o acervo completo de artigos do site anterior do Dr. Antônio Felipe.',
+    'Vol. 2 dos 12 eixos da Matriz Editorial de Saúde Mental, e o acervo completo de artigos do site anterior do Dr. Antonio Felipe.',
 };
 
 async function carregarArtigos() {

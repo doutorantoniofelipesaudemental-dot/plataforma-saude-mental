@@ -3,14 +3,14 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Links',
   description:
-    'Dr. Antônio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
+    'Dr. Antonio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
 };
 
 // Numero no formato internacional, so digitos (ex.: 5571999999999). Definido
 // em NEXT_PUBLIC_WHATSAPP_NUMERO para nao hardcodar dado de contato; sem ele,
 // o botao de agendamento cai para o e-mail do consultorio.
 const WHATSAPP_NUMERO = process.env.NEXT_PUBLIC_WHATSAPP_NUMERO;
-const MENSAGEM = encodeURIComponent('Olá, Dr. Antônio Felipe. Gostaria de agendar uma consulta.');
+const MENSAGEM = encodeURIComponent('Olá, Dr. Antonio Felipe. Gostaria de agendar uma consulta.');
 const AGENDAMENTO = WHATSAPP_NUMERO
   ? `https://wa.me/${WHATSAPP_NUMERO}?text=${MENSAGEM}`
   : 'mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta';
@@ -57,7 +57,7 @@ const POS_GRADUACOES = [
 const ATUACAO = [
   'Pronto Atendimento Psiquiátrico',
   'Atenção Primária à Saúde',
-  'Mentoria e Consultoria em Saúde Mental do Dr. Antônio Felipe',
+  'Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe',
 ];
 
 const FOCO =
@@ -94,7 +94,7 @@ export default function PaginaLinks() {
     <main className="flex-1 bg-areia px-4 py-10 sm:px-6">
       <div className="mx-auto flex w-full max-w-md flex-col gap-8">
         <header className="flex flex-col gap-3 text-center">
-          <h1 className="font-serif text-3xl font-bold text-verde-escuro">Dr. Antônio Felipe</h1>
+          <h1 className="font-serif text-3xl font-bold text-verde-escuro">Dr. Antonio Felipe</h1>
           <p className="text-base font-medium text-tinta">
             Médico Especialista em Medicina de Família e Comunidade
           </p>

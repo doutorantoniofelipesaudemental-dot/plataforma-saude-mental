@@ -6,7 +6,7 @@ import CartaoArtigoAnimado from '../CartaoArtigoAnimado';
 export const metadata = {
   title: 'Blog',
   description:
-    'Artigos do Dr. Antônio Felipe organizados pelos 12 eixos da Matriz Editorial de Saúde Mental: APS, Pronto Atendimento, cuidadores, escola, dependências, perinatal e mais.',
+    'Artigos do Dr. Antonio Felipe organizados pelos 12 eixos da Matriz Editorial de Saúde Mental: APS, Pronto Atendimento, cuidadores, escola, dependências, perinatal e mais.',
 };
 
 async function carregarGrupos() {

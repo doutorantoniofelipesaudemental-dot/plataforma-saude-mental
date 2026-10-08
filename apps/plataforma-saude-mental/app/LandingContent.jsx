@@ -134,7 +134,7 @@ export default function LandingContent() {
           variants={item}
           className="max-w-2xl font-serif text-4xl font-bold leading-tight text-verde-escuro sm:text-5xl"
         >
-          Portal de Saúde Mental Doutor Antônio Felipe Garabito
+          Portal de Saúde Mental Doutor Antonio Felipe Garabito
         </motion.h1>
 
         <motion.p variants={item} className="max-w-2xl text-lg leading-relaxed text-tinta-media">
@@ -179,14 +179,14 @@ export default function LandingContent() {
             <div className="mb-4 w-fit overflow-hidden rounded-2xl border border-dourado/40 shadow-sm">
               <Image
                 src="/images/dr-antonio-felipe.jpg"
-                alt="Placa oficial — Dr. Antônio Felipe"
+                alt="Placa oficial — Dr. Antonio Felipe"
                 width={150}
                 height={150}
                 className="h-[150px] w-[150px] object-cover"
                 priority
               />
             </div>
-            <h2 className="font-serif text-xl font-bold text-verde-escuro">Dr. Antônio Felipe</h2>
+            <h2 className="font-serif text-xl font-bold text-verde-escuro">Dr. Antonio Felipe</h2>
             <p className="mt-1 text-sm text-tinta-media">
               Médico Especialista em MFC (Medicina de Família e Comunidade)
             </p>

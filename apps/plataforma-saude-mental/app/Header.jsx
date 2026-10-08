@@ -29,7 +29,7 @@ export default function Header() {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-verde-escuro">
             <Brain className="h-5 w-5 text-white" aria-hidden="true" />
           </div>
-          <span className="font-serif text-sm font-bold text-verde-escuro">Dr. Antônio Felipe</span>
+          <span className="font-serif text-sm font-bold text-verde-escuro">Dr. Antonio Felipe</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Principal">

@@ -53,7 +53,7 @@ export default async function ArtigoPage({ params }) {
           {metadata.titulo}
         </h1>
         <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-tinta-media">
-          <span>{metadata.autor || 'Dr. Antônio Felipe'}</span>
+          <span>{metadata.autor || 'Dr. Antonio Felipe'}</span>
           <span aria-hidden="true">·</span>
           <time dateTime={metadata.publicadoEm}>{formatarData(metadata.publicadoEm)}</time>
           <span aria-hidden="true">·</span>
