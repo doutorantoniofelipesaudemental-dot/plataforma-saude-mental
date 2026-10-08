@@ -50,3 +50,6 @@ Start-ClaudeFallback.ps1
 
 # Pacote local de reescritas (não versionar)
 reescritas-semana-1.zip
+
+# Script local de envio de audios ao R2 (mantido so na maquina)
+upload_r2.py
