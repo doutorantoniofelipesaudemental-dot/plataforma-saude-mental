@@ -83,3 +83,9 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - Carrossel de lançamento da /links (7 slides): capa (cérebro dourado + chamada), agendamento por e-mail, mentoria B2B, portal com áudios, conteúdos educativos, CTA para o link da bio e assinatura.
 - Salvar em `C:\DRSAUDEMENTAL\carrosseis-instagram\<nome-do-post>\` (pasta no `.gitignore`, fora do Git).
 - Só quando o escopo pedir o Pacote Multimídia Completo: gerar também roteiro de Reel, Stories interativos (com enquete) e chamadas para os artigos narrados (ver `CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md`).
+
+#### G. ECOSSISTEMA MULTIMÍDIA COMPLETO (AUTORIZADO PARA CADA POST OU TEMA)
+- Formatos: carrossel/post de feed (4:5, 1080x1350, 7 slides); vídeos e Reels (9:16, 1080x1920) com roteiro, narração, gancho nos 3 primeiros segundos, marcação Lottie/GSAP, trilha a -22 dB, legendas em caixa mista e cartão final CFM; Stories interativos (9:16, 3 a 5 quadros) com áreas livres para adesivos nativos (enquete, caixa de perguntas, link, isenção de emergência); podcasts e narrações com roteiro e chamada explícita ao player no topo das páginas do Portal.
+- Identificação, avisos mandatórios (IA Res. CFM 2.454/2026, orientação geral/protocolos locais, "Em crise: CVV 188 · SAMU 192") e regras de grafia valem para todos os formatos.
+- Legendas e roteiros validados por `checarEticaCfm` (contexto `social`) antes de entregar.
+- Todo o pacote (artes, roteiros, vídeos, podcasts e legendas) em `C:\DRSAUDEMENTAL\carrosseis-instagram\<nome-do-post>\`, fora do Git. Vídeo e voz gravada têm custo: gerar só com aval explícito.
