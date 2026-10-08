@@ -45,3 +45,32 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - **Three.js (`CloudAI-X/threejs-skills`):** elementos 3D interativos e leves em matérias clínicas e anatômicas, com alternativa estática e sem bloquear a leitura em celular.
 - **Mídias sociais:** Reels e Shorts exigem especificação de movimento (microanimação Lottie/GSAP ou elemento 3D) com gancho visual nos 3 primeiros segundos; LinkedIn segue os tokens de Design DNA/Genjutsu, com tom de autoridade e conformidade estrita ao CFM. Detalhes em `CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md`.
 
+
+---
+
+### 3. DIRETRIZES DE BRANDING, CONTATO E PRESERVAÇÃO (PROMPT UNIFICADO — VALEM SOBRE O QUE CONFLITAR ACIMA)
+
+#### A. CABEÇALHO RÍGIDO NA /links, NOS ATIVOS DE MARCA E EM NOVAS ARTES/APRESENTAÇÕES (CFM 2.336/2023)
+- Nome Oficial: Dr. Antonio Felipe (grafia SEM acento no material de marca e na /links)
+- Médico Especialista em Medicina de Família e Comunidade (CRM-BA 41322 | RQE 26638)
+- Pós-Graduações: Psiquiatria • Saúde Mental & Atenção Psicossocial • Medicina do Trabalho • Neuropsicologia • Terapia Cognitivo-Comportamental (Não especialista)
+- Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe
+
+#### B. CONTATO E CONVERSÃO (SEM WHATSAPP)
+- PROIBIDO incluir botões, formulários ou links wa.me de WhatsApp no portal, na /links ou nas páginas estáticas. Única ocorrência permitida: a string técnica de robôs em `backend/lib/robos.js`.
+- Agendamento de consulta SOMENTE por e-mail do consultório: `mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta`.
+- Instagram: SOMENTE o perfil oficial https://instagram.com/doutor.antoniofelipe.smental.
+
+#### C. DOMÍNIO E MAPEAMENTO DA /links
+- Domínio oficial: https://drantoniofelipemedico.com.br/links (308 para www; responde HTTP 200). Publicada pelo projeto Vercel `drsaudemental` (`public/links.html` + rota em `vercel.json`). O `app/links/page.js` do app Next não tem deploy próprio.
+- Botões: 1) Agendamento de Consulta Médica -> mailto; 2) Mentoria e Consultoria em Saúde Mental -> `/#servicos`; 3) Portal de Saúde Mental & Narrações em Áudio -> `/`; 4) Instagram & Conteúdos Educativos -> perfil oficial.
+
+#### D. GRAFIA E PRESERVAÇÃO (REGRA DEFINITIVA)
+- "Antonio" (sem acento): SOMENTE na /links e nos ativos de `assets/marca/` (placas 2400, 1080 e horizontal 2500x500).
+- "Antônio" (com acento): PRESERVAR em `public/` (index.html, artigo.html etc.), testes de conformidade CFM (`tests/unit/assinatura-cfm.test.js`) e e2e, artigos MDX do app Next, banco de dados, backend, scripts e `CONTEUDO_INSTAGRAM`.
+- PROIBIDO busca-e-troca global de acento e qualquer alteração em `public/`, `backend/data/` e na suíte de testes, exceto: `public/links.html` e a rota `/links` em `vercel.json`.
+- PROIBIDO modificar textos de artigos em `backend/data/`: o hash de narração (`backend/lib/narracao.js`) marcaria o áudio como "desatualizada" e geraria custo de regeração de voz.
+
+#### E. SEGURANÇA
+- `upload_r2.py` fica só local (está no `.gitignore`); `client_secret.json` e credenciais de API nunca entram no repositório.
+- Não colar chaves/segredos em chats ou arquivos versionados; se expostas, revogar.
