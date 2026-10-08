@@ -20,6 +20,7 @@
     { "src": "/instagram/?", "dest": "/backend/index.js" },
     { "src": "/artigo/[^/]+/?", "dest": "/backend/index.js" },
     { "src": "/privacidade/?", "dest": "/public/privacidade.html" },
+    { "src": "/links/?", "dest": "/public/links.html" },
     { "src": "/admin/?", "dest": "/public/admin.html" },
     { "src": "/(.*)", "dest": "/public/index.html" }
   ],
