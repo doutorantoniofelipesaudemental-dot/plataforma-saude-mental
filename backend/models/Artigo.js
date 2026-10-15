@@ -33,7 +33,7 @@ const CATEGORIAS = [
 // Fluxo de aprovação para publicação nas redes sociais (backend/lib/socialPublisher.js)
 // — independente de `publicado`, que controla só a visibilidade no site.
 // Um artigo pode estar publicado no site e ainda não aprovado para redes.
-const STATUS_REDES = ['rascunho', 'aprovado', 'publicado'];
+const STATUS_REDES = ['rascunho', 'aprovado', 'publicado', 'arquivado']; // 'arquivado': fluxo antigo de redes encerrado (redesLegado guarda o status anterior)
 
 /**
  * Artigo do blog. O campo `conteudo` guarda HTML escrito pela própria clínica
@@ -157,6 +157,7 @@ const ArtigoSchema = new mongoose.Schema(
     },
     vinculos: { relatos: { type: [String], default: [] }, artigos: { type: [String], default: [] } },
     capaPendente: { type: Boolean, default: false },
+    redesLegado: { statusAnterior: String, publicadoRedesEm: Date, arquivadoEm: Date },
     historicoTitulos: [{ titulo: String, em: Date }],
     agendamento: { agendado: { type: Boolean, default: false }, slot: Date, falha: String },
     // Linha curta opcional abaixo do título na capa das redes.

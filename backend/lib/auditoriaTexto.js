@@ -16,14 +16,17 @@ const PROFISSAO_PSIQUIATRA_OK = new Set(['quando-encaminhar-aps', 'quando-procur
 
 // Uma ocorrência só conta se não vier negada ("não é preguiça"), citada ("evitar 'frescura'") ou em lista de exemplos.
 const RE_CONTEXTO_OK = new RegExp(
-  `(?<!${L})(n(?:\\u00e3|a)o|nem|evit\\w*|jamais|nunca|mito|mitos|estigma\\w*|express(?:\\u00f5|o)es|termos|frases?|linguagem|substitu\\w*|trocar)(?!${L})|["\\u201c\\u201d]|&#39;|'`,
+  `(?<!${L})(n(?:\\u00e3|a)o|nem|evit\\w*|jamais|nunca|mito|mitos|estigma\\w*|express(?:\\u00f5|o)es|termos|frases?|linguagem|substitu\\w*|trocar|achando|acham|estere\\u00f3tipo|r\\u00f3tulo|dizia|diz|dizem|ouvir|ouve|chamam)(?!${L})|["\\u201c\\u201d]|&#39;|'`,
   'i'
 );
 function ocorrenciaReal(texto, re) {
   const g = new RegExp(re.source, 'gi');
-  const limpo = String(texto).normalize('NFC').replace(/<[^>]+>/g, ' ');
+  // fim de bloco vira quebra de linha: linhas de diálogo (travessão) são FALA de personagem, não voz do autor
+  const limpo = String(texto).normalize('NFC').replace(/<\/(p|li|div|h[1-6]|blockquote)>/gi, '\n').replace(/<[^>]+>/g, ' ');
   for (const m of limpo.matchAll(g)) {
     const antes = limpo.slice(Math.max(0, m.index - 70), m.index);
+    const linha = limpo.slice(limpo.lastIndexOf('\n', m.index) + 1, m.index);
+    if (/^\s*[—–-]\s/.test(linha)) continue;
     if (!RE_CONTEXTO_OK.test(antes)) return m[0];
   }
   return null;

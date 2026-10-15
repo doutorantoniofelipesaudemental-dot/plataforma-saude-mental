@@ -41,7 +41,12 @@
     "ollama:status": "node -e \"require('./backend/lib/ollamaAdapter').modelosInstalados().then(console.log)\"",
     "auditoria": "node --env-file-if-exists=.env backend/scripts/auditoria.js",
     "importar-tudo": "node --env-file-if-exists=.env backend/scripts/importarTudo.js",
-    "build": "npm --prefix apps/plataforma-saude-mental run build"
+    "build": "npm --prefix apps/plataforma-saude-mental run build",
+    "redes:arquivar": "node --env-file-if-exists=.env backend/scripts/redes/arquivarFilaAntiga.js",
+    "redes:gerar": "node --env-file-if-exists=.env backend/scripts/redes/gerarFila.js",
+    "redes:enviar": "node --env-file-if-exists=.env backend/scripts/redes/enviarFila.js",
+    "redes:publicar": "node --env-file-if-exists=.env backend/scripts/redes/publicarRedes.js",
+    "redes:relatorio": "node --env-file-if-exists=.env backend/scripts/redes/relatorioSemanal.js"
   },
   "engines": {
     "node": ">=20"

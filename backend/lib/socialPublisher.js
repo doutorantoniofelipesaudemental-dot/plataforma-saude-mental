@@ -328,7 +328,7 @@ async function publicarNoInstagram({ imagemUrl, legenda }) {
  * CAROUSEL com a legenda, espera FINISHED e publica. Devolve o id e o status
  * HTTP da publicação para o log.
  */
-async function publicarCarrosselNoInstagram({ imagensUrls, legenda }) {
+async function publicarCarrosselNoInstagram({ imagensUrls, legenda, alts = [] }) {
   exigirRedesAtivas('publicação de carrossel no Instagram');
   requerEnv('INSTAGRAM_ACCESS_TOKEN');
   const token = await obterTokenInstagram();
@@ -337,11 +337,11 @@ async function publicarCarrosselNoInstagram({ imagensUrls, legenda }) {
   const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
 
   const filhos = [];
-  for (const imagemUrl of imagensUrls) {
+  for (const [i, imagemUrl] of imagensUrls.entries()) {
     const r = await fetch(`${base}/${contaId}/media`, {
       method: 'POST',
       headers: cabecalhos,
-      body: new URLSearchParams({ image_url: imagemUrl, is_carousel_item: 'true' }),
+      body: new URLSearchParams({ image_url: imagemUrl, is_carousel_item: 'true', ...(alts[i] ? { alt_text: String(alts[i]).slice(0, 1000) } : {}) }),
     });
     const d = await r.json();
     if (!r.ok || !d.id) lancarErroMeta(d, 'Falha ao criar item do carrossel', 'INSTAGRAM_CONTAINER_FALHOU');
