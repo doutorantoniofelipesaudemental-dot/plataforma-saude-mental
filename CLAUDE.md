@@ -51,10 +51,10 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 ### 3. DIRETRIZES DE BRANDING, CONTATO E PRESERVAÇÃO (PROMPT UNIFICADO — VALEM SOBRE O QUE CONFLITAR ACIMA)
 
 #### A. CABEÇALHO RÍGIDO NA /links, NOS ATIVOS DE MARCA E EM NOVAS ARTES/APRESENTAÇÕES (CFM 2.336/2023)
-- Nome Oficial: Dr. Antonio Felipe (grafia SEM acento no material de marca e na /links)
+- Nome Oficial: Dr. Antônio Felipe (COM acento, também no material de marca e na /links; regra de 15/10/2026, sem exceção)
 - Médico Especialista em Medicina de Família e Comunidade (CRM-BA 41322 | RQE 26638)
 - Pós-Graduações: Psiquiatria • Saúde Mental & Atenção Psicossocial • Medicina do Trabalho • Neuropsicologia • Terapia Cognitivo-Comportamental (Não especialista)
-- Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe (texto da /links)
+- Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antônio Felipe
 
 #### B. CONTATO E CONVERSÃO (SEM MENSAGERIA DE TERCEIROS)
 - PROIBIDO incluir botões, formulários, rótulos ou links de mensageria de terceiros (tipo wa.me) no portal, na /links ou nas páginas estáticas (manter apenas o rótulo "Telefone"). Única ocorrência permitida: a string técnica de robôs em `backend/lib/robos.js`.
@@ -66,7 +66,7 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - Botões: 1) Agendamento de Consulta Médica -> mailto; 2) Mentoria e Consultoria em Saúde Mental -> `/#servicos`; 3) Portal de Saúde Mental & Narrações em Áudio -> `/`; 4) Instagram & Conteúdos Educativos -> perfil oficial.
 
 #### D. GRAFIA E PRESERVAÇÃO (REGRA DEFINITIVA)
-- "Antonio" (sem acento): SOMENTE na /links e nos ativos de `assets/marca/` (placas 2400, 1080 e horizontal 2500x500).
+- "Antônio" COM acento em TODOS os textos e artes, inclusive na /links e nos ativos de `assets/marca/` (placas 2400, 1080 e horizontal 2500x500; acento acrescentado em 15/10/2026). "Antonio" sem acento só onde o acento é impossível: endereços de site, o @ do Instagram (@doutor.antoniofelipe.smental), e-mail e nomes técnicos (ex.: voz `pt-BR-AntonioNeural` do Edge-TTS, nomes de arquivo).
 - "Antônio" (com acento): PRESERVAR em `public/` (index.html, artigo.html etc.), testes de conformidade CFM (`tests/unit/assinatura-cfm.test.js`) e e2e, artigos MDX do app Next, banco de dados, backend, scripts e `CONTEUDO_INSTAGRAM`.
 - PROIBIDO busca-e-troca global de acento e qualquer alteração em `public/`, `backend/data/` e na suíte de testes, exceto: `public/links.html` e a rota `/links` em `vercel.json`.
 - PROIBIDO modificar textos de artigos em `backend/data/`: o hash de narração (`backend/lib/narracao.js`) marcaria o áudio como "desatualizada" e geraria custo de regeração de voz.
@@ -136,4 +136,4 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 
 ### Decisões do Dr. Antônio (14/10/2026)
 - **§D (hash de narração) — liberado** para os itens do PROMPT-MESTRE e para correções aprovadas da auditoria. Nesses itens: marcar a narração como `pendente`; ocultar o player do áudio antigo até o novo ser gerado; NÃO apagar o arquivo de áudio antigo e NÃO gerar áudio agora. Para todos os outros textos, o §D continua valendo.
-- **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) A grafia "Antonio" segue apenas na `/links` e em `assets/marca/` (§3.A/D), por serem ativos de marca já definidos.
+- **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) ATUALIZAÇÃO de 15/10/2026: a exceção da `/links` e de `assets/marca/` também foi REVOGADA; "Antônio" leva acento em todo lugar, exceto endereços, @, e-mail e nomes técnicos.

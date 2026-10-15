@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Links',
   description:
-    'Dr. Antonio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
+    'Dr. Antônio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
 };
 
 // Canal unico de agendamento: e-mail do consultorio.
@@ -50,7 +50,7 @@ const POS_GRADUACOES = [
 const ATUACAO = [
   'Pronto Atendimento Psiquiátrico',
   'Atenção Primária à Saúde',
-  'Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe',
+  'Mentoria e Consultoria em Saúde Mental do Dr. Antônio Felipe',
 ];
 
 const FOCO =
@@ -87,7 +87,7 @@ export default function PaginaLinks() {
     <main className="flex-1 bg-areia px-4 py-10 sm:px-6">
       <div className="mx-auto flex w-full max-w-md flex-col gap-8">
         <header className="flex flex-col gap-3 text-center">
-          <h1 className="font-serif text-3xl font-bold text-verde-escuro">Dr. Antonio Felipe</h1>
+          <h1 className="font-serif text-3xl font-bold text-verde-escuro">Dr. Antônio Felipe</h1>
           <p className="text-base font-medium text-tinta">
             Médico Especialista em Medicina de Família e Comunidade
           </p>

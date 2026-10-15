@@ -67,7 +67,7 @@ test('landing page e portal mantêm o bloco de 5 linhas com as pós-graduações
 });
 
 // Regra vigente (14/10/2026, revoga o §F antigo): "Antônio" COM acento em textos e artes; "Antonio Felipe" sem acento é ERRO.
-// Exceção documentada (CLAUDE.md §3.A/D): ativos de marca já definidos e a /links; no CLAUDE.md só as linhas que descrevem essa exceção.
+// Sem exceção (15/10/2026): vale também para a /links e o material de marca. Só endereços, @, e-mail e nomes técnicos (ex.: pt-BR-AntonioNeural) ficam sem acento.
 const SEM_ACENTO = /Antonio Felipe|ANTONIO FELIPE/;
 
 test('o nome do médico leva acento nos arquivos de identidade e nos geradores de arte e legenda', () => {
@@ -76,10 +76,12 @@ test('o nome do médico leva acento nos arquivos de identidade e nos geradores d
   }
 });
 
-test('CLAUDE.md só usa "Antonio" sem acento ao descrever a exceção da /links e dos ativos de marca', () => {
-  const linhas = fs.readFileSync(path.join(RAIZ, 'CLAUDE.md'), 'utf8').split('\n').filter((l) => SEM_ACENTO.test(l));
-  for (const l of linhas) assert.match(l, /\/links|material de marca|assets\/marca|ativos de marca/i, `linha sem justificativa: ${l.slice(0, 90)}`);
+test('nenhum texto do projeto usa "Dr. Antonio Felipe" sem acento (CLAUDE.md, /links, app Next, geradores)', () => {
+  for (const rel of ['CLAUDE.md', 'public/links.html', 'apps/plataforma-saude-mental/app/links/page.js', 'public/artigo.html', 'public/blog.html', 'public/instagram.html']) {
+    assert.doesNotMatch(fs.readFileSync(path.join(RAIZ, rel), 'utf8'), SEM_ACENTO, rel);
+  }
 });
+
 
 test('a assinatura das artes novas das redes traz "Antônio" com acento e a fonte tem todos os glifos', () => {
   const { ASSINATURA, glifosAusentes } = require('../../backend/lib/redesV2/arte');

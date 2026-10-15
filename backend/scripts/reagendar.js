@@ -11,6 +11,7 @@ const { montarCalendario } = require('../lib/calendarioSite');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const aplicar = process.argv.includes('--aplicar');
+const PRIORITARIOS = new Set(['migracao-saude-mental', 'criancas-adolescentes-migrantes-saude-mental', 'mulher-migrante-saude-mental', 'homem-migrante-saude-mental', 'trabalhador-migrante-saude-mental', 'estudante-migrante-saude-mental', 'refugiados-trauma-saude-mental', 'xenofobia-racismo-saude-mental-migrantes', 'familias-separadas-migracao-quem-fica', 'migrantes-como-buscar-ajuda-saude-mental-sus']); // os 10 com 301 (vercel.json)
 
 (async () => {
   const mongoose = require('mongoose');
@@ -29,7 +30,9 @@ const aplicar = process.argv.includes('--aplicar');
     numeroSerie: d.importacao?.serie?.numero, serie: Boolean(d.importacao?.serie), ordem: i,
     par: [...(d.vinculos?.relatos || []), ...(d.vinculos?.artigos || [])].find((s) => slugsOk.has(s)),
   }));
-  const { agenda, avisos } = montarCalendario(itens);
+  // Os 10 textos de migração que recebem 301 dos endereços antigos saem nos 2 primeiros dias úteis (5 + 5).
+  const migracao = ok.map((x) => x.d).filter((d) => d.importacao?.pasta === '20-migracao-saude-mental-60' && d.importacao?.tipo !== 'relato' && PRIORITARIOS.has(d.slug)).map((d) => d.slug);
+  const { agenda, avisos } = montarCalendario(itens, { fixosPorDia: [migracao.slice(0, 5), migracao.slice(5, 10)] });
   console.log(`Agendados: ${fila.length} · aprovados na auditoria: ${ok.length} · fora do calendário: ${falhas.length} · dias: ${new Set(agenda.map((a) => a.data)).size} (${agenda[0]?.data} a ${agenda.at(-1)?.data}) · avisos: ${avisos.length}`);
   for (const { d, f } of falhas) console.log(`  FORA: ${d.slug} — ${f.map((x) => x.msg).join(' | ')}`);
 
