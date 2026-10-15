@@ -15,10 +15,11 @@ const { textoParaNarracao, hashNarracao, estadoNarracao } = require('../lib/narr
 const RAIZ = path.resolve(__dirname, '../..');
 const PASTA = path.join(RAIZ, 'narracoes-geradas');
 const enviar = process.argv.includes('--enviar');
+const agendados = process.argv.includes('--agendados');
 
 (async () => {
   await mongoose.connect(process.env.MONGODB_URI, { dbName: process.env.MONGODB_DB || 'drsaudemental', serverSelectionTimeoutMS: 10000 });
-  const docs = await mongoose.connection.db.collection('artigos').find({ publicado: true }).toArray();
+  const docs = await mongoose.connection.db.collection('artigos').find(agendados ? { $or: [{ publicado: true }, { 'agendamento.agendado': true }] } : { publicado: true }).toArray();
   const prontos = [], desatualizados = [], semMp3 = [];
   for (const d of docs) {
     if (estadoNarracao(d).estado === 'ok') continue;
@@ -26,7 +27,7 @@ const enviar = process.argv.includes('--enviar');
     if (!fs.existsSync(mp3) || !fs.existsSync(selo)) { semMp3.push(d.slug); continue; }
     (fs.readFileSync(selo, 'utf8').trim() === hashNarracao(textoParaNarracao(d)) ? prontos : desatualizados).push(d.slug);
   }
-  console.log(`${enviar ? 'ENVIAR' : 'DRY-RUN'} · publicados sem áudio "ok": ${prontos.length + desatualizados.length + semMp3.length} · com MP3 pronto e selo válido: ${prontos.length} · MP3 de texto editado depois (regerar): ${desatualizados.length} · sem MP3 pré-gerado: ${semMp3.length}`);
+  console.log(`${enviar ? 'ENVIAR' : 'DRY-RUN'} · ${agendados ? 'publicados + agendados' : 'publicados'} sem áudio "ok": ${prontos.length + desatualizados.length + semMp3.length} · com MP3 pronto e selo válido: ${prontos.length} · MP3 de texto editado depois (regerar): ${desatualizados.length} · sem MP3 pré-gerado: ${semMp3.length}`);
   if (desatualizados.length) console.log('  regerar:', desatualizados.join(', '));
   if (semMp3.length) console.log('  sem MP3:', semMp3.slice(0, 20).join(', ') + (semMp3.length > 20 ? ', …' : ''));
   await mongoose.disconnect();

@@ -93,8 +93,10 @@ function estadoNarracao(artigo) {
   return { estado: 'ausente', esperado };
 }
 
-/** URL que o player pode tocar, ou '' (ausente ou desatualizada). */
+/** URL que o player pode tocar, ou '' (ausente, desatualizada ou texto ainda não publicado). */
 function urlNarracaoTocavel(artigo) {
+  // Texto agendado (publicado:false) pode ter o MP3 enviado antes ("aguardando publicação"): só toca depois de publicado.
+  if (artigo && artigo.publicado === false) return '';
   const { estado } = estadoNarracao(artigo);
   if (estado === 'ok') return artigo.narracao.url;
   if (estado === 'legado') return artigo.audioNarracaoUrl;
