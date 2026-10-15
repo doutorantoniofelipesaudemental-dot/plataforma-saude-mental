@@ -35,7 +35,13 @@
     "proxy:github": "node scripts/proxy-github.js",
     "auditoria:seo": "node scripts/auditoria-seo.js",
     "ingestao:rascunhos": "node --env-file-if-exists=.env backend/scripts/ingestaoRascunhos.js",
-    "audit:instagram": "node backend/scripts/auditoriaInstagram.js"
+    "audit:instagram": "node backend/scripts/auditoriaInstagram.js",
+    "publish:autonomous": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/publicar-autonomo.js",
+    "publish:autonomous:teste": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/publicar-autonomo.js --teste",
+    "ollama:status": "node -e \"require('./backend/lib/ollamaAdapter').modelosInstalados().then(console.log)\"",
+    "auditoria": "node --env-file-if-exists=.env backend/scripts/auditoria.js",
+    "importar-tudo": "node --env-file-if-exists=.env backend/scripts/importarTudo.js",
+    "build": "npm --prefix apps/plataforma-saude-mental run build"
   },
   "engines": {
     "node": ">=20"

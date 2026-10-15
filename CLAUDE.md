@@ -98,3 +98,42 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
   3. Segurança/preservação: mídias só em `carrosseis-instagram/` (ignorada pelo Git), repositório sem pendências, `backend/data`, `narracao.js` e testes intactos, sem custo de API.
 - Roteiros e legendas devem trazer o bloco oficial de identificação de 3 linhas (com acento) para passar no validador.
 - PUBLICAÇÃO (atualizada pelo usuário): a aprovação 50/50 na Tripla Checagem é o GATILHO AUTOMÁTICO de publicação direta no Instagram oficial (API Meta Graph ou script local de automação), sem comandos manuais adicionais nem nova confirmação, seguida do registro do log de publicação na pasta do post. Qualquer reprovação, alteração de conteúdo após a checagem ou ausência de credencial válida bloqueia o envio. Tokens do Meta ficam só em variáveis de ambiente/arquivos locais ignorados pelo Git, nunca no repositório nem em chats. Fluxo: conteúdo → Edge-TTS → FFmpeg → Tripla Checagem → disparo → log.
+
+
+---
+
+## Regras permanentes do Dr. Antônio Felipe
+
+> Em qualquer divergência entre esta seção e o restante deste CLAUDE.md, prevalece esta seção (PROMPT-MESTRE de 14/10/2026). Exceção: regras de segurança (chaves, IP do Atlas, backup, segredos) — nelas vale sempre a regra mais restritiva.
+
+### Segurança, backup e gravação
+- A chave do Azure fica só no `.env` local. No MongoDB Atlas, só o IP atual (nunca `0.0.0.0/0`). Nunca imprimir segredos.
+- Um backup só, antes de qualquer gravação: cópia da coleção `artigos` e dos `.md`/`.mdx` que serão tocados, em `backups/importacao-completa-AAAAMMDD-HHMM/`, confirmando que abre (contagem de documentos).
+- Scripts de gravação rodam em `--dry-run` por padrão; só gravam com `--aplicar --etapa X`, após aprovação explícita ("aprovo a etapa X").
+- Não reescrever textos fornecidos: usar o HTML como está. **Deploy do site sempre exige o OK do Dr. Antônio.**
+- Caminho dos textos da importação: `C:\DRSAUDEMENTAL\importacao-completa\importacao\` (não mover). `importacao-completa/` está no `.gitignore`: no git entram só scripts, relatórios e as fontes `.md`/`.mdx` atualizadas.
+
+### Autor
+- Nunca "psiquiatra"; sem #psiquiatria; "Antônio" com acento; RQE 26638 sempre junto de "Medicina de Família e Comunidade"; "NÃO ESPECIALISTA" só abaixo da linha das pós-graduações.
+- Exceção: "psiquiatra" como nome da profissão em `quando-encaminhar-aps` e `quando-procurar-psiquiatra-psicologo`.
+
+### Auditoria geral e tripla checagem (sempre)
+- **Sempre fazer a auditoria geral e a tripla checagem técnica, científica, ética e humanizada, e corrigir as falhas e erros encontrados.**
+- `npm run auditoria` (só leitura; `--corrigir` aplica só as correções automáticas permitidas) roda antes de todo `--aplicar`, de todo deploy e de cada publicação nas redes; gera `relatorios/auditoria-AAAAMMDD-HHMM.md`.
+- Técnica: build sem erro, links/DOI sem 404, slug único, título/resumo/tempoLeitura/alt, `lastmod`, identificação exatamente uma vez, `<sup>` com referência, ≥ 4 referências, sem `{{` nem encoding quebrado, nenhum segredo no repositório/histórico/`NEXT_PUBLIC_*`.
+- Ética: Res. CFM 2.336/2023 (sem promessa, sensacionalismo ou paciente identificável), identificação do autor, suicídio/autolesão conforme OMS (sem método/local, sempre CVV 188 · SAMU 192), relatos como "Narrativa composta", sem estigma, português do Brasil (exceção: "burnout"), LGPD.
+- Científica: afirmações com número/recomendação têm referência que as sustenta (amostra mínima de 10%, priorizando os mais lidos); dados datados com mais de 2 anos marcados; fonte de imprensa com equivalente oficial é trocada pelo link oficial.
+- Humanizada: fala COM a pessoa; linguagem simples; sem culpa, medo, vergonha ou pressão; autonomia e caminho de cuidado (SUS, APS, CAPS, CVV); sem estereótipo; dignidade acima do efeito literário; soa como um médico conversando.
+- Correção: forma e links são corrigidos automaticamente; qualquer mudança no **sentido** de um texto é proposta (trecho atual → proposto → motivo) e espera OK. Rodar a auditoria de novo até zerar as falhas automáticas; relatório final com encontrado / corrigido / aguardando decisão, comparando com a auditoria inicial.
+- Marca d'água: nenhuma imagem do site ou das redes pode ter marca d'água. Encontrou: a peça é reprovada e a imagem é trocada (gerada de novo). Nunca apagar marca de terceiros.
+
+### Redes sociais
+- **Peça que passou na auditoria e na tripla checagem, sem marca d'água e com as correções feitas, é publicada sem pedir autorização.**
+- Antes de publicar: status `aprovado-checagem`, hash da imagem idêntico ao checado e ausência de marca d'água; se algo não bater, não publica e registra no log.
+- Falhou após 2 tentativas de correção: sai da fila, vai para `conteudo/redes-v2/revisar/` e entra no relatório semanal; a fila segue.
+- **Freio de emergência:** variável `REDES_PUBLICACAO_ATIVA=true|false`. Com `false`, nada é publicado (alterar em Vercel → Project Settings → Environment Variables → redeploy).
+- O deploy inicial do código do novo publicador é o único ponto que exige OK; depois, as publicações seguem sozinhas.
+
+### Decisões do Dr. Antônio (14/10/2026)
+- **§D (hash de narração) — liberado** para os itens do PROMPT-MESTRE e para correções aprovadas da auditoria. Nesses itens: marcar a narração como `pendente`; ocultar o player do áudio antigo até o novo ser gerado; NÃO apagar o arquivo de áudio antigo e NÃO gerar áudio agora. Para todos os outros textos, o §D continua valendo.
+- **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) A grafia "Antonio" segue apenas na `/links` e em `assets/marca/` (§3.A/D), por serem ativos de marca já definidos.
