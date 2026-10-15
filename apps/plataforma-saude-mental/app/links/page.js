@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Links',
+  alternates: { canonical: 'https://www.drantoniofelipemedico.com.br/links' },
   description:
     'Dr. Antônio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
 };

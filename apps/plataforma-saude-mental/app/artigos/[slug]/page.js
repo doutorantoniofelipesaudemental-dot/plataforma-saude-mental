@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { canonicalDoTexto } from '../../slugsDominioPrincipal';
 import { ArrowLeft } from 'lucide-react';
 import { TODOS_ARTIGOS } from '@/src/content/artigos';
 import RodapeIdentificacao from '@/app/RodapeIdentificacao';
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }) {
   return {
     title: metadata.titulo,
     description: metadata.resumo,
+    alternates: { canonical: canonicalDoTexto(slug, '/artigos/' + slug) },
   };
 }
 

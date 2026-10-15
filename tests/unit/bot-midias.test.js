@@ -11,7 +11,7 @@ const ARTIGO = {
   categoria: 'Empresas & RH',
   conteudo: '<p>Uma revisão encontrou ansiedade em 38% a 41% dos trabalhadores.</p>',
 };
-const CHAMADA = '🎧 Ouça o artigo narrado no Portal: https://drsaudemental.vercel.app/artigo/teste';
+const CHAMADA = '🎧 Ouça o artigo narrado no Portal: https://www.drantoniofelipemedico.com.br/artigo/teste';
 const FONTE = `${ARTIGO.titulo} ${ARTIGO.resumo} Uma revisão encontrou ansiedade em 38% a 41% dos trabalhadores.`;
 
 function rascunho(ajustes = {}) {

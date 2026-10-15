@@ -6,7 +6,7 @@
 
   const { api, esc, formatarData, cartaoArtigo } = window.Site;
 
-  const BASE_URL = 'https://drsaudemental.vercel.app';
+  const BASE_URL = 'https://www.drantoniofelipemedico.com.br';
 
   const cabecalho = document.getElementById('artigo-cabecalho');
   const conteudo = document.getElementById('artigo-conteudo');

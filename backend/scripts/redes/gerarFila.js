@@ -20,7 +20,7 @@ const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').
 const LIMITE = +arg('limite', 60);
 const INICIO = arg('inicio', '2026-10-26');
 const SO_PLANEJAR = process.argv.includes('--so-planejar');
-const SITE = 'https://drantoniofelipemedico.com.br';
+const SITE = 'https://www.drantoniofelipemedico.com.br';
 const ROTACAO = ['pacientes', 'pais', 'profissionais', 'empresas'];
 
 const diaBahia = (d) => new Date(new Date(d).getTime() - 3 * 3600e3).toISOString().slice(0, 10);

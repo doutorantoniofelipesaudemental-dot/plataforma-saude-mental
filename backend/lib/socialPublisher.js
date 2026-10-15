@@ -47,7 +47,7 @@ const { estadoNarracao, PENDENCIA_NARRACAO } = require('./narracao');
 const { obterTokenInstagram, registrarTokenInvalido, ehErroDeToken } = require('./tokenInstagram');
 const { log } = require('./log');
 
-const BASE_URL = 'https://drsaudemental.vercel.app';
+const BASE_URL = 'https://www.drantoniofelipemedico.com.br';
 const GRAPH_API_VERSION = 'v21.0';
 // Tokens do "Instagram Login" (prefixo IGAA) só funcionam em graph.instagram.com
 // — em graph.facebook.com voltam "Cannot parse access token". Tokens do fluxo

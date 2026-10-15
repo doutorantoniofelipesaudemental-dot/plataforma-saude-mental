@@ -54,7 +54,7 @@ test('metadados do .md aprovado e descrição final do YouTube', () => {
 
   const longo = montarDescricaoYoutube({ metadados: meta, slug: 'burnout-aps', sensivel: true, short: false });
   assert.ok(longo.startsWith('Burnout na APS tem sinais claros.'));
-  assert.match(longo, /Artigo completo: https:\/\/drsaudemental\.vercel\.app\/artigo\/burnout-aps/);
+  assert.match(longo, /Artigo completo: https:\/\/www.drantoniofelipemedico.com.br\/artigo\/burnout-aps/);
   assert.match(longo, /Capítulos:\n0:00 Abertura\n1:30 Sinais\n6:00 Cuidado/);
   assert.match(longo, /CVV 188/);
   assert.ok(longo.includes(IDENTIFICACAO_COMPLETA) && longo.includes(AVISO_CFM));

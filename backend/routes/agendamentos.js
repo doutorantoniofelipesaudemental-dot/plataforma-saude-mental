@@ -30,6 +30,8 @@ const CAMPOS_PERMITIDOS = [
  * Cria uma solicitação de agendamento a partir do formulário público.
  */
 router.post('/', limiteEnvio, exigirBanco, async (req, res) => {
+  // Formulários desativados (15/10/2026): contato e agendamento somente por e-mail; nenhum dado de visitante é guardado.
+  return res.status(410).json({ ok: false, mensagem: 'Formulário desativado. Escreva para doutor.antoniofelipe.saudemental@gmail.com (não envie informações de saúde por e-mail; em emergência: SAMU 192 · CVV 188).' });
   const corpo = req.body || {};
 
   // Honeypot: campo invisível no formulário. Se veio preenchido, é bot.

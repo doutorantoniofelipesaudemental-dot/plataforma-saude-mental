@@ -3,7 +3,7 @@ const path = require('path');
 const { escapeHtml, formatarData } = require('./texto');
 const { urlNarracaoTocavel, estadoNarracao } = require('./narracao');
 
-const BASE_URL = 'https://drsaudemental.vercel.app';
+const BASE_URL = 'https://www.drantoniofelipemedico.com.br';
 const TEMPLATE_PATH = path.join(__dirname, '..', '..', 'public', 'artigo.html');
 
 // Lido uma vez por instância serverless — o template estático não muda em runtime.
