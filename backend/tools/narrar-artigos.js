@@ -130,7 +130,7 @@ async function sintetizarAzure(texto) {
 }
 
 function sintetizarEdge(arquivoTexto, arquivoMp3) {
-  const r = spawnSync(EDGE_TTS, ['--voice', VOZ_NARRACAO, '--file', arquivoTexto, '--write-media', arquivoMp3], { encoding: 'utf8' });
+  const r = spawnSync(EDGE_TTS, ['--voice', VOZ_NARRACAO, '--file', arquivoTexto, '--write-media', arquivoMp3], { encoding: 'utf8', timeout: 300_000, killSignal: 'SIGKILL' }); // 5 min: o Edge-TTS já travou sem erro (15/10/2026)
   if (r.status !== 0) throw new Error(`edge-tts falhou: ${(r.stderr || r.error?.message || '').slice(0, 300)}`);
 }
 
