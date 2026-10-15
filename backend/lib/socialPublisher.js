@@ -36,6 +36,7 @@
  */
 
 const db = require('./db');
+const { exigirRedesAtivas } = require('./freioRedes');
 const Artigo = require('../models/Artigo');
 const RegistroPublicacao = require('../models/RegistroPublicacao');
 const { montarSlides } = require('./carrossel');
@@ -288,6 +289,7 @@ function montarPayloads(artigo, url, redes, instagram = {}) {
 
 /** Instagram Graph API — fluxo oficial de 2 passos (Regra 16 do CLAUDE.md): cria o container, espera FINISHED, publica. */
 async function publicarNoInstagram({ imagemUrl, legenda }) {
+  exigirRedesAtivas('publicação no Instagram');
   requerEnv('INSTAGRAM_ACCESS_TOKEN');
   // O mais recente: o renovado pelo cron semanal, se houver (ver tokenInstagram.js).
   const token = await obterTokenInstagram();
@@ -327,6 +329,7 @@ async function publicarNoInstagram({ imagemUrl, legenda }) {
  * HTTP da publicação para o log.
  */
 async function publicarCarrosselNoInstagram({ imagensUrls, legenda }) {
+  exigirRedesAtivas('publicação de carrossel no Instagram');
   requerEnv('INSTAGRAM_ACCESS_TOKEN');
   const token = await obterTokenInstagram();
   const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
@@ -396,6 +399,7 @@ function parametrosContainerReel({ token, legenda, videoUrl, compartilharNoFeed 
 }
 
 async function publicarReelNoInstagram({ arquivo, videoUrl = null, legenda, compartilharNoFeed = true }) {
+  exigirRedesAtivas('publicação de Reel no Instagram');
   requerEnv('INSTAGRAM_ACCESS_TOKEN');
   const token = await obterTokenInstagram();
   const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
@@ -471,6 +475,7 @@ function lancarErroMeta(resposta, contexto, codigoPadrao) {
 
 /** LinkedIn — UGC Posts API. Requer LINKEDIN_AUTHOR_URN (organização ou pessoa), não só o token. */
 async function publicarNoLinkedIn({ url, titulo, legenda }) {
+  exigirRedesAtivas('publicação no LinkedIn');
   const token = requerEnv('LINKEDIN_ACCESS_TOKEN');
   const autorUrn = requerEnv('LINKEDIN_AUTHOR_URN');
 

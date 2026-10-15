@@ -143,6 +143,22 @@ const ArtigoSchema = new mongoose.Schema(
       bytes: Number,
       geradaEm: Date,
     },
+    // Importação completa (PROMPT-MESTRE 14/10/2026): origem dos campos do lote, vínculos artigo↔relato
+    // (nos dois sentidos) e agendamento do calendário do site (backend/scripts/publicarAgendados.js).
+    importacao: {
+      lote180: Number,
+      semanaPublicacao: Number,
+      parte: String,
+      origem: String,
+      tipo: { type: String, enum: ['artigo', 'relato'] },
+      pasta: String,
+      serie: { nome: String, slug: String, numero: Number, bloco: String },
+      importadaEm: Date,
+    },
+    vinculos: { relatos: { type: [String], default: [] }, artigos: { type: [String], default: [] } },
+    capaPendente: { type: Boolean, default: false },
+    historicoTitulos: [{ titulo: String, em: Date }],
+    agendamento: { agendado: { type: Boolean, default: false }, slot: Date, falha: String },
     // Linha curta opcional abaixo do título na capa das redes.
     subtituloRedes: { type: String, default: '', trim: true, maxlength: 120 },
     // Reescrita aprovada importada (backend/tools/importar-reescritas.js).

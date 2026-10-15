@@ -14,6 +14,7 @@
  * O access token vai só no cabeçalho; nunca é gravado nem logado.
  */
 const fs = require('fs');
+const { exigirRedesAtivas } = require('./freioRedes');
 
 const LIMITE_TITULO = 100;
 const LIMITE_DESCRICAO_BYTES = 5000;
@@ -65,6 +66,7 @@ function validarMetadados({ titulo, descricao, tags }) {
  * Devolve id, link, status HTTP e a privacidade que o YouTube aplicou.
  */
 async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade = 'public', short = false }) {
+  exigirRedesAtivas('upload no YouTube');
   const token = await obterAccessToken();
   const tamanho = fs.statSync(arquivo).size;
   const inicio = await fetch('https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status', {
