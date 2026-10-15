@@ -2,13 +2,7 @@
 
 266 itens · 34 dias úteis · de 2026-10-19 a 2026-12-07 · 8 por dia útil (08:00, 09:30, 11:00, 12:30, 14:00, 15:30, 17:00, 19:00, America/Bahia)
 
-## Fora do calendário (aguardam decisão do Dr. Antônio)
-
-- **insatisfacao-corporal-brasil-numeros**: linguagem de culpa/pressão: "falta de força de vontade" (decisão do autor)
-- **relato-namorado-controlava-celular**: termo estigmatizante: "louca" (decisão do autor)
-- **relato-calor-aos-quarenta-e-oito**: termo estigmatizante: "louca" (decisão do autor) | linguagem de culpa/pressão: "frescura" (decisão do autor)
-- **relato-baiano-que-trabalhava-dobrado**: linguagem de culpa/pressão: "preguiça" (decisão do autor)
-- **higiene-autocuidado-saude-mental**: linguagem de culpa/pressão: "preguiça" (decisão do autor)
+**ATENÇÃO — plano Hobby da Vercel:** o cron roda 1x por dia (08:00 de Salvador). Todos os itens do dia saem juntos nesse horário; a coluna Hora é a ordem planejada. Com o plano Pro, defina `AGENDADOS_MODO=meia-hora` e o cron `0,30 * * * *` para publicar em cada horário.
 
 | Data | Hora | Slug | Título | Tipo | Público |
 |---|---|---|---|---|---|
