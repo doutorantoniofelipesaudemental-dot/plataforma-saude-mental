@@ -35,6 +35,7 @@ export default async function ArtigoPage({ params }) {
   const eDoSiteAnterior = info?.origem === 'site-anterior';
 
   return (
+    <main className="flex-1">
     <article className="mx-auto w-full max-w-2xl px-6 py-16 sm:px-8">
       <Link
         href="/artigos"
@@ -69,5 +70,6 @@ export default async function ArtigoPage({ params }) {
       </div>
       <RodapeIdentificacao />
     </article>
+    </main>
   );
 }

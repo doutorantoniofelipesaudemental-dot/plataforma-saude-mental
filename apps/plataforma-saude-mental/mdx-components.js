@@ -9,9 +9,9 @@ import { ArrowRight } from 'lucide-react';
 
 function Lead({ children }) {
   return (
-    <p className="text-xl font-medium leading-relaxed text-tinta-media">
+    <div className="text-xl font-medium leading-relaxed text-tinta-media">
       {children}
-    </p>
+    </div>
   );
 }
 
@@ -38,10 +38,11 @@ function RefsNote({ emergencia, children }) {
           procure o pronto-socorro mais próximo.
         </p>
       )}
-      <p>
+      {/* div, não p: o MDX entrega <p> em children e p dentro de p quebra a hidratação (React #418) */}
+      <div>
         {children ||
           'Este conteúdo tem finalidade educativa e não substitui avaliação médica ou psicológica individualizada.'}
-      </p>
+      </div>
     </div>
   );
 }
