@@ -24,3 +24,182 @@ Início da sessão: 51 ok · 200 desatualizadas · 475 ausentes · faltam 675.
   - automutilacao-adolescentes-consulta | conferidos: CVVok, SAMUFALHA, CAPSok, 188ok, 192ok, 2019ok
   - bipolar-diferenciando-depressao | conferidos: APSok, CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
   - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 3 — 15/10/2026 07:03 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 50 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":200,"desatualizada":51,"ausente":475},"faltam":526}
+- Amostra (transcrição de 5 áudios):
+  - adolescencia-mudancas-humor | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2025FALHA
+  - prevencao-suicidio-ambiente-trabalho | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - assedio-moral-prevencao-empresa | conferidos: CVVok, SAMUok, 188ok, 192ok, 2022FALHA
+  - gestacao-maternidade-trabalho | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - linguagem-inclusiva-saude-mental-empresa | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2026ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 4 — 15/10/2026 07:19 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 50 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - quando-procurar-psiquiatra-psicologo | conferidos: CVVok, SAMUok, CAPSok, SUSok, 188ok, 192ok, 2026ok
+  - solidao-diferenca-estar-sozinho | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - adolescente-experimentacao-alcool-conversa | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2026ok
+  - depressao-sinais-alem-tristeza | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - terapia-online-funciona | conferidos: CRMok, CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2022ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 5 — 15/10/2026 07:19 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 6 — 15/10/2026 07:19 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 7 — 15/10/2026 07:19 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 8 — 15/10/2026 07:19 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 9 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 10 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 11 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 12 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":250,"desatualizada":1,"ausente":475},"faltam":476}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 13 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 14 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 15 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 16 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 17 — 15/10/2026 07:20 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 18 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 19 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 20 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 21 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 22 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 23 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 24 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 25 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 26 — 15/10/2026 07:21 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 27 — 15/10/2026 07:22 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 28 — 15/10/2026 07:22 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 29 — 15/10/2026 07:22 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+
+## Lote 30 — 15/10/2026 07:22 (pronúncia ativa)
+- ENVIAR · aprovados na conferência: 0 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":246,"desatualizada":5,"ausente":475},"faltam":480}
+- Amostra (transcrição de 5 áudios):
+  - AMOSTRA OK
+- FIM do laço em 15/10/2026 07:22
