@@ -24,7 +24,7 @@ const contarMd = (dir) => (fs.existsSync(dir) ? fs.readdirSync(dir, { withFileTy
 
 (async () => {
   const p = (n) => String(n).padStart(2, '0'); const d = new Date();
-  const dir = path.join(RAIZ, 'backups', `importacao-completa-${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`);
+  const dir = path.join(RAIZ, 'backups', `${(process.argv.find((x) => x.startsWith('--prefixo=')) || '--prefixo=importacao-completa').split('=')[1]}-${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`);
   fs.mkdirSync(dir, { recursive: true });
   const mongoose = require('mongoose');
   await mongoose.connect(process.env.MONGODB_URI, { dbName: process.env.MONGODB_DB || 'drsaudemental', serverSelectionTimeoutMS: 10000 });
