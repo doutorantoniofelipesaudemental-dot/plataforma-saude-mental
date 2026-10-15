@@ -22,6 +22,21 @@ const PASTAS = [path.join(APP, 'src/content/artigos'), path.join(APP, 'content/b
 const args = new Set(process.argv.slice(2));
 
 const { checarTexto } = require('../lib/auditoriaTexto');
+const { renderizarArtigoHtml } = require('../lib/renderizarArtigo');
+
+/** Página RENDERIZADA (texto visível, sem <head>/<script>/<style>): identificação exatamente 1 vez e a TCC no rodapé. */
+function checarRenderizada(doc) {
+  const falhas = [];
+  let html;
+  try { html = renderizarArtigoHtml(doc); } catch (e) { return [{ grupo: 'renderizada', msg: `falha ao renderizar: ${e.message.slice(0, 80)}` }]; }
+  const visivel = html.replace(/<head[\s\S]*?<\/head>/i, '').replace(/<(script|style)[\s\S]*?<\/\1>/gi, '');
+  for (const [re, nome] of [[/CRM-BA 41322/g, 'CRM-BA 41322'], [/RQE 26638/g, 'RQE 26638'], [/N[ÃA]O ESPECIALISTA/g, 'NÃO ESPECIALISTA']]) {
+    const n = (visivel.match(re) || []).length;
+    if (n !== 1) falhas.push({ grupo: 'renderizada', msg: `página renderizada com "${nome}" ${n}x (esperado 1)` });
+  }
+  if (!/Terapia Cognitivo-Comportamental/.test(visivel)) falhas.push({ grupo: 'renderizada', msg: 'página renderizada sem a TCC no rodapé' });
+  return falhas;
+}
 
 function lerMdx() {
   const itens = [];
@@ -43,7 +58,7 @@ async function lerMongo() {
   try {
     const mongoose = require('mongoose');
     await mongoose.connect(process.env.MONGODB_URI, { dbName: process.env.MONGODB_DB || 'drsaudemental', serverSelectionTimeoutMS: 8000 });
-    const docs = await mongoose.connection.db.collection('artigos').find({}, { projection: { slug: 1, titulo: 1, resumo: 1, tempoLeitura: 1, conteudo: 1, status: 1, createdAt: 1 } }).toArray();
+    const docs = await mongoose.connection.db.collection('artigos').find({}).toArray();
     let cvvCorrigidos = 0;
     if (args.has('--corrigir')) {
       // Única escrita no banco: acrescenta a caixa CVV 188 · SAMU 192 onde falta (forma, não sentido).
@@ -56,7 +71,7 @@ async function lerMongo() {
       }
     }
     await mongoose.disconnect();
-    return { cvvCorrigidos, itens: docs.map((d) => ({ origem: 'mongo', slug: d.slug, titulo: d.titulo, resumo: d.resumo, tempoLeitura: d.tempoLeitura, corpo: String(d.conteudo || ''), publicadoEm: d.criadoEm })), nota: `MongoDB: ${docs.length} documento(s) lidos${args.has('--corrigir') ? ` (${cvvCorrigidos} corrigido(s))` : ' (somente leitura)'}` };
+    return { cvvCorrigidos, docs, itens: docs.map((d) => ({ origem: 'mongo', slug: d.slug, titulo: d.titulo, resumo: d.resumo, tempoLeitura: d.tempoLeitura, corpo: String(d.conteudo || ''), publicadoEm: d.criadoEm })), nota: `MongoDB: ${docs.length} documento(s) lidos${args.has('--corrigir') ? ` (${cvvCorrigidos} corrigido(s))` : ' (somente leitura)'}` };
   } catch (e) {
     return { itens: [], nota: `MongoDB inacessível (${e.message.slice(0, 90)}): provável IP não liberado no Atlas` };
   }
@@ -82,10 +97,9 @@ function auditarSeguranca() {
   return falhas;
 }
 
-// Correções AUTOMÁTICAS permitidas (forma, nunca sentido): acento do autor, caixa CVV 188 · SAMU 192 e bloco de identificação.
+// Correções AUTOMÁTICAS permitidas (forma, nunca sentido): acento do autor e caixa CVV 188 · SAMU 192. (O bloco de identificação NÃO é mais inserido no corpo: vive só no rodapé do template.)
 const CVV_HTML = '<div class="callout"><strong>Precisa de apoio agora?</strong> CVV — 188 (ligação gratuita, 24h, também por chat em cvv.org.br) · SAMU — 192 em emergências · A UBS e o CAPS da sua cidade acolhem e encaminham.</div>';
 const CVV_MDX = "<Callout titulo={'Se você precisar de apoio agora:'}>\nCVV — 188 (ligação gratuita, 24h, também por chat em cvv.org.br) · SAMU — 192 em emergências.\n</Callout>";
-const IDENT_MDX = '<p className="identificacao-medico">Dr. Antônio Felipe — Médico — CRM-BA 41322<br />Especialista em Medicina de Família e Comunidade — RQE 26638<br />Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde<br />Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho<br />NÃO ESPECIALISTA</p>';
 
 function inserirAntes(texto, marcadores, bloco) {
   for (const re of marcadores) {
@@ -100,9 +114,9 @@ function corrigirMdx(itens) {
   for (const it of itens.filter((i) => i.origem === 'mdx')) {
     let t = it.corpo;
     const falhas = checarTexto(it).map((f) => f.msg);
-    if (/Antonio Felipe/.test(t)) { t = t.replace(/Antonio Felipe/g, 'Antônio Felipe'); cont.acento += 1; }
+    // "Antonio Felipe Garabito Jr." é o nome do filho (dedicatória): grafia preservada, nunca corrigir.
+    if (/Antonio Felipe(?! Garabito Jr\.)/.test(t)) { t = t.replace(/Antonio Felipe(?! Garabito Jr\.)/g, 'Antônio Felipe'); cont.acento += 1; }
     if (falhas.some((m) => /sem CVV 188/.test(m))) { t = inserirAntes(t, [/<h2>\s*Refer[êe]ncias/i, /<p className="identificacao-medico"/, /<CallToTool/], CVV_MDX); cont.cvv += 1; }
-    if (falhas.some((m) => /"CRM-BA 41322" 0x/.test(m))) { t = inserirAntes(t, [/<CallToTool/], IDENT_MDX); cont.ident += 1; }
     if (t !== it.corpo) fs.writeFileSync(it.arquivo, t, 'utf8');
   }
   return cont;
@@ -117,7 +131,8 @@ function corrigirMdx(itens) {
   let corrigidos = null;
   if (args.has('--corrigir')) { corrigidos = { ...corrigirMdx(itens), cvvBanco: mongo.cvvCorrigidos || 0 }; itens = lerMdx(); }
   const todos = [...itens, ...mongo.itens];
-  const resultados = todos.map((it) => ({ it, falhas: checarTexto(it) }));
+  const porSlug = new Map((mongo.docs || []).map((d) => [d.slug, d]));
+  const resultados = todos.map((it) => ({ it, falhas: [...checarTexto(it), ...(it.origem === 'mongo' && porSlug.get(it.slug) ? checarRenderizada(porSlug.get(it.slug)) : [])] }));
   const comFalha = resultados.filter((r) => r.falhas.length);
   const porMsg = new Map();
   for (const r of comFalha) for (const f of r.falhas) { const k = `${f.grupo} · ${f.msg.replace(/\d+x|\(\d+\)|"[^"]*"/g, '…')}`; porMsg.set(k, [...(porMsg.get(k) || []), `${r.it.origem}:${r.it.slug}`]); }
