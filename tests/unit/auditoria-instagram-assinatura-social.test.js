@@ -74,7 +74,8 @@ test('landing page e portal mantêm o bloco de 5 linhas com as pós-graduações
 
 // Regra vigente (14/10/2026, revoga o §F antigo): "Antônio" COM acento em textos e artes; "Antonio Felipe" sem acento é ERRO.
 // Sem exceção (15/10/2026): vale também para a /links e o material de marca. Só endereços, @, e-mail e nomes técnicos (ex.: pt-BR-AntonioNeural) ficam sem acento.
-const SEM_ACENTO = /Antonio Felipe|ANTONIO FELIPE/;
+// Exceção permanente (15/10/2026): "Antonio Felipe Garabito Jr." (dedicatória ao filho em public/index.html) é nome de outra pessoa.
+const SEM_ACENTO = /Antonio Felipe(?! Garabito Jr\.)|ANTONIO FELIPE/;
 
 test('o nome do médico leva acento nos arquivos de identidade e nos geradores de arte e legenda', () => {
   for (const rel of ['post_instagram.py', 'reels_automation/src/llm_ollama.py', 'backend/lib/carrossel.js', 'backend/lib/legendaInstagram.js', 'backend/lib/conformidadeCfm.js', 'backend/lib/redesV2/arte.js', 'backend/lib/redesV2/conteudo.js']) {
@@ -83,9 +84,15 @@ test('o nome do médico leva acento nos arquivos de identidade e nos geradores d
 });
 
 test('nenhum texto do projeto usa "Dr. Antonio Felipe" sem acento (CLAUDE.md, /links, app Next, geradores)', () => {
-  for (const rel of ['CLAUDE.md', 'public/links.html', 'apps/plataforma-saude-mental/app/links/page.js', 'public/artigo.html', 'public/blog.html', 'public/instagram.html']) {
+  for (const rel of ['CLAUDE.md', 'public/index.html', 'public/links.html', 'apps/plataforma-saude-mental/app/links/page.js', 'public/artigo.html', 'public/blog.html', 'public/instagram.html']) {
     assert.doesNotMatch(fs.readFileSync(path.join(RAIZ, rel), 'utf8'), SEM_ACENTO, rel);
   }
+});
+
+test('a dedicatória "Antonio Felipe Garabito Jr." (filho) fica exatamente como está, sem acento, e está registrada no CLAUDE.md', () => {
+  const index = fs.readFileSync(path.join(RAIZ, 'public', 'index.html'), 'utf8');
+  assert.ok(index.includes('<strong>Antonio Felipe Garabito Jr.</strong>, por serem a base de tudo o que construo.'));
+  assert.match(fs.readFileSync(path.join(RAIZ, 'CLAUDE.md'), 'utf8'), /Antonio Felipe Garabito Jr\.[^\n]*grafia preservada/);
 });
 
 

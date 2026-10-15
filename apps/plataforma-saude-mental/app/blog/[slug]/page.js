@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { EIXOS } from '@/content/blog/eixos';
+import RodapeIdentificacao from '@/app/RodapeIdentificacao';
 
 export function generateStaticParams() {
   return EIXOS.map(({ slug }) => ({ slug }));
@@ -75,6 +76,7 @@ export default async function ArtigoPage({ params }) {
           Agendar consulta
         </Link>
       </div>
+      <RodapeIdentificacao />
     </article>
   );
 }

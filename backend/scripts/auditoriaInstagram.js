@@ -24,7 +24,7 @@ const { AVISO_CFM, LINHA_CVV } = require('../lib/conformidadeCfm');
 const { IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../lib/legendaInstagram');
 
 const PASTA = path.join(__dirname, '..', '..', 'CONTEUDO_INSTAGRAM');
-const PASTAS_FORA = new Set(['pautas']);
+const PASTAS_FORA = new Set(['pautas', 'arquivo-fluxo-antigo']); // arquivo-fluxo-antigo: fluxo antigo substituido (15/10/2026)
 
 const RE_ATUACAO = /(?:Atuo em|Atua no) Pronto Atendimento Psiqui[aá]trico[^\n]*Aten[cç][aã]o Prim[aá]ria/i;
 const RE_MENTORIA = /\bmentoria\b/i;

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { TODOS_ARTIGOS } from '@/src/content/artigos';
+import RodapeIdentificacao from '@/app/RodapeIdentificacao';
 
 export function generateStaticParams() {
   return TODOS_ARTIGOS.map(({ slug }) => ({ slug }));
@@ -64,6 +65,7 @@ export default async function ArtigoPage({ params }) {
       <div className="prose prose-marca max-w-none leading-relaxed">
         <Artigo />
       </div>
+      <RodapeIdentificacao />
     </article>
   );
 }

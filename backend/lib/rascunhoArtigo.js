@@ -13,7 +13,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { IDENTIFICACAO_COMPLETA, AVISO_CFM, LINHA_CVV } = require('./conformidadeCfm');
+const { AVISO_CFM, LINHA_CVV } = require('./conformidadeCfm');
 const { RE_NARRATIVA_COMPOSTA } = require('./legendaInstagram');
 const { checarHumanizacao, checarEticaCfm } = require('./checagensAprovacao');
 const { checarOriginalidade } = require('./originalidade');
@@ -116,7 +116,7 @@ function montarDocumento(pauta, d, { slug, checagens = null, geradoEm = new Date
   const rodape = [
     pauta.tipo === 'cronica' ? AVISO_NARRATIVA_COMPOSTA : null,
     LINHA_CVV,
-    IDENTIFICACAO_COMPLETA,
+    // A identificação (5 linhas, com a TCC) vive SÓ no rodapé do template do site: o corpo do texto não a leva (15/10/2026).
     AVISO_CFM,
   ].filter(Boolean).join('\n\n');
   const revisar = trechosParaRevisaoMedica(corpo, pauta.tipo);
@@ -157,8 +157,8 @@ async function checarRascunho(pauta, d, doc, { acervo = [], outros = [] } = {}) 
 
   // 1) Humanização e empatia (sobre o corpo escrito pelo modelo)
   const humanizacao = checarHumanizacao(`${d.resumo}. ${corpo}`);
-  // 2) Ética médica / CFM (documento completo: 5 linhas, CRM, RQE, CVV e aviso de narrativa composta)
-  const etica = checarEticaCfm(doc, { contexto: 'portal', sensivel: pauta.sensivel ? true : undefined });
+  // 2) Ética médica / CFM (documento completo: CVV e aviso de narrativa composta; a identificação está no rodapé do template)
+  const etica = checarEticaCfm(doc, { contexto: 'portal', sensivel: pauta.sensivel ? true : undefined, exigirIdentificacao: false });
   if (pauta.tipo === 'cronica' && !doc.includes(AVISO_NARRATIVA_COMPOSTA)) etica.falhas.push('falta o aviso legal de narrativa composta');
   if (!doc.includes(AVISO_CFM)) etica.falhas.push('falta o aviso da Res. CFM 2.454/2026');
   // 3) Originalidade: título + resumo + texto contra o acervo do banco e os outros rascunhos

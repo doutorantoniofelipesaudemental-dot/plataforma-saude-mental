@@ -48,18 +48,13 @@ function checarTexto({ origem, slug, titulo, corpo, resumo, tempoLeitura }) {
   const refs = iRef >= 0 ? contar(corpo.slice(iRef), /<li[ >]/g) : 0;
   if (refs < 4) f('técnica', `menos de 4 referências (${refs})`);
   for (const n of new Set(sups)) if (n > refs) f('técnica', `citação <sup>${n}</sup> sem referência`);
-  // No MongoDB a identificação entra na renderização/HTML do lote: contagem exata só vale para MDX.
-  if (origem === 'mdx' && contar(corpo, /CRM-BA 41322/g) !== 1) f('técnica', `"CRM-BA 41322" ${contar(corpo, /CRM-BA 41322/g)}x (esperado 1)`);
-  if (origem === 'mdx' && contar(corpo, /RQE 26638/g) !== 1) f('técnica', `"RQE 26638" ${contar(corpo, /RQE 26638/g)}x (esperado 1)`);
-  if (contar(corpo, /N[ÃA]O ESPECIALISTA/g) > 1) f('técnica', '"NÃO ESPECIALISTA" duplicado');
-  // Assinatura padrão completa (15/10/2026): toda linha de pós-graduações traz a TCC e é seguida de "NÃO ESPECIALISTA" (uma vez).
-  if (/P[óo]s-gradua[çc][ãa]o em Psiquiatria/i.test(corpo)) {
-    if (!/Terapia Cognitivo-Comportamental/.test(corpo)) f('técnica', 'assinatura completa sem a Terapia Cognitivo-Comportamental');
-    if (!/Medicina do Trabalho\s*(?:<br\s*\/?>)?\s*N[ÃA]O ESPECIALISTA/i.test(corpo)) f('técnica', '"NÃO ESPECIALISTA" não está logo abaixo da linha das pós-graduações');
-    if (/Medicina do Trabalho\.\s*(?:<br\s*\/?>)?\s*N[ÃA]O ESPECIALISTA/i.test(corpo)) f('técnica', 'linha das pós-graduações com ponto final (redação antiga)');
-  }
+  // Identificação ÚNICA (15/10/2026): o bloco oficial vive SÓ no rodapé do template do site. O corpo do texto não leva
+  // CRM, RQE, "NÃO ESPECIALISTA" nem a linha de pós-graduações (a página renderizada deve ter cada um exatamente 1 vez: ver auditoria.js).
+  const noCorpo = [[/CRM-BA 41322/, 'CRM-BA 41322'], [/RQE 26638/, 'RQE 26638'], [/N[ÃA]O ESPECIALISTA/, 'NÃO ESPECIALISTA'], [/P[óo]s-gradua[çc][ãa]o em Psiquiatria/i, 'linha de pós-graduações']].filter(([re]) => re.test(corpo)).map(([, nome]) => nome);
+  if (noCorpo.length) f('técnica', `bloco de identificação no corpo do texto (${noCorpo.join(', ')}): deve existir só no rodapé do template`);
   if (/RQE 26638/.test(corpo) && !/Medicina de Fam[ií]lia e Comunidade/.test(corpo)) f('ética', 'RQE sem "Medicina de Família e Comunidade"');
-  if (/Antonio Felipe/.test(corpo)) f('ética', '"Antonio" sem acento (corrigível)');
+  // exceção permanente: "Antonio Felipe Garabito Jr." (dedicatória ao filho) é nome de outra pessoa, grafia preservada
+  if (/Antonio Felipe(?! Garabito Jr\.)/.test(corpo)) f('ética', '"Antonio" sem acento (corrigível)');
   if (RE_PSIQ_AUTOR.test(corpo)) f('ética', 'autor apresentado como psiquiatra / #psiquiatria');
   else if (/#psiq/i.test(corpo)) f('ética', '#psiquiatria');
   if (/\bpsiquiatra\b/i.test(corpo) && !PROFISSAO_PSIQUIATRA_OK.has(slug) && /Antônio Felipe[^]{0,200}psiquiatra/i.test(corpo)) f('ética', 'verificar uso de "psiquiatra" junto ao autor');

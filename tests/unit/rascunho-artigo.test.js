@@ -42,12 +42,13 @@ const PAUTA_CRONICA = { id: '2026-09-30-98-cronica-teste', tipo: 'cronica', titu
 
 const ACERVO_OUTRO = [{ titulo: 'Tabagismo: como abordar a cessação na consulta', resumo: 'Cessação do tabagismo na atenção primária', categoria: 'Pacientes & Famílias' }];
 
-test('artigo científico: passa nas 3 checagens, traz as 3 seções, as 5 linhas do CFM e o vínculo ao ID/slug', async () => {
+test('artigo científico: passa nas 3 checagens, traz as 3 seções, o aviso CFM (sem a identificação no corpo) e o vínculo ao ID/slug', async () => {
   const r = await rascunhos.gerarRascunho(PAUTA_ARTIGO, { gerar: async () => ARTIGO_BOM, acervo: ACERVO_OUTRO });
   assert.strictEqual(r.ok, true, r.checagens.motivo);
   assert.deepStrictEqual([r.checagens.humanizacao, r.checagens.etica, r.checagens.originalidade], [true, true, true]);
   for (const s of ['## Guia Prático', '## Fisiopatologia', '## Manejo Clínico', '## Referências (a confirmar)']) assert.ok(r.md.includes(s), s);
-  assert.ok(r.md.includes(IDENTIFICACAO_COMPLETA) && r.md.includes(AVISO_CFM));
+  assert.ok(r.md.includes(AVISO_CFM));
+  assert.ok(!r.md.includes('NÃO ESPECIALISTA') && !r.md.includes('CRM-BA 41322'), 'a identificação NÃO entra no corpo: vive só no rodapé do template');
   assert.match(r.md, /pautaId: 2026-09-30-99-artigo-teste/);
   assert.match(r.md, new RegExp(`slug: ${r.slug}`));
   assert.match(r.md, /revisaoMedica: pendente/);
