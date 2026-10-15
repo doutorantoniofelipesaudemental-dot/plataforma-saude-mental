@@ -453,7 +453,7 @@
       <p class="texto-apoio" style="margin-inline:auto;">Siga o ritmo da esfera: inspire por 4 s, segure por 4 s e solte o ar em 6 s. Repita por alguns ciclos.</p>
       <div class="respiracao__esfera" aria-hidden="true"></div>
       <p class="respiracao__estado" role="status" aria-live="polite">Pronto quando você estiver.</p>
-      <button class="botao respiracao__botao" type="button" aria-pressed="false">Começar</button>
+      <button class="botao botao--claro respiracao__botao" type="button" aria-pressed="false">Começar</button>
     </div>
   </section>
 
@@ -468,7 +468,7 @@
       </div>
       <form id="plano-form" novalidate aria-describedby="plano-fontes">
         <h3 class="plano__grupo">Humor (PHQ-9)</h3>
-        <p class="texto-apoio">Nas últimas 2 semanas, com que frequência você foi incomodado(a) por cada problema abaixo?</p>
+        <p class="texto-apoio"><strong>Nas últimas 2 semanas</strong>, com que frequência você foi incomodado(a) por cada problema abaixo?</p>
         <fieldset class="plano__pergunta">
           <legend>1. Pouco interesse ou pouco prazer em fazer as coisas</legend>
           <label><input type="radio" name="phq1" value="0" required> Nenhuma vez</label>
@@ -533,7 +533,7 @@
           <label><input type="radio" name="phq9" value="3"> Quase todos os dias</label>
         </fieldset>
         <h3 class="plano__grupo">Ansiedade (GAD-7)</h3>
-        <p class="texto-apoio">Nas últimas 2 semanas, com que frequência você foi incomodado(a) por cada problema abaixo?</p>
+        <p class="texto-apoio"><strong>Nas últimas 2 semanas</strong>, com que frequência você foi incomodado(a) por cada problema abaixo?</p>
         <fieldset class="plano__pergunta">
           <legend>1. Sentir-se nervoso(a), ansioso(a) ou muito tenso(a)</legend>
           <label><input type="radio" name="gad1" value="0" required> Nenhuma vez</label>
@@ -584,7 +584,7 @@
           <label><input type="radio" name="gad7" value="3"> Quase todos os dias</label>
         </fieldset>
         <p id="plano-erro" class="plano__erro" role="alert" hidden></p>
-        <button class="botao" type="submit">Ver meu resultado</button>
+        <div class="plano__botoes"><button class="botao" type="submit">Ver meu resultado</button> <button class="botao botao--vazado" type="button" id="plano-limpar">Limpar respostas</button></div>
       </form>
       <div class="plano__resultado" id="plano-resultado" tabindex="-1" hidden aria-live="polite"></div>
       <div id="plano-fontes" class="plano__fontes">
@@ -746,7 +746,7 @@
       </div>
 
       <div>
-        <h4>Navegação</h4>
+        <h3>Navegação</h3>
         <ul>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#atendimento">Atendimento</a></li>
@@ -759,7 +759,7 @@
       </div>
 
       <div>
-        <h4>Contato</h4>
+        <h3>Contato</h3>
         <ul>
           <li><a href="#agendar">Agendar consulta</a></li>
           <li><a href="mailto:doutor.antoniofelipe.saudemental@gmail.com">doutor.antoniofelipe.saudemental@gmail.com</a></li>
@@ -769,7 +769,7 @@
       </div>
 
       <div>
-        <h4>Emergência</h4>
+        <h3>Emergência</h3>
         <ul>
           <li><a href="tel:188">CVV — 188 (24h, gratuito)</a></li>
           <li><a href="tel:192">SAMU — 192</a></li>

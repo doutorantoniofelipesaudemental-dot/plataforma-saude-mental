@@ -1,7 +1,8 @@
 /**
  * Dicionário de pronúncia aplicado SÓ ao texto enviado ao TTS (Edge-TTS). O hash da narração (backend/lib/narracao.js) e o texto
  * dos artigos continuam sobre o ORIGINAL: nada aqui altera conteúdo nem invalida áudios.
- * Uso: narrar-artigos.js --pronuncia (desligado por padrão; ligar só depois da aprovação do Dr. Antônio, a partir dos próximos lotes).
+ * Ativo por padrão no Edge desde 15/10/2026 (aprovado pelo Dr. Antônio para UBS, RQE, SAMU, CAPS, CVV, APS e TCC); --sem-pronuncia desliga.
+ * NR-1 fica FORA até o Dr. Antônio escolher entre "NR um" e "Norma Regulamentadora número 1" (testes em relatorios/teste-pronuncia/).
  */
 const DICIONARIO = [
   ['SAMU', 'Samu'],
@@ -10,7 +11,6 @@ const DICIONARIO = [
   ['APS', 'Á Pê Esse'],
   ['UBS', 'Ú Bê Esse'],
   ['RQE', 'Érre Quê É'],
-  ['NR-1', 'ene érre um'],
   ['TCC', 'Tê Cê Cê'],
 ];
 

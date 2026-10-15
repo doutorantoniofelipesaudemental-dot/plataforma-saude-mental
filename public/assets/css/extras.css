@@ -45,7 +45,7 @@ body, .secao, .cartao { transition: background-color 300ms ease, color 300ms eas
 .ajuda-rapida { position: fixed; right: 1rem; bottom: 1rem; z-index: 70; font-family: var(--fonte-texto); }
 .ajuda-rapida > summary {
   list-style: none; cursor: pointer; min-height: 44px; padding: 0.7rem 1.1rem;
-  border-radius: 999px; background: var(--terracota); color: #fff; font-weight: 600;
+  border-radius: 999px; background: #a85d3c; /* terracota escurecida (4,89:1 com branco: WCAG AA) */ color: #fff; font-weight: 600;
   font-size: 0.95rem; box-shadow: var(--sombra-g);
 }
 .ajuda-rapida > summary::-webkit-details-marker { display: none; }
@@ -102,3 +102,4 @@ body, .secao, .cartao { transition: background-color 300ms ease, color 300ms eas
 .plano__fontes { margin-top: 2rem; font-size: 0.9rem; }
 .plano__fontes ol { padding-left: 1.2rem; }
 .plano__fontes a { color: var(--verde-700); overflow-wrap: anywhere; }
+.plano__botoes { display: flex; flex-wrap: wrap; gap: 0.75rem; }
