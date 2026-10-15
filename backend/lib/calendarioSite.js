@@ -81,7 +81,7 @@ function arranjarDia(itens, ultimoDiaAnterior, relaxar) {
  *   `par` = slug do item ligado (se também estiver na lista, saem no mesmo dia).
  * @returns {{agenda: Array<{slug,data,hora,slot,titulo,tipo,publico}>, avisos: string[]}}
  */
-function montarCalendario(itens) {
+function montarCalendario(itens, { fixosPorDia = [] } = {}) {
   const avisos = [];
   const total = itens.length;
   const nDias = Math.ceil(total / POR_DIA);
@@ -89,7 +89,8 @@ function montarCalendario(itens) {
   const porSlug = new Map(itens.map((i) => [i.slug, i]));
 
   const corpo = itens.filter((i) => i.serie).sort((a, b) => a.numeroSerie - b.numeroSerie);
-  const principais = itens.filter((i) => !i.serie);
+  const fixSlugs = new Set(fixosPorDia.flat()); // itens fixados em dias específicos (ex.: textos com 301 apontando para eles)
+  const principais = itens.filter((i) => !i.serie && !fixSlugs.has(i.slug));
 
   // Unidades (par = 2 itens no mesmo dia). O artigo define o público e a posição.
   const usadoNoPar = new Set();
@@ -114,8 +115,9 @@ function montarCalendario(itens) {
   dias.forEach((data, d) => {
     const nCorpo = Math.floor(((d + 1) * corpo.length) / nDias) - Math.floor((d * corpo.length) / nDias);
     const doDia = corpo.slice(iCorpo, iCorpo + nCorpo); iCorpo += nCorpo;
-    let capacidade = Math.min(POR_DIA, total - agenda.length) - doDia.length;
-    const escolhidas = [...doDia];
+    const fixos = (fixosPorDia[d] || []).map((sl) => porSlug.get(sl)).filter(Boolean);
+    let capacidade = Math.min(POR_DIA, total - agenda.length) - doDia.length - fixos.length;
+    const escolhidas = [...doDia, ...fixos];
     let tentativas = 0;
     const inicial = Object.fromEntries(ORDEM_PUBLICOS.map((p) => [p, Math.max(1, totais[p])]));
     const contaChave = (k) => escolhidas.filter((e) => (e.serie ? 'corpo' : temaDe(e)) === k).length;
