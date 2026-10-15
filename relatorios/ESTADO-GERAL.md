@@ -18,7 +18,7 @@ Atualizado em 15/10/2026 (atualizar ao final de cada lote futuro). Repositório:
 - **Freio `REDES_PUBLICACAO_ATIVA`: ATIVO** (`GET /api/admin/freio-redes` → `{"publicacaoAtiva":true}`).
 
 ## Narração (Edge-TTS gratuito, voz pt-BR-AntonioNeural)
-- Ver `relatorios/narracao-progresso.md`. Em 15/10: 101 "ok", 625 faltam, em lotes de 50. Custo zero.
+- Ver `relatorios/narracao-progresso.md`. Em 15/10 (após o lote 2): 150 "ok", 576 faltam, lotes de 50, custo zero. Laço novo em andamento (lote 3 em diante, com pronúncia e limite de 5 min por áudio).
 - Pronúncia (dicionário só no texto falado; hash sobre o original): ativa nos próximos lotes para UBS, RQE, SAMU, CAPS, CVV, APS, TCC. **NR-1 fora** até a sua escolha.
 
 ## Pendências que dependem do Dr. Antônio
