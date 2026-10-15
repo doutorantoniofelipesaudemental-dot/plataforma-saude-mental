@@ -143,6 +143,8 @@ async function gerarMp3(artigo, provedor) {
   // Pronúncia (ativa por padrão no Edge desde 15/10/2026; --sem-pronuncia desliga): o dicionário vale só para o texto falado; o hash e o texto do artigo seguem sobre o original.
   const textoFalado = provedor === 'edge' && !process.argv.includes('--sem-pronuncia') ? require('../lib/pronunciaTts').aplicarPronuncia(texto) : texto;
   fs.writeFileSync(arquivoTexto, textoFalado);
+  // Selo do texto narrado: o envio posterior só aceita o MP3 se este hash ainda for o do texto atual (hash sobre o ORIGINAL).
+  fs.writeFileSync(path.join(PASTA_SAIDA, `${artigo.slug}.hash`), hash);
 
   const inicio = Date.now();
   if (provedor === 'edge') sintetizarEdge(arquivoTexto, arquivoMp3);
@@ -183,8 +185,10 @@ async function main() {
   let alvo;
   if (args.slugs) {
     const slugs = String(args.slugs).split(',');
-    alvo = slugs.map((s) => publicados.find((a) => a.slug === s)).filter(Boolean);
-    if (alvo.length !== slugs.length) throw new Error('algum slug não existe ou não está publicado');
+    // --incluir-agendados: gera o MP3 de textos ainda não publicados (o envio só é possível depois da publicação; ver enviarNarracoesPublicadas.js)
+    const base = args['incluir-agendados'] ? await Artigo.find({}).lean() : publicados;
+    alvo = slugs.map((s) => base.find((a) => a.slug === s)).filter(Boolean);
+    if (alvo.length !== slugs.length) throw new Error('algum slug não existe ou não está publicado (use --incluir-agendados para gerar o MP3 antes da publicação)');
   } else if (args.pendentes) {
     alvo = publicados
       .map((a) => ({ a, estado: estadoNarracao(a).estado }))

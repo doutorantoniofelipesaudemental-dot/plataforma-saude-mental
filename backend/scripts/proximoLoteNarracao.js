@@ -5,7 +5,13 @@
  *   node --env-file=.env backend/scripts/proximoLoteNarracao.js --resumo       imprime feitos/faltam
  */
 const mongoose = require('mongoose');
-const { estadoNarracao, textoParaNarracao } = require('../lib/narracao');
+const fs = require('node:fs');
+const path = require('node:path');
+const { estadoNarracao, textoParaNarracao, hashNarracao } = require('../lib/narracao');
+
+// --pre-gerar: ignora os textos que já têm MP3 pré-gerado com selo (<slug>.hash) válido em narracoes-geradas/ (agendados esperando a publicação).
+const PASTA = path.join(__dirname, '../../narracoes-geradas');
+const preGerado = (d) => { try { return fs.existsSync(path.join(PASTA, `${d.slug}.mp3`)) && fs.readFileSync(path.join(PASTA, `${d.slug}.hash`), 'utf8').trim() === hashNarracao(textoParaNarracao(d)); } catch { return false; } };
 
 const n = Number((process.argv.find((a) => a.startsWith('--n=')) || '--n=50').split('=')[1]);
 const LIMITE_CARACTERES = 56000; // ~68 min seria demais; o envio aceita até ~4,4 MB (~12 min = ~9 900 caracteres de fala por MP3)
@@ -21,11 +27,13 @@ const LIMITE_CARACTERES = 56000; // ~68 min seria demais; o envio aceita até ~4
     if (e !== 'ok') pend.push(d);
   }
   if (process.argv.includes('--resumo')) {
-    console.log(JSON.stringify({ total: docs.length, estados, faltam: pend.length }));
+    const preGer = process.argv.includes('--pre-gerar') || true ? pend.filter((d) => !d.publicado && preGerado(d)).length : 0;
+    console.log(JSON.stringify({ total: docs.length, estados, faltam: pend.length, agendadosComMp3PreGerado: preGer }));
   } else {
     const pub = pend.filter((d) => d.publicado).sort((a, b) => (b.visualizacoes || 0) - (a.visualizacoes || 0));
     const agend = pend.filter((d) => !d.publicado).sort((a, b) => new Date(a.publicadoEm || 0) - new Date(b.publicadoEm || 0));
-    const lote = [...pub, ...agend].filter((d) => textoParaNarracao(d).length * 1 <= LIMITE_CARACTERES).slice(0, n);
+    const pular = process.argv.includes('--pre-gerar') ? preGerado : () => false;
+    const lote = [...pub, ...agend].filter((d) => !pular(d) && textoParaNarracao(d).length * 1 <= LIMITE_CARACTERES).slice(0, n);
     console.log(lote.map((d) => d.slug).join(','));
     console.error(`lote de ${lote.length}: ${lote.filter((d) => d.publicado).length} publicados + ${lote.filter((d) => !d.publicado).length} agendados · faltam ${pend.length} no total`);
   }
