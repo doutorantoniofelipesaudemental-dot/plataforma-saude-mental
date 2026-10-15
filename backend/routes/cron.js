@@ -4,6 +4,8 @@ const { publicarProximoDaFila } = require('../lib/filaRedes');
 const { renovarTokenInstagram } = require('../lib/tokenInstagram');
 const { publicarVencidos } = require('../lib/publicarAgendados');
 const { redesAtivas } = require('../lib/freioRedes');
+const { publicarDevidos } = require('../lib/redesV2/fila');
+const { gerarRelatorio } = require('../lib/redesV2/relatorio');
 const { log } = require('../lib/log');
 
 const router = express.Router();
@@ -47,6 +49,34 @@ router.get('/publicar-agendados', exigirCron, exigirBanco, async (req, res) => {
   } catch (err) {
     log.erro('[agendados] erro inesperado:', err);
     res.status(500).json({ erro: 'Falha inesperada na publicação agendada.' });
+  }
+});
+
+/**
+ * GET /api/cron/publicar-redes-v2 — diário (seg a sex, 08:00 de Salvador). Publica 1 post da fila NOVA de redes,
+ * somente se a conferência completa passar (backend/lib/redesV2/fila.js). Respeita REDES_PUBLICACAO_ATIVA.
+ */
+router.get('/publicar-redes-v2', exigirCron, exigirBanco, async (req, res) => {
+  try {
+    const r = await publicarDevidos({ simular: req.query.simular === '1' });
+    log.info('[redes-v2]', JSON.stringify({ publicado: r.publicado, motivo: r.motivo, id: r.id }));
+    res.json(r);
+  } catch (err) {
+    log.erro('[redes-v2] erro inesperado:', err);
+    res.status(500).json({ erro: 'Falha inesperada na publicação das redes.' });
+  }
+});
+
+/** GET /api/cron/relatorio-redes — toda segunda-feira. Grava o relatório semanal no banco (coleção redes_v2_relatorios). */
+router.get('/relatorio-redes', exigirCron, exigirBanco, async (req, res) => {
+  try {
+    const { mongoose } = require('../lib/db');
+    const r = await gerarRelatorio();
+    await mongoose.connection.db.collection('redes_v2_relatorios').replaceOne({ _id: `${r.ano}-W${String(r.semana).padStart(2, '0')}` }, { _id: `${r.ano}-W${String(r.semana).padStart(2, '0')}`, md: r.md, geradoEm: new Date() }, { upsert: true });
+    res.json({ ok: true, semana: r.semana, publicados: r.publicados });
+  } catch (err) {
+    log.erro('[relatorio-redes] erro:', err);
+    res.status(500).json({ erro: 'Falha ao gerar o relatório semanal.' });
   }
 });
 

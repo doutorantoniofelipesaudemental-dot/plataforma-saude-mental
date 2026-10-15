@@ -63,6 +63,36 @@
         <span><span class="nome">Instagram &amp; Conteúdos Educativos</span><span class="detalhe">@doutor.antoniofelipe.smental</span></span></a></li>
     </ul>
   </nav>
+
+  <section aria-labelledby="titulo-recentes" id="recentes" style="margin-top:1.75rem" hidden>
+    <h2 id="titulo-recentes" class="rotulo" style="margin-bottom:.75rem">Textos mais recentes</h2>
+    <ul id="lista-recentes"></ul>
+  </section>
 </main>
+<script>
+// Lista os textos mais recentes do portal (sem formulário e sem coleta de dados do visitante).
+(function () {
+  fetch('/api/artigos?limite=5', { headers: { Accept: 'application/json' } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.itens || !d.itens.length) return;
+      var ul = document.getElementById('lista-recentes');
+      d.itens.slice(0, 5).forEach(function (a) {
+        var li = document.createElement('li');
+        var link = document.createElement('a');
+        link.className = 'botao';
+        link.href = '/artigo/' + encodeURIComponent(a.slug);
+        var nome = document.createElement('span');
+        nome.className = 'nome';
+        nome.textContent = a.titulo;
+        link.appendChild(nome);
+        li.appendChild(link);
+        ul.appendChild(li);
+      });
+      document.getElementById('recentes').hidden = false;
+    })
+    .catch(function () { /* sem lista: a página continua funcionando */ });
+})();
+</script>
 </body>
 </html>
