@@ -1,5 +1,5 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
-Atualizado em 15/10/2026 (checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
+Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
 ## Domínio
 - **Principal único:** `https://www.drantoniofelipemedico.com.br` (canonical, og:url, sitemap, robots, links internos, capas das redes).
@@ -18,8 +18,32 @@ Atualizado em 15/10/2026 (checagem geral; atualizar ao final de cada lote futuro
 - **Freio `REDES_PUBLICACAO_ATIVA`: ATIVO** (`GET /api/admin/freio-redes` → `{"publicacaoAtiva":true}`).
 
 ## Narração (Edge-TTS gratuito, voz pt-BR-AntonioNeural)
-- Ver `relatorios/narracao-progresso.md`. Em 15/10 (após o lote 3): **200 "ok", 526 faltam** (lotes de 50, custo zero, sem falhas de envio). `benzodiazepinicos-urgencia` (falhou no lote 2) foi gerado e enviado no lote 3. Laço em andamento (`backend/scripts/loop-narracao2.sh`, com pronúncia e limite de 5 min por áudio).
+- Ver `relatorios/narracao-progresso.md`. **Os 251 textos publicados estão com áudio "ok"** (inclusive os 5 refeitos após a troca das referências retratadas). Os 475 agendados só podem receber o áudio depois de publicados: os MP3 estão sendo **pré-gerados** (50 por lote, laço `backend/scripts/loop-narracao3.sh`, selo de hash por texto) e são enviados no dia da publicação com `node --env-file=.env backend/scripts/enviarNarracoesPublicadas.js --enviar` (rodar depois do cron das 11:00 UTC; texto editado depois de narrado não é enviado).
 - Pronúncia (dicionário só no texto falado; hash sobre o original): ativa desde o lote 3 para UBS, RQE, SAMU, CAPS, CVV, APS, TCC e **NR-1 ("Norma Regulamentadora número 1", opção B aprovada)**. Áudios já enviados não são regenerados.
+
+## ⚠ Incidente aberto (15/10/2026 20:40 UTC): Vercel Blob bloqueado
+O store Blob do plano Hobby atingiu o limite de 1 GB ("Your store is blocked"): capas e áudios hospedados nele dão 403 no site. As narrações dos agendados NÃO foram enviadas (500 por cota). Ver `relatorios/SE-ALGO-DER-ERRADO.md` §3. **Depende do Dr. Antônio:** liberar espaço no painel (Storage) ou trocar de plano; depois `npm run ciclo-narracao`.
+
+## Operação sem o Claude (atualizado em 15/10/2026)
+**O que roda sozinho e quando**
+| O quê | Onde | Quando |
+|---|---|---|
+| Publicar textos agendados | cron Vercel `/api/cron/publicar-agendados` | diário 11:00 UTC (8h Bahia), a partir de 19/10 |
+| Instagram (fila de 60 posts) | cron Vercel `/api/cron/publicar-redes-v2` | seg–sex 11:00 UTC; **1º post 26/10 08:00 Bahia** |
+| Relatório semanal das redes e renovação do token do Instagram | crons Vercel | segunda 12:00 UTC |
+| LinkedIn (37 textos) | cron Vercel `/api/cron/publicar-linkedin` (**após o merge do PR #77**) | seg/qua/sex 22:30 UTC (19:30 Bahia); **1º post 28/10**; precisa da autorização (`relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`) |
+| YouTube (42 longos + 67 Shorts planejados; 15 longos e 22 Shorts já com vídeo pronto) | Agendador do Windows, `DrSM-YouTube-Publica` | diário 12:30; **1º longo 27/10 18:00, 1º Short 28/10 12:00**; precisa de OAuth (`relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md`) e do computador ligado |
+| Rotina semanal (auditoria, links, token, freio, fila, narração) | Agendador do Windows | segunda 07:30 |
+| Ciclo de narração (gera e envia MP3; agendados sobem antes e só tocam após publicar) | Agendador do Windows | diário 22:00 (bloqueado enquanto o Blob estiver cheio) |
+| Geração de vídeos que faltam | Agendador do Windows | diário 23:30 |
+| Conferências 19/10 e 26/10 | Agendador do Windows | 19:30 Bahia |
+Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -File scripts\agendar-tarefas-windows.ps1`.
+
+**Freios:** `REDES_PUBLICACAO_ATIVA` (geral, Vercel; no `.env` local está `false`, o que também bloqueia o publicador local do YouTube até você ligar) · `LINKEDIN_PUBLICACAO_ATIVA` (Vercel) · `YOUTUBE_PUBLICACAO_ATIVA` (`.env` local) · remover `CRON_SECRET` pausa todos os crons da Vercel.
+
+**Filas manuais:** `relatorios/youtube/fila-manual/` e `relatorios/linkedin/fila-manual/` (uma pasta por semana), `relatorios/linkedin/newsletters/`. Propostas aguardando aprovação: `relatorios/youtube/propostas/mentoria/` e `relatorios/linkedin/propostas/post-mentoria-PROPOSTA.md`.
+
+**Depende do Dr. Antônio:** (1) Blob (acima); (2) mesclar o PR #77 (deploy); (3) OAuth do YouTube e do LinkedIn; (4) registrar as tarefas do Windows; (5) aprovar ou não as 2 propostas da /mentoria; (6) decisão sobre a proposta pendente do `jogos-online-criancas` no app Next (`relatorios/parte-a-decisoes-20261015.md`).
 
 ## Checagem geral de 15/10/2026 (do zero)
 - **Auditoria** (`npm run auditoria`): 815 textos (726 Mongo + 89 `.mdx`), 0 falhas; segurança 0 pendências.

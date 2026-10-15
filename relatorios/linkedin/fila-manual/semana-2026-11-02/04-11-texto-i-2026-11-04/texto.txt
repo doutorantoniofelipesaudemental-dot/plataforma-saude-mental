@@ -1,0 +1,21 @@
+Todo texto do portal tem narração em áudio no topo da página. O motivo é acessibilidade: nem todo mundo lê com facilidade no celular, depois de um plantão ou com pouco tempo.
+
+Como isso funciona nos bastidores:
+• a voz é sintética, e isso fica claro para quem ouve;
+• o áudio é conferido antes de ir ao ar (duração, cortes e tamanho do arquivo);
+• se o texto muda, o áudio antigo deixa de tocar até ser refeito, para nunca ler uma versão que já foi corrigida;
+• a identificação do autor e as referências não entram na narração.
+
+Quem trabalha em saúde sabe: informação que não chega à pessoa não cuida de ninguém. Acessibilidade também é contraste, tamanho de letra e botões grandes o bastante para o dedo, e tudo isso é testado nas páginas do portal.
+
+Conheça o portal: https://www.drantoniofelipemedico.com.br
+
+Conteúdo educativo, não substitui consulta. Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.
+Em crise: CVV 188 · SAMU 192
+Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
+
+Dr. Antônio Felipe · Médico · CRM-BA 41322
+Especialista em Medicina de Família e Comunidade · RQE 26638
+Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
+
+#SaudeMental #AtencaoPrimaria #PraticaClinica

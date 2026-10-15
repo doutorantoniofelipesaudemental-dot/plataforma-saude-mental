@@ -66,3 +66,11 @@ relatorios/.cache-retratacoes.json
 # Graphify (grafo local, regenerável) e seu ambiente
 graphify-out/
 tools-graphify/
+
+# Mídia pesada das filas manuais do YouTube/LinkedIn (os textos .txt/.json/.md ficam versionados)
+relatorios/youtube/fila-manual/**/*.mp4
+relatorios/youtube/fila-manual/**/*.png
+relatorios/youtube/canal/*.mp4
+relatorios/youtube/propostas/**/*.mp4
+relatorios/linkedin/fila-manual/**/*.pdf
+relatorios/logs-agendador/

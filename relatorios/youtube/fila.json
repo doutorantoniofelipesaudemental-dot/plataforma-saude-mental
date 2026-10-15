@@ -1,0 +1,1708 @@
+{
+ "geradoEm": "2026-10-15T20:43:49.440Z",
+ "regra": "longos ter/qui/sab 18h; Shorts seg/qua/sex/sab/dom 12h (Bahia)",
+ "itens": [
+  {
+   "id": "longo-tmc-aps",
+   "tipo": "longo",
+   "slug": "tmc-aps",
+   "titulo": "O que o consultório de atenção primária revela sobre ansiedade, depressão e sofrimento no trabalho",
+   "slot": "2026-10-27T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/tmc-aps",
+   "tituloYoutube": "O que o consultório de atenção primária revela sobre ansiedade, depressão e sofrimento no trabalho",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Geral",
+    "atenção primária",
+    "saúde do trabalhador"
+   ],
+   "hashVideo": "879c88547ca557feb8a3c221d59121797eaabd02c1ddbefb129e9315d6b59cff",
+   "duracao": 412,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-10-26-saude-mental-cuidador",
+   "tipo": "short",
+   "slug": "saude-mental-cuidador",
+   "postId": "2026-10-26-saude-mental-cuidador",
+   "titulo": "Saúde mental do cuidador: quem cuida de quem cuida?",
+   "slot": "2026-10-28T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/saude-mental-cuidador/short-2026-10-26-saude-mental-cuidador",
+   "tituloYoutube": "Saúde mental do cuidador: quem cuida de quem cuida? #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "02bda8710e396d063aabe86937ec8bc7854786de7b59dae829956a577f703b6f",
+   "duracao": 40,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-burnout-medicos-enfermeiros",
+   "tipo": "longo",
+   "slug": "burnout-medicos-enfermeiros",
+   "titulo": "Burnout em médicos e enfermeiros: quando o cuidador precisa de ajuda",
+   "slot": "2026-10-29T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/burnout-medicos-enfermeiros",
+   "tituloYoutube": "Burnout em médicos e enfermeiros: quando o cuidador precisa de ajuda",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros"
+   ],
+   "hashVideo": "03515660695cd4db8e134e43825df9d77cf9612ab5a8fd88286d2ae93834a347",
+   "duracao": 273,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-10-27-tempo-tela-criancas",
+   "tipo": "short",
+   "slug": "tempo-tela-criancas",
+   "postId": "2026-10-27-tempo-tela-criancas",
+   "titulo": "O que a ciência mostra, perguntas mais úteis do que o relógio e como montar um.",
+   "slot": "2026-10-30T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/tempo-tela-criancas/short-2026-10-27-tempo-tela-criancas",
+   "tituloYoutube": "O que a ciência mostra, perguntas mais úteis do que o relógio e como montar um. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "68d938149fc93c55ee184bee449bac88a9fa31fcc7cef0943735c7848ded25aa",
+   "duracao": 32,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-10-28-primeiro-episodio-psicotico",
+   "tipo": "short",
+   "slug": "primeiro-episodio-psicotico",
+   "postId": "2026-10-28-primeiro-episodio-psicotico",
+   "titulo": "Por que a duração da psicose não tratada importa, sinais prodrômicos, exclusão de causas clínicas.",
+   "slot": "2026-10-31T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/primeiro-episodio-psicotico/short-2026-10-28-primeiro-episodio-psicotico",
+   "tituloYoutube": "Por que a duração da psicose não tratada importa, sinais prodrômicos, exclusão de cau... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "aps & pa"
+   ],
+   "hashVideo": "3e235719698c81ed9aa1127d1657d3c653b9d09cf8815f5fa3149bb8b3163ebc",
+   "duracao": 45,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-saude-mental-residencia",
+   "tipo": "longo",
+   "slug": "saude-mental-residencia",
+   "titulo": "Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação",
+   "slot": "2026-10-31T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/saude-mental-residencia",
+   "tituloYoutube": "Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Residentes & Estudantes"
+   ],
+   "hashVideo": "7a45b3c7e25c86e01cfe0f8fc448009674a3370485fce83529419987ee31dc7d",
+   "duracao": 270,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-10-29-relato-paciente-invisivel",
+   "tipo": "short",
+   "slug": "relato-paciente-invisivel",
+   "postId": "2026-10-29-relato-paciente-invisivel",
+   "titulo": "Ele já tinha passado por mim umas seis vezes.",
+   "slot": "2026-11-01T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-paciente-invisivel/short-2026-10-29-relato-paciente-invisivel",
+   "tituloYoutube": "Ele já tinha passado por mim umas seis vezes. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "0c4dc83861cd6c2010d7a61a185e196f4d88ee9517f724128eefa2bfc700adb9",
+   "duracao": 18,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-10-30-programa-saude-mental-ocupacional",
+   "tipo": "short",
+   "slug": "programa-saude-mental-ocupacional",
+   "postId": "2026-10-30-programa-saude-mental-ocupacional",
+   "titulo": "Os três níveis de um programa eficaz, passo a passo para começar.",
+   "slot": "2026-11-02T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/programa-saude-mental-ocupacional/short-2026-10-30-programa-saude-mental-ocupacional",
+   "tituloYoutube": "Os três níveis de um programa eficaz, passo a passo para começar. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "97e91f54b1588d2ffc0738e4ee7dfabbe09f1cdc7b8f1e0eb9b54e2a1b00cd96",
+   "duracao": 45,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-ansiedade-social-medo-julgamento",
+   "tipo": "longo",
+   "slug": "ansiedade-social-medo-julgamento",
+   "titulo": "Ansiedade social: quando o medo do julgamento limita a vida",
+   "slot": "2026-11-03T21:00:00.000Z",
+   "playlist": "Ansiedade",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-social-medo-julgamento",
+   "tituloYoutube": "Ansiedade social: quando o medo do julgamento limita a vida",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Ansiedade Social & Timidez"
+   ],
+   "hashVideo": "654f7f9471fa588c329df4213756f85b6d4d1e06b5be8f5aa79e2ef1b709cf51",
+   "duracao": 160,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-03-gestacao-amamentacao-saude-mental",
+   "tipo": "short",
+   "slug": "gestacao-amamentacao-saude-mental",
+   "postId": "2026-11-03-gestacao-amamentacao-saude-mental",
+   "titulo": "Diferença entre baby blues e depressão perinatal, rastreamento, tratamento durante a amamentação.",
+   "slot": "2026-11-04T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/gestacao-amamentacao-saude-mental/short-2026-11-03-gestacao-amamentacao-saude-mental",
+   "tituloYoutube": "Diferença entre baby blues e depressão perinatal, rastreamento, tratamento durante a ... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "ad195658789ab8d95637f9344883e0bfab3bad02db87c966643c0c4bbf1eec9c",
+   "duracao": 40,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-estresse-migratorio-adaptacao-cultural",
+   "tipo": "longo",
+   "slug": "estresse-migratorio-adaptacao-cultural",
+   "titulo": "Estresse migratório: o que ninguém conta sobre recomeçar em outro país",
+   "slot": "2026-11-05T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/estresse-migratorio-adaptacao-cultural",
+   "tituloYoutube": "Estresse migratório: o que ninguém conta sobre recomeçar em outro país",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Migrantes & Expatriados"
+   ],
+   "hashVideo": "cfb55a7410577ec0e09034e9dfb20d19df0592b8490be400ecfebb50ebf6411b",
+   "duracao": 170,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-04-alimentacao-criancas",
+   "tipo": "short",
+   "slug": "alimentacao-criancas",
+   "postId": "2026-11-04-alimentacao-criancas",
+   "titulo": "Benefícios das refeições em família, riscos do controle excessivo.",
+   "slot": "2026-11-06T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/alimentacao-criancas/short-2026-11-04-alimentacao-criancas",
+   "tituloYoutube": "Benefícios das refeições em família, riscos do controle excessivo. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "1ebc149adc5cf856f6df2f907244e061a4a6274eda2e192d8006f3365a213d36",
+   "duracao": 42,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-05-relato-crise-evitavel",
+   "tipo": "short",
+   "slug": "relato-crise-evitavel",
+   "postId": "2026-11-05-relato-crise-evitavel",
+   "titulo": "Foi só quando consegui ler o…",
+   "slot": "2026-11-07T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-crise-evitavel/short-2026-11-05-relato-crise-evitavel",
+   "tituloYoutube": "Foi só quando consegui ler o… #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "35cbb34c087ff275f267cc85ba47027ef3d5fa78f31eaccd6529bc572d4360ad",
+   "duracao": 24,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-depressao-pos-parto-ansiedade-perinatal",
+   "tipo": "longo",
+   "slug": "depressao-pos-parto-ansiedade-perinatal",
+   "titulo": "Depressão pós-parto e ansiedade perinatal: reconhecendo os sinais além do \"baby blues\"",
+   "slot": "2026-11-07T21:00:00.000Z",
+   "playlist": "Ansiedade",
+   "pasta": "carrosseis-instagram/youtube/depressao-pos-parto-ansiedade-perinatal",
+   "tituloYoutube": "Depressão pós-parto e ansiedade perinatal: reconhecendo os sinais além do \"baby blues\"",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Maternidade, Puerpério & Lactação"
+   ],
+   "hashVideo": "be92b73f5b612291f81e0f5b8299c94fda564596ae370dc22552bde904473fa6",
+   "duracao": 157,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-06-intoxicacao-agitacao-pa",
+   "tipo": "short",
+   "slug": "intoxicacao-agitacao-pa",
+   "postId": "2026-11-06-intoxicacao-agitacao-pa",
+   "titulo": "Sinais que apontam para causa clínica ou tóxica, diferenciação prática entre os principais quadros.",
+   "slot": "2026-11-08T15:00:00.000Z",
+   "playlist": "Urgências",
+   "pasta": "carrosseis-instagram/youtube/intoxicacao-agitacao-pa/short-2026-11-06-intoxicacao-agitacao-pa",
+   "tituloYoutube": "Sinais que apontam para causa clínica ou tóxica, diferenciação prática entre os princ... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "pa psiquiátrico"
+   ],
+   "hashVideo": "c7a4925e7db0ec7f4049602d2f49261303685bd7933cc43c5121e555220da3b5",
+   "duracao": 49,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-09-afastamento-transtorno-mental",
+   "tipo": "short",
+   "slug": "afastamento-transtorno-mental",
+   "postId": "2026-11-09-afastamento-transtorno-mental",
+   "titulo": "Como funciona o afastamento, nexo com o trabalho e CAT, sigilo do diagnóstico.",
+   "slot": "2026-11-09T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/afastamento-transtorno-mental/short-2026-11-09-afastamento-transtorno-mental",
+   "tituloYoutube": "Como funciona o afastamento, nexo com o trabalho e CAT, sigilo do diagnóstico. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "478197d5b55fa4e36b5f3acc4719587e8379ef0d78880eebbff646a911b23a14",
+   "duracao": 38,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-sinais-alerta-comportamentais-jovens",
+   "tipo": "longo",
+   "slug": "sinais-alerta-comportamentais-jovens",
+   "titulo": "Sinais de alerta em crianças e adolescentes: o que observar (e como agir)",
+   "slot": "2026-11-10T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/sinais-alerta-comportamentais-jovens",
+   "tituloYoutube": "Sinais de alerta em crianças e adolescentes: o que observar (e como agir)",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Infância & Adolescência"
+   ],
+   "hashVideo": "00c2216438b6502310ba9f7bbb2ea459b4c7f79b02c48b746b759c6660154e4f",
+   "duracao": 179,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-10-crise-psiquiatrica-familia",
+   "tipo": "short",
+   "slug": "crise-psiquiatrica-familia",
+   "postId": "2026-11-10-crise-psiquiatrica-familia",
+   "titulo": "Como garantir a segurança, conversar durante a crise, onde buscar ajuda na rede pública.",
+   "slot": "2026-11-11T15:00:00.000Z",
+   "playlist": "Urgências",
+   "pasta": "carrosseis-instagram/youtube/crise-psiquiatrica-familia/short-2026-11-10-crise-psiquiatrica-familia",
+   "tituloYoutube": "Como garantir a segurança, conversar durante a crise, onde buscar ajuda na rede pública. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "e7d9200e2cfa6bf90dc572c037b350baaf967acb7cc271aa9aec4949ef5f5ed6",
+   "duracao": 17,
+   "checagem": {
+    "texto": [
+     "ética: CFM: promessa de resultado garantido (\"garantidos\")"
+    ],
+    "midia": []
+   },
+   "status": "reprovado"
+  },
+  {
+   "id": "longo-neurodivergencia-adulta-mascaramento-burnout",
+   "tipo": "longo",
+   "slug": "neurodivergencia-adulta-mascaramento-burnout",
+   "titulo": "Neurodivergência na vida adulta: mascaramento e o burnout que ele causa",
+   "slot": "2026-11-12T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/neurodivergencia-adulta-mascaramento-burnout",
+   "tituloYoutube": "Neurodivergência na vida adulta: mascaramento e o burnout que ele causa",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Neurodivergência na Vida Adulta"
+   ],
+   "hashVideo": "8984909283f5a06a5eb91869509e597a8a466d9283c3caedfed5c2b0798f21e1",
+   "duracao": 168,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-11-relato-familia-em-crise",
+   "tipo": "short",
+   "slug": "relato-familia-em-crise",
+   "postId": "2026-11-11-relato-familia-em-crise",
+   "titulo": "Quem precisava de atenção naquele momento, na verdade, era a mãe dele,…",
+   "slot": "2026-11-13T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-familia-em-crise/short-2026-11-11-relato-familia-em-crise",
+   "tituloYoutube": "Quem precisava de atenção naquele momento, na verdade, era a mãe dele,… #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "92e1cca15c023d480f00037cf18c1becb4e34717044def776ff2109bf93a29a5",
+   "duracao": 24,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-12-rotina-criancas",
+   "tipo": "short",
+   "slug": "rotina-criancas",
+   "postId": "2026-11-12-rotina-criancas",
+   "titulo": "Por que a rotina importa, quanto sono cada idade precisa.",
+   "slot": "2026-11-14T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/rotina-criancas/short-2026-11-12-rotina-criancas",
+   "tituloYoutube": "Por que a rotina importa, quanto sono cada idade precisa. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "b05bf46db9a955770e5b85f3859b3c18b94435af52120dcceb30f9984d40d33a",
+   "duracao": 39,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-dependencia-quimica-comportamental-sinais",
+   "tipo": "longo",
+   "slug": "dependencia-quimica-comportamental-sinais",
+   "titulo": "Sinais de dependência: química ou comportamental, o padrão é parecido",
+   "slot": "2026-11-14T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/dependencia-quimica-comportamental-sinais",
+   "tituloYoutube": "Sinais de dependência: química ou comportamental, o padrão é parecido",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Dependências & Adições"
+   ],
+   "hashVideo": "cdcaaab1ef832fdceced9f4f172014560d664cc5981cf70c87dc692f2e84c9fd",
+   "duracao": 176,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-13-matriciamento-saude-mental",
+   "tipo": "short",
+   "slug": "matriciamento-saude-mental",
+   "postId": "2026-11-13-matriciamento-saude-mental",
+   "titulo": "O que é e o que não é apoio matricial, suas modalidades.",
+   "slot": "2026-11-15T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/matriciamento-saude-mental/short-2026-11-13-matriciamento-saude-mental",
+   "tituloYoutube": "O que é e o que não é apoio matricial, suas modalidades. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "atenção primária"
+   ],
+   "hashVideo": "a1450d58679ec8822484a10f989fbc6ca6d40e1de8807932ec8009a1d8b9a73f",
+   "duracao": 40,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-16-acidente-trabalho-trauma-psicologico",
+   "tipo": "short",
+   "slug": "acidente-trabalho-trauma-psicologico",
+   "postId": "2026-11-16-acidente-trabalho-trauma-psicologico",
+   "titulo": "O impacto psicológico de um acidente de trabalho pode durar mais que a lesão.",
+   "slot": "2026-11-16T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/acidente-trabalho-trauma-psicologico/short-2026-11-16-acidente-trabalho-trauma-psicologico",
+   "tituloYoutube": "O impacto psicológico de um acidente de trabalho pode durar mais que a lesão. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "0ab8ab7cd21b0d0b4448bcae0d4c08cb644214ed89980453d1be4db283977821",
+   "duracao": 35,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-compulsao-alimentar-compras-compulsivas",
+   "tipo": "longo",
+   "slug": "compulsao-alimentar-compras-compulsivas",
+   "titulo": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
+   "slot": "2026-11-17T21:00:00.000Z",
+   "playlist": "Corpo e Saúde Mental",
+   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar-compras-compulsivas",
+   "tituloYoutube": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Compulsões & Transtornos Alimentares"
+   ],
+   "hashVideo": "d7e2c13cfafb42a0aef1cb88313f43c80e0ff7fb98f22182e72b9053712b2f01",
+   "duracao": 165,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-17-relato-vinculo-perdido",
+   "tipo": "short",
+   "slug": "relato-vinculo-perdido",
+   "postId": "2026-11-17-relato-vinculo-perdido",
+   "titulo": "Fazia mais de um ano que ela não aparecia na unidade.",
+   "slot": "2026-11-18T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-vinculo-perdido/short-2026-11-17-relato-vinculo-perdido",
+   "tituloYoutube": "Fazia mais de um ano que ela não aparecia na unidade. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "da16cd0434a7c91e87c89428275a0b993004f7bd21bfbda1cd85062ed1da8877",
+   "duracao": 19,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-burnout-na-gestao-fatores-de-risco",
+   "tipo": "longo",
+   "slug": "burnout-na-gestao-fatores-de-risco",
+   "titulo": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
+   "slot": "2026-11-19T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/burnout-na-gestao-fatores-de-risco",
+   "tituloYoutube": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH",
+    "burnout",
+    "gestão de pessoas",
+    "risco psicossocial"
+   ],
+   "hashVideo": "fa27a0841f8459ea66d7fd3f7f432f2ce5c9db01591fc4a7cc036c2817157f0d",
+   "duracao": 350,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-18-primeira-consulta-saude-mental",
+   "tipo": "short",
+   "slug": "primeira-consulta-saude-mental",
+   "postId": "2026-11-18-primeira-consulta-saude-mental",
+   "titulo": "Onde começar no SUS, o que é perguntado na consulta, o papel do diagnóstico.",
+   "slot": "2026-11-20T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/primeira-consulta-saude-mental/short-2026-11-18-primeira-consulta-saude-mental",
+   "tituloYoutube": "Onde começar no SUS, o que é perguntado na consulta, o papel do diagnóstico. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "a3729cc50d76864eba1140d59717a18f807eb64d17875c92282a1d8cde981a36",
+   "duracao": 39,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-19-jogos-online-criancas",
+   "tipo": "short",
+   "slug": "jogos-online-criancas",
+   "postId": "2026-11-19-jogos-online-criancas",
+   "titulo": "Sinais de transtorno de jogo eletrônico, caixas de recompensa e apostas.",
+   "slot": "2026-11-21T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/jogos-online-criancas/short-2026-11-19-jogos-online-criancas",
+   "tituloYoutube": "Sinais de transtorno de jogo eletrônico, caixas de recompensa e apostas. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "cb3476ebf92c6989bb0ee20730cbd4da50c7020803e39a026d73d4dd185019db",
+   "duracao": 37,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-fadiga-compaixao-cuidado-idosos",
+   "tipo": "longo",
+   "slug": "fadiga-compaixao-cuidado-idosos",
+   "titulo": "Fadiga da compaixão: quando cuidar de alguém amado está te esgotando",
+   "slot": "2026-11-21T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/fadiga-compaixao-cuidado-idosos",
+   "tituloYoutube": "Fadiga da compaixão: quando cuidar de alguém amado está te esgotando",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Cuidadores & Famílias"
+   ],
+   "hashVideo": "f28d5d9ee112244d8caedc90dff5f83499ecd9ab61fc5a0dc012bec501f86f1a",
+   "duracao": 161,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-23-grupos-terapeuticos-aps",
+   "tipo": "short",
+   "slug": "grupos-terapeuticos-aps",
+   "postId": "2026-11-23-grupos-terapeuticos-aps",
+   "titulo": "Benefícios, modalidades, evidência da TCC em grupo para depressão.",
+   "slot": "2026-11-23T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/grupos-terapeuticos-aps/short-2026-11-23-grupos-terapeuticos-aps",
+   "tituloYoutube": "Benefícios, modalidades, evidência da TCC em grupo para depressão. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "atenção primária"
+   ],
+   "hashVideo": "7916e15ecce21b5db62bcbbc4aa7a4ffbf7a3c01030bf015c470d5260f5ba85e",
+   "duracao": 41,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-trabalho-domestico-invisivel-estresse",
+   "tipo": "longo",
+   "slug": "trabalho-domestico-invisivel-estresse",
+   "titulo": "O peso do trabalho doméstico invisível: estresse ocupacional de quem cuida da casa",
+   "slot": "2026-11-24T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/trabalho-domestico-invisivel-estresse",
+   "tituloYoutube": "O peso do trabalho doméstico invisível: estresse ocupacional de quem cuida da casa",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Trabalho Doméstico & Cuidados do Lar"
+   ],
+   "hashVideo": "aaaa2ea520fbe4c75f510077668b9a6a1385afc804ed0f860f042218146ad24f",
+   "duracao": 150,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-24-relato-peso-invisivel-cuidador",
+   "tipo": "short",
+   "slug": "relato-peso-invisivel-cuidador",
+   "postId": "2026-11-24-relato-peso-invisivel-cuidador",
+   "titulo": "A consulta era sobre o pai, não sobre ela.",
+   "slot": "2026-11-25T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-peso-invisivel-cuidador/short-2026-11-24-relato-peso-invisivel-cuidador",
+   "tituloYoutube": "A consulta era sobre o pai, não sobre ela. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "f8039467798f00111f37fff8122c087282c03a742112560f0a26d0690db0509f",
+   "duracao": 19,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-transicao-carreira-aposentadoria-identidade",
+   "tipo": "longo",
+   "slug": "transicao-carreira-aposentadoria-identidade",
+   "titulo": "Transição de carreira e aposentadoria: reorganizando identidade depois de uma mudança significativa",
+   "slot": "2026-11-26T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/transicao-carreira-aposentadoria-identidade",
+   "tituloYoutube": "Transição de carreira e aposentadoria: reorganizando identidade depois de uma mudança significativa",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Transição de Carreira & Aposentadoria"
+   ],
+   "hashVideo": "d06e07c4c7b851afe5bf87e87a351ee3e2be175295cc5d95131673a2e9166880",
+   "duracao": 161,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-25-avaliacao-desempenho-saude-mental",
+   "tipo": "short",
+   "slug": "avaliacao-desempenho-saude-mental",
+   "postId": "2026-11-25-avaliacao-desempenho-saude-mental",
+   "titulo": "O que torna a avaliação adoecedora, boas práticas e como conduzir a conversa de avaliação.",
+   "slot": "2026-11-27T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/avaliacao-desempenho-saude-mental/short-2026-11-25-avaliacao-desempenho-saude-mental",
+   "tituloYoutube": "O que torna a avaliação adoecedora, boas práticas e como conduzir a conversa de avali... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "261cb4107f615fb218ae56e1159101a4fdc660de28f94ea691ae9dc042009dc7",
+   "duracao": 38,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-11-26-compulsao-jogos",
+   "tipo": "short",
+   "slug": "compulsao-jogos",
+   "postId": "2026-11-26-compulsao-jogos",
+   "titulo": "Apostas como problema de saúde pública, o que diz a Lei 14.790/2023, sinais de alerta.",
+   "slot": "2026-11-28T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/compulsao-jogos/short-2026-11-26-compulsao-jogos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-burnout-academico-pos-graduacao-concursos",
+   "tipo": "longo",
+   "slug": "burnout-academico-pos-graduacao-concursos",
+   "titulo": "Burnout acadêmico: quando mestrado, doutorado ou concurso cobram um preço alto demais",
+   "slot": "2026-11-28T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/burnout-academico-pos-graduacao-concursos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-11-27-adocao-saude-mental-filho",
+   "tipo": "short",
+   "slug": "adocao-saude-mental-filho",
+   "postId": "2026-11-27-adocao-saude-mental-filho",
+   "titulo": "Comportamentos que podem surgir após a adoção.",
+   "slot": "2026-11-29T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/adocao-saude-mental-filho/short-2026-11-27-adocao-saude-mental-filho",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-11-30-relato-silencio-fatal",
+   "tipo": "short",
+   "slug": "relato-silencio-fatal",
+   "postId": "2026-11-30-relato-silencio-fatal",
+   "titulo": "A consulta já estava quase terminando.",
+   "slot": "2026-11-30T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-silencio-fatal/short-2026-11-30-relato-silencio-fatal",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-sobrecarga-docente-descompressao",
+   "tipo": "longo",
+   "slug": "sobrecarga-docente-descompressao",
+   "titulo": "Sobrecarga docente: reconhecendo o esgotamento antes que ele vire adoecimento",
+   "slot": "2026-12-01T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/sobrecarga-docente-descompressao",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-01-quando-encaminhar-aps",
+   "tipo": "short",
+   "slug": "quando-encaminhar-aps",
+   "postId": "2026-12-01-quando-encaminhar-aps",
+   "titulo": "O que a APS pode cuidar com apoio matricial, segundo o mhGAP da OMS.",
+   "slot": "2026-12-02T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/quando-encaminhar-aps/short-2026-12-01-quando-encaminhar-aps",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-saude-mental-pilar-de-performance-liderancas",
+   "tipo": "longo",
+   "slug": "saude-mental-pilar-de-performance-liderancas",
+   "titulo": "Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas",
+   "slot": "2026-12-03T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/saude-mental-pilar-de-performance-liderancas",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-02-clima-organizacional-pesquisa-efetiva",
+   "tipo": "short",
+   "slug": "clima-organizacional-pesquisa-efetiva",
+   "postId": "2026-12-02-clima-organizacional-pesquisa-efetiva",
+   "titulo": "Fatores do trabalho ligados a depressão e ansiedade, perguntas-chave.",
+   "slot": "2026-12-04T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/clima-organizacional-pesquisa-efetiva/short-2026-12-02-clima-organizacional-pesquisa-efetiva",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-03-compulsao-alimentar",
+   "tipo": "short",
+   "slug": "compulsao-alimentar",
+   "postId": "2026-12-03-compulsao-alimentar",
+   "titulo": "Sinais do transtorno de compulsão alimentar, o papel das dietas e do estigma do peso.",
+   "slot": "2026-12-05T15:00:00.000Z",
+   "playlist": "Corpo e Saúde Mental",
+   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar/short-2026-12-03-compulsao-alimentar",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-fadiga-compaixao-voluntariado-terceiro-setor",
+   "tipo": "longo",
+   "slug": "fadiga-compaixao-voluntariado-terceiro-setor",
+   "titulo": "Fadiga da compaixão em quem trabalha por uma causa",
+   "slot": "2026-12-05T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/fadiga-compaixao-voluntariado-terceiro-setor",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-04-relato-entre-dois-mundos",
+   "tipo": "short",
+   "slug": "relato-entre-dois-mundos",
+   "postId": "2026-12-04-relato-entre-dois-mundos",
+   "titulo": "A mãe trouxe a filha de catorze anos preocupada com \"o vício no celular\".",
+   "slot": "2026-12-06T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-entre-dois-mundos/short-2026-12-04-relato-entre-dois-mundos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-07-adolescente-corpo-mudanca-aceitacao",
+   "tipo": "short",
+   "slug": "adolescente-corpo-mudanca-aceitacao",
+   "postId": "2026-12-07-adolescente-corpo-mudanca-aceitacao",
+   "titulo": "Sinais de que a insatisfação passou do ponto.",
+   "slot": "2026-12-07T15:00:00.000Z",
+   "playlist": "Corpo e Saúde Mental",
+   "pasta": "carrosseis-instagram/youtube/adolescente-corpo-mudanca-aceitacao/short-2026-12-07-adolescente-corpo-mudanca-aceitacao",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-reorganizacao-emocional-luto-divorcio",
+   "tipo": "longo",
+   "slug": "reorganizacao-emocional-luto-divorcio",
+   "titulo": "Luto e divórcio: reorganizar a vida depois de uma perda significativa",
+   "slot": "2026-12-08T21:00:00.000Z",
+   "playlist": "Depressão",
+   "pasta": "carrosseis-instagram/youtube/reorganizacao-emocional-luto-divorcio",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-09-jogos-online-consulta-medicos",
+   "tipo": "short",
+   "slug": "jogos-online-consulta-medicos",
+   "postId": "2026-12-09-jogos-online-consulta-medicos",
+   "titulo": "Riscos específicos dos jogos na internet, relação das loot boxes com apostas.",
+   "slot": "2026-12-09T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/jogos-online-consulta-medicos/short-2026-12-09-jogos-online-consulta-medicos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-envelhecimento-ativo-isolamento-social",
+   "tipo": "longo",
+   "slug": "envelhecimento-ativo-isolamento-social",
+   "titulo": "Saúde mental na terceira idade: isolamento social e preservação emocional",
+   "slot": "2026-12-10T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/envelhecimento-ativo-isolamento-social",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-10-comunicacao-nao-violenta-equipe",
+   "tipo": "short",
+   "slug": "comunicacao-nao-violenta-equipe",
+   "postId": "2026-12-10-comunicacao-nao-violenta-equipe",
+   "titulo": "Os quatro passos da comunicação não violenta, aplicação no retorno e nas mensagens, e seus limites.",
+   "slot": "2026-12-11T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/comunicacao-nao-violenta-equipe/short-2026-12-10-comunicacao-nao-violenta-equipe",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-11-relato-diagnostico-nao-aceito",
+   "tipo": "short",
+   "slug": "relato-diagnostico-nao-aceito",
+   "postId": "2026-12-11-relato-diagnostico-nao-aceito",
+   "titulo": "\"Ele só está estressado com a faculdade, doutor.\" Foi a terceira vez que a família repetia.",
+   "slot": "2026-12-12T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-diagnostico-nao-aceito/short-2026-12-11-relato-diagnostico-nao-aceito",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-ansiedade-corporativa-sintomas-tratamento",
+   "tipo": "longo",
+   "slug": "ansiedade-corporativa-sintomas-tratamento",
+   "titulo": "Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico",
+   "slot": "2026-12-12T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-corporativa-sintomas-tratamento",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-14-adolescencia-mudancas-humor",
+   "tipo": "short",
+   "slug": "adolescencia-mudancas-humor",
+   "postId": "2026-12-14-adolescencia-mudancas-humor",
+   "titulo": "O que é esperado na adolescência, sinais de sofrimento e de autolesão.",
+   "slot": "2026-12-14T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/adolescencia-mudancas-humor/short-2026-12-14-adolescencia-mudancas-humor",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-insonia-o-que-fazer",
+   "tipo": "longo",
+   "slug": "insonia-o-que-fazer",
+   "titulo": "Insônia: o que fazer antes de recorrer a remédios",
+   "slot": "2026-12-15T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/insonia-o-que-fazer",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-15-adolescente-escolha-profissional-pressao",
+   "tipo": "short",
+   "slug": "adolescente-escolha-profissional-pressao",
+   "postId": "2026-12-15-adolescente-escolha-profissional-pressao",
+   "titulo": "De onde vem a pressão, o aumento do perfeccionismo entre jovens e como a família pode.",
+   "slot": "2026-12-16T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/adolescente-escolha-profissional-pressao/short-2026-12-15-adolescente-escolha-profissional-pressao",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-depressao-ansiedade-produtividade",
+   "tipo": "longo",
+   "slug": "depressao-ansiedade-produtividade",
+   "titulo": "Depressão e ansiedade: o impacto real na produtividade",
+   "slot": "2026-12-17T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/depressao-ansiedade-produtividade",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-16-redes-sociais-consulta-medicos",
+   "tipo": "short",
+   "slug": "redes-sociais-consulta-medicos",
+   "postId": "2026-12-16-redes-sociais-consulta-medicos",
+   "titulo": "O que mostram estudos longitudinais e grandes bases de dados, como conduzir a conversa a sós.",
+   "slot": "2026-12-18T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/redes-sociais-consulta-medicos/short-2026-12-16-redes-sociais-consulta-medicos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-17-relato-receita-nao-veio-sozinha",
+   "tipo": "short",
+   "slug": "relato-receita-nao-veio-sozinha",
+   "postId": "2026-12-17-relato-receita-nao-veio-sozinha",
+   "titulo": "Era só uma renovação de receita de pressão alta.",
+   "slot": "2026-12-19T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-receita-nao-veio-sozinha/short-2026-12-17-relato-receita-nao-veio-sozinha",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-professores-saude-mental",
+   "tipo": "longo",
+   "slug": "professores-saude-mental",
+   "titulo": "Saúde mental de professores: o adoecimento silencioso de quem forma pessoas",
+   "slot": "2026-12-19T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/professores-saude-mental",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-18-crise-humanitaria-impacto-equipe",
+   "tipo": "short",
+   "slug": "crise-humanitaria-impacto-equipe",
+   "postId": "2026-12-18-crise-humanitaria-impacto-equipe",
+   "titulo": "Impacto de desastres na saúde mental, resposta imediata, primeiros cuidados psicológicos e acompanhamento nas semanas seguintes.",
+   "slot": "2026-12-20T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/crise-humanitaria-impacto-equipe/short-2026-12-18-crise-humanitaria-impacto-equipe",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-21-ansiedade-diferenca-nervosismo",
+   "tipo": "short",
+   "slug": "ansiedade-diferenca-nervosismo",
+   "postId": "2026-12-21-ansiedade-diferenca-nervosismo",
+   "titulo": "Diferença entre nervosismo e transtorno de ansiedade.",
+   "slot": "2026-12-21T15:00:00.000Z",
+   "playlist": "Ansiedade",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-diferenca-nervosismo/short-2026-12-21-ansiedade-diferenca-nervosismo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-burnout-aps",
+   "tipo": "longo",
+   "slug": "burnout-aps",
+   "titulo": "Burnout em médicos e enfermeiros da Atenção Primária: quando quem cuida precisa de cuidados",
+   "slot": "2026-12-22T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/burnout-aps",
+   "tituloYoutube": "Burnout em médicos e enfermeiros da Atenção Primária: quando quem cuida precisa de cuidados",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Geral",
+    "saúde do trabalhador",
+    "burnout"
+   ],
+   "hashVideo": "0f9cc5372878e0226d05c33bf9332b5d5a3787a01144413a9263ddf93ac3ed70",
+   "duracao": 312,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "short-2026-12-22-adolescente-experimentacao-alcool-conversa",
+   "tipo": "short",
+   "slug": "adolescente-experimentacao-alcool-conversa",
+   "postId": "2026-12-22-adolescente-experimentacao-alcool-conversa",
+   "titulo": "Por que o álcool é mais arriscado na adolescência, o que diz a lei.",
+   "slot": "2026-12-23T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/adolescente-experimentacao-alcool-conversa/short-2026-12-22-adolescente-experimentacao-alcool-conversa",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-paciente-invisivel",
+   "tipo": "longo",
+   "slug": "relato-paciente-invisivel",
+   "titulo": "O paciente que ninguém via",
+   "slot": "2026-12-24T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-paciente-invisivel",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-23-relato-corpo-envelhece-mente-esquecida",
+   "tipo": "short",
+   "slug": "relato-corpo-envelhece-mente-esquecida",
+   "postId": "2026-12-23-relato-corpo-envelhece-mente-esquecida",
+   "titulo": "\"Ele já está bem velhinho, doutor, é assim mesmo.\" Foi a explicação que recebi.",
+   "slot": "2026-12-25T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-corpo-envelhece-mente-esquecida/short-2026-12-23-relato-corpo-envelhece-mente-esquecida",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-24-alimentacao-consulta-medicos",
+   "tipo": "short",
+   "slug": "alimentacao-consulta-medicos",
+   "postId": "2026-12-24-alimentacao-consulta-medicos",
+   "titulo": "Perguntas sobre o clima das refeições, evidências sobre refeições em família e práticas parentais.",
+   "slot": "2026-12-26T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/alimentacao-consulta-medicos/short-2026-12-24-alimentacao-consulta-medicos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-afastamento-transtorno-mental",
+   "tipo": "longo",
+   "slug": "afastamento-transtorno-mental",
+   "titulo": "Afastamento por transtorno mental: o que a empresa precisa saber",
+   "slot": "2026-12-26T21:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/afastamento-transtorno-mental",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-25-cultura-psicologicamente-segura",
+   "tipo": "short",
+   "slug": "cultura-psicologicamente-segura",
+   "postId": "2026-12-25-cultura-psicologicamente-segura",
+   "titulo": "Conceito de segurança psicológica, benefícios, sinais de alerta e práticas concretas de liderança.",
+   "slot": "2026-12-27T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/cultura-psicologicamente-segura/short-2026-12-25-cultura-psicologicamente-segura",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-28-ansiedade-filhos-pais-o-que-fazer",
+   "tipo": "short",
+   "slug": "ansiedade-filhos-pais-o-que-fazer",
+   "postId": "2026-12-28-ansiedade-filhos-pais-o-que-fazer",
+   "titulo": "Diferença entre medo comum e ansiedade, o papel da acomodação familiar.",
+   "slot": "2026-12-28T15:00:00.000Z",
+   "playlist": "Ansiedade",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-filhos-pais-o-que-fazer/short-2026-12-28-ansiedade-filhos-pais-o-que-fazer",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-jogos-online-criancas",
+   "tipo": "longo",
+   "slug": "jogos-online-criancas",
+   "titulo": "Roblox, Fortnite e jogos online: o que pais precisam saber sobre saúde mental dos filhos",
+   "slot": "2026-12-29T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/jogos-online-criancas",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-29-relato-medo-remedio",
+   "tipo": "short",
+   "slug": "relato-medo-remedio",
+   "postId": "2026-12-29-relato-medo-remedio",
+   "titulo": "\"Doutor, eu prefiro sofrer do meu jeito do que virar outra pessoa com esse remédio.\" Foi.",
+   "slot": "2026-12-30T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-medo-remedio/short-2026-12-29-relato-medo-remedio",
+   "tituloYoutube": "\"Doutor, eu prefiro sofrer do meu jeito do que virar outra pessoa com esse remédio.\" ... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "fcc24979f0d9f872462e5e586d825e79d05244f997885672b1000cf2eca4789e",
+   "duracao": 31,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  },
+  {
+   "id": "longo-compulsao-alimentar",
+   "tipo": "longo",
+   "slug": "compulsao-alimentar",
+   "titulo": "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda",
+   "slot": "2026-12-31T21:00:00.000Z",
+   "playlist": "Corpo e Saúde Mental",
+   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-30-adolescente-primeiro-namoro",
+   "tipo": "short",
+   "slug": "adolescente-primeiro-namoro",
+   "postId": "2026-12-30-adolescente-primeiro-namoro",
+   "titulo": "O que é esperado, como conversar sobre consentimento e sexualidade.",
+   "slot": "2027-01-01T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/adolescente-primeiro-namoro/short-2026-12-30-adolescente-primeiro-namoro",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2026-12-31-rotina-consulta-medicos",
+   "tipo": "short",
+   "slug": "rotina-consulta-medicos",
+   "postId": "2026-12-31-rotina-consulta-medicos",
+   "titulo": "Recomendações de sono por idade, evidência sobre rotina de dormir.",
+   "slot": "2027-01-02T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/rotina-consulta-medicos/short-2026-12-31-rotina-consulta-medicos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-quando-encaminhar-aps",
+   "tipo": "longo",
+   "slug": "quando-encaminhar-aps",
+   "titulo": "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS",
+   "slot": "2027-01-02T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/quando-encaminhar-aps",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-01-depressao-ansiedade-produtividade",
+   "tipo": "short",
+   "slug": "depressao-ansiedade-produtividade",
+   "postId": "2027-01-01-depressao-ansiedade-produtividade",
+   "titulo": "Dados sobre presenteísmo e retorno do investimento em tratamento.",
+   "slot": "2027-01-03T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/depressao-ansiedade-produtividade/short-2027-01-01-depressao-ansiedade-produtividade",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-04-relato-aposta-familia",
+   "tipo": "short",
+   "slug": "relato-aposta-familia",
+   "postId": "2027-01-04-relato-aposta-familia",
+   "titulo": "Ela veio à consulta pedindo um atestado para o marido.",
+   "slot": "2027-01-04T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-aposta-familia/short-2027-01-04-relato-aposta-familia",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-crise-evitavel",
+   "tipo": "longo",
+   "slug": "relato-crise-evitavel",
+   "titulo": "A crise que poderia ter sido evitada",
+   "slot": "2027-01-05T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-crise-evitavel",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-05-ansiedade-social-timidez",
+   "tipo": "short",
+   "slug": "ansiedade-social-timidez",
+   "postId": "2027-01-05-ansiedade-social-timidez",
+   "titulo": "Como diferenciar timidez de ansiedade social, sinais comuns.",
+   "slot": "2027-01-06T15:00:00.000Z",
+   "playlist": "Ansiedade",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-social-timidez/short-2027-01-05-ansiedade-social-timidez",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-jogos-online-consulta-medicos",
+   "tipo": "longo",
+   "slug": "jogos-online-consulta-medicos",
+   "titulo": "Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes",
+   "slot": "2027-01-07T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/jogos-online-consulta-medicos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-06-adolescente-quarto-bagunca-privacidade",
+   "tipo": "short",
+   "slug": "adolescente-quarto-bagunca-privacidade",
+   "postId": "2027-01-06-adolescente-quarto-bagunca-privacidade",
+   "titulo": "Por que o adolescente busca privacidade, como negociar regras.",
+   "slot": "2027-01-08T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/adolescente-quarto-bagunca-privacidade/short-2027-01-06-adolescente-quarto-bagunca-privacidade",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-07-sobrecarga-cuidador-consulta",
+   "tipo": "short",
+   "slug": "sobrecarga-cuidador-consulta",
+   "postId": "2027-01-07-sobrecarga-cuidador-consulta",
+   "titulo": "Evidências sobre adoecimento de cuidadores, perguntas e sinais de sobrecarga.",
+   "slot": "2027-01-09T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/sobrecarga-cuidador-consulta/short-2027-01-07-sobrecarga-cuidador-consulta",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-familia-em-crise",
+   "tipo": "longo",
+   "slug": "relato-familia-em-crise",
+   "titulo": "Quando a família também precisa de cuidado",
+   "slot": "2027-01-09T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-familia-em-crise",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-08-relato-cuidador-equipe-burnout",
+   "tipo": "short",
+   "slug": "relato-cuidador-equipe-burnout",
+   "postId": "2027-01-08-relato-cuidador-equipe-burnout",
+   "titulo": "Foi exatamente por isso que demorei a…",
+   "slot": "2027-01-10T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-cuidador-equipe-burnout/short-2027-01-08-relato-cuidador-equipe-burnout",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-11-desligamento-humanizado",
+   "tipo": "short",
+   "slug": "desligamento-humanizado",
+   "postId": "2027-01-11-desligamento-humanizado",
+   "titulo": "Impacto psicológico da demissão, boas práticas na conversa.",
+   "slot": "2027-01-11T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/desligamento-humanizado/short-2027-01-11-desligamento-humanizado",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-psicofarmacos-mitos-culturais",
+   "tipo": "longo",
+   "slug": "psicofarmacos-mitos-culturais",
+   "titulo": "Por que existe tanta desinformação sobre psicofármacos?",
+   "slot": "2027-01-12T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/psicofarmacos-mitos-culturais",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-12-ansiedade-trabalho-lidando",
+   "tipo": "short",
+   "slug": "ansiedade-trabalho-lidando",
+   "postId": "2027-01-12-ansiedade-trabalho-lidando",
+   "titulo": "Fatores do trabalho que adoecem, sinais de alerta, estratégias para o dia a dia.",
+   "slot": "2027-01-13T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-trabalho-lidando/short-2027-01-12-ansiedade-trabalho-lidando",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-vinculo-perdido",
+   "tipo": "longo",
+   "slug": "relato-vinculo-perdido",
+   "titulo": "O resgate de um vínculo perdido",
+   "slot": "2027-01-14T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-vinculo-perdido",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-13-agressividade-infantil-morder-bater",
+   "tipo": "short",
+   "slug": "agressividade-infantil-morder-bater",
+   "postId": "2027-01-13-agressividade-infantil-morder-bater",
+   "titulo": "Na primeira infância, morder e bater são comuns e tendem a diminuir com o tempo.",
+   "slot": "2027-01-15T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/agressividade-infantil-morder-bater/short-2027-01-13-agressividade-infantil-morder-bater",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-14-relato-territorio-segredos",
+   "tipo": "short",
+   "slug": "relato-territorio-segredos",
+   "postId": "2027-01-14-relato-territorio-segredos",
+   "titulo": "Foi a agente comunitária de saúde quem primeiro percebeu.",
+   "slot": "2027-01-16T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-territorio-segredos/short-2027-01-14-relato-territorio-segredos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-realidade-saude-mental-aps",
+   "tipo": "longo",
+   "slug": "realidade-saude-mental-aps",
+   "titulo": "O que ninguém te conta sobre atender saúde mental na atenção primária",
+   "slot": "2027-01-16T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/realidade-saude-mental-aps",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-15-saude-mental-perinatal-consulta",
+   "tipo": "short",
+   "slug": "saude-mental-perinatal-consulta",
+   "postId": "2027-01-15-saude-mental-perinatal-consulta",
+   "titulo": "Uso da EPDS e pontos de corte no Brasil, atenção ao item 10, fatores de risco.",
+   "slot": "2027-01-17T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/saude-mental-perinatal-consulta/short-2027-01-15-saude-mental-perinatal-consulta",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-18-diversidade-saude-mental-inclusao",
+   "tipo": "short",
+   "slug": "diversidade-saude-mental-inclusao",
+   "postId": "2027-01-18-diversidade-saude-mental-inclusao",
+   "titulo": "Como preconceito e microagressões afetam a saúde mental e práticas que tornam a inclusão real.",
+   "slot": "2027-01-18T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/diversidade-saude-mental-inclusao/short-2027-01-18-diversidade-saude-mental-inclusao",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-peso-invisivel-cuidador",
+   "tipo": "longo",
+   "slug": "relato-peso-invisivel-cuidador",
+   "titulo": "O peso invisível de quem cuida",
+   "slot": "2027-01-19T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-peso-invisivel-cuidador",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-19-aposentadoria-saude-mental",
+   "tipo": "short",
+   "slug": "aposentadoria-saude-mental",
+   "postId": "2027-01-19-aposentadoria-saude-mental",
+   "titulo": "O que a pesquisa mostra sobre aposentadoria e depressão, quem precisa de mais atenção.",
+   "slot": "2027-01-20T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/aposentadoria-saude-mental/short-2027-01-19-aposentadoria-saude-mental",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-gestacao-amamentacao-saude-mental",
+   "tipo": "longo",
+   "slug": "gestacao-amamentacao-saude-mental",
+   "titulo": "Gestação, amamentação e saúde mental: o que toda família precisa saber",
+   "slot": "2027-01-21T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/gestacao-amamentacao-saude-mental",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-2027-01-20-relato-ultima-consulta-antes-desistir",
+   "tipo": "short",
+   "slug": "relato-ultima-consulta-antes-desistir",
+   "postId": "2027-01-20-relato-ultima-consulta-antes-desistir",
+   "titulo": "\"Essa é a última vez que eu venho aqui.\" Ele disse isso sem drama.",
+   "slot": "2027-01-22T15:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-ultima-consulta-antes-desistir/short-2027-01-20-relato-ultima-consulta-antes-desistir",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-tmc-aps",
+   "tipo": "short",
+   "slug": "tmc-aps",
+   "postId": null,
+   "titulo": "O que o consultório de atenção primária revela sobre ansiedade, depressão e sofrimento no trabalho",
+   "slot": "2027-01-23T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/tmc-aps/short-resumo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-silencio-fatal",
+   "tipo": "longo",
+   "slug": "relato-silencio-fatal",
+   "titulo": "O silêncio que quase foi fatal",
+   "slot": "2027-01-23T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-silencio-fatal",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-burnout-medicos-enfermeiros",
+   "tipo": "short",
+   "slug": "burnout-medicos-enfermeiros",
+   "postId": null,
+   "titulo": "Burnout em médicos e enfermeiros: quando o cuidador precisa de ajuda",
+   "slot": "2027-01-24T15:00:00.000Z",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/burnout-medicos-enfermeiros/short-resumo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-saude-mental-residencia",
+   "tipo": "short",
+   "slug": "saude-mental-residencia",
+   "postId": null,
+   "titulo": "Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação",
+   "slot": "2027-01-25T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/saude-mental-residencia/short-resumo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-psicofarmacos-mitos-verdades",
+   "tipo": "longo",
+   "slug": "psicofarmacos-mitos-verdades",
+   "titulo": "Psicofármacos: mitos e verdades sobre o tratamento medicamentoso em saúde mental",
+   "slot": "2027-01-26T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/psicofarmacos-mitos-verdades",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-estresse-migratorio-adaptacao-cultural",
+   "tipo": "short",
+   "slug": "estresse-migratorio-adaptacao-cultural",
+   "postId": null,
+   "titulo": "Estresse migratório: o que ninguém conta sobre recomeçar em outro país",
+   "slot": "2027-01-27T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/estresse-migratorio-adaptacao-cultural/short-resumo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-relato-entre-dois-mundos",
+   "tipo": "longo",
+   "slug": "relato-entre-dois-mundos",
+   "titulo": "Entre dois mundos",
+   "slot": "2027-01-28T21:00:00.000Z",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-entre-dois-mundos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-sinais-alerta-comportamentais-jovens",
+   "tipo": "short",
+   "slug": "sinais-alerta-comportamentais-jovens",
+   "postId": null,
+   "titulo": "Sinais de alerta em crianças e adolescentes: o que observar (e como agir)",
+   "slot": "2027-01-29T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/sinais-alerta-comportamentais-jovens/short-resumo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-dependencia-quimica-comportamental-sinais",
+   "tipo": "short",
+   "slug": "dependencia-quimica-comportamental-sinais",
+   "postId": null,
+   "titulo": "Sinais de dependência: química ou comportamental, o padrão é parecido",
+   "slot": "2027-01-30T15:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/dependencia-quimica-comportamental-sinais/short-resumo",
+   "status": "sem-midia"
+  },
+  {
+   "id": "longo-compulsao-jogos",
+   "tipo": "longo",
+   "slug": "compulsao-jogos",
+   "titulo": "Compulsão por jogos: como reconhecer os sinais em si mesmo ou em alguém da família",
+   "slot": "2027-01-30T21:00:00.000Z",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/compulsao-jogos",
+   "status": "sem-midia"
+  },
+  {
+   "id": "short-resumo-ansiedade-social-medo-julgamento",
+   "tipo": "short",
+   "slug": "ansiedade-social-medo-julgamento",
+   "postId": null,
+   "titulo": "Ansiedade social: quando o medo do julgamento limita a vida",
+   "slot": "2027-01-31T15:00:00.000Z",
+   "playlist": "Ansiedade",
+   "pasta": "carrosseis-instagram/youtube/ansiedade-social-medo-julgamento/short-resumo",
+   "tituloYoutube": "Ansiedade social: quando o medo do julgamento limita a vida #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Ansiedade Social & Timidez"
+   ],
+   "hashVideo": "7b0862493766419b7b772be881686d8bebc57f054a777261600c4bcd27b00008",
+   "duracao": 28,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
+  }
+ ]
+}

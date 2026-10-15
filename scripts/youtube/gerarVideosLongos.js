@@ -16,10 +16,8 @@ const refazer = process.argv.includes('--refazer');
 async function baixar(url) { const r = await fetch(url); if (!r.ok) throw new Error(`capa HTTP ${r.status}`); return Buffer.from(await r.arrayBuffer()); }
 
 async function gerar(a) {
-  const mp3 = path.join(L.NARR, `${a.slug}.mp3`), selo = path.join(L.NARR, `${a.slug}.hash`);
-  if (!fs.existsSync(mp3) || !fs.existsSync(selo)) return { slug: a.slug, pulou: 'sem MP3 local' };
-  const esperado = L.hashNarracao(L.textoParaNarracao(a), L.vozDaNarracao(a));
-  if (fs.readFileSync(selo, 'utf8').trim() !== esperado) return { slug: a.slug, pulou: 'MP3 desatualizado (hash difere do texto atual)' };
+  const mp3 = await L.obterAudio(a);
+  if (!mp3) return { slug: a.slug, pulou: 'sem áudio válido (hash difere do texto atual ou narração ausente)' };
   const dir = path.join(L.MIDIA, a.slug); fs.mkdirSync(dir, { recursive: true });
   const saida = path.join(dir, 'longo.mp4');
   if (fs.existsSync(saida) && fs.existsSync(path.join(dir, 'meta.json')) && !refazer) return { slug: a.slug, pulou: 'já gerado' };

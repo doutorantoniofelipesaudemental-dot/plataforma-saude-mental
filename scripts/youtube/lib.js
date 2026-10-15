@@ -8,7 +8,7 @@ const crypto = require('node:crypto');
 const { spawnSync } = require('node:child_process');
 const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/conformidadeCfm');
 const { IDENTIFICACAO_3_LINHAS } = require('../../backend/lib/legendaInstagram');
-const { textoParaNarracao, hashNarracao, vozDaNarracao } = require('../../backend/lib/narracao');
+const { textoParaNarracao, hashNarracao, vozDaNarracao, estadoNarracao } = require('../../backend/lib/narracao');
 const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
 
 const RAIZ = path.resolve(__dirname, '../..');
@@ -46,6 +46,22 @@ function arte(spec) {
   try { run(PY, ['-I', path.join(__dirname, 'arte.py'), f]); } finally { fs.rmSync(f, { force: true }); }
 }
 
+/** MP3 local com selo de hash igual ao do texto atual. */
+function mp3Selado(a) {
+  const mp3 = path.join(NARR, `${a.slug}.mp3`), selo = path.join(NARR, `${a.slug}.hash`);
+  try { return fs.existsSync(mp3) && fs.readFileSync(selo, 'utf8').trim() === hashNarracao(textoParaNarracao(a), vozDaNarracao(a)) ? mp3 : ''; } catch { return ''; }
+}
+/** Há áudio utilizável? (MP3 selado local, ou narração "ok" no banco, cujo MP3 é baixado na hora de gerar.) */
+const audioDisponivel = (a) => Boolean(mp3Selado(a)) || (estadoNarracao(a).estado === 'ok' && Boolean(a.narracao && a.narracao.url));
+async function obterAudio(a) {
+  const local = mp3Selado(a); if (local) return local;
+  if (estadoNarracao(a).estado !== 'ok' || !a.narracao || !a.narracao.url) return '';
+  const dir = path.join(MIDIA, a.slug); fs.mkdirSync(dir, { recursive: true });
+  const alvo = path.join(dir, 'narracao.mp3');
+  if (!fs.existsSync(alvo)) { const r = await fetch(a.narracao.url); if (!r.ok) throw new Error(`áudio HTTP ${r.status}`); fs.writeFileSync(alvo, Buffer.from(await r.arrayBuffer())); }
+  return alvo;
+}
+
 /** Separa o HTML em seções por <h2>. */
 function secoes(html) {
   const partes = String(html).split(/(?=<h2\b)/i);
@@ -62,7 +78,8 @@ function referencias(html) {
   if (!m) return [];
   return [...m[0].matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)].map((x) => {
     const link = (x[1].match(/href=["']([^"']+)["']/) || [])[1] || '';
-    const txt = semTags(x[1]).replace(/\s+(doi:|www\.|planalto\.gov\.br|bvsms)\S*$/i, '').slice(0, 230);
+    const txt = semTags(x[1]).replace(/\s+(doi:|www\.|planalto\.gov\.br|bvsms)\S*$/i, '');
+    if (txt.length > 230) return link ? `${txt.slice(0, 230).replace(/[\s,;(]+\S*$/, '')}… ${link}` : `${txt.slice(0, 230).replace(/[\s,;(]+\S*$/, '')}…`;
     return link ? `${txt} ${link}` : txt;
   });
 }
@@ -176,4 +193,4 @@ function checarTexto(item) {
   return f;
 }
 
-module.exports = { RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };
+module.exports = { mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };

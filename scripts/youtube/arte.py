@@ -117,6 +117,17 @@ def banner(s):
     d.text((x0, y0 + 330), 'Em crise: CVV 188 · SAMU 192', font=fonte(SEGOE_B, 34), fill=OURO)
     im.save(s['saida'], 'PNG')
 
+def banner_li(s):
+    W, H = 1584, 396
+    im = Image.new('RGB', (W, H), MARINHO); d = ImageDraw.Draw(im)
+    x0 = 540  # a foto de perfil cobre o canto inferior esquerdo
+    barra_ouro(d, x0, 70, 120, 6)
+    d.text((x0, 96), 'Dr. Antônio Felipe', font=fonte(GEORGIA_B, 76), fill=BRANCO)
+    d.text((x0, 196), 'Saúde mental no Pronto Atendimento e na Atenção Primária', font=fonte(SEGOE, 34), fill=OURO)
+    d.text((x0, 250), 'Mentoria para a APS · Consultoria para empresas e RH · NR-1', font=fonte(SEGOE, 28), fill=BRANCO)
+    d.text((x0, 306), 'Médico · CRM-BA 41322 · RQE 26638 · Em crise: CVV 188 · SAMU 192', font=fonte(SEGOE_B, 24), fill=OURO)
+    im.save(s['saida'], 'PNG')
+
 def perfil(s):
     W = 800
     im = Image.new('RGB', (W, W), MARINHO); d = ImageDraw.Draw(im)
@@ -127,4 +138,4 @@ def perfil(s):
 
 if __name__ == '__main__':
     spec = json.load(open(sys.argv[1], encoding='utf-8'))
-    {'thumb': thumb, 'longo': longo, 'short': short, 'banner': banner, 'perfil': perfil}[spec['tipo']](spec)
+    {'banner_li': banner_li, 'thumb': thumb, 'longo': longo, 'short': short, 'banner': banner, 'perfil': perfil}[spec['tipo']](spec)

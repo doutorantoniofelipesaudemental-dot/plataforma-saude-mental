@@ -42,7 +42,8 @@ async function gerar({ a, id, tituloTela, linhas, extraDescricao = '' }) {
   fs.mkdirSync(dir, { recursive: true }); for (const f of fs.readdirSync(dir)) fs.rmSync(path.join(dir, f), { recursive: true, force: true });
   let capa = '';
   if (a.imagemCapa) {
-    const buf = Buffer.from(await (await fetch(a.imagemCapa)).arrayBuffer());
+    const rc = await fetch(a.imagemCapa); if (!rc.ok) throw new Error(`capa HTTP ${rc.status} (Blob indisponível?)`);
+    const buf = Buffer.from(await rc.arrayBuffer());
     const wm = await checarImagemSemMarcaDagua(buf);
     if (!wm.ok) return { slug: a.slug, id, reprovado: `capa com marca d'água/ruído: ${wm.falhas.join('; ')}` };
     capa = path.join(dir, 'capa.jpg'); fs.writeFileSync(capa, buf);

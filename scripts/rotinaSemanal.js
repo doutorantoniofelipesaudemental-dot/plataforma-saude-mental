@@ -101,6 +101,14 @@ async function passoTokenFreio() {
     linhas.push(`- Freio REDES_PUBLICACAO_ATIVA: ${f.publicacaoAtiva === true ? 'ATIVO (true)' : 'NÃO ATIVO'}`);
     if (f.publicacaoAtiva !== true) problemas.push('freio das redes não está ativo');
   } catch { problemas.push('não consegui consultar o freio'); linhas.push('- Freio: NÃO VERIFICADO'); }
+  // LinkedIn (token de ~60 dias, sem renovação automática) e YouTube
+  const vL = process.env.LINKEDIN_TOKEN_VENCE_EM;
+  if (vL) {
+    const d = Math.round((new Date(`${vL}T23:59:59-03:00`) - Date.now()) / 864e5);
+    linhas.push(`- LinkedIn: token vence em ${vL} (${d} dias)`);
+    if (d < 15) problemas.push(`token do LinkedIn vence em ${d} dias (npm run linkedin:autorizar e atualizar na Vercel)`);
+  } else linhas.push('- LinkedIn: sem token local (fila manual; ver relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md)');
+  linhas.push(`- YouTube: ${process.env.YOUTUBE_REFRESH_TOKEN ? 'autorizado' : 'sem autorização (fila manual em uso)'} · freio YOUTUBE_PUBLICACAO_ATIVA ${process.env.YOUTUBE_PUBLICACAO_ATIVA === 'true' ? 'ativo' : 'desligado'}`);
   sec.push(`## 3. Token e freio\n${linhas.join('\n')}`);
 }
 

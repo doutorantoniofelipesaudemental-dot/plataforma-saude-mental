@@ -38,7 +38,7 @@ url.search = new URLSearchParams({
   client_id: id,
   redirect_uri: REDIRECT,
   response_type: 'code',
-  scope: 'https://www.googleapis.com/auth/youtube.upload',
+  scope: 'https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube', // upload + playlists/miniaturas (ampliado em 15/10/2026)
   access_type: 'offline',
   prompt: 'consent',
 }).toString();
