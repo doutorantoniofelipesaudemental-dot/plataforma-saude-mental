@@ -62,3 +62,7 @@ importacao-completa.zip
 # Fila de redes (artes, arquivo)
 conteudo/
 relatorios/.cache-retratacoes.json
+
+# Graphify (grafo local, regenerável) e seu ambiente
+graphify-out/
+tools-graphify/
