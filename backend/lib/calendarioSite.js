@@ -18,6 +18,17 @@ const PUBLICO_POR_CATEGORIA = {
   'Médicos & Enfermeiros': 'profissionais', 'Residentes & Estudantes': 'profissionais', 'Pós-Graduação & Concursos': 'profissionais',
   'Empresas & RH': 'empresas',
 };
+// Tema = assunto do texto (não só a categoria): evita, por exemplo, dois textos sobre apostas em horários seguidos.
+const TEMAS = [
+  ['apostas', /aposta|bets?\b|jogo-patologico|jogos?-online/], ['ia', /(^|-)ia(-|$)|chatbot|aplicativo|inteligencia-artificial|terapeuta/],
+  ['burnout', /burnout|esgotamento|fadiga/], ['suicidio', /suicid|autolesao|automutilacao/], ['luto', /luto|perda/], ['bullying', /bullying|cyberbullying|assedio/],
+  ['ansiedade', /ansiedade|panico|fobia/], ['depressao', /depress|tristeza/], ['sono', /sono|insonia/], ['telas', /tela|redes-sociais|internet|digital/],
+  ['alimentar', /aliment|compuls|anorexia|bulimia|peso/], ['dependencia', /alcool|drogas|dependencia|tabaco|vape|nicotina/], ['trauma', /trauma|tept|violencia/],
+  ['gestacao', /gest|puerper|materni|amament|baby-blues/], ['idosos', /idoso|demencia|alzheimer|esquecimento/], ['trabalho', /trabalho|ocupacional|empresa|lideranc|nr-1|afastamento/],
+  ['cuidadores', /cuidador|sobrecarga/], ['neurodiv', /tdah|autis|neurodiv/], ['racismo', /racis|indigena|migrante|preconceito/],
+];
+const temaDe = (it) => { const t = `${it.slug} ${(it.titulo || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`; const m = TEMAS.find(([, re]) => re.test(t)); return m ? m[0] : it.categoria; };
+
 const ORDEM_PUBLICOS = ['pacientes', 'pais', 'profissionais', 'empresas', 'relatos'];
 const publicoDe = (categoria) => PUBLICO_POR_CATEGORIA[categoria] || 'pacientes';
 
@@ -106,7 +117,7 @@ function montarCalendario(itens) {
     const escolhidas = [...doDia];
     let tentativas = 0;
     const inicial = Object.fromEntries(ORDEM_PUBLICOS.map((p) => [p, Math.max(1, totais[p])]));
-    const contaChave = (k) => escolhidas.filter((e) => (e.serie ? 'corpo' : e.categoria) === k).length;
+    const contaChave = (k) => escolhidas.filter((e) => (e.serie ? 'corpo' : temaDe(e)) === k).length;
     while (capacidade > 0 && tentativas < 60) {
       tentativas += 1;
       // fila com maior fração restante (proporcional): todas terminam juntas
@@ -115,7 +126,7 @@ function montarCalendario(itens) {
       if (!candidatas.length) break;
       const pub = candidatas[0];
       const cabem = filas[pub].map((u, i) => ({ u, i })).filter(({ u }) => u.itens.length <= capacidade);
-      const evita = (u) => u.itens.some((x) => contaChave(x.categoria) >= 2);
+      const evita = (u) => u.itens.some((x) => contaChave(temaDe(x)) >= 2 || contaChave(x.categoria) >= 3);
       const escolha = cabem.find(({ u }) => !evita(u)) || cabem[0];
       filas[pub].splice(escolha.i, 1);
       escolhidas.push(...escolha.u.itens); capacidade -= escolha.u.itens.length;
@@ -130,7 +141,7 @@ function montarCalendario(itens) {
         escolhidas.push(it); capacidade -= 1;
       }
     }
-    for (const it of escolhidas) it.chaveTema = it.serie ? 'corpo' : it.categoria;
+    for (const it of escolhidas) it.chaveTema = it.serie ? 'corpo' : temaDe(it);
     let arranjo = arranjarDia(escolhidas, ultimoTema, false);
     if (!arranjo) { avisos.push(`dia ${data}: regra de não-adjacência relaxada para pares`); arranjo = arranjarDia(escolhidas, ultimoTema, true); }
     if (!arranjo) { avisos.push(`dia ${data}: não foi possível evitar tema repetido em horários seguidos`); arranjo = [...escolhidas]; }
@@ -145,4 +156,4 @@ function montarCalendario(itens) {
   return { agenda, avisos };
 }
 
-module.exports = { HORARIOS, POR_DIA, INICIO, FERIADOS, publicoDe, diasUteis, montarCalendario };
+module.exports = { temaDe, HORARIOS, POR_DIA, INICIO, FERIADOS, publicoDe, diasUteis, montarCalendario };
