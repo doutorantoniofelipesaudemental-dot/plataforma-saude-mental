@@ -1,5 +1,5 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
-Atualizado em 15/10/2026 (atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
+Atualizado em 15/10/2026 (checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
 ## Domínio
 - **Principal único:** `https://www.drantoniofelipemedico.com.br` (canonical, og:url, sitemap, robots, links internos, capas das redes).
@@ -18,12 +18,21 @@ Atualizado em 15/10/2026 (atualizar ao final de cada lote futuro). Repositório:
 - **Freio `REDES_PUBLICACAO_ATIVA`: ATIVO** (`GET /api/admin/freio-redes` → `{"publicacaoAtiva":true}`).
 
 ## Narração (Edge-TTS gratuito, voz pt-BR-AntonioNeural)
-- Ver `relatorios/narracao-progresso.md`. Em 15/10 (após o lote 2): 150 "ok", 576 faltam, lotes de 50, custo zero. Laço novo em andamento (lote 3 em diante, com pronúncia e limite de 5 min por áudio).
-- Pronúncia (dicionário só no texto falado; hash sobre o original): ativa nos próximos lotes para UBS, RQE, SAMU, CAPS, CVV, APS, TCC. **NR-1 fora** até a sua escolha.
+- Ver `relatorios/narracao-progresso.md`. Em 15/10 (após o lote 3): **200 "ok", 526 faltam** (lotes de 50, custo zero, sem falhas de envio). `benzodiazepinicos-urgencia` (falhou no lote 2) foi gerado e enviado no lote 3. Laço em andamento (`backend/scripts/loop-narracao2.sh`, com pronúncia e limite de 5 min por áudio).
+- Pronúncia (dicionário só no texto falado; hash sobre o original): ativa desde o lote 3 para UBS, RQE, SAMU, CAPS, CVV, APS, TCC e **NR-1 ("Norma Regulamentadora número 1", opção B aprovada)**. Áudios já enviados não são regenerados.
+
+## Checagem geral de 15/10/2026 (do zero)
+- **Auditoria** (`npm run auditoria`): 815 textos (726 Mongo + 89 `.mdx`), 0 falhas; segurança 0 pendências.
+- **DOIs:** varredura de todos os 644 DOIs únicos no Crossref: todos existem; **2 retratados** (Panagioti 2018, em 8 textos; Kamal 2016, em 2) → proposta em `relatorios/referencias-retratadas-proposta.md`, **aguardando OK**.
+- **Amostra de 15 textos lidos por inteiro** (5 publicados, 5 agendados, 5 Next): links/imagens/títulos ok; DOIs conferidos; linguagem acolhedora, sem promessa nem estigma; CVV/SAMU presentes nos temas sensíveis; 3 observações editoriais na proposta (portaria do MJSP sem fonte, links das leis, selo "Narrativa composta" em 1 abertura).
+- **Testes:** 232 unitários e 31 E2E sem falhas.
+- **Lighthouse mobile medido em produção (acessibilidade):** home 100 · /mentoria 100 · /links 100 · artigo `burnout-aps` 100 · relato `relato-paciente-invisivel` 100 · /privacidade 100 (SEO 92 por canonical relativo, corrigido) · app Next 98 (sem `<main>` e erro de hidratação, corrigidos no PR #74).
+- **Produção:** www 200; apex 308→www; `vercel.app` 301→www (exceto `/api/`); sitemap-index (artigos 251 + páginas) e robots no www; canonical no www; autoavaliação com caixa de crise do item 9 testada no navegador (sem POST, sem erro de console); freio `{"publicacaoAtiva":true}`; token válido (`@doutor.antoniofelipe.smental`, vence 14/12/2026, 59 dias); fila 60 posts, primeiro `2026-10-26-saude-mental-cuidador` às 08:00 (Bahia).
+- **Fila do Instagram, amostra de 5 posts:** capas sem marca d'água, assinatura curta de 3 linhas, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria, acentos ok. Varredura das 60 legendas: 0 problemas.
 
 ## Pendências que dependem do Dr. Antônio
-1. Ouvir `relatorios/teste-pronuncia/frase3-a.mp3` ("NR um") e `frase3-b.mp3` ("Norma Regulamentadora número 1") e escolher (recomendação: b).
-2. Revisar `relatorios/politica-privacidade-revisar.md`.
+1. Decidir sobre a troca das 2 referências retratadas (`relatorios/referencias-retratadas-proposta.md`).
+2. (Política de privacidade e pronúncia de NR-1: aprovadas em 15/10/2026.)
 3. Cadastrar o www no Search Console e enviar `sitemap-index.xml`.
 4. Trocar o link da bio do Instagram para `https://www.drantoniofelipemedico.com.br/links`.
 5. Decidir sobre os 24 rascunhos retidos e sobre importar (ou não) os `.mdx` do Next para o site principal.

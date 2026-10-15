@@ -22,3 +22,13 @@ test('rodapé geral com CVV/SAMU e e-mail; página de privacidade com LGPD e can
   const p = ler('app/privacidade/page.js');
   assert.match(p, /13\.709\/2018/); assert.match(p, /canonical: 'https:\/\/www\.drantoniofelipemedico\.com\.br\/privacidade'/);
 });
+
+test('componentes MDX que recebem children não usam <p> como invólucro (p dentro de p quebra a hidratação)', () => {
+  const t = ler('mdx-components.js');
+  assert.doesNotMatch(t, /<p[^>]*>\s*\{children\s*(\|\||\})/);
+  assert.match(t, /function Lead[\s\S]{0,120}<div/);
+});
+
+test('páginas de texto do Next têm landmark main', () => {
+  for (const f of ['app/artigos/[slug]/page.js', 'app/blog/[slug]/page.js']) assert.match(ler(f), /<main className="flex-1">/);
+});
