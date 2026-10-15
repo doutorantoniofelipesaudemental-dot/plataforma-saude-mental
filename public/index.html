@@ -376,7 +376,7 @@
         <h2>Vamos conversar sobre o seu caso</h2>
         <p class="texto-apoio" style="margin-bottom:2rem;">
           Conte em poucas linhas o que você procura — mentoria individual ou consultoria institucional —
-          e retornamos por e-mail ou telefone em até 2 dias úteis.
+          e retornamos por e-mail.
         </p>
 
         <div class="painel-contato">
@@ -463,41 +463,140 @@
       <div class="secao-cabecalho revelar">
         <p class="etiqueta">Anônimo · sem cadastro</p>
         <h2 id="plano-titulo">Meu Plano de Cuidado</h2>
-        <p class="texto-apoio">Cinco perguntas rápidas para sugerir trilhas de leitura. Suas respostas não são enviadas nem gravadas em nenhum servidor.</p>
+        <p class="texto-apoio">Dois questionários curtos e validados, para você refletir sobre como tem se sentido e receber sugestões de leitura.</p>
+        <p class="plano__aviso"><strong>Não é diagnóstico e não substitui consulta.</strong> Suas respostas ficam apenas neste aparelho: não são enviadas, guardadas nem registradas (nem em estatísticas de uso). Em crise: <a href="tel:188">CVV 188</a> · <a href="tel:192">SAMU 192</a>.</p>
       </div>
-      <form id="plano-form" novalidate>
+      <form id="plano-form" novalidate aria-describedby="plano-fontes">
+        <h3 class="plano__grupo">Humor (PHQ-9)</h3>
+        <p class="texto-apoio">Nas últimas 2 semanas, com que frequência você foi incomodado(a) por cada problema abaixo?</p>
         <fieldset class="plano__pergunta">
-          <legend>1. Tenho dormido mal ou acordado cansado(a).</legend>
-          <label><input type="radio" name="q1" value="0" data-trilha="sono" required> Quase nunca</label>
-          <label><input type="radio" name="q1" value="1" data-trilha="sono"> Às vezes</label>
-          <label><input type="radio" name="q1" value="2" data-trilha="sono"> Com frequência</label>
+          <legend>1. Pouco interesse ou pouco prazer em fazer as coisas</legend>
+          <label><input type="radio" name="phq1" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq1" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq1" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq1" value="3"> Quase todos os dias</label>
         </fieldset>
         <fieldset class="plano__pergunta">
-          <legend>2. Sinto preocupação difícil de controlar.</legend>
-          <label><input type="radio" name="q2" value="0" data-trilha="ansiedade" required> Quase nunca</label>
-          <label><input type="radio" name="q2" value="1" data-trilha="ansiedade"> Às vezes</label>
-          <label><input type="radio" name="q2" value="2" data-trilha="ansiedade"> Com frequência</label>
+          <legend>2. Se sentindo para baixo, deprimido(a) ou sem perspectiva</legend>
+          <label><input type="radio" name="phq2" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq2" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq2" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq2" value="3"> Quase todos os dias</label>
         </fieldset>
         <fieldset class="plano__pergunta">
-          <legend>3. Tenho me sentido sem ânimo ou triste.</legend>
-          <label><input type="radio" name="q3" value="0" data-trilha="humor" required> Quase nunca</label>
-          <label><input type="radio" name="q3" value="1" data-trilha="humor"> Às vezes</label>
-          <label><input type="radio" name="q3" value="2" data-trilha="humor"> Com frequência</label>
+          <legend>3. Dificuldade para pegar no sono ou permanecer dormindo, ou dormindo mais do que o costume</legend>
+          <label><input type="radio" name="phq3" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq3" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq3" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq3" value="3"> Quase todos os dias</label>
         </fieldset>
         <fieldset class="plano__pergunta">
-          <legend>4. O trabalho ou o cuidado com outros tem me esgotado.</legend>
-          <label><input type="radio" name="q4" value="0" data-trilha="trabalho" required> Quase nunca</label>
-          <label><input type="radio" name="q4" value="1" data-trilha="trabalho"> Às vezes</label>
-          <label><input type="radio" name="q4" value="2" data-trilha="trabalho"> Com frequência</label>
+          <legend>4. Se sentindo cansado(a) ou com pouca energia</legend>
+          <label><input type="radio" name="phq4" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq4" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq4" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq4" value="3"> Quase todos os dias</label>
         </fieldset>
         <fieldset class="plano__pergunta">
-          <legend>5. Tenho pensado em me machucar ou que a vida não vale a pena?</legend>
-          <label><input type="radio" name="seguranca" value="0" required> Não</label>
-          <label><input type="radio" name="seguranca" value="1"> Sim, às vezes ou com frequência</label>
+          <legend>5. Falta de apetite ou comendo demais</legend>
+          <label><input type="radio" name="phq5" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq5" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq5" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq5" value="3"> Quase todos os dias</label>
         </fieldset>
-        <button class="botao" type="submit">Ver minhas trilhas</button>
+        <fieldset class="plano__pergunta">
+          <legend>6. Se sentindo mal consigo mesmo(a) — ou achando que você é um fracasso ou que decepcionou sua família ou você mesmo(a)</legend>
+          <label><input type="radio" name="phq6" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq6" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq6" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq6" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>7. Dificuldade para se concentrar nas coisas, como ler o jornal ou ver televisão</legend>
+          <label><input type="radio" name="phq7" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq7" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq7" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq7" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>8. Lentidão para se movimentar ou falar, a ponto de outras pessoas perceberem? Ou o oposto: estar tão agitado(a) ou irrequieto(a) que você fica andando de um lado para o outro muito mais do que de costume</legend>
+          <label><input type="radio" name="phq8" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq8" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq8" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq8" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>9. Pensar em se ferir de alguma maneira ou que seria melhor estar morto(a)</legend>
+          <label><input type="radio" name="phq9" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="phq9" value="1"> Vários dias</label>
+          <label><input type="radio" name="phq9" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="phq9" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <h3 class="plano__grupo">Ansiedade (GAD-7)</h3>
+        <p class="texto-apoio">Nas últimas 2 semanas, com que frequência você foi incomodado(a) por cada problema abaixo?</p>
+        <fieldset class="plano__pergunta">
+          <legend>1. Sentir-se nervoso(a), ansioso(a) ou muito tenso(a)</legend>
+          <label><input type="radio" name="gad1" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad1" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad1" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad1" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>2. Não ser capaz de impedir ou de controlar as preocupações</legend>
+          <label><input type="radio" name="gad2" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad2" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad2" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad2" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>3. Preocupar-se muito com diversas coisas</legend>
+          <label><input type="radio" name="gad3" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad3" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad3" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad3" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>4. Dificuldade para relaxar</legend>
+          <label><input type="radio" name="gad4" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad4" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad4" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad4" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>5. Ficar tão agitado(a) que se torna difícil permanecer sentado(a)</legend>
+          <label><input type="radio" name="gad5" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad5" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad5" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad5" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>6. Ficar facilmente aborrecido(a) ou irritado(a)</legend>
+          <label><input type="radio" name="gad6" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad6" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad6" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad6" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <fieldset class="plano__pergunta">
+          <legend>7. Sentir medo como se algo horrível fosse acontecer</legend>
+          <label><input type="radio" name="gad7" value="0" required> Nenhuma vez</label>
+          <label><input type="radio" name="gad7" value="1"> Vários dias</label>
+          <label><input type="radio" name="gad7" value="2"> Mais da metade dos dias</label>
+          <label><input type="radio" name="gad7" value="3"> Quase todos os dias</label>
+        </fieldset>
+        <p id="plano-erro" class="plano__erro" role="alert" hidden></p>
+        <button class="botao" type="submit">Ver meu resultado</button>
       </form>
       <div class="plano__resultado" id="plano-resultado" tabindex="-1" hidden aria-live="polite"></div>
+      <div id="plano-fontes" class="plano__fontes">
+        <h3>Fontes dos questionários</h3>
+        <ol>
+          <li>Kroenke K, Spitzer RL, Williams JBW. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-613. <a href="https://doi.org/10.1046/j.1525-1497.2001.016009606.x" target="_blank" rel="noopener">doi:10.1046/j.1525-1497.2001.016009606.x</a></li>
+          <li>Santos IS, Tavares BF, Munhoz TN, et al. Sensibilidade e especificidade do Patient Health Questionnaire-9 (PHQ-9) entre adultos da população geral. Cad Saúde Pública. 2013;29(8):1533-1543. <a href="https://doi.org/10.1590/s0102-311x2013001200006" target="_blank" rel="noopener">doi:10.1590/s0102-311x2013001200006</a></li>
+          <li>Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006;166(10):1092-1097. <a href="https://doi.org/10.1001/archinte.166.10.1092" target="_blank" rel="noopener">doi:10.1001/archinte.166.10.1092</a></li>
+          <li>Moreno AL, DeSousa DA, et al. Factor structure, reliability, and item parameters of the Brazilian-Portuguese version of the GAD-7 questionnaire. Temas Psicol. 2016;24(1):367-376. <a href="https://doi.org/10.9788/tp2016.1-25" target="_blank" rel="noopener">doi:10.9788/tp2016.1-25</a></li>
+        </ol>
+        <p class="texto-apoio">Questionários de rastreamento indicam a frequência de sintomas; apenas uma avaliação clínica individual pode dizer se há um transtorno. Orientação geral: respeite sempre os protocolos da sua unidade de saúde e da rede de saúde local.</p>
+      </div>
     </div>
   </section>
 
@@ -508,7 +607,7 @@
         <p class="etiqueta">Agendamento</p>
         <h2>Vamos marcar sua consulta</h2>
         <p class="texto-apoio" style="margin-bottom:2rem;">
-          Preencha o formulário e entraremos em contato em até 1 dia útil para confirmar
+          Escreva por e-mail e responderemos para confirmar
           o horário. Você não precisa explicar nada agora — isso é assunto da consulta.
         </p>
 

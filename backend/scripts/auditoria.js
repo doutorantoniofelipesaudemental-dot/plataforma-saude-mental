@@ -130,9 +130,12 @@ function corrigirMdx(itens) {
   const mongo = await lerMongo();
   let corrigidos = null;
   if (args.has('--corrigir')) { corrigidos = { ...corrigirMdx(itens), cvvBanco: mongo.cvvCorrigidos || 0 }; itens = lerMdx(); }
+  const dup = require('../lib/duplicadosNext');
+  if (args.has('--corrigir') && mongo.docs && mongo.docs.length) dup.gravarSlugsCanonicos(mongo.docs.map((d) => d.slug));
+  const duplicadosSemCanonical = mongo.docs && mongo.docs.length ? dup.falhasDuplicados(itens.map((i) => i.slug), mongo.docs.map((d) => d.slug)) : [];
   const todos = [...itens, ...mongo.itens];
   const porSlug = new Map((mongo.docs || []).map((d) => [d.slug, d]));
-  const resultados = todos.map((it) => ({ it, falhas: [...checarTexto(it), ...(it.origem === 'mongo' && porSlug.get(it.slug) ? checarRenderizada(porSlug.get(it.slug)) : [])] }));
+  const resultados = todos.map((it) => ({ it, falhas: [...(it.origem !== 'mongo' && duplicadosSemCanonical.includes(it.slug) ? [{ grupo: 'técnica', msg: 'texto existe no app Next e no domínio principal sem canonical para o www (rodar npm run auditoria -- --corrigir)' }] : []), ...checarTexto(it), ...(it.origem === 'mongo' && porSlug.get(it.slug) ? checarRenderizada(porSlug.get(it.slug)) : [])] }));
   const comFalha = resultados.filter((r) => r.falhas.length);
   const porMsg = new Map();
   for (const r of comFalha) for (const f of r.falhas) { const k = `${f.grupo} · ${f.msg.replace(/\d+x|\(\d+\)|"[^"]*"/g, '…')}`; porMsg.set(k, [...(porMsg.get(k) || []), `${r.it.origem}:${r.it.slug}`]); }

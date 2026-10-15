@@ -1,4 +1,8 @@
-# Trechos RASCUNHO da /mentoria (15/10/2026)
+# Trechos da /mentoria — APROVADOS em 15/10/2026 pelo Dr. Antônio Felipe
+
+**Aprovação (15/10/2026):** os itens 1 a 5 abaixo foram aprovados como estão; os comentários RASCUNHO foram retirados do HTML.
+
+(Texto original do pedido de aprovação:)
 
 Estes trechos estão no ar (`public/mentoria.html`, marcados com `<!-- RASCUNHO -->`). Para aprovar ou corrigir, responda com o número.
 
