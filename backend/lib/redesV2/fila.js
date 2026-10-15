@@ -80,6 +80,11 @@ async function publicarDevidos({ agora = new Date(), simular = false } = {}) {
   if (!redesAtivas()) return { publicado: false, motivo: 'REDES_PUBLICACAO_ATIVA=false (freio de emergência)' };
   const devidos = await col('redes_v2').find({ status: 'aprovado-checagem', dataSugerida: { $lte: agora } }).toArray();
   if (!devidos.length) return { publicado: false, motivo: 'nenhum post devido' };
+  // Token recusado pela Meta: não tenta de novo com ele (a pausa sai sozinha quando um token novo é configurado).
+  if (!simular) {
+    const pausa = await require('../tokenInstagram').estadoPausa();
+    if (pausa) { await log('bloqueado', null, `Instagram pausado por token inválido: ${pausa.motivo}`); return { publicado: false, motivo: `Instagram pausado por token inválido (desde ${new Date(pausa.desde).toISOString().slice(0, 10)}): ${pausa.motivo}` }; }
+  }
   // critério de engajamento: entre os devidos, o texto mais lido primeiro (empate: o mais antigo)
   const lidosDocs = await col('artigos').find({ slug: { $in: devidos.map((d) => d.slug) } }, { projection: { slug: 1, visualizacoes: 1 } }).toArray();
   const lidos = new Map(lidosDocs.map((a) => [a.slug, a.visualizacoes || 0]));

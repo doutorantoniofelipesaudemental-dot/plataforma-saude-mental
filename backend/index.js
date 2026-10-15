@@ -147,7 +147,8 @@ app.get('/artigo/:slug', async (req, res) => {
       .select('titulo slug resumo conteudo categoria autor imagemCapa audioNarracaoUrl tempoLeitura publicadoEm atualizadoEm reescrita narracao')
       .lean();
 
-    if (!artigo) return shellEstatico();
+    // Slug inexistente ou ainda não publicado: 404 de verdade (nada de soft 404 com status 200).
+    if (!artigo) return res.status(404).sendFile(path.join(PUBLIC_DIR, '404.html'));
 
     res.set('Content-Type', 'text/html; charset=utf-8');
     res.send(renderizarArtigoHtml(artigo));
@@ -198,9 +199,9 @@ app.use(
 
 app.get('/admin', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'admin.html')));
 
-// SPA-ish fallback: qualquer rota desconhecida devolve a home.
+// Rota desconhecida: 404 de verdade, com link para a home e para /links (antes devolvia a home com status 200 = soft 404).
 app.use((req, res) => {
-  res.status(200).sendFile(path.join(PUBLIC_DIR, 'index.html'));
+  res.status(404).sendFile(path.join(PUBLIC_DIR, '404.html'));
 });
 
 /* ----------------------------- Erros gerais ------------------------------ */
