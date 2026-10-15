@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://drsaudemental.vercel.app/sitemap-index.xml
+Sitemap: https://www.drantoniofelipemedico.com.br/sitemap-index.xml

@@ -62,7 +62,7 @@ const APROVADOS = path.join(PASTA, 'aprovados');
 const RASCUNHOS = path.join(PASTA, 'rascunhos');
 const PUBLICADOS = path.join(PASTA, 'publicados');
 const BASE_API = process.env.BOT_API_BASE || 'https://drsaudemental.vercel.app';
-const SITE = 'https://drsaudemental.vercel.app';
+const SITE = 'https://www.drantoniofelipemedico.com.br';
 const LIMITE_LEGENDA = 2200;
 
 function argumentos() {

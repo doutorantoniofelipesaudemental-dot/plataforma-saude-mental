@@ -14,7 +14,7 @@ const { checarTexto } = require('../auditoriaTexto');
 const { checarEticaCfm, checarImagemSemMarcaDagua } = require('../checagensAprovacao');
 
 const RAIZ = path.resolve(__dirname, '../../..');
-const BASE_SITE = () => process.env.SITE_BASE_URL || 'https://drantoniofelipemedico.com.br';
+const BASE_SITE = () => process.env.SITE_BASE_URL || 'https://www.drantoniofelipemedico.com.br';
 const sha = (b) => crypto.createHash('sha256').update(b).digest('hex');
 const col = (n) => mongoose.connection.db.collection(n);
 const bufferDe = (b) => (b && b.buffer ? Buffer.from(b.buffer) : Buffer.from(b));

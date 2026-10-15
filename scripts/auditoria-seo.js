@@ -2,13 +2,13 @@
 /**
  * Auditoria de SEO dos artigos pré-renderizados (CLAUDE.md, Seção 19).
  *
- *   npm run auditoria:seo                       produção (https://drsaudemental.vercel.app)
+ *   npm run auditoria:seo                       produção (https://www.drantoniofelipemedico.com.br)
  *   AUDITORIA_BASE_URL=http://localhost:3000 npm run auditoria:seo
  *
  * Lê o HTML REAL de /artigo/:slug (o que o Google recebe, sem JS) e confere:
  *   - title com o sufixo da marca; meta description limpa (sem HTML, marcador
  *     estrutural, entidade quebrada, "undefined"/"null") e com 50–170 caracteres;
- *   - canonical = og:url = https://drsaudemental.vercel.app/artigo/<slug>, exato;
+ *   - canonical = og:url = https://www.drantoniofelipemedico.com.br/artigo/<slug>, exato;
  *   - og:image absoluta, igual à imagemCapa do artigo, respondendo imagem 1200×630;
  *   - JSON-LD válido com MedicalWebPage;
  *   - links internos: /artigo/<slug> tem de existir; /blog?categoria= tem de ser
@@ -17,8 +17,8 @@
  */
 const sharp = require('sharp');
 
-const BASE = (process.env.AUDITORIA_BASE_URL || 'https://drsaudemental.vercel.app').replace(/\/+$/, '');
-const CANONICO = 'https://drsaudemental.vercel.app';
+const BASE = (process.env.AUDITORIA_BASE_URL || 'https://www.drantoniofelipemedico.com.br').replace(/\/+$/, '');
+const CANONICO = 'https://www.drantoniofelipemedico.com.br';
 const SUFIXO_TITULO = '— Saúde Mental · Doutor Antônio Felipe';
 const CONCORRENCIA = 8;
 

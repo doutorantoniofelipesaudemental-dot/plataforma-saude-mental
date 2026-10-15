@@ -59,8 +59,8 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - Instagram: SOMENTE o perfil oficial https://instagram.com/doutor.antoniofelipe.smental.
 
 #### C. DOMÍNIO E MAPEAMENTO DA /links
-- Domínio oficial: https://drantoniofelipemedico.com.br/links (308 para www; responde HTTP 200). Publicada pelo projeto Vercel `drsaudemental` (`public/links.html` + rota em `vercel.json`). O `app/links/page.js` do app Next não tem deploy próprio.
-- Botões: 1) Agendamento de Consulta Médica -> mailto; 2) Mentoria e Consultoria em Saúde Mental -> `/#servicos`; 3) Portal de Saúde Mental & Narrações em Áudio -> `/`; 4) Instagram & Conteúdos Educativos -> perfil oficial.
+- Domínio principal ÚNICO (decisão 15/10/2026): https://www.drantoniofelipemedico.com.br (canonical, og:url, sitemap, robots e links internos). O apex drantoniofelipemedico.com.br faz 308 para o www (configuração da Vercel) e drsaudemental.vercel.app redireciona 301 para o www (exceto /api/, usado por crons e scripts). /links: https://www.drantoniofelipemedico.com.br/links (HTTP 200). Publicada pelo projeto Vercel `drsaudemental` (`public/links.html` + rota em `vercel.json`). O `app/links/page.js` do app Next não tem deploy próprio.
+- Botões: 1) Agendamento de Consulta Médica -> mailto; 2) Mentoria e Consultoria em Saúde Mental -> `/mentoria` (alterado em 15/10/2026; antes `/#servicos`); 3) Portal de Saúde Mental & Narrações em Áudio -> `/`; 4) Instagram & Conteúdos Educativos -> perfil oficial.
 
 #### D. GRAFIA E PRESERVAÇÃO (REGRA DEFINITIVA)
 - **Exceção permanente (15/10/2026):** "Antonio Felipe Garabito Jr." (dedicatória ao filho, em `public/index.html`) — nome de outra pessoa, grafia preservada SEM acento. Nunca corrigir; a auditoria e os testes não o acusam.

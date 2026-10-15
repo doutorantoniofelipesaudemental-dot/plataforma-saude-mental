@@ -40,7 +40,7 @@ const { calcularMatriz, FORMATOS } = require('../backend/lib/matrizMidia');
 
 // Pacote Multimídia obrigatório (CONTEUDO_INSTAGRAM/pautas/PADRAO_PACOTE_MULTIMIDIA.md):
 // Carrossel + Reel + Stories (com enquete e caixa de perguntas) + chamada ao áudio narrado do Portal.
-const SITE_PORTAL = 'https://drsaudemental.vercel.app';
+const SITE_PORTAL = 'https://www.drantoniofelipemedico.com.br';
 const PREFIXO_AUDIO = '🎧 Ouça o artigo narrado no Portal:';
 const RE_CHAMADA_AUDIO = /🎧 Ouça o artigo narrado no Portal: \S+/g;
 const chamadaAudio = (slug) => `${PREFIXO_AUDIO} ${SITE_PORTAL}/artigo/${slug}`;

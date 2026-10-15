@@ -192,12 +192,10 @@ async function auditarFerramenta(page, slug) {
     const r = alvo?.getBoundingClientRect();
     return {
       tipo: new URLSearchParams(location.search).get('tipo'),
-      marcado: document.querySelector('#formulario-contato-servicos input[name="tipoAtendimento"]:checked')?.value,
       alvoNaTela: !!r && r.top < innerHeight && r.bottom > 0,
     };
   });
-  expect.soft(destino.alvoNaTela, `${rotulo}: Home rolou até o formulário`).toBe(true);
-  if (destino.tipo) expect.soft(destino.marcado, `${rotulo}: ?tipo= pré-marcado`).toBe(destino.tipo);
+  expect.soft(destino.alvoNaTela, `${rotulo}: Home rolou até o contato por e-mail`).toBe(true);
   expect.soft(errosJs, `${rotulo}: erros de JS`).toEqual([]);
 }
 
@@ -365,9 +363,6 @@ test.describe('Checklist de Sobrecarga — CTAs e mensagem de cuidado', () => {
 
       await Promise.all([page.waitForURL((u) => u.pathname === '/'), cta.click()]);
       await page.waitForTimeout(1200);
-      const marcado = await page.evaluate(() =>
-        document.querySelector('#formulario-contato-servicos input[name="tipoAtendimento"]:checked')?.value);
-      expect(marcado).toBe(tipo);
       expect(usos, 'clique no CTA não conta uso').toHaveLength(1);
     });
   }
