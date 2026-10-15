@@ -17,6 +17,8 @@ const path = require('path');
 const { test, expect, devices } = require('@playwright/test');
 
 // Sem defaultBrowserType: a emulação roda no Chromium (tamanho, densidade, toque, UA).
+const { compararComTolerancia } = require('./comparacaoVisual'); // tolerância de ±1 px: ver comentário em comparacaoVisual.js
+
 const semNavegador = ({ defaultBrowserType, ...resto }) => resto;
 const APARELHOS = { 'iphone-13': semNavegador(devices['iPhone 13']), 'pixel-7': semNavegador(devices['Pixel 7']) };
 
@@ -147,7 +149,11 @@ for (const [aparelho, config] of Object.entries(APARELHOS)) {
             await bloco.screenshot({ ...opcoes, path: base });
             test.info().annotations.push({ type: 'base visual criada', description: nomeBase });
           } else {
-            await expect.soft(bloco, `${rotulo}: regressão visual`).toHaveScreenshot(nomeBase, { ...opcoes, maxDiffPixelRatio: 0.01, timeout: 20000 });
+            const atual = await bloco.screenshot(opcoes);
+            if (test.info().config.updateSnapshots === 'all') { fs.writeFileSync(base, atual); continue; }
+            const r = await compararComTolerancia(atual, base);
+            if (!r.ok) fs.writeFileSync(test.info().outputPath(`${nomeBase}-actual.png`), atual);
+            expect.soft(r.ok, `${rotulo}: regressão visual — ${r.motivo}`).toBe(true);
           }
         }
       }
