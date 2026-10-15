@@ -22,14 +22,26 @@ function registrarFalha(d, falhas) {
   return linha;
 }
 
-async function publicarVencidos({ agora = new Date(), simular = false } = {}) {
+/** Fim do dia civil em America/Bahia (UTC-3) que contém `d`, como Date UTC. */
+const fimDoDiaBahia = (d) => { const l = new Date(d.getTime() - 3 * 3600e3); return new Date(Date.UTC(l.getUTCFullYear(), l.getUTCMonth(), l.getUTCDate() + 1, 3, 0, 0) - 1); };
+
+/**
+ * `diario: true` (plano Hobby da Vercel: cron só 1x/dia) publica de uma vez TODOS os itens do dia (e atrasados),
+ * em vez de esperar cada horário. Com cron de 30 em 30 min (plano Pro) use diario:false.
+ */
+async function publicarVencidos({ agora = new Date(), simular = false, diario = false } = {}) {
   const col = Artigo.collection;
   const resultado = { publicados: [], barrados: [], substituicoes: [], pendentes: 0, simulado: simular };
-  const vencidos = await col.find({ publicado: false, 'agendamento.agendado': true, 'agendamento.slot': { $lte: agora } }).sort({ 'agendamento.slot': 1 }).limit(16).toArray();
+  const limite = diario ? fimDoDiaBahia(agora) : agora;
+  const vencidos = await col.find({ publicado: false, 'agendamento.agendado': true, 'agendamento.slot': { $lte: limite } }).sort({ 'agendamento.slot': 1 }).limit(48).toArray();
+  let ordem = 0;
   const tentados = new Set(vencidos.map((d) => String(d._id)));
 
   async function publicar(d, slot) {
-    if (!simular) await col.updateOne({ _id: d._id }, { $set: { publicado: true, publicadoEm: slot, 'agendamento.agendado': false, 'agendamento.falha': '', atualizadoEm: new Date() } });
+    // publicadoEm nunca no futuro; no modo diário preserva a ordem do calendário com 1 s de diferença.
+    const quando = slot <= agora ? slot : new Date(agora.getTime() - (vencidos.length - ordem) * 1000);
+    ordem += 1;
+    if (!simular) await col.updateOne({ _id: d._id }, { $set: { publicado: true, publicadoEm: quando, 'agendamento.agendado': false, 'agendamento.falha': '', atualizadoEm: new Date() } });
     resultado.publicados.push({ slug: d.slug, slot: slot.toISOString() });
   }
 
@@ -41,7 +53,7 @@ async function publicarVencidos({ agora = new Date(), simular = false } = {}) {
     if (!simular) await col.updateOne({ _id: d._id }, { $set: { 'agendamento.agendado': false, 'agendamento.falha': `auditoria: ${falhas.map((f) => f.msg).join(' | ')}` } });
     resultado.barrados.push({ slug: d.slug, falhas: falhas.map((f) => f.msg) });
     // puxa o próximo da fila (primeiro que passe na auditoria) para ocupar este horário
-    const proximos = await col.find({ publicado: false, 'agendamento.agendado': true, 'agendamento.slot': { $gt: agora } }).sort({ 'agendamento.slot': 1 }).limit(10).toArray();
+    const proximos = await col.find({ publicado: false, 'agendamento.agendado': true, 'agendamento.slot': { $gt: limite } }).sort({ 'agendamento.slot': 1 }).limit(10).toArray();
     for (const p of proximos) {
       if (tentados.has(String(p._id))) continue;
       tentados.add(String(p._id));

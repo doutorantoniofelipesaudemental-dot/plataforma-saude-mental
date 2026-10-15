@@ -4,7 +4,7 @@ const db = require('../lib/db');
 (async () => {
   await db.connect();
   const a = process.argv.find((x) => x.startsWith('--agora='));
-  const r = await publicarVencidos({ agora: a ? new Date(a.split('=')[1]) : new Date(), simular: process.argv.includes('--simular') });
+  const r = await publicarVencidos({ agora: a ? new Date(a.split('=')[1]) : new Date(), simular: process.argv.includes('--simular'), diario: process.argv.includes('--diario') });
   console.log(JSON.stringify(r, null, 2));
   process.exit(0);
 })().catch((e) => { console.error(e.message); process.exit(2); });

@@ -41,7 +41,7 @@ router.get('/publicar-fila', exigirCron, exigirBanco, async (req, res) => {
  */
 router.get('/publicar-agendados', exigirCron, exigirBanco, async (req, res) => {
   try {
-    const r = await publicarVencidos();
+    const r = await publicarVencidos({ diario: process.env.AGENDADOS_MODO !== 'meia-hora' }); // Hobby: 1x/dia, publica o dia inteiro
     log.info('[agendados]', JSON.stringify({ publicados: r.publicados.length, barrados: r.barrados.length, pendentes: r.pendentes }));
     res.json(r);
   } catch (err) {
