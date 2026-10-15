@@ -66,8 +66,27 @@ test('landing page e portal mantêm o bloco de 5 linhas com as pós-graduações
   assert.ok(index.includes('Terapia Cognitivo-Comportamental'));
 });
 
-test('o nome do médico leva acento nos arquivos de identidade do projeto', () => {
-  for (const rel of ['CLAUDE.md', 'post_instagram.py', 'reels_automation/src/llm_ollama.py']) {
-    assert.doesNotMatch(fs.readFileSync(path.join(RAIZ, rel), 'utf8'), /Antonio Felipe|ANTONIO FELIPE/, rel);
+// Regra vigente (14/10/2026, revoga o §F antigo): "Antônio" COM acento em textos e artes; "Antonio Felipe" sem acento é ERRO.
+// Exceção documentada (CLAUDE.md §3.A/D): ativos de marca já definidos e a /links; no CLAUDE.md só as linhas que descrevem essa exceção.
+const SEM_ACENTO = /Antonio Felipe|ANTONIO FELIPE/;
+
+test('o nome do médico leva acento nos arquivos de identidade e nos geradores de arte e legenda', () => {
+  for (const rel of ['post_instagram.py', 'reels_automation/src/llm_ollama.py', 'backend/lib/carrossel.js', 'backend/lib/legendaInstagram.js', 'backend/lib/conformidadeCfm.js', 'backend/lib/redesV2/arte.js', 'backend/lib/redesV2/conteudo.js']) {
+    assert.doesNotMatch(fs.readFileSync(path.join(RAIZ, rel), 'utf8'), SEM_ACENTO, rel);
   }
+});
+
+test('CLAUDE.md só usa "Antonio" sem acento ao descrever a exceção da /links e dos ativos de marca', () => {
+  const linhas = fs.readFileSync(path.join(RAIZ, 'CLAUDE.md'), 'utf8').split('\n').filter((l) => SEM_ACENTO.test(l));
+  for (const l of linhas) assert.match(l, /\/links|material de marca|assets\/marca|ativos de marca/i, `linha sem justificativa: ${l.slice(0, 90)}`);
+});
+
+test('a assinatura das artes novas das redes traz "Antônio" com acento e a fonte tem todos os glifos', () => {
+  const { ASSINATURA, glifosAusentes } = require('../../backend/lib/redesV2/arte');
+  const { FONTE_SANS, FONTE_SERIF } = require('../../backend/lib/carrossel');
+  assert.match(ASSINATURA.join(' '), /Antônio Felipe/);
+  assert.doesNotMatch(ASSINATURA.join(' '), SEM_ACENTO);
+  assert.deepEqual(glifosAusentes(ASSINATURA, FONTE_SANS), []);
+  assert.deepEqual(glifosAusentes(ASSINATURA, FONTE_SERIF), []);
+  assert.ok(glifosAusentes(['\u{1F600}'], FONTE_SANS).length > 0, 'detector de glifo ausente deve apontar o que a fonte não tem');
 });

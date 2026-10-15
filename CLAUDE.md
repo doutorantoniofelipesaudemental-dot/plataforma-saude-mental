@@ -54,7 +54,7 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - Nome Oficial: Dr. Antonio Felipe (grafia SEM acento no material de marca e na /links)
 - Médico Especialista em Medicina de Família e Comunidade (CRM-BA 41322 | RQE 26638)
 - Pós-Graduações: Psiquiatria • Saúde Mental & Atenção Psicossocial • Medicina do Trabalho • Neuropsicologia • Terapia Cognitivo-Comportamental (Não especialista)
-- Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe
+- Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antonio Felipe (texto da /links)
 
 #### B. CONTATO E CONVERSÃO (SEM MENSAGERIA DE TERCEIROS)
 - PROIBIDO incluir botões, formulários, rótulos ou links de mensageria de terceiros (tipo wa.me) no portal, na /links ou nas páginas estáticas (manter apenas o rótulo "Telefone"). Única ocorrência permitida: a string técnica de robôs em `backend/lib/robos.js`.
@@ -77,7 +77,7 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 
 #### F. PADRÃO DE CARROSSÉIS E PACOTES DO INSTAGRAM
 - Slides 4:5 (1080x1350), paleta azul-marinho + dourado + branco, alto contraste e leitura mobile; máximo de 25 palavras de arte por slide (a assinatura obrigatória do último slide é exceção).
-- Nas artes: "Dr. Antonio Felipe" (sem acento). Na legenda (`legenda.txt`) e textos de apoio: "Antônio" (com acento), pois as constantes éticas e os testes do backend exigem o texto oficial.
+- Nas artes, legendas e textos de apoio: "Dr. Antônio Felipe" (COM acento). Regra atualizada em 14/10/2026 (ver "Regras permanentes"); "Antonio" sem acento nas artes é erro.
 - Legenda validada por `checarEticaCfm` (contexto `social`) antes de entregar, com: aviso de IA (Res. CFM 2.454/2026), orientação geral/protocolos locais e "Em crise: CVV 188 · SAMU 192".
 - Último slide: assinatura de 3 linhas (CRM-BA 41322, RQE 26638, PAP e APS) sem quebras órfãs.
 - Carrossel de lançamento da /links (7 slides): capa (cérebro dourado + chamada), agendamento por e-mail, mentoria B2B, portal com áudios, conteúdos educativos, CTA para o link da bio e assinatura.
@@ -94,7 +94,7 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - Geração e montagem do pacote multimídia (carrossel 4:5, Stories 9:16, Reels/vídeos MP4 via FFmpeg com movimento, podcasts e narrações via Edge-TTS `pt-BR-AntonioNeural`, legendas) são 100% automáticas, sem API paga.
 - Antes de declarar um pacote PRONTO, rodar `node carrosseis-instagram/_checagem-tripla.js <nome-do-post> [artes.html…]` (script local, fora do Git), que grava `checagem-tripla.md` na pasta do post:
   1. Ética/legal: `checarEticaCfm` (contexto `social`) em legendas e roteiros; aviso de IA, orientação geral/protocolos locais e "Em crise: CVV 188 · SAMU 192"; sem mensageria de terceiros; links só do domínio oficial e do Instagram oficial; agendamento só por e-mail.
-  2. Branding/integridade: artes com "Dr. Antonio Felipe" e legendas/roteiros com "Dr. Antônio Felipe"; 25 palavras por quadro (exceto assinatura e avisos obrigatórios); dimensões 1080x1350 e 1080x1920; vídeo a 30 fps constante; trilha a -22 dB; inspeção visual dos quadros (quebras órfãs, zoom, transições) pelo agente.
+  2. Branding/integridade: artes, legendas e roteiros com "Dr. Antônio Felipe" (com acento, conferido na imagem renderizada); 25 palavras por quadro (exceto assinatura e avisos obrigatórios); dimensões 1080x1350 e 1080x1920; vídeo a 30 fps constante; trilha a -22 dB; inspeção visual dos quadros (quebras órfãs, zoom, transições) pelo agente.
   3. Segurança/preservação: mídias só em `carrosseis-instagram/` (ignorada pelo Git), repositório sem pendências, `backend/data`, `narracao.js` e testes intactos, sem custo de API.
 - Roteiros e legendas devem trazer o bloco oficial de identificação de 3 linhas (com acento) para passar no validador.
 - PUBLICAÇÃO (atualizada pelo usuário): a aprovação 50/50 na Tripla Checagem é o GATILHO AUTOMÁTICO de publicação direta no Instagram oficial (API Meta Graph ou script local de automação), sem comandos manuais adicionais nem nova confirmação, seguida do registro do log de publicação na pasta do post. Qualquer reprovação, alteração de conteúdo após a checagem ou ausência de credencial válida bloqueia o envio. Tokens do Meta ficam só em variáveis de ambiente/arquivos locais ignorados pelo Git, nunca no repositório nem em chats. Fluxo: conteúdo → Edge-TTS → FFmpeg → Tripla Checagem → disparo → log.

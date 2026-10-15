@@ -236,9 +236,9 @@ test.describe('Miniaplicativos — cálculo, salvaguardas e CTA', () => {
 
   test('ferramenta funciona também no fallback sem SSR', async ({ page }) => {
     const slug = 'estresse-migratorio-adaptacao-cultural';
-    // Slug inexistente cai no fallback do servidor: shell estático cru, sem
-    // data-ssr — o mesmo HTML servido quando o SSR não consegue consultar o banco.
-    const shell = await (await page.request.get('/artigo/__slug-inexistente-e2e__')).text();
+    // Shell estático cru, sem data-ssr — o mesmo HTML servido quando o SSR não consegue consultar o banco.
+    // (Slug inexistente agora devolve 404 de verdade; o shell vem direto do arquivo estático.)
+    const shell = await (await page.request.get('/artigo.html')).text();
     await page.route(new RegExp(`/artigo/${slug}$`), (r) => r.fulfill({ contentType: 'text/html', body: shell }));
     const usos = [];
     await page.route('**/ferramenta-uso', (r) => { usos.push(1); r.fulfill({ status: 200, body: '{"ok":true}' }); });
