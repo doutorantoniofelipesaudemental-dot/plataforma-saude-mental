@@ -135,7 +135,14 @@ function corrigirMdx(itens) {
   const duplicadosSemCanonical = mongo.docs && mongo.docs.length ? dup.falhasDuplicados(itens.map((i) => i.slug), mongo.docs.map((d) => d.slug)) : [];
   const todos = [...itens, ...mongo.itens];
   const porSlug = new Map((mongo.docs || []).map((d) => [d.slug, d]));
-  const resultados = todos.map((it) => ({ it, falhas: [...(it.origem !== 'mongo' && duplicadosSemCanonical.includes(it.slug) ? [{ grupo: 'técnica', msg: 'texto existe no app Next e no domínio principal sem canonical para o www (rodar npm run auditoria -- --corrigir)' }] : []), ...checarTexto(it), ...(it.origem === 'mongo' && porSlug.get(it.slug) ? checarRenderizada(porSlug.get(it.slug)) : [])] }));
+  // Retratações (Crossref/PubMed): referência retratada ou DOI inexistente vira falha do texto que a cita. `--sem-rede` pula.
+  let varredura = null; const retPorTexto = new Map();
+  if (!args.has('--sem-rede')) {
+    varredura = await require('../lib/retratacoes').varrer(todos.map((it) => ({ chave: `${it.origem}:${it.slug}`, corpo: it.corpo })));
+    for (const r of varredura.retratados) for (const c of r.chaves) retPorTexto.set(c, [...(retPorTexto.get(c) || []), { grupo: 'científica', msg: `referência RETRATADA (${r.id}: ${r.titulo || 'sem título'})` }]);
+    for (const r of varredura.inexistentes) for (const c of r.chaves) retPorTexto.set(c, [...(retPorTexto.get(c) || []), { grupo: 'técnica', msg: `${r.id} não encontrado (Crossref/PubMed): conferir` }]);
+  }
+  const resultados = todos.map((it) => ({ it, falhas: [...(retPorTexto.get(`${it.origem}:${it.slug}`) || []), ...(it.origem !== 'mongo' && duplicadosSemCanonical.includes(it.slug) ? [{ grupo: 'técnica', msg: 'texto existe no app Next e no domínio principal sem canonical para o www (rodar npm run auditoria -- --corrigir)' }] : []), ...checarTexto(it), ...(it.origem === 'mongo' && porSlug.get(it.slug) ? checarRenderizada(porSlug.get(it.slug)) : [])] }));
   const comFalha = resultados.filter((r) => r.falhas.length);
   const porMsg = new Map();
   for (const r of comFalha) for (const f of r.falhas) { const k = `${f.grupo} · ${f.msg.replace(/\d+x|\(\d+\)|"[^"]*"/g, '…')}`; porMsg.set(k, [...(porMsg.get(k) || []), `${r.it.origem}:${r.it.slug}`]); }
@@ -145,6 +152,7 @@ function corrigirMdx(itens) {
   const L = [];
   L.push(`# Auditoria geral — ${agora.toISOString()}`, '', `Modo: ${args.has('--corrigir') ? 'CORRIGIR' : 'somente leitura'} · textos auditados: ${todos.length} (${itens.length} MDX + ${mongo.itens.length} MongoDB) · com falha: ${comFalha.length}`, `Fontes: ${mongo.nota}`);
   if (corrigidos) L.push(`Correções automáticas aplicadas: acento em ${corrigidos.acento} MDX · caixa CVV/SAMU em ${corrigidos.cvv} MDX e ${corrigidos.cvvBanco} documento(s) do MongoDB · bloco de identificação em ${corrigidos.ident} MDX.`);
+  L.push(varredura ? `Retratações (Crossref/PubMed): ${varredura.total} DOI/PMID conferidos · retratados: ${varredura.retratados.length} · não encontrados: ${varredura.inexistentes.length} · não verificados (rede): ${varredura.naoVerificados}` : 'Retratações: não verificadas (--sem-rede).');
   L.push('', '## Resumo das falhas (por tipo)', '');
   if (!porMsg.size) L.push('Nenhuma falha automática.');
   for (const [k, v] of [...porMsg].sort((a, b) => b[1].length - a[1].length)) L.push(`- **${k}**: ${v.length} texto(s) — ${v.slice(0, 6).join(', ')}${v.length > 6 ? ', …' : ''}`);

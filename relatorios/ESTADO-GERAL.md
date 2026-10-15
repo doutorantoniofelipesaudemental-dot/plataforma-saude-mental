@@ -26,9 +26,16 @@ Atualizado em 15/10/2026 (checagem geral; atualizar ao final de cada lote futuro
 - **DOIs:** varredura de todos os 644 DOIs únicos no Crossref: todos existem; **2 retratados** (Panagioti 2018, em 8 textos; Kamal 2016, em 2) → proposta em `relatorios/referencias-retratadas-proposta.md`, **aguardando OK**.
 - **Amostra de 15 textos lidos por inteiro** (5 publicados, 5 agendados, 5 Next): links/imagens/títulos ok; DOIs conferidos; linguagem acolhedora, sem promessa nem estigma; CVV/SAMU presentes nos temas sensíveis; 3 observações editoriais na proposta (portaria do MJSP sem fonte, links das leis, selo "Narrativa composta" em 1 abertura).
 - **Testes:** 232 unitários e 31 E2E sem falhas.
-- **Lighthouse mobile medido em produção (acessibilidade):** home 100 · /mentoria 100 · /links 100 · artigo `burnout-aps` 100 · relato `relato-paciente-invisivel` 100 · /privacidade 100 (SEO 92 por canonical relativo, corrigido) · app Next 98 (sem `<main>` e erro de hidratação, corrigidos no PR #74).
+- **Lighthouse mobile medido em produção (acessibilidade):** home 100 · /mentoria 100 · /links 100 · artigo `burnout-aps` 100 · relato `relato-paciente-invisivel` 100 · /privacidade 100 (SEO 92 → 100 após corrigir o canonical) · app Next 98 → 100 (`<main>` e erro de hidratação corrigidos no PR #74). Todas as 7 páginas: acessibilidade 100, boas práticas 100, SEO 100.
 - **Produção:** www 200; apex 308→www; `vercel.app` 301→www (exceto `/api/`); sitemap-index (artigos 251 + páginas) e robots no www; canonical no www; autoavaliação com caixa de crise do item 9 testada no navegador (sem POST, sem erro de console); freio `{"publicacaoAtiva":true}`; token válido (`@doutor.antoniofelipe.smental`, vence 14/12/2026, 59 dias); fila 60 posts, primeiro `2026-10-26-saude-mental-cuidador` às 08:00 (Bahia).
 - **Fila do Instagram, amostra de 5 posts:** capas sem marca d'água, assinatura curta de 3 linhas, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria, acentos ok. Varredura das 60 legendas: 0 problemas.
+
+<!-- ROTINA:INICIO -->
+## Rotina semanal (última: 15/10/2026) — ATENÇÃO (1 problema(s))
+- ⚠ links quebrados: 2
+- Narração: 246 ok · faltam 480.
+- Detalhe: `relatorios/rotina-20261015.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
+<!-- ROTINA:FIM -->
 
 ## Pendências que dependem do Dr. Antônio
 1. Decidir sobre a troca das 2 referências retratadas (`relatorios/referencias-retratadas-proposta.md`).
