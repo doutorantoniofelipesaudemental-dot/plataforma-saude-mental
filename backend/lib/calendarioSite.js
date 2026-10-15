@@ -1,5 +1,5 @@
 /**
- * Calendário de publicação do site (PROMPT-MESTRE, decisão 7): 8 itens por dia útil, de segunda a sexta,
+ * Calendário de publicação do site (PROMPT-MESTRE, decisão 7): 11 itens por dia útil, de segunda a sexta,
  * a partir de 19/10/2026, sem feriados. Horários America/Bahia (UTC-3, sem horário de verão).
  *
  * Regras:
@@ -8,7 +8,8 @@
  *  - artigo e relato ligados saem no mesmo dia (artigo antes, relato depois, nunca em horários seguidos);
  *  - nunca a mesma categoria/tema em horários seguidos (inclusive na virada do dia).
  */
-const HORARIOS = ['08:00', '09:30', '11:00', '12:30', '14:00', '15:30', '17:00', '19:00'];
+// 11 por dia útil (autorização de 14/10/2026). Horários de hora em hora (08:00–18:00): suposição minha, pois o item 8 do pedido veio cortado.
+const HORARIOS = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
 const POR_DIA = HORARIOS.length;
 const INICIO = '2026-10-19';
 const FERIADOS = new Set(['2026-11-02', '2026-11-20', '2026-12-08']);

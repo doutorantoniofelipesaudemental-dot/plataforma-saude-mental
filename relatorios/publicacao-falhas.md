@@ -5,3 +5,5 @@
 - 2026-10-15T02:20:15.685Z · **relato-calor-aos-quarenta-e-oito** · termo estigmatizante: "louca" (decisão do autor) | linguagem de culpa/pressão: "frescura" (decisão do autor)
 - 2026-10-15T02:20:15.685Z · **relato-baiano-que-trabalhava-dobrado** · linguagem de culpa/pressão: "preguiça" (decisão do autor)
 - 2026-10-15T02:20:15.685Z · **higiene-autocuidado-saude-mental** · linguagem de culpa/pressão: "preguiça" (decisão do autor)
+
+- 2026-10-15T02:51:11.398Z · **violencia-psicologica-controle-coercitivo** · termo estigmatizante: "louca" (decisão do autor)

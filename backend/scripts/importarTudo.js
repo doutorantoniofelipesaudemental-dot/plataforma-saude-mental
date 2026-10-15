@@ -19,6 +19,7 @@ const { estadoNarracao } = require('../lib/narracao');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const BASE = path.join(RAIZ, 'importacao-completa/importacao');
+const BASE_EXTRA = path.join(RAIZ, 'importacao-extra-180/importacao'); // etapa D (3 séries extras)
 const APP = path.join(RAIZ, 'apps/plataforma-saude-mental');
 const args = process.argv.slice(2);
 const val = (k) => (args.find((a) => a.startsWith(`--${k}=`)) || '').split('=')[1] || (args.includes(`--${k}`) ? args[args.indexOf(`--${k}`) + 1] : null);
@@ -35,17 +36,20 @@ const PARTE_EQUIVALENTE = {
 };
 const SLUG_CORRIGIDO = { 'criancas-superproteção-riscos': 'criancas-superprotecao-riscos' };
 const COLISAO = { slug: 'ansiedade-social-timidez', pastaPlano180: '04-plano180-lotes-07-09', novoSlug: 'ansiedade-social-timidez-adolescencia' };
-const PROFISSAO_OK = new Set(['quando-encaminhar-aps', 'quando-procurar-psiquiatra-psicologo']);
+// "psiquiatra" como nome da profissão (nunca o autor): os 2 itens originais + 2 da Etapa D (psiquiatra espanhol citado; "não precisa de psiquiatra").
+const PROFISSAO_OK = new Set(['quando-encaminhar-aps', 'quando-procurar-psiquiatra-psicologo', 'migracao-luto-migratorio', 'migracao-papel-da-sociedade-e-politicas']);
 const RE_SENSIVEL = /\b(suic[ií]d\w*|autoles\w*|autom?utila\w*|desejo de morrer|quer(?:er)? morrer|tirar a (?:pr[óo]pria )?vida|morte)\b/i;
 const n = (t, re) => (t.match(re) || []).length;
 const sha = (t) => crypto.createHash('sha256').update(String(t)).digest('hex');
 
 /* ------------------------------ Leitura -------------------------------------- */
 function carregarItens() {
-  const manifesto = JSON.parse(fs.readFileSync(path.join(BASE, 'manifesto.json'), 'utf8'));
+  const manifestos = [[BASE, 'manifesto.json'], [BASE_EXTRA, 'manifesto-extra.json']].filter(([b, nome]) => fs.existsSync(path.join(b, nome)));
+  const pastas = manifestos.flatMap(([b, nome]) => JSON.parse(fs.readFileSync(path.join(b, nome), 'utf8')).pastas.map((p) => ({ ...p, base: b })));
   const itens = [];
   let ordem = 0;
-  for (const p of manifesto.pastas) {
+  for (const p of pastas) {
+    const BASE = p.base; // eslint-disable-line no-shadow
     const lote = path.join(BASE, p.pasta, 'lote.json');
     if (p.modo === 'nao-importar-agora' || !fs.existsSync(lote)) continue;
     const lista = JSON.parse(fs.readFileSync(lote, 'utf8'));
@@ -66,15 +70,27 @@ function carregarItens() {
       item.arquivo = arq;
       item.html = fs.existsSync(arq) ? fs.readFileSync(arq, 'utf8') : null;
       // Pasta 04 (Plano 180) da colisão entra como novo; pasta 08 atualiza o item existente.
-      item.modoEfetivo = slug === COLISAO.novoSlug ? 'criar-rascunho' : p.modo;
+      // Etapa D (verificar-e-importar): se já existir → atualizar-com-titulo; se não → criar (decide a existência no banco).
+      item.modoEfetivo = slug === COLISAO.novoSlug ? 'criar-rascunho' : p.etapa === 'D' ? 'atualizar-com-titulo' : p.modo;
       itens.push(item);
     }
   }
   return itens;
 }
 
+// Etapa D: as 3 categorias do pacote não existem no site; cada "parte" vai para a categoria existente mais próxima.
+const D_PARTE = {
+  '18-paliativos-saude-mental-60': { 'Cuidadores e familiares': 'Cuidadores & Famílias', 'Saúde mental dos profissionais': 'Médicos & Enfermeiros', 'Sociedade e instituições': 'Terceiro Setor & Causas Sociais', '*': 'Condições Específicas' },
+  '19-violencia-saude-mental-60': { 'Infância': 'Infância & Adolescência', 'Adolescência, escola e faculdade': 'Infância & Adolescência', 'Pessoa idosa': 'Saúde Mental na Terceira Idade', Trabalho: 'Empresas & RH', 'Bairro e comunidade': 'Terceiro Setor & Causas Sociais', '*': 'Pacientes & Famílias' },
+  '20-migracao-saude-mental-60': { '*': 'Migrantes & Expatriados' },
+};
+
 function categoriaDe(it) {
   let cat, motivo = null;
+  if (it.tipo !== 'relato' && D_PARTE[it.pasta]) {
+    cat = D_PARTE[it.pasta][it.parte] || D_PARTE[it.pasta]['*'];
+    return { cat, motivo: `${it.pasta.slice(0, 2)}: "${it.categoria}" / "${it.parte}" → "${cat}" (categoria nova não criada; a mais próxima)` };
+  }
   if (it.tipo === 'relato') cat = 'Relatos da Prática';
   else if (it.parte && CATEGORIAS.includes(it.parte)) cat = it.parte;
   else if (it.parte && PARTE_EQUIVALENTE[it.parte]) { cat = PARTE_EQUIVALENTE[it.parte]; motivo = `"${it.parte}" → "${cat}" (sem categoria própria; a mais próxima)`; }
@@ -97,7 +113,9 @@ function validarHtml(it) {
   const refs = iRef >= 0 ? n(html.slice(iRef), /<li[ >]/g) : 0;
   if (refs < 4) av.push(`${refs} referências (<4)`);
   for (const s of new Set([...html.matchAll(/<sup[^>]*>\s*\[?(\d+)\]?\s*<\/sup>/g)].map((m) => +m[1]))) if (s > refs) av.push(`<sup>${s}</sup> sem referência`);
-  if (RE_SENSIVEL.test(iRef >= 0 ? html.slice(0, iRef) : html) && !/\b188\b/.test(html)) av.push('tema sensível sem 188');
+  // Etapa D (pastas 18 a 20): 188 só para suicídio, autolesão ou desejo de morrer; morte e fim de vida (paliativos) NÃO exigem a caixa.
+  const reSens = /^(18|19|20)-/.test(it.pasta) ? new RegExp(RE_SENSIVEL.source.replace('|morte', ''), 'i') : RE_SENSIVEL;
+  if (reSens.test(iRef >= 0 ? html.slice(0, iRef) : html) && !/\b188\b/.test(html)) av.push('tema sensível sem 188');
   if (it.tipo === 'relato') {
     if (n(html, /Narrativa composta/g) !== 1) av.push(`"Narrativa composta" ${n(html, /Narrativa composta/g)}x`);
     if (!/reflection-box/.test(html)) av.push('sem .reflection-box');
@@ -126,7 +144,7 @@ async function main() {
   for (const it of todos) {
     const d = noBanco.get(it.slug);
     it.existeNoBanco = Boolean(d);
-    it.criadoPorNos = Boolean(d?.importacao?.pasta);
+    it.criadoPorNos = Boolean(d?.agendamento); // só os documentos criados por esta importação têm `agendamento`
     it.novo = it.modoEfetivo === 'criar-rascunho' ? (!d || it.criadoPorNos) : (!d || it.criadoPorNos);
     const c = categoriaDe(it); it.categoria = c.cat; it.motivoCategoria = c.motivo;
     it.avisos = validarHtml(it);
@@ -150,7 +168,7 @@ async function main() {
 
   /* ---------------------------- Relatório ---------------------------------- */
   const cont = (e, a) => acoes.filter((x) => x.it.etapa === e && x.acao === a).length;
-  const resumo = ['A', 'B', 'C'].map((e) => `Etapa ${e}: ${cont(e, 'atualizar')} atualizar · ${cont(e, 'criar') + cont(e, 'recriar')} criar · ${cont(e, 'inalterado')} inalterados · ${cont(e, 'erro-html')} erro`);
+  const resumo = ['A', 'B', 'C', 'D'].map((e) => `Etapa ${e}: ${cont(e, 'atualizar')} atualizar · ${cont(e, 'criar') + cont(e, 'recriar')} criar · ${cont(e, 'inalterado')} inalterados · ${cont(e, 'erro-html')} erro`);
   const mapeamentos = new Map();
   for (const x of acoes.filter((a) => a.acao === 'criar' && a.it.motivoCategoria)) mapeamentos.set(x.it.motivoCategoria, (mapeamentos.get(x.it.motivoCategoria) || 0) + 1);
   const comMdx = acoes.filter((x) => mdxExiste(x.it.slug)).map((x) => x.it.slug);
@@ -197,7 +215,7 @@ async function main() {
         const ligados = [...(vinc.get(it.slug) || [])];
         const parRelatos = it.tipo === 'artigo' ? ligados : [];
         const parArtigos = it.tipo === 'relato' ? ligados : [];
-        const meta = { lote180: it.lote_180 ?? null, semanaPublicacao: it.semana_publicacao != null ? +it.semana_publicacao : null, parte: it.parte || '', origem: it.origem, tipo: it.tipo, pasta: it.pasta };
+        const meta = { lote180: it.lote_180 ?? null, semanaPublicacao: it.semana_publicacao != null ? +it.semana_publicacao : null, parte: it.parte || '', origem: it.origem || 'extra-180', tipo: it.tipo, pasta: it.pasta };
         if (it.origem === 'serie-corpo') meta.serie = { nome: it.serie, slug: 'corpo-e-saude-mental', numero: it.numero_serie, bloco: it.bloco };
         if (acao === 'atualizar') {
           const set = { conteudo: it.html, tempoLeitura: it.tempoLeitura, atualizadoEm: agora, 'vinculos.relatos': parRelatos, 'vinculos.artigos': parArtigos };

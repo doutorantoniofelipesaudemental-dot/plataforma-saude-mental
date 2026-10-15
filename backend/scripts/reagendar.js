@@ -35,7 +35,7 @@ const aplicar = process.argv.includes('--aplicar');
 
   const dir = path.join(RAIZ, 'relatorios');
   fs.mkdirSync(dir, { recursive: true });
-  const cal = ['# Calendário de publicação do site', '', `${agenda.length} itens · ${new Set(agenda.map((a) => a.data)).size} dias úteis · de ${agenda[0]?.data} a ${agenda.at(-1)?.data} · 8 por dia útil (08:00, 09:30, 11:00, 12:30, 14:00, 15:30, 17:00, 19:00, America/Bahia)`, '',
+  const cal = ['# Calendário de publicação do site', '', `${agenda.length} itens · ${new Set(agenda.map((a) => a.data)).size} dias úteis · de ${agenda[0]?.data} a ${agenda.at(-1)?.data} · 11 por dia útil (08:00 a 18:00, de hora em hora, America/Bahia)`, '',
     '**ATENÇÃO — plano Hobby da Vercel:** o cron roda 1x por dia (08:00 de Salvador). Todos os itens do dia saem juntos nesse horário; a coluna Hora é a ordem planejada. Com o plano Pro, defina `AGENDADOS_MODO=meia-hora` e o cron `0,30 * * * *` para publicar em cada horário.', '',
     ...(falhas.length ? ['## Fora do calendário (aguardam decisão do Dr. Antônio)', '', ...falhas.map(({ d, f }) => `- **${d.slug}**: ${f.map((x) => x.msg).join(' | ')}`), ''] : []),
     '| Data | Hora | Slug | Título | Tipo | Público |', '|---|---|---|---|---|---|', ...agenda.map((a) => `| ${a.data} | ${a.hora} | ${a.slug} | ${a.titulo.replace(/\|/g, '/')} | ${a.tipo} | ${a.publico} |`)].join('\n');
