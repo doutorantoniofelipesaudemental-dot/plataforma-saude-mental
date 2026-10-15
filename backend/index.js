@@ -7,7 +7,7 @@ const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
 const { listarArtigos, listarCategorias } = require('./lib/listarArtigos');
 const { renderizarBlogHtml } = require('./lib/renderizarBlog');
 const { listarPostsRecentes, renderizarInstagramHtml } = require('./lib/renderizarInstagram');
-const { gerarSitemapArtigosXml, gerarSitemapIndexXml } = require('./lib/sitemap');
+const { gerarSitemapArtigosXml, gerarSitemapIndexXml, gerarSitemapPaginasXml } = require('./lib/sitemap');
 const agendamentosRouter = require('./routes/agendamentos');
 const contatoRouter = require('./routes/contato');
 const artigosRouter = require('./routes/artigos');
@@ -175,6 +175,13 @@ app.get('/sitemap-artigos.xml', async (req, res) => {
     res.status(500).send('Não foi possível gerar o sitemap.');
   }
 });
+
+app.get('/sitemap-paginas.xml', (req, res) => {
+  res.set('Content-Type', 'application/xml; charset=utf-8');
+  res.send(gerarSitemapPaginasXml());
+});
+
+app.get('/mentoria', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'mentoria.html')));
 
 app.get('/sitemap-index.xml', async (req, res) => {
   if (!db.isConfigured()) return res.status(503).send('Sitemap indisponível: banco não configurado.');

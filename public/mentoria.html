@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentoria e Consultoria em Saúde Mental · Dr. Antônio Felipe</title>
+<meta name="description" content="Mentoria para profissionais da Atenção Primária, consultoria em saúde mental para empresas e atendimento com o Dr. Antônio Felipe, médico de família e comunidade. Contato e agendamento por e-mail.">
+<link rel="canonical" href="https://drsaudemental.vercel.app/mentoria">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mentoria e Consultoria em Saúde Mental · Dr. Antônio Felipe">
+<meta property="og:description" content="Mentoria para profissionais da Atenção Primária, consultoria em saúde mental para empresas e atendimento. Contato e agendamento por e-mail.">
+<meta property="og:url" content="https://drsaudemental.vercel.app/mentoria">
+<meta property="og:image" content="https://drsaudemental.vercel.app/assets/img/og-cover.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root { --verde-escuro:#0d3330; --verde:#185d58; --areia:#faf7f2; --tinta:#17211f; --tinta-media:#45564f; --dourado:#c9a227; --linha:rgba(69,86,79,.25); }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--areia); color:var(--tinta); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.6; font-size:1rem; }
+  .pular { position:absolute; left:-999px; top:0; background:#fff; color:var(--verde-escuro); padding:.75rem 1rem; z-index:10; }
+  .pular:focus { left:1rem; top:1rem; outline:3px solid var(--dourado); }
+  .container { max-width:46rem; margin:0 auto; padding:0 1rem; }
+  header.topo { background:var(--verde-escuro); color:#fff; }
+  header.topo .container { display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:3.5rem; flex-wrap:wrap; padding-top:.5rem; padding-bottom:.5rem; }
+  header.topo a { color:#fff; text-decoration:none; font-weight:600; min-height:44px; display:inline-flex; align-items:center; }
+  header.topo nav { display:flex; gap:1.25rem; flex-wrap:wrap; }
+  h1, h2, h3 { font-family:Georgia,"Times New Roman",serif; color:var(--verde-escuro); line-height:1.25; margin:0; }
+  h1 { font-size:1.9rem; }
+  h2 { font-size:1.5rem; margin-bottom:1rem; }
+  h3 { font-size:1.15rem; margin-bottom:.5rem; }
+  p { margin:0 0 1rem; }
+  section { padding:2.5rem 0; }
+  .etiqueta { margin:0 0 .5rem; font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--verde); }
+  .apoio { color:var(--tinta-media); }
+  .grade { display:grid; gap:1rem; grid-template-columns:1fr; }
+  .cartao { background:#fff; border:1px solid var(--linha); border-radius:1rem; padding:1.25rem; }
+  .cartao ul { margin:.75rem 0 1.25rem; padding-left:1.1rem; }
+  .cartao li { margin-bottom:.35rem; }
+  .faixa { background:#fff; border-top:1px solid var(--linha); border-bottom:1px solid var(--linha); }
+  a.botao { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:.75rem 1.4rem; border-radius:.9rem; font-weight:600; text-decoration:none; background:var(--verde-escuro); color:#fff; border:2px solid var(--verde-escuro); }
+  a.botao:hover { background:var(--verde); border-color:var(--verde); }
+  a.botao--vazado { background:transparent; color:var(--verde-escuro); }
+  a.botao--vazado:hover { background:var(--verde-escuro); color:#fff; }
+  a:focus-visible, summary:focus-visible { outline:3px solid var(--dourado); outline-offset:2px; }
+  main a:not(.botao) { color:var(--verde); text-decoration:underline; text-underline-offset:2px; }
+  .acoes { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.5rem; }
+  ol.etapas { list-style:none; margin:0; padding:0; counter-reset:e; display:grid; gap:1rem; }
+  ol.etapas li { counter-increment:e; display:grid; grid-template-columns:2.25rem 1fr; gap:.9rem; }
+  ol.etapas li::before { content:counter(e); width:2.25rem; height:2.25rem; border-radius:50%; background:var(--verde-escuro); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  details { background:#fff; border:1px solid var(--linha); border-radius:.9rem; margin-bottom:.75rem; }
+  summary { cursor:pointer; padding:.9rem 1.1rem; min-height:44px; font-weight:600; color:var(--verde-escuro); }
+  details p { padding:0 1.1rem; }
+  .artigos { list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+  .artigos a { display:block; padding:.75rem 1rem; background:#fff; border:1px solid var(--linha); border-radius:.8rem; text-decoration:none !important; color:var(--verde-escuro) !important; min-height:44px; }
+  .artigos a:hover { border-color:var(--verde); }
+  .emergencia { background:#fff; border:2px solid var(--verde-escuro); border-radius:1rem; padding:1rem 1.25rem; margin:0; }
+  .cta { background:var(--verde-escuro); color:#fff; }
+  .cta h2 { color:#fff; }
+  .cta a.botao { background:var(--dourado); color:var(--verde-escuro); border-color:var(--dourado); }
+  .cta a.botao:hover { background:#fff; border-color:#fff; }
+  footer.rodape { background:var(--verde-escuro); color:#fff; padding:2.5rem 0 2rem; font-size:.92rem; }
+  footer.rodape a { color:#fff; }
+  footer.rodape a:focus-visible { outline-color:var(--dourado); }
+  footer.rodape p { margin:0 0 1rem; }
+  .legal { color:#e3ece9; font-size:.85rem; }
+  @media (min-width:720px) { h1 { font-size:2.4rem; } .grade--2 { grid-template-columns:1fr 1fr; } }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="container">
+    <a href="/">Portal de Saúde Mental · Dr. Antônio Felipe</a>
+    <nav aria-label="Principal">
+      <a href="/blog">Artigos</a>
+      <a href="/links">Links</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section>
+    <div class="container">
+      <p class="etiqueta">Serviços</p>
+      <h1>Mentoria e Consultoria em Saúde Mental</h1>
+      <!-- RASCUNHO para aprovação do Dr. Antônio: parágrafo de apresentação -->
+      <p class="apoio" style="margin-top:1rem;">
+        Meu trabalho em saúde mental acontece em dois lugares: no Pronto Atendimento Psiquiátrico, onde a urgência pede decisões
+        seguras, e na Atenção Primária à Saúde, onde o cuidado se constrói com o tempo, em vínculo com pessoas, famílias e equipes.
+        Esta página reúne as formas de trabalhar juntos.
+      </p>
+      <p class="apoio">
+        Além do atendimento clínico individual, atuo diretamente com profissionais e organizações que precisam estruturar cuidado em saúde mental.
+      </p>
+      <div class="acoes">
+        <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Mentoria%20e%20consultoria%20em%20sa%C3%BAde%20mental">Escrever por e-mail</a>
+        <a class="botao botao--vazado" href="#servicos">Ver os serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="faixa" aria-labelledby="t-servicos">
+    <div class="container">
+      <h2 id="t-servicos">O que ofereço</h2>
+      <div class="grade">
+        <article class="cartao">
+          <h3>Mentoria para médicos e profissionais da APS</h3>
+          <p>
+            Para médicos, residentes e outros profissionais de saúde que querem desenvolver raciocínio clínico em saúde mental com quem atua
+            nas duas pontas do sistema: o Pronto Atendimento Psiquiátrico e a Atenção Primária à Saúde.
+          </p>
+          <ul>
+            <li>Supervisão de casos clínicos em saúde mental</li>
+            <li>Desenvolvimento de raciocínio diagnóstico e conduta</li>
+            <li>Encontros individuais, presenciais ou online</li>
+          </ul>
+          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Mentoria%20em%20Sa%C3%BAde%20Mental">Falar sobre mentoria</a>
+        </article>
+
+        <article class="cartao">
+          <h3>Consultoria para empresas e RH</h3>
+          <p>
+            Para empresas, equipes de RH e instituições de saúde que precisam estruturar — não improvisar — o cuidado em saúde mental
+            oferecido a colaboradores ou pacientes.
+          </p>
+          <ul>
+            <li>Diagnóstico organizacional de saúde mental</li>
+            <li>Estruturação de fluxos de cuidado e encaminhamento</li>
+            <li>Capacitação de equipes e lideranças</li>
+            <!-- RASCUNHO para aprovação: item abaixo (Kit NR-1) citado no pedido, sem texto anterior da página -->
+            <li>Kit NR-1: apoio à identificação e ao manejo de riscos psicossociais no trabalho</li>
+          </ul>
+          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Consultoria%20em%20Sa%C3%BAde%20Mental">Falar sobre consultoria</a>
+        </article>
+
+        <article class="cartao">
+          <h3>Atendimento</h3>
+          <!-- RASCUNHO para aprovação: texto do serviço de atendimento -->
+          <p>
+            Consulta médica individual, com escuta e avaliação feitas com calma. A avaliação é sempre individual e presencial;
+            mentoria e consultoria não substituem consulta nem tratamento.
+          </p>
+          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta">Solicitar horário por e-mail</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-como">
+    <div class="container">
+      <h2 id="t-como">Como funciona</h2>
+      <!-- RASCUNHO para aprovação: etapas (sem promessa de resultado, sem valores) -->
+      <ol class="etapas">
+        <li><div><h3>Contato por e-mail</h3><p class="apoio">Você escreve contando o contexto e o que busca. Não envie dados de saúde por e-mail: bastam o perfil e o objetivo.</p></div></li>
+        <li><div><h3>Conversa inicial</h3><p class="apoio">Juntos, definimos se mentoria, consultoria ou atendimento é o caminho adequado.</p></div></li>
+        <li><div><h3>Plano combinado</h3><p class="apoio">Objetivos, formato e frequência dos encontros ficam claros desde o começo.</p></div></li>
+        <li><div><h3>Encontros e acompanhamento</h3><p class="apoio">Encontros com foco na sua realidade, com revisão do que funcionou e do que precisa de ajuste.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faixa" aria-labelledby="t-faq">
+    <div class="container">
+      <h2 id="t-faq">Perguntas frequentes</h2>
+      <!-- RASCUNHO para aprovação: perguntas e respostas -->
+      <details>
+        <summary>A mentoria substitui uma consulta ou um tratamento?</summary>
+        <p>Não. A mentoria é um espaço de aprendizado e supervisão para profissionais. Quem precisa de avaliação ou tratamento deve procurar atendimento individual, na unidade de saúde ou com um profissional de confiança.</p>
+      </details>
+      <details>
+        <summary>Posso mandar detalhes de um caso clínico por e-mail?</summary>
+        <p>Por favor, não. Por segurança e sigilo, não envie dados de saúde nem informações que identifiquem pacientes. Os casos são discutidos nos encontros, sempre de forma anonimizada.</p>
+      </details>
+      <details>
+        <summary>Os encontros são presenciais ou online?</summary>
+        <p>Podem ser presenciais ou online, conforme a combinação feita na conversa inicial.</p>
+      </details>
+      <details>
+        <summary>A consultoria serve para qual tipo de empresa?</summary>
+        <p>Para empresas, equipes de RH e instituições de saúde que querem estruturar o cuidado em saúde mental, com atenção aos riscos psicossociais previstos na NR-1.</p>
+      </details>
+      <details>
+        <summary>Como agendo ou peço informações?</summary>
+        <p>Somente por e-mail: <a href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta">doutor.antoniofelipe.saudemental@gmail.com</a>. A resposta chega por e-mail, com os próximos passos.</p>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-artigos">
+    <div class="container">
+      <h2 id="t-artigos">Para ler antes de escrever</h2>
+      <ul class="artigos">
+        <li><a href="/artigo/quando-encaminhar-aps">Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS</a></li>
+        <li><a href="/artigo/burnout-aps">Burnout em médicos e enfermeiros da Atenção Primária: quando quem cuida precisa de cuidados</a></li>
+        <li><a href="/artigo/burnout-na-gestao-fatores-de-risco">Síndrome de Burnout na Gestão: como identificar fatores de risco psicossocial nas equipes</a></li>
+        <li><a href="/artigo/realidade-saude-mental-aps">O que ninguém te conta sobre atender saúde mental na atenção primária</a></li>
+        <li><a href="/blog">Ver todos os artigos</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="t-cta">
+    <div class="container">
+      <h2 id="t-cta">Vamos conversar?</h2>
+      <p>Escreva contando o seu contexto. A resposta vem por e-mail, com os próximos passos.</p>
+      <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta">Enviar e-mail</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <p class="emergencia" role="note"><strong>Precisa de apoio agora?</strong> Ligue para o <a href="tel:188">CVV 188</a> (24 horas, gratuito) ou para o <a href="tel:192">SAMU 192</a>. Esta página não atende urgências.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <p>
+      Dr. Antônio Felipe — Médico — CRM-BA 41322<br>
+      Especialista em Medicina de Família e Comunidade — RQE 26638<br>
+      Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde<br>
+      Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho<br>
+      NÃO ESPECIALISTA
+    </p>
+    <p class="legal">
+      O conteúdo deste site tem caráter informativo e educativo e não substitui consulta, diagnóstico ou tratamento realizados por profissional de saúde habilitado.
+      Este site não realiza atendimento de urgência ou emergência. Não há promessa de resultado.
+    </p>
+    <p class="legal">
+      Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).
+    </p>
+    <p class="legal"><a href="/">Início</a> · <a href="/blog">Artigos</a> · <a href="/links">Links</a> · <a href="/privacidade">Privacidade</a> · <a href="https://instagram.com/doutor.antoniofelipe.smental" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+  </div>
+</footer>
+</body>
+</html>
