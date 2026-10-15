@@ -73,34 +73,48 @@
   }
 
   /* ------------------------ Meu Plano de Cuidado ------------------------ */
+  /* PHQ-9 e GAD-7 (versões em português; fontes visíveis na página). Tudo roda no navegador: nada é enviado, gravado ou contado. */
   var form = document.getElementById('plano-form');
   if (form) {
-    var trilhas = {
-      sono: { titulo: 'Sono e descanso', busca: 'sono' },
-      ansiedade: { titulo: 'Ansiedade e preocupação', busca: 'ansiedade' },
-      humor: { titulo: 'Humor e desânimo', busca: 'depressão' },
-      trabalho: { titulo: 'Trabalho e esgotamento', busca: 'burnout' },
-      cuidador: { titulo: 'Cuidar de quem cuida', busca: 'cuidador' },
-    };
     var saida = document.getElementById('plano-resultado');
+    var erro = document.getElementById('plano-erro');
+    var faixaPhq = function (n) { return n <= 4 ? 'mínima' : n <= 9 ? 'leve' : n <= 14 ? 'moderada' : n <= 19 ? 'moderadamente grave' : 'grave'; };
+    var faixaGad = function (n) { return n <= 4 ? 'mínima' : n <= 9 ? 'leve' : n <= 14 ? 'moderada' : 'grave'; };
+    var soma = function (prefixo, qtd) {
+      var total = 0;
+      for (var i = 1; i <= qtd; i++) {
+        var marcado = form.querySelector('input[name="' + prefixo + i + '"]:checked');
+        if (!marcado) return null;
+        total += Number(marcado.value);
+      }
+      return total;
+    };
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var dados = new FormData(form);
-      var pontos = {};
-      form.querySelectorAll('input[type=radio]:checked').forEach(function (r) {
-        pontos[r.dataset.trilha] = (pontos[r.dataset.trilha] || 0) + Number(r.value);
-      });
-      var risco = dados.get('seguranca') === '1';
-      var ordem = Object.keys(trilhas).sort(function (a, b) { return (pontos[b] || 0) - (pontos[a] || 0); }).slice(0, 3);
+      var phq = soma('phq', 9);
+      var gad = soma('gad', 7);
+      if (phq === null || gad === null) {
+        erro.textContent = 'Responda todas as perguntas para ver o resultado. Nada é enviado nem gravado.';
+        erro.hidden = false;
+        var primeira = form.querySelector('fieldset:not(:has(input:checked)) input');
+        if (primeira) primeira.focus();
+        return;
+      }
+      erro.hidden = true;
+      var item9 = form.querySelector('input[name="phq9"]:checked');
+      var risco = !!item9 && Number(item9.value) > 0;
       var html = '';
       if (risco) {
-        html += '<p><strong>Você não precisa passar por isso sozinho(a).</strong> Ligue agora para o <a href="tel:188">CVV 188</a> (24 h, gratuito) ou, em emergência, para o <a href="tel:192">SAMU 192</a>.</p>';
+        html += '<div class="plano__crise" role="alert"><p><strong>Você não precisa passar por isso sozinho(a).</strong> Você marcou pensamentos de se ferir ou de que seria melhor estar morto(a). Ligue agora para o <a href="tel:188">CVV 188</a> (24 h, gratuito) ou, em emergência, para o <a href="tel:192">SAMU 192</a>. Procure também a unidade de saúde ou o CAPS da sua cidade.</p></div>';
       }
-      html += '<h3>Suas trilhas de leitura</h3><ul>';
-      ordem.forEach(function (k) {
-        html += '<li><a href="/blog?busca=' + encodeURIComponent(trilhas[k].busca) + '">' + trilhas[k].titulo + '</a></li>';
-      });
-      html += '</ul><p><small>Este questionário é anônimo: suas respostas não saem deste aparelho e não são gravadas. Ele orienta leituras; não é diagnóstico nem substitui avaliação profissional.</small></p>';
+      html += '<h3>Seu resultado</h3><ul><li>Humor (PHQ-9): ' + phq + ' de 27 pontos — frequência de sintomas ' + faixaPhq(phq) + '.</li><li>Ansiedade (GAD-7): ' + gad + ' de 21 pontos — frequência de sintomas ' + faixaGad(gad) + '.</li></ul>';
+      if (phq >= 10 || gad >= 10 || risco) {
+        html += '<p>Pelo que você respondeu, vale conversar com um profissional de saúde. Você pode procurar a unidade básica de saúde do seu bairro (Atenção Primária) ou o CAPS da sua cidade; a avaliação individual é o que esclarece o que está acontecendo.</p>';
+      } else {
+        html += '<p>Se algo ainda incomoda você, vale conversar com um profissional de saúde, mesmo com pontuação baixa.</p>';
+      }
+      html += '<h3>Sugestões de leitura</h3><ul><li><a href="/blog?busca=' + encodeURIComponent('depressão') + '">Humor e desânimo</a></li><li><a href="/blog?busca=ansiedade">Ansiedade e preocupação</a></li></ul>';
+      html += '<p><small>Este resultado não é diagnóstico e não substitui consulta. Suas respostas não saem deste aparelho e não são gravadas. Fontes: PHQ-9 e GAD-7, listadas abaixo do questionário.</small></p>';
       saida.innerHTML = html;
       saida.hidden = false;
       saida.focus();

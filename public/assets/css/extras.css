@@ -91,3 +91,14 @@ body, .secao, .cartao { transition: background-color 300ms ease, color 300ms eas
 .plano__resultado a { color: var(--verde-700); font-weight: 600; }
 .plano__resultado ul { padding-left: 1.2rem; }
 [hidden] { display: none !important; }
+
+/* Autoavaliação PHQ-9 / GAD-7 */
+.plano__aviso { margin: 1rem 0 0; padding: 0.9rem 1.1rem; border-left: 4px solid var(--verde-700); background: var(--verde-50); color: #17211f; border-radius: var(--raio); }
+.plano__aviso a { color: var(--verde-700); font-weight: 700; }
+.plano__grupo { margin: 2rem 0 0.25rem; }
+.plano__erro { color: #8a1c1c; font-weight: 600; margin: 0 0 1rem; }
+.plano__crise { border: 2px solid #8a1c1c; background: #fff; color: #17211f; padding: 1rem 1.2rem; border-radius: var(--raio); margin-bottom: 1rem; }
+.plano__crise a { color: #8a1c1c; font-weight: 700; font-size: 1.1em; }
+.plano__fontes { margin-top: 2rem; font-size: 0.9rem; }
+.plano__fontes ol { padding-left: 1.2rem; }
+.plano__fontes a { color: var(--verde-700); overflow-wrap: anywhere; }
