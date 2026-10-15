@@ -14,7 +14,13 @@ const peca = (rodape, extra = '') => `## Stories\n\nConvite para a mentoria.\n${
 const codigos = (md) => aud.auditarTexto(md).falhas.map((f) => f.codigo);
 
 test('as 3 linhas do padrão social são as três primeiras do bloco completo', () => {
-  assert.deepEqual(IDENTIFICACAO_3_LINHAS.split('\n'), IDENTIFICACAO_COMPLETA.split('\n').slice(0, 3));
+  // Desde 15/10/2026 a assinatura curta das mídias sociais (CRM, RQE, PAP e APS, com "·") difere das 3 primeiras do padrão completo
+  // (com "—"): as duas formas são aceitas na auditoria social, e o bloco completo traz a TCC.
+  const completo = IDENTIFICACAO_COMPLETA.split('\n');
+  assert.equal(IDENTIFICACAO_3_LINHAS.split('\n').length, 3);
+  assert.ok(completo[3].includes('Terapia Cognitivo-Comportamental'));
+  assert.match(completo[0], /CRM-BA 41322/);
+  assert.match(IDENTIFICACAO_3_LINHAS, /RQE 26638/);
 });
 
 test('assinatura de 3 linhas passa, sem exigir as pós-graduações', () => {

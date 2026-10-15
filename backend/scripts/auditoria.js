@@ -85,7 +85,7 @@ function auditarSeguranca() {
 // Correções AUTOMÁTICAS permitidas (forma, nunca sentido): acento do autor, caixa CVV 188 · SAMU 192 e bloco de identificação.
 const CVV_HTML = '<div class="callout"><strong>Precisa de apoio agora?</strong> CVV — 188 (ligação gratuita, 24h, também por chat em cvv.org.br) · SAMU — 192 em emergências · A UBS e o CAPS da sua cidade acolhem e encaminham.</div>';
 const CVV_MDX = "<Callout titulo={'Se você precisar de apoio agora:'}>\nCVV — 188 (ligação gratuita, 24h, também por chat em cvv.org.br) · SAMU — 192 em emergências.\n</Callout>";
-const IDENT_MDX = '<p className="identificacao-medico">Dr. Antônio Felipe — Médico — CRM-BA 41322<br />Especialista em Medicina de Família e Comunidade — RQE 26638<br />Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde<br />Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Neuropsicologia e Medicina do Trabalho<br />NÃO ESPECIALISTA</p>';
+const IDENT_MDX = '<p className="identificacao-medico">Dr. Antônio Felipe — Médico — CRM-BA 41322<br />Especialista em Medicina de Família e Comunidade — RQE 26638<br />Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde<br />Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho<br />NÃO ESPECIALISTA</p>';
 
 function inserirAntes(texto, marcadores, bloco) {
   for (const re of marcadores) {

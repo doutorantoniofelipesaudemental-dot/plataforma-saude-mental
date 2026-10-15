@@ -27,6 +27,10 @@ const ENTIDADES = { '&nbsp;': ' ', '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quo
 function textoParaNarracao(artigo) {
   let html = String(artigo.conteudo || '');
 
+  // O bloco de identificação do médico (CRM/RQE/pós-graduações) NÃO entra na narração nem no hash: a assinatura pode
+  // ser atualizada sem invalidar o áudio (decisão de 15/10/2026). Remove todo parágrafo que traga "NÃO ESPECIALISTA".
+  html = html.replace(/<p\b[^>]*>(?:(?!<\/p>)[\s\S])*N[ÃA]O ESPECIALISTA(?:(?!<\/p>)[\s\S])*<\/p>/gi, ' ');
+
   // Ferramenta interativa: do título da seção (ou do bloco) até o próximo H2.
   html = html.replace(/<h2[^>]*>\s*Ferramenta interativa\s*<\/h2>[\s\S]*?(?=<h2[\s>]|$)/gi, ' ');
   html = html.replace(/<div[^>]*class="[^"]*ferramenta[^"]*"[\s\S]*?(?=<h2[\s>]|$)/gi, ' ');

@@ -187,7 +187,8 @@ const RE_SENSIVEL = /suic[ií]d|autoextermin|tirar (?:a )?(?:minha |a própria )
 
 // As linhas fixas de cada padrão (CFM): 5 no portal/blog/artigo, 3 em Instagram e mídias sociais.
 const LINHAS_PORTAL = IDENTIFICACAO_COMPLETA.split('\n');
-const LINHAS_SOCIAL = LINHAS_PORTAL.slice(0, 3);
+// Mídias sociais: assinatura curta de 3 linhas (sem pós-graduações), que NÃO coincide com as 3 primeiras do padrão completo.
+const LINHAS_SOCIAL = require('./legendaInstagram').IDENTIFICACAO_3_LINHAS.split('\n');
 
 const RE_APRESENTA_COMO_PSIQUIATRA =
   /\b(?:dr\.?|doutor)\s+ant[oô]nio\s+felipe[^.\n]{0,60}\bpsiquiatra\b|\bespecialista em (?:psiquiatria|sa[uú]de mental)\b|\bpsiquiatra (?:dr\.?|doutor)\s+ant[oô]nio/i;
@@ -222,7 +223,9 @@ function checarEticaCfm(texto, { contexto = 'portal', sensivel, exigirIdentifica
     const corpo = norm(t);
     // Conteúdo legado (social) traz a identificação de uma linha: continua válido.
     const legado = contexto === 'social' && corpo.includes(norm(IDENTIFICACAO));
-    const ausentes = legado ? [] : linhas.filter((l) => !corpo.includes(norm(l)));
+    // 4ª linha do padrão completo (pós-graduações) é SEM ponto final; a redação antiga com ponto é erro (15/10/2026).
+    const comPontoAntigo = contexto !== 'social' && linhas.some((l) => /Medicina do Trabalho$/.test(l) && corpo.includes(`${norm(l)}.`));
+    const ausentes = legado ? [] : linhas.filter((l) => !corpo.includes(norm(l)) || (comPontoAntigo && /Medicina do Trabalho$/.test(l)));
     if (ausentes.length) falhas.push(`identificação CFM incompleta (${contexto === 'social' ? '3' : '5'} linhas): falta "${ausentes.map((l) => l.slice(0, 40)).join('", "')}…"`);
     if (!/CRM-BA 41322/.test(t)) falhas.push('sem CRM-BA 41322');
     if (!/RQE 26638/.test(t)) falhas.push('sem RQE 26638');
