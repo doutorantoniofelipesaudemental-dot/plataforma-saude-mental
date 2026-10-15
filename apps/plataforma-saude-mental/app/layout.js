@@ -1,6 +1,7 @@
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./Header";
+import RodapeGeral from "./RodapeGeral";
 
 // Mesmas familias tipograficas do site principal (Regra 7 do CLAUDE.md —
 // DNA de marca consolidado, nao uma escolha nova para esta app).
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col font-sans">
         <Header />
         {children}
+        <RodapeGeral />
       </body>
     </html>
   );

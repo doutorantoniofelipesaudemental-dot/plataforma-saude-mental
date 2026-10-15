@@ -140,8 +140,8 @@ async function gerarMp3(artigo, provedor) {
   fs.mkdirSync(PASTA_SAIDA, { recursive: true });
   const arquivoTexto = path.join(PASTA_SAIDA, `${artigo.slug}.txt`);
   const arquivoMp3 = path.join(PASTA_SAIDA, `${artigo.slug}.mp3`);
-  // Pronúncia (opt-in, só Edge): o dicionário vale só para o texto falado; o hash e o texto do artigo seguem sobre o original.
-  const textoFalado = provedor === 'edge' && process.argv.includes('--pronuncia') ? require('../lib/pronunciaTts').aplicarPronuncia(texto) : texto;
+  // Pronúncia (ativa por padrão no Edge desde 15/10/2026; --sem-pronuncia desliga): o dicionário vale só para o texto falado; o hash e o texto do artigo seguem sobre o original.
+  const textoFalado = provedor === 'edge' && !process.argv.includes('--sem-pronuncia') ? require('../lib/pronunciaTts').aplicarPronuncia(texto) : texto;
   fs.writeFileSync(arquivoTexto, textoFalado);
 
   const inicio = Date.now();

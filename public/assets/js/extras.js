@@ -78,8 +78,8 @@
   if (form) {
     var saida = document.getElementById('plano-resultado');
     var erro = document.getElementById('plano-erro');
-    var faixaPhq = function (n) { return n <= 4 ? 'mínima' : n <= 9 ? 'leve' : n <= 14 ? 'moderada' : n <= 19 ? 'moderadamente grave' : 'grave'; };
-    var faixaGad = function (n) { return n <= 4 ? 'mínima' : n <= 9 ? 'leve' : n <= 14 ? 'moderada' : 'grave'; };
+    var faixaPhq = function (n) { return n <= 4 ? 'mínimos' : n <= 9 ? 'leves' : n <= 14 ? 'moderados' : n <= 19 ? 'moderadamente graves' : 'graves'; };
+    var faixaGad = function (n) { return n <= 4 ? 'mínimos' : n <= 9 ? 'leves' : n <= 14 ? 'moderados' : 'graves'; };
     var soma = function (prefixo, qtd) {
       var total = 0;
       for (var i = 1; i <= qtd; i++) {
@@ -105,13 +105,13 @@
       var risco = !!item9 && Number(item9.value) > 0;
       var html = '';
       if (risco) {
-        html += '<div class="plano__crise" role="alert"><p><strong>Você não precisa passar por isso sozinho(a).</strong> Você marcou pensamentos de se ferir ou de que seria melhor estar morto(a). Ligue agora para o <a href="tel:188">CVV 188</a> (24 h, gratuito) ou, em emergência, para o <a href="tel:192">SAMU 192</a>. Procure também a unidade de saúde ou o CAPS da sua cidade.</p></div>';
+        html += '<div class="plano__crise" role="alert"><p><strong>Você não precisa passar por isso sozinho(a).</strong> Você marcou pensamentos de se ferir ou de que seria melhor estar morto(a). Fale com alguém agora: <a href="tel:188">CVV 188</a> (ligação gratuita, 24 horas; também por chat em <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>) ou <a href="tel:192">SAMU 192</a>. Se houver risco imediato, procure uma UPA, um pronto-socorro ou o CAPS da sua cidade.</p></div>';
       }
-      html += '<h3>Seu resultado</h3><ul><li>Humor (PHQ-9): ' + phq + ' de 27 pontos — frequência de sintomas ' + faixaPhq(phq) + '.</li><li>Ansiedade (GAD-7): ' + gad + ' de 21 pontos — frequência de sintomas ' + faixaGad(gad) + '.</li></ul>';
+      html += '<h3>Seu resultado</h3><ul><li>Humor (PHQ-9), ' + phq + ' de 27 pontos: suas respostas sugerem sintomas ' + faixaPhq(phq) + '.</li><li>Ansiedade (GAD-7), ' + gad + ' de 21 pontos: suas respostas sugerem sintomas ' + faixaGad(gad) + '.</li></ul>';
       if (phq >= 10 || gad >= 10 || risco) {
-        html += '<p>Pelo que você respondeu, vale conversar com um profissional de saúde. Você pode procurar a unidade básica de saúde do seu bairro (Atenção Primária) ou o CAPS da sua cidade; a avaliação individual é o que esclarece o que está acontecendo.</p>';
+        html += '<p>Vale conversar com um profissional de saúde. Você pode procurar a unidade básica de saúde (UBS) do seu bairro ou o CAPS da sua cidade; a avaliação individual é o que esclarece o que está acontecendo, e cuidar disso é um passo importante.</p>';
       } else {
-        html += '<p>Se algo ainda incomoda você, vale conversar com um profissional de saúde, mesmo com pontuação baixa.</p>';
+        html += '<p>Se algo ainda incomoda você, vale conversar com um profissional de saúde na sua UBS, mesmo com pontuação baixa.</p>';
       }
       html += '<h3>Sugestões de leitura</h3><ul><li><a href="/blog?busca=' + encodeURIComponent('depressão') + '">Humor e desânimo</a></li><li><a href="/blog?busca=ansiedade">Ansiedade e preocupação</a></li></ul>';
       html += '<p><small>Este resultado não é diagnóstico e não substitui consulta. Suas respostas não saem deste aparelho e não são gravadas. Fontes: PHQ-9 e GAD-7, listadas abaixo do questionário.</small></p>';
@@ -120,5 +120,16 @@
       saida.focus();
       form.reset();
     });
+    var limpar = document.getElementById('plano-limpar');
+    if (limpar) {
+      limpar.addEventListener('click', function () {
+        form.reset();
+        erro.hidden = true;
+        saida.hidden = true;
+        saida.innerHTML = '';
+        var topo = form.querySelector('input');
+        if (topo) topo.focus();
+      });
+    }
   }
 })();

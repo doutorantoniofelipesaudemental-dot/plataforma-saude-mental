@@ -25,3 +25,13 @@ test('item 9 positivo mostra CVV 188 / SAMU 192; nada é enviado, guardado ou re
   assert.match(plano, /CVV 188[\s\S]{0,200}SAMU 192/);
   assert.doesNotMatch(plano, /fetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|document\.cookie|gtag|dataLayer/);
 });
+
+test('resultado em linguagem acolhedora ("sugerem sintomas"), crise antes da pontuação, período e botão de limpar', () => {
+  assert.doesNotMatch(plano, /você tem (depress|ansiedade)/i);
+  assert.match(plano, /suas respostas sugerem sintomas/);
+  assert.ok(plano.indexOf('plano__crise') < plano.indexOf('Seu resultado'), 'caixa de crise antes da pontuação');
+  assert.match(plano, /cvv\.org\.br/);
+  assert.match(plano, /UPA[\s\S]{0,60}pronto-socorro[\s\S]{0,60}CAPS/);
+  assert.match(html, /Nas últimas 2 semanas/);
+  assert.match(html, /id="plano-limpar"/);
+});

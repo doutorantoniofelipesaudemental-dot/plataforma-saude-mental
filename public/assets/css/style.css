@@ -104,7 +104,7 @@
 
   --tinta: #17211f;
   --tinta-media: #45564f;
-  --tinta-fraca: #6e817a;
+  --tinta-fraca: #5f736c; /* escurecido de #6e817a (3,87:1) para 4,73:1 sobre areia: WCAG AA */
 
   --papel: #ffffff;
   --linha: rgba(13, 51, 48, 0.12);
@@ -1071,7 +1071,8 @@ a:hover { color: var(--verde-500); }
 @media (max-width: 880px) { .rodape__grade { grid-template-columns: 1fr 1fr; gap: 2rem; } }
 @media (max-width: 520px) { .rodape__grade { grid-template-columns: 1fr; } }
 
-.rodape h4 {
+.rodape h4,
+.rodape h3 {
   color: #fff;
   font-family: var(--fonte-texto);
   font-size: 0.8rem;
