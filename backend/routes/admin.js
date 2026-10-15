@@ -10,6 +10,7 @@ const RegistroPublicacao = require('../models/RegistroPublicacao');
 const { garantirCapaRedes, capaAtualizada } = require('../lib/capaRedes');
 const { resumoToken } = require('../lib/tokenInstagram');
 const { log } = require('../lib/log');
+const { redesAtivas } = require('../lib/freioRedes');
 
 const router = express.Router();
 
@@ -156,6 +157,9 @@ router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req,
  * credencial (nomes, nunca valores), travas, próximos da fila e os últimos
  * postados. Nunca publica — para isso existe o cron (backend/lib/filaRedes.js).
  */
+/** GET /api/admin/freio-redes — só o estado do freio (true/false); nunca devolve o valor da variável. */
+router.get('/freio-redes', exigirAdmin, (req, res) => res.json({ publicacaoAtiva: redesAtivas() }));
+
 router.get('/fila-redes', exigirAdmin, exigirBanco, async (req, res) => {
   try {
     const [aguardar, proximos, ultimos, token] = await Promise.all([

@@ -39,7 +39,23 @@ ${urls}
 `;
 }
 
-/** Índice referenciando os sitemaps do site — hoje só o de artigos. */
+// Páginas estáticas institucionais (data da última revisão do conteúdo da página).
+const PAGINAS_ESTATICAS = ['/mentoria'];
+const DATA_PAGINAS = '2026-10-15T00:00:00.000Z';
+
+function gerarSitemapPaginasXml() {
+  const urls = PAGINAS_ESTATICAS.map((p) => `  <url>
+    <loc>${escapeXml(`${BASE_URL}${p}`)}</loc>
+    <lastmod>${DATA_PAGINAS}</lastmod>
+  </url>`).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
+}
+
+/** Índice referenciando os sitemaps do site: artigos e páginas estáticas. */
 async function gerarSitemapIndexXml() {
   const maisRecente = await Artigo.findOne({ publicado: true })
     .select('publicadoEm atualizadoEm')
@@ -53,8 +69,12 @@ async function gerarSitemapIndexXml() {
     <loc>${BASE_URL}/sitemap-artigos.xml</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>${BASE_URL}/sitemap-paginas.xml</loc>
+    <lastmod>${DATA_PAGINAS}</lastmod>
+  </sitemap>
 </sitemapindex>
 `;
 }
 
-module.exports = { gerarSitemapArtigosXml, gerarSitemapIndexXml };
+module.exports = { gerarSitemapArtigosXml, gerarSitemapIndexXml, gerarSitemapPaginasXml };

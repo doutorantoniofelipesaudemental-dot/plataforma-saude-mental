@@ -54,6 +54,10 @@
       "dest": "/backend/index.js"
     },
     {
+      "src": "/sitemap-paginas.xml",
+      "dest": "/backend/index.js"
+    },
+    {
       "src": "/blog/migracao/(migracao-saude-mental|criancas-adolescentes-migrantes-saude-mental|mulher-migrante-saude-mental|homem-migrante-saude-mental|trabalhador-migrante-saude-mental|estudante-migrante-saude-mental|refugiados-trauma-saude-mental|xenofobia-racismo-saude-mental-migrantes|familias-separadas-migracao-quem-fica|migrantes-como-buscar-ajuda-saude-mental-sus)([.]html)?/?",
       "status": 301,
       "headers": {
@@ -86,6 +90,10 @@
     {
       "src": "/links/?",
       "dest": "/public/links.html"
+    },
+    {
+      "src": "/mentoria/?",
+      "dest": "/public/mentoria.html"
     },
     {
       "src": "/redes/previa/?",
