@@ -26,7 +26,7 @@ const { IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../lib/legen
 const PASTA = path.join(__dirname, '..', '..', 'CONTEUDO_INSTAGRAM');
 const PASTAS_FORA = new Set(['pautas']);
 
-const RE_ATUACAO = /Atuo em Pronto Atendimento Psiqui[aá]trico[^\n]*Aten[cç][aã]o Prim[aá]ria/i;
+const RE_ATUACAO = /(?:Atuo em|Atua no) Pronto Atendimento Psiqui[aá]trico[^\n]*Aten[cç][aã]o Prim[aá]ria/i;
 const RE_MENTORIA = /\bmentoria\b/i;
 const LINHA_ATUACAO = IDENTIFICACAO_3_LINHAS.split('\n').find((l) => /^Atuo em/.test(l));
 // Trilha: o volume combinado é -22 dB (CLAUDE.md). Lê o número que vem depois de "trilha" na mesma linha.

@@ -39,20 +39,6 @@ const BOTOES = [
   },
 ];
 
-const POS_GRADUACOES = [
-  'Psiquiatria',
-  'Saúde Mental & Atenção Psicossocial',
-  'Medicina do Trabalho',
-  'Neuropsicologia',
-  'Terapia Cognitivo-Comportamental',
-];
-
-const ATUACAO = [
-  'Pronto Atendimento Psiquiátrico',
-  'Atenção Primária à Saúde',
-  'Mentoria e Consultoria em Saúde Mental do Dr. Antônio Felipe',
-];
-
 const FOCO =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dourado';
 
@@ -88,22 +74,13 @@ export default function PaginaLinks() {
       <div className="mx-auto flex w-full max-w-md flex-col gap-8">
         <header className="flex flex-col gap-3 text-center">
           <h1 className="font-serif text-3xl font-bold text-verde-escuro">Dr. Antônio Felipe</h1>
-          <p className="text-base font-medium text-tinta">
-            Médico Especialista em Medicina de Família e Comunidade
+          <p className="text-sm leading-relaxed text-tinta-media">
+            Dr. Antônio Felipe — Médico — CRM-BA 41322<br />
+            Especialista em Medicina de Família e Comunidade — RQE 26638<br />
+            Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde<br />
+            Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho<br />
+            NÃO ESPECIALISTA
           </p>
-          <p className="text-sm font-semibold text-verde">CRM-BA 41322 | RQE 26638</p>
-
-          <div className="mt-2 flex flex-col gap-1">
-            <p className="text-xs font-semibold uppercase tracking-wide text-tinta-media">
-              Pós-graduações (não especialista)
-            </p>
-            <p className="text-sm leading-relaxed text-tinta-media">{POS_GRADUACOES.join(' • ')}</p>
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <p className="text-xs font-semibold uppercase tracking-wide text-tinta-media">Atuação</p>
-            <p className="text-sm leading-relaxed text-tinta-media">{ATUACAO.join(' • ')}</p>
-          </div>
         </header>
 
         <nav aria-label="Links principais">

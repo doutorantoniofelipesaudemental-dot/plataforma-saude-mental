@@ -15,11 +15,11 @@ Sua missão é gerar código, artigos, interfaces, carrosséis e scripts de míd
 
 ### 1. PILARES DE COMPLIANCE MÉDICO E ÉTICA (RESOLUÇÃO CFM 2.336/2023, OMS E LGPD)
 
-#### A. IDENTIFICAÇÃO NO PORTAL E BLOG (PADRÃO COMPLETO 5 LINHAS)
-Dr. Antônio Felipe · Médico · CRM-BA 41322
-Especialista em Medicina de Família e Comunidade · RQE 26638
-Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
-Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.
+#### A. IDENTIFICAÇÃO NO PORTAL E BLOG (PADRÃO COMPLETO 5 LINHAS — ASSINATURA PADRÃO, VALE PARA TODO O SITE, SEM EXCEÇÃO; DECISÃO DE 15/10/2026)
+Dr. Antônio Felipe — Médico — CRM-BA 41322
+Especialista em Medicina de Família e Comunidade — RQE 26638
+Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho
 NÃO ESPECIALISTA
 
 #### B. IDENTIFICAÇÃO NO INSTAGRAM E MÍDIAS SOCIAIS (PADRÃO SINTÉTICO 3 LINHAS)
@@ -51,10 +51,7 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 ### 3. DIRETRIZES DE BRANDING, CONTATO E PRESERVAÇÃO (PROMPT UNIFICADO — VALEM SOBRE O QUE CONFLITAR ACIMA)
 
 #### A. CABEÇALHO RÍGIDO NA /links, NOS ATIVOS DE MARCA E EM NOVAS ARTES/APRESENTAÇÕES (CFM 2.336/2023)
-- Nome Oficial: Dr. Antônio Felipe (COM acento, também no material de marca e na /links; regra de 15/10/2026, sem exceção)
-- Médico Especialista em Medicina de Família e Comunidade (CRM-BA 41322 | RQE 26638)
-- Pós-Graduações: Psiquiatria • Saúde Mental & Atenção Psicossocial • Medicina do Trabalho • Neuropsicologia • Terapia Cognitivo-Comportamental (Não especialista)
-- Atuação: Pronto Atendimento Psiquiátrico • Atenção Primária à Saúde • Mentoria e Consultoria em Saúde Mental do Dr. Antônio Felipe
+- Assinatura: a PADRÃO COMPLETA de 5 linhas do §1.A (com a Terapia Cognitivo-Comportamental), também na /links, nos ativos de marca e em novas artes/apresentações de cabeçalho. Nome sempre "Dr. Antônio Felipe" (com acento).
 
 #### B. CONTATO E CONVERSÃO (SEM MENSAGERIA DE TERCEIROS)
 - PROIBIDO incluir botões, formulários, rótulos ou links de mensageria de terceiros (tipo wa.me) no portal, na /links ou nas páginas estáticas (manter apenas o rótulo "Telefone"). Única ocorrência permitida: a string técnica de robôs em `backend/lib/robos.js`.
@@ -135,5 +132,6 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 - O deploy inicial do código do novo publicador é o único ponto que exige OK; depois, as publicações seguem sozinhas.
 
 ### Decisões do Dr. Antônio (14/10/2026)
+- **Assinatura padrão (15/10/2026):** o Dr. Antônio TEM pós-graduação em Terapia Cognitivo-Comportamental. A assinatura de 5 linhas do §1.A ("—", "Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde", pós-graduações com a TCC e sem ponto final, "NÃO ESPECIALISTA" logo abaixo da linha das pós-graduações) vale em todo o site, sem exceção. A assinatura curta de 3 linhas das mídias sociais (CRM, RQE, PAP e APS) continua como está, pois não lista pós-graduações. O bloco de identificação NÃO entra na narração nem no hash da narração (`backend/lib/narracao.js`): trocar a assinatura não invalida áudios.
 - **§D (hash de narração) — liberado** para os itens do PROMPT-MESTRE e para correções aprovadas da auditoria. Nesses itens: marcar a narração como `pendente`; ocultar o player do áudio antigo até o novo ser gerado; NÃO apagar o arquivo de áudio antigo e NÃO gerar áudio agora. Para todos os outros textos, o §D continua valendo.
 - **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) ATUALIZAÇÃO de 15/10/2026: a exceção da `/links` e de `assets/marca/` também foi REVOGADA; "Antônio" leva acento em todo lugar, exceto endereços, @, e-mail e nomes técnicos.

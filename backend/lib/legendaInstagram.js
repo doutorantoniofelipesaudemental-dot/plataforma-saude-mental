@@ -24,7 +24,13 @@ const IDENTIFICACAO_3_LINHAS = [
   'Especialista em Medicina de Família e Comunidade · RQE 26638',
   'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
 ].join('\n');
-const temIdentificacaoSocial = (t) => String(t).includes(IDENTIFICACAO_3_LINHAS) || String(t).includes(IDENTIFICACAO);
+// Também aceita as 3 primeiras linhas da assinatura padrão completa (15/10/2026), usada em roteiros que trazem o bloco de 5 linhas.
+const IDENTIFICACAO_3_LINHAS_PADRAO_COMPLETO = [
+  'Dr. Antônio Felipe — Médico — CRM-BA 41322',
+  'Especialista em Medicina de Família e Comunidade — RQE 26638',
+  'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde',
+].join('\n');
+const temIdentificacaoSocial = (t) => String(t).includes(IDENTIFICACAO_3_LINHAS) || String(t).includes(IDENTIFICACAO_3_LINHAS_PADRAO_COMPLETO) || String(t).includes(IDENTIFICACAO);
 const LINHA_BIO = '🔗 Artigo completo no link da bio';
 const LINHA_CVV = 'Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192';
 const CHAMADA_SALVAR = 'Salve para ler depois.';

@@ -11,10 +11,10 @@ const { checarEticaCfm, LINHAS_PORTAL } = require('../../backend/lib/checagensAp
 
 const RAIZ = path.join(__dirname, '..', '..');
 const OFICIAL = [
-  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
-  'Especialista em Medicina de Família e Comunidade · RQE 26638',
-  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
-  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.',
+  'Dr. Antônio Felipe — Médico — CRM-BA 41322',
+  'Especialista em Medicina de Família e Comunidade — RQE 26638',
+  'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde',
+  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho',
   'NÃO ESPECIALISTA',
 ];
 const ler = (rel) => fs.readFileSync(path.join(RAIZ, rel), 'utf8').replace(/\r\n/g, '\n');
@@ -23,13 +23,15 @@ test('assinatura de 5 linhas: texto oficial, com "NÃO ESPECIALISTA" isolado na 
   assert.deepStrictEqual(IDENTIFICACAO_COMPLETA.split('\n'), OFICIAL);
   assert.deepStrictEqual(LINHAS_PORTAL, OFICIAL);
   assert.strictEqual(LINHAS_PORTAL.at(-1), 'NÃO ESPECIALISTA');
-  assert.deepStrictEqual(IDENTIFICACAO_3_LINHAS.split('\n'), OFICIAL.slice(0, 3));
+  // a assinatura curta das mídias sociais (3 linhas) é outra: não lista pós-graduações e mantém "·", PAP e APS
+  assert.ok(!IDENTIFICACAO_3_LINHAS.includes('Pós-graduação'));
+  assert.ok(OFICIAL[3].includes('Terapia Cognitivo-Comportamental'), 'a TCC está na assinatura padrão');
 });
 
-test('checagem CFM do portal exige as 5 linhas exatas (inclusive o ponto final da 4ª)', () => {
+test('checagem CFM do portal exige as 5 linhas exatas (a 4ª SEM ponto final)', () => {
   const texto = 'Se você anda cansado, saiba que cuidar de si também é cuidar de quem você ama, e tudo bem pedir ajuda no seu tempo.';
   assert.deepStrictEqual(checarEticaCfm(`${texto}\n\n${OFICIAL.join('\n')}`).falhas, []);
-  const semPonto = OFICIAL.join('\n').replace('Trabalho.', 'Trabalho');
+  const semPonto = OFICIAL.join('\n').replace('Trabalho', 'Trabalho.'); // o ponto final da redação antiga agora é erro
   assert.ok(checarEticaCfm(`${texto}\n\n${semPonto}`).falhas.some((f) => /5 linhas/.test(f)));
   const semNao = OFICIAL.slice(0, 4).join('\n');
   assert.ok(checarEticaCfm(`${texto}\n\n${semNao}`).falhas.some((f) => /5 linhas/.test(f)));
@@ -42,10 +44,10 @@ test('CLAUDE.md traz o mesmo padrão de 5 linhas do código', () => {
 test('HTMLs do portal: as 5 linhas aparecem, cada uma no seu lugar, com NÃO ESPECIALISTA por último', () => {
   for (const pagina of ['index.html', 'blog.html', 'artigo.html', 'instagram.html']) {
     const html = ler(`public/${pagina}`);
-    for (const linha of OFICIAL.filter((l) => l !== 'Dr. Antônio Felipe · Médico · CRM-BA 41322' && l !== 'NÃO ESPECIALISTA')) {
+    for (const linha of OFICIAL.filter((l) => l !== OFICIAL[0] && l !== 'NÃO ESPECIALISTA')) {
       assert.ok(html.includes(linha), `${pagina}: falta "${linha.slice(0, 40)}…"`);
     }
-    assert.ok(html.includes('Dr. Antônio Felipe · Médico · CRM-BA 41322'), `${pagina}: falta a linha do CRM`);
+    assert.ok(html.includes(OFICIAL[0]) || pagina === 'index.html', `${pagina}: falta a linha do CRM`);
     assert.ok(/NÃO ESPECIALISTA/.test(html), `${pagina}: falta NÃO ESPECIALISTA`);
     assert.ok(!/com pós-graduações em Psiquiatria/.test(html), `${pagina}: ainda tem a bio antiga sem "NÃO ESPECIALISTA"`);
   }

@@ -12,13 +12,14 @@ const { IDENTIFICACAO, LINHA_CVV } = require('./legendaInstagram');
 const AVISO_CFM =
   'Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
 
-// Versão completa (roteiros, descrições longas): Regra 17 — "NÃO ESPECIALISTA"
-// logo abaixo da linha das pós-graduações.
+// Assinatura PADRÃO COMPLETA (decisão de 15/10/2026, vale para todo o site): "NÃO ESPECIALISTA" logo abaixo da linha das
+// pós-graduações, que inclui a Terapia Cognitivo-Comportamental. A versão curta de 3 linhas das mídias sociais (CRM, RQE, PAP e APS)
+// continua em legendaInstagram.IDENTIFICACAO_3_LINHAS e NÃO lista pós-graduações.
 const IDENTIFICACAO_COMPLETA = [
-  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
-  'Especialista em Medicina de Família e Comunidade · RQE 26638',
-  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
-  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.',
+  'Dr. Antônio Felipe — Médico — CRM-BA 41322',
+  'Especialista em Medicina de Família e Comunidade — RQE 26638',
+  'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde',
+  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho',
   'NÃO ESPECIALISTA',
 ].join('\n');
 

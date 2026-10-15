@@ -52,6 +52,12 @@ function checarTexto({ origem, slug, titulo, corpo, resumo, tempoLeitura }) {
   if (origem === 'mdx' && contar(corpo, /CRM-BA 41322/g) !== 1) f('técnica', `"CRM-BA 41322" ${contar(corpo, /CRM-BA 41322/g)}x (esperado 1)`);
   if (origem === 'mdx' && contar(corpo, /RQE 26638/g) !== 1) f('técnica', `"RQE 26638" ${contar(corpo, /RQE 26638/g)}x (esperado 1)`);
   if (contar(corpo, /N[ÃA]O ESPECIALISTA/g) > 1) f('técnica', '"NÃO ESPECIALISTA" duplicado');
+  // Assinatura padrão completa (15/10/2026): toda linha de pós-graduações traz a TCC e é seguida de "NÃO ESPECIALISTA" (uma vez).
+  if (/P[óo]s-gradua[çc][ãa]o em Psiquiatria/i.test(corpo)) {
+    if (!/Terapia Cognitivo-Comportamental/.test(corpo)) f('técnica', 'assinatura completa sem a Terapia Cognitivo-Comportamental');
+    if (!/Medicina do Trabalho\s*(?:<br\s*\/?>)?\s*N[ÃA]O ESPECIALISTA/i.test(corpo)) f('técnica', '"NÃO ESPECIALISTA" não está logo abaixo da linha das pós-graduações');
+    if (/Medicina do Trabalho\.\s*(?:<br\s*\/?>)?\s*N[ÃA]O ESPECIALISTA/i.test(corpo)) f('técnica', 'linha das pós-graduações com ponto final (redação antiga)');
+  }
   if (/RQE 26638/.test(corpo) && !/Medicina de Fam[ií]lia e Comunidade/.test(corpo)) f('ética', 'RQE sem "Medicina de Família e Comunidade"');
   if (/Antonio Felipe/.test(corpo)) f('ética', '"Antonio" sem acento (corrigível)');
   if (RE_PSIQ_AUTOR.test(corpo)) f('ética', 'autor apresentado como psiquiatra / #psiquiatria');

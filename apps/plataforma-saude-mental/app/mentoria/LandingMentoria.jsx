@@ -4,10 +4,10 @@ import { ArrowRight, CheckCircle2, Stethoscope, Users, Building2, MessageCircle 
 // Landing de Mentoria. Texto de identificação e aviso de IA idênticos aos do CLAUDE.md do projeto
 // (padrão completo de 5 linhas do portal e Res. CFM 2.454/2026); sem promessa de resultado.
 const IDENTIFICACAO = [
-  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
-  'Especialista em Medicina de Família e Comunidade · RQE 26638',
-  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
-  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho.',
+  'Dr. Antônio Felipe — Médico — CRM-BA 41322',
+  'Especialista em Medicina de Família e Comunidade — RQE 26638',
+  'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde',
+  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho',
   'NÃO ESPECIALISTA',
 ];
 

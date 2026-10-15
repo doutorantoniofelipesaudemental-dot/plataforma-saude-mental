@@ -25,6 +25,7 @@ const ARTIGO = {
     <h2>Referências</h2>
     <ol class="referencias"><li>Autor. Título. <a href="https://doi.org/10.1/x">doi:10.1/x</a></li></ol>
     <p class="refs-note">Conteúdo educativo. Não substitui avaliação individual.</p>
+    <p>Procure ATENDIMENTO MÉDICO sempre que precisar.</p>
     <p class="identificacao-medico">Dr. Antônio Felipe<br>NÃO ESPECIALISTA</p>`,
 };
 
@@ -40,7 +41,14 @@ test('narra só o texto: sem ferramenta, código, links nem lista de referência
   assert.ok(t.includes(AVISO_REFERENCIAS));
   assert.match(t, /CVV — 188/);
   assert.match(t, /SAMU — 192/);
-  assert.match(t, /Não especialista\./, 'caixa alta longa vira caixa normal');
+  assert.match(t, /Atendimento médico/, 'caixa alta longa vira caixa normal');
+  assert.ok(!/Antônio Felipe|especialista/i.test(t), 'o bloco de identificação não é narrado');
+});
+
+test('trocar a assinatura (bloco de identificação) NÃO muda o hash da narração', () => {
+  const outraAssinatura = ARTIGO.conteudo.replace(/<p class="identificacao-medico">[\s\S]*?<\/p>/, '<p class="identificacao-medico">Dr. Antônio Felipe — Médico — CRM-BA 41322<br>Pós-graduação em Psiquiatria, Terapia Cognitivo-Comportamental<br>NÃO ESPECIALISTA</p>');
+  assert.notEqual(outraAssinatura, ARTIGO.conteudo);
+  assert.equal(hashNarracao(textoParaNarracao({ ...ARTIGO, conteudo: outraAssinatura })), hashNarracao(textoParaNarracao(ARTIGO)));
 });
 
 test('hash muda quando o conteúdo muda; estado segue o hash', () => {
