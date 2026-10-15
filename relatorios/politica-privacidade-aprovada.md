@@ -1,10 +1,20 @@
-# Política de Privacidade — texto novo para revisão (15/10/2026)
+# Política de Privacidade — APROVADA em 15/10/2026 pelo Dr. Antônio Felipe
 
-Texto integral hoje em `public/privacidade.html` (já no ar desde o PR #68; esta versão acrescenta cookies/armazenamento/estatísticas e a autoavaliação). Revise e diga o que ajustar.
+**Aprovação:** 15/10/2026. Texto integral em `public/privacidade.html` e resumo coerente em `apps/plataforma-saude-mental/app/privacidade/page.js`.
+
+**Checagem final (15/10/2026) e ajustes factuais (código × texto), sem mudar o sentido do texto aprovado:**
+- Controlador identificado (consultório do Dr. Antônio Felipe) com e-mail para exercício dos direitos da LGPD: já constava.
+- Operadores citados pelo nome: Vercel (hospedagem e dados técnicos de acesso), MongoDB Atlas (conteúdo dos textos e contadores; sem dado pessoal de visitante) e Google/Gmail (e-mail). Acrescentado.
+- Contadores anônimos conferidos no código: só incrementam números no documento do texto (`$inc`); não guardam IP, cookie, identificador nem impressão digital. O IP é usado só na memória temporária do servidor para limitar excesso de pedidos (`limitarTaxa`) e o User-Agent só filtra robôs, sem gravar. Esclarecido no texto.
+- Data da última atualização visível no topo (15/10/2026). Acrescentada.
+- Coerência com a /privacidade do app Next: mesmas afirmações (sem formulários, sem cookies, contadores, autoavaliação no navegador, operadores, e-mail LGPD). Ajustada.
+- Link "Privacidade" no rodapé de todas as páginas (home, artigos, blog, Instagram, /mentoria, /links, 404) e no app Next. Acrescentado em /links e 404.
+
+---
 
 # Política de Privacidade
 
-Como tratamos os dados pessoais coletados neste site, conforme a Lei nº 13.709/2018 (LGPD).
+Como tratamos os dados pessoais coletados neste site, conforme a Lei nº 13.709/2018 (LGPD). Última atualização: 15/10/2026.
 
 Antes de tudo:
 Este site não coleta nem guarda dados de visitantes e não possui formulários de contato. O contato e o agendamento são feitos somente por e-mail. Não envie informações de saúde por e-mail. Em emergência: SAMU 192 · CVV 188.
@@ -30,7 +40,11 @@ Quando você nos escreve, a base legal é o consentimento implícito no próprio
 
 Não vendemos nem cedemos dados pessoais. O compartilhamento se limita a:
 
-- Provedores de infraestrutura que hospedam o site e o banco de dados, na condição de operadores e apenas para viabilizar o serviço (o e-mail é operado pelo Google);
+- Vercel (hospedagem do site e da API), que trata dados técnicos de acesso, como IP e navegador, na condição de operadora;
+
+- MongoDB Atlas (banco de dados), que guarda o conteúdo dos textos e os contadores anônimos. Não guarda dados pessoais de visitantes: este site não tem cadastro, formulários nem login de visitantes;
+
+- Google (Gmail), que opera o e-mail quando você nos escreve;
 
 - Autoridades públicas, quando houver determinação legal ou judicial.
 
@@ -79,7 +93,7 @@ Este site não usa cookies, nem ferramentas de análise de audiência (como Goog
 
 - Contadores anônimos: o site conta, sem identificar ninguém e sem guardar IP, sessão ou cookie, quantas vezes cada texto foi aberto, quantos votos cada opção da enquete recebeu, quantas vezes uma ferramenta de cada texto foi usada (sem as respostas) e quantos pedidos de narração cada texto recebeu.
 
-- Hospedagem: o provedor de infraestrutura pode registrar dados técnicos de acesso (como IP e navegador) para segurança e funcionamento.
+- Hospedagem: a Vercel pode registrar dados técnicos de acesso (como IP e navegador) para segurança e funcionamento. Para limitar o excesso de pedidos, o servidor mantém o seu IP apenas na memória temporária, sem gravá-lo em banco de dados.
 
 ## 9. Autoavaliação "Meu Plano de Cuidado"
 
