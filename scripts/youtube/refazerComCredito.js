@@ -20,7 +20,7 @@ const limite = Number((process.argv.find((a) => a.startsWith('--limite=')) || '-
   for (const it of fila) {
     if (n >= limite || it.status === 'publicado') continue;
     const meta = path.join(L.RAIZ, it.pasta, 'meta.json');
-    if (!fs.existsSync(meta) || JSON.parse(fs.readFileSync(meta, 'utf8')).creditoMarca === 'v1') continue;
+    if (!fs.existsSync(meta) || JSON.parse(fs.readFileSync(meta, 'utf8')).creditoMarca === 'v2') continue;
     const a = await db.collection('artigos').findOne({ slug: it.slug });
     try {
       if (it.tipo === 'longo') console.log(JSON.stringify(await longos.gerar(a)));

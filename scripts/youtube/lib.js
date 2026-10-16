@@ -76,14 +76,16 @@ function comVinheta(a, mp3) {
 /** Crédito de tela (ASS, discreto, caixa opaca p/ contraste): 0–3 s e tela final com o endereço. Não é marca d'água fixa. */
 function creditoAss(dur, { W = 1920, H = 1080 } = {}) {
   const t = (s) => { const cs = Math.round(s * 100); return `${Math.floor(cs / 360000)}:${String(Math.floor((cs % 360000) / 6000)).padStart(2, '0')}:${String(Math.floor((cs % 6000) / 100)).padStart(2, '0')}.${String(cs % 100).padStart(2, '0')}`; };
-  const f1 = Math.round(H * (W > H ? 0.034 : 0.026)), f2 = Math.round(f1 * 1.2), mv = Math.round(H * (W > H ? 0.07 : 0.1));
-  const estilo = (n, f, m) => `Style: ${n},Segoe UI,${f},&H00FFFFFF,&H000000FF,&HC8301A0B,&HC8301A0B,-1,0,0,0,100,100,0,0,3,14,0,2,60,60,${m},1`;
+  const vert = W <= H; // 9:16: faixa de 1 linha rente à borda inferior, abaixo da assinatura (sem sobrepor texto da arte)
+  const f1 = 34, f2 = 34, mv = 24; // horizontal: canto inferior direito (livre; a assinatura fica à esquerda), em 2 linhas
+  const marca = vert ? vinheta.MARCA : vinheta.MARCA.replace('Mental Doutor', 'Mental\\NDoutor');
+  const estilo = (n, f, m) => `Style: ${n},Segoe UI,${f},&H00FFFFFF,&H000000FF,&HC8301A0B,&HC8301A0B,-1,0,0,0,100,100,0,0,3,14,0,${vert ? 2 : 3},60,60,${m},1`;
   const cab = ['[Script Info]', 'ScriptType: v4.00+', `PlayResX: ${W}`, `PlayResY: ${H}`, 'WrapStyle: 0', '', '[V4+ Styles]',
     'Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding',
-    estilo('Cred', f1, mv), estilo('Fim', f2, Math.round(H * 0.12)), '', '[Events]', 'Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text'];
+    estilo('Cred', f1, mv), estilo('Fim', f2, mv), '', '[Events]', 'Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text'];
   const fim = Math.min(6, Math.max(3, dur / 2));
-  cab.push(`Dialogue: 0,${t(0)},${t(Math.min(3, dur))},Cred,,0,0,0,,${vinheta.MARCA}`);
-  cab.push(`Dialogue: 0,${t(Math.max(3, dur - fim))},${t(dur)},Fim,,0,0,0,,${vinheta.MARCA}\\N${vinheta.SITE}`);
+  cab.push(`Dialogue: 0,${t(0)},${t(Math.min(3, dur))},Cred,,0,0,0,,${marca}`);
+  cab.push(`Dialogue: 0,${t(Math.max(3, dur - fim))},${t(dur)},Fim,,0,0,0,,${marca}\\N${vinheta.SITE}`);
   return cab.join('\n') + '\n';
 }
 

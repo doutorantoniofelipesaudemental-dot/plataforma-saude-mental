@@ -2,8 +2,9 @@
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
 ## EM ANDAMENTO (16/10/2026) — ver relatorios/PROMPT-ATUAL.md
-- Etapa 1: feita (abaixo). Etapa 2: rebase + auditoria 0 falhas + build + 247 unit + 31 e2e OK; **PR NÃO aberto: push bloqueado pelas permissões** (aguarda comando do Dr. Antônio).
-- Etapas 3.3, 4.1, 4.3: aguardam merge/deploy da vinheta (2.4). 4.2: varredura sem promessas; 1 título do LinkedIn aguarda decisão. 6: tarefas registradas (Narração-Noite desativada). 5/7: ver relatório.
+- Etapa 1: feita (abaixo). Etapa 2: PR #78 (vinheta) MERGED (65700a5), deploy Ready. Vinheta já aplicada localmente em 251 publicados + 280 agendados (narracoes-geradas/).
+- BLOQUEIO 3.3/4.1: o .env local não tem BLOB_READ_WRITE_TOKEN e o Blob está em 1017/1024 MB; 288 órfãs (314 MB) sem lista completa e possivelmente áudios antigos a preservar (§D). Aguarda token/decisão do Dr. Antônio.
+- 4.2: sem promessas; 1 título do LinkedIn (25/11) aguarda OK. 6: tarefas registradas (Narração-Noite desativada até o upload).
 
 ## Etapa 1 — produção do PR #77 (16/10/2026)
 - PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).

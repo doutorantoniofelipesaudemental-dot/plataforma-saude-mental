@@ -1863,7 +1863,7 @@
 - **rascunho:** `CONTEUDO_INSTAGRAM/pautas/rascunhos/crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa.md` · slug: `crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa` · pauta: `2026-09-30-140-crise-de-ansiedade-vs-infarto-`
 - **checagens automáticas:** humanização ✓ · ética/CFM ✓ · originalidade ✓ · **revisão médica: aprovada**
 - **pacote:** 82 · `CONTEUDO_INSTAGRAM/pacotes/novo-fluxo-82-crise-de-ansiedade-vs-infarto-diagnostico-diferencial-no-pa.md`
-- **originalidade:** original · mais próximo: "Alta do PA Psiquiátrico: o que garante que o paciente não volte em crise" (similaridade 0.25)
+- **originalidade:** original · mais próximo: "Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise" (similaridade 0.25)
 
 ## [redigida] Manejo de Efeitos Colaterais Extrapiramidais no Plantão
 

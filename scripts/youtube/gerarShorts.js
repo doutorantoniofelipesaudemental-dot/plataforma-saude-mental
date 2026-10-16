@@ -81,7 +81,7 @@ async function gerar({ a, id, tituloTela, linhas, extraDescricao = '' }) {
   for (const f of fs.readdirSync(dir)) if (/^l\d+\.(mp3|wav|txt)$|^(lista\.txt|voz\.wav|segoeuib\.ttf|fundo\.png)$/.test(f)) fs.rmSync(path.join(dir, f), { force: true });
   const video = path.join(dir, 'short.mp4');
   const meta = {
-    tipo: 'short', creditoMarca: 'v1', slug: a.slug, id, titulo: `${tituloTela.length > 88 ? tituloTela.slice(0, 85) + '...' : tituloTela} #Shorts`,
+    tipo: 'short', creditoMarca: 'v2', slug: a.slug, id, titulo: `${tituloTela.length > 88 ? tituloTela.slice(0, 85) + '...' : tituloTela} #Shorts`,
     descricao: L.descricaoShort(a, extraDescricao), tags: L.tagsDe(a), playlist: L.playlistDe(a), refsPermitidas: [],
     roteiro: uso, arquivos: { video: 'short.mp4', capa: 'thumb.png' }, midia: L.sondar(video), hashVideo: L.sha256(video), duracao: total, geradoEm: new Date().toISOString(),
   };

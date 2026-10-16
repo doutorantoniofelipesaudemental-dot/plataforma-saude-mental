@@ -45,3 +45,17 @@ ETAPA 7 — MEMÓRIA E ESTADO
 DECISÃO "ANTONIO" SEM ACENTO: vale o CLAUDE.md ("Antônio" com acento em todo lugar). Exceções: URLs, @, e-mail, nomes técnicos e "Antonio Felipe Garabito Jr." (dedicatória). Se o teste protege uma exceção, MANTER. Se permite sem acento em outro lugar, corrigir o teste. Informar qual foi o caso.
 
 RELATÓRIO FINAL (curto, pt-BR): 1 validação+trava B; 2 PR da vinheta e arquivos para ouvir; 3 órfãos; 4 áudios/capas, varredura ética, vídeos YouTube; 5 LinkedIn; 6 tarefas Windows; 7 estado geral; teste do "Antonio"; comandos "!" para mim.
+
+
+---
+# ATUALIZAÇÃO 16/10/2026 (noite) — vinheta aprovada, PR #78 mergeado
+(Substitui as etapas 2–6 acima; texto integral do pedido do Dr. Antônio resumido abaixo.)
+- URGENTE antes das 23:30: tarefa DrSM-YouTube-Gera-Midia — merge em produção => 1 execução de teste com 1 vídeo (crédito na fala e na tela, sem marca d'água, assinatura, RAM < 70%); só deixar ativa se passar.
+- 2.4: conferir 1 áudio publicado com abertura/encerramento da vinheta (CVV/SAMU em temas sensíveis); reativar DrSM-Narracao-Noite e confirmar que usa a vinheta.
+- 3: ajustar /api/admin/blob-narracoes para listar TODOS os arquivos e classificar (a publicado, b agendado, c hash antigo de texto existente, d sem texto). Relatório blob-orfaos-AAAAMMDD.md com contagens/tamanhos. APROVADO apagar só (c) e (d), com backup da lista e dry-run; nunca (a)/(b); se (c)+(d) > 50% do total, PARAR e mostrar números.
+- 4.1: com vinheta em produção e trava B: subir ~277 áudios/capas em lotes de 50, amostra de 5 por lote. 4.3: 27 longos + 45 Shorts com crédito, sem marca d'água, assinatura, auditoria e tripla checagem.
+- TÍTULO APROVADO: "Alta do PA Psiquiátrico: o que garante que o paciente não volte em crise" -> "Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise" (título do artigo, meta title/og:title, post LinkedIn 25/11, qualquer post/vídeo/capa/legenda). MANTER slug. Regerar capa e, se narrado, o áudio.
+- 5: simulação do primeiro post do LinkedIn; renovação do token; freio desligado; conferir PASSO-A-PASSO-LINKEDIN.md e fila manual.
+- Conferência 19/10 (conferirPosRenovacao.js): incluir teste real da trava B (1º agendado de 19/10 08:00 Bahia toca com vinheta e URL do MP3 responde 200).
+- Se push/merge bloquear: comandos separados, um por linha, com "!", sem "cd".
+- Relatório final curto: tarefa 23:30; vinheta+narração noturna; órfãos por grupo; áudios/capas; YouTube; título; LinkedIn; conferência 19/10; comandos "!".

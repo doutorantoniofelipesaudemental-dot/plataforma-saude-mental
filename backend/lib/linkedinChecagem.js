@@ -7,6 +7,7 @@ function checarPost(it) {
   const n = (re) => (t.match(re) || []).length;
   if (n(/CRM-BA 41322/g) !== 1) f.push('CRM-BA 41322 deve aparecer 1 vez');
   if (n(/RQE 26638/g) !== 1 || !/Medicina de Família e Comunidade/.test(t)) f.push('RQE 26638 junto de Medicina de Família e Comunidade (1 vez)');
+  if (!/Portal de Saúde Mental Doutor Antônio Felipe Garabito/.test(t)) f.push('sem o crédito do Portal de Saúde Mental Doutor Antônio Felipe Garabito');
   if (/NÃO ESPECIALISTA/.test(t)) f.push('assinatura curta não leva "NÃO ESPECIALISTA"');
   if (!/CVV 188/.test(t) || !/SAMU 192/.test(t)) f.push('sem CVV 188 · SAMU 192');
   if (!/protocolos hospitalares/.test(t)) f.push('sem aviso de protocolos locais');
