@@ -1,9 +1,12 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
-## EM ANDAMENTO (16/10/2026) — ver relatorios/PROMPT-ATUAL.md
-- Etapa 1: feita (abaixo). Etapa 2: rebase + auditoria 0 falhas + build + 247 unit + 31 e2e OK; **PR NÃO aberto: push bloqueado pelas permissões** (aguarda comando do Dr. Antônio).
-- Etapas 3.3, 4.1, 4.3: aguardam merge/deploy da vinheta (2.4). 4.2: varredura sem promessas; 1 título do LinkedIn aguarda decisão. 6: tarefas registradas (Narração-Noite desativada). 5/7: ver relatório.
+## EM ANDAMENTO (16/10/2026, noite) — ver relatorios/PROMPT-ATUAL.md
+- PR #78 (vinheta) MERGED. **PR #79** (título sem promessa, crédito v2 dos vídeos, LinkedIn com crédito, inventário do Blob a/b/c/d, trava B na conferência de 19/10) aberto e PRONTO (auditoria 0 falhas, build OK, 248 unit + 31 e2e); merge bloqueado pelas permissões — aguarda o Dr. Antônio.
+- Tarefa DrSM-YouTube-Gera-Midia: teste de 1 vídeo REPROVOU no 1º formato (crédito sobre a assinatura); corrigido (crédito em canto livre, v2), Short e longo conferidos (assinatura, sem marca d'água, RAM ~49%); 21 vídeos antigos refeitos em v2; tarefa ATIVA. DrSM-Narracao-Noite REATIVADA (usa a vinheta via narrar-artigos.js).
+- Título da alta do PA trocado (banco + mdx + seed + fila do LinkedIn; slug mantido; backup backups/titulo-*). Narração desse texto = desatualizada (player oculto até regerar). Capa nova local; a do Blob será trocada no envio.
+- Próximo (depende do merge do #79 + deploy): GET /api/admin/blob-narracoes?completo=1 → relatório blob-orfaos → apagar c+d (dry-run, ≤50%) → subir áudios/capas em lotes de 50 (4.1) → conferência de 19/10 (trava B real). O envio é feito pela API (token do Blob fica na Vercel); o bloqueio real é a cota de 1 GB.
+- LinkedIn: simulação do 1º post OK (texto, assinatura, crédito); credencial da API ausente e freio desligado; token LinkedIn não se renova sozinho (rotina avisa <15 dias).
 
 ## Etapa 1 — produção do PR #77 (16/10/2026)
 - PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).

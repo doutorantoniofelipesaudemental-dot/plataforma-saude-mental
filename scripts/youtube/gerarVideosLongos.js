@@ -48,7 +48,7 @@ async function gerar(a) {
   fs.rmSync(path.join(dir, 'segoeuib.ttf'), { force: true });
   fs.writeFileSync(path.join(dir, 'legenda.srt'), L.srt(a, dur), 'utf8');
   const meta = {
-    tipo: 'longo', creditoMarca: 'v1', slug: a.slug, titulo: a.titulo.length > 100 ? `${a.titulo.slice(0, 97)}...` : a.titulo,
+    tipo: 'longo', creditoMarca: 'v2', slug: a.slug, titulo: a.titulo.length > 100 ? `${a.titulo.slice(0, 97)}...` : a.titulo,
     descricao: L.descricaoLongo(a, dur), tags: L.tagsDe(a), playlist: L.playlistDe(a),
     refsPermitidas: L.referencias(a.conteudo),
     arquivos: { video: 'longo.mp4', capa: 'thumb.png', legenda: 'legenda.srt' },

@@ -61,7 +61,7 @@ function melhorLista(a) {
 const encurtar = (t, n) => (t.length <= n ? t : `${t.slice(0, n).replace(/[\s,;(]+\S*$/, '')}…`);
 const PIE = (a) => ({ slug: a.slug, titulo: a.titulo, url: `${L.SITE}/artigo/${a.slug}`, ref: encurtar((L.referencias(a.conteudo)[0] || '').replace(/\s+https?:\/\/\S+$/, ''), 190) });
 
-const RODAPE = `\nConteúdo educativo, não substitui consulta. Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.\n${L.CRISE}\n${L.AVISO_IA}\n\n${L.IDENTIFICACAO_3_LINHAS}`;
+const RODAPE = `\nConteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito.\nConteúdo educativo, não substitui consulta. Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.\n${L.CRISE}\n${L.AVISO_IA}\n\n${L.IDENTIFICACAO_3_LINHAS}`;
 const HASH = { educativo: '#SaudeMental #AtencaoPrimaria #MedicinaDeFamilia', trabalho: '#SaudeMentalNoTrabalho #NR1 #RiscosPsicossociais', bastidores: '#SaudeMental #AtencaoPrimaria #PraticaClinica' };
 
 function montarPost(a, tema) {

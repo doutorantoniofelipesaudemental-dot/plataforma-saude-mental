@@ -162,12 +162,13 @@ router.get('/freio-redes', exigirAdmin, (req, res) => res.json({ publicacaoAtiva
 
 /** GET /api/admin/blob-narracoes — inventário do Blob (só leitura). DELETE (mesmo caminho) apaga SÓ narrações órfãs, sem referência no banco. */
 router.get('/blob-narracoes', exigirAdmin, exigirBanco, async (req, res) => {
-  try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: false })); }
+  try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: false, completo: req.query.completo === '1' })); }
   catch (err) { log.erro('[admin] blob-narracoes:', err.message); res.status(500).json({ erro: 'Não foi possível consultar o Blob.' }); }
 });
 
 router.delete('/blob-narracoes', exigirAdmin, exigirBanco, async (req, res) => {
-  try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: true })); }
+  // Dry-run por padrão: só apaga com ?aplicar=1 (grupos c e d; ver lib/blobNarracoes.js).
+  try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: req.query.aplicar === '1' })); }
   catch (err) { log.erro('[admin] blob-narracoes (apagar):', err.message); res.status(500).json({ erro: 'Não foi possível apagar no Blob.' }); }
 });
 
