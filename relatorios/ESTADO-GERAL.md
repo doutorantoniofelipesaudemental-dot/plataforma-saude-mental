@@ -1,6 +1,10 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
+## EM ANDAMENTO (16/10/2026) — ver relatorios/PROMPT-ATUAL.md
+- Etapa 1: feita (abaixo). Etapa 2: rebase + auditoria 0 falhas + build + 247 unit + 31 e2e OK; **PR NÃO aberto: push bloqueado pelas permissões** (aguarda comando do Dr. Antônio).
+- Etapas 3.3, 4.1, 4.3: aguardam merge/deploy da vinheta (2.4). 4.2: varredura sem promessas; 1 título do LinkedIn aguarda decisão. 6: tarefas registradas (Narração-Noite desativada). 5/7: ver relatório.
+
 ## Etapa 1 — produção do PR #77 (16/10/2026)
 - PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).
 - OK em produção: home, /mentoria, /links (200), /api/health (banco conectado), artigo com <audio> e MP3 (206 audio/mpeg), capa no Blob (200), rotas cron e admin existem (401 sem token), cron publicar-linkedin registrado em vercel.json (seg/qua/sex 22:30 UTC).
@@ -62,10 +66,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - **Fila do Instagram, amostra de 5 posts:** capas sem marca d'água, assinatura curta de 3 linhas, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria, acentos ok. Varredura das 60 legendas: 0 problemas.
 
 <!-- ROTINA:INICIO -->
-## Rotina semanal (última: 15/10/2026) — ATENÇÃO (1 problema(s))
-- ⚠ links quebrados: 2
-- Narração: 246 ok · faltam 480.
-- Detalhe: `relatorios/rotina-20261015.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
+## Rotina semanal (última: 16/10/2026) — TUDO OK
+- Auditoria, retratações, links, token, freio e próximos 7 posts sem problemas.
+- Narração: 329 ok · faltam 397.
+- Detalhe: `relatorios/rotina-20261016.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
 <!-- ROTINA:FIM -->
 
 ## Pendências que dependem do Dr. Antônio
