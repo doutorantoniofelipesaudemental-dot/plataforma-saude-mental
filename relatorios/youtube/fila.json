@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-15T21:29:00.530Z",
+ "geradoEm": "2026-10-16T22:52:34.247Z",
  "regra": "longos ter/qui/sab 18h; Shorts seg/qua/sex/sab/dom 12h (Bahia)",
  "itens": [
   {
@@ -20,7 +20,7 @@
     "atenção primária",
     "saúde do trabalhador"
    ],
-   "hashVideo": "47528253a6e91cf75f50861411faff22ce4125e913ba57583dac67dca099999c",
+   "hashVideo": "d9dcf9dc46f73fbd878e9b0984057f4d05af59d18ca8252aaab39d849e47661b",
    "duracao": 433,
    "checagem": {
     "texto": [],
@@ -37,7 +37,21 @@
    "slot": "2026-10-28T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/saude-mental-cuidador/short-2026-10-26-saude-mental-cuidador",
-   "status": "sem-midia"
+   "tituloYoutube": "Saúde mental do cuidador: quem cuida de quem cuida? #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "a63a6ba81ff1e6d91614ae21a723671bc812a31da5e9db699d4c0b644dc8723b",
+   "duracao": 45,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-burnout-medicos-enfermeiros",
@@ -55,7 +69,7 @@
     "Dr. Antônio Felipe",
     "Médicos & Enfermeiros"
    ],
-   "hashVideo": "ac35996fa9dee8bac418c1267e14fac09e897e78a291bbe5869dd08ebf5f2b0a",
+   "hashVideo": "3c6d92883419ffbf5a4215f3443fed3178c7b031f214f43f531badb9b0dcbfdd",
    "duracao": 295,
    "checagem": {
     "texto": [],
@@ -72,7 +86,21 @@
    "slot": "2026-10-30T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/tempo-tela-criancas/short-2026-10-27-tempo-tela-criancas",
-   "status": "sem-midia"
+   "tituloYoutube": "O que a ciência mostra, perguntas mais úteis do que o relógio e como montar um. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "052f635166e5dac557bf1d1e9d6ca1589e235461e781503e27cf5e861522923c",
+   "duracao": 38,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-10-28-primeiro-episodio-psicotico",
@@ -83,7 +111,22 @@
    "slot": "2026-10-31T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/primeiro-episodio-psicotico/short-2026-10-28-primeiro-episodio-psicotico",
-   "status": "sem-midia"
+   "tituloYoutube": "Por que a duração da psicose não tratada importa, sinais prodrômicos, exclusão de cau... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "aps & pa"
+   ],
+   "hashVideo": "c454ca437504d4053d63e04fbbfa7a4ced7094ce305bdcd27b939a311fef3e6a",
+   "duracao": 50,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-saude-mental-residencia",
@@ -101,7 +144,7 @@
     "Dr. Antônio Felipe",
     "Residentes & Estudantes"
    ],
-   "hashVideo": "1ee89fac45a8f60f3e918f4ff4cd1b94d8f1ff8c9d6f1f8fb23587ba456100dc",
+   "hashVideo": "b88ab287d788fba2d6c3f2ba220c64f1732f590093cae6337f3a959625a638d7",
    "duracao": 304,
    "checagem": {
     "texto": [],
@@ -147,7 +190,7 @@
     "Dr. Antônio Felipe",
     "Ansiedade Social & Timidez"
    ],
-   "hashVideo": "94aa0422ef6c8a53afbaae15895cf098f8e2caddeae0d02684ee3a807db2d172",
+   "hashVideo": "ced9b4dbb6de274fb34be7810ea146a815c5ec2d166f0efc2a16942e010f142f",
    "duracao": 181,
    "checagem": {
     "texto": [],
@@ -182,7 +225,7 @@
     "Dr. Antônio Felipe",
     "Migrantes & Expatriados"
    ],
-   "hashVideo": "55f45923d85d518d164dfcbaaff4a57035e30a91ee8a4265092ee59e781b0adf",
+   "hashVideo": "9dc37bd9b4aae4492457237a66a416701739ec5e7ff4d297871e29489eaaae5b",
    "duracao": 191,
    "checagem": {
     "texto": [],
@@ -228,7 +271,7 @@
     "Dr. Antônio Felipe",
     "Maternidade, Puerpério & Lactação"
    ],
-   "hashVideo": "32b56fa453023aa1ed74e4ae6f727ba13afe239dbfb1e3dd318b557ff90adbbe",
+   "hashVideo": "6a41b992c719e97244213c636db23a5a11ba9834d06614330aec1796643b007d",
    "duracao": 178,
    "checagem": {
     "texto": [],
@@ -274,7 +317,7 @@
     "Dr. Antônio Felipe",
     "Infância & Adolescência"
    ],
-   "hashVideo": "1abd68c1af9c5186100bc08b58e95fdae61e3e364d8ceeef22068528e2d334b0",
+   "hashVideo": "4bb786d6187014dac1319aaac9b4b90cbf7a89f8a118d22201ac3969eb9f8159",
    "duracao": 200,
    "checagem": {
     "texto": [],
@@ -309,7 +352,7 @@
     "Dr. Antônio Felipe",
     "Neurodivergência na Vida Adulta"
    ],
-   "hashVideo": "8cd20b26b6e298734121ef65aa1fdd698b5993a9a01cae9f43544c1e2dfb37fd",
+   "hashVideo": "a4c399290d718615f22f2c1992a682f7649db4b6f665611de410de36893365d3",
    "duracao": 189,
    "checagem": {
     "texto": [],
@@ -355,7 +398,7 @@
     "Dr. Antônio Felipe",
     "Dependências & Adições"
    ],
-   "hashVideo": "9ec8020f789eb804585840edc0bda1fb2ff15cab3efeec5ba3cef77ab6dc640e",
+   "hashVideo": "a384688a7179c8ec874147fe606cce750a710fc29fd5b5972841b5a005fe930c",
    "duracao": 197,
    "checagem": {
     "texto": [],
@@ -401,7 +444,7 @@
     "Dr. Antônio Felipe",
     "Compulsões & Transtornos Alimentares"
    ],
-   "hashVideo": "29e86a5090d2bc1dcdf141627c82eac070c0a8e6d19c89571b66c6dd01496ad5",
+   "hashVideo": "b3eda4957b0ec777ce0431bc86167dd1d3eaeb87b8d354ab69ed9345370c2992",
    "duracao": 186,
    "checagem": {
     "texto": [],
@@ -439,7 +482,7 @@
     "gestão de pessoas",
     "risco psicossocial"
    ],
-   "hashVideo": "0b10a4775394a87b1b300e3dd50b4b7ab0629d1f26cf9174f49144a4729392ea",
+   "hashVideo": "37ef01105c3b2f6a904b8180a49905c726f2be4690edd733f1874a410114aab3",
    "duracao": 371,
    "checagem": {
     "texto": [],
@@ -485,7 +528,7 @@
     "Dr. Antônio Felipe",
     "Cuidadores & Famílias"
    ],
-   "hashVideo": "4e6258671aea87247d8df27ab327c6c822a53a95295620499eef0727170c32e8",
+   "hashVideo": "590e79979868df8883ab2a5a662d2959ea88a49ed13289a8b7d2370f911fa6a0",
    "duracao": 182,
    "checagem": {
     "texto": [],
@@ -520,7 +563,7 @@
     "Dr. Antônio Felipe",
     "Trabalho Doméstico & Cuidados do Lar"
    ],
-   "hashVideo": "44072c87ac04392a4d9f692f635b4dd5b6d60b65cfbbbec763494e2eae5b22f6",
+   "hashVideo": "a910290ba9a601c6b3b5d798ab248dcea57fa164b2fe5beb06ce4568d219dae7",
    "duracao": 171,
    "checagem": {
     "texto": [],
@@ -555,7 +598,7 @@
     "Dr. Antônio Felipe",
     "Transição de Carreira & Aposentadoria"
    ],
-   "hashVideo": "d09ac283f8db0cf4aaadbf853681805a869b96e5507fc0fd04caba02863bba21",
+   "hashVideo": "14b3346f45213e2bc4719123728a3e45e024157d5253fcc53a7afb16546f7708",
    "duracao": 182,
    "checagem": {
     "texto": [],
@@ -879,7 +922,7 @@
     "saúde do trabalhador",
     "burnout"
    ],
-   "hashVideo": "89680053b7b29427967a74bb35fb89703187fd4e8f020bda7320d4c79839b9ed",
+   "hashVideo": "ac5c707ec47375dd7668a9aa990710f3f38cb944e62cf7f047b0b55c5ab050a4",
    "duracao": 346,
    "checagem": {
     "texto": [],
@@ -1278,7 +1321,7 @@
     "atenção primária",
     "saúde do trabalhador"
    ],
-   "hashVideo": "9c455b3d6ebe4e5d7c8ef49f44085fb87a102b4cdcfdae66369160ba4d1db19c",
+   "hashVideo": "1cf0a4184c147005e8394f79aac772f0ef8ccc915896a816b1738dacf63f9c53",
    "duracao": 36,
    "checagem": {
     "texto": [],
@@ -1313,7 +1356,7 @@
     "Dr. Antônio Felipe",
     "Médicos & Enfermeiros"
    ],
-   "hashVideo": "5af8ce5527cc56d048b4a2fa948a9e6402195e601f7a8aae8d3d75ff748eef0a",
+   "hashVideo": "0495d06dd9570f7ad93ac3ffddbf0e00b9ce032162966d1e322f1bdc1572fd0a",
    "duracao": 31,
    "checagem": {
     "texto": [],
@@ -1338,7 +1381,7 @@
     "Dr. Antônio Felipe",
     "Residentes & Estudantes"
    ],
-   "hashVideo": "fd96cb221f9a925de434de710ed68a22be6d88380c5be8fd0908f2852ab5402b",
+   "hashVideo": "37b075c36e02dc16c4c4fe3c71d36f4635fa192a86c6efd8145011ceb3159149",
    "duracao": 31,
    "checagem": {
     "texto": [],
@@ -1373,7 +1416,7 @@
     "Dr. Antônio Felipe",
     "Migrantes & Expatriados"
    ],
-   "hashVideo": "f67e3d9655a7d4dbaacb61ccff4d23a4e2fef237a33ef0f5fd168fb6758f9477",
+   "hashVideo": "dee9d7dda3564b364d70334fa68d0dbc88c716875e207f8ea79ede0ed2a95c36",
    "duracao": 36,
    "checagem": {
     "texto": [],
@@ -1408,7 +1451,7 @@
     "Dr. Antônio Felipe",
     "Infância & Adolescência"
    ],
-   "hashVideo": "8c3e46479b11da3434575a0708c884755050b54060753bca290d7835686ea042",
+   "hashVideo": "4135b6c74a62f13ad07966c07912ca64e83487ae1b106f084dfd55d332353c47",
    "duracao": 35,
    "checagem": {
     "texto": [],
@@ -1433,7 +1476,7 @@
     "Dr. Antônio Felipe",
     "Dependências & Adições"
    ],
-   "hashVideo": "182435d6609c2c211f92c42fa3a5c87ff360a352b33f3f4898d00d3d4ca8f7af",
+   "hashVideo": "b331b7bdc2f31001203e7196b1ecf37ec0c5b1a844eae5275519c61113866ba7",
    "duracao": 39,
    "checagem": {
     "texto": [],
@@ -1468,7 +1511,7 @@
     "Dr. Antônio Felipe",
     "Ansiedade Social & Timidez"
    ],
-   "hashVideo": "e5fa6d72f7d193061fbe213026f9c3be7c83920331bdad776c9b80ff28fb6408",
+   "hashVideo": "056de6435b5de12ad830eac934fa7187394e9a37703debdc456fc511af15f26b",
    "duracao": 34,
    "checagem": {
     "texto": [],
