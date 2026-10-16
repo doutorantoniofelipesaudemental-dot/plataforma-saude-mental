@@ -1,7 +1,7 @@
 /**
  * Conferência de 19/10/2026 (rodar depois das 12:00 UTC): o cron semanal ig_refresh_token renovou o token do Instagram?
  *   node --env-file=.env scripts/conferirPosRenovacao.js
- * SOMENTE LEITURA. Não imprime o token. Grava relatorios/conferencia-renovacao-AAAAMMDD.md.
+ * Com --simular: ensaio da trava B antes do dia (finge a publicação). SOMENTE LEITURA. Não imprime o token. Grava relatorios/conferencia-renovacao-AAAAMMDD.md.
  */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -45,14 +45,20 @@ const admin = { headers: { Authorization: `Bearer ${process.env.ADMIN_TOKEN}` } 
     const a = await col.find({ 'agendamento.slot': { $gte: new Date('2026-10-19T10:00:00Z'), $lte: new Date('2026-10-19T12:00:00Z') } }).sort({ 'agendamento.slot': 1 }).limit(1).next();
     if (!a) { falhas.push('trava B: nenhum texto agendado para 19/10 às 08:00 (Bahia) encontrado'); linhas.push('- Trava B: sem texto agendado para 19/10 08:00'); }
     else {
-      const url = urlNarracaoTocavel(a);
+      const SIM = process.argv.includes('--simular'); // simulação: finge que o texto já publicou (não toca a produção); a API/página só são conferidas no dia real
+      const url = urlNarracaoTocavel(SIM ? { ...a, publicado: true } : a);
       const api = await fetch(`${BASE}/api/artigos/${a.slug}`).then(async (r) => ({ s: r.status, j: await r.json().catch(() => ({})) })).catch(() => ({ s: 0, j: {} }));
       const mp3 = url ? await fetch(url, { method: 'HEAD' }).then((r) => r.status).catch(() => 0) : 0;
       const vin = a.narracao?.vinhetaVersao === VINHETA_VERSAO;
-      linhas.push(`- Trava B (${a.slug}): publicado ${a.publicado === true ? 'sim' : 'NÃO'} · página/API ${api.s} · player toca ${api.j?.audioNarracaoUrl ? 'sim' : 'NÃO'} · MP3 HTTP ${mp3} · vinheta v${a.narracao?.vinhetaVersao ?? '—'} ${vin ? '(ok)' : '(FALTA)'}`);
-      if (a.publicado !== true) falhas.push(`trava B: ${a.slug} não foi publicado às 08:00`);
-      if (api.s !== 200) falhas.push(`trava B: página/API de ${a.slug} respondeu ${api.s} (esperado 200)`);
-      if (!api.j?.audioNarracaoUrl) falhas.push(`trava B: o player de ${a.slug} não tem áudio para tocar após publicar`);
+      linhas.push(`- Trava B (${a.slug}): publicado ${a.publicado === true ? 'sim' : 'NÃO'} · página/API ${api.s} · player toca ${api.j?.artigo?.audioNarracaoUrl ? 'sim' : 'NÃO'} · MP3 HTTP ${mp3} · vinheta v${a.narracao?.vinhetaVersao ?? '—'} ${vin ? '(ok)' : '(FALTA)'}`);
+      if (SIM) {
+        linhas.push('- (SIMULAÇÃO: publicação, página/API e player só são conferidos no dia real; aqui: URL tocável pós-publicação, MP3 200 e vinheta)');
+        if (!url) falhas.push(`trava B (simulação): após publicar, o player de ${a.slug} NÃO teria áudio (estado/hash)`);
+      } else {
+        if (a.publicado !== true) falhas.push(`trava B: ${a.slug} não foi publicado às 08:00`);
+        if (api.s !== 200) falhas.push(`trava B: página/API de ${a.slug} respondeu ${api.s} (esperado 200)`);
+        if (!api.j?.artigo?.audioNarracaoUrl) falhas.push(`trava B: o player de ${a.slug} não tem áudio para tocar após publicar`);
+      }
       if (mp3 !== 200) falhas.push(`trava B: URL do MP3 de ${a.slug} respondeu ${mp3} (esperado 200)`);
       if (!vin) falhas.push(`trava B: o áudio de ${a.slug} não tem a vinheta (versão ${VINHETA_VERSAO})`);
     }
