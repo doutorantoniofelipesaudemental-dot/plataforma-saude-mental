@@ -1,194 +1,214 @@
 1
-00:00:00,000 --> 00:00:02,913
-Depressão pós-parto e ansiedade perinatal:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:02,913 --> 00:00:05,948
+00:00:06,772 --> 00:00:09,685
+Depressão pós-parto e ansiedade perinatal:
+
+3
+00:00:09,685 --> 00:00:12,720
 reconhecendo os sinais além
 do "baby blues".
 
-3
-00:00:05,948 --> 00:00:07,890
+4
+00:00:12,720 --> 00:00:14,662
 Narração em voz sintética.
 
-4
-00:00:07,890 --> 00:00:12,806
+5
+00:00:14,662 --> 00:00:19,578
 O período após o parto é cercado de
 expectativa de felicidade — o que torna
 
-5
-00:00:12,806 --> 00:00:17,783
+6
+00:00:19,578 --> 00:00:24,555
 ainda mais difícil para muitas mães
 reconhecer, ou admitir, que o que sentem
 
-6
-00:00:17,783 --> 00:00:22,942
+7
+00:00:24,555 --> 00:00:29,714
 é tristeza persistente, ansiedade intensa ou
 exaustão que vai além do esperado.
 
-7
-00:00:22,942 --> 00:00:27,737
+8
+00:00:29,714 --> 00:00:34,509
 O "baby blues" (oscilação de humor nos
 primeiros dias, que passa sozinha)
 
-8
-00:00:27,737 --> 00:00:32,349
+9
+00:00:34,509 --> 00:00:39,121
 é comum e diferente de depressão
 pós-parto ou ansiedade perinatal, que
 
-9
-00:00:32,349 --> 00:00:34,959
+10
+00:00:39,121 --> 00:00:41,731
 exigem atenção e cuidado específicos.
 
-10
-00:00:34,959 --> 00:00:38,722
+11
+00:00:41,731 --> 00:00:45,494
 Diferenciando baby blues de algo
 que precisa de cuidado.
 
-11
-00:00:38,722 --> 00:00:43,638
+12
+00:00:45,494 --> 00:00:50,410
 O baby blues costuma aparecer nos primeiros
 dias, é leve, e melhora sozinho
 
-12
-00:00:43,638 --> 00:00:45,216
+13
+00:00:50,410 --> 00:00:51,988
 em até duas semanas.
 
-13
-00:00:45,216 --> 00:00:50,011
+14
+00:00:51,988 --> 00:00:56,783
 Quando a tristeza, ansiedade ou desconexão
 emocional persistem além desse
 
-14
-00:00:50,011 --> 00:00:54,866
+15
+00:00:56,783 --> 00:01:01,638
 período, se intensificam, ou vêm
 acompanhadas de pensamentos assustadores,
 
-15
-00:00:54,866 --> 00:00:59,600
+16
+00:01:01,638 --> 00:01:06,372
 o quadro pode ser depressão pós-parto ou
 ansiedade perinatal — condições
 
-16
-00:00:59,600 --> 00:01:02,574
+17
+00:01:06,372 --> 00:01:09,346
 clínicas reconhecidas,
 comuns, e tratáveis.
 
-17
-00:01:02,574 --> 00:01:07,490
+18
+00:01:09,346 --> 00:01:14,262
 A depressão pós-parto é comum e tratável, e
 a Escala de Edimburgo, validada
 
-18
-00:01:07,490 --> 00:01:09,857
+19
+00:01:14,262 --> 00:01:16,629
 no Brasil, ajuda a identificá-la.
 
-19
-00:01:09,857 --> 00:01:12,528
+20
+00:01:16,629 --> 00:01:19,300
 A sobrecarga invisível da amamentação.
 
-20
-00:01:12,528 --> 00:01:17,201
+21
+00:01:19,300 --> 00:01:23,973
 A pressão — própria e externa — para
 amamentar "do jeito certo" costuma
 
-21
-00:01:17,201 --> 00:01:22,117
+22
+00:01:23,973 --> 00:01:28,889
 adicionar uma camada extra de exaustão e
 culpa em um momento já fisicamente
 
-22
-00:01:22,117 --> 00:01:23,028
+23
+00:01:28,889 --> 00:01:29,800
 exigente.
 
-23
-00:01:23,028 --> 00:01:28,126
+24
+00:01:29,800 --> 00:01:34,898
 Dificuldade na amamentação não é falha da
 mãe, e o desgaste físico e emocional
 
-24
-00:01:28,126 --> 00:01:32,799
+25
+00:01:34,898 --> 00:01:39,571
 que ela pode causar merece ser levado a
 sério, não minimizado como "faz
 
-25
-00:01:32,799 --> 00:01:33,588
+26
+00:01:39,571 --> 00:01:40,360
 parte".
 
-26
-00:01:33,588 --> 00:01:34,984
+27
+00:01:40,360 --> 00:01:41,756
 Ponto de atenção:
 
-27
-00:01:34,984 --> 00:01:39,718
+28
+00:01:41,756 --> 00:01:46,490
 Pensamentos intrusivos assustadores (sobre
 machucar o bebê, por exemplo)
 
-28
-00:01:39,718 --> 00:01:44,513
+29
+00:01:46,490 --> 00:01:51,285
 são mais comuns do que se fala abertamente
 e, na maioria das vezes, geram
 
-29
-00:01:44,513 --> 00:01:49,672
+30
+00:01:51,285 --> 00:01:56,444
 angústia exatamente porque a mãe não quer que
 aconteçam — mas merecem avaliação
 
-30
-00:01:49,672 --> 00:01:52,464
+31
+00:01:56,444 --> 00:01:59,236
 profissional, não silêncio por vergonha.
 
-31
-00:01:52,464 --> 00:01:54,588
+32
+00:01:59,236 --> 00:02:01,360
 Ansiedade também é frequente:
 
-32
-00:01:54,588 --> 00:01:59,504
+33
+00:02:01,360 --> 00:02:06,276
 atinge cerca de uma em cada cinco gestantes
 e muitas mulheres no pós-parto.
 
-33
-00:01:59,504 --> 00:02:03,328
+34
+00:02:06,276 --> 00:02:10,100
 Vários antidepressivos são
 compatíveis com a amamentação.
 
-34
-00:02:03,328 --> 00:02:06,059
+35
+00:02:10,100 --> 00:02:12,831
 Rede de apoio como parte do tratamento.
 
-35
-00:02:06,059 --> 00:02:10,975
+36
+00:02:12,831 --> 00:02:17,747
 Dividir tarefas com o parceiro ou família,
 conversar abertamente com outras
 
-36
-00:02:10,975 --> 00:02:15,770
+37
+00:02:17,747 --> 00:02:22,542
 mães, e não carregar sozinha a expectativa
 de dar conta de tudo são parte
 
-37
-00:02:15,770 --> 00:02:21,050
+38
+00:02:22,542 --> 00:02:27,822
 concreta do cuidado — ao lado, quando
 necessário, de acompanhamento profissional.
 
-38
-00:02:21,050 --> 00:02:25,420
+39
+00:02:27,822 --> 00:02:32,192
 Pedir ajuda cedo tende a encurtar o
 sofrimento, não a prolongá-lo.
 
-39
-00:02:25,420 --> 00:02:30,518
+40
+00:02:32,192 --> 00:02:37,290
 Conteúdo educativo baseado em literatura
 sobre depressão pós-parto e ansiedade
 
-40
-00:02:30,518 --> 00:02:31,489
+41
+00:02:37,290 --> 00:02:38,261
 perinatal.
 
-41
-00:02:31,489 --> 00:02:33,978
+42
+00:02:38,261 --> 00:02:40,750
 Não substitui avaliação individual.
 
-42
-00:02:33,978 --> 00:02:36,648
+43
+00:02:40,750 --> 00:02:43,420
 As referências estão no fim da página.
+
+44
+00:02:44,120 --> 00:02:49,917
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+45
+00:02:49,917 --> 00:02:54,005
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+46
+00:02:54,005 --> 00:02:57,944
+O texto completo, com as
+referências, está no portal.

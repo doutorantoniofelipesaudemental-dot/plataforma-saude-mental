@@ -8,7 +8,7 @@ const sharp = require('sharp');
 const { checarEticaCfm, checarImagemSemMarcaDagua } = require('../checagensAprovacao');
 const { checarTexto } = require('../auditoriaTexto');
 const { AVISO_CFM } = require('../conformidadeCfm');
-const { MAX_PALAVRAS_TELA, palavras, ORIENTACAO } = require('./conteudo');
+const { MAX_PALAVRAS_TELA, palavras, ORIENTACAO, LINHA_CREDITO } = require('./conteudo');
 
 const RE_INGLES = /\b(the|and|with|your|feedback|online|home office|stress|follow|link in bio|swipe)\b/i; // "burnout" é a única exceção aprovada
 const RE_MENSAGERIA = /wa\.me|whatsapp|t\.me\/|telegram/i;
@@ -41,6 +41,8 @@ async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }
   for (const x of checarEticaCfm(legenda, { contexto: 'social' }).falhas) f('ética', x);
   if (!legenda.includes(AVISO_CFM)) f('ética', 'sem aviso de IA (Res. CFM 2.454/2026)');
   if (!legenda.includes(ORIENTACAO)) f('ética', 'sem aviso de orientação geral/protocolos locais');
+  if (!legenda.includes(LINHA_CREDITO)) f('ética', 'sem a linha de crédito "Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito"');
+  if (!telas.length || telas[telas.length - 1].tipo !== 'final') f('técnica', 'último cartão (com o crédito da marca) ausente');
   if (!/CVV 188/.test(legenda) || !/SAMU 192/.test(legenda)) f('ética', 'sem "Em crise: CVV 188 · SAMU 192"');
   if (/#psiquiatri/i.test(legenda)) f('ética', '#psiquiatria é vetado');
   if (RE_MENSAGERIA.test(legenda)) f('ética', 'mensageria de terceiros proibida');

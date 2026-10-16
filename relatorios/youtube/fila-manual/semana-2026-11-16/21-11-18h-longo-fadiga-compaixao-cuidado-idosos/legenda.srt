@@ -1,212 +1,232 @@
 1
-00:00:00,000 --> 00:00:01,551
-Fadiga da compaixão:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:01,551 --> 00:00:04,772
+00:00:06,772 --> 00:00:08,323
+Fadiga da compaixão:
+
+3
+00:00:08,323 --> 00:00:11,544
 quando cuidar de alguém amado
 está te esgotando.
 
-3
-00:00:04,772 --> 00:00:06,680
+4
+00:00:11,544 --> 00:00:13,452
 Narração em voz sintética.
 
-4
-00:00:06,680 --> 00:00:11,213
+5
+00:00:13,452 --> 00:00:17,985
 Cuidar de um pai, mãe ou cônjuge idoso ou
 acamado é, na maior parte do
 
-5
-00:00:11,213 --> 00:00:16,044
+6
+00:00:17,985 --> 00:00:22,816
 tempo, um trabalho invisível — feito em
 casa, sem escala, sem folga formal,
 
-6
-00:00:16,044 --> 00:00:20,220
+7
+00:00:22,816 --> 00:00:26,992
 e frequentemente sem reconhecimento de
 que é, de fato, trabalho.
 
-7
-00:00:20,220 --> 00:00:23,560
+8
+00:00:26,992 --> 00:00:30,332
 A dedicação genuína não protege
 contra o desgaste;
 
-8
-00:00:23,560 --> 00:00:28,152
+9
+00:00:30,332 --> 00:00:34,924
 ela só torna mais difícil perceber quando
 o desgaste já passou do ponto
 
-9
-00:00:28,152 --> 00:00:29,226
+10
+00:00:34,924 --> 00:00:35,998
 sustentável.
 
-10
-00:00:29,226 --> 00:00:32,984
+11
+00:00:35,998 --> 00:00:39,756
 O que é fadiga da compaixão (e por
 que não é "fraqueza").
 
-11
-00:00:32,984 --> 00:00:37,815
+12
+00:00:39,756 --> 00:00:44,587
 Fadiga da compaixão é o esgotamento físico
 e emocional que surge do cuidado
 
-12
-00:00:37,815 --> 00:00:42,348
+13
+00:00:44,587 --> 00:00:49,120
 contínuo e próximo do sofrimento de outra
 pessoa — comum em cuidadores
 
-13
-00:00:42,348 --> 00:00:45,628
+14
+00:00:49,120 --> 00:00:52,400
 familiares, mas também em
 profissionais de saúde.
 
-14
-00:00:45,628 --> 00:00:48,432
+15
+00:00:52,400 --> 00:00:55,204
 Não é sinal de que você se importa menos.
 
-15
-00:00:48,432 --> 00:00:52,965
+16
+00:00:55,204 --> 00:00:59,737
 É o resultado esperado de sustentar, por
 tempo prolongado, uma demanda
 
-16
-00:00:52,965 --> 00:00:57,199
+17
+00:00:59,737 --> 00:01:03,971
 de cuidado que ultrapassa a capacidade
 de recuperação disponível.
 
-17
-00:00:57,199 --> 00:01:01,732
+18
+00:01:03,971 --> 00:01:08,504
 Uma meta-análise mostrou que cuidadores
 familiares têm mais estresse e
 
-18
-00:01:01,732 --> 00:01:06,802
+19
+00:01:08,504 --> 00:01:13,574
 sintomas depressivos e menos bem-estar do que
 pessoas que não cuidam, sobretudo
 
-19
-00:01:06,802 --> 00:01:09,367
+20
+00:01:13,574 --> 00:01:16,139
 quando cuidam de alguém com demência.
 
-20
-00:01:09,367 --> 00:01:12,170
+21
+00:01:16,139 --> 00:01:18,942
 Sinais que costumam passar despercebidos.
 
-21
-00:01:12,170 --> 00:01:14,854
+22
+00:01:18,942 --> 00:01:21,626
 Exaustão física que o sono não resolve;
 
-22
-00:01:14,854 --> 00:01:19,387
+23
+00:01:21,626 --> 00:01:26,159
 adiar consultas ou cuidados com a própria
 saúde "porque não há tempo";
 
-23
-00:01:19,387 --> 00:01:24,039
+24
+00:01:26,159 --> 00:01:30,811
 momentos de raiva ou ressentimento em
 relação à pessoa cuidada, seguidos
 
-24
-00:01:24,039 --> 00:01:25,411
+25
+00:01:30,811 --> 00:01:32,183
 de culpa intensa;
 
-25
-00:01:25,411 --> 00:01:30,123
+26
+00:01:32,183 --> 00:01:36,895
 sensação crescente de isolamento, com
 amizades e atividades pessoais indo
 
-26
-00:01:30,123 --> 00:01:31,555
+27
+00:01:36,895 --> 00:01:38,327
 ficando para trás.
 
-27
-00:01:31,555 --> 00:01:36,445
+28
+00:01:38,327 --> 00:01:43,217
 Esses sinais tendem a se acumular de forma
 gradual, o que dificulta perceber
 
-28
-00:01:36,445 --> 00:01:39,786
+29
+00:01:43,217 --> 00:01:46,558
 a própria exaustão até que ela
 já esteja avançada.
 
-29
-00:01:39,786 --> 00:01:41,157
+30
+00:01:46,558 --> 00:01:47,929
 Ponto de atenção:
 
-30
-00:01:41,157 --> 00:01:45,750
+31
+00:01:47,929 --> 00:01:52,522
 Sentir raiva ou vontade de "fugir" da
 situação de cuidado, mesmo amando
 
-31
-00:01:45,750 --> 00:01:50,522
+32
+00:01:52,522 --> 00:01:57,294
 a pessoa cuidada, é uma reação humana comum
 ao esgotamento — não uma falha
 
-32
-00:01:50,522 --> 00:01:51,536
+33
+00:01:57,294 --> 00:01:58,308
 de caráter.
 
-33
-00:01:51,536 --> 00:01:56,307
+34
+00:01:58,308 --> 00:02:03,079
 Muitos cuidadores vivem o luto antes da
 perda, à medida que a pessoa amada
 
-34
-00:01:56,307 --> 00:02:00,124
+35
+00:02:03,079 --> 00:02:06,896
 vai mudando, e as formas de
 enfrentamento fazem diferença.
 
-35
-00:02:00,124 --> 00:02:01,735
+36
+00:02:06,896 --> 00:02:08,507
 Cuidar de quem cuida.
 
-36
-00:02:01,735 --> 00:02:06,387
+37
+00:02:08,507 --> 00:02:13,159
 Dividir tarefas com outros familiares,
 buscar redes de apoio comunitário
 
-37
-00:02:06,387 --> 00:02:11,099
+38
+00:02:13,159 --> 00:02:17,871
 ou profissional, e reservar — de forma
 deliberada, não como sobra — tempo
 
-38
-00:02:11,099 --> 00:02:15,334
+39
+00:02:17,871 --> 00:02:22,106
 para as próprias necessidades físicas
 e emocionais não são luxos:
 
-39
-00:02:15,334 --> 00:02:20,105
+40
+00:02:22,106 --> 00:02:26,877
 são o que sustenta a capacidade de
 continuar cuidando bem, por mais tempo,
 
-40
-00:02:20,105 --> 00:02:22,730
+41
+00:02:26,877 --> 00:02:29,502
 sem que o cuidador adoeça no processo.
 
-41
-00:02:22,730 --> 00:02:27,800
+42
+00:02:29,502 --> 00:02:34,572
 Conteúdo educativo baseado em literatura
 sobre fadiga da compaixão e sobrecarga
 
-42
-00:02:27,800 --> 00:02:29,410
+43
+00:02:34,572 --> 00:02:36,182
 do cuidador familiar.
 
-43
-00:02:29,410 --> 00:02:31,855
+44
+00:02:36,182 --> 00:02:38,627
 Não substitui avaliação individual.
 
-44
-00:02:31,855 --> 00:02:36,746
+45
+00:02:38,627 --> 00:02:43,518
 Programas de apoio, inclusive digitais,
 reduziram a sobrecarga de cuidadores
 
-45
-00:02:36,746 --> 00:02:38,536
+46
+00:02:43,518 --> 00:02:45,308
 de pessoas com demência.
 
-46
-00:02:38,536 --> 00:02:41,160
+47
+00:02:45,308 --> 00:02:47,932
 As referências estão no fim da página.
+
+48
+00:02:48,632 --> 00:02:54,429
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+49
+00:02:54,429 --> 00:02:58,517
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+50
+00:02:58,517 --> 00:03:02,456
+O texto completo, com as
+referências, está no portal.

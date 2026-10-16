@@ -1,362 +1,382 @@
 1
-00:00:00,000 --> 00:00:02,321
-Burnout em médicos e enfermeiros:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:02,321 --> 00:00:04,761
-quando o cuidador precisa de ajuda.
+00:00:06,772 --> 00:00:09,093
+Burnout em médicos e enfermeiros:
 
 3
-00:00:04,761 --> 00:00:06,665
-Narração em voz sintética.
+00:00:09,093 --> 00:00:11,533
+quando o cuidador precisa de ajuda.
 
 4
-00:00:06,665 --> 00:00:11,545
+00:00:11,533 --> 00:00:13,437
+Narração em voz sintética.
+
+5
+00:00:13,437 --> 00:00:18,317
 Profissionais de saúde são ensinados a
 cuidar dos outros com uma competência
 
-5
-00:00:11,545 --> 00:00:14,045
+6
+00:00:18,317 --> 00:00:20,817
 que raramente voltam para si mesmos.
 
-6
-00:00:14,045 --> 00:00:18,865
+7
+00:00:20,817 --> 00:00:25,637
 O burnout, nessa população, muitas vezes
 avança silenciosamente — encoberto
 
-7
-00:00:18,865 --> 00:00:22,317
+8
+00:00:25,637 --> 00:00:29,089
 pela cultura de que aguentar faz
 parte da profissão.
 
-8
-00:00:22,317 --> 00:00:27,018
+9
+00:00:29,089 --> 00:00:33,790
 A Síndrome de Burnout é reconhecida pela
 CID-11 como fenômeno ocupacional
 
-9
-00:00:27,018 --> 00:00:31,660
+10
+00:00:33,790 --> 00:00:38,432
 resultante de estresse crônico no trabalho
 não adequadamente gerenciado.
 
-10
-00:00:31,660 --> 00:00:36,243
+11
+00:00:38,432 --> 00:00:43,015
 Não é fraqueza, não é falta de vocação —
 é uma resposta compreensível a
 
-11
-00:00:36,243 --> 00:00:40,765
+12
+00:00:43,015 --> 00:00:47,537
 condições que frequentemente demandam
 mais do que qualquer pessoa pode
 
-12
-00:00:40,765 --> 00:00:42,610
+13
+00:00:47,537 --> 00:00:49,382
 oferecer indefinidamente.
 
-13
-00:00:42,610 --> 00:00:44,693
+14
+00:00:49,382 --> 00:00:51,465
 As três dimensões do burnout.
 
-14
-00:00:44,693 --> 00:00:46,181
+15
+00:00:51,465 --> 00:00:52,953
 Exaustão emocional.
 
-15
-00:00:46,181 --> 00:00:50,704
+16
+00:00:52,953 --> 00:00:57,476
 Sensação de estar completamente drenado,
 sem reserva emocional para os
 
-16
-00:00:50,704 --> 00:00:54,334
+17
+00:00:57,476 --> 00:01:01,106
 pacientes — e muitas vezes para a
 própria vida pessoal.
 
-17
-00:00:54,334 --> 00:00:55,762
+18
+00:01:01,106 --> 00:01:02,534
 Despersonalização.
 
-18
-00:00:55,762 --> 00:01:00,285
+19
+00:01:02,534 --> 00:01:07,057
 Distanciamento emocional dos pacientes,
 tendência a tratá-los de forma
 
-19
-00:01:00,285 --> 00:01:05,046
+20
+00:01:07,057 --> 00:01:11,818
 mecânica ou cínica — frequentemente
 reconhecido como perda do cuidado pelo
 
-20
-00:01:05,046 --> 00:01:06,653
+21
+00:01:11,818 --> 00:01:13,425
 próprio profissional.
 
-21
-00:01:06,653 --> 00:01:08,022
+22
+00:01:13,425 --> 00:01:14,794
 Baixa realização.
 
-22
-00:01:08,022 --> 00:01:13,021
+23
+00:01:14,794 --> 00:01:19,793
 Sensação persistente de incompetência e
 ineficácia, mesmo quando os resultados
 
-23
-00:01:13,021 --> 00:01:14,806
+24
+00:01:19,793 --> 00:01:21,578
 objetivos são adequados.
 
-24
-00:01:14,806 --> 00:01:18,198
+25
+00:01:21,578 --> 00:01:24,970
 Questionamento sobre o sentido
 do próprio trabalho.
 
-25
-00:01:18,198 --> 00:01:22,781
+26
+00:01:24,970 --> 00:01:29,553
 Essas três dimensões são as mesmas
 descritas na pesquisa clássica sobre
 
-26
-00:01:22,781 --> 00:01:27,363
+27
+00:01:29,553 --> 00:01:34,135
 burnout, que o entende como resultado de
 um desencontro duradouro entre
 
-27
-00:01:27,363 --> 00:01:29,863
+28
+00:01:34,135 --> 00:01:36,635
 a pessoa e as condições do trabalho:
 
-28
-00:01:29,863 --> 00:01:33,969
+29
+00:01:36,635 --> 00:01:40,741
 carga, controle, reconhecimento,
 comunidade, justiça e valores.
 
-29
-00:01:33,969 --> 00:01:37,956
+30
+00:01:40,741 --> 00:01:44,728
 Por que profissionais de saúde têm
 dificuldade em reconhecer.
 
-30
-00:01:37,956 --> 00:01:42,598
+31
+00:01:44,728 --> 00:01:49,370
 A formação médica e de enfermagem valoriza
 resistência e disponibilidade
 
-31
-00:01:42,598 --> 00:01:45,693
+32
+00:01:49,370 --> 00:01:52,465
 — frequentemente em
 detrimento do autocuidado.
 
-32
-00:01:45,693 --> 00:01:50,930
+33
+00:01:52,465 --> 00:01:57,702
 Isso cria um ambiente onde admitir esgotamento
 é visto como fraqueza profissional,
 
-33
-00:01:50,930 --> 00:01:55,453
+34
+00:01:57,702 --> 00:02:02,225
 e onde os primeiros sinais de burnout são
 sistematicamente minimizados
 
-34
-00:01:55,453 --> 00:01:57,595
+35
+00:02:02,225 --> 00:02:04,367
 ou atribuídos a outras causas.
 
-35
-00:01:57,595 --> 00:01:59,559
+36
+00:02:04,367 --> 00:02:06,331
 Sinais que merecem atenção:
 
-36
-00:01:59,559 --> 00:02:04,379
+37
+00:02:06,331 --> 00:02:11,151
 irritabilidade crescente com pacientes ou
 colegas que antes não te afetavam
 
-37
-00:02:04,379 --> 00:02:05,093
+38
+00:02:11,151 --> 00:02:11,865
 assim;
 
-38
-00:02:05,093 --> 00:02:09,081
+39
+00:02:11,865 --> 00:02:15,853
 dificuldade de sair mentalmente do
 trabalho mesmo nas folgas;
 
-39
-00:02:09,081 --> 00:02:11,640
+40
+00:02:15,853 --> 00:02:18,412
 erros ou quase-erros mais frequentes;
 
-40
-00:02:11,640 --> 00:02:15,806
+41
+00:02:18,412 --> 00:02:22,578
 uso crescente de álcool ou outras
 substâncias para descomprimir;
 
-41
-00:02:15,806 --> 00:02:20,447
+42
+00:02:22,578 --> 00:02:27,219
 sensação de que nada do que você faz faz
 diferença — qualquer um desses,
 
-42
-00:02:20,447 --> 00:02:24,078
+43
+00:02:27,219 --> 00:02:30,850
 persistindo por semanas,
 justifica avaliação cuidadosa.
 
-43
-00:02:24,078 --> 00:02:25,565
+44
+00:02:30,850 --> 00:02:32,337
 O problema é comum:
 
-44
-00:02:25,565 --> 00:02:30,445
+45
+00:02:32,337 --> 00:02:37,217
 uma meta-análise mundial estimou que cerca
 de 11% dos enfermeiros apresentam
 
-45
-00:02:30,445 --> 00:02:35,385
+46
+00:02:37,217 --> 00:02:42,157
 sintomas de burnout, e os estudos com
 médicos mostram números muito variados,
 
-46
-00:02:35,385 --> 00:02:37,289
+47
+00:02:42,157 --> 00:02:44,061
 conforme a forma de medir.
 
-47
-00:02:37,289 --> 00:02:40,146
+48
+00:02:44,061 --> 00:02:46,918
 O que diferencia burnout de cansaço comum.
 
-48
-00:02:40,146 --> 00:02:42,229
+49
+00:02:46,918 --> 00:02:49,001
 Cansaço melhora com descanso.
 
-49
-00:02:42,229 --> 00:02:46,930
+50
+00:02:49,001 --> 00:02:53,702
 Burnout não — ou melhora muito pouco nas
 férias e retorna rapidamente com
 
-50
-00:02:46,930 --> 00:02:47,942
+51
+00:02:53,702 --> 00:02:54,714
 o trabalho.
 
-51
-00:02:47,942 --> 00:02:52,524
+52
+00:02:54,714 --> 00:02:59,296
 A distinção mais importante está na
 persistência e na presença das três
 
-52
-00:02:52,524 --> 00:02:55,262
+53
+00:02:59,296 --> 00:03:02,034
 dimensões em conjunto, não isoladamente.
 
-53
-00:02:55,262 --> 00:02:57,821
+54
+00:03:02,034 --> 00:03:04,593
 O esgotamento também afeta o cuidado:
 
-54
-00:02:57,821 --> 00:03:02,403
+55
+00:03:04,593 --> 00:03:09,175
 médicos com burnout têm chance cerca de
 duas vezes maior de se envolver
 
-55
-00:03:02,403 --> 00:03:05,081
+56
+00:03:09,175 --> 00:03:11,853
 em incidentes de segurança do paciente.
 
-56
-00:03:05,081 --> 00:03:07,045
+57
+00:03:11,853 --> 00:03:13,817
 Primeiros passos concretos.
 
-57
-00:03:07,045 --> 00:03:11,568
+58
+00:03:13,817 --> 00:03:18,340
 Buscar avaliação e acompanhamento
 profissional para si mesmo — médico,
 
-58
-00:03:11,568 --> 00:03:13,353
+59
+00:03:18,340 --> 00:03:20,125
 psicólogo ou psiquiatra.
 
-59
-00:03:13,353 --> 00:03:18,174
+60
+00:03:20,125 --> 00:03:24,946
 Diagnosticar nos outros não substitui o
 cuidado com a própria saúde mental.
 
-60
-00:03:18,174 --> 00:03:22,756
+61
+00:03:24,946 --> 00:03:29,528
 Mapear o que no trabalho contribui —
 carga horária, falta de autonomia,
 
-61
-00:03:22,756 --> 00:03:27,339
+62
+00:03:29,528 --> 00:03:34,111
 conflitos institucionais — e o que pode
 ser modificado no curto e médio
 
-62
-00:03:27,339 --> 00:03:28,053
+63
+00:03:34,111 --> 00:03:34,825
 prazo.
 
-63
-00:03:28,053 --> 00:03:31,564
+64
+00:03:34,825 --> 00:03:38,336
 Estabelecer limites reais , não
 apenas como intenção:
 
-64
-00:03:31,564 --> 00:03:36,384
+65
+00:03:38,336 --> 00:03:43,156
 horas sem responder mensagens de trabalho,
 folgas que são realmente folgas.
 
-65
-00:03:36,384 --> 00:03:41,205
+66
+00:03:43,156 --> 00:03:47,977
 Não adiar o pedido de ajuda até que o
 quadro esteja grave — burnout tratado
 
-66
-00:03:41,205 --> 00:03:45,728
+67
+00:03:47,977 --> 00:03:52,500
 precocemente tem prognóstico muito melhor
 do que após anos de acúmulo.
 
-67
-00:03:45,728 --> 00:03:50,251
+68
+00:03:52,500 --> 00:03:57,023
 "Cuidar de você não é um luxo que você
 terá quando o trabalho melhorar
 
-68
-00:03:50,251 --> 00:03:55,011
+69
+00:03:57,023 --> 00:04:01,783
 — porque o trabalho raramente melhora por
 conta própria enquanto você está
 
-69
-00:03:55,011 --> 00:03:57,154
+70
+00:04:01,783 --> 00:04:03,926
 esgotado tentando sustentá-lo.
 
-70
-00:03:57,154 --> 00:04:01,677
+71
+00:04:03,926 --> 00:04:08,449
 Cuidar de você é o que torna possível
 continuar cuidando dos outros de
 
-71
-00:04:01,677 --> 00:04:04,236
+72
+00:04:08,449 --> 00:04:11,008
 forma que valha a pena, para todos.".
 
-72
-00:04:04,236 --> 00:04:08,818
+73
+00:04:11,008 --> 00:04:15,590
 Este conteúdo tem finalidade educativa,
 baseado nos critérios da CID-11
 
-73
-00:04:08,818 --> 00:04:13,698
+74
+00:04:15,590 --> 00:04:20,470
 para Síndrome de Burnout e em literatura
 sobre saúde mental de profissionais
 
-74
-00:04:13,698 --> 00:04:14,591
+75
+00:04:20,470 --> 00:04:21,363
 de saúde.
 
-75
-00:04:14,591 --> 00:04:18,638
+76
+00:04:21,363 --> 00:04:25,410
 Não substitui avaliação médica ou
 psicológica individualizada.
 
-76
-00:04:18,638 --> 00:04:23,458
+77
+00:04:25,410 --> 00:04:30,230
 As evidências mostram que estratégias
 individuais e mudanças na organização
 
-77
-00:04:23,458 --> 00:04:27,981
+78
+00:04:30,230 --> 00:04:34,753
 do trabalho reduzem o burnout de forma
 significativa, e que as medidas
 
-78
-00:04:27,981 --> 00:04:30,837
+79
+00:04:34,753 --> 00:04:37,609
 organizacionais tendem a ter efeito maior.
 
-79
-00:04:30,837 --> 00:04:33,456
+80
+00:04:37,609 --> 00:04:40,228
 As referências estão no fim da página.
+
+81
+00:04:40,928 --> 00:04:46,725
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+82
+00:04:46,725 --> 00:04:50,813
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+83
+00:04:50,813 --> 00:04:54,752
+O texto completo, com as
+referências, está no portal.

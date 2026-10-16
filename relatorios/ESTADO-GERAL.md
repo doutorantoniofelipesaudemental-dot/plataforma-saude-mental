@@ -1,6 +1,13 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
+## Etapa 1 — produção do PR #77 (16/10/2026)
+- PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).
+- OK em produção: home, /mentoria, /links (200), /api/health (banco conectado), artigo com <audio> e MP3 (206 audio/mpeg), capa no Blob (200), rotas cron e admin existem (401 sem token), cron publicar-linkedin registrado em vercel.json (seg/qua/sex 22:30 UTC).
+- Freios: Instagram ativo (REDES_PUBLICACAO_ATIVA); LINKEDIN_PUBLICACAO_ATIVA e YOUTUBE_PUBLICACAO_ATIVA NÃO existem na Vercel = desligados.
+- Trava B (parte "não acessível"): passa. Texto agendado imagem-corporal-o-que-e: página e API 404, fora da listagem, URL do Blob pelo selo 404; o MP3 fica só em narracoes-geradas/ até a publicação. Parte "passa a tocar ao publicar": só validada no dry-run (0 publicados sem áudio); teste real = 19/10 08h (Bahia).
+- Blob: 1017 MB de 1024 MB; 288 narrações órfãs (314 MB). Lista completa depende de ajuste no endpoint (ver relatório).
+
 ## Domínio
 - **Principal único:** `https://www.drantoniofelipemedico.com.br` (canonical, og:url, sitemap, robots, links internos, capas das redes).
 - `drantoniofelipemedico.com.br` (sem www) → 308 para o www (Vercel). `drsaudemental.vercel.app` → 301 para o www, **exceto `/api/`** (crons e scripts).

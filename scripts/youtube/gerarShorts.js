@@ -15,6 +15,7 @@ const { checarImagemSemMarcaDagua } = require('../../backend/lib/checagensAprova
 const arg = (k) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').split('=').slice(1).join('=');
 const refazer = process.argv.includes('--refazer');
 const FECHO = 'Texto completo no site do Dr. Antônio Felipe, link na descrição. Em crise: CVV 188, SAMU 192.';
+const CREDITO_FALA = L.vinheta.TEXTOS.curta; // Shorts até 60 s: só a versão curta, no fim
 const MAX_SEG = 58;
 
 const tts = (texto, mp3, dir) => {
@@ -39,19 +40,17 @@ function ass(trechos, W = 1080, H = 1920) {
 async function gerar({ a, id, tituloTela, linhas, extraDescricao = '' }) {
   const dir = path.join(L.MIDIA, a.slug, `short-${id}`);
   if (fs.existsSync(path.join(dir, 'meta.json')) && !refazer) return { slug: a.slug, id, pulou: 'já gerado' };
+  // capa ANTES de apagar a pasta: se falhar, o que já existe fica intacto
+  const cp = await L.obterCapa(a);
+  if (cp.erro) return { slug: a.slug, id, pulou: cp.erro };
+  if (cp.buf) { const wm = await checarImagemSemMarcaDagua(cp.buf); if (!wm.ok) return { slug: a.slug, id, reprovado: `capa com marca d'água/ruído: ${wm.falhas.join('; ')}` }; }
   fs.mkdirSync(dir, { recursive: true }); for (const f of fs.readdirSync(dir)) fs.rmSync(path.join(dir, f), { recursive: true, force: true });
   let capa = '';
-  if (a.imagemCapa) {
-    const rc = await fetch(a.imagemCapa); if (!rc.ok) throw new Error(`capa HTTP ${rc.status} (Blob indisponível?)`);
-    const buf = Buffer.from(await rc.arrayBuffer());
-    const wm = await checarImagemSemMarcaDagua(buf);
-    if (!wm.ok) return { slug: a.slug, id, reprovado: `capa com marca d'água/ruído: ${wm.falhas.join('; ')}` };
-    capa = path.join(dir, 'capa.jpg'); fs.writeFileSync(capa, buf);
-  }
+  if (cp.buf) { capa = path.join(dir, 'capa.jpg'); fs.writeFileSync(capa, cp.buf); }
   // escolhe as linhas que cabem em ~MAX_SEG (14 caracteres de fala por segundo, +0,3 s entre linhas)
-  let uso = [...linhas, FECHO];
+  let uso = [...linhas, FECHO, CREDITO_FALA];
   const estima = (xs) => xs.reduce((s, x) => s + x.length / 14 + 0.3, 0);
-  while (uso.length > 3 && estima(uso) > MAX_SEG - 3) uso.splice(uso.length - 2, 1);
+  while (uso.length > 4 && estima(uso) > MAX_SEG - 3) uso.splice(uso.length - 3, 1);
   // 1 TTS por linha: tempo exato para a legenda
   const partes = [];
   uso.forEach((txt, i) => { const mp3 = path.join(dir, `l${i}.mp3`); tts(txt, mp3, dir); partes.push({ txt, mp3, dur: L.duracao(mp3) }); });
@@ -71,17 +70,18 @@ async function gerar({ a, id, tituloTela, linhas, extraDescricao = '' }) {
     t0 += p.dur + 0.3;
   }
   fs.writeFileSync(path.join(dir, 'cap.ass'), ass(trechos), 'utf8');
+  fs.writeFileSync(path.join(dir, 'credito.ass'), L.creditoAss(total, { W: 1080, H: 1920 }), 'utf8'); // crédito de tela: 0–3 s e tela final
   fs.copyFileSync('C:/Windows/Fonts/segoeuib.ttf', path.join(dir, 'segoeuib.ttf'));
   L.arte({ tipo: 'short', titulo: tituloTela, capa, saida: path.join(dir, 'fundo.png') });
   L.arte({ tipo: 'thumb', titulo: a.titulo, capa, saida: path.join(dir, 'thumb.png') });
   // deriva lenta (movimento) + barra de progresso dourada + legenda queimada + voz
   L.run('ffmpeg', ['-y', '-v', 'error', '-loop', '1', '-framerate', '30', '-i', 'fundo.png', '-i', 'voz.wav', '-f', 'lavfi', '-i', 'color=c=0xC9A24B:s=1080x12:r=30',
-    '-filter_complex', `[0:v]scale=1134:2016,crop=1080:1920:x='27+20*sin(t/3)':y='48+30*sin(t/5)',subtitles=cap.ass:fontsdir=.[b];[b][2:v]overlay=x='-1080+1080*t/${total.toFixed(2)}':y=0:shortest=1,format=yuv420p[v]`,
+    '-filter_complex', `[0:v]scale=1134:2016,crop=1080:1920:x='27+20*sin(t/3)':y='48+30*sin(t/5)',subtitles=cap.ass:fontsdir=.,subtitles=credito.ass:fontsdir=.[b];[b][2:v]overlay=x='-1080+1080*t/${total.toFixed(2)}':y=0:shortest=1,format=yuv420p[v]`,
     '-map', '[v]', '-map', '1:a', '-t', total.toFixed(2), '-r', '30', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '23', '-c:a', 'aac', '-b:a', '128k', '-ar', '44100', '-movflags', '+faststart', 'short.mp4'], { cwd: dir });
   for (const f of fs.readdirSync(dir)) if (/^l\d+\.(mp3|wav|txt)$|^(lista\.txt|voz\.wav|segoeuib\.ttf|fundo\.png)$/.test(f)) fs.rmSync(path.join(dir, f), { force: true });
   const video = path.join(dir, 'short.mp4');
   const meta = {
-    tipo: 'short', slug: a.slug, id, titulo: `${tituloTela.length > 88 ? tituloTela.slice(0, 85) + '...' : tituloTela} #Shorts`,
+    tipo: 'short', creditoMarca: 'v1', slug: a.slug, id, titulo: `${tituloTela.length > 88 ? tituloTela.slice(0, 85) + '...' : tituloTela} #Shorts`,
     descricao: L.descricaoShort(a, extraDescricao), tags: L.tagsDe(a), playlist: L.playlistDe(a), refsPermitidas: [],
     roteiro: uso, arquivos: { video: 'short.mp4', capa: 'thumb.png' }, midia: L.sondar(video), hashVideo: L.sha256(video), duracao: total, geradoEm: new Date().toISOString(),
   };

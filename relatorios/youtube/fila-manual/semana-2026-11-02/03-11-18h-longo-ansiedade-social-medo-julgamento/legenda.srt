@@ -1,203 +1,223 @@
 1
-00:00:00,000 --> 00:00:01,393
-Ansiedade social:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:01,393 --> 00:00:04,299
-quando o medo do julgamento limita a vida.
+00:00:06,772 --> 00:00:08,165
+Ansiedade social:
 
 3
-00:00:04,299 --> 00:00:06,236
-Narração em voz sintética.
+00:00:08,165 --> 00:00:11,071
+quando o medo do julgamento limita a vida.
 
 4
-00:00:06,236 --> 00:00:11,261
+00:00:11,071 --> 00:00:13,008
+Narração em voz sintética.
+
+5
+00:00:13,008 --> 00:00:18,033
 Timidez é um traço de personalidade comum e
 não necessariamente problemático.
 
-5
-00:00:11,261 --> 00:00:13,380
+6
+00:00:18,033 --> 00:00:20,152
 Ansiedade social é diferente:
 
-6
-00:00:13,380 --> 00:00:18,284
+7
+00:00:20,152 --> 00:00:25,056
 envolve medo intenso e persistente de
 julgamento ou humilhação em situações
 
-7
-00:00:18,284 --> 00:00:22,946
+8
+00:00:25,056 --> 00:00:29,718
 sociais, com evitação que chega a limitar
 decisões importantes — de não
 
-8
-00:00:22,946 --> 00:00:27,729
+9
+00:00:29,718 --> 00:00:34,501
 aceitar uma promoção que exigiria
 apresentações, a evitar relacionamentos
 
-9
-00:00:27,729 --> 00:00:29,364
+10
+00:00:34,501 --> 00:00:36,136
 por medo de rejeição.
 
-10
-00:00:29,364 --> 00:00:32,028
+11
+00:00:36,136 --> 00:00:38,800
 O ciclo que mantém a ansiedade social.
 
-11
-00:00:32,028 --> 00:00:36,811
+12
+00:00:38,800 --> 00:00:43,583
 Evitar uma situação social alivia a
 ansiedade no curto prazo, mas reforça
 
-12
-00:00:36,811 --> 00:00:41,533
+13
+00:00:43,583 --> 00:00:48,305
 a crença de que a situação era, de fato,
 perigosa — alimentando o ciclo.
 
-13
-00:00:41,533 --> 00:00:46,195
+14
+00:00:48,305 --> 00:00:52,967
 Some a isso a ruminação pós-evento,
 revisando cada detalhe da interação
 
-14
-00:00:46,195 --> 00:00:50,857
+15
+00:00:52,967 --> 00:00:57,629
 em busca de erros, e o resultado é um
 padrão que se autoperpetua, mesmo
 
-15
-00:00:50,857 --> 00:00:54,369
+16
+00:00:57,629 --> 00:01:01,141
 sem eventos sociais realmente
 negativos acontecendo.
 
-16
-00:00:54,369 --> 00:00:59,212
+17
+00:01:01,141 --> 00:01:05,984
 A ansiedade social é um dos transtornos de
 ansiedade mais comuns e costuma
 
-17
-00:00:59,212 --> 00:01:01,029
+18
+00:01:05,984 --> 00:01:07,801
 começar na adolescência.
 
-18
-00:01:01,029 --> 00:01:05,872
+19
+00:01:07,801 --> 00:01:12,644
 Metade dos transtornos mentais começa até
 os 14 anos, e a ansiedade social
 
-19
-00:01:05,872 --> 00:01:08,354
+20
+00:01:12,644 --> 00:01:15,126
 está entre os que surgem mais cedo.
 
-20
-00:01:08,354 --> 00:01:11,442
+21
+00:01:15,126 --> 00:01:18,214
 O medo de falar em público
 como caso extremo.
 
-21
-00:01:11,442 --> 00:01:16,286
+22
+00:01:18,214 --> 00:01:23,058
 Fobia de falar em público é uma das
 manifestações mais comuns de ansiedade
 
-22
-00:01:16,286 --> 00:01:19,858
+23
+00:01:23,058 --> 00:01:26,630
 social — e uma das mais
 limitantes profissionalmente.
 
-23
-00:01:19,858 --> 00:01:24,883
+24
+00:01:26,630 --> 00:01:31,655
 Os sintomas físicos intensos (taquicardia,
 tremor, sudorese) que a acompanham
 
-24
-00:01:24,883 --> 00:01:29,848
+25
+00:01:31,655 --> 00:01:36,620
 costumam gerar medo adicional de que os
 outros percebam a ansiedade, criando
 
-25
-00:01:29,848 --> 00:01:33,844
+26
+00:01:36,620 --> 00:01:40,616
 uma camada extra de autoconsciência
 que piora a experiência.
 
-26
-00:01:33,844 --> 00:01:35,236
+27
+00:01:40,616 --> 00:01:42,008
 Ponto de atenção:
 
-27
-00:01:35,236 --> 00:01:39,837
+28
+00:01:42,008 --> 00:01:46,609
 Ansiedade social não é falta de
 habilidade social — muitas pessoas com
 
-28
-00:01:39,837 --> 00:01:44,499
+29
+00:01:46,609 --> 00:01:51,271
 ansiedade social têm boas habilidades
 sociais, mas o medo do julgamento
 
-29
-00:01:44,499 --> 00:01:48,616
+30
+00:01:51,271 --> 00:01:55,388
 impede que essas habilidades sejam
 exercidas com naturalidade.
 
-30
-00:01:48,616 --> 00:01:53,399
+31
+00:01:55,388 --> 00:02:00,171
 Perguntas simples, como as três do
 Mini-SPIN, ajudam a identificar quando
 
-31
-00:01:53,399 --> 00:01:55,216
+32
+00:02:00,171 --> 00:02:01,988
 o medo merece avaliação.
 
-32
-00:01:55,216 --> 00:01:57,940
+33
+00:02:01,988 --> 00:02:04,712
 Ansiedade social tem tratamento eficaz.
 
-33
-00:01:57,940 --> 00:02:02,905
+34
+00:02:04,712 --> 00:02:09,677
 Entre as condições de saúde mental,
 ansiedade social é uma das que respondem
 
-34
-00:02:02,905 --> 00:02:07,990
+35
+00:02:09,677 --> 00:02:14,762
 melhor a acompanhamento estruturado — a
 exposição gradual a situações temidas,
 
-35
-00:02:07,990 --> 00:02:13,016
+36
+00:02:14,762 --> 00:02:19,788
 com apoio adequado, tende a quebrar o ciclo
 de evitação de forma consistente.
 
-36
-00:02:13,016 --> 00:02:15,559
+37
+00:02:19,788 --> 00:02:22,331
 Buscar ajuda não é admitir fraqueza;
 
-37
-00:02:15,559 --> 00:02:18,949
+38
+00:02:22,331 --> 00:02:25,721
 é acessar um tratamento que
 genuinamente funciona.
 
-38
-00:02:18,949 --> 00:02:23,550
+39
+00:02:25,721 --> 00:02:30,322
 Conteúdo educativo baseado em literatura
 sobre transtorno de ansiedade
 
-39
-00:02:23,550 --> 00:02:24,337
+40
+00:02:30,322 --> 00:02:31,109
 social.
 
-40
-00:02:24,337 --> 00:02:26,820
+41
+00:02:31,109 --> 00:02:33,592
 Não substitui avaliação individual.
 
-41
-00:02:26,820 --> 00:02:31,421
+42
+00:02:33,592 --> 00:02:38,193
 Uma grande meta-análise mostrou que a
 terapia cognitivo-comportamental
 
-42
-00:02:31,421 --> 00:02:36,325
+43
+00:02:38,193 --> 00:02:43,097
 individual é o tratamento psicológico mais
 eficaz, e alguns antidepressivos
 
-43
-00:02:36,325 --> 00:02:37,536
+44
+00:02:43,097 --> 00:02:44,308
 também ajudam.
 
-44
-00:02:37,536 --> 00:02:40,200
+45
+00:02:44,308 --> 00:02:46,972
 As referências estão no fim da página.
+
+46
+00:02:47,672 --> 00:02:53,469
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+47
+00:02:53,469 --> 00:02:57,557
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+48
+00:02:57,557 --> 00:03:01,496
+O texto completo, com as
+referências, está no portal.

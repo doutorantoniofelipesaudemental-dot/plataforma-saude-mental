@@ -8,6 +8,7 @@ const { AVISO_CFM } = require('../conformidadeCfm');
 const MAX_PALAVRAS_TELA = 25;
 const ORIENTACAO = 'Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.';
 const LINHA_CRISE = 'Em crise: CVV 188 · SAMU 192';
+const LINHA_CREDITO = 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito';
 const RE_SENSIVEL = /\b(suic[ií]d\w*|autoles\w*|autom?utila\w*|desejo de morrer|quer(?:er)? morrer|tirar a (?:pr[óo]pria )?vida|viol[êe]ncia|abuso|trauma)\b/i;
 const ENTIDADES = { '&nbsp;': ' ', '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#39;': "'", '&mdash;': '—', '&ndash;': '–', '&hellip;': '…' };
 const SUBSTITUICOES_INGLES = [[/\bonline\b/gi, 'na internet'], [/\bfeedback\b/gi, 'retorno'], [/\bhome office\b/gi, 'trabalho em casa'], [/\bstress\b/gi, 'estresse'], [/\bbullying\b/gi, 'bullying']];
@@ -152,7 +153,7 @@ function planejarPost(artigo, { tipo = 'artigo' } = {}) {
 
 /** Legenda final: corpo + referências + avisos obrigatórios + assinatura de 3 linhas + hashtags (≤ 1500 caracteres). */
 function montarLegenda(plano, { limite = 1500 } = {}) {
-  const fixos = [ORIENTACAO, plano.sensivel ? LINHA_CRISE : LINHA_CRISE, AVISO_CFM, LINHAS_SOCIAL.join('\n')].join('\n\n');
+  const fixos = [LINHA_CREDITO, ORIENTACAO, plano.sensivel ? LINHA_CRISE : LINHA_CRISE, AVISO_CFM, LINHAS_SOCIAL.join('\n')].join('\n\n');
   const tags = plano.hashtags.join(' ');
   const refs = plano.refs.length ? `Referências: ${plano.refs.join(' | ')}` : '';
   const montar = (corpo) => [corpo, refs, fixos, tags].filter(Boolean).join('\n\n');
@@ -164,4 +165,4 @@ function montarLegenda(plano, { limite = 1500 } = {}) {
   return legenda;
 }
 
-module.exports = { planejarPost, montarLegenda, textoPuro, palavras, encurtar, MAX_PALAVRAS_TELA, ORIENTACAO, LINHA_CRISE };
+module.exports = { planejarPost, montarLegenda, textoPuro, palavras, encurtar, MAX_PALAVRAS_TELA, ORIENTACAO, LINHA_CRISE, LINHA_CREDITO };

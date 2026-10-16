@@ -1,207 +1,227 @@
 1
-00:00:00,000 --> 00:00:01,740
-Sinais de dependência:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:01,740 --> 00:00:05,032
+00:00:06,772 --> 00:00:08,512
+Sinais de dependência:
+
+3
+00:00:08,512 --> 00:00:11,804
 química ou comportamental, o
 padrão é parecido.
 
-3
-00:00:05,032 --> 00:00:07,021
+4
+00:00:11,804 --> 00:00:13,793
 Narração em voz sintética.
 
-4
-00:00:07,021 --> 00:00:12,612
+5
+00:00:13,793 --> 00:00:19,384
 Dependência química — de álcool ou outras
 substâncias — e dependência comportamental
 
-5
-00:00:12,612 --> 00:00:17,893
+6
+00:00:19,384 --> 00:00:24,665
 — de jogos virtuais, apostas (bets),
 pornografia, entre outros — têm mecanismos
 
-6
-00:00:17,893 --> 00:00:22,615
+7
+00:00:24,665 --> 00:00:29,387
 cerebrais e padrões de comportamento
 notavelmente parecidos, mesmo sem
 
-7
-00:00:22,615 --> 00:00:25,473
+8
+00:00:29,387 --> 00:00:32,245
 envolver uma substância química externa.
 
-8
-00:00:25,473 --> 00:00:30,567
+9
+00:00:32,245 --> 00:00:37,339
 Em ambos os casos, o que caracteriza
 dependência não é a frequência isolada,
 
-9
-00:00:30,567 --> 00:00:34,668
+10
+00:00:37,339 --> 00:00:41,440
 mas a perda de controle sobre ela,
 apesar das consequências.
 
-10
-00:00:34,668 --> 00:00:37,836
+11
+00:00:41,440 --> 00:00:44,608
 O padrão comum por trás de
 formas diferentes.
 
-11
-00:00:37,836 --> 00:00:42,807
+12
+00:00:44,608 --> 00:00:49,579
 Necessidade crescente de mais quantidade ou
 frequência para sentir o mesmo
 
-12
-00:00:42,807 --> 00:00:47,963
+13
+00:00:49,579 --> 00:00:54,735
 efeito (tolerância), tentativas fracassadas
 de reduzir ou parar, continuidade
 
-13
-00:00:47,963 --> 00:00:52,685
+14
+00:00:54,735 --> 00:00:59,457
 apesar de problemas evidentes, e
 desconforto intenso quando o acesso é
 
-14
-00:00:52,685 --> 00:00:57,531
+15
+00:00:59,457 --> 00:01:04,303
 interrompido — esse padrão se repete seja
 a dependência de álcool, jogos
 
-15
-00:00:57,531 --> 00:01:02,253
+16
+00:01:04,303 --> 00:01:09,025
 de apostas ou qualquer outro
 comportamento repetitivo usado como forma
 
-16
-00:01:02,253 --> 00:01:03,247
+17
+00:01:09,025 --> 00:01:10,019
 de alívio.
 
-17
-00:01:03,247 --> 00:01:08,031
+18
+00:01:10,019 --> 00:01:14,803
 O transtorno do jogo é reconhecido como
 dependência comportamental, com
 
-18
-00:01:08,031 --> 00:01:10,951
+19
+00:01:14,803 --> 00:01:17,723
 mecanismos parecidos aos das substâncias.
 
-19
-00:01:10,951 --> 00:01:14,492
+20
+00:01:17,723 --> 00:01:21,264
 A compra compulsiva atinge
 cerca de 5% dos adultos.
 
-20
-00:01:14,492 --> 00:01:18,468
+21
+00:01:21,264 --> 00:01:25,240
 Por que dependência comportamental
 costuma ser minimizada.
 
-21
-00:01:18,468 --> 00:01:23,563
+22
+00:01:25,240 --> 00:01:30,335
 Como não envolve uma substância química
 ingerida, dependência comportamental
 
-22
-00:01:23,563 --> 00:01:28,471
+23
+00:01:30,335 --> 00:01:35,243
 — especialmente de apostas online, cada
 vez mais acessíveis — costuma ser
 
-23
-00:01:28,471 --> 00:01:33,566
+24
+00:01:35,243 --> 00:01:40,338
 tratada como "falta de força de vontade" em
 vez de reconhecida como condição
 
-24
-00:01:33,566 --> 00:01:38,350
+25
+00:01:40,338 --> 00:01:45,122
 de saúde real, o que atrasa a busca por
 ajuda e aumenta o isolamento de
 
-25
-00:01:38,350 --> 00:01:40,027
+26
+00:01:45,122 --> 00:01:46,799
 quem convive com ela.
 
-26
-00:01:40,027 --> 00:01:41,456
+27
+00:01:46,799 --> 00:01:48,228
 Ponto de atenção:
 
-27
-00:01:41,456 --> 00:01:46,426
+28
+00:01:48,228 --> 00:01:53,198
 Esconder ou minimizar a frequência real de
 um comportamento para os outros
 
-28
-00:01:46,426 --> 00:01:51,397
+29
+00:01:53,198 --> 00:01:58,169
 é, em si, um sinal relevante — não porque a
 pessoa é desonesta, mas porque
 
-29
-00:01:51,397 --> 00:01:56,367
+30
+00:01:58,169 --> 00:02:03,139
 a vergonha associada à dependência costuma
 gerar esse padrão de ocultação.
 
-30
-00:01:56,367 --> 00:02:01,461
+31
+00:02:03,139 --> 00:02:08,233
 Em crianças e adolescentes, o transtorno de
 jogo pela internet já é estudado
 
-31
-00:02:01,461 --> 00:02:03,201
+32
+00:02:08,233 --> 00:02:09,973
 como condição clínica.
 
-32
-00:02:03,201 --> 00:02:05,500
+33
+00:02:09,973 --> 00:02:12,272
 Buscar ajuda cedo muda o curso.
 
-33
-00:02:05,500 --> 00:02:10,656
+34
+00:02:12,272 --> 00:02:17,428
 Dependência química e comportamental são
 condições reconhecidas clinicamente,
 
-34
-00:02:10,656 --> 00:02:16,062
+35
+00:02:17,428 --> 00:02:22,834
 com abordagens de tratamento estabelecidas —
 CAPS AD, grupos de apoio comunitário
 
-35
-00:02:16,062 --> 00:02:20,908
+36
+00:02:22,834 --> 00:02:27,680
 (Alcoólicos Anônimos, Narcóticos Anônimos)
 e acompanhamento profissional
 
-36
-00:02:20,908 --> 00:02:25,443
+37
+00:02:27,680 --> 00:02:32,215
 individual são caminhos concretos,
 muitas vezes usados em conjunto.
 
-37
-00:02:25,443 --> 00:02:30,476
+38
+00:02:32,215 --> 00:02:37,248
 Buscar ajuda cedo, antes que as
 consequências se acumulem ainda mais, tende
 
-38
-00:02:30,476 --> 00:02:33,768
+39
+00:02:37,248 --> 00:02:40,540
 a tornar o processo de
 recuperação mais viável.
 
-39
-00:02:33,768 --> 00:02:39,360
+40
+00:02:40,540 --> 00:02:46,132
 Conteúdo educativo baseado em literatura sobre
 dependência química e comportamental.
 
-40
-00:02:39,360 --> 00:02:41,907
+41
+00:02:46,132 --> 00:02:48,679
 Não substitui avaliação individual.
 
-41
-00:02:41,907 --> 00:02:45,821
+42
+00:02:48,679 --> 00:02:52,593
 Em caso de risco imediato, ligue
 188 (CVV) ou 192 (SAMU).
 
-42
-00:02:45,821 --> 00:02:50,978
+43
+00:02:52,593 --> 00:02:57,750
 Instrumentos como o Assist ajudam a
 identificar o uso problemático de álcool,
 
-43
-00:02:50,978 --> 00:02:53,090
+44
+00:02:57,750 --> 00:02:59,862
 tabaco e outras substâncias.
 
-44
-00:02:53,090 --> 00:02:55,824
+45
+00:02:59,862 --> 00:03:02,596
 As referências estão no fim da página.
+
+46
+00:03:03,296 --> 00:03:09,093
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+47
+00:03:09,093 --> 00:03:13,181
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+48
+00:03:13,181 --> 00:03:17,120
+O texto completo, com as
+referências, está no portal.

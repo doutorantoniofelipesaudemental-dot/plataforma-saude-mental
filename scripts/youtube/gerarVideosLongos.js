@@ -16,7 +16,8 @@ const refazer = process.argv.includes('--refazer');
 async function baixar(url) { const r = await fetch(url); if (!r.ok) throw new Error(`capa HTTP ${r.status}`); return Buffer.from(await r.arrayBuffer()); }
 
 async function gerar(a) {
-  const mp3 = await L.obterAudio(a);
+  let mp3 = await L.obterAudio(a);
+  if (mp3) mp3 = L.comVinheta(a, mp3); // abertura + encerramento falados (crédito da marca)
   if (!mp3) return { slug: a.slug, pulou: 'sem áudio válido (hash difere do texto atual ou narração ausente)' };
   const dir = path.join(L.MIDIA, a.slug); fs.mkdirSync(dir, { recursive: true });
   const saida = path.join(dir, 'longo.mp4');
@@ -24,8 +25,10 @@ async function gerar(a) {
 
   // capa: sem marca d'água (peça com marca é reprovada)
   let capaLocal = '';
-  if (a.imagemCapa) {
-    const buf = await baixar(a.imagemCapa);
+  const cp = await L.obterCapa(a);
+  if (cp.erro) return { slug: a.slug, pulou: cp.erro };
+  if (cp.buf) {
+    const buf = cp.buf;
     const wm = await checarImagemSemMarcaDagua(buf);
     if (!wm.ok) return { slug: a.slug, reprovado: `capa com marca d'água/ruído: ${wm.falhas.join('; ')}` };
     capaLocal = path.join(dir, 'capa.jpg'); fs.writeFileSync(capaLocal, buf);
@@ -34,14 +37,18 @@ async function gerar(a) {
   L.arte({ tipo: 'longo', titulo: a.titulo, capa: capaLocal, saida: path.join(dir, 'quadro.png') });
   L.arte({ tipo: 'thumb', titulo: a.titulo, capa: capaLocal, saida: path.join(dir, 'thumb.png') });
   // barra de progresso dourada (movimento sutil) sobre o quadro estático
+  // crédito de tela: 0–3 s e tela final com o endereço (legenda ASS com caixa opaca, não é marca d'água)
+  fs.writeFileSync(path.join(dir, 'credito.ass'), L.creditoAss(dur), 'utf8');
+  fs.copyFileSync('C:/Windows/Fonts/segoeuib.ttf', path.join(dir, 'segoeuib.ttf'));
   L.run('ffmpeg', ['-y', '-v', 'error', '-loop', '1', '-framerate', '30', '-i', path.join(dir, 'quadro.png'), '-i', mp3,
     '-f', 'lavfi', '-i', 'color=c=0xC9A24B:s=1920x10:r=30',
-    '-filter_complex', `[0:v][2:v]overlay=x='-1920+1920*t/${dur.toFixed(2)}':y=1070:shortest=1,format=yuv420p[v]`,
+    '-filter_complex', `[0:v][2:v]overlay=x='-1920+1920*t/${dur.toFixed(2)}':y=1070:shortest=1,subtitles=credito.ass:fontsdir=.,format=yuv420p[v]`,
     '-map', '[v]', '-map', '1:a', '-t', dur.toFixed(2), '-r', '30', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '24', '-tune', 'stillimage',
-    '-c:a', 'aac', '-b:a', '128k', '-ar', '44100', '-movflags', '+faststart', saida]);
+    '-c:a', 'aac', '-b:a', '128k', '-ar', '44100', '-movflags', '+faststart', saida], { cwd: dir });
+  fs.rmSync(path.join(dir, 'segoeuib.ttf'), { force: true });
   fs.writeFileSync(path.join(dir, 'legenda.srt'), L.srt(a, dur), 'utf8');
   const meta = {
-    tipo: 'longo', slug: a.slug, titulo: a.titulo.length > 100 ? `${a.titulo.slice(0, 97)}...` : a.titulo,
+    tipo: 'longo', creditoMarca: 'v1', slug: a.slug, titulo: a.titulo.length > 100 ? `${a.titulo.slice(0, 97)}...` : a.titulo,
     descricao: L.descricaoLongo(a, dur), tags: L.tagsDe(a), playlist: L.playlistDe(a),
     refsPermitidas: L.referencias(a.conteudo),
     arquivos: { video: 'longo.mp4', capa: 'thumb.png', legenda: 'legenda.srt' },

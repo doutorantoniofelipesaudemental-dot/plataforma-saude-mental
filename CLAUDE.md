@@ -82,6 +82,9 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - Não reescrever textos fornecidos: usar o HTML como está. **Deploy do site sempre exige o OK do Dr. Antônio.**
 - Caminho dos textos da importação: `C:\DRSAUDEMENTAL\importacao-completa\importacao\` (não mover). `importacao-completa/` está no `.gitignore`: no git entram só scripts, relatórios e as fontes `.md`/`.mdx` atualizadas.
 
+### Crédito de marca em áudio e vídeo (16/10/2026)
+- Toda narração e toda produção audiovisual (áudios dos artigos, vídeos longos, Shorts, Reels, trailer, podcast Relatos da Prática, vídeos de LinkedIn) menciona, na fala e na tela, que o conteúdo é do Portal de Saúde Mental Doutor Antônio Felipe Garabito. A menção é crédito discreto, nunca marca d'água sobreposta. Vinhetas em `backend/lib/vinheta.js`; campo `vinhetaVersao` separado do hash de narração.
+
 ### Autor
 - Nunca "psiquiatra"; sem #psiquiatria; "Antônio" com acento; RQE 26638 sempre junto de "Medicina de Família e Comunidade"; "NÃO ESPECIALISTA" só abaixo da linha das pós-graduações.
 - Exceção: "psiquiatra" como nome da profissão em `quando-encaminhar-aps` e `quando-procurar-psiquiatra-psicologo`.
@@ -110,6 +113,9 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - **§D (hash de narração) — liberado** para os itens do PROMPT-MESTRE e para correções aprovadas da auditoria. Nesses itens: marcar a narração como `pendente`; ocultar o player do áudio antigo até o novo ser gerado; NÃO apagar o arquivo de áudio antigo e NÃO gerar áudio agora. Para todos os outros textos, o §D continua valendo.
 - **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) ATUALIZAÇÃO de 15/10/2026: a exceção da `/links` e de `assets/marca/` também foi REVOGADA; "Antônio" leva acento em todo lugar, exceto endereços, @, e-mail e nomes técnicos.
 
+
+### Regra de merge (16/10/2026)
+- Merge na `main` só depois de auditoria com 0 falhas, build OK e 100% dos testes passando. Se o merge for bloqueado pelas permissões, NÃO contornar: deixar o PR pronto e escrever ao Dr. Antônio o comando exato.
 
 ### Ferramentas não permitidas (decisão de 15/10/2026)
 - OmniRoute e qualquer gateway/proxy que roteie para outros provedores de modelo (não alterar `ANTHROPIC_BASE_URL`).

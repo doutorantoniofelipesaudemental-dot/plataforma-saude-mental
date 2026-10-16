@@ -1,211 +1,231 @@
 1
-00:00:00,000 --> 00:00:02,280
-Neurodivergência na vida adulta:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:02,280 --> 00:00:04,980
-mascaramento e o burnout que ele causa.
+00:00:06,772 --> 00:00:09,052
+Neurodivergência na vida adulta:
 
 3
-00:00:04,980 --> 00:00:06,900
-Narração em voz sintética.
+00:00:09,052 --> 00:00:11,752
+mascaramento e o burnout que ele causa.
 
 4
-00:00:06,900 --> 00:00:11,941
+00:00:11,752 --> 00:00:13,672
+Narração em voz sintética.
+
+5
+00:00:13,672 --> 00:00:18,713
 Mascaramento (camouflaging) é o esforço,
 consciente ou automático, de esconder
 
-5
-00:00:11,941 --> 00:00:16,921
+6
+00:00:18,713 --> 00:00:23,693
 ou compensar traços de neurodivergência —
 como TDAH ou TEA — para se encaixar
 
-6
-00:00:16,921 --> 00:00:19,681
+7
+00:00:23,693 --> 00:00:26,453
 em expectativas sociais e profissionais.
 
-7
-00:00:19,681 --> 00:00:24,662
+8
+00:00:26,453 --> 00:00:31,434
 Para muitos adultos, esse esforço começou
 tão cedo e se tornou tão automático
 
-8
-00:00:24,662 --> 00:00:29,642
+9
+00:00:31,434 --> 00:00:36,414
 que nem é percebido como esforço — até que o
 desgaste acumulado vira burnout.
 
-9
-00:00:29,642 --> 00:00:31,982
+10
+00:00:36,414 --> 00:00:38,754
 O que é mascaramento, na prática.
 
-10
-00:00:31,982 --> 00:00:36,783
+11
+00:00:38,754 --> 00:00:43,555
 Forçar contato visual quando ele é
 desconfortável, ensaiar conversas antes
 
-11
-00:00:36,783 --> 00:00:41,583
+12
+00:00:43,555 --> 00:00:48,355
 que aconteçam, suprimir estimulação
 (stimming) em público, fingir entender
 
-12
-00:00:41,583 --> 00:00:46,383
+13
+00:00:48,355 --> 00:00:53,155
 referências sociais que não fazem sentido —
 tudo isso é trabalho cognitivo
 
-13
-00:00:46,383 --> 00:00:51,364
+14
+00:00:53,155 --> 00:00:58,136
 e emocional contínuo, feito por baixo de uma
 interação que, para quem observa
 
-14
-00:00:51,364 --> 00:00:53,164
+15
+00:00:58,136 --> 00:00:59,936
 de fora, parece natural.
 
-15
-00:00:53,164 --> 00:00:58,264
+16
+00:00:59,936 --> 00:01:05,036
 Num estudo com 92 adultos autistas, o
 mascaramento foi descrito como estratégia
 
-16
-00:00:58,264 --> 00:01:02,824
+17
+00:01:05,036 --> 00:01:09,596
 para se encaixar, com consequências como
 exaustão e prejuízo à própria
 
-17
-00:01:02,824 --> 00:01:03,845
+18
+00:01:09,596 --> 00:01:10,617
 identidade.
 
-18
-00:01:03,845 --> 00:01:06,305
+19
+00:01:10,617 --> 00:01:13,077
 O burnout que o mascaramento causa.
 
-19
-00:01:06,305 --> 00:01:11,045
+20
+00:01:13,077 --> 00:01:17,817
 Sustentar essa performance por anos,
 especialmente sem saber nomear o que
 
-20
-00:01:11,045 --> 00:01:15,005
+21
+00:01:17,817 --> 00:01:21,777
 está acontecendo, tende a levar a um
 esgotamento específico:
 
-21
-00:01:15,005 --> 00:01:19,746
+22
+00:01:21,777 --> 00:01:26,518
 exaustão que não passa com descanso comum,
 perda de habilidades que antes
 
-22
-00:01:19,746 --> 00:01:24,426
+23
+00:01:26,518 --> 00:01:31,198
 eram automáticas, e uma sensação de "não
 aguentar mais atuar" — mesmo em
 
-23
-00:01:24,426 --> 00:01:29,166
+24
+00:01:31,198 --> 00:01:35,938
 contextos que a pessoa genuinamente
 valoriza, como o trabalho ou relações
 
-24
-00:01:29,166 --> 00:01:30,066
+25
+00:01:35,938 --> 00:01:36,838
 próximas.
 
-25
-00:01:30,066 --> 00:01:31,447
+26
+00:01:36,838 --> 00:01:38,219
 Ponto de atenção:
 
-26
-00:01:31,447 --> 00:01:36,487
+27
+00:01:38,219 --> 00:01:43,259
 Muitos adultos — especialmente mulheres —
 chegam à vida adulta sem diagnóstico
 
-27
-00:01:36,487 --> 00:01:41,107
+28
+00:01:43,259 --> 00:01:47,879
 de TDAH ou TEA justamente porque o
 mascaramento foi eficaz o suficiente
 
-28
-00:01:41,107 --> 00:01:45,788
+29
+00:01:47,879 --> 00:01:52,560
 para esconder os sinais que, na infância,
 costumam ser mais visíveis nos
 
-29
-00:01:45,788 --> 00:01:46,628
+30
+00:01:52,560 --> 00:01:53,400
 meninos.
 
-30
-00:01:46,628 --> 00:01:51,188
+31
+00:01:53,400 --> 00:01:57,960
 Muitos adultos autistas só recebem o
 diagnóstico tarde, depois de anos
 
-31
-00:01:51,188 --> 00:01:52,928
+32
+00:01:57,960 --> 00:01:59,700
 de sofrimento sem nome.
 
-32
-00:01:52,928 --> 00:01:56,828
+33
+00:01:59,700 --> 00:02:03,600
 O TDAH também persiste na vida
 adulta em parte das pessoas.
 
-33
-00:01:56,828 --> 00:01:59,349
+34
+00:02:03,600 --> 00:02:06,121
 Reduzir a máscara, não a identidade.
 
-34
-00:01:59,349 --> 00:02:03,969
+35
+00:02:06,121 --> 00:02:10,741
 Identificar em quais contextos o
 mascaramento é mais custoso, e onde há
 
-35
-00:02:03,969 --> 00:02:09,009
+36
+00:02:10,741 --> 00:02:15,781
 espaço — mesmo pequeno — para reduzir esse
 esforço, ajuda a recuperar energia.
 
-36
-00:02:09,009 --> 00:02:13,690
+37
+00:02:15,781 --> 00:02:20,462
 Isso pode incluir desde ajustes sensoriais
 simples até conversas abertas
 
-37
-00:02:13,690 --> 00:02:17,230
+38
+00:02:20,462 --> 00:02:24,002
 com pessoas de confiança sobre o
 que realmente ajuda.
 
-38
-00:02:17,230 --> 00:02:21,850
+39
+00:02:24,002 --> 00:02:28,622
 Avaliação profissional pode esclarecer se
 há uma condição de base a ser
 
-39
-00:02:21,850 --> 00:02:26,470
+40
+00:02:28,622 --> 00:02:33,242
 nomeada e apoiada — mas o desgaste do
 mascaramento é real e válido, com
 
-40
-00:02:26,470 --> 00:02:28,391
+41
+00:02:33,242 --> 00:02:35,163
 ou sem diagnóstico formal.
 
-41
-00:02:28,391 --> 00:02:33,191
+42
+00:02:35,163 --> 00:02:39,963
 Conteúdo educativo baseado em literatura
 sobre mascaramento (camouflaging)
 
-42
-00:02:33,191 --> 00:02:35,831
+43
+00:02:39,963 --> 00:02:42,603
 e burnout em adultos neurodivergentes.
 
-43
-00:02:35,831 --> 00:02:38,291
+44
+00:02:42,603 --> 00:02:45,063
 Não substitui avaliação individual.
 
-44
-00:02:38,291 --> 00:02:43,632
+45
+00:02:45,063 --> 00:02:50,404
 No trabalho, adultos autistas relatam que
 ajustes simples e ambientes compreensivos
 
-45
-00:02:43,632 --> 00:02:44,952
+46
+00:02:50,404 --> 00:02:51,724
 fazem diferença.
 
-46
-00:02:44,952 --> 00:02:47,592
+47
+00:02:51,724 --> 00:02:54,364
 As referências estão no fim da página.
+
+48
+00:02:55,064 --> 00:03:00,861
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+49
+00:03:00,861 --> 00:03:04,949
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+50
+00:03:04,949 --> 00:03:08,888
+O texto completo, com as
+referências, está no portal.

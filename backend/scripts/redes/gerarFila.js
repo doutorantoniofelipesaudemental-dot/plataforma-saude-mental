@@ -20,6 +20,7 @@ const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').
 const LIMITE = +arg('limite', 60);
 const INICIO = arg('inicio', '2026-10-26');
 const SO_PLANEJAR = process.argv.includes('--so-planejar');
+const REFAZER_EXISTENTES = process.argv.includes('--refazer-existentes'); // mantém ids e datas da fila atual; só regera arte e legenda (crédito da marca)
 const SITE = 'https://www.drantoniofelipemedico.com.br';
 const ROTACAO = ['pacientes', 'pais', 'profissionais', 'empresas'];
 
@@ -60,6 +61,45 @@ async function gerarUm(doc, tipo, dataPost) {
   return { ...ultimo, tentativas };
 }
 
+/** Gera e grava um post (pasta, imagens, legenda, alt, meta). Devolve {aprovado, r}. */
+async function gerarEGravar({ id, doc, tipo, publico, dataSugerida }) {
+  const r = await gerarUm(doc, tipo, dataSugerida.slice(0, 10));
+  const aprovado = r.chk.ok;
+  const dir = path.join(SAIDA, aprovado ? '' : 'revisar', id);
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(dir, { recursive: true });
+  r.imagens.forEach((img, i) => fs.writeFileSync(path.join(dir, `tela-${i + 1}.png`), img));
+  fs.writeFileSync(path.join(dir, 'legenda.txt'), r.legenda, 'utf8');
+  fs.writeFileSync(path.join(dir, 'alt.txt'), r.alts.map((a, i) => `${i + 1}. ${a}`).join('\n'), 'utf8');
+  const meta = {
+    id, slug: doc.slug, titulo: doc.titulo, tipo, publico, formato: 'carrossel', publicador: 'api (Instagram Graph: carrossel)',
+    status: aprovado ? 'aprovado-checagem' : 'revisar', dataSugerida, urlTexto: `${SITE}/artigo/${doc.slug}`,
+    categoria: doc.categoria, hashtags: r.plano.hashtags, telas: r.plano.telas.length, legendaCaracteres: r.legenda.length,
+    origemImagens: 'geradas localmente (vetor + sharp), sem banco de imagens, sem Canva, sem IA generativa — nenhuma marca d\'água', tentativasDeCorrecao: r.tentativas,
+    creditoMarca: 'v1', checagem: { ok: aprovado, falhas: r.chk.falhas, hashes: r.chk.hashes, em: new Date().toISOString() },
+  };
+  fs.writeFileSync(path.join(dir, 'meta.json'), JSON.stringify(meta, null, 2), 'utf8');
+  return { aprovado, r };
+}
+
+async function refazerExistentes(docs) {
+  const porSlug = new Map(docs.map((d) => [d.slug, d]));
+  const resumo = { aprovados: 0, revisar: 0, falhas: [] };
+  for (const nome of fs.readdirSync(SAIDA).sort()) {
+    const f = path.join(SAIDA, nome, 'meta.json');
+    if (nome === 'revisar' || !fs.existsSync(f)) continue;
+    const m = JSON.parse(fs.readFileSync(f, 'utf8'));
+    const doc = porSlug.get(m.slug);
+    if (!doc) { resumo.revisar += 1; resumo.falhas.push(`${nome}: texto de origem não encontrado`); continue; }
+    try {
+      const { aprovado, r } = await gerarEGravar({ id: m.id, doc, tipo: m.tipo, publico: m.publico, dataSugerida: m.dataSugerida });
+      if (aprovado) resumo.aprovados += 1; else { resumo.revisar += 1; resumo.falhas.push(`${nome}: ${r.chk.falhas.map((x) => x.msg).join(' | ')}`); }
+    } catch (e) { resumo.revisar += 1; resumo.falhas.push(`${nome}: ERRO ${e.message}`); }
+  }
+  console.log(`Refeitos com crédito de marca · aprovados: ${resumo.aprovados} · em revisar/: ${resumo.revisar}`);
+  resumo.falhas.slice(0, 15).forEach((x) => console.log('  -', x.slice(0, 260)));
+}
+
 (async () => {
   const mongoose = require('mongoose');
   await mongoose.connect(process.env.MONGODB_URI, { dbName: process.env.MONGODB_DB || 'drsaudemental', serverSelectionTimeoutMS: 10000 });
@@ -67,6 +107,7 @@ async function gerarUm(doc, tipo, dataPost) {
   const docs = await col.find({ 'importacao.pasta': { $exists: true }, 'importacao.serie': { $exists: false }, 'agendamento.falha': { $in: ['', null] } }).toArray();
   await mongoose.disconnect();
 
+  if (REFAZER_EXISTENTES) return refazerExistentes(docs);
   const hoje = diaBahia(new Date());
   const cand = docs.map((d) => ({
     d, tipo: d.importacao.tipo || (d.categoria === 'Relatos da Prática' ? 'relato' : 'artigo'),
@@ -95,22 +136,7 @@ async function gerarUm(doc, tipo, dataPost) {
   for (const p of plano) {
     const id = `${p.data}-${p.d.slug}`;
     try {
-      const r = await gerarUm(p.d, p.tipo, p.data);
-      const aprovado = r.chk.ok;
-      const dir = path.join(SAIDA, aprovado ? '' : 'revisar', id);
-      fs.rmSync(dir, { recursive: true, force: true });
-      fs.mkdirSync(dir, { recursive: true });
-      r.imagens.forEach((img, i) => fs.writeFileSync(path.join(dir, `tela-${i + 1}.png`), img));
-      fs.writeFileSync(path.join(dir, 'legenda.txt'), r.legenda, 'utf8');
-      fs.writeFileSync(path.join(dir, 'alt.txt'), r.alts.map((a, i) => `${i + 1}. ${a}`).join('\n'), 'utf8');
-      const meta = {
-        id, slug: p.d.slug, titulo: p.d.titulo, tipo: p.tipo, publico: p.publico, formato: 'carrossel', publicador: 'api (Instagram Graph: carrossel)',
-        status: aprovado ? 'aprovado-checagem' : 'revisar', dataSugerida: `${p.data}T08:00:00-03:00`, urlTexto: `${SITE}/artigo/${p.d.slug}`,
-        categoria: p.d.categoria, hashtags: r.plano.hashtags, telas: r.plano.telas.length, legendaCaracteres: r.legenda.length,
-        origemImagens: 'geradas localmente (vetor + sharp), sem banco de imagens, sem Canva, sem IA generativa — nenhuma marca d\'água', tentativasDeCorrecao: r.tentativas,
-        checagem: { ok: aprovado, falhas: r.chk.falhas, hashes: r.chk.hashes, em: new Date().toISOString() },
-      };
-      fs.writeFileSync(path.join(dir, 'meta.json'), JSON.stringify(meta, null, 2), 'utf8');
+      const { aprovado, r } = await gerarEGravar({ id, doc: p.d, tipo: p.tipo, publico: p.publico, dataSugerida: `${p.data}T08:00:00-03:00` });
       if (aprovado) resumo.aprovados += 1; else { resumo.revisar += 1; resumo.falhas.push(`${id}: ${r.chk.falhas.map((x) => x.msg).join(' | ')}`); }
     } catch (e) { resumo.revisar += 1; resumo.falhas.push(`${id}: ERRO ${e.message}`); }
   }

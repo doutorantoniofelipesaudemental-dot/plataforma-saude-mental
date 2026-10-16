@@ -10,6 +10,7 @@ const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/conformidadeCfm');
 const { IDENTIFICACAO_3_LINHAS } = require('../../backend/lib/legendaInstagram');
 const { textoParaNarracao, hashNarracao, vozDaNarracao, estadoNarracao } = require('../../backend/lib/narracao');
 const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
+const vinheta = require('../../backend/lib/vinheta');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const SITE = 'https://www.drantoniofelipemedico.com.br';
@@ -60,6 +61,39 @@ async function obterAudio(a) {
   const alvo = path.join(dir, 'narracao.mp3');
   if (!fs.existsSync(alvo)) { const r = await fetch(a.narracao.url); if (!r.ok) throw new Error(`áudio HTTP ${r.status}`); fs.writeFileSync(alvo, Buffer.from(await r.arrayBuffer())); }
   return alvo;
+}
+
+/** MP3 com a vinheta de crédito (fala). O local selado já a traz (marcador .vinheta); o baixado do Blob recebe aqui. */
+function comVinheta(a, mp3) {
+  if (path.dirname(mp3) === NARR && fs.existsSync(path.join(NARR, `${a.slug}.vinheta`))) return mp3;
+  const saida = path.join(path.dirname(mp3), 'narracao-vinheta.mp3');
+  if (fs.existsSync(saida)) return saida;
+  const v = vinheta.garantirVinhetas(); const sens = vinheta.temaSensivel(a);
+  vinheta.juntar({ base: mp3, saida, abertura: v.abertura, encerramento: sens ? v.encerramentoSensivel : v.encerramento });
+  return saida;
+}
+
+/** Crédito de tela (ASS, discreto, caixa opaca p/ contraste): 0–3 s e tela final com o endereço. Não é marca d'água fixa. */
+function creditoAss(dur, { W = 1920, H = 1080 } = {}) {
+  const t = (s) => { const cs = Math.round(s * 100); return `${Math.floor(cs / 360000)}:${String(Math.floor((cs % 360000) / 6000)).padStart(2, '0')}:${String(Math.floor((cs % 6000) / 100)).padStart(2, '0')}.${String(cs % 100).padStart(2, '0')}`; };
+  const f1 = Math.round(H * (W > H ? 0.034 : 0.026)), f2 = Math.round(f1 * 1.2), mv = Math.round(H * (W > H ? 0.07 : 0.1));
+  const estilo = (n, f, m) => `Style: ${n},Segoe UI,${f},&H00FFFFFF,&H000000FF,&HC8301A0B,&HC8301A0B,-1,0,0,0,100,100,0,0,3,14,0,2,60,60,${m},1`;
+  const cab = ['[Script Info]', 'ScriptType: v4.00+', `PlayResX: ${W}`, `PlayResY: ${H}`, 'WrapStyle: 0', '', '[V4+ Styles]',
+    'Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding',
+    estilo('Cred', f1, mv), estilo('Fim', f2, Math.round(H * 0.12)), '', '[Events]', 'Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text'];
+  const fim = Math.min(6, Math.max(3, dur / 2));
+  cab.push(`Dialogue: 0,${t(0)},${t(Math.min(3, dur))},Cred,,0,0,0,,${vinheta.MARCA}`);
+  cab.push(`Dialogue: 0,${t(Math.max(3, dur - fim))},${t(dur)},Fim,,0,0,0,,${vinheta.MARCA}\\N${vinheta.SITE}`);
+  return cab.join('\n') + '\n';
+}
+
+/** Capa do texto: baixa do Blob; se indisponível (403 por cota), usa a cópia local já guardada em <slug>/capa.jpg. '' se não houver. */
+async function obterCapa(a) {
+  if (!a.imagemCapa) return { buf: null };
+  try { const r = await fetch(a.imagemCapa); if (r.ok) return { buf: Buffer.from(await r.arrayBuffer()) }; } catch { /* tenta a cópia local */ }
+  const local = path.join(MIDIA, a.slug, 'capa.jpg');
+  if (fs.existsSync(local)) return { buf: fs.readFileSync(local), local: true };
+  return { erro: 'capa indisponível (Blob bloqueado e sem cópia local)' };
 }
 
 /** Separa o HTML em seções por <h2>. */
@@ -129,6 +163,7 @@ function descricaoLongo(a, dur) {
   const caps = capitulos(a, dur);
   const refs = referencias(a.conteudo).slice(0, 4);
   const L = [
+    vinheta.TEXTOS.curta.replace(/\.$/, ''), SITE, '',
     semTags(a.resumo || a.titulo), '',
     `Texto completo no site: ${SITE}/artigo/${a.slug}`,
   ];
@@ -140,12 +175,17 @@ function descricaoLongo(a, dur) {
 }
 
 function descricaoShort(a, extra = '') {
-  return [semTags(a.resumo || a.titulo), '', `Texto completo no site: ${SITE}/artigo/${a.slug}`, extra, '', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
+  return [vinheta.TEXTOS.curta.replace(/\.$/, ''), SITE, '', semTags(a.resumo || a.titulo), '', `Texto completo no site: ${SITE}/artigo/${a.slug}`, extra, '', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
     `Mentoria e consultoria: ${SITE}/mentoria`, '#saudemental #cuidado'].filter((x, i, arr) => !(x === '' && arr[i - 1] === '')).join('\n').replace(/[<>]/g, '');
 }
 
 /** Frases e legenda .srt a partir do texto narrado (tempo proporcional ao tamanho; no YouTube Studio use "Sincronizar automaticamente"). */
 function srt(a, dur) {
+  // A fala da vinheta entra na legenda: abertura no início, encerramento no fim (durações reais dos trechos).
+  const v = vinheta.garantirVinhetas(); const sens = vinheta.temaSensivel(a);
+  const tAb = duracao(v.abertura) + 0.7, tEn = duracao(sens ? v.encerramentoSensivel : v.encerramento);
+  const falaAb = vinheta.TEXTOS.abertura, falaEn = sens ? vinheta.TEXTOS.encerramentoSensivel : vinheta.TEXTOS.encerramento;
+  const durNarr = Math.max(1, dur - tAb - tEn - 0.7);
   const linhas = textoParaNarracao(a).split('\n').filter(Boolean);
   const pedacos = [];
   for (const l of linhas) {
@@ -157,19 +197,20 @@ function srt(a, dur) {
   }
   const total = pedacos.reduce((s, p) => s + p.length + 6, 0);
   const ts = (s) => { const ms = Math.round(s * 1000), h = Math.floor(ms / 3600000), m = Math.floor((ms % 3600000) / 60000), x = Math.floor((ms % 60000) / 1000), r = ms % 1000; return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')},${String(r).padStart(3, '0')}`; };
-  let t = 0; const out = [];
-  pedacos.forEach((p, i) => {
-    const d = ((p.length + 6) / total) * dur; const meio = p.length > 42 ? p.lastIndexOf(' ', Math.floor(p.length / 2) + 6) : -1;
-    const txt = meio > 10 ? `${p.slice(0, meio)}\n${p.slice(meio + 1)}` : p;
-    out.push(`${i + 1}\n${ts(t)} --> ${ts(t + d)}\n${txt}\n`); t += d;
-  });
-  return out.join('\n');
+  const quebra = (p) => { const meio = p.length > 42 ? p.lastIndexOf(' ', Math.floor(p.length / 2) + 6) : -1; return meio > 10 ? `${p.slice(0, meio)}\n${p.slice(meio + 1)}` : p; };
+  let t = tAb; const out = [];
+  pedacos.forEach((p) => { const d = ((p.length + 6) / total) * durNarr; out.push({ ini: t, fim: t + d, txt: quebra(p) }); t += d; });
+  // frases da vinheta, com tempo proporcional ao tamanho dentro do trecho
+  const bloco = (fala, ini, dd) => { const fr = fala.split(/(?<=[.!?])\s+/); const tt = fr.reduce((x, y) => x + y.length, 0); let c = ini; return fr.map((f) => { const d1 = (f.length / tt) * dd; const r = { ini: c, fim: c + d1, txt: quebra(f) }; c += d1; return r; }); };
+  const todos = [...bloco(falaAb, 0, tAb - 0.7), ...out, ...bloco(falaEn, dur - tEn, tEn)];
+  return todos.map((x, i) => `${i + 1}\n${ts(x.ini)} --> ${ts(x.fim)}\n${x.txt}\n`).join('\n');
 }
 
 /** Checagem pré-publicação de um item da fila (texto). Mídia é checada em checarMidia. */
 function checarTexto(item) {
   const f = [];
   const d = item.descricao || '', t = item.titulo || '';
+  if (!d.startsWith('Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito\n')) f.push('descrição sem a 1ª linha de crédito "Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito"');
   if (!t) f.push('sem título'); if ([...t].length > 100) f.push('título > 100 caracteres');
   if (/[<>]/.test(d + t)) f.push('"<" ou ">" no texto');
   if (Buffer.byteLength(d, 'utf8') > 5000) f.push('descrição > 5000 bytes');
@@ -193,4 +234,4 @@ function checarTexto(item) {
   return f;
 }
 
-module.exports = { mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };
+module.exports = { obterCapa, comVinheta, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };

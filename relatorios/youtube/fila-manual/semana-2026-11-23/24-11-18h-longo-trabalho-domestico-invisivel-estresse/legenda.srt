@@ -1,194 +1,214 @@
 1
-00:00:00,000 --> 00:00:02,704
-O peso do trabalho doméstico invisível:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:02,704 --> 00:00:05,649
+00:00:06,772 --> 00:00:09,476
+O peso do trabalho doméstico invisível:
+
+3
+00:00:09,476 --> 00:00:12,421
 estresse ocupacional de
 quem cuida da casa.
 
-3
-00:00:05,649 --> 00:00:07,572
+4
+00:00:12,421 --> 00:00:14,344
 Narração em voz sintética.
 
-4
-00:00:07,572 --> 00:00:12,259
+5
+00:00:14,344 --> 00:00:19,031
 Quem sustenta o trabalho doméstico e de
 cuidado do lar — historicamente,
 
-5
-00:00:12,259 --> 00:00:17,126
+6
+00:00:19,031 --> 00:00:23,898
 e ainda hoje na maioria dos casos, mulheres
 — carrega uma carga de trabalho
 
-6
-00:00:17,126 --> 00:00:21,693
+7
+00:00:23,898 --> 00:00:28,465
 real, contínua e sem escala definida, que
 raramente é reconhecida como
 
-7
-00:00:21,693 --> 00:00:22,594
+8
+00:00:28,465 --> 00:00:29,366
 trabalho.
 
-8
-00:00:22,594 --> 00:00:25,960
+9
+00:00:29,366 --> 00:00:32,732
 A ausência de reconhecimento
 não reduz o desgaste;
 
-9
-00:00:25,960 --> 00:00:30,166
+10
+00:00:32,732 --> 00:00:36,938
 só o torna mais difícil de nomear e de
 pedir ajuda para dividir.
 
-10
-00:00:30,166 --> 00:00:32,329
+11
+00:00:36,938 --> 00:00:39,101
 A carga mental que ninguém vê.
 
-11
-00:00:32,329 --> 00:00:37,377
+12
+00:00:39,101 --> 00:00:44,149
 Além das tarefas executadas, existe o
 trabalho de planejar, lembrar, antecipar
 
-12
-00:00:37,377 --> 00:00:42,064
+13
+00:00:44,149 --> 00:00:48,836
 e coordenar tudo o que a casa precisa — o
 que a pesquisa chama de "carga
 
-13
-00:00:42,064 --> 00:00:42,905
+14
+00:00:48,836 --> 00:00:49,677
 mental".
 
-14
-00:00:42,905 --> 00:00:48,133
+15
+00:00:49,677 --> 00:00:54,905
 Mesmo em casas onde as tarefas físicas são
 divididas, essa carga de gerenciamento
 
-15
-00:00:48,133 --> 00:00:53,061
+16
+00:00:54,905 --> 00:00:59,833
 costuma continuar concentrada em uma pessoa,
 de forma invisível e constante.
 
-16
-00:00:53,061 --> 00:00:57,868
+17
+00:00:59,833 --> 00:01:04,640
 Uma revisão sistemática mostrou que mais
 horas de trabalho não remunerado,
 
-17
-00:00:57,868 --> 00:01:02,856
+18
+00:01:04,640 --> 00:01:09,628
 como tarefas domésticas e cuidado, se
 associam a pior saúde mental, sobretudo
 
-18
-00:01:02,856 --> 00:01:04,118
+19
+00:01:09,628 --> 00:01:10,890
 entre mulheres.
 
-19
-00:01:04,118 --> 00:01:08,024
+20
+00:01:10,890 --> 00:01:14,796
 Por que "não ter expediente" não
 significa "não ter carga".
 
-20
-00:01:08,024 --> 00:01:12,531
+21
+00:01:14,796 --> 00:01:19,303
 Trabalho doméstico não tem hora de
 entrada, saída, ou férias formais.
 
-21
-00:01:12,531 --> 00:01:17,759
+22
+00:01:19,303 --> 00:01:24,531
 A ausência de limites claros — que em qualquer
 outro trabalho seriam considerados
 
-22
-00:01:17,759 --> 00:01:22,386
+23
+00:01:24,531 --> 00:01:29,158
 abusivos — costuma ser normalizada quando
 o trabalho acontece dentro de
 
-23
-00:01:22,386 --> 00:01:24,489
+24
+00:01:29,158 --> 00:01:31,261
 casa, para a própria família.
 
-24
-00:01:24,489 --> 00:01:25,871
+25
+00:01:31,261 --> 00:01:32,643
 Ponto de atenção:
 
-25
-00:01:25,871 --> 00:01:30,859
+26
+00:01:32,643 --> 00:01:37,631
 Sentir exaustão, ressentimento ou vontade de
 "sumir por um dia" não significa
 
-26
-00:01:30,859 --> 00:01:35,786
+27
+00:01:37,631 --> 00:01:42,558
 falta de amor pela família — é uma resposta
 esperada a uma carga de trabalho
 
-27
-00:01:35,786 --> 00:01:37,709
+28
+00:01:42,558 --> 00:01:44,481
 contínua sem pausas reais.
 
-28
-00:01:37,709 --> 00:01:42,276
+29
+00:01:44,481 --> 00:01:49,048
 Essa divisão desigual é uma das
 explicações para a depressão ser cerca
 
-29
-00:01:42,276 --> 00:01:44,860
+30
+00:01:49,048 --> 00:01:51,632
 de duas vezes mais comum em mulheres.
 
-30
-00:01:44,860 --> 00:01:46,963
+31
+00:01:51,632 --> 00:01:53,735
 Tornando a carga sustentável.
 
-31
-00:01:46,963 --> 00:01:51,710
+32
+00:01:53,735 --> 00:01:58,482
 Nomear explicitamente as tarefas
 invisíveis (não só as físicas), negociar
 
-32
-00:01:51,710 --> 00:01:56,578
+33
+00:01:58,482 --> 00:02:03,350
 divisão real — não simbólica — com outros
 adultos da casa, e reservar tempo
 
-33
-00:01:56,578 --> 00:02:00,363
+34
+00:02:03,350 --> 00:02:07,135
 verdadeiramente próprio, sem
 culpa, são passos concretos.
 
-34
-00:02:00,363 --> 00:02:04,991
+35
+00:02:07,135 --> 00:02:11,763
 Quando o esgotamento já está instalado,
 conversar com alguém de fora da
 
-35
-00:02:04,991 --> 00:02:09,618
+36
+00:02:11,763 --> 00:02:16,390
 situação ajuda a enxergar saídas que de
 dentro da rotina ficam difíceis
 
-36
-00:02:09,618 --> 00:02:10,399
+37
+00:02:16,390 --> 00:02:17,171
 de ver.
 
-37
-00:02:10,399 --> 00:02:14,966
+38
+00:02:17,171 --> 00:02:21,738
 Conteúdo educativo baseado em literatura
 sobre carga mental e trabalho
 
-38
-00:02:14,966 --> 00:02:16,829
+39
+00:02:21,738 --> 00:02:23,601
 doméstico não remunerado.
 
-39
-00:02:16,829 --> 00:02:19,292
+40
+00:02:23,601 --> 00:02:26,064
 Não substitui avaliação individual.
 
-40
-00:02:19,292 --> 00:02:23,859
+41
+00:02:26,064 --> 00:02:30,631
 Cuidar de um familiar, tarefa que costuma
 recair sobre a mesma pessoa,
 
-41
-00:02:23,859 --> 00:02:26,924
+42
+00:02:30,631 --> 00:02:33,696
 aumenta o estresse e os
 sintomas depressivos.
 
-42
-00:02:26,924 --> 00:02:29,568
+43
+00:02:33,696 --> 00:02:36,340
 As referências estão no fim da página.
+
+44
+00:02:37,040 --> 00:02:42,837
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+45
+00:02:42,837 --> 00:02:46,925
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+46
+00:02:46,925 --> 00:02:50,864
+O texto completo, com as
+referências, está no portal.
