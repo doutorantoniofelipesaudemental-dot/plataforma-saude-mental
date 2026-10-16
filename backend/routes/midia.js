@@ -127,4 +127,35 @@ router.put(
   }
 );
 
+/**
+ * PUT /api/artigos/:slug/midia/capa-arquivo — corpo: a capa (image/jpeg, até 4,4 MB). Grava em artigos/<slug>/capa.jpg (mesmo caminho,
+ * sobrescreve) e guarda a URL em `imagemCapa`. Usado para trocar a capa de um texto sem painel do Blob (ex.: título alterado).
+ */
+router.put(
+  '/:slug/midia/capa-arquivo',
+  exigirAdmin,
+  exigirBanco,
+  express.raw({ type: 'image/jpeg', limit: '4400kb' }),
+  async (req, res) => {
+    try {
+      const img = req.body;
+      if (!Buffer.isBuffer(img) || img.length < 1024 || !(img[0] === 0xff && img[1] === 0xd8)) {
+        return res.status(400).json({ erro: 'Envie um JPEG no corpo, com Content-Type: image/jpeg.' });
+      }
+      const artigo = await Artigo.findOne({ slug: req.params.slug }).lean();
+      if (!artigo) return res.status(404).json({ erro: 'Artigo não encontrado.' });
+      if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ erro: 'Blob não configurado.' });
+      const { put } = require('@vercel/blob');
+      const enviado = await put(`artigos/${artigo.slug}/capa.jpg`, img, {
+        access: 'public', contentType: 'image/jpeg', addRandomSuffix: false, allowOverwrite: true, cacheControlMaxAge: 300,
+      });
+      await Artigo.updateOne({ _id: artigo._id }, { $set: { imagemCapa: enviado.url, capaPendente: false } }, { timestamps: false });
+      res.json({ ok: true, imagemCapa: enviado.url, bytes: img.length });
+    } catch (err) {
+      log.erro('[midia] erro ao gravar a capa:', err.message);
+      res.status(500).json({ erro: 'Não foi possível gravar a capa.' });
+    }
+  }
+);
+
 module.exports = router;

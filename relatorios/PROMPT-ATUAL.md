@@ -59,3 +59,14 @@ RELATÓRIO FINAL (curto, pt-BR): 1 validação+trava B; 2 PR da vinheta e arquiv
 - Conferência 19/10 (conferirPosRenovacao.js): incluir teste real da trava B (1º agendado de 19/10 08:00 Bahia toca com vinheta e URL do MP3 responde 200).
 - Se push/merge bloquear: comandos separados, um por linha, com "!", sem "cd".
 - Relatório final curto: tarefa 23:30; vinheta+narração noturna; órfãos por grupo; áudios/capas; YouTube; título; LinkedIn; conferência 19/10; comandos "!".
+
+
+---
+# ATUALIZAÇÃO 16/10/2026 (madrugada) — #79 mergeado
+- P1 TRAVA B: áudios COM vinheta de todos os textos que publicam de 19 a 25/10 no Blob antes das 08h de 19/10 (ordem de data); conferir vinheta, URL/página bloqueada antes de publicar, hash; rodar conferirPosRenovacao.js em simulação para o texto de 19/10.
+- P2 TÍTULO: regerar já a narração de "Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise" com vinheta + capa nova no Blob (player não pode ficar sem áudio).
+- Etapa 3: conferir plano Vercel/cota do Blob (informar); GET blob-narracoes?completo=1 -> relatorios/blob-orfaos-AAAAMMDD.md; DELETE dry-run; (c)+(d) até 50% => ?aplicar=1 (nunca a/b); >50% parar; inventário de novo + amostra de 10 (incl. 19/10).
+- Etapa 4: 4.1 demais áudios/capas em lotes de 50 por data de publicação, amostra de 5; parar se Blob >90% da cota. 4.3 retomar 27 longos + 45 Shorts com crédito em canto livre; conferir 1 quadro inicial e 1 final por lote.
+- ÉTICA: conferir no portal.cfm.org.br se a "Resolução CFM 2.454/2026" (IA) existe com esse número/ano e trata de IA; se sim, manter e gravar link em docs/; se NÃO, retirar o número em TODOS os lugares (site, Instagram, YouTube, LinkedIn, vídeos) e manter só "Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe."
+- short-resumo: não apagar; colocar no .gitignore e confirmar que nenhuma fila usa.
+- Relatório final curto: 19–25/10; título; Blob (plano, cota, antes/depois, a/b/c/d); áudios/capas; YouTube; Resolução CFM; comandos "!".
