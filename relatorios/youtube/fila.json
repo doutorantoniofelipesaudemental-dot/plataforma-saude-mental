@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-16T22:52:34.247Z",
+ "geradoEm": "2026-10-16T23:59:13.237Z",
  "regra": "longos ter/qui/sab 18h; Shorts seg/qua/sex/sab/dom 12h (Bahia)",
  "itens": [
   {
@@ -161,7 +161,21 @@
    "slot": "2026-11-01T15:00:00.000Z",
    "playlist": "Relatos da Prática",
    "pasta": "carrosseis-instagram/youtube/relato-paciente-invisivel/short-2026-10-29-relato-paciente-invisivel",
-   "status": "sem-midia"
+   "tituloYoutube": "Ele já tinha passado por mim umas seis vezes. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "8106684231ab6ae78336282f1131b918d65f5604fe49eec07c55ef44e4bfe555",
+   "duracao": 23,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-10-30-programa-saude-mental-ocupacional",
@@ -172,7 +186,21 @@
    "slot": "2026-11-02T15:00:00.000Z",
    "playlist": "Trabalho e NR-1",
    "pasta": "carrosseis-instagram/youtube/programa-saude-mental-ocupacional/short-2026-10-30-programa-saude-mental-ocupacional",
-   "status": "sem-midia"
+   "tituloYoutube": "Os três níveis de um programa eficaz, passo a passo para começar. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "a95b6e80196fbafc4d25b0bf8c71ae5e43993eb6b92e173262c74ee164ea3b7e",
+   "duracao": 51,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-ansiedade-social-medo-julgamento",
@@ -207,7 +235,21 @@
    "slot": "2026-11-04T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/gestacao-amamentacao-saude-mental/short-2026-11-03-gestacao-amamentacao-saude-mental",
-   "status": "sem-midia"
+   "tituloYoutube": "Diferença entre baby blues e depressão perinatal, rastreamento, tratamento durante a ... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "2aa119f7f911ffc076e403dd521396ee9c769850485b41811e53bf2c5c0502c9",
+   "duracao": 45,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-estresse-migratorio-adaptacao-cultural",
@@ -242,7 +284,21 @@
    "slot": "2026-11-06T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/alimentacao-criancas/short-2026-11-04-alimentacao-criancas",
-   "status": "sem-midia"
+   "tituloYoutube": "Benefícios das refeições em família, riscos do controle excessivo. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "cde75c3e81a0af905e96ed6e8424805f74cd5e5323a491c5cf30872feccf3ea3",
+   "duracao": 47,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-05-relato-crise-evitavel",
@@ -253,7 +309,21 @@
    "slot": "2026-11-07T15:00:00.000Z",
    "playlist": "Relatos da Prática",
    "pasta": "carrosseis-instagram/youtube/relato-crise-evitavel/short-2026-11-05-relato-crise-evitavel",
-   "status": "sem-midia"
+   "tituloYoutube": "Foi só quando consegui ler o… #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "d393091a4f14e54a306cc519612f025b5d379b4c3a8d396bd46d998b3262ad0d",
+   "duracao": 29,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-depressao-pos-parto-ansiedade-perinatal",
@@ -288,7 +358,22 @@
    "slot": "2026-11-08T15:00:00.000Z",
    "playlist": "Urgências",
    "pasta": "carrosseis-instagram/youtube/intoxicacao-agitacao-pa/short-2026-11-06-intoxicacao-agitacao-pa",
-   "status": "sem-midia"
+   "tituloYoutube": "Sinais que apontam para causa clínica ou tóxica, diferenciação prática entre os princ... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "pa psiquiátrico"
+   ],
+   "hashVideo": "f6bca4c7b498f3e8ce36964935237233430bfab4bc9b67ef980ec3815be5c4ef",
+   "duracao": 54,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-09-afastamento-transtorno-mental",
@@ -299,7 +384,21 @@
    "slot": "2026-11-09T15:00:00.000Z",
    "playlist": "Trabalho e NR-1",
    "pasta": "carrosseis-instagram/youtube/afastamento-transtorno-mental/short-2026-11-09-afastamento-transtorno-mental",
-   "status": "sem-midia"
+   "tituloYoutube": "Como funciona o afastamento, nexo com o trabalho e CAT, sigilo do diagnóstico. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "53d3840e27996a5df027d03232c234f7c6427e2195cfdf824ca3545704ebf87f",
+   "duracao": 43,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-sinais-alerta-comportamentais-jovens",
@@ -334,7 +433,21 @@
    "slot": "2026-11-11T15:00:00.000Z",
    "playlist": "Urgências",
    "pasta": "carrosseis-instagram/youtube/crise-psiquiatrica-familia/short-2026-11-10-crise-psiquiatrica-familia",
-   "status": "sem-midia"
+   "tituloYoutube": "Como garantir a segurança, conversar durante a crise, onde buscar ajuda na rede pública. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "b9438ee799eb50b2726c639f8bc5cbadecada4315521cc7e3587dcd774e7b583",
+   "duracao": 28,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-neurodivergencia-adulta-mascaramento-burnout",
@@ -369,7 +482,21 @@
    "slot": "2026-11-13T15:00:00.000Z",
    "playlist": "Relatos da Prática",
    "pasta": "carrosseis-instagram/youtube/relato-familia-em-crise/short-2026-11-11-relato-familia-em-crise",
-   "status": "sem-midia"
+   "tituloYoutube": "Quem precisava de atenção naquele momento, na verdade, era a mãe dele,… #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "3b63ff0044ab53ea29c3b89bf6fc015b4c0ed5b860ff0790575c538274567330",
+   "duracao": 30,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-12-rotina-criancas",
@@ -380,7 +507,21 @@
    "slot": "2026-11-14T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/rotina-criancas/short-2026-11-12-rotina-criancas",
-   "status": "sem-midia"
+   "tituloYoutube": "Por que a rotina importa, quanto sono cada idade precisa. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "97d8c077ec881d708cc540cfb360503296732adc07be7ecd686b510b47f0965a",
+   "duracao": 45,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-dependencia-quimica-comportamental-sinais",
@@ -415,7 +556,22 @@
    "slot": "2026-11-15T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/matriciamento-saude-mental/short-2026-11-13-matriciamento-saude-mental",
-   "status": "sem-midia"
+   "tituloYoutube": "O que é e o que não é apoio matricial, suas modalidades. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "atenção primária"
+   ],
+   "hashVideo": "7e971b159ac6c87fda3ca289770a9354dcf3cc33533bfc2a0fa0a9d1a8adaa13",
+   "duracao": 45,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-16-acidente-trabalho-trauma-psicologico",
@@ -426,7 +582,21 @@
    "slot": "2026-11-16T15:00:00.000Z",
    "playlist": "Trabalho e NR-1",
    "pasta": "carrosseis-instagram/youtube/acidente-trabalho-trauma-psicologico/short-2026-11-16-acidente-trabalho-trauma-psicologico",
-   "status": "sem-midia"
+   "tituloYoutube": "O impacto psicológico de um acidente de trabalho pode durar mais que a lesão. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "fb5079d00f3290c457a1fa38ac8769937783d831871b4b2b9748bf6b84b3ddc5",
+   "duracao": 40,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-compulsao-alimentar-compras-compulsivas",
@@ -461,7 +631,21 @@
    "slot": "2026-11-18T15:00:00.000Z",
    "playlist": "Relatos da Prática",
    "pasta": "carrosseis-instagram/youtube/relato-vinculo-perdido/short-2026-11-17-relato-vinculo-perdido",
-   "status": "sem-midia"
+   "tituloYoutube": "Fazia mais de um ano que ela não aparecia na unidade. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "1d2cb1b86a75300ca44776e2bca6ed7b64d8014e611e0cb0c3ea94ac3cb45edc",
+   "duracao": 24,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-burnout-na-gestao-fatores-de-risco",
@@ -499,7 +683,21 @@
    "slot": "2026-11-20T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/primeira-consulta-saude-mental/short-2026-11-18-primeira-consulta-saude-mental",
-   "status": "sem-midia"
+   "tituloYoutube": "Onde começar no SUS, o que é perguntado na consulta, o papel do diagnóstico. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "c7681f9837eec96a3157e08e5465c526a8f25d3632466f1ee5854b512e4aa412",
+   "duracao": 44,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-19-jogos-online-criancas",
@@ -510,7 +708,21 @@
    "slot": "2026-11-21T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/jogos-online-criancas/short-2026-11-19-jogos-online-criancas",
-   "status": "sem-midia"
+   "tituloYoutube": "Sinais de transtorno de jogo eletrônico, caixas de recompensa e apostas. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "0f38a03b1e96c0f3fefd2753ad442b92e89ba31e4fc90f61115e5b1f4d5b73c6",
+   "duracao": 42,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-fadiga-compaixao-cuidado-idosos",
@@ -545,7 +757,22 @@
    "slot": "2026-11-23T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/grupos-terapeuticos-aps/short-2026-11-23-grupos-terapeuticos-aps",
-   "status": "sem-midia"
+   "tituloYoutube": "Benefícios, modalidades, evidência da TCC em grupo para depressão. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "atenção primária"
+   ],
+   "hashVideo": "b87773832d96794b1a1d58eda8bdfe604c102ae7b0ec19c5f00de5c3bae330ca",
+   "duracao": 46,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-trabalho-domestico-invisivel-estresse",
@@ -580,7 +807,21 @@
    "slot": "2026-11-25T15:00:00.000Z",
    "playlist": "Relatos da Prática",
    "pasta": "carrosseis-instagram/youtube/relato-peso-invisivel-cuidador/short-2026-11-24-relato-peso-invisivel-cuidador",
-   "status": "sem-midia"
+   "tituloYoutube": "A consulta era sobre o pai, não sobre ela. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "3421687c0cf2144842e6074aa9613398ff1847b5e0d96e8af8686a7cdc72abe1",
+   "duracao": 24,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-transicao-carreira-aposentadoria-identidade",
@@ -615,7 +856,21 @@
    "slot": "2026-11-27T15:00:00.000Z",
    "playlist": "Trabalho e NR-1",
    "pasta": "carrosseis-instagram/youtube/avaliacao-desempenho-saude-mental/short-2026-11-25-avaliacao-desempenho-saude-mental",
-   "status": "sem-midia"
+   "tituloYoutube": "O que torna a avaliação adoecedora, boas práticas e como conduzir a conversa de avali... #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH"
+   ],
+   "hashVideo": "08cb3745ee085cac268d00beba08b24ab589717d092b4f02379ca002cf0145ab",
+   "duracao": 44,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-26-compulsao-jogos",
@@ -626,7 +881,21 @@
    "slot": "2026-11-28T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/compulsao-jogos/short-2026-11-26-compulsao-jogos",
-   "status": "sem-midia"
+   "tituloYoutube": "Apostas como problema de saúde pública, o que diz a Lei 14.790/2023, sinais de alerta. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pacientes & Famílias"
+   ],
+   "hashVideo": "a051433a70a6214deee84a581bdacd755c29ef56c85df734d9326ad313c72ae6",
+   "duracao": 53,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-burnout-academico-pos-graduacao-concursos",
@@ -636,7 +905,21 @@
    "slot": "2026-11-28T21:00:00.000Z",
    "playlist": "Trabalho e NR-1",
    "pasta": "carrosseis-instagram/youtube/burnout-academico-pos-graduacao-concursos",
-   "status": "sem-midia"
+   "tituloYoutube": "Burnout acadêmico: quando mestrado, doutorado ou concurso cobram um preço alto demais",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pós-Graduação & Concursos"
+   ],
+   "hashVideo": "dd068c6ad55112402102f0fdbd4c5895ce3cf4a644a8f6287b432b7b7498b748",
+   "duracao": 193,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-27-adocao-saude-mental-filho",
@@ -647,7 +930,21 @@
    "slot": "2026-11-29T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/adocao-saude-mental-filho/short-2026-11-27-adocao-saude-mental-filho",
-   "status": "sem-midia"
+   "tituloYoutube": "Comportamentos que podem surgir após a adoção. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Pais & Famílias"
+   ],
+   "hashVideo": "4f401f81c812cf2eef2bdbb7de1605cba82ec59ea112b1a6e34d004655eb5f5e",
+   "duracao": 38,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-11-30-relato-silencio-fatal",
@@ -658,7 +955,21 @@
    "slot": "2026-11-30T15:00:00.000Z",
    "playlist": "Relatos da Prática",
    "pasta": "carrosseis-instagram/youtube/relato-silencio-fatal/short-2026-11-30-relato-silencio-fatal",
-   "status": "sem-midia"
+   "tituloYoutube": "A consulta já estava quase terminando. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Relatos da Prática"
+   ],
+   "hashVideo": "5a580123a2435680f8519c5b2e8035bbc24d22e6081bd89b365cc872b5f64cde",
+   "duracao": 23,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-sobrecarga-docente-descompressao",
@@ -668,7 +979,21 @@
    "slot": "2026-12-01T21:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/sobrecarga-docente-descompressao",
-   "status": "sem-midia"
+   "tituloYoutube": "Sobrecarga docente: reconhecendo o esgotamento antes que ele vire adoecimento",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Educadores & Professores"
+   ],
+   "hashVideo": "f37620f934a7abc324ded418087fc1a06f6b47f205e364c1f9ce91f2bcff29ad",
+   "duracao": 209,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-12-01-quando-encaminhar-aps",
@@ -679,7 +1004,22 @@
    "slot": "2026-12-02T15:00:00.000Z",
    "playlist": "Saúde Mental na APS",
    "pasta": "carrosseis-instagram/youtube/quando-encaminhar-aps/short-2026-12-01-quando-encaminhar-aps",
-   "status": "sem-midia"
+   "tituloYoutube": "O que a APS pode cuidar com apoio matricial, segundo o mhGAP da OMS. #Shorts",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Médicos & Enfermeiros",
+    "atenção primária"
+   ],
+   "hashVideo": "bb8dd1666107e0114cb8dd0e3eb8098fb3f0eee6dc314cacffb9bd76efebf3e8",
+   "duracao": 47,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "longo-saude-mental-pilar-de-performance-liderancas",
@@ -689,7 +1029,24 @@
    "slot": "2026-12-03T21:00:00.000Z",
    "playlist": "Trabalho e NR-1",
    "pasta": "carrosseis-instagram/youtube/saude-mental-pilar-de-performance-liderancas",
-   "status": "sem-midia"
+   "tituloYoutube": "Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas",
+   "tags": [
+    "saúde mental",
+    "atenção primária à saúde",
+    "medicina de família e comunidade",
+    "Dr. Antônio Felipe",
+    "Empresas & RH",
+    "performance organizacional",
+    "prevenção",
+    "liderança"
+   ],
+   "hashVideo": "2c2ac6afdcfa9918acf62e7ffac6e7497a72d2eaeeaa58b9d6196472a8e06464",
+   "duracao": 312,
+   "checagem": {
+    "texto": [],
+    "midia": []
+   },
+   "status": "aprovado-checagem"
   },
   {
    "id": "short-2026-12-02-clima-organizacional-pesquisa-efetiva",
@@ -974,13 +1331,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-afastamento-transtorno-mental",
+   "id": "longo-alta-pa-psiquiatrico",
    "tipo": "longo",
-   "slug": "afastamento-transtorno-mental",
-   "titulo": "Afastamento por transtorno mental: o que a empresa precisa saber",
+   "slug": "alta-pa-psiquiatrico",
+   "titulo": "Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise",
    "slot": "2026-12-26T21:00:00.000Z",
-   "playlist": "Trabalho e NR-1",
-   "pasta": "carrosseis-instagram/youtube/afastamento-transtorno-mental",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/alta-pa-psiquiatrico",
    "status": "sem-midia"
   },
   {
@@ -1006,13 +1363,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-jogos-online-criancas",
+   "id": "longo-afastamento-transtorno-mental",
    "tipo": "longo",
-   "slug": "jogos-online-criancas",
-   "titulo": "Roblox, Fortnite e jogos online: o que pais precisam saber sobre saúde mental dos filhos",
+   "slug": "afastamento-transtorno-mental",
+   "titulo": "Afastamento por transtorno mental: o que a empresa precisa saber",
    "slot": "2026-12-29T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/jogos-online-criancas",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/afastamento-transtorno-mental",
    "status": "sem-midia"
   },
   {
@@ -1027,13 +1384,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-compulsao-alimentar",
+   "id": "longo-jogos-online-criancas",
    "tipo": "longo",
-   "slug": "compulsao-alimentar",
-   "titulo": "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda",
+   "slug": "jogos-online-criancas",
+   "titulo": "Roblox, Fortnite e jogos online: o que pais precisam saber sobre saúde mental dos filhos",
    "slot": "2026-12-31T21:00:00.000Z",
-   "playlist": "Corpo e Saúde Mental",
-   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/jogos-online-criancas",
    "status": "sem-midia"
   },
   {
@@ -1059,13 +1416,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-quando-encaminhar-aps",
+   "id": "longo-compulsao-alimentar",
    "tipo": "longo",
-   "slug": "quando-encaminhar-aps",
-   "titulo": "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS",
+   "slug": "compulsao-alimentar",
+   "titulo": "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda",
    "slot": "2027-01-02T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/quando-encaminhar-aps",
+   "playlist": "Corpo e Saúde Mental",
+   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar",
    "status": "sem-midia"
   },
   {
@@ -1091,13 +1448,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-relato-crise-evitavel",
+   "id": "longo-quando-encaminhar-aps",
    "tipo": "longo",
-   "slug": "relato-crise-evitavel",
-   "titulo": "A crise que poderia ter sido evitada",
+   "slug": "quando-encaminhar-aps",
+   "titulo": "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS",
    "slot": "2027-01-05T21:00:00.000Z",
-   "playlist": "Relatos da Prática",
-   "pasta": "carrosseis-instagram/youtube/relato-crise-evitavel",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/quando-encaminhar-aps",
    "status": "sem-midia"
   },
   {
@@ -1112,13 +1469,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-jogos-online-consulta-medicos",
+   "id": "longo-relato-crise-evitavel",
    "tipo": "longo",
-   "slug": "jogos-online-consulta-medicos",
-   "titulo": "Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes",
+   "slug": "relato-crise-evitavel",
+   "titulo": "A crise que poderia ter sido evitada",
    "slot": "2027-01-07T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/jogos-online-consulta-medicos",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-crise-evitavel",
    "status": "sem-midia"
   },
   {
@@ -1144,13 +1501,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-relato-familia-em-crise",
+   "id": "longo-jogos-online-consulta-medicos",
    "tipo": "longo",
-   "slug": "relato-familia-em-crise",
-   "titulo": "Quando a família também precisa de cuidado",
+   "slug": "jogos-online-consulta-medicos",
+   "titulo": "Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes",
    "slot": "2027-01-09T21:00:00.000Z",
-   "playlist": "Relatos da Prática",
-   "pasta": "carrosseis-instagram/youtube/relato-familia-em-crise",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/jogos-online-consulta-medicos",
    "status": "sem-midia"
   },
   {
@@ -1176,13 +1533,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-psicofarmacos-mitos-culturais",
+   "id": "longo-relato-familia-em-crise",
    "tipo": "longo",
-   "slug": "psicofarmacos-mitos-culturais",
-   "titulo": "Por que existe tanta desinformação sobre psicofármacos?",
+   "slug": "relato-familia-em-crise",
+   "titulo": "Quando a família também precisa de cuidado",
    "slot": "2027-01-12T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/psicofarmacos-mitos-culturais",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-familia-em-crise",
    "status": "sem-midia"
   },
   {
@@ -1197,13 +1554,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-relato-vinculo-perdido",
+   "id": "longo-psicofarmacos-mitos-culturais",
    "tipo": "longo",
-   "slug": "relato-vinculo-perdido",
-   "titulo": "O resgate de um vínculo perdido",
+   "slug": "psicofarmacos-mitos-culturais",
+   "titulo": "Por que existe tanta desinformação sobre psicofármacos?",
    "slot": "2027-01-14T21:00:00.000Z",
-   "playlist": "Relatos da Prática",
-   "pasta": "carrosseis-instagram/youtube/relato-vinculo-perdido",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/psicofarmacos-mitos-culturais",
    "status": "sem-midia"
   },
   {
@@ -1229,13 +1586,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-realidade-saude-mental-aps",
+   "id": "longo-relato-vinculo-perdido",
    "tipo": "longo",
-   "slug": "realidade-saude-mental-aps",
-   "titulo": "O que ninguém te conta sobre atender saúde mental na atenção primária",
+   "slug": "relato-vinculo-perdido",
+   "titulo": "O resgate de um vínculo perdido",
    "slot": "2027-01-16T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/realidade-saude-mental-aps",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-vinculo-perdido",
    "status": "sem-midia"
   },
   {
@@ -1261,13 +1618,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-relato-peso-invisivel-cuidador",
+   "id": "longo-realidade-saude-mental-aps",
    "tipo": "longo",
-   "slug": "relato-peso-invisivel-cuidador",
-   "titulo": "O peso invisível de quem cuida",
+   "slug": "realidade-saude-mental-aps",
+   "titulo": "O que ninguém te conta sobre atender saúde mental na atenção primária",
    "slot": "2027-01-19T21:00:00.000Z",
-   "playlist": "Relatos da Prática",
-   "pasta": "carrosseis-instagram/youtube/relato-peso-invisivel-cuidador",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/realidade-saude-mental-aps",
    "status": "sem-midia"
   },
   {
@@ -1282,13 +1639,13 @@
    "status": "sem-midia"
   },
   {
-   "id": "longo-gestacao-amamentacao-saude-mental",
+   "id": "longo-relato-peso-invisivel-cuidador",
    "tipo": "longo",
-   "slug": "gestacao-amamentacao-saude-mental",
-   "titulo": "Gestação, amamentação e saúde mental: o que toda família precisa saber",
+   "slug": "relato-peso-invisivel-cuidador",
+   "titulo": "O peso invisível de quem cuida",
    "slot": "2027-01-21T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/gestacao-amamentacao-saude-mental",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-peso-invisivel-cuidador",
    "status": "sem-midia"
   },
   {
@@ -1330,13 +1687,13 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-relato-silencio-fatal",
+   "id": "longo-gestacao-amamentacao-saude-mental",
    "tipo": "longo",
-   "slug": "relato-silencio-fatal",
-   "titulo": "O silêncio que quase foi fatal",
+   "slug": "gestacao-amamentacao-saude-mental",
+   "titulo": "Gestação, amamentação e saúde mental: o que toda família precisa saber",
    "slot": "2027-01-23T21:00:00.000Z",
-   "playlist": "Relatos da Prática",
-   "pasta": "carrosseis-instagram/youtube/relato-silencio-fatal",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/gestacao-amamentacao-saude-mental",
    "status": "sem-midia"
   },
   {
@@ -1390,13 +1747,13 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-psicofarmacos-mitos-verdades",
+   "id": "longo-relato-silencio-fatal",
    "tipo": "longo",
-   "slug": "psicofarmacos-mitos-verdades",
-   "titulo": "Psicofármacos: mitos e verdades sobre o tratamento medicamentoso em saúde mental",
+   "slug": "relato-silencio-fatal",
+   "titulo": "O silêncio que quase foi fatal",
    "slot": "2027-01-26T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/psicofarmacos-mitos-verdades",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-silencio-fatal",
    "status": "sem-midia"
   },
   {
@@ -1425,13 +1782,13 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-relato-entre-dois-mundos",
+   "id": "longo-psicofarmacos-mitos-verdades",
    "tipo": "longo",
-   "slug": "relato-entre-dois-mundos",
-   "titulo": "Entre dois mundos",
+   "slug": "psicofarmacos-mitos-verdades",
+   "titulo": "Psicofármacos: mitos e verdades sobre o tratamento medicamentoso em saúde mental",
    "slot": "2027-01-28T21:00:00.000Z",
-   "playlist": "Relatos da Prática",
-   "pasta": "carrosseis-instagram/youtube/relato-entre-dois-mundos",
+   "playlist": "Saúde Mental na APS",
+   "pasta": "carrosseis-instagram/youtube/psicofarmacos-mitos-verdades",
    "status": "sem-midia"
   },
   {
@@ -1485,13 +1842,13 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-compulsao-jogos",
+   "id": "longo-relato-entre-dois-mundos",
    "tipo": "longo",
-   "slug": "compulsao-jogos",
-   "titulo": "Compulsão por jogos: como reconhecer os sinais em si mesmo ou em alguém da família",
+   "slug": "relato-entre-dois-mundos",
+   "titulo": "Entre dois mundos",
    "slot": "2027-01-30T21:00:00.000Z",
-   "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/compulsao-jogos",
+   "playlist": "Relatos da Prática",
+   "pasta": "carrosseis-instagram/youtube/relato-entre-dois-mundos",
    "status": "sem-midia"
   },
   {

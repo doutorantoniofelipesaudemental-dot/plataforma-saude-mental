@@ -280,3 +280,6 @@ Início da sessão: 51 ok · 200 desatualizadas · 475 ausentes · faltam 675.
 - Lotes 1–3: 150 áudios NOVOS (agendados, na ordem da data; inclui `imagem-corporal-o-que-e`, texto de 19/10 08:00) enviados com vinheta v1: 150/150 ok, 0 falhas. Amostra de 5+ por lote: vinheta v1 no banco, HTTP 200, duração/razão 1,02–1,29, volume médio ≈ −17 dB.
 - Blob agora: 915,8 MB de 1024 (grupos: a 251 = 270 MB · b 228 = 304 MB · c/d 0).
 - PARADO por cota: faltam 52 novos (~76 MB) e 328 regravações com vinheta dos já enviados (~+48 MB de crescimento, mesmo caminho) → não cabem em 108 MB livres. `DrSM-Narracao-Noite` DESATIVADA para não encher o Blob sozinha. Depende de decisão do Dr. Antônio (liberar espaço/plano maior/outro destino).
+
+## Fechamento do envio com vinheta — 17/10/2026
+- 532/726 textos com áudio v1 no Blob (251 publicados + 281 agendados); lotes 4–8: 0 reprovados além de 1 truncado (relato-pilula-da-concentracao, regerado). Faltam 194 (sem MP3 local): ciclo noturno reativado.

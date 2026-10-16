@@ -11,3 +11,7 @@ Plano da Vercel: **Pro** (alterado em 16–17/10/2026; `vercel api /v2/teams/<id
 - 1076 blobs, 923,7 MB (outros arquivos 595: capas e imagens, ~342 MB) · narrações 481.
 - a (publicados): 251 · 270,2 MB · b (agendados): 229 · 310,6 MB · c: 1 · 1,5 MB (áudio antigo do texto retitulado, apagado em seguida) · d: 0.
 - Regra de ouro: nunca apagar a nem b. Amostra de 10 (6 publicados + 4 agendados de 19/10): 10/10 com MP3 HTTP 200.
+
+## Fechamento (17/10/2026, madrugada)
+- Plano Pro. Blob 1060,7 MB · narrações 533: a 251 (307 MB) · b 281 (388,5 MB) · c 1 (3,1 MB, apagado) · d 0. Capas: 475 enviadas (0 falhas); 0 textos sem capa.
+- Envios com vinheta: 351 áudios em 8 lotes (50 cada), amostra de 5 por lote: vinheta v1 + HTTP 200 em todas, exceto 1 áudio truncado reprovado na conferência de duração (regerado e reenviado).

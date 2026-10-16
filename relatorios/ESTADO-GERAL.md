@@ -1,12 +1,14 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
-## EM ANDAMENTO (16/10/2026, noite) — ver relatorios/PROMPT-ATUAL.md
-- PR #78 (vinheta) MERGED. **PR #79** (título sem promessa, crédito v2 dos vídeos, LinkedIn com crédito, inventário do Blob a/b/c/d, trava B na conferência de 19/10) aberto e PRONTO (auditoria 0 falhas, build OK, 248 unit + 31 e2e); merge bloqueado pelas permissões — aguarda o Dr. Antônio.
-- Tarefa DrSM-YouTube-Gera-Midia: teste de 1 vídeo REPROVOU no 1º formato (crédito sobre a assinatura); corrigido (crédito em canto livre, v2), Short e longo conferidos (assinatura, sem marca d'água, RAM ~49%); 21 vídeos antigos refeitos em v2; tarefa ATIVA. DrSM-Narracao-Noite REATIVADA (usa a vinheta via narrar-artigos.js).
-- Título da alta do PA trocado (banco + mdx + seed + fila do LinkedIn; slug mantido; backup backups/titulo-*). Narração desse texto = desatualizada (player oculto até regerar). Capa nova local; a do Blob será trocada no envio.
-- Próximo: decidir espaço do Blob; conferência de 19/10 (trava B real) deve passar (texto de 19/10 08:00 já está no Blob com vinheta).
-- LinkedIn: simulação do 1º post OK (texto, assinatura, crédito); credencial da API ausente e freio desligado; token LinkedIn não se renova sozinho (rotina avisa <15 dias).
+## EM ANDAMENTO (17/10/2026, madrugada) — ver relatorios/PROMPT-ATUAL.md
+- PRs #78, #79, #80, #81 MERGED; deploy Ready. Plano da Vercel: **Pro** (Blob sem o bloqueio duro de 1 GB; cota incluída exata não confirmada).
+- Áudios com vinheta v1: 532 de 726 textos (251 publicados + 281 agendados), TODOS os de 19–25/10 (57) incluídos; trava B: ensaio (--simular) passou; teste real = 19/10 08h (Bahia, texto imagem-corporal-o-que-e). Faltam 194 sem MP3 local: o ciclo noturno (DrSM-Narracao-Noite, REATIVADA, 22:00) gera e envia. Conferência barrou 1 áudio truncado (relato-pilula-da-concentracao), regerado.
+- Título da alta do PA: áudio novo (vinheta) e capa nova no ar. Capas: 475 textos agendados sem capa receberam capa gerada (backend/tools/gerar-capas.py + PUT /midia/capa-arquivo); 0 sem capa.
+- Blob: ~1,06 GB (a 251 = 307 MB · b 281 = 388 MB · c/d 0). Órfãos c+d apagados (288 + 2). Relatório: relatorios/blob-orfaos-20261016.md.
+- YouTube: crédito v2; 50 vídeos aprovados na fila, 59 sem mídia (tarefa DrSM-YouTube-Gera-Midia gera 25/dia, 23:30). Short crise-psiquiatrica-familia: resumo do texto trocava "direitos garantidos por lei" → "direitos previstos em lei" (backup backups/resumo-crise-*); refeito.
+- Resolução CFM 2.454/2026 CONFIRMADA (docs/fonte-resolucao-cfm-2454-2026.md); mantida em todos os lugares.
+- LinkedIn: credencial da API ausente, freio desligado; fila com crédito do Portal.
 
 ## Etapa 1 — produção do PR #77 (16/10/2026)
 - PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).
