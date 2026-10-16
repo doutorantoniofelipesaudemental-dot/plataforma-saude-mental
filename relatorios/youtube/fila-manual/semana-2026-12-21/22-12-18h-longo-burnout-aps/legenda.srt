@@ -1,0 +1,388 @@
+1
+00:00:00,000 --> 00:00:03,911
+Burnout em médicos e enfermeiros
+da Atenção Primária:
+
+2
+00:00:03,911 --> 00:00:06,827
+quando quem cuida precisa de cuidados.
+
+3
+00:00:06,827 --> 00:00:08,948
+Narração em voz sintética.
+
+4
+00:00:08,948 --> 00:00:14,118
+Agenda sempre cheia, casos sem resposta
+fácil, famílias acompanhadas por
+
+5
+00:00:14,118 --> 00:00:14,847
+anos.
+
+6
+00:00:14,847 --> 00:00:20,084
+Trabalhar na Atenção Primária é uma
+experiência rica — e, sem apoio, pode
+
+7
+00:00:20,084 --> 00:00:21,741
+esgotar quem cuida.
+
+8
+00:00:21,741 --> 00:00:27,043
+Reconhecer o burnout cedo protege o
+profissional e a qualidade do cuidado.
+
+9
+00:00:27,043 --> 00:00:32,213
+Quem trabalha na Atenção Primária à Saúde
+(APS) sabe que o dia raramente
+
+10
+00:00:32,213 --> 00:00:34,003
+termina onde deveria.
+
+11
+00:00:34,003 --> 00:00:39,173
+Entre consultas, visitas domiciliares,
+reuniões de equipe e prontuários,
+
+12
+00:00:39,173 --> 00:00:41,692
+sobra pouco tempo para respirar.
+
+13
+00:00:41,692 --> 00:00:46,729
+Este texto é para médicos, enfermeiros e
+demais profissionais da APS —
+
+14
+00:00:46,729 --> 00:00:50,905
+e para gestores que querem manter
+suas equipes saudáveis.
+
+15
+00:00:50,905 --> 00:00:53,424
+O que é burnout — e o que não é.
+
+16
+00:00:53,424 --> 00:00:58,461
+Burnout é uma síndrome ligada ao
+trabalho, descrita em três dimensões:
+
+17
+00:00:58,461 --> 00:01:03,764
+exaustão emocional , distanciamento
+(cinismo, impaciência, "tratar pessoas
+
+18
+00:01:03,764 --> 00:01:06,747
+como casos") e sensação de ineficácia .
+
+19
+00:01:06,747 --> 00:01:09,530
+Não é preguiça nem falta de vocação:
+
+20
+00:01:09,530 --> 00:01:14,634
+é a resposta esperada a um desgaste
+crônico sem recuperação suficiente.
+
+21
+00:01:14,634 --> 00:01:19,672
+Quanto à frequência, uma revisão
+sistemática com 182 estudos e mais de
+
+22
+00:01:19,672 --> 00:01:24,974
+100 mil médicos encontrou prevalências
+entre 0% e 80,5%, justamente porque
+
+23
+00:01:24,974 --> 00:01:29,481
+os estudos usam definições e pontos
+de corte muito diferentes.
+
+24
+00:01:29,481 --> 00:01:30,940
+A lição é dupla:
+
+25
+00:01:30,940 --> 00:01:36,043
+o burnout é comum, e números isolados
+circulando por aí devem ser lidos
+
+26
+00:01:36,043 --> 00:01:37,237
+com cautela.
+
+27
+00:01:37,237 --> 00:01:39,888
+Por que a APS tem riscos próprios.
+
+28
+00:01:39,888 --> 00:01:44,793
+O vínculo longitudinal , um dos maiores
+valores da APS, também pesa:
+
+29
+00:01:44,793 --> 00:01:49,830
+acompanhar famílias vulneráveis por anos,
+sentindo-se impotente diante
+
+30
+00:01:49,830 --> 00:01:52,614
+de problemas sociais, é desgastante.
+
+31
+00:01:52,614 --> 00:01:54,603
+"Carregar o território":
+
+32
+00:01:54,603 --> 00:01:59,773
+a sensação de ser responsável por toda uma
+comunidade, e não só por quem
+
+33
+00:01:59,773 --> 00:02:01,231
+chega à unidade.
+
+34
+00:02:01,231 --> 00:02:03,087
+Condições de trabalho:
+
+35
+00:02:03,087 --> 00:02:08,456
+falta de insumos, estrutura precária,
+violência no território, rotatividade
+
+36
+00:02:08,456 --> 00:02:10,245
+e vínculos instáveis.
+
+37
+00:02:10,245 --> 00:02:15,482
+Metas de produção que nem sempre refletem
+a complexidade real do cuidado.
+
+38
+00:02:15,482 --> 00:02:17,337
+Um equívoco frequente:
+
+39
+00:02:17,337 --> 00:02:22,905
+a ideia de que a APS seria "menos
+estressante" do que a urgência ou o hospital
+
+40
+00:02:22,905 --> 00:02:27,280
+torna esse sofrimento invisível — e
+atrasa a busca de ajuda.
+
+41
+00:02:27,280 --> 00:02:29,069
+Autoavaliação rápida:
+
+42
+00:02:29,069 --> 00:02:30,594
+sinais de alerta.
+
+43
+00:02:30,594 --> 00:02:34,240
+Guarde esta lista e revise-a
+de tempos em tempos:
+
+44
+00:02:34,240 --> 00:02:38,084
+Chegar cansado à unidade, mesmo
+depois de descansar;
+
+45
+00:02:38,084 --> 00:02:41,796
+Irritação com pacientes que
+antes não incomodavam;
+
+46
+00:02:41,796 --> 00:02:45,309
+Sentir indiferença diante do
+sofrimento alheio;
+
+47
+00:02:45,309 --> 00:02:48,954
+Dificuldade de concentração
+durante as consultas;
+
+48
+00:02:48,954 --> 00:02:52,534
+Insônia, dores de cabeça,
+problemas de estômago;
+
+49
+00:02:52,534 --> 00:02:55,649
+Pensar em abandonar a APS ou a profissão;
+
+50
+00:02:55,649 --> 00:03:00,885
+Uso crescente de álcool ou de medicações
+para dormir ou para "funcionar".
+
+51
+00:03:00,885 --> 00:03:05,989
+Se surgirem pensamentos de morte ou de
+que seria melhor não estar vivo,
+
+52
+00:03:05,989 --> 00:03:08,242
+busque ajuda imediatamente .
+
+53
+00:03:08,242 --> 00:03:13,876
+Profissionais de saúde também adoecem — e
+merecem o mesmo cuidado que oferecem.
+
+54
+00:03:13,876 --> 00:03:15,268
+O que funciona:
+
+55
+00:03:15,268 --> 00:03:16,395
+evidências.
+
+56
+00:03:16,395 --> 00:03:21,830
+Uma meta-análise com 52 estudos mostrou que
+intervenções reduziram o burnout
+
+57
+00:03:21,830 --> 00:03:26,934
+geral de médicos de 54% para 44%, e a
+exaustão emocional elevada de 38%
+
+58
+00:03:26,934 --> 00:03:32,701
+para 24% — tanto com estratégias individuais
+quanto com mudanças organizacionais.
+
+59
+00:03:32,701 --> 00:03:38,003
+Outra meta-análise, com estudos
+controlados, encontrou um dado importante:
+
+60
+00:03:38,003 --> 00:03:43,505
+intervenções dirigidas à organização tiveram
+efeito maior do que as dirigidas
+
+61
+00:03:43,505 --> 00:03:48,874
+apenas ao profissional , reforçando que o
+burnout é um problema do sistema,
+
+62
+00:03:48,874 --> 00:03:50,730
+e não só do indivíduo.
+
+63
+00:03:50,730 --> 00:03:52,453
+No plano individual.
+
+64
+00:03:52,453 --> 00:03:56,364
+Psicoterapia e, quando
+necessário, tratamento médico;
+
+65
+00:03:56,364 --> 00:04:01,401
+Grupos de apoio entre pares, como o grupo
+Balint ou rodas de conversa;
+
+66
+00:04:01,401 --> 00:04:06,439
+Proteção de pausas reais durante o dia e
+de descanso fora do trabalho.
+
+67
+00:04:06,439 --> 00:04:08,891
+No plano da equipe e da gestão.
+
+68
+00:04:08,891 --> 00:04:13,067
+Agenda com tempo protegido para
+demandas não presenciais;
+
+69
+00:04:13,067 --> 00:04:18,171
+Reuniões de equipe com espaço para
+dificuldades emocionais, não só para
+
+70
+00:04:18,171 --> 00:04:18,966
+metas;
+
+71
+00:04:18,966 --> 00:04:23,805
+Apoio matricial das equipes
+multiprofissionais nos casos complexos;
+
+72
+00:04:23,805 --> 00:04:28,511
+Segurança no território e protocolos
+para situações de violência;
+
+73
+00:04:28,511 --> 00:04:32,355
+Estabilidade dos vínculos e
+redução da rotatividade.
+
+74
+00:04:32,355 --> 00:04:36,332
+O seu sofrimento tem nome, tem
+causa e tem tratamento.
+
+75
+00:04:36,332 --> 00:04:39,514
+Cuidar de si não é abandonar os pacientes:
+
+76
+00:04:39,514 --> 00:04:44,551
+é a condição para continuar cuidando
+deles com presença e competência.
+
+77
+00:04:44,551 --> 00:04:47,666
+Esse cuidado também protege os pacientes:
+
+78
+00:04:47,666 --> 00:04:52,770
+médicos com burnout têm chance cerca de
+duas vezes maior de se envolver
+
+79
+00:04:52,770 --> 00:04:55,753
+em incidentes de segurança do paciente.
+
+80
+00:04:55,753 --> 00:04:58,272
+Se você precisar de apoio agora:
+
+81
+00:04:58,272 --> 00:05:03,375
+CVV — 188 (ligação gratuita, 24h, também
+por chat em cvv.org.br) · SAMU
+
+82
+00:05:03,375 --> 00:05:05,165
+— 192 em emergências.
+
+83
+00:05:05,165 --> 00:05:08,081
+As referências estão no fim da página.
+
+84
+00:05:08,081 --> 00:05:09,738
+Conteúdo educativo.
+
+85
+00:05:09,738 --> 00:05:12,456
+Não substitui avaliação individual.

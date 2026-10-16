@@ -19,6 +19,12 @@ const BASE = process.env.NARRACAO_API_BASE || 'https://drsaudemental.vercel.app'
 const envArg = ['--env-file-if-exists=.env'];
 const roda = (args, opts = {}) => spawnSync(process.execPath, [...envArg, ...args], { cwd: RAIZ, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, ...opts });
 const problemas = [];
+// Link oficial alternativo para fontes que caem de vez em quando (decisão de 15/10/2026): se a fonte falhar em 2 semanas seguidas,
+// a rotina manda trocar pelo oficial (backend/scripts/trocarLinkAlternativo.js, dry-run por padrão).
+const ALTERNATIVAS_OFICIAIS = {
+  'https://www.conass.org.br/?p=43106': 'https://bvsms.saude.gov.br/bvs/saudelegis/gm/2024/prt3681_22_05_2024.html', // CONASS (resumo) → Portaria GM/MS 3.681/2024 no texto oficial
+};
+const ESTADO_LINKS = path.join(RAIZ, 'relatorios', 'links-estado.json');
 const sec = []; // seções do relatório
 
 async function passoAuditoria() {
@@ -60,6 +66,19 @@ async function passoLinks(col) {
       if (!ok) ruins.push({ u, status, onde: [...urls.get(u)].slice(0, 2).join(', ') });
     }
   }));
+  // falhas seguidas por semana (a rotina roda 1x por semana; mesma semana não conta duas vezes)
+  let estado = {}; try { estado = JSON.parse(fs.readFileSync(ESTADO_LINKS, 'utf8')); } catch { /* primeira execução */ }
+  const hoje = new Date().toISOString().slice(0, 10), novo = {}, trocar = [];
+  for (const r of ruins) {
+    const ant = estado[r.u] || { falhasSeguidas: 0, ultima: '' };
+    const dias = ant.ultima ? (new Date(hoje) - new Date(ant.ultima)) / 864e5 : 99;
+    const falhasSeguidas = dias < 1 ? ant.falhasSeguidas : (dias <= 10 ? ant.falhasSeguidas + 1 : 1);
+    novo[r.u] = { falhasSeguidas, ultima: dias < 1 ? ant.ultima : hoje };
+    if (falhasSeguidas >= 2 && ALTERNATIVAS_OFICIAIS[r.u]) trocar.push(r);
+  }
+  // fonte que respondeu bem nesta semana zera o contador (não entra em `novo`)
+  fs.writeFileSync(ESTADO_LINKS, JSON.stringify(novo, null, 1), 'utf8');
+  for (const r of trocar) problemas.push(`link falhou 2 semanas seguidas: ${r.u} → trocar pelo oficial ${ALTERNATIVAS_OFICIAIS[r.u]} (node --env-file=.env backend/scripts/trocarLinkAlternativo.js --aplicar)`);
   if (ruins.length) problemas.push(`links quebrados: ${ruins.length}`);
   if (internos.length) problemas.push(`links internos para texto inexistente: ${internos.length}`);
   sec.push(`## 2. Links\n- Verificados: ${lista.length} links externos distintos (DOIs ficam na varredura do Crossref) · 403/429 de editoras ignorados\n- Quebrados: ${ruins.length}${ruins.length ? '\n' + ruins.slice(0, 30).map((r) => `  - ${r.status} ${r.u} (${r.onde})`).join('\n') : ''}\n- Links internos para texto inexistente: ${internos.length}${internos.length ? '\n' + internos.slice(0, 15).map((x) => `  - ${x}`).join('\n') : ''}`);
@@ -82,6 +101,14 @@ async function passoTokenFreio() {
     linhas.push(`- Freio REDES_PUBLICACAO_ATIVA: ${f.publicacaoAtiva === true ? 'ATIVO (true)' : 'NÃO ATIVO'}`);
     if (f.publicacaoAtiva !== true) problemas.push('freio das redes não está ativo');
   } catch { problemas.push('não consegui consultar o freio'); linhas.push('- Freio: NÃO VERIFICADO'); }
+  // LinkedIn (token de ~60 dias, sem renovação automática) e YouTube
+  const vL = process.env.LINKEDIN_TOKEN_VENCE_EM;
+  if (vL) {
+    const d = Math.round((new Date(`${vL}T23:59:59-03:00`) - Date.now()) / 864e5);
+    linhas.push(`- LinkedIn: token vence em ${vL} (${d} dias)`);
+    if (d < 15) problemas.push(`token do LinkedIn vence em ${d} dias (npm run linkedin:autorizar e atualizar na Vercel)`);
+  } else linhas.push('- LinkedIn: sem token local (fila manual; ver relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md)');
+  linhas.push(`- YouTube: ${process.env.YOUTUBE_REFRESH_TOKEN ? 'autorizado' : 'sem autorização (fila manual em uso)'} · freio YOUTUBE_PUBLICACAO_ATIVA ${process.env.YOUTUBE_PUBLICACAO_ATIVA === 'true' ? 'ativo' : 'desligado'}`);
   sec.push(`## 3. Token e freio\n${linhas.join('\n')}`);
 }
 

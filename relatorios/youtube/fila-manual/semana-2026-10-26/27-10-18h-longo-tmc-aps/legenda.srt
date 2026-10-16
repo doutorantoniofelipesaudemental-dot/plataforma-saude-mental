@@ -1,0 +1,484 @@
+1
+00:00:00,000 --> 00:00:05,390
+O que o consultório de atenção primária
+revela sobre ansiedade, depressão
+
+2
+00:00:05,390 --> 00:00:07,505
+e sofrimento no trabalho.
+
+3
+00:00:07,505 --> 00:00:09,689
+Narração em voz sintética.
+
+4
+00:00:09,689 --> 00:00:14,874
+Dor nas costas que não melhora, insônia,
+cansaço que não passa, dor de
+
+5
+00:00:14,874 --> 00:00:16,784
+cabeça quase todo dia.
+
+6
+00:00:16,784 --> 00:00:22,516
+Muitas vezes, quem chega ao posto de saúde
+com essas queixas está, na verdade,
+
+7
+00:00:22,516 --> 00:00:27,838
+carregando um sofrimento psíquico ligado
+ao trabalho — e nem sempre sabe
+
+8
+00:00:27,838 --> 00:00:28,656
+disso.
+
+9
+00:00:28,656 --> 00:00:32,955
+Na Atenção Primária à Saúde (APS),
+esse cenário é diário.
+
+10
+00:00:32,955 --> 00:00:38,277
+Os chamados transtornos mentais comuns
+(TMC) — ansiedade, depressão leve
+
+11
+00:00:38,277 --> 00:00:43,530
+a moderada e sintomas físicos sem causa
+orgânica clara — estão entre os
+
+12
+00:00:43,530 --> 00:00:48,511
+motivos mais frequentes de sofrimento e
+de afastamento do trabalho.
+
+13
+00:00:48,511 --> 00:00:53,833
+E o consultório da APS costuma ser a
+primeira porta onde esse sofrimento
+
+14
+00:00:53,833 --> 00:00:54,788
+aparece.
+
+15
+00:00:54,788 --> 00:00:58,063
+Este texto foi escrito para dois públicos:
+
+16
+00:00:58,063 --> 00:01:03,317
+trabalhadores que querem entender o que
+estão sentindo, e profissionais
+
+17
+00:01:03,317 --> 00:01:07,820
+de saúde que querem reconhecer e
+cuidar melhor desses casos.
+
+18
+00:01:07,820 --> 00:01:09,935
+Quando o trabalho adoece:
+
+19
+00:01:09,935 --> 00:01:11,914
+o que a ciência mostra.
+
+20
+00:01:11,914 --> 00:01:17,236
+Uma ampla revisão de revisões sobre o tema
+identificou, com evidência de
+
+21
+00:01:17,236 --> 00:01:22,489
+estudos que acompanharam trabalhadores ao
+longo do tempo, os fatores do
+
+22
+00:01:22,489 --> 00:01:26,242
+trabalho mais associados a
+depressão e ansiedade:
+
+23
+00:01:26,242 --> 00:01:30,677
+Exigência alta com pouco controle
+sobre o próprio trabalho;
+
+24
+00:01:30,677 --> 00:01:36,067
+Esforço grande e pouca recompensa
+(salário, reconhecimento, perspectiva);
+
+25
+00:01:36,067 --> 00:01:40,297
+Falta de justiça nas relações e
+nas decisões da empresa;
+
+26
+00:01:40,297 --> 00:01:43,436
+Papéis confusos e ordens contraditórias;
+
+27
+00:01:43,436 --> 00:01:47,188
+Assédio moral e pouco apoio de
+colegas e chefias.
+
+28
+00:01:47,188 --> 00:01:52,374
+Um estudo clássico com mais de 13 mil
+trabalhadores suecos já mostrava
+
+29
+00:01:52,374 --> 00:01:57,627
+que a combinação de alta exigência, baixo
+controle e baixo apoio social
+
+30
+00:01:57,627 --> 00:02:03,222
+pesa mais do que cada fator isolado — no
+caso, sobre a saúde cardiovascular.
+
+31
+00:02:03,222 --> 00:02:08,817
+É o chamado modelo demanda–controle–suporte
+, hoje muito usado para entender
+
+32
+00:02:08,817 --> 00:02:11,956
+também o adoecimento mental no trabalho.
+
+33
+00:02:11,956 --> 00:02:13,047
+Em resumo:
+
+34
+00:02:13,047 --> 00:02:17,755
+o sofrimento no trabalho raramente é
+"fraqueza" de quem adoece.
+
+35
+00:02:17,755 --> 00:02:23,213
+Na maioria das vezes, ele reflete a forma
+como o trabalho está organizado.
+
+36
+00:02:23,213 --> 00:02:25,192
+Para você, trabalhador:
+
+37
+00:02:25,192 --> 00:02:27,512
+sinais para prestar atenção.
+
+38
+00:02:27,512 --> 00:02:29,149
+Guarde esta lista.
+
+39
+00:02:29,149 --> 00:02:34,744
+Se vários itens aparecem juntos e duram mais
+de duas semanas, vale conversar
+
+40
+00:02:34,744 --> 00:02:37,132
+com um profissional de saúde:
+
+41
+00:02:37,132 --> 00:02:42,659
+Angústia ou aperto no peito ao pensar no
+trabalho, especialmente no domingo
+
+42
+00:02:42,659 --> 00:02:43,614
+à noite;
+
+43
+00:02:43,614 --> 00:02:48,458
+Dormir mal, acordar cansado ou de
+madrugada pensando nas tarefas;
+
+44
+00:02:48,458 --> 00:02:53,371
+Dores no corpo, dor de cabeça ou
+problemas de estômago frequentes;
+
+45
+00:02:53,371 --> 00:02:58,215
+Irritação fácil, choro sem motivo
+aparente, vontade de se isolar;
+
+46
+00:02:58,215 --> 00:03:01,627
+Dificuldade de concentração
+e esquecimentos;
+
+47
+00:03:01,627 --> 00:03:06,266
+Aumento do uso de álcool, cigarro ou
+remédios para "aguentar".
+
+48
+00:03:06,266 --> 00:03:08,654
+Como contar isso na consulta.
+
+49
+00:03:08,654 --> 00:03:13,362
+Muita gente sai da consulta sem falar
+do que realmente importa.
+
+50
+00:03:13,362 --> 00:03:15,477
+Um roteiro simples ajuda:
+
+51
+00:03:15,477 --> 00:03:20,117
+Diga o sintoma que mais incomoda e há
+quanto tempo ele existe.
+
+52
+00:03:20,117 --> 00:03:23,801
+Conte o que mudou no trabalho
+nos últimos meses:
+
+53
+00:03:23,801 --> 00:03:26,940
+metas, chefia, jornada, clima da equipe.
+
+54
+00:03:26,940 --> 00:03:31,443
+Fale sobre o sono, o humor e o uso
+de álcool ou de remédios.
+
+55
+00:03:31,443 --> 00:03:37,106
+Se tiver pensamentos de que seria melhor não
+estar vivo, diga isso claramente
+
+56
+00:03:37,106 --> 00:03:40,790
+— é uma informação essencial
+para o seu cuidado.
+
+57
+00:03:40,790 --> 00:03:42,974
+Para profissionais da APS:
+
+58
+00:03:42,974 --> 00:03:45,839
+por que o consultório é estratégico.
+
+59
+00:03:45,839 --> 00:03:51,025
+A APS reúne três características que
+favorecem o cuidado desses casos:
+
+60
+00:03:51,025 --> 00:03:56,824
+integralidade (olhar a pessoa, não só o
+sintoma), longitudinalidade (acompanhar
+
+61
+00:03:56,824 --> 00:04:02,078
+ao longo do tempo) e conhecimento do
+território (entender o contexto de
+
+62
+00:04:02,078 --> 00:04:03,852
+vida e de trabalho).
+
+63
+00:04:03,852 --> 00:04:09,515
+O médico de família e comunidade está em
+posição privilegiada para reconhecer
+
+64
+00:04:09,515 --> 00:04:14,905
+o sofrimento que chega como dor física e
+para perguntar sobre o trabalho.
+
+65
+00:04:14,905 --> 00:04:17,498
+O que tem funcionado na prática.
+
+66
+00:04:17,498 --> 00:04:23,161
+Perguntar sobre o trabalho em toda consulta
+com queixas vagas e persistentes:
+
+67
+00:04:23,161 --> 00:04:25,344
+"Como está o seu trabalho?
+
+68
+00:04:25,344 --> 00:04:27,527
+Algo mudou recentemente?".
+
+69
+00:04:27,527 --> 00:04:30,529
+Rastreamento com instrumento validado:
+
+70
+00:04:30,529 --> 00:04:35,851
+o SRQ-20, validado em unidades de atenção
+primária de São Paulo, mostrou
+
+71
+00:04:35,851 --> 00:04:41,173
+sensibilidade de 83% e especificidade de
+80% para identificar sofrimento
+
+72
+00:04:41,173 --> 00:04:42,197
+psíquico.
+
+73
+00:04:42,197 --> 00:04:46,700
+Ele cabe numa consulta breve e ajuda
+a organizar a conversa.
+
+74
+00:04:46,700 --> 00:04:48,474
+Intervenções breves:
+
+75
+00:04:48,474 --> 00:04:53,659
+psicoeducação, ativação comportamental,
+orientação sobre sono e grupos
+
+76
+00:04:53,659 --> 00:05:00,073
+na unidade, com apoio do matriciamento em saúde
+mental e das equipes multiprofissionais.
+
+77
+00:05:00,073 --> 00:05:05,326
+Investigar o nexo com o trabalho e
+articular com o Cerest quando houver
+
+78
+00:05:05,326 --> 00:05:10,648
+indícios de adoecimento relacionado ao
+trabalho, incluindo a notificação
+
+79
+00:05:10,648 --> 00:05:12,149
+quando indicada.
+
+80
+00:05:12,149 --> 00:05:14,060
+Seguimento programado:
+
+81
+00:05:14,060 --> 00:05:19,109
+marcar o retorno antes de o paciente
+sair, e não apenas "se piorar".
+
+82
+00:05:19,109 --> 00:05:20,883
+Os obstáculos reais.
+
+83
+00:05:20,883 --> 00:05:26,136
+Tempo curto de consulta, estigma,
+formação insuficiente em saúde mental
+
+84
+00:05:26,136 --> 00:05:31,322
+ocupacional e pouca integração entre APS,
+Rede de Atenção Psicossocial
+
+85
+00:05:31,322 --> 00:05:34,187
+e Cerest ainda limitam esse cuidado.
+
+86
+00:05:34,187 --> 00:05:37,531
+Reconhecer esses limites
+ajuda a priorizar:
+
+87
+00:05:37,531 --> 00:05:42,784
+escuta qualificada, vínculo e seguimento
+continuam sendo ferramentas de
+
+88
+00:05:42,784 --> 00:05:45,923
+alto impacto, mesmo com poucos recursos.
+
+89
+00:05:45,923 --> 00:05:49,471
+Por que cuidar disso vale a
+pena — para todos.
+
+90
+00:05:49,471 --> 00:05:54,656
+Tratar ansiedade e depressão não é só uma
+questão de saúde individual.
+
+91
+00:05:54,656 --> 00:06:00,046
+Uma análise coordenada por pesquisadores
+da Organização Mundial da Saúde,
+
+92
+00:06:00,046 --> 00:06:05,436
+em 36 países, estimou que cada dólar
+investido na ampliação do tratamento
+
+93
+00:06:05,436 --> 00:06:10,895
+desses transtornos retorna de 2,3 a 3
+dólares apenas em ganhos econômicos,
+
+94
+00:06:10,895 --> 00:06:16,421
+como produtividade e retorno ao trabalho —
+e ainda mais quando se considera
+
+95
+00:06:16,421 --> 00:06:17,991
+o ganho em saúde.
+
+96
+00:06:17,991 --> 00:06:23,654
+Para empresas e gestores, isso significa que
+cuidar das condições de trabalho
+
+97
+00:06:23,654 --> 00:06:27,406
+e apoiar o tratamento de quem
+adoece não é custo:
+
+98
+00:06:27,406 --> 00:06:28,839
+é investimento.
+
+99
+00:06:28,839 --> 00:06:31,432
+Se você precisar de apoio agora:
+
+100
+00:06:31,432 --> 00:06:36,686
+CVV — 188 (ligação gratuita, 24h, também
+por chat em cvv.org.br) · SAMU
+
+101
+00:06:36,686 --> 00:06:42,007
+— 192 em emergências · A Unidade Básica de
+Saúde do seu bairro é a porta
+
+102
+00:06:42,007 --> 00:06:44,191
+de entrada para o cuidado.
+
+103
+00:06:44,191 --> 00:06:47,193
+As referências estão no fim da página.
+
+104
+00:06:47,193 --> 00:06:48,899
+Conteúdo educativo.
+
+105
+00:06:48,899 --> 00:06:51,696
+Não substitui avaliação individual.

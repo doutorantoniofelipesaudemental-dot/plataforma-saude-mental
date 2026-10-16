@@ -47,7 +47,13 @@
     "redes:gerar": "node --env-file-if-exists=.env backend/scripts/redes/gerarFila.js",
     "redes:enviar": "node --env-file-if-exists=.env backend/scripts/redes/enviarFila.js",
     "redes:publicar": "node --env-file-if-exists=.env backend/scripts/redes/publicarRedes.js",
-    "redes:relatorio": "node --env-file-if-exists=.env backend/scripts/redes/relatorioSemanal.js"
+    "redes:relatorio": "node --env-file-if-exists=.env backend/scripts/redes/relatorioSemanal.js",
+    "ciclo-narracao": "node --env-file-if-exists=.env scripts/cicloNarracao.js",
+    "youtube:fila": "node --env-file-if-exists=.env scripts/youtube/montarFila.js",
+    "youtube:publicar": "node --env-file-if-exists=.env scripts/youtube/publicarYoutube.js",
+    "youtube:playlists": "node --env-file-if-exists=.env scripts/youtube/criarPlaylists.js",
+    "linkedin:conteudo": "node --env-file-if-exists=.env scripts/linkedin/gerarConteudo.js",
+    "linkedin:autorizar": "node scripts/linkedin-autorizar.js"
   },
   "engines": {
     "node": ">=20"

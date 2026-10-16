@@ -106,3 +106,15 @@ test('voz por artigo: a voz gravada em narracao.voz vale, desde que seja uma das
   const semVoz = { ...ARTIGO, narracao: { url: 'https://x/c.mp3', hash: hashNarracao(texto, francisca) } };
   assert.strictEqual(estadoNarracao(semVoz).estado, 'desatualizada');
 });
+
+test('texto agendado: MP3 enviado antes só toca depois da publicação, e só com hash igual', () => {
+  const narracao = { url: 'https://blob/agendado.mp3', hash: hashNarracao(textoParaNarracao(ARTIGO)) };
+  const agendado = { ...ARTIGO, publicado: false, narracao };
+  assert.equal(estadoNarracao(agendado).estado, 'ok', 'aguardando publicação com hash válido');
+  assert.equal(urlNarracaoTocavel(agendado), '', 'não toca enquanto não publicado');
+  const publicado = { ...agendado, publicado: true }; // o cron diário só vira publicado:true
+  assert.equal(urlNarracaoTocavel(publicado), 'https://blob/agendado.mp3');
+  const editado = { ...publicado, conteudo: ARTIGO.conteudo.replace('piora', 'costuma piorar') };
+  assert.equal(urlNarracaoTocavel(editado), '', 'hash diferente: não toca e entra na fila de regeneração');
+  assert.equal(estadoNarracao(editado).estado, 'desatualizada');
+});

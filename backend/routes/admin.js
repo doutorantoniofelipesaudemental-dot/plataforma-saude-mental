@@ -160,6 +160,17 @@ router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req,
 /** GET /api/admin/freio-redes — só o estado do freio (true/false); nunca devolve o valor da variável. */
 router.get('/freio-redes', exigirAdmin, (req, res) => res.json({ publicacaoAtiva: redesAtivas() }));
 
+/** GET /api/admin/blob-narracoes — inventário do Blob (só leitura). DELETE (mesmo caminho) apaga SÓ narrações órfãs, sem referência no banco. */
+router.get('/blob-narracoes', exigirAdmin, exigirBanco, async (req, res) => {
+  try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: false })); }
+  catch (err) { log.erro('[admin] blob-narracoes:', err.message); res.status(500).json({ erro: 'Não foi possível consultar o Blob.' }); }
+});
+
+router.delete('/blob-narracoes', exigirAdmin, exigirBanco, async (req, res) => {
+  try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: true })); }
+  catch (err) { log.erro('[admin] blob-narracoes (apagar):', err.message); res.status(500).json({ erro: 'Não foi possível apagar no Blob.' }); }
+});
+
 router.get('/fila-redes', exigirAdmin, exigirBanco, async (req, res) => {
   try {
     const [aguardar, proximos, ultimos, token] = await Promise.all([
