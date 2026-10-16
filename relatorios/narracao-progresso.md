@@ -274,3 +274,9 @@ Início da sessão: 51 ok · 200 desatualizadas · 475 ausentes · faltam 675.
 - Pré-geradas nesta execução: 0 · falhas de geração: 0
 - ENVIAR · aprovados na conferência: 198 · reprovados: 1 · enviados e "ok" no banco: 0 · falhas de envio: 198
 - Estado geral: {"total":726,"estados":{"ok":329,"ausente":397},"faltam":397,"agendadosComMp3PreGerado":227}
+
+## Envio com vinheta — 16/10/2026 (noite)
+- Limpeza do Blob (grupos c+d, aprovada): 288 órfãs apagadas (313,7 MB); lista em `backups/blob-orfaos-*/lista-c-d.json`. Blob: 1017,4 → 703,8 MB.
+- Lotes 1–3: 150 áudios NOVOS (agendados, na ordem da data; inclui `imagem-corporal-o-que-e`, texto de 19/10 08:00) enviados com vinheta v1: 150/150 ok, 0 falhas. Amostra de 5+ por lote: vinheta v1 no banco, HTTP 200, duração/razão 1,02–1,29, volume médio ≈ −17 dB.
+- Blob agora: 915,8 MB de 1024 (grupos: a 251 = 270 MB · b 228 = 304 MB · c/d 0).
+- PARADO por cota: faltam 52 novos (~76 MB) e 328 regravações com vinheta dos já enviados (~+48 MB de crescimento, mesmo caminho) → não cabem em 108 MB livres. `DrSM-Narracao-Noite` DESATIVADA para não encher o Blob sozinha. Depende de decisão do Dr. Antônio (liberar espaço/plano maior/outro destino).
