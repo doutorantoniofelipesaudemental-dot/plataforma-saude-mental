@@ -1,209 +1,229 @@
 1
-00:00:00,000 --> 00:00:02,832
-Compulsão alimentar e compras compulsivas:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:02,832 --> 00:00:05,841
+00:00:06,772 --> 00:00:09,604
+Compulsão alimentar e compras compulsivas:
+
+3
+00:00:09,604 --> 00:00:12,613
 quando o alívio vira um
 padrão que aprisiona.
 
-3
-00:00:05,841 --> 00:00:07,729
+4
+00:00:12,613 --> 00:00:14,501
 Narração em voz sintética.
 
-4
-00:00:07,729 --> 00:00:12,980
+5
+00:00:14,501 --> 00:00:19,752
 Compulsão alimentar e compras compulsivas
 parecem, à primeira vista, comportamentos
 
-5
-00:00:12,980 --> 00:00:16,579
+6
+00:00:19,752 --> 00:00:23,351
 muito diferentes — um envolve
 comida, o outro dinheiro.
 
-6
-00:00:16,579 --> 00:00:20,001
+7
+00:00:23,351 --> 00:00:26,773
 Mas psicologicamente
 compartilham a mesma estrutura:
 
-7
-00:00:20,001 --> 00:00:24,485
+8
+00:00:26,773 --> 00:00:31,257
 um comportamento repetitivo usado para
 regular uma emoção difícil, que
 
-8
-00:00:24,485 --> 00:00:29,028
+9
+00:00:31,257 --> 00:00:35,800
 produz alívio imediato seguido de culpa,
 e que a pessoa tem dificuldade
 
-9
-00:00:29,028 --> 00:00:32,509
+10
+00:00:35,800 --> 00:00:39,281
 de controlar mesmo quando
 reconhece as consequências.
 
-10
-00:00:32,509 --> 00:00:34,751
+11
+00:00:39,281 --> 00:00:41,523
 O ciclo do alívio que aprisiona.
 
-11
-00:00:34,751 --> 00:00:39,412
+12
+00:00:41,523 --> 00:00:46,184
 O episódio compulsivo — comer sem fome
 real, comprar sem necessidade real
 
-12
-00:00:39,412 --> 00:00:43,955
+13
+00:00:46,184 --> 00:00:50,727
 — costuma trazer uma sensação momentânea
 de alívio ou "desligamento" de
 
-13
-00:00:43,955 --> 00:00:45,843
+14
+00:00:50,727 --> 00:00:52,615
 uma emoção desconfortável.
 
-14
-00:00:45,843 --> 00:00:50,327
+15
+00:00:52,615 --> 00:00:57,099
 Esse alívio é seguido, quase sempre, de
 culpa ou vergonha, que por sua
 
-15
-00:00:50,327 --> 00:00:54,870
+16
+00:00:57,099 --> 00:01:01,642
 vez pode se tornar o próprio gatilho
 emocional para o próximo episódio,
 
-16
-00:00:54,870 --> 00:00:57,466
+17
+00:01:01,642 --> 00:01:04,238
 fechando um ciclo que se autoalimenta.
 
-17
-00:00:57,466 --> 00:01:02,009
+18
+00:01:04,238 --> 00:01:08,781
 O transtorno de compulsão alimentar é
 mais comum que a bulimia, segundo
 
-18
-00:01:02,009 --> 00:01:06,552
+19
+00:01:08,781 --> 00:01:13,324
 os inquéritos mundiais da OMS, e a compra
 compulsiva atinge cerca de 5%
 
-19
-00:01:06,552 --> 00:01:07,614
+20
+00:01:13,324 --> 00:01:14,386
 dos adultos.
 
-20
-00:01:07,614 --> 00:01:10,151
+21
+00:01:14,386 --> 00:01:16,923
 Por que não é sobre força de vontade.
 
-21
-00:01:10,151 --> 00:01:14,871
+22
+00:01:16,923 --> 00:01:21,643
 Tratar compulsão alimentar ou compras
 compulsivas como falta de disciplina
 
-22
-00:01:14,871 --> 00:01:19,532
+23
+00:01:21,643 --> 00:01:26,304
 ignora a função emocional real que esses
 comportamentos cumprem — regular
 
-23
-00:01:19,532 --> 00:01:24,192
+24
+00:01:26,304 --> 00:01:30,964
 emoções que, de outra forma, a pessoa não
 tem ferramentas para processar.
 
-24
-00:01:24,192 --> 00:01:29,089
+25
+00:01:30,964 --> 00:01:35,861
 Isso explica por que tentativas de controle
 baseadas só em "força de vontade"
 
-25
-00:01:29,089 --> 00:01:30,387
+26
+00:01:35,861 --> 00:01:37,159
 costumam falhar:
 
-26
-00:01:30,387 --> 00:01:34,399
+27
+00:01:37,159 --> 00:01:41,171
 elas não endereçam a necessidade
 emocional por trás do padrão.
 
-27
-00:01:34,399 --> 00:01:35,756
+28
+00:01:41,171 --> 00:01:42,528
 Ponto de atenção:
 
-28
-00:01:35,756 --> 00:01:40,240
+29
+00:01:42,528 --> 00:01:47,012
 Esconder dos outros a frequência real de
 episódios compulsivos é comum
 
-29
-00:01:40,240 --> 00:01:44,783
+30
+00:01:47,012 --> 00:01:51,555
 e está ligado à vergonha associada a
 esses comportamentos — não é sinal
 
-30
-00:01:44,783 --> 00:01:50,093
+31
+00:01:51,555 --> 00:01:56,865
 de desonestidade, é sinal de que o padrão já
 está causando sofrimento significativo.
 
-31
-00:01:50,093 --> 00:01:54,636
+32
+00:01:56,865 --> 00:02:01,408
 O estigma do peso, em vez de motivar,
 piora a saúde emocional e física.
 
-32
-00:01:54,636 --> 00:01:56,465
+33
+00:02:01,408 --> 00:02:03,237
 Tratamento eficaz existe.
 
-33
-00:01:56,465 --> 00:02:01,067
+34
+00:02:03,237 --> 00:02:07,839
 Compulsão alimentar e compras compulsivas
 respondem bem a abordagens que
 
-34
-00:02:01,067 --> 00:02:05,846
+35
+00:02:07,839 --> 00:02:12,618
 trabalham tanto o comportamento quanto a
 regulação emocional por trás dele.
 
-35
-00:02:05,846 --> 00:02:10,979
+36
+00:02:12,618 --> 00:02:17,751
 Reconhecer o padrão, sem julgamento, e buscar
 apoio profissional para desenvolver
 
-36
-00:02:10,979 --> 00:02:15,758
+37
+00:02:17,751 --> 00:02:22,530
 formas alternativas de lidar com as emoções
 que disparam os episódios tende
 
-37
-00:02:15,758 --> 00:02:20,242
+38
+00:02:22,530 --> 00:02:27,014
 a quebrar o ciclo de forma mais
 sustentável do que tentativas isoladas
 
-38
-00:02:20,242 --> 00:02:21,894
+39
+00:02:27,014 --> 00:02:28,666
 de "força de vontade".
 
-39
-00:02:21,894 --> 00:02:26,378
+40
+00:02:28,666 --> 00:02:33,150
 Conteúdo educativo baseado em literatura
 sobre transtorno de compulsão
 
-40
-00:02:26,378 --> 00:02:29,210
+41
+00:02:33,150 --> 00:02:35,982
 alimentar periódica e compras compulsivas.
 
-41
-00:02:29,210 --> 00:02:31,629
+42
+00:02:35,982 --> 00:02:38,401
 Não substitui avaliação individual.
 
-42
-00:02:31,629 --> 00:02:36,703
+43
+00:02:38,401 --> 00:02:43,475
 Uma meta-análise confirmou a eficácia de
 tratamentos psicológicos, especialmente
 
-43
-00:02:36,703 --> 00:02:41,364
+44
+00:02:43,475 --> 00:02:48,136
 a terapia cognitivo-comportamental, e de
 alguns medicamentos na compulsão
 
-44
-00:02:41,364 --> 00:02:42,308
+45
+00:02:48,136 --> 00:02:49,080
 alimentar.
 
-45
-00:02:42,308 --> 00:02:44,904
+46
+00:02:49,080 --> 00:02:51,676
 As referências estão no fim da página.
+
+47
+00:02:52,376 --> 00:02:58,173
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+48
+00:02:58,173 --> 00:03:02,261
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+49
+00:03:02,261 --> 00:03:06,200
+O texto completo, com as
+referências, está no portal.

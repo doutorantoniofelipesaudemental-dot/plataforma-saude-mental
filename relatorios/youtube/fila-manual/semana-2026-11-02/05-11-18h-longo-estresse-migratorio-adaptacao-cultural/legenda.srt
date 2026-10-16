@@ -1,214 +1,234 @@
 1
-00:00:00,000 --> 00:00:01,568
-Estresse migratório:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:01,568 --> 00:00:04,946
+00:00:06,772 --> 00:00:08,340
+Estresse migratório:
+
+3
+00:00:08,340 --> 00:00:11,718
 o que ninguém conta sobre
 recomeçar em outro país.
 
-3
-00:00:04,946 --> 00:00:06,876
+4
+00:00:11,718 --> 00:00:13,648
 Narração em voz sintética.
 
-4
-00:00:06,876 --> 00:00:11,882
+5
+00:00:13,648 --> 00:00:18,654
 Migrar costuma ser descrito de fora como uma
 questão de logística e adaptação
 
-5
-00:00:11,882 --> 00:00:16,587
+6
+00:00:18,654 --> 00:00:23,359
 prática — aprender o idioma, entender a
 burocracia, construir uma rotina
 
-6
-00:00:16,587 --> 00:00:17,250
+7
+00:00:23,359 --> 00:00:24,022
 nova.
 
-7
-00:00:17,250 --> 00:00:21,533
+8
+00:00:24,022 --> 00:00:28,305
 O que raramente é dito é que migrar
 também é um processo de luto:
 
-8
-00:00:21,533 --> 00:00:26,298
+9
+00:00:28,305 --> 00:00:33,070
 pela rede de apoio que ficou para trás,
 pela identidade que fazia sentido
 
-9
-00:00:26,298 --> 00:00:31,304
+10
+00:00:33,070 --> 00:00:38,076
 no contexto anterior, e pela versão de si
 mesmo que existia antes da mudança.
 
-10
-00:00:31,304 --> 00:00:34,078
+11
+00:00:38,076 --> 00:00:40,850
 As fases da adaptação que ninguém avisa.
 
-11
-00:00:34,078 --> 00:00:38,843
+12
+00:00:40,850 --> 00:00:45,615
 É comum um período inicial de entusiasmo e
 novidade, seguido por uma fase
 
-12
-00:00:38,843 --> 00:00:43,729
+13
+00:00:45,615 --> 00:00:50,501
 de desgaste — quando a diferença cultural
 deixa de ser interessante e passa
 
-13
-00:00:43,729 --> 00:00:47,227
+14
+00:00:50,501 --> 00:00:53,999
 a ser cansativa, e a saudade se
 torna mais concreta.
 
-14
-00:00:47,227 --> 00:00:52,354
+15
+00:00:53,999 --> 00:00:59,126
 Essa fase intermediária costuma ser a mais
 difícil, e também a mais silenciada,
 
-15
-00:00:52,354 --> 00:00:57,059
+16
+00:00:59,126 --> 00:01:03,831
 porque quem migrou "por escolha" sente que
 não tem o direito de reclamar
 
-16
-00:00:57,059 --> 00:00:58,506
+17
+00:01:03,831 --> 00:01:05,278
 do que conquistou.
 
-17
-00:00:58,506 --> 00:01:03,633
+18
+00:01:05,278 --> 00:01:10,405
 A literatura descreve a migração em fases
 (antes, durante e depois da chegada),
 
-18
-00:01:03,633 --> 00:01:06,830
+19
+00:01:10,405 --> 00:01:13,602
 cada uma com seus próprios
 fatores de estresse.
 
-19
-00:01:06,830 --> 00:01:09,785
+20
+00:01:13,602 --> 00:01:16,557
 Sinais de que a adaptação
 não está fluindo.
 
-20
-00:01:09,785 --> 00:01:14,490
+21
+00:01:16,557 --> 00:01:21,262
 Saudade que interfere na rotina diária,
 não apenas em datas específicas;
 
-21
-00:01:14,490 --> 00:01:18,048
+22
+00:01:21,262 --> 00:01:24,820
 sensação persistente de não
 pertencer a lugar nenhum;
 
-22
-00:01:18,048 --> 00:01:23,235
+23
+00:01:24,820 --> 00:01:30,007
 exaustão social genuína ao lidar com barreira
 de idioma ou diferenças culturais;
 
-23
-00:01:23,235 --> 00:01:28,302
+24
+00:01:30,007 --> 00:01:35,074
 e, com frequência, a sensação de ter perdido
 uma parte de si mesmo no processo
 
-24
-00:01:28,302 --> 00:01:32,283
+25
+00:01:35,074 --> 00:01:39,055
 — sem ainda ter reconstruído algo
 equivalente no novo lugar.
 
-25
-00:01:32,283 --> 00:01:33,670
+26
+00:01:39,055 --> 00:01:40,442
 Ponto de atenção:
 
-26
-00:01:33,670 --> 00:01:38,616
+27
+00:01:40,442 --> 00:01:45,388
 Sentir estresse migratório não significa que
 a decisão de migrar foi errada.
 
-27
-00:01:38,616 --> 00:01:43,200
+28
+00:01:45,388 --> 00:01:49,972
 Significa que o processo de reconstrução
 de identidade e pertencimento
 
-28
-00:01:43,200 --> 00:01:47,965
+29
+00:01:49,972 --> 00:01:54,737
 ainda está em curso — e esse processo tem
 um tempo que não é o mesmo para
 
-29
-00:01:47,965 --> 00:01:48,990
+30
+00:01:54,737 --> 00:01:55,762
 todo mundo.
 
-30
-00:01:48,990 --> 00:01:54,057
+31
+00:01:55,762 --> 00:02:00,829
 Uma meta-análise estimou depressão em cerca
 de 20% dos migrantes por trabalho,
 
-31
-00:01:54,057 --> 00:01:55,866
+32
+00:02:00,829 --> 00:02:02,638
 e mais entre refugiados.
 
-32
-00:01:55,866 --> 00:02:00,752
+33
+00:02:02,638 --> 00:02:07,524
 Os estressores depois da chegada, como
 solidão, discriminação e dificuldade
 
-33
-00:02:00,752 --> 00:02:02,622
+34
+00:02:07,524 --> 00:02:09,394
 de trabalho, pesam muito.
 
-34
-00:02:02,622 --> 00:02:04,672
+35
+00:02:09,394 --> 00:02:11,444
 Reconstruindo pertencimento.
 
-35
-00:02:04,672 --> 00:02:09,317
+36
+00:02:11,444 --> 00:02:16,089
 Buscar comunidades — mesmo pequenas — de
 pessoas que compartilham parte
 
-36
-00:02:09,317 --> 00:02:12,996
+37
+00:02:16,089 --> 00:02:19,768
 da experiência migratória ajuda a
 reduzir o isolamento.
 
-37
-00:02:12,996 --> 00:02:18,243
+38
+00:02:19,768 --> 00:02:25,015
 Manter vínculos com quem ficou, sem que isso
 vire fuga do presente, e permitir-se
 
-38
-00:02:18,243 --> 00:02:23,008
+39
+00:02:25,015 --> 00:02:29,780
 construir uma identidade que integra as
 duas culturas, em vez de escolher
 
-39
-00:02:23,008 --> 00:02:27,653
+40
+00:02:29,780 --> 00:02:34,425
 uma em detrimento da outra, tende a
 facilitar esse processo — mesmo que
 
-40
-00:02:27,653 --> 00:02:30,005
+41
+00:02:34,425 --> 00:02:36,777
 ele nunca seja totalmente linear.
 
-41
-00:02:30,005 --> 00:02:34,589
+42
+00:02:36,777 --> 00:02:41,361
 Conteúdo educativo baseado em literatura
 sobre estresse de aculturação
 
-42
-00:02:34,589 --> 00:02:37,303
+43
+00:02:41,361 --> 00:02:44,075
 e saúde mental de populações migrantes.
 
-43
-00:02:37,303 --> 00:02:39,776
+44
+00:02:44,075 --> 00:02:46,548
 Não substitui avaliação individual.
 
-44
-00:02:39,776 --> 00:02:44,420
+45
+00:02:46,548 --> 00:02:51,192
 No Brasil, a Lei de Migração (Lei nº
 13.445/2017) garante ao migrante o
 
-45
-00:02:44,420 --> 00:02:47,074
+46
+00:02:51,192 --> 00:02:53,846
 acesso aos serviços públicos de saúde.
 
-46
-00:02:47,074 --> 00:02:49,728
+47
+00:02:53,846 --> 00:02:56,500
 As referências estão no fim da página.
+
+48
+00:02:57,200 --> 00:03:02,997
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+49
+00:03:02,997 --> 00:03:07,085
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+50
+00:03:07,085 --> 00:03:11,024
+O texto completo, com as
+referências, está no portal.

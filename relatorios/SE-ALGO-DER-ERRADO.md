@@ -27,3 +27,17 @@
 - **Vercel** (site, crons, Blob): vercel.com/help. **Meta/Instagram:** Central de Ajuda do Meta Business. **YouTube/Google Cloud:** suporte do YouTube Studio e formulário de auditoria da API. **LinkedIn:** linkedin.com/help.
 - **Comentário ou mensagem com risco de vida:** não responder com orientação clínica; indicar **CVV 188** (24 h) ou **SAMU 192**.
 - **Vazamento de chave/segredo:** revogar a chave no painel do provedor na hora e avisar o Dr. Antônio.
+
+## Tarefas agendadas do Windows (registradas em 16/10/2026)
+Rodam como o seu usuário (sem administrador), só scripts do repositório; log em `relatorios/logs-agendador/<tarefa>.log`.
+| Tarefa | Quando | O que faz |
+|---|---|---|
+| DrSM-Rotina-Semanal | segunda 07:30 | `scripts/rotinaSemanal.js` (somente leitura) |
+| DrSM-Narracao-Noite | diária 22:00 — **DESATIVADA** até a vinheta estar em produção | `scripts/cicloNarracao.js --lotes=4` |
+| DrSM-YouTube-Gera-Midia | diária 23:30 | gera mídia local (limite 25) |
+| DrSM-YouTube-Publica | diária 12:30 | só publica com `YOUTUBE_PUBLICACAO_ATIVA=true` (hoje nada) |
+| DrSM-Conferencia-19-10 / 26-10 | 19:30 nas datas | relatórios de conferência |
+
+Desativar uma: `Disable-ScheduledTask -TaskName 'DrSM-NOME'` · reativar: `Enable-ScheduledTask -TaskName 'DrSM-NOME'`
+Remover todas: `powershell -ExecutionPolicy Bypass -File scripts\agendar-tarefas-windows.ps1 -Remover`
+Reativar a narração após a vinheta em produção: `Enable-ScheduledTask -TaskName 'DrSM-Narracao-Noite'`

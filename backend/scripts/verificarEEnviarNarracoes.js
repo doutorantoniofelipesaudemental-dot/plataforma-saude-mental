@@ -50,7 +50,7 @@ function decodificaSemErro(arq) {
     if (!enviar) continue;
     const resp = await fetch(`${BASE_API}/api/artigos/${encodeURIComponent(slug)}/midia/narracao`, {
       method: 'PUT',
-      headers: { Authorization: `Bearer ${process.env.ADMIN_TOKEN}`, 'Content-Type': 'audio/mpeg', 'X-Narracao-Hash': hashNarracao(texto, VOZ_NARRACAO), 'X-Narracao-Caracteres': String(texto.length), 'X-Narracao-Provedor': 'edge', 'X-Narracao-Voz': VOZ_NARRACAO },
+      headers: { Authorization: `Bearer ${process.env.ADMIN_TOKEN}`, 'Content-Type': 'audio/mpeg', 'X-Narracao-Hash': hashNarracao(texto, VOZ_NARRACAO), 'X-Narracao-Caracteres': String(texto.length), 'X-Narracao-Provedor': 'edge', 'X-Narracao-Vinheta': fs.existsSync(path.join(PASTA, `${slug}.vinheta`)) ? '1' : '0', 'X-Narracao-Voz': VOZ_NARRACAO },
       body: fs.readFileSync(arq),
     });
     if (!resp.ok) { rel.falhaEnvio.push(`${slug}: HTTP ${resp.status}`); continue; }

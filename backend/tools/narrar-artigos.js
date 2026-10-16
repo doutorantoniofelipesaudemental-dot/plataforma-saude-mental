@@ -149,6 +149,12 @@ async function gerarMp3(artigo, provedor) {
   const inicio = Date.now();
   if (provedor === 'edge') sintetizarEdge(arquivoTexto, arquivoMp3);
   else fs.writeFileSync(arquivoMp3, await sintetizarAzure(texto));
+  // Vinheta de crédito da marca (16/10/2026): abertura + narração + encerramento; o hash segue sobre o texto do artigo.
+  if (provedor === 'edge' && !process.argv.includes('--sem-vinheta')) {
+    fs.rmSync(path.join(PASTA_SAIDA, `${artigo.slug}.base.mp3`), { force: true });
+    fs.rmSync(path.join(PASTA_SAIDA, `${artigo.slug}.vinheta`), { force: true });
+    require('../lib/vinheta').aplicarAoMp3(artigo, PASTA_SAIDA);
+  }
   const bytes = fs.statSync(arquivoMp3).size;
   return { slug: artigo.slug, texto, hash, provedor, arquivoMp3, bytes, segundosAudio: bytes / BYTES_POR_SEGUNDO, segundosGeracao: (Date.now() - inicio) / 1000 };
 }
@@ -164,6 +170,7 @@ async function enviar(gerado) {
       'X-Narracao-Caracteres': String(gerado.texto.length),
       'X-Narracao-Provedor': gerado.provedor,
       'X-Narracao-Voz': VOZ_NARRACAO,
+      'X-Narracao-Vinheta': fs.existsSync(path.join(PASTA_SAIDA, `${gerado.slug}.vinheta`)) ? '1' : '0',
     },
     body: fs.readFileSync(gerado.arquivoMp3),
   });

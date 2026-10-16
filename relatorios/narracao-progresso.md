@@ -203,3 +203,74 @@ Início da sessão: 51 ok · 200 desatualizadas · 475 ausentes · faltam 675.
 - Amostra (transcrição de 5 áudios):
   - AMOSTRA OK
 - FIM do laço em 15/10/2026 07:22
+
+## Lote 6 — 15/10/2026 08:11 (pronúncia ativa; MP3 pré-gerados de textos agendados, enviados quando forem publicados)
+- CONFERIR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":251,"ausente":475},"faltam":475,"agendadosComMp3PreGerado":50}
+- Amostra (transcrição de 5 áudios):
+  - transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises | conferidos: Ant�niook, APSok, CVVFALHA, SAMUok, 188FALHA, 192ok, 2016ok
+  - insonia-refrataria-na-atencao-primaria-investigacao-e-condut | conferidos: Ant�niook, APSok, CVVFALHA, SAMUFALHA, 188ok, 192ok, 2016ok
+  - catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici | conferidos: Ant�niook, CVVFALHA, SAMUok, 188FALHA, 192ok, 2012ok
+  - primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para | conferidos: Ant�niook, APSok, CVVFALHA, SAMUok, CAPSFALHA, 188ok, 192ok, 2012ok
+  - transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane | conferidos: Ant�niook, APSok, CVVFALHA, SAMUok, 188ok, 192ok, 2009ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 7 — 15/10/2026 08:37 (pronúncia ativa; MP3 pré-gerados de textos agendados, enviados quando forem publicados)
+- CONFERIR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":251,"ausente":475},"faltam":475,"agendadosComMp3PreGerado":100}
+- Amostra (transcrição de 5 áudios):
+  - insatisfacao-corporal-brasil-numeros | conferidos: 2006ok, 2019ok, 2024ok
+  - assedio-sexual-trabalho-prevencao | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2022FALHA
+  - canetas-emagrecedoras-saude-mental-humor | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2023ok
+  - saude-mental-indigena-jovens | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2022ok
+  - filho-aposta-como-conversar | conferidos: CVVok, SAMUok, CAPSok, 188ok, 192ok, 2026ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 8 — 15/10/2026 08:58 (pronúncia ativa; MP3 pré-gerados de textos agendados, enviados quando forem publicados)
+- CONFERIR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":251,"ausente":475},"faltam":475,"agendadosComMp3PreGerado":150}
+- Amostra (transcrição de 5 áudios):
+  - paliativos-historia-cicely-saunders | conferidos: SUSok, 1950ok, 1960ok, 1967ok
+  - violencia-domestica-saude-mental | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2021ok
+  - caneta-sem-indicacao-magreza | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2025ok
+  - abuso-sexual-infantil-proteger | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2026ok
+  - relato-violencia-a-festa-da-turma | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2013FALHA
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 9 — 15/10/2026 09:17 (pronúncia ativa; MP3 pré-gerados de textos agendados, enviados quando forem publicados)
+- CONFERIR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":251,"ausente":475},"faltam":475,"agendadosComMp3PreGerado":200}
+- Amostra (transcrição de 5 áudios):
+  - paliativos-normas-brasil | conferidos: CVVok, SAMUok, CAPSFALHA, SUSok, 188ok, 192ok, 2006ok
+  - bullying-sinais-o-que-fazer | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2015ok
+  - pensamentos-suicidas-pedir-ajuda | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2019FALHA
+  - paliativos-necessidade-crescente | conferidos: 2016ok, 2017ok, 2019ok
+  - ansiedade-na-gestacao | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 10 — 15/10/2026 09:35 (pronúncia ativa; MP3 pré-gerados de textos agendados, enviados quando forem publicados)
+- CONFERIR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":251,"ausente":475},"faltam":475,"agendadosComMp3PreGerado":250}
+- Amostra (transcrição de 5 áudios):
+  - brasil-campeao-cirurgias-plasticas | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2020ok
+  - eventos-climaticos-saude-mental | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - deficiencia-adquirida-reconstruir | conferidos: CVVok, SAMUFALHA, CAPSok, 188ok, 192ok, 2026ok
+  - migrante-endividado-apostas | conferidos: CVVok, SAMUFALHA, CAPSok, 188ok, 192ok, 2026FALHA
+  - paliativos-aps-medicina-familia | conferidos: APSok, SUSFALHA, 2018ok, 2026ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Lote 11 — 15/10/2026 09:55 (pronúncia ativa; MP3 pré-gerados de textos agendados, enviados quando forem publicados)
+- CONFERIR · aprovados na conferência: 50 · reprovados: 0 · enviados e "ok" no banco: 0 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":251,"ausente":475},"faltam":475,"agendadosComMp3PreGerado":300}
+- Amostra (transcrição de 5 áudios):
+  - socorristas-trauma-estresse | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2026ok
+  - luto-por-suicidio | conferidos: CVVok, SAMUok, CAPSok, 188ok, 192ok, 2026FALHA
+  - luto-prolongado-cid11 | conferidos: CVVok, SAMUok, CAPSFALHA, 188ok, 192ok, 2026ok
+  - autolesao-guia-pais-professores | conferidos: CVVok, SAMUFALHA, CAPSFALHA, 188ok, 192ok, 2026ok
+  - paliativos-empresas-trabalhador-cuidador | conferidos: CVVok, SAMUFALHA, CAPSFALHA, SUSok, 188ok, 192ok, 2026ok
+  - AMOSTRA COM DIVERG�NCIAS (ver FALHA; pode ser limita��o do transcritor)
+
+## Ciclo automático — 15/10/2026, 17:20:59
+- Pré-geradas nesta execução: 0 · falhas de geração: 0
+- ENVIAR · aprovados na conferência: 198 · reprovados: 1 · enviados e "ok" no banco: 0 · falhas de envio: 198
+- Estado geral: {"total":726,"estados":{"ok":329,"ausente":397},"faltam":397,"agendadosComMp3PreGerado":227}

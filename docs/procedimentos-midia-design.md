@@ -45,3 +45,6 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 
 ---
 
+
+## Crédito de marca em áudio e vídeo (16/10/2026)
+Toda narração e produção audiovisual (artigos, longos, Shorts, Reels, trailer, podcast, LinkedIn) cita na fala e na tela o Portal de Saúde Mental Doutor Antônio Felipe Garabito: abertura+encerramento (longos/artigos), versão curta só no fim (Shorts/Reels ≤ 60 s); tela nos 3 primeiros segundos e na tela final com www.drantoniofelipemedico.com.br; legenda .srt inclui a fala; 1ª linha da descrição/legenda do post. Crédito discreto, sem marca d'água sobreposta. Código: `backend/lib/vinheta.js`, `scripts/youtube/lib.js` (`creditoAss`, `comVinheta`).

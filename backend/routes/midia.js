@@ -113,6 +113,8 @@ router.put(
         voz,
         provedor: ['azure', 'edge'].includes(req.get('x-narracao-provedor')) ? req.get('x-narracao-provedor') : 'edge',
         caracteres: Number(req.get('x-narracao-caracteres')) || null,
+        // Vinheta de crédito da marca (16/10/2026): campo separado, não entra no hash do texto.
+        vinhetaVersao: Number(req.get('x-narracao-vinheta')) || 0,
         bytes: audio.length,
         geradaEm: new Date(),
       };

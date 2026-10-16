@@ -1,436 +1,456 @@
 1
-00:00:00,000 --> 00:00:02,152
-Síndrome de Burnout na Gestão:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:02,152 --> 00:00:06,038
+00:00:06,772 --> 00:00:08,924
+Síndrome de Burnout na Gestão:
+
+3
+00:00:08,924 --> 00:00:12,810
 Como Identificar Fatores de Risco
 Psicossocial nas Equipes.
 
-3
-00:00:06,038 --> 00:00:07,952
+4
+00:00:12,810 --> 00:00:14,724
 Narração em voz sintética.
 
-4
-00:00:07,952 --> 00:00:12,974
+5
+00:00:14,724 --> 00:00:19,746
 A Organização Mundial da Saúde reclassificou
 o burnout no CID-11 como fenômeno
 
-5
-00:00:12,974 --> 00:00:18,175
+6
+00:00:19,746 --> 00:00:24,947
 ocupacional — resultante de estresse crônico
 no trabalho que não foi administrado
 
-6
-00:00:18,175 --> 00:00:19,251
+7
+00:00:24,947 --> 00:00:26,023
 com sucesso.
 
-7
-00:00:19,251 --> 00:00:21,165
+8
+00:00:26,023 --> 00:00:27,937
 Não é fraqueza individual:
 
-8
-00:00:21,165 --> 00:00:26,486
+9
+00:00:27,937 --> 00:00:33,258
 é sintoma de um ambiente que ultrapassou seus
 próprios limites de sustentabilidade.
 
-9
-00:00:26,486 --> 00:00:30,850
+10
+00:00:33,258 --> 00:00:37,622
 Para quem gerencia pessoas, essa
 distinção muda a pergunta central.
 
-10
-00:00:30,850 --> 00:00:35,932
+11
+00:00:37,622 --> 00:00:42,704
 Não é "por que esse colaborador não aguenta
 mais", e sim "o que, na organização
 
-11
-00:00:35,932 --> 00:00:40,535
+12
+00:00:42,704 --> 00:00:47,307
 do trabalho desta equipe, está gerando
 esse esgotamento — e por que eu,
 
-12
-00:00:40,535 --> 00:00:43,585
+13
+00:00:47,307 --> 00:00:50,357
 como gestor, só percebi
 quando já era tarde".
 
-13
-00:00:43,585 --> 00:00:48,367
+14
+00:00:50,357 --> 00:00:55,139
 20-30% — faixa de prevalência de sintomas
 compatíveis com burnout relatada
 
-14
-00:00:48,367 --> 00:00:52,134
+15
+00:00:55,139 --> 00:00:58,906
 em pesquisas ocupacionais recentes
 em diferentes setores.
 
-15
-00:00:52,134 --> 00:00:57,037
+16
+00:00:58,906 --> 00:01:03,809
 CID-11 — classifica o burnout como fenômeno
 ocupacional, não como transtorno
 
-16
-00:00:57,037 --> 00:00:58,292
+17
+00:01:03,809 --> 00:01:05,064
 mental isolado.
 
-17
-00:00:58,292 --> 00:01:00,743
+18
+00:01:05,064 --> 00:01:07,515
 3 — dimensões clássicas do burnout:
 
-18
-00:01:00,743 --> 00:01:05,765
+19
+00:01:07,515 --> 00:01:12,537
 exaustão emocional, cinismo/despersonalização
 e baixa realização profissional.
 
-19
-00:01:05,765 --> 00:01:09,771
+20
+00:01:12,537 --> 00:01:16,543
 Por que gestores costumam
 identificar o burnout tarde demais.
 
-20
-00:01:09,771 --> 00:01:12,462
+21
+00:01:16,543 --> 00:01:19,234
 O burnout raramente aparece de repente.
 
-21
-00:01:12,462 --> 00:01:17,663
+22
+00:01:19,234 --> 00:01:24,435
 Ele se instala em etapas — entusiasmo
 excessivo no início, seguido de estagnação,
 
-22
-00:01:17,663 --> 00:01:22,326
+23
+00:01:24,435 --> 00:01:29,098
 frustração e, por fim, apatia — e é
 justamente essa progressão lenta que
 
-23
-00:01:22,326 --> 00:01:27,229
+24
+00:01:29,098 --> 00:01:34,001
 faz com que o gestor só note quando o
 colaborador já está na fase de apatia:
 
-24
-00:01:27,229 --> 00:01:32,131
+25
+00:01:34,001 --> 00:01:38,903
 entregando o mínimo, isolado, ou pedindo
 demissão sem aviso prévio aparente.
 
-25
-00:01:32,131 --> 00:01:36,855
+26
+00:01:38,903 --> 00:01:43,627
 Boa parte disso acontece porque os sinais
 de alerta são, no início, sutis
 
-26
-00:01:36,855 --> 00:01:39,605
+27
+00:01:43,627 --> 00:01:46,377
 e facilmente atribuídos a outras causas:
 
-27
-00:01:39,605 --> 00:01:44,208
+28
+00:01:46,377 --> 00:01:50,980
 "ele está com a produtividade baixa
 porque está desmotivado", "ela está
 
-28
-00:01:44,208 --> 00:01:48,094
+29
+00:01:50,980 --> 00:01:54,866
 mais fechada porque deve estar com
 algum problema pessoal".
 
-29
-00:01:48,094 --> 00:01:53,176
+30
+00:01:54,866 --> 00:01:59,948
 Sem um vocabulário e uma ferramenta
 estruturada para nomear risco psicossocial,
 
-30
-00:01:53,176 --> 00:01:55,926
+31
+00:01:59,948 --> 00:02:02,698
 esses sinais se acumulam sem gerar ação.
 
-31
-00:01:55,926 --> 00:02:00,949
+32
+00:02:02,698 --> 00:02:07,721
 A Organização Mundial da Saúde classifica o
 burnout na CID-11 como um fenômeno
 
-32
-00:02:00,949 --> 00:02:06,030
+33
+00:02:07,721 --> 00:02:12,802
 ocupacional, ligado ao estresse crônico no
 trabalho que não foi bem gerenciado.
 
-33
-00:02:06,030 --> 00:02:10,514
+34
+00:02:12,802 --> 00:02:17,286
 Os fatores de risco psicossocial que
 mais pesam na gestão de equipes.
 
-34
-00:02:10,514 --> 00:02:15,656
+35
+00:02:17,286 --> 00:02:22,428
 A literatura em saúde ocupacional converge em
 torno de um conjunto relativamente
 
-35
-00:02:15,656 --> 00:02:20,678
+36
+00:02:22,428 --> 00:02:27,450
 estável de fatores organizacionais que,
 quando presentes de forma persistente,
 
-36
-00:02:20,678 --> 00:02:25,461
+37
+00:02:27,450 --> 00:02:32,233
 elevam o risco de burnout em uma equipe —
 independentemente do quanto cada
 
-37
-00:02:25,461 --> 00:02:28,152
+38
+00:02:32,233 --> 00:02:34,924
 pessoa individualmente seja resiliente:
 
-38
-00:02:28,152 --> 00:02:32,755
+39
+00:02:34,924 --> 00:02:39,527
 Carga de trabalho consistentemente acima
 da capacidade sustentável, sem
 
-39
-00:02:32,755 --> 00:02:34,848
+40
+00:02:39,527 --> 00:02:41,620
 ajuste de prazos ou recursos.
 
-40
-00:02:34,848 --> 00:02:39,571
+41
+00:02:41,620 --> 00:02:46,343
 Ambiguidade de papéis — expectativas pouco
 claras sobre o que é esperado,
 
-41
-00:02:39,571 --> 00:02:40,527
+42
+00:02:46,343 --> 00:02:47,299
 e de quem.
 
-42
-00:02:40,527 --> 00:02:44,772
+43
+00:02:47,299 --> 00:02:51,544
 Baixa autonomia para decidir como o
 próprio trabalho é executado.
 
-43
-00:02:44,772 --> 00:02:49,376
+44
+00:02:51,544 --> 00:02:56,148
 Suporte insuficiente da liderança direta
 , especialmente em momentos de
 
-44
-00:02:49,376 --> 00:02:50,452
+45
+00:02:56,148 --> 00:02:57,224
 dificuldade.
 
-45
-00:02:50,452 --> 00:02:54,219
+46
+00:02:57,224 --> 00:03:00,991
 Falta de reconhecimento
 proporcional ao esforço entregue.
 
-46
-00:02:54,219 --> 00:02:58,822
+47
+00:03:00,991 --> 00:03:05,594
 Dificuldade estrutural de equilíbrio
 entre vida profissional e pessoal,
 
-47
-00:02:58,822 --> 00:03:02,051
+48
+00:03:05,594 --> 00:03:08,823
 muitas vezes normalizada pela
 cultura da equipe.
 
-48
-00:03:02,051 --> 00:03:04,920
+49
+00:03:08,823 --> 00:03:11,692
 Um ponto que gestores costumam subestimar:
 
-49
-00:03:04,920 --> 00:03:07,551
+50
+00:03:11,692 --> 00:03:14,323
 esses seis fatores interagem entre si.
 
-50
-00:03:07,551 --> 00:03:12,573
+51
+00:03:14,323 --> 00:03:19,345
 Uma pessoa com carga de trabalho alta, mas
 com autonomia real e reconhecimento
 
-51
-00:03:12,573 --> 00:03:17,356
+52
+00:03:19,345 --> 00:03:24,128
 consistente, tende a sustentar isso por
 mais tempo do que alguém com carga
 
-52
-00:03:17,356 --> 00:03:20,585
+53
+00:03:24,128 --> 00:03:27,357
 moderada, mas sem nenhum dos
 fatores protetores.
 
-53
-00:03:20,585 --> 00:03:24,112
+54
+00:03:27,357 --> 00:03:30,884
 Avaliar os fatores isoladamente
 esconde o risco real.
 
-54
-00:03:24,112 --> 00:03:28,955
+55
+00:03:30,884 --> 00:03:35,727
 Uma meta-revisão identificou como fatores
 de risco para transtornos mentais
 
-55
-00:03:28,955 --> 00:03:33,558
+56
+00:03:35,727 --> 00:03:40,330
 comuns a alta demanda com pouco controle,
 o desequilíbrio entre esforço
 
-56
-00:03:33,558 --> 00:03:38,162
+57
+00:03:40,330 --> 00:03:44,934
 e recompensa, a falta de apoio, a
 injustiça organizacional e o assédio.
 
-57
-00:03:38,162 --> 00:03:39,656
+58
+00:03:44,934 --> 00:03:46,428
 Ferramenta prática:
 
-58
-00:03:39,656 --> 00:03:42,825
+59
+00:03:46,428 --> 00:03:49,597
 avalie os fatores de risco na
 sua equipe agora.
 
-59
-00:03:42,825 --> 00:03:47,369
+60
+00:03:49,597 --> 00:03:54,141
 A matriz abaixo ajuda a organizar essa
 avaliação de forma estruturada.
 
-60
-00:03:47,369 --> 00:03:52,092
+61
+00:03:54,141 --> 00:03:58,864
 Para cada fator, marque de 1 (nunca
 acontece) a 5 (acontece o tempo todo)
 
-61
-00:03:52,092 --> 00:03:55,679
+62
+00:03:58,864 --> 00:04:02,451
 o quanto ele descreve a realidade
 atual da sua equipe.
 
-62
-00:03:55,679 --> 00:03:57,234
+63
+00:04:02,451 --> 00:04:04,006
 Da percepção à ação:
 
-63
-00:03:57,234 --> 00:04:00,343
+64
+00:04:04,006 --> 00:04:07,115
 o que muda quando o risco é
 identificado cedo.
 
-64
-00:04:00,343 --> 00:04:05,126
+65
+00:04:07,115 --> 00:04:11,898
 Equipes em que gestores reconhecem e
 nomeiam fatores de risco psicossocial
 
-65
-00:04:05,126 --> 00:04:10,327
+66
+00:04:11,898 --> 00:04:17,099
 precocemente apresentam, de forma consistente
 na literatura de saúde ocupacional,
 
-66
-00:04:10,327 --> 00:04:15,289
+67
+00:04:17,099 --> 00:04:22,061
 menor rotatividade e menor incidência de
 afastamentos por transtornos mentais
 
-67
-00:04:15,289 --> 00:04:17,143
+68
+00:04:22,061 --> 00:04:23,915
 relacionados ao trabalho.
 
-68
-00:04:17,143 --> 00:04:21,687
+69
+00:04:23,915 --> 00:04:28,459
 A diferença não está em ter uma equipe
 "mais forte" — está em intervir
 
-69
-00:04:21,687 --> 00:04:26,350
+70
+00:04:28,459 --> 00:04:33,122
 na organização do trabalho antes que o
 desgaste se acumule a ponto de se
 
-70
-00:04:26,350 --> 00:04:29,997
+71
+00:04:33,122 --> 00:04:36,769
 tornar irreversível para aquela
 pessoa naquele momento.
 
-71
-00:04:29,997 --> 00:04:35,139
+72
+00:04:36,769 --> 00:04:41,911
 A NR-1 passou a exigir que as empresas incluam
 os fatores de risco psicossociais
 
-72
-00:04:35,139 --> 00:04:37,889
+73
+00:04:41,911 --> 00:04:44,661
 no gerenciamento de riscos ocupacionais.
 
-73
-00:04:37,889 --> 00:04:42,971
+74
+00:04:44,661 --> 00:04:49,743
 E treinar gestores em saúde mental reduziu o
 afastamento por doença relacionado
 
-74
-00:04:42,971 --> 00:04:45,422
+75
+00:04:49,743 --> 00:04:52,194
 ao trabalho num ensaio randomizado.
 
-75
-00:04:45,422 --> 00:04:46,917
+76
+00:04:52,194 --> 00:04:53,689
 Caminhos possíveis.
 
-76
-00:04:46,917 --> 00:04:47,933
+77
+00:04:53,689 --> 00:04:54,705
 Individual:
 
-77
-00:04:47,933 --> 00:04:52,477
+78
+00:04:54,705 --> 00:04:59,249
 conversas de checagem genuínas (não
 apenas de desempenho) entre gestor
 
-78
-00:04:52,477 --> 00:04:56,184
+79
+00:04:59,249 --> 00:05:02,956
 e colaborador, com espaço real
 para nomear dificuldades.
 
-79
-00:04:56,184 --> 00:04:56,961
+80
+00:05:02,956 --> 00:05:03,733
 Equipe:
 
-80
-00:04:56,961 --> 00:05:01,923
+81
+00:05:03,733 --> 00:05:08,695
 revisão periódica de carga de trabalho e
 clareza de papéis, feita em conjunto
 
-81
-00:05:01,923 --> 00:05:06,407
+82
+00:05:08,695 --> 00:05:13,179
 com quem executa o trabalho — não apenas
 definida de cima para baixo.
 
-82
-00:05:06,407 --> 00:05:07,663
+83
+00:05:13,179 --> 00:05:14,435
 Organizacional:
 
-83
-00:05:07,663 --> 00:05:12,505
+84
+00:05:14,435 --> 00:05:19,277
 mapeamento formal de risco psicossocial por
 setor, com apoio de consultoria
 
-84
-00:05:12,505 --> 00:05:17,288
+85
+00:05:19,277 --> 00:05:24,060
 especializada quando a complexidade
 ultrapassa o que o RH interno consegue
 
-85
-00:05:17,288 --> 00:05:18,723
+86
+00:05:24,060 --> 00:05:25,495
 endereçar sozinho.
 
-86
-00:05:18,723 --> 00:05:21,354
+87
+00:05:25,495 --> 00:05:28,126
 As referências estão no fim da página.
 
-87
-00:05:21,354 --> 00:05:25,957
+88
+00:05:28,126 --> 00:05:32,729
 Este artigo é uma adaptação, em formato
 de leitura acessível, elaborada
 
-88
-00:05:25,957 --> 00:05:26,794
+89
+00:05:32,729 --> 00:05:33,566
 pelo Dr.
 
-89
-00:05:26,794 --> 00:05:31,697
+90
+00:05:33,566 --> 00:05:38,469
 Antônio Felipe, com base em publicações
 indexadas em Lilacs, Medline/PubMed,
 
-90
-00:05:31,697 --> 00:05:36,779
+91
+00:05:38,469 --> 00:05:43,551
 SciELO e BVS sobre burnout e risco
 psicossocial ocupacional, e na classificação
 
-91
-00:05:36,779 --> 00:05:39,648
+92
+00:05:43,551 --> 00:05:46,420
 do CID-11 da Organização Mundial da Saúde.
 
-92
-00:05:39,648 --> 00:05:44,671
+93
+00:05:46,420 --> 00:05:51,443
 A ferramenta de autoavaliação incluída tem
 finalidade exclusivamente educativa
 
-93
-00:05:44,671 --> 00:05:49,872
+94
+00:05:51,443 --> 00:05:56,644
 e não substitui diagnóstico organizacional
 conduzido por profissional habilitado.
+
+95
+00:05:57,344 --> 00:06:03,141
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+96
+00:06:03,141 --> 00:06:07,229
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+97
+00:06:07,229 --> 00:06:11,168
+O texto completo, com as
+referências, está no portal.

@@ -1,340 +1,369 @@
 1
-00:00:00,000 --> 00:00:01,967
-Saúde mental na residência:
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
 
 2
-00:00:01,967 --> 00:00:05,662
+00:00:06,772 --> 00:00:08,739
+Saúde mental na residência:
+
+3
+00:00:08,739 --> 00:00:12,434
 como sobreviver (e se desenvolver)
 nos anos de formação.
 
-3
-00:00:05,662 --> 00:00:07,569
+4
+00:00:12,434 --> 00:00:14,341
 Narração em voz sintética.
 
-4
-00:00:07,569 --> 00:00:12,158
+5
+00:00:14,341 --> 00:00:18,930
 Ninguém avisa, antes da residência
 começar, que o maior desafio não vai
 
-5
-00:00:12,158 --> 00:00:17,164
+6
+00:00:18,930 --> 00:00:23,936
 ser o conhecimento técnico — vai ser
 continuar inteiro emocionalmente enquanto
 
-6
-00:00:17,164 --> 00:00:18,773
+7
+00:00:23,936 --> 00:00:25,545
 se forma como médico.
 
-7
-00:00:18,773 --> 00:00:23,601
+8
+00:00:25,545 --> 00:00:30,373
 A residência médica é, ao mesmo tempo, um
 dos períodos de maior crescimento
 
-8
-00:00:23,601 --> 00:00:28,488
+9
+00:00:30,373 --> 00:00:35,260
 profissional e um dos de maior risco para a
 saúde mental na carreira médica.
 
-9
-00:00:28,488 --> 00:00:33,375
+10
+00:00:35,260 --> 00:00:40,147
 Plantões extensos, privação crônica de sono,
 exposição precoce ao sofrimento
 
-10
-00:00:33,375 --> 00:00:38,083
+11
+00:00:40,147 --> 00:00:44,855
 e à morte, hierarquias rígidas e a pressão
 por desempenho constante criam
 
-11
-00:00:38,083 --> 00:00:41,897
+12
+00:00:44,855 --> 00:00:48,669
 um ambiente que, sem cuidado ativo,
 adoece com facilidade.
 
-12
-00:00:41,897 --> 00:00:45,234
+13
+00:00:48,669 --> 00:00:52,006
 Por que esse período é
 particularmente vulnerável.
 
-13
-00:00:45,234 --> 00:00:50,181
+14
+00:00:52,006 --> 00:00:56,953
 Diferente da graduação, na residência a
 exigência deixa de ser só intelectual
 
-14
-00:00:50,181 --> 00:00:54,055
+15
+00:00:56,953 --> 00:01:00,827
 e passa a ser também física e
 emocional, em tempo integral.
 
-15
-00:00:54,055 --> 00:00:59,538
+16
+00:01:00,827 --> 00:01:06,310
 O residente precisa, ao mesmo tempo, aprender,
 performar, lidar com a responsabilidade
 
-16
-00:00:59,538 --> 00:01:04,067
+17
+00:01:06,310 --> 00:01:10,839
 real sobre vidas e ainda construir
 identidade profissional — tudo isso
 
-17
-00:01:04,067 --> 00:01:08,179
+18
+00:01:10,839 --> 00:01:14,951
 com sono insuficiente e suporte
 emocional muitas vezes escasso.
 
-18
-00:01:08,179 --> 00:01:10,921
+19
+00:01:14,951 --> 00:01:17,693
 Um dado que merece ser dito sem rodeios:
 
-19
-00:01:10,921 --> 00:01:16,404
+20
+00:01:17,693 --> 00:01:23,176
 médicos residentes apresentam taxas de depressão,
 ansiedade e burnout consistentemente
 
-20
-00:01:16,404 --> 00:01:21,291
+21
+00:01:23,176 --> 00:01:28,063
 mais altas que a população geral da mesma
 faixa etária — e a cultura médica,
 
-21
-00:01:21,291 --> 00:01:25,820
+22
+00:01:28,063 --> 00:01:32,592
 historicamente, tratou isso como "parte
 do processo" em vez de como um
 
-22
-00:01:25,820 --> 00:01:27,727
+23
+00:01:32,592 --> 00:01:34,499
 problema a ser enfrentado.
 
-23
-00:01:27,727 --> 00:01:32,555
+24
+00:01:34,499 --> 00:01:39,327
 Uma meta-análise estimou que cerca de 29%
 dos médicos residentes apresentam
 
-24
-00:01:32,555 --> 00:01:37,501
+25
+00:01:39,327 --> 00:01:44,273
 depressão ou sintomas depressivos, e entre
 estudantes de medicina a proporção
 
-25
-00:01:37,501 --> 00:01:38,514
+26
+00:01:44,273 --> 00:01:45,286
 é parecida.
 
-26
-00:01:38,514 --> 00:01:41,137
+27
+00:01:45,286 --> 00:01:47,909
 Sinais de que algo precisa de atenção.
 
-27
-00:01:41,137 --> 00:01:44,534
+28
+00:01:47,909 --> 00:01:51,306
 Exaustão que não melhora com o
 descanso disponível.
 
-28
-00:01:44,534 --> 00:01:48,348
+29
+00:01:51,306 --> 00:01:55,120
 Cinismo crescente em relação aos
 pacientes ou à profissão.
 
-29
-00:01:48,348 --> 00:01:52,818
+30
+00:01:55,120 --> 00:01:59,590
 Sensação persistente de incompetência,
 mesmo com desempenho adequado.
 
-30
-00:01:52,818 --> 00:01:57,228
+31
+00:01:59,590 --> 00:02:04,000
 Isolamento de amigos e família "porque
 não tenho tempo nem energia".
 
-31
-00:01:57,228 --> 00:02:01,757
+32
+00:02:04,000 --> 00:02:08,529
 Uso de substâncias (incluindo cafeína em
 excesso, álcool, ansiolíticos
 
-32
-00:02:01,757 --> 00:02:05,154
+33
+00:02:08,529 --> 00:02:11,926
 sem orientação) como forma de
 lidar com o estresse.
 
-33
-00:02:05,154 --> 00:02:09,922
+34
+00:02:11,926 --> 00:02:16,694
 Pensamentos recorrentes de desistir da
 carreira ou de que "não vale a pena
 
-34
-00:02:09,922 --> 00:02:10,935
+35
+00:02:16,694 --> 00:02:17,707
 continuar".
 
-35
-00:02:10,935 --> 00:02:12,485
+36
+00:02:17,707 --> 00:02:19,257
 O que de fato ajuda.
 
-36
-00:02:12,485 --> 00:02:14,034
+37
+00:02:19,257 --> 00:02:20,806
 No nível individual.
 
-37
-00:02:14,034 --> 00:02:18,623
+38
+00:02:20,806 --> 00:02:25,395
 Buscar apoio psicológico ou psiquiátrico
 não é admissão de fracasso — é
 
-38
-00:02:18,623 --> 00:02:23,272
+39
+00:02:25,395 --> 00:02:30,044
 uma decisão estratégica de qualquer
 profissional que entende os próprios
 
-39
-00:02:23,272 --> 00:02:24,106
+40
+00:02:30,044 --> 00:02:30,878
 limites.
 
-40
-00:02:24,106 --> 00:02:27,086
+41
+00:02:30,878 --> 00:02:33,858
 Pequenos hábitos protetores
 também importam:
 
-41
-00:02:27,086 --> 00:02:31,794
+42
+00:02:33,858 --> 00:02:38,566
 preservar o sono sempre que a escala
 permitir, manter ao menos um vínculo
 
-42
-00:02:31,794 --> 00:02:36,562
+43
+00:02:38,566 --> 00:02:43,334
 social fora da medicina, e processar casos
 difíceis em vez de simplesmente
 
-43
-00:02:36,562 --> 00:02:38,529
+44
+00:02:43,334 --> 00:02:45,301
 acumulá-los emocionalmente.
 
-44
-00:02:38,529 --> 00:02:40,019
+45
+00:02:45,301 --> 00:02:46,791
 No nível dos pares.
 
-45
-00:02:40,019 --> 00:02:45,025
+46
+00:02:46,791 --> 00:02:51,797
 Conversas entre residentes sobre as
 dificuldades reais — não só sobre conteúdo
 
-46
-00:02:45,025 --> 00:02:48,780
+47
+00:02:51,797 --> 00:02:55,552
 técnico — quebram o isolamento e
 normalizam buscar ajuda.
 
-47
-00:02:48,780 --> 00:02:53,607
+48
+00:02:55,552 --> 00:03:00,379
 Programas de mentoria entre residentes mais
 experientes e iniciantes também
 
-48
-00:02:53,607 --> 00:02:58,256
+49
+00:03:00,379 --> 00:03:05,028
 fazem diferença real na adaptação aos
 primeiros meses, historicamente os
 
-49
-00:02:58,256 --> 00:02:59,448
+50
+00:03:05,028 --> 00:03:06,220
 mais difíceis.
 
-50
-00:02:59,448 --> 00:03:01,176
+51
+00:03:06,220 --> 00:03:07,948
 No nível institucional.
 
-51
-00:03:01,176 --> 00:03:06,301
+52
+00:03:07,948 --> 00:03:13,073
 Programas de residência que oferecem suporte
 psicológico estruturado, supervisão
 
-52
-00:03:06,301 --> 00:03:11,307
+53
+00:03:13,073 --> 00:03:18,079
 clínica com espaço genuíno para dúvidas e
 fragilidades, e jornadas de trabalho
 
-53
-00:03:11,307 --> 00:03:16,135
+54
+00:03:18,079 --> 00:03:22,907
 dentro dos limites legais têm impacto
 direto na saúde mental e na qualidade
 
-54
-00:03:16,135 --> 00:03:17,208
+55
+00:03:22,907 --> 00:03:23,980
 da formação.
 
-55
-00:03:17,208 --> 00:03:21,737
+56
+00:03:23,980 --> 00:03:28,509
 Cobrar isso das instituições não é
 "fragilidade" — é parte legítima da
 
-56
-00:03:21,737 --> 00:03:24,836
+57
+00:03:28,509 --> 00:03:31,608
 construção de uma formação
 médica sustentável.
 
-57
-00:03:24,836 --> 00:03:29,604
+58
+00:03:31,608 --> 00:03:36,376
 "A residência forma médicos competentes
 tecnicamente, mas só forma médicos
 
-58
-00:03:29,604 --> 00:03:34,252
+59
+00:03:36,376 --> 00:03:41,024
 íntegros e sustentáveis quando também
 cuida da saúde mental de quem está
 
-59
-00:03:34,252 --> 00:03:35,325
+60
+00:03:41,024 --> 00:03:42,097
 se formando.
 
-60
-00:03:35,325 --> 00:03:39,914
+61
+00:03:42,097 --> 00:03:46,686
 Pedir ajuda durante esse processo não te
 torna um residente pior — pode
 
-61
-00:03:39,914 --> 00:03:44,444
+62
+00:03:46,686 --> 00:03:51,216
 ser exatamente o que vai te permitir
 terminar essa formação inteiro.".
 
-62
-00:03:44,444 --> 00:03:49,092
+63
+00:03:51,216 --> 00:03:55,864
 Levar a própria saúde mental em conta
 durante a residência não é desviar
 
-63
-00:03:49,092 --> 00:03:51,953
+64
+00:03:55,864 --> 00:03:58,725
 o foco da formação técnica — é parte dela.
 
-64
-00:03:51,953 --> 00:03:56,482
+65
+00:03:58,725 --> 00:04:03,254
 Médicos que aprendem, desde cedo, a
 reconhecer seus próprios limites e
 
-65
-00:03:56,482 --> 00:04:01,131
+66
+00:04:03,254 --> 00:04:07,903
 buscar apoio quando necessário tendem a
 sustentar carreiras mais longas,
 
-66
-00:04:01,131 --> 00:04:04,945
+67
+00:04:07,903 --> 00:04:11,717
 mais saudáveis e, no fim, mais
 úteis para quem vão cuidar.
 
-67
-00:04:04,945 --> 00:04:09,653
+68
+00:04:11,717 --> 00:04:16,425
 Este conteúdo tem finalidade educativa e
 reflexiva, baseado em evidências
 
-68
-00:04:09,653 --> 00:04:14,481
+69
+00:04:16,425 --> 00:04:21,253
 sobre saúde mental de médicos em formação e
 na experiência prática do autor
 
-69
-00:04:14,481 --> 00:04:17,878
+70
+00:04:21,253 --> 00:04:24,650
 em mentoria de residentes e
 estudantes de medicina.
 
-70
-00:04:17,878 --> 00:04:22,467
+71
+00:04:24,650 --> 00:04:29,239
 Estratégias individuais e mudanças na
 organização do trabalho reduzem o
 
-71
-00:04:22,467 --> 00:04:27,354
+72
+00:04:29,239 --> 00:04:34,126
 burnout em médicos, e as mudanças
 organizacionais tendem a ter efeito maior.
 
-72
-00:04:27,354 --> 00:04:29,976
+73
+00:04:34,126 --> 00:04:36,748
 As referências estão no fim da página.
+
+74
+00:04:37,448 --> 00:04:44,299
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+75
+00:04:44,299 --> 00:04:49,131
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+76
+00:04:49,131 --> 00:04:53,786
+O texto completo, com as
+referências, está no portal.
+
+77
+00:04:53,786 --> 00:05:00,637
+Se você precisar de apoio agora, ligue 188, o
+CVV, ligação gratuita, 24 horas.
+
+78
+00:05:00,637 --> 00:05:03,536
+Em emergência, ligue 192, o SAMU.

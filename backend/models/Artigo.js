@@ -139,6 +139,7 @@ const ArtigoSchema = new mongoose.Schema(
       hash: String,
       voz: String,
       provedor: String,
+      vinhetaVersao: Number, // 1 = áudio com a vinheta de crédito da marca (backend/lib/vinheta.js); fora do hash
       caracteres: Number,
       bytes: Number,
       geradaEm: Date,

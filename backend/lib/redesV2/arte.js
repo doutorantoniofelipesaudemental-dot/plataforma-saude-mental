@@ -11,6 +11,7 @@ const { FONTE_SERIF, FONTE_SANS, caminhoTexto, caminhoLinhas, quebrarLinhas, lar
 
 const COR = { marinho: '#0b1f3a', marinhoClaro: '#13315c', dourado: '#d4af37', branco: '#ffffff', suave: 'rgba(255,255,255,0.82)' };
 const LARGURA_UTIL = LARGURA - MARGEM * 2;
+const CREDITO = 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito'; // crédito discreto no último cartão (16/10/2026)
 const ASSINATURA = ['Dr. Antônio Felipe · Médico · CRM-BA 41322', 'RQE 26638 – Medicina de Família e Comunidade'];
 
 const fundo = (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${COR.marinho}"/><stop offset="1" stop-color="${COR.marinhoClaro}"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#${id})"/>`;
@@ -48,7 +49,8 @@ function svgTela(tela, i, total) {
     miolo = `${fundo('g')}${contador(i, total)}${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, 470, 92, 76, COR.branco, { negrito: true })}
       ${barraOuro(470 + linhas.length * 92 - 40)}
       ${caminhoTexto(FONTE_SANS, tela.texto, MARGEM, 470 + linhas.length * 92 + 50, 44, COR.dourado, { negrito: true })}
-      ${tela.apoio ? caminhoTexto(FONTE_SANS, 'Em crise: CVV 188 · SAMU 192', MARGEM, ALTURA - 230, 38, COR.branco, { negrito: true }) : ''}`;
+      ${tela.apoio ? caminhoTexto(FONTE_SANS, 'Em crise: CVV 188 · SAMU 192', MARGEM, ALTURA - 230, 38, COR.branco, { negrito: true }) : ''}
+      ${caminhoTexto(FONTE_SANS, CREDITO, MARGEM, ALTURA - 178, 24, COR.suave)}`;
   } else {
     const tamT = 50, tamX = tela.tipo === 'trecho' ? 46 : 44;
     const lt = tela.titulo ? quebrarLinhas(FONTE_SERIF, tela.titulo, LARGURA_UTIL, tamT, { maxLinhas: 3 }) : [];
@@ -65,7 +67,7 @@ function svgTela(tela, i, total) {
 
 async function renderizarTelas(telas) {
   const total = telas.length;
-  const textos = [...ASSINATURA, 'Deslize para o lado', 'Em crise: CVV 188 · SAMU 192', ...telas.flatMap((t) => [t.titulo, t.texto].filter(Boolean))];
+  const textos = [...ASSINATURA, CREDITO, 'Deslize para o lado', 'Em crise: CVV 188 · SAMU 192', ...telas.flatMap((t) => [t.titulo, t.texto].filter(Boolean))];
   const ausentes = [...glifosAusentes(textos, FONTE_SANS), ...glifosAusentes(textos, FONTE_SERIF)];
   const imagens = [];
   for (const [i, t] of telas.entries()) imagens.push(await sharp(Buffer.from(svgTela(t, i, total))).png().toBuffer());
@@ -74,7 +76,8 @@ async function renderizarTelas(telas) {
 
 const textoAlternativo = (tela, i, total) => {
   const corpo = [tela.titulo, tela.texto].filter(Boolean).map((x) => String(x).replace(/[.\s]+$/, '')).join('. ');
-  return `Tela ${i + 1} de ${total}, fundo azul-marinho com detalhes dourados: ${corpo}. Assinatura: Dr. Antônio Felipe, médico, CRM-BA 41322, RQE 26638, Medicina de Família e Comunidade.`;
+  const credito = tela.tipo === 'final' ? ` ${CREDITO}.` : '';
+  return `Tela ${i + 1} de ${total}, fundo azul-marinho com detalhes dourados: ${corpo}.${credito} Assinatura: Dr. Antônio Felipe, médico, CRM-BA 41322, RQE 26638, Medicina de Família e Comunidade.`;
 };
 
-module.exports = { renderizarTelas, textoAlternativo, glifosAusentes, ASSINATURA, COR };
+module.exports = { renderizarTelas, textoAlternativo, glifosAusentes, ASSINATURA, COR, CREDITO };

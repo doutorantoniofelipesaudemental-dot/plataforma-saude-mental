@@ -1,215 +1,235 @@
 1
-00:00:00,000 --> 00:00:03,077
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+2
+00:00:06,772 --> 00:00:09,849
 Sinais de alerta em crianças
 e adolescentes:
 
-2
-00:00:03,077 --> 00:00:05,231
+3
+00:00:09,849 --> 00:00:12,003
 o que observar (e como agir).
 
-3
-00:00:05,231 --> 00:00:07,200
+4
+00:00:12,003 --> 00:00:13,972
 Narração em voz sintética.
 
-4
-00:00:07,200 --> 00:00:12,124
+5
+00:00:13,972 --> 00:00:18,896
 Crianças e adolescentes atravessam fases de
 mudança de humor, de interesse
 
-5
-00:00:12,124 --> 00:00:16,001
+6
+00:00:18,896 --> 00:00:22,773
 e de comportamento como parte
 natural do desenvolvimento.
 
-6
-00:00:16,001 --> 00:00:20,986
+7
+00:00:22,773 --> 00:00:27,758
 O desafio para pais e responsáveis é
 diferenciar essas oscilações esperadas
 
-7
-00:00:20,986 --> 00:00:25,848
+8
+00:00:27,758 --> 00:00:32,620
 de sinais que indicam sofrimento real —
 sem cair nem no alarme excessivo,
 
-8
-00:00:25,848 --> 00:00:29,294
+9
+00:00:32,620 --> 00:00:36,066
 nem na minimização de algo que
 precisa de atenção.
 
-9
-00:00:29,294 --> 00:00:31,448
+10
+00:00:36,066 --> 00:00:38,220
 Mudanças que merecem atenção.
 
-10
-00:00:31,448 --> 00:00:36,187
+11
+00:00:38,220 --> 00:00:42,959
 O que costuma diferenciar uma fase de um
 sinal de alerta é a combinação
 
-11
-00:00:36,187 --> 00:00:41,048
+12
+00:00:42,959 --> 00:00:47,820
 de mudanças, a duração, e o quanto elas
 destoam do funcionamento habitual
 
-12
-00:00:41,048 --> 00:00:45,726
+13
+00:00:47,820 --> 00:00:52,498
 daquela criança ou adolescente específico
 — não de uma média genérica.
 
-13
-00:00:45,726 --> 00:00:50,403
+14
+00:00:52,498 --> 00:00:57,175
 Isolamento social maior que o costume,
 queda de desempenho escolar sem
 
-14
-00:00:50,403 --> 00:00:55,265
+15
+00:00:57,175 --> 00:01:02,037
 causa aparente, alterações de sono ou
 apetite, e mudança no interesse por
 
-15
-00:00:55,265 --> 00:01:00,003
+16
+00:01:02,037 --> 00:01:06,775
 atividades que antes traziam prazer,
 quando aparecem juntas e persistem
 
-16
-00:01:00,003 --> 00:01:03,819
+17
+00:01:06,775 --> 00:01:10,591
 por semanas, merecem conversa e
 observação mais próxima.
 
-17
-00:01:03,819 --> 00:01:08,927
+18
+00:01:10,591 --> 00:01:15,699
 Uma meta-análise mundial estimou que cerca
 de 13% das crianças e adolescentes
 
-18
-00:01:08,927 --> 00:01:11,019
+19
+00:01:15,699 --> 00:01:17,791
 têm algum transtorno mental.
 
-19
-00:01:11,019 --> 00:01:13,727
+20
+00:01:17,791 --> 00:01:20,499
 Diferenciando fase de sinal de alerta.
 
-20
-00:01:13,727 --> 00:01:18,589
+21
+00:01:20,499 --> 00:01:25,361
 Uma fase costuma ser pontual, ligada a um
 evento identificável, e melhora
 
-21
-00:01:18,589 --> 00:01:20,928
+22
+00:01:25,361 --> 00:01:27,700
 com o tempo e com apoio simples.
 
-22
-00:01:20,928 --> 00:01:25,605
+23
+00:01:27,700 --> 00:01:32,377
 Um sinal de alerta tende a persistir, se
 espalhar para várias áreas da
 
-23
-00:01:25,605 --> 00:01:30,282
+24
+00:01:32,377 --> 00:01:37,054
 vida (escola, amizades, família), e não
 melhorar mesmo com o apoio que
 
-24
-00:01:30,282 --> 00:01:31,944
+25
+00:01:37,054 --> 00:01:38,716
 normalmente ajudaria.
 
-25
-00:01:31,944 --> 00:01:36,682
+26
+00:01:38,716 --> 00:01:43,454
 Comentários sobre não se sentir bem
 consigo mesmo — mesmo que ditos "de
 
-26
-00:01:36,682 --> 00:01:41,175
+27
+00:01:43,454 --> 00:01:47,947
 brincadeira" — nunca devem ser
 descartados sem uma conversa direta.
 
-27
-00:01:41,175 --> 00:01:42,221
+28
+00:01:47,947 --> 00:01:48,993
 Importante:
 
-28
-00:01:42,221 --> 00:01:47,021
+29
+00:01:48,993 --> 00:01:53,793
 Se uma criança ou adolescente expressar,
 de qualquer forma, que não quer
 
-29
-00:01:47,021 --> 00:01:52,191
+30
+00:01:53,793 --> 00:01:58,963
 viver ou pensamento de se machucar, isso deve
 ser levado a sério imediatamente
 
-30
-00:01:52,191 --> 00:01:55,514
+31
+00:01:58,963 --> 00:02:02,286
 — procure avaliação
 profissional o quanto antes.
 
-31
-00:01:55,514 --> 00:02:00,314
+32
+00:02:02,286 --> 00:02:07,086
 Em caso de risco imediato, ligue 188 (CVV,
 gratuito, 24h) ou 192 (SAMU).
 
-32
-00:02:00,314 --> 00:02:05,484
+33
+00:02:07,086 --> 00:02:12,256
 Metade dos transtornos mentais começa até os
 14 anos, o que torna a observação
 
-33
-00:02:05,484 --> 00:02:07,453
+34
+00:02:12,256 --> 00:02:14,225
 nessa fase tão importante.
 
-34
-00:02:07,453 --> 00:02:10,099
+35
+00:02:14,225 --> 00:02:16,871
 Como conversar e quando buscar ajuda.
 
-35
-00:02:10,099 --> 00:02:14,961
+36
+00:02:16,871 --> 00:02:21,733
 Perguntar diretamente, com calma e sem
 julgamento — "percebi que você tem
 
-36
-00:02:14,961 --> 00:02:19,823
+37
+00:02:21,733 --> 00:02:26,595
 estado diferente, quer me contar o que
 está acontecendo?" — costuma abrir
 
-37
-00:02:19,823 --> 00:02:22,654
+38
+00:02:26,595 --> 00:02:29,426
 mais espaço do que insistência indireta.
 
-38
-00:02:22,654 --> 00:02:27,700
+39
+00:02:29,426 --> 00:02:34,472
 Quando os sinais persistem, se combinam, ou
 geram dúvida real, uma avaliação
 
-39
-00:02:27,700 --> 00:02:32,808
+40
+00:02:34,472 --> 00:02:39,580
 profissional ajuda a esclarecer o que está
 por trás — sem que isso signifique
 
-40
-00:02:32,808 --> 00:02:37,486
+41
+00:02:39,580 --> 00:02:44,258
 que algo está necessariamente "errado"
 com a criança ou com a família.
 
-41
-00:02:37,486 --> 00:02:42,163
+42
+00:02:44,258 --> 00:02:48,935
 Conteúdo educativo baseado em literatura
 de desenvolvimento infantil e
 
-42
-00:02:42,163 --> 00:02:44,994
+43
+00:02:48,935 --> 00:02:51,766
 saúde mental na infância e adolescência.
 
-43
-00:02:44,994 --> 00:02:47,517
+44
+00:02:51,766 --> 00:02:54,289
 Não substitui avaliação individual.
 
-44
-00:02:47,517 --> 00:02:52,686
+45
+00:02:54,289 --> 00:02:59,458
 Vergonha, estigma e não saber reconhecer os
 sintomas estão entre as principais
 
-45
-00:02:52,686 --> 00:02:55,948
+46
+00:02:59,458 --> 00:03:02,720
 barreiras para crianças e
 jovens pedirem ajuda.
 
-46
-00:02:55,948 --> 00:02:58,656
+47
+00:03:02,720 --> 00:03:05,428
 As referências estão no fim da página.
+
+48
+00:03:06,128 --> 00:03:11,925
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+49
+00:03:11,925 --> 00:03:16,013
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+50
+00:03:16,013 --> 00:03:19,952
+O texto completo, com as
+referências, está no portal.
