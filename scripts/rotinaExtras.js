@@ -63,11 +63,17 @@ function passoLinkedinManual({ sec, problemas }) {
   const r = spawnSync(process.execPath, ['--env-file=.env', 'scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 90000 });
   const linha = String(r.stdout || '').trim().split('\n').pop() || 'não consegui ler a fila manual';
   const agend = Number((linha.match(/agendados no LinkedIn (\d+)/) || [])[1] || 0);
-  const ate = (linha.match(/agendados no LinkedIn \d+ \(até (\d{2})\/(\d{2})\/(\d{4})\)/) || []);
+  // a linha traz "(até dd/mm)" (sem o ano): usa o próximo dd/mm a partir de hoje
+  const mAte = linha.match(/agendados no LinkedIn \d+ \(até (\d{2})\/(\d{2})\)/);
+  const hoje = new Date(); let ano = hoje.getUTCFullYear();
+  if (mAte && new Date(`${ano}-${mAte[2]}-${mAte[1]}T12:00:00Z`) < hoje - 30 * 864e5) ano += 1;
+  const ate = mAte ? [mAte[0], mAte[1], mAte[2], String(ano)] : [];
+  const abertos = Number((linha.match(/abertos (\d+)/) || [])[1] || 0);
   sec.push(`## 12. LinkedIn — fila manual e posts agendados (perfil pessoal, seg/qua/sex 19:30)\n- ${linha}\n- **Lembrete da semana (sem robô):** abra o LinkedIn → "Posts agendados" e confira data, hora e texto dos posts da semana. Se algo sumiu ou está errado, me avise.`);
   if (agend > 0 && ate.length) {
     const dias = Math.round((new Date(`${ate[3]}-${ate[2]}-${ate[1]}T12:00:00Z`) - Date.now()) / 864e5);
-    if (dias <= 14) problemas.push(`LinkedIn: a fila AGENDADA acaba em ${ate[1]}/${ate[2]}/${ate[3]} (${dias} dia(s)): hora de uma nova sessão de agendamento`);
+    if (dias <= 14) problemas.push(`LinkedIn: o último post agendado é de ${ate[1]}/${ate[2]}/${ate[3]} (${dias} dia(s)) e faltam ${abertos} na fila: digite "rodar agendar-linkedin" (skill agendar-linkedin)`);
+    sec.push(`- **Agendamento:** último post agendado em ${ate[1]}/${ate[2]}/${ate[3]}; faltam agendar ${abertos} (inclui os carrosséis manuais). Uma sessão por dia: "rodar agendar-linkedin".`);
   }
   const atrasados = Number((linha.match(/atrasados (\d+)/) || [])[1] || 0);
   if (r.status !== 0) problemas.push(`fila manual do LinkedIn: não consegui atualizar (${String(r.stderr || '').trim().slice(0, 80)})`);

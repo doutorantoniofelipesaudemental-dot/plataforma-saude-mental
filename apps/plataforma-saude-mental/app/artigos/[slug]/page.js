@@ -3,6 +3,9 @@ import { canonicalDoTexto } from '../../slugsDominioPrincipal';
 import { ArrowLeft } from 'lucide-react';
 import { TODOS_ARTIGOS } from '@/src/content/artigos';
 import RodapeIdentificacao from '@/app/RodapeIdentificacao';
+import { AVISO_PROTOCOLOS, precisaAviso } from '@/app/avisoProtocolos';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 export function generateStaticParams() {
   return TODOS_ARTIGOS.map(({ slug }) => ({ slug }));
@@ -33,6 +36,8 @@ export default async function ArtigoPage({ params }) {
   const { default: Artigo, metadata } = await import(`@/src/content/artigos/${slug}.mdx`);
   const info = TODOS_ARTIGOS.find((a) => a.slug === slug);
   const eDoSiteAnterior = info?.origem === 'site-anterior';
+  const textoBruto = readFileSync(join(process.cwd(), 'src', 'content', 'artigos', `${slug}.mdx`), 'utf8');
+  const mostrarAviso = precisaAviso({ slug, categoria: metadata.categoria, texto: textoBruto });
 
   return (
     <main className="flex-1">
@@ -68,6 +73,11 @@ export default async function ArtigoPage({ params }) {
       <div className="prose prose-marca max-w-none leading-relaxed">
         <Artigo />
       </div>
+      {mostrarAviso && (
+        <aside className="mt-10 rounded-lg border border-tinta-media/20 bg-verde-claro/10 px-4 py-3 text-sm leading-relaxed text-tinta-media" data-aviso-protocolos>
+          <p>{AVISO_PROTOCOLOS}</p>
+        </aside>
+      )}
       <RodapeIdentificacao />
     </article>
     </main>

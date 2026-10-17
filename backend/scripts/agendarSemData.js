@@ -18,7 +18,7 @@ const aplicar = process.argv.includes('--aplicar');
 
 // Aprovados na tripla checagem (22). Ficam de fora, para decisão do autor: abandono-de-tratamento..., catatonia..., delirium..., insatisfacao-corporal-brasil-numeros,
 // relato-namorado-controlava-celular, transtorno-bipolar-na-aps... e uso-problematico-de-telas... (motivos em relatorios/textos-sem-agenda.md).
-const APROVADOS = [
+const APROVADOS_PADRAO = [
   'a-carta-que-nunca-foi-enviada-ao-psiquiatra', 'a-planta-que-sobreviveu-na-janela-do-posto', 'a-receita-dobrada-no-bolso-do-casaco', 'a-sala-de-espera-que-respirava-em-silencio',
   'conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar', 'esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo', 'higiene-autocuidado-saude-mental',
   'insonia-refrataria-na-atencao-primaria-investigacao-e-condut', 'manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr', 'o-balcao-da-farmacia-e-as-perguntas-nao-feitas',
@@ -27,6 +27,9 @@ const APROVADOS = [
   'primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa', 'relato-baiano-que-trabalhava-dobrado', 'relato-calor-aos-quarenta-e-oito',
   'transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane', 'transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic',
 ];
+// --slugs=a,b,c agenda só esses textos (ex.: os 7 corrigidos em 17/10/2026, após auditoria + tripla checagem)
+const ARG_SLUGS = (process.argv.find((a) => a.startsWith('--slugs=')) || '').slice(8);
+const APROVADOS = ARG_SLUGS ? ARG_SLUGS.split(',').filter(Boolean) : APROVADOS_PADRAO;
 const CORRECOES = {
   'conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar': [['não posso conversar gritos', 'não posso conversar aos gritos']],
   'manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr': [['retraumantização', 'retraumatização'], ['psychoeducação', 'psicoeducação']],

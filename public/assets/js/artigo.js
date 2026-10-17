@@ -190,6 +190,17 @@
       // O conteúdo é HTML escrito pela clínica pelas rotas administrativas
       // autenticadas — não é entrada de usuário anônimo.
       conteudo.innerHTML = artigo.conteudo;
+      // Aviso de protocolos locais (textos clínicos; mesma regra de backend/lib/avisoProtocolos.js; não entra no texto narrado)
+      const profissional = ['Médicos & Enfermeiros', 'Residentes & Estudantes', 'Pós-Graduação & Concursos'].includes(artigo.categoria);
+      const clinico = profissional || /Manejo Clínico/i.test(artigo.conteudo) || /\b\d+(?:[.,]\d+)?\s?(?:mg|mcg|µg|mEq\/L|mmol\/L)\b/i.test(artigo.conteudo);
+      if (clinico && !/^Relatos/i.test(artigo.categoria || '') && !/^relato-/.test(slug) && !/protocolos hospitalares/i.test(artigo.conteudo)) {
+        const aviso = document.createElement('aside');
+        aviso.className = 'aviso-legal aviso-protocolos';
+        aviso.setAttribute('data-aviso-protocolos', '');
+        aviso.style.marginTop = '2rem';
+        aviso.innerHTML = '<p>Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.</p>';
+        conteudo.insertAdjacentElement('afterend', aviso);
+      }
       // <script> inserido via innerHTML não executa — sem recriá-los, a
       // ferramenta interativa embutida ficaria inerte neste caminho de fallback.
       conteudo.querySelectorAll('script').forEach((antigo) => {
