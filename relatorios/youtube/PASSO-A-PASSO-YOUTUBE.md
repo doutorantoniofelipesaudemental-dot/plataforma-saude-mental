@@ -81,11 +81,24 @@ Fazer **uma vez**, depois do teste. Não precisa de verificação do Google para
 ## D. Teste privado e só depois ligar o freio
 1. **Não ligue o freio ainda.** Peça ao Claude Code o **teste** (ou digite você: `! node --env-file=.env scripts/youtube/testeUploadPrivado.js --confirmar`): ele sobe **1 vídeo como PRIVADO** (só você vê) e mostra o link para você conferir. Sem `--confirmar`, ele só confere o vídeo e não envia nada.
 2. Abra o link, veja o vídeo, o título, a descrição e as playlists.
-3. Se estiver tudo certo, **você** liga o freio: no Bloco de Notas, no `.env`, acrescente a linha
+3. Se estiver tudo certo, **você** liga o freio. **São DOIS ajustes no `.env` deste computador** (Bloco de Notas), e os dois precisam estar certos ao mesmo tempo:
    ```
    YOUTUBE_PUBLICACAO_ATIVA=true
+   REDES_PUBLICACAO_ATIVA=true
    ```
-   e salve. (Para conferir sem publicar: `! node --env-file=.env scripts/youtube/publicarYoutube.js --simular`.)
+   - `YOUTUBE_PUBLICACAO_ATIVA` é o freio **do YouTube**: nasce desligado; só o valor `true` liga.
+   - `REDES_PUBLICACAO_ATIVA` é o freio **geral das redes**: com `false` ele bloqueia tudo que sobe vídeo. **Hoje essa linha está `false` no `.env` local**, então mesmo com `YOUTUBE_PUBLICACAO_ATIVA=true` nada seria publicado até você trocar para `true` (ou apagar a linha).
+   - **Quais tarefas dependem de cada um:**
+
+     | O que | Depende de `YOUTUBE_PUBLICACAO_ATIVA` | Depende de `REDES_PUBLICACAO_ATIVA` (local) |
+     |---|---|---|
+     | Tarefa `DrSM-YouTube-Publica` (12:30, publica os vídeos) | **sim** | **sim** |
+     | Teste de upload privado e criação das playlists | não | **sim** (por isso o teste privado precisou de autorização expressa) |
+     | Tarefa `DrSM-YouTube-Gera-Midia` (23:30, só gera os arquivos) | não | não |
+     | Tarefa `DrSM-Narracao-Noite` (áudios) e conferências/rotina | não | não |
+
+   - O freio geral da **Vercel** (que controla o Instagram e o LinkedIn) é **outra** variável, em outro lugar; mudar o `.env` daqui não mexe nele (ver a tabela de freios no `ESTADO-GERAL.md`).
+   - Para conferir sem publicar: `! node --env-file=.env scripts/youtube/publicarYoutube.js --simular`.
 4. O agendador do Windows roda o publicador todo dia às 12:30 (o computador precisa estar ligado). Até 2 vídeos por dia.
 
 ## Auditoria da API (para os vídeos poderem ser públicos)
@@ -96,7 +109,7 @@ YouTube Studio → **Configurações → Comunidade → Padrões**: marque **"Re
 **Regra:** nunca responder com orientação clínica individual. Resposta-modelo: "Obrigado por compartilhar. Este canal é educativo e não substitui consulta; procure a UBS ou o CAPS da sua região. Em crise: CVV 188 (24 h) ou SAMU 192." Se houver risco imediato no comentário, responder só com isso e, se possível, denunciar/encaminhar conforme a plataforma.
 
 ## Desligar a qualquer momento
-No `.env`: `YOUTUBE_PUBLICACAO_ATIVA=false` (ou apague a linha). Ver também `relatorios/SE-ALGO-DER-ERRADO.md`.
+No `.env`: `YOUTUBE_PUBLICACAO_ATIVA=false` (ou apague a linha). **Qualquer um dos dois freios desliga**: `REDES_PUBLICACAO_ATIVA=false` também impede o YouTube (e qualquer upload feito deste computador). Para parar também a tarefa: `Disable-ScheduledTask -TaskName 'DrSM-YouTube-Publica'`. Ver também `relatorios/SE-ALGO-DER-ERRADO.md`.
 
 ## Criar o canal (se ainda não existir)
 1. youtube.com → foto do perfil → **Criar um canal**. Nome: `Dr. Antônio Felipe · Saúde Mental`; identificador: `@drantoniofelipe.saudemental`.

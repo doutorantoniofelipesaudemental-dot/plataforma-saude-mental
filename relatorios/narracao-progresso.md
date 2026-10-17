@@ -283,3 +283,8 @@ Início da sessão: 51 ok · 200 desatualizadas · 475 ausentes · faltam 675.
 
 ## Fechamento do envio com vinheta — 17/10/2026
 - 532/726 textos com áudio v1 no Blob (251 publicados + 281 agendados); lotes 4–8: 0 reprovados além de 1 truncado (relato-pilula-da-concentracao, regerado). Faltam 194 (sem MP3 local): ciclo noturno reativado.
+
+## Ciclo automático — 17/10/2026, 00:01:44
+- Pré-geradas nesta execução: 10 · falhas de geração: 0
+- ENVIAR · publicados + agendados sem áudio "ok": 1 · com MP3 pronto e selo válido: 0 · MP3 de texto editado depois (regerar): 0 · sem MP3 pré-gerado: 1
+- Estado geral: {"total":726,"estados":{"ok":697,"ausente":29},"faltam":29,"agendadosComMp3PreGerado":28}
