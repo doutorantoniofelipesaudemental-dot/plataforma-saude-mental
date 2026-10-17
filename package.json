@@ -57,7 +57,8 @@
     "youtube:upload-teste": "node --env-file-if-exists=.env scripts/youtube/testeUploadPrivado.js --confirmar",
     "linkedin:hoje": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js hoje",
     "linkedin:marcar": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js marcar",
-    "linkedin:fila": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js estado"
+    "linkedin:fila": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js estado",
+    "marca:aplicar": "node scripts/aplicarMarca.js"
   },
   "engines": {
     "node": ">=20"

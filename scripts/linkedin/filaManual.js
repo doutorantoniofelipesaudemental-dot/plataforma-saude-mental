@@ -16,7 +16,7 @@ const mongoose = require('mongoose');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const REL = path.join(RAIZ, 'relatorios', 'linkedin');
-const PERFIL = 'https://www.linkedin.com/in/doutor-antonio-felipe-undefined-70990b438';
+const PERFIL = require('../../backend/lib/marca').marca().LINKEDIN_PERFIL_URL; // variável única (config/marca.json)
 const DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
 const ABERTOS = ['aprovado-checagem', 'manual'];
 
