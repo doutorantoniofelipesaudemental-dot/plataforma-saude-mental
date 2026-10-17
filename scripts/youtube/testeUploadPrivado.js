@@ -29,5 +29,10 @@ const idArg = (process.argv.find((a) => a.startsWith('--id=')) || '').split('=')
   if (!confirmar) { console.log('Conferido. Nada enviado (use --confirmar para subir 1 vídeo PRIVADO).'); return; }
   const r = await yt.enviarVideo({ arquivo: arq, titulo: `[TESTE PRIVADO] ${meta.titulo}`.slice(0, 100), descricao: meta.descricao, tags: meta.tags, privacidade: 'private', short: it.tipo === 'short' });
   console.log(`ENVIADO como PRIVADO: ${r.link} (privacidade aplicada: ${r.privacidade})`);
+  // registra como "teste": fora de relatórios e da fila (relatorios/youtube/videos-teste.json)
+  const regArq = path.join(L.REL, 'videos-teste.json');
+  const reg = fs.existsSync(regArq) ? JSON.parse(fs.readFileSync(regArq, 'utf8')) : { nota: 'Vídeos de TESTE (privados).', videos: [] };
+  reg.videos.push({ id: r.id, tipo: 'teste', privacidade: r.privacidade, enviadoEm: new Date().toISOString().slice(0, 10), origem: it.id, link: r.link });
+  fs.writeFileSync(regArq, JSON.stringify(reg, null, 2) + '\n', 'utf8');
   fs.appendFileSync(path.join(L.REL, 'publicacao-log.md'), `- ${new Date().toISOString()} TESTE PRIVADO ${it.id} → ${r.link} (${r.privacidade})\n`);
 })().catch((e) => { console.error('ERRO:', e.message); process.exit(2); });

@@ -64,6 +64,13 @@ const admin = { headers: { Authorization: `Bearer ${process.env.ADMIN_TOKEN}` } 
     }
   } catch (e) { falhas.push(`trava B: não consegui conferir (${e.message})`); }
 
+  // Autorização do YouTube: o app do Google em modo "Testando" vence 7 dias depois de autorizar (autorizada em 16/10/2026 → vence em 23/10/2026)
+  try {
+    const au = await require('./youtube/avisoAutorizacao').conferir();
+    linhas.push(`- Autorização do YouTube: autorizada em ${au.autorizadoEm || '—'} (app: ${au.modo || '—'}) · ${au.venceEm ? `vence em ${au.venceEm} (${au.dias} dia(s))` : 'app publicado: não vence em 7 dias'}`);
+    if (au.problema) falhas.push(`YouTube: ${au.problema} (passo a passo em relatorios/youtube/AVISO-REAUTORIZAR.md)`);
+  } catch (e) { linhas.push(`- Autorização do YouTube: não consegui conferir (${e.message.slice(0, 60)})`); }
+
   const hoje = new Date().toISOString().slice(0, 10);
   const md = `# Conferência pós-renovação do token — ${hoje}\n\n**Resultado: ${falhas.length ? 'ATENÇÃO' : 'OK, renovação funcionou'}**\n\n${linhas.join('\n')}\n\n${falhas.length ? '## Problemas\n' + falhas.map((x) => `- ${x}`).join('\n') + '\n' : ''}`;
   const arq = path.join(__dirname, '..', 'relatorios', `conferencia-renovacao-${hoje.replace(/-/g, '')}.md`);

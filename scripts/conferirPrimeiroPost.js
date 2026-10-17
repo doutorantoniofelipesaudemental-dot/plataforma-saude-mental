@@ -45,6 +45,15 @@ const { obterTokenInstagram } = require('../backend/lib/tokenInstagram');
   for (const e of erros) falhas.push(`log ${e.nivel} (${new Date(e.em).toISOString()}): ${String(e.mensagem).slice(0, 160)}`);
   linhas.push(`- Erros/bloqueios no log: ${erros.length}`);
 
+  if (!/Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito/.test(legenda)) falhas.push('legenda sem a linha de crédito do Portal');
+
+  // Autorização do YouTube (app em modo "Testando" vence 7 dias depois de autorizar; autorizada em 16/10/2026 → vence em 23/10/2026)
+  try {
+    const au = await require('./youtube/avisoAutorizacao').conferir();
+    linhas.push(`- Autorização do YouTube: autorizada em ${au.autorizadoEm || '—'} (app: ${au.modo || '—'}) · ${au.venceEm ? `vence em ${au.venceEm} (${au.dias} dia(s))` : 'app publicado: não vence em 7 dias'}`);
+    if (au.problema) falhas.push(`YouTube: ${au.problema} (passo a passo em relatorios/youtube/AVISO-REAUTORIZAR.md)`);
+  } catch (e) { linhas.push(`- Autorização do YouTube: não consegui conferir (${e.message.slice(0, 60)})`); }
+
   const hoje = new Date().toISOString().slice(0, 10);
   const md = `# Conferência do primeiro post — ${hoje}\n\n**Resultado: ${falhas.length ? 'ATENÇÃO' : publicado ? 'PUBLICADO e conferido' : 'NÃO PUBLICADO'}**\n\n${linhas.join('\n')}\n\n${falhas.length ? '## Problemas\n' + falhas.map((x) => `- ${x}`).join('\n') + '\n' : ''}`;
   const arq = path.join(__dirname, '..', 'relatorios', `conferencia-primeiro-post-${hoje.replace(/-/g, '')}.md`);
