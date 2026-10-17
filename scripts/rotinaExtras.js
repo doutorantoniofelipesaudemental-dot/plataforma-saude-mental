@@ -46,6 +46,17 @@ function passoYoutube({ sec, problemas }) {
   } catch { sec.push('## 8. YouTube\n- fila não encontrada'); }
 }
 
+/** YouTube: validade da autorização (app em modo "Testando" vence em 7 dias). A rotina é semanal, então avisa já quando vence antes da próxima. */
+async function passoAutorizacaoYoutube({ sec, problemas }) {
+  try {
+    const au = await require('./youtube/avisoAutorizacao').conferir();
+    const quando = au.venceEm ? `vence em ${au.venceEm} (${au.dias} dia(s))` : (au.modo === 'producao' ? 'app publicado: não vence em 7 dias' : 'sem data registrada');
+    sec.push(`## 10. Autorização do YouTube\n- autorizada em ${au.autorizadoEm || '—'} · modo do app: ${au.modo || '—'} · ${quando}${au.problema ? ' · ⚠ ' + au.problema : ''}`);
+    if (au.problema) problemas.push(`YouTube: ${au.problema}. Passo a passo: relatorios/youtube/AVISO-REAUTORIZAR.md`);
+    else if (au.modo === 'testando' && au.dias !== null && au.dias <= 7) problemas.push(`YouTube: a autorização vence em ${au.venceEm} (antes da próxima rotina); reautorize ou publique o app: relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md`);
+  } catch (e) { sec.push(`## 10. Autorização do YouTube\n- não consegui conferir (${e.message.slice(0, 60)})`); }
+}
+
 /** Leitor mínimo só com o Node: descomprime os fluxos FlateDecode e junta o texto dos operadores Tj/TJ. */
 function textoDoPdf(buf) {
   const bin = buf.toString('latin1'); let texto = ''; let ini = 0;
@@ -75,4 +86,4 @@ async function passoPdfCfm({ sec }) {
   } catch (e) { sec.push(`## 9. PDF oficial da Resolução CFM 2.454/2026\n- não consegui baixar o PDF (${e.message.slice(0, 60)})`); }
 }
 
-module.exports = { passoBlob, passoVinheta, passoYoutube, passoPdfCfm, textoDoPdf, TETO_BLOB_MB };
+module.exports = { passoAutorizacaoYoutube, passoBlob, passoVinheta, passoYoutube, passoPdfCfm, textoDoPdf, TETO_BLOB_MB };
