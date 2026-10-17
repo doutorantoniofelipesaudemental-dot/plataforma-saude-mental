@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-16T23:59:13.237Z",
+ "geradoEm": "2026-10-17T00:25:48.434Z",
  "regra": "longos ter/qui/sab 18h; Shorts seg/qua/sex/sab/dom 12h (Bahia)",
  "itens": [
   {
@@ -24,7 +24,8 @@
    "duracao": 433,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -49,7 +50,8 @@
    "duracao": 45,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -73,7 +75,8 @@
    "duracao": 295,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -98,7 +101,8 @@
    "duracao": 38,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -124,7 +128,8 @@
    "duracao": 50,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -148,7 +153,8 @@
    "duracao": 304,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -173,7 +179,8 @@
    "duracao": 23,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -198,7 +205,8 @@
    "duracao": 51,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -222,7 +230,8 @@
    "duracao": 181,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -247,7 +256,8 @@
    "duracao": 45,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -271,7 +281,8 @@
    "duracao": 191,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -296,7 +307,8 @@
    "duracao": 47,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -321,7 +333,8 @@
    "duracao": 29,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -345,7 +358,8 @@
    "duracao": 178,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -371,7 +385,8 @@
    "duracao": 54,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -396,7 +411,8 @@
    "duracao": 43,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -420,7 +436,8 @@
    "duracao": 200,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -445,7 +462,8 @@
    "duracao": 28,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -469,7 +487,8 @@
    "duracao": 189,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -494,7 +513,8 @@
    "duracao": 30,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -519,7 +539,8 @@
    "duracao": 45,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -543,7 +564,8 @@
    "duracao": 197,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -569,7 +591,8 @@
    "duracao": 45,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -594,7 +617,8 @@
    "duracao": 40,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -618,7 +642,8 @@
    "duracao": 186,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -643,7 +668,8 @@
    "duracao": 24,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -670,7 +696,8 @@
    "duracao": 371,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -695,7 +722,8 @@
    "duracao": 44,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -720,7 +748,8 @@
    "duracao": 42,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -744,7 +773,8 @@
    "duracao": 182,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -770,7 +800,8 @@
    "duracao": 46,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -794,7 +825,8 @@
    "duracao": 171,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -819,7 +851,8 @@
    "duracao": 24,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -843,7 +876,8 @@
    "duracao": 182,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -868,7 +902,8 @@
    "duracao": 44,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -893,7 +928,8 @@
    "duracao": 53,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -917,7 +953,8 @@
    "duracao": 193,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -942,7 +979,8 @@
    "duracao": 38,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -967,7 +1005,8 @@
    "duracao": 23,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -991,7 +1030,8 @@
    "duracao": 209,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1017,7 +1057,8 @@
    "duracao": 47,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1044,7 +1085,8 @@
    "duracao": 312,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1283,7 +1325,8 @@
    "duracao": 346,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1682,7 +1725,8 @@
    "duracao": 36,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1717,7 +1761,8 @@
    "duracao": 31,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1742,7 +1787,8 @@
    "duracao": 31,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1777,7 +1823,8 @@
    "duracao": 36,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1812,7 +1859,8 @@
    "duracao": 35,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1837,7 +1885,8 @@
    "duracao": 39,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   },
@@ -1872,7 +1921,8 @@
    "duracao": 34,
    "checagem": {
     "texto": [],
-    "midia": []
+    "midia": [],
+    "video": []
    },
    "status": "aprovado-checagem"
   }

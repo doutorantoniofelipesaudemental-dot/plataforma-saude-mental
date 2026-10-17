@@ -160,7 +160,12 @@ function passoNarracao() {
   await passoTokenFreio();
   await passoFila();
   const nar = passoNarracao();
+  const extras = require('./rotinaExtras'); // 6 Blob · 7 vinheta · 8 YouTube · 9 PDF da Resolução CFM
+  await extras.passoBlob({ sec, problemas });
+  await extras.passoVinheta({ sec, problemas }, col);
+  extras.passoYoutube({ sec, problemas });
   await mongoose.disconnect();
+  await extras.passoPdfCfm({ sec, problemas });
 
   const veredito = problemas.length ? `ATENÇÃO (${problemas.length} problema(s))` : 'TUDO OK';
   const md = `# Rotina semanal — ${carimbo.slice(6)}/${carimbo.slice(4, 6)}/${carimbo.slice(0, 4)}\n\n**Resultado: ${veredito}**\n${problemas.length ? '\n' + problemas.map((x) => `- ⚠ ${x}`).join('\n') + '\n' : ''}\n${sec.join('\n\n')}\n`;

@@ -31,7 +31,9 @@ const LIMITE_CARACTERES = 56000; // ~68 min seria demais; o envio aceita até ~4
     console.log(JSON.stringify({ total: docs.length, estados, faltam: pend.length, agendadosComMp3PreGerado: preGer }));
   } else {
     const pub = pend.filter((d) => d.publicado).sort((a, b) => (b.visualizacoes || 0) - (a.visualizacoes || 0));
-    const agend = pend.filter((d) => !d.publicado).sort((a, b) => new Date(a.publicadoEm || 0) - new Date(b.publicadoEm || 0));
+    // agendados: pela data de publicação (slot do agendamento; senão publicadoEm) — nenhum texto pode publicar sem áudio, os dos próximos dias vêm primeiro
+    const dataPub = (d) => new Date((d.agendamento && d.agendamento.slot) || d.publicadoEm || '2099-01-01').getTime();
+    const agend = pend.filter((d) => !d.publicado).sort((a, b) => dataPub(a) - dataPub(b));
     const pular = process.argv.includes('--pre-gerar') ? preGerado : () => false;
     const lote = [...pub, ...agend].filter((d) => !pular(d) && textoParaNarracao(d).length * 1 <= LIMITE_CARACTERES).slice(0, n);
     console.log(lote.map((d) => d.slug).join(','));
