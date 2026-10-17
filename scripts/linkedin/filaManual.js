@@ -131,6 +131,13 @@ async function marcar(db, id, data) {
   console.log(`marcado como publicado à mão: ${id}`);
 }
 
+/** Marca como agendado no agendador NATIVO do LinkedIn (sai da fila manual; o lembrete das 19:25 deixa de avisar). */
+async function agendado(db, id, data) {
+  const r = await db.collection('linkedin_fila').updateOne({ _id: id, status: { $in: ABERTOS } }, { $set: { status: 'agendado-linkedin', agendadoLinkedinEm: data || agoraBahia(), atualizadoEm: new Date() } });
+  if (!r.matchedCount) throw new Error(`item "${id}" não encontrado ou já marcado`);
+  console.log(`marcado como agendado no LinkedIn (agendador nativo): ${id}`);
+}
+
 (async () => {
   const [cmd, ...args] = process.argv.slice(2);
   if (!['hoje', 'estado', 'marcar', 'agendado'].includes(cmd)) { console.error('uso: filaManual.js hoje|estado|marcar <id>|agendado <id>'); process.exit(2); }
