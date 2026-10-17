@@ -38,7 +38,12 @@ function decodificaSemErro(arq) {
     const d = await col.findOne({ slug });
     if (!d || !fs.existsSync(arq)) { rel.reprovados.push(`${slug}: sem documento ou sem mp3`); continue; }
     const texto = textoParaNarracao(d);
-    const bytes = fs.statSync(arq).size, seg = duracao(arq), esperado = texto.length / CPS, razao = seg / esperado;
+    // Estimativa de duração (ajustada em 17/10/2026): fala do texto (caracteres ÷ CPS) + a vinheta, quando o MP3 a traz (abertura + encerramento + pausas)
+    // + 0,3 s por dígito (listas de telefones e números são lidos devagar). Antes, a vinheta (~33 s) inflava a razão e barrava áudio bom.
+    const vinhetaLib = require('../lib/vinheta');
+    let extra = 0.3 * (texto.match(/\d/g) || []).length;
+    if (fs.existsSync(path.join(PASTA, `${slug}.vinheta`))) { const v = vinhetaLib.garantirVinhetas(); extra += vinhetaLib.duracao(v.abertura) + vinhetaLib.duracao(vinhetaLib.temaSensivel(d) ? v.encerramentoSensivel : v.encerramento) + 1.4; }
+    const bytes = fs.statSync(arq).size, seg = duracao(arq), esperado = texto.length / CPS + extra, razao = seg / esperado;
     const dec = decodificaSemErro(arq);
     const motivos = [];
     if (!(razao >= FAIXA[0] && razao <= FAIXA[1])) motivos.push(`duração ${seg.toFixed(0)} s vs ~${esperado.toFixed(0)} s esperados (razão ${razao.toFixed(2)})`);

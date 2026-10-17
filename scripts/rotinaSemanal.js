@@ -167,7 +167,9 @@ function passoNarracao() {
   await extras.passoAutorizacaoYoutube({ sec, problemas });
   extras.passoLinkedinManual({ sec, problemas }); // fila manual do LinkedIn (perfil pessoal)
   // 11. Tarefas do Windows: última execução, resultado e se o PC estava ligado (grava relatorios/tarefas-estado.md e o bloco do ESTADO-GERAL.md)
-  try { const tar = require('./rotinaTarefas').gravar(); sec.push(`## 11. Tarefas do Windows\n${tar.md.replace(/^### .*\n/, '')}`); problemas.push(...tar.problemas); } catch (e) { sec.push(`## 11. Tarefas do Windows\n- não consegui conferir (${e.message.slice(0, 60)})`); }
+  let tarRes = null;
+  try { const tar = require('./rotinaTarefas').gravar(); tarRes = tar; sec.push(`## 11. Tarefas do Windows\n${tar.md.replace(/^### .*\n/, '')}`); problemas.push(...tar.problemas); } catch (e) { sec.push(`## 11. Tarefas do Windows\n- não consegui conferir (${e.message.slice(0, 60)})`); }
+  await extras.passoAtrasos({ sec, problemas }, col, tarRes); // interrupções do PC: perdido × recuperado, e o que está atrasado
   await mongoose.disconnect();
   await extras.passoPdfCfm({ sec, problemas });
 

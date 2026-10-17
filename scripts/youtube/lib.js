@@ -172,6 +172,9 @@ function capitulos(a, dur) {
   return bons.length >= 3 ? bons : [];
 }
 
+/** Link do perfil do LinkedIn (variável única LINKEDIN_PERFIL_URL em config/marca.json): só entra quando o endereço for o personalizado (sem "undefined"). */
+function linhaLinkedin() { const m = require('../../backend/lib/marca').marca(); return m.LINKEDIN_PERFIL_LIMPO ? [`LinkedIn: ${m.LINKEDIN_PERFIL_URL}`] : []; }
+
 function descricaoLongo(a, dur) {
   const caps = capitulos(a, dur);
   const refs = referencias(a.conteudo).slice(0, 4);
@@ -183,13 +186,13 @@ function descricaoLongo(a, dur) {
   if (caps.length) L.push('', 'Capítulos:', ...caps.map((c) => `${mmss(c.t)} ${c.nome}`));
   if (refs.length) L.push('', 'Principais referências:', ...refs.map((r, i) => `${i + 1}. ${r}`));
   L.push('', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
-    `Mentoria para profissionais da APS e consultoria para empresas: ${SITE}/mentoria`, `Todos os links: ${SITE}/links`);
+    `Mentoria para profissionais da APS e consultoria para empresas: ${SITE}/mentoria`, `Todos os links: ${SITE}/links`, ...linhaLinkedin());
   return L.join('\n').replace(/[<>]/g, '');
 }
 
 function descricaoShort(a, extra = '') {
   return [vinheta.TEXTOS.curta.replace(/\.$/, ''), SITE, '', semTags(a.resumo || a.titulo), '', `Texto completo no site: ${SITE}/artigo/${a.slug}`, extra, '', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
-    `Mentoria e consultoria: ${SITE}/mentoria`, '#saudemental #cuidado'].filter((x, i, arr) => !(x === '' && arr[i - 1] === '')).join('\n').replace(/[<>]/g, '');
+    `Mentoria e consultoria: ${SITE}/mentoria`, ...linhaLinkedin(), '#saudemental #cuidado'].filter((x, i, arr) => !(x === '' && arr[i - 1] === '')).join('\n').replace(/[<>]/g, '');
 }
 
 /** Frases e legenda .srt a partir do texto narrado (tempo proporcional ao tamanho; no YouTube Studio use "Sincronizar automaticamente"). */

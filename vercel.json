@@ -102,6 +102,10 @@
       "dest": "/public/mentoria.html"
     },
     {
+      "src": "/linkedin/?",
+      "dest": "/public/linkedin.html"
+    },
+    {
       "src": "/redes/previa/?",
       "dest": "/backend/index.js"
     },

@@ -68,6 +68,37 @@ function passoLinkedinManual({ sec, problemas }) {
   else if (atrasados > 0) problemas.push(`LinkedIn: ${atrasados} post(s) da fila manual com a data vencida e sem marcar como publicado (relatorios/linkedin/FILA-MANUAL.md)`);
 }
 
+/**
+ * Interrupções do PC (17/10/2026): resumo do que ficou para trás e do que a tarefa seguinte recuperou ao religar.
+ * `tar` = resultado de rotinaTarefas.conferir(). Textos do site, vídeos do YouTube e posts do LinkedIn com data vencida são listados.
+ */
+async function passoAtrasos({ sec, problemas }, col, tar) {
+  const linhas = [];
+  const tarefas = (tar && tar.tarefas) || [];
+  const perdidas = tarefas.filter((t) => t.perdidas > 0);
+  const recuperadas = tarefas.filter((t) => t.ultima && t.perdidas === 0 && /rodou \d+ min depois/.test(String((tar.md.split('\n').find((l) => l.startsWith(`| ${t.nome} `)) || ''))));
+  linhas.push(`- Tarefas com horário PERDIDO (PC desligado e sem recuperar): ${perdidas.length ? perdidas.map((t) => `${t.nome} (${t.perdidas})`).join(', ') : 'nenhuma'}`);
+  linhas.push(`- Tarefas RECUPERADAS ao religar (rodaram atrasadas, "assim que possível"): ${recuperadas.length ? recuperadas.map((t) => t.nome).join(', ') : 'nenhuma'}`);
+  if (tar && tar.energia) linhas.push(`- Reinícios/quedas do PC nos últimos 7 dias: ${tar.energia.desligamentos} · suspensões: ${tar.energia.suspensoes}`);
+  const agora = new Date();
+  // textos do site: data vencida e ainda não publicados (o cron diário das 11:00 UTC recupera na execução seguinte)
+  const atrasadosSite = await col.find({ publicado: false, 'agendamento.agendado': true, 'agendamento.slot': { $lt: new Date(agora.getTime() - 3600e3) } }).project({ slug: 1, 'agendamento.slot': 1 }).sort({ 'agendamento.slot': 1 }).toArray();
+  linhas.push(`- Textos do site com data vencida e ainda não publicados: ${atrasadosSite.length ? `${atrasadosSite.length} (${atrasadosSite.slice(0, 5).map((d) => d.slug).join(', ')}); o cron das 11:00 UTC publica na próxima execução` : 'nenhum'}`);
+  if (atrasadosSite.length) problemas.push(`${atrasadosSite.length} texto(s) do site com data vencida e ainda não publicados (cron diário atrasado?)`);
+  // vídeos do YouTube: data vencida e não publicados nem enviados à mão (a fila manual segue valendo)
+  let atrasadosYt = 0;
+  try { const f = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios/youtube/fila.json'), 'utf8')).itens; atrasadosYt = f.filter((i) => i.status === 'aprovado-checagem' && new Date(i.slot) < agora).length; } catch { /* sem fila */ }
+  linhas.push(`- Vídeos do YouTube com data vencida e ainda não publicados: ${atrasadosYt}${atrasadosYt ? ' (publicar à mão pela pasta fila-manual enquanto o publicador estiver desligado)' : ''}`);
+  if (atrasadosYt) problemas.push(`${atrasadosYt} vídeo(s) do YouTube com data vencida e sem publicar`);
+  // lembretes/posts do LinkedIn: data vencida sem marcar como publicado/agendado
+  try {
+    const li = await col.db.collection('linkedin_fila').find({ status: { $in: ['aprovado-checagem', 'manual'] }, slot: { $lt: new Date(agora.getTime() - 3600e3).toISOString() } }).project({ id: 1 }).toArray();
+    linhas.push(`- Posts do LinkedIn com data vencida e sem marcar como publicados/agendados: ${li.length}${li.length ? ` (${li.slice(0, 5).map((x) => x.id).join(', ')})` : ''}`);
+    if (li.length) problemas.push(`${li.length} post(s) do LinkedIn com data vencida e sem marcar (relatorios/linkedin/FILA-MANUAL.md)`);
+  } catch { /* sem fila */ }
+  sec.push(`## 13. Interrupções do PC: o que ficou para trás e o que foi recuperado\n${linhas.join('\n')}\n- A tarefa seguinte recupera sozinha o que ficou para trás: as tarefas do Windows usam "rodar assim que possível" e o ciclo de narração recomeça pelo que estava pronto.`);
+}
+
 /** Leitor mínimo só com o Node: descomprime os fluxos FlateDecode e junta o texto dos operadores Tj/TJ. */
 function textoDoPdf(buf) {
   const bin = buf.toString('latin1'); let texto = ''; let ini = 0;
@@ -97,4 +128,4 @@ async function passoPdfCfm({ sec }) {
   } catch (e) { sec.push(`## 9. PDF oficial da Resolução CFM 2.454/2026\n- não consegui baixar o PDF (${e.message.slice(0, 60)})`); }
 }
 
-module.exports = { passoLinkedinManual, passoAutorizacaoYoutube, passoBlob, passoVinheta, passoYoutube, passoPdfCfm, textoDoPdf, TETO_BLOB_MB };
+module.exports = { passoAtrasos, passoLinkedinManual, passoAutorizacaoYoutube, passoBlob, passoVinheta, passoYoutube, passoPdfCfm, textoDoPdf, TETO_BLOB_MB };

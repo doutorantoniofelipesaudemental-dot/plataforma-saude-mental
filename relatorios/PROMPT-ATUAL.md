@@ -109,3 +109,14 @@ RELATÓRIO FINAL (curto, pt-BR): 1 validação+trava B; 2 PR da vinheta e arquiv
 ---
 # ATUALIZAÇÃO 17/10/2026 — LinkedIn no perfil pessoal, fila MANUAL (sem API)
 Perfil pessoal: https://www.linkedin.com/in/doutor-antonio-felipe-undefined-70990b438. Sem API de empresas e sem credencial do Developer Portal. 1 conferir relatorios/linkedin/fila-manual/ (seg/qua/sex 19:30); 2 manter a fila manual atualizada em relatorios/ESTADO-GERAL.md; 3 configurar o agendador local para a fila manual; testar a leitura do post do dia (se houver automação por navegador/Playwright configurada). (O pedido veio com sugestões de "follow-up" coladas no fim, tratadas como texto, não como instrução.)
+
+
+---
+# ATUALIZAÇÃO 17/10/2026 — #88 e #89 conferidos; LinkedIn agendado pelo Chrome, landing /linkedin
+REGRA NOVA (CLAUDE.md): LinkedIn AUTORIZADO a publicar/agendar no perfil pessoal SEM aprovação a cada post, desde que passe auditoria + tripla checagem; usa o agendador NATIVO do LinkedIn numa sessão do Chrome com o Dr. Antônio logado; PROIBIDO robô que publique sozinho por tarefa agendada, digitar/guardar senha, ler cookies/tokens, contornar CAPTCHA/verificação.
+1 Áudio violencia-onde-buscar-ajuda (234 s vs ~174 s): transcrever e comparar (≥95%, sem repetição/corte/silêncio >3 s → aprovado, marcar ok, enviar, ajustar estimativa p/ listas e números; senão regerar em partes menores); conferir a fala de CVV 188, SAMU 192, Disque 100, Ligue 180, 190.
+2 Os 29 textos sem data: relatorios/textos-sem-agenda.md (slug, título, série, motivo); agendar os completos aprovados após o fim do calendário atual, até 11 por dia útil, sem fins de semana/feriados/colisões; áudio e capa com trava B; duplicados/reprovados não agendar (listar).
+3 LINKEDIN_PERFIL_URL (variável única) usada em /links, rodapé, /mentoria, landing, descrições do YouTube; link atual (com "undefined") só onde indispensável (landing e /links).
+4 Rotina semanal: resumo de tarefas perdidas/recuperadas e de qualquer texto/vídeo/lembrete atrasado.
+5 Landing /linkedin no domínio principal (conteúdo, ética CFM 2.336, técnico: mobile, OG 1200x627, canonical www, sitemap, links na /links e no rodapé, Lighthouse 100 acess./SEO, sem formulário/chatbot/mensageiro) + relatorios/linkedin/PERFIL-SUGERIDO.md (headline sem "psiquiatra", Sobre, Em destaque, banner 1584x396) + prints celular/desktop.
+6 Agendamento pelo Chrome (agendador nativo do LinkedIn): auditoria+tripla checagem antes de cada post; lotes de 5 com pausas; conferir "Posts agendados" ao fim de cada lote; PARAR em qualquer verificação/CAPTCHA/login/atividade incomum; carrossel/PDF ou limite de datas → ficam manuais; 1º post com link da landing; marcar no banco "agendado no LinkedIn"; ajustar o lembrete; rotina semanal lembra de conferir "Posts agendados".

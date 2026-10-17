@@ -182,6 +182,7 @@ app.get('/sitemap-paginas.xml', (req, res) => {
 });
 
 app.get('/mentoria', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'mentoria.html')));
+app.get('/linkedin', (req, res) => res.sendFile(path.join(PUBLIC_DIR, 'linkedin.html')));
 
 app.get('/sitemap-index.xml', async (req, res) => {
   if (!db.isConfigured()) return res.status(503).send('Sitemap indisponível: banco não configurado.');
