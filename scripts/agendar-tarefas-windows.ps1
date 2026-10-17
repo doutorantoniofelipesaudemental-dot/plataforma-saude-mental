@@ -19,6 +19,8 @@ $tarefas = @(
   @{ Nome = 'DrSM-YouTube-Gera-Midia';  Args = 'scripts/youtube/montarFila.js --aplicar --gerar --limite=25'; Gatilho = (New-ScheduledTaskTrigger -Daily -At 23:30); Horas = 5 },
   @{ Nome = 'DrSM-YouTube-Publica';     Args = 'scripts/youtube/publicarYoutube.js';                Gatilho = (New-ScheduledTaskTrigger -Daily -At 12:30); Horas = 1 },
   @{ Nome = 'DrSM-Conferencia-19-10';   Args = 'scripts/conferirPosRenovacao.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-19 19:30'); Horas = 1 },
+  # Lembrete do LinkedIn (fila MANUAL, perfil pessoal): 19:25 seg/qua/sex; precisa da SUA sessão para abrir o Bloco de Notas (por isso não é S4U)
+  @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
   @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/conferirPrimeiroPost.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
@@ -31,6 +33,13 @@ foreach ($t in $tarefas) {
   $descr = 'Portal Dr. Antônio Felipe (sem Claude)'
   # 1ª tentativa: "executar mesmo sem o usuário conectado" sem guardar senha (S4U); se o Windows recusar sem administrador, usa a sessão do usuário (continua oculta)
   $modo = 'S4U (roda mesmo com o usuário desconectado, sem janela)'
+  if ($t.Interativa) {
+    # lembrete que abre o Bloco de Notas na sua tela: precisa da sessão do usuário (S4U não tem tela); não exige rede
+    $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew
+    Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger $t.Gatilho -Settings $conf -Description $descr -Force | Out-Null
+    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · limite $($t.Horas) h · sessão do usuário (abre o Bloco de Notas na sua tela)"
+    continue
+  }
   try {
     $princ = New-ScheduledTaskPrincipal -UserId $usuario -LogonType S4U -RunLevel Limited
     Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger $t.Gatilho -Settings $conf -Principal $princ -Description $descr -Force -ErrorAction Stop | Out-Null

@@ -5,3 +5,4 @@
 - `fila-manual/semana-AAAA-MM-DD/` texto para copiar e colar (e `carrossel.pdf` nos 6 carrosséis; PDFs fora do Git em `carrosseis-instagram/linkedin/`).
 - `newsletters/` 3 edições (16/11, 14/12, 18/01) para publicar à mão.
 - Publicação: cron `/api/cron/publicar-linkedin` (seg/qua/sex 22:30 UTC) com freio `LINKEDIN_PUBLICACAO_ATIVA`. Guia: `PASSO-A-PASSO-LINKEDIN.md`.
+- **Fila manual (decisão de 17/10/2026):** perfil pessoal, sem API. `FILA-MANUAL.md` (calendário e situação), `POST-DE-HOJE.md` (gerado às 19:25 por `DrSM-LinkedIn-Lembrete`), `npm run linkedin:hoje | linkedin:marcar | linkedin:fila`. O cron da Vercel e o passo a passo da API ficam arquivados (freio desligado).

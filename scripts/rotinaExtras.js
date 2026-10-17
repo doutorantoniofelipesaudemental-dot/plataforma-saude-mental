@@ -57,6 +57,17 @@ async function passoAutorizacaoYoutube({ sec, problemas }) {
   } catch (e) { sec.push(`## 10. Autorização do YouTube\n- não consegui conferir (${e.message.slice(0, 60)})`); }
 }
 
+/** LinkedIn: fila MANUAL do perfil pessoal (sem API). Atualiza FILA-MANUAL.md e o bloco do ESTADO-GERAL.md; avisa se houver post atrasado. */
+function passoLinkedinManual({ sec, problemas }) {
+  const { spawnSync } = require('node:child_process');
+  const r = spawnSync(process.execPath, ['--env-file=.env', 'scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 90000 });
+  const linha = String(r.stdout || '').trim().split('\n').pop() || 'não consegui ler a fila manual';
+  sec.push(`## 12. LinkedIn — fila manual (perfil pessoal, seg/qua/sex 19:30)\n- ${linha}`);
+  const atrasados = Number((linha.match(/atrasados (\d+)/) || [])[1] || 0);
+  if (r.status !== 0) problemas.push(`fila manual do LinkedIn: não consegui atualizar (${String(r.stderr || '').trim().slice(0, 80)})`);
+  else if (atrasados > 0) problemas.push(`LinkedIn: ${atrasados} post(s) da fila manual com a data vencida e sem marcar como publicado (relatorios/linkedin/FILA-MANUAL.md)`);
+}
+
 /** Leitor mínimo só com o Node: descomprime os fluxos FlateDecode e junta o texto dos operadores Tj/TJ. */
 function textoDoPdf(buf) {
   const bin = buf.toString('latin1'); let texto = ''; let ini = 0;
@@ -86,4 +97,4 @@ async function passoPdfCfm({ sec }) {
   } catch (e) { sec.push(`## 9. PDF oficial da Resolução CFM 2.454/2026\n- não consegui baixar o PDF (${e.message.slice(0, 60)})`); }
 }
 
-module.exports = { passoAutorizacaoYoutube, passoBlob, passoVinheta, passoYoutube, passoPdfCfm, textoDoPdf, TETO_BLOB_MB };
+module.exports = { passoLinkedinManual, passoAutorizacaoYoutube, passoBlob, passoVinheta, passoYoutube, passoPdfCfm, textoDoPdf, TETO_BLOB_MB };

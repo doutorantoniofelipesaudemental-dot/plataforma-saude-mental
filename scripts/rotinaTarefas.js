@@ -16,6 +16,7 @@ const HORARIOS = {
   'DrSM-Narracao-Noite': { h: 22, m: 0 },
   'DrSM-YouTube-Gera-Midia': { h: 23, m: 30 },
   'DrSM-YouTube-Publica': { h: 12, m: 30 },
+  'DrSM-LinkedIn-Lembrete': { h: 19, m: 25, dows: [1, 3, 5] },
   'DrSM-Conferencia-19-10': { uma: '2026-10-19T19:30:00' },
   'DrSM-Conferencia-26-10': { uma: '2026-10-26T19:30:00' },
 };
@@ -43,6 +44,7 @@ function horarioEsperado(nome, ate) {
   const d = new Date(ate); d.setHours(c.h, c.m, 0, 0);
   if (d > ate) d.setDate(d.getDate() - 1);
   if (c.dow != null) while (d.getDay() !== c.dow) d.setDate(d.getDate() - 1);
+  if (c.dows) while (!c.dows.includes(d.getDay())) d.setDate(d.getDate() - 1);
   return d;
 }
 

@@ -1,6 +1,6 @@
 {
- "geradoEm": "2026-10-15T20:46:55.016Z",
- "regra": "seg/qua/sex 19:30 (Bahia), 27/10/2026 a 31/01/2027; mistura 60/25/15",
+ "geradoEm": "2026-10-17T03:08:30.943Z",
+ "regra": "seg/qua/sex 19:30 (Bahia), publicação MANUAL no perfil pessoal (sem API)",
  "itens": [
   {
    "id": "li-2026-10-28",
@@ -12,7 +12,8 @@
    "slug": "saude-mental-residencia",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1598
+   "atualizadoEm": "2026-10-15T20:46:52.111Z",
+   "caracteres": 1665
   },
   {
    "id": "li-2026-10-30",
@@ -24,7 +25,8 @@
    "slug": "burnout-na-gestao-fatores-de-risco",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1668
+   "atualizadoEm": "2026-10-15T20:46:52.188Z",
+   "caracteres": 1735
   },
   {
    "id": "li-2026-11-02",
@@ -36,7 +38,8 @@
    "slug": "quando-encaminhar-aps",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1564
+   "atualizadoEm": "2026-10-15T20:46:52.264Z",
+   "caracteres": 1631
   },
   {
    "id": "li-2026-11-04",
@@ -46,7 +49,8 @@
    "titulo": "Por que todo texto do portal tem áudio",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1402
+   "atualizadoEm": "2026-10-15T20:46:52.340Z",
+   "caracteres": 1469
   },
   {
    "id": "li-2026-11-06-carrossel",
@@ -58,7 +62,8 @@
    "checagem": [],
    "status": "manual",
    "pdf": "carrosseis-instagram/linkedin/nr1-primeiros-passos/carrossel.pdf",
-   "caracteres": 819
+   "atualizadoEm": "2026-10-15T20:46:52.411Z",
+   "caracteres": 886
   },
   {
    "id": "li-2026-11-09",
@@ -70,7 +75,8 @@
    "slug": "jogos-online-consulta-medicos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1477
+   "atualizadoEm": "2026-10-15T20:46:52.482Z",
+   "caracteres": 1544
   },
   {
    "id": "li-2026-11-11",
@@ -82,7 +88,8 @@
    "slug": "saude-mental-pilar-de-performance-liderancas",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1759
+   "atualizadoEm": "2026-10-15T20:46:52.559Z",
+   "caracteres": 1826
   },
   {
    "id": "li-2026-11-13",
@@ -94,7 +101,8 @@
    "slug": "primeiro-episodio-psicotico",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1524
+   "atualizadoEm": "2026-10-15T20:46:52.630Z",
+   "caracteres": 1591
   },
   {
    "id": "li-2026-11-16",
@@ -106,7 +114,8 @@
    "slug": "contencao-mecanica-pa",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1644
+   "atualizadoEm": "2026-10-15T20:46:52.700Z",
+   "caracteres": 1711
   },
   {
    "id": "li-2026-11-18",
@@ -116,7 +125,8 @@
    "titulo": "Como as referências dos textos são conferidas",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1361
+   "atualizadoEm": "2026-10-15T20:46:52.774Z",
+   "caracteres": 1428
   },
   {
    "id": "li-2026-11-20",
@@ -128,7 +138,8 @@
    "slug": "intoxicacao-agitacao-pa",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1510
+   "atualizadoEm": "2026-10-15T20:46:52.844Z",
+   "caracteres": 1577
   },
   {
    "id": "li-2026-11-23-carrossel",
@@ -140,7 +151,8 @@
    "checagem": [],
    "status": "manual",
    "pdf": "carrosseis-instagram/linkedin/nr1-pratica-clinica/carrossel.pdf",
-   "caracteres": 820
+   "atualizadoEm": "2026-10-15T20:46:52.915Z",
+   "caracteres": 887
   },
   {
    "id": "li-2026-11-25",
@@ -152,7 +164,8 @@
    "slug": "alta-pa-psiquiatrico",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1553
+   "atualizadoEm": "2026-10-15T20:46:52.985Z",
+   "caracteres": 1620
   },
   {
    "id": "li-2026-11-27",
@@ -164,7 +177,8 @@
    "slug": "matriciamento-saude-mental",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1566
+   "atualizadoEm": "2026-10-15T20:46:53.055Z",
+   "caracteres": 1633
   },
   {
    "id": "li-2026-11-30",
@@ -176,7 +190,8 @@
    "slug": "ansiedade-corporativa-sintomas-tratamento",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1749
+   "atualizadoEm": "2026-10-15T20:46:53.125Z",
+   "caracteres": 1816
   },
   {
    "id": "li-2026-12-02",
@@ -188,7 +203,8 @@
    "slug": "grupos-terapeuticos-aps",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1474
+   "atualizadoEm": "2026-10-15T20:46:53.196Z",
+   "caracteres": 1541
   },
   {
    "id": "li-2026-12-04",
@@ -198,7 +214,8 @@
    "titulo": "\"Narrativa composta\": o que significa",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1317
+   "atualizadoEm": "2026-10-15T20:46:53.266Z",
+   "caracteres": 1384
   },
   {
    "id": "li-2026-12-07",
@@ -210,7 +227,8 @@
    "slug": "tempo-tela-consulta-medicos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1319
+   "atualizadoEm": "2026-10-15T20:46:53.336Z",
+   "caracteres": 1386
   },
   {
    "id": "li-2026-12-09-carrossel",
@@ -222,7 +240,8 @@
    "checagem": [],
    "status": "manual",
    "pdf": "carrosseis-instagram/linkedin/burnout-aps/carrossel.pdf",
-   "caracteres": 792
+   "atualizadoEm": "2026-10-15T20:46:53.409Z",
+   "caracteres": 859
   },
   {
    "id": "li-2026-12-11",
@@ -234,7 +253,8 @@
    "slug": "redes-sociais-consulta-medicos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1609
+   "atualizadoEm": "2026-10-15T20:46:53.483Z",
+   "caracteres": 1676
   },
   {
    "id": "li-2026-12-14",
@@ -246,7 +266,8 @@
    "slug": "alimentacao-consulta-medicos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1618
+   "atualizadoEm": "2026-10-15T20:46:53.556Z",
+   "caracteres": 1685
   },
   {
    "id": "li-2026-12-16",
@@ -258,7 +279,8 @@
    "slug": "rotina-consulta-medicos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1645
+   "atualizadoEm": "2026-10-15T20:46:53.627Z",
+   "caracteres": 1712
   },
   {
    "id": "li-2026-12-18",
@@ -270,7 +292,8 @@
    "slug": "depressao-ansiedade-produtividade",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1382
+   "atualizadoEm": "2026-10-15T20:46:53.698Z",
+   "caracteres": 1449
   },
   {
    "id": "li-2026-12-21",
@@ -282,7 +305,8 @@
    "slug": "sobrecarga-cuidador-consulta",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1409
+   "atualizadoEm": "2026-10-15T20:46:53.767Z",
+   "caracteres": 1476
   },
   {
    "id": "li-2026-12-23",
@@ -292,7 +316,8 @@
    "titulo": "Por que todo texto com conduta traz o aviso dos protocolos locais",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1346
+   "atualizadoEm": "2026-10-15T20:46:53.841Z",
+   "caracteres": 1413
   },
   {
    "id": "li-2026-12-25-carrossel",
@@ -304,7 +329,8 @@
    "checagem": [],
    "status": "manual",
    "pdf": "carrosseis-instagram/linkedin/burnout-equipes/carrossel.pdf",
-   "caracteres": 806
+   "atualizadoEm": "2026-10-15T20:46:53.911Z",
+   "caracteres": 873
   },
   {
    "id": "li-2026-12-28",
@@ -316,7 +342,8 @@
    "slug": "afastamento-transtorno-mental",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1670
+   "atualizadoEm": "2026-10-15T20:46:53.981Z",
+   "caracteres": 1737
   },
   {
    "id": "li-2026-12-30",
@@ -328,7 +355,8 @@
    "slug": "saude-mental-perinatal-consulta",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1390
+   "atualizadoEm": "2026-10-15T20:46:54.051Z",
+   "caracteres": 1457
   },
   {
    "id": "li-2027-01-01",
@@ -340,7 +368,8 @@
    "slug": "saude-mental-idoso-consulta",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1341
+   "atualizadoEm": "2026-10-15T20:46:54.124Z",
+   "caracteres": 1408
   },
   {
    "id": "li-2027-01-04",
@@ -350,7 +379,8 @@
    "titulo": "Auditoria antes de publicar: o que olhamos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1319
+   "atualizadoEm": "2026-10-15T20:46:54.196Z",
+   "caracteres": 1386
   },
   {
    "id": "li-2027-01-06",
@@ -362,7 +392,8 @@
    "slug": "jogo-patologico-rastreio",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1366
+   "atualizadoEm": "2026-10-15T20:46:54.266Z",
+   "caracteres": 1433
   },
   {
    "id": "li-2027-01-08",
@@ -374,7 +405,21 @@
    "slug": "programa-saude-mental-ocupacional",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1743
+   "atualizadoEm": "2026-10-15T20:46:54.339Z",
+   "caracteres": 1810
+  },
+  {
+   "id": "li-2027-01-11",
+   "tipo": "texto",
+   "tema": "educativo",
+   "slot": "2027-01-11T22:30:00.000Z",
+   "titulo": "Compulsão alimentar: como rastrear na consulta de rotina, sem reforçar estigma",
+   "url": "https://www.drantoniofelipemedico.com.br/artigo/compulsao-alimentar-rastreio",
+   "slug": "compulsao-alimentar-rastreio",
+   "checagem": [],
+   "status": "aprovado-checagem",
+   "atualizadoEm": "2026-10-15T20:41:22.579Z",
+   "caracteres": 1528
   },
   {
    "id": "li-2027-01-11-carrossel",
@@ -386,7 +431,8 @@
    "checagem": [],
    "status": "manual",
    "pdf": "carrosseis-instagram/linkedin/manejo-crise/carrossel.pdf",
-   "caracteres": 809
+   "atualizadoEm": "2026-10-15T20:46:54.412Z",
+   "caracteres": 876
   },
   {
    "id": "li-2027-01-13",
@@ -398,7 +444,8 @@
    "slug": "compulsao-alimentar-rastreio",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1443
+   "atualizadoEm": "2026-10-15T20:46:54.483Z",
+   "caracteres": 1510
   },
   {
    "id": "li-2027-01-15",
@@ -410,7 +457,8 @@
    "slug": "employee-assistance-program",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1503
+   "atualizadoEm": "2026-10-15T20:46:54.557Z",
+   "caracteres": 1570
   },
   {
    "id": "li-2027-01-18",
@@ -422,7 +470,8 @@
    "slug": "dependencia-quimica-rastreio-aps",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1446
+   "atualizadoEm": "2026-10-15T20:46:54.628Z",
+   "caracteres": 1513
   },
   {
    "id": "li-2027-01-20",
@@ -434,7 +483,8 @@
    "slug": "psicofarmacos-aps-medicos",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1534
+   "atualizadoEm": "2026-10-15T20:46:54.701Z",
+   "caracteres": 1601
   },
   {
    "id": "li-2027-01-22",
@@ -444,7 +494,8 @@
    "titulo": "Pronto Atendimento e Atenção Primária: etapas da mesma rede",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1353
+   "atualizadoEm": "2026-10-15T20:46:54.771Z",
+   "caracteres": 1420
   },
   {
    "id": "li-2027-01-25",
@@ -456,7 +507,21 @@
    "slug": "risco-suicidio-aps",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1665
+   "atualizadoEm": "2026-10-15T20:46:54.840Z",
+   "caracteres": 1732
+  },
+  {
+   "id": "li-2027-01-27",
+   "tipo": "texto",
+   "tema": "trabalho",
+   "slot": "2027-01-27T22:30:00.000Z",
+   "titulo": "Desligamento humanizado: reduzindo o impacto psicológico",
+   "url": "https://www.drantoniofelipemedico.com.br/artigo/desligamento-humanizado",
+   "slug": "desligamento-humanizado",
+   "checagem": [],
+   "status": "aprovado-checagem",
+   "atualizadoEm": "2026-10-15T20:41:23.115Z",
+   "caracteres": 1548
   },
   {
    "id": "li-2027-01-27-carrossel",
@@ -468,7 +533,8 @@
    "checagem": [],
    "status": "manual",
    "pdf": "carrosseis-instagram/linkedin/risco-suicidio-aps/carrossel.pdf",
-   "caracteres": 797
+   "atualizadoEm": "2026-10-15T20:46:54.909Z",
+   "caracteres": 864
   },
   {
    "id": "li-2027-01-29",
@@ -480,7 +546,8 @@
    "slug": "manejo-crise-psiquiatrica",
    "checagem": [],
    "status": "aprovado-checagem",
-   "caracteres": 1569
+   "atualizadoEm": "2026-10-15T20:46:54.979Z",
+   "caracteres": 1636
   }
  ]
 }

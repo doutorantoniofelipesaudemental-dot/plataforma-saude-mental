@@ -54,7 +54,10 @@
     "youtube:playlists": "node --env-file-if-exists=.env scripts/youtube/criarPlaylists.js",
     "linkedin:conteudo": "node --env-file-if-exists=.env scripts/linkedin/gerarConteudo.js",
     "linkedin:autorizar": "node scripts/linkedin-autorizar.js",
-    "youtube:upload-teste": "node --env-file-if-exists=.env scripts/youtube/testeUploadPrivado.js --confirmar"
+    "youtube:upload-teste": "node --env-file-if-exists=.env scripts/youtube/testeUploadPrivado.js --confirmar",
+    "linkedin:hoje": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js hoje",
+    "linkedin:marcar": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js marcar",
+    "linkedin:fila": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js estado"
   },
   "engines": {
     "node": ">=20"
