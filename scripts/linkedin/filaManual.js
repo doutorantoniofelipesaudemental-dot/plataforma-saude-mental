@@ -103,13 +103,15 @@ async function estado(db) {
   const hojeB = agoraBahia();
   const abertos = itens.filter((i) => ABERTOS.includes(i.status));
   const feitos = itens.filter((i) => i.status === 'publicado-manual');
+  const agendNoLi = itens.filter((i) => i.status === 'agendado-linkedin');
+  const ultimoAg = agendNoLi.length ? agendNoLi[agendNoLi.length - 1].dia : null;
   const atrasados = abertos.filter((i) => i.dia < hojeB);
   const prox = abertos.filter((i) => i.dia >= hojeB).slice(0, 7);
   fs.writeFileSync(path.join(REL, 'fila.json'), JSON.stringify({ geradoEm: new Date().toISOString(), regra: 'seg/qua/sex 19:30 (Bahia), publicação MANUAL no perfil pessoal (sem API)', itens: itens.map(({ texto, _id, dia, ...r }) => ({ ...r, caracteres: (texto || '').length })) }, null, 1), 'utf8');
-  const lin = (i) => `| ${DIAS[bahia(i.slot).getUTCDay()].slice(0, 3)} ${br(i.dia)} | ${i.tipo === 'carrossel' ? 'carrossel PDF' : 'texto'} | ${i.titulo} | ${i.status === 'publicado-manual' ? `✅ publicado (${i.publicadoManualEm || ''})` : i.dia < hojeB ? '⚠ atrasado' : 'aberto'} |`;
+  const lin = (i) => `| ${DIAS[bahia(i.slot).getUTCDay()].slice(0, 3)} ${br(i.dia)} | ${i.tipo === 'carrossel' ? 'carrossel PDF' : 'texto'} | ${i.titulo} | ${i.status === 'publicado-manual' ? `✅ publicado (${i.publicadoManualEm || ''})` : i.status === 'agendado-linkedin' ? `🗓 agendado no LinkedIn (${i.agendadoLinkedinEm || ''})` : i.dia < hojeB ? '⚠ atrasado' : 'aberto (manual)'} |`;
   const cal = `# Fila manual do LinkedIn — perfil pessoal\n\nPerfil: ${PERFIL}\nQuando: segunda, quarta e sexta, 19:30 (Bahia), de ${br(itens[0].dia)}/${itens[0].dia.slice(0, 4)} a ${br(itens[itens.length - 1].dia)}/${itens[itens.length - 1].dia.slice(0, 4)}. Total ${itens.length} · publicados à mão ${feitos.length} · abertos ${abertos.length} · atrasados ${atrasados.length}.\nNo dia: \`! npm run linkedin:hoje -- --copiar --abrir\` (a tarefa \`DrSM-LinkedIn-Lembrete\` faz isso sozinha às 19:25).\n\n| Dia | Tipo | Título | Situação |\n|---|---|---|---|\n${itens.map(lin).join('\n')}\n`;
   fs.writeFileSync(path.join(REL, 'FILA-MANUAL.md'), cal, 'utf8');
-  const bloco = `<!-- LINKEDIN-MANUAL:INICIO -->\n## Fila manual do LinkedIn (perfil pessoal, sem API)\n- Seg/qua/sex 19:30 (Bahia), ${br(itens[0].dia)} a ${br(itens[itens.length - 1].dia)}: **${itens.length} posts** · publicados à mão **${feitos.length}** · abertos **${abertos.length}** · atrasados **${atrasados.length}**. Perfil: ${PERFIL}\n- Próximos: ${prox.length ? prox.map((i) => `${DIAS[bahia(i.slot).getUTCDay()].slice(0, 3)} ${br(i.dia)} (${i.tipo === 'carrossel' ? 'carrossel' : 'texto'})`).join(' · ') : 'nenhum'}\n- No dia: \`! npm run linkedin:hoje -- --copiar --abrir\` · depois \`! npm run linkedin:marcar -- <id>\` · calendário completo em \`relatorios/linkedin/FILA-MANUAL.md\`. A tarefa \`DrSM-LinkedIn-Lembrete\` (seg/qua/sex 19:25) abre o post do dia.\n<!-- LINKEDIN-MANUAL:FIM -->\n`;
+  const bloco = `<!-- LINKEDIN-MANUAL:INICIO -->\n## Fila manual do LinkedIn (perfil pessoal, sem API)\n- Seg/qua/sex 19:30 (Bahia), ${br(itens[0].dia)} a ${br(itens[itens.length - 1].dia)}: **${itens.length} posts** · publicados à mão **${feitos.length}** · agendados no LinkedIn **${agendNoLi.length}**${ultimoAg ? ` (até ${br(ultimoAg)})` : ''} · abertos (manuais) **${abertos.length}** · atrasados **${atrasados.length}**. Perfil: ${PERFIL}\n- Próximos: ${prox.length ? prox.map((i) => `${DIAS[bahia(i.slot).getUTCDay()].slice(0, 3)} ${br(i.dia)} (${i.tipo === 'carrossel' ? 'carrossel' : 'texto'})`).join(' · ') : 'nenhum'}\n- No dia: \`! npm run linkedin:hoje -- --copiar --abrir\` · depois \`! npm run linkedin:marcar -- <id>\` · calendário completo em \`relatorios/linkedin/FILA-MANUAL.md\`. A tarefa \`DrSM-LinkedIn-Lembrete\` (seg/qua/sex 19:25) abre o post do dia.\n<!-- LINKEDIN-MANUAL:FIM -->\n`;
   const eg = path.join(RAIZ, 'relatorios', 'ESTADO-GERAL.md');
   if (fs.existsSync(eg)) {
     let t = fs.readFileSync(eg, 'utf8');
@@ -119,7 +121,7 @@ async function estado(db) {
     else t = `${t.trimEnd()}\n\n${bloco}`;
     fs.writeFileSync(eg, t, 'utf8');
   }
-  console.log(`fila manual: ${itens.length} itens · publicados ${feitos.length} · abertos ${abertos.length} · atrasados ${atrasados.length} · próximos: ${prox.map((i) => br(i.dia)).join(', ')}`);
+  console.log(`fila manual: ${itens.length} itens · publicados ${feitos.length} · agendados no LinkedIn ${agendNoLi.length}${ultimoAg ? ` (até ${br(ultimoAg)})` : ''} · abertos ${abertos.length} · atrasados ${atrasados.length} · próximos: ${prox.map((i) => br(i.dia)).join(', ')}`);
   return { itens, feitos, abertos, atrasados, prox };
 }
 
@@ -131,10 +133,11 @@ async function marcar(db, id, data) {
 
 (async () => {
   const [cmd, ...args] = process.argv.slice(2);
-  if (!['hoje', 'estado', 'marcar'].includes(cmd)) { console.error('uso: filaManual.js hoje|estado|marcar <id>'); process.exit(2); }
+  if (!['hoje', 'estado', 'marcar', 'agendado'].includes(cmd)) { console.error('uso: filaManual.js hoje|estado|marcar <id>|agendado <id>'); process.exit(2); }
   const db = await abrirBanco();
   if (cmd === 'hoje') await hoje(db, args);
   if (cmd === 'marcar') { await marcar(db, args[0], args[1]); await estado(db); }
+  if (cmd === 'agendado') { await agendado(db, args[0], args[1]); await estado(db); }
   if (cmd === 'estado') await estado(db);
   await mongoose.disconnect();
 })().catch((e) => { console.error('ERRO:', e.message); process.exit(2); });

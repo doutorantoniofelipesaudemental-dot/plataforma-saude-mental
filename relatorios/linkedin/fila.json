@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-17T03:51:35.416Z",
+ "geradoEm": "2026-10-17T03:55:51.878Z",
  "regra": "seg/qua/sex 19:30 (Bahia), publicação MANUAL no perfil pessoal (sem API)",
  "itens": [
   {
@@ -12,8 +12,8 @@
    "slug": "saude-mental-residencia",
    "checagem": [],
    "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.111Z",
-   "caracteres": 1665
+   "atualizadoEm": "2026-10-17T03:55:36.375Z",
+   "caracteres": 1766
   },
   {
    "id": "li-2026-10-30",
