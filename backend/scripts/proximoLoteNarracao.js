@@ -13,6 +13,9 @@ const { estadoNarracao, textoParaNarracao, hashNarracao } = require('../lib/narr
 const PASTA = path.join(__dirname, '../../narracoes-geradas');
 const preGerado = (d) => { try { return fs.existsSync(path.join(PASTA, `${d.slug}.mp3`)) && fs.readFileSync(path.join(PASTA, `${d.slug}.hash`), 'utf8').trim() === hashNarracao(textoParaNarracao(d)); } catch { return false; } };
 
+// textos que reprovaram 2x na conferência (relatorios/narracao-revisar.json) ficam fora do ciclo até alguém olhar
+const parados = (() => { try { const j = JSON.parse(fs.readFileSync(path.join(__dirname, '../../relatorios/narracao-revisar.json'), 'utf8')); return new Set(Object.keys(j).filter((k) => (j[k].tentativas || 0) >= 2)); } catch { return new Set(); } })();
+
 const n = Number((process.argv.find((a) => a.startsWith('--n=')) || '--n=50').split('=')[1]);
 const LIMITE_CARACTERES = 56000; // ~68 min seria demais; o envio aceita até ~4,4 MB (~12 min = ~9 900 caracteres de fala por MP3)
 
@@ -35,7 +38,7 @@ const LIMITE_CARACTERES = 56000; // ~68 min seria demais; o envio aceita até ~4
     const dataPub = (d) => new Date((d.agendamento && d.agendamento.slot) || d.publicadoEm || '2099-01-01').getTime();
     const agend = pend.filter((d) => !d.publicado).sort((a, b) => dataPub(a) - dataPub(b));
     const pular = process.argv.includes('--pre-gerar') ? preGerado : () => false;
-    const lote = [...pub, ...agend].filter((d) => !pular(d) && textoParaNarracao(d).length * 1 <= LIMITE_CARACTERES).slice(0, n);
+    const lote = [...pub, ...agend].filter((d) => !pular(d) && !parados.has(d.slug) && textoParaNarracao(d).length * 1 <= LIMITE_CARACTERES).slice(0, n);
     console.log(lote.map((d) => d.slug).join(','));
     console.error(`lote de ${lote.length}: ${lote.filter((d) => d.publicado).length} publicados + ${lote.filter((d) => !d.publicado).length} agendados · faltam ${pend.length} no total`);
   }

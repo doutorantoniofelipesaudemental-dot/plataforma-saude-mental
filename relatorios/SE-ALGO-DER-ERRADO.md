@@ -58,3 +58,20 @@ Notas:
 - **Freio geral (`REDES_PUBLICACAO_ATIVA=false`)**: bloqueia Instagram, LinkedIn e YouTube **no lugar onde a variável está**. Na Vercel vale para Instagram e LinkedIn; no `.env` local vale para o YouTube e para qualquer script rodado no computador.
 - Quem decide ligar o YouTube e o LinkedIn é o Dr. Antônio. Nada foi alterado nos freios nesta etapa. Não se repete a sobrescrita do freio em comando sem ordem expressa.
 - Ver o estado do freio da Vercel sem abrir o painel: `GET /api/admin/freio-redes` (Instagram/geral) e `GET /api/admin/freio-youtube` (variável do YouTube na Vercel; o publicador real lê o `.env` local).
+
+## YouTube: o freio é DUPLO (no `.env` local)
+Para o YouTube publicar são necessários **os dois ajustes ao mesmo tempo** no arquivo `C:DRSAUDEMENTAL.env` (Bloco de Notas):
+
+| Ajuste no `.env` | Valor para LIGAR | Hoje |
+|---|---|---|
+| `YOUTUBE_PUBLICACAO_ATIVA` | `true` | linha **não existe** (desligado) |
+| `REDES_PUBLICACAO_ATIVA` | `true` (ou apagar a linha) | está `false` (bloqueando) |
+
+**Para DESLIGAR basta um dos dois:** `YOUTUBE_PUBLICACAO_ATIVA=false` (ou apagar a linha) **ou** `REDES_PUBLICACAO_ATIVA=false`.
+
+Quem depende de quê (no computador):
+- `DrSM-YouTube-Publica` (12:30): precisa dos **dois**.
+- Teste de upload privado (`npm run youtube:upload-teste`) e criação das playlists: precisam só de `REDES_PUBLICACAO_ATIVA` (não olham o freio do YouTube).
+- `DrSM-YouTube-Gera-Midia` (23:30, só gera arquivos), `DrSM-Narracao-Noite`, `DrSM-Rotina-Semanal` e as conferências: **não dependem** de nenhum dos dois.
+
+Atenção: o `REDES_PUBLICACAO_ATIVA` da **Vercel** é uma variável **separada** (controla Instagram e LinkedIn). Mudar o `.env` daqui não altera a Vercel, e o contrário também não. Passo a passo completo: `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` (passo D).

@@ -165,6 +165,8 @@ function passoNarracao() {
   await extras.passoVinheta({ sec, problemas }, col);
   extras.passoYoutube({ sec, problemas });
   await extras.passoAutorizacaoYoutube({ sec, problemas });
+  // 11. Tarefas do Windows: última execução, resultado e se o PC estava ligado (grava relatorios/tarefas-estado.md e o bloco do ESTADO-GERAL.md)
+  try { const tar = require('./rotinaTarefas').gravar(); sec.push(`## 11. Tarefas do Windows\n${tar.md.replace(/^### .*\n/, '')}`); problemas.push(...tar.problemas); } catch (e) { sec.push(`## 11. Tarefas do Windows\n- não consegui conferir (${e.message.slice(0, 60)})`); }
   await mongoose.disconnect();
   await extras.passoPdfCfm({ sec, problemas });
 
