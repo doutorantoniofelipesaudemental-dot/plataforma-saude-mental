@@ -3,6 +3,19 @@
 Linguagem simples. ~30 minutos, uma vez (e de novo a cada ~60 dias, quando o token vence). **Nunca cole chaves em chat**: elas vão só no `.env` e no painel da Vercel.
 Enquanto isto não estiver feito, **nada é publicado** e tudo fica pronto em `relatorios/linkedin/fila-manual/` (uma pasta por semana: `texto.txt` para copiar e colar e, nos carrosséis, o `carrossel.pdf`).
 
+## DECISÃO DE 17/10/2026: publicação MANUAL no perfil pessoal (sem API)
+O LinkedIn será usado **no perfil pessoal** (https://www.linkedin.com/in/doutor-antonio-felipe-undefined-70990b438), sem a API de empresas e sem credencial do Developer Portal. Tudo abaixo, a partir da seção "1. Página e app", fica **arquivado** (só se um dia for usar a API).
+
+**Como funciona hoje** (segunda, quarta e sexta, 19:30 Bahia; primeiro post: 28/10/2026):
+1. Às **19:25** a tarefa `DrSM-LinkedIn-Lembrete` abre no Bloco de Notas o arquivo `relatorios/linkedin/POST-DE-HOJE.md` e já deixa o texto copiado (só abre se houver post no dia).
+2. Abra o LinkedIn no perfil pessoal → **Começar publicação** → cole (Ctrl + V) → confira → **Publicar**. Nos carrosséis, anexe o PDF indicado no arquivo.
+3. Marque como feito: `! npm run linkedin:marcar -- <id do post>` (o id aparece no arquivo).
+- Ver o post do dia a qualquer hora: `! npm run linkedin:hoje -- --copiar --abrir` (`--linkedin` abre a caixa de publicação no navegador).
+- Calendário completo e situação de cada post: `relatorios/linkedin/FILA-MANUAL.md` (também resumido em `relatorios/ESTADO-GERAL.md`, atualizado pela rotina de segunda e por `! npm run linkedin:fila`).
+- O arquivo avisa se o **texto do site** citado no post ainda não saiu (o link daria página inexistente): nesse caso espere ou adie o post.
+- **Não** usamos robô de navegador para publicar: automatizar o perfil pessoal viola os termos do LinkedIn e pode restringir a conta. A automação é só o lembrete e o texto pronto.
+- Dica opcional: o endereço do perfil tem "undefined" no meio (o LinkedIn gerou assim). Em *Perfil → Editar perfil público e URL* você pode trocar por algo limpo, como `linkedin.com/in/dr-antonio-felipe`; depois me avise para atualizar os arquivos.
+
 ## Onde você está (conferido em 16/10/2026, à noite)
 - **Nada feito ainda:** nenhuma credencial do LinkedIn está no `.env` (`LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_AUTHOR_URN` ausentes) e o freio `LINKEDIN_PUBLICACAO_ATIVA` não existe, então nada é publicado.
 - A fila de 43 itens está pronta e a simulação do primeiro post passou (texto, assinatura de 3 linhas e crédito do Portal). Quando as credenciais entrarem, o primeiro post sai em 28/10 às 19:30 (Bahia), se o freio estiver ligado.
