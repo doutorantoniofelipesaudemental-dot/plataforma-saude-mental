@@ -69,3 +69,12 @@ test('post sem o crédito do Portal é reprovado', () => {
   const { checarPost } = require('../../backend/lib/linkedinChecagem');
   assert.ok(checarPost({ tipo: 'texto', texto: TEXTO.replace('Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito.', '') }).some((f) => /crédito do Portal/.test(f)));
 });
+
+test('"psiquiatra" como nome da profissão passa; ligado ao autor ou #psiquiatria reprova', () => {
+  const { checarPost } = require('../../backend/lib/linkedinChecagem');
+  const veto = (t) => checarPost({ tipo: 'texto', texto: t }).some((f) => /psiquiatra|#psiquiatria/.test(f));
+  assert.equal(veto(`${TEXTO}\nA carta que nunca foi enviada ao psiquiatra: quando encaminhar ao psiquiatra.`), false);
+  assert.equal(veto(`${TEXTO}\nDr. Antônio Felipe, psiquiatra, explica.`), true);
+  assert.equal(veto(`${TEXTO}\nSou psiquiatra e aqui vai a dica.`), true);
+  assert.equal(veto(`${TEXTO}\n#psiquiatria`), true);
+});

@@ -33,7 +33,11 @@ async function gerar(a) {
     if (!wm.ok) return { slug: a.slug, reprovado: `capa com marca d'água/ruído: ${wm.falhas.join('; ')}` };
     capaLocal = path.join(dir, 'capa.jpg'); fs.writeFileSync(capaLocal, buf);
   }
+  // na fala, só a assinatura curta (depois do encerramento); as 5 linhas ficam na tela final e na descrição (decisão de 17/10/2026)
+  mp3 = L.comAssinaturaFalada(mp3, dir);
   const dur = L.duracao(mp3);
+  const finalSeg = Math.min(16, dur / 2); // tela final: cobre o encerramento e a assinatura falada
+  L.arte({ tipo: 'longo_final', linhas: L.IDENTIFICACAO_COMPLETA.split('\n'), aviso: L.AVISO_PROTOCOLOS, saida: path.join(dir, 'quadro-final.png') });
   L.arte({ tipo: 'longo', titulo: a.titulo, capa: capaLocal, saida: path.join(dir, 'quadro.png') });
   L.arte({ tipo: 'thumb', titulo: a.titulo, capa: capaLocal, saida: path.join(dir, 'thumb.png') });
   // barra de progresso dourada (movimento sutil) sobre o quadro estático
@@ -41,14 +45,14 @@ async function gerar(a) {
   fs.writeFileSync(path.join(dir, 'credito.ass'), L.creditoAss(dur), 'utf8');
   fs.copyFileSync('C:/Windows/Fonts/segoeuib.ttf', path.join(dir, 'segoeuib.ttf'));
   L.run('ffmpeg', ['-y', '-v', 'error', '-loop', '1', '-framerate', '30', '-i', path.join(dir, 'quadro.png'), '-i', mp3,
-    '-f', 'lavfi', '-i', 'color=c=0xC9A24B:s=1920x10:r=30',
-    '-filter_complex', `[0:v][2:v]overlay=x='-1920+1920*t/${dur.toFixed(2)}':y=1070:shortest=1,subtitles=credito.ass:fontsdir=.,format=yuv420p[v]`,
+    '-f', 'lavfi', '-i', 'color=c=0xC9A24B:s=1920x10:r=30', '-loop', '1', '-framerate', '30', '-i', path.join(dir, 'quadro-final.png'),
+    '-filter_complex', `[0:v][3:v]overlay=enable='gte(t,${(dur - finalSeg).toFixed(2)})'[q];[q][2:v]overlay=x='-1920+1920*t/${dur.toFixed(2)}':y=1070:shortest=1,subtitles=credito.ass:fontsdir=.,format=yuv420p[v]`,
     '-map', '[v]', '-map', '1:a', '-t', dur.toFixed(2), '-r', '30', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '24', '-tune', 'stillimage',
     '-c:a', 'aac', '-b:a', '128k', '-ar', '44100', '-movflags', '+faststart', saida], { cwd: dir });
   fs.rmSync(path.join(dir, 'segoeuib.ttf'), { force: true });
   fs.writeFileSync(path.join(dir, 'legenda.srt'), L.srt(a, dur), 'utf8');
   const meta = {
-    tipo: 'longo', creditoMarca: 'v2', slug: a.slug, titulo: a.titulo.length > 100 ? `${a.titulo.slice(0, 97)}...` : a.titulo,
+    tipo: 'longo', creditoMarca: 'v3', slug: a.slug, titulo: a.titulo.length > 100 ? `${a.titulo.slice(0, 97)}...` : a.titulo,
     descricao: L.descricaoLongo(a, dur), tags: L.tagsDe(a), playlist: L.playlistDe(a),
     refsPermitidas: L.referencias(a.conteudo),
     arquivos: { video: 'longo.mp4', capa: 'thumb.png', legenda: 'legenda.srt' },

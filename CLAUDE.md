@@ -86,8 +86,8 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - Toda narração e toda produção audiovisual (áudios dos artigos, vídeos longos, Shorts, Reels, trailer, podcast Relatos da Prática, vídeos de LinkedIn) menciona, na fala e na tela, que o conteúdo é do Portal de Saúde Mental Doutor Antônio Felipe Garabito. A menção é crédito discreto, nunca marca d'água sobreposta. Vinhetas em `backend/lib/vinheta.js`; campo `vinhetaVersao` separado do hash de narração.
 
 ### Autor
-- Nunca "psiquiatra"; sem #psiquiatria; "Antônio" com acento; RQE 26638 sempre junto de "Medicina de Família e Comunidade"; "NÃO ESPECIALISTA" só abaixo da linha das pós-graduações.
-- Exceção: "psiquiatra" como nome da profissão em `quando-encaminhar-aps` e `quando-procurar-psiquiatra-psicologo`.
+- "psiquiatra" é proibido apenas como título/identificação do Dr. Antônio Felipe; é permitido como nome da profissão no conteúdo (decisão de 17/10/2026). Sem #psiquiatria; "Antônio" com acento; RQE 26638 sempre junto de "Medicina de Família e Comunidade"; "NÃO ESPECIALISTA" só abaixo da linha das pós-graduações.
+- A auditoria distingue os dois casos: reprova "psiquiatra" junto de "Dr. Antônio"/"Antônio Felipe", "sou psiquiatra", "médico psiquiatra" na assinatura/bio e #psiquiatria; aceita no corpo e nos títulos dos textos (ex.: `a-carta-que-nunca-foi-enviada-ao-psiquiatra`, `quando-encaminhar-aps`).
 
 ### Auditoria geral e tripla checagem (sempre)
 - **Sempre fazer a auditoria geral e a tripla checagem técnica, científica, ética e humanizada, e corrigir as falhas e erros encontrados.**

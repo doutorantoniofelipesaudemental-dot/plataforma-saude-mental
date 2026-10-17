@@ -39,7 +39,7 @@ async function extras(token, id, item, meta, dir) {
 }
 
 (async () => {
-  if (String(process.env.YOUTUBE_PUBLICACAO_ATIVA || '').trim().toLowerCase() !== 'true') return log('freio YOUTUBE_PUBLICACAO_ATIVA não está "true": nada publicado.');
+  if (!require('../../backend/lib/freioYoutube').youtubeLigado()) return log('freio YOUTUBE_PUBLICACAO_ATIVA não está "true": nada publicado.');
   if (!redesAtivas()) return log('freio geral REDES_PUBLICACAO_ATIVA=false: nada publicado.');
   if (!yt.credenciaisYoutube() && !simular) return log('sem credenciais do YouTube (.env): nada publicado. Siga relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md; enquanto isso use relatorios/youtube/fila-manual/.');
   const fila = JSON.parse(fs.readFileSync(FILA, 'utf8'));

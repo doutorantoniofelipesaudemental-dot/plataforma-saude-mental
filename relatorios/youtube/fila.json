@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-17T00:25:48.434Z",
+ "geradoEm": "2026-10-17T01:05:41.656Z",
  "regra": "longos ter/qui/sab 18h; Shorts seg/qua/sex/sab/dom 12h (Bahia)",
  "itens": [
   {
@@ -20,8 +20,8 @@
     "atenção primária",
     "saúde do trabalhador"
    ],
-   "hashVideo": "d9dcf9dc46f73fbd878e9b0984057f4d05af59d18ca8252aaab39d849e47661b",
-   "duracao": 433,
+   "hashVideo": "96cae2ea9c465c84f6aff84765e0d99ef487d697b4ef3d9a174efcfa13f86104",
+   "duracao": 415,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -71,8 +71,8 @@
     "Dr. Antônio Felipe",
     "Médicos & Enfermeiros"
    ],
-   "hashVideo": "3c6d92883419ffbf5a4215f3443fed3178c7b031f214f43f531badb9b0dcbfdd",
-   "duracao": 295,
+   "hashVideo": "40bb37f497f52535b78ae77a6ec9b8462aba9d2c23b8d3798ee7c90286028204",
+   "duracao": 307,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -149,8 +149,8 @@
     "Dr. Antônio Felipe",
     "Residentes & Estudantes"
    ],
-   "hashVideo": "b88ab287d788fba2d6c3f2ba220c64f1732f590093cae6337f3a959625a638d7",
-   "duracao": 304,
+   "hashVideo": "7cb346b84b677b5d086ad9178d6b5b78937d7befb45623856c20f4e799f93391",
+   "duracao": 316,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -226,8 +226,8 @@
     "Dr. Antônio Felipe",
     "Ansiedade Social & Timidez"
    ],
-   "hashVideo": "ced9b4dbb6de274fb34be7810ea146a815c5ec2d166f0efc2a16942e010f142f",
-   "duracao": 181,
+   "hashVideo": "2bb1d1f1614626699e7fcf0f52bafd5debb5bfa290e77e6215c90ea77963854e",
+   "duracao": 194,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -277,8 +277,8 @@
     "Dr. Antônio Felipe",
     "Migrantes & Expatriados"
    ],
-   "hashVideo": "9dc37bd9b4aae4492457237a66a416701739ec5e7ff4d297871e29489eaaae5b",
-   "duracao": 191,
+   "hashVideo": "34b72f67690feb4ec7c7da9ca22f02b65a48454dd6381a6aad00031baac328d9",
+   "duracao": 203,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -354,8 +354,8 @@
     "Dr. Antônio Felipe",
     "Maternidade, Puerpério & Lactação"
    ],
-   "hashVideo": "6a41b992c719e97244213c636db23a5a11ba9834d06614330aec1796643b007d",
-   "duracao": 178,
+   "hashVideo": "e6b8a0a92534eaa91eaece28dacdce2aec34bb297032383f44a7c432d74178a1",
+   "duracao": 190,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -432,8 +432,8 @@
     "Dr. Antônio Felipe",
     "Infância & Adolescência"
    ],
-   "hashVideo": "4bb786d6187014dac1319aaac9b4b90cbf7a89f8a118d22201ac3969eb9f8159",
-   "duracao": 200,
+   "hashVideo": "8f0fe4e7890ba7bfff0b68df5d4b65a31a036f3aa925c16a280df368ccdee86e",
+   "duracao": 212,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -483,8 +483,8 @@
     "Dr. Antônio Felipe",
     "Neurodivergência na Vida Adulta"
    ],
-   "hashVideo": "a4c399290d718615f22f2c1992a682f7649db4b6f665611de410de36893365d3",
-   "duracao": 189,
+   "hashVideo": "d2d98120271907d7d078a352b8fa6adaebb5d8b4c2c7a18880374fb57a6e9749",
+   "duracao": 201,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -560,8 +560,8 @@
     "Dr. Antônio Felipe",
     "Dependências & Adições"
    ],
-   "hashVideo": "a384688a7179c8ec874147fe606cce750a710fc29fd5b5972841b5a005fe930c",
-   "duracao": 197,
+   "hashVideo": "8d9780f9e5cfe066469e40275b4da91df3477974d9c9e0fc5cba71520c9ecda9",
+   "duracao": 209,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -638,8 +638,8 @@
     "Dr. Antônio Felipe",
     "Compulsões & Transtornos Alimentares"
    ],
-   "hashVideo": "b3eda4957b0ec777ce0431bc86167dd1d3eaeb87b8d354ab69ed9345370c2992",
-   "duracao": 186,
+   "hashVideo": "e847e053c27d0159b176f150fd62af356d1ba970b9665ff1de9f7ac27f379cf2",
+   "duracao": 198,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -692,8 +692,8 @@
     "gestão de pessoas",
     "risco psicossocial"
    ],
-   "hashVideo": "37ef01105c3b2f6a904b8180a49905c726f2be4690edd733f1874a410114aab3",
-   "duracao": 371,
+   "hashVideo": "00ab4daf1524f04ae519fb3782f115f840b3025714f0a92eac391117c13c5503",
+   "duracao": 383,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -769,8 +769,8 @@
     "Dr. Antônio Felipe",
     "Cuidadores & Famílias"
    ],
-   "hashVideo": "590e79979868df8883ab2a5a662d2959ea88a49ed13289a8b7d2370f911fa6a0",
-   "duracao": 182,
+   "hashVideo": "f676b61f5b98b86bb32dad6e22836f1dea5a7f3e193643d0f20114ddf5361138",
+   "duracao": 195,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -821,8 +821,8 @@
     "Dr. Antônio Felipe",
     "Trabalho Doméstico & Cuidados do Lar"
    ],
-   "hashVideo": "a910290ba9a601c6b3b5d798ab248dcea57fa164b2fe5beb06ce4568d219dae7",
-   "duracao": 171,
+   "hashVideo": "51de0d1d2342fa59b2c0c84eb53b425572cd1645e2fbaf1264abc5d3916808c1",
+   "duracao": 183,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -872,8 +872,8 @@
     "Dr. Antônio Felipe",
     "Transição de Carreira & Aposentadoria"
    ],
-   "hashVideo": "14b3346f45213e2bc4719123728a3e45e024157d5253fcc53a7afb16546f7708",
-   "duracao": 182,
+   "hashVideo": "5442d45431caa87ff58381c7970a453414d1dabcd32c3096538b5dc8afd15de4",
+   "duracao": 195,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -949,8 +949,8 @@
     "Dr. Antônio Felipe",
     "Pós-Graduação & Concursos"
    ],
-   "hashVideo": "dd068c6ad55112402102f0fdbd4c5895ce3cf4a644a8f6287b432b7b7498b748",
-   "duracao": 193,
+   "hashVideo": "de88e11c8a2c9216dd6bb5f59845d3daa088ca50df267555f6479f61b6d72854",
+   "duracao": 206,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -1026,8 +1026,8 @@
     "Dr. Antônio Felipe",
     "Educadores & Professores"
    ],
-   "hashVideo": "f37620f934a7abc324ded418087fc1a06f6b47f205e364c1f9ce91f2bcff29ad",
-   "duracao": 209,
+   "hashVideo": "16c6b208a4ca13f0966aa62b92613fb3d58471c584178580be691d2c6fe26519",
+   "duracao": 222,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -1081,8 +1081,8 @@
     "prevenção",
     "liderança"
    ],
-   "hashVideo": "2c2ac6afdcfa9918acf62e7ffac6e7497a72d2eaeeaa58b9d6196472a8e06464",
-   "duracao": 312,
+   "hashVideo": "7d786822e7e023a1f73aa1820d23554f2a1af9ced7da27fd829c60be5ef5ea56",
+   "duracao": 325,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -1321,8 +1321,8 @@
     "saúde do trabalhador",
     "burnout"
    ],
-   "hashVideo": "ac5c707ec47375dd7668a9aa990710f3f38cb944e62cf7f047b0b55c5ab050a4",
-   "duracao": 346,
+   "hashVideo": "e1e25e2f97a6238777b752ea199f39cdfee9fe7d4fcb00965b507407db5c0ae8",
+   "duracao": 358,
    "checagem": {
     "texto": [],
     "midia": [],

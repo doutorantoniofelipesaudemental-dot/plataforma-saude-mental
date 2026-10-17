@@ -3,12 +3,11 @@
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
 ## EM ANDAMENTO (17/10/2026) — ver relatorios/PROMPT-ATUAL.md
-- Auditoria da main (#82): 0 falhas; unit 248/248. Capas: 475 conferidas (0 reprovadas; 1 aguarda decisão por "psiquiatra" no título do texto); mosaicos relatorios/capas-mosaico-*.png (21).
-- YouTube: conferência automática de CADA vídeo embutida no montarFila (tarefa DrSM-YouTube-Gera-Midia): 50 aprovados, 0 reprovados; mosaico relatorios/youtube/mosaico-quadros.png; reprovados vão para relatorios/youtube/reprovados/. Shorts: crédito falado só no fim (crédito curto); longos: início e fim.
-- Blob (Pro): ~1,06 GB; teto próprio 5 GB (aviso a partir de 80% na rotina semanal). Varredura trava B: 586 requisições, 0 URLs de MP3/capa de texto agendado em sitemap, API, categorias, busca, HTML, fila de redes.
-- Narração: 532 com vinheta, faltam 194 (ciclo das 22:00 por data de publicação; rotina semanal alerta se algum dos próximos 7 dias ficar sem áudio).
-- Instagram: 60 posts e 352 imagens conferidos (0 problemas); 1º post 26/10 08:00 (Bahia), freio ativo, token válido até 14/12.
-- Resolução CFM 2.454/2026: PDF oficial lido (nº 2.454, 11/02/2026; DOU 27/02/2026; retificação 05/03/2026).
+- "psiquiatra": proibido só como título/identificação do Dr. Antônio; permitido como nome da profissão (CLAUDE.md; auditoria e checagem do LinkedIn ajustadas). Capa de a-carta-que-nunca-foi-enviada-ao-psiquiatra aprovada; #psiquiatria segue proibido.
+- Capas: 475 + a da alta do PA regeradas com o peso das antigas (conferência automática completa: 0 problemas) e reenviadas ao Blob; mosaicos relatorios/capas-mosaico-1..21.png.
+- Vídeos longos (17): fala termina com a assinatura curta ("Doutor Antônio Felipe, médico, CRM Bahia 41322, especialista em Medicina de Família e Comunidade, RQE 26638."); tela final com as 5 linhas; descrição com as 5 linhas. Conferência automática: 50/50 aprovados; mosaico relatorios/youtube/mosaico-quadros.png. Áudio do tmc-aps regerado (lia a assinatura antiga).
+- YouTube: freio YOUTUBE_PUBLICACAO_ATIVA (desligado por padrão) + /api/admin/freio-youtube; PASSO-A-PASSO reescrito (falta a chave secreta no .env, a autorização e o teste privado: scripts/youtube/testeUploadPrivado.js).
+- Instagram: cron renovar-token-instagram ativo (seg 12:00 UTC = 19/10); a conferência de 19/10 exige a origem do token "renovado".
 
 ## Etapa 1 — produção do PR #77 (16/10/2026)
 - PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).
