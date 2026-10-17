@@ -3,6 +3,12 @@
 Linguagem simples. Tempo: ~40 minutos, uma vez. **Nunca cole chaves em chat.** Elas vão só no arquivo `.env` deste computador.
 Enquanto você não fizer isso, **nada é publicado** e tudo fica pronto em `relatorios/youtube/fila-manual/` (uma pasta por semana, com vídeo, capa, título, descrição, tags e legenda `.srt` para subir à mão).
 
+## Onde você está (conferido em 17/10/2026)
+- Passo 2 (projeto no Google Cloud): **feito pela metade**. O `YOUTUBE_CLIENT_ID` já está no `.env`, mas a **chave secreta (`YOUTUBE_CLIENT_SECRET`) está vazia**. Falta copiar a chave secreta do Google Cloud para o `.env`.
+- Passo 3 (autorização): **falta** (`YOUTUBE_REFRESH_TOKEN` vazio). Só rode depois de preencher a chave secreta.
+- Passo 4 (ligar a publicação): **falta** (`YOUTUBE_PUBLICACAO_ATIVA` não existe, então nada é publicado).
+- Enquanto isso, os vídeos aprovados ficam prontos em `relatorios/youtube/fila-manual/` para subir à mão.
+
 ## 1. Criar o canal
 1. Entre em youtube.com com a conta Google do consultório → foto do perfil → **Criar um canal**.
 2. Nome: `Dr. Antônio Felipe · Saúde Mental`. Identificador (@): `@drantoniofelipe.saudemental`.

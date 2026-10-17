@@ -1,14 +1,14 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
+> **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
-## EM ANDAMENTO (17/10/2026, madrugada) — ver relatorios/PROMPT-ATUAL.md
-- PRs #78, #79, #80, #81 MERGED; deploy Ready. Plano da Vercel: **Pro** (Blob sem o bloqueio duro de 1 GB; cota incluída exata não confirmada).
-- Áudios com vinheta v1: 532 de 726 textos (251 publicados + 281 agendados), TODOS os de 19–25/10 (57) incluídos; trava B: ensaio (--simular) passou; teste real = 19/10 08h (Bahia, texto imagem-corporal-o-que-e). Faltam 194 sem MP3 local: o ciclo noturno (DrSM-Narracao-Noite, REATIVADA, 22:00) gera e envia. Conferência barrou 1 áudio truncado (relato-pilula-da-concentracao), regerado.
-- Título da alta do PA: áudio novo (vinheta) e capa nova no ar. Capas: 475 textos agendados sem capa receberam capa gerada (backend/tools/gerar-capas.py + PUT /midia/capa-arquivo); 0 sem capa.
-- Blob: ~1,06 GB (a 251 = 307 MB · b 281 = 388 MB · c/d 0). Órfãos c+d apagados (288 + 2). Relatório: relatorios/blob-orfaos-20261016.md.
-- YouTube: crédito v2; 50 vídeos aprovados na fila, 59 sem mídia (tarefa DrSM-YouTube-Gera-Midia gera 25/dia, 23:30). Short crise-psiquiatrica-familia: resumo do texto trocava "direitos garantidos por lei" → "direitos previstos em lei" (backup backups/resumo-crise-*); refeito.
-- Resolução CFM 2.454/2026 CONFIRMADA (docs/fonte-resolucao-cfm-2454-2026.md); mantida em todos os lugares.
-- LinkedIn: credencial da API ausente, freio desligado; fila com crédito do Portal.
+## EM ANDAMENTO (17/10/2026) — ver relatorios/PROMPT-ATUAL.md
+- Auditoria da main (#82): 0 falhas; unit 248/248. Capas: 475 conferidas (0 reprovadas; 1 aguarda decisão por "psiquiatra" no título do texto); mosaicos relatorios/capas-mosaico-*.png (21).
+- YouTube: conferência automática de CADA vídeo embutida no montarFila (tarefa DrSM-YouTube-Gera-Midia): 50 aprovados, 0 reprovados; mosaico relatorios/youtube/mosaico-quadros.png; reprovados vão para relatorios/youtube/reprovados/. Shorts: crédito falado só no fim (crédito curto); longos: início e fim.
+- Blob (Pro): ~1,06 GB; teto próprio 5 GB (aviso a partir de 80% na rotina semanal). Varredura trava B: 586 requisições, 0 URLs de MP3/capa de texto agendado em sitemap, API, categorias, busca, HTML, fila de redes.
+- Narração: 532 com vinheta, faltam 194 (ciclo das 22:00 por data de publicação; rotina semanal alerta se algum dos próximos 7 dias ficar sem áudio).
+- Instagram: 60 posts e 352 imagens conferidos (0 problemas); 1º post 26/10 08:00 (Bahia), freio ativo, token válido até 14/12.
+- Resolução CFM 2.454/2026: PDF oficial lido (nº 2.454, 11/02/2026; DOU 27/02/2026; retificação 05/03/2026).
 
 ## Etapa 1 — produção do PR #77 (16/10/2026)
 - PR #77 mergeado (d339b9f); deploy dpl_GsQtdoqZQa9f9xD6zWk7RaVrXBm4 Ready. Rollback: Promote de dpl_5T42Da4GYLjXEkJRJWh9wtiSLsQd (main do #76).

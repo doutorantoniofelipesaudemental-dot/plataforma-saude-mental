@@ -3,6 +3,11 @@
 Linguagem simples. ~30 minutos, uma vez (e de novo a cada ~60 dias, quando o token vence). **Nunca cole chaves em chat**: elas vão só no `.env` e no painel da Vercel.
 Enquanto isto não estiver feito, **nada é publicado** e tudo fica pronto em `relatorios/linkedin/fila-manual/` (uma pasta por semana: `texto.txt` para copiar e colar e, nos carrosséis, o `carrossel.pdf`).
 
+## Onde você está (conferido em 17/10/2026)
+- **Nada feito ainda:** nenhuma credencial do LinkedIn está no `.env` (`LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_AUTHOR_URN` ausentes) e o freio `LINKEDIN_PUBLICACAO_ATIVA` não existe, então nada é publicado.
+- A fila de 43 itens está pronta e a simulação do primeiro post passou (texto, assinatura de 3 linhas e crédito do Portal). Quando as credenciais entrarem, o primeiro post sai em 28/10 às 19:30 (Bahia), se o freio estiver ligado.
+- Enquanto isso, copie e cole os textos da pasta `relatorios/linkedin/fila-manual/`.
+
 ## 1. Página e app no LinkedIn
 1. Em linkedin.com/company/setup/new crie uma **Página** (ex.: "Dr. Antônio Felipe · Saúde Mental"). O LinkedIn exige uma Página para criar o app.
 2. Abra linkedin.com/developers/apps → **Create app**: nome `Portal Saúde Mental`, a Página criada, logotipo = `relatorios/linkedin/perfil/foto-perfil.png`.

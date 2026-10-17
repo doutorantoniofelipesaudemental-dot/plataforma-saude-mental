@@ -14,6 +14,7 @@ const mongoose = require('mongoose');
 const L = require('./lib');
 const longos = require('./gerarVideosLongos');
 const shorts = require('./gerarShorts');
+const { conferirVideo } = require('./conferirVideo');
 
 const aplicar = process.argv.includes('--aplicar'), gerarMidia = process.argv.includes('--gerar');
 const limite = Number((process.argv.find((a) => a.startsWith('--limite=')) || '--limite=9999').split('=')[1]);
@@ -90,7 +91,15 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
     if (!fs.existsSync(metaArq)) { it.status = 'sem-midia'; continue; }
     const meta = JSON.parse(fs.readFileSync(metaArq, 'utf8'));
     Object.assign(it, { tituloYoutube: meta.titulo, tags: meta.tags, hashVideo: meta.hashVideo, duracao: Math.round(meta.duracao), checagem: { texto: meta.checagemTexto, midia: meta.checagemMidia } });
-    it.status = !meta.checagemTexto.length && !meta.checagemMidia.length ? 'aprovado-checagem' : 'reprovado';
+    // conferência automática do vídeo (quadros, crédito, assinatura, marca d'água, legenda, vinheta falada); reprovado vai para relatorios/youtube/reprovados/
+    const conf = await conferirVideo(dir, meta);
+    it.checagem.video = conf.falhas;
+    it.status = !meta.checagemTexto.length && !meta.checagemMidia.length && conf.ok ? 'aprovado-checagem' : 'reprovado';
+    if (it.status === 'reprovado' && conf.falhas.length) {
+      const rep = path.join(L.REL, 'reprovados', it.id); fs.mkdirSync(rep, { recursive: true });
+      for (const f of ['ini', 'meio', 'fim']) { const o = path.join(dir, 'conferencia', `${f}.png`); if (fs.existsSync(o)) fs.copyFileSync(o, path.join(rep, `${f}.png`)); }
+      fs.writeFileSync(path.join(rep, 'motivos.txt'), [it.id, ...conf.falhas, `Pasta do vídeo: ${it.pasta}`].join('\n') + '\n', 'utf8');
+    }
   }
   fs.mkdirSync(L.REL, { recursive: true });
   const anterior = (() => { try { return new Map(JSON.parse(fs.readFileSync(path.join(L.REL, 'fila.json'), 'utf8')).itens.map((i) => [i.id, i])); } catch { return new Map(); } })();
