@@ -62,7 +62,13 @@ function passoLinkedinManual({ sec, problemas }) {
   const { spawnSync } = require('node:child_process');
   const r = spawnSync(process.execPath, ['--env-file=.env', 'scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 90000 });
   const linha = String(r.stdout || '').trim().split('\n').pop() || 'não consegui ler a fila manual';
-  sec.push(`## 12. LinkedIn — fila manual (perfil pessoal, seg/qua/sex 19:30)\n- ${linha}`);
+  const agend = Number((linha.match(/agendados no LinkedIn (\d+)/) || [])[1] || 0);
+  const ate = (linha.match(/agendados no LinkedIn \d+ \(até (\d{2})\/(\d{2})\/(\d{4})\)/) || []);
+  sec.push(`## 12. LinkedIn — fila manual e posts agendados (perfil pessoal, seg/qua/sex 19:30)\n- ${linha}\n- **Lembrete da semana (sem robô):** abra o LinkedIn → "Posts agendados" e confira data, hora e texto dos posts da semana. Se algo sumiu ou está errado, me avise.`);
+  if (agend > 0 && ate.length) {
+    const dias = Math.round((new Date(`${ate[3]}-${ate[2]}-${ate[1]}T12:00:00Z`) - Date.now()) / 864e5);
+    if (dias <= 14) problemas.push(`LinkedIn: a fila AGENDADA acaba em ${ate[1]}/${ate[2]}/${ate[3]} (${dias} dia(s)): hora de uma nova sessão de agendamento`);
+  }
   const atrasados = Number((linha.match(/atrasados (\d+)/) || [])[1] || 0);
   if (r.status !== 0) problemas.push(`fila manual do LinkedIn: não consegui atualizar (${String(r.stderr || '').trim().slice(0, 80)})`);
   else if (atrasados > 0) problemas.push(`LinkedIn: ${atrasados} post(s) da fila manual com a data vencida e sem marcar como publicado (relatorios/linkedin/FILA-MANUAL.md)`);
