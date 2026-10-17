@@ -123,5 +123,6 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
   }
   const cont = (s) => itens.filter((i) => i.status === s).length;
   console.log(`GRAVADO relatorios/youtube/fila.json · aprovado-checagem: ${cont('aprovado-checagem')} · reprovado: ${cont('reprovado')} · sem mídia: ${cont('sem-midia')} · publicado: ${cont('publicado')}`);
+  try { const au = await require('./avisoAutorizacao').conferir(); if (au.problema) console.log(`⚠ YouTube: ${au.problema} (ver relatorios/youtube/AVISO-REAUTORIZAR.md)`); } catch (e) { console.log('aviso de autorização do YouTube não conferido:', e.message.slice(0, 80)); }
   await mongoose.disconnect();
 })().catch((e) => { console.error('ERRO:', e.message); process.exit(2); });

@@ -164,6 +164,7 @@ function passoNarracao() {
   await extras.passoBlob({ sec, problemas });
   await extras.passoVinheta({ sec, problemas }, col);
   extras.passoYoutube({ sec, problemas });
+  await extras.passoAutorizacaoYoutube({ sec, problemas });
   await mongoose.disconnect();
   await extras.passoPdfCfm({ sec, problemas });
 

@@ -53,7 +53,8 @@
     "youtube:publicar": "node --env-file-if-exists=.env scripts/youtube/publicarYoutube.js",
     "youtube:playlists": "node --env-file-if-exists=.env scripts/youtube/criarPlaylists.js",
     "linkedin:conteudo": "node --env-file-if-exists=.env scripts/linkedin/gerarConteudo.js",
-    "linkedin:autorizar": "node scripts/linkedin-autorizar.js"
+    "linkedin:autorizar": "node scripts/linkedin-autorizar.js",
+    "youtube:upload-teste": "node --env-file-if-exists=.env scripts/youtube/testeUploadPrivado.js --confirmar"
   },
   "engines": {
     "node": ">=20"

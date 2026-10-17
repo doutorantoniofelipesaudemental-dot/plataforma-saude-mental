@@ -3,11 +3,38 @@
 Linguagem simples. **Nunca cole chaves em chat.** Elas vão só no arquivo `.env` deste computador.
 Enquanto isto não estiver feito, **nada é publicado**: tudo fica pronto em `relatorios/youtube/fila-manual/` (uma pasta por semana, com vídeo, capa, título, descrição, tags e legenda) para subir à mão.
 
-## Onde você está (conferido em 17/10/2026)
-- ✅ Canal e projeto no Google Cloud: o `YOUTUBE_CLIENT_ID` já está no `.env`.
-- ❌ **Falta a chave secreta** (`YOUTUBE_CLIENT_SECRET` está vazia no `.env`). **Comece pelo passo A.**
-- ❌ Falta a autorização (`YOUTUBE_REFRESH_TOKEN` vazio) → passo B.
-- ❌ O freio está **desligado** (é o certo por enquanto): `YOUTUBE_PUBLICACAO_ATIVA` não existe. Só se liga no passo D, depois do teste.
+## Onde você está (conferido em 16/10/2026, à noite)
+- ✅ Chave secreta, autorização e teste privado: **feitos**. O vídeo de teste está privado em https://www.youtube.com/shorts/z_JHmmpw880 (só você vê; pode apagar no YouTube Studio).
+- ⚠ O app do Google está em modo **"Testando"**: a autorização feita em **16/10/2026 vence em 23/10/2026**. A rotina avisa 2 dias antes (arquivo `relatorios/youtube/AVISO-REAUTORIZAR.md` e uma linha no topo do `ESTADO-GERAL.md`). **Para a autorização não vencer, faça a seção "Publicar o app" logo abaixo.**
+- ❌ O freio está **desligado** (é o certo por enquanto): `YOUTUBE_PUBLICACAO_ATIVA` não existe. Só se liga no passo D.
+- ❌ Os vídeos só poderão ficar **públicos** depois da auditoria da API (seção "Auditoria da API"; respostas prontas em `relatorios/youtube/AUDITORIA-API-RESPOSTAS.md`). Até lá, mesmo com o freio ligado, o YouTube deixa tudo como privado.
+
+---
+
+## Publicar o app (para a autorização não vencer)
+Fazer **uma vez**, depois do teste. Não precisa de verificação do Google para isso (o app só tem você como usuário).
+1. Abra **console.cloud.google.com**, projeto **portal-saude-mental-youtube** → menu ☰ → **Google Auth Platform** (ou **APIs e serviços → Tela de permissão OAuth**).
+2. Página **Branding** (Identidade visual). Preencha:
+   - **Nome do app:** `Portal Saúde Mental`.
+   - **E-mail de suporte do usuário:** doutor.antoniofelipe.saudemental@gmail.com.
+   - **Logotipo:** **deixe em branco** (não envie logo; enviar logo obriga a uma revisão demorada).
+   - **Página inicial do app:** `https://www.drantoniofelipemedico.com.br`
+   - **Link da Política de Privacidade:** `https://www.drantoniofelipemedico.com.br/privacidade`
+   - **Link dos Termos de Serviço:** pode ficar em branco.
+   - **Domínios autorizados:** `drantoniofelipemedico.com.br` (sem `www`, sem `https://`).
+   - **Dados de contato do desenvolvedor (e-mail):** doutor.antoniofelipe.saudemental@gmail.com.
+   - Clique em **Salvar**.
+3. Página **Público-alvo** (Audience): confira que o tipo é **Externo** e clique em **Publicar app** → **Confirmar**. O status muda de "Testando" para **"Em produção"**.
+4. **Rode a autorização de novo** (a de "Testando" não vale como permanente):
+   ```
+   ! npm run youtube:autorizar
+   ```
+   Abra o endereço, entre com a conta do canal, **Avançado → Acessar Portal Saúde Mental (não seguro) → Continuar**. Deve aparecer "YOUTUBE_REFRESH_TOKEN gravado no .env".
+5. Registre que o app está em produção (para o aviso de 7 dias parar):
+   ```
+   ! node --env-file=.env scripts/youtube/avisoAutorizacao.js --registrar producao
+   ```
+6. Se o Google disser que a política de privacidade precisa citar o YouTube, avise o Claude Code: o texto da página `/privacidade` hoje **não menciona** o uso da API do YouTube e acrescentar um parágrafo exige o seu OK (a pasta `public/` é protegida).
 
 ---
 
@@ -61,8 +88,8 @@ Enquanto isto não estiver feito, **nada é publicado**: tudo fica pronto em `re
    e salve. (Para conferir sem publicar: `! node --env-file=.env scripts/youtube/publicarYoutube.js --simular`.)
 4. O agendador do Windows roda o publicador todo dia às 12:30 (o computador precisa estar ligado). Até 2 vídeos por dia.
 
-## Atenção: vídeos privados por padrão
-Projetos do Google Cloud **não verificados** têm os vídeos enviados pela API forçados para **privado**. O log (`relatorios/youtube/publicacao-log.md`) avisa. Soluções: (a) pedir a auditoria no formulário "YouTube API Services – Audit and Quota Extension" (gratuito, leva dias) ou (b) continuar subindo à mão pela pasta `fila-manual`.
+## Auditoria da API (para os vídeos poderem ser públicos)
+Projetos do Google Cloud **não auditados** têm os vídeos enviados pela API forçados para **privado**. O log (`relatorios/youtube/publicacao-log.md`) avisa. Soluções: (a) pedir a auditoria no formulário **YouTube API Services – Audit and Quota Extension** (gratuito, leva dias): link, respostas prontas em português e inglês e passo a passo de envio estão em `relatorios/youtube/AUDITORIA-API-RESPOSTAS.md`; ou (b) continuar subindo à mão pela pasta `fila-manual` (funciona hoje, sem depender de ninguém).
 
 ## Comentários — moderação
 YouTube Studio → **Configurações → Comunidade → Padrões**: marque **"Reter comentários potencialmente inadequados para revisão"**. Em **Palavras bloqueadas**, cadastre (retêm o comentário para você revisar): suicídio, suicida, me matar, quero morrer, tirar minha vida, acabar com tudo, automutilação, me cortar, overdose, além de termos de ódio. Revise a fila de "Retidos" ao menos 1x por dia.
