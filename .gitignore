@@ -77,3 +77,6 @@ relatorios/logs-agendador/
 
 # Pasta de teste solta (16/10/2026): o Dr. Antônio apaga pelo Explorador de Arquivos
 carrosseis-instagram/youtube/saude-mental-cuidador/short-resumo/
+
+# gerado todo dia pela tarefa DrSM-LinkedIn-Lembrete (conteúdo do post do dia)
+relatorios/linkedin/POST-DE-HOJE.md
