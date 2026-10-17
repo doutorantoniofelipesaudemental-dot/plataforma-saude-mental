@@ -160,6 +160,9 @@ router.post('/artigos/:id/publicar-redes', exigirAdmin, exigirBanco, async (req,
 /** GET /api/admin/freio-redes — só o estado do freio (true/false); nunca devolve o valor da variável. */
 router.get('/freio-redes', exigirAdmin, (req, res) => res.json({ publicacaoAtiva: redesAtivas() }));
 
+/** GET /api/admin/freio-youtube — só o estado do freio do YouTube (true/false; desligado por padrão); nunca devolve o valor da variável. */
+router.get('/freio-youtube', exigirAdmin, (req, res) => res.json({ publicacaoAtiva: require('../lib/freioYoutube').youtubeAtivo() }));
+
 /** GET /api/admin/blob-narracoes — inventário do Blob (só leitura). DELETE (mesmo caminho) apaga SÓ narrações órfãs, sem referência no banco. */
 router.get('/blob-narracoes', exigirAdmin, exigirBanco, async (req, res) => {
   try { res.json(await require('../lib/blobNarracoes').inventario({ aplicar: false, completo: req.query.completo === '1' })); }

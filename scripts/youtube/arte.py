@@ -88,6 +88,25 @@ def longo(s):
     d.text((110, H - 60), 'Em crise: CVV 188 · SAMU 192', font=fonte(SEGOE_B, 30), fill=OURO)
     im.save(s['saida'], 'PNG')
 
+def longo_final(s):
+    # Tela final do vídeo longo: assinatura COMPLETA de 5 linhas (spec['linhas']), crédito do Portal, avisos e CVV/SAMU (decisão de 17/10/2026)
+    W, H = 1920, 1080
+    im = Image.new('RGB', (W, H), MARINHO); d = ImageDraw.Draw(im)
+    barra_ouro(d, 110, 120, 180)
+    d.text((110, 160), 'Conteúdo do Portal de Saúde Mental', font=fonte(SEGOE_B, 46), fill=OURO)
+    d.text((110, 220), 'Doutor Antônio Felipe Garabito', font=fonte(SEGOE_B, 46), fill=OURO)
+    y = 330
+    for k, t in enumerate(s['linhas']):
+        f = fonte(SEGOE_B if k == 0 or k == len(s['linhas']) - 1 else SEGOE, 38 if k == 0 else 33)
+        for l in quebrar(d, t, f, 1600):
+            d.text((110, y), l, font=f, fill=BRANCO); y += 46
+        y += 8
+    f = fonte(SEGOE, 28)
+    for l in quebrar(d, s['aviso'], f, 1250):
+        d.text((110, y + 20), l, font=f, fill=BRANCO); y += 36
+    d.text((110, H - 60), 'Em crise: CVV 188 · SAMU 192', font=fonte(SEGOE_B, 30), fill=OURO)
+    im.save(s['saida'], 'PNG')
+
 def short(s):
     W, H = 1080, 1920
     cap = carregar(s.get('capa'))
@@ -138,4 +157,4 @@ def perfil(s):
 
 if __name__ == '__main__':
     spec = json.load(open(sys.argv[1], encoding='utf-8'))
-    {'banner_li': banner_li, 'thumb': thumb, 'longo': longo, 'short': short, 'banner': banner, 'perfil': perfil}[spec['tipo']](spec)
+    {'banner_li': banner_li, 'thumb': thumb, 'longo': longo, 'longo_final': longo_final, 'short': short, 'banner': banner, 'perfil': perfil}[spec['tipo']](spec)

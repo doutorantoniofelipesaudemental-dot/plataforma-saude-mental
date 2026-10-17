@@ -13,7 +13,8 @@ const { spawnSync } = require('node:child_process');
 const sharp = require('sharp');
 const { checarImagemSemMarcaDagua } = require('../../backend/lib/checagensAprovacao');
 const L = require('./lib');
-const VERSAO = 'v2';
+const VERSAO = 'v3';
+const REG_FINAL_LONGO = [100, 320, 1700, 760]; // região das 5 linhas da assinatura na tela final do vídeo longo
 
 const sem = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const ff = (args) => spawnSync('ffmpeg', ['-v', 'error', '-y', ...args], { encoding: 'utf8' });
@@ -51,9 +52,13 @@ async function conferirVideo(dir, meta) {
     if (ci.n < 300) falhas.push(`crédito do Portal não aparece no quadro de 1 s (${ci.n} px claros)`);
     if (cf.n < 300) falhas.push(`crédito do Portal não aparece no quadro final (${cf.n} px claros)`);
     if (am.n < 600) falhas.push(`assinatura ilegível ou ausente no quadro do meio (${am.n} px claros)`);
-    if (ai.n < 600 || af.n < 600) falhas.push(`assinatura ilegível ou ausente com o crédito na tela (${ai.n}/${af.n} px claros)`);
+    const horizontal = reg === REG.horizontal;
+    if (ai.n < 600) falhas.push(`assinatura ilegível ou ausente com o crédito na tela (${ai.n} px claros)`);
+    if (!horizontal && af.n < 600) falhas.push(`assinatura ilegível ou ausente no quadro final (${af.n} px claros)`);
+    // vídeo longo: a tela final traz a assinatura COMPLETA de 5 linhas (região própria)
+    if (horizontal) { const fin = await brilho(png.fim, REG_FINAL_LONGO); if (fin.n < 1500) falhas.push(`tela final sem a assinatura completa de 5 linhas (${fin.n} px claros)`); }
     // horizontal: a assinatura é estática, então a máscara de texto tem de ser idêntica com e sem o crédito; vertical: o layout muda entre telas, vale a regra geométrica (crédito rente à borda, abaixo da assinatura)
-    if (reg === REG.horizontal && (iou(ai.data, am.data) < 0.85 || iou(af.data, am.data) < 0.85)) falhas.push('crédito cobre a assinatura (a região da assinatura muda quando o crédito aparece)');
+    if (horizontal && iou(ai.data, am.data) < 0.85) falhas.push('crédito cobre a assinatura (a região da assinatura muda quando o crédito aparece)');
     for (const k of ['ini', 'fim']) { const r = await checarImagemSemMarcaDagua(png[k], { verificarCantos: true }); if (!r.ok) falhas.push(`quadro ${k}: ${r.falhas.join('; ')}`.slice(0, 220)); }
   }
   const legenda = meta.arquivos.legenda ? fs.existsSync(path.join(dir, meta.arquivos.legenda)) : fs.existsSync(path.join(dir, 'cap.ass'));
@@ -61,7 +66,7 @@ async function conferirVideo(dir, meta) {
   // vinheta falada: início (16 s) e fim (últimos 34 s)
   const a1 = path.join(q, 'ini.wav'), a2 = path.join(q, 'fim.wav');
   ff(['-i', video, '-t', '16', '-ac', '1', '-ar', '16000', a1]);
-  ff(['-sseof', '-34', '-i', video, '-ac', '1', '-ar', '16000', a2]);
+  ff(['-sseof', '-46', '-i', video, '-ac', '1', '-ar', '16000', a2]);
   const t = spawnSync(L.PY, ['-I', path.join(__dirname, 'transcrever.py'), a1, a2], { encoding: 'utf8', timeout: 600000 });
   let fala = ['', ''];
   try { fala = JSON.parse(t.stdout.trim().split('\n').pop()); } catch { falhas.push('transcrição da vinheta falhou'); }
@@ -69,6 +74,11 @@ async function conferirVideo(dir, meta) {
   const ehShort = meta.tipo === 'short';
   if (!ehShort && !/portal de saude mental/.test(sem(fala[0]))) falhas.push(`vinheta falada ausente no início ("${fala[0].slice(0, 70)}")`);
   if (!/portal de saude mental/.test(sem(fala[1]))) falhas.push(`vinheta falada ausente no fim ("${fala[1].slice(0, 70)}")`);
+  if (!ehShort) { // vídeo longo: assinatura falada curta (sem as 5 linhas: nada de pós-graduação nem "não especialista" na fala)
+    const fim = sem(fala[1]);
+    if (!/ba[hi]a/.test(fim) || !/medicina de familia/.test(fim)) falhas.push(`assinatura falada curta ausente no fim ("${fala[1].slice(-90)}")`);
+    if (/pos.?graduacao|nao especialista/.test(fim)) falhas.push('a fala do fim lê a assinatura de 5 linhas (pós-graduação / "não especialista")');
+  }
   for (const f of [a1, a2]) fs.rmSync(f, { force: true });
   const res = { versao: VERSAO, hashVideo: meta.hashVideo, ok: falhas.length === 0, falhas, fala, em: new Date().toISOString() };
   fs.writeFileSync(arqCache, JSON.stringify(res, null, 1));

@@ -73,6 +73,17 @@ function comVinheta(a, mp3) {
   return saida;
 }
 
+/** Vídeo longo: acrescenta, depois do encerramento, a assinatura FALADA curta (as 5 linhas ficam na tela final e na descrição). Devolve { mp3, extra } (extra = segundos acrescentados). */
+function comAssinaturaFalada(mp3, dir) {
+  const v = vinheta.garantirVinhetas();
+  const saida = path.join(dir, 'narracao-video.mp3');
+  const r = spawnSync('ffmpeg', ['-y', '-v', 'error', '-i', mp3, '-i', v.assinaturaFalada, '-filter_complex',
+    '[0:a]aresample=24000,aformat=channel_layouts=mono,apad=pad_dur=0.8[a];[1:a]aresample=24000,aformat=channel_layouts=mono[b];[a][b]concat=n=2:v=0:a=1[o]',
+    '-map', '[o]', '-ac', '1', '-ar', '24000', '-b:a', '48k', saida], { encoding: 'utf8' });
+  if (r.status !== 0 || String(r.stderr).trim()) throw new Error('ffmpeg (assinatura falada) falhou: ' + String(r.stderr).slice(0, 200));
+  return saida;
+}
+
 /** Crédito de tela (ASS, discreto, caixa opaca p/ contraste): 0–3 s e tela final com o endereço. Não é marca d'água fixa. */
 function creditoAss(dur, { W = 1920, H = 1080 } = {}) {
   const t = (s) => { const cs = Math.round(s * 100); return `${Math.floor(cs / 360000)}:${String(Math.floor((cs % 360000) / 6000)).padStart(2, '0')}:${String(Math.floor((cs % 6000) / 100)).padStart(2, '0')}.${String(cs % 100).padStart(2, '0')}`; };
@@ -236,4 +247,4 @@ function checarTexto(item) {
   return f;
 }
 
-module.exports = { obterCapa, comVinheta, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };
+module.exports = { obterCapa, comVinheta, comAssinaturaFalada, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };

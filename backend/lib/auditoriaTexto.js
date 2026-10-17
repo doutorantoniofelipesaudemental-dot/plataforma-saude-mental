@@ -12,7 +12,8 @@ const RE_PROMESSA = /\b(cura garantida|resultado garantido|100% eficaz|(?:totalm
 const RE_CULPA = new RegExp('\\b(a culpa \\u00e9 sua|falta de for\\u00e7a de vontade|pregui\\u00e7a|frescura|\\u00e9 s\\u00f3 querer)\\b', 'i');
 const RE_MOJIBAKE = /Ã[©¡£§³ª´µ¢]|â€|Â\s/;
 const RE_PSIQ_AUTOR = /Antônio Felipe[^.\n]{0,80}\bpsiquiatra\b|#psiquiatria/i;
-const PROFISSAO_PSIQUIATRA_OK = new Set(['quando-encaminhar-aps', 'quando-procurar-psiquiatra-psicologo']);
+// "psiquiatra" como nome da profissão é permitido em qualquer texto (decisão de 17/10/2026); só é vetado ligado ao autor.
+const RE_PSIQ_AUTOR_AMPLO = /\bm[eé]dico psiquiatra\b|\bsou (?:o |um )?psiquiatra\b|\bpsiquiatra (?:dr\.?|doutor)\s+ant[oô]nio/i;
 
 // Uma ocorrência só conta se não vier negada ("não é preguiça"), citada ("evitar 'frescura'") ou em lista de exemplos.
 const RE_CONTEXTO_OK = new RegExp(
@@ -57,7 +58,7 @@ function checarTexto({ origem, slug, titulo, corpo, resumo, tempoLeitura }) {
   if (/Antonio Felipe(?! Garabito Jr\.)/.test(corpo)) f('ética', '"Antonio" sem acento (corrigível)');
   if (RE_PSIQ_AUTOR.test(corpo)) f('ética', 'autor apresentado como psiquiatra / #psiquiatria');
   else if (/#psiq/i.test(corpo)) f('ética', '#psiquiatria');
-  if (/\bpsiquiatra\b/i.test(corpo) && !PROFISSAO_PSIQUIATRA_OK.has(slug) && /Antônio Felipe[^]{0,200}psiquiatra/i.test(corpo)) f('ética', 'verificar uso de "psiquiatra" junto ao autor');
+  if (RE_PSIQ_AUTOR_AMPLO.test(corpo)) f('ética', 'autor apresentado como psiquiatra ("médico psiquiatra" / "sou psiquiatra")');
   if (RE_SENSIVEL.test(corpo) && !/\b188\b/.test(corpo)) f('ética', 'tema de suicídio/autolesão sem CVV 188 (corrigível)');
   const est = ocorrenciaReal(corpo, RE_ESTIGMA);
   if (est) f('ética', `termo estigmatizante: "${est}" (decisão do autor)`);

@@ -5,7 +5,7 @@ import json, os, sys
 from PIL import Image, ImageDraw, ImageFont
 
 BG, PILL, OURO, CLARO = (12, 51, 48), (44, 74, 72), (201, 164, 52), (255, 255, 255)
-FT = ImageFont.truetype('backend/assets/fonts/fraunces-static.ttf', 46)
+FT = ImageFont.truetype('backend/assets/fonts/fraunces-static.ttf', 42)
 FC = ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf', 22)
 FR = ImageFont.truetype('C:/Windows/Fonts/segoeui.ttf', 21)
 
@@ -26,10 +26,10 @@ def gerar(item, saida):
         d.rounded_rectangle([72, 56, 72 + w + 50, 100], radius=22, fill=PILL)
         d.text((97, 64), cat, font=FC, fill=(230, 238, 236))
     linhas = quebra(d, item['titulo'], FT, 1000)[:4]
-    h = len(linhas) * 60
+    h = len(linhas) * 54
     y = 330 - h // 2
     for l in linhas:
-        d.text((72, y), l, font=FT, fill=CLARO); y += 60
+        d.text((72, y), l, font=FT, fill=CLARO, stroke_width=1, stroke_fill=CLARO); y += 54
     d.rectangle([72, y + 14, 153, y + 19], fill=OURO)
     d.ellipse([72, 576, 84, 588], fill=OURO)
     d.text((95, 570), 'Dr. Antônio Felipe', font=FR, fill=(190, 205, 202))

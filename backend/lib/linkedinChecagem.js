@@ -13,7 +13,8 @@ function checarPost(it) {
   if (!/protocolos hospitalares/.test(t)) f.push('sem aviso de protocolos locais');
   if (!/2\.454\/2026/.test(t)) f.push('sem aviso de IA (Res. CFM 2.454/2026)');
   if (/Antonio Felipe/.test(t)) f.push('"Antonio" sem acento');
-  if (/psiquiatra|#psiquiatria/i.test(t)) f.push('"psiquiatra"/#psiquiatria');
+  // "psiquiatra" como nome da profissão é permitido (17/10/2026); vetado ligado ao autor e #psiquiatria
+  if (/Antônio Felipe[^.\n]{0,80}\bpsiquiatra\b|\bm[eé]dico psiquiatra\b|\bsou (?:o |um )?psiquiatra\b|\bpsiquiatra (?:dr\.?|doutor)\s+ant[oô]nio|#psiquiatria/i.test(t)) f.push('autor apresentado como "psiquiatra" ou #psiquiatria');
   if (/wa\.me|whatsapp/i.test(t)) f.push('mensageria de terceiros');
   if (/(antes e depois|depoimento|garantid|100% eficaz|cura garantida)/i.test(t)) f.push('promessa/depoimento/antes-e-depois');
   const OFICIAL = /^https?:\/\/(www\.drantoniofelipemedico\.com\.br|instagram\.com\/doutor\.antoniofelipe\.smental)/;

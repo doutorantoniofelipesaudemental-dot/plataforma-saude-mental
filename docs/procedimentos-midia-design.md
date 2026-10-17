@@ -48,3 +48,9 @@ Uso estratégico das skills abaixo (referências externas, ainda não instaladas
 
 ## Crédito de marca em áudio e vídeo (16/10/2026)
 Toda narração e produção audiovisual (artigos, longos, Shorts, Reels, trailer, podcast, LinkedIn) cita na fala e na tela o Portal de Saúde Mental Doutor Antônio Felipe Garabito: abertura+encerramento (longos/artigos), versão curta só no fim (Shorts/Reels ≤ 60 s); tela nos 3 primeiros segundos e na tela final com www.drantoniofelipemedico.com.br; legenda .srt inclui a fala; 1ª linha da descrição/legenda do post. Crédito discreto, sem marca d'água sobreposta. Código: `backend/lib/vinheta.js`, `scripts/youtube/lib.js` (`creditoAss`, `comVinheta`).
+
+## Vídeos longos do YouTube: assinatura na fala (17/10/2026)
+- Na FALA, depois do encerramento da vinheta, só: "Doutor Antônio Felipe, médico, CRM Bahia 41322, especialista em Medicina de Família e Comunidade, RQE 26638." (`TEXTOS.assinaturaFalada` em `backend/lib/vinheta.js`; `L.comAssinaturaFalada` em `scripts/youtube/lib.js`). Nunca ler as 5 linhas (pós-graduação, "não especialista").
+- Na TELA: tela final com as 5 linhas completas (`arte.py: longo_final`) nos últimos segundos; a descrição também leva as 5 linhas. Marcador de layout `creditoMarca: 'v3'` nos longos.
+- Shorts: crédito falado curto só no fim; legenda queimada (`cap.ass`) vale no lugar do `.srt`.
+- `scripts/youtube/conferirVideo.js` confere tudo por vídeo (quadros, crédito, assinatura, marca d'água, legenda, fala por transcrição) dentro do `montarFila`; reprovados vão para `relatorios/youtube/reprovados/`.

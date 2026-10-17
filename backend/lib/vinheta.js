@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const { VOZ_NARRACAO } = require('./narracao');
-const { aplicarPronuncia } = require('./pronunciaTts');
+const { aplicarPronuncia, DICIONARIO } = require('./pronunciaTts');
 
 const MARCA = 'Portal de Saúde Mental Doutor Antônio Felipe Garabito';
 const SITE = 'www.drantoniofelipemedico.com.br';
@@ -22,6 +22,8 @@ const TEXTOS = {
     `Este foi um conteúdo do ${MARCA}. Ele tem caráter educativo e não substitui uma consulta. O texto completo, com as referências, está no portal. ` +
     'Se você precisar de apoio agora, ligue 188, o CVV, ligação gratuita, 24 horas. Em emergência, ligue 192, o SAMU.',
   curta: `Conteúdo do ${MARCA}.`,
+  // Só nos vídeos longos (decisão de 17/10/2026): na fala, a assinatura é esta, curta; as 5 linhas ficam na tela final e na descrição.
+  assinaturaFalada: 'Doutor Antônio Felipe, médico, CRM Bahia 41322, especialista em Medicina de Família e Comunidade, RQE 26638.',
 };
 
 // Mesmo critério da caixa CVV: suicídio, autolesão, violência e crise (título, resumo e corpo).
@@ -35,13 +37,13 @@ function temaSensivel(artigo) {
 const RAIZ = path.join(__dirname, '..', '..');
 const EDGE_TTS = process.env.EDGE_TTS_BIN || path.join(RAIZ, 'reels_automation', '.venv', process.platform === 'win32' ? 'Scripts/edge-tts.exe' : 'bin/edge-tts');
 const PASTA_VINHETAS = path.join(RAIZ, 'narracoes-geradas', '_vinhetas');
-const ARQUIVOS = { abertura: 'abertura.mp3', encerramento: 'encerramento.mp3', encerramentoSensivel: 'encerramento-sensivel.mp3', curta: 'curta.mp3' };
+const ARQUIVOS = { abertura: 'abertura.mp3', encerramento: 'encerramento.mp3', encerramentoSensivel: 'encerramento-sensivel.mp3', curta: 'curta.mp3', assinaturaFalada: 'assinatura-falada.mp3' };
 
 /** Pronúncia: "Garabito" fica como está (conferido por transcrição); o dicionário cobre CVV/SAMU. */
 function sintetizar(chave, saida) {
   fs.mkdirSync(path.dirname(saida), { recursive: true });
   const tmp = `${saida}.txt`;
-  fs.writeFileSync(tmp, aplicarPronuncia(TEXTOS[chave]));
+  fs.writeFileSync(tmp, aplicarPronuncia(TEXTOS[chave], [...DICIONARIO, ['CRM', 'Cê Érre Ême']]));
   const r = spawnSync(EDGE_TTS, ['--voice', VOZ_NARRACAO, '--file', tmp, '--write-media', saida], { encoding: 'utf8', timeout: 120_000, killSignal: 'SIGKILL' });
   fs.rmSync(tmp, { force: true });
   if (r.status !== 0) throw new Error(`edge-tts falhou: ${(r.stderr || r.error?.message || '').slice(0, 300)}`);
