@@ -1,0 +1,6 @@
+{
+  "nota": "Vídeos de TESTE já enviados ao canal (privados). Não são da fila, não entram em relatórios nem em contagens. O Dr. Antônio apaga pelo YouTube Studio; não apagar por script.",
+  "videos": [
+    { "id": "z_JHmmpw880", "tipo": "teste", "privacidade": "private", "enviadoEm": "2026-10-16", "origem": "short-2026-10-26-saude-mental-cuidador", "link": "https://www.youtube.com/shorts/z_JHmmpw880" }
+  ]
+}

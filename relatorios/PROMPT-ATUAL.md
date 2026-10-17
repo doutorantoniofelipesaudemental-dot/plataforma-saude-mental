@@ -89,3 +89,13 @@ RELATÓRIO FINAL (curto, pt-BR): 1 validação+trava B; 2 PR da vinheta e arquiv
 ---
 # ATUALIZAÇÃO 17/10/2026 (noite) — YouTube autorizado
 1 token gravado (conferir só pelo tamanho); 2 npm run youtube:upload-teste (1 Short PRIVADO, freio desligado); 3 conferir pela API (privado, título com acentos, linha de crédito, assinatura, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria) e mostrar o link; 4 gravar a data da autorização (16/10/2026) no ESTADO-GERAL e avisar na rotina semanal 2 dias antes do vencimento (7 dias), com o passo a passo; 5 PASSO-A-PASSO-YOUTUBE: seção "Publicar o app (para a autorização não vencer)" (Branding sem logo, página inicial, /privacidade, domínio autorizado, e-mail do desenvolvedor; Público-alvo → Publicar app; autorizar de novo); 6 relatorios/youtube/AUDITORIA-API-RESPOSTAS.md (PT e EN, formulário, link e passo a passo); 7 manter YOUTUBE_PUBLICACAO_ATIVA DESLIGADO.
+
+
+---
+# ATUALIZAÇÃO 17/10/2026 (noite) — PR #85 conferido; decisões
+1 Política de privacidade: seção curta "Uso da API do YouTube" (APROVADA) em public/privacidade e na /privacidade do app Next (Portal usa a API só para publicar/organizar os vídeos do próprio canal; não coleta/armazena/compartilha dados de visitantes nem de usuários do YouTube; links: Termos do YouTube https://www.youtube.com/t/terms, Política do Google https://policies.google.com/privacy; revogar: https://myaccount.google.com/permissions; atualizar "Última atualização"); não mudar o resto; registrar em relatorios/politica-privacidade-aprovada.md; deploy e conferir no ar.
+2 Freios LOCAL × VERCEL: tabela no ESTADO-GERAL.md e em SE-ALGO-DER-ERRADO.md (Instagram=Vercel; YouTube, LinkedIn, narração=tarefas do Windows/.env local; como ligar/desligar). NÃO alterar freio; não repetir sobrescrita sem ordem.
+3 AUDITORIA-API-RESPOSTAS.md: topo com "O que o Dr. Antônio preenche" e onde achar cada item; não inventar dados pessoais.
+4 Vídeo de teste z_JHmmpw880: não apagar; registrar como "teste" (fora de relatórios e fila).
+5 LinkedIn sem credencial: 5.1 PASSO-A-PASSO completo (Página, app, verificar, Share on LinkedIn + Sign In with LinkedIn using OpenID Connect, URL de redirecionamento exata, nome exato das variáveis, comando "!"); 5.2 npm run linkedin:autorizar (padrão do YouTube) e freio LINKEDIN_PUBLICACAO_ATIVA desligado; 5.3 linha na /privacidade só se a política do LinkedIn exigir.
+6 Conferências: 19/10 (trava B + token Instagram) e 26/10 (1º post) prontas e com aviso de vencimento da autorização do YouTube (23/10); narração noturna gerando os 194 por data — informar quantos faltam.

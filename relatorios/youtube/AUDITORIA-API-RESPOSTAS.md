@@ -7,6 +7,23 @@ Confira o que é verdadeiro antes de enviar. **Nunca coloque chaves, tokens nem 
 
 > Os trechos marcados **(PREENCHA)** são dados pessoais/jurídicos que eu não tenho. Os demais descrevem exatamente o que o código faz hoje.
 
+## O que o Dr. Antônio preenche (e onde achar cada item)
+Nada abaixo foi inventado: são dados seus. **Não coloque senha, chave secreta (`CLIENT_SECRET`) nem token no formulário.**
+
+| # | Item do formulário | De onde vem | Onde achar |
+|---|---|---|---|
+| 1 | **Número do projeto** (Project number) | Google Cloud | console.cloud.google.com → escolha o projeto **portal-saude-mental-youtube** → **Painel (Dashboard)** → cartão **"Informações do projeto"** → **"Número do projeto"** (só dígitos). *Não* é o "ID do projeto" (esse tem letras). |
+| 2 | **Nome legal completo** do solicitante | Você | Como está no seu documento de identidade / CRM. |
+| 3 | **Tipo de solicitante** (pessoa física ou organização) e, se for organização, **nome legal da organização**, **empresa-mãe** e **porte** | Você / contador | Se atende como pessoa física: escolha pessoa física e "não se aplica" para empresa-mãe. Se o consultório tem CNPJ: razão social em seu cartão CNPJ (consulta pública da Receita Federal). Porte: 1 pessoa. |
+| 4 | **Endereço legal** | Você | Endereço do consultório ou o endereço fiscal que consta no CNPJ/comprovante de residência. |
+| 5 | **E-mail de contato** (principal, técnico e comercial) | Já definido | doutor.antoniofelipe.saudemental@gmail.com (o mesmo da política de privacidade e do Google Cloud). Confirme que você lê essa caixa: o Google responde por ela. |
+| 6 | **Telefone de contato** (se o formulário pedir) | Você | O telefone do consultório (o mesmo que aparece no site, só como "Telefone"). |
+| 7 | **ID do cliente OAuth** (Client ID) | Google Cloud | Menu ☰ → **APIs e serviços → Credenciais** → clique no nome do ID do cliente: o **ID do cliente** (termina em `.apps.googleusercontent.com`) é público e pode ir no formulário. **A chave secreta não vai.** |
+| 8 | **Capturas de tela** da política de privacidade e da página inicial | Você (print) | Abra https://www.drantoniofelipemedico.com.br/privacidade e https://www.drantoniofelipemedico.com.br e tire um print de cada (a política já tem a seção "Uso da API do YouTube"). |
+| 9 | **Captura do painel do Google Cloud** (projeto, YouTube Data API v3 ativada, escopos) | Você (print) | Google Cloud → **APIs e serviços → APIs ativadas** (mostra a YouTube Data API v3) e **Google Auth Platform → Acesso a dados** (mostra os escopos). |
+| 10 | **Vídeo de tela** de 1–2 minutos (canal, pasta de vídeos prontos, comando de upload privado) | Você (grave) / Claude Code prepara o roteiro | Gravador de Tela do Windows (tecla **Windows + Alt + R**). Peça ao Claude Code o roteiro do que mostrar. |
+| 11 | **Quando o formulário perguntar "como conheceu a API"**, representante do Google, IDs de proprietário de conteúdo, Google Ads | Você | Responda "pesquisa na documentação" e deixe os demais em branco / "não se aplica" (você não é parceiro do YouTube nem usa Google Ads aqui). |
+
 ---
 
 ## Passo a passo para enviar (você faz, ~30 minutos)
