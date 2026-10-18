@@ -191,3 +191,5 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - **App Next:** mesmo processo no projeto `plataforma-saude-mental` (pasta `apps/plataforma-saude-mental`).
 - **Redes:** parar na hora = `REDES_PUBLICACAO_ATIVA=false` na Vercel (Production) + redeploy.
 - **Dados:** backups em `backups/` (identificação única, assinatura TCC, referências, `redes-v2-urltexto-20261015`).
+
+> **CHECKPOINT FASE 0 e 1 (18/10/2026, ordem "versão enxuta + Ollama"):** verificações em `relatorios/VERIFICACOES.md` (carrossel liberado, 726/726 com vinheta, Ollama com 3 modelos). Mapa em `relatorios/MAPA-AUTOMACAO.md`. **Próximo passo exato:** Fase 5 (checagens, portão leve e PR único, sem merge).
