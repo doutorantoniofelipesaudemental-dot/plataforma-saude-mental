@@ -150,3 +150,32 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Resumo: não-regressão (conteúdo aprovado/publicado/agendado não muda sem ordem; o novo entra como arquivo/módulo novo); fonte única = artigo publicado; 1 artigo → pacote multicanal; públicos separados (pacientes, profissionais, gestores/RH); nada de atendimento em comentários/DM/e-mail; fatos normativos (NR-1, GRO, resoluções) só após checagem na fonte oficial; pesquisa de referência extrai só padrões, sem copiar; relatório final no formato [AUDITORIA DE EXECUÇÃO].
 - Decisões do Dr. Antônio (18/10/2026): assinatura por extenso (TCC) e PAP/APS só na versão de 3 linhas; landings e conteúdo já publicado/agendado só com plano e ordem dele; Newsletter, Podcast, Kit NR-1 e thumbnail com rosto = módulos planejados (PR próprio, sem tocar no existente; rosto só com foto aprovada).
 - **Instagram (18/10/2026, ordem do Dr. Antônio):** imagem única e carrossel pela Meta Graph (freio `REDES_PUBLICACAO_ATIVA` da Vercel). Carrossel LIBERADO em 18/10/2026 16:59 UTC após validação SEM publicar dos 7 próximos posts (`npm run redes:teste-carrossel -- --validar`); antes de cada `media_publish` o publicador reconfere o post e valida os containers (FINISHED), trava contra publicar 2 vezes, adia 1 dia e alerta se algo falhar, e confere pela API (só leitura) o post publicado e grava o ID da Meta. Reels e Stories: NÃO são produzidos por ora (sem fila manual); reavaliar em ~18/11. Conferência diária só de leitura às 09:30 (tarefa `DrSM-Conferencia-Diaria`, relatório em `relatorios/conferencias/`, alerta no topo do `ESTADO-GERAL.md`).
+
+## O que continua sendo do Dr. Antônio (18/10/2026)
+- `merge-seguro` (1x por semana, executado pelo Dr. Antônio).
+- Clicar em "Enviar" na auditoria do YouTube.
+- Login no LinkedIn quando cair; CAPTCHA e verificação.
+- PC ligado à noite (narração 22:00, YouTube 23:30 e 12:30, conferências 19:30).
+- Ligar `YOUTUBE_PUBLICACAO_ATIVA` somente após aprovação da auditoria.
+- Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
+- Ativar crédito extra ou recarga, se necessário.
+- Push e abertura de PR quando o classificador bloquear. Nesse caso, o Claude Code deixa o commit local pronto e entrega os comandos com "!" (nunca contorna o bloqueio).
+
+## Modo economia (18/10/2026)
+- Leitura mínima: grep, head, tail, wc e jq. Não ler arquivos grandes inteiros, não reler o que já foi lido, não explorar o repositório inteiro, sem subagentes.
+- Saídas longas vão para `relatorios/logs/` por redirecionamento; ler só as últimas 20 linhas ou os contadores.
+- Escrever relatórios direto, sem rascunhos intermediários e sem reescrever arquivos para ajustes.
+- Ao fim de cada fase, gravar checkpoint em `relatorios/ESTADO-GERAL.md` (fase concluída + próximo passo exato) e escrever "CHECKPOINT FASE X" em uma linha.
+- Comando travado, erro repetido ou mais de 2 tentativas: parar o item, registrar em `relatorios/PENDENTES.md` e seguir.
+- Nunca ativar recarga nem comprar crédito.
+- Produção em volume só com ferramentas gratuitas.
+
+## Uso do Ollama (18/10/2026)
+- O1. Verificar primeiro com `ollama list`. Não baixar modelos nem acessar a rede. Se não responder ou o modelo não existir: registrar em PENDENTES.md, seguir sem ele e não refazer o trabalho com o Claude em volume.
+- O2. Chamar por linha de comando com saída em `relatorios/logs/` (ex.: `ollama run MODELO < entrada.txt > saida.txt`). Ler só o resultado final ou um resumo curto. Um modelo por vez. Mais de 5 minutos no mesmo item: interromper e registrar.
+- O3. Divisão: llama3.2:3b (sanitização, listas, tabelas, extração de campos, contagens); gemma2:9b (rascunho de descrições do mapa, resumo do ESTADO-GERAL, pré-checagem científica e ética/humanizada de documentação, saída JSON `{"aprovado":true|false,"motivos":[]}`); qwen2.5-coder:14b (validar JSON/markdown e conferir comandos; não decide nada de código do projeto).
+- O4. Antes de qualquer IA, checagens determinísticas com grep/script (zero token): "Antônio" com acento (exceto URL, @, e-mail, nomes técnicos e Antonio Felipe Garabito Jr.), ausência de "psiquiatra" como título e de #psiquiatria, crédito "Portal de Saúde Mental Doutor Antônio Felipe Garabito" onde aplicável, links válidos, ausência de segredos nos arquivos a commitar. Nunca ler o `.env`.
+- O5. O modelo local é triagem, nunca decisor único. "Reprovado", "incerto", JSON inválido ou fora do formato = registrar em `relatorios/checagens/` e NÃO aprovar. Texto com sentido clínico, números, doses ou diagnóstico: não aprovar sozinho; listar em `relatorios/APROVACAO-ANTONIO.md`.
+- O6. Quem revisa por último é o Claude Code, lendo só o relatório consolidado das checagens (máx. 20 linhas), não os textos inteiros.
+- a) O gemma2:9b NÃO deve gerar tabelas nem estruturas com colunas. Use-o só para triagem em JSON e resumos curtos de texto corrido. Tabelas e relatórios com fatos são montados pelo Claude Code direto a partir de grep, sem rascunho do modelo local. Ao capturar saída de modelo local, remova códigos de terminal antes de gravar (ex.: `sed 's/\x1b\[[0-9;?]*[a-zA-Z]//g'`).
+- c) A aprovação do gemma2:9b é só de triagem. Quem confere o conteúdo é o Claude Code.

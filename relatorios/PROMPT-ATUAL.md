@@ -175,3 +175,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - **18/10 (manuais concluídos, informado pelo Dr. Antônio):** bios (Instagram, YouTube, LinkedIn) e app Google em "Em produção" feitos. Falta `! npm run youtube:autorizar` (Dr. Antônio) e conferir o token (tamanho, sem imprimir). Conferência 19/10 (token Instagram) e 1º post 26/10 seguem. LinkedIn: `agendar-linkedin` a partir de li-2026-11-25 + PDF 06/11.
 - **18/10 (reautorização feita):** `youtube:autorizar` concluído; token conferido (103 caracteres, canal HTTP 200); 322 testes unitários OK. Bios, links e app Google 100% concluídos. O aviso de vencimento em 23/10 não vale mais (app em produção). Freio do YouTube desligado.
 - **18/10, 14h:** narrações 726/726 com vinheta; `DrSM-Conferencia-Diaria` registrada (09:30, S4U, oculta); conferência de hoje: 0 falhas. LinkedIn: sem novos agendamentos (limite diário), retomar a partir de li-2026-11-25.
+
+## Estado em 18/10/2026 (ordem "versão enxuta + Ollama")
+- Fases 0, 1, 4 e 5 feitas: `relatorios/VERIFICACOES.md`, `relatorios/MAPA-AUTOMACAO.md`, `relatorios/checagens/2026-10-18.md`, `relatorios/PENDENTES.md`. CLAUDE.md ganhou "O que continua sendo do Dr. Antônio", "Modo economia" e "Uso do Ollama".
+- Nada publicado, nenhuma tarefa agendada criada, nenhum freio alterado. Merge só pelo Dr. Antônio via `npm run merge-seguro -- <PR>`.
+- Próximo passo exato: o Dr. Antônio revisa o PR da Fase 5 e roda o merge-seguro; depois da renovação da cota, ver `relatorios/PENDENTES.md`.
