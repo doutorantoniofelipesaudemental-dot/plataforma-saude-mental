@@ -17,6 +17,7 @@ const { redesAtivas } = require('../../backend/lib/freioRedes');
 
 const simular = process.argv.includes('--simular');
 const max = Math.min(4, Number((process.argv.find((a) => a.startsWith('--max=')) || '--max=2').split('=')[1]));
+const idArg = (process.argv.find((a) => a.startsWith('--id=')) || '').split('=')[1]; // publicar-seguro: só este item (ignora o horário)
 const FILA = path.join(L.REL, 'fila.json'), LOG = path.join(L.REL, 'publicacao-log.md'), PLAYLISTS = path.join(L.REL, 'playlists.json');
 const log = (t) => { fs.mkdirSync(L.REL, { recursive: true }); fs.appendFileSync(LOG, `${fs.existsSync(LOG) ? '' : '# Log de publicação do YouTube\n'}\n- ${new Date().toISOString()} · ${t}\n`, 'utf8'); console.log(t); };
 
@@ -47,7 +48,7 @@ async function extras(token, id, item, meta, dir) {
   const artigos = mongoose.connection.db.collection('artigos');
   const aArg = (process.argv.find((a) => a.startsWith('--agora=')) || '').split('=')[1]; // só para simular (testes)
   const agora = aArg ? new Date(aArg).getTime() : Date.now();
-  const devidos = fila.itens.filter((i) => i.status === 'aprovado-checagem' && new Date(i.slot).getTime() <= agora).sort((a, b) => new Date(a.slot) - new Date(b.slot)).slice(0, max);
+  const devidos = fila.itens.filter((i) => i.status === 'aprovado-checagem' && (idArg ? i.id === idArg : new Date(i.slot).getTime() <= agora)).sort((a, b) => new Date(a.slot) - new Date(b.slot)).slice(0, max);
   if (!devidos.length) return log('nada devido agora.');
   const token = simular ? null : await yt.obterAccessToken();
   for (const it of devidos) {

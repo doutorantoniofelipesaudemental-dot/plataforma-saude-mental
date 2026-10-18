@@ -139,6 +139,14 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Detalhe: `relatorios/rotina-20261017.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
 <!-- ROTINA:FIM -->
 
+## O que continua dependendo do Dr. Antônio (17/10/2026)
+- Login em sites, códigos de verificação e CAPTCHA.
+- Autorizações OAuth (Google/YouTube) e o "Publicar app" do Google.
+- Qualquer pagamento ou plano.
+- Decisões de conteúdo que mudem o sentido clínico.
+- Ligar ou desligar freios (REDES_/YOUTUBE_/LINKEDIN_PUBLICACAO_ATIVA), `.env` e a trava `.claude/settings.json` + `.claude/hooks/guarda.js`.
+- Merge só por `npm run merge-seguro`; publicação manual só por `npm run publicar-seguro`.
+
 ## Pendências que dependem do Dr. Antônio
 1. Decidir sobre a troca das 2 referências retratadas (`relatorios/referencias-retratadas-proposta.md`).
 2. (Política de privacidade e pronúncia de NR-1: aprovadas em 15/10/2026.)
