@@ -159,6 +159,7 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Ligar `YOUTUBE_PUBLICACAO_ATIVA` somente após aprovação da auditoria.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se necessário.
+- Push e abertura de PR quando o classificador bloquear. Nesse caso, o Claude Code deixa o commit local pronto e entrega os comandos com "!" (nunca contorna o bloqueio).
 
 ## Modo economia (18/10/2026)
 - Leitura mínima: grep, head, tail, wc e jq. Não ler arquivos grandes inteiros, não reler o que já foi lido, não explorar o repositório inteiro, sem subagentes.
@@ -176,3 +177,5 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - O4. Antes de qualquer IA, checagens determinísticas com grep/script (zero token): "Antônio" com acento (exceto URL, @, e-mail, nomes técnicos e Antonio Felipe Garabito Jr.), ausência de "psiquiatra" como título e de #psiquiatria, crédito "Portal de Saúde Mental Doutor Antônio Felipe Garabito" onde aplicável, links válidos, ausência de segredos nos arquivos a commitar. Nunca ler o `.env`.
 - O5. O modelo local é triagem, nunca decisor único. "Reprovado", "incerto", JSON inválido ou fora do formato = registrar em `relatorios/checagens/` e NÃO aprovar. Texto com sentido clínico, números, doses ou diagnóstico: não aprovar sozinho; listar em `relatorios/APROVACAO-ANTONIO.md`.
 - O6. Quem revisa por último é o Claude Code, lendo só o relatório consolidado das checagens (máx. 20 linhas), não os textos inteiros.
+- a) O gemma2:9b NÃO deve gerar tabelas nem estruturas com colunas. Use-o só para triagem em JSON e resumos curtos de texto corrido. Tabelas e relatórios com fatos são montados pelo Claude Code direto a partir de grep, sem rascunho do modelo local. Ao capturar saída de modelo local, remova códigos de terminal antes de gravar (ex.: `sed 's/\x1b\[[0-9;?]*[a-zA-Z]//g'`).
+- c) A aprovação do gemma2:9b é só de triagem. Quem confere o conteúdo é o Claude Code.

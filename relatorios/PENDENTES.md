@@ -5,3 +5,4 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 2. **E-mail de alertas** (`docs/alertas-email.md`, **arquivo não encontrado em 18/10/2026**). Passo exato: localizar ou criar o documento depois da renovação; não enviar nada antes.
 3. **Tarefas agendadas.** Passo exato: só criar após a renovação e nova ordem escrita. Nenhuma tarefa `DrSM-*` foi criada ou alterada nesta ordem.
 4. **Merge do PR da Fase 5.** Passo exato: o Dr. Antônio roda `npm run merge-seguro -- <número do PR>` (o número aparece em `relatorios/ESTADO-GERAL.md`).
+5. push e PR dependem de comando do Antônio (bloqueio do classificador em 18/10/2026).
