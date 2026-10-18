@@ -14,8 +14,12 @@ test('o script gerado nunca clica no botão Publicar', () => {
 });
 
 test('para em erro, limite diário ou verificação e exige o aviso de sucesso', () => {
-  assert.match(src, /atingiu o limite/);
-  assert.match(src, /Publicação agendada/);
+  // a decisão sucesso/limite/bloqueio vive em classificarAviso.js (testada em linkedin-aviso.test.js) e é embutida no script
+  const aviso = fs.readFileSync(path.join(__dirname, '..', '..', 'scripts', 'linkedin', 'classificarAviso.js'), 'utf8');
+  assert.match(src, /classificarAviso\.toString\(\)/);
+  assert.match(aviso, /atingiu o limite/);
+  assert.match(aviso, /Publicação agendada/);
+  assert.match(src, /r\.estado !== 'sucesso'/);
   assert.match(src, /não vou escrever por cima/);
   assert.match(src, /fase: 'agendar'/);
 });
