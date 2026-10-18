@@ -144,3 +144,8 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
   (e) nada que mude o sentido clínico de um texto seja alterado sem aprovação do Dr. Antônio.
 - Pedir ação do Dr. Antônio SÓ para: login, código de verificação, CAPTCHA, autorizações OAuth, pagamento, ligar/desligar freios, decisões clínicas e comandos bloqueados pelo classificador (nesse caso, passar o comando exato com "!").
 - Ao terminar qualquer sessão: atualizar `relatorios/ESTADO-GERAL.md` e `relatorios/PROMPT-ATUAL.md` com o estado REAL (conferido no banco), nunca com suposições.
+
+### Prompt mestre unificado (18/10/2026)
+- Texto integral e tabela de conflitos: **[docs/prompt-mestre-unificado.md](docs/prompt-mestre-unificado.md)** — vale como parte deste arquivo; **em conflito prevalece este `CLAUDE.md`** (assinatura por extenso, regras de segurança e freios) e, entre duas regras, a mais restritiva.
+- Resumo: não-regressão (conteúdo aprovado/publicado/agendado não muda sem ordem; o novo entra como arquivo/módulo novo); fonte única = artigo publicado; 1 artigo → pacote multicanal; públicos separados (pacientes, profissionais, gestores/RH); nada de atendimento em comentários/DM/e-mail; fatos normativos (NR-1, GRO, resoluções) só após checagem na fonte oficial; pesquisa de referência extrai só padrões, sem copiar; relatório final no formato [AUDITORIA DE EXECUÇÃO].
+- Em aberto (aguarda o Dr. Antônio): se carrossel/Reels/Stories do Instagram seguem só na fila manual ou também pelo Meta Graph. Newsletter, Podcast e Kit NR-1 são módulos PLANEJADOS (PR próprio, sem tocar no existente).
