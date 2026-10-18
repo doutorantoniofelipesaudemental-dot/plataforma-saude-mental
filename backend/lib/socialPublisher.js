@@ -336,6 +336,28 @@ async function publicarCarrosselNoInstagram({ imagensUrls, legenda, alts = [] })
   const base = graphBase(token);
   const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
 
+  // Validação ANTES de publicar: todos os containers (itens e carrossel) precisam chegar a FINISHED, na ordem e na quantidade certas.
+  const { filhos, container } = await criarContainersCarrossel({ imagensUrls, legenda, alts, base, cabecalhos, token, contaId });
+
+  const pub = await fetch(`${base}/${contaId}/media_publish`, {
+    method: 'POST',
+    headers: cabecalhos,
+    body: new URLSearchParams({ creation_id: container }),
+  });
+  const publicado = await pub.json();
+  if (!pub.ok || !publicado.id) lancarErroMeta(publicado, 'Falha ao publicar o carrossel', 'INSTAGRAM_PUBLISH_FALHOU');
+
+  const link = await fetch(`${base}/${publicado.id}?fields=permalink`, { headers: { Authorization: `Bearer ${token}` } })
+    .then((x) => x.json())
+    .catch(() => ({}));
+  return { id: publicado.id, statusHttp: pub.status, permalink: link.permalink || null, itens: filhos.length };
+}
+
+/**
+ * Cria os containers dos itens e do carrossel e espera todos ficarem FINISHED. NÃO publica (não chama media_publish).
+ * Containers não publicados expiram sozinhos em 24 h. Usado pela publicação (antes do media_publish) e pelo modo --validar.
+ */
+async function criarContainersCarrossel({ imagensUrls, legenda, alts = [], base, cabecalhos, token, contaId }) {
   const filhos = [];
   for (const [i, imagemUrl] of imagensUrls.entries()) {
     const r = await fetch(`${base}/${contaId}/media`, {
@@ -348,6 +370,7 @@ async function publicarCarrosselNoInstagram({ imagensUrls, legenda, alts = [] })
     filhos.push(d.id);
   }
   for (const id of filhos) await aguardarContainerPronto(id, token);
+  if (filhos.length !== imagensUrls.length) throw new ErroPublicacao('Quantidade de itens do carrossel diferente da esperada.', 'INSTAGRAM_CONTAINER_FALHOU');
 
   const r = await fetch(`${base}/${contaId}/media`, {
     method: 'POST',
@@ -357,19 +380,37 @@ async function publicarCarrosselNoInstagram({ imagensUrls, legenda, alts = [] })
   const container = await r.json();
   if (!r.ok || !container.id) lancarErroMeta(container, 'Falha ao criar o container do carrossel', 'INSTAGRAM_CONTAINER_FALHOU');
   await aguardarContainerPronto(container.id, token);
+  return { filhos, container: container.id };
+}
 
-  const pub = await fetch(`${base}/${contaId}/media_publish`, {
-    method: 'POST',
-    headers: cabecalhos,
-    body: new URLSearchParams({ creation_id: container.id }),
-  });
-  const publicado = await pub.json();
-  if (!pub.ok || !publicado.id) lancarErroMeta(publicado, 'Falha ao publicar o carrossel', 'INSTAGRAM_PUBLISH_FALHOU');
+/**
+ * Validação SEM publicar (modo --validar do testeCarrossel.js): cria os containers e espera FINISHED; nunca chama media_publish.
+ * Não passa pelo freio porque não publica nada.
+ */
+async function validarCarrosselNoInstagram({ imagensUrls, legenda, alts = [] }) {
+  requerEnv('INSTAGRAM_ACCESS_TOKEN');
+  const token = await obterTokenInstagram();
+  const contaId = requerEnv('INSTAGRAM_ACCOUNT_ID');
+  const base = graphBase(token);
+  const cabecalhos = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
+  const { filhos, container } = await criarContainersCarrossel({ imagensUrls, legenda, alts, base, cabecalhos, token, contaId });
+  return { itens: filhos.length, container, status: 'FINISHED', publicado: false };
+}
 
-  const link = await fetch(`${base}/${publicado.id}?fields=permalink`, { headers: { Authorization: `Bearer ${token}` } })
-    .then((x) => x.json())
-    .catch(() => ({}));
-  return { id: publicado.id, statusHttp: pub.status, permalink: link.permalink || null, itens: filhos.length };
+/** Só leitura: o post publicado existe com todas as imagens? Devolve { ok, itens, permalink, falhas }. */
+async function conferirPublicacaoInstagram(id, itensEsperados) {
+  requerEnv('INSTAGRAM_ACCESS_TOKEN');
+  const token = await obterTokenInstagram();
+  const r = await fetch(`${graphBase(token)}/${id}?fields=media_type,permalink,timestamp,children{id,media_type}`, { headers: { Authorization: `Bearer ${token}` } });
+  const d = await r.json();
+  const falhas = [];
+  if (!r.ok || d.error) falhas.push(`consulta recusada: ${(d.error && d.error.message) || r.status}`);
+  else {
+    const itens = (d.children && d.children.data ? d.children.data.length : 1);
+    if (itensEsperados && itens !== itensEsperados) falhas.push(`itens ${itens} (esperado ${itensEsperados})`);
+    return { ok: !falhas.length, itens, permalink: d.permalink || null, tipo: d.media_type || null, falhas };
+  }
+  return { ok: false, itens: 0, permalink: null, falhas };
 }
 
 /**
@@ -709,6 +750,8 @@ module.exports = {
   montarPacotesMidia,
   publicarNoInstagram,
   publicarCarrosselNoInstagram,
+  validarCarrosselNoInstagram,
+  conferirPublicacaoInstagram,
   publicarReelNoInstagram,
   parametrosContainerReel,
   publicarNoLinkedIn,

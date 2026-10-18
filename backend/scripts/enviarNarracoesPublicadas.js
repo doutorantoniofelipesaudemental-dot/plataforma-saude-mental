@@ -10,7 +10,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const mongoose = require('mongoose');
-const { textoParaNarracao, hashNarracao, estadoNarracao } = require('../lib/narracao');
+const { textoParaNarracao, hashNarracao, estadoNarracao, precisaVinheta } = require('../lib/narracao');
+const { VINHETA_VERSAO } = require('../lib/vinheta');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const PASTA = path.join(RAIZ, 'narracoes-geradas');
@@ -22,9 +23,11 @@ const agendados = process.argv.includes('--agendados');
   const docs = await mongoose.connection.db.collection('artigos').find(agendados ? { $or: [{ publicado: true }, { 'agendamento.agendado': true }] } : { publicado: true }).toArray();
   const prontos = [], desatualizados = [], semMp3 = [];
   for (const d of docs) {
-    if (estadoNarracao(d).estado === 'ok') continue;
+    const semVinheta = precisaVinheta(d);
+    if (estadoNarracao(d).estado === 'ok' && !semVinheta) continue;
     const mp3 = path.join(PASTA, `${d.slug}.mp3`), selo = path.join(PASTA, `${d.slug}.hash`);
     if (!fs.existsSync(mp3) || !fs.existsSync(selo)) { semMp3.push(d.slug); continue; }
+    if (semVinheta) { let v = ''; try { v = fs.readFileSync(path.join(PASTA, `${d.slug}.vinheta`), 'utf8').trim(); } catch { /* sem marcador */ } if (v !== String(VINHETA_VERSAO)) { semMp3.push(d.slug); continue; } } // o MP3 local ainda não tem a vinheta: precisa regerar
     (fs.readFileSync(selo, 'utf8').trim() === hashNarracao(textoParaNarracao(d)) ? prontos : desatualizados).push(d.slug);
   }
   console.log(`${enviar ? 'ENVIAR' : 'DRY-RUN'} · ${agendados ? 'publicados + agendados' : 'publicados'} sem áudio "ok": ${prontos.length + desatualizados.length + semMp3.length} · com MP3 pronto e selo válido: ${prontos.length} · MP3 de texto editado depois (regerar): ${desatualizados.length} · sem MP3 pré-gerado: ${semMp3.length}`);

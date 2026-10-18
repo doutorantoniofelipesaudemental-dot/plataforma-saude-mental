@@ -93,6 +93,16 @@ function estadoNarracao(artigo) {
   return { estado: 'ausente', esperado };
 }
 
+/**
+ * Narração "ok" (hash certo) mas SEM a vinheta de crédito da marca (áudio gerado antes da vinheta, vinhetaVersao 0/ausente).
+ * Não é problema de hash: o lote noturno precisa regerar e reenviar (causa das 16 narrações sem vinheta em 18/10/2026).
+ */
+function precisaVinheta(artigo) {
+  if (estadoNarracao(artigo).estado !== 'ok') return false;
+  const versao = require('./vinheta').VINHETA_VERSAO;
+  return !(artigo.narracao && artigo.narracao.vinhetaVersao === versao);
+}
+
 /** URL que o player pode tocar, ou '' (ausente, desatualizada ou texto ainda não publicado). */
 function urlNarracaoTocavel(artigo) {
   // Texto agendado (publicado:false) pode ter o MP3 enviado antes ("aguardando publicação"): só toca depois de publicado.
@@ -110,6 +120,7 @@ const PENDENCIA = {
 };
 
 module.exports = {
+  precisaVinheta,
   textoParaNarracao,
   hashNarracao,
   estadoNarracao,

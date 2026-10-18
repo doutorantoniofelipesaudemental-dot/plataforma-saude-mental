@@ -49,3 +49,11 @@ Cadência base: site conforme a fila (dias úteis); YouTube 1 longo/semana + 3 S
 - **Aprovação:** ver tabela de conflitos. Peça nova que passar na auditoria e na tripla checagem, sem marca d'água e com as correções feitas, pode ser publicada sem aprovação prévia (carta de autonomia, freios respeitados).
 - **Tripla checagem:** (1) técnica: `npm test` + build, zero regressão (o projeto roda `npm run portao`); (2) científica/ética/humanizada: fidelidade ao artigo-base, referências válidas, conformidade com 1 e 3; (3) estado: rotas e landings intactas, `ESTADO-GERAL.md` e `PROMPT-ATUAL.md` atualizados.
 - **Relatório final:** [AUDITORIA DE EXECUÇÃO] com: preservação do existente; fonte (artigos); referências de mercado (padrões, sem cópia); peças por canal; tripla checagem (técnica, científica/ética/CFM, estado/links); métricas da semana; falhas detectadas e corrigidas; próximo passo requerido.
+
+## Atualização de 18/10/2026 (ordem escrita do Dr. Antônio): automação do Instagram sem celular
+- Substitui o teste supervisionado por **validação sem publicar** (`--validar`): containers dos itens e do carrossel na Graph API até FINISHED, **sem `media_publish`** (expiram em 24 h). Validados 7 de 7 (26/10 a 04/11; a semana de 26/10 a 01/11 tem 5 posts úteis). Resultado em `relatorios/redes/validacao-carrosseis.json`.
+- **Carrossel liberado** (`redes_v2_config/instagram.carrosselLiberado=true`, 18/10/2026 16:59 UTC, conferido lendo o banco).
+- Publicador (cron `publicar-redes-v2`, Vercel): conferência completa + validação dos containers antes do `media_publish`; trava atômica ("publicando"); falha = não publica, adia para o dia seguinte e registra alerta; depois de publicar, confere pela API (só leitura) e grava o ID da Meta.
+- **Reels e Stories: não produzir por ora**; não há fila manual para eles nem nada que dependa de celular. Reavaliar em 30 dias (~18/11).
+- Conferências automáticas só de leitura: `scripts/conferencias/conferenciaDiaria.js`, 09:30 (Salvador), tarefa `DrSM-Conferencia-Diaria` (S4U, oculta, 3 reinícios); inclui token/renovação (a partir de 19/10) e o primeiro post (a partir de 26/10). Sem e-mail configurado no projeto: o alerta fica no topo do `ESTADO-GERAL.md`.
+

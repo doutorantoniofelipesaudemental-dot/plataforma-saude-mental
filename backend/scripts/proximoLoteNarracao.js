@@ -7,11 +7,13 @@
 const mongoose = require('mongoose');
 const fs = require('node:fs');
 const path = require('node:path');
-const { estadoNarracao, textoParaNarracao, hashNarracao } = require('../lib/narracao');
+const { estadoNarracao, precisaVinheta, textoParaNarracao, hashNarracao } = require('../lib/narracao');
+const { VINHETA_VERSAO } = require('../lib/vinheta');
 
 // --pre-gerar: ignora os textos que já têm MP3 pré-gerado com selo (<slug>.hash) válido em narracoes-geradas/ (agendados esperando a publicação).
 const PASTA = path.join(__dirname, '../../narracoes-geradas');
-const preGerado = (d) => { try { return fs.existsSync(path.join(PASTA, `${d.slug}.mp3`)) && fs.readFileSync(path.join(PASTA, `${d.slug}.hash`), 'utf8').trim() === hashNarracao(textoParaNarracao(d)); } catch { return false; } };
+const comVinhetaLocal = (d) => { try { return fs.readFileSync(path.join(PASTA, `${d.slug}.vinheta`), 'utf8').trim() === String(VINHETA_VERSAO); } catch { return false; } };
+const preGerado = (d) => { try { return fs.existsSync(path.join(PASTA, `${d.slug}.mp3`)) && fs.readFileSync(path.join(PASTA, `${d.slug}.hash`), 'utf8').trim() === hashNarracao(textoParaNarracao(d)) && comVinhetaLocal(d); } catch { return false; } };
 
 // textos que reprovaram 2x na conferência (relatorios/narracao-revisar.json) ficam fora do ciclo até alguém olhar
 const parados = (() => { try { const j = JSON.parse(fs.readFileSync(path.join(__dirname, '../../relatorios/narracao-revisar.json'), 'utf8')); return new Set(Object.keys(j).filter((k) => (j[k].tentativas || 0) >= 2)); } catch { return new Set(); } })();
@@ -27,7 +29,7 @@ const LIMITE_CARACTERES = 56000; // ~68 min seria demais; o envio aceita até ~4
   for (const d of docs) {
     const e = estadoNarracao(d).estado;
     estados[e] = (estados[e] || 0) + 1;
-    if (e !== 'ok') pend.push(d);
+    if (e !== 'ok' || precisaVinheta(d)) pend.push(d); // "ok" sem vinheta também volta para a fila (regerar com a vinheta)
   }
   if (process.argv.includes('--resumo')) {
     const preGer = process.argv.includes('--pre-gerar') || true ? pend.filter((d) => !d.publicado && preGerado(d)).length : 0;

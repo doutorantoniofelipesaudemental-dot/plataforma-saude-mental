@@ -77,9 +77,19 @@ async function conferir(post) {
   return problemas;
 }
 
+/**
+ * Trava atômica: só uma execução consegue mudar o post de "aprovado-checagem" para "publicando" (e só se ainda não tem ID da Meta).
+ * Driver novo devolve o documento (ou null); o antigo devolve { value }. Aceita os dois.
+ */
+async function travarPost(colecao, id) {
+  const r = await colecao.findOneAndUpdate({ _id: id, status: 'aprovado-checagem', instagramId: null }, { $set: { status: 'publicando', publicandoDesde: new Date() } });
+  return Boolean(r && (r.value !== undefined ? r.value : r));
+}
+
 async function publicarDevidos({ agora = new Date(), simular = false, apenasId } = {}) {
   if (!redesAtivas()) return { publicado: false, motivo: 'REDES_PUBLICACAO_ATIVA=false (freio de emergência)' };
-  const devidos = await col('redes_v2').find({ status: 'aprovado-checagem', dataSugerida: { $lte: agora }, ...(apenasId ? { _id: apenasId } : {}) }).toArray();
+  // posts adiados por falha (adiadoAte no futuro) só voltam no dia seguinte
+  const devidos = await col('redes_v2').find({ status: 'aprovado-checagem', dataSugerida: { $lte: agora }, $or: [{ adiadoAte: { $exists: false } }, { adiadoAte: null }, { adiadoAte: { $lte: agora } }], ...(apenasId ? { _id: apenasId } : {}) }).toArray();
   if (!devidos.length) return { publicado: false, motivo: 'nenhum post devido' };
   // Token recusado pela Meta: não tenta de novo com ele (a pausa sai sozinha quando um token novo é configurado).
   if (!simular) {
@@ -107,17 +117,31 @@ async function publicarDevidos({ agora = new Date(), simular = false, apenasId }
     const imagensUrls = post.checagem.hashes.map((_, i) => `${BASE_SITE()}/api/redes-v2/img/${post._id}/${i + 1}.png`);
     if (simular) return { publicado: false, simulado: true, publicaria: post._id, tipo: rota.tipo, imagensUrls, bloqueados, roteados };
     if (!(process.env.INSTAGRAM_ACCESS_TOKEN && process.env.INSTAGRAM_ACCOUNT_ID)) { await log('bloqueado', post._id, 'sem credencial do Instagram'); return { publicado: false, motivo: 'sem credencial do Instagram', bloqueados }; }
+    // trava atômica: um post nunca é publicado duas vezes (outra execução ou tentativa vê "publicando" e não o pega)
+    if (!(await travarPost(col('redes_v2'), post._id))) { await log('bloqueado', post._id, 'já em publicação ou já publicado (trava)'); continue; }
+    let publicadoNaMeta = false;
     try {
       const sp = require('../socialPublisher');
       const r = rota.tipo === 'imagem-unica'
         ? await sp.publicarNoInstagram({ imagemUrl: imagensUrls[0], legenda: post.legenda })
         : await sp.publicarCarrosselNoInstagram({ imagensUrls, legenda: post.legenda, alts: post.alts });
-      await col('redes_v2').updateOne({ _id: post._id }, { $set: { status: 'publicado', publicadoEm: new Date(), instagramId: r.id || null } });
+      publicadoNaMeta = true;
+      await col('redes_v2').updateOne({ _id: post._id }, { $set: { status: 'publicado', publicadoEm: new Date(), instagramId: r.id || null, permalink: r.permalink || null } });
       await log('publicado', post._id, `Instagram ${r.id || ''}`);
-      return { publicado: true, id: post._id, tipo: rota.tipo, instagramId: r.id || null, bloqueados, roteados };
+      // conferência pós-publicação (só leitura): o post existe, com todas as imagens?
+      let verificacao = null;
+      try { verificacao = await sp.conferirPublicacaoInstagram(r.id, imagensUrls.length); } catch (e2) { verificacao = { ok: false, falhas: [e2.message] }; }
+      await col('redes_v2').updateOne({ _id: post._id }, { $set: { verificacao: { ...verificacao, em: new Date() } } });
+      if (!verificacao.ok) await log('alerta', post._id, `publicado (${r.id}), mas a conferência pós-publicação falhou: ${(verificacao.falhas || []).join('; ')}`);
+      return { publicado: true, id: post._id, tipo: rota.tipo, instagramId: r.id || null, verificacao, bloqueados, roteados };
     } catch (e) {
+      if (publicadoNaMeta) { await log('alerta', post._id, `publicado na Meta, mas falhou ao registrar: ${e.message}`); return { publicado: true, id: post._id, aviso: e.message, bloqueados, roteados }; }
+      // nada foi publicado (a validação dos containers ou a Meta falhou antes do media_publish): volta para a fila, adia para o dia seguinte e alerta
+      const adiadoAte = new Date(agora.getTime() + 20 * 3600e3);
+      await col('redes_v2').updateOne({ _id: post._id }, { $set: { status: 'aprovado-checagem', adiadoAte, ultimoErro: String(e.message).slice(0, 300) }, $inc: { falhas: 1 }, $unset: { publicandoDesde: '' } });
       await log('erro', post._id, e.message);
-      return { publicado: false, motivo: `erro ao publicar: ${e.message}`, id: post._id, bloqueados, roteados };
+      await log('alerta', post._id, `NÃO publicado; adiado para ${adiadoAte.toISOString().slice(0, 10)}: ${String(e.message).slice(0, 200)}`);
+      return { publicado: false, motivo: `erro ao publicar (adiado para o dia seguinte): ${e.message}`, id: post._id, bloqueados, roteados };
     }
   }
   return { publicado: false, motivo: roteados.length && !bloqueados.length ? 'posts devidos foram para a fila manual (carrossel/Reel/Story)' : 'todos os posts devidos foram bloqueados na conferência', bloqueados, roteados };
@@ -131,4 +155,4 @@ async function previaHtml({ dias = 14, agora = new Date() } = {}) {
   return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prévia das redes</title><style>body{font:16px/1.5 system-ui;margin:0;background:#0b1f3a;color:#fff;padding:16px}h1{font-size:1.2rem}article{display:flex;gap:16px;background:#13315c;border-radius:12px;padding:12px;margin:12px 0}img{border-radius:8px;height:auto}.d{color:#d4af37;margin:0}h2{font-size:1rem;margin:.2rem 0}pre{white-space:pre-wrap;font:inherit;color:#d8e1f0}.s-publicado{color:#7fdc9b}.s-aprovado-checagem{color:#d4af37}</style></head><body><h1>Prévia — próximos ${dias} dias (só para acompanhar, não para aprovar)</h1>${cartoes || '<p>Nada na fila.</p>'}</body></html>`;
 }
 
-module.exports = { enviarParaBanco, publicarDevidos, conferir, imagemPublica, previaHtml, log };
+module.exports = { travarPost, enviarParaBanco, publicarDevidos, conferir, imagemPublica, previaHtml, log };

@@ -23,7 +23,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 const db = require('../lib/db');
 const Artigo = require('../models/Artigo');
-const { textoParaNarracao, hashNarracao, estadoNarracao, VOZ_NARRACAO } = require('../lib/narracao');
+const { textoParaNarracao, hashNarracao, estadoNarracao, precisaVinheta, VOZ_NARRACAO } = require('../lib/narracao');
 
 const RAIZ = path.join(__dirname, '..', '..');
 const PASTA_SAIDA = path.join(RAIZ, 'narracoes-geradas');
@@ -199,7 +199,7 @@ async function main() {
   } else if (args.pendentes) {
     alvo = publicados
       .map((a) => ({ a, estado: estadoNarracao(a).estado }))
-      .filter((x) => x.estado !== 'ok')
+      .filter((x) => x.estado !== 'ok' || precisaVinheta(x.a))
       .sort((x, y) => ORDEM_ESTADO[x.estado] - ORDEM_ESTADO[y.estado] || x.a.slug.localeCompare(y.a.slug))
       .slice(0, Number(args.limite) || Infinity)
       .map((x) => x.a);
