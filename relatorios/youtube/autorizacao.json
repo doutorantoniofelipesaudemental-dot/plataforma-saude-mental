@@ -1,5 +1,5 @@
 {
- "autorizadoEm": "2026-10-16",
- "modoApp": "testando",
- "nota": "App em \"Testando\": a autorização vence 7 dias depois de autorizadoEm."
+ "autorizadoEm": "2026-10-18",
+ "modoApp": "producao",
+ "nota": "App publicado (\"Em produção\"): a autorização não vence em 7 dias."
 }

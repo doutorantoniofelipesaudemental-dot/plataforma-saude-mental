@@ -1,12 +1,15 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
-## PENDÊNCIAS ao reabrir (17/10/2026, fim da noite) — leia primeiro
-1. FEITO: trava v2 aplicada e mesclada (PR #99); órfãs do Blob apagadas (c+d = 0, Blob 1332 MB).
-2. (nada pendente de permissões/hook.)
-3. LinkedIn: teste de 1 carrossel em PDF; agendar 23/11, 25/11, 27/11 (skill `agendar-linkedin`, só com o Chrome logado).
-4. **YouTube:** autorização do Google vence em **23/10** (Publicar app + reautorizar). 34 itens sem mídia (`youtube:fila -- --aplicar --gerar --limite=N`).
-5. **19/10 (depois das 9h):** rodar a conferência pós-renovação e ver se a renovação do token do Instagram ocorreu ("origem = renovado").
-6. **26/10:** primeiro post do Instagram.
+## PENDÊNCIAS ao reabrir (18/10/2026, tarde) — leia primeiro
+1. FEITO: trava v2, órfãs do Blob (0), landings /youtube e /instagram, bios e perfis (pelo Dr. Antônio), app Google em produção, YouTube reautorizado (registro `producao`).
+2. **LinkedIn:** 10 agendados (até 20/11); limite diário atingido em 18/10. Próxima sessão: `rodar agendar-linkedin` a partir de **li-2026-11-25**; testar o carrossel PDF de 06/11 (se o agendador não aceitar, fica na fila manual). 33 abertos (27 posts + 6 carrosséis): ~6 a 7 sessões diárias.
+3. **YouTube:** 109 aprovados, freio desligado. Decisão do Dr. Antônio: `relatorios/youtube/DECISAO-FREIO.md` (A ligar agora, B esperar a auditoria). Preencher os campos (PREENCHA) de `AUDITORIA-API-RESPOSTAS.md` (nome legal, endereço, telefone, prints, vídeo de tela). Apagar o vídeo de teste **z_JHmmpw880** no Studio (Dr. Antônio).
+4. **Agenda das conferências (comandos):**
+   - **19/10 depois das 9h:** "rodar conferência de 19/10" (skill `conferencia-19-10`: teste real da trava B e origem do token do Instagram "renovado"; cron renovar-token-instagram segunda 12:00 UTC).
+   - **26/10 às 08:00:** 1º post do Instagram (2026-10-26-saude-mental-cuidador). **Depois das 9h:** "rodar conferência de 26/10" (skill `conferencia-26-10`).
+   - **Toda segunda:** "rodar manutencao" (a rotina semanal roda sozinha às 07:30).
+   - **LinkedIn diário até zerar a fila:** "rodar agendar-linkedin".
+5. Melhorias propostas (sem implementar): `relatorios/PROPOSTAS-PARTE-E.md`.
 
 ## ATUALIZAÇÃO 17/10/2026 — autonomia com portão
 Autorizado pelo Dr. Antônio: tudo o que for rotina roda sem pedir autorização, SEMPRE depois do `npm run portao` (auditoria + tripla checagem + build + unitários + e2e). Merge só por `npm run merge-seguro -- <PR>`; publicação só por crons/tarefas com checagem ou `npm run publicar-seguro`. Se o classificador bloquear, não contornar: passar o comando com "!". Sequência: (1) skills `youtube-reprovados` e `manutencao` [feito]; (2) branch `chore/portao-seguro` + PR; (3) portão completo + merge-seguro; (4) `rodar manutencao` (LinkedIn li-2026-11-11/13/16/18/20 + PDF de teste, 5 órfãs do Blob grupos c/d, 9 vídeos reprovados do YouTube, 3 narrações com EBUSY, "aguardando data").
