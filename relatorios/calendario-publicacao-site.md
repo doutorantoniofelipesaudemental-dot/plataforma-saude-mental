@@ -206,7 +206,7 @@
 | 2026-11-12 | 18:00 | paliativos-emergencia-pronto-atendimento | Cuidados paliativos no pronto-socorro: decisões rápidas sem atropelar valores | artigo | pacientes |
 | 2026-11-13 | 08:00 | corpo-masculino-pressao-silenciosa | O corpo masculino em pauta: a pressão silenciosa sobre homens e meninos | artigo | série Corpo |
 | 2026-11-13 | 09:00 | migrante-endividado-apostas | Migrante, endividado e longe de casa: a pressão das remessas, a armadilha das apostas e onde buscar apoio | artigo | pacientes |
-| 2026-11-13 | 10:00 | brasil-campeao-cirurgias-plasticas | Brasil, campeão de cirurgias plásticas: o que isso diz sobre nós | artigo | série Corpo |
+| 2026-11-13 | 10:00 | brasil-campeao-cirurgias-plasticas | Brasil entre os países que mais fazem cirurgias plásticas: o que isso diz sobre nós | artigo | série Corpo |
 | 2026-11-13 | 11:00 | relato-dinheiro-que-mandava-para-casa | O dinheiro que ele mandava para casa | relato | relato (geral) |
 | 2026-11-13 | 12:00 | violencia-escola-cuidar-equipe | Depois da violência na escola: como cuidar de professores e funcionários nas primeiras horas e nas semanas seguintes | artigo | pais |
 | 2026-11-13 | 13:00 | calor-extremo-trabalho-saude-mental | Calor extremo no trabalho: riscos físicos e mentais e como proteger as equipes | artigo | empresas |

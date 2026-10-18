@@ -1,122 +1,16 @@
 {
- "geradoEm": "2026-10-17T03:42:08.330Z",
- "correcoes": [
-  "conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar: \"não posso conversar gritos\" → \"não posso conversar aos gritos\"",
-  "insonia-refrataria-na-atencao-primaria-investigacao-e-condut: aviso padrão de orientação geral e protocolos locais antes das referências",
-  "manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr: \"retraumantização\" → \"retraumatização\"; \"psychoeducação\" → \"psicoeducação\"; aviso padrão de orientação geral e protocolos locais antes das referências",
-  "o-corredor-que-parecia-nao-ter-fim: \"nocturno\" → \"noturno\"; \"esgotarse\" → \"esgotar-se\"",
-  "transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic: \"corporales\" → \"corporais\""
- ],
+ "geradoEm": "2026-10-18T00:58:15.840Z",
+ "correcoes": [],
  "plano": [
   {
-   "slug": "a-carta-que-nunca-foi-enviada-ao-psiquiatra",
-   "titulo": "A carta que nunca foi enviada ao psiquiatra",
-   "slot": "2026-12-18T11:00:00.000Z"
+   "slug": "catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici",
+   "titulo": "Catatonia na emergência médica: reconhecimento e manejo inicial",
+   "slot": "2026-12-23T11:00:00.000Z"
   },
   {
-   "slug": "esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo",
-   "titulo": "Esquecimento comum ou sinal de alerta: conversando sobre memória",
-   "slot": "2026-12-18T12:00:00.000Z"
-  },
-  {
-   "slug": "a-planta-que-sobreviveu-na-janela-do-posto",
-   "titulo": "A planta que sobreviveu na janela do posto",
-   "slot": "2026-12-18T13:00:00.000Z"
-  },
-  {
-   "slug": "higiene-autocuidado-saude-mental",
-   "titulo": "Quando tomar banho fica difícil: o autocuidado na depressão, o que a ciência mostra e como ajudar sem brigar",
-   "slot": "2026-12-18T14:00:00.000Z"
-  },
-  {
-   "slug": "a-receita-dobrada-no-bolso-do-casaco",
-   "titulo": "A receita dobrada no bolso do casaco",
-   "slot": "2026-12-18T15:00:00.000Z"
-  },
-  {
-   "slug": "insonia-refrataria-na-atencao-primaria-investigacao-e-condut",
-   "titulo": "Insônia refratária na atenção primária: investigação e conduta",
-   "slot": "2026-12-18T16:00:00.000Z"
-  },
-  {
-   "slug": "a-sala-de-espera-que-respirava-em-silencio",
-   "titulo": "A sala de espera que respirava em silêncio",
-   "slot": "2026-12-18T17:00:00.000Z"
-  },
-  {
-   "slug": "manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr",
-   "titulo": "Manejo de Sintomas Dissociativos Associados ao Trauma e Estresse Crônico na APS: Guia de Acolhimento e Autorregulação",
-   "slot": "2026-12-18T18:00:00.000Z"
-  },
-  {
-   "slug": "o-balcao-da-farmacia-e-as-perguntas-nao-feitas",
-   "titulo": "O balcão da farmácia e as perguntas não feitas",
-   "slot": "2026-12-18T19:00:00.000Z"
-  },
-  {
-   "slug": "transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane",
-   "titulo": "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial",
-   "slot": "2026-12-18T20:00:00.000Z"
-  },
-  {
-   "slug": "o-cafe-frio-que-esperou-a-consulta-acabar",
-   "titulo": "O café frio que esperou a consulta acabar",
-   "slot": "2026-12-18T21:00:00.000Z"
-  },
-  {
-   "slug": "conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar",
-   "titulo": "Conviver com a oscilação de humor: limites e apoio familiar",
-   "slot": "2026-12-21T11:00:00.000Z"
-  },
-  {
-   "slug": "o-corredor-que-parecia-nao-ter-fim",
-   "titulo": "O corredor que parecia não ter fim",
-   "slot": "2026-12-21T12:00:00.000Z"
-  },
-  {
-   "slug": "o-domingo-a-tarde-em-que-o-telefone-nao-chamou",
-   "titulo": "O domingo à tarde em que o telefone não chamou",
-   "slot": "2026-12-21T13:00:00.000Z"
-  },
-  {
-   "slug": "o-idioma-do-afeto-acolhendo-quem-chegou-de-longe-na-ubs",
-   "titulo": "O idioma do afeto: acolhendo quem chegou de longe na UBS",
-   "slot": "2026-12-21T14:00:00.000Z"
-  },
-  {
-   "slug": "o-lenco-esquecido-na-cadeira-do-consultorio",
-   "titulo": "O lenço esquecido na cadeira do consultório",
-   "slot": "2026-12-21T15:00:00.000Z"
-  },
-  {
-   "slug": "o-relogio-na-parede-do-pronto-atendimento",
-   "titulo": "O relógio na parede do pronto atendimento",
-   "slot": "2026-12-21T16:00:00.000Z"
-  },
-  {
-   "slug": "primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para",
-   "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
-   "slot": "2026-12-21T17:00:00.000Z"
-  },
-  {
-   "slug": "primeiro-episodio-psicotico-orientacoes-essenciais-para-a-fa",
-   "titulo": "Primeiro episódio psicótico: orientações essenciais para a família",
-   "slot": "2026-12-21T18:00:00.000Z"
-  },
-  {
-   "slug": "relato-baiano-que-trabalhava-dobrado",
-   "titulo": "O baiano que trabalhava dobrado",
-   "slot": "2026-12-21T19:00:00.000Z"
-  },
-  {
-   "slug": "relato-calor-aos-quarenta-e-oito",
-   "titulo": "Calor aos quarenta e oito",
-   "slot": "2026-12-21T20:00:00.000Z"
-  },
-  {
-   "slug": "transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic",
-   "titulo": "Transtornos somatoformes na UBS: investigação e manejo clínico",
-   "slot": "2026-12-21T21:00:00.000Z"
+   "slug": "uso-problematico-de-telas-e-dependencia-digital-na-infancia",
+   "titulo": "Uso problemático de telas e dependência digital na infância e APS",
+   "slot": "2026-12-23T12:00:00.000Z"
   }
  ]
 }
