@@ -4,11 +4,15 @@
  * Sem credencial válida, bloqueia (CLAUDE.md §H) em vez de falhar no meio.
  */
 const sp = require('../../socialPublisher');
+const { rotaDaMidia } = require('../../redesV2/roteamento');
 
 const temCredencial = () => Boolean(process.env.INSTAGRAM_ACCESS_TOKEN && process.env.INSTAGRAM_ACCOUNT_ID);
 
 /** @param {{tipo:'carrossel'|'reel'|'story', legenda:string, imagensUrls?:string[], videoUrl?:string, arquivo?:string, imagemUrl?:string}} peca */
-async function publicar(peca, { simulado = true } = {}) {
+async function publicar(peca, { simulado = true, carrosselLiberado = false } = {}) {
+  // Reel e Story NUNCA vão pela Meta Graph (decisão de 18/10/2026); carrossel só depois do teste supervisionado liberado.
+  const rota = rotaDaMidia({ tipo: peca.tipo, imagens: (peca.imagensUrls || []).length }, { carrosselLiberado });
+  if (rota.via === 'manual') return { rede: 'instagram', tipo: peca.tipo, filaManual: true, motivo: rota.motivo };
   if (simulado) return { rede: 'instagram', tipo: peca.tipo, simulado: true, id: `sim-ig-${Date.now()}` };
   if (!temCredencial()) return { rede: 'instagram', tipo: peca.tipo, bloqueado: 'sem credencial válida (INSTAGRAM_ACCESS_TOKEN/INSTAGRAM_ACCOUNT_ID)' };
   if (peca.tipo === 'carrossel') return { rede: 'instagram', tipo: peca.tipo, ...(await sp.publicarCarrosselNoInstagram({ imagensUrls: peca.imagensUrls, legenda: peca.legenda })) };

@@ -2,13 +2,13 @@
 
 Vale como parte do `CLAUDE.md`. **Em conflito, prevalece o `CLAUDE.md`** e, entre duas regras, a mais restritiva. Segurança (chaves, segredos, freios, backup) nunca é afrouxada.
 
-## Como os conflitos foram resolvidos (decisão provisória, até o Dr. Antônio dizer o contrário)
+## Como os conflitos foram resolvidos (aprovado pelo Dr. Antônio em 18/10/2026)
 | Ponto do prompt | Resolução |
 |---|---|
 | Assinatura com "TCC" abreviado e "(PAP)/(APS)" na de 5 linhas | **Vale o `CLAUDE.md`:** 5 linhas com "Terapia Cognitivo-Comportamental" por extenso e sem siglas; a de 3 linhas (com PAP/APS) só nas redes. Os testes de assinatura continuam como estão. |
 | 8.1 "alterar código/landings/conteúdo existente: plano e aguardar autorização" | Mantida como regra mais restritiva **para conteúdo já publicado/agendado e para landings**: apresentar plano e arquivos afetados e esperar. Mudanças de código de rotina seguem a carta de autonomia (portão + `merge-seguro` executado pelo Dr. Antônio). |
-| 6.3 "carrossel, Reels e Stories só na fila manual" × `CLAUDE.md` (publicar por Meta Graph/script local) | **EM ABERTO: pergunta ao Dr. Antônio.** Até a resposta, nada muda no publicador atual; Reels e Stories vão para a fila manual. |
-| Newsletter, Podcast "Relatos da Prática", Kit NR-1 em PDF, thumbnail com rosto | **Planejados, não implementados.** Cada módulo entra como arquivo/módulo novo, com PR próprio, sem tocar em conteúdo existente. Thumbnail com rosto só com foto aprovada pelo Dr. Antônio. |
+| 6.3 "carrossel, Reels e Stories só na fila manual" × `CLAUDE.md` (publicar por Meta Graph/script local) | **Decidido em 18/10/2026:** (a) imagem única: Meta Graph com o freio `REDES_PUBLICACAO_ATIVA`; (b) carrossel: pode ir pela Meta Graph, mas só depois de UM teste supervisionado (preparar 1 carrossel aprovado, 2 a 10 imagens no Blob com URL pública, legenda e créditos; mostrar a prévia; publicar só com a ordem escrita "publicar teste de carrossel"); até lá, fila manual; (c) Reels e Stories: SEMPRE fila manual (arquivo pronto, legenda, hashtags permitidas e instruções curtas para postar pelo celular); reavaliar após 30 dias. Implementado em `backend/lib/redesV2/roteamento.js` (+ `fila.js`, `operacional/instagram/postPublisher.js`, `scripts/bot-publicar.js`), com testes em `tests/unit/redes-roteamento.test.js`. Comandos: `npm run redes:fila-manual` (arquivos para postar), `npm run redes:teste-carrossel` (prepara a prévia, não publica; `--publicar --ordem="publicar teste de carrossel"`; `--liberar --ordem="liberar carrossel automático"` só depois do teste). Nenhum freio é alterado por esses scripts. |
+| Newsletter, Podcast "Relatos da Prática", Kit NR-1 em PDF, thumbnail com rosto | **Aprovado: planejados, não implementados.** Cada módulo entra como arquivo/módulo novo, com PR próprio, sem tocar em conteúdo existente. Thumbnail com rosto só com foto aprovada pelo Dr. Antônio. |
 | Vídeo "sempre com rosto ou voz própria" | Voz padrão do projeto: Edge-TTS `pt-BR-AntonioNeural` (regra do `CLAUDE.md`); rosto só com material aprovado. |
 | Exceção "burnout" | Mantida: "esgotamento profissional (burnout)". |
 
@@ -38,7 +38,7 @@ Site: narração. YouTube: 1 longo + 3 Shorts. Instagram: 1 carrossel + 2 Reels 
 ## 6. Regras por canal
 - **Blog:** dias úteis; 3–5 referências (o `CLAUDE.md` exige ≥ 4); texto humanizado; narração em áudio no topo; links internos para /mentoria ou Kit NR-1 quando couber.
 - **YouTube:** longo 8–15 min (gancho em 15 s, capítulos, síntese, CTA); Shorts até 60 s (1 ideia, legenda na tela, CTA para o longo). Título com termo real de busca; descrição com identificação, link do artigo, `/youtube` e emergência. Thumbnail: até 4 palavras, sem expressão de choque.
-- **Instagram:** carrossel 7–10 lâminas (gancho → conteúdo → síntese → identificação + CTA); Reels 15–60 s com gancho em 3 s e áudio livre de direitos; Stories com enquete/caixinha educativa e link do artigo; legenda: primeira linha forte, corpo curto, identificação, CTA, 3–5 hashtags de nicho; "Comente X" só para enviar material educativo/link; destaques: Mentoria · Consultoria/NR-1 · Emergência · Sobre. Formato técnico automático: ver "em aberto" acima.
+- **Instagram:** carrossel 7–10 lâminas (gancho → conteúdo → síntese → identificação + CTA); Reels 15–60 s com gancho em 3 s e áudio livre de direitos; Stories com enquete/caixinha educativa e link do artigo; legenda: primeira linha forte, corpo curto, identificação, CTA, 3–5 hashtags de nicho; "Comente X" só para enviar material educativo/link; destaques: Mentoria · Consultoria/NR-1 · Emergência · Sobre. Formato técnico automático: ver a decisão do item 6.3 na tabela acima.
 - **LinkedIn:** gestores, RH, SESMT, empresas e profissionais; tom técnico-executivo (absenteísmo, presenteísmo, afastamentos, NR-1/GRO); post com gancho em 2 linhas, parágrafos curtos, 1 insight prático e pergunta final; PDF de 6–10 páginas com CTA para o Kit NR-1; 80% educação, 20% oferta. Só o agendador nativo (regras do `CLAUDE.md`).
 - **Newsletter (planejada):** resumo do pacote da semana + 1 relato anonimizado + 1 recurso gratuito + 1 oferta.
 

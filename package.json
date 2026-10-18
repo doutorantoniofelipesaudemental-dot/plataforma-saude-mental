@@ -48,6 +48,8 @@
     "redes:gerar": "node --env-file-if-exists=.env backend/scripts/redes/gerarFila.js",
     "redes:enviar": "node --env-file-if-exists=.env backend/scripts/redes/enviarFila.js",
     "redes:publicar": "node --env-file-if-exists=.env backend/scripts/redes/publicarRedes.js",
+    "redes:fila-manual": "node --env-file-if-exists=.env backend/scripts/redes/filaManualInstagram.js",
+    "redes:teste-carrossel": "node --env-file-if-exists=.env backend/scripts/redes/testeCarrossel.js",
     "redes:relatorio": "node --env-file-if-exists=.env backend/scripts/redes/relatorioSemanal.js",
     "ciclo-narracao": "node --env-file-if-exists=.env scripts/cicloNarracao.js",
     "youtube:fila": "node --env-file-if-exists=.env scripts/youtube/montarFila.js",
