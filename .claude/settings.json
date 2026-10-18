@@ -1,5 +1,7 @@
 {
-  "enabledMcpjsonServers": ["elevenlabs"],
+  "enabledMcpjsonServers": [
+    "elevenlabs"
+  ],
   "enableAllProjectMcpServers": true,
   "permissions": {
     "allow": [
@@ -53,7 +55,9 @@
       "mcp__claude_ai_Vercel__get_runtime_errors",
       "mcp__claude_ai_Vercel__list_teams",
       "WebSearch",
-      "WebFetch"
+      "WebFetch",
+      "Write(.claude/skills/**)",
+      "Edit(.claude/skills/**)"
     ],
     "deny": [
       "Read(./.env*)",
