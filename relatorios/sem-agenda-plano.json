@@ -1,31 +1,16 @@
 {
- "geradoEm": "2026-10-17T08:42:16.362Z",
+ "geradoEm": "2026-10-18T00:58:15.840Z",
  "correcoes": [],
  "plano": [
   {
-   "slug": "abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n",
-   "titulo": "Abandono de tratamento psiquiátrico: estratégias de resgate na UBS",
-   "slot": "2026-12-22T11:00:00.000Z"
+   "slug": "catatonia-na-emergencia-medica-reconhecimento-e-manejo-inici",
+   "titulo": "Catatonia na emergência médica: reconhecimento e manejo inicial",
+   "slot": "2026-12-23T11:00:00.000Z"
   },
   {
-   "slug": "delirium-no-pronto-atendimento-avaliacao-e-manejo-para-resid",
-   "titulo": "Delirium no pronto-atendimento: avaliação e manejo para residentes",
-   "slot": "2026-12-22T12:00:00.000Z"
-  },
-  {
-   "slug": "insatisfacao-corporal-brasil-numeros",
-   "titulo": "Insatisfação com o corpo no Brasil: o que os números mostram por idade, gênero e renda",
-   "slot": "2026-12-22T13:00:00.000Z"
-  },
-  {
-   "slug": "relato-namorado-controlava-celular",
-   "titulo": "O namorado que controlava o celular",
-   "slot": "2026-12-22T14:00:00.000Z"
-  },
-  {
-   "slug": "transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises",
-   "titulo": "Transtorno bipolar na APS: rastreio e manejo intercrises",
-   "slot": "2026-12-22T15:00:00.000Z"
+   "slug": "uso-problematico-de-telas-e-dependencia-digital-na-infancia",
+   "titulo": "Uso problemático de telas e dependência digital na infância e APS",
+   "slot": "2026-12-23T12:00:00.000Z"
   }
  ]
 }

@@ -3,6 +3,7 @@
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
 ## EM ANDAMENTO (17/10/2026) — ver relatorios/PROMPT-ATUAL.md
+- Rodada 3 (17/10/2026): PR #92 mergeado; PR #93 com catatonia (sem doses; BAP), telas (sem dopamina/luz azul), abandono (referência trocada), 2 páginas de cirurgia (título/ISAPS 2025/capa/áudio), caixa de apoio de violência no template (34 páginas), link do LinkedIn personalizado e catatonia + telas agendadas em 23/12/2026 (08:00 e 09:00 Bahia). Narrações dos 5 textos regeradas e enviadas. Backup: backups/importacao-completa-20261018-0058 (726 documentos). Rollback: relatorios/rollback-20261017-rodada3.md.
 - "psiquiatra": proibido só como título/identificação do Dr. Antônio; permitido como nome da profissão (CLAUDE.md; auditoria e checagem do LinkedIn ajustadas). Capa de a-carta-que-nunca-foi-enviada-ao-psiquiatra aprovada; #psiquiatria segue proibido.
 - Capas: 475 + a da alta do PA regeradas com o peso das antigas (conferência automática completa: 0 problemas) e reenviadas ao Blob; mosaicos relatorios/capas-mosaico-1..21.png.
 - Vídeos longos (17): fala termina com a assinatura curta ("Doutor Antônio Felipe, médico, CRM Bahia 41322, especialista em Medicina de Família e Comunidade, RQE 26638."); tela final com as 5 linhas; descrição com as 5 linhas. Conferência automática: 50/50 aprovados; mosaico relatorios/youtube/mosaico-quadros.png. Áudio do tmc-aps regerado (lia a assinatura antiga).

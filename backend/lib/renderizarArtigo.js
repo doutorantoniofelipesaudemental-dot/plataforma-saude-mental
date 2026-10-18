@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { AVISO_PROTOCOLOS, precisaAviso } = require('./avisoProtocolos');
+const { CAIXA_VIOLENCIA_TITULO, CAIXA_VIOLENCIA_ITENS, precisaCaixaViolencia } = require('./caixaViolencia');
 const path = require('path');
 const { escapeHtml, formatarData } = require('./texto');
 const { urlNarracaoTocavel, estadoNarracao } = require('./narracao');
@@ -111,6 +112,13 @@ function avisoProtocolosHtml(artigo) {
   return `<aside class="aviso-legal aviso-protocolos" data-aviso-protocolos style="margin-top:2rem"><p>${AVISO_PROTOCOLOS}</p></aside>`;
 }
 
+/** Caixa de canais de apoio nos textos de violência (Ligue 180, 190, Disque 100, CVV 188, SAMU 192), uma vez, fora do texto narrado. */
+function caixaViolenciaHtml(artigo) {
+  if (!precisaCaixaViolencia({ titulo: artigo.titulo, texto: artigo.conteudo })) return '';
+  const itens = CAIXA_VIOLENCIA_ITENS.map((i) => `<li>${escapeHtml(i)}</li>`).join('');
+  return `<aside class="aviso-legal caixa-violencia" data-caixa-violencia aria-label="Onde buscar ajuda em situação de violência" style="margin-top:2rem"><p><strong>${CAIXA_VIOLENCIA_TITULO}</strong></p><ul>${itens}</ul></aside>`;
+}
+
 function renderizarArtigoHtml(artigo) {
   const url = `${BASE_URL}/artigo/${encodeURIComponent(artigo.slug)}`;
   const titulo = escapeHtml(artigo.titulo);
@@ -189,7 +197,7 @@ function renderizarArtigoHtml(artigo) {
     html = html.replace(SKELETON_CABECALHO, montarCabecalhoHtml(artigo));
     html = html.replace(
       SKELETON_CONTEUDO,
-      `<div class="conteudo-artigo" id="artigo-conteudo" aria-busy="false">${artigo.conteudo}</div>${avisoProtocolosHtml(artigo)}`
+      `<div class="conteudo-artigo" id="artigo-conteudo" aria-busy="false">${artigo.conteudo}</div>${caixaViolenciaHtml(artigo)}${avisoProtocolosHtml(artigo)}`
     );
   } else {
     console.warn('[renderizarArtigo] skeleton do template mudou — pulando SSR do corpo, so o <head> foi pre-renderizado.');

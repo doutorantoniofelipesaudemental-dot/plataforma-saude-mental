@@ -135,3 +135,9 @@ ORDEM: primeiro 4 (conferir os 5 primeiros posts) e 5 (agendar no LinkedIn), dep
 ---
 ## Prompt de 17/10/2026 (rodada 2): commit pendente, correções aprovadas dos 7 textos, aviso de protocolos, varredura científica, skill agendar-linkedin
 Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com texto literal (CANMAT 2018 + Nolen 2019 ISBD/IGSLi) ou sem números; 1.4 caixa 180/190/188; 1.5 demais; 1.6 regerar narração (player oculto/pendente) e agendar após 21/12/2026; 2 aviso no template (+Next); 3 varredura dos 726; 4 skill agendar-linkedin (sem tarefa agendada), rotina mostra faltantes e aviso <14 dias, carrossel teste, perfil undefined.
+
+---
+## Prompt de 17/10/2026 (rodada 3): merges #92/#93, decisões dos textos pendentes, caixa de violência, link do LinkedIn
+1 Regra de merge: #92 (e2e 31/31, auditoria 0 falhas, build, 261 unitários) MERGED; #93 com e2e 31/31, build, 267 unitários e auditoria 0 falhas antes do merge. Depois: deploy, conferência em produção (clínico com aviso, não clínico sem, /linkedin, home) e rollback documentado.
+2.1 Catatonia sem doses de lorazepam (BAP, PMID 37039129: benzodiazepínico e/ou ECT como 1ª linha; catatonia maligna "ameaça a vida"); 2.2 telas sem dopamina/luz azul; 2.3 abandono: Dewa 2009 trocada por Loots 2021 (PMID 34639510); 2.4 cirurgia: título novo (slug mantido), ISAPS 2025 ("1º em cirúrgicos, 2º no total"), capa nova no Blob e áudios regerados; 2.5 caixa 180/190/Disque 100/CVV 188/SAMU 192 no template (backend/lib/caixaViolencia.js + app Next + navegador): 34 páginas.
+3 LinkedIn: `LINKEDIN_PERFIL_URL` = https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438 (config/marca.json; `npm run marca:aplicar`). Rotina: "rodar agendar-linkedin" 1x/dia. Próxima sessão: testar agendar 1 carrossel em PDF.

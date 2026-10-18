@@ -190,6 +190,26 @@
       // O conteúdo é HTML escrito pela clínica pelas rotas administrativas
       // autenticadas — não é entrada de usuário anônimo.
       conteudo.innerHTML = artigo.conteudo;
+      // Caixa de canais de apoio nos textos de violência (mesma regra de backend/lib/caixaViolencia.js; fora do texto narrado)
+      const textoPuro = String(artigo.conteudo).replace(/<[^>]+>/g, ' ');
+      const reViol = /(viol[êe]ncia dom[ée]stica|viol[êe]ncia contra a mulher|viol[êe]ncia no namoro|abuso sexual|abuso f[ií]sico|maus-tratos|relacionamento abusivo|Maria da Penha|viol[êe]ncia (?:f[ií]sica|psicol[óo]gica|sexual))/gi;
+      const nViol = (textoPuro.match(reViol) || []).length;
+      const temaViolencia = nViol >= 3 || (nViol >= 1 && new RegExp(reViol.source, 'i').test(artigo.titulo || ''));
+      if (temaViolencia && !(/Ligue 180/i.test(textoPuro) && /190/.test(textoPuro) && /Disque 100/i.test(textoPuro))) {
+        const caixa = document.createElement('aside');
+        caixa.className = 'aviso-legal caixa-violencia';
+        caixa.setAttribute('data-caixa-violencia', '');
+        caixa.setAttribute('aria-label', 'Onde buscar ajuda em situação de violência');
+        caixa.style.marginTop = '2rem';
+        caixa.innerHTML = '<p><strong>Precisa de ajuda agora?</strong></p><ul>' + [
+          'Ligue 180: Central de Atendimento à Mulher (violência contra a mulher; ligação gratuita, 24h)',
+          '190: emergência policial, se houver risco imediato',
+          'Disque 100: violações de direitos humanos, inclusive contra crianças, adolescentes e pessoas idosas (ligação gratuita, 24h)',
+          'CVV 188: apoio emocional (ligação gratuita, 24h)',
+          'SAMU 192: emergência de saúde',
+        ].map((i) => '<li>' + i + '</li>').join('') + '</ul>';
+        conteudo.insertAdjacentElement('afterend', caixa);
+      }
       // Aviso de protocolos locais (textos clínicos; mesma regra de backend/lib/avisoProtocolos.js; não entra no texto narrado)
       const profissional = ['Médicos & Enfermeiros', 'Residentes & Estudantes', 'Pós-Graduação & Concursos'].includes(artigo.categoria);
       const clinico = profissional || /Manejo Clínico/i.test(artigo.conteudo) || /\b\d+(?:[.,]\d+)?\s?(?:mg|mcg|µg|mEq\/L|mmol\/L)\b/i.test(artigo.conteudo);
