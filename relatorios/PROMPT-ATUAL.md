@@ -167,3 +167,6 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - LinkedIn: próxima sessão `rodar agendar-linkedin` a partir de li-2026-11-25 e testar o carrossel PDF de 06/11.
 
 - **18/10 (landings):** PRs #101, #102 e #103 mesclados. /youtube e /instagram no ar, 100 no Lighthouse. Falta o Dr. Antônio colar as bios (`relatorios/redes/BIO-SUGERIDAS.md`). Pendentes: conferência 19/10 (token Instagram), YouTube reautorizar até 22/10, LinkedIn `agendar-linkedin` a partir de li-2026-11-25 + PDF 06/11, 1º post Instagram 26/10.
+
+- **18/10 (manuais concluídos, informado pelo Dr. Antônio):** bios (Instagram, YouTube, LinkedIn) e app Google em "Em produção" feitos. Falta `! npm run youtube:autorizar` (Dr. Antônio) e conferir o token (tamanho, sem imprimir). Conferência 19/10 (token Instagram) e 1º post 26/10 seguem. LinkedIn: `agendar-linkedin` a partir de li-2026-11-25 + PDF 06/11.
+- **18/10 (reautorização feita):** `youtube:autorizar` concluído; token conferido (103 caracteres, canal HTTP 200); 322 testes unitários OK. Bios, links e app Google 100% concluídos. O aviso de vencimento em 23/10 não vale mais (app em produção). Freio do YouTube desligado.
