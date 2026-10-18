@@ -5,6 +5,7 @@
   "description": "Site e blog do Portal de Saúde Mental Doutor Antônio Felipe Garabito",
   "main": "index.js",
   "scripts": {
+    "blob:orfas": "node --env-file-if-exists=.env scripts/blob-orfas.js",
     "start": "node --env-file-if-exists=.env index.js --carregar-banco",
     "dev": "node --env-file-if-exists=.env --watch index.js",
     "seed": "node --env-file-if-exists=.env backend/seed.js",

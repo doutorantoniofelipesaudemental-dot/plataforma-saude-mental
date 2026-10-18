@@ -11,6 +11,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const mongoose = require('mongoose');
+const { classificarAviso } = require('./classificarAviso');
 
 const MESES = ['jan.', 'fev.', 'mar.', 'abr.', 'mai.', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'];
 const DIAS = ['dom.', 'seg.', 'ter.', 'qua.', 'qui.', 'sex.', 'sáb.'];
@@ -62,11 +63,13 @@ function corpoAgendar(id, rotulo) {
   const rot = [...document.querySelectorAll('*')].filter((e) => e.children.length === 0 && /Publicação em/.test(e.innerText || '')).map((e) => e.innerText.trim());
   if (!rot.includes(${JSON.stringify(rotulo)})) return { erro: 'rótulo diferente do esperado', rot };
   await esp(900, 1600); ag.click(); await esp(3000, 4200);
-  const av = [...document.querySelectorAll('[role=alert],.artdeco-toast-item')].map((x) => (x.innerText || '').trim()).filter((t) => /agendad|Publicação/i.test(t)).slice(0, 2);
-  // sucesso só com o aviso "Publicação agendada"; qualquer outra coisa (ex.: "Você atingiu o limite de publicações de hoje") é erro e PARA tudo
-  const limite = /atingiu o limite|limite de publica|verifica|segurança|atividade incomum/i.test(document.body.innerText) ? (document.body.innerText.match(/Você atingiu[^.]*\\./) || ['aviso do LinkedIn na tela'])[0] : '';
-  if (limite) return { erro: 'o LinkedIn barrou o agendamento: ' + limite, id: ${JSON.stringify(id)} };
-  if (!av.some((t) => /Publicação agendada/i.test(t))) return { erro: 'sem o aviso "Publicação agendada": não conto como agendado', avisos: av, id: ${JSON.stringify(id)} };
+  const av = [...document.querySelectorAll('[role=alert],[role=alertdialog],.artdeco-toast-item')].map((x) => (x.innerText || '').trim()).filter(Boolean).slice(0, 4);
+  // sucesso = aviso "Publicação agendada"; limite e bloqueio só pelos AVISOS e pela URL (nunca pelo texto do feed); ver classificarAviso.js
+  const classificar = ${classificarAviso.toString()};
+  const r = classificar({ avisos: av, caminho: location.pathname });
+  if (r.estado === 'limite') return { erro: 'limite diário do LinkedIn: ' + r.motivo, limite: true, id: ${JSON.stringify(id)} };
+  if (r.estado === 'bloqueio') return { erro: 'o LinkedIn pediu verificação/bloqueou: ' + r.motivo, bloqueio: true, id: ${JSON.stringify(id)} };
+  if (r.estado !== 'sucesso') return { erro: 'sem o aviso "Publicação agendada": não conto como agendado', avisos: av, id: ${JSON.stringify(id)} };
   return { id: ${JSON.stringify(id)}, avisos: av, url: location.pathname };`;
 }
 

@@ -1,5 +1,13 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
+## PENDÊNCIAS ao reabrir (17/10/2026, fim da noite) — leia primeiro
+1. **Dr. Antônio, com `!`:** (a) aplicar a trava v2 (comando em `docs/uso-eficiente.md`, seção "Trava v2"); (b) `npm run blob:orfas` (dry-run, 5 arquivos do grupo c, 11,6 MB) e depois `npm run blob:orfas -- --aplicar`.
+2. Depois de aplicada a trava v2: commitar o hook/settings novos e acrescentar `tests/unit/hook-guarda.test.js` (casos em `docs/uso-eficiente.md`) numa branch, PR e `npm run merge-seguro`.
+3. LinkedIn: teste de 1 carrossel em PDF; agendar 23/11, 25/11, 27/11 (skill `agendar-linkedin`, só com o Chrome logado).
+4. **YouTube:** autorização do Google vence em **23/10** (Publicar app + reautorizar). 34 itens sem mídia (`youtube:fila -- --aplicar --gerar --limite=N`).
+5. **19/10 (depois das 9h):** rodar a conferência pós-renovação e ver se a renovação do token do Instagram ocorreu ("origem = renovado").
+6. **26/10:** primeiro post do Instagram.
+
 ## ATUALIZAÇÃO 17/10/2026 — autonomia com portão
 Autorizado pelo Dr. Antônio: tudo o que for rotina roda sem pedir autorização, SEMPRE depois do `npm run portao` (auditoria + tripla checagem + build + unitários + e2e). Merge só por `npm run merge-seguro -- <PR>`; publicação só por crons/tarefas com checagem ou `npm run publicar-seguro`. Se o classificador bloquear, não contornar: passar o comando com "!". Sequência: (1) skills `youtube-reprovados` e `manutencao` [feito]; (2) branch `chore/portao-seguro` + PR; (3) portão completo + merge-seguro; (4) `rodar manutencao` (LinkedIn li-2026-11-11/13/16/18/20 + PDF de teste, 5 órfãs do Blob grupos c/d, 9 vídeos reprovados do YouTube, 3 narrações com EBUSY, "aguardando data").
 
