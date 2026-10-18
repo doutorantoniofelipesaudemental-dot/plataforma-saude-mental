@@ -1,3 +1,5 @@
+> **18/10/2026 (landings):** /youtube e /instagram no ar (HTTP 200, Lighthouse mobile 100/100/100), links no rodapé e na /links; `config/marca.json` com YOUTUBE_CANAL_URL; conferidor aceita só os links oficiais; descrições do YouTube terminam com o link da /youtube. Bios prontas em `relatorios/redes/BIO-SUGERIDAS.md` (colar à mão). Inventário: `relatorios/landings-inventario-20261018.md`.
+
 > **18/10/2026 (estado real):** LinkedIn 10 agendados (até 20/11; limite diário atingido em 18/10). YouTube: 109 aprovados, 0 reprovados, nada publicado (freio desligado; autorização vence 23/10). Conferidor aceita só os links oficiais de `config/marca.json`. Carta de autonomia no CLAUDE.md.
 
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
