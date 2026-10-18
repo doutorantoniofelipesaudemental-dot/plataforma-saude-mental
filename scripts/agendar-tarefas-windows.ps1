@@ -23,13 +23,28 @@ $tarefas = @(
   @{ Nome = 'DrSM-Conferencia-19-10';   Args = 'scripts/conferirPosRenovacao.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-19 19:30'); Horas = 1 },
   # Lembrete do LinkedIn (fila MANUAL, perfil pessoal): 19:25 seg/qua/sex; precisa da SUA sessão para abrir o Bloco de Notas (por isso não é S4U)
   @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
-  @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/conferirPrimeiroPost.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 }
+  @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/conferirPrimeiroPost.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 },
+  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Criada DESATIVADA: a ativação é do Dr. Antônio.
+  @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
 foreach ($t in $tarefas) {
   if ($So -and $t.Nome -ne $So) { continue }
   if ($Remover) { Unregister-ScheduledTask -TaskName $t.Nome -Confirm:$false -ErrorAction SilentlyContinue; Write-Host "removida: $($t.Nome)"; continue }
   $log = Join-Path $logs "$($t.Nome).log"
+  if ($t.Mensal) {
+    # gatilho mensal (dia 1, 03:00): o PowerShell não tem -Monthly; registra diário e troca o gatilho por XML. Criada DESATIVADA.
+    $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""
+    $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -WakeToRun -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 10) -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew -Hidden
+    Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger (New-ScheduledTaskTrigger -Daily -At 03:00) -Settings $conf -Description 'Portal Dr. Antônio Felipe (sem Claude)' -Force | Out-Null
+    $meses = 'January','February','March','April','May','June','July','August','September','October','November','December' | ForEach-Object { "<$_/>" }
+    $xml = (Export-ScheduledTask -TaskName $t.Nome) -replace '(?s)<ScheduleByDay>.*?</ScheduleByDay>', "<ScheduleByMonth><DaysOfMonth><Day>1</Day></DaysOfMonth><Months>$($meses -join '')</Months></ScheduleByMonth>"
+    $xml = $xml -replace '<StartBoundary>[^<]*</StartBoundary>', '<StartBoundary>2026-11-01T03:00:00</StartBoundary>'
+    Register-ScheduledTask -TaskName $t.Nome -Xml $xml -Force | Out-Null
+    Disable-ScheduledTask -TaskName $t.Nome | Out-Null
+    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · mensal, dia 1 às 03:00 · DESATIVADA (ativar só por ordem do Dr. Antônio)"
+    continue
+  }
   $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""
   $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -WakeToRun -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable `
     -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 10) -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew -Hidden
@@ -50,6 +65,7 @@ foreach ($t in $tarefas) {
     $modo = 'sessão do usuário (oculta; precisa estar conectado)'
     Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger $t.Gatilho -Settings $conf -Description $descr -Force | Out-Null
   }
+  if ($t.Desativada) { Disable-ScheduledTask -TaskName $t.Nome | Out-Null; $modo += ' · DESATIVADA (ativar só por ordem do Dr. Antônio)' }
   Write-Host "registrada: $($t.Nome)  ($($t.Args)) · limite $($t.Horas) h · $modo"
 }
 Write-Host "`nPronto. Ver: Agendador de Tarefas > Biblioteca. Logs em $logs"
