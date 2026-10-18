@@ -17,3 +17,5 @@ Acessada em **16–17/10/2026**.
 Número, ano e tema CONFIRMADOS no texto oficial. O aviso de IA com "(Resolução CFM 2.454/2026)" é mantido em todos os lugares (site, Instagram, YouTube, LinkedIn, vídeos).
 
 A rotina semanal (`scripts/rotinaExtras.js`) tenta ler o PDF de novo toda segunda-feira e registra aqui quando conseguir; se o PDF mudar e voltar a ficar ilegível, a rotina avisa.
+
+- 2026-10-18: PDF oficial lido pela rotina semanal; número e tema (IA na medicina) confirmados no texto.

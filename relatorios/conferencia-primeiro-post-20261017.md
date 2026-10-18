@@ -7,6 +7,7 @@
 - ID no Instagram: —
 - Legenda conferida: ok (3 linhas, sem psiquiatra/#psiquiatria, com acentos)
 - Erros/bloqueios no log: 0
+- Autorização do YouTube: autorizada em 2026-10-16 (app: testando) · vence em 2026-10-23 (7 dia(s))
 
 ## Problemas
 - não publicado (status aprovado-checagem)

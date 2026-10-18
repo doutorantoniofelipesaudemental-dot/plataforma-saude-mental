@@ -1,16 +1,11 @@
 # Lote para o agendador nativo do LinkedIn (conferido em 2026-10-18)
 
-- Posts de texto aprovados para agendar: **32** (de 11/11/2026 a 29/01/2027), em 7 lote(s) de até 5.
+- Posts de texto aprovados para agendar: **27** (de 25/11/2026 a 29/01/2027), em 6 lote(s) de até 5.
 - Carrosséis (PDF), deixados na fila manual com o lembrete das 19:25 até confirmar que o agendador aceita PDF: **6**.
 - Reprovados (não agendados): **0** (ver `relatorios/linkedin/reprovados/`).
 
 | Data | Hora | Tipo | Título |
 |---|---|---|---|
-| 11/11/2026 | 19:30 | texto | Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas |
-| 13/11/2026 | 19:30 | texto | Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial |
-| 16/11/2026 | 19:30 | texto | Contenção mecânica no PA Psiquiátrico: quando, como e os limites éticos |
-| 18/11/2026 | 19:30 | texto | Como as referências dos textos são conferidas |
-| 20/11/2026 | 19:30 | texto | Intoxicação exógena e agitação: diferenciando causas no PA |
 | 25/11/2026 | 19:30 | texto | Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise |
 | 27/11/2026 | 19:30 | texto | Matriciamento em saúde mental: como funciona na prática |
 | 30/11/2026 | 19:30 | texto | Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico |

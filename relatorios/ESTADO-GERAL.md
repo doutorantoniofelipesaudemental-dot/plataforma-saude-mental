@@ -1,3 +1,5 @@
+> **18/10/2026 (estado real):** LinkedIn 10 agendados (até 20/11; limite diário atingido em 18/10). YouTube: 109 aprovados, 0 reprovados, nada publicado (freio desligado; autorização vence 23/10). Conferidor aceita só os links oficiais de `config/marca.json`. Carta de autonomia no CLAUDE.md.
+
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
@@ -47,6 +49,7 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 - Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · qua 25/11 (texto) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto)
 - No dia: `! npm run linkedin:hoje -- --copiar --abrir` · depois `! npm run linkedin:marcar -- <id>` · calendário completo em `relatorios/linkedin/FILA-MANUAL.md`. A tarefa `DrSM-LinkedIn-Lembrete` (seg/qua/sex 19:25) abre o post do dia.
 <!-- LINKEDIN-MANUAL:FIM -->
+
 
 
 

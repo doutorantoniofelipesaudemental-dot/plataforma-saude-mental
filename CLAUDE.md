@@ -134,3 +134,13 @@ Skills do projeto em `.claude/skills/`, subagentes (model: sonnet) em `.claude/a
 
 ### Ponytail (skill instalado em `.claude/skills/ponytail/`, só o SKILL.md, sem hooks; auditoria em `relatorios/auditoria-ponytail.md`)
 Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup, dry-run, auditoria, tripla checagem, acessibilidade ou CVV/SAMU. As regras deste CLAUDE.md prevalecem sobre o skill; avisos CFM/IA, identificação do autor e CVV 188 · SAMU 192 nunca são "recurso opcional".
+
+### Carta de autonomia (18/10/2026)
+- O Claude Code tem autonomia para PRODUZIR, CONFERIR, AGENDAR e PUBLICAR conteúdo do Portal (site, narrações, vídeos do YouTube, posts do LinkedIn, posts do Instagram), usando os conectores, as skills e os agentes do ecossistema, SEM pedir autorização a cada passo, desde que:
+  (a) tudo passe pelo portão (auditoria geral + tripla checagem técnica, científica, ética e humanizada);
+  (b) merge só por `npm run merge-seguro`;
+  (c) publicação só pelos crons/tarefas com checagem ou por `npm run publicar-seguro`;
+  (d) os freios de cada rede sejam respeitados (o Claude Code não liga nem desliga freios);
+  (e) nada que mude o sentido clínico de um texto seja alterado sem aprovação do Dr. Antônio.
+- Pedir ação do Dr. Antônio SÓ para: login, código de verificação, CAPTCHA, autorizações OAuth, pagamento, ligar/desligar freios, decisões clínicas e comandos bloqueados pelo classificador (nesse caso, passar o comando exato com "!").
+- Ao terminar qualquer sessão: atualizar `relatorios/ESTADO-GERAL.md` e `relatorios/PROMPT-ATUAL.md` com o estado REAL (conferido no banco), nunca com suposições.

@@ -11,6 +11,11 @@ const { IDENTIFICACAO_3_LINHAS } = require('../../backend/lib/legendaInstagram')
 const { textoParaNarracao, hashNarracao, vozDaNarracao, estadoNarracao } = require('../../backend/lib/narracao');
 const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
 const vinheta = require('../../backend/lib/vinheta');
+const MARCA = require('../../config/marca.json');
+
+/** Links oficiais de config/marca.json (perfil do LinkedIn e landing): comparação EXATA, com ou sem "ô" codificado. Qualquer outro link externo segue reprovado. */
+const normalizaLink = (u) => { let x = String(u).replace(/[.,;:!?]+$/, '').replace(/\/+$/, ''); try { x = decodeURIComponent(x); } catch { /* mantém */ } return x.toLowerCase(); };
+const linkOficialMarca = (u) => [MARCA.LINKEDIN_PERFIL_URL, MARCA.LINKEDIN_LANDING_URL].filter(Boolean).some((o) => normalizaLink(o) === normalizaLink(u));
 
 const RAIZ = path.resolve(__dirname, '../..');
 const SITE = 'https://www.drantoniofelipemedico.com.br';
@@ -243,11 +248,11 @@ function checarTexto(item) {
   if (/psiquiatra|#psiquiatria/i.test(`${d} ${t} ${(item.tags || []).join(' ')}`) && !EXCECAO_PSIQUIATRA.includes(item.slug)) f.push('"psiquiatra"/#psiquiatria');
   if (/wa\.me|whatsapp/i.test(d)) f.push('mensageria de terceiros');
   for (const u of d.match(/https?:\/\/[^\s)]+/g) || []) {
-    if (!/^https?:\/\/(www\.drantoniofelipemedico\.com\.br|instagram\.com\/doutor\.antoniofelipe\.smental)/.test(u) && !item.refsPermitidas?.some((r) => r.includes(u))) f.push(`link fora do domínio oficial (apenas referências): ${u.slice(0, 60)}`);
+    if (!/^https?:\/\/(www\.drantoniofelipemedico\.com\.br|instagram\.com\/doutor\.antoniofelipe\.smental)/.test(u) && !linkOficialMarca(u) && !item.refsPermitidas?.some((r) => r.includes(u))) f.push(`link fora do domínio oficial (apenas referências): ${u.slice(0, 60)}`);
   }
   const eth = checarEticaCfm(d, { contexto: 'social', exigirIdentificacao: false });
   for (const x of eth.falhas) f.push(`ética: ${x}`);
   return f;
 }
 
-module.exports = { obterCapa, comVinheta, comAssinaturaFalada, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };
+module.exports = { linkOficialMarca, obterCapa, comVinheta, comAssinaturaFalada, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };

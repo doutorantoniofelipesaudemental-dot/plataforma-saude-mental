@@ -1,56 +1,7 @@
 {
- "geradoEm": "2026-10-18T02:07:28.196Z",
+ "geradoEm": "2026-10-18T03:15:19.884Z",
  "regra": "só entra no agendador o que passou na auditoria + tripla checagem; lotes de 5",
  "aprovados": [
-  {
-   "id": "li-2026-11-11",
-   "data": "2026-11-11",
-   "hora": "19:30",
-   "titulo": "Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas",
-   "tipo": "texto",
-   "slug": "saude-mental-pilar-de-performance-liderancas",
-   "caracteres": 1826,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-13",
-   "data": "2026-11-13",
-   "hora": "19:30",
-   "titulo": "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial",
-   "tipo": "texto",
-   "slug": "primeiro-episodio-psicotico",
-   "caracteres": 1591,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-16",
-   "data": "2026-11-16",
-   "hora": "19:30",
-   "titulo": "Contenção mecânica no PA Psiquiátrico: quando, como e os limites éticos",
-   "tipo": "texto",
-   "slug": "contencao-mecanica-pa",
-   "caracteres": 1711,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-18",
-   "data": "2026-11-18",
-   "hora": "19:30",
-   "titulo": "Como as referências dos textos são conferidas",
-   "tipo": "texto",
-   "caracteres": 1428,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-20",
-   "data": "2026-11-20",
-   "hora": "19:30",
-   "titulo": "Intoxicação exógena e agitação: diferenciando causas no PA",
-   "tipo": "texto",
-   "slug": "intoxicacao-agitacao-pa",
-   "caracteres": 1577,
-   "pdf": null
-  },
   {
    "id": "li-2026-11-25",
    "data": "2026-11-25",
@@ -382,13 +333,6 @@
  ],
  "reprovados": [],
  "lotes": [
-  [
-   "li-2026-11-11",
-   "li-2026-11-13",
-   "li-2026-11-16",
-   "li-2026-11-18",
-   "li-2026-11-20"
-  ],
   [
    "li-2026-11-25",
    "li-2026-11-27",
