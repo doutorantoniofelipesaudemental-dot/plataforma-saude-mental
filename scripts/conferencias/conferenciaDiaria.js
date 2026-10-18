@@ -135,6 +135,12 @@ function alertaNoEstadoGeral() {
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });
   const md = `# Conferência diária — ${hoje}\n\n**Resultado: ${falhas.length ? `${falhas.length} FALHA(S)` : 'tudo certo'}${avisos.length ? ` · ${avisos.length} aviso(s)` : ''}** (somente leitura: nada foi publicado, apagado nem alterado; freios intactos)\n${linhas.join('\n')}\n`;
   fs.writeFileSync(path.join(pasta, `${hoje}.md`), md, 'utf8');
+  try { // resumo do dia (máx. 15 linhas): falha exige ação; aviso, não
+    const resumo = require('./resumoDoDia');
+    const dados = await resumo.coletar(d, hoje);
+    const alertas = [...falhas.map((texto) => ({ texto, acao: true })), ...avisos.map((texto) => ({ texto, acao: false }))];
+    resumo.gravar(resumo.montarResumo({ hoje, ...dados, alertas }));
+  } catch (e) { console.error(`resumo do dia não gerado: ${e.message}`); }
   alertaNoEstadoGeral();
   console.log(`conferência ${hoje}: ${falhas.length} falha(s), ${avisos.length} aviso(s) → relatorios/conferencias/${hoje}.md`);
   await mongoose.disconnect();
