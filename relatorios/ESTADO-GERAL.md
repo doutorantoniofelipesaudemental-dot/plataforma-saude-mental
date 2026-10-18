@@ -3,6 +3,7 @@
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
 ## EM ANDAMENTO (17/10/2026) — ver relatorios/PROMPT-ATUAL.md
+- Rodada 4 (18/10/2026): #94 mergeado; catatonia com citação Apetauerova 2021 (PMID 33896535) e narração regerada; LinkedIn logado, 5 agendados até 09/11, lote seguinte (11/11 a 20/11) NÃO agendado: navegador bloqueado pelo classificador de permissões; YouTube em "Testando" (vence 23/10); tarefas noturnas OK; 19/10: crons publicar-agendados 11:00 UTC e renovar-token 12:00 UTC registrados, conferência às 19:30 (Bahia).
 - Rodada 3 (17/10/2026): PR #92 mergeado; PR #93 com catatonia (sem doses; BAP), telas (sem dopamina/luz azul), abandono (referência trocada), 2 páginas de cirurgia (título/ISAPS 2025/capa/áudio), caixa de apoio de violência no template (34 páginas), link do LinkedIn personalizado e catatonia + telas agendadas em 23/12/2026 (08:00 e 09:00 Bahia). Narrações dos 5 textos regeradas e enviadas. Backup: backups/importacao-completa-20261018-0058 (726 documentos). Rollback: relatorios/rollback-20261017-rodada3.md.
 - "psiquiatra": proibido só como título/identificação do Dr. Antônio; permitido como nome da profissão (CLAUDE.md; auditoria e checagem do LinkedIn ajustadas). Capa de a-carta-que-nunca-foi-enviada-ao-psiquiatra aprovada; #psiquiatria segue proibido.
 - Capas: 475 + a da alta do PA regeradas com o peso das antigas (conferência automática completa: 0 problemas) e reenviadas ao Blob; mosaicos relatorios/capas-mosaico-1..21.png.
@@ -23,27 +24,29 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 - Instagram: cron renovar-token-instagram ativo (seg 12:00 UTC = 19/10); a conferência de 19/10 exige a origem do token "renovado".
 
 <!-- TAREFAS:INICIO -->
-### Tarefas do Windows (conferidas em 17/10, 00:08)
-- PC ligado desde 16/10, 17:12 · nos últimos 7 dias: 10 partida(s), 21 desligamento(s)/queda(s), 0 suspensão(ões), 0 retomada(s)
+### Tarefas do Windows (conferidas em 17/10, 22:21)
+- PC ligado desde 17/10, 19:55 · nos últimos 7 dias: 10 partida(s), 21 desligamento(s)/queda(s), 0 suspensão(ões), 0 retomada(s)
 
 | Tarefa | Estado | Última execução | Resultado | Atraso | O PC estava ligado? | Próxima | Perdidas |
 |---|---|---|---|---|---|---|---|
 | DrSM-Conferencia-19-10 | Ready | 16/10, 19:23 | terminou com erro (código 1) | — | execução manual/de teste (fora do horário marcado) | 19/10, 19:30 | 0 |
 | DrSM-Conferencia-26-10 | Ready | 16/10, 19:23 | terminou com erro (código 1) | — | execução manual/de teste (fora do horário marcado) | 26/10, 19:30 | 0 |
 | DrSM-LinkedIn-Lembrete | Ready | — | ainda não rodou | — | — | 19/10, 19:25 | 0 |
-| DrSM-Narracao-Noite | Ready | 16/10, 23:58 | OK | 119 min | rodou 119 min depois do horário (computador desligado/dormindo na hora, ou execução manual) | 17/10, 22:00 | 0 |
+| DrSM-Narracao-Noite | Ready | 17/10, 22:00 | OK | 0 min | ligado no horário | 18/10, 22:00 | 0 |
 | DrSM-Rotina-Semanal | Ready | 16/10, 19:23 | OK | — | execução manual/de teste (fora do horário marcado) | 19/10, 07:30 | 0 |
 | DrSM-YouTube-Gera-Midia | Ready | 16/10, 23:30 | OK | 0 min | ligado no horário | 17/10, 23:30 | 0 |
-| DrSM-YouTube-Publica | Ready | 16/10, 19:23 | OK | — | execução manual/de teste (fora do horário marcado) | 17/10, 12:30 | 0 |
+| DrSM-YouTube-Publica | Ready | 17/10, 19:55 | OK | — | execução manual/de teste (fora do horário marcado) | 18/10, 12:30 | 0 |
 <!-- TAREFAS:FIM -->
+
 
 
 <!-- LINKEDIN-MANUAL:INICIO -->
 ## Fila manual do LinkedIn (perfil pessoal, sem API)
-- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **5** (até 09/11) · abertos (manuais) **38** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-antonio-felipe-undefined-70990b438
+- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **5** (até 09/11) · abertos (manuais) **38** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
 - Próximos: sex 06/11 (carrossel) · qua 11/11 (texto) · sex 13/11 (texto) · seg 16/11 (texto) · qua 18/11 (texto) · sex 20/11 (texto) · seg 23/11 (carrossel)
 - No dia: `! npm run linkedin:hoje -- --copiar --abrir` · depois `! npm run linkedin:marcar -- <id>` · calendário completo em `relatorios/linkedin/FILA-MANUAL.md`. A tarefa `DrSM-LinkedIn-Lembrete` (seg/qua/sex 19:25) abre o post do dia.
 <!-- LINKEDIN-MANUAL:FIM -->
+
 
 
 
@@ -126,10 +129,14 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - **Fila do Instagram, amostra de 5 posts:** capas sem marca d'água, assinatura curta de 3 linhas, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria, acentos ok. Varredura das 60 legendas: 0 problemas.
 
 <!-- ROTINA:INICIO -->
-## Rotina semanal (última: 16/10/2026) — TUDO OK
-- Auditoria, retratações, links, token, freio e próximos 7 posts sem problemas.
-- Narração: 329 ok · faltam 397.
-- Detalhe: `relatorios/rotina-20261016.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
+## Rotina semanal (última: 17/10/2026) — ATENÇÃO (5 problema(s))
+- ⚠ 5 narração(ões) órfã(s) no Blob: ver relatorios/blob-orfaos-*.md
+- ⚠ 9 vídeo(s) do YouTube reprovado(s) na conferência: relatorios/youtube/reprovados/
+- ⚠ YouTube: a autorização vence em 2026-10-23 (antes da próxima rotina); reautorize ou publique o app: relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md
+- ⚠ tarefa DrSM-Conferencia-19-10: última execução 16/10, 19:23 terminou como "terminou com erro (código 1)"
+- ⚠ tarefa DrSM-Conferencia-26-10: última execução 16/10, 19:23 terminou como "terminou com erro (código 1)"
+- Narração: 726 ok · faltam 0.
+- Detalhe: `relatorios/rotina-20261017.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
 <!-- ROTINA:FIM -->
 
 ## Pendências que dependem do Dr. Antônio
