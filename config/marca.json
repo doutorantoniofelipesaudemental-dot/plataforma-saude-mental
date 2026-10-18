@@ -2,5 +2,8 @@
   "LINKEDIN_PERFIL_URL": "https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438",
   "LINKEDIN_PERFIL_PERSONALIZADO": true,
   "LINKEDIN_LANDING_URL": "https://www.drantoniofelipemedico.com.br/linkedin",
+  "YOUTUBE_CANAL_URL": "https://www.youtube.com/channel/UCFToj3Wg77mhK_0MJSpBr-w",
+  "YOUTUBE_LANDING_URL": "https://www.drantoniofelipemedico.com.br/youtube",
+  "INSTAGRAM_LANDING_URL": "https://www.drantoniofelipemedico.com.br/instagram",
   "nota": "FONTE ÚNICA do link do perfil do LinkedIn. Enquanto o endereço tiver 'undefined' (LINKEDIN_PERFIL_PERSONALIZADO=false), o link só aparece onde é indispensável (landing /linkedin e /links); rodapé, /mentoria e descrições do YouTube ficam sem ele. Quando o Dr. Antônio mandar o link personalizado: troque LINKEDIN_PERFIL_URL, ponha LINKEDIN_PERFIL_PERSONALIZADO=true, rode `npm run marca:aplicar` e faça o deploy."
 }

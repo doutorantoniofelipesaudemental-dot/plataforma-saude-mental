@@ -106,6 +106,10 @@
       "dest": "/public/linkedin.html"
     },
     {
+      "src": "/youtube/?",
+      "dest": "/public/youtube.html"
+    },
+    {
       "src": "/redes/previa/?",
       "dest": "/backend/index.js"
     },

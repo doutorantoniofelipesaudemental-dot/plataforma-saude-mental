@@ -1,0 +1,292 @@
+1
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+2
+00:00:06,772 --> 00:00:09,650
+Intoxicação exógena e agitação:
+
+3
+00:00:09,650 --> 00:00:12,217
+diferenciando causas no PA.
+
+4
+00:00:12,217 --> 00:00:14,707
+Narração em voz sintética.
+
+5
+00:00:14,707 --> 00:00:21,241
+Nem toda agitação que chega ao pronto
+atendimento psiquiátrico é psiquiátrica.
+
+6
+00:00:21,241 --> 00:00:27,776
+Intoxicação, abstinência e delirium podem se
+parecer com um surto, e confundir
+
+7
+00:00:27,776 --> 00:00:31,354
+os quadros pode custar caro ao paciente.
+
+8
+00:00:31,354 --> 00:00:33,999
+A pergunta que vem primeiro.
+
+9
+00:00:33,999 --> 00:00:37,267
+Diante de qualquer paciente agitado:
+
+10
+00:00:37,267 --> 00:00:43,412
+isso é causa clínica, intoxicação ou
+abstinência, transtorno psiquiátrico
+
+11
+00:00:43,412 --> 00:00:46,057
+primário, ou uma combinação?
+
+12
+00:00:46,057 --> 00:00:52,825
+O consenso do Projeto BETA, da Associação
+Americana de Psiquiatria de Emergência,
+
+13
+00:00:52,825 --> 00:00:59,437
+recomenda que a escolha do tratamento parta
+da causa mais provável da agitação,
+
+14
+00:00:59,437 --> 00:01:04,494
+e que no delirium a prioridade seja
+tratar a causa de base.
+
+15
+00:01:04,494 --> 00:01:08,695
+Sinais que apontam para causa
+clínica ou tóxica.
+
+16
+00:01:08,695 --> 00:01:13,985
+alteração ou flutuação do nível de
+consciência, desorientação;
+
+17
+00:01:13,985 --> 00:01:16,318
+sinais vitais alterados:
+
+18
+00:01:16,318 --> 00:01:21,142
+febre, taquicardia importante,
+hipotensão, dessaturação;
+
+19
+00:01:21,142 --> 00:01:25,887
+sinais neurológicos focais,
+convulsão, trauma craniano;
+
+20
+00:01:25,887 --> 00:01:31,255
+primeiro episódio após os 40 anos ou
+sem história psiquiátrica;
+
+21
+00:01:31,255 --> 00:01:35,144
+alucinações visuais ou
+táteis predominantes;
+
+22
+00:01:35,144 --> 00:01:39,656
+pupilas alteradas, sudorese,
+tremor, odor de álcool.
+
+23
+00:01:39,656 --> 00:01:41,834
+Diferenciação prática.
+
+24
+00:01:41,834 --> 00:01:44,012
+Intoxicação alcoólica:
+
+25
+00:01:44,012 --> 00:01:46,813
+ataxia, disartria, labilidade.
+
+26
+00:01:46,813 --> 00:01:51,014
+Atenção a hipoglicemia e
+trauma craniano oculto.
+
+27
+00:01:51,014 --> 00:01:53,192
+Abstinência alcoólica:
+
+28
+00:01:53,192 --> 00:01:57,004
+tremor, sudorese,
+taquicardia, hipertensão;
+
+29
+00:01:57,004 --> 00:02:00,504
+risco de convulsões e delirium tremens.
+
+30
+00:02:00,504 --> 00:02:03,772
+Estimulantes (cocaína, anfetaminas):
+
+31
+00:02:03,772 --> 00:02:09,062
+midríase, taquicardia, hipertensão,
+hipertermia, dor torácica.
+
+32
+00:02:09,062 --> 00:02:13,262
+Monitorização cardiovascular e
+controle térmico.
+
+33
+00:02:13,262 --> 00:02:15,674
+Síndrome anticolinérgica:
+
+34
+00:02:15,674 --> 00:02:21,197
+pele seca e quente, rubor, midríase,
+retenção urinária, delirium.
+
+35
+00:02:21,197 --> 00:02:23,531
+Delirium de outra causa:
+
+36
+00:02:23,531 --> 00:02:26,876
+início agudo, desatenção e flutuação.
+
+37
+00:02:26,876 --> 00:02:29,210
+Não é diagnóstico final:
+
+38
+00:02:29,210 --> 00:02:31,388
+sempre buscar a causa.
+
+39
+00:02:31,388 --> 00:02:34,266
+Agitação psiquiátrica primária:
+
+40
+00:02:34,266 --> 00:02:40,490
+consciência preservada, sinais vitais
+normais ou pouco alterados, história
+
+41
+00:02:40,490 --> 00:02:41,812
+compatível.
+
+42
+00:02:41,812 --> 00:02:45,313
+Diagnóstico após afastar as anteriores.
+
+43
+00:02:45,313 --> 00:02:46,558
+Princípio:
+
+44
+00:02:46,558 --> 00:02:53,014
+agitação com alteração de consciência é
+causa clínica até prova em contrário.
+
+45
+00:02:53,014 --> 00:02:54,804
+Avaliação mínima.
+
+46
+00:02:54,804 --> 00:03:01,183
+Glicemia capilar, sinais vitais completos,
+oximetria e exame físico dirigido
+
+47
+00:03:01,183 --> 00:03:02,972
+são obrigatórios.
+
+48
+00:03:02,972 --> 00:03:04,683
+Conforme o caso:
+
+49
+00:03:04,683 --> 00:03:11,140
+eletrocardiograma, eletrólitos, função renal
+e hepática, exames toxicológicos
+
+50
+00:03:11,140 --> 00:03:13,629
+disponíveis e neuroimagem.
+
+51
+00:03:13,629 --> 00:03:16,352
+Manejo enquanto se investiga.
+
+52
+00:03:16,352 --> 00:03:22,653
+As diretrizes brasileiras recomendam
+começar por medidas não farmacológicas
+
+53
+00:03:22,653 --> 00:03:29,266
+e, se a medicação for necessária, escolher o
+fármaco conforme a causa provável,
+
+54
+00:03:29,266 --> 00:03:36,034
+preferindo a via oral e evitando a via
+intravenosa fora de ambiente monitorizado.
+
+55
+00:03:36,034 --> 00:03:42,413
+Em intoxicação por depressores do sistema
+nervoso central, cuidado redobrado
+
+56
+00:03:42,413 --> 00:03:43,968
+com sedativos.
+
+57
+00:03:43,968 --> 00:03:50,347
+A desescalada verbal deve ser a primeira
+abordagem, antes de qualquer medida
+
+58
+00:03:50,347 --> 00:03:51,825
+de contenção.
+
+59
+00:03:51,825 --> 00:03:55,248
+As referências estão no fim da página.
+
+60
+00:03:55,248 --> 00:03:59,371
+Conteúdo educativo para
+profissionais de saúde.
+
+61
+00:03:59,371 --> 00:04:05,283
+Não substitui protocolos institucionais,
+bulas e avaliação individual.
+
+62
+00:04:05,283 --> 00:04:08,084
+Atualizado em outubro de 2026.
+
+63
+00:04:08,784 --> 00:04:14,581
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+64
+00:04:14,581 --> 00:04:18,669
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+65
+00:04:18,669 --> 00:04:22,608
+O texto completo, com as
+referências, está no portal.

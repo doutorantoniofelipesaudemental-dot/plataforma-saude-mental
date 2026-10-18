@@ -1,0 +1,367 @@
+1
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+2
+00:00:06,772 --> 00:00:08,686
+Alta do PA Psiquiátrico:
+
+3
+00:00:08,686 --> 00:00:11,876
+o que ajuda a reduzir o
+risco de nova crise.
+
+4
+00:00:11,876 --> 00:00:13,918
+Narração em voz sintética.
+
+5
+00:00:13,918 --> 00:00:18,958
+Estabilizar a crise aguda é apenas metade
+do trabalho no PA Psiquiátrico.
+
+6
+00:00:18,958 --> 00:00:24,062
+A outra metade — frequentemente mais
+negligenciada pela pressão do serviço
+
+7
+00:00:24,062 --> 00:00:29,294
+— é garantir que o paciente saia com o
+mínimo de condições para não retornar
+
+8
+00:00:29,294 --> 00:00:31,974
+em crise nas próximas horas ou dias.
+
+9
+00:00:31,974 --> 00:00:36,950
+A alta do PA Psiquiátrico não é
+simplesmente o momento em que o paciente
+
+10
+00:00:36,950 --> 00:00:39,566
+não representa mais risco imediato.
+
+11
+00:00:39,566 --> 00:00:44,479
+É um processo que envolve avaliação de
+condições de segurança pós-alta,
+
+12
+00:00:44,479 --> 00:00:49,392
+articulação com a rede, orientação ao
+paciente e à família, e definição
+
+13
+00:00:49,392 --> 00:00:52,135
+clara dos próximos passos de cuidado.
+
+14
+00:00:52,135 --> 00:00:55,198
+Critérios clínicos para considerar a alta.
+
+15
+00:00:55,198 --> 00:01:00,047
+Resolução ou redução significativa da
+agitação e do risco imediato que
+
+16
+00:01:00,047 --> 00:01:01,833
+motivou o atendimento.
+
+17
+00:01:01,833 --> 00:01:07,129
+Paciente capaz de comunicar-se de forma
+minimamente coerente e de compreender
+
+18
+00:01:07,129 --> 00:01:08,788
+orientações básicas.
+
+19
+00:01:08,788 --> 00:01:14,147
+Ausência de ideação suicida ativa com plano
+ou intenção — ou, quando presente,
+
+20
+00:01:14,147 --> 00:01:18,549
+avaliação cuidadosa de fatores
+protetores e de rede de suporte.
+
+21
+00:01:18,549 --> 00:01:23,462
+Condição clínica estável, sem necessidade
+de monitoramento contínuo que
+
+22
+00:01:23,462 --> 00:01:26,525
+não possa ser oferecido ambulatorialmente.
+
+23
+00:01:26,525 --> 00:01:31,501
+O período logo após a alta de um serviço
+psiquiátrico é o de maior risco
+
+24
+00:01:31,501 --> 00:01:34,947
+de suicídio, sobretudo nos
+primeiros três meses.
+
+25
+00:01:34,947 --> 00:01:38,073
+O que precisa estar
+definido antes da alta.
+
+26
+00:01:38,073 --> 00:01:38,583
+1.
+
+27
+00:01:38,583 --> 00:01:40,497
+Para onde vai o cuidado?
+
+28
+00:01:40,497 --> 00:01:45,601
+Alta sem referência de continuidade é um
+dos maiores fatores de risco para
+
+29
+00:01:45,601 --> 00:01:47,388
+retorno precoce ao PA.
+
+30
+00:01:47,388 --> 00:01:52,747
+Idealmente, o próximo ponto de cuidado —
+CAPS, UBS, ambulatório especializado,
+
+31
+00:01:52,747 --> 00:01:57,724
+psiquiatra — deve estar definido e, quando
+possível, comunicado antes do
+
+32
+00:01:57,724 --> 00:01:59,000
+paciente sair.
+
+33
+00:01:59,000 --> 00:01:59,510
+2.
+
+34
+00:01:59,510 --> 00:02:00,531
+Medicação:
+
+35
+00:02:00,531 --> 00:02:02,318
+o paciente tem acesso?
+
+36
+00:02:02,318 --> 00:02:06,210
+Prescrever e não garantir acesso
+é prescrição ineficaz.
+
+37
+00:02:06,210 --> 00:02:11,250
+Verificar se o paciente tem condições de
+adquirir ou retirar a medicação,
+
+38
+00:02:11,250 --> 00:02:15,716
+e se há quem possa auxiliar na adesão
+inicial quando necessário.
+
+39
+00:02:15,716 --> 00:02:16,226
+3.
+
+40
+00:02:16,226 --> 00:02:18,141
+Quem vai com o paciente?
+
+41
+00:02:18,141 --> 00:02:23,053
+Alta sem acompanhante em casos de risco
+moderado a alto merece atenção.
+
+42
+00:02:23,053 --> 00:02:28,030
+Orientar a família ou responsável sobre
+sinais de alerta para retorno ao
+
+43
+00:02:28,030 --> 00:02:32,241
+serviço e sobre como apoiar nas
+primeiras horas após a alta.
+
+44
+00:02:32,241 --> 00:02:32,751
+4.
+
+45
+00:02:32,751 --> 00:02:36,260
+O paciente e a família
+entenderam as orientações?
+
+46
+00:02:36,260 --> 00:02:41,301
+Verificar compreensão ativa — não apenas
+entregar orientações por escrito
+
+47
+00:02:41,301 --> 00:02:46,277
+— sobre o que fazer se os sintomas
+retornarem, quando buscar atendimento
+
+48
+00:02:46,277 --> 00:02:51,381
+novamente, e quais são os sinais de alerta
+que justificam retorno urgente.
+
+49
+00:02:51,381 --> 00:02:53,423
+Sobre o "cartão de crise":
+
+50
+00:02:53,423 --> 00:02:58,463
+em casos de risco de suicídio, a entrega
+de informações claras sobre onde
+
+51
+00:02:58,463 --> 00:03:03,312
+buscar ajuda em caso de crise — incluindo
+CVV (188) e SAMU (192) — e a
+
+52
+00:03:03,312 --> 00:03:08,417
+construção, mesmo que breve, de um plano de
+segurança com o paciente antes
+
+53
+00:03:08,417 --> 00:03:13,521
+da alta, são práticas com evidência de
+redução de risco no período pós-PA.
+
+54
+00:03:13,521 --> 00:03:18,689
+Em serviços de emergência, um plano de
+segurança construído com o paciente,
+
+55
+00:03:18,689 --> 00:03:23,538
+seguido de contatos telefônicos nos dias
+seguintes, reduziu quase pela
+
+56
+00:03:23,538 --> 00:03:29,088
+metade o comportamento suicida em seis meses e
+dobrou a adesão ao acompanhamento.
+
+57
+00:03:29,088 --> 00:03:32,342
+Gestos simples de
+continuidade também contam:
+
+58
+00:03:32,342 --> 00:03:37,255
+num estudo clássico, cartas breves de
+acompanhamento enviadas depois da
+
+59
+00:03:37,255 --> 00:03:41,275
+alta reduziram as mortes por
+suicídio nos primeiros anos.
+
+60
+00:03:41,275 --> 00:03:43,954
+Quando a alta não é a decisão certa.
+
+61
+00:03:43,954 --> 00:03:48,867
+A pressão de fluxo nos serviços de
+urgência pode levar a altas precoces
+
+62
+00:03:48,867 --> 00:03:50,973
+que seriam melhor evitadas.
+
+63
+00:03:50,973 --> 00:03:56,268
+Casos com risco de suicídio significativo
+sem rede de suporte real, episódios
+
+64
+00:03:56,268 --> 00:04:01,436
+psicóticos ativos sem acesso a cuidado
+contínuo, ou pacientes sem condições
+
+65
+00:04:01,436 --> 00:04:06,413
+mínimas de seguir qualquer orientação
+pós-alta, devem ser avaliados para
+
+66
+00:04:06,413 --> 00:04:11,262
+necessidade de internação ou observação
+prolongada, mesmo que o quadro
+
+67
+00:04:11,262 --> 00:04:13,048
+agudo tenha melhorado.
+
+68
+00:04:13,048 --> 00:04:18,152
+Diretrizes da OMS para serviços não
+especializados orientam avaliar risco,
+
+69
+00:04:18,152 --> 00:04:22,618
+rede de apoio e acesso ao tratamento
+antes de decidir pela alta.
+
+70
+00:04:22,618 --> 00:04:25,426
+As referências estão no fim da página.
+
+71
+00:04:25,426 --> 00:04:30,338
+Este conteúdo tem finalidade educativa e
+de apoio ao raciocínio clínico
+
+72
+00:04:30,338 --> 00:04:32,316
+em urgência psiquiátrica.
+
+73
+00:04:32,316 --> 00:04:37,293
+Não substitui protocolos institucionais,
+avaliação clínica presencial ou
+
+74
+00:04:37,293 --> 00:04:40,164
+diretrizes específicas de cada serviço.
+
+75
+00:04:40,864 --> 00:04:47,715
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+76
+00:04:47,715 --> 00:04:52,547
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+77
+00:04:52,547 --> 00:04:57,202
+O texto completo, com as
+referências, está no portal.
+
+78
+00:04:57,202 --> 00:05:04,053
+Se você precisar de apoio agora, ligue 188, o
+CVV, ligação gratuita, 24 horas.
+
+79
+00:05:04,053 --> 00:05:06,952
+Em emergência, ligue 192, o SAMU.
