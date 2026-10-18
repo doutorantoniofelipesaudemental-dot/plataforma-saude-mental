@@ -90,6 +90,7 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
     it.pasta = path.relative(L.RAIZ, dir).replace(/\\/g, '/');
     if (!fs.existsSync(metaArq)) { it.status = 'sem-midia'; continue; }
     const meta = JSON.parse(fs.readFileSync(metaArq, 'utf8'));
+    meta.checagemTexto = L.checarTexto(meta); // reconfere com a regra atual (o meta guarda o resultado da geração)
     Object.assign(it, { tituloYoutube: meta.titulo, tags: meta.tags, hashVideo: meta.hashVideo, duracao: Math.round(meta.duracao), checagem: { texto: meta.checagemTexto, midia: meta.checagemMidia } });
     // conferência automática do vídeo (quadros, crédito, assinatura, marca d'água, legenda, vinheta falada); reprovado vai para relatorios/youtube/reprovados/
     const conf = await conferirVideo(dir, meta);

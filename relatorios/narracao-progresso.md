@@ -288,3 +288,13 @@ Início da sessão: 51 ok · 200 desatualizadas · 475 ausentes · faltam 675.
 - Pré-geradas nesta execução: 10 · falhas de geração: 0
 - ENVIAR · publicados + agendados sem áudio "ok": 1 · com MP3 pronto e selo válido: 0 · MP3 de texto editado depois (regerar): 0 · sem MP3 pré-gerado: 1
 - Estado geral: {"total":726,"estados":{"ok":697,"ausente":29},"faltam":29,"agendadosComMp3PreGerado":28}
+
+## Ciclo automático — 17/10/2026, 05:46:04
+- Pré-geradas nesta execução: 0 · falhas de geração: 0
+- ENVIAR · aprovados na conferência: 5 · reprovados: 0 · enviados e "ok" no banco: 5 · falhas de envio: 0
+- Estado geral: {"total":726,"estados":{"ok":724,"ausente":2},"faltam":2,"agendadosComMp3PreGerado":1}
+
+## Ciclo automático — 17/10/2026, 22:03:35
+- Pré-geradas nesta execução: 2 · falhas de geração: 3
+- ENVIAR · publicados + agendados sem áudio "ok": 0 · com MP3 pronto e selo válido: 0 · MP3 de texto editado depois (regerar): 0 · sem MP3 pré-gerado: 0
+- Estado geral: {"total":726,"estados":{"ok":726},"faltam":0,"agendadosComMp3PreGerado":0}
