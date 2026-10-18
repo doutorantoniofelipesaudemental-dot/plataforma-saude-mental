@@ -12,10 +12,10 @@ def troca(a, b):
     assert a in s, a[:60]
     s = s.replace(a, b, 1)
 
-troca('<title>Do Instagram — Saúde Mental · Doutor Antônio Felipe</title>', '<title>Do Instagram ao Portal de Saúde Mental · Dr. Antônio Felipe</title>')
+troca('<title>Do Instagram — Saúde Mental · Doutor Antônio Felipe</title>', '<title>Do Instagram ao Portal — Saúde Mental · Doutor Antônio Felipe</title>')
 troca('content="Os artigos dos posts mais recentes do Instagram @doutor.antoniofelipe.smental, do Dr. Antônio Felipe, do mais novo para o mais antigo."',
       'content="Veio do Instagram @doutor.antoniofelipe.smental? Aqui estão os artigos completos dos posts, o canal no YouTube e os caminhos de cuidado. Conteúdo educativo em saúde mental."')
-troca('<meta property="og:title" content="Do Instagram — Saúde Mental · Doutor Antônio Felipe">', '<meta property="og:title" content="Do Instagram ao Portal de Saúde Mental · Dr. Antônio Felipe">')
+troca('<meta property="og:title" content="Do Instagram — Saúde Mental · Doutor Antônio Felipe">', '<meta property="og:title" content="Do Instagram ao Portal — Saúde Mental · Doutor Antônio Felipe">')
 troca('<meta property="og:description" content="Os artigos dos posts mais recentes do Instagram.">',
       '<meta property="og:description" content="Os artigos completos dos posts do Instagram, o canal no YouTube e os caminhos de cuidado.">')
 troca('<meta property="og:image" content="https://www.drantoniofelipemedico.com.br/assets/img/og-cover.png">',
