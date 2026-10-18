@@ -76,9 +76,9 @@ async function conferir(post) {
   return problemas;
 }
 
-async function publicarDevidos({ agora = new Date(), simular = false } = {}) {
+async function publicarDevidos({ agora = new Date(), simular = false, apenasId } = {}) {
   if (!redesAtivas()) return { publicado: false, motivo: 'REDES_PUBLICACAO_ATIVA=false (freio de emergência)' };
-  const devidos = await col('redes_v2').find({ status: 'aprovado-checagem', dataSugerida: { $lte: agora } }).toArray();
+  const devidos = await col('redes_v2').find({ status: 'aprovado-checagem', dataSugerida: { $lte: agora }, ...(apenasId ? { _id: apenasId } : {}) }).toArray();
   if (!devidos.length) return { publicado: false, motivo: 'nenhum post devido' };
   // Token recusado pela Meta: não tenta de novo com ele (a pausa sai sozinha quando um token novo é configurado).
   if (!simular) {

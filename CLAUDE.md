@@ -115,6 +115,11 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) ATUALIZAÇÃO de 15/10/2026: a exceção da `/links` e de `assets/marca/` também foi REVOGADA; "Antônio" leva acento em todo lugar, exceto endereços, @, e-mail e nomes técnicos.
 
 
+### Portão único de qualidade (17/10/2026)
+- **Merge só por `npm run merge-seguro -- <PR>`. Publicação só por crons/tarefas com checagem ou `npm run publicar-seguro -- <rede> <id>`. Nunca `gh pr merge` direto.**
+- `npm run portao` (auditoria → tripla checagem dos itens alterados → build → unitários → e2e; para no 1º erro; grava `relatorios/portao-AAAAMMDD-HHMM.md`). O `merge-seguro` roda o portão na branch do PR, mescla só se passar, confere o deploy e grava `relatorios/rollback-pr<N>-*.md`.
+- Trava dupla: regras deny em `.claude/settings.json` + hook `.claude/hooks/guarda.js` (bloqueia merge direto, push da/para main, leitura do `.env`, mudança dos freios, DELETE nas redes, tarefas fora de `DrSM-*`).
+
 ### Regra de merge (16/10/2026)
 - Merge na `main` só depois de auditoria com 0 falhas, build OK e 100% dos testes passando. Se o merge for bloqueado pelas permissões, NÃO contornar: deixar o PR pronto e escrever ao Dr. Antônio o comando exato.
 

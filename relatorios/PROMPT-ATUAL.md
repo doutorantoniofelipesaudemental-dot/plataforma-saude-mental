@@ -1,5 +1,8 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
+## ATUALIZAÇÃO 17/10/2026 — autonomia com portão
+Autorizado pelo Dr. Antônio: tudo o que for rotina roda sem pedir autorização, SEMPRE depois do `npm run portao` (auditoria + tripla checagem + build + unitários + e2e). Merge só por `npm run merge-seguro -- <PR>`; publicação só por crons/tarefas com checagem ou `npm run publicar-seguro`. Se o classificador bloquear, não contornar: passar o comando com "!". Sequência: (1) skills `youtube-reprovados` e `manutencao` [feito]; (2) branch `chore/portao-seguro` + PR; (3) portão completo + merge-seguro; (4) `rodar manutencao` (LinkedIn li-2026-11-11/13/16/18/20 + PDF de teste, 5 órfãs do Blob grupos c/d, 9 vídeos reprovados do YouTube, 3 narrações com EBUSY, "aguardando data").
+
 CONTEXTO: o PR #77 está MERGED (d339b9f) e o deploy de produção está Ready. Antes de tudo, SALVE este prompt em relatorios/PROMPT-ATUAL.md e registre no topo de relatorios/ESTADO-GERAL.md qual etapa está em andamento. Atualize os dois ao fim de cada etapa.
 
 Regras permanentes do CLAUDE.md: backup -> --dry-run -> --aplicar; auditoria geral + tripla checagem técnica, científica, ética e humanizada; não mudar o sentido dos textos sem aprovação; nunca ler nem imprimir o .env ou segredos.
