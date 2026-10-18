@@ -9,6 +9,7 @@
    - **26/10 às 08:00:** 1º post do Instagram (2026-10-26-saude-mental-cuidador). **Depois das 9h:** "rodar conferência de 26/10" (skill `conferencia-26-10`).
    - **Toda segunda:** "rodar manutencao" (a rotina semanal roda sozinha às 07:30).
    - **LinkedIn diário até zerar a fila:** "rodar agendar-linkedin".
+5. **Instagram (decisão 18/10):** PR #107 (roteamento) precisa de `! npm run merge-seguro -- 107` ANTES de 26/10 08:00. Carrossel de teste preparado (prévia em `relatorios/redes/teste-carrossel/`); publicar só com a ordem escrita "publicar teste de carrossel" (o Claude roda `npm run redes:teste-carrossel -- --publicar --ordem="publicar teste de carrossel"`, com o freio REDES_PUBLICACAO_ATIVA ligado por você). Depois de conferir o teste: ordem "liberar carrossel automático". Reels/Stories: fila manual (`npm run redes:fila-manual`), reavaliar em 30 dias (18/11).
 5. Melhorias propostas (sem implementar): `relatorios/PROPOSTAS-PARTE-E.md`.
 
 ## ATUALIZAÇÃO 17/10/2026 — autonomia com portão
