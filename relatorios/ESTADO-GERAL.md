@@ -24,7 +24,7 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 - Instagram: cron renovar-token-instagram ativo (seg 12:00 UTC = 19/10); a conferência de 19/10 exige a origem do token "renovado".
 
 <!-- TAREFAS:INICIO -->
-### Tarefas do Windows (conferidas em 17/10, 22:21)
+### Tarefas do Windows (conferidas em 17/10, 23:04)
 - PC ligado desde 17/10, 19:55 · nos últimos 7 dias: 10 partida(s), 21 desligamento(s)/queda(s), 0 suspensão(ões), 0 retomada(s)
 
 | Tarefa | Estado | Última execução | Resultado | Atraso | O PC estava ligado? | Próxima | Perdidas |
@@ -40,12 +40,14 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 
 
 
+
 <!-- LINKEDIN-MANUAL:INICIO -->
 ## Fila manual do LinkedIn (perfil pessoal, sem API)
-- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **5** (até 09/11) · abertos (manuais) **38** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
-- Próximos: sex 06/11 (carrossel) · qua 11/11 (texto) · sex 13/11 (texto) · seg 16/11 (texto) · qua 18/11 (texto) · sex 20/11 (texto) · seg 23/11 (carrossel)
+- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **10** (até 20/11) · abertos (manuais) **33** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
+- Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · qua 25/11 (texto) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto)
 - No dia: `! npm run linkedin:hoje -- --copiar --abrir` · depois `! npm run linkedin:marcar -- <id>` · calendário completo em `relatorios/linkedin/FILA-MANUAL.md`. A tarefa `DrSM-LinkedIn-Lembrete` (seg/qua/sex 19:25) abre o post do dia.
 <!-- LINKEDIN-MANUAL:FIM -->
+
 
 
 
@@ -138,6 +140,15 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Narração: 726 ok · faltam 0.
 - Detalhe: `relatorios/rotina-20261017.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
 <!-- ROTINA:FIM -->
+
+## Estado final da manutenção (17/10/2026, noite) — PRs #96 e #97 mesclados pelo `merge-seguro`
+- **Portão/merge-seguro/publicar-seguro:** `npm run portao` (auditoria → tripla → build → 267 unitários → e2e), `npm run merge-seguro -- <PR>` (portão na branch, merge só se passar, deploy conferido, `relatorios/rollback-pr*.md`), `npm run publicar-seguro -- <rede> <id>`.
+- **LinkedIn:** 10 posts agendados no agendador nativo, todos às 19:30 (Bahia): 28/10, 30/10, 02/11, 04/11, 09/11, **11/11 (conferido: data e hora certas, sem duplicado)**, 13/11, 16/11, 18/11, 20/11. Falso erro do script corrigido (`scripts/linkedin/classificarAviso.js` + `tests/unit/linkedin-aviso.test.js`): o regex lia "Usuário verificado" do feed como bloqueio. Limite diário não foi atingido. Pendente: teste de 1 carrossel em PDF; próximos abertos: 06/11 (carrossel, manual), 23/11, 25/11, 27/11.
+- **YouTube:** 75 aprovado-checagem · 34 sem mídia · 0 reprovado · 0 publicado. Os 9 reprovados eram bug do conferidor (regex de "Bahia"), corrigido. Autorização do Google vence em **23/10**.
+- **Narrações:** 726/726 ok, 0 faltando.
+- **Blob:** 1343,5 MB (plano Pro, teto próprio de 5 GB); a 251 · b 475 · c 5 (11,6 MB, hash antigo) · d 0. Limpeza das 5 órfãs: `npm run blob:orfas` (dry-run) e `npm run blob:orfas -- --aplicar` (só c/d), a rodar pelo Dr. Antônio com `!`.
+- **Permissões/hook:** `.claude/settings.json` + `.claude/hooks/guarda.js` (v1) ativos. A v2 do hook (análise por comando: merge só quando o comando começa com ele, `.env` só como argumento de comando de leitura, push só com destino main) está testada (34/34 casos) e aguarda o Dr. Antônio aplicar com `!` (ver `docs/uso-eficiente.md`). O `settings.json` e o hook são protegidos contra edição pelo Claude.
+- **Conferência pós-renovação:** trata "AGUARDANDO DATA" antes de 19/10 08:00 (Bahia).
 
 ## O que continua dependendo do Dr. Antônio (17/10/2026)
 - Login em sites, códigos de verificação e CAPTCHA.

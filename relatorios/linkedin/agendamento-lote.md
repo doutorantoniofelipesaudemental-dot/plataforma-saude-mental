@@ -1,16 +1,11 @@
-# Lote para o agendador nativo do LinkedIn (conferido em 2026-10-17)
+# Lote para o agendador nativo do LinkedIn (conferido em 2026-10-18)
 
-- Posts de texto aprovados para agendar: **37** (de 28/10/2026 a 29/01/2027), em 8 lote(s) de até 5.
+- Posts de texto aprovados para agendar: **32** (de 11/11/2026 a 29/01/2027), em 7 lote(s) de até 5.
 - Carrosséis (PDF), deixados na fila manual com o lembrete das 19:25 até confirmar que o agendador aceita PDF: **6**.
 - Reprovados (não agendados): **0** (ver `relatorios/linkedin/reprovados/`).
 
 | Data | Hora | Tipo | Título |
 |---|---|---|---|
-| 28/10/2026 | 19:30 | texto | Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação |
-| 30/10/2026 | 19:30 | texto | Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes |
-| 02/11/2026 | 19:30 | texto | Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS |
-| 04/11/2026 | 19:30 | texto | Por que todo texto do portal tem áudio |
-| 09/11/2026 | 19:30 | texto | Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes |
 | 11/11/2026 | 19:30 | texto | Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas |
 | 13/11/2026 | 19:30 | texto | Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial |
 | 16/11/2026 | 19:30 | texto | Contenção mecânica no PA Psiquiátrico: quando, como e os limites éticos |

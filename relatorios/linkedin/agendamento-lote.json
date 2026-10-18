@@ -1,56 +1,7 @@
 {
- "geradoEm": "2026-10-17T03:55:38.646Z",
+ "geradoEm": "2026-10-18T02:07:28.196Z",
  "regra": "só entra no agendador o que passou na auditoria + tripla checagem; lotes de 5",
  "aprovados": [
-  {
-   "id": "li-2026-10-28",
-   "data": "2026-10-28",
-   "hora": "19:30",
-   "titulo": "Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação",
-   "tipo": "texto",
-   "slug": "saude-mental-residencia",
-   "caracteres": 1766,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-10-30",
-   "data": "2026-10-30",
-   "hora": "19:30",
-   "titulo": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
-   "tipo": "texto",
-   "slug": "burnout-na-gestao-fatores-de-risco",
-   "caracteres": 1735,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-02",
-   "data": "2026-11-02",
-   "hora": "19:30",
-   "titulo": "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS",
-   "tipo": "texto",
-   "slug": "quando-encaminhar-aps",
-   "caracteres": 1631,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-04",
-   "data": "2026-11-04",
-   "hora": "19:30",
-   "titulo": "Por que todo texto do portal tem áudio",
-   "tipo": "texto",
-   "caracteres": 1469,
-   "pdf": null
-  },
-  {
-   "id": "li-2026-11-09",
-   "data": "2026-11-09",
-   "hora": "19:30",
-   "titulo": "Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes",
-   "tipo": "texto",
-   "slug": "jogos-online-consulta-medicos",
-   "caracteres": 1544,
-   "pdf": null
-  },
   {
    "id": "li-2026-11-11",
    "data": "2026-11-11",
@@ -431,13 +382,6 @@
  ],
  "reprovados": [],
  "lotes": [
-  [
-   "li-2026-10-28",
-   "li-2026-10-30",
-   "li-2026-11-02",
-   "li-2026-11-04",
-   "li-2026-11-09"
-  ],
   [
    "li-2026-11-11",
    "li-2026-11-13",

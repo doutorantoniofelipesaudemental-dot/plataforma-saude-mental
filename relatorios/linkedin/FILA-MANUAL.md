@@ -1,22 +1,22 @@
 # Fila manual do LinkedIn — perfil pessoal
 
-Perfil: https://www.linkedin.com/in/doutor-antonio-felipe-undefined-70990b438
-Quando: segunda, quarta e sexta, 19:30 (Bahia), de 28/10/2026 a 29/01/2027. Total 43 · publicados à mão 0 · abertos 43 · atrasados 0.
+Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
+Quando: segunda, quarta e sexta, 19:30 (Bahia), de 28/10/2026 a 29/01/2027. Total 43 · publicados à mão 0 · abertos 33 · atrasados 0.
 No dia: `! npm run linkedin:hoje -- --copiar --abrir` (a tarefa `DrSM-LinkedIn-Lembrete` faz isso sozinha às 19:25).
 
 | Dia | Tipo | Título | Situação |
 |---|---|---|---|
-| qua 28/10 | texto | Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação | aberto (manual) |
-| sex 30/10 | texto | Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes | aberto (manual) |
-| seg 02/11 | texto | Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS | aberto (manual) |
-| qua 04/11 | texto | Por que todo texto do portal tem áudio | aberto (manual) |
+| qua 28/10 | texto | Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação | 🗓 agendado no LinkedIn (2026-10-17) |
+| sex 30/10 | texto | Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes | 🗓 agendado no LinkedIn (2026-10-17) |
+| seg 02/11 | texto | Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS | 🗓 agendado no LinkedIn (2026-10-17) |
+| qua 04/11 | texto | Por que todo texto do portal tem áudio | 🗓 agendado no LinkedIn (2026-10-17) |
 | sex 06/11 | carrossel PDF | NR-1 e riscos psicossociais: por onde começar | aberto (manual) |
-| seg 09/11 | texto | Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes | aberto (manual) |
-| qua 11/11 | texto | Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas | aberto (manual) |
-| sex 13/11 | texto | Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial | aberto (manual) |
-| seg 16/11 | texto | Contenção mecânica no PA Psiquiátrico: quando, como e os limites éticos | aberto (manual) |
-| qua 18/11 | texto | Como as referências dos textos são conferidas | aberto (manual) |
-| sex 20/11 | texto | Intoxicação exógena e agitação: diferenciando causas no PA | aberto (manual) |
+| seg 09/11 | texto | Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes | 🗓 agendado no LinkedIn (2026-10-17) |
+| qua 11/11 | texto | Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas | 🗓 agendado no LinkedIn (2026-10-17) |
+| sex 13/11 | texto | Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial | 🗓 agendado no LinkedIn (2026-10-17) |
+| seg 16/11 | texto | Contenção mecânica no PA Psiquiátrico: quando, como e os limites éticos | 🗓 agendado no LinkedIn (2026-10-17) |
+| qua 18/11 | texto | Como as referências dos textos são conferidas | 🗓 agendado no LinkedIn (2026-10-17) |
+| sex 20/11 | texto | Intoxicação exógena e agitação: diferenciando causas no PA | 🗓 agendado no LinkedIn (2026-10-17) |
 | seg 23/11 | carrossel PDF | NR-1 na prática clínica e na rotina de saúde | aberto (manual) |
 | qua 25/11 | texto | Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise | aberto (manual) |
 | sex 27/11 | texto | Matriciamento em saúde mental: como funciona na prática | aberto (manual) |

@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-17T03:55:51.878Z",
+ "geradoEm": "2026-10-18T02:33:59.027Z",
  "regra": "seg/qua/sex 19:30 (Bahia), publicação MANUAL no perfil pessoal (sem API)",
  "itens": [
   {
@@ -11,8 +11,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/saude-mental-residencia",
    "slug": "saude-mental-residencia",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-17T03:55:36.375Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-17T04:18:19.793Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1766
   },
   {
@@ -24,8 +25,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/burnout-na-gestao-fatores-de-risco",
    "slug": "burnout-na-gestao-fatores-de-risco",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.188Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-17T04:18:20.606Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1735
   },
   {
@@ -37,8 +39,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/quando-encaminhar-aps",
    "slug": "quando-encaminhar-aps",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.264Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-17T04:18:21.417Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1631
   },
   {
@@ -48,8 +51,9 @@
    "slot": "2026-11-04T22:30:00.000Z",
    "titulo": "Por que todo texto do portal tem áudio",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.340Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-17T04:18:22.241Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1469
   },
   {
@@ -74,8 +78,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/jogos-online-consulta-medicos",
    "slug": "jogos-online-consulta-medicos",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.482Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-17T04:18:23.062Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1544
   },
   {
@@ -87,8 +92,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/saude-mental-pilar-de-performance-liderancas",
    "slug": "saude-mental-pilar-de-performance-liderancas",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.559Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-18T02:31:12.610Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1826
   },
   {
@@ -100,8 +106,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/primeiro-episodio-psicotico",
    "slug": "primeiro-episodio-psicotico",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.630Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-18T02:33:56.382Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1591
   },
   {
@@ -113,8 +120,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/contencao-mecanica-pa",
    "slug": "contencao-mecanica-pa",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.700Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-18T02:33:57.197Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1711
   },
   {
@@ -124,8 +132,9 @@
    "slot": "2026-11-18T22:30:00.000Z",
    "titulo": "Como as referências dos textos são conferidas",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.774Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-18T02:33:58.035Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1428
   },
   {
@@ -137,8 +146,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/intoxicacao-agitacao-pa",
    "slug": "intoxicacao-agitacao-pa",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.844Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-18T02:33:58.872Z",
+   "agendadoLinkedinEm": "2026-10-17",
    "caracteres": 1577
   },
   {
