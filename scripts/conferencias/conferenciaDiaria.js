@@ -142,6 +142,11 @@ function alertaNoEstadoGeral() {
     resumo.gravar(resumo.montarResumo({ hoje, ...dados, alertas }));
   } catch (e) { console.error(`resumo do dia não gerado: ${e.message}`); }
   alertaNoEstadoGeral();
+  if (falhas.length) { // e-mail só se RESEND_API_KEY existir (desligado até lá)
+    const { enviarAlerta } = require('../alertas/enviarAlerta');
+    const r = await enviarAlerta({ assunto: `${falhas.length} falha(s) na conferência ${hoje}`, texto: `${falhas.map((f) => `- ${f}`).join('\n')}\n\nDetalhes: relatorios/conferencias/${hoje}.md` });
+    if (!r.enviado) console.log(`e-mail de alerta não enviado: ${r.motivo}`);
+  }
   console.log(`conferência ${hoje}: ${falhas.length} falha(s), ${avisos.length} aviso(s) → relatorios/conferencias/${hoje}.md`);
   await mongoose.disconnect();
   process.exit(falhas.length ? 1 : 0);
