@@ -1,8 +1,10 @@
+> **18/10/2026 (estado real verificado — etapa 1 da tarefa unificada):** PR #105 mergeado. Narração: 726 "ok", 0 desatualizadas, 0 ausentes; **710 com vinheta, 16 sem** (nenhuma publicada nem dos próximos 7 dias; o lote da noite completa). Capas: 726/726 com imagem. YouTube: 109 aprovados · 0 reprovados · 0 publicados (freio desligado). Instagram: fila de 60 posts aprovados, primeiro em 26/10 às 08:00 (Bahia), token válido (vence 14/12, 56 dias), freio `REDES_PUBLICACAO_ATIVA` ativo na Vercel. LinkedIn: 10 agendados (até 20/11), 33 abertos (27 posts + 6 carrosséis manuais); limite diário do LinkedIn atingido em 18/10 (parou em li-2026-11-25). Blob: 1332 MB (26% do teto), órfãs 0 (a 251 · b 475 · c 0 · d 0). Bios e perfis atualizados pelo Dr. Antônio em 18/10. Tarefas DrSM-*: todas Ready, sem perdidas; as duas conferências (19/10 e 26/10) mostram "erro 1" da execução de teste de 16/10 (antes da data) e rodam nas datas. Crons da Vercel: publicar-agendados, publicar-redes-v2, publicar-linkedin, relatorio-redes, renovar-token-instagram registrados.
+
 > **18/10/2026 (configurações manuais, informadas pelo Dr. Antônio):** bio e link da bio do Instagram, "Sobre"/links/e-mail do YouTube e título/"Sobre"/destaque do LinkedIn CONCLUÍDOS; app do Google Cloud em "Em produção" (a autorização não vence mais em 7 dias). **YouTube reautorizado em 18/10/2026** (refresh token definitivo gravado no .env local, 103 caracteres; access token e leitura do canal conferidos, HTTP 200; app em produção, sem vencimento de 7 dias). 100% concluídos: bios, links e app do Google Cloud. `youtube:upload-teste` só se o Dr. Antônio pedir. Freio do YouTube segue desligado.
 
 > **18/10/2026 (landings):** /youtube e /instagram no ar (HTTP 200, Lighthouse mobile 100/100/100), links no rodapé e na /links; `config/marca.json` com YOUTUBE_CANAL_URL; conferidor aceita só os links oficiais; descrições do YouTube terminam com o link da /youtube. Bios prontas em `relatorios/redes/BIO-SUGERIDAS.md` (colar à mão). Inventário: `relatorios/landings-inventario-20261018.md`.
 
-> **18/10/2026 (estado real):** LinkedIn 10 agendados (até 20/11; limite diário atingido em 18/10). YouTube: 109 aprovados, 0 reprovados, nada publicado (freio desligado; autorização vence 23/10). Conferidor aceita só os links oficiais de `config/marca.json`. Carta de autonomia no CLAUDE.md.
+> **18/10/2026 (estado real):** LinkedIn 10 agendados (até 20/11; limite diário atingido em 18/10). YouTube: 109 aprovados, 0 reprovados, nada publicado (freio desligado; autorização refeita em 18/10, app em produção, sem vencimento). Conferidor aceita só os links oficiais de `config/marca.json`. Carta de autonomia no CLAUDE.md.
 
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
@@ -25,12 +27,12 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 - **Narração com envio incremental:** o ciclo envia a cada 10 áudios gerados e conferidos e, ao recomeçar, primeiro envia o que ficou pronto (pula o já "ok" com o hash certo). Áudio reprovado na conferência vai para `narracoes-geradas/_reprovados/` e é regerado; reprovado 2x sai do ciclo (relatorios/narracao-revisar.json). **Faltam 29 de 726** (697 com vinheta): todos são textos ainda não agendados, com MP3 pronto localmente, enviados no dia em que forem agendados; 1 texto parado para revisão (violencia-onde-buscar-ajuda, duração acima da faixa).
 - **App Next** (projeto Vercel `plataforma-saude-mental`, sem integração com o Git: deploy manual com `vercel deploy --prod` em `apps/plataforma-saude-mental`): estava 2 dias atrás; deploy feito em 17/10 e a /privacidade dele está no ar com o item do YouTube. Rollback: Promote do deployment `plataforma-saude-mental-9yr2pd207`.
 - **YouTube: freio DUPLO no `.env` local** (`YOUTUBE_PUBLICACAO_ATIVA=true` **e** `REDES_PUBLICACAO_ATIVA=true`): ver PASSO-A-PASSO-YOUTUBE.md (passo D) e SE-ALGO-DER-ERRADO.md.
-- **YouTube autorizado em 16/10/2026** (app do Google em modo "Testando": a autorização **vence em 23/10/2026**; rotina e tarefa diária avisam a partir de 2 dias antes e geram relatorios/youtube/AVISO-REAUTORIZAR.md). Teste de upload PRIVADO feito: https://www.youtube.com/shorts/z_JHmmpw880 (privacidade private, crédito do Portal, assinatura, CVV/SAMU, sem "psiquiatra" como título). Freio YOUTUBE_PUBLICACAO_ATIVA segue DESLIGADO; quem liga é o Dr. Antônio. Próximos passos: "Publicar o app" e auditoria da API (relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md e AUDITORIA-API-RESPOSTAS.md).
+- ~~**YouTube autorizado em 16/10/2026** (app do Google em modo "Testando": a autorização **vence em 23/10/2026**; rotina e tarefa diária avisam a partir de 2 dias antes e geram relatorios/youtube/AVISO-REAUTORIZAR.md). Teste de upload PRIVADO feito: https://www.youtube.com/shorts/z_JHmmpw880 (privacidade private, crédito do Portal, assinatura, CVV/SAMU, sem "psiquiatra" como título). Freio YOUTUBE_PUBLICACAO_ATIVA segue DESLIGADO; quem liga é o Dr. Antônio. Próximos passos: "Publicar o app" e auditoria da API (relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md e AUDITORIA-API-RESPOSTAS.md).~~ **SUPERADO em 18/10/2026:** YouTube reautorizado (token definitivo), app do Google "Em produção", registro em `relatorios/youtube/autorizacao.json` = producao; sem aviso de vencimento.
 - YouTube: freio YOUTUBE_PUBLICACAO_ATIVA (desligado por padrão) + /api/admin/freio-youtube; PASSO-A-PASSO reescrito (falta a chave secreta no .env, a autorização e o teste privado: scripts/youtube/testeUploadPrivado.js).
 - Instagram: cron renovar-token-instagram ativo (seg 12:00 UTC = 19/10); a conferência de 19/10 exige a origem do token "renovado".
 
 <!-- TAREFAS:INICIO -->
-### Tarefas do Windows (conferidas em 17/10, 23:04)
+### Tarefas do Windows (conferidas em 18/10, 10:17)
 - PC ligado desde 17/10, 19:55 · nos últimos 7 dias: 10 partida(s), 21 desligamento(s)/queda(s), 0 suspensão(ões), 0 retomada(s)
 
 | Tarefa | Estado | Última execução | Resultado | Atraso | O PC estava ligado? | Próxima | Perdidas |
@@ -40,9 +42,10 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 | DrSM-LinkedIn-Lembrete | Ready | — | ainda não rodou | — | — | 19/10, 19:25 | 0 |
 | DrSM-Narracao-Noite | Ready | 17/10, 22:00 | OK | 0 min | ligado no horário | 18/10, 22:00 | 0 |
 | DrSM-Rotina-Semanal | Ready | 16/10, 19:23 | OK | — | execução manual/de teste (fora do horário marcado) | 19/10, 07:30 | 0 |
-| DrSM-YouTube-Gera-Midia | Ready | 16/10, 23:30 | OK | 0 min | ligado no horário | 17/10, 23:30 | 0 |
+| DrSM-YouTube-Gera-Midia | Ready | 17/10, 23:30 | OK | 0 min | ligado no horário | 18/10, 23:30 | 0 |
 | DrSM-YouTube-Publica | Ready | 17/10, 19:55 | OK | — | execução manual/de teste (fora do horário marcado) | 18/10, 12:30 | 0 |
 <!-- TAREFAS:FIM -->
+
 
 
 
@@ -53,6 +56,7 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 - Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · qua 25/11 (texto) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto)
 - No dia: `! npm run linkedin:hoje -- --copiar --abrir` · depois `! npm run linkedin:marcar -- <id>` · calendário completo em `relatorios/linkedin/FILA-MANUAL.md`. A tarefa `DrSM-LinkedIn-Lembrete` (seg/qua/sex 19:25) abre o post do dia.
 <!-- LINKEDIN-MANUAL:FIM -->
+
 
 
 
@@ -138,14 +142,12 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - **Fila do Instagram, amostra de 5 posts:** capas sem marca d'água, assinatura curta de 3 linhas, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria, acentos ok. Varredura das 60 legendas: 0 problemas.
 
 <!-- ROTINA:INICIO -->
-## Rotina semanal (última: 17/10/2026) — ATENÇÃO (5 problema(s))
-- ⚠ 5 narração(ões) órfã(s) no Blob: ver relatorios/blob-orfaos-*.md
-- ⚠ 9 vídeo(s) do YouTube reprovado(s) na conferência: relatorios/youtube/reprovados/
-- ⚠ YouTube: a autorização vence em 2026-10-23 (antes da próxima rotina); reautorize ou publique o app: relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md
+## Rotina semanal (última: 18/10/2026) — ATENÇÃO (3 problema(s))
+- ~~⚠ YouTube: a autorização vence em 2026-10-23 (antes da próxima rotina); reautorize ou publique o app: relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md~~ (resolvido em 18/10/2026: reautorizado e app em produção)
 - ⚠ tarefa DrSM-Conferencia-19-10: última execução 16/10, 19:23 terminou como "terminou com erro (código 1)"
 - ⚠ tarefa DrSM-Conferencia-26-10: última execução 16/10, 19:23 terminou como "terminou com erro (código 1)"
 - Narração: 726 ok · faltam 0.
-- Detalhe: `relatorios/rotina-20261017.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
+- Detalhe: `relatorios/rotina-20261018.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
 <!-- ROTINA:FIM -->
 
 ## Estado final da manutenção (17/10/2026, noite) — PRs #96 e #97 mesclados pelo `merge-seguro`

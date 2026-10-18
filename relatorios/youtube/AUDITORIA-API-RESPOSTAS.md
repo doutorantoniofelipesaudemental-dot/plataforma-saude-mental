@@ -8,6 +8,8 @@ Confira o que é verdadeiro antes de enviar. **Nunca coloque chaves, tokens nem 
 > Os trechos marcados **(PREENCHA)** são dados pessoais/jurídicos que eu não tenho. Os demais descrevem exatamente o que o código faz hoje.
 
 ## O que o Dr. Antônio preenche (e onde achar cada item)
+**Já preenchido com dados do projeto (18/10/2026):** número do projeto e ID do cliente OAuth (abaixo), e-mail de contato, URLs da política de privacidade, do site e da landing do canal (https://www.drantoniofelipemedico.com.br/youtube, sem player de terceiros). **Depende só de você:** nome legal completo, endereço legal, telefone, prints e vídeo de tela (itens 2, 3, 4, 6, 8, 9 e 10 da tabela).
+
 Nada abaixo foi inventado: são dados seus. **Não coloque senha, chave secreta (`CLIENT_SECRET`) nem token no formulário.**
 
 | # | Item do formulário | De onde vem | Onde achar |
@@ -27,11 +29,11 @@ Nada abaixo foi inventado: são dados seus. **Não coloque senha, chave secreta 
 ---
 
 ## Passo a passo para enviar (você faz, ~30 minutos)
-1. **Antes de tudo:** faça a seção "Publicar o app" de `PASSO-A-PASSO-YOUTUBE.md` (app "Em produção", política de privacidade e página inicial no ar).
+1. ✅ **Feito em 18/10/2026:** app "Em produção" no Google Cloud, política de privacidade e página inicial no ar, YouTube reautorizado (token definitivo).
 2. Abra o formulário (link acima), entre com a conta Google dona do projeto e escolha **"Audit"** (auditoria de conformidade; em **"Request type"**, a opção de auditoria/cota adicional).
 3. Copie as respostas abaixo, **campo por campo**, na língua que o formulário estiver (o Google costuma pedir em inglês: use a versão EN).
 4. Anexe as **evidências**: (a) captura de tela da página `https://www.drantoniofelipemedico.com.br/privacidade`; (b) captura da página inicial `https://www.drantoniofelipemedico.com.br`; (c) captura do painel do Google Cloud mostrando o projeto, a API ativada e os escopos; (d) um vídeo curto de tela (1–2 min) mostrando o canal, a pasta de vídeos prontos e o comando de upload privado (peça ao Claude Code para gravar o roteiro do que mostrar).
-5. Em **"Número do projeto"** (Project number): Google Cloud → Painel (Dashboard) → "Número do projeto". **(PREENCHA)**
+5. Em **"Número do projeto"** (Project number): **741851919949** (é o prefixo do ID do cliente OAuth, que é público; confira em Google Cloud → Painel → "Número do projeto"). **ID do cliente OAuth:** `741851919949-dqtp625up9qjvc3p8lpg0npr9esm9n9v.apps.googleusercontent.com` (público; a chave secreta NUNCA vai no formulário).
 6. Envie. O Google responde por e-mail (costuma levar de dias a semanas). Se pedirem mais informação, responda no mesmo e-mail com as respostas abaixo.
 7. Quando aprovarem: avise o Claude Code. O teste seguinte é subir 1 vídeo e conferir que ficou **público** só se você ligar o freio (`YOUTUBE_PUBLICACAO_ATIVA=true`), o que **só você decide**.
 
@@ -58,7 +60,7 @@ Nada abaixo foi inventado: são dados seus. **Não coloque senha, chave secreta 
 - **Publicamente acessível? / Publicly accessible?** PT: o site sim; o cliente da API não (uso privado). EN: the website yes; the API client no (private use).
 - **Conta de demonstração / Demo account:** PT: não se aplica (sem login de usuários); posso gravar um vídeo de tela do fluxo completo. EN: not applicable (no user logins); I can provide a screen recording of the full flow.
 
-> ⚠ **Atenção (PT):** a página `/privacidade` hoje **não cita** o uso da API do YouTube. O Google costuma exigir isso (que cite o uso dos YouTube API Services, o link para os Termos do YouTube — https://www.youtube.com/t/terms — e para a Política de Privacidade do Google — https://policies.google.com/privacy — e como revogar o acesso em https://security.google.com/settings/security/permissions). Acrescentar o parágrafo exige o seu OK (a pasta `public/` é protegida). **Peça ao Claude Code para preparar o texto antes de enviar o formulário.**
+> ✅ **Resolvido (16–17/10/2026):** a `/privacidade` já traz a seção "Uso da API do YouTube" (APROVADA pelo Dr. Antônio; ver `relatorios/politica-privacidade-aprovada.md`), com os links dos Termos do YouTube (https://www.youtube.com/t/terms), da Política de Privacidade do Google (https://policies.google.com/privacy) e de como revogar o acesso (https://myaccount.google.com/permissions). Conferido no ar em 18/10/2026.
 
 ## 5. Casos de uso, OAuth e cota / Use cases, OAuth and quota
 - **Uso de OAuth 2.0 / Uses OAuth 2.0:** PT: sim, fluxo para aplicativo de computador (loopback), acesso offline. EN: yes, desktop-app (loopback) flow with offline access.
