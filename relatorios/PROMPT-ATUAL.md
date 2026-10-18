@@ -1,8 +1,8 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
 ## PENDÊNCIAS ao reabrir (17/10/2026, fim da noite) — leia primeiro
-1. **Dr. Antônio, com `!`:** (a) aplicar a trava v2 (comando em `docs/uso-eficiente.md`, seção "Trava v2"); (b) `npm run blob:orfas` (dry-run, 5 arquivos do grupo c, 11,6 MB) e depois `npm run blob:orfas -- --aplicar`.
-2. Depois de aplicada a trava v2: commitar o hook/settings novos e acrescentar `tests/unit/hook-guarda.test.js` (casos em `docs/uso-eficiente.md`) numa branch, PR e `npm run merge-seguro`.
+1. FEITO: trava v2 aplicada e mesclada (PR #99); órfãs do Blob apagadas (c+d = 0, Blob 1332 MB).
+2. (nada pendente de permissões/hook.)
 3. LinkedIn: teste de 1 carrossel em PDF; agendar 23/11, 25/11, 27/11 (skill `agendar-linkedin`, só com o Chrome logado).
 4. **YouTube:** autorização do Google vence em **23/10** (Publicar app + reautorizar). 34 itens sem mídia (`youtube:fila -- --aplicar --gerar --limite=N`).
 5. **19/10 (depois das 9h):** rodar a conferência pós-renovação e ver se a renovação do token do Instagram ocorreu ("origem = renovado").
