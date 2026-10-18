@@ -17,6 +17,9 @@ function marca(env = process.env) {
     // o endereço ainda traz "undefined" (gerado pelo LinkedIn): só vale onde for indispensável
     LINKEDIN_PERFIL_LIMPO: personalizado && !/undefined/i.test(url),
     LINKEDIN_LANDING_URL: j.LINKEDIN_LANDING_URL || 'https://www.drantoniofelipemedico.com.br/linkedin',
+    YOUTUBE_CANAL_URL: j.YOUTUBE_CANAL_URL || '',
+    YOUTUBE_LANDING_URL: j.YOUTUBE_LANDING_URL || 'https://www.drantoniofelipemedico.com.br/youtube',
+    INSTAGRAM_LANDING_URL: j.INSTAGRAM_LANDING_URL || 'https://www.drantoniofelipemedico.com.br/instagram',
   };
 }
 

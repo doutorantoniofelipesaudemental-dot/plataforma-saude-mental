@@ -40,8 +40,8 @@ ${urls}
 }
 
 // Páginas estáticas institucionais (data da última revisão do conteúdo da página).
-const PAGINAS_ESTATICAS = ['/mentoria', '/linkedin'];
-const DATA_PAGINAS = '2026-10-17T00:00:00.000Z';
+const PAGINAS_ESTATICAS = ['/mentoria', '/linkedin', '/youtube', '/instagram'];
+const DATA_PAGINAS = '2026-10-18T00:00:00.000Z';
 
 function gerarSitemapPaginasXml() {
   const urls = PAGINAS_ESTATICAS.map((p) => `  <url>

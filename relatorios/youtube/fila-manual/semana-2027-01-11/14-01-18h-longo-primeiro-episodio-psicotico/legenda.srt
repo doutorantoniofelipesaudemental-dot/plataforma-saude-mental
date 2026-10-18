@@ -1,0 +1,309 @@
+1
+00:00:00,000 --> 00:00:06,072
+Você está ouvindo um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+2
+00:00:06,772 --> 00:00:09,722
+Primeiros episódios psicóticos:
+
+3
+00:00:09,722 --> 00:00:13,469
+reconhecimento precoce e conduta inicial.
+
+4
+00:00:13,469 --> 00:00:16,021
+Narração em voz sintética.
+
+5
+00:00:16,021 --> 00:00:22,160
+O tempo entre os primeiros sintomas de
+psicose e o início do tratamento
+
+6
+00:00:22,160 --> 00:00:25,349
+adequado influencia o prognóstico.
+
+7
+00:00:25,349 --> 00:00:31,488
+A Atenção Primária e o pronto atendimento
+são, muitas vezes, a porta de
+
+8
+00:00:31,488 --> 00:00:35,076
+entrada, e podem encurtar esse caminho.
+
+9
+00:00:35,076 --> 00:00:37,468
+Por que o tempo importa.
+
+10
+00:00:37,468 --> 00:00:43,528
+Uma revisão sistemática com meta-análise
+encontrou associação, pequena
+
+11
+00:00:43,528 --> 00:00:49,986
+mas consistente, entre maior duração da
+psicose não tratada e pior evolução
+
+12
+00:00:49,986 --> 00:00:56,125
+a longo prazo, incluindo mais sintomas,
+menor chance de remissão e pior
+
+13
+00:00:56,125 --> 00:00:58,278
+funcionamento social.
+
+14
+00:00:58,278 --> 00:01:04,736
+Serviços de intervenção precoce, com
+equipes dedicadas e cuidado integrado,
+
+15
+00:01:04,736 --> 00:01:11,274
+mostraram resultados superiores ao
+tratamento habitual em todos os desfechos
+
+16
+00:01:11,274 --> 00:01:17,652
+avaliados, como menos abandono e
+internações, melhor funcionamento e maior
+
+17
+00:01:17,652 --> 00:01:20,842
+participação em trabalho e estudo.
+
+18
+00:01:20,842 --> 00:01:23,234
+Antes da psicose franca:
+
+19
+00:01:23,234 --> 00:01:25,386
+o período prodrômico.
+
+20
+00:01:25,386 --> 00:01:28,257
+isolamento social progressivo;
+
+21
+00:01:28,257 --> 00:01:33,439
+queda no desempenho escolar ou no
+trabalho sem causa clara;
+
+22
+00:01:33,439 --> 00:01:38,223
+alterações de sono,
+irritabilidade, ansiedade incomum;
+
+23
+00:01:38,223 --> 00:01:43,963
+comportamentos ou ideias estranhos,
+diferentes do padrão anterior;
+
+24
+00:01:43,963 --> 00:01:49,066
+desconfiança crescente, sensação de
+estar sendo observado.
+
+25
+00:01:49,066 --> 00:01:51,139
+Sintomas psicóticos.
+
+26
+00:01:51,139 --> 00:01:54,647
+Alucinações , especialmente auditivas;
+
+27
+00:01:54,647 --> 00:02:00,946
+Delírios , como persecutórios, de
+referência, de grandeza ou de controle;
+
+28
+00:02:00,946 --> 00:02:05,251
+Desorganização do pensamento e
+do comportamento;
+
+29
+00:02:05,251 --> 00:02:07,245
+Sintomas negativos:
+
+30
+00:02:07,245 --> 00:02:11,311
+embotamento, falta de
+iniciativa, pouca fala.
+
+31
+00:02:11,311 --> 00:02:14,739
+Antes de tudo, afastar causa clínica:
+
+32
+00:02:14,739 --> 00:02:21,516
+delirium, encefalites (incluindo autoimunes),
+epilepsia, distúrbios metabólicos
+
+33
+00:02:21,516 --> 00:02:26,699
+e endócrinos, efeitos de
+medicamentos e uso de substâncias.
+
+34
+00:02:26,699 --> 00:02:33,157
+Alteração de consciência, início abrupto,
+sinais neurológicos e alucinações
+
+35
+00:02:33,157 --> 00:02:37,223
+visuais predominantes
+reforçam essa suspeita.
+
+36
+00:02:37,223 --> 00:02:42,486
+Pergunte sempre sobre maconha,
+estimulantes e outras drogas.
+
+37
+00:02:42,486 --> 00:02:45,276
+Também é preciso diferenciar.
+
+38
+00:02:45,276 --> 00:02:52,133
+Experiências espirituais e religiosas
+culturalmente reconhecidas, sem sofrimento
+
+39
+00:02:52,133 --> 00:02:56,678
+e sem prejuízo funcional, não
+são, por si, psicose.
+
+40
+00:02:56,678 --> 00:03:03,295
+Na dúvida, converse com a família e com a
+comunidade de referência da pessoa.
+
+41
+00:03:03,295 --> 00:03:05,049
+Conduta inicial.
+
+42
+00:03:05,049 --> 00:03:10,312
+avaliar risco de suicídio, de
+agressão e de autonegligência;
+
+43
+00:03:10,312 --> 00:03:16,451
+exames clínicos e laboratoriais básicos,
+e neuroimagem quando indicada;
+
+44
+00:03:16,451 --> 00:03:22,749
+envolver a família, com consentimento,
+explicando o que está acontecendo;
+
+45
+00:03:22,749 --> 00:03:29,128
+discutir o caso com a equipe de referência
+em saúde mental (matriciamento)
+
+46
+00:03:29,128 --> 00:03:32,477
+e encaminhar com prioridade ao CAPS;
+
+47
+00:03:32,477 --> 00:03:38,855
+se houver indicação de antipsicótico,
+preferir doses baixas, com titulação
+
+48
+00:03:38,855 --> 00:03:45,313
+cuidadosa, atenção a efeitos metabólicos e
+motores e decisão compartilhada.
+
+49
+00:03:45,313 --> 00:03:51,692
+O uso de cannabis, sobretudo de alta
+potência e diário, se associa a maior
+
+50
+00:03:51,692 --> 00:03:56,316
+risco de psicose, e deve ser
+investigado e abordado.
+
+51
+00:03:56,316 --> 00:03:59,107
+A primeira experiência marca.
+
+52
+00:03:59,107 --> 00:04:05,565
+A forma como a pessoa é recebida no
+primeiro contato com o sistema de saúde
+
+53
+00:04:05,565 --> 00:04:09,392
+influencia a confiança e a adesão futuras.
+
+54
+00:04:09,392 --> 00:04:15,611
+Acolhimento, explicação clara e
+participação nas decisões fazem parte do
+
+55
+00:04:15,611 --> 00:04:16,966
+tratamento.
+
+56
+00:04:16,966 --> 00:04:19,278
+Precisa de apoio agora?
+
+57
+00:04:19,278 --> 00:04:25,418
+CVV — 188 (ligação gratuita, 24h, também
+por chat em cvv.org.br) · SAMU
+
+58
+00:04:25,418 --> 00:04:31,716
+— 192 em emergências · A UBS e o CAPS da
+sua cidade acolhem e encaminham.
+
+59
+00:04:31,716 --> 00:04:35,224
+As referências estão no fim da página.
+
+60
+00:04:35,224 --> 00:04:39,450
+Conteúdo educativo para
+profissionais de saúde.
+
+61
+00:04:39,450 --> 00:04:45,510
+Não substitui protocolos institucionais,
+bulas e avaliação individual.
+
+62
+00:04:45,510 --> 00:04:48,380
+Atualizado em outubro de 2026.
+
+63
+00:04:49,080 --> 00:04:55,931
+Este foi um conteúdo do Portal de Saúde
+Mental Doutor Antônio Felipe Garabito.
+
+64
+00:04:55,931 --> 00:05:00,763
+Ele tem caráter educativo e não
+substitui uma consulta.
+
+65
+00:05:00,763 --> 00:05:05,418
+O texto completo, com as
+referências, está no portal.
+
+66
+00:05:05,418 --> 00:05:12,269
+Se você precisar de apoio agora, ligue 188, o
+CVV, ligação gratuita, 24 horas.
+
+67
+00:05:12,269 --> 00:05:15,168
+Em emergência, ligue 192, o SAMU.

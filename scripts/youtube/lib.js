@@ -13,9 +13,10 @@ const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
 const vinheta = require('../../backend/lib/vinheta');
 const MARCA = require('../../config/marca.json');
 
-/** Links oficiais de config/marca.json (perfil do LinkedIn e landing): comparação EXATA, com ou sem "ô" codificado. Qualquer outro link externo segue reprovado. */
+/** Links oficiais de config/marca.json (perfil do LinkedIn, canal do YouTube e landings): comparação EXATA, com ou sem "ô" codificado. Qualquer outro link externo segue reprovado. */
 const normalizaLink = (u) => { let x = String(u).replace(/[.,;:!?]+$/, '').replace(/\/+$/, ''); try { x = decodeURIComponent(x); } catch { /* mantém */ } return x.toLowerCase(); };
-const linkOficialMarca = (u) => [MARCA.LINKEDIN_PERFIL_URL, MARCA.LINKEDIN_LANDING_URL].filter(Boolean).some((o) => normalizaLink(o) === normalizaLink(u));
+const LINKS_OFICIAIS = ['LINKEDIN_PERFIL_URL', 'LINKEDIN_LANDING_URL', 'YOUTUBE_CANAL_URL', 'YOUTUBE_LANDING_URL', 'INSTAGRAM_LANDING_URL'];
+const linkOficialMarca = (u) => LINKS_OFICIAIS.map((k) => MARCA[k]).filter(Boolean).some((o) => normalizaLink(o) === normalizaLink(u));
 
 const RAIZ = path.resolve(__dirname, '../..');
 const SITE = 'https://www.drantoniofelipemedico.com.br';
@@ -191,13 +192,13 @@ function descricaoLongo(a, dur) {
   if (caps.length) L.push('', 'Capítulos:', ...caps.map((c) => `${mmss(c.t)} ${c.nome}`));
   if (refs.length) L.push('', 'Principais referências:', ...refs.map((r, i) => `${i + 1}. ${r}`));
   L.push('', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
-    `Mentoria para profissionais da APS e consultoria para empresas: ${SITE}/mentoria`, `Todos os links: ${SITE}/links`, ...linhaLinkedin());
+    `Mentoria para profissionais da APS e consultoria para empresas: ${SITE}/mentoria`, `Todos os links: ${SITE}/links`, ...linhaLinkedin(), `Canal e playlists: ${SITE}/youtube`);
   return L.join('\n').replace(/[<>]/g, '');
 }
 
 function descricaoShort(a, extra = '') {
   return [vinheta.TEXTOS.curta.replace(/\.$/, ''), SITE, '', semTags(a.resumo || a.titulo), '', `Texto completo no site: ${SITE}/artigo/${a.slug}`, extra, '', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
-    `Mentoria e consultoria: ${SITE}/mentoria`, ...linhaLinkedin(), '#saudemental #cuidado'].filter((x, i, arr) => !(x === '' && arr[i - 1] === '')).join('\n').replace(/[<>]/g, '');
+    `Mentoria e consultoria: ${SITE}/mentoria`, ...linhaLinkedin(), `Canal e playlists: ${SITE}/youtube`, '#saudemental #cuidado'].filter((x, i, arr) => !(x === '' && arr[i - 1] === '')).join('\n').replace(/[<>]/g, '');
 }
 
 /** Frases e legenda .srt a partir do texto narrado (tempo proporcional ao tamanho; no YouTube Studio use "Sincronizar automaticamente"). */
