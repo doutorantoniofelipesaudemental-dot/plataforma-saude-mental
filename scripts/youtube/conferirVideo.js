@@ -76,7 +76,7 @@ async function conferirVideo(dir, meta) {
   if (!/portal de saude mental/.test(sem(fala[1]))) falhas.push(`vinheta falada ausente no fim ("${fala[1].slice(0, 70)}")`);
   if (!ehShort) { // vídeo longo: assinatura falada curta (sem as 5 linhas: nada de pós-graduação nem "não especialista" na fala)
     const fim = sem(fala[1]);
-    if (!/ba[hi]a/.test(fim) || !/medicina de familia/.test(fim)) falhas.push(`assinatura falada curta ausente no fim ("${fala[1].slice(-90)}")`);
+    if (!/bahia|baia/.test(fim) || !/medicina de familia/.test(fim)) falhas.push(`assinatura falada curta ausente no fim ("${fala[1].slice(-90)}")`);
     if (/pos.?graduacao|nao especialista/.test(fim)) falhas.push('a fala do fim lê a assinatura de 5 linhas (pós-graduação / "não especialista")');
   }
   for (const f of [a1, a2]) fs.rmSync(f, { force: true });

@@ -54,12 +54,16 @@ const admin = { headers: { Authorization: `Bearer ${process.env.ADMIN_TOKEN}` } 
       if (SIM) {
         linhas.push('- (SIMULAÇÃO: publicação, página/API e player só são conferidos no dia real; aqui: URL tocável pós-publicação, MP3 200 e vinheta)');
         if (!url) falhas.push(`trava B (simulação): após publicar, o player de ${a.slug} NÃO teria áudio (estado/hash)`);
+      } else if (Date.now() < new Date(a.agendamento.slot).getTime()) {
+        // antes do horário agendado a publicação ainda não deveria ter ocorrido: não é falha
+        linhas.push(`- AGUARDANDO DATA: publicação, página/API e player de ${a.slug} só são conferidos a partir de ${fmt(a.agendamento.slot)}`);
       } else {
         if (a.publicado !== true) falhas.push(`trava B: ${a.slug} não foi publicado às 08:00`);
         if (api.s !== 200) falhas.push(`trava B: página/API de ${a.slug} respondeu ${api.s} (esperado 200)`);
         if (!api.j?.artigo?.audioNarracaoUrl) falhas.push(`trava B: o player de ${a.slug} não tem áudio para tocar após publicar`);
       }
-      if (mp3 !== 200) falhas.push(`trava B: URL do MP3 de ${a.slug} respondeu ${mp3} (esperado 200)`);
+      const antesDoSlot = Date.now() < new Date(a.agendamento.slot).getTime();
+      if (mp3 !== 200 && !(antesDoSlot && !url)) falhas.push(`trava B: URL do MP3 de ${a.slug} respondeu ${mp3} (esperado 200)`);
       if (!vin) falhas.push(`trava B: o áudio de ${a.slug} não tem a vinheta (versão ${VINHETA_VERSAO})`);
     }
   } catch (e) { falhas.push(`trava B: não consegui conferir (${e.message})`); }
