@@ -5,7 +5,7 @@
 # Resistência a interrupções (17/10/2026): SEM janela de console (wscript + rodar-oculto.vbs: não dá para fechar nem apertar Ctrl+C sem querer),
 # acorda o computador, roda assim que possível se o horário foi perdido, reinicia a cada 10 min até 3 vezes se falhar, não para ao trocar para
 # bateria, só roda com rede e não abre uma 2ª cópia se a anterior ainda estiver rodando. Sem administrador.
-param([switch]$Remover)
+param([switch]$Remover, [string]$So = '')
 $raiz = Split-Path -Parent $PSScriptRoot
 $logs = Join-Path $raiz 'relatorios\logs-agendador'
 New-Item -ItemType Directory -Force $logs | Out-Null
@@ -18,6 +18,8 @@ $tarefas = @(
   @{ Nome = 'DrSM-Narracao-Noite';      Args = 'scripts/cicloNarracao.js --lotes=4';                Gatilho = (New-ScheduledTaskTrigger -Daily -At 22:00); Horas = 6 },
   @{ Nome = 'DrSM-YouTube-Gera-Midia';  Args = 'scripts/youtube/montarFila.js --aplicar --gerar --limite=25'; Gatilho = (New-ScheduledTaskTrigger -Daily -At 23:30); Horas = 5 },
   @{ Nome = 'DrSM-YouTube-Publica';     Args = 'scripts/youtube/publicarYoutube.js';                Gatilho = (New-ScheduledTaskTrigger -Daily -At 12:30); Horas = 1 },
+  # Conferência diária das redes (18/10/2026): SOMENTE LEITURA, 09:30 de Salvador; grava relatorios\conferencias\AAAA-MM-DD.md e, se falhar, o alerta no topo do ESTADO-GERAL.md
+  @{ Nome = 'DrSM-Conferencia-Diaria';  Args = 'scripts/conferencias/conferenciaDiaria.js';        Gatilho = (New-ScheduledTaskTrigger -Daily -At 09:30); Horas = 1 },
   @{ Nome = 'DrSM-Conferencia-19-10';   Args = 'scripts/conferirPosRenovacao.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-19 19:30'); Horas = 1 },
   # Lembrete do LinkedIn (fila MANUAL, perfil pessoal): 19:25 seg/qua/sex; precisa da SUA sessão para abrir o Bloco de Notas (por isso não é S4U)
   @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
@@ -25,6 +27,7 @@ $tarefas = @(
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
 foreach ($t in $tarefas) {
+  if ($So -and $t.Nome -ne $So) { continue }
   if ($Remover) { Unregister-ScheduledTask -TaskName $t.Nome -Confirm:$false -ErrorAction SilentlyContinue; Write-Host "removida: $($t.Nome)"; continue }
   $log = Join-Path $logs "$($t.Nome).log"
   $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""

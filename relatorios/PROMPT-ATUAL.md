@@ -9,7 +9,7 @@
    - **26/10 às 08:00:** 1º post do Instagram (2026-10-26-saude-mental-cuidador). **Depois das 9h:** "rodar conferência de 26/10" (skill `conferencia-26-10`).
    - **Toda segunda:** "rodar manutencao" (a rotina semanal roda sozinha às 07:30).
    - **LinkedIn diário até zerar a fila:** "rodar agendar-linkedin".
-5. **Instagram (decisão 18/10):** PR #107 (roteamento) precisa de `! npm run merge-seguro -- 107` ANTES de 26/10 08:00. Carrossel de teste preparado (prévia em `relatorios/redes/teste-carrossel/`); publicar só com a ordem escrita "publicar teste de carrossel" (o Claude roda `npm run redes:teste-carrossel -- --publicar --ordem="publicar teste de carrossel"`, com o freio REDES_PUBLICACAO_ATIVA ligado por você). Depois de conferir o teste: ordem "liberar carrossel automático". Reels/Stories: fila manual (`npm run redes:fila-manual`), reavaliar em 30 dias (18/11).
+5. **Instagram (ordem de 18/10, automação total):** carrossel LIBERADO (validação 7/7 sem publicar). O PR da automação (publicador novo + conferência diária) precisa de `! npm run merge-seguro -- <N>` ANTES de 26/10 08:00. 26/10 08:00: 1º post sai sozinho pela Vercel (freio da Vercel ligado); 09:30: conferência diária confere imagens, legenda, link e ID da Meta (`relatorios/conferencias/2026-10-26.md`; alerta no topo do ESTADO-GERAL se falhar). Reels e Stories: não produzir por ora, reavaliar em ~18/11.
 5. Melhorias propostas (sem implementar): `relatorios/PROPOSTAS-PARTE-E.md`.
 
 ## ATUALIZAÇÃO 17/10/2026 — autonomia com portão
@@ -174,3 +174,4 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 
 - **18/10 (manuais concluídos, informado pelo Dr. Antônio):** bios (Instagram, YouTube, LinkedIn) e app Google em "Em produção" feitos. Falta `! npm run youtube:autorizar` (Dr. Antônio) e conferir o token (tamanho, sem imprimir). Conferência 19/10 (token Instagram) e 1º post 26/10 seguem. LinkedIn: `agendar-linkedin` a partir de li-2026-11-25 + PDF 06/11.
 - **18/10 (reautorização feita):** `youtube:autorizar` concluído; token conferido (103 caracteres, canal HTTP 200); 322 testes unitários OK. Bios, links e app Google 100% concluídos. O aviso de vencimento em 23/10 não vale mais (app em produção). Freio do YouTube desligado.
+- **18/10, 14h:** narrações 726/726 com vinheta; `DrSM-Conferencia-Diaria` registrada (09:30, S4U, oculta); conferência de hoje: 0 falhas. LinkedIn: sem novos agendamentos (limite diário), retomar a partir de li-2026-11-25.

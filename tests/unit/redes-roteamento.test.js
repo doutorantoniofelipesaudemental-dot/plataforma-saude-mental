@@ -79,7 +79,7 @@ test('teste do carrossel: só com a ordem escrita; liberar só depois do teste; 
   const t = ler('backend/scripts/redes/testeCarrossel.js');
   assert.match(t, /publicar teste de carrossel/);
   assert.match(t, /sem a ordem escrita do Dr\. Antônio/);
-  assert.match(t, /o teste supervisionado ainda não foi publicado/);
+  assert.match(t, /sem validação aprovada em todos os posts/);
   assert.doesNotMatch(t, /process\.env\.[A-Z_]*PUBLICACAO_ATIVA\s*=[^=]/);
   assert.doesNotMatch(t, /REDES_PUBLICACAO_ATIVA\s*=\s*['"]?true/);
 });
