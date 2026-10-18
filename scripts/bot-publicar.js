@@ -385,6 +385,8 @@ async function publicarVideo(slug, { tipo, peca, arquivo, confirmar, forcar = fa
   const md = fs.readFileSync(local.md, 'utf8');
 
   if (tipo === 'reel') {
+    // Decisão de 18/10/2026: Reels e Stories só na fila manual (o Dr. Antônio posta pelo celular); reavaliar após 30 dias.
+    return { slug, ok: false, motivo: 'Reels só na fila manual (decisão de 18/10/2026): use o arquivo pronto, a legenda e as instruções; nada é publicado pela Meta Graph' };
     // Reel também vai para o feed: mesma trava inversa da fila. YouTube não entra.
     const bloqueioFila = motivoJaPostadoPelaFila(artigo, { forcar });
     if (bloqueioFila) return { slug, ok: false, motivo: `Reel bloqueado: ${bloqueioFila}` };

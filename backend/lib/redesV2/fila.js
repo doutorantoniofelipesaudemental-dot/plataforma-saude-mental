@@ -12,6 +12,7 @@ const mongoose = require('mongoose');
 const { redesAtivas } = require('../freioRedes');
 const { checarTexto } = require('../auditoriaTexto');
 const { checarEticaCfm, checarImagemSemMarcaDagua } = require('../checagensAprovacao');
+const { rotaDaMidia } = require('./roteamento');
 
 const RAIZ = path.resolve(__dirname, '../../..');
 const BASE_SITE = () => process.env.SITE_BASE_URL || 'https://www.drantoniofelipemedico.com.br';
@@ -90,24 +91,36 @@ async function publicarDevidos({ agora = new Date(), simular = false, apenasId }
   const lidos = new Map(lidosDocs.map((a) => [a.slug, a.visualizacoes || 0]));
   devidos.sort((a, b) => (lidos.get(b.slug) || 0) - (lidos.get(a.slug) || 0) || a.dataSugerida - b.dataSugerida);
   const bloqueados = [];
+  const roteados = [];
+  const config = (await col('redes_v2_config').findOne({ _id: 'instagram' })) || {};
   for (const post of devidos) {
     const problemas = await conferir(post);
     if (problemas.length) { bloqueados.push({ id: post._id, problemas }); if (!simular) await log('bloqueado', post._id, problemas.join(' | ')); continue; }
+    const rota = rotaDaMidia(post, config);
+    if (rota.via === 'bloqueado') { bloqueados.push({ id: post._id, problemas: [rota.motivo] }); if (!simular) await log('bloqueado', post._id, rota.motivo); continue; }
+    if (rota.via === 'manual') {
+      // passou na conferência, mas esta mídia não vai pela Meta Graph: sai da fila automática e entra na fila manual (arquivos: npm run redes:fila-manual)
+      roteados.push({ id: post._id, tipo: rota.tipo, motivo: rota.motivo });
+      if (!simular) { await col('redes_v2').updateOne({ _id: post._id }, { $set: { status: 'fila-manual', roteadoEm: new Date(), rota: rota.tipo } }); await log('fila-manual', post._id, rota.motivo); }
+      continue;
+    }
     const imagensUrls = post.checagem.hashes.map((_, i) => `${BASE_SITE()}/api/redes-v2/img/${post._id}/${i + 1}.png`);
-    if (simular) return { publicado: false, simulado: true, publicaria: post._id, imagensUrls, bloqueados };
+    if (simular) return { publicado: false, simulado: true, publicaria: post._id, tipo: rota.tipo, imagensUrls, bloqueados, roteados };
     if (!(process.env.INSTAGRAM_ACCESS_TOKEN && process.env.INSTAGRAM_ACCOUNT_ID)) { await log('bloqueado', post._id, 'sem credencial do Instagram'); return { publicado: false, motivo: 'sem credencial do Instagram', bloqueados }; }
     try {
-      const { publicarCarrosselNoInstagram } = require('../socialPublisher');
-      const r = await publicarCarrosselNoInstagram({ imagensUrls, legenda: post.legenda, alts: post.alts });
+      const sp = require('../socialPublisher');
+      const r = rota.tipo === 'imagem-unica'
+        ? await sp.publicarNoInstagram({ imagemUrl: imagensUrls[0], legenda: post.legenda })
+        : await sp.publicarCarrosselNoInstagram({ imagensUrls, legenda: post.legenda, alts: post.alts });
       await col('redes_v2').updateOne({ _id: post._id }, { $set: { status: 'publicado', publicadoEm: new Date(), instagramId: r.id || null } });
       await log('publicado', post._id, `Instagram ${r.id || ''}`);
-      return { publicado: true, id: post._id, instagramId: r.id || null, bloqueados };
+      return { publicado: true, id: post._id, tipo: rota.tipo, instagramId: r.id || null, bloqueados, roteados };
     } catch (e) {
       await log('erro', post._id, e.message);
-      return { publicado: false, motivo: `erro ao publicar: ${e.message}`, id: post._id, bloqueados };
+      return { publicado: false, motivo: `erro ao publicar: ${e.message}`, id: post._id, bloqueados, roteados };
     }
   }
-  return { publicado: false, motivo: 'todos os posts devidos foram bloqueados na conferência', bloqueados };
+  return { publicado: false, motivo: roteados.length && !bloqueados.length ? 'posts devidos foram para a fila manual (carrossel/Reel/Story)' : 'todos os posts devidos foram bloqueados na conferência', bloqueados, roteados };
 }
 
 async function previaHtml({ dias = 14, agora = new Date() } = {}) {

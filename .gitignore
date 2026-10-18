@@ -80,3 +80,7 @@ carrosseis-instagram/youtube/saude-mental-cuidador/short-resumo/
 
 # gerado todo dia pela tarefa DrSM-LinkedIn-Lembrete (conteúdo do post do dia)
 relatorios/linkedin/POST-DE-HOJE.md
+
+# Instagram: fila manual (arquivos gerados) e estado do teste do carrossel
+relatorios/redes/fila-manual/
+relatorios/redes/teste-carrossel/estado.json
