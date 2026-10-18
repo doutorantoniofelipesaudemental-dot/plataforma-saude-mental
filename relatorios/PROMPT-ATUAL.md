@@ -180,3 +180,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Fases 0, 1, 4 e 5 feitas: `relatorios/VERIFICACOES.md`, `relatorios/MAPA-AUTOMACAO.md`, `relatorios/checagens/2026-10-18.md`, `relatorios/PENDENTES.md`. CLAUDE.md ganhou "O que continua sendo do Dr. Antônio", "Modo economia" e "Uso do Ollama".
 - Nada publicado, nenhuma tarefa agendada criada, nenhum freio alterado. Merge só pelo Dr. Antônio via `npm run merge-seguro -- <PR>`.
 - Próximo passo exato: o Dr. Antônio revisa o PR da Fase 5 e roda o merge-seguro; depois da renovação da cota, ver `relatorios/PENDENTES.md`.
+
+## Lote 1 (18/10/2026): estado real
+- Branch `feat/automacao-lote1-20261018` (a partir da main com o PR #109 mesclado). Itens 1, 2 e 3 commitados e testados; item 4 não criado (conflito de regra).
+- Portão: **não passou** (e2e 26 passed / 5 failed, localhost:3000 recusado). Não fazer merge até corrigir. Relatório: relatorios/checagens/2026-10-18-lote1.md.
+- Próximo passo exato: rodar `npm run test:e2e` com o servidor local no ar; corrigir os 5 testes; então `npm run portao` e entregar os comandos `!` de push/PR/merge-seguro.

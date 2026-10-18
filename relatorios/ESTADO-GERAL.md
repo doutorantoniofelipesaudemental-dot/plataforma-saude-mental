@@ -13,6 +13,8 @@
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 
 > **18/10/2026 (lote 1):** PR #109 (modo economia, Ollama) foi MESCLADO em 18/10/2026 20:40 UTC. Próximo ponto: Lote 1 no branch `feat/automacao-lote1-20261018` (itens: resumo diário, rotina mensal do Blob em simulação, e-mail de alertas, tarefa do LinkedIn desativada).
+
+> **CHECKPOINT ITEM 4 (18/10/2026):** itens 1–3 prontos no branch; item 4 NÃO criado (regra permanente proíbe robô que agenda sozinho). Portão com 5 falhas de e2e (localhost:3000 recusado): sem merge. Ver `relatorios/checagens/2026-10-18-lote1.md`.
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 

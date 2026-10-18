@@ -36,3 +36,11 @@ Legenda: 🔴 depende do Dr. Antônio.
 - Ligar `YOUTUBE_PUBLICACAO_ATIVA` após aprovação da auditoria.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se for necessário.
+
+## Lote 1 (18/10/2026, branch feat/automacao-lote1-20261018)
+| Item | Onde | Estado |
+|---|---|---|
+| Resumo diário | scripts/conferencias/resumoDoDia.js (chamado por conferenciaDiaria.js) → relatorios/RESUMO-DO-DIA.md | pronto, testado |
+| Rotina mensal do Blob | scripts/blob-rotina-mensal.js; tarefa DrSM-Blob-Rotina-Mensal (dia 1, 03:00) | DESATIVADA; só simulação |
+| E-mail de alertas | scripts/alertas/enviarAlerta.js; docs/alertas-email.md | desligado até RESEND_API_KEY |
+| Tarefa LinkedIn (DrSM-LinkedIn-Agendar) | — | NÃO criada: conflita com a regra de robô que agenda sozinho (CLAUDE.md) |
