@@ -59,8 +59,8 @@
     "linkedin:marcar": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js marcar",
     "linkedin:fila": "node --env-file-if-exists=.env scripts/linkedin/filaManual.js estado",
     "marca:aplicar": "node scripts/aplicarMarca.js",
-    "portao": "node --env-file-if-exists=.env scripts/portao.js",
-    "merge-seguro": "node --env-file-if-exists=.env scripts/merge-seguro.js",
+    "portao": "node scripts/portao.js",
+    "merge-seguro": "node scripts/merge-seguro.js",
     "publicar-seguro": "node --env-file-if-exists=.env scripts/publicar-seguro.js"
   },
   "engines": {
