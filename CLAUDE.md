@@ -57,7 +57,7 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - **Exceção permanente (15/10/2026):** "Antonio Felipe Garabito Jr." (dedicatória ao filho, em `public/index.html`) — nome de outra pessoa, grafia preservada SEM acento. Nunca corrigir; a auditoria e os testes não o acusam.
 - "Antônio" COM acento em TODOS os textos e artes, inclusive na /links e nos ativos de `assets/marca/` (placas 2400, 1080 e horizontal 2500x500; acento acrescentado em 15/10/2026). "Antonio" sem acento só onde o acento é impossível: endereços de site, o @ do Instagram (@doutor.antoniofelipe.smental), e-mail e nomes técnicos (ex.: voz `pt-BR-AntonioNeural` do Edge-TTS, nomes de arquivo).
 - "Antônio" (com acento): PRESERVAR em `public/` (index.html, artigo.html etc.), testes de conformidade CFM (`tests/unit/assinatura-cfm.test.js`) e e2e, artigos MDX do app Next, banco de dados, backend, scripts e `CONTEUDO_INSTAGRAM`.
-- PROIBIDO busca-e-troca global de acento e qualquer alteração em `public/`, `backend/data/` e na suíte de testes, exceto: `public/links.html` e a rota `/links` em `vercel.json`.
+- PROIBIDO busca-e-troca global de acento e qualquer alteração em `public/`, `backend/data/` e na suíte de testes, exceto: `public/links.html` e a rota `/links` em `vercel.json`. EXCEÇÃO PONTUAL (19/10/2026, ordem escrita do Dr. Antônio): a alteração em `public/assets/css/style.css` do PR #111 (fix do CLS, `size-adjust` do `Inter Fallback`). Qualquer nova alteração em `public/` exige nova ordem escrita do Dr. Antônio.
 - PROIBIDO modificar textos de artigos em `backend/data/`: o hash de narração (`backend/lib/narracao.js`) marcaria o áudio como "desatualizada" e geraria custo de regeração de voz.
 
 #### E. SEGURANÇA
@@ -116,6 +116,7 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 
 
 ### Portão único de qualidade (17/10/2026)
+- Teste de CLS (`tests/e2e/auditoria-ferramentas.spec.js`): quando passa, não imprime o valor medido. Ao corrigir CLS, registrar o valor medido no relatório da correção (ordem de 19/10/2026).
 - **Merge só por `npm run merge-seguro -- <PR>`. Publicação só por crons/tarefas com checagem ou `npm run publicar-seguro -- <rede> <id>`. Nunca `gh pr merge` direto.**
 - `npm run portao` (auditoria → tripla checagem dos itens alterados → build → unitários → e2e; para no 1º erro; grava `relatorios/portao-AAAAMMDD-HHMM.md`). O `merge-seguro` roda o portão na branch do PR, mescla só se passar, confere o deploy e grava `relatorios/rollback-pr<N>-*.md`.
 - Trava dupla: regras deny em `.claude/settings.json` + hook `.claude/hooks/guarda.js` (bloqueia merge direto, push da/para main, leitura do `.env`, mudança dos freios, DELETE nas redes, tarefas fora de `DrSM-*`).
@@ -154,6 +155,7 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 ### Agenda de plantões (19/10/2026)
 - Às QUINTAS e aos DOMINGOS o Dr. Antônio fica indisponível das 17:30 até as 10:30 do dia seguinte. O PC pode estar desligado nesse período.
 - Nessas noites: narração e YouTube gera-mídia adiantados para 14:00 e 15:30. Nos outros dias, mantidos às 22:00 e 23:30.
+- YouTube publica (ordem do Dr. Antônio, 19/10/2026): seg, ter, qua, sex e sáb às 20:15; qui e dom às 17:15 (antes era 12:30 todos os dias). Aplicado só após `scripts/agendar-tarefas-windows.ps1` rodar de novo, por ordem do Dr. Antônio.
 - Todas as tarefas `DrSM-*` com StartWhenAvailable e trava para não rodar duas vezes no mesmo dia. LinkedIn (11:00) e conferência (09:30), se o PC estiver desligado, rodam quando ele voltar.
 - PR semanal na sexta às 11:00. Nada automático depende do Dr. Antônio nas janelas de plantão.
 
