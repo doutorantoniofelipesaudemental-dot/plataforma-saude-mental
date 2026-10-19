@@ -3,7 +3,7 @@
 ## ESTADO REAL (19/10/2026, lote 2) — leia primeiro
 - PR #114 MESCLADO (22:00 UTC). Horários do YouTube aplicados no Windows. Blob, LinkedIn-Agendar e Lembrete Disabled.
 - Alerta: renovação do token da Meta recusada na conferência de 19/10 (ver PENDENTES.md).
-- Branch `feat/lote2-automacao-20261019` em andamento (itens 1 a 8 da ordem do lote 2).
+- Lote 2 (branch feat/lote2-automacao-20261019): item 1 feito; item 2 PARADO (regras do Blob precisam de decisão); item 3 feito (PR semanal, tarefa criada desativada); item 4 sem trabalho (fila 60); item 5 feito; item 6 PARADO; item 7 NÃO apagado (data de teste não informada); item 8 não executado. Detalhes em PENDENTES.md.
 
 ## ESTADO REAL (19/10/2026, noite)
 - PR #113 MESCLADO (21:02 UTC). Lote 1: correções já presentes na main; 387 testes passam.

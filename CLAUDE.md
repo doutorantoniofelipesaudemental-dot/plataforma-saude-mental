@@ -184,6 +184,12 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
   - **CLASSE 3 (só o Dr. Antônio):** sentido clínico novo, novos módulos (Newsletter, Podcast, Kit NR-1), foto de rosto, logins e verificações (LinkedIn), criação de contas e chaves, gasto de dinheiro (crédito extra, recarga, conectores ou serviços pagos), apagar qualquer coisa fora das autorizações, mudar regras e freios.
   - Esta autorização NÃO altera nenhuma regra permanente. Só o que está escrito aqui passa a valer.
 
+## Lote 2 de automação (19/10/2026, ordem do Dr. Antônio)
+- Feitos: estado do Windows registrado; PR semanal que só prepara (`scripts/prSemanal.js`, tarefa DrSM-PR-Semanal criada Disabled); revisão da auditoria do YouTube (`relatorios/youtube/FALTA-DO-ANTONIO.md`).
+- Tarefa DrSM-Conferencia-19-10 NÃO removida: rodou com ATENÇÃO (token da Meta recusado). Remover só depois de um relatório OK.
+- Parados, sem execução: correção das regras do Blob (decisão de a/b), formulário da auditoria do YouTube (legendas), vídeo de teste (data não informada) e teste do LinkedIn (depende dos anteriores).
+- Instagram: fila com 60 posts (>= 20), item pulado. Nada de integração nova.
+
 ## Modo economia (18/10/2026)
 - Leitura mínima: grep, head, tail, wc e jq. Não ler arquivos grandes inteiros, não reler o que já foi lido, não explorar o repositório inteiro, sem subagentes.
 - Saídas longas vão para `relatorios/logs/` por redirecionamento; ler só as últimas 20 linhas ou os contadores.

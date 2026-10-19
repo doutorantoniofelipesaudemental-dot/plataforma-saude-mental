@@ -25,6 +25,11 @@
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
+## Lote 2 (19/10/2026, branch feat/lote2-automacao-20261019)
+- Feitos: item 1 (estado registrado), item 3 (PR semanal preparado; DrSM-PR-Semanal criada Disabled), item 5 (revisão da auditoria do YouTube; ver relatorios/youtube/FALTA-DO-ANTONIO.md).
+- Parados ou não feitos: item 2 (Blob: decisão sua), item 4 (sem trabalho), item 6 (formulário: decisão sua), item 7 (vídeo de teste não apagado), item 8 (depende do item 2).
+- Alerta: token da Meta recusado na conferência de 19/10.
+
 ## Estado do Windows (19/10/2026, após PR #114 e horários aplicados)
 - YouTube Publica 20:15 (seg/ter/qua/sex/sáb) e 17:15 (qui/dom); Gera-Midia 23:30 e 15:30 (qui/dom); Narração 22:00 e 14:00 (qui/dom). Conferido por leitura.
 - DrSM-LinkedIn-Agendar, DrSM-LinkedIn-Lembrete e DrSM-Blob-Rotina-Mensal: Disabled. Demais DrSM-*: Ready.
