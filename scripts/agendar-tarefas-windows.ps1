@@ -34,6 +34,8 @@ $tarefas = @(
   # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Criada DESATIVADA: a ativação é do Dr. Antônio.
   # Agendamento diário do LinkedIn (autorizado em 18/10/2026, CLAUDE.md): 11:00, sessão do usuário (precisa do Chrome com o perfil logado), uma execução por dia (scripts/linkedin/agendarDiario.js). Desligar: npm run linkedin:pausar
   @{ Nome = 'DrSM-LinkedIn-Agendar';    Args = 'scripts/linkedin/agendarDiario.js';                 Gatilho = (New-ScheduledTaskTrigger -Daily -At 11:00); Horas = 1; Interativa = $true; NascerDesativada = $true },
+  # PR semanal (19/10/2026): sexta 11:00, SÓ PREPARA (scripts/prSemanal.js: portão + relatorios\PR-SEMANAL.md; sem push, PR ou merge). Criada DESATIVADA.
+  @{ Nome = 'DrSM-PR-Semanal';          Args = 'scripts/travaDiaria.js DrSM-PR-Semanal scripts/prSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Friday -At 11:00); Horas = 1; NascerDesativada = $true },
   @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true; NascerDesativada = $true }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"

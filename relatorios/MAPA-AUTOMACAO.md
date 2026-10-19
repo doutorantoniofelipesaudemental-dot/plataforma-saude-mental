@@ -42,6 +42,9 @@ Legenda: 🔴 depende do Dr. Antônio.
 - Disabled: DrSM-LinkedIn-Agendar, DrSM-LinkedIn-Lembrete, DrSM-Blob-Rotina-Mensal. Ready: demais DrSM-*.
 - DrSM-Conferencia-19-10: rodou com ATENÇÃO (token da Meta); não removida.
 
+## PR semanal (19/10/2026, lote 2)
+- DrSM-PR-Semanal: sexta 11:00, criada DESATIVADA. Roda `scripts/prSemanal.js`: reúne os commits do branch, roda o portão e grava relatorios/PR-SEMANAL.md com os comandos "!". Não faz push, PR nem merge.
+
 ## Blob mensal (19/10/2026)
 - DrSM-Blob-Rotina-Mensal: DESATIVADA (decisão C2 do Dr. Antônio). Primeira execução seria 01/11/2026, 03:00. Ativar só por ordem, após simulação. Código com condições (b) e (d) faltando: ver PENDENTES.md.
 
