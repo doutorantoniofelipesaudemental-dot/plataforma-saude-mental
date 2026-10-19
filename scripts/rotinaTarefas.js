@@ -15,10 +15,10 @@ const HORARIOS = {
   'DrSM-Rotina-Semanal': { h: 7, m: 30, dow: 1 },
   'DrSM-Narracao-Noite': { h: 22, m: 0 },
   'DrSM-YouTube-Gera-Midia': { h: 23, m: 30 },
-  'DrSM-YouTube-Publica': { h: 12, m: 30 },
+  'DrSM-YouTube-Publica': { slots: [{ dows: [1, 2, 3, 5, 6], h: 20, m: 15 }, { dows: [4, 0], h: 17, m: 15 }] },
   'DrSM-LinkedIn-Lembrete': { h: 19, m: 25, dows: [1, 3, 5] },
-  'DrSM-Conferencia-19-10': { uma: '2026-10-19T19:30:00' },
-  'DrSM-Conferencia-26-10': { uma: '2026-10-26T19:30:00' },
+  'DrSM-Conferencia-19-10': { uma: '2026-10-19T19:30:00-03:00' },
+  'DrSM-Conferencia-26-10': { uma: '2026-10-26T19:30:00-03:00' },
 };
 const CODIGOS = {
   0: 'OK', 267009: 'rodando agora', 267011: 'ainda não rodou', 267014: 'interrompida pelo Agendador/usuário', 267012: 'sem horário a executar',
@@ -38,14 +38,21 @@ function lerEnergia() {
 }
 
 /** Último horário marcado até `ate` (hora local). */
+// Salvador (UTC-3, sem horário de verão): a conta é feita no relógio de Salvador, não no fuso da máquina.
+const SALVADOR_MS = -3 * 3600e3;
 function horarioEsperado(nome, ate) {
   const c = HORARIOS[nome]; if (!c) return null;
   if (c.uma) return new Date(c.uma);
-  const d = new Date(ate); d.setHours(c.h, c.m, 0, 0);
-  if (d > ate) d.setDate(d.getDate() - 1);
-  if (c.dow != null) while (d.getDay() !== c.dow) d.setDate(d.getDate() - 1);
-  if (c.dows) while (!c.dows.includes(d.getDay())) d.setDate(d.getDate() - 1);
-  return d;
+  // um horário ou vários (slots); vale o mais recente até `ate`
+  const relogio = new Date(ate.getTime() + SALVADOR_MS);
+  const passados = (c.slots || [c]).map((s) => {
+    const d = new Date(Date.UTC(relogio.getUTCFullYear(), relogio.getUTCMonth(), relogio.getUTCDate(), s.h, s.m));
+    if (d > relogio) d.setUTCDate(d.getUTCDate() - 1);
+    if (s.dow != null) while (d.getUTCDay() !== s.dow) d.setUTCDate(d.getUTCDate() - 1);
+    if (s.dows) while (!s.dows.includes(d.getUTCDay())) d.setUTCDate(d.getUTCDate() - 1);
+    return d.getTime() - SALVADOR_MS;
+  });
+  return new Date(Math.max(...passados));
 }
 
 function conferir() {
@@ -87,6 +94,6 @@ function gravar(r = conferir()) {
   return r;
 }
 
-module.exports = { conferir, gravar, HORARIOS, CODIGOS };
+module.exports = { conferir, gravar, HORARIOS, CODIGOS, horarioEsperado };
 
 if (require.main === module) { const r = gravar(); console.log(r.md); if (r.problemas.length) console.log('PROBLEMAS:\n - ' + r.problemas.join('\n - ')); }

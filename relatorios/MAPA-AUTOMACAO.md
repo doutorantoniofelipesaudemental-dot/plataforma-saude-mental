@@ -11,7 +11,7 @@ Legenda: 🔴 depende do Dr. Antônio.
 | **Narração dos áudios** (geração Edge-TTS) | Automática | Tarefa `DrSM-Narracao-Noite` (Windows) | Seg, ter, qua, sex, sáb 22:00; quinta e domingo 14:00 (plantão) | Narração não gerada; sai da fila e fica `pendente`. Só roda com o PC ligado. Envio ao site pela API |
 | **Narração — vinheta de crédito** | Automática | Conferido em `precisaVinheta` (`narracao.js`) | Por lote | Estado atual: 726/726 com vinheta (verificado 18/10) |
 | **YouTube — geração de mídia** | Automática (só gera arquivos locais) | Tarefa `DrSM-YouTube-Gera-Midia` (Windows) | Seg, ter, qua, sex, sáb 23:30; quinta e domingo 15:30 (plantão) | Sem publicação; arquivo não gerado. Só roda com o PC ligado |
-| **YouTube — publicação** | Automática, com freio | Tarefa `DrSM-YouTube-Publica` (Windows), freio `YOUTUBE_PUBLICACAO_ATIVA` + `REDES_PUBLICACAO_ATIVA` no `.env` local | Diária, 12:30 | Com freio `false` nada sai. 🔴 Ligar o freio só após aprovação da auditoria; 🔴 "Enviar" na auditoria do YouTube é manual |
+| **YouTube — publicação** | Automática, com freio | Tarefa `DrSM-YouTube-Publica` (Windows), freio `YOUTUBE_PUBLICACAO_ATIVA` + `REDES_PUBLICACAO_ATIVA` no `.env` local | Seg, ter, qua, sex, sáb 20:15; qui e dom 17:15 (ordem de 19/10/2026) | Com freio `false` nada sai. 🔴 Ligar o freio só após aprovação da auditoria; 🔴 "Enviar" na auditoria do YouTube é manual |
 | **Instagram — fila de posts** (imagem única pela Meta Graph) | Automática, com freio | Cron Vercel `publicar-redes-v2`, seg–sex 11:00 UTC; freio `REDES_PUBLICACAO_ATIVA` na Vercel | Dias úteis, 08:00 Bahia | Trava contra publicação dupla; adia 1 dia e alerta. Freio `false` bloqueia |
 | **Instagram — carrossel** | Automática, liberada | Mesmo publicador; `carrosselLiberado=true` (verificado 18/10) | Conforme a fila | Valida containers antes do `media_publish`; falha adia 1 dia |
 | **Instagram — Reels e Stories** | Manual (fora de escopo por ora) | Não produzidos; reavaliar em ~18/11 | — | — |
@@ -32,14 +32,14 @@ Legenda: 🔴 depende do Dr. Antônio.
 - `merge-seguro` (1x por semana).
 - Clicar em "Enviar" na auditoria do YouTube.
 - Login no LinkedIn quando cair; CAPTCHA e verificação.
-- PC ligado nos horários fora dos plantões (narração 22:00, YouTube 23:30 e 12:30, conferências 19:30). Quintas e domingos, ver a seção de plantões abaixo.
+- PC ligado nos horários fora dos plantões (narração 22:00, YouTube 23:30 e publicação 20:15 (qui e dom 17:15), conferências 19:30). Quintas e domingos, ver a seção de plantões abaixo.
 - Ligar `YOUTUBE_PUBLICACAO_ATIVA` após aprovação da auditoria.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se for necessário.
 
 ## Plantões e tarefas DrSM-* (19/10/2026)
 - Indisponível às QUINTAS e DOMINGOS das 17:30 até as 10:30 do dia seguinte; o PC pode estar desligado.
-- Narração: 22:00 (seg, ter, qua, sex, sáb); 14:00 (qui, dom). YouTube gera-mídia: 23:30 / 15:30 (qui, dom). YouTube publica 12:30 todos os dias.
+- Narração: 22:00 (seg, ter, qua, sex, sáb); 14:00 (qui, dom). YouTube gera-mídia: 23:30 / 15:30 (qui, dom). YouTube publica 20:15 (seg, ter, qua, sex, sáb) e 17:15 (qui, dom).
 - Todas as tarefas DrSM-* têm StartWhenAvailable (rodam quando o PC voltar). Trava diária (`scripts/travaDiaria.js`) nas tarefas de script: uma vez por dia com sucesso. Blob mensal tem trava própria; LinkedIn tem a sua (`agendarDiario.js`).
 - LinkedIn 11:00 e conferência 09:30: rodam quando o PC voltar.
 - PR semanal na sexta às 11:00: **não automatizado ainda** (não há script de PR semanal; decisão pendente sobre o que o PR contém).
