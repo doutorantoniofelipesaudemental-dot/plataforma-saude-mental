@@ -1,6 +1,12 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
-## ESTADO REAL (19/10/2026, correções pós-plano) — leia primeiro
+## ESTADO REAL (19/10/2026, noite) — leia primeiro
+- PR #113 MESCLADO (21:02 UTC). Lote 1: correções já presentes na main; 387 testes passam.
+- Blob mensal DESATIVADA (decisão C2). Código do Blob com condições (b) e (d) faltando: correção em ordem separada.
+- Aplicar horários no Windows: só por ordem, depois de `-Simular`. Hoje YouTube Publica ainda tem gatilho 12:30, e DrSM-LinkedIn-Agendar não existe.
+- Branch `docs/autonomia-classe1-20261019`: docs e CLAUDE.md alterados, sem commit até o portão leve.
+
+## ESTADO REAL (19/10/2026, correções pós-plano)
 1. PR #112 MESCLADO (19/10/2026, 14:37 UTC): horários do YouTube publica na main.
 2. Branch `fix/agendador-estado-e-teto-20261019`: (A) agendador mantém tarefas pausadas; (B) teto do `claude -p` 3/dia e 15/semana (`scripts/consumoClaude.js`); (C) MCP ElevenLabs removido. Detalhes em ESTADO-GERAL.md e PENDENTES.md.
 3. Nada aplicado no Windows nesta sessão (só `-Simular`). Aplicar horários só por ordem, depois do merge.

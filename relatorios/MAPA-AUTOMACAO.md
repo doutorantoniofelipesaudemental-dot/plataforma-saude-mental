@@ -37,6 +37,9 @@ Legenda: 🔴 depende do Dr. Antônio.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se for necessário.
 
+## Blob mensal (19/10/2026)
+- DrSM-Blob-Rotina-Mensal: DESATIVADA (decisão C2 do Dr. Antônio). Primeira execução seria 01/11/2026, 03:00. Ativar só por ordem, após simulação. Código com condições (b) e (d) faltando: ver PENDENTES.md.
+
 ## Reativação e teto (19/10/2026, correção pós-plano)
 - `scripts/agendar-tarefas-windows.ps1`: tarefa existente mantém o estado (ativa ou desativada); `-Simular` só mostra a ação. Novas DrSM-LinkedIn-Agendar e DrSM-Blob-Rotina-Mensal nascem desativadas.
 - Formas de reativação: LinkedIn — `scripts/linkedin/pausar.js` só desativa a tarefa e grava `pausado` em relatorios/linkedin/agendar-diario-estado.json; para religar, apagar `pausado` e habilitar a tarefa (só por ordem). Blob — não há comando de retomar; só o agendador. Lembrete manual — o script o desativa a cada execução real.
