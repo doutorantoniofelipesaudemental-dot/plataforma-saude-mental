@@ -1,0 +1,13 @@
+# Plano de reaproveitamento dos reprovados (19/10/2026)
+
+## Diagnóstico (Fase 1)
+- 54 pastas. Motivos: todas F (forma): vinheta falada ausente (início ou fim) ou assinatura falada curta ausente no fim. Algumas com texto da narração com erro de digitação ou trecho truncado (ex.: short-2026-11-05-relato-crise-evitavel; short-resumo-ansiedade-social-medo-julgamento). Não há classe R nem C no diagnóstico automático.
+- Publicação: nenhuma das 54 consta em relatorios/youtube/publicacao-log.md.
+
+## CONFLITO (exige decisão antes de qualquer reforma)
+- As 54 IDs estão em relatorios/youtube/fila.json com status aprovado-checagem. O publicador (scripts/youtube/publicarYoutube.js) publica esse status quando o horário chega, desde que o freio YOUTUBE_PUBLICACAO_ATIVA esteja "true".
+- Ou seja: se o freio estiver ligado, estes 54 vídeos seriam publicados mesmo com motivo de reprovação registrado.
+- Proposta: marcar as 54 entradas da fila como "reprovado" (alteração no índice da fila, sem apagar pasta), para o publicador ignorá-las até a reforma. Depende de ordem sua.
+
+## Próximo passo (se aprovado)
+- Fase 2 em lotes de 6, começando pelos de assinatura falada ausente (F, mecânicos). Cada vídeo: guardar original em _original/, corrigir só forma, revalidar T1, T2 e T3, auditoria em relatorios/checagens/.

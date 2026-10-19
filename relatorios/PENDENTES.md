@@ -62,3 +62,6 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 - ITEM 7 NÃO APAGADO: z_JHmmpw880 é privado e "[TESTE PRIVADO]", mas a data de teste esperada não foi informada (publicado em 17/10/2026). Ver relatorios/youtube/video-teste-2026-10-19.md.
 - ITEM 8 NÃO EXECUTADO: depende dos itens 1 a 5 concluídos (item 2 parado).
 - Pendente de você: relatorios/youtube/FALTA-DO-ANTONIO.md.
+## Vídeos reprovados (19/10/2026, decisão C do Dr. Antônio)
+- [x] As 54 entradas da fila (relatorios/youtube/fila.json) foram marcadas como "reprovado" (o publicador ignora esse status). Fila ativa: 55 itens aprovado-checagem. Pastas intocadas.
+- [ ] Fase 2 (reforma em lotes de 6, começando pelas F de assinatura falada): aguarda ordem. Índice em relatorios/youtube/reprovados/INDICE.md.
