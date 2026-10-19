@@ -12,9 +12,14 @@
 
 # Estado geral — Portal de Saúde Mental Dr. Antônio Felipe
 
+> **19/10/2026 (correções antes do commit do lote 1):** LinkedIn agora lê a ÚLTIMA linha `STATUS: OK | PARAR | DESATIVAR` (sem status = parada); `agendarDiario.js` e testes atualizados (8/8). `pausar.js --simular` e `alerta:teste` OK. Agenda de plantões (quinta e domingo 17:30 → 10:30) aplicada no `agendar-tarefas-windows.ps1` (narração 14:00, YouTube gera 15:30) com trava diária (`scripts/travaDiaria.js`). Lembrete manual LinkedIn DESATIVADO. **PORTÃO REPROVADO** (`relatorios/portao-20261019-0858.md`): E2E, CLS 0.18 no artigo `relato-aposta-tres-da-manha` (limite 0.1), reproduzido 2x com o mesmo valor; código de página e conteúdo idênticos ao `origin/main`, então é falha pré-existente, não do lote. **Merge bloqueado até corrigir.** PR semanal sexta 11:00 não automatizado (pendente de definição).
+> CHECKPOINT FASE CORREÇÕES-LOTE1 · próximo passo exato: decidir como tratar o CLS do relato (corrigir o artigo/layout ou ajustar o limite com ordem do Dr. Antônio), rodar `npm run portao` até passar, depois os comandos `!` de commit/PR/tarefas.
+
 > **18/10/2026 (lote 1):** PR #109 (modo economia, Ollama) foi MESCLADO em 18/10/2026 20:40 UTC. Próximo ponto: Lote 1 no branch `feat/automacao-lote1-20261018` (itens: resumo diário, rotina mensal do Blob em simulação, e-mail de alertas, tarefa do LinkedIn desativada).
 
-> **CHECKPOINT ITEM 4 (18/10/2026):** itens 1–3 prontos no branch; item 4 NÃO criado (regra permanente proíbe robô que agenda sozinho). Portão com 5 falhas de e2e (localhost:3000 recusado): sem merge. Ver `relatorios/checagens/2026-10-18-lote1.md`.
+> **FECHAMENTO LOTE 1 (18/10/2026):** portão APROVADO (`relatorios/portao-20261018-1808.md`). Rotina mensal do Blob HABILITADA (dia 1, 03:00). Regra do LinkedIn trocada por ordem escrita; tarefa `DrSM-LinkedIn-Agendar` pendente de criação pelo Dr. Antônio (`!`). Alerta de e-mail desligado até `RESEND_API_KEY`. Pausa do LinkedIn: `npm run linkedin:pausar`.
+
+> **CHECKPOINT ITEM 4 (18/10/2026) [superado pelo fechamento acima]:** itens 1–3 prontos no branch; item 4 NÃO criado (regra permanente proíbe robô que agenda sozinho). Portão com 5 falhas de e2e (localhost:3000 recusado): sem merge. Ver `relatorios/checagens/2026-10-18-lote1.md`.
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
@@ -40,18 +45,20 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 - Instagram: cron renovar-token-instagram ativo (seg 12:00 UTC = 19/10); a conferência de 19/10 exige a origem do token "renovado".
 
 <!-- TAREFAS:INICIO -->
-### Tarefas do Windows (conferidas em 18/10, 10:17)
-- PC ligado desde 17/10, 19:55 · nos últimos 7 dias: 10 partida(s), 21 desligamento(s)/queda(s), 0 suspensão(ões), 0 retomada(s)
+### Tarefas do Windows (conferidas em 19/10, 08:20)
+- PC ligado desde 19/10, 08:19 · nos últimos 7 dias: 10 partida(s), 21 desligamento(s)/queda(s), 0 suspensão(ões), 0 retomada(s)
 
 | Tarefa | Estado | Última execução | Resultado | Atraso | O PC estava ligado? | Próxima | Perdidas |
 |---|---|---|---|---|---|---|---|
+| DrSM-Blob-Rotina-Mensal | Ready | — | ainda não rodou | — | — | 01/11, 03:00 | 0 |
 | DrSM-Conferencia-19-10 | Ready | 16/10, 19:23 | terminou com erro (código 1) | — | execução manual/de teste (fora do horário marcado) | 19/10, 19:30 | 0 |
 | DrSM-Conferencia-26-10 | Ready | 16/10, 19:23 | terminou com erro (código 1) | — | execução manual/de teste (fora do horário marcado) | 26/10, 19:30 | 0 |
+| DrSM-Conferencia-Diaria | Ready | — | ainda não rodou | — | — | 19/10, 09:30 | 0 |
 | DrSM-LinkedIn-Lembrete | Ready | — | ainda não rodou | — | — | 19/10, 19:25 | 0 |
-| DrSM-Narracao-Noite | Ready | 17/10, 22:00 | OK | 0 min | ligado no horário | 18/10, 22:00 | 0 |
-| DrSM-Rotina-Semanal | Ready | 16/10, 19:23 | OK | — | execução manual/de teste (fora do horário marcado) | 19/10, 07:30 | 0 |
-| DrSM-YouTube-Gera-Midia | Ready | 17/10, 23:30 | OK | 0 min | ligado no horário | 18/10, 23:30 | 0 |
-| DrSM-YouTube-Publica | Ready | 17/10, 19:55 | OK | — | execução manual/de teste (fora do horário marcado) | 18/10, 12:30 | 0 |
+| DrSM-Narracao-Noite | Ready | 19/10, 08:20 | OK | — | execução manual/de teste (fora do horário marcado) | 19/10, 22:00 | 0 |
+| DrSM-Rotina-Semanal | Running | 19/10, 08:20 | rodando agora | 50 min | rodou 50 min depois do horário (computador desligado/dormindo na hora, ou execução manual) | 26/10, 07:30 | 0 |
+| DrSM-YouTube-Gera-Midia | Ready | 19/10, 08:20 | OK | — | execução manual/de teste (fora do horário marcado) | 19/10, 23:30 | 0 |
+| DrSM-YouTube-Publica | Ready | 18/10, 12:30 | OK | 0 min | ligado no horário | 19/10, 12:30 | 0 |
 <!-- TAREFAS:FIM -->
 
 
@@ -151,12 +158,11 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - **Fila do Instagram, amostra de 5 posts:** capas sem marca d'água, assinatura curta de 3 linhas, CVV/SAMU, sem "psiquiatra" como título, sem #psiquiatria, acentos ok. Varredura das 60 legendas: 0 problemas.
 
 <!-- ROTINA:INICIO -->
-## Rotina semanal (última: 18/10/2026) — ATENÇÃO (3 problema(s))
-- ~~⚠ YouTube: a autorização vence em 2026-10-23 (antes da próxima rotina); reautorize ou publique o app: relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md~~ (resolvido em 18/10/2026: reautorizado e app em produção)
+## Rotina semanal (última: 19/10/2026) — ATENÇÃO (2 problema(s))
 - ⚠ tarefa DrSM-Conferencia-19-10: última execução 16/10, 19:23 terminou como "terminou com erro (código 1)"
 - ⚠ tarefa DrSM-Conferencia-26-10: última execução 16/10, 19:23 terminou como "terminou com erro (código 1)"
 - Narração: 726 ok · faltam 0.
-- Detalhe: `relatorios/rotina-20261018.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
+- Detalhe: `relatorios/rotina-20261019.md`. Rodar toda segunda-feira: `npm run rotina-semanal`.
 <!-- ROTINA:FIM -->
 
 ## Estado final da manutenção (17/10/2026, noite) — PRs #96 e #97 mesclados pelo `merge-seguro`

@@ -13,3 +13,8 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 - **Pendente de você:** ativar a rotina do Blob (`! schtasks /Change /TN DrSM-Blob-Rotina-Mensal /ENABLE`, só após ordem); criar a variável `RESEND_API_KEY` no `.env` (passos em `docs/alertas-email.md`).
 - **Lote 2:** autorizações b, d, f e testes do LinkedIn.
 - **Lote 1 — portão NÃO passou:** e2e 5 falhas (ERR_CONNECTION_REFUSED em localhost:3000 e ECONNRESET, visual-miniapps). Passo exato: subir o servidor de teste e rodar `npm run test:e2e`; se persistir, investigar o webServer do playwright.config.
+
+## Correções antes do commit do lote 1 (19/10/2026)
+- **Portão REPROVADO (bloqueia merge):** E2E `auditoria-ferramentas.spec.js` › CLS do `relato-aposta-tres-da-manha` = 0.1835 (limite < 0.1). Reproduzido 2x com o mesmo valor. Código de páginas e conteúdo idênticos ao origin/main (falha pré-existente). Decisão necessária: corrigir o layout/artigo ou ajustar o limite (com ordem do Dr. Antônio). Relatório: relatorios/portao-20261019-0858.md.
+- **PR semanal sexta 11:00:** não automatizado. Falta definir o que o PR contém e de qual branch sai.
+- **DrSM-LinkedIn-Agendar:** criar/recriar pelo `scripts/agendar-tarefas-windows.ps1` (comando `!` no fim da sessão).
