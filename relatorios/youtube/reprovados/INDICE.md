@@ -1,0 +1,60 @@
+# Índice dos vídeos reprovados (19/10/2026)
+
+Nada apagado, movido ou renomeado. Classe F = forma (vinheta ou assinatura falada ausente, texto da narração). Duplicidade: nenhuma pasta foi publicada (publicacao-log.md); as 54 TAMBÉM estão em relatorios/youtube/fila.json com status aprovado-checagem (CONFLITO, ver PLANO.md).
+
+| pasta | motivo (resumo) | classe | estado | data do motivo |
+|---|---|---|---|---|
+| longo-afastamento-transtorno-mental | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-alta-pa-psiquiatrico | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-ansiedade-corporativa-sintomas-tratamento | assinatura falada curta ausente no fim (" médico, CRM Bahia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-burnout-aps | vinheta falada ausente no fim ("e o seu convite. Ele tem caráter educativo e não substitui | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| longo-burnout-na-gestao-fatores-de-risco | assinatura falada curta ausente no fim (", médico, CRM Baia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| longo-compulsao-alimentar | assinatura falada curta ausente no fim ("médico, CRM Bahia 4-1-3-2-2, especialista em medi | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-depressao-ansiedade-produtividade | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-envelhecimento-ativo-isolamento-social | assinatura falada curta ausente no fim (" médico, CRM Bahia 4-1-3-2-2 Especialista em medi | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-fadiga-compaixao-voluntariado-terceiro-setor | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-insonia-o-que-fazer | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-jogos-online-consulta-medicos | assinatura falada curta ausente no fim (" médico, CRM Bahia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-jogos-online-criancas | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-professores-saude-mental | assinatura falada curta ausente no fim (" médico, CRM Bahia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-psicofarmacos-mitos-culturais | vinheta falada ausente no fim ("Confissa da Death atual • D compromise Esse foi o conteúdo | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-quando-encaminhar-aps | assinatura falada curta ausente no fim ("ipe, médico, CRM Bahia 41322, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-relato-crise-evitavel | assinatura falada curta ausente no fim (" médico, CRM Bahia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-relato-familia-em-crise | assinatura falada curta ausente no fim ("ipe, médico, CRM Bahia 41322, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-relato-paciente-invisivel | assinatura falada curta ausente no fim (" médico, CRM Bahia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-relato-vinculo-perdido | assinatura falada curta ausente no fim (", médico, CRM Bahia 4-1-3-2-2, especialista em me | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-reorganizacao-emocional-luto-divorcio | assinatura falada curta ausente no fim ("ipe, médico, CRM Bahia 41322, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-18 |
+| longo-saude-mental-pilar-de-performance-liderancas | assinatura falada curta ausente no fim (", médico, CRM Baia 4-1-3-2-2, especialista em med | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| longo-saude-mental-residencia | vinheta falada ausente no fim ("ele tem caráter educativo e não substituir uma consulta. O | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| longo-sobrecarga-docente-descompressao | vinheta falada ausente no fim ("ele tem caráter educativo e não substituir uma consulta. O | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-10-26-saude-mental-cuidador | vinheta falada ausente no início ("Saúde mental do cuidador, que em cuidador de quem cuida | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-10-27-tempo-tela-criancas | vinheta falada ausente no início ("O que a ciência mostra? Pergunte as mais úteis do que o | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-10-28-primeiro-episodio-psicotico | vinheta falada ausente no início ("porque a duração da psicose não tratada em porta, sinai | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-10-29-relato-paciente-invisivel | vinheta falada ausente no início ("Ele já tinha passado por mim mais seis vezes. Ele já ti | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-10-30-programa-saude-mental-ocupacional | vinheta falada ausente no início ("Os três níveis de um programa eficaz, passo a passo par | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-03-gestacao-amamentacao-saude-mental | vinheta falada ausente no início ("Diferência entre Baby Blues e Depressão Perinatal, Rast | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-04-alimentacao-criancas | vinheta falada ausente no início ("Beneficios das Refeições em família, riscos do controle | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-05-relato-crise-evitavel | vinheta falada ausente no início ("Foi só quando conseguir ler o? Ela chegou ao pronto ate | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-06-intoxicacao-agitacao-pa | vinheta falada ausente no início ("sinais que apontam para causa clínica ou tóxica, difere | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-09-afastamento-transtorno-mental | vinheta falada ausente no início ("Como funciona o afastamento? Nexo com o trabalho e quet | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-11-relato-familia-em-crise | vinheta falada ausente no início ("Quem precisava de atenção naquele momento? Na verdade,  | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-12-rotina-criancas | vinheta falada ausente no início ("Porque a rotina importa, quanto sono cada idade precisa | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-13-matriciamento-saude-mental | vinheta falada ausente no início ("O que é o que não é apoio matricial, suas modalidades.  | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-16-acidente-trabalho-trauma-psicologico | vinheta falada ausente no início ("O impacto psicológico de um acidente de trabalho pode d | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-17-relato-vinculo-perdido | vinheta falada ausente no início ("fazia mais de um ano que ela não aparecia na unidade. f | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-18-primeira-consulta-saude-mental | vinheta falada ausente no início ("onde começar no SUS, o que é perguntado na consulta, o  | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-19-jogos-online-criancas | vinheta falada ausente no início ("Sinais de transtorno de jogo eletrônico, caixas de reco | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-23-grupos-terapeuticos-aps | vinheta falada ausente no início ("benefícios, modalidades, evidência da TCC em grupo para | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-24-relato-peso-invisivel-cuidador | vinheta falada ausente no início ("A consulta era sobre o pai, não sobre ela. A consulta e | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-25-avaliacao-desempenho-saude-mental | vinheta falada ausente no início ("O que torna a avaliação à doescedora? Boas práticas e c | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-26-compulsao-jogos | vinheta falada ausente no início ("Após-te-es como problema de saúde pública, o que diz a  | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-27-adocao-saude-mental-filho | vinheta falada ausente no início ("comportamentos que podem surgir após adoção. comportame | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-11-30-relato-silencio-fatal | vinheta falada ausente no início ("A consulta já estava quase terminando. A consulta já es | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-2026-12-01-quando-encaminhar-aps | vinheta falada ausente no início ("O que a p-se pode cuidar com apoio matricial, segundo M | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-ansiedade-social-medo-julgamento | vinheta falada ausente no início ("Ancidade social, quando medo do julgamento limita a vid | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-burnout-medicos-enfermeiros | vinheta falada ausente no início ("Burnout em médicos enfermeiros, quando o cuidador preci | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-dependencia-quimica-comportamental-sinais | vinheta falada ausente no início ("Senage de dependência, química ou comportamental, o pad | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-estresse-migratorio-adaptacao-cultural | vinheta falada ausente no início ("Estresse migratório, o que ninguém conta sobre recomeça | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-saude-mental-residencia | vinheta falada ausente no início ("Saúde mental na residência, como sobreviver e se desenv | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-sinais-alerta-comportamentais-jovens | vinheta falada ausente no início ("Sinais já alertam crianças e adolescentes, o que observ | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |
+| short-resumo-tmc-aps | vinheta falada ausente no início ("O que o consultório de atenção primária revela sobrenci | F | reprovado; marcado na fila em 19/10/2026 | 2026-10-17 |

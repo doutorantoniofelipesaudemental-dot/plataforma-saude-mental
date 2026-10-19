@@ -49,3 +49,7 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 - [ ] Relatar se DrSM-Conferencia-19-10 e DrSM-Conferencia-26-10 podem ser removidas depois de rodarem (execução única cada).
 - [ ] Próximo passo: "Lote 2 de automação (Classe 1)", depois do merge deste PR. Não iniciado.
 - Demais pendências (horários no Windows, RESEND_API_KEY, PR semanal, CLS, PC ligado, teto do claude -p): ver as listas acima.
+
+## Vídeos reprovados (19/10/2026, decisão C do Dr. Antônio)
+- [x] As 54 entradas da fila (relatorios/youtube/fila.json) foram marcadas como "reprovado" (o publicador ignora esse status). Fila ativa: 55 itens aprovado-checagem. Pastas intocadas.
+- [ ] Fase 2 (reforma em lotes de 6, começando pelas F de assinatura falada): aguarda ordem. Índice em relatorios/youtube/reprovados/INDICE.md.
