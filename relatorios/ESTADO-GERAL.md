@@ -25,6 +25,11 @@
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
+## Checkpoint (19/10/2026, noite): PR #113 MESCLADO (21:02 UTC). Correções do lote 1 conferidas: contrato STATUS, SKILL, plantões, Lembrete desativado, alerta:teste e simulações OK; 387 testes passam. Nada novo a commitar nesta rodada.
+- Blob mensal DESATIVADA pelo Dr. Antônio (C2, 19/10/2026; leitura: `Disabled`). Código do Blob com duas condições faltando (ver PENDENTES.md), correção em ordem separada.
+- Windows (estado real, sem nova alteração): YouTube Publica ainda com gatilho 12:30; DrSM-LinkedIn-Agendar não existe (o script cria DESATIVADA); DrSM-LinkedIn-Lembrete ativo (o script o desativa na execução real).
+- Branch `docs/autonomia-classe1-20261019` (a partir da main), sem commit até o portão leve.
+
 ## Correções pós-plano (19/10/2026) — PR #112 MESCLADO em 19/10/2026 (horários do YouTube publica na main)
 - Branch `fix/agendador-estado-e-teto-20261019`: agendador mantém tarefas pausadas; teto do `claude -p` (3/dia, 15/semana); MCP ElevenLabs removido.
 - Pendências do Dr. Antônio: ver relatorios/PENDENTES.md (aplicar horários no Windows, Blob, RESEND, PR semanal, Lote 2).

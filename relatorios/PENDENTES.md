@@ -34,4 +34,18 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 - [ ] PC ligado às 20:15 e às 17:15 nos dias de publicação do YouTube (tarefa do Dr. Antônio).
 - [ ] Teto do `claude -p`: comparar relatorios/CONSUMO.md com o /usage após uma semana e ajustar TETO em scripts/consumoClaude.js.
 - [ ] DrSM-LinkedIn-Lembrete segue Ready no Windows até a próxima execução real do script, que o desativa.
-- [ ] PORTÃO REPROVADO (19/10/2026, relatorios/portao-20261019-1735.md): tests/unit/visual-elevenlabs.test.js exige a entrada "elevenlabs" no .mcp.json (remoção do item C). Na main a entrada existe. Decidir: ajustar o teste (ordem do Dr. Antônio) ou manter a remoção. Commit não feito.
+- [x] (resolvido 19/10/2026, PR #113) PORTÃO REPROVADO em relatorios/portao-20261019-1735.md: o teto de visual-elevenlabs.test.js foi ajustado para conferir a ausência da entrada. Portão aprovado em relatorios/portao-20261019-1744.md. Registro original: tests/unit/visual-elevenlabs.test.js exigia a entrada "elevenlabs" no .mcp.json (remoção do item C). Na main a entrada existe. Decidir: ajustar o teste (ordem do Dr. Antônio) ou manter a remoção. Commit não feito.
+
+## Blob mensal (19/10/2026, ordem do Dr. Antônio: decisão C2)
+- [x] DrSM-Blob-Rotina-Mensal DESATIVADA pelo Dr. Antônio (`Disabled`, confirmado por leitura em 19/10/2026). A primeira execução real seria em 01/11/2026, 03:00.
+- [ ] Ativar só por ordem do Dr. Antônio, depois de revisar uma simulação (`blob:orfas` em modo simulação).
+- [ ] Código do Blob (scripts/blob-rotina-mensal.js) NÃO atende duas condições de segurança: (b) a trava só bloqueia apagável de c/d que também aparece em a/b, e não qualquer item de a ou b; (d) não grava alerta no topo do ESTADO-GERAL.md (só relatório e código de saída 1). Correção em ordem separada.
+
+## Arquivos gerados e .gitignore (19/10/2026)
+- Os arquivos relatorios/linkedin/agendamento-lote.json e .md são regravados por simulações do agendarDiario.js; são pré-existentes aceitos e nunca entram em commit de outra tarefa.
+- [ ] Avaliar com o Dr. Antônio colocar esses dois arquivos gerados no .gitignore (mudança de código; só por ordem). Não alterar o .gitignore sem ordem.
+
+## Fechamento (19/10/2026, ordem do Dr. Antônio)
+- [ ] Relatar se DrSM-Conferencia-19-10 e DrSM-Conferencia-26-10 podem ser removidas depois de rodarem (execução única cada).
+- [ ] Próximo passo: "Lote 2 de automação (Classe 1)", depois do merge deste PR. Não iniciado.
+- Demais pendências (horários no Windows, RESEND_API_KEY, PR semanal, CLS, PC ligado, teto do claude -p): ver as listas acima.
