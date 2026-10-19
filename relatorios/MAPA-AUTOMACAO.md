@@ -37,6 +37,12 @@ Legenda: 🔴 depende do Dr. Antônio.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se for necessário.
 
+## Reativação e teto (19/10/2026, correção pós-plano)
+- `scripts/agendar-tarefas-windows.ps1`: tarefa existente mantém o estado (ativa ou desativada); `-Simular` só mostra a ação. Novas DrSM-LinkedIn-Agendar e DrSM-Blob-Rotina-Mensal nascem desativadas.
+- Formas de reativação: LinkedIn — `scripts/linkedin/pausar.js` só desativa a tarefa e grava `pausado` em relatorios/linkedin/agendar-diario-estado.json; para religar, apagar `pausado` e habilitar a tarefa (só por ordem). Blob — não há comando de retomar; só o agendador. Lembrete manual — o script o desativa a cada execução real.
+- Teto do `claude -p`: `scripts/consumoClaude.js`, usado por `scripts/linkedin/agendarDiario.js`. 3 por dia e 15 por semana; registro em relatorios/CONSUMO.md.
+- MCP: ElevenLabs removido de `.mcp.json`. `.claude/settings.json` e `.claude/settings.local.json` ainda citam o nome (não alterados).
+
 ## Plantões e tarefas DrSM-* (19/10/2026)
 - Indisponível às QUINTAS e DOMINGOS das 17:30 até as 10:30 do dia seguinte; o PC pode estar desligado.
 - Narração: 22:00 (seg, ter, qua, sex, sáb); 14:00 (qui, dom). YouTube gera-mídia: 23:30 / 15:30 (qui, dom). YouTube publica 20:15 (seg, ter, qua, sex, sáb) e 17:15 (qui, dom).

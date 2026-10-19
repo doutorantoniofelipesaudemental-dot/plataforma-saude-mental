@@ -169,6 +169,11 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Ativar crédito extra ou recarga, se necessário.
 - Push e abertura de PR quando o classificador bloquear. Nesse caso, o Claude Code deixa o commit local pronto e entrega os comandos com "!" (nunca contorna o bloqueio).
 
+## Correções pós-plano (19/10/2026, ordem do Dr. Antônio; PR #112 mesclado)
+- Tarefas pausadas permanecem pausadas: `scripts/agendar-tarefas-windows.ps1` não reativa tarefa desativada (decisão em `scripts/agendadorEstado.js`); `-Simular` mostra a ação prevista por tarefa. Tarefas novas DrSM-LinkedIn-Agendar e DrSM-Blob-Rotina-Mensal nascem desativadas.
+- Teto de chamadas do `claude -p`: 3 por dia e 15 por semana (seg a dom, Salvador), via `scripts/consumoClaude.js`, registro em `relatorios/CONSUMO.md`. Número de partida: comparar com o /usage após uma semana e ajustar.
+- Servidor MCP pago ElevenLabs removido de `.mcp.json` (voz paga proibida).
+
 ## Modo economia (18/10/2026)
 - Leitura mínima: grep, head, tail, wc e jq. Não ler arquivos grandes inteiros, não reler o que já foi lido, não explorar o repositório inteiro, sem subagentes.
 - Saídas longas vão para `relatorios/logs/` por redirecionamento; ler só as últimas 20 linhas ou os contadores.
