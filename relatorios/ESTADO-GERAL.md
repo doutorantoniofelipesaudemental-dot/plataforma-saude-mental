@@ -25,6 +25,11 @@
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
+## Correções pós-plano (19/10/2026) — PR #112 MESCLADO em 19/10/2026 (horários do YouTube publica na main)
+- Branch `fix/agendador-estado-e-teto-20261019`: agendador mantém tarefas pausadas; teto do `claude -p` (3/dia, 15/semana); MCP ElevenLabs removido.
+- Pendências do Dr. Antônio: ver relatorios/PENDENTES.md (aplicar horários no Windows, Blob, RESEND, PR semanal, Lote 2).
+- Alerta: DrSM-Blob-Rotina-Mensal está ATIVA no Windows (criada antes desta correção). O script a mantém ativa; desativar só por ordem.
+
 ## EM ANDAMENTO (17/10/2026) — ver relatorios/PROMPT-ATUAL.md
 - Rodada 4 (18/10/2026): #94 mergeado; catatonia com citação Apetauerova 2021 (PMID 33896535) e narração regerada; LinkedIn logado, 5 agendados até 09/11, lote seguinte (11/11 a 20/11) NÃO agendado: navegador bloqueado pelo classificador de permissões; YouTube em "Testando" (vence 23/10); tarefas noturnas OK; 19/10: crons publicar-agendados 11:00 UTC e renovar-token 12:00 UTC registrados, conferência às 19:30 (Bahia).
 - Rodada 3 (17/10/2026): PR #92 mergeado; PR #93 com catatonia (sem doses; BAP), telas (sem dopamina/luz azul), abandono (referência trocada), 2 páginas de cirurgia (título/ISAPS 2025/capa/áudio), caixa de apoio de violência no template (34 páginas), link do LinkedIn personalizado e catatonia + telas agendadas em 23/12/2026 (08:00 e 09:00 Bahia). Narrações dos 5 textos regeradas e enviadas. Backup: backups/importacao-completa-20261018-0058 (726 documentos). Rollback: relatorios/rollback-20261017-rodada3.md.

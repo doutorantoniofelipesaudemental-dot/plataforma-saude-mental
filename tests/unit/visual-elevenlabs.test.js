@@ -59,12 +59,9 @@ test('ElevenLabs: sem chave ou sem voz, falha com instrução — nunca com a ch
   }
 });
 
-test('.mcp.json: MCP oficial da ElevenLabs por uvx, chave só por variável de ambiente', () => {
+test('.mcp.json: sem servidor ElevenLabs (voz paga proibida, ordem de 19/10/2026)', () => {
   const mcp = JSON.parse(fs.readFileSync(path.join(__dirname, '../../.mcp.json'), 'utf8'));
-  const s = mcp.mcpServers.elevenlabs;
-  assert.equal(s.command, 'uvx');
-  assert.deepEqual(s.args, ['elevenlabs-mcp']);
-  assert.equal(s.env.ELEVENLABS_API_KEY, '${ELEVENLABS_API_KEY}', 'nunca a chave literal no repositório público');
+  assert.equal(mcp.mcpServers.elevenlabs, undefined);
 });
 
 test('bot:elevenlabs: nome de arquivo do efeito sem acento nem símbolo', () => {

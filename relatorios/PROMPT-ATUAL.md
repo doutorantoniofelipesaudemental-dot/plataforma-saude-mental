@@ -1,6 +1,11 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
-## ESTADO REAL (19/10/2026, pós-merge) — leia primeiro
+## ESTADO REAL (19/10/2026, correções pós-plano) — leia primeiro
+1. PR #112 MESCLADO (19/10/2026, 14:37 UTC): horários do YouTube publica na main.
+2. Branch `fix/agendador-estado-e-teto-20261019`: (A) agendador mantém tarefas pausadas; (B) teto do `claude -p` 3/dia e 15/semana (`scripts/consumoClaude.js`); (C) MCP ElevenLabs removido. Detalhes em ESTADO-GERAL.md e PENDENTES.md.
+3. Nada aplicado no Windows nesta sessão (só `-Simular`). Aplicar horários só por ordem, depois do merge.
+
+## ESTADO REAL (19/10/2026, pós-merge)
 1. MESCLADOS: PR #111 (fix do CLS, 13:40 UTC) e PR #110 (Lote 1, 14:01 UTC). Portão aprovado nas duas etapas.
 2. YouTube publica: novos horários (seg/ter/qua/sex/sáb 20:15; qui/dom 17:15). Só vale depois que `scripts/agendar-tarefas-windows.ps1` rodar de novo, por ordem do Dr. Antônio.
 3. Pendências: RESEND_API_KEY; ativação do Blob (só por ordem); PR semanal sexta 11:00 (sem script); Lote 2 (autorizações b, d, f e testes do LinkedIn); CLS no PageSpeed em 2 ou 3 relatos.

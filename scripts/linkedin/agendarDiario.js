@@ -6,10 +6,12 @@
  *   node --env-file-if-exists=.env scripts/linkedin/agendarDiario.js            execução real
  *   node --env-file-if-exists=.env scripts/linkedin/agendarDiario.js --simular  só pré-checagem e regras (não abre o Chrome)
  * Estado: relatorios/linkedin/agendar-diario-estado.json. Alerta: topo do relatorios/ESTADO-GERAL.md e relatorios/RESUMO-DO-DIA.md.
+ * Teto do claude -p (19/10/2026): 3 por dia e 15 por semana, via scripts/consumoClaude.js (consulta antes, registra depois).
  */
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
+const consumo = require('../consumoClaude');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const ESTADO = path.join(RAIZ, 'relatorios/linkedin/agendar-diario-estado.json');
@@ -93,8 +95,22 @@ async function main() {
     if (i > 0) await esperar(INTERVALO_MS);
     // o prompt vai pela entrada padrão (no Windows o `claude` é .cmd, então shell: true; sem espaços nos argumentos)
     const prompt = 'Rode a skill agendar-linkedin para agendar APENAS 1 post (o próximo da fila aprovada). Auditoria e tripla antes. Sem senha. Se aparecer login, verificação, CAPTCHA, limite ou atividade incomum, PARE. Termine a resposta com UMA última linha exatamente assim: "STATUS: OK", "STATUS: PARAR <motivo curto>" ou "STATUS: DESATIVAR <motivo curto>" (DESATIVAR só para aviso de atividade incomum ou restrição de conta).';
+    // Teto do claude -p (19/10/2026): consulta ANTES; teto atingido ou contador ilegível = não chama.
+    const teto = consumo.podeChamarClaude({ agora: new Date() });
+    if (!teto.pode) {
+      if (teto.uso) consumo.avisarTeto(teto.motivo, new Date());
+      else alertar(teto.motivo, hoje);
+      console.log(`não chamado: ${teto.motivo}`);
+      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: teto.motivo, agendados });
+    }
     const r = spawnSync('claude', ['-p'], { cwd: RAIZ, input: prompt, encoding: 'utf8', shell: true, timeout: 900000 });
     const saida = `${r.stdout || ''}\n${r.stderr || ''}`;
+    // registra DEPOIS, mesmo se a chamada falhou (a cota já foi usada)
+    const grava = consumo.registrarChamada({ agora: new Date(), origem: 'agendarDiario' });
+    if (!grava.gravado) {
+      alertar(`contador do claude -p não gravado (${grava.motivo}); parado por segurança`, hoje);
+      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'contador do claude -p', agendados });
+    }
     const c = classificarSaida(saida, r.status);
     if (c.parar) {
       if (c.desativar) desativarTarefa();
