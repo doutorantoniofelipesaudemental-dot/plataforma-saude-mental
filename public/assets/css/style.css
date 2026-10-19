@@ -49,9 +49,9 @@
   font-family: 'Inter Fallback';
   font-weight: 400;
   src: local('Arial'), local('ArialMT'), local('Helvetica'), local('Roboto');
-  size-adjust: 106.1%;
-  ascent-override: 91.4%;
-  descent-override: 22.6%;
+  size-adjust: 104.5%;
+  ascent-override: 92.8%;
+  descent-override: 22.9%;
   line-gap-override: 0%;
 }
 @font-face {
