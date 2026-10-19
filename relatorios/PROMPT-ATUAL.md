@@ -1,6 +1,11 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
-## ESTADO REAL (19/10/2026, noite) — leia primeiro
+## ESTADO REAL (19/10/2026, lote 2) — leia primeiro
+- PR #114 MESCLADO (22:00 UTC). Horários do YouTube aplicados no Windows. Blob, LinkedIn-Agendar e Lembrete Disabled.
+- Alerta: renovação do token da Meta recusada na conferência de 19/10 (ver PENDENTES.md).
+- Branch `feat/lote2-automacao-20261019` em andamento (itens 1 a 8 da ordem do lote 2).
+
+## ESTADO REAL (19/10/2026, noite)
 - PR #113 MESCLADO (21:02 UTC). Lote 1: correções já presentes na main; 387 testes passam.
 - Blob mensal DESATIVADA (decisão C2). Código do Blob com condições (b) e (d) faltando: correção em ordem separada.
 - Aplicar horários no Windows: só por ordem, depois de `-Simular`. Hoje YouTube Publica ainda tem gatilho 12:30, e DrSM-LinkedIn-Agendar não existe.

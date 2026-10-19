@@ -25,6 +25,11 @@
 > **Para ligar YouTube e LinkedIn, siga os passos em `relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md` e `relatorios/linkedin/PASSO-A-PASSO-LINKEDIN.md`** (cada um começa com "Onde você está"). YouTube: falta a chave secreta no `.env`, a autorização e o freio. LinkedIn: nada feito ainda. Instagram: ativo.
 Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao final de cada lote futuro). Repositório: `main` = último PR mergeado.
 
+## Estado do Windows (19/10/2026, após PR #114 e horários aplicados)
+- YouTube Publica 20:15 (seg/ter/qua/sex/sáb) e 17:15 (qui/dom); Gera-Midia 23:30 e 15:30 (qui/dom); Narração 22:00 e 14:00 (qui/dom). Conferido por leitura.
+- DrSM-LinkedIn-Agendar, DrSM-LinkedIn-Lembrete e DrSM-Blob-Rotina-Mensal: Disabled. Demais DrSM-*: Ready.
+- DrSM-Conferencia-19-10 RODOU com resultado ATENÇÃO (relatorios/conferencia-renovacao-20261019.md): a Meta recusou a renovação do token (HTTP 400, código 100); token em produção veio de variável. Não removida. Alerta para o Dr. Antônio.
+
 ## Checkpoint (19/10/2026, noite): PR #113 MESCLADO (21:02 UTC). Correções do lote 1 conferidas: contrato STATUS, SKILL, plantões, Lembrete desativado, alerta:teste e simulações OK; 387 testes passam. Nada novo a commitar nesta rodada.
 - Blob mensal DESATIVADA pelo Dr. Antônio (C2, 19/10/2026; leitura: `Disabled`). Código do Blob com duas condições faltando (ver PENDENTES.md), correção em ordem separada.
 - Windows (estado real, sem nova alteração): YouTube Publica ainda com gatilho 12:30; DrSM-LinkedIn-Agendar não existe (o script cria DESATIVADA); DrSM-LinkedIn-Lembrete ativo (o script o desativa na execução real).

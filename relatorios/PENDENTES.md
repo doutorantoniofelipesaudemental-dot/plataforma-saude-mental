@@ -49,3 +49,8 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 - [ ] Relatar se DrSM-Conferencia-19-10 e DrSM-Conferencia-26-10 podem ser removidas depois de rodarem (execução única cada).
 - [ ] Próximo passo: "Lote 2 de automação (Classe 1)", depois do merge deste PR. Não iniciado.
 - Demais pendências (horários no Windows, RESEND_API_KEY, PR semanal, CLS, PC ligado, teto do claude -p): ver as listas acima.
+
+## Lote 2 (19/10/2026), item 1
+- [ ] ALERTA: renovação do token da Meta recusada (HTTP 400, código 100) na conferência de 19/10 (relatorios/conferencia-renovacao-20261019.md). Ver com o Dr. Antônio antes do vencimento (expiraEm 2026-12-14).
+- [ ] DrSM-Conferencia-19-10 NÃO removida (resultado ATENÇÃO). Remover só depois de um relatório OK.
+- [ ] DrSM-Conferencia-26-10: fica até rodar.
