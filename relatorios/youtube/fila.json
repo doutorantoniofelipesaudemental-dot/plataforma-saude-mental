@@ -53,7 +53,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-10-26-saude-mental-cuidador/motivos.txt): vinheta falada ausente no início (\"Saúde mental do cuidador, que em cuidador de quem cuida. O peso do cui\")"
   },
   {
    "id": "longo-burnout-medicos-enfermeiros",
@@ -104,7 +105,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-10-27-tempo-tela-criancas/motivos.txt): vinheta falada ausente no início (\"O que a ciência mostra? Pergunte as mais úteis do que o relógio e como\")"
   },
   {
    "id": "short-2026-10-28-primeiro-episodio-psicotico",
@@ -131,7 +133,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-10-28-primeiro-episodio-psicotico/motivos.txt): vinheta falada ausente no início (\"porque a duração da psicose não tratada em porta, sinais prodromicos, \")"
   },
   {
    "id": "longo-saude-mental-residencia",
@@ -156,7 +159,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-saude-mental-residencia/motivos.txt): vinheta falada ausente no fim (\"ele tem caráter educativo e não substituir uma consulta. O texto compl\")"
   },
   {
    "id": "short-2026-10-29-relato-paciente-invisivel",
@@ -182,7 +186,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-10-29-relato-paciente-invisivel/motivos.txt): vinheta falada ausente no início (\"Ele já tinha passado por mim mais seis vezes. Ele já tinha passado por\")"
   },
   {
    "id": "short-2026-10-30-programa-saude-mental-ocupacional",
@@ -208,7 +213,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-10-30-programa-saude-mental-ocupacional/motivos.txt): vinheta falada ausente no início (\"Os três níveis de um programa eficaz, passo a passo para começar. Os t\")"
   },
   {
    "id": "longo-ansiedade-social-medo-julgamento",
@@ -259,7 +265,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-03-gestacao-amamentacao-saude-mental/motivos.txt): vinheta falada ausente no início (\"Diferência entre Baby Blues e Depressão Perinatal, Rastreamento, Trata\")"
   },
   {
    "id": "longo-estresse-migratorio-adaptacao-cultural",
@@ -310,7 +317,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-04-alimentacao-criancas/motivos.txt): vinheta falada ausente no início (\"Beneficios das Refeições em família, riscos do controle excessivo. Ben\")"
   },
   {
    "id": "short-2026-11-05-relato-crise-evitavel",
@@ -336,7 +344,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-05-relato-crise-evitavel/motivos.txt): vinheta falada ausente no início (\"Foi só quando conseguir ler o? Ela chegou ao pronto atendimento psiqui\")"
   },
   {
    "id": "longo-depressao-pos-parto-ansiedade-perinatal",
@@ -388,7 +397,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-06-intoxicacao-agitacao-pa/motivos.txt): vinheta falada ausente no início (\"sinais que apontam para causa clínica ou tóxica, diferenciação prática\")"
   },
   {
    "id": "short-2026-11-09-afastamento-transtorno-mental",
@@ -414,7 +424,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-09-afastamento-transtorno-mental/motivos.txt): vinheta falada ausente no início (\"Como funciona o afastamento? Nexo com o trabalho e quete, sigilo do di\")"
   },
   {
    "id": "longo-sinais-alerta-comportamentais-jovens",
@@ -516,7 +527,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-11-relato-familia-em-crise/motivos.txt): vinheta falada ausente no início (\"Quem precisava de atenção naquele momento? Na verdade, era mãe dele. O\")"
   },
   {
    "id": "short-2026-11-12-rotina-criancas",
@@ -542,7 +554,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-12-rotina-criancas/motivos.txt): vinheta falada ausente no início (\"Porque a rotina importa, quanto sono cada idade precisa? Porque a roti\")"
   },
   {
    "id": "longo-dependencia-quimica-comportamental-sinais",
@@ -594,7 +607,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-13-matriciamento-saude-mental/motivos.txt): vinheta falada ausente no início (\"O que é o que não é apoio matricial, suas modalidades. O que é o que n\")"
   },
   {
    "id": "short-2026-11-16-acidente-trabalho-trauma-psicologico",
@@ -620,7 +634,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-16-acidente-trabalho-trauma-psicologico/motivos.txt): vinheta falada ausente no início (\"O impacto psicológico de um acidente de trabalho pode durar mais que a\")"
   },
   {
    "id": "longo-compulsao-alimentar-compras-compulsivas",
@@ -671,7 +686,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-17-relato-vinculo-perdido/motivos.txt): vinheta falada ausente no início (\"fazia mais de um ano que ela não aparecia na unidade. fazia mais de um\")"
   },
   {
    "id": "longo-burnout-na-gestao-fatores-de-risco",
@@ -699,7 +715,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-burnout-na-gestao-fatores-de-risco/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Baia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ-26.638.\")"
   },
   {
    "id": "short-2026-11-18-primeira-consulta-saude-mental",
@@ -725,7 +742,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-18-primeira-consulta-saude-mental/motivos.txt): vinheta falada ausente no início (\"onde começar no SUS, o que é perguntado na consulta, o papel do diagnó\")"
   },
   {
    "id": "short-2026-11-19-jogos-online-criancas",
@@ -751,7 +769,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-19-jogos-online-criancas/motivos.txt): vinheta falada ausente no início (\"Sinais de transtorno de jogo eletrônico, caixas de recompensa e aposta\")"
   },
   {
    "id": "longo-fadiga-compaixao-cuidado-idosos",
@@ -803,7 +822,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-23-grupos-terapeuticos-aps/motivos.txt): vinheta falada ausente no início (\"benefícios, modalidades, evidência da TCC em grupo para depressão. Ben\")"
   },
   {
    "id": "longo-trabalho-domestico-invisivel-estresse",
@@ -854,7 +874,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-24-relato-peso-invisivel-cuidador/motivos.txt): vinheta falada ausente no início (\"A consulta era sobre o pai, não sobre ela. A consulta era sobre o pai,\")"
   },
   {
    "id": "longo-transicao-carreira-aposentadoria-identidade",
@@ -905,7 +926,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-25-avaliacao-desempenho-saude-mental/motivos.txt): vinheta falada ausente no início (\"O que torna a avaliação à doescedora? Boas práticas e como conduzir a \")"
   },
   {
    "id": "short-2026-11-26-compulsao-jogos",
@@ -931,7 +953,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-26-compulsao-jogos/motivos.txt): vinheta falada ausente no início (\"Após-te-es como problema de saúde pública, o que diz a lei 14, 7,9,0,2\")"
   },
   {
    "id": "longo-saude-mental-pilar-de-performance-liderancas",
@@ -959,7 +982,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-saude-mental-pilar-de-performance-liderancas/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Baia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ-26.638.\")"
   },
   {
    "id": "short-2026-11-27-adocao-saude-mental-filho",
@@ -985,7 +1009,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-27-adocao-saude-mental-filho/motivos.txt): vinheta falada ausente no início (\"comportamentos que podem surgir após adoção. comportamentos que podem \")"
   },
   {
    "id": "short-2026-11-30-relato-silencio-fatal",
@@ -1011,7 +1036,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-11-30-relato-silencio-fatal/motivos.txt): vinheta falada ausente no início (\"A consulta já estava quase terminando. A consulta já estava quase term\")"
   },
   {
    "id": "longo-sobrecarga-docente-descompressao",
@@ -1036,7 +1062,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-sobrecarga-docente-descompressao/motivos.txt): vinheta falada ausente no fim (\"ele tem caráter educativo e não substituir uma consulta. O texto compl\")"
   },
   {
    "id": "short-2026-12-01-quando-encaminhar-aps",
@@ -1063,7 +1090,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-2026-12-01-quando-encaminhar-aps/motivos.txt): vinheta falada ausente no início (\"O que a p-se pode cuidar com apoio matricial, segundo MHGAP da OMS? O \")"
   },
   {
    "id": "longo-burnout-academico-pos-graduacao-concursos",
@@ -1165,7 +1193,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-envelhecimento-ativo-isolamento-social/motivos.txt): assinatura falada curta ausente no fim (\" médico, CRM Bahia 4-1-3-2-2 Especialista em medicina de família e comunidade, RQ-26-1638.\")"
   },
   {
    "id": "short-2026-12-04-relato-entre-dois-mundos",
@@ -1242,7 +1271,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-reorganizacao-emocional-luto-divorcio/motivos.txt): assinatura falada curta ausente no fim (\"ipe, médico, CRM Bahia 41322, especialista em medicina de família e comunidade, R, 26.638.\")"
   },
   {
    "id": "short-2026-12-09-jogos-online-consulta-medicos",
@@ -1294,7 +1324,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-fadiga-compaixao-voluntariado-terceiro-setor/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2026-12-10-comunicacao-nao-violenta-equipe",
@@ -1374,7 +1405,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-ansiedade-corporativa-sintomas-tratamento/motivos.txt): assinatura falada curta ausente no fim (\" médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ-26.638.\")"
   },
   {
    "id": "short-2026-12-14-adolescencia-mudancas-humor",
@@ -1425,7 +1457,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-insonia-o-que-fazer/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2026-12-15-adolescente-escolha-profissional-pressao",
@@ -1476,7 +1509,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-depressao-ansiedade-produtividade/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2026-12-16-redes-sociais-consulta-medicos",
@@ -1556,7 +1590,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-professores-saude-mental/motivos.txt): assinatura falada curta ausente no fim (\" médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ 26.638.\")"
   },
   {
    "id": "short-2026-12-18-crise-humanitaria-impacto-equipe",
@@ -1635,7 +1670,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-burnout-aps/motivos.txt): vinheta falada ausente no fim (\"e o seu convite. Ele tem caráter educativo e não substituir uma consul\")"
   },
   {
    "id": "short-2026-12-22-adolescente-experimentacao-alcool-conversa",
@@ -1686,7 +1722,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-relato-paciente-invisivel/motivos.txt): assinatura falada curta ausente no fim (\" médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ-26.638.\")"
   },
   {
    "id": "short-2026-12-23-relato-corpo-envelhece-mente-esquecida",
@@ -1765,7 +1802,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-alta-pa-psiquiatrico/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2026-12-25-cultura-psicologicamente-segura",
@@ -1842,7 +1880,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-afastamento-transtorno-mental/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2026-12-29-relato-medo-remedio",
@@ -1894,7 +1933,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-quando-encaminhar-aps/motivos.txt): assinatura falada curta ausente no fim (\"ipe, médico, CRM Bahia 41322, especialista em medicina de família e comunidade, R, 26.638.\")"
   },
   {
    "id": "short-2026-12-30-adolescente-primeiro-namoro",
@@ -2051,7 +2091,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-jogos-online-consulta-medicos/motivos.txt): assinatura falada curta ausente no fim (\" médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ-26.638.\")"
   },
   {
    "id": "short-2027-01-05-ansiedade-social-timidez",
@@ -2102,7 +2143,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-compulsao-alimentar/motivos.txt): assinatura falada curta ausente no fim (\"médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ-26-1638.\")"
   },
   {
    "id": "short-2027-01-06-adolescente-quarto-bagunca-privacidade",
@@ -2180,7 +2222,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-jogos-online-criancas/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2027-01-08-relato-cuidador-equipe-burnout",
@@ -2257,7 +2300,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-relato-crise-evitavel/motivos.txt): assinatura falada curta ausente no fim (\" médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, RQ 26.638.\")"
   },
   {
    "id": "short-2027-01-12-ansiedade-trabalho-lidando",
@@ -2386,7 +2430,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-relato-familia-em-crise/motivos.txt): assinatura falada curta ausente no fim (\"ipe, médico, CRM Bahia 41322, especialista em medicina de família e comunidade, R, 26.638.\")"
   },
   {
    "id": "short-2027-01-15-saude-mental-perinatal-consulta",
@@ -2516,7 +2561,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-relato-vinculo-perdido/motivos.txt): assinatura falada curta ausente no fim (\", médico, CRM Bahia 4-1-3-2-2, especialista em medicina de família e comunidade, R-26.638.\")"
   },
   {
    "id": "short-2027-01-20-relato-ultima-consulta-antes-desistir",
@@ -2570,7 +2616,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-tmc-aps/motivos.txt): vinheta falada ausente no início (\"O que o consultório de atenção primária revela sobrencidade, depressão\")"
   },
   {
    "id": "longo-psicofarmacos-mitos-culturais",
@@ -2596,7 +2643,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/longo-psicofarmacos-mitos-culturais/motivos.txt): vinheta falada ausente no fim (\"Confissa da Death atual • D compromise Esse foi o conteúdo do portau d\")"
   },
   {
    "id": "short-resumo-burnout-medicos-enfermeiros",
@@ -2622,7 +2670,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-burnout-medicos-enfermeiros/motivos.txt): vinheta falada ausente no início (\"Burnout em médicos enfermeiros, quando o cuidador precisa de ajuda. Co\")"
   },
   {
    "id": "short-resumo-saude-mental-residencia",
@@ -2648,7 +2697,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-saude-mental-residencia/motivos.txt): vinheta falada ausente no início (\"Saúde mental na residência, como sobreviver e se desenvolver nos anos \")"
   },
   {
    "id": "longo-relato-peso-invisivel-cuidador",
@@ -2699,7 +2749,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-estresse-migratorio-adaptacao-cultural/motivos.txt): vinheta falada ausente no início (\"Estresse migratório, o que ninguém conta sobre recomeçar em outro país\")"
   },
   {
    "id": "longo-realidade-saude-mental-aps",
@@ -2750,7 +2801,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-sinais-alerta-comportamentais-jovens/motivos.txt): vinheta falada ausente no início (\"Sinais já alertam crianças e adolescentes, o que observar e como agir.\")"
   },
   {
    "id": "short-resumo-dependencia-quimica-comportamental-sinais",
@@ -2776,7 +2828,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-dependencia-quimica-comportamental-sinais/motivos.txt): vinheta falada ausente no início (\"Senage de dependência, química ou comportamental, o padrão é parecido.\")"
   },
   {
    "id": "longo-relato-silencio-fatal",
@@ -2827,7 +2880,8 @@
     "midia": [],
     "video": []
    },
-   "status": "aprovado-checagem"
+   "status": "reprovado",
+   "motivo": "Reprovado na checagem (ver relatorios/youtube/reprovados/short-resumo-ansiedade-social-medo-julgamento/motivos.txt): vinheta falada ausente no início (\"Ancidade social, quando medo do julgamento limita a vida. Timidez é di\")"
   }
  ]
 }
