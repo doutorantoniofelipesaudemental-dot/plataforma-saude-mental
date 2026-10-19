@@ -1,5 +1,11 @@
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
+## ESTADO REAL (19/10/2026, correções do lote 1) — leia primeiro
+1. Código do LinkedIn corrigido (linha `STATUS:` obrigatória), testes 8/8, `pausar.js --simular` e `alerta:teste` OK, `node --check` OK nos arquivos do lote. Nada commitado nem enviado.
+2. Agenda de plantões aplicada no script do Windows (quinta e domingo: narração 14:00, YouTube gera 15:30) + trava diária + StartWhenAvailable. Lembrete manual LinkedIn desativado.
+3. **Portão REPROVADO** (E2E: CLS 0.18 no `relato-aposta-tres-da-manha`, limite 0.1; falha pré-existente na base, ver ESTADO-GERAL). Merge bloqueado até decisão.
+4. Pendente: PR semanal sexta 11:00 (sem script ainda). Comandos `!` para o Dr. Antônio: ver a resposta da sessão de 19/10.
+
 ## PENDÊNCIAS ao reabrir (18/10/2026, tarde) — leia primeiro
 1. FEITO: trava v2, órfãs do Blob (0), landings /youtube e /instagram, bios e perfis (pelo Dr. Antônio), app Google em produção, YouTube reautorizado (registro `producao`).
 2. **LinkedIn:** 10 agendados (até 20/11); limite diário atingido em 18/10. Próxima sessão: `rodar agendar-linkedin` a partir de **li-2026-11-25**; testar o carrossel PDF de 06/11 (se o agendador não aceitar, fica na fila manual). 33 abertos (27 posts + 6 carrosséis): ~6 a 7 sessões diárias.
@@ -180,3 +186,13 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Fases 0, 1, 4 e 5 feitas: `relatorios/VERIFICACOES.md`, `relatorios/MAPA-AUTOMACAO.md`, `relatorios/checagens/2026-10-18.md`, `relatorios/PENDENTES.md`. CLAUDE.md ganhou "O que continua sendo do Dr. Antônio", "Modo economia" e "Uso do Ollama".
 - Nada publicado, nenhuma tarefa agendada criada, nenhum freio alterado. Merge só pelo Dr. Antônio via `npm run merge-seguro -- <PR>`.
 - Próximo passo exato: o Dr. Antônio revisa o PR da Fase 5 e roda o merge-seguro; depois da renovação da cota, ver `relatorios/PENDENTES.md`.
+
+## Lote 1 (18/10/2026): estado real
+- Branch `feat/automacao-lote1-20261018` (a partir da main com o PR #109 mesclado). Itens 1, 2 e 3 commitados e testados; item 4 não criado (conflito de regra).
+- Portão: **não passou** (e2e 26 passed / 5 failed, localhost:3000 recusado). Não fazer merge até corrigir. Relatório: relatorios/checagens/2026-10-18-lote1.md.
+- Próximo passo exato: rodar `npm run test:e2e` com o servidor local no ar; corrigir os 5 testes; então `npm run portao` e entregar os comandos `!` de push/PR/merge-seguro.
+
+## Lote 1, fechamento (18/10/2026)
+- Portão APROVADO (relatorios/portao-20261018-1808.md): auditoria 0 falhas, build OK, unitários OK, e2e 31/31.
+- Regra do LinkedIn trocada por ordem escrita (CLAUDE.md, seção LinkedIn). Tarefa DrSM-LinkedIn-Agendar ainda NÃO criada: falta o comando `!`.
+- Próximo passo exato: rodar o comando `!` de criação da tarefa LinkedIn (ver resposta), depois `npm run merge-seguro -- <PR>` pelo Dr. Antônio.

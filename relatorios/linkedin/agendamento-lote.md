@@ -1,4 +1,4 @@
-# Lote para o agendador nativo do LinkedIn (conferido em 2026-10-18)
+# Lote para o agendador nativo do LinkedIn (conferido em 2026-10-19)
 
 - Posts de texto aprovados para agendar: **27** (de 25/11/2026 a 29/01/2027), em 6 lote(s) de até 5.
 - Carrosséis (PDF), deixados na fila manual com o lembrete das 19:25 até confirmar que o agendador aceita PDF: **6**.

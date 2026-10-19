@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-18T03:49:57.875Z",
+ "geradoEm": "2026-10-19T11:20:30.660Z",
  "regra": "longos ter/qui/sab 18h; Shorts seg/qua/sex/sab/dom 12h (Bahia)",
  "itens": [
   {
@@ -623,26 +623,23 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-burnout-na-gestao-fatores-de-risco",
+   "id": "longo-compulsao-alimentar-compras-compulsivas",
    "tipo": "longo",
-   "slug": "burnout-na-gestao-fatores-de-risco",
-   "titulo": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
+   "slug": "compulsao-alimentar-compras-compulsivas",
+   "titulo": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
    "slot": "2026-11-17T21:00:00.000Z",
-   "playlist": "Trabalho e NR-1",
-   "pasta": "carrosseis-instagram/youtube/burnout-na-gestao-fatores-de-risco",
-   "tituloYoutube": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
+   "playlist": "Corpo e Saúde Mental",
+   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar-compras-compulsivas",
+   "tituloYoutube": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
    "tags": [
     "saúde mental",
     "atenção primária à saúde",
     "medicina de família e comunidade",
     "Dr. Antônio Felipe",
-    "Empresas & RH",
-    "burnout",
-    "gestão de pessoas",
-    "risco psicossocial"
+    "Compulsões & Transtornos Alimentares"
    ],
-   "hashVideo": "00ab4daf1524f04ae519fb3782f115f840b3025714f0a92eac391117c13c5503",
-   "duracao": 383,
+   "hashVideo": "e847e053c27d0159b176f150fd62af356d1ba970b9665ff1de9f7ac27f379cf2",
+   "duracao": 198,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -677,23 +674,26 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-compulsao-alimentar-compras-compulsivas",
+   "id": "longo-burnout-na-gestao-fatores-de-risco",
    "tipo": "longo",
-   "slug": "compulsao-alimentar-compras-compulsivas",
-   "titulo": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
+   "slug": "burnout-na-gestao-fatores-de-risco",
+   "titulo": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
    "slot": "2026-11-19T21:00:00.000Z",
-   "playlist": "Corpo e Saúde Mental",
-   "pasta": "carrosseis-instagram/youtube/compulsao-alimentar-compras-compulsivas",
-   "tituloYoutube": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
+   "playlist": "Trabalho e NR-1",
+   "pasta": "carrosseis-instagram/youtube/burnout-na-gestao-fatores-de-risco",
+   "tituloYoutube": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
    "tags": [
     "saúde mental",
     "atenção primária à saúde",
     "medicina de família e comunidade",
     "Dr. Antônio Felipe",
-    "Compulsões & Transtornos Alimentares"
+    "Empresas & RH",
+    "burnout",
+    "gestão de pessoas",
+    "risco psicossocial"
    ],
-   "hashVideo": "e847e053c27d0159b176f150fd62af356d1ba970b9665ff1de9f7ac27f379cf2",
-   "duracao": 198,
+   "hashVideo": "00ab4daf1524f04ae519fb3782f115f840b3025714f0a92eac391117c13c5503",
+   "duracao": 383,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -1143,23 +1143,23 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-fadiga-compaixao-voluntariado-terceiro-setor",
+   "id": "longo-envelhecimento-ativo-isolamento-social",
    "tipo": "longo",
-   "slug": "fadiga-compaixao-voluntariado-terceiro-setor",
-   "titulo": "Fadiga da compaixão em quem trabalha por uma causa",
+   "slug": "envelhecimento-ativo-isolamento-social",
+   "titulo": "Saúde mental na terceira idade: isolamento social e preservação emocional",
    "slot": "2026-12-05T21:00:00.000Z",
    "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/fadiga-compaixao-voluntariado-terceiro-setor",
-   "tituloYoutube": "Fadiga da compaixão em quem trabalha por uma causa",
+   "pasta": "carrosseis-instagram/youtube/envelhecimento-ativo-isolamento-social",
+   "tituloYoutube": "Saúde mental na terceira idade: isolamento social e preservação emocional",
    "tags": [
     "saúde mental",
     "atenção primária à saúde",
     "medicina de família e comunidade",
     "Dr. Antônio Felipe",
-    "Terceiro Setor & Causas Sociais"
+    "Saúde Mental na Terceira Idade"
    ],
-   "hashVideo": "16b3af3ec981ae2d7ff5aaab817ac8da5799f9e5c377a77da064f8650c2852f7",
-   "duracao": 212,
+   "hashVideo": "6e5fce10f96d8152840999e8a42569451d4802878b70890d4fd693c0f2987348",
+   "duracao": 220,
    "checagem": {
     "texto": [],
     "midia": [],
@@ -1272,23 +1272,23 @@
    "status": "aprovado-checagem"
   },
   {
-   "id": "longo-envelhecimento-ativo-isolamento-social",
+   "id": "longo-fadiga-compaixao-voluntariado-terceiro-setor",
    "tipo": "longo",
-   "slug": "envelhecimento-ativo-isolamento-social",
-   "titulo": "Saúde mental na terceira idade: isolamento social e preservação emocional",
+   "slug": "fadiga-compaixao-voluntariado-terceiro-setor",
+   "titulo": "Fadiga da compaixão em quem trabalha por uma causa",
    "slot": "2026-12-10T21:00:00.000Z",
    "playlist": "Saúde Mental na APS",
-   "pasta": "carrosseis-instagram/youtube/envelhecimento-ativo-isolamento-social",
-   "tituloYoutube": "Saúde mental na terceira idade: isolamento social e preservação emocional",
+   "pasta": "carrosseis-instagram/youtube/fadiga-compaixao-voluntariado-terceiro-setor",
+   "tituloYoutube": "Fadiga da compaixão em quem trabalha por uma causa",
    "tags": [
     "saúde mental",
     "atenção primária à saúde",
     "medicina de família e comunidade",
     "Dr. Antônio Felipe",
-    "Saúde Mental na Terceira Idade"
+    "Terceiro Setor & Causas Sociais"
    ],
-   "hashVideo": "6e5fce10f96d8152840999e8a42569451d4802878b70890d4fd693c0f2987348",
-   "duracao": 220,
+   "hashVideo": "16b3af3ec981ae2d7ff5aaab817ac8da5799f9e5c377a77da064f8650c2852f7",
+   "duracao": 212,
    "checagem": {
     "texto": [],
     "midia": [],

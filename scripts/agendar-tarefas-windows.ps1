@@ -5,6 +5,8 @@
 # Resistência a interrupções (17/10/2026): SEM janela de console (wscript + rodar-oculto.vbs: não dá para fechar nem apertar Ctrl+C sem querer),
 # acorda o computador, roda assim que possível se o horário foi perdido, reinicia a cada 10 min até 3 vezes se falhar, não para ao trocar para
 # bateria, só roda com rede e não abre uma 2ª cópia se a anterior ainda estiver rodando. Sem administrador.
+# Plantão (19/10/2026): quintas e domingos, narração e YouTube gera-mídia rodam mais cedo (14:00 e 15:30). Trava diária (scripts\travaDiaria.js):
+# cada tarefa só roda uma vez por dia com sucesso, mesmo que o PC seja ligado depois do horário (StartWhenAvailable).
 param([switch]$Remover, [string]$So = '')
 $raiz = Split-Path -Parent $PSScriptRoot
 $logs = Join-Path $raiz 'relatorios\logs-agendador'
@@ -12,24 +14,51 @@ New-Item -ItemType Directory -Force $logs | Out-Null
 $node = (Get-Command node).Source
 $vbs = Join-Path $PSScriptRoot 'rodar-oculto.vbs'
 
-# nome, argumentos do node, gatilho, limite de execução (horas)
+# nome, argumentos do node, gatilho(s), limite de execução (horas)
+# Tarefas com trava diária (travaDiaria.js) rodam uma vez por dia com sucesso. Blob mensal tem trava própria; LinkedIn tem a sua (agendarDiario.js).
 $tarefas = @(
-  @{ Nome = 'DrSM-Rotina-Semanal';      Args = 'scripts/rotinaSemanal.js';                          Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 07:30); Horas = 2 },
-  @{ Nome = 'DrSM-Narracao-Noite';      Args = 'scripts/cicloNarracao.js --lotes=4';                Gatilho = (New-ScheduledTaskTrigger -Daily -At 22:00); Horas = 6 },
-  @{ Nome = 'DrSM-YouTube-Gera-Midia';  Args = 'scripts/youtube/montarFila.js --aplicar --gerar --limite=25'; Gatilho = (New-ScheduledTaskTrigger -Daily -At 23:30); Horas = 5 },
-  @{ Nome = 'DrSM-YouTube-Publica';     Args = 'scripts/youtube/publicarYoutube.js';                Gatilho = (New-ScheduledTaskTrigger -Daily -At 12:30); Horas = 1 },
+  @{ Nome = 'DrSM-Rotina-Semanal';      Args = 'scripts/travaDiaria.js DrSM-Rotina-Semanal scripts/rotinaSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 07:30); Horas = 2 },
+  # Narração: 22:00 nos dias normais; quintas e domingos 14:00 (plantão)
+  @{ Nome = 'DrSM-Narracao-Noite';      Args = 'scripts/travaDiaria.js DrSM-Narracao-Noite scripts/cicloNarracao.js --lotes=4'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Friday,Saturday -At 22:00), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Thursday,Sunday -At 14:00)); Horas = 6 },
+  # YouTube gera-mídia: 23:30 nos dias normais; quintas e domingos 15:30 (plantão)
+  @{ Nome = 'DrSM-YouTube-Gera-Midia';  Args = 'scripts/travaDiaria.js DrSM-YouTube-Gera-Midia scripts/youtube/montarFila.js --aplicar --gerar --limite=25'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Friday,Saturday -At 23:30), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Thursday,Sunday -At 15:30)); Horas = 5 },
+  @{ Nome = 'DrSM-YouTube-Publica';     Args = 'scripts/travaDiaria.js DrSM-YouTube-Publica scripts/youtube/publicarYoutube.js'; Gatilho = (New-ScheduledTaskTrigger -Daily -At 12:30); Horas = 1 },
   # Conferência diária das redes (18/10/2026): SOMENTE LEITURA, 09:30 de Salvador; grava relatorios\conferencias\AAAA-MM-DD.md e, se falhar, o alerta no topo do ESTADO-GERAL.md
-  @{ Nome = 'DrSM-Conferencia-Diaria';  Args = 'scripts/conferencias/conferenciaDiaria.js';        Gatilho = (New-ScheduledTaskTrigger -Daily -At 09:30); Horas = 1 },
-  @{ Nome = 'DrSM-Conferencia-19-10';   Args = 'scripts/conferirPosRenovacao.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-19 19:30'); Horas = 1 },
-  # Lembrete do LinkedIn (fila MANUAL, perfil pessoal): 19:25 seg/qua/sex; precisa da SUA sessão para abrir o Bloco de Notas (por isso não é S4U)
-  @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
-  @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/conferirPrimeiroPost.js';                   Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 }
+  @{ Nome = 'DrSM-Conferencia-Diaria';  Args = 'scripts/travaDiaria.js DrSM-Conferencia-Diaria scripts/conferencias/conferenciaDiaria.js'; Gatilho = (New-ScheduledTaskTrigger -Daily -At 09:30); Horas = 1 },
+  @{ Nome = 'DrSM-Conferencia-19-10';   Args = 'scripts/travaDiaria.js DrSM-Conferencia-19-10 scripts/conferirPosRenovacao.js'; Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-19 19:30'); Horas = 1 },
+  # Lembrete MANUAL do LinkedIn DESATIVADO (19/10/2026): o agendamento agora é automático. Mantido como opção comentada.
+  # @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
+  @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/travaDiaria.js DrSM-Conferencia-26-10 scripts/conferirPrimeiroPost.js'; Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 },
+  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Criada DESATIVADA: a ativação é do Dr. Antônio.
+  # Agendamento diário do LinkedIn (autorizado em 18/10/2026, CLAUDE.md): 11:00, sessão do usuário (precisa do Chrome com o perfil logado), uma execução por dia (scripts/linkedin/agendarDiario.js). Desligar: npm run linkedin:pausar
+  @{ Nome = 'DrSM-LinkedIn-Agendar';    Args = 'scripts/linkedin/agendarDiario.js';                 Gatilho = (New-ScheduledTaskTrigger -Daily -At 11:00); Horas = 1; Interativa = $true },
+  @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
+
+# O lembrete manual (versão antiga) pode continuar registrado no Windows: desativa para não disparar.
+if (-not $Remover -and -not $So) {
+  Disable-ScheduledTask -TaskName 'DrSM-LinkedIn-Lembrete' -ErrorAction SilentlyContinue | Out-Null
+  Write-Host 'desativada (se existia): DrSM-LinkedIn-Lembrete (substituído pelo agendamento automático)'
+}
+
 foreach ($t in $tarefas) {
   if ($So -and $t.Nome -ne $So) { continue }
   if ($Remover) { Unregister-ScheduledTask -TaskName $t.Nome -Confirm:$false -ErrorAction SilentlyContinue; Write-Host "removida: $($t.Nome)"; continue }
   $log = Join-Path $logs "$($t.Nome).log"
+  if ($t.Mensal) {
+    # gatilho mensal (dia 1, 03:00): o PowerShell não tem -Monthly; registra diário e troca o gatilho por XML. Criada DESATIVADA.
+    $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""
+    $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -WakeToRun -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 10) -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew -Hidden
+    Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger (New-ScheduledTaskTrigger -Daily -At 03:00) -Settings $conf -Description 'Portal Dr. Antônio Felipe (sem Claude)' -Force | Out-Null
+    $meses = 'January','February','March','April','May','June','July','August','September','October','November','December' | ForEach-Object { "<$_/>" }
+    $xml = (Export-ScheduledTask -TaskName $t.Nome) -replace '(?s)<ScheduleByDay>.*?</ScheduleByDay>', "<ScheduleByMonth><DaysOfMonth><Day>1</Day></DaysOfMonth><Months>$($meses -join '')</Months></ScheduleByMonth>"
+    $xml = $xml -replace '<StartBoundary>[^<]*</StartBoundary>', '<StartBoundary>2026-11-01T03:00:00</StartBoundary>'
+    Register-ScheduledTask -TaskName $t.Nome -Xml $xml -Force | Out-Null
+    Disable-ScheduledTask -TaskName $t.Nome | Out-Null
+    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · mensal, dia 1 às 03:00 · DESATIVADA (ativar só por ordem do Dr. Antônio)"
+    continue
+  }
   $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""
   $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -WakeToRun -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable `
     -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 10) -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew -Hidden
@@ -40,7 +69,7 @@ foreach ($t in $tarefas) {
     # lembrete que abre o Bloco de Notas na sua tela: precisa da sessão do usuário (S4U não tem tela); não exige rede
     $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew
     Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger $t.Gatilho -Settings $conf -Description $descr -Force | Out-Null
-    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · limite $($t.Horas) h · sessão do usuário (abre o Bloco de Notas na sua tela)"
+    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · limite $($t.Horas) h · sessão do usuário (StartWhenAvailable)"
     continue
   }
   try {
@@ -50,6 +79,7 @@ foreach ($t in $tarefas) {
     $modo = 'sessão do usuário (oculta; precisa estar conectado)'
     Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger $t.Gatilho -Settings $conf -Description $descr -Force | Out-Null
   }
-  Write-Host "registrada: $($t.Nome)  ($($t.Args)) · limite $($t.Horas) h · $modo"
+  if ($t.Desativada) { Disable-ScheduledTask -TaskName $t.Nome | Out-Null; $modo += ' · DESATIVADA (ativar só por ordem do Dr. Antônio)' }
+  Write-Host "registrada: $($t.Nome)  ($($t.Args)) · limite $($t.Horas) h · $modo · StartWhenAvailable"
 }
 Write-Host "`nPronto. Ver: Agendador de Tarefas > Biblioteca. Logs em $logs"
