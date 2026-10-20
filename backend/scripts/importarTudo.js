@@ -238,7 +238,13 @@ async function main() {
             agendamento: { agendado: true, slot: new Date(slot.slot), falha: '' }, criadoEm: agora, atualizadoEm: agora,
           };
           if (acao === 'recriar') await col.updateOne({ _id: d._id }, { $set: { conteudo: it.html, titulo: it.titulo, resumo: it.resumo, atualizadoEm: agora } });
-          else await col.insertOne(doc);
+          else {
+            // fonte única contra duplicidade (20/10/2026): texto novo não entra se já existir no site (banco, MDX, rotas ou similaridade)
+            const { verificarConteudo } = require('../lib/existeConteudo');
+            const dup = await verificarConteudo({ slug: it.slug, titulo: it.titulo, corpo: it.html, col });
+            if (dup.existe) { log.ignorados = log.ignorados || []; log.ignorados.push({ slug: it.slug, motivos: dup.motivos }); continue; }
+            await col.insertOne(doc);
+          }
           log.criados.push(it.slug);
         }
       } catch (e) { log.falhas.push(`${it.slug}: ${e.message}`); }

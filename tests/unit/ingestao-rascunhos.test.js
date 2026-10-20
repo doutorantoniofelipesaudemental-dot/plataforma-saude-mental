@@ -170,3 +170,26 @@ test('aprovarRevisoes grava só os elegíveis e respeita dryRun', () => {
   assert.match(fs.readFileSync(path.join(pasta, 'ok.md'), 'utf8'), /revisaoMedica: aprovada/);
   assert.match(fs.readFileSync(path.join(pasta, 'pend.md'), 'utf8'), /revisaoMedica: pendente/);
 });
+
+test('texto novo que já existe no banco (mesmo título) é recusado antes de gravar (fonte única, 20/10/2026)', async () => {
+  const modelo = modeloFalso();
+  modelo.collection = {
+    findOne: async () => null,
+    find: () => ({ toArray: async () => [{ slug: 'outro-slug', titulo: 'Guia prático de teste' }] }),
+  };
+  const r = await ing.ingerir([ler(rascunho({ slug: 'slug-novo' }))], { modelo });
+  assert.equal(r.gravados.length, 0);
+  assert.match(r.ignorados[0].motivos.join(), /título já existe no banco/);
+  assert.equal(modelo.chamadas.length, 0, 'nada gravado');
+});
+
+test('texto que já existe no banco com o mesmo slug é atualizado normalmente (fluxo de atualização preservado)', async () => {
+  const modelo = modeloFalso();
+  modelo.collection = {
+    findOne: async () => ({ _id: 'x' }),
+    find: () => ({ toArray: async () => [{ slug: 'mesmo', titulo: 'Guia prático de teste' }] }),
+  };
+  const r = await ing.ingerir([ler(rascunho({ slug: 'mesmo' }))], { modelo });
+  assert.equal(r.gravados.length, 1);
+  assert.equal(modelo.chamadas.length, 1);
+});
