@@ -26,7 +26,7 @@ async function consultar(token, caminho) {
 (async () => {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN || '';
   const contaEsperada = process.env.INSTAGRAM_ACCOUNT_ID || '';
-  const saida = { tokenPresente: Boolean(token), tipo: !token ? null : token.startsWith('IGAA') ? 'Instagram Login (IGAA) — longa duração renovável' : 'NÃO é Instagram Login (o cron de renovação não se aplica)', formatoPlausivel: /^[A-Za-z0-9_-]{60,}$/.test(token) };
+  const saida = { tokenPresente: Boolean(token), tipo: require('../../lib/instagramConta').tipoDoToken(token), formatoPlausivel: /^[A-Za-z0-9_-]{60,}$/.test(token) };
   let valido = false;
 
   if (token) {
@@ -34,7 +34,7 @@ async function consultar(token, caminho) {
     saida.aceitoPelaMeta = eu.ok;
     if (eu.ok) {
       valido = true;
-      const id = eu.dados.user_id || eu.dados.id;
+      const id = require('../../lib/instagramConta').idDaConta(eu.dados, token);
       saida.conta = { usuario: eu.dados.username || eu.dados.name || null, tipo: eu.dados.account_type || null, id };
       saida.contaBateComINSTAGRAM_ACCOUNT_ID = contaEsperada ? String(id) === String(contaEsperada) : 'INSTAGRAM_ACCOUNT_ID ausente';
     } else saida.erroDaMeta = eu.erro;

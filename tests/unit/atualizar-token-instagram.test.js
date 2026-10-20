@@ -90,3 +90,55 @@ test('dataBR: formato DD/MM/AAAA e texto quando não há data', () => {
   assert.equal(A.dataBR(null), 'não informada pela API');
   assert.equal(A.dataBR(new Date(Date.UTC(2027, 0, 5))), '05/01/2027');
 });
+
+test('obterIdConta: token IGAA lê user_id de /me no graph.instagram.com, sem o token na URL', async () => {
+  let url = '';
+  const r = await A.obterIdConta(TOKEN, { buscar: async (u) => { url = String(u); return { json: async () => ({ user_id: '17841400000000000', username: 'doutor.antoniofelipe.smental' }) }; } });
+  assert.deepEqual(r, { ok: true, id: '17841400000000000', username: 'doutor.antoniofelipe.smental' });
+  assert.match(url, /^https:\/\/graph\.instagram\.com\/me\?/);
+  assert.doesNotMatch(url, /IGAA/);
+});
+
+test('obterIdConta: token via Página (EAA) acha a conta pelo username esperado em /me/accounts', async () => {
+  const dados = { data: [{ instagram_business_account: { id: '111', username: 'outra' } }, { instagram_business_account: { id: '222', username: 'doutor.antoniofelipe.smental' } }] };
+  const r = await A.obterIdConta('EAAfake', { buscar: async () => ({ json: async () => dados }) });
+  assert.equal(r.ok, true);
+  assert.equal(r.id, '222');
+});
+
+test('obterIdConta: erro da Meta vem sem o token', async () => {
+  const r = await A.obterIdConta(TOKEN, { buscar: async () => ({ json: async () => ({ error: { code: 190, message: `token ${TOKEN} inválido` } }) }) });
+  assert.equal(r.ok, false);
+  assert.doesNotMatch(r.erro, /IGAAtesteFICTICIO/);
+});
+
+const contaCerta = async () => ({ json: async () => ({ user_id: '17841415747425012', username: 'doutor.antoniofelipe.smental' }) });
+
+test('soConta --redeploy: grava ID (.env e Vercel) e só então dispara o deploy de produção', async () => {
+  const ordem = [];
+  const r = await A.soConta({ token: TOKEN, redeploy: true, buscar: contaCerta, escreverEnv: (v) => ordem.push(['env', v]), vercel: (n, v) => { ordem.push(['vercel', n, v]); return true; }, deploy: () => { ordem.push(['deploy']); return true; } });
+  assert.equal(r, 0);
+  assert.deepEqual(ordem, [['env', '17841415747425012'], ['vercel', 'INSTAGRAM_ACCOUNT_ID', '17841415747425012'], ['deploy']]);
+});
+
+test('soConta sem --redeploy: grava o ID e NÃO dispara deploy', async () => {
+  let deploys = 0;
+  const r = await A.soConta({ token: TOKEN, buscar: contaCerta, escreverEnv: () => {}, vercel: () => true, deploy: () => { deploys++; return true; } });
+  assert.equal(r, 0);
+  assert.equal(deploys, 0);
+});
+
+test('soConta: falha na Vercel não dispara deploy', async () => {
+  let deploys = 0;
+  const r = await A.soConta({ token: TOKEN, redeploy: true, buscar: contaCerta, escreverEnv: () => {}, vercel: () => false, deploy: () => { deploys++; return true; } });
+  assert.equal(r, 1);
+  assert.equal(deploys, 0);
+});
+
+test('soConta: conta de outro username é recusada sem gravar nada', async () => {
+  let gravou = false;
+  const outra = async () => ({ json: async () => ({ user_id: '1', username: 'outra_conta' }) });
+  const r = await A.soConta({ token: TOKEN, redeploy: true, buscar: outra, escreverEnv: () => { gravou = true; }, vercel: () => { gravou = true; return true; }, deploy: () => { gravou = true; return true; } });
+  assert.equal(r, 1);
+  assert.equal(gravou, false);
+});

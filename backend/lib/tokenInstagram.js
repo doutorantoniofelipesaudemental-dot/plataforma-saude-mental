@@ -182,9 +182,8 @@ async function renovarTokenInstagram() {
 
   let dados;
   try {
-    const resp = await fetch(`${URL_RENOVACAO}?grant_type=ig_refresh_token`, {
-      headers: { Authorization: `Bearer ${atual}` },
-    });
+    // A Meta exige access_token na QUERY neste endpoint (sem ele: HTTP 400 / código 100). O token não entra em log: lib/log.js redige.
+    const resp = await fetch(`${URL_RENOVACAO}?` + new URLSearchParams({ grant_type: 'ig_refresh_token', access_token: atual }));
     dados = await resp.json();
     if (!resp.ok || dados.error || !dados.access_token) {
       const e = dados.error || {};

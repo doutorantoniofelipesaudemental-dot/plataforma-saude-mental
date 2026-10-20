@@ -32,9 +32,8 @@ test('renova o token de longa duração (60 dias), grava renovadoEm/expiraEm e g
   try {
     const r = await token.renovarTokenInstagram();
     assert.equal(r.renovado, true);
-    assert.match(t.chamadas[0].url, /graph\.instagram\.com\/refresh_access_token\?grant_type=ig_refresh_token/);
-    assert.equal(t.chamadas[0].auth, 'Bearer ***', 'token só no cabeçalho Authorization, nunca na URL');
-    assert.doesNotMatch(t.chamadas[0].url, /IGAA_token/); // segredos:permitir (valor fictício de teste)
+    assert.match(t.chamadas[0].url, /graph\.instagram\.com\/refresh_access_token\?grant_type=ig_refresh_token&access_token=/);
+    assert.equal(t.chamadas[0].auth, null, 'a Meta exige access_token na QUERY neste endpoint (sem ele: código 100)');
     const g = t.gravado.at(-1);
     assert.ok(g.renovadoEm instanceof Date, 'grava renovadoEm');
     const dias = Math.round((g.expiraEm - g.renovadoEm) / DIA);

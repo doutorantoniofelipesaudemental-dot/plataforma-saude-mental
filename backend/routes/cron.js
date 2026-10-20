@@ -109,4 +109,19 @@ router.get('/renovar-token-instagram', exigirCron, exigirBanco, async (req, res)
   }
 });
 
+/**
+ * GET /api/cron/diagnostico-instagram — diário às 20:00 de Salvador (23:00 UTC). Valida o próximo post da fila SEM publicar
+ * e guarda o resultado. Responde só { ok, postId, falhas } (sem token nem IDs). Nunca publica.
+ */
+router.get('/diagnostico-instagram', exigirCron, exigirBanco, async (req, res) => {
+  try {
+    const { executarDiagnostico, salvarNoBanco } = require('../lib/diagnosticoPublicacao');
+    const r = await executarDiagnostico({ salvar: salvarNoBanco });
+    res.json({ ok: r.ok, postId: r.postId, falhas: r.falhas });
+  } catch (err) {
+    log.erro('[diagnostico-instagram] erro inesperado:', err);
+    res.status(500).json({ ok: false, erro: 'Falha inesperada no diagnóstico.' });
+  }
+});
+
 module.exports = router;
