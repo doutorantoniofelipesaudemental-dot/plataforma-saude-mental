@@ -233,3 +233,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - PR de fim de linha (.gitattributes): aguardando push/PR/merge do Dr. Antônio.
 - PR de backup do estado + fila manual + ZIPs: portão e merge pendentes.
 - Aguardando ordem: (a) 11 reprovados da fila manual (cap.ass em 9 Shorts; encerramento falado em 2 longos); (b) importar os 24 textos novos do referencias-140-prontas; (c) descartar ou manter o importacao-extra-180 (recomendação: manter arquivado).
+
+## Decisões de 20/10/2026 (fim de sessão)
+- Trava de duplicidade no LinkedIn e no YouTube: PR em fix/trava-duplicidade-agendadores-20261020. Portão aprovado (relatorios/portao-20261020-0733.md).
+- Aguardando o Dr. Antônio: (a) método de regeração dos 11 reprovados (gerador direto ou lote noturno); (b) decisões dos 24 textos novos: ferramentas interativas e <script>, identificação e aviso no corpo, e os 7 textos com menos de 4 DOIs.
+- Tarefa DrSM-LinkedIn-Agendar: desativada; reativar só depois de reconciliar e revisar o trabalho desta semana.

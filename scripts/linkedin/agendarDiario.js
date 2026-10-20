@@ -12,6 +12,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const consumo = require('../consumoClaude');
+const mongoose = require('mongoose');
+const { lerContagens, confirmarUmAgendado } = require('./travaDuplicidade');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const ESTADO = path.join(RAIZ, 'relatorios/linkedin/agendar-diario-estado.json');
@@ -74,6 +76,7 @@ const hojeBahia = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0,
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function main() {
+  await mongoose.connect(process.env.MONGODB_URI, { dbName: process.env.MONGODB_DB || 'drsaudemental', serverSelectionTimeoutMS: 10000 }).catch(() => null);
   const simular = process.argv.includes('--simular');
   const hoje = hojeBahia();
   const estado = lerEstado();
@@ -104,6 +107,13 @@ async function main() {
       console.log(`não chamado: ${teto.motivo}`);
       return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: teto.motivo, agendados });
     }
+    // trava de duplicidade (banco): antes da chamada, conta; se não conseguir ler, não chama
+    let antes;
+    try { antes = await lerContagens(mongoose); } catch (e) {
+      alertar(`banco ilegível antes do agendamento (${String(e.message).slice(0, 80)}); parado para evitar duplicidade`, hoje);
+      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'banco ilegível', agendados });
+    }
+    if (antes.abertos === 0) { gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados }); return console.log('nenhum item aberto no banco. Nada feito.'); }
     const r = spawnSync('claude', ['-p'], { cwd: RAIZ, input: prompt, encoding: 'utf8', shell: true, timeout: 900000 });
     const saida = `${r.stdout || ''}\n${r.stderr || ''}`;
     // registra DEPOIS, mesmo se a chamada falhou (a cota já foi usada)
@@ -118,6 +128,13 @@ async function main() {
       alertar(`agendamento parado: ${c.motivo}. ${agendados} post(s) agendado(s) hoje.`, hoje);
       return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: c.motivo, agendados, desativadaAutomaticamente: c.desativar });
     }
+    // trava de duplicidade (banco): depois da chamada, exatamente 1 item tem que ter saído de aberto para agendado
+    let depois;
+    try { depois = await lerContagens(mongoose); } catch (e) { depois = null; }
+    if (!depois || !confirmarUmAgendado(antes, depois)) {
+      alertar(`banco não confirmou exatamente 1 agendamento (antes ${antes.agendados}/${antes.abertos}, depois ${depois ? `${depois.agendados}/${depois.abertos}` : 'ilegível'}). Parado para evitar duplicidade; conferir o LinkedIn e o banco`, hoje);
+      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'banco não confirmou', agendados: agendados + (depois && depois.agendados > antes.agendados ? 1 : 0) });
+    }
     agendados += 1;
   }
   gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados });
@@ -126,4 +143,4 @@ async function main() {
 
 module.exports = { classificarSaida, jaRodouHoje, limitarPosts, MAX_POSTS, INTERVALO_MS };
 
-if (require.main === module) main().catch((e) => { console.error('ERRO:', e.message); process.exit(1); });
+if (require.main === module) main().catch((e) => { console.error('ERRO:', e.message); process.exit(1); }).finally(() => mongoose.disconnect());

@@ -18,6 +18,7 @@ const { redesAtivas } = require('../../backend/lib/freioRedes');
 const simular = process.argv.includes('--simular');
 const max = Math.min(4, Number((process.argv.find((a) => a.startsWith('--max=')) || '--max=2').split('=')[1]));
 const idArg = (process.argv.find((a) => a.startsWith('--id=')) || '').split('=')[1]; // publicar-seguro: só este item (ignora o horário)
+const TRAVA = require('./travaDuplicidadeYoutube');
 const FILA = path.join(L.REL, 'fila.json'), LOG = path.join(L.REL, 'publicacao-log.md'), PLAYLISTS = path.join(L.REL, 'playlists.json');
 const log = (t) => { fs.mkdirSync(L.REL, { recursive: true }); fs.appendFileSync(LOG, `${fs.existsSync(LOG) ? '' : '# Log de publicação do YouTube\n'}\n- ${new Date().toISOString()} · ${t}\n`, 'utf8'); console.log(t); };
 
@@ -51,9 +52,11 @@ async function extras(token, id, item, meta, dir) {
   const devidos = fila.itens.filter((i) => i.status === 'aprovado-checagem' && (idArg ? i.id === idArg : new Date(i.slot).getTime() <= agora)).sort((a, b) => new Date(a.slot) - new Date(b.slot)).slice(0, max);
   if (!devidos.length) return log('nada devido agora.');
   const token = simular ? null : await yt.obterAccessToken();
+  const registrados = mongoose.connection.db.collection(TRAVA.COLECAO);
   for (const it of devidos) {
     const dir = path.join(L.RAIZ, it.pasta);
     try {
+      if (await TRAVA.jaRegistrado(registrados, it.id)) { Object.assign(it, { status: 'publicado' }); log(`JÁ PUBLICADO (banco) ${it.id}: não sobe de novo`); continue; }
       const texto = await artigos.findOne({ slug: it.slug }, { projection: { publicado: 1 } });
       if (!texto || texto.publicado !== true) { log(`AGUARDANDO ${it.id}: o texto ${it.slug} ainda não está publicado no site`); continue; }
       const meta = JSON.parse(fs.readFileSync(path.join(dir, 'meta.json'), 'utf8'));
@@ -64,6 +67,9 @@ async function extras(token, id, item, meta, dir) {
       if (bloqueios.length) { it.status = 'bloqueado'; it.motivo = bloqueios.join(' | '); log(`BLOQUEADO ${it.id}: ${it.motivo}`); continue; }
       if (simular) { log(`SIMULAÇÃO: publicaria ${it.id} (${it.tipo}) agendado para ${it.slot}`); continue; }
       const r = await yt.enviarVideo({ arquivo: arq, titulo: meta.titulo, descricao: meta.descricao, tags: meta.tags, privacidade: 'public', short: it.tipo === 'short' });
+      // registra no banco ANTES de qualquer outra coisa: se falhar, o vídeo já está no ar e o lote para aqui
+      try { await TRAVA.registrar(registrados, { id: it.id, youtubeId: r.id, publicadoEm: new Date().toISOString() }); }
+      catch (e) { log(`ATENÇÃO: ${it.id} foi enviado (${r.id}) mas NÃO registrado no banco: ${e.message.slice(0, 80)}. Parado.`); break; }
       const notas = await extras(token, r.id, it, meta, dir);
       Object.assign(it, { status: 'publicado', youtubeId: r.id, publicadoEm: new Date().toISOString(), privacidadeAplicada: r.privacidade });
       log(`PUBLICADO ${it.id} → ${r.link} · privacidade aplicada: ${r.privacidade} · ${notas.join('; ')}${r.privacidade !== 'public' ? ' · ATENÇÃO: projeto do Google Cloud não verificado deixa o vídeo privado (ver PASSO-A-PASSO)' : ''}`);
