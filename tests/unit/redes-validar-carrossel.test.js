@@ -82,7 +82,10 @@ test('publicação: container do carrossel com ERROR → nada é publicado (nunc
 
 test('código: o modo --validar não referencia media_publish; liberar exige validação aprovada; o publicador tem trava e adia em falha', () => {
   const t = ler('backend/scripts/redes/testeCarrossel.js');
-  const trechoValidar = t.slice(t.indexOf('async function validarPost'), t.indexOf('async function preparar'));
+  // a validação foi movida para backend/lib/redesV2/validacaoCarrossel.js (também usada pelo diagnóstico da Vercel); a guarda é a mesma
+  const v = ler('backend/lib/redesV2/validacaoCarrossel.js');
+  const trechoValidar = v.slice(v.indexOf('async function validarPostNoInstagram'), v.indexOf('/** Próximo post da fila'));
+  assert.match(t, /validarPostNoInstagram: validarPost/);
   assert.ok(trechoValidar.length > 500);
   assert.doesNotMatch(trechoValidar, /media_publish|publicarCarrosselNoInstagram/);
   assert.match(t, /sem validação aprovada em todos os posts/);

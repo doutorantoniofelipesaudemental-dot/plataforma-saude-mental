@@ -91,3 +91,6 @@ relatorios/linkedin/agendamento-lote.simulacao.md
 
 # YouTube: estado da regeração de mídia (gravado pela tarefa noturna; INDICE.md é atualizado pelo Claude Code)
 relatorios/youtube/reprovados/estado-regeracao.json
+
+# temporários da sessão (ordem 20/10/2026): nunca versionar
+.tmp/

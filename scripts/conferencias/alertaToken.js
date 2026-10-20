@@ -14,3 +14,14 @@ function alertaTokenInstagram({ hoje, expiraEm }) {
 }
 
 module.exports = { alertaTokenInstagram };
+
+// Diagnóstico diário da Vercel (diagnosticos_publicacao): sem resultado recente ou com falha = alerta com ação.
+function alertaDiagnostico({ agora, diag }) {
+  if (!diag || !diag.executadoEm) return { texto: 'PRECISA DE VOCÊ: diagnóstico da Vercel (token e ID) não rodou ainda. Verificar o cron diagnostico-instagram', acao: true, primeira: true };
+  const horas = (new Date(agora) - new Date(diag.executadoEm)) / 3600e3;
+  if (horas > 30) return { texto: `PRECISA DE VOCÊ: diagnóstico da Vercel sem resultado há ${Math.round(horas)} h`, acao: true, primeira: true };
+  if (!diag.ok) return { texto: `PRECISA DE VOCÊ: diagnóstico da Vercel reprovou o próximo post (${diag.postId || 'sem post'}): ${(diag.falhas || []).join(' | ').slice(0, 140)}`, acao: true, primeira: true };
+  return null;
+}
+
+module.exports.alertaDiagnostico = alertaDiagnostico;

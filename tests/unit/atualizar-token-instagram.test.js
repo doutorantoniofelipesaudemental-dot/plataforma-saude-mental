@@ -111,3 +111,34 @@ test('obterIdConta: erro da Meta vem sem o token', async () => {
   assert.equal(r.ok, false);
   assert.doesNotMatch(r.erro, /IGAAtesteFICTICIO/);
 });
+
+const contaCerta = async () => ({ json: async () => ({ user_id: '17841415747425012', username: 'doutor.antoniofelipe.smental' }) });
+
+test('soConta --redeploy: grava ID (.env e Vercel) e só então dispara o deploy de produção', async () => {
+  const ordem = [];
+  const r = await A.soConta({ token: TOKEN, redeploy: true, buscar: contaCerta, escreverEnv: (v) => ordem.push(['env', v]), vercel: (n, v) => { ordem.push(['vercel', n, v]); return true; }, deploy: () => { ordem.push(['deploy']); return true; } });
+  assert.equal(r, 0);
+  assert.deepEqual(ordem, [['env', '17841415747425012'], ['vercel', 'INSTAGRAM_ACCOUNT_ID', '17841415747425012'], ['deploy']]);
+});
+
+test('soConta sem --redeploy: grava o ID e NÃO dispara deploy', async () => {
+  let deploys = 0;
+  const r = await A.soConta({ token: TOKEN, buscar: contaCerta, escreverEnv: () => {}, vercel: () => true, deploy: () => { deploys++; return true; } });
+  assert.equal(r, 0);
+  assert.equal(deploys, 0);
+});
+
+test('soConta: falha na Vercel não dispara deploy', async () => {
+  let deploys = 0;
+  const r = await A.soConta({ token: TOKEN, redeploy: true, buscar: contaCerta, escreverEnv: () => {}, vercel: () => false, deploy: () => { deploys++; return true; } });
+  assert.equal(r, 1);
+  assert.equal(deploys, 0);
+});
+
+test('soConta: conta de outro username é recusada sem gravar nada', async () => {
+  let gravou = false;
+  const outra = async () => ({ json: async () => ({ user_id: '1', username: 'outra_conta' }) });
+  const r = await A.soConta({ token: TOKEN, redeploy: true, buscar: outra, escreverEnv: () => { gravou = true; }, vercel: () => { gravou = true; return true; }, deploy: () => { gravou = true; return true; } });
+  assert.equal(r, 1);
+  assert.equal(gravou, false);
+});

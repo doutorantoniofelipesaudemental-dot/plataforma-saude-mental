@@ -220,7 +220,7 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Regra do LinkedIn trocada por ordem escrita (CLAUDE.md, seção LinkedIn). Tarefa DrSM-LinkedIn-Agendar ainda NÃO criada: falta o comando `!`.
 - Próximo passo exato: rodar o comando `!` de criação da tarefa LinkedIn (ver resposta), depois `npm run merge-seguro -- <PR>` pelo Dr. Antônio.
 
-## Instagram — token e conta (20/10/2026)
-- Token: Instagram Login (IGAA), válido. Conta @doutor.antoniofelipe.smental, ID 17841415747425012 (falta gravar: `--so-conta`).
-- Prova: validar do carrossel de 26/10 OK, sem publicar.
-- Próximo passo: rodar `--so-conta` no PowerShell; abrir PR da branch fix/instagram-conta-token-20261020 (portão aprovado); depois do merge, o cron de renovação passa a enviar o token na query.
+## Instagram — token, conta e diagnóstico (20/10/2026, fim de sessão)
+- Token IGAA válido; conta @doutor.antoniofelipe.smental; ID 17841415747425012 (ainda não gravado no .env/Vercel).
+- Pendências do Dr. Antônio, nesta ordem: 1) CRON_SECRET no .env local; 2) `node --env-file-if-exists=.env scripts/instagram/atualizarToken.js --so-conta`; 3) habilitar DrSM-Renovar-Token-Inicial (21/10); 4) push, PR e merge-seguro do branch fix/instagram-conta-token-20261020.
+- Após o merge: a conferência de 21/10 e a véspera de 26/10 (25/10 20:00) mostram o diagnóstico.

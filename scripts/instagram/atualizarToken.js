@@ -88,20 +88,35 @@ async function obterIdConta(token, { buscar = fetch } = {}) {
 }
 
 // --so-conta: lê o token do .env (sem pedir), descobre o ID da @doutor.antoniofelipe.smental e grava INSTAGRAM_ACCOUNT_ID.
-async function soConta({ buscar = fetch } = {}) {
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN || '';
+// Deploy de produção do projeto drsaudemental (só com --redeploy, depois de gravar o ID).
+function dispararDeploy() {
+  const d = spawnSync('vercel', ['deploy', '--prod', '--yes'], { cwd: RAIZ, shell: true, encoding: 'utf8', timeout: 900000 });
+  return d.status === 0;
+}
+
+async function soConta({ token = process.env.INSTAGRAM_ACCESS_TOKEN || '', redeploy = false, buscar = fetch, vercel = atualizarVercelVar, deploy = dispararDeploy, escreverEnv } = {}) {
   if (!token) { console.log('INSTAGRAM_ACCESS_TOKEN ausente no .env. Nada gravado.'); return 1; }
   const achado = await obterIdConta(token, { buscar });
   if (!achado.ok) { console.log(`ID não encontrado: ${achado.erro}. Nada gravado.`); return 1; }
   if (achado.username !== CONTA_ESPERADA) { console.log(`Conta do token é @${achado.username}, não @${CONTA_ESPERADA}. Nada gravado.`); return 1; }
   console.log(`ID encontrado para @${achado.username}.`);
-  const arq = path.join(RAIZ, '.env');
-  const atual = fs.existsSync(arq) ? fs.readFileSync(arq, 'utf8') : '';
-  fs.writeFileSync(arq, atualizarEnv(atual, achado.id, 'INSTAGRAM_ACCOUNT_ID'), 'utf8');
+  const gravarLocal = escreverEnv || ((valor) => {
+    const arq = path.join(RAIZ, '.env');
+    const atual = fs.existsSync(arq) ? fs.readFileSync(arq, 'utf8') : '';
+    fs.writeFileSync(arq, atualizarEnv(atual, valor, 'INSTAGRAM_ACCOUNT_ID'), 'utf8');
+  });
+  gravarLocal(achado.id);
   console.log('.env local: INSTAGRAM_ACCOUNT_ID gravado.');
-  const vercelOk = atualizarVercelVar('INSTAGRAM_ACCOUNT_ID', achado.id);
+  const vercelOk = vercel('INSTAGRAM_ACCOUNT_ID', achado.id);
   console.log(`Vercel (produção): ${vercelOk ? 'INSTAGRAM_ACCOUNT_ID gravado' : 'FALHOU (faça login no CLI da Vercel ou atualize pela interface)'}.`);
-  return vercelOk ? 0 : 1;
+  if (!vercelOk) return 1;
+  if (redeploy) {
+    const ok = deploy();
+    console.log(`Redeploy de produção: ${ok ? 'disparado' : 'FALHOU'}.`);
+    return ok ? 0 : 1;
+  }
+  console.log('Redeploy não disparado (use --redeploy para disparar).');
+  return 0;
 }
 
 // Pergunta com entrada oculta: só o texto da pergunta aparece na tela.
@@ -128,7 +143,7 @@ async function principal() {
   try { projeto = JSON.parse(fs.readFileSync(path.join(RAIZ, '.vercel', 'project.json'), 'utf8')); } catch { /* ausente */ }
   const permissao = projetoPermitido(projeto);
   if (!permissao.ok) { console.log(`Recusado: ${permissao.motivo}. Nada foi gravado.`); return 1; }
-  if (process.argv.includes('--so-conta')) return soConta();
+  if (process.argv.includes('--so-conta')) return soConta({ redeploy });
   const token = await pedirOculto('Cole o token novo (entrada oculta) e tecle Enter: ');
   if (!token) { console.log('Nenhum token informado. Nada feito.'); return 1; }
   const me = await validarMe(token);
@@ -154,4 +169,4 @@ if (require.main === module) {
   principal().then((c) => { process.exitCode = c; }).catch((e) => { console.log(`Erro: ${redigir(e.message, process.env.INSTAGRAM_ACCESS_TOKEN || '')}`); process.exitCode = 1; });
 }
 
-module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, obterIdConta, PROJETO_OFICIAL_ID };
+module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, obterIdConta, soConta, PROJETO_OFICIAL_ID };
