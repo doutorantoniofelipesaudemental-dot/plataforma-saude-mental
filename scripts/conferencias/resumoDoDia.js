@@ -10,12 +10,15 @@ const MAX_LINHAS = 15;
 const DIA_MS = 24 * 3600e3;
 
 // Função pura (testável): monta as linhas a partir dos dados já coletados.
-function montarResumo({ hoje, publicadosOntem = [], saiHoje = [], alertas = [] }) {
+// pendentesOllama: itens "aguardando Ollama" (pendentes, nunca aprovados nem reprovados por omissão).
+function montarResumo({ hoje, publicadosOntem = [], saiHoje = [], alertas = [], pendentesOllama = 0 }) {
   const acoes = alertas.filter((a) => a.acao);
+  const primeira = alertas.find((a) => a.primeira);
   const linhas = [
-    acoes.length
+    primeira ? primeira.texto : acoes.length
       ? `PRECISA DE VOCÊ: SIM — ${acoes[0].texto}`
       : 'PRECISA DE VOCÊ: NÃO',
+    ...(pendentesOllama ? [`Aguardando Ollama: ${pendentesOllama} item(ns), pendentes (não decididos)`] : []),
     `Resumo de ${hoje} (Portal e redes)`,
     `Publicado ontem: ${publicadosOntem.length ? publicadosOntem.join(', ') : 'nada'}`,
     `Sai hoje: ${saiHoje.length ? saiHoje.join(', ') : 'nada agendado'}`,
