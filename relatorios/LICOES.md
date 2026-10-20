@@ -8,3 +8,5 @@
 - **`publicadoEm` obrigatório para renderizar (20/10):** sem esse campo, a página falha ("Invalid time value"). Lição: copiar do registro existente, não inventar campos.
 - **Importação gravada antes da conferência de duplicidade (20/10):** 17 e depois 9 rascunhos foram inseridos e desfeitos, com backup antes. Lição: conferência de duplicidade antes de qualquer gravação, nunca depois.
 - **Diretório do shell muda com `cd` (20/10):** comandos seguintes rodaram na pasta errada. Lição: usar caminhos absolutos.
+- **Rebaixei 7 vídeos sem olhar a pasta do pipeline (20/10):** marquei como reprovados itens que o conferidor do pipeline já tinha aprovado (cap.ass presente, hash igual). O erro foi confiar na cópia da fila manual, que não traz o cap.ass. Lição: antes de mudar status, comparar hash e pasta de origem. Revertido: os 7 voltaram a aprovado-checagem e saíram da lista noturna.
+- **Cache do conferidor ignorava a legenda (20/10):** o cache era indexado só pelo hash do vídeo. Corrigido com a assinatura vídeo + legenda. Lição: todo cache precisa de uma chave que cubra todas as entradas do resultado.

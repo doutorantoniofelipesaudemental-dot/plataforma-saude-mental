@@ -129,7 +129,7 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
     // conferência automática do vídeo (quadros, crédito, assinatura, marca d'água, legenda, vinheta falada); reprovado vai para relatorios/youtube/reprovados/
     const conf = await conferirVideo(dir, meta);
     it.checagem.video = conf.falhas;
-    const statusCalc = !meta.checagemTexto.length && !meta.checagemMidia.length && conf.ok ? 'aprovado-checagem' : 'reprovado';
+    const statusCalc = require('./conferirVideo').statusPelaConferencia(conf, meta); // única regra: só o conferidor, com o hash conferido
     it.status = regeracao.statusComGate(it.id, statusCalc, regeracao.lerEstado().itens); // regerados só publicam depois de T2/T3 e calibração
     if (it.status === 'reprovado' && conf.falhas.length) {
       const rep = path.join(L.REL, 'reprovados', it.id); fs.mkdirSync(rep, { recursive: true });
