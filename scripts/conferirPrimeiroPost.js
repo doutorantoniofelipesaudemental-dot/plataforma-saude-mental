@@ -26,7 +26,7 @@ const { obterTokenInstagram } = require('../backend/lib/tokenInstagram');
   let link = null;
   if (publicado && post.instagramId) {
     const token = await obterTokenInstagram();
-    const j = await fetch(`https://graph.instagram.com/v21.0/${post.instagramId}?fields=permalink,caption,timestamp,media_type`, { headers: { Authorization: `Bearer ${token}` } }).then((r) => r.json());
+    const j = await fetch(`${require('../backend/lib/instagramHost').baseGraph(token)}/${post.instagramId}?fields=permalink,caption,timestamp,media_type`, { headers: { Authorization: `Bearer ${token}` } }).then((r) => r.json());
     if (j.error) falhas.push(`Meta não devolveu o post (código ${j.error.code}): ${String(j.error.message).slice(0, 100)}`);
     else { link = j.permalink; legenda = j.caption || legenda; linhas.push(`- Link: ${link}`, `- Tipo: ${j.media_type}`); }
   }

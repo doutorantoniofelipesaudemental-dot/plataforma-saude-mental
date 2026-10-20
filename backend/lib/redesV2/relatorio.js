@@ -18,7 +18,7 @@ async function insights(instagramId) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   if (!instagramId || !token) return null;
   try {
-    const host = `https://${token.startsWith('IGAA') ? 'graph.instagram.com' : 'graph.facebook.com'}/v21.0`; // mesma regra de socialPublisher.graphBase
+    const host = `https://${require('../instagramHost').hostDoToken(token)}/v21.0`; // mesma regra de socialPublisher.graphBase
     const r = await fetch(`${host}/${instagramId}/insights?metric=reach,saved,shares,total_interactions`, { headers: { Authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(10000) });
     if (!r.ok) return null;
     const j = await r.json();

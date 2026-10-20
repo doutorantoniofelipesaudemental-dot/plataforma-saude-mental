@@ -14,7 +14,7 @@ const DIA = 86400e3;
 const fmt = (d) => (d ? new Date(d).toISOString().slice(0, 10) : null);
 
 async function consultar(token, caminho) {
-  const host = token.startsWith('IGAA') ? 'graph.instagram.com' : 'graph.facebook.com';
+  const host = require('../../lib/instagramHost').hostDoToken(token);
   try {
     const r = await fetch(`https://${host}/v21.0/${caminho}`, { headers: { Authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(15000) });
     const j = await r.json();

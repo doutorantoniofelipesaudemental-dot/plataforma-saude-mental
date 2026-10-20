@@ -1,3 +1,4 @@
+> **ALERTA: token do Instagram inválido (190); fila pausada até novo token.** Atualizado em 20/10/2026.
 # PROMPT ATUAL (salvo em 16/10/2026 para sobreviver ao /clear)
 
 ## ESTADO REAL (19/10/2026, lote 2) — leia primeiro

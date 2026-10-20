@@ -26,7 +26,7 @@ async function publicarStory({ imagemUrl }) {
   require('../../freioRedes').exigirRedesAtivas('publicação de Story no Instagram');
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   const conta = process.env.INSTAGRAM_ACCOUNT_ID;
-  const base = `https://graph.${process.env.INSTAGRAM_GRAPH_HOST || 'facebook.com'}/${process.env.INSTAGRAM_GRAPH_VERSAO || 'v21.0'}`;
+  const base = require('../../instagramHost').baseGraph(token, process.env); // mesma regra do socialPublisher
   const cab = { 'Content-Type': 'application/x-www-form-urlencoded', Authorization: `Bearer ${token}` };
   const c = await (await fetch(`${base}/${conta}/media`, { method: 'POST', headers: cab, body: new URLSearchParams({ image_url: imagemUrl, media_type: 'STORIES' }) })).json();
   if (!c.id) throw new Error(`Instagram recusou o container do Story: ${c.error?.message || 'sem id'}`);
