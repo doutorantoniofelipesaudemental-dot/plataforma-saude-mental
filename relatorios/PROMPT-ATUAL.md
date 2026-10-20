@@ -224,3 +224,7 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Merge feito, deploy Ready. ID da conta gravado (Vercel e .env). Renovação semanal pelo cron de segunda 12:00 UTC (26/10); a conferência de 26/10 confere renovadoEm/expiraEm.
 - Diagnóstico diário 23:00 UTC; primeira execução real 25/10 às 20:00.
 - Próximo passo: ordem do Dr. Antônio sobre a limpeza da árvore de trabalho (PR próprio para mudanças reais; .gitignore para gerados).
+
+## Limpeza da árvore (20/10/2026)
+- Branch chore/limpeza-gerados-20261020: 68 gerados saem do índice (no disco), .gitignore atualizado, ZIPs em arquivo/. Portão APROVADO (relatorios/portao-20261020-0634.md).
+- Pendente: decidir sobre as pastas novas de fila-manual e aprovar a normalização de fim de linha (PR separado).
