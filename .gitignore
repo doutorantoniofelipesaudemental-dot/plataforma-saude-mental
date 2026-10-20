@@ -84,3 +84,10 @@ relatorios/linkedin/POST-DE-HOJE.md
 # Instagram: fila manual (arquivos gerados) e estado do teste do carrossel
 relatorios/redes/fila-manual/
 relatorios/redes/teste-carrossel/estado.json
+
+# LinkedIn: simulações do lote (não rastreadas; o lote rastreado só muda em execução real)
+relatorios/linkedin/agendamento-lote.simulacao.json
+relatorios/linkedin/agendamento-lote.simulacao.md
+
+# YouTube: estado da regeração de mídia (gravado pela tarefa noturna; INDICE.md é atualizado pelo Claude Code)
+relatorios/youtube/reprovados/estado-regeracao.json

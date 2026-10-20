@@ -139,7 +139,11 @@ function alertaNoEstadoGeral() {
     const resumo = require('./resumoDoDia');
     const dados = await resumo.coletar(d, hoje);
     const alertas = [...falhas.map((texto) => ({ texto, acao: true })), ...avisos.map((texto) => ({ texto, acao: false }))];
-    resumo.gravar(resumo.montarResumo({ hoje, ...dados, alertas }));
+    const { alertaValidade, lerVenceEm } = require('../youtube/validadeAutorizacao');
+    const { contarPendentes } = require('../ollamaStatus');
+    const validade = alertaValidade({ hoje, venceEm: lerVenceEm() });
+    const pendentesOllama = contarPendentes(path.join(RAIZ, 'relatorios/youtube/reprovados/estado-regeracao.json'));
+    resumo.gravar(resumo.montarResumo({ hoje, ...dados, alertas: [...(validade ? [validade] : []), ...alertas], pendentesOllama }));
   } catch (e) { console.error(`resumo do dia não gerado: ${e.message}`); }
   alertaNoEstadoGeral();
   if (falhas.length) { // e-mail só se RESEND_API_KEY existir (desligado até lá)

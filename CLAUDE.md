@@ -208,3 +208,13 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - O6. Quem revisa por último é o Claude Code, lendo só o relatório consolidado das checagens (máx. 20 linhas), não os textos inteiros.
 - a) O gemma2:9b NÃO deve gerar tabelas nem estruturas com colunas. Use-o só para triagem em JSON e resumos curtos de texto corrido. Tabelas e relatórios com fatos são montados pelo Claude Code direto a partir de grep, sem rascunho do modelo local. Ao capturar saída de modelo local, remova códigos de terminal antes de gravar (ex.: `sed 's/\x1b\[[0-9;?]*[a-zA-Z]//g'`).
 - c) A aprovação do gemma2:9b é só de triagem. Quem confere o conteúdo é o Claude Code.
+
+## Vídeos reprovados (19/10/2026)
+- Vídeos reprovados não se apagam nem se movem; são reaproveitados (classes F, R, C, D, X).
+- Aprovados em T1, T2, T3 e auditoria geral entram no final da fila; sem alterar a ordem dos demais.
+- Mudança de sentido clínico só com aprovação do Dr. Antônio; a geração de mídia fica com a tarefa noturna existente, e sem mecanismo seguro de enfileirar o item fica em PENDENTES.md.
+
+## Autorizações (19/10/2026)
+- Registro datado das ordens escritas do Dr. Antônio em relatorios/AUTORIZACOES.md. Só o que está copiado de ordem escrita vale; o Claude Code não amplia nem reinterpreta.
+
+- Regeração dos reprovados: lotes de 6 pela tarefa noturna, com backup SHA-256 em backups/ e freio de 50% de falha em duas noites. Regerado só publica depois de T2/T3 e calibração. Estado fora do git (ver relatorios/PENDENTES.md).

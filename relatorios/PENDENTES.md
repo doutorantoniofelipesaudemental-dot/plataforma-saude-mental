@@ -65,3 +65,23 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 ## Vídeos reprovados (19/10/2026, decisão C do Dr. Antônio)
 - [x] As 54 entradas da fila (relatorios/youtube/fila.json) foram marcadas como "reprovado" (o publicador ignora esse status). Fila ativa: 55 itens aprovado-checagem. Pastas intocadas.
 - [ ] Fase 2 (reforma em lotes de 6, começando pelas F de assinatura falada): aguarda ordem. Índice em relatorios/youtube/reprovados/INDICE.md.
+
+## Fase 2 dos vídeos reprovados (19/10/2026, ordem do Dr. Antônio)
+- [ ] 54 vídeos F (forma) aguardam geração de mídia. Nada foi aprovado nem reformado. Detalhes em relatorios/youtube/reprovados/PLANO.md.
+- [ ] Decidir o mecanismo: o montarFila só gera quando meta.json não existe, e não há forma segura de enfileirar regeração sem apagar ou mover. Opções para o Dr. Antônio escolher: (a) PR com flag de regeração por item, em Classe 2; (b) manter parado até a revisão do gerador.
+- [ ] Confirmar a causa antes de regerar: `L.comVinheta` e `L.comAssinaturaFalada` (scripts/youtube/gerarVideosLongos.js) produzem a vinheta falada nos 54? Se não, regerar repete o defeito.
+- [ ] Ollama fora do ar (127.0.0.1:11434). Iniciar o serviço antes de qualquer T2/T3 local.
+- [ ] Os 54 seguem fora da fila ativa (status reprovado) até a regeração passar em conferirVideo.
+
+## Destravamento dos 54 vídeos (19/10/2026, ordem do Dr. Antônio)
+- [ ] Merge do PR da branch feat/reaproveitar-fase2-20261019 (código de regeração, travas e testes) e depois a regeração noturna começa a rodar (6 por noite, piloto em REGERAR.txt).
+- [ ] Ollama fora do ar (127.0.0.1:11434). Sem ele, T2/T3 ficam "aguardando-ollama". Iniciar o serviço.
+- [ ] Testar um longo em rascunho (o teste do Item 5b foi só com um Short). Confirmar a causa da vinheta (comVinheta pula quando existe .vinheta).
+- [ ] Calibração: os 12 primeiros regerados ficam "aguardando-calibracao" até revisão do Claude Code (liberação por ordem).
+- [ ] Freio de 50% parado: para limpar, só por ordem do Dr. Antônio (campo freioAtivo em estado-regeracao.json).
+- [ ] Posição "final da fila" para os liberados: não implementada. O montarFila recalcula slots; a regra precisa de decisão.
+- [ ] Item 8: PR #115 não mesclado. Rodar a simulação do Blob depois do merge: node --env-file-if-exists=.env scripts/blob-rotina-mensal.js (sem --aplicar).
+- [ ] Opcional O1 (formulário da auditoria no Chrome): NÃO executado. Precisa da sessão do Dr. logada e revisão das respostas.
+- [ ] Opcional O2 (apagar z_JHmmpw880): NÃO executado. O projeto não tem código de exclusão no YouTube; criar seria novo módulo (fora da autorização).
+- [ ] Opcional O3 (agendarDiario, 1 post): NÃO executado. Depende de sessão do LinkedIn logada no Chrome do Dr.
+- [ ] Autorização do YouTube vence em 2026-10-23 (validade.json). O alerta aparece no RESUMO-DO-DIA. Solução definitiva: aprovação da auditoria (sair do modo Testando), que é do Dr. Antônio.

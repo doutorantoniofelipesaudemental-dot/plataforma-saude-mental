@@ -1,0 +1,8 @@
+# Ids da fila (relatorios/youtube/fila.json), um por linha, do menor para o maior arquivo de vídeo.
+# Piloto (19/10/2026): os 6 menores.
+short-2026-11-30-relato-silencio-fatal
+short-2026-10-29-relato-paciente-invisivel
+short-2026-11-24-relato-peso-invisivel-cuidador
+short-2026-11-17-relato-vinculo-perdido
+short-2026-11-05-relato-crise-evitavel
+short-resumo-saude-mental-residencia

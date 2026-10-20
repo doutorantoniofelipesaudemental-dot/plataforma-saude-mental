@@ -15,11 +15,11 @@ const refazer = process.argv.includes('--refazer');
 
 async function baixar(url) { const r = await fetch(url); if (!r.ok) throw new Error(`capa HTTP ${r.status}`); return Buffer.from(await r.arrayBuffer()); }
 
-async function gerar(a) {
+async function gerar(a, { dirSaida = '' } = {}) {
   let mp3 = await L.obterAudio(a);
   if (mp3) mp3 = L.comVinheta(a, mp3); // abertura + encerramento falados (crédito da marca)
   if (!mp3) return { slug: a.slug, pulou: 'sem áudio válido (hash difere do texto atual ou narração ausente)' };
-  const dir = path.join(L.MIDIA, a.slug); fs.mkdirSync(dir, { recursive: true });
+  const dir = dirSaida || path.join(L.MIDIA, a.slug); fs.mkdirSync(dir, { recursive: true }); // dirSaida: rascunho de regeração
   const saida = path.join(dir, 'longo.mp4');
   if (fs.existsSync(saida) && fs.existsSync(path.join(dir, 'meta.json')) && !refazer) return { slug: a.slug, pulou: 'já gerado' };
 

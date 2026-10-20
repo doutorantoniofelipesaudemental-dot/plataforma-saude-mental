@@ -81,9 +81,10 @@ async function main() {
   if (jaRodouHoje(estado, hoje)) return console.log(`já rodou hoje (${estado.status}). Nada feito.`);
 
   // 1) pré-checagem: auditoria + tripla do lote (só escreve o lote; não agenda nada)
-  const pre = spawnSync(process.execPath, ['--env-file-if-exists=.env', path.join(RAIZ, 'scripts/linkedin/preAgendamento.js')], { cwd: RAIZ, encoding: 'utf8', timeout: 300000 });
+  const env = { ...process.env, LOTE_SIMULACAO: simular ? '1' : '' };
+  const pre = spawnSync(process.execPath, ['--env-file-if-exists=.env', path.join(RAIZ, 'scripts/linkedin/preAgendamento.js')], { cwd: RAIZ, encoding: 'utf8', timeout: 300000, env });
   if (pre.status !== 0) { alertar('pré-checagem do lote falhou (preAgendamento)', hoje); return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'pré-checagem' }); }
-  const lote = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios/linkedin/agendamento-lote.json'), 'utf8'));
+  const lote = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios/linkedin', require('./nomesLote').nomesLote({ simulacao: simular }).json), 'utf8'));
   const disponiveis = (lote.aprovados || []).length;
   const alvo = limitarPosts(disponiveis);
   if (simular) return console.log(`simulação: ${disponiveis} aprovado(s) no lote; agendaria até ${alvo} hoje (intervalo ${INTERVALO_MS / 60e3} min). Nada agendado.`);

@@ -49,9 +49,10 @@ const br = (iso) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}/${iso.slice(0, 4)}`;
   }
   const lotes = []; for (let i = 0; i < aprovados.length; i += 5) lotes.push(aprovados.slice(i, i + 5).map((x) => x.id));
   const saida = { geradoEm: new Date().toISOString(), regra: 'só entra no agendador o que passou na auditoria + tripla checagem; lotes de 5', aprovados, carrosseis_manuais: carrosseis, reprovados, lotes };
-  fs.writeFileSync(path.join(REL, 'agendamento-lote.json'), JSON.stringify(saida, null, 1), 'utf8');
+  const nomes = require('./nomesLote').nomesLote({ simulacao: process.env.LOTE_SIMULACAO === '1' });
+  fs.writeFileSync(path.join(REL, nomes.json), JSON.stringify(saida, null, 1), 'utf8');
   const md = `# Lote para o agendador nativo do LinkedIn (conferido em ${new Date().toISOString().slice(0, 10)})\n\n- Posts de texto aprovados para agendar: **${aprovados.length}** (de ${aprovados[0] ? br(aprovados[0].data) : '—'} a ${aprovados.length ? br(aprovados[aprovados.length - 1].data) : '—'}), em ${lotes.length} lote(s) de até 5.\n- Carrosséis (PDF), deixados na fila manual com o lembrete das 19:25 até confirmar que o agendador aceita PDF: **${carrosseis.length}**.\n- Reprovados (não agendados): **${reprovados.length}** (ver \`relatorios/linkedin/reprovados/\`).\n\n| Data | Hora | Tipo | Título |\n|---|---|---|---|\n${aprovados.map((x) => `| ${br(x.data)} | 19:30 | texto | ${x.titulo} |`).join('\n')}\n${reprovados.length ? `\n## Reprovados\n${reprovados.map((r) => `- ${r.id}: ${r.motivos.join('; ')}`).join('\n')}\n` : ''}`;
-  fs.writeFileSync(path.join(REL, 'agendamento-lote.md'), md, 'utf8');
+  fs.writeFileSync(path.join(REL, nomes.md), md, 'utf8');
   console.log(`aprovados ${aprovados.length} · carrosséis (manual) ${carrosseis.length} · reprovados ${reprovados.length} · lotes ${lotes.length}`);
   reprovados.forEach((r) => console.log(`  REPROVADO ${r.id}: ${r.motivos.join(' | ').slice(0, 200)}`));
   await mongoose.disconnect();
