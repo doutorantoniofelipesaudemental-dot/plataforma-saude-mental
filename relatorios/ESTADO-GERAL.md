@@ -243,3 +243,11 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Diagnóstico diário: /api/cron/diagnostico-instagram, 23:00 UTC (20:00 em Salvador). Só valida o próximo post; nunca publica. Primeira execução real: 25/10 às 20:00.
 - Redeploy: atualizarToken.js agora refaz o último deploy de produção (vercel redeploy). Nunca faz deploy da pasta local. Sem shell:true (DEP0190 corrigido).
 - Pendências: CRON_SECRET ausente no .env local (não é mais necessário para a renovação; só para os diagnósticos locais). Árvore de trabalho com 11 arquivos alterados e 176 não rastreados (ver relatório da limpeza).
+
+## Limpeza da árvore de trabalho (20/10/2026, branch chore/limpeza-gerados-20261020)
+- Parados de ser versionados (só git rm --cached; os arquivos continuam no disco): relatórios gerados (auditoria, portão, rollback, conferências, RESUMO-DO-DIA, logs, blob, links-estado, youtube/reprovados) e estado de tarefas (agendamento-lote, narracao-progresso, validacao-carrosseis, youtube/fila.json, publicacao-log). Total: 68 arquivos.
+- Continuam versionados: relatorios/youtube/fila-manual/** (o portão lê os textos de lá). Motivo: scripts/portao.js (EH_PUBLICAVEL).
+- Nenhum arquivo parado é lido pelo build ou runtime da Vercel. Testes: lote-simulacao exige no .gitignore a linha de estado-regeracao.json (mantida).
+- Os relatórios citados no ESTADO (portao-20261020-0420/0428/0430, rollback-pr120/121) continuam no disco.
+- ZIPs: importacao-extra-180.zip (513 KB, 17/10/2026, 197 entradas, 190 arquivos: 180 html, 6 md, 4 json) e referencias-140-prontas.zip (485 KB, 17/10/2026, 145 entradas, 144 arquivos: 140 html, 3 md, 1 json). Movidos para arquivo/ (ignorado). Só 6 e 5 nomes de arquivo existem no repositório; conteúdo no banco não verificado.
+- Pastas novas em fila-manual (semana-2026-11-30 e semana-2026-12-07) continuam sem commit: decisão pendente.

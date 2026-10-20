@@ -94,3 +94,28 @@ relatorios/youtube/reprovados/estado-regeracao.json
 
 # temporários da sessão (ordem 20/10/2026): nunca versionar
 .tmp/
+
+# relatórios e estado GERADOS pelas tarefas e pelo portão (ordem de 20/10/2026): ficam no disco, fora do Git
+relatorios/auditoria-*.md
+relatorios/portao-*.md
+relatorios/rollback-*.md
+relatorios/conferencia-renovacao-*.md
+relatorios/conferencias/
+relatorios/RESUMO-DO-DIA.md
+relatorios/logs/
+relatorios/blob/
+relatorios/links-estado.json
+relatorios/youtube/reprovados/
+relatorios/linkedin/agendamento-lote.json
+relatorios/linkedin/agendamento-lote.md
+relatorios/narracao-progresso.md
+relatorios/redes/validacao-carrosseis.json
+relatorios/youtube/fila.json
+relatorios/youtube/publicacao-log.md
+# materiais movidos para arquivo/ e pastas extraídas de ZIPs (ordem de 20/10/2026)
+arquivo/
+importacao-extra-180.zip
+referencias-140-prontas.zip
+importacao-extra-180/
+referencias-140-prontas/
+relatorios/rotina-*.md
