@@ -1,0 +1,37 @@
+# Mapa da automação (20/10/2026)
+
+Fontes: `vercel.json` (crons), `relatorios/*-estado*`, freios em variáveis de ambiente. Nada aqui foi alterado.
+
+## Crons de produção (Vercel)
+
+| Horário (UTC) | Rota | O que faz |
+|---|---|---|
+| 11:00 todo dia | `/api/cron/publicar-agendados` | publica os textos agendados no horário |
+| 11:00 seg a sex | `/api/cron/publicar-redes-v2` | publica a fila de redes (freio `REDES_PUBLICACAO_ATIVA`) |
+| 22:30 seg, qua, sex | `/api/cron/publicar-linkedin` | publica a fila do LinkedIn (freio próprio) |
+| 12:00 segunda | `/api/cron/relatorio-redes` | relatório semanal das redes |
+| 12:00 segunda | `/api/cron/renovar-token-instagram` | renova o token do Instagram (IGAA) e grava `expiraEm` |
+| 23:00 todo dia | `/api/cron/diagnostico-instagram` | valida o próximo post sem publicar; grava em `diagnosticos_publicacao` |
+
+## Tarefas locais (Agendador do Windows, `DrSM-*`)
+
+- `DrSM-Conferencia-Diaria`: 09:30. Gera o `RESUMO-DO-DIA.md`, roda o backup do estado e os alertas.
+- `DrSM-LinkedIn-Agendar`: **desativada**. Só reativar após reconciliar e nova ordem.
+- `DrSM-PR-Semanal`: criada desativada (19/10).
+- `DrSM-Renovar-Token-Inicial`: não foi criada (a renovação é o cron de segunda).
+
+## Freios (só o Dr. Antônio liga ou desliga)
+
+- `REDES_PUBLICACAO_ATIVA`: freio geral das redes. Está desligado.
+- `YOUTUBE_PUBLICACAO_ATIVA`: freio do YouTube. Está desligado.
+- Freio próprio do LinkedIn: `LINKEDIN_PUBLICACAO_ATIVA`.
+
+## Estados fora do Git (com backup diário em `backup_estado`)
+
+`agendamento-lote`, `narracao-progresso`, `validacao-carrosseis`, `youtube/fila.json`, `publicacao-log`, `links-estado.json`, `estado-regeracao.json`, `teste-carrossel/estado.json`, `linkedin/agendar-diario-estado.json`, `linkedin/fila.json`, `youtube/reprovados/REGERAR-FILA.txt`, `CONSUMO.md`, `consumo-claude.json`.
+
+## Trava contra duplicidade
+
+- LinkedIn: `scripts/linkedin/travaDuplicidade.js` (conta no banco antes e depois).
+- YouTube: `scripts/youtube/travaDuplicidadeYoutube.js` (coleção `youtube_publicados`).
+- Conteúdo novo: `backend/lib/existeConteudo.js` (ainda não ligado a todas as importações).

@@ -1,7 +1,7 @@
 /**
  * Resumo do dia (relatorios/RESUMO-DO-DIA.md, máx. 15 linhas), gerado pela conferência das 09:30.
  * Script determinístico: sem IA. Só lê o banco (redes_v2) e recebe as falhas/avisos da conferência.
- * Primeira linha: "PRECISA DE VOCÊ: SIM — ação" só se algum alerta exigir ação do Dr. Antônio; senão, NÃO.
+ * Primeira linha: "PRECISA DO DR. ANTÔNIO: SIM — ação" só se algum alerta exigir ação do Dr. Antônio; senão, NÃO.
  */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -16,8 +16,8 @@ function montarResumo({ hoje, publicadosOntem = [], saiHoje = [], alertas = [], 
   const primeira = alertas.find((a) => a.primeira);
   const linhas = [
     primeira ? primeira.texto : acoes.length
-      ? `PRECISA DE VOCÊ: SIM — ${acoes[0].texto}`
-      : 'PRECISA DE VOCÊ: NÃO',
+      ? `PRECISA DO DR. ANTÔNIO: SIM — ${acoes[0].texto}`
+      : 'PRECISA DO DR. ANTÔNIO: NÃO',
     ...(pendentesOllama ? [`Aguardando Ollama: ${pendentesOllama} item(ns), pendentes (não decididos)`] : []),
     `Resumo de ${hoje} (Portal e redes)`,
     `Publicado ontem: ${publicadosOntem.length ? publicadosOntem.join(', ') : 'nada'}`,

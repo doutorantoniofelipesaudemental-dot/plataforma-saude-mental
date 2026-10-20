@@ -218,3 +218,7 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Registro datado das ordens escritas do Dr. Antônio em relatorios/AUTORIZACOES.md. Só o que está copiado de ordem escrita vale; o Claude Code não amplia nem reinterpreta.
 
 - Regeração dos reprovados: lotes de 6 pela tarefa noturna, com backup SHA-256 em backups/ e freio de 50% de falha em duas noites. Regerado só publica depois de T2/T3 e calibração. Estado fora do git (ver relatorios/PENDENTES.md).
+
+## Carta de autonomia v3 (20/10/2026)
+
+Resumo: o ecossistema opera sozinho e o Dr. Antônio é chamado só para: merge-seguro; aplicar permissões em settings.json; ligar ou desligar freios; login no LinkedIn ou na Meta e novo token; enviar a auditoria do YouTube; mudança de sentido clínico ou de texto já publicado; novos módulos e foto de rosto. Texto integral e regras fixas: [docs/carta-autonomia-v3.md](docs/carta-autonomia-v3.md). Mapas: relatorios/MAPA-AUTOMACAO.md (18/10) e relatorios/MAPA-AUTOMACAO-20261020.md (crons e freios em 20/10). Lições: relatorios/LICOES.md.

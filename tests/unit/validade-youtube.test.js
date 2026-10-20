@@ -51,6 +51,6 @@ test('contador de pendentes Ollama: conta só aguardando-ollama e aparece no res
   fs.unlinkSync(tmp);
   assert.equal(contarPendentes(tmp), 0);
   const l = montarResumo({ hoje: '2026-10-19', pendentesOllama: 2 });
-  assert.equal(l[0], 'PRECISA DE VOCÊ: NÃO');
+  assert.equal(l[0], 'PRECISA DO DR. ANTÔNIO: NÃO');
   assert.equal(l[1], 'Aguardando Ollama: 2 item(ns), pendentes (não decididos)');
 });
