@@ -207,3 +207,8 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Vídeos reprovados não se apagam nem se movem; são reaproveitados (classes F, R, C, D, X).
 - Aprovados em T1, T2, T3 e auditoria geral entram no final da fila; sem alterar a ordem dos demais.
 - Mudança de sentido clínico só com aprovação do Dr. Antônio; a geração de mídia fica com a tarefa noturna existente, e sem mecanismo seguro de enfileirar o item fica em PENDENTES.md.
+
+## Autorizações (19/10/2026)
+- Registro datado das ordens escritas do Dr. Antônio em relatorios/AUTORIZACOES.md. Só o que está copiado de ordem escrita vale; o Claude Code não amplia nem reinterpreta.
+
+- Regeração dos reprovados: lotes de 6 pela tarefa noturna, com backup SHA-256 em backups/ e freio de 50% de falha em duas noites. Regerado só publica depois de T2/T3 e calibração. Estado fora do git (ver relatorios/PENDENTES.md).

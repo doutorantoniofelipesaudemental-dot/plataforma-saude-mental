@@ -70,3 +70,7 @@ Legenda: 🔴 depende do Dr. Antônio.
 | DrSM-Blob-Rotina-Mensal (dia 1, 03:00) | HABILITADA em 18/10/2026 por ordem escrita; apaga só c/d, com trava |
 | Alerta por e-mail | código pronto; desligado sem RESEND_API_KEY; teste: `npm run alerta:teste` |
 | Botão de desligar | `npm run linkedin:pausar` |
+
+## Regeração dos reprovados (19/10/2026)
+- Tarefa noturna DrSM-YouTube-Gera-Midia, via montarFila --gerar: regeração de 6 por noite (scripts/youtube/regeracao.js) e triagem T2/T3 sem o Claude (scripts/youtube/reaproveitarReprovados.js). Sem lista REGERAR*.txt, nada muda.
+- Estado: relatorios/youtube/reprovados/estado-regeracao.json (ignorado pelo git). Alerta de freio vai ao topo do ESTADO-GERAL e do RESUMO-DO-DIA.
