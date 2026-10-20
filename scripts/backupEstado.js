@@ -27,6 +27,10 @@ const LISTA = [
   'relatorios/youtube/publicacao-log.md',
   'relatorios/youtube/reprovados/estado-regeracao.json',
   'relatorios/links-estado.json',
+  'relatorios/linkedin/fila.json',
+  'relatorios/youtube/reprovados/REGERAR-FILA.txt',
+  'relatorios/CONSUMO.md',
+  'relatorios/consumo-claude.json',
 ];
 
 // Padrões de segredo. Só diz SIM/NÃO; nunca mostra o trecho encontrado.

@@ -282,3 +282,11 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - **Reprovados da fila manual (B):** 4 já estavam na lista noturna; os outros 7 foram marcados como reprovado no fila.json (backup em backups/fila-youtube-antes-20261020/) e acrescentados ao REGERAR-FILA.txt (55 ids; 6 por noite). Os 2 longos (sobrecarga, pilar) já estavam na lista.
 - **Textos novos (C):** NENHUM importado. Os 24 já existem no site (12 em src/content/artigos e 12 em content/blog). Duas tentativas desfeitas (17 e 9), banco em 726. Possível atualização de referências: confirmar com o Dr. Antônio. Backup: backups/importacao-extra-20261020-1241/artigos.json. Feriados 25/12 e 01/01 incluídos em backend/lib/calendarioSite.js.
 - Correção do relatório de análise: os 24 não têm ferramentas nem scripts (a contagem era do ZIP inteiro).
+
+## Carta de autonomia v3 (20/10/2026)
+- Item 2 (fonte única contra duplicidade): backend/lib/existeConteudo.js com testes. Ainda não ligado a todas as importações.
+- Item 4 (ZIP referencias-140-prontas): A=0, B=0, C=24. Todos idênticos ao que está no ar. Nada a aplicar. Lista de revisão vazia (relatorios/REVISAO-TEXTOS.md).
+- Item 6 (árvore limpa): .gitignore com CONSUMO.md, consumo-claude.json, agendar-diario-estado.json e REGERAR-FILA.txt (este último saiu do índice). linkedin/fila.json CONTINUA versionado: o portão lê esse arquivo (ética dos posts).
+- Item 7 (resumo do dia): primeira linha agora diz "PRECISA DO DR. ANTÔNIO: SIM/NÃO".
+- Itens 8, 9, 10: docs/carta-autonomia-v3.md, relatorios/LICOES.md, relatorios/MAPA-AUTOMACAO-20261020.md; ponteiro no CLAUDE.md.
+- Não feitos agora: item 1 (permissões headless, precisa de testes com claude -p, com teto diário), item 3 (causa dos 7 itens em aprovado-checagem), item 5 (manutenção semanal: a tarefa precisa de você para criar).

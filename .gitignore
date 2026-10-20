@@ -119,3 +119,9 @@ referencias-140-prontas.zip
 importacao-extra-180/
 referencias-140-prontas/
 relatorios/rotina-*.md
+
+# estados gerados (ordem 20/10/2026, item 6): saem do Git e entram no backup diário
+relatorios/CONSUMO.md
+relatorios/consumo-claude.json
+relatorios/linkedin/agendar-diario-estado.json
+relatorios/youtube/reprovados/REGERAR-FILA.txt
