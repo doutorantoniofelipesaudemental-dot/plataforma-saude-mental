@@ -8,6 +8,7 @@
  * Guarda o resultado em <pasta>/conferencia.json (cache por hash do vídeo) e os quadros em <pasta>/conferencia/{ini,meio,fim}.png.
  */
 const fs = require('node:fs');
+const crypto = require('node:crypto');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const sharp = require('sharp');
@@ -32,9 +33,23 @@ async function brilho(png, [x0, y0, x1, y1]) {
 // IoU das máscaras de pixels claros (texto): 1 = a região da assinatura é idêntica com e sem o crédito na tela
 const iou = (a, b) => { let i = 0, u = 0; for (let k = 0; k < a.length; k++) { if (a[k] && b[k]) i++; if (a[k] || b[k]) u++; } return u ? i / u : 0; };
 
+// Assinatura do que foi conferido: hash do vídeo + estado e conteúdo da legenda (.ass ou .srt). Qualquer mudança invalida o cache.
+function assinaturaConferencia(dir, meta) {
+  const legenda = meta.arquivos && meta.arquivos.legenda ? path.join(dir, meta.arquivos.legenda) : path.join(dir, 'cap.ass');
+  const leg = fs.existsSync(legenda) ? crypto.createHash('sha256').update(fs.readFileSync(legenda)).digest('hex') : 'sem-legenda';
+  return `${meta.hashVideo}|${leg}`;
+}
+
+// Único lugar que decide 'aprovado-checagem' pela conferência: exige ok, versão atual e o mesmo hash do vídeo conferido.
+function statusPelaConferencia(conf, meta) {
+  const aprovado = Boolean(conf) && conf.ok === true && conf.versao === VERSAO && conf.hashVideo === meta.hashVideo && !(meta.checagemTexto || []).length && !(meta.checagemMidia || []).length;
+  return aprovado ? 'aprovado-checagem' : 'reprovado';
+}
+
 async function conferirVideo(dir, meta) {
   const arqCache = path.join(dir, 'conferencia.json');
-  try { const c = JSON.parse(fs.readFileSync(arqCache, 'utf8')); if (c.versao === VERSAO && c.hashVideo === meta.hashVideo) return c; } catch { /* confere de novo */ }
+  const assinatura = assinaturaConferencia(dir, meta); // vídeo + legenda: mudou qualquer um, confere de novo
+  try { const c = JSON.parse(fs.readFileSync(arqCache, 'utf8')); if (c.versao === VERSAO && c.hashVideo === meta.hashVideo && c.assinatura === assinatura) return c; } catch { /* confere de novo */ }
   const video = path.join(dir, meta.arquivos.video), q = path.join(dir, 'conferencia');
   fs.mkdirSync(q, { recursive: true });
   const dur = L.duracao(video);
@@ -80,11 +95,11 @@ async function conferirVideo(dir, meta) {
     if (/pos.?graduacao|nao especialista/.test(fim)) falhas.push('a fala do fim lê a assinatura de 5 linhas (pós-graduação / "não especialista")');
   }
   for (const f of [a1, a2]) fs.rmSync(f, { force: true });
-  const res = { versao: VERSAO, hashVideo: meta.hashVideo, ok: falhas.length === 0, falhas, fala, em: new Date().toISOString() };
+  const res = { versao: VERSAO, hashVideo: meta.hashVideo, assinatura, ok: falhas.length === 0, falhas, fala, em: new Date().toISOString() };
   fs.writeFileSync(arqCache, JSON.stringify(res, null, 1));
   return res;
 }
-module.exports = { conferirVideo };
+module.exports = { conferirVideo, assinaturaConferencia, statusPelaConferencia, VERSAO };
 
 if (require.main === module) { // node scripts/youtube/conferirVideo.js <pasta-do-video>
   (async () => { const d = path.resolve(process.argv[2]); const meta = JSON.parse(fs.readFileSync(path.join(d, 'meta.json'), 'utf8')); fs.rmSync(path.join(d, 'conferencia.json'), { force: true }); console.log(JSON.stringify(await conferirVideo(d, meta), null, 1)); })();

@@ -120,6 +120,10 @@ function outrasFilas() {
   try {
     const f = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios/youtube/fila.json'), 'utf8')); const c = {}; f.itens.forEach((i) => { c[i.status] = (c[i.status] || 0) + 1; });
     (c.reprovado || c.bloqueado ? falha : ok)(`YouTube: ${JSON.stringify(c)}`);
+    // checagem cruzada (ordem de 20/10/2026): aprovado só com conferência do conferidor, com o mesmo hash
+    const CF = require('../youtube/conferenciaFila');
+    const div = CF.divergencias(f.itens, CF.lerConferenciaDoDisco(RAIZ));
+    if (div.length) falha(`YouTube: ${div.length} divergência(s) entre a fila e o conferidor (ex.: ${div[0].id}: ${div[0].motivo})`);
   } catch (e) { aviso(`YouTube: fila ilegível (${e.message.slice(0, 60)})`); }
   const li = spawnSync(process.execPath, ['--env-file=.env', 'scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
   const linha = String(li.stdout).trim().split('\n').pop();

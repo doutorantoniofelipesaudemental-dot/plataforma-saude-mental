@@ -247,3 +247,7 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 ## Carta de autonomia v3 (20/10/2026)
 - Feito: existeConteudo.js, ZIP classificado (C=24), árvore limpa parcial, resumo do dia com 'PRECISA DO DR. ANTÔNIO', docs da carta, lições e mapa.
 - Pendente: permissões headless (item 1), causa dos 7 aprovados sem conferidor (item 3), manutenção semanal (item 5, precisa de criação de tarefa por você).
+
+## Item 3 — 20/10/2026
+- Feito: status da fila só pelo conferidor; checagem cruzada na conferência diária; 7 itens revertidos.
+- Pendente: a exportação da fila manual deve incluir cap.ass e credito.ass, para o conferidor não reprovar por falta de arquivo (decisão de exportação).

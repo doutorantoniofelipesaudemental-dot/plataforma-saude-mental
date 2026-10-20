@@ -290,3 +290,9 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Item 7 (resumo do dia): primeira linha agora diz "PRECISA DO DR. ANTÔNIO: SIM/NÃO".
 - Itens 8, 9, 10: docs/carta-autonomia-v3.md, relatorios/LICOES.md, relatorios/MAPA-AUTOMACAO-20261020.md; ponteiro no CLAUDE.md.
 - Não feitos agora: item 1 (permissões headless, precisa de testes com claude -p, com teto diário), item 3 (causa dos 7 itens em aprovado-checagem), item 5 (manutenção semanal: a tarefa precisa de você para criar).
+
+## Item 3 (fila do YouTube: status só pelo conferidor) — 20/10/2026
+- Causa: o status era decidido inline no montarFila, e o cache do conferidor era indexado só pelo hash do vídeo (ignorava a legenda).
+- Correção: conferirVideo.js com assinatura vídeo+legenda e statusPelaConferencia (única regra); conferenciaFila.js com a checagem cruzada, ligada à conferência diária (alerta de divergência). Testes incluídos.
+- Os 7 itens que eu tinha rebaixado foram revertidos: a pasta do pipeline tem cap.ass e conferência ok com o mesmo hash. Os vídeos da fila manual são idênticos aos do pipeline; a falta de cap.ass é só da exportação.
+- Checagem atual: 55 aprovados, 0 divergências.
