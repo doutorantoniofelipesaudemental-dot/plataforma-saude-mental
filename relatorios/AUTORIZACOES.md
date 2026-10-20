@@ -18,3 +18,8 @@ Mantidas (autorizadas por escrito nesta ordem):
 - Opcional O3 (agendarDiario.js uma vez, 1 post, sem senha, sem cookies, sem contornar CAPTCHA), mantido.
 
 Não autorizado nesta ordem (continuam só com o Dr. Antônio): push, PR, merge-seguro, ativar ou desativar tarefas do Windows, YOUTUBE_PUBLICACAO_ATIVA, RESEND_API_KEY, contas e chaves, qualquer gasto, sentido clínico, novos módulos, foto de rosto, mudança de regras ou freios.
+
+## 20/10/2026: decisões sobre o token do Instagram (ordem escrita do Dr. Antônio)
+- Hook de segredos: marcador "segredos:permitir" autorizado SOMENTE nas linhas do token fictício do teste atualizarToken (valor fictício confirmado, "FICTICIO"). Nenhuma outra exceção.
+- relatorios/youtube/fila.json: gerado pela tarefa do YouTube. Fica na lista de pré-existentes (arquivo rastreado, por isso não entra no .gitignore) e não entra em commit de outra tarefa.
+- Host da API: IGAA → graph.instagram.com (instagram_business_content_publish); demais tokens → graph.facebook.com (instagram_content_publish). Regra única em backend/lib/instagramHost.js. INSTAGRAM_GRAPH_HOST só vale quando coerente com o token.

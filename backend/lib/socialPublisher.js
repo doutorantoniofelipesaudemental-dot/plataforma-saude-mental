@@ -53,8 +53,7 @@ const GRAPH_API_VERSION = 'v21.0';
 // — em graph.facebook.com voltam "Cannot parse access token". Tokens do fluxo
 // via Página do Facebook (prefixo EAA) seguem em graph.facebook.com.
 function graphBase(token = process.env.INSTAGRAM_ACCESS_TOKEN || '') {
-  const host = token.startsWith('IGAA') ? 'graph.instagram.com' : 'graph.facebook.com';
-  return `https://${host}/${GRAPH_API_VERSION}`;
+  return require('./instagramHost').baseGraph(token, { INSTAGRAM_GRAPH_HOST: process.env.INSTAGRAM_GRAPH_HOST, INSTAGRAM_GRAPH_VERSAO: GRAPH_API_VERSION });
 }
 const LINKEDIN_API_BASE = 'https://api.linkedin.com/v2';
 
