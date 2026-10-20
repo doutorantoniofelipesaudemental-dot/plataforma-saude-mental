@@ -50,6 +50,18 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 - [ ] Próximo passo: "Lote 2 de automação (Classe 1)", depois do merge deste PR. Não iniciado.
 - Demais pendências (horários no Windows, RESEND_API_KEY, PR semanal, CLS, PC ligado, teto do claude -p): ver as listas acima.
 
+## Lote 2 (19/10/2026), item 1
+- [ ] ALERTA: renovação do token da Meta recusada (HTTP 400, código 100) na conferência de 19/10 (relatorios/conferencia-renovacao-20261019.md). Ver com o Dr. Antônio antes do vencimento (expiraEm 2026-12-14).
+- [ ] DrSM-Conferencia-19-10 NÃO removida (resultado ATENÇÃO). Remover só depois de um relatório OK.
+- [ ] DrSM-Conferencia-26-10: fica até rodar.
+
+## Lote 2 (19/10/2026): resultado por item
+- ITEM 2 PARADO: as regras de a/b não batem com os dados. a (publicados) e b (agendados) têm sempre itens (251 e 475 no último inventário). Regra literal "qualquer item de a ou b não apaga nada" torna a rotina um no-op permanente e inverte o teste de tests/unit/blob-rotina-mensal.test.js (linhas 20-23). Decidir: (A) a/b nunca apagados (já é assim) + alerta em vez de bloqueio; ou (B) manter a trava atual (bloqueia só sobreposição) + alerta de (d). Código NÃO alterado.
+- ITEM 4 SEM TRABALHO: relatorios/conferencias/2026-10-19.md mostra fila {"aprovado-checagem": 60} (>= 20). Pulado.
+- ITEM 6 PARADO: preencher o formulário com a resposta de legendas incorreta (ver relatorios/youtube/FALTA-DO-ANTONIO.md, item 1). Decida antes.
+- ITEM 7 NÃO APAGADO: z_JHmmpw880 é privado e "[TESTE PRIVADO]", mas a data de teste esperada não foi informada (publicado em 17/10/2026). Ver relatorios/youtube/video-teste-2026-10-19.md.
+- ITEM 8 NÃO EXECUTADO: depende dos itens 1 a 5 concluídos (item 2 parado).
+- Pendente de você: relatorios/youtube/FALTA-DO-ANTONIO.md.
 ## Vídeos reprovados (19/10/2026, decisão C do Dr. Antônio)
 - [x] As 54 entradas da fila (relatorios/youtube/fila.json) foram marcadas como "reprovado" (o publicador ignora esse status). Fila ativa: 55 itens aprovado-checagem. Pastas intocadas.
 - [ ] Fase 2 (reforma em lotes de 6, começando pelas F de assinatura falada): aguarda ordem. Índice em relatorios/youtube/reprovados/INDICE.md.

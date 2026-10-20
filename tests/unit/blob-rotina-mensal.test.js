@@ -17,10 +17,22 @@ test('simulação nunca pode apagar', () => {
   assert.ok(t.motivos.some((m) => m.includes('simulação')));
 });
 
-test('aplicar com c pequeno e a/b intactos pode apagar', () => {
+test('item em a ou b: NÃO apaga nada, mesmo com c pequeno (ordem do Dr. Antônio, 19/10/2026)', () => {
   const t = avaliarTrava(inv({ blobs: 100, a: [item(1), item(2)], b: [item(3)], c: [item(4)] }), { aplicar: true });
+  assert.equal(t.podeApagar, false);
+  assert.ok(t.motivos.some((m) => m.includes('a/b')));
+});
+
+test('caso limpo: a/b vazios e c pequeno pode apagar', () => {
+  const t = avaliarTrava(inv({ blobs: 100, c: [item(4)] }), { aplicar: true });
   assert.equal(t.podeApagar, true);
   assert.equal(t.apagaveis, 1);
+});
+
+test('falha de leitura (inventário ausente): não apaga, sem lançar erro', () => {
+  const t = avaliarTrava(undefined, { aplicar: true });
+  assert.equal(t.podeApagar, false);
+  assert.ok(t.motivos.some((m) => m.includes('falha segura')));
 });
 
 test('recusa quando c+d passam de 50% dos blobs', () => {
