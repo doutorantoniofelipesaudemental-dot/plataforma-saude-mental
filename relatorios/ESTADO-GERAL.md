@@ -251,3 +251,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Os relatórios citados no ESTADO (portao-20261020-0420/0428/0430, rollback-pr120/121) continuam no disco.
 - ZIPs: importacao-extra-180.zip (513 KB, 17/10/2026, 197 entradas, 190 arquivos: 180 html, 6 md, 4 json) e referencias-140-prontas.zip (485 KB, 17/10/2026, 145 entradas, 144 arquivos: 140 html, 3 md, 1 json). Movidos para arquivo/ (ignorado). Só 6 e 5 nomes de arquivo existem no repositório; conteúdo no banco não verificado.
 - Pastas novas em fila-manual (semana-2026-11-30 e semana-2026-12-07) continuam sem commit: decisão pendente.
+
+## Pós-limpeza (20/10/2026, branch feat/backup-estado-e-fila-manual-20261020)
+- Incidente: o `git pull` de 20/10 (PR #122) apagou do disco os 68 arquivos de estado que saíram do Git. Restaurados a partir do commit b321633 anterior (ver disco). Perdidas as últimas edições não commitadas de 6 arquivos de estado (narracao-progresso, validacao-carrosseis, youtube/fila.json, publicacao-log, linkedin/agendamento-lote.json/.md). Regeneram na próxima execução das tarefas.
+- Fim de linha: PR de .gitattributes (chore/normalizacao-fim-de-linha) aguardando push/PR/merge.
+- Backup diário do estado: scripts/backupEstado.js (coleção backup_estado, 30 dias, sem segredos). Roda junto da conferência das 09:30; falha ou mais de 2 dias sem backup = alerta. Primeiro backup feito 20/10: 9 arquivos. Restauração: scripts/restaurarEstado.js (--simular é só leitura; --aplicar exige ordem escrita).
+- Fila manual: conferidor oficial em 18 pacotes (cópias): 7 aprovados, 11 reprovados (9 Shorts sem cap.ass; 2 longos sem assinatura falada no encerramento). Detalhes em relatorios/fila-manual-conferencia-20261020.md. Os 2 aprovados novos entram neste PR (só textos e SRT; mp4 e png seguem fora do Git).
+- ZIPs (só leitura): relatorios/ZIPS-CONFERENCIA.md. importacao-extra-180: 180/180 já no banco; referencias-140-prontas: 24 novos (importar só com ordem).
