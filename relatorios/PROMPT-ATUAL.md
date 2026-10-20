@@ -247,3 +247,6 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 ## Carta de autonomia v3 (20/10/2026)
 - Feito: existeConteudo.js, ZIP classificado (C=24), árvore limpa parcial, resumo do dia com 'PRECISA DO DR. ANTÔNIO', docs da carta, lições e mapa.
 - Pendente: permissões headless (item 1), causa dos 7 aprovados sem conferidor (item 3), manutenção semanal (item 5, precisa de criação de tarefa por você).
+
+## Item 1 — 20/10/2026
+- Feito: .env carregado dentro do script; atalhos npm; checagem de permissões. Pendente: teste headless real e decisão sobre a manutenção semanal (docs/manutencao-semanal.md).

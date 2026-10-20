@@ -8,6 +8,7 @@
  * Estado: relatorios/linkedin/agendar-diario-estado.json. Alerta: topo do relatorios/ESTADO-GERAL.md e relatorios/RESUMO-DO-DIA.md.
  * Teto do claude -p (19/10/2026): 3 por dia e 15 por semana, via scripts/consumoClaude.js (consulta antes, registra depois).
  */
+require('../carregarEnv').carregarEnv(); // .env carregado aqui, sem --env-file na linha de comando (o filho herda o ambiente)
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
@@ -85,7 +86,7 @@ async function main() {
 
   // 1) pré-checagem: auditoria + tripla do lote (só escreve o lote; não agenda nada)
   const env = { ...process.env, LOTE_SIMULACAO: simular ? '1' : '' };
-  const pre = spawnSync(process.execPath, ['--env-file-if-exists=.env', path.join(RAIZ, 'scripts/linkedin/preAgendamento.js')], { cwd: RAIZ, encoding: 'utf8', timeout: 300000, env });
+  const pre = spawnSync(process.execPath, [path.join(RAIZ, 'scripts/linkedin/preAgendamento.js')], { cwd: RAIZ, encoding: 'utf8', timeout: 300000, env });
   if (pre.status !== 0) { alertar('pré-checagem do lote falhou (preAgendamento)', hoje); return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'pré-checagem' }); }
   const lote = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios/linkedin', require('./nomesLote').nomesLote({ simulacao: simular }).json), 'utf8'));
   const disponiveis = (lote.aprovados || []).length;

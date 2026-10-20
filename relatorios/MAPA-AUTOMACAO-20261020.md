@@ -35,3 +35,10 @@ Fontes: `vercel.json` (crons), `relatorios/*-estado*`, freios em variáveis de a
 - LinkedIn: `scripts/linkedin/travaDuplicidade.js` (conta no banco antes e depois).
 - YouTube: `scripts/youtube/travaDuplicidadeYoutube.js` (coleção `youtube_publicados`).
 - Conteúdo novo: `backend/lib/existeConteudo.js` (ainda não ligado a todas as importações).
+
+## Mudanças de 20/10 (carta v3)
+- Agendador do LinkedIn e pré-checagem carregam o .env por dentro (scripts/carregarEnv.js); sem --env-file na linha de comando. Atalhos: npm run linkedin:pre e linkedin:agendar.
+- Permissões headless: docs/permissoes-headless/aplicar.js (checagem; hoje nada falta).
+- Fila do YouTube: status só pelo conferidor (conferirVideo.statusPelaConferencia), checagem cruzada na conferência diária.
+- Criação de texto novo: fonte única (existeConteudo) na ingestão de rascunhos e na importação.
+- Manutenção semanal: pendente (ver docs/manutencao-semanal.md).
