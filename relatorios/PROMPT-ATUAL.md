@@ -238,3 +238,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Trava de duplicidade no LinkedIn e no YouTube: PR em fix/trava-duplicidade-agendadores-20261020. Portão aprovado (relatorios/portao-20261020-0733.md).
 - Aguardando o Dr. Antônio: (a) método de regeração dos 11 reprovados (gerador direto ou lote noturno); (b) decisões dos 24 textos novos: ferramentas interativas e <script>, identificação e aviso no corpo, e os 7 textos com menos de 4 DOIs.
 - Tarefa DrSM-LinkedIn-Agendar: desativada; reativar só depois de reconciliar e revisar o trabalho desta semana.
+
+## Decisões de 20/10/2026 — execução
+- LinkedIn: agendamento manual bloqueado pelo classificador; nada agendado. Tarefa desativada até nova ordem.
+- Fila manual do YouTube: 7 reprovados enfileirados para a regeração noturna (55 na lista).
+- Textos do ZIP referencias-140-prontas: TODOS já existem no site (artigos e blog). Nada importado. Decidir se o ZIP é atualização de referências (aplicar-referencias).

@@ -42,3 +42,9 @@ Arquivos analisados: 24
 - **Duplicidade por conteúdo:** nenhum texto passa de 14,7% de semelhança com o acervo (limiar de revisão: 35%).
 - **Crédito e CVV no corpo:** não são exigidos no corpo pelo padrão do acervo (0 de 200 publicados; o CVV fica no rodapé do site). Não contam como falha.
 - **Datas:** a última data já agendada é 23/12/2026 12:00 UTC. Proposta: 1 texto por dia útil a partir de 24/12, às 08:00 de Salvador, sem feriados. 25/12 e 01/01 ficam de fora (o calendário do site não tem esses feriados).
+
+## CORREÇÃO (20/10/2026, depois da análise)
+
+- **Ferramentas interativas e `<script>`: NÃO existem nos 24 textos.** A contagem de 88 fieldsets e de scripts era do ZIP inteiro (140 arquivos), não destes 24. Os 24 têm só `CallToTool` (em alguns) e componentes de formatação.
+- **Aviso educativo: existe nos 24** (o `RefsNote`, "finalidade educativa"). O que falta é o aviso padrão de protocolos locais, que foi acrescentado.
+- Os DOIs listados como "sem resposta" eram erro de extração (parênteses no DOI da Elsevier). Corrigido: todos confirmados no Crossref.

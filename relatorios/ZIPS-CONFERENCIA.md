@@ -42,3 +42,9 @@ Somente leitura: nenhum texto foi importado, alterado ou publicado. Comparação
 ## Não existem no banco (importacao-extra-180.zip)
 
 - nenhum
+
+## CORREÇÃO FINAL (20/10/2026)
+
+- **Nenhum texto foi importado.** Os 24 já existem no site: 12 em apps/plataforma-saude-mental/src/content/artigos/ e os outros 12 em apps/plataforma-saude-mental/content/blog/ (MDX rastreado pelo Git). A verificação anterior olhou só o banco, e isso estava errado.
+- As 2 tentativas de importação foram DESFEITAS (17 e depois 9 documentos), removidos só pelo marcador da importação. O banco voltou a 726 documentos.
+- Possível explicação: o ZIP é uma atualização de referências dos textos já existentes (a ferramenta aplicar-referencias existe para isso). Isso precisa ser confirmado pelo Dr. Antônio, comparando a versão do ZIP com a do site.

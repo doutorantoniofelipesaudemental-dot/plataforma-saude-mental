@@ -1,4 +1,13 @@
 > **ALERTA: token do Instagram inválido (190); fila pausada até novo token.** Atualizado em 20/10/2026.
+<!-- ALERTA-LINKEDIN:INICIO -->
+> # 🚨 ALERTA DO LINKEDIN (2026-10-20): agendamento parado: comando bloqueado pelo classificador (preAgendamento com --env-file); nada agendado. 0 post(s) agendado(s) hoje.
+> Agendamento parado até nova ordem do Dr. Antônio. Desligar: `npm run linkedin:pausar`.
+<!-- ALERTA-LINKEDIN:FIM -->
+<!-- ALERTA-REDES:INICIO -->
+> # 🚨 ALERTA DAS REDES (2026-10-20): 1 falha(s) na conferência diária
+> - YouTube: {"aprovado-checagem":55,"reprovado":54}
+> Detalhes: relatorios/conferencias/2026-10-20.md
+<!-- ALERTA-REDES:FIM -->
 > **18/10/2026, 14h (automação do Instagram, ordem escrita do Dr. Antônio):** validação SEM publicar dos 7 próximos carrosséis (26/10 a 04/11): **7/7 FINISHED, nada publicado** (`relatorios/redes/validacao-carrosseis.json`). **Carrossel LIBERADO** (`redes_v2_config/instagram.carrosselLiberado=true`, 18/10/2026 16:59 UTC; confirmado lendo o banco). Publicador novo (trava, validação de containers antes do `media_publish`, adiamento em falha, conferência pós-publicação com ID da Meta) e conferência diária (`DrSM-Conferencia-Diaria`, 09:30) no PR abaixo; **o merge precisa acontecer antes de 26/10 08:00** (sem ele a Vercel roda o publicador do #107, que também valida os containers, mas sem a trava e sem o adiamento). Narrações: **726/726 com vinheta** (causa das 16: o seletor do lote ignorava "ok" com `vinhetaVersao` 0; corrigido em `precisaVinheta`). LinkedIn: limite diário ainda ativo em 18/10 (10 agendados até 20/11); retomar em outro dia a partir de li-2026-11-25 e testar o PDF de 06/11.
 
 > **18/10/2026 (decisões do Dr. Antônio sobre o Instagram, PR #107):** imagem única pela Meta Graph (freio); carrossel na fila manual até UM teste supervisionado ("publicar teste de carrossel"); Reels e Stories SEMPRE na fila manual. **Carrossel de teste PREPARADO e NÃO publicado:** 2026-10-26-saude-mental-cuidador (5 imagens no Blob, conferidas por HTTP 200/hash; prévia em `relatorios/redes/teste-carrossel/PREVIA.html` e `previa.png`). **Atenção:** o cron da Vercel só respeita a nova regra depois do merge do #107 e do deploy; sem o merge antes de 26/10 08:00, o post de 26/10 sairia como carrossel automático (regra antiga). Fila manual: `npm run redes:fila-manual` (arquivos em `relatorios/redes/fila-manual/`).
@@ -265,3 +274,11 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Item 1 (11 reprovados da fila manual): aguardando método. Shorts (9): o gerador recria o vídeo inteiro (gerarShorts.gerar); regeração de reprovados segue lotes de 6 com backup SHA-256 (scripts/youtube/regeracao.js). Longos (2): regerar a narração com a assinatura de encerramento. Nenhum vídeo foi alterado.
 - Item 2 (24 textos novos): análise em relatorios/IMPORTACAO-24-ANALISE-20261020.md. Nada gravado no banco. Bloqueios: identificação no corpo (24/24), aviso educativo ausente (24/24), ferramentas interativas e <script> (precisa decisão), 7 textos com menos de 4 DOIs, e conversão MDX para o formato de rascunho.
 - Item 3: importacao-extra-180.zip segue arquivado em arquivo/.
+
+- [2026-10-20] PRECISA DE VOCÊ: diagnóstico da Vercel (token e ID) não rodou ainda. Verificar o cron diagnostico-instagram
+
+## Decisões de 20/10/2026 — execução (branch feat/importar-24-textos-20261020)
+- **LinkedIn (A):** rodada manual do agendador bloqueada pelo classificador de segurança (etapa de pré-checagem). Nada agendado; banco segue com 10 agendados. Estado do dia marcado como "parado". Tarefa DrSM-LinkedIn-Agendar segue DESATIVADA. Reativar só após conferência e nova ordem.
+- **Reprovados da fila manual (B):** 4 já estavam na lista noturna; os outros 7 foram marcados como reprovado no fila.json (backup em backups/fila-youtube-antes-20261020/) e acrescentados ao REGERAR-FILA.txt (55 ids; 6 por noite). Os 2 longos (sobrecarga, pilar) já estavam na lista.
+- **Textos novos (C):** NENHUM importado. Os 24 já existem no site (12 em src/content/artigos e 12 em content/blog). Duas tentativas desfeitas (17 e 9), banco em 726. Possível atualização de referências: confirmar com o Dr. Antônio. Backup: backups/importacao-extra-20261020-1241/artigos.json. Feriados 25/12 e 01/01 incluídos em backend/lib/calendarioSite.js.
+- Correção do relatório de análise: os 24 não têm ferramentas nem scripts (a contagem era do ZIP inteiro).
