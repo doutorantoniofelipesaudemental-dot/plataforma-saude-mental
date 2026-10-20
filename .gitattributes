@@ -1,3 +1,17 @@
-
+* text=auto eol=lf
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.mp3 binary
+*.mp4 binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.woff binary
+*.woff2 binary
 MODELO_ROTEIRO_MULTIMIDIA.md text eol=lf
 *.sh text eol=lf
