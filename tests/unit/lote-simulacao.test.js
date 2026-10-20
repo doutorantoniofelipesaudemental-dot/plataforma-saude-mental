@@ -19,6 +19,6 @@ test('simulação nunca usa os nomes rastreados', () => {
 test('os arquivos de simulação estão no .gitignore', () => {
   const gi = fs.readFileSync(path.resolve(__dirname, '../../.gitignore'), 'utf8');
   for (const n of ['relatorios/linkedin/agendamento-lote.simulacao.json', 'relatorios/linkedin/agendamento-lote.simulacao.md', 'relatorios/youtube/reprovados/estado-regeracao.json']) {
-    assert.ok(gi.split('\n').includes(n), `falta no .gitignore: ${n}`);
+    assert.ok(gi.split(/\r?\n/).includes(n), `falta no .gitignore: ${n}`);
   }
 });
