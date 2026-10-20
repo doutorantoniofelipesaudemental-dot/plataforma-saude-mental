@@ -53,3 +53,10 @@ Nenhuma tarefa agendada, código de produto ou ação em Instagram, YouTube, Lin
 ## Vídeos reprovados (19/10/2026, decisão C do Dr. Antônio)
 - [x] As 54 entradas da fila (relatorios/youtube/fila.json) foram marcadas como "reprovado" (o publicador ignora esse status). Fila ativa: 55 itens aprovado-checagem. Pastas intocadas.
 - [ ] Fase 2 (reforma em lotes de 6, começando pelas F de assinatura falada): aguarda ordem. Índice em relatorios/youtube/reprovados/INDICE.md.
+
+## Fase 2 dos vídeos reprovados (19/10/2026, ordem do Dr. Antônio)
+- [ ] 54 vídeos F (forma) aguardam geração de mídia. Nada foi aprovado nem reformado. Detalhes em relatorios/youtube/reprovados/PLANO.md.
+- [ ] Decidir o mecanismo: o montarFila só gera quando meta.json não existe, e não há forma segura de enfileirar regeração sem apagar ou mover. Opções para o Dr. Antônio escolher: (a) PR com flag de regeração por item, em Classe 2; (b) manter parado até a revisão do gerador.
+- [ ] Confirmar a causa antes de regerar: `L.comVinheta` e `L.comAssinaturaFalada` (scripts/youtube/gerarVideosLongos.js) produzem a vinheta falada nos 54? Se não, regerar repete o defeito.
+- [ ] Ollama fora do ar (127.0.0.1:11434). Iniciar o serviço antes de qualquer T2/T3 local.
+- [ ] Os 54 seguem fora da fila ativa (status reprovado) até a regeração passar em conferirVideo.

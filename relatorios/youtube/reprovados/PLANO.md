@@ -11,3 +11,10 @@
 
 ## Próximo passo (se aprovado)
 - Fase 2 em lotes de 6, começando pelos de assinatura falada ausente (F, mecânicos). Cada vídeo: guardar original em _original/, corrigir só forma, revalidar T1, T2 e T3, auditoria em relatorios/checagens/.
+
+## Fase 2 (19/10/2026, ordem do Dr. Antônio): estado
+- Classificação: 54 F, 0 R, 0 C, 0 D, 0 X. Nenhuma pasta foi alterada; nenhum original precisou ser guardado (nada foi reformado).
+- Bloqueio: a correção de F exige nova narração (áudio com vinheta/assinatura faladas) e novo render. A conferência (`scripts/youtube/conferirVideo.js`) checa quadros, transcrição do áudio e legenda do vídeo renderizado; metadado sozinho não zera nenhum dos 54.
+- `scripts/youtube/montarFila.js` só gera mídia quando `meta.json` não existe. Não há forma segura de enfileirar regeração sem apagar ou mover arquivos (proibido). Registrado em PENDENTES.md; nada foi forçado.
+- Causa a confirmar antes de regerar: `gerarVideosLongos.js` chama `L.comVinheta` e `L.comAssinaturaFalada`. Se o defeito persistir na regeração, o bug está nessas funções, não na fila.
+- Ollama (127.0.0.1:11434) não respondeu: T2/T3 locais não rodaram. Não houve texto reformado, então não havia o que checar.
