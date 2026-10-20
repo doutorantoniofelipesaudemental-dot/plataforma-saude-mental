@@ -228,3 +228,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 ## Limpeza da árvore (20/10/2026)
 - Branch chore/limpeza-gerados-20261020: 68 gerados saem do índice (no disco), .gitignore atualizado, ZIPs em arquivo/. Portão APROVADO (relatorios/portao-20261020-0634.md).
 - Pendente: decidir sobre as pastas novas de fila-manual e aprovar a normalização de fim de linha (PR separado).
+
+## Pós-limpeza (20/10/2026)
+- PR de fim de linha (.gitattributes): aguardando push/PR/merge do Dr. Antônio.
+- PR de backup do estado + fila manual + ZIPs: portão e merge pendentes.
+- Aguardando ordem: (a) 11 reprovados da fila manual (cap.ass em 9 Shorts; encerramento falado em 2 longos); (b) importar os 24 textos novos do referencias-140-prontas; (c) descartar ou manter o importacao-extra-180 (recomendação: manter arquivado).

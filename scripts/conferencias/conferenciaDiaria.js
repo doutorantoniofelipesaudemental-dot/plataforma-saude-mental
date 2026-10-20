@@ -23,6 +23,22 @@ const falhas = [], avisos = [], linhas = [];
 const ok = (t) => linhas.push(`- ✔ ${t}`);
 const falha = (t) => { falhas.push(t); linhas.push(`- ✘ **${t}**`); };
 const aviso = (t) => { avisos.push(t); linhas.push(`- ⚠ ${t}`); };
+
+// Backup diário do estado que saiu do Git (scripts/backupEstado.js). Falha ou mais de 2 dias sem backup = alerta com ação.
+function backupDoEstado() {
+  const r = spawnSync(process.execPath, [path.join(RAIZ, 'scripts/backupEstado.js'), '--executar'], { cwd: RAIZ, encoding: 'utf8', timeout: 300000 });
+  let j = null;
+  try { j = JSON.parse(String(r.stdout).trim().split('\n').pop()); } catch { /* sem JSON */ }
+  const hojeMs = Date.parse(`${hoje}T00:00:00Z`);
+  let t;
+  if (!j || j.erro) t = 'backup do estado FALHOU (sem resultado): ver scripts/backupEstado.js';
+  else if (j.falhas.length || j.recusados.length) t = `backup do estado incompleto: ${j.falhas.length} falha(s), ${j.recusados.length} recusado(s) por segurança`;
+  else if (!j.ultimoBackup || hojeMs - Date.parse(`${j.ultimoBackup}T00:00:00Z`) > 2 * 24 * 3600e3) t = `backup do estado sem rodar há mais de 2 dias (último: ${j.ultimoBackup || 'nenhum'})`;
+  if (t) {
+    falha(t);
+    fs.appendFileSync(path.join(RAIZ, 'relatorios/ESTADO-GERAL.md'), `\n- [${hoje}] PRECISA DE VOCÊ: ${t}\n`, 'utf8');
+  }
+}
 const secao = (t) => linhas.push('', `## ${t}`);
 const http = async (url, opcoes = {}) => { try { return await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000), ...opcoes }); } catch (e) { return { status: 0, erro: e.message }; } };
 
@@ -132,6 +148,7 @@ function alertaNoEstadoGeral() {
   await db.connect();
   const d = mongoose.connection.db;
   for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
+  backupDoEstado(); // gravação à parte, na mesma tarefa: a conferência em si segue só de leitura
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });
   const md = `# Conferência diária — ${hoje}\n\n**Resultado: ${falhas.length ? `${falhas.length} FALHA(S)` : 'tudo certo'}${avisos.length ? ` · ${avisos.length} aviso(s)` : ''}** (somente leitura: nada foi publicado, apagado nem alterado; freios intactos)\n${linhas.join('\n')}\n`;
   fs.writeFileSync(path.join(pasta, `${hoje}.md`), md, 'utf8');
