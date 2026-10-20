@@ -12,7 +12,7 @@
 const HORARIOS = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
 const POR_DIA = HORARIOS.length;
 const INICIO = '2026-10-19';
-const FERIADOS = new Set(['2026-11-02', '2026-11-20', '2026-12-08']);
+const FERIADOS = new Set(['2026-11-02', '2026-11-20', '2026-12-08', '2026-12-25', '2027-01-01']);
 
 const PUBLICO_POR_CATEGORIA = {
   'Pais & Famílias': 'pais', 'Infância & Adolescência': 'pais', 'Educadores & Professores': 'pais',
