@@ -142,3 +142,34 @@ test('soConta: conta de outro username é recusada sem gravar nada', async () =>
   assert.equal(r, 1);
   assert.equal(gravou, false);
 });
+
+const fs = require('node:fs');
+const path = require('node:path');
+const FONTE_DO_SCRIPT = fs.readFileSync(path.join(__dirname, '../../scripts/instagram/atualizarToken.js'), 'utf8');
+
+test('redeploy: refaz o último deploy de produção (redeploy <url>), nunca "vercel deploy" a partir da pasta local', () => {
+  const chamadas = [];
+  const rodar = (args) => { chamadas.push(args); return { status: 0, stdout: '\turl\t\thttps://drsaudemental-abc123-doutor.vercel.app\n' }; };
+  assert.equal(A.dispararDeploy(rodar), true);
+  assert.deepEqual(chamadas[1], ['redeploy', 'https://drsaudemental-abc123-doutor.vercel.app', '--target', 'production']);
+  assert.ok(chamadas.every((c) => c[0] !== 'deploy'), 'nunca chama deploy');
+});
+
+test('redeploy: sem URL de produção reconhecível, não faz nada', () => {
+  const chamadas = [];
+  assert.equal(A.dispararDeploy((args) => { chamadas.push(args); return { status: 0, stdout: 'sem url' }; }), false);
+  assert.equal(chamadas.length, 1, 'só o inspect; nenhum redeploy');
+});
+
+test('redeploy: URL fora de *.vercel.app é recusada (nunca vira argumento)', () => {
+  const chamadas = [];
+  const rodar = (args) => { chamadas.push(args); return { status: 0, stdout: 'url https://exemplo.com.br/evil\n' }; };
+  assert.equal(A.dispararDeploy(rodar), false);
+  assert.equal(chamadas.length, 1);
+});
+
+test('código do script: nunca chama "vercel deploy" e não usa shell:true (DEP0190)', () => {
+  assert.doesNotMatch(FONTE_DO_SCRIPT, /['"]deploy['"]/);
+  assert.doesNotMatch(FONTE_DO_SCRIPT, /shell:\s*true/);
+  assert.match(FONTE_DO_SCRIPT, /['"]redeploy['"]/);
+});

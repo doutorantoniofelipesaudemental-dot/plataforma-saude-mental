@@ -44,3 +44,26 @@ test('diagnóstico da Vercel: resultado com mais de 30 h = alerta', () => {
   const agora = new Date('2026-10-27T12:00:00Z');
   assert.match(alertaDiagnostico({ agora, diag: { ok: true, executadoEm: new Date('2026-10-25T23:00:00Z') } }).texto, /sem resultado há/);
 });
+
+const { checagemRenovacaoSemanal } = require('../../scripts/conferencias/alertaToken');
+
+test('renovação semanal: segunda com renovação gravada = aviso informativo, sem ação', () => {
+  const a = checagemRenovacaoSemanal({ hoje: '2026-10-26', renovadoEm: new Date('2026-10-26T12:00:05Z'), expiraEm: new Date('2026-12-25T12:00:05Z') });
+  assert.equal(a.acao, false);
+  assert.match(a.texto, /OK: gravada em 2026-10-26/);
+});
+
+test('renovação semanal: segunda sem renovadoEm/expiraEm = alerta com ação', () => {
+  const a = checagemRenovacaoSemanal({ hoje: '2026-10-26', renovadoEm: null, expiraEm: null });
+  assert.equal(a.acao, true);
+  assert.match(a.texto, /NÃO gravou/);
+});
+
+test('renovação semanal: renovação antiga (mais de 36 h) não conta como desta semana', () => {
+  const a = checagemRenovacaoSemanal({ hoje: '2026-10-26', renovadoEm: new Date('2026-10-19T12:00:00Z'), expiraEm: new Date('2026-12-18T12:00:00Z') });
+  assert.equal(a.acao, true);
+});
+
+test('renovação semanal: fora de segunda não gera nada', () => {
+  assert.equal(checagemRenovacaoSemanal({ hoje: '2026-10-27', renovadoEm: null, expiraEm: null }), null);
+});
