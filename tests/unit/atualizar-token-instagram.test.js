@@ -76,6 +76,16 @@ test('atualizarEnv: mantém fim de linha CRLF', () => {
   assert.equal(A.atualizarEnv('A=1\r\nINSTAGRAM_ACCESS_TOKEN=velho\r\n', 'novo'), 'A=1\r\nINSTAGRAM_ACCESS_TOKEN=novo\r\n');
 });
 
+test('projeto: grava só no drsaudemental (ID fixo); outro projeto ou pasta sem vínculo é recusado', () => {
+  assert.equal(A.projetoPermitido({ projectId: A.PROJETO_OFICIAL_ID }).ok, true);
+  assert.equal(A.PROJETO_OFICIAL_ID, 'prj_uIQsuIIdKas1D6AHlGtHEwcdaFsG');
+  const outro = A.projetoPermitido({ projectId: 'prj_1Y76anxudO71uxA3Hil9KsDmc7fQ' });
+  assert.equal(outro.ok, false);
+  assert.match(outro.motivo, /outro projeto/);
+  assert.equal(A.projetoPermitido(null).ok, false);
+  assert.equal(A.projetoPermitido({}).ok, false);
+});
+
 test('dataBR: formato DD/MM/AAAA e texto quando não há data', () => {
   assert.equal(A.dataBR(null), 'não informada pela API');
   assert.equal(A.dataBR(new Date(Date.UTC(2027, 0, 5))), '05/01/2027');

@@ -12,6 +12,15 @@ const { spawnSync } = require('node:child_process');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const VAR = 'INSTAGRAM_ACCESS_TOKEN';
+const PROJETO_OFICIAL_ID = 'prj_uIQsuIIdKas1D6AHlGtHEwcdaFsG'; // drsaudemental (www.drantoniofelipemedico.com.br)
+
+// Grava só no projeto oficial. Lê apenas o projectId de .vercel/project.json; recusa qualquer outro ou arquivo ausente.
+function projetoPermitido(projetoLido) {
+  const id = projetoLido && projetoLido.projectId;
+  if (!id) return { ok: false, motivo: 'pasta sem projeto Vercel vinculado (.vercel/project.json ausente)' };
+  if (id !== PROJETO_OFICIAL_ID) return { ok: false, motivo: 'pasta vinculada a outro projeto da Vercel; recusado' };
+  return { ok: true };
+}
 
 // IGAA = Instagram Login (graph.instagram.com); EAA = via Página do Facebook (graph.facebook.com).
 function hostDoToken(token) {
@@ -79,6 +88,10 @@ function atualizarVercel(token) {
 
 async function principal() {
   const redeploy = process.argv.includes('--redeploy');
+  let projeto = null;
+  try { projeto = JSON.parse(fs.readFileSync(path.join(RAIZ, '.vercel', 'project.json'), 'utf8')); } catch { /* ausente */ }
+  const permissao = projetoPermitido(projeto);
+  if (!permissao.ok) { console.log(`Recusado: ${permissao.motivo}. Nada foi gravado.`); return 1; }
   const token = await pedirOculto('Cole o token novo (entrada oculta) e tecle Enter: ');
   if (!token) { console.log('Nenhum token informado. Nada feito.'); return 1; }
   const me = await validarMe(token);
@@ -104,4 +117,4 @@ if (require.main === module) {
   principal().then((c) => { process.exitCode = c; }).catch((e) => { console.log(`Erro: ${redigir(e.message, process.env.INSTAGRAM_ACCESS_TOKEN || '')}`); process.exitCode = 1; });
 }
 
-module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR };
+module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, PROJETO_OFICIAL_ID };
