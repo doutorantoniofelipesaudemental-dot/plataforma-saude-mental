@@ -219,3 +219,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Portão APROVADO (relatorios/portao-20261018-1808.md): auditoria 0 falhas, build OK, unitários OK, e2e 31/31.
 - Regra do LinkedIn trocada por ordem escrita (CLAUDE.md, seção LinkedIn). Tarefa DrSM-LinkedIn-Agendar ainda NÃO criada: falta o comando `!`.
 - Próximo passo exato: rodar o comando `!` de criação da tarefa LinkedIn (ver resposta), depois `npm run merge-seguro -- <PR>` pelo Dr. Antônio.
+
+## Instagram — token e conta (20/10/2026)
+- Token: Instagram Login (IGAA), válido. Conta @doutor.antoniofelipe.smental, ID 17841415747425012 (falta gravar: `--so-conta`).
+- Prova: validar do carrossel de 26/10 OK, sem publicar.
+- Próximo passo: rodar `--so-conta` no PowerShell; abrir PR da branch fix/instagram-conta-token-20261020 (portão aprovado); depois do merge, o cron de renovação passa a enviar o token na query.

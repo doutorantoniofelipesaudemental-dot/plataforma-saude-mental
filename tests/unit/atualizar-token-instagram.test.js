@@ -90,3 +90,24 @@ test('dataBR: formato DD/MM/AAAA e texto quando não há data', () => {
   assert.equal(A.dataBR(null), 'não informada pela API');
   assert.equal(A.dataBR(new Date(Date.UTC(2027, 0, 5))), '05/01/2027');
 });
+
+test('obterIdConta: token IGAA lê user_id de /me no graph.instagram.com, sem o token na URL', async () => {
+  let url = '';
+  const r = await A.obterIdConta(TOKEN, { buscar: async (u) => { url = String(u); return { json: async () => ({ user_id: '17841400000000000', username: 'doutor.antoniofelipe.smental' }) }; } });
+  assert.deepEqual(r, { ok: true, id: '17841400000000000', username: 'doutor.antoniofelipe.smental' });
+  assert.match(url, /^https:\/\/graph\.instagram\.com\/me\?/);
+  assert.doesNotMatch(url, /IGAA/);
+});
+
+test('obterIdConta: token via Página (EAA) acha a conta pelo username esperado em /me/accounts', async () => {
+  const dados = { data: [{ instagram_business_account: { id: '111', username: 'outra' } }, { instagram_business_account: { id: '222', username: 'doutor.antoniofelipe.smental' } }] };
+  const r = await A.obterIdConta('EAAfake', { buscar: async () => ({ json: async () => dados }) });
+  assert.equal(r.ok, true);
+  assert.equal(r.id, '222');
+});
+
+test('obterIdConta: erro da Meta vem sem o token', async () => {
+  const r = await A.obterIdConta(TOKEN, { buscar: async () => ({ json: async () => ({ error: { code: 190, message: `token ${TOKEN} inválido` } }) }) });
+  assert.equal(r.ok, false);
+  assert.doesNotMatch(r.erro, /IGAAtesteFICTICIO/);
+});

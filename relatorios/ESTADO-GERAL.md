@@ -234,3 +234,13 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 > **CHECKPOINT (19/10/2026, ordem "destravar o reaproveitamento"):** Itens 1 a 7 feitos com testes (424 unitários passam). Item 5b: Short de teste passou em T1 (resultado A, amostra única). Regeração e triagem T2/T3 só rodam na noite depois do merge. Item 8: PR #115 ainda não mesclado; simulação do Blob pendente. Opcionais O1, O2 e O3 não executados (motivos em PENDENTES.md). Ollama fora do ar. Ponto de retomada: merge da branch feat/reaproveitar-fase2-20261019; testar um longo em rascunho.
 
 > **PROJETOS NA VERCEL (20/10/2026, ordem "dois projetos"):** a pasta está vinculada ao projeto oficial `drsaudemental` (prj_uIQs…). O atualizarToken.js agora grava só nele e recusa os demais (teste). O projeto `plataforma-saude-mental` (steel) NÃO deve ser pausado ainda: o app Next usa o domínio dele como canonical de todos os textos que não estão no domínio principal (apps/plataforma-saude-mental/app/slugsDominioPrincipal.js, gerado por backend/lib/duplicadosNext.js). Pausar agora derrubaria essas páginas enquanto o Google ainda as indexa. Antes de pausar: trocar esse canonical para o www (ou redirecionar o steel para o www), confirmar que o OAuth do YouTube não usa o steel (conferir no console do Google, que não está no repositório) e só então pausar, por decisão do Dr. Antônio, depois de 7 dias sem problemas.
+
+## Token do Instagram — 20/10/2026 (CHECKPOINT)
+- Tipo: Instagram Login (IGAA), válido, aceito pela Meta. Conta: @doutor.antoniofelipe.smental (BUSINESS). Validade: vence em ~60 dias da última renovação; a data exata não consta no banco (renovação nunca rodou com sucesso).
+- Token via Página (EAA): descartado. O token atual não é EAA. Por isso não se aplica "token que não vence" nem --token-pagina.
+- INSTAGRAM_ACCOUNT_ID encontrado: 17841415747425012 (campo user_id de /me). Gravação pendente: rodar `node --env-file-if-exists=.env scripts/instagram/atualizarToken.js --so-conta` (ver mensagem).
+- Prova do caminho real: `testeCarrossel.js --validar --id=2026-10-26-saude-mental-cuidador` → OK, 5 itens, FINISHED, nada publicado (log em relatorios/logs/validar-carrossel-26-10.txt). Feita com INSTAGRAM_ACCOUNT_ID passado só na linha de comando.
+- Defeito "código 100 access_token is required": corrigido no código (token na QUERY, exigido pela Meta; teste atualizado). Ainda não está em produção.
+- Alerta de 15 dias no RESUMO-DO-DIA: implementado (scripts/conferencias/alertaToken.js), ativo na próxima conferência.
+- Branch fix/instagram-conta-token-20261020, portão APROVADO (relatorios/portao-20261020-0351.md). Não mesclado.
+- Pendente: diagnóstico somente leitura na Vercel (não construído); decisão sobre a Vercel ter o mesmo token e ID.

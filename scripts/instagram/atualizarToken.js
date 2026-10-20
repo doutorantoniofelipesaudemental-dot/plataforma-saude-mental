@@ -3,6 +3,8 @@
  * Rodar numa janela do PowerShell, fora do Claude Code:
  *   node --env-file-if-exists=.env scripts/instagram/atualizarToken.js
  *   node --env-file-if-exists=.env scripts/instagram/atualizarToken.js --redeploy
+ *   node --env-file-if-exists=.env scripts/instagram/atualizarToken.js --so-conta
+ *       Só o INSTAGRAM_ACCOUNT_ID (lido do token do .env, sem pedir token): grava no .env e na Vercel (produção).
  * O token é digitado com entrada oculta, vai para a Vercel pela entrada padrão (não pela linha de comando) e nunca aparece na saída.
  */
 const fs = require('node:fs');
@@ -58,15 +60,48 @@ function resumoValido({ usuario, conta }, { app, appId, expiraEm }, host = '') {
   return `VÁLIDO para @${usuario} (${conta}), host ${host || '?'}, app ${alvo}, expira em ${dataBR(expiraEm)}`;
 }
 
-// Troca (ou acrescenta) a linha INSTAGRAM_ACCESS_TOKEN no texto do .env, mantendo as outras linhas e o fim de linha.
-function atualizarEnv(texto, token) {
+// Troca (ou acrescenta) a linha da variável no texto do .env, mantendo as outras linhas e o fim de linha.
+function atualizarEnv(texto, valor, variavel = VAR) {
   const eol = texto.includes('\r\n') ? '\r\n' : '\n';
   const linhas = texto.split(/\r?\n/);
-  const i = linhas.findIndex((l) => l.startsWith(`${VAR}=`));
-  if (i >= 0) linhas[i] = `${VAR}=${token}`;
-  else if (linhas[linhas.length - 1] === '') linhas.splice(linhas.length - 1, 0, `${VAR}=${token}`);
-  else linhas.push(`${VAR}=${token}`);
+  const i = linhas.findIndex((l) => l.startsWith(`${variavel}=`));
+  if (i >= 0) linhas[i] = `${variavel}=${valor}`;
+  else if (linhas[linhas.length - 1] === '') linhas.splice(linhas.length - 1, 0, `${variavel}=${valor}`);
+  else linhas.push(`${variavel}=${valor}`);
   return linhas.join(eol);
+}
+
+// ID da conta profissional do Instagram. Token IGAA: /me (user_id). Token via Página (EAA): /me/accounts. Só leitura.
+const CONTA_ESPERADA = 'doutor.antoniofelipe.smental';
+async function obterIdConta(token, { buscar = fetch } = {}) {
+  const h = { headers: { Authorization: `Bearer ${token}` } };
+  if (token.startsWith('IGAA')) {
+    const j = await (await buscar(`${hostDoToken(token)}/me?fields=user_id,username`, h)).json().catch(() => ({}));
+    if (j.error || !j.user_id) return { ok: false, erro: j.error ? `${j.error.code}: ${redigir(j.error.message, token)}` : 'resposta sem user_id' };
+    return { ok: true, id: String(j.user_id), username: j.username || '?' };
+  }
+  const j = await (await buscar('https://graph.facebook.com/v21.0/me/accounts?fields=name,instagram_business_account{id,username}', h)).json().catch(() => ({}));
+  if (j.error) return { ok: false, erro: `${j.error.code}: ${redigir(j.error.message, token)}` };
+  const conta = (j.data || []).map((p) => p.instagram_business_account).find((c) => c && c.username === CONTA_ESPERADA) || (j.data || []).map((p) => p.instagram_business_account).find(Boolean);
+  if (!conta) return { ok: false, erro: 'nenhuma conta do Instagram ligada às Páginas deste token' };
+  return { ok: true, id: String(conta.id), username: conta.username };
+}
+
+// --so-conta: lê o token do .env (sem pedir), descobre o ID da @doutor.antoniofelipe.smental e grava INSTAGRAM_ACCOUNT_ID.
+async function soConta({ buscar = fetch } = {}) {
+  const token = process.env.INSTAGRAM_ACCESS_TOKEN || '';
+  if (!token) { console.log('INSTAGRAM_ACCESS_TOKEN ausente no .env. Nada gravado.'); return 1; }
+  const achado = await obterIdConta(token, { buscar });
+  if (!achado.ok) { console.log(`ID não encontrado: ${achado.erro}. Nada gravado.`); return 1; }
+  if (achado.username !== CONTA_ESPERADA) { console.log(`Conta do token é @${achado.username}, não @${CONTA_ESPERADA}. Nada gravado.`); return 1; }
+  console.log(`ID encontrado para @${achado.username}.`);
+  const arq = path.join(RAIZ, '.env');
+  const atual = fs.existsSync(arq) ? fs.readFileSync(arq, 'utf8') : '';
+  fs.writeFileSync(arq, atualizarEnv(atual, achado.id, 'INSTAGRAM_ACCOUNT_ID'), 'utf8');
+  console.log('.env local: INSTAGRAM_ACCOUNT_ID gravado.');
+  const vercelOk = atualizarVercelVar('INSTAGRAM_ACCOUNT_ID', achado.id);
+  console.log(`Vercel (produção): ${vercelOk ? 'INSTAGRAM_ACCOUNT_ID gravado' : 'FALHOU (faça login no CLI da Vercel ou atualize pela interface)'}.`);
+  return vercelOk ? 0 : 1;
 }
 
 // Pergunta com entrada oculta: só o texto da pergunta aparece na tela.
@@ -80,11 +115,12 @@ function pedirOculto(pergunta) {
 }
 
 // Vercel: remove a variável de produção (se existir) e recria com o valor pela entrada padrão. Retorna true/false.
-function atualizarVercel(token) {
-  spawnSync('vercel', ['env', 'rm', VAR, 'production', '--yes'], { cwd: RAIZ, shell: true, encoding: 'utf8', timeout: 120000 });
-  const r = spawnSync('vercel', ['env', 'add', VAR, 'production'], { cwd: RAIZ, shell: true, encoding: 'utf8', input: `${token}\n`, timeout: 120000 });
+function atualizarVercelVar(variavel, valor) {
+  spawnSync('vercel', ['env', 'rm', variavel, 'production', '--yes'], { cwd: RAIZ, shell: true, encoding: 'utf8', timeout: 120000 });
+  const r = spawnSync('vercel', ['env', 'add', variavel, 'production'], { cwd: RAIZ, shell: true, encoding: 'utf8', input: `${valor}\n`, timeout: 120000 });
   return r.status === 0;
 }
+const atualizarVercel = (token) => atualizarVercelVar(VAR, token);
 
 async function principal() {
   const redeploy = process.argv.includes('--redeploy');
@@ -92,6 +128,7 @@ async function principal() {
   try { projeto = JSON.parse(fs.readFileSync(path.join(RAIZ, '.vercel', 'project.json'), 'utf8')); } catch { /* ausente */ }
   const permissao = projetoPermitido(projeto);
   if (!permissao.ok) { console.log(`Recusado: ${permissao.motivo}. Nada foi gravado.`); return 1; }
+  if (process.argv.includes('--so-conta')) return soConta();
   const token = await pedirOculto('Cole o token novo (entrada oculta) e tecle Enter: ');
   if (!token) { console.log('Nenhum token informado. Nada feito.'); return 1; }
   const me = await validarMe(token);
@@ -117,4 +154,4 @@ if (require.main === module) {
   principal().then((c) => { process.exitCode = c; }).catch((e) => { console.log(`Erro: ${redigir(e.message, process.env.INSTAGRAM_ACCESS_TOKEN || '')}`); process.exitCode = 1; });
 }
 
-module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, PROJETO_OFICIAL_ID };
+module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, obterIdConta, PROJETO_OFICIAL_ID };
