@@ -235,12 +235,11 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 
 > **PROJETOS NA VERCEL (20/10/2026, ordem "dois projetos"):** a pasta está vinculada ao projeto oficial `drsaudemental` (prj_uIQs…). O atualizarToken.js agora grava só nele e recusa os demais (teste). O projeto `plataforma-saude-mental` (steel) NÃO deve ser pausado ainda: o app Next usa o domínio dele como canonical de todos os textos que não estão no domínio principal (apps/plataforma-saude-mental/app/slugsDominioPrincipal.js, gerado por backend/lib/duplicadosNext.js). Pausar agora derrubaria essas páginas enquanto o Google ainda as indexa. Antes de pausar: trocar esse canonical para o www (ou redirecionar o steel para o www), confirmar que o OAuth do YouTube não usa o steel (conferir no console do Google, que não está no repositório) e só então pausar, por decisão do Dr. Antônio, depois de 7 dias sem problemas.
 
-## Token do Instagram — 20/10/2026 (CHECKPOINT, branch fix/instagram-conta-token-20261020)
-- Tipo: Instagram Login (IGAA). Válido; aceito pela Meta. Cron semanal de renovação SE APLICA.
-- Conta: @doutor.antoniofelipe.smental. ID da conta: 17841415747425012 (user_id). Gravação pendente: `--so-conta`.
-- Validade: a Meta só informa a validade ao renovar. Renovação única agendada na tarefa DrSM-Renovar-Token-Inicial (21/10, 11:30, criada desativada). Até lá: "não registrada".
-- Prova do carrossel de 26/10: `testeCarrossel.js --validar` OK (5 itens, FINISHED, nada publicado).
-- Diagnóstico diário da Vercel: rota /api/cron/diagnostico-instagram (23:00 UTC = 20:00 Salvador), só valida o próximo post, nunca publica. Resultado em `diagnosticos_publicacao`; a conferência das 09:30 alerta no RESUMO e no ESTADO.
-- Defeito "código 100": corrigido no código (token na query). Não está em produção até o merge.
-- Portão: APROVADO (relatorios/portao-20261020-0405.md). Commit no branch; sem push, sem PR, sem merge.
-- Pendências do Dr. Antônio: (1) CRON_SECRET no .env local (está AUSENTE; sem ele a renovação inicial e os comandos locais de diagnóstico não rodam); (2) habilitar a tarefa DrSM-Renovar-Token-Inicial; (3) push, PR e merge-seguro.
+## Token do Instagram — 20/10/2026 (PÓS-MERGE PR #120)
+- Merge do PR #120 feito (commit c8fe2d0, 07:22 UTC). Portão aprovado (relatorios/portao-20261020-0420.md). Deploy de produção Ready (dpl_6MAq4aTXjHHRMgzJNiwWaLuozidp), alias www, rotas de cron respondem 401 sem segredo.
+- Token: Instagram Login (IGAA), aceito pela Meta. Cron semanal de renovação SE APLICA.
+- Conta: @doutor.antoniofelipe.smental, ID 17841415747425012. INSTAGRAM_ACCOUNT_ID gravado na Vercel (produção) e no .env local.
+- Renovação: NÃO há tarefa de renovação inicial (cancelada; nunca foi criada). A renovação é o cron semanal de segunda 12:00 UTC (26/10). A conferência de segunda checa renovadoEm e expiraEm e alerta se não gravou.
+- Diagnóstico diário: /api/cron/diagnostico-instagram, 23:00 UTC (20:00 em Salvador). Só valida o próximo post; nunca publica. Primeira execução real: 25/10 às 20:00.
+- Redeploy: atualizarToken.js agora refaz o último deploy de produção (vercel redeploy). Nunca faz deploy da pasta local. Sem shell:true (DEP0190 corrigido).
+- Pendências: CRON_SECRET ausente no .env local (não é mais necessário para a renovação; só para os diagnósticos locais). Árvore de trabalho com 11 arquivos alterados e 176 não rastreados (ver relatório da limpeza).

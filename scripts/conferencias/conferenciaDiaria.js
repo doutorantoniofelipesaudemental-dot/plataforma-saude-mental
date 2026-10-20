@@ -142,15 +142,16 @@ function alertaNoEstadoGeral() {
     const { alertaValidade, lerVenceEm } = require('../youtube/validadeAutorizacao');
     const { contarPendentes } = require('../ollamaStatus');
     const validade = alertaValidade({ hoje, venceEm: lerVenceEm() });
-    const credToken = await d.collection('credencials').findOne({ chave: 'instagram_access_token' }, { projection: { expiraEm: 1 } }).catch(() => null);
+    const credToken = await d.collection('credencials').findOne({ chave: 'instagram_access_token' }, { projection: { expiraEm: 1, renovadoEm: 1 } }).catch(() => null);
     const tokenIG = require('./alertaToken').alertaTokenInstagram({ hoje, expiraEm: credToken?.expiraEm || null });
+    const tokenSemanal = require('./alertaToken').checagemRenovacaoSemanal({ hoje, renovadoEm: credToken?.renovadoEm || null, expiraEm: credToken?.expiraEm || null });
     const diagPub = await d.collection('diagnosticos_publicacao').findOne({ _id: 'instagram' }).catch(() => null);
     const alertaDiag = require('./alertaToken').alertaDiagnostico({ agora: new Date(), diag: diagPub });
     if (alertaDiag) fs.appendFileSync(path.join(RAIZ, 'relatorios/ESTADO-GERAL.md'), `
 - [${hoje}] ${alertaDiag.texto}
 `, 'utf8');
     const pendentesOllama = contarPendentes(path.join(RAIZ, 'relatorios/youtube/reprovados/estado-regeracao.json'));
-    resumo.gravar(resumo.montarResumo({ hoje, ...dados, alertas: [...(validade ? [validade] : []), ...(tokenIG ? [tokenIG] : []), ...(alertaDiag ? [alertaDiag] : []), ...alertas], pendentesOllama }));
+    resumo.gravar(resumo.montarResumo({ hoje, ...dados, alertas: [...(validade ? [validade] : []), ...(tokenIG ? [tokenIG] : []), ...(tokenSemanal ? [tokenSemanal] : []), ...(alertaDiag ? [alertaDiag] : []), ...alertas], pendentesOllama }));
   } catch (e) { console.error(`resumo do dia não gerado: ${e.message}`); }
   alertaNoEstadoGeral();
   if (falhas.length) { // e-mail só se RESEND_API_KEY existir (desligado até lá)

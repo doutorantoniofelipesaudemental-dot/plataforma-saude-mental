@@ -25,3 +25,14 @@ function alertaDiagnostico({ agora, diag }) {
 }
 
 module.exports.alertaDiagnostico = alertaDiagnostico;
+
+// Segunda-feira: o cron semanal (12:00 UTC) deve ter gravado renovadoEm e expiraEm antes da conferência (09:30 de Brasília).
+function checagemRenovacaoSemanal({ hoje, renovadoEm, expiraEm }) {
+  const agora = Date.parse(`${hoje}T12:00:00Z`);
+  if (new Date(agora).getUTCDay() !== 1) return null;
+  const gravou = renovadoEm && expiraEm && agora - new Date(renovadoEm).getTime() < 36 * 3600e3 && new Date(expiraEm).getTime() > agora;
+  if (gravou) return { texto: `Renovação semanal do token OK: gravada em ${new Date(renovadoEm).toISOString().slice(0, 10)}, vence em ${new Date(expiraEm).toISOString().slice(0, 10)}`, acao: false };
+  return { texto: 'PRECISA DE VOCÊ: renovação semanal do token NÃO gravou renovadoEm/expiraEm (cron de segunda 12:00 UTC). Verificar o cron renovar-token-instagram', acao: true, primeira: true };
+}
+
+module.exports.checagemRenovacaoSemanal = checagemRenovacaoSemanal;

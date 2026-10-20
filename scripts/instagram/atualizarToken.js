@@ -88,10 +88,26 @@ async function obterIdConta(token, { buscar = fetch } = {}) {
 }
 
 // --so-conta: lê o token do .env (sem pedir), descobre o ID da @doutor.antoniofelipe.smental e grava INSTAGRAM_ACCOUNT_ID.
-// Deploy de produção do projeto drsaudemental (só com --redeploy, depois de gravar o ID).
-function dispararDeploy() {
-  const d = spawnSync('vercel', ['deploy', '--prod', '--yes'], { cwd: RAIZ, shell: true, encoding: 'utf8', timeout: 900000 });
-  return d.status === 0;
+// Roda o CLI da Vercel sem shell. No Windows o `vercel` é um .cmd, que só o cmd.exe executa; os argumentos
+// são constantes do script ou um URL validado por regex antes de chegar aqui.
+function rodarVercel(args, { input } = {}) {
+  const opcoes = { cwd: RAIZ, encoding: 'utf8', timeout: 900000, input };
+  if (process.platform === 'win32') return spawnSync('cmd.exe', ['/d', '/s', '/c', ['vercel', ...args].join(' ')], opcoes);
+  return spawnSync('vercel', args, opcoes);
+}
+
+// URL do deploy de produção atual (o alias oficial aponta para ele). Só aceita *.vercel.app.
+function ultimoDeployProducao(rodar = rodarVercel) {
+  const r = rodar(['inspect', 'https://drsaudemental.vercel.app']);
+  const m = /^\s*url\s+(https:\/\/[a-z0-9-]+\.vercel\.app)\s*$/m.exec(String(r.stdout || ''));
+  return m ? m[1] : null;
+}
+
+// Redeploy do ÚLTIMO deploy de produção (nunca sobe código da pasta local, mesmo que não esteja mesclado).
+function dispararDeploy(rodar = rodarVercel) {
+  const url = ultimoDeployProducao(rodar);
+  if (!url) return false;
+  return rodar(['redeploy', url, '--target', 'production']).status === 0;
 }
 
 async function soConta({ token = process.env.INSTAGRAM_ACCESS_TOKEN || '', redeploy = false, buscar = fetch, vercel = atualizarVercelVar, deploy = dispararDeploy, escreverEnv } = {}) {
@@ -131,8 +147,8 @@ function pedirOculto(pergunta) {
 
 // Vercel: remove a variável de produção (se existir) e recria com o valor pela entrada padrão. Retorna true/false.
 function atualizarVercelVar(variavel, valor) {
-  spawnSync('vercel', ['env', 'rm', variavel, 'production', '--yes'], { cwd: RAIZ, shell: true, encoding: 'utf8', timeout: 120000 });
-  const r = spawnSync('vercel', ['env', 'add', variavel, 'production'], { cwd: RAIZ, shell: true, encoding: 'utf8', input: `${valor}\n`, timeout: 120000 });
+  rodarVercel(['env', 'rm', variavel, 'production', '--yes']);
+  const r = rodarVercel(['env', 'add', variavel, 'production'], { input: `${valor}\n` });
   return r.status === 0;
 }
 const atualizarVercel = (token) => atualizarVercelVar(VAR, token);
@@ -157,8 +173,7 @@ async function principal() {
   const vercelOk = atualizarVercel(token);
   console.log(`Vercel (produção): ${vercelOk ? 'atualizada' : 'FALHOU (faça login no CLI da Vercel ou atualize pela interface)'}.`);
   if (redeploy && vercelOk) {
-    const d = spawnSync('vercel', ['deploy', '--prod', '--yes'], { cwd: RAIZ, shell: true, encoding: 'utf8', timeout: 900000 });
-    console.log(`Redeploy de produção: ${d.status === 0 ? 'disparado' : 'FALHOU'}.`);
+    console.log(`Redeploy de produção: ${dispararDeploy() ? 'disparado' : 'FALHOU'}.`);
   } else if (!redeploy) {
     console.log('Redeploy não disparado (use --redeploy para disparar).');
   }
@@ -169,4 +184,4 @@ if (require.main === module) {
   principal().then((c) => { process.exitCode = c; }).catch((e) => { console.log(`Erro: ${redigir(e.message, process.env.INSTAGRAM_ACCESS_TOKEN || '')}`); process.exitCode = 1; });
 }
 
-module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, obterIdConta, soConta, PROJETO_OFICIAL_ID };
+module.exports = { hostDoToken, redigir, validarMe, debugToken, resumoValido, atualizarEnv, dataBR, projetoPermitido, obterIdConta, soConta, dispararDeploy, PROJETO_OFICIAL_ID };
