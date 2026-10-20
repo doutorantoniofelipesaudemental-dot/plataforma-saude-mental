@@ -37,8 +37,8 @@ function ass(trechos, W = 1080, H = 1920) {
   return cab + trechos.map((x) => `Dialogue: 0,${t(x.ini)},${t(x.fim)},Cap,,0,0,0,,${x.txt.replace(/\n/g, '\\N')}`).join('\n') + '\n';
 }
 
-async function gerar({ a, id, tituloTela, linhas, extraDescricao = '' }) {
-  const dir = path.join(L.MIDIA, a.slug, `short-${id}`);
+async function gerar({ a, id, tituloTela, linhas, extraDescricao = '', dirSaida = '' }) {
+  const dir = dirSaida || path.join(L.MIDIA, a.slug, `short-${id}`); // dirSaida: rascunho de regeração (pasta original intocada)
   if (fs.existsSync(path.join(dir, 'meta.json')) && !refazer) return { slug: a.slug, id, pulou: 'já gerado' };
   // capa ANTES de apagar a pasta: se falhar, o que já existe fica intacto
   const cp = await L.obterCapa(a);

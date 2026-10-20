@@ -15,6 +15,7 @@ const L = require('./lib');
 const longos = require('./gerarVideosLongos');
 const shorts = require('./gerarShorts');
 const { conferirVideo } = require('./conferirVideo');
+const regeracao = require('./regeracao');
 
 const aplicar = process.argv.includes('--aplicar'), gerarMidia = process.argv.includes('--gerar');
 const limite = Number((process.argv.find((a) => a.startsWith('--limite=')) || '--limite=9999').split('=')[1]);
@@ -75,6 +76,39 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
 
   // ---------- gera mídia que falta e confere ----------
   let feitos = 0;
+  // Regeração segura dos reprovados (lista REGERAR.txt / REGERAR-FILA.txt; sem lista não muda nada). Antes do recálculo de status.
+  if (gerarMidia && regeracao.listaCandidatos().length) {
+    const hoje = new Date().toISOString().slice(0, 10);
+    const dirDe = (id) => { const it = itens.find((i) => i.id === id); if (!it) return null; return it.tipo === 'longo' ? path.join(L.MIDIA, it.slug) : path.join(L.MIDIA, it.slug, `short-${it.postId || 'resumo'}`); };
+    const maiorMp4 = (dir) => { try { return Math.max(0, ...fs.readdirSync(dir).filter((f) => /\.mp4$/.test(f)).map((f) => fs.statSync(path.join(dir, f)).size)); } catch { return 0; } };
+    const gerarItem = async (id, dirSaida) => {
+      const it = itens.find((i) => i.id === id); if (!it) throw new Error('id fora da fila');
+      const a = porSlug.get(it.slug); if (!a) throw new Error('texto não encontrado');
+      if (it.tipo === 'longo') return longos.gerar(a, { dirSaida });
+      const p = it.postId ? posts.find((x) => x._id === it.postId) : null;
+      if (it.postId && !p) throw new Error('post não está aprovado-checagem');
+      const r = p ? shorts.linhasDoPost(p) : { titulo: a.titulo, linhas: [a.titulo, L.semTags(a.resumo || '')].filter(Boolean) };
+      return shorts.gerar({ a, id: it.postId || 'resumo', tituloTela: r.titulo, linhas: r.linhas, dirSaida });
+    };
+    const r = await regeracao.executarNoite({
+      gerarItem, conferir: conferirVideo, pastaDe: dirDe, tamanhoBytes: (id) => { const d = dirDe(id); return d ? maiorMp4(d) : 0; },
+      livreBytes: () => { const s = fs.statfsSync(L.RAIZ); return s.bavail * s.bsize; },
+      backupDir: path.join(regeracao.BACKUPS, `reprovados-originais-${hoje.replace(/-/g, '')}`), hoje,
+    });
+    console.log(JSON.stringify({ regeracao: r }));
+    const linhaNoite = `Regeração dos vídeos: ${r.feitos} tentativa(s), ${r.falhas || 0} falha(s), espaço livre ${r.espacoLivreGB} GB${r.parado ? `, parou: ${r.parado}` : ''}`;
+    if (r.feitos) regeracao.resumoNoite(path.join(L.RAIZ, 'relatorios/RESUMO-DO-DIA.md'), linhaNoite);
+    if (r.parado === 'freio') {
+      regeracao.alertarTopo(path.join(L.RAIZ, 'relatorios/ESTADO-GERAL.md'), `> ${regeracao.ALERTA_FREIO}`);
+      regeracao.alertarTopo(path.join(L.RAIZ, 'relatorios/RESUMO-DO-DIA.md'), regeracao.ALERTA_FREIO);
+    }
+    // T2/T3 dos regerados (gemma2:9b local; Ollama fora = aguardando-ollama). Sem chamada ao Claude.
+    const RP = require('./reaproveitarReprovados');
+    const st = await require('../ollamaStatus').statusOllama();
+    const metaDe = (id) => { const d = dirDe(id); try { return JSON.parse(fs.readFileSync(path.join(d, 'meta.json'), 'utf8')); } catch { return null; } };
+    const triagem = await RP.executar({ estadoArq: regeracao.ESTADO, metaDe, st, chamar: (m) => RP.chamarGemma(m), hoje });
+    console.log(JSON.stringify({ ollama: st.status, triagem }));
+  }
   for (const it of itens) {
     const a = porSlug.get(it.slug);
     const dir = it.tipo === 'longo' ? path.join(L.MIDIA, it.slug) : path.join(L.MIDIA, it.slug, `short-${it.postId || 'resumo'}`);
@@ -95,7 +129,8 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
     // conferência automática do vídeo (quadros, crédito, assinatura, marca d'água, legenda, vinheta falada); reprovado vai para relatorios/youtube/reprovados/
     const conf = await conferirVideo(dir, meta);
     it.checagem.video = conf.falhas;
-    it.status = !meta.checagemTexto.length && !meta.checagemMidia.length && conf.ok ? 'aprovado-checagem' : 'reprovado';
+    const statusCalc = !meta.checagemTexto.length && !meta.checagemMidia.length && conf.ok ? 'aprovado-checagem' : 'reprovado';
+    it.status = regeracao.statusComGate(it.id, statusCalc, regeracao.lerEstado().itens); // regerados só publicam depois de T2/T3 e calibração
     if (it.status === 'reprovado' && conf.falhas.length) {
       const rep = path.join(L.REL, 'reprovados', it.id); fs.mkdirSync(rep, { recursive: true });
       for (const f of ['ini', 'meio', 'fim']) { const o = path.join(dir, 'conferencia', `${f}.png`); if (fs.existsSync(o)) fs.copyFileSync(o, path.join(rep, `${f}.png`)); }
