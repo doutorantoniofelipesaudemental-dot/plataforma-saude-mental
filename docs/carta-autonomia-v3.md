@@ -32,3 +32,7 @@ Toda execução passa por: auditoria geral + tripla checagem (técnica, científ
 
 - Automático: backup diário do estado (`backup_estado`), conferência das 09:30, diagnóstico da Vercel às 20:00 de Salvador, duas trilhas de trava contra duplicidade (LinkedIn e YouTube).
 - Pendente: permissões headless (item 1 da ordem), manutenção semanal (item 5), fonte única contra duplicidade ligada a todas as importações.
+
+## Regra de Git (atualizada em 20/10/2026)
+
+A automação pode fazer push de branches de trabalho (feat/, fix/, chore/) e abrir PR depois do portão aprovado. Continua proibido: push para main, force push, apagar branch remota e merge. Merge é sempre do Dr. Antônio.

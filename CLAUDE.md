@@ -222,3 +222,10 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 ## Carta de autonomia v3 (20/10/2026)
 
 Resumo: o ecossistema opera sozinho e o Dr. Antônio é chamado só para: merge-seguro; aplicar permissões em settings.json; ligar ou desligar freios; login no LinkedIn ou na Meta e novo token; enviar a auditoria do YouTube; mudança de sentido clínico ou de texto já publicado; novos módulos e foto de rosto. Texto integral e regras fixas: [docs/carta-autonomia-v3.md](docs/carta-autonomia-v3.md). Mapas: relatorios/MAPA-AUTOMACAO.md (18/10) e relatorios/MAPA-AUTOMACAO-20261020.md (crons e freios em 20/10). Lições: relatorios/LICOES.md.
+
+## Decisões de 20/10/2026 (carta v3, registro)
+
+- linkedin/fila.json continua versionado (o portão o lê).
+- ZIP referencias-140: encerrado (24 textos idênticos ao que está no ar; nada a decidir).
+- Git: a automação pode fazer push de branches de trabalho (feat/, fix/, chore/) e abrir PR, depois do portão aprovado. Continua proibido: push para main, force push, apagar branch remota e merge. Merge é sempre do Dr. Antônio (merge-seguro).
+- Manutenção semanal: scripts/manutencaoSemanal.js (segunda prepara o branch; sexta envia o branch da semana). Ver docs/manutencao-semanal.md.

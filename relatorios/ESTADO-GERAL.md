@@ -1,4 +1,7 @@
 > **ALERTA: token do Instagram inválido (190); fila pausada até novo token.** Atualizado em 20/10/2026.
+<!-- ALERTA-CLAUDE-P:INICIO -->
+> # 🚨 TETO DO claude -p ATINGIDO (2026-10-20): teto diário. Chamadas do agendador do LinkedIn paradas até o próximo período. Ver relatorios/CONSUMO.md.
+<!-- ALERTA-CLAUDE-P:FIM -->
 <!-- ALERTA-LINKEDIN:INICIO -->
 > # 🚨 ALERTA DO LINKEDIN (2026-10-20): agendamento parado: comando bloqueado pelo classificador (preAgendamento com --env-file); nada agendado. 0 post(s) agendado(s) hoje.
 > Agendamento parado até nova ordem do Dr. Antônio. Desligar: `npm run linkedin:pausar`.
@@ -99,8 +102,8 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 
 <!-- LINKEDIN-MANUAL:INICIO -->
 ## Fila manual do LinkedIn (perfil pessoal, sem API)
-- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **10** (até 20/11) · abertos (manuais) **33** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
-- Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · qua 25/11 (texto) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto)
+- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **11** (até 25/11) · abertos (manuais) **32** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
+- Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto) · seg 07/12 (texto)
 - No dia: `! npm run linkedin:hoje -- --copiar --abrir` · depois `! npm run linkedin:marcar -- <id>` · calendário completo em `relatorios/linkedin/FILA-MANUAL.md`. A tarefa `DrSM-LinkedIn-Lembrete` (seg/qua/sex 19:25) abre o post do dia.
 <!-- LINKEDIN-MANUAL:FIM -->
 
