@@ -8,6 +8,7 @@
  * + texto dentro do limite de 3.000 caracteres do LinkedIn + (carrossel) PDF existente.
  * Carrosséis (PDF) e posts já agendados no LinkedIn ficam de fora do lote automático: carrossel só entra depois de o Dr. Antônio confirmar que o agendador aceita PDF.
  */
+require('../carregarEnv').carregarEnv(); // .env carregado aqui, sem --env-file na linha de comando
 const fs = require('node:fs');
 const path = require('node:path');
 const mongoose = require('mongoose');

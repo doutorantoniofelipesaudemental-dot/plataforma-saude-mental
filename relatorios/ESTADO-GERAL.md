@@ -291,6 +291,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Itens 8, 9, 10: docs/carta-autonomia-v3.md, relatorios/LICOES.md, relatorios/MAPA-AUTOMACAO-20261020.md; ponteiro no CLAUDE.md.
 - Não feitos agora: item 1 (permissões headless, precisa de testes com claude -p, com teto diário), item 3 (causa dos 7 itens em aprovado-checagem), item 5 (manutenção semanal: a tarefa precisa de você para criar).
 
+## Item 1 (modo automático sem bloqueio) — 20/10/2026
+- Causa do bloqueio: o agendador passava --env-file na linha de comando do pré-checagem, e o classificador bloqueou. Corrigido: o script carrega o .env por dentro (scripts/carregarEnv.js) e o filho não recebe o argumento.
+- Permissões: as regras necessárias já estão na lista (Bash(npm run:*), Bash(node:*)). docs/permissoes-headless/aplicar.js só checa.
+- Não feito: teste real em claude -p de cada rotina (teto de 3 chamadas por dia; precisa de aprovação). Reativação de DrSM-LinkedIn-Agendar depende de sessão validada.
 ## Item 2 (fonte única contra duplicidade) — 20/10/2026
 - backend/lib/existeConteudo.js agora é consultado antes de criar texto novo em: ingestaoRascunhos (insert por slug inexistente no banco) e importarTudo (criação). Atualização de texto que já existe (mesmo slug) segue o fluxo normal.
 - Não ligado: agendarSemData (só atualiza textos existentes) e a publicação (publicarAgendados só publica o que já está no banco).
