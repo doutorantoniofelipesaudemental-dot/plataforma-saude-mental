@@ -54,3 +54,6 @@ Fontes: `vercel.json` (crons), `relatorios/*-estado*`, freios em variáveis de a
 - Monitoramento: conferência diária lê LastTaskResult das tarefas DrSM-* (scripts/conferencias/monitorTarefas.js).
 - YouTube: scripts/youtube/reaproveitarProntos.js e proximosHorarios.js (fila nova, 1 por dia, horários das regras da fila).
 - Permissões: docs/permissoes-headless/aplicar.js (Write(...) para Edit(...) nas negações).
+
+## Estratégia de crescimento (20/10/2026)
+- Planos: ARQUITETURA-ARTIGOS.md (domínio e pilares), RADAR-TEMAS-2026-10.md (radar mensal, depende do Search Console), ESTRATEGIA-CRESCIMENTO-PLANO.md (sete peças e painel semanal), COMENTARIOS-PROPOSTA.md (comentários, sem resposta automática), BENCHMARK-ECOSSISTEMAS.md (10 práticas).

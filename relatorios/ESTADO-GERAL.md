@@ -327,3 +327,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Permissões (3): docs/permissoes-headless/aplicar.js troca Write(...) por Edit(...) nas negações, com diff, backup e confirmação. Não aplicado: rode o comando do PowerShell.
 - Monitoramento (4): a conferência diária lê o último resultado de DrSM-LinkedIn-Agendar e DrSM-Manutencao-Semanal e alerta com a correção.
 - Tarefas: DrSM-LinkedIn-Agendar ativada e DrSM-Manutencao-Semanal criada (pelo Dr. Antônio).
+
+## Estratégia de crescimento (ordem de 20/10/2026) — estado real
+- Entregue como plano (nada executado no site, no banco nem nos freios): relatorios/ARQUITETURA-ARTIGOS.md, BENCHMARK-ECOSSISTEMAS.md, RADAR-TEMAS-2026-10.md, COMENTARIOS-PROPOSTA.md, SEARCH-CONSOLE-PASSO-A-PASSO.md, VOZ-PODCAST-OPCOES.md, ESTRATEGIA-CRESCIMENTO-PLANO.md.
+- Achado de SEO: 24 dos 89 MDX do app Next apontam o canonical para plataforma-saude-mental-steel.vercel.app. Corrigir depende de OK seu (ARQUITETURA-ARTIGOS.md, etapa 2 e 5).
+- Voz: Piper faber (cartão do modelo: dataset CC0, repo MIT), amostras aguardam OK para instalar o pacote (regra de terceiros).
+- Não conectado: Search Console, YouTube Analytics, Instagram Insights (cada um precisa de autorização sua).
+- PR #134 (podcast) está em conflito com a main (3 arquivos de status). Não resolvido nesta rodada.
