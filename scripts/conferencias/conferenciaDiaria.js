@@ -125,6 +125,14 @@ function outrasFilas() {
     const div = CF.divergencias(f.itens, CF.lerConferenciaDoDisco(RAIZ));
     if (div.length) falha(`YouTube: ${div.length} divergência(s) entre a fila e o conferidor (ex.: ${div[0].id}: ${div[0].motivo})`);
   } catch (e) { aviso(`YouTube: fila ilegível (${e.message.slice(0, 60)})`); }
+  // monitoramento das tarefas DrSM-* (ordem de 20/10/2026): leitura do último resultado; falha vira alerta com a correção
+  for (const nome of ['DrSM-LinkedIn-Agendar', 'DrSM-Manutencao-Semanal']) {
+    const r = spawnSync('powershell', ['-NoProfile', '-Command', `(Get-ScheduledTaskInfo -TaskName '${nome}').LastTaskResult`], { encoding: 'utf8', timeout: 30000 });
+    const codigo = parseInt(String(r.stdout || '').trim(), 10);
+    if (Number.isNaN(codigo)) { aviso(`tarefa ${nome}: resultado não lido (verificar o Agendador)`); continue; }
+    const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo });
+    if (a !== 'ok') falha(a.alerta);
+  }
   const li = spawnSync(process.execPath, ['scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
   const linha = String(li.stdout).trim().split('\n').pop();
   linhas.push(`- LinkedIn: ${linha}`);

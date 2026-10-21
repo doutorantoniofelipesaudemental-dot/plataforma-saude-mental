@@ -26,3 +26,19 @@ async function lerContagens(mongoose) {
 }
 
 module.exports = { ABERTOS, AGENDADO, contagens, confirmarUmAgendado, lerContagens };
+
+// Lote numa única chamada (ordem de 20/10/2026): uma linha STATUS por post. Só vale se o banco mudou exatamente
+// do tamanho dos posts marcados como OK, sem nenhum PARAR/DESATIVAR e com pelo menos uma linha de status.
+function interpretarLote(saida = '', { antes, depois, esperados = 3 }) {
+  const linhas = [...String(saida).matchAll(/^STATUS:\s*(OK|PARAR|DESATIVAR)\b(.*)$/gm)].map((m) => m[1]);
+  if (!linhas.length) return { ok: false, agendados: 0, motivo: 'sem linha STATUS' };
+  if (linhas.some((x) => x !== 'OK')) return { ok: false, agendados: linhas.filter((x) => x === 'OK').length, motivo: 'a sessão marcou PARAR ou DESATIVAR' };
+  if (!depois) return { ok: false, agendados: 0, motivo: 'banco ilegível depois do lote' };
+  const delta = depois.agendados - antes.agendados;
+  const saiu = antes.abertos - depois.abertos;
+  if (delta !== linhas.length || saiu !== linhas.length) return { ok: false, agendados: Math.max(0, delta), motivo: `banco não bate com o STATUS (STATUS OK=${linhas.length}, banco +${delta}, abertos -${saiu})` };
+  if (linhas.length > esperados) return { ok: false, agendados: linhas.length, motivo: `mais posts que o combinado (${linhas.length} > ${esperados})` };
+  return { ok: true, agendados: linhas.length, motivo: '' };
+}
+
+module.exports.interpretarLote = interpretarLote;
