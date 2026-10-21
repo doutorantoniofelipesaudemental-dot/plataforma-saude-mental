@@ -260,3 +260,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - LinkedIn: 1 post agendado hoje (li-2026-11-25); total 11 (até 25/11). Tarefa desativada.
 - PRs #131 e #132 abertos: merge é seu (merge-seguro).
 - Decidir: 54 itens reprovados com conferência ok; settings.json (Write→Edit); ativar tarefas.
+
+## Expansão para a nuvem (20/10/2026)
+- Fase 1 (podcast): código pronto no branch feat/podcast-feed-20261020; feed e página no site após deploy (merge seu).
+- Decidir: voz para distribuição pública (Edge-TTS sem termo claro); recomendação de LinkedIn (manter A); liberar a fase 2 (Actions) depois da voz.
+- Cadastro uma vez: Spotify for Creators e Apple Podcasts Connect com o link do feed (passo a passo na resposta).

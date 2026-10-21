@@ -317,3 +317,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Manutenção semanal: scripts/manutencaoSemanal.js (--auto: segunda prepara o branch, sexta envia). Tarefa não criada: comando em docs/manutencao-semanal.md.
 - Branches e PRs: #131 (criação de texto + manutenção), #132 (env e exportação). Anteriores mesclados: #127 a #130.
 - Pendências para você: (1) 54 itens 'reprovado' na fila têm conferência ok: a decisão de publicar ou manter é sua; (2) regras de negação em .claude/settings.json usam Write(...), que a ferramenta ignora: trocar por Edit(...); (3) ativar DrSM-LinkedIn-Agendar e criar DrSM-Manutencao-Semanal (comandos abaixo).
+
+## Expansão para a nuvem (ordem de 20/10/2026) — estado real
+- FASE 1 (podcast): feed em /podcast/feed.xml (backend/lib/podcast.js, só textos publicados com narração); página /podcast (public/podcast.html, sem player de terceiros); capa public/podcast/capa-3000.png (3000x3000 RGB, sem alfa); validador só leitura scripts/podcast/validarFeed.js. Branch feat/podcast-feed-20261020. Nada cadastrado no Spotify nem no Apple ainda (depende do seu cadastro).
+- Voz: sem termo oficial que permita distribuição pública do Edge-TTS (fonte: pesquisa, sem fonte oficial). Troca por voz de licença aberta NÃO feita; aguarda sua aprovação de amostra.
+- FASE 2 (YouTube na nuvem): só plano em relatorios/YOUTUBE-NUVEM.md. Bloqueada pela decisão de voz e pela confirmação do limite do GitHub Actions.
+- FASE 3 (LinkedIn na nuvem): análise em relatorios/LINKEDIN-NUVEM.md. Recomendação: manter (A) até confirmar os termos da API.
+- PR #133 (monitor/permissões/YouTube) aguardando merge-seguro seu.
