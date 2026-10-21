@@ -60,7 +60,7 @@ async function passoAutorizacaoYoutube({ sec, problemas }) {
 /** LinkedIn: fila MANUAL do perfil pessoal (sem API). Atualiza FILA-MANUAL.md e o bloco do ESTADO-GERAL.md; avisa se houver post atrasado. */
 function passoLinkedinManual({ sec, problemas }) {
   const { spawnSync } = require('node:child_process');
-  const r = spawnSync(process.execPath, ['--env-file=.env', 'scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 90000 });
+  const r = spawnSync(process.execPath, ['scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 90000 });
   const linha = String(r.stdout || '').trim().split('\n').pop() || 'não consegui ler a fila manual';
   const agend = Number((linha.match(/agendados no LinkedIn (\d+)/) || [])[1] || 0);
   // a linha traz "(até dd/mm)" (sem o ano): usa o próximo dd/mm a partir de hoje

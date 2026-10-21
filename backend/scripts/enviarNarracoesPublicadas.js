@@ -6,6 +6,7 @@
  *   node --env-file=.env backend/scripts/enviarNarracoesPublicadas.js --enviar   confere e envia
  * Texto cujo selo não bate (foi editado depois de narrado) NÃO é enviado: precisa ser narrado de novo.
  */
+require('../../scripts/carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
@@ -35,7 +36,7 @@ const agendados = process.argv.includes('--agendados');
   if (semMp3.length) console.log('  sem MP3:', semMp3.slice(0, 20).join(', ') + (semMp3.length > 20 ? ', …' : ''));
   await mongoose.disconnect();
   if (!prontos.length || !enviar) { if (prontos.length) console.log('  enviaria:', prontos.join(', ')); return; }
-  const r = spawnSync(process.execPath, ['--env-file=.env', 'backend/scripts/verificarEEnviarNarracoes.js', `--slugs=${prontos.join(',')}`, '--enviar'], { cwd: RAIZ, encoding: 'utf8' });
+  const r = spawnSync(process.execPath, ['backend/scripts/verificarEEnviarNarracoes.js', `--slugs=${prontos.join(',')}`, '--enviar'], { cwd: RAIZ, encoding: 'utf8' });
   process.stdout.write(r.stdout || ''); process.stderr.write(r.stderr || '');
   process.exit(r.status || 0);
 })().catch((e) => { console.error('ERRO:', e.message); process.exit(2); });

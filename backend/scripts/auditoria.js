@@ -12,6 +12,7 @@
  * lista a amostra de 10% (mais antigos primeiro) para conferência.
  * Checagem de segurança: segredos em arquivos rastreados, .env no .gitignore, NEXT_PUBLIC_*.
  */
+require('../../scripts/carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('node:fs');
 const path = require('node:path');
 const { execFileSync } = require('node:child_process');

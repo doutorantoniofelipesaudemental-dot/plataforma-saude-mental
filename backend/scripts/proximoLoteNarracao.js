@@ -4,6 +4,7 @@
  *   node --env-file=.env backend/scripts/proximoLoteNarracao.js [--n=50]      imprime os slugs separados por vírgula
  *   node --env-file=.env backend/scripts/proximoLoteNarracao.js --resumo       imprime feitos/faltam
  */
+require('../../scripts/carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const mongoose = require('mongoose');
 const fs = require('node:fs');
 const path = require('node:path');

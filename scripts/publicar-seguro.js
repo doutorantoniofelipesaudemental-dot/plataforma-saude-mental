@@ -15,7 +15,7 @@ if (!rede || !id) { console.error('Uso: npm run publicar-seguro -- <instagram|yo
 
 (async () => {
   if (rede === 'youtube') {
-    const r = spawnSync(process.execPath, ['--env-file-if-exists=.env', 'scripts/youtube/publicarYoutube.js', `--id=${id}`, ...(simular ? ['--simular'] : [])], { cwd: RAIZ, stdio: 'inherit' });
+    const r = spawnSync(process.execPath, ['scripts/youtube/publicarYoutube.js', `--id=${id}`, ...(simular ? ['--simular'] : [])], { cwd: RAIZ, stdio: 'inherit' });
     process.exit(r.status ?? 1);
   }
   const db = require('../backend/lib/db');

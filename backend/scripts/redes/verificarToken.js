@@ -6,6 +6,7 @@
  * Saída com código 1 se o token for inválido. Para conferir o token que está na Vercel, a variável precisa estar no
  * seu .env local (segredos da Vercel não podem ser baixados pelo `vercel env pull`).
  */
+require('../../../scripts/carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const mongoose = require('mongoose');
 const db = require('../../lib/db');
 const Credencial = require('../../models/Credencial');

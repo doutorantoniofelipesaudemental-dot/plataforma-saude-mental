@@ -10,13 +10,14 @@
  * Texto editado depois de narrado: o selo não bate, o áudio não toca e o texto volta para a fila do passo 1 (regeneração).
  *   node scripts/cicloNarracao.js [--lotes=4] [--so-enviar] [--grupo=10]
  */
+require('./carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 
 const RAIZ = path.resolve(__dirname, '..');
 const arg = (k, d) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || `--${k}=${d}`).split('=')[1];
-const roda = (args) => spawnSync(process.execPath, ['--env-file=.env', ...args], { cwd: RAIZ, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, timeout: 4 * 3600e3 });
+const roda = (args) => spawnSync(process.execPath, [...args], { cwd: RAIZ, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, timeout: 4 * 3600e3 });
 const PROG = path.join(RAIZ, 'relatorios', 'narracao-progresso.md');
 const nota = (t) => fs.appendFileSync(PROG, `${t}\n`, 'utf8');
 const agora = () => new Date().toLocaleString('pt-BR', { timeZone: 'America/Bahia' });

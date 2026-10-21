@@ -16,7 +16,7 @@ const mongoose = require('mongoose');
 const RAIZ = path.resolve(__dirname, '..');
 const APP = path.join(RAIZ, 'apps/plataforma-saude-mental');
 const BASE = process.env.NARRACAO_API_BASE || 'https://drsaudemental.vercel.app';
-const envArg = ['--env-file-if-exists=.env'];
+const envArg = []; // os filhos carregam o .env por dentro (scripts/carregarEnv.js)
 const roda = (args, opts = {}) => spawnSync(process.execPath, [...envArg, ...args], { cwd: RAIZ, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, ...opts });
 const problemas = [];
 // Link oficial alternativo para fontes que caem de vez em quando (decisão de 15/10/2026): se a fonte falhar em 2 semanas seguidas,

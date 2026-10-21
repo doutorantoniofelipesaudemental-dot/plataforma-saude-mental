@@ -52,7 +52,7 @@ async function paginas() {
 
 async function instagram(d) {
   secao('2. Instagram: token, fila e publicações');
-  const v = spawnSync(process.execPath, ['--env-file=.env', 'backend/scripts/redes/verificarToken.js'], { cwd: RAIZ, encoding: 'utf8', timeout: 60000 });
+  const v = spawnSync(process.execPath, ['backend/scripts/redes/verificarToken.js'], { cwd: RAIZ, encoding: 'utf8', timeout: 60000 });
   let t = null; try { t = JSON.parse(String(v.stdout).slice(String(v.stdout).indexOf('{'), String(v.stdout).lastIndexOf('}') + 1)); } catch { /* sem JSON */ }
   if (!t) falha('não consegui verificar o token do Instagram');
   else {
@@ -125,7 +125,7 @@ function outrasFilas() {
     const div = CF.divergencias(f.itens, CF.lerConferenciaDoDisco(RAIZ));
     if (div.length) falha(`YouTube: ${div.length} divergência(s) entre a fila e o conferidor (ex.: ${div[0].id}: ${div[0].motivo})`);
   } catch (e) { aviso(`YouTube: fila ilegível (${e.message.slice(0, 60)})`); }
-  const li = spawnSync(process.execPath, ['--env-file=.env', 'scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
+  const li = spawnSync(process.execPath, ['scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
   const linha = String(li.stdout).trim().split('\n').pop();
   linhas.push(`- LinkedIn: ${linha}`);
   if (/atrasados (\d+)/.test(linha) && Number(RegExp.$1) > 0) falha(`LinkedIn: ${RegExp.$1} post(s) atrasado(s)`);

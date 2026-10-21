@@ -124,7 +124,7 @@ async function triplaChecagem() {
 }
 
 (async () => {
-  comando('1. Auditoria geral', process.execPath, ['--env-file-if-exists=.env', 'backend/scripts/auditoria.js', '--falhar']);
+  comando('1. Auditoria geral', process.execPath, ['backend/scripts/auditoria.js', '--falhar']);
   console.log('\n=== 2. Tripla checagem dos itens alterados ===');
   const t = await triplaChecagem();
   etapas.push({ nome: '2. Tripla checagem (técnica, científica, ética, humanizada)', ok: t.falhas.length === 0, detalhe: t.falhas.length ? `${t.falhas.length} falha(s)` : `${t.total} itens, 0 falhas`, itens: t.falhas });

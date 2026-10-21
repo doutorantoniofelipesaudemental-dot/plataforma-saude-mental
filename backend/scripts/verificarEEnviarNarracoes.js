@@ -6,6 +6,7 @@
  * completa sem nenhum erro/corte (ffmpeg -v error); (3) tamanho coerente com 48 kbit/s mono; (4) cabe no limite de envio. Depois do envio,
  * confere que o estado da narração no banco virou "ok". Cada áudio só aparece no site depois de enviado e conferido.
  */
+require('../../scripts/carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');

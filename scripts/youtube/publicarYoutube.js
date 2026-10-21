@@ -8,6 +8,7 @@
  * Cota: cada upload custa ~1 600 unidades da API (padrão 10 000/dia): no máximo 2 por execução (--max até 4). Cota esgotada = para sem marcar.
  *   node --env-file=.env scripts/youtube/publicarYoutube.js [--simular] [--max=2]
  */
+require('../carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('node:fs');
 const path = require('node:path');
 const L = require('./lib');
