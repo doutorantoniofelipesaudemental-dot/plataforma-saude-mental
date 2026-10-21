@@ -18,6 +18,7 @@
  * que confere o hash contra o texto atual e grava no Blob. Arquivos acima
  * de 4,4 MB (limite de corpo da Vercel, ~12 min de áudio) são recusados aqui.
  */
+require('../../scripts/carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');

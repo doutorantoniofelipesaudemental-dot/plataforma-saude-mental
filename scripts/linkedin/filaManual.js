@@ -9,6 +9,7 @@
  *   node --env-file=.env scripts/linkedin/filaManual.js marcar <id> [AAAA-MM-DD]   marca como "publicado-manual" (a fila automática, se um dia for ligada, não repete)
  * NÃO publica nada sozinho e não automatiza o navegador: publicar por robô no perfil pessoal viola os termos do LinkedIn e arrisca a conta.
  */
+require('../carregarEnv').carregarEnv(); // .env carregado aqui (sem --env-file na linha de comando)
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawn, spawnSync } = require('node:child_process');

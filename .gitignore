@@ -125,3 +125,4 @@ relatorios/CONSUMO.md
 relatorios/consumo-claude.json
 relatorios/linkedin/agendar-diario-estado.json
 relatorios/youtube/reprovados/REGERAR-FILA.txt
+relatorios/youtube/fila-manual/**/*.ass

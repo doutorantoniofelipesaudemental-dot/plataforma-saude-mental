@@ -147,11 +147,9 @@ const rotuloSlot = (dt) => { const l = new Date(dt.getTime() - 3 * 3600e3); retu
   for (const it of itens.filter((i) => i.status === 'aprovado-checagem' || i.status === 'publicado')) {
     const dir = path.join(base, `semana-${segundaDe(new Date(it.slot))}`, `${rotuloSlot(new Date(it.slot))}-${it.tipo}-${it.slug}${it.postId ? '' : ''}`);
     const orig = path.join(L.RAIZ, it.pasta); const meta = JSON.parse(fs.readFileSync(path.join(orig, 'meta.json'), 'utf8'));
-    if (fs.existsSync(path.join(dir, 'titulo.txt')) && fs.existsSync(path.join(dir, meta.arquivos.video))) continue;
-    fs.mkdirSync(dir, { recursive: true });
-    fs.copyFileSync(path.join(orig, meta.arquivos.video), path.join(dir, meta.arquivos.video));
-    fs.copyFileSync(path.join(orig, meta.arquivos.capa), path.join(dir, 'capa.png'));
-    if (meta.arquivos.legenda) fs.copyFileSync(path.join(orig, meta.arquivos.legenda), path.join(dir, 'legenda.srt'));
+    // completa a pasta (inclui cap.ass e credito.ass, que o conferidor exige nos Shorts); não sobrescreve nada
+    if (fs.existsSync(path.join(dir, 'titulo.txt')) && fs.existsSync(path.join(dir, meta.arquivos.video))) { require('./copiarPacoteManual').copiarPacote({ orig, dir, meta }); continue; }
+    require('./copiarPacoteManual').copiarPacote({ orig, dir, meta });
     fs.writeFileSync(path.join(dir, 'titulo.txt'), meta.titulo, 'utf8');
     fs.writeFileSync(path.join(dir, 'descricao.txt'), meta.descricao, 'utf8');
     fs.writeFileSync(path.join(dir, 'tags.txt'), meta.tags.join(', '), 'utf8');
