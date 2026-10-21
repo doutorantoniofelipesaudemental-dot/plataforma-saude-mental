@@ -7,8 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T05:29:19.508Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
-revisadoEm: 2026-10-01T03:01:12.798Z
+revisaoMedica: pendente
 ---
 
 # O idioma do afeto: acolhendo quem chegou de longe na UBS

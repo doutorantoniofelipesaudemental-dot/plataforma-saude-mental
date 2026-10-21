@@ -133,42 +133,9 @@ test('filtrarPorLote usa o lote registrado em pautas.json; lerRascunhos lê a pa
   assert.deepEqual(ing.argumentos(['--lote=4', '--dry-run']), { lote: '4', 'dry-run': true });
 });
 
-test('aprovarRevisaoTexto troca revisaoMedica para aprovada e registra revisadoEm', () => {
-  const agora = new Date('2026-10-02T12:00:00.000Z');
-  const { texto, motivos } = ing.aprovarRevisaoTexto(rascunho({ revisao: 'pendente' }), agora);
-  assert.deepEqual(motivos, []);
-  assert.match(texto, /^revisaoMedica: aprovada\nrevisadoEm: 2026-10-02T12:00:00.000Z$/m);
-  assert.equal(ing.lerFrontmatter(texto).dados.revisaoMedica, 'aprovada');
-  assert.deepEqual(ing.validarRascunho(ler(texto), { categorias: CATEGORIAS }), []);
-});
-
-test('aprovarRevisaoTexto recusa marcadores A CONFIRMAR, checagens reprovadas e revisão já aprovada', () => {
-  const comMarcador = rascunho({}, 'Dose [DOSE A CONFIRMAR].\n\n1. `q` — Revisão — [PMID A CONFIRMAR]');
-  const a = ing.aprovarRevisaoTexto(comMarcador);
-  assert.match(a.motivos.join(), /A CONFIRMAR/);
-  assert.equal(a.texto, comMarcador, 'texto intacto');
-  assert.match(ing.aprovarRevisaoTexto(rascunho({ checagens: 'reprovado — ética' })).motivos.join(), /checagens/);
-  assert.match(ing.aprovarRevisaoTexto(rascunho({ revisao: 'aprovada' })).motivos.join(), /já aprovada/);
-  assert.match(ing.aprovarRevisaoTexto('sem cabeçalho').motivos.join(), /Frontmatter/);
-});
-
-test('aprovarRevisoes grava só os elegíveis e respeita dryRun', () => {
-  const pasta = fs.mkdtempSync(path.join(os.tmpdir(), 'aprov-'));
-  fs.writeFileSync(path.join(pasta, 'ok.md'), rascunho({ pautaId: 'p-ok', slug: 'ok', revisao: 'pendente' }));
-  fs.writeFileSync(path.join(pasta, 'pend.md'), rascunho({ pautaId: 'p-pend', slug: 'pend', revisao: 'pendente' }, 'Dose [DOSE A CONFIRMAR].'));
-  const lista = ing.lerRascunhos(pasta);
-
-  const seco = ing.aprovarRevisoes(lista, { pasta, dryRun: true });
-  assert.equal(seco.aprovados.length, 1);
-  assert.match(fs.readFileSync(path.join(pasta, 'ok.md'), 'utf8'), /revisaoMedica: pendente/, 'dry-run não grava');
-
-  const real = ing.aprovarRevisoes(lista, { pasta });
-  assert.deepEqual(real.aprovados.map((a) => a.arquivo), ['ok.md']);
-  assert.equal(real.ignorados.length, 1);
-  assert.equal(real.ignorados[0].arquivo, 'pend.md');
-  assert.match(real.ignorados[0].motivos.join(), /A CONFIRMAR/);
-  assert.match(fs.readFileSync(path.join(pasta, 'ok.md'), 'utf8'), /revisaoMedica: aprovada/);
-  assert.match(fs.readFileSync(path.join(pasta, 'pend.md'), 'utf8'), /revisaoMedica: pendente/);
+test('o fluxo antigo não grava revisão aprovada: a aprovação médica só pelo registro com hash (21/10/2026)', () => {
+  assert.equal(ing.aprovarRevisaoTexto, undefined);
+  assert.equal(ing.aprovarRevisoes, undefined);
 });
 
 test('texto novo que já existe no banco (mesmo título) é recusado antes de gravar (fonte única, 20/10/2026)', async () => {

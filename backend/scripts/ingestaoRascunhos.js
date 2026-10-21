@@ -1,8 +1,8 @@
 /**
  * Ingestão dos rascunhos de CONTEUDO_INSTAGRAM/pautas/rascunhos/*.md no MongoDB Atlas.
  *
- * Só entra o rascunho que o Dr. Antônio Felipe já revisou: `revisaoMedica: aprovada` no
- * Frontmatter, checagens automáticas aprovadas, categoria válida, sem marcadores
+ * Só entra o rascunho com o campo revisaoMedica com valor de aprovação escrito à mão no Frontmatter (PENDÊNCIA: passar a ler
+ * o registro com hash de relatorios/revisoes/registro.json), checagens automáticas aprovadas, categoria válida, sem marcadores
  * [... A CONFIRMAR] e com referências já verificadas. Os demais são listados com o motivo
  * e não são gravados. O upsert é por `slug`; ao inserir, o artigo nasce NÃO publicado
  * (`publicado: false`, status de redes "rascunho"), e ao atualizar não mexe nesses campos.
@@ -10,9 +10,7 @@
  *   npm run ingestao:rascunhos -- --dry-run               (valida, não conecta nem grava)
  *   npm run ingestao:rascunhos -- --lote=4 --dry-run
  *   npm run ingestao:rascunhos -- --lote=4                (upsert no MongoDB)
- *   npm run ingestao:rascunhos -- --lote=4 --aprovar-revisao [--dry-run]
- *       marca `revisaoMedica: aprovada` no Frontmatter (e em pautas.json) dos rascunhos do lote
- *       (ou de --slug=...) sem marcadores "A CONFIRMAR"; não toca no banco. Exige --lote ou --slug.
+ *   (A aprovação médica não é gravada por este script: use npm run revisao:aprovar -- <slug>.)
  */
 const fs = require('fs');
 const path = require('path');
@@ -106,37 +104,7 @@ function extrairCorpo(corpo) {
 
 const temMarcadorPendente = (corpo) => RE_MARCADOR.test(extrairCorpo(corpo).markdown);
 
-/**
- * Marca `revisaoMedica: aprovada` (e `revisadoEm`) no Frontmatter. Só é permitido sem marcadores
- * "A CONFIRMAR" (dose, dado ou PMID) e com as checagens automáticas aprovadas.
- * Retorna { texto, motivos }; com motivos não vazios o texto volta intacto.
- */
-function aprovarRevisaoTexto(texto, agora = new Date()) {
-  const r = lerFrontmatter(texto);
-  if (!r.valido) return { texto, motivos: ['Frontmatter ausente ou malformado'] };
-  const motivos = [];
-  if (/^aprovad[oa]$/i.test(r.dados.revisaoMedica || '')) motivos.push('revisão médica já aprovada');
-  if (!/^aprovado/i.test(r.dados.checagensAutomaticas || '')) motivos.push('checagens automáticas não aprovadas');
-  if (temMarcadorPendente(r.corpo)) motivos.push('há marcadores "A CONFIRMAR" (dose, dado ou PMID) pendentes');
-  if (!/^revisaoMedica:/m.test(texto)) motivos.push('campo revisaoMedica ausente no Frontmatter');
-  if (motivos.length) return { texto, motivos };
-  const novo = texto
-    .replace(/^revisaoMedica:.*$/m, 'revisaoMedica: aprovada')
-    .replace(/^(revisaoMedica: aprovada)$/m, `$1\nrevisadoEm: ${agora.toISOString()}`);
-  return { texto: novo, motivos: [] };
-}
-
-/** Aprova a revisão dos rascunhos informados, gravando o arquivo (salvo em dryRun). */
-function aprovarRevisoes(rascunhos, { pasta = PASTA_RASCUNHOS, dryRun = false, agora = new Date() } = {}) {
-  const resultado = { aprovados: [], ignorados: [] };
-  for (const r of rascunhos) {
-    const { texto, motivos } = aprovarRevisaoTexto(r.texto, agora);
-    if (motivos.length) { resultado.ignorados.push({ arquivo: r.arquivo, pautaId: r.dados.pautaId, motivos }); continue; }
-    if (!dryRun) fs.writeFileSync(path.join(pasta, r.arquivo), texto);
-    resultado.aprovados.push({ arquivo: r.arquivo, pautaId: r.dados.pautaId });
-  }
-  return resultado;
-}
+/* A aprovação médica não é gravada aqui: só pelo registro com hash (npm run revisao:aprovar). */
 
 /** Motivos pelos quais o rascunho NÃO pode ser gravado (lista vazia = pode). */
 function validarRascunho(rascunho, { categorias = null } = {}) {
@@ -241,19 +209,7 @@ async function main() {
   if (args.lote) rascunhos = filtrarPorLote(rascunhos, args.lote, ideacao.lerRegistros());
   if (args.slug) rascunhos = rascunhos.filter((r) => r.dados.slug === args.slug);
   if (args['aprovar-revisao']) {
-    if (!args.lote && !args.slug) throw new Error('--aprovar-revisao exige --lote=N ou --slug=...');
-    const r = aprovarRevisoes(rascunhos, { dryRun });
-    for (const a of r.aprovados) console.log(`  [${dryRun ? 'a aprovar' : 'aprovada'}] ${a.arquivo}`);
-    for (const i of r.ignorados) console.log(`  [ignorado] ${i.arquivo}\n      ${i.motivos.join('\n      ')}`);
-    if (!dryRun && r.aprovados.length) {
-      // PAUTAS.md mostra a revisão médica a partir de pautas.json: mantém os dois em sincronia.
-      const registros = ideacao.lerRegistros();
-      const ids = new Set(r.aprovados.map((a) => a.pautaId));
-      for (const reg of registros) if (reg.rascunho && ids.has(reg.id)) reg.rascunho.revisaoMedica = 'aprovada';
-      ideacao.gravarRegistros(registros);
-    }
-    console.log(`\n${r.aprovados.length} ${dryRun ? 'a aprovar' : 'aprovada(s)'}, ${r.ignorados.length} ignorado(s).`);
-    return;
+    throw new Error('a aprovação médica não é mais feita por este script: use npm run revisao:aprovar -- <slug> (registro com hash)');
   }
   const Artigo = require('../models/Artigo');
   console.log(`${rascunhos.length} rascunho(s) lido(s)${args.lote ? ` do lote ${args.lote}` : ''}${dryRun ? ' (dry-run: nada será gravado)' : ''}.`);
@@ -275,4 +231,4 @@ if (require.main === module) {
   main().catch((e) => { console.error(`Erro: ${e.message}`); process.exit(1); });
 }
 
-module.exports = { aprovarRevisaoTexto, aprovarRevisoes, lerFrontmatter, markdownParaHtml, extrairCorpo, validarRascunho, montarArtigo, lerRascunhos, filtrarPorLote, ingerir, argumentos };
+module.exports = { lerFrontmatter, markdownParaHtml, extrairCorpo, validarRascunho, montarArtigo, lerRascunhos, filtrarPorLote, ingerir, argumentos };
