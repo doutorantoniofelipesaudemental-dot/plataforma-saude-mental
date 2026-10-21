@@ -15,6 +15,8 @@ const ARQUIVOS_PADRAO = {
   estado: path.join(RAIZ, 'relatorios/ESTADO-GERAL.md'),
 };
 const TETO = { dia: 3, semana: 15 };
+const ORIGEM_LINKEDIN = 'agendarDiario-lote'; // origem da chamada diária do LinkedIn
+const RESERVA_LINKEDIN = 1; // quantas chamadas do dia ficam reservadas ao LinkedIn
 const DATA = /^\d{4}-\d{2}-\d{2}$/;
 
 // Função pura: dia no relógio de Salvador (UTC-3, sem horário de verão).
@@ -38,14 +40,18 @@ function interpretar(texto) {
 }
 
 // Função pura: uso de hoje e da semana e se ainda pode chamar. Teto diário vale antes do semanal.
-function avaliar(registros, agora = new Date(), teto = TETO) {
+function avaliar(registros, agora = new Date(), teto = TETO, origem = '') {
   const dia = diaSalvador(agora);
   const semana = segundaDaSemana(dia);
   const uso = {
     dia: registros.filter((r) => r.dia === dia).length,
     semana: registros.filter((r) => r.semana === semana).length,
   };
-  const motivo = uso.dia >= teto.dia ? 'teto diário' : uso.semana >= teto.semana ? 'teto semanal' : '';
+  // uma chamada do dia fica reservada ao LinkedIn (ordem de 20/10/2026): as outras rotinas param uma antes do teto
+  const reserva = origem === ORIGEM_LINKEDIN ? 0 : RESERVA_LINKEDIN;
+  const motivo = uso.dia >= teto.dia - reserva
+    ? (reserva && uso.dia < teto.dia ? 'última chamada do dia reservada ao LinkedIn' : 'teto diário')
+    : uso.semana >= teto.semana ? 'teto semanal' : '';
   return { pode: !motivo, motivo, uso, dia, semana };
 }
 
@@ -73,10 +79,10 @@ function lerContador(arquivos = ARQUIVOS_PADRAO) {
 }
 
 // Consulta ANTES de chamar o claude -p. Contador ilegível = não chama (falha segura).
-function podeChamarClaude({ agora = new Date(), arquivos = ARQUIVOS_PADRAO } = {}) {
+function podeChamarClaude({ agora = new Date(), arquivos = ARQUIVOS_PADRAO, origem = '' } = {}) {
   const lido = lerContador(arquivos);
   if (!lido.ok) return { pode: false, motivo: `contador ilegível (${lido.motivo}); não chama por segurança` };
-  return avaliar(lido.registros, agora);
+  return avaliar(lido.registros, agora, TETO, origem);
 }
 
 // Registra DEPOIS da chamada. Não sobrescreve contador ilegível. Simular não grava nada.
@@ -107,7 +113,7 @@ function avisarTeto(motivo, agora = new Date(), arquivos = ARQUIVOS_PADRAO) {
   return true;
 }
 
-module.exports = { TETO, ARQUIVOS_PADRAO, diaSalvador, segundaDaSemana, interpretar, avaliar, resumo, podeChamarClaude, registrarChamada, avisarTeto };
+module.exports = { TETO, ORIGEM_LINKEDIN, RESERVA_LINKEDIN, ARQUIVOS_PADRAO, diaSalvador, segundaDaSemana, interpretar, avaliar, resumo, podeChamarClaude, registrarChamada, avisarTeto };
 
 if (require.main === module) {
   const lido = lerContador();

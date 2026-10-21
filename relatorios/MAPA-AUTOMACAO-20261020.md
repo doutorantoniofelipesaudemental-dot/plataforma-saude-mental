@@ -47,3 +47,10 @@ Fontes: `vercel.json` (crons), `relatorios/*-estado*`, freios em variáveis de a
 - LinkedIn: agendador carrega o .env por dentro; 1 post agendado hoje; tarefa DrSM-LinkedIn-Agendar desativada.
 - Manutenção semanal: scripts/manutencaoSemanal.js --auto (segunda 11:00 prepara o branch; sexta 11:00 envia o branch). Tarefa a criar (docs/manutencao-semanal.md).
 - Processos filhos sem --env-file (teste estático em tests/unit/sem-env-file-em-codigo.test.js).
+
+## Atualização de 20/10 (noite)
+- LinkedIn: scripts/linkedin/agendarDiario.js (uma chamada, até 3 posts, trava no banco). Tarefa DrSM-LinkedIn-Agendar ativada.
+- Manutenção semanal: DrSM-Manutencao-Semanal (segunda e sexta 11:00), scripts/manutencaoSemanal.js.
+- Monitoramento: conferência diária lê LastTaskResult das tarefas DrSM-* (scripts/conferencias/monitorTarefas.js).
+- YouTube: scripts/youtube/reaproveitarProntos.js e proximosHorarios.js (fila nova, 1 por dia, horários das regras da fila).
+- Permissões: docs/permissoes-headless/aplicar.js (Write(...) para Edit(...) nas negações).

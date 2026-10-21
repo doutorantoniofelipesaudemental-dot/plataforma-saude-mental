@@ -53,7 +53,7 @@ test('checagem cruzada: aprovado sem conferência, reprovado pelo conferidor, ha
   assert.match(r[3].motivo, /versão antiga/);
 });
 
-test('checagem cruzada: a fila real (55 aprovados) não tem divergência', () => {
+test('checagem cruzada: a fila real não tem divergência', () => {
   const raiz = path.join(__dirname, '../..');
   const fila = JSON.parse(fs.readFileSync(path.join(raiz, 'relatorios/youtube/fila.json'), 'utf8')).itens;
   const r = F.divergencias(fila, F.lerConferenciaDoDisco(raiz));

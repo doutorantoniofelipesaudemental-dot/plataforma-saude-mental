@@ -260,3 +260,9 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - LinkedIn: 1 post agendado hoje (li-2026-11-25); total 11 (até 25/11). Tarefa desativada.
 - PRs #131 e #132 abertos: merge é seu (merge-seguro).
 - Decidir: 54 itens reprovados com conferência ok; settings.json (Write→Edit); ativar tarefas.
+
+## Ordem unificada (20/10/2026, noite)
+- LinkedIn: lote em uma chamada (até 3 posts), trava no banco, reserva de 1 chamada ao LinkedIn. Próxima execução: 11:00 de amanhã. Conferir o painel (deve bater com 11 até 25/11).
+- YouTube: 45 aprovados em nova fila (01/02 a 21/03/2027); 9 em regeração (link externo na descrição). Decidir sobre a regra de links oficiais.
+- Permissões: rodar docs/permissoes-headless/aplicar.js --aplicar no PowerShell.
+- Pendências: teste do PDF dos carrosséis; a checagem do painel do LinkedIn.

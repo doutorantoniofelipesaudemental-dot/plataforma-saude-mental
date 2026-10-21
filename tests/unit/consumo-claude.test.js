@@ -10,7 +10,7 @@ const quando = (iso) => new Date(`${iso}-03:00`);
 const reg = (dia, semana = segundaDaSemana(dia)) => ({ quando: `${dia}T12:00:00.000Z`, dia, semana, origem: 'teste' });
 
 test('abaixo do teto: pode chamar e mostra o uso', () => {
-  const a = avaliar([reg('2026-10-19'), reg('2026-10-19')], quando('2026-10-19T14:00:00'));
+  const a = avaliar([reg('2026-10-19'), reg('2026-10-19')], quando('2026-10-19T14:00:00'), undefined, 'agendarDiario-lote'); // a última chamada do dia é do LinkedIn
   assert.equal(a.pode, true);
   assert.deepEqual(a.uso, { dia: 2, semana: 2 });
 });
