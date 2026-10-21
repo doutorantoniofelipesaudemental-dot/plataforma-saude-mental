@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-10-01T00:28:31.017Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # A luz amarela do abajur na triagem do plantão

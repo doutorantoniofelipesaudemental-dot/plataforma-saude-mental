@@ -328,6 +328,14 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Monitoramento (4): a conferência diária lê o último resultado de DrSM-LinkedIn-Agendar e DrSM-Manutencao-Semanal e alerta com a correção.
 - Tarefas: DrSM-LinkedIn-Agendar ativada e DrSM-Manutencao-Semanal criada (pelo Dr. Antônio).
 
+## Rodada de 21/10/2026 (revisão médica e selo) — estado real
+- Feito neste PR: núcleo de revisão (backend/lib/revisaoMedica.js), comandos de decisão (scripts/revisao/revisao.js), checagem do aviso, 9 testes, regra de ouro em CLAUDE.md e na carta v3.
+- Aviso de transparência: pronto e checado; NÃO aplicado no site. Aguarda `npm run aviso:aprovar` do Dr. Antônio.
+- Selo "Revisado pelo Dr. Antônio Felipe Garabito": só com aprovação registrada e hash igual. Nenhum texto aprovado ainda.
+- Pendência: backend/scripts/ingestaoRascunhos.js ainda grava "revisaoMedica: aprovada" pelo fluxo antigo de rascunhos (listado no teste como exceção). Unificar com o registro.
+- Legendas (item 2): NÃO iniciadas. Exigem a reautorização OAuth no PC do Dr. Antônio e a checagem com Whisper e LanguageTool (ferramentas a instalar e auditar).
+- PR #138 (rewrite do domínio único): preview protegido por login. 24 × 200 ainda não verificado; depende do Dr. Antônio abrir o preview logado.
+
 ## Estratégia de crescimento (ordem de 20/10/2026) — estado real
 - Entregue como plano (nada executado no site, no banco nem nos freios): relatorios/ARQUITETURA-ARTIGOS.md, BENCHMARK-ECOSSISTEMAS.md, RADAR-TEMAS-2026-10.md, COMENTARIOS-PROPOSTA.md, SEARCH-CONSOLE-PASSO-A-PASSO.md, VOZ-PODCAST-OPCOES.md, ESTRATEGIA-CRESCIMENTO-PLANO.md.
 - Achado de SEO: 24 dos 89 MDX do app Next apontam o canonical para plataforma-saude-mental-steel.vercel.app. Corrigir depende de OK seu (ARQUITETURA-ARTIGOS.md, etapa 2 e 5).

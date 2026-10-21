@@ -68,7 +68,11 @@
     "merge-seguro": "node scripts/merge-seguro.js",
     "publicar-seguro": "node --env-file-if-exists=.env scripts/publicar-seguro.js",
     "linkedin:pre": "node scripts/linkedin/preAgendamento.js",
-    "linkedin:agendar": "node scripts/linkedin/agendarDiario.js"
+    "linkedin:agendar": "node scripts/linkedin/agendarDiario.js",
+    "aviso": "node scripts/revisao/revisao.js aviso",
+    "aviso:aprovar": "node scripts/revisao/revisao.js aviso:aprovar",
+    "revisao:aprovar": "node scripts/revisao/revisao.js revisao:aprovar",
+    "revisao:reprovar": "node scripts/revisao/revisao.js revisao:reprovar"
   },
   "engines": {
     "node": ">=20"

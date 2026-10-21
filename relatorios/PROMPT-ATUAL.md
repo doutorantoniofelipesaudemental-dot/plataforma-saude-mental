@@ -267,6 +267,12 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Permissões: rodar docs/permissoes-headless/aplicar.js --aplicar no PowerShell.
 - Pendências: teste do PDF dos carrosséis; a checagem do painel do LinkedIn.
 
+## Rodada de 21/10/2026 (revisão médica)
+- Aprovar o aviso (npm run aviso:aprovar), depois que ele for lido.
+- Escolher textos para revisão e aprovar com npm run revisao:aprovar -- <slug>.
+- Conferir o preview do PR #138 logado e autorizar o merge só depois.
+- Legendas: reautorização OAuth no PC e aprovação do padrão de legenda (ainda não preparadas).
+
 ## Estratégia de crescimento (20/10/2026)
 - Decidir: OK para instalar Piper e gerar 3 amostras; autorização do Search Console (passo a passo em SEARCH-CONSOLE-PASSO-A-PASSO.md); OK para corrigir o canonical dos 24 MDX; comentários (proposta em COMENTARIOS-PROPOSTA.md).
 - PR #134 em conflito: resolver os 3 arquivos de status (manter os dois blocos) e rodar o portão de novo.

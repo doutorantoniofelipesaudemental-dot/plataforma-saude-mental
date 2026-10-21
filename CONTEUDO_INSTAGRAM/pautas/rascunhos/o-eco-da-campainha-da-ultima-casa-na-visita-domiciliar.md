@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-10-01T00:28:07.635Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # O eco da campainha da última casa na visita domiciliar
