@@ -327,3 +327,8 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Permissões (3): docs/permissoes-headless/aplicar.js troca Write(...) por Edit(...) nas negações, com diff, backup e confirmação. Não aplicado: rode o comando do PowerShell.
 - Monitoramento (4): a conferência diária lê o último resultado de DrSM-LinkedIn-Agendar e DrSM-Manutencao-Semanal e alerta com a correção.
 - Tarefas: DrSM-LinkedIn-Agendar ativada e DrSM-Manutencao-Semanal criada (pelo Dr. Antônio).
+
+## Conferência do preview (21/10/2026)
+- Preview do PR #138: 24 de 24 textos com HTTP 200 e página real; 9 recursos carregando; páginas principais 200 (relatorios/preview-138-24.md).
+- Áudio: não comprovado por HTTP (o HTML não referencia áudio); conferir no navegador.
+- Canonical e sitemap: ainda não trocados (próxima etapa).
