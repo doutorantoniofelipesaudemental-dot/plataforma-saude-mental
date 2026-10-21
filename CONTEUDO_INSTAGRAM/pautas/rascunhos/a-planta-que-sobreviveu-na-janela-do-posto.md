@@ -7,8 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T05:26:51.404Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
-revisadoEm: 2026-10-01T03:01:12.798Z
+revisaoMedica: pendente
 ---
 
 # A planta que sobreviveu na janela do posto

@@ -332,3 +332,11 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Preview do PR #138: 24 de 24 textos com HTTP 200 e página real; 9 recursos carregando; páginas principais 200 (relatorios/preview-138-24.md).
 - Áudio: não comprovado por HTTP (o HTML não referencia áudio); conferir no navegador.
 - Canonical e sitemap: ainda não trocados (próxima etapa).
+
+## Rodada de 21/10/2026 (revisão médica e selo) — estado real
+- Feito neste PR: núcleo de revisão (backend/lib/revisaoMedica.js), comandos de decisão (scripts/revisao/revisao.js), checagem do aviso, 9 testes, regra de ouro em CLAUDE.md e na carta v3.
+- Aviso de transparência: pronto e checado; NÃO aplicado no site. Aguarda `npm run aviso:aprovar` do Dr. Antônio.
+- Selo "Revisado pelo Dr. Antônio Felipe Garabito": só com aprovação registrada e hash igual. Nenhum texto aprovado ainda.
+- Pendência: backend/scripts/ingestaoRascunhos.js ainda grava "revisaoMedica: aprovada" pelo fluxo antigo de rascunhos (listado no teste como exceção). Unificar com o registro.
+- Legendas (item 2): NÃO iniciadas. Exigem a reautorização OAuth no PC do Dr. Antônio e a checagem com Whisper e LanguageTool (ferramentas a instalar e auditar).
+- PR #138 (rewrite do domínio único): preview protegido por login. 24 × 200 ainda não verificado; depende do Dr. Antônio abrir o preview logado.

@@ -240,3 +240,9 @@ Quando algo travar, classificar e agir SEM parar o resto do trabalho:
 6. Risco de quebrar algo no ar: não executar; preparar a solução segura em etapas.
 No fim de cada rodada: lista única de "comandos para o Dr. Antônio", na ordem, uma linha cada.
 Push e PR só pelo `scripts/publicarBranch.js`, depois de PORTÃO APROVADO.
+
+## Regra de ouro das aprovações (21/10/2026, ordem do Dr. Antônio)
+Toda aprovação do Dr. Antônio tem auditoria geral + tripla checagem (técnica, científica, ética e humanizada) em DOIS momentos:
+- ANTES: nada chega para aprovação sem ter passado nas checagens. Itens reprovados não são apresentados; vão para correção.
+- DEPOIS: a aprovação não publica nada sozinha. Antes de ir ao ar, tudo passa de novo: hash igual ao aprovado, página ou vídeo renderizado, schema, links e CFM. Se algo falhar depois da aprovação, não publica, avisa o Dr. Antônio e registra.
+Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/unit/revisao-medica.test.js).

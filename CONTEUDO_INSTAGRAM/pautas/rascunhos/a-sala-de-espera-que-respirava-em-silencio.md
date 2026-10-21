@@ -7,8 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T05:24:44.468Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
-revisadoEm: 2026-10-01T03:01:12.798Z
+revisaoMedica: pendente
 ---
 
 # A sala de espera que respirava em silêncio
