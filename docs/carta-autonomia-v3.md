@@ -36,3 +36,6 @@ Toda execução passa por: auditoria geral + tripla checagem (técnica, científ
 ## Regra de Git (atualizada em 20/10/2026)
 
 A automação pode fazer push de branches de trabalho (feat/, fix/, chore/) e abrir PR depois do portão aprovado. Continua proibido: push para main, force push, apagar branch remota e merge. Merge é sempre do Dr. Antônio.
+
+## Regra de ouro das aprovações (21/10/2026)
+Mesma regra do CLAUDE.md: checagens completas antes de apresentar a aprovação, e de novo depois dela, com hash igual ao aprovado e página renderizada conferida. Aprovação não publica sozinha.
