@@ -14,7 +14,7 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const consumo = require('../consumoClaude');
 const mongoose = require('mongoose');
-const { lerContagens, confirmarUmAgendado } = require('./travaDuplicidade');
+const { lerContagens, interpretarLote } = require('./travaDuplicidade');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const ESTADO = path.join(RAIZ, 'relatorios/linkedin/agendar-diario-estado.json');
@@ -94,51 +94,43 @@ async function main() {
   if (simular) return console.log(`simulação: ${disponiveis} aprovado(s) no lote; agendaria até ${alvo} hoje (intervalo ${INTERVALO_MS / 60e3} min). Nada agendado.`);
   if (!alvo) { gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados: 0 }); return console.log('nada aprovado para agendar hoje.'); }
 
-  // 2) um post por chamada da skill, com intervalo; para ao primeiro sinal de parada
-  let agendados = 0;
-  for (let i = 0; i < alvo; i++) {
-    if (i > 0) await esperar(INTERVALO_MS);
-    // o prompt vai pela entrada padrão (no Windows o `claude` é .cmd, então shell: true; sem espaços nos argumentos)
-    const prompt = 'Rode a skill agendar-linkedin para agendar APENAS 1 post (o próximo da fila aprovada). Auditoria e tripla antes. Sem senha. Se aparecer login, verificação, CAPTCHA, limite ou atividade incomum, PARE. Termine a resposta com UMA última linha exatamente assim: "STATUS: OK", "STATUS: PARAR <motivo curto>" ou "STATUS: DESATIVAR <motivo curto>" (DESATIVAR só para aviso de atividade incomum ou restrição de conta).';
-    // Teto do claude -p (19/10/2026): consulta ANTES; teto atingido ou contador ilegível = não chama.
-    const teto = consumo.podeChamarClaude({ agora: new Date() });
-    if (!teto.pode) {
-      if (teto.uso) consumo.avisarTeto(teto.motivo, new Date());
-      else alertar(teto.motivo, hoje);
-      console.log(`não chamado: ${teto.motivo}`);
-      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: teto.motivo, agendados });
-    }
-    // trava de duplicidade (banco): antes da chamada, conta; se não conseguir ler, não chama
-    let antes;
-    try { antes = await lerContagens(mongoose); } catch (e) {
-      alertar(`banco ilegível antes do agendamento (${String(e.message).slice(0, 80)}); parado para evitar duplicidade`, hoje);
-      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'banco ilegível', agendados });
-    }
-    if (antes.abertos === 0) { gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados }); return console.log('nenhum item aberto no banco. Nada feito.'); }
-    const r = spawnSync('claude', ['-p'], { cwd: RAIZ, input: prompt, encoding: 'utf8', shell: true, timeout: 900000 });
-    const saida = `${r.stdout || ''}\n${r.stderr || ''}`;
-    // registra DEPOIS, mesmo se a chamada falhou (a cota já foi usada)
-    const grava = consumo.registrarChamada({ agora: new Date(), origem: 'agendarDiario' });
-    if (!grava.gravado) {
-      alertar(`contador do claude -p não gravado (${grava.motivo}); parado por segurança`, hoje);
-      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'contador do claude -p', agendados });
-    }
-    const c = classificarSaida(saida, r.status);
-    if (c.parar) {
-      if (c.desativar) desativarTarefa();
-      alertar(`agendamento parado: ${c.motivo}. ${agendados} post(s) agendado(s) hoje.`, hoje);
-      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: c.motivo, agendados, desativadaAutomaticamente: c.desativar });
-    }
-    // trava de duplicidade (banco): depois da chamada, exatamente 1 item tem que ter saído de aberto para agendado
-    let depois;
-    try { depois = await lerContagens(mongoose); } catch (e) { depois = null; }
-    if (!depois || !confirmarUmAgendado(antes, depois)) {
-      alertar(`banco não confirmou exatamente 1 agendamento (antes ${antes.agendados}/${antes.abertos}, depois ${depois ? `${depois.agendados}/${depois.abertos}` : 'ilegível'}). Parado para evitar duplicidade; conferir o LinkedIn e o banco`, hoje);
-      return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'banco não confirmou', agendados: agendados + (depois && depois.agendados > antes.agendados ? 1 : 0) });
-    }
-    agendados += 1;
+  // 2) UMA chamada do claude -p para até `alvo` posts (ordem de 20/10/2026): uma linha STATUS por post.
+  // A trava no banco vale antes e depois: o lote só é aceito se o banco mudou exatamente pelo número de STATUS OK.
+  const teto = consumo.podeChamarClaude({ agora: new Date(), origem: consumo.ORIGEM_LINKEDIN });
+  if (!teto.pode) {
+    if (teto.uso) consumo.avisarTeto(teto.motivo, new Date());
+    else alertar(teto.motivo, hoje);
+    console.log(`não chamado: ${teto.motivo}`);
+    return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: teto.motivo, agendados: 0 });
   }
-  gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados });
+  let antes;
+  try { antes = await lerContagens(mongoose); } catch (e) {
+    alertar(`banco ilegível antes do agendamento (${String(e.message).slice(0, 80)}); parado para evitar duplicidade`, hoje);
+    return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'banco ilegível', agendados: 0 });
+  }
+  if (antes.abertos === 0) { gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados: 0 }); return console.log('nenhum item aberto no banco. Nada feito.'); }
+  // o prompt vai pela entrada padrão (no Windows o `claude` é .cmd, então shell: true; sem espaços nos argumentos)
+  const prompt = `Rode a skill agendar-linkedin para agendar ATÉ ${alvo} post(s), um de cada vez, na ordem da fila aprovada. Antes de cada um: auditoria e tripla checagem. Entre um e outro, espere 2 minutos. Sem senha. Se aparecer login, verificação, CAPTCHA, limite ou atividade incomum, PARE e não tente de novo. Ao final, escreva UMA linha por post tentado, exatamente: "STATUS: OK" (agendado), "STATUS: PARAR <motivo curto>" ou "STATUS: DESATIVAR <motivo curto>" (DESATIVAR só para aviso de atividade incomum ou restrição de conta). Não escreva mais nada depois dessas linhas.`;
+  const r = spawnSync('claude', ['-p'], { cwd: RAIZ, input: prompt, encoding: 'utf8', shell: true, timeout: 3600000 });
+  const saida = `${r.stdout || ''}\n${r.stderr || ''}`;
+  // registra DEPOIS, mesmo se a chamada falhou (a cota já foi usada)
+  const grava = consumo.registrarChamada({ agora: new Date(), origem: 'agendarDiario-lote' });
+  if (!grava.gravado) {
+    alertar(`contador do claude -p não gravado (${grava.motivo}); parado por segurança`, hoje);
+    return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: 'contador do claude -p', agendados: 0 });
+  }
+  const c = classificarSaida(saida, r.status);
+  let depois = null;
+  try { depois = await lerContagens(mongoose); } catch (e) { depois = null; }
+  const resultado = interpretarLote(saida, { antes, depois, esperados: alvo });
+  if (!resultado.ok) {
+    if (c.desativar) desativarTarefa();
+    alertar(`lote parado: ${resultado.motivo}. Conferir o LinkedIn e o banco antes de reativar.`, hoje);
+    return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: resultado.motivo, agendados: resultado.agendados, desativadaAutomaticamente: c.desativar });
+  }
+  gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados: resultado.agendados });
+  console.log(`agendados hoje: ${resultado.agendados}`);
+
   console.log(`agendados hoje: ${agendados}`);
 }
 

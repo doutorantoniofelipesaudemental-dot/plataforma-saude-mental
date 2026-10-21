@@ -318,6 +318,16 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Branches e PRs: #131 (criação de texto + manutenção), #132 (env e exportação). Anteriores mesclados: #127 a #130.
 - Pendências para você: (1) 54 itens 'reprovado' na fila têm conferência ok: a decisão de publicar ou manter é sua; (2) regras de negação em .claude/settings.json usam Write(...), que a ferramenta ignora: trocar por Edit(...); (3) ativar DrSM-LinkedIn-Agendar e criar DrSM-Manutencao-Semanal (comandos abaixo).
 
+## Ordem unificada (20/10/2026, noite) — resultado
+- LinkedIn (1): agendarDiario faz UMA chamada do claude -p para até 3 posts (uma linha STATUS por post). A trava no banco vale antes e depois: o lote só é aceito se o banco mudou exatamente pelo número de STATUS OK. Chamada diária reservada ao LinkedIn no teto de 3 (scripts/consumoClaude.js). Testes incluídos. Ainda não rodou em lote real (a próxima execução é a das 11:00 de amanhã).
+- Hoje: 1 post agendado (li-2026-11-25). Banco: 11 agendados (28/10 a 25/11). A conferência do painel do LinkedIn não foi lida aqui: depende de você (deve bater com 11).
+- Previsão (1c): 26 posts restantes, 3 por dia, em 9 execuções diárias (21/10 a 29/10), se rodar sem bloqueio. Ressalva: as datas vão até 29/01/2027; o agendador nativo pode recusar datas muito distantes.
+- Carrosséis PDF (1d): não testado; depende de uma sessão com o agendador nativo aceitar PDF.
+- YouTube (2): 54 reprovados verificados. 45 passam em tudo (checagens do publicador, metadados, conferidor com hash, similaridade máxima 13,2%, registro youtube_publicados vazio): aprovado-checagem, horários novos de 01/02/2027 a 21/03/2027, 1 por dia, sem mexer nos existentes. 9 voltam para a regeração (link externo de referência na descrição: regra de links oficiais, decisão do Dr.). Pacotes manuais completos (cap.ass e credito.ass) criados para os 45 (semanas de 2027). Freio YOUTUBE_PUBLICACAO_ATIVA desligado (não mexi).
+- Permissões (3): docs/permissoes-headless/aplicar.js troca Write(...) por Edit(...) nas negações, com diff, backup e confirmação. Não aplicado: rode o comando do PowerShell.
+- Monitoramento (4): a conferência diária lê o último resultado de DrSM-LinkedIn-Agendar e DrSM-Manutencao-Semanal e alerta com a correção.
+- Tarefas: DrSM-LinkedIn-Agendar ativada e DrSM-Manutencao-Semanal criada (pelo Dr. Antônio).
+
 ## Expansão para a nuvem (ordem de 20/10/2026) — estado real
 - FASE 1 (podcast): feed em /podcast/feed.xml (backend/lib/podcast.js, só textos publicados com narração); página /podcast (public/podcast.html, sem player de terceiros); capa public/podcast/capa-3000.png (3000x3000 RGB, sem alfa); validador só leitura scripts/podcast/validarFeed.js. Branch feat/podcast-feed-20261020. Nada cadastrado no Spotify nem no Apple ainda (depende do seu cadastro).
 - Voz: sem termo oficial que permita distribuição pública do Edge-TTS (fonte: pesquisa, sem fonte oficial). Troca por voz de licença aberta NÃO feita; aguarda sua aprovação de amostra.
