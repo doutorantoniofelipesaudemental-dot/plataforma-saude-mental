@@ -250,3 +250,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 
 ## Item 1 — 20/10/2026
 - Feito: .env carregado dentro do script; atalhos npm; checagem de permissões. Pendente: teste headless real e decisão sobre a manutenção semanal (docs/manutencao-semanal.md).
+## Item 2 — 20/10/2026
+- Fonte única ligada à criação de texto novo (ingestaoRascunhos e importarTudo). Pendente: teste real de importarTudo num lote de teste, com backup.
+## Item 3 — 20/10/2026
+- Feito: status da fila só pelo conferidor; checagem cruzada na conferência diária; 7 itens revertidos.
+- Pendente: a exportação da fila manual deve incluir cap.ass e credito.ass, para o conferidor não reprovar por falta de arquivo (decisão de exportação).

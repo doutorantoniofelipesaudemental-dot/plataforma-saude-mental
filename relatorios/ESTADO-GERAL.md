@@ -295,3 +295,12 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Causa do bloqueio: o agendador passava --env-file na linha de comando do pré-checagem, e o classificador bloqueou. Corrigido: o script carrega o .env por dentro (scripts/carregarEnv.js) e o filho não recebe o argumento.
 - Permissões: as regras necessárias já estão na lista (Bash(npm run:*), Bash(node:*)). docs/permissoes-headless/aplicar.js só checa.
 - Não feito: teste real em claude -p de cada rotina (teto de 3 chamadas por dia; precisa de aprovação). Reativação de DrSM-LinkedIn-Agendar depende de sessão validada.
+## Item 2 (fonte única contra duplicidade) — 20/10/2026
+- backend/lib/existeConteudo.js agora é consultado antes de criar texto novo em: ingestaoRascunhos (insert por slug inexistente no banco) e importarTudo (criação). Atualização de texto que já existe (mesmo slug) segue o fluxo normal.
+- Não ligado: agendarSemData (só atualiza textos existentes) e a publicação (publicarAgendados só publica o que já está no banco).
+- importarTudo não tem testes próprios; o caminho de inserção foi verificado por sintaxe, e a lógica de verificação tem testes.
+## Item 3 (fila do YouTube: status só pelo conferidor) — 20/10/2026
+- Causa: o status era decidido inline no montarFila, e o cache do conferidor era indexado só pelo hash do vídeo (ignorava a legenda).
+- Correção: conferirVideo.js com assinatura vídeo+legenda e statusPelaConferencia (única regra); conferenciaFila.js com a checagem cruzada, ligada à conferência diária (alerta de divergência). Testes incluídos.
+- Os 7 itens que eu tinha rebaixado foram revertidos: a pasta do pipeline tem cap.ass e conferência ok com o mesmo hash. Os vídeos da fila manual são idênticos aos do pipeline; a falta de cap.ass é só da exportação.
+- Checagem atual: 55 aprovados, 0 divergências.
