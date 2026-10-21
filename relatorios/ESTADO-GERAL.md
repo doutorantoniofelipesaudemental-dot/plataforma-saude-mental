@@ -327,3 +327,12 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Permissões (3): docs/permissoes-headless/aplicar.js troca Write(...) por Edit(...) nas negações, com diff, backup e confirmação. Não aplicado: rode o comando do PowerShell.
 - Monitoramento (4): a conferência diária lê o último resultado de DrSM-LinkedIn-Agendar e DrSM-Manutencao-Semanal e alerta com a correção.
 - Tarefas: DrSM-LinkedIn-Agendar ativada e DrSM-Manutencao-Semanal criada (pelo Dr. Antônio).
+
+## Rodada de 21/10/2026 — estado real
+- PR #133 (monitor, permissões, YouTube): MESCLADO.
+- PR #134 (podcast): conflito resolvido (mantidos os dois blocos de status); portão aprovado (relatorios/portao-20261020-2350.md); mergeable e CLEAN. Merge: npm run merge-seguro -- 134. Feed NÃO cadastrado no Spotify nem na Apple: a voz ainda não foi escolhida.
+- PR #135 (plano de crescimento): portão aprovado (relatorios/portao-20261020-2347.md), comentário postado com o comando de merge.
+- PR #136 (scripts/publicarBranch.js): portão aprovado; publicado pelo script. Regra: push e PR só depois de PORTÃO APROVADO.
+- Voz: Piper (faber, cadu, jeff: dados CC0; edresson: CC BY 4.0, exige crédito) e Kokoro (pf_dora, pm_alex, pm_santa: origem dos dados não documentada, fora da distribuição pública). Amostras e tabela em relatorios/voz-amostras/TABELA.md. A escolha por escuta é do Dr. Antônio.
+- Domínio único (item 6): NÃO preparado. Dos 23 textos com canonical no domínio antigo consultados, todos dão 404 no www. Trocar o canonical ou o 308 agora mandaria esses endereços para páginas inexistentes.
+- Pendente: Search Console (autorização), YouTube Analytics e Instagram Insights (autorização), e a voz escolhida antes do cadastro no Spotify e na Apple.

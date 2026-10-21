@@ -266,3 +266,9 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - YouTube: 45 aprovados em nova fila (01/02 a 21/03/2027); 9 em regeração (link externo na descrição). Decidir sobre a regra de links oficiais.
 - Permissões: rodar docs/permissoes-headless/aplicar.js --aplicar no PowerShell.
 - Pendências: teste do PDF dos carrosséis; a checagem do painel do LinkedIn.
+
+## Rodada de 21/10/2026
+- Merge pelo Dr. Antônio: 135 e 134 (comandos merge-seguro no ESTADO-GERAL). O 136 e o PR de voz também aguardam merge.
+- Escolher a voz ouvindo relatorios/voz-amostras/TABELA.md (faber, cadu ou jeff). Pode pedir a origem dos dados das vozes do Kokoro.
+- Autorizar o Search Console (SEARCH-CONSOLE-PASSO-A-PASSO.md).
+- Domínio único: só depois de publicar os 23 textos no www (decisão de publicação).
