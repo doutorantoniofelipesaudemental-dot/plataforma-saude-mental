@@ -240,10 +240,8 @@ async function main() {
           if (acao === 'recriar') await col.updateOne({ _id: d._id }, { $set: { conteudo: it.html, titulo: it.titulo, resumo: it.resumo, atualizadoEm: agora } });
           else {
             // fonte única contra duplicidade (20/10/2026): texto novo não entra se já existir no site (banco, MDX, rotas ou similaridade)
-            const { verificarConteudo } = require('../lib/existeConteudo');
-            const dup = await verificarConteudo({ slug: it.slug, titulo: it.titulo, corpo: it.html, col });
-            if (dup.existe) { log.ignorados = log.ignorados || []; log.ignorados.push({ slug: it.slug, motivos: dup.motivos }); continue; }
-            await col.insertOne(doc);
+            const r = await require('../lib/criarTextoNovo').criarSeNaoExistir({ col, doc: { ...doc, conteudo: it.html } });
+            if (!r.criado) { log.ignorados = log.ignorados || []; log.ignorados.push({ slug: it.slug, motivos: r.motivos }); continue; }
           }
           log.criados.push(it.slug);
         }

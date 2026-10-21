@@ -255,3 +255,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 ## Item 3 — 20/10/2026
 - Feito: status da fila só pelo conferidor; checagem cruzada na conferência diária; 7 itens revertidos.
 - Pendente: a exportação da fila manual deve incluir cap.ass e credito.ass, para o conferidor não reprovar por falta de arquivo (decisão de exportação).
+
+## Carta v3 — 20/10/2026 (noite)
+- LinkedIn: 1 post agendado hoje (li-2026-11-25); total 11 (até 25/11). Tarefa desativada.
+- PRs #131 e #132 abertos: merge é seu (merge-seguro).
+- Decidir: 54 itens reprovados com conferência ok; settings.json (Write→Edit); ativar tarefas.

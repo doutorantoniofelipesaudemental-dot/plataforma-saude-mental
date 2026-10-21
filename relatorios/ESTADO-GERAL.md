@@ -1,4 +1,7 @@
 > **ALERTA: token do Instagram inválido (190); fila pausada até novo token.** Atualizado em 20/10/2026.
+<!-- ALERTA-CLAUDE-P:INICIO -->
+> # 🚨 TETO DO claude -p ATINGIDO (2026-10-20): teto diário. Chamadas do agendador do LinkedIn paradas até o próximo período. Ver relatorios/CONSUMO.md.
+<!-- ALERTA-CLAUDE-P:FIM -->
 <!-- ALERTA-LINKEDIN:INICIO -->
 > # 🚨 ALERTA DO LINKEDIN (2026-10-20): agendamento parado: comando bloqueado pelo classificador (preAgendamento com --env-file); nada agendado. 0 post(s) agendado(s) hoje.
 > Agendamento parado até nova ordem do Dr. Antônio. Desligar: `npm run linkedin:pausar`.
@@ -99,8 +102,8 @@ Atualizado em 15/10/2026 (operação sem o Claude; checagem geral; atualizar ao 
 
 <!-- LINKEDIN-MANUAL:INICIO -->
 ## Fila manual do LinkedIn (perfil pessoal, sem API)
-- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **10** (até 20/11) · abertos (manuais) **33** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
-- Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · qua 25/11 (texto) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto)
+- Seg/qua/sex 19:30 (Bahia), 28/10 a 29/01: **43 posts** · publicados à mão **0** · agendados no LinkedIn **11** (até 25/11) · abertos (manuais) **32** · atrasados **0**. Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
+- Próximos: sex 06/11 (carrossel) · seg 23/11 (carrossel) · sex 27/11 (texto) · seg 30/11 (texto) · qua 02/12 (texto) · sex 04/12 (texto) · seg 07/12 (texto)
 - No dia: `! npm run linkedin:hoje -- --copiar --abrir` · depois `! npm run linkedin:marcar -- <id>` · calendário completo em `relatorios/linkedin/FILA-MANUAL.md`. A tarefa `DrSM-LinkedIn-Lembrete` (seg/qua/sex 19:25) abre o post do dia.
 <!-- LINKEDIN-MANUAL:FIM -->
 
@@ -304,3 +307,13 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Correção: conferirVideo.js com assinatura vídeo+legenda e statusPelaConferencia (única regra); conferenciaFila.js com a checagem cruzada, ligada à conferência diária (alerta de divergência). Testes incluídos.
 - Os 7 itens que eu tinha rebaixado foram revertidos: a pasta do pipeline tem cap.ass e conferência ok com o mesmo hash. Os vídeos da fila manual são idênticos aos do pipeline; a falta de cap.ass é só da exportação.
 - Checagem atual: 55 aprovados, 0 divergências.
+
+## Execução da carta v3 — 20/10/2026 (noite)
+- LinkedIn: teste em simulação (claude -p) respondeu STATUS: OK, com 27 aprovados; nada agendado. Sessão real: 1 post agendado (li-2026-11-25, 25/11 às 19:30 Bahia). A segunda chamada foi parada pelo teto diário, como previsto. Banco: 11 agendados (28/10 a 25/11). A tarefa DrSM-LinkedIn-Agendar segue DESATIVADA até você ativar.
+- Classificador: não bloqueou o agendador depois de tirar o --env-file da linha de comando.
+- Processos filhos: nenhum --env-file em chamadas de código; os filhos carregam o .env por dentro (scripts/carregarEnv.js). Teste estático impede a volta.
+- Exportação da fila manual: inclui cap.ass e credito.ass; 57 pastas completadas (93 arquivos), sem sobrescrever. Os 2 Shorts sem cap.ass (quando-encaminhar, silencio-fatal) estão reprovados por outro motivo registrado pelo pipeline.
+- Criação de texto novo: criarSeNaoExistir (backend/lib/criarTextoNovo.js) com testes de banco simulado.
+- Manutenção semanal: scripts/manutencaoSemanal.js (--auto: segunda prepara o branch, sexta envia). Tarefa não criada: comando em docs/manutencao-semanal.md.
+- Branches e PRs: #131 (criação de texto + manutenção), #132 (env e exportação). Anteriores mesclados: #127 a #130.
+- Pendências para você: (1) 54 itens 'reprovado' na fila têm conferência ok: a decisão de publicar ou manter é sua; (2) regras de negação em .claude/settings.json usam Write(...), que a ferramenta ignora: trocar por Edit(...); (3) ativar DrSM-LinkedIn-Agendar e criar DrSM-Manutencao-Semanal (comandos abaixo).
