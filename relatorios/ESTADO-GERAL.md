@@ -307,3 +307,13 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Correção: conferirVideo.js com assinatura vídeo+legenda e statusPelaConferencia (única regra); conferenciaFila.js com a checagem cruzada, ligada à conferência diária (alerta de divergência). Testes incluídos.
 - Os 7 itens que eu tinha rebaixado foram revertidos: a pasta do pipeline tem cap.ass e conferência ok com o mesmo hash. Os vídeos da fila manual são idênticos aos do pipeline; a falta de cap.ass é só da exportação.
 - Checagem atual: 55 aprovados, 0 divergências.
+
+## Execução da carta v3 — 20/10/2026 (noite)
+- LinkedIn: teste em simulação (claude -p) respondeu STATUS: OK, com 27 aprovados; nada agendado. Sessão real: 1 post agendado (li-2026-11-25, 25/11 às 19:30 Bahia). A segunda chamada foi parada pelo teto diário, como previsto. Banco: 11 agendados (28/10 a 25/11). A tarefa DrSM-LinkedIn-Agendar segue DESATIVADA até você ativar.
+- Classificador: não bloqueou o agendador depois de tirar o --env-file da linha de comando.
+- Processos filhos: nenhum --env-file em chamadas de código; os filhos carregam o .env por dentro (scripts/carregarEnv.js). Teste estático impede a volta.
+- Exportação da fila manual: inclui cap.ass e credito.ass; 57 pastas completadas (93 arquivos), sem sobrescrever. Os 2 Shorts sem cap.ass (quando-encaminhar, silencio-fatal) estão reprovados por outro motivo registrado pelo pipeline.
+- Criação de texto novo: criarSeNaoExistir (backend/lib/criarTextoNovo.js) com testes de banco simulado.
+- Manutenção semanal: scripts/manutencaoSemanal.js (--auto: segunda prepara o branch, sexta envia). Tarefa não criada: comando em docs/manutencao-semanal.md.
+- Branches e PRs: #131 (criação de texto + manutenção), #132 (env e exportação). Anteriores mesclados: #127 a #130.
+- Pendências para você: (1) 54 itens 'reprovado' na fila têm conferência ok: a decisão de publicar ou manter é sua; (2) regras de negação em .claude/settings.json usam Write(...), que a ferramenta ignora: trocar por Edit(...); (3) ativar DrSM-LinkedIn-Agendar e criar DrSM-Manutencao-Semanal (comandos abaixo).

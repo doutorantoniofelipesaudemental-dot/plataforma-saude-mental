@@ -42,3 +42,8 @@ Fontes: `vercel.json` (crons), `relatorios/*-estado*`, freios em variáveis de a
 - Fila do YouTube: status só pelo conferidor (conferirVideo.statusPelaConferencia), checagem cruzada na conferência diária.
 - Criação de texto novo: fonte única (existeConteudo) na ingestão de rascunhos e na importação.
 - Manutenção semanal: pendente (ver docs/manutencao-semanal.md).
+
+## Atualização de 20/10 (noite)
+- LinkedIn: agendador carrega o .env por dentro; 1 post agendado hoje; tarefa DrSM-LinkedIn-Agendar desativada.
+- Manutenção semanal: scripts/manutencaoSemanal.js --auto (segunda 11:00 prepara o branch; sexta 11:00 envia o branch). Tarefa a criar (docs/manutencao-semanal.md).
+- Processos filhos sem --env-file (teste estático em tests/unit/sem-env-file-em-codigo.test.js).
