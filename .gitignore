@@ -126,3 +126,7 @@ relatorios/consumo-claude.json
 relatorios/linkedin/agendar-diario-estado.json
 relatorios/youtube/reprovados/REGERAR-FILA.txt
 relatorios/youtube/fila-manual/**/*.ass
+
+# Estado de sessão (fora do Git: o merge-seguro troca de branch; backup diário, decisão E1 de 21/10/2026)
+relatorios/ESTADO-GERAL.md
+relatorios/PROMPT-ATUAL.md
