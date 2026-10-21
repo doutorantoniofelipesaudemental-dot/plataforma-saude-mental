@@ -291,6 +291,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Itens 8, 9, 10: docs/carta-autonomia-v3.md, relatorios/LICOES.md, relatorios/MAPA-AUTOMACAO-20261020.md; ponteiro no CLAUDE.md.
 - Não feitos agora: item 1 (permissões headless, precisa de testes com claude -p, com teto diário), item 3 (causa dos 7 itens em aprovado-checagem), item 5 (manutenção semanal: a tarefa precisa de você para criar).
 
+## Item 2 (fonte única contra duplicidade) — 20/10/2026
+- backend/lib/existeConteudo.js agora é consultado antes de criar texto novo em: ingestaoRascunhos (insert por slug inexistente no banco) e importarTudo (criação). Atualização de texto que já existe (mesmo slug) segue o fluxo normal.
+- Não ligado: agendarSemData (só atualiza textos existentes) e a publicação (publicarAgendados só publica o que já está no banco).
+- importarTudo não tem testes próprios; o caminho de inserção foi verificado por sintaxe, e a lógica de verificação tem testes.
 ## Item 3 (fila do YouTube: status só pelo conferidor) — 20/10/2026
 - Causa: o status era decidido inline no montarFila, e o cache do conferidor era indexado só pelo hash do vídeo (ignorava a legenda).
 - Correção: conferirVideo.js com assinatura vídeo+legenda e statusPelaConferencia (única regra); conferenciaFila.js com a checagem cruzada, ligada à conferência diária (alerta de divergência). Testes incluídos.

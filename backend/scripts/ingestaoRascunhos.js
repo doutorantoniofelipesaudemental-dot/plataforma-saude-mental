@@ -204,6 +204,13 @@ async function ingerir(rascunhos, { modelo, dryRun = false, categorias = null } 
     if (dryRun) { resultado.gravados.push({ arquivo: r.arquivo, slug: artigo.slug, acao: 'simulado' }); continue; }
     try {
       const { slug, ...campos } = artigo;
+      // fonte única contra duplicidade (20/10/2026): texto novo (slug inexistente no banco) não entra se já existir no site
+      const jaNoBanco = modelo.collection ? await modelo.collection.findOne({ slug }, { projection: { _id: 1 } }) : null;
+      if (!jaNoBanco) {
+        const { verificarConteudo } = require('../lib/existeConteudo');
+        const dup = await verificarConteudo({ slug, titulo: artigo.titulo, corpo: artigo.conteudo, col: modelo.collection || null });
+        if (dup.existe) { resultado.ignorados.push({ arquivo: r.arquivo, motivos: dup.motivos }); continue; }
+      }
       const res = await modelo.updateOne(
         { slug },
         { $set: campos, $setOnInsert: { slug, publicado: false, status: 'rascunho' } },
