@@ -1,6 +1,13 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { decidirPelaSaida, publicar, MAXIMO_REPETICOES } = require('../../scripts/publicarBranch');
+const { decidirPelaSaida, publicar, precisaShell, MAXIMO_REPETICOES } = require('../../scripts/publicarBranch');
+
+test('shell: só npm no Windows; gh e git sem shell (título com espaços e acentos não pode ser cortado)', () => {
+  assert.equal(precisaShell('npm', 'win32'), true);
+  assert.equal(precisaShell('gh', 'win32'), false);
+  assert.equal(precisaShell('git', 'win32'), false);
+  assert.equal(precisaShell('npm', 'linux'), false);
+});
 
 const APROVADA = 'algo\nPORTÃO APROVADO · relatório: relatorios\\portao-20261021-1000.md\n';
 const REPROVADA = 'algo\nPORTÃO REPROVADO · relatório: relatorios\\portao-20261021-1001.md\n';

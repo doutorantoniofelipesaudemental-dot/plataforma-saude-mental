@@ -56,8 +56,15 @@ async function publicar({ rodarPortao, empurrar, abrirOuAtualizarPR, esperar = a
 }
 
 // Lado real: git, gh e o portão. Usado só pela linha de comando.
+// Só o npm precisa de shell no Windows (é npm.cmd). git e gh rodam sem shell: com shell, o texto do
+// título e do corpo do PR é colado sem aspas e o gh lê parte dele como opção (falhou em 21/10/2026).
+// Função pura: só o npm, no Windows, precisa de shell.
+function precisaShell(cmd, plataforma) {
+  return cmd === 'npm' && plataforma === 'win32';
+}
+
 function executar(cmd, args, opcoes = {}) {
-  const r = spawnSync(cmd, args, { cwd: RAIZ, encoding: 'utf8', shell: process.platform === 'win32', ...opcoes });
+  const r = spawnSync(cmd, args, { cwd: RAIZ, encoding: 'utf8', shell: precisaShell(cmd, process.platform), ...opcoes });
   return { saida: `${r.stdout || ''}${r.stderr || ''}`, codigo: r.status };
 }
 
@@ -87,7 +94,7 @@ function abrirOuAtualizarPRReal(branch) {
   return novo.saida.trim().split('\n').pop();
 }
 
-module.exports = { decidirPelaSaida, publicar, ESPERA_MS, MAXIMO_REPETICOES };
+module.exports = { decidirPelaSaida, publicar, precisaShell, ESPERA_MS, MAXIMO_REPETICOES };
 
 if (require.main === module) {
   (async () => {
