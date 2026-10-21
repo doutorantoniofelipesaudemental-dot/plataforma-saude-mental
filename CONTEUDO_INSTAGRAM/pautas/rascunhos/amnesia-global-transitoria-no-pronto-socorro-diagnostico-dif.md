@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:27:22.471Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # Amnésia Global Transitória no Pronto-Socorro: Diagnóstico Diferencial Psiquiátrico

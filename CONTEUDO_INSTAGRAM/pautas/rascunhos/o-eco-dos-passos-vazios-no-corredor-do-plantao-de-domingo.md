@@ -7,7 +7,7 @@ tipo: cronica
 status: rascunho
 geradoEm: 2026-09-30T06:09:25.128Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # O eco dos passos vazios no corredor do plantão de domingo

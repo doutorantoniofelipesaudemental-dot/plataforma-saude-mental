@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:00:49.474Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # Desmame Seguro de Benzodiazepínicos na Atenção Primária

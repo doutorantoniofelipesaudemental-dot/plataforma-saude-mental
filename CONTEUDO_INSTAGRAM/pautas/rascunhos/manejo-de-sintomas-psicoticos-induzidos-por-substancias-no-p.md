@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-10-01T00:26:25.087Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # Manejo de Sintomas Psicóticos Induzidos por Substâncias no PA

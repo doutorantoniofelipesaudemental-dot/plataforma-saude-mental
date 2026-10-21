@@ -7,7 +7,7 @@ tipo: artigo-cientifico
 status: rascunho
 geradoEm: 2026-09-30T23:58:39.358Z
 checagensAutomaticas: aprovado (humanização, ética/CFM, originalidade)
-revisaoMedica: aprovada
+revisaoMedica: pendente
 ---
 
 # Manejo da Insônia em Plantões: Abordagem no Pronto-Atendimento
