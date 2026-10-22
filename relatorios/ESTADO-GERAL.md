@@ -344,3 +344,15 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Voz: Piper (faber, cadu, jeff: dados CC0; edresson: CC BY 4.0, exige crédito) e Kokoro (pf_dora, pm_alex, pm_santa: origem dos dados não documentada, fora da distribuição pública). Amostras e tabela em relatorios/voz-amostras/TABELA.md. A escolha por escuta é do Dr. Antônio.
 - Domínio único (item 6): NÃO preparado. Dos 23 textos com canonical no domínio antigo consultados, todos dão 404 no www. Trocar o canonical ou o 308 agora mandaria esses endereços para páginas inexistentes.
 - Pendente: Search Console (autorização), YouTube Analytics e Instagram Insights (autorização), e a voz escolhida antes do cadastro no Spotify e na Apple.
+## Estratégia de crescimento (ordem de 20/10/2026) — estado real
+- Entregue como plano (nada executado no site, no banco nem nos freios): relatorios/ARQUITETURA-ARTIGOS.md, BENCHMARK-ECOSSISTEMAS.md, RADAR-TEMAS-2026-10.md, COMENTARIOS-PROPOSTA.md, SEARCH-CONSOLE-PASSO-A-PASSO.md, VOZ-PODCAST-OPCOES.md, ESTRATEGIA-CRESCIMENTO-PLANO.md.
+- Achado de SEO: 24 dos 89 MDX do app Next apontam o canonical para plataforma-saude-mental-steel.vercel.app. Corrigir depende de OK seu (ARQUITETURA-ARTIGOS.md, etapa 2 e 5).
+- Voz: Piper faber (cartão do modelo: dataset CC0, repo MIT), amostras aguardam OK para instalar o pacote (regra de terceiros).
+- Não conectado: Search Console, YouTube Analytics, Instagram Insights (cada um precisa de autorização sua).
+- PR #134 (podcast) está em conflito com a main (3 arquivos de status). Não resolvido nesta rodada.
+## Expansão para a nuvem (ordem de 20/10/2026) — estado real
+- FASE 1 (podcast): feed em /podcast/feed.xml (backend/lib/podcast.js, só textos publicados com narração); página /podcast (public/podcast.html, sem player de terceiros); capa public/podcast/capa-3000.png (3000x3000 RGB, sem alfa); validador só leitura scripts/podcast/validarFeed.js. Branch feat/podcast-feed-20261020. Nada cadastrado no Spotify nem no Apple ainda (depende do seu cadastro).
+- Voz: sem termo oficial que permita distribuição pública do Edge-TTS (fonte: pesquisa, sem fonte oficial). Troca por voz de licença aberta NÃO feita; aguarda sua aprovação de amostra.
+- FASE 2 (YouTube na nuvem): só plano em relatorios/YOUTUBE-NUVEM.md. Bloqueada pela decisão de voz e pela confirmação do limite do GitHub Actions.
+- FASE 3 (LinkedIn na nuvem): análise em relatorios/LINKEDIN-NUVEM.md. Recomendação: manter (A) até confirmar os termos da API.
+- PR #133 (monitor/permissões/YouTube) aguardando merge-seguro seu.

@@ -176,6 +176,22 @@ app.get('/sitemap-artigos.xml', async (req, res) => {
   }
 });
 
+app.get('/podcast/feed.xml', async (req, res) => {
+  if (!db.isConfigured()) return res.status(503).send('Feed indisponível: banco não configurado.');
+  try {
+    await db.connect();
+    const { episodiosDe, montarFeed, CANAL } = require('./lib/podcast');
+    const artigos = await Artigo.find({ publicado: true }, { slug: 1, titulo: 1, resumo: 1, publicado: 1, publicadoEm: 1, narracao: 1 }).lean();
+    const episodios = episodiosDe(artigos, { base: 'https://www.drantoniofelipemedico.com.br' });
+    res.set('Content-Type', 'application/rss+xml; charset=utf-8');
+    res.set('Cache-Control', 'public, max-age=900');
+    res.send(montarFeed({ canal: CANAL, episodios }));
+  } catch (err) {
+    console.error('[podcast] falha ao gerar o feed:', err.message);
+    res.status(500).send('Não foi possível gerar o feed.');
+  }
+});
+
 app.get('/sitemap-paginas.xml', (req, res) => {
   res.set('Content-Type', 'application/xml; charset=utf-8');
   res.send(gerarSitemapPaginasXml());

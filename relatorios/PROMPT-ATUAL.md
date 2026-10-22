@@ -278,3 +278,10 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Escolher a voz ouvindo relatorios/voz-amostras/TABELA.md (faber, cadu ou jeff). Pode pedir a origem dos dados das vozes do Kokoro.
 - Autorizar o Search Console (SEARCH-CONSOLE-PASSO-A-PASSO.md).
 - Domínio único: só depois de publicar os 23 textos no www (decisão de publicação).
+## Estratégia de crescimento (20/10/2026)
+- Decidir: OK para instalar Piper e gerar 3 amostras; autorização do Search Console (passo a passo em SEARCH-CONSOLE-PASSO-A-PASSO.md); OK para corrigir o canonical dos 24 MDX; comentários (proposta em COMENTARIOS-PROPOSTA.md).
+- PR #134 em conflito: resolver os 3 arquivos de status (manter os dois blocos) e rodar o portão de novo.
+## Expansão para a nuvem (20/10/2026)
+- Fase 1 (podcast): código pronto no branch feat/podcast-feed-20261020; feed e página no site após deploy (merge seu).
+- Decidir: voz para distribuição pública (Edge-TTS sem termo claro); recomendação de LinkedIn (manter A); liberar a fase 2 (Actions) depois da voz.
+- Cadastro uma vez: Spotify for Creators e Apple Podcasts Connect com o link do feed (passo a passo na resposta).
