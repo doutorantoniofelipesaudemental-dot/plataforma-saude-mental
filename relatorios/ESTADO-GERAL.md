@@ -336,6 +336,14 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Legendas (item 2): NÃO iniciadas. Exigem a reautorização OAuth no PC do Dr. Antônio e a checagem com Whisper e LanguageTool (ferramentas a instalar e auditar).
 - PR #138 (rewrite do domínio único): preview protegido por login. 24 × 200 ainda não verificado; depende do Dr. Antônio abrir o preview logado.
 
+## Rodada de 21/10/2026 — estado real
+- PR #133 (monitor, permissões, YouTube): MESCLADO.
+- PR #134 (podcast): conflito resolvido (mantidos os dois blocos de status); portão aprovado (relatorios/portao-20261020-2350.md); mergeable e CLEAN. Merge: npm run merge-seguro -- 134. Feed NÃO cadastrado no Spotify nem na Apple: a voz ainda não foi escolhida.
+- PR #135 (plano de crescimento): portão aprovado (relatorios/portao-20261020-2347.md), comentário postado com o comando de merge.
+- PR #136 (scripts/publicarBranch.js): portão aprovado; publicado pelo script. Regra: push e PR só depois de PORTÃO APROVADO.
+- Voz: Piper (faber, cadu, jeff: dados CC0; edresson: CC BY 4.0, exige crédito) e Kokoro (pf_dora, pm_alex, pm_santa: origem dos dados não documentada, fora da distribuição pública). Amostras e tabela em relatorios/voz-amostras/TABELA.md. A escolha por escuta é do Dr. Antônio.
+- Domínio único (item 6): NÃO preparado. Dos 23 textos com canonical no domínio antigo consultados, todos dão 404 no www. Trocar o canonical ou o 308 agora mandaria esses endereços para páginas inexistentes.
+- Pendente: Search Console (autorização), YouTube Analytics e Instagram Insights (autorização), e a voz escolhida antes do cadastro no Spotify e na Apple.
 ## Estratégia de crescimento (ordem de 20/10/2026) — estado real
 - Entregue como plano (nada executado no site, no banco nem nos freios): relatorios/ARQUITETURA-ARTIGOS.md, BENCHMARK-ECOSSISTEMAS.md, RADAR-TEMAS-2026-10.md, COMENTARIOS-PROPOSTA.md, SEARCH-CONSOLE-PASSO-A-PASSO.md, VOZ-PODCAST-OPCOES.md, ESTRATEGIA-CRESCIMENTO-PLANO.md.
 - Achado de SEO: 24 dos 89 MDX do app Next apontam o canonical para plataforma-saude-mental-steel.vercel.app. Corrigir depende de OK seu (ARQUITETURA-ARTIGOS.md, etapa 2 e 5).

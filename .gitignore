@@ -126,3 +126,6 @@ relatorios/consumo-claude.json
 relatorios/linkedin/agendar-diario-estado.json
 relatorios/youtube/reprovados/REGERAR-FILA.txt
 relatorios/youtube/fila-manual/**/*.ass
+
+# Amostras de voz geradas localmente (não versionar áudio)
+relatorios/voz-amostras/*.mp3

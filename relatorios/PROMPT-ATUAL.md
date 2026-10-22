@@ -273,6 +273,11 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Conferir o preview do PR #138 logado e autorizar o merge só depois.
 - Legendas: reautorização OAuth no PC e aprovação do padrão de legenda (ainda não preparadas).
 
+## Rodada de 21/10/2026
+- Merge pelo Dr. Antônio: 135 e 134 (comandos merge-seguro no ESTADO-GERAL). O 136 e o PR de voz também aguardam merge.
+- Escolher a voz ouvindo relatorios/voz-amostras/TABELA.md (faber, cadu ou jeff). Pode pedir a origem dos dados das vozes do Kokoro.
+- Autorizar o Search Console (SEARCH-CONSOLE-PASSO-A-PASSO.md).
+- Domínio único: só depois de publicar os 23 textos no www (decisão de publicação).
 ## Estratégia de crescimento (20/10/2026)
 - Decidir: OK para instalar Piper e gerar 3 amostras; autorização do Search Console (passo a passo em SEARCH-CONSOLE-PASSO-A-PASSO.md); OK para corrigir o canonical dos 24 MDX; comentários (proposta em COMENTARIOS-PROPOSTA.md).
 - PR #134 em conflito: resolver os 3 arquivos de status (manter os dois blocos) e rodar o portão de novo.
