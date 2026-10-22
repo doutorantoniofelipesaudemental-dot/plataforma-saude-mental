@@ -6,7 +6,7 @@ import {
   Brain, Heart, GraduationCap, Briefcase, Activity, Calendar,
   CheckCircle, AlertTriangle, ShieldAlert, Copy, RefreshCw,
   BookOpen, Smile, Meh, Frown, Sun, Moon, Sparkles, FileText, UserCheck,
-  HeartHandshake, Wine, Cookie, Puzzle, Bone, Baby,
+  HeartHandshake, Wine, Cookie, Puzzle, Bone, Baby, PenLine, Anchor,
 } from 'lucide-react';
 
 import ZaritBurden from '@/src/components/ferramentas/ZaritBurden';
@@ -18,6 +18,9 @@ import DorCronica from '@/src/components/ferramentas/DorCronica';
 import EdimburgoEPDS from '@/src/components/ferramentas/EdimburgoEPDS';
 import PCL5 from '@/src/components/ferramentas/PCL5';
 import RespiracaoGuiada from '@/src/components/ferramentas/RespiracaoGuiada';
+import RegistroPensamentos from '@/src/components/ferramentas/RegistroPensamentos';
+import Aterramento54321 from '@/src/components/ferramentas/Aterramento54321';
+import EmailOptIn from '@/src/components/ferramentas/EmailOptIn';
 import useMovimentoReduzido from '@/src/hooks/useMovimentoReduzido';
 
 // Navegacao agrupada por publico/contexto clinico — com 12 abas ao todo,
@@ -31,6 +34,8 @@ const GRUPOS_NAV = [
       { chave: 'sono', label: 'Higiene do Sono', Icone: Moon },
       { chave: 'fomeEmocional', label: 'Fome Emocional', Icone: Cookie },
       { chave: 'dorCronica', label: 'Dor Crônica', Icone: Bone },
+      { chave: 'registroPensamentos', label: 'Registro de Pensamentos (TCC)', Icone: PenLine },
+      { chave: 'aterramento', label: 'Aterramento 5-4-3-2-1', Icone: Anchor },
     ],
   },
   {
@@ -66,6 +71,8 @@ const MODULOS_POR_ABA = {
   dorCronica: () => <DorCronica />,
   edimburgo: () => <EdimburgoEPDS />,
   pcl5: () => <PCL5 />,
+  registroPensamentos: () => <RegistroPensamentos />,
+  aterramento: () => <Aterramento54321 />,
 };
 
 // Retemado a partir do .jsx original recebido: mesma logica e estrutura,
@@ -291,6 +298,8 @@ function ModuloPaciente() {
       {/* Painel Lateral: Psicoeducação & Respiração */}
       <div className="space-y-6">
         <RespiracaoGuiada />
+
+        <EmailOptIn />
 
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
           <h3 className="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
