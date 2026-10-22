@@ -49,7 +49,7 @@
   font-family: 'Inter Fallback';
   font-weight: 400;
   src: local('Arial'), local('ArialMT'), local('Helvetica'), local('Roboto');
-  size-adjust: 104.5%;
+  size-adjust: 106%;
   ascent-override: 92.8%;
   descent-override: 22.9%;
   line-gap-override: 0%;
@@ -76,7 +76,7 @@
   font-family: 'Fraunces Fallback';
   font-weight: 600;
   src: local('Times New Roman Bold'), local('TimesNewRomanPS-BoldMT'), local('Times Bold');
-  size-adjust: 110.9%;
+  size-adjust: 110%;
   ascent-override: 88.4%;
   descent-override: 23.4%;
   line-gap-override: 0%;
