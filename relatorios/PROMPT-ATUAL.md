@@ -272,3 +272,8 @@ Itens: 0 commit; 1.1 haloperidol; 1.2 ISAPS (ano exato); 1.3 lítio só com text
 - Escolher textos para revisão e aprovar com npm run revisao:aprovar -- <slug>.
 - Conferir o preview do PR #138 logado e autorizar o merge só depois.
 - Legendas: reautorização OAuth no PC e aprovação do padrão de legenda (ainda não preparadas).
+
+## Expansão para a nuvem (20/10/2026)
+- Fase 1 (podcast): código pronto no branch feat/podcast-feed-20261020; feed e página no site após deploy (merge seu).
+- Decidir: voz para distribuição pública (Edge-TTS sem termo claro); recomendação de LinkedIn (manter A); liberar a fase 2 (Actions) depois da voz.
+- Cadastro uma vez: Spotify for Creators e Apple Podcasts Connect com o link do feed (passo a passo na resposta).

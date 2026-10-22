@@ -335,3 +335,10 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Pendência: backend/scripts/ingestaoRascunhos.js ainda grava "revisaoMedica: aprovada" pelo fluxo antigo de rascunhos (listado no teste como exceção). Unificar com o registro.
 - Legendas (item 2): NÃO iniciadas. Exigem a reautorização OAuth no PC do Dr. Antônio e a checagem com Whisper e LanguageTool (ferramentas a instalar e auditar).
 - PR #138 (rewrite do domínio único): preview protegido por login. 24 × 200 ainda não verificado; depende do Dr. Antônio abrir o preview logado.
+
+## Expansão para a nuvem (ordem de 20/10/2026) — estado real
+- FASE 1 (podcast): feed em /podcast/feed.xml (backend/lib/podcast.js, só textos publicados com narração); página /podcast (public/podcast.html, sem player de terceiros); capa public/podcast/capa-3000.png (3000x3000 RGB, sem alfa); validador só leitura scripts/podcast/validarFeed.js. Branch feat/podcast-feed-20261020. Nada cadastrado no Spotify nem no Apple ainda (depende do seu cadastro).
+- Voz: sem termo oficial que permita distribuição pública do Edge-TTS (fonte: pesquisa, sem fonte oficial). Troca por voz de licença aberta NÃO feita; aguarda sua aprovação de amostra.
+- FASE 2 (YouTube na nuvem): só plano em relatorios/YOUTUBE-NUVEM.md. Bloqueada pela decisão de voz e pela confirmação do limite do GitHub Actions.
+- FASE 3 (LinkedIn na nuvem): análise em relatorios/LINKEDIN-NUVEM.md. Recomendação: manter (A) até confirmar os termos da API.
+- PR #133 (monitor/permissões/YouTube) aguardando merge-seguro seu.
