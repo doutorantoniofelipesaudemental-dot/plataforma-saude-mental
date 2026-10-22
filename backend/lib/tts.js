@@ -25,6 +25,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 const azure = require('./azureTts');
 const { exigirAzureAutorizado } = require('./ordemAzure');
+const { exigirPagoAutorizado } = require('./ordemPaga');
 const elevenlabs = require('./elevenlabs');
 const { VOZ_NARRACAO } = require('./narracao');
 
@@ -161,10 +162,10 @@ function sintetizarEdge(texto, voz) {
 }
 
 /** MP3 de um trecho curto (um slide) no provedor escolhido. */
-async function sintetizar(texto, { provedor = PROVEDOR_PADRAO, voz = vozPadrao(provedor), ordemAzure } = {}) {
+async function sintetizar(texto, { provedor = PROVEDOR_PADRAO, voz = vozPadrao(provedor), ordemAzure, ordemPaga } = {}) {
   validarProvedor(provedor, voz);
-  if (provedor === 'openai') return sintetizarOpenAI(texto, voz);
-  if (provedor === 'elevenlabs') return elevenlabs.sintetizar(texto, { vozId: voz });
+  if (provedor === 'openai') { exigirPagoAutorizado({ provedor, ordem: ordemPaga }); return sintetizarOpenAI(texto, voz); }
+  if (provedor === 'elevenlabs') { exigirPagoAutorizado({ provedor, ordem: ordemPaga }); return elevenlabs.sintetizar(texto, { vozId: voz }); }
   if (provedor === 'kokoro') return sintetizarKokoro(texto, voz);
   if (provedor === 'edge') return sintetizarEdge(texto, voz);
   exigirAzureAutorizado({ ordem: ordemAzure });

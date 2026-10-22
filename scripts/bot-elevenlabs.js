@@ -117,6 +117,8 @@ async function dublar(args) {
 
 async function main() {
   const args = argumentos();
+  // ElevenLabs é voz PAGA: qualquer ação (voz, efeito, dublagem) exige ordem registrada (config/ordens-pagas.json).
+  require('../backend/lib/ordemPaga').exigirPagoAutorizado({ provedor: 'elevenlabs', ordem: args.ordem });
   if (args['desenhar-voz']) return desenharVoz(args);
   if (args['salvar-voz']) return salvarVoz(args);
   if (args.efeito) return efeito(args);
