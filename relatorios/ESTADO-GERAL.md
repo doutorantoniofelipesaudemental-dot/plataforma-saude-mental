@@ -336,6 +336,12 @@ Registrar as tarefas do Windows (uma vez): `powershell -ExecutionPolicy Bypass -
 - Legendas (item 2): NÃO iniciadas. Exigem a reautorização OAuth no PC do Dr. Antônio e a checagem com Whisper e LanguageTool (ferramentas a instalar e auditar).
 - PR #138 (rewrite do domínio único): preview protegido por login. 24 × 200 ainda não verificado; depende do Dr. Antônio abrir o preview logado.
 
+## Estratégia de crescimento (ordem de 20/10/2026) — estado real
+- Entregue como plano (nada executado no site, no banco nem nos freios): relatorios/ARQUITETURA-ARTIGOS.md, BENCHMARK-ECOSSISTEMAS.md, RADAR-TEMAS-2026-10.md, COMENTARIOS-PROPOSTA.md, SEARCH-CONSOLE-PASSO-A-PASSO.md, VOZ-PODCAST-OPCOES.md, ESTRATEGIA-CRESCIMENTO-PLANO.md.
+- Achado de SEO: 24 dos 89 MDX do app Next apontam o canonical para plataforma-saude-mental-steel.vercel.app. Corrigir depende de OK seu (ARQUITETURA-ARTIGOS.md, etapa 2 e 5).
+- Voz: Piper faber (cartão do modelo: dataset CC0, repo MIT), amostras aguardam OK para instalar o pacote (regra de terceiros).
+- Não conectado: Search Console, YouTube Analytics, Instagram Insights (cada um precisa de autorização sua).
+- PR #134 (podcast) está em conflito com a main (3 arquivos de status). Não resolvido nesta rodada.
 ## Expansão para a nuvem (ordem de 20/10/2026) — estado real
 - FASE 1 (podcast): feed em /podcast/feed.xml (backend/lib/podcast.js, só textos publicados com narração); página /podcast (public/podcast.html, sem player de terceiros); capa public/podcast/capa-3000.png (3000x3000 RGB, sem alfa); validador só leitura scripts/podcast/validarFeed.js. Branch feat/podcast-feed-20261020. Nada cadastrado no Spotify nem no Apple ainda (depende do seu cadastro).
 - Voz: sem termo oficial que permita distribuição pública do Edge-TTS (fonte: pesquisa, sem fonte oficial). Troca por voz de licença aberta NÃO feita; aguarda sua aprovação de amostra.
