@@ -1,1 +1,458 @@
-{}
+{
+  "afastamento-trabalho-laudo-aps": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/afastamento-trabalho-laudo-aps.mp3",
+    "hash": "3fe0cf326461cb3d662f625f84b3644516cd451328cbcfec1899721339846656",
+    "sha256": "741dfd159d6064313ae87b856beda37b9e83827a39642e68096e574dbc325147",
+    "fonteHash": "6c736a7bc31cdd75ecb00c5df2bc6becba40e192840e1ce454574ddf94d0c76a",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1324892,
+    "duracaoSeg": 220.7,
+    "geradaEm": "2026-10-22T03:45:38.531Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.086,
+      "picoDb": -1.4,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 220.7
+    }
+  },
+  "anorexia-bulimia-adolescencia": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/anorexia-bulimia-adolescencia.mp3",
+    "hash": "5cc13361c1cbd1526242589debe3161d5a6c22437ec21e4a94413bdc76f215d2",
+    "sha256": "c6c18d1af488866f6655e7fdf3abac95c29ffa83172216df78981412e0edc0a3",
+    "fonteHash": "6dad1d80188da538f78a3c5841105bd14263b7bd24d678d5e1321a1b932f630e",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1513100,
+    "duracaoSeg": 252.1,
+    "geradaEm": "2026-10-22T03:46:11.177Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.103,
+      "picoDb": -1.2,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 252.1
+    }
+  },
+  "ansiedade-depressao-gestacional": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/ansiedade-depressao-gestacional.mp3",
+    "hash": "104363853f9c020dae6d813607d16d87b79560b01fecc26a0510a364b9d8deb9",
+    "sha256": "9f7adba2795a2fa6884fcd8985f0b3052430f575051b70e9e38994de2206a8ce",
+    "fonteHash": "78d2901cb7ed720e1e5f52bfa23ef7c3887049602dd84aacad196148afef4f0b",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1173980,
+    "duracaoSeg": 195.6,
+    "geradaEm": "2026-10-22T03:46:41.303Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.08,
+      "picoDb": -1.1,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 195.6
+    }
+  },
+  "ansiedade-por-inteligencia-artificial": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/ansiedade-por-inteligencia-artificial.mp3",
+    "hash": "63f497e501f3110f94b20e91ad0187eefc6f68159386d057f19857a54779c0f0",
+    "sha256": "38dd21c898bf005274b6daeba823efc340d191338f5900f50b136a00cac4f62e",
+    "fonteHash": "314194d01bc8b9b3e1c2c572fedbcb076db76bafb999cb660faa42e188636963",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1284716,
+    "duracaoSeg": 214,
+    "geradaEm": "2026-10-22T03:52:21.484Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.125,
+      "picoDb": -1.3,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 214
+    }
+  },
+  "baby-blues-ou-depressao-pos-parto": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/baby-blues-ou-depressao-pos-parto.mp3",
+    "hash": "506433ce420db4d69f78054116f308aefb43b9f7391265d771b5932d30e15a8f",
+    "sha256": "4971f17f102343c6c82542ee2d02658b684deef2d1cdce8aa94e3ebfd877294d",
+    "fonteHash": "7d5d2e9aa9d833b809e7bf9a191e920ea647351fdd3b0f369abb613b63d93cde",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1164764,
+    "duracaoSeg": 194,
+    "geradaEm": "2026-10-22T03:53:04.722Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.097,
+      "picoDb": -1.2,
+      "medioDb": -17,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 194
+    }
+  },
+  "benzodiazepinicos-uso-cronico-riscos": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/benzodiazepinicos-uso-cronico-riscos.mp3",
+    "hash": "bcd2cb03c33f2e261bf7389d382a7634b92655a502acf7016649025927355bf9",
+    "sha256": "4555314efd0e4ed8fdfd647699de94809276cffa185e75b4dbdd8c4c0154eb41",
+    "fonteHash": "ea4f81f702cccbd690eda39faa3718a6d6af54d93728eef008c948781363a764",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1380044,
+    "duracaoSeg": 229.9,
+    "geradaEm": "2026-10-22T03:47:31.668Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.124,
+      "picoDb": -1.4,
+      "medioDb": -17,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 229.9
+    }
+  },
+  "burnout-docente-sala-de-aula": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/burnout-docente-sala-de-aula.mp3",
+    "hash": "4db6b970e0f3bad91933f7e366629e21424bab90a639f9d7e73198311f32dd50",
+    "sha256": "a6fa51b020084c4bd1c1425ae81213364adb2bbe446320301049ecb4a9483216",
+    "fonteHash": "2fca3755ad05a9a68905c044e7df2c9eb869216689b261e33cdcf68cc7959049",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1303580,
+    "duracaoSeg": 217.2,
+    "geradaEm": "2026-10-22T03:47:59.261Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.084,
+      "picoDb": -1.4,
+      "medioDb": -17,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 217.2
+    }
+  },
+  "colapso-do-cuidador-emergencia-pa": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/colapso-do-cuidador-emergencia-pa.mp3",
+    "hash": "38a4e338a8c6f6b70dc834cec90b0ee301a62bea1e0ccdc2807fdd9504f27851",
+    "sha256": "5b6945e8d24437d0a4a1ac2f6b6f451d39358530afa9f8549d4d8942257f0e1d",
+    "fonteHash": "cedf9fc0d81641fc875b5087d7e4327152ee9e22375126567c51f2ebbc8705e5",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1242380,
+    "duracaoSeg": 207,
+    "geradaEm": "2026-10-22T03:48:57.872Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.067,
+      "picoDb": -1.4,
+      "medioDb": -17,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 207
+    }
+  },
+  "comparacao-redes-sociais-autoestima": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/comparacao-redes-sociais-autoestima.mp3",
+    "hash": "cad449fa6e9c29ad7d3d4e184cd407cd223edbaf5404a524b6e322fd9ca4f348",
+    "sha256": "2af9094d3cc16002b82cb3e950311511a137b1b2e42a1edc23e12b47f6fcf10c",
+    "fonteHash": "4e2cbb6445243b87764e2d0a1d97aaeed8160f8f9ae96d0eec7a2bc6a4310319",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1324172,
+    "duracaoSeg": 220.6,
+    "geradaEm": "2026-10-22T03:49:33.217Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.092,
+      "picoDb": -1.3,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 220.6
+    }
+  },
+  "esquecimento-normal-ou-alzheimer": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/esquecimento-normal-ou-alzheimer.mp3",
+    "hash": "b54e12b17d769924c4894296cffb1e93ee0d15a16f161b755206f1c53ca0d968",
+    "sha256": "cfa0f81ddeaaf7c9497a21e5b8e747057566bea9c6685d9681b451183d70a87a",
+    "fonteHash": "86f78676b245662381f536f1736dc2e8c0b10206ec25c464a12be9e3744c60c3",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1354412,
+    "duracaoSeg": 225.6,
+    "geradaEm": "2026-10-22T03:53:49.374Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.073,
+      "picoDb": -1.1,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 225.6
+    }
+  },
+  "exercicio-fisico-como-prescricao-medica": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/exercicio-fisico-como-prescricao-medica.mp3",
+    "hash": "c25205de032bfeb31b0dff1a3e46afbb4c68cc819cfd08d7a62de82084dd4f7e",
+    "sha256": "d15d0b72a8f2b47ee54832d18825da02be8f3f0248cfee7234516a42a6bfb0c2",
+    "fonteHash": "b78c8293b1f9c355523e044b00d495b8d65f112ad34dc4b9067f7d0663ad9269",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1270460,
+    "duracaoSeg": 211.6,
+    "geradaEm": "2026-10-22T03:54:18.595Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.099,
+      "picoDb": -1.3,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 211.6
+    }
+  },
+  "fadiga-por-compaixao-profissionais-saude": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/fadiga-por-compaixao-profissionais-saude.mp3",
+    "hash": "581830242da1abb6934d7962b737fca55839af3535d539bd5311bc034732b05c",
+    "sha256": "4060134b7e2103e0ae02990dccc561822a5f3501e35bf7720564e0204ef3db0d",
+    "fonteHash": "d99196b4546927756d613608adbe8a6bd1aaf5503c490ce57c080941ef0be741",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1231436,
+    "duracaoSeg": 205.1,
+    "geradaEm": "2026-10-22T03:54:44.188Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.063,
+      "picoDb": -1.3,
+      "medioDb": -16.7,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 205.1
+    }
+  },
+  "fome-emocional-compulsao-alimentar": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/fome-emocional-compulsao-alimentar.mp3",
+    "hash": "09ecc205ceaf3850bde19817b198881654c0cb327781a684667e66019329ff66",
+    "sha256": "1a3c108f63b06bebb480d8c82e01408adae50b1bf9fd425a9c5bf9aed5173b72",
+    "fonteHash": "a3785c2b71cc1008ea009bef7c144634dea153f77adaad77985471bcde55c57e",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1218332,
+    "duracaoSeg": 203,
+    "geradaEm": "2026-10-22T03:55:12.155Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.072,
+      "picoDb": -1.2,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 203
+    }
+  },
+  "luto-gestacional-e-neonatal": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/luto-gestacional-e-neonatal.mp3",
+    "hash": "5365181f0a546dc7c4681e0232304cec12978eabadd3e7438e0ee9ddb2bc4470",
+    "sha256": "12b6c1c5548e92eb7aeb4342c807e7742bce3f471b373bc76951079d23cd268d",
+    "fonteHash": "5a8c635546348c919a1d3bce0982975710bc1316ca8393d966461860d6f9253e",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1247420,
+    "duracaoSeg": 207.8,
+    "geradaEm": "2026-10-22T03:50:02.922Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.092,
+      "picoDb": -1.3,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 207.8
+    }
+  },
+  "luto-normal-ou-complicado": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/luto-normal-ou-complicado.mp3",
+    "hash": "d64d7e3c70af48b92cacb06197e27e4f9547150fb32d1d82da61aea88ac5e197",
+    "sha256": "af7b7fe27f854ded2d5c764502a087c508f9a49a882156ad182fdfc80e2f8cee",
+    "fonteHash": "53afaaa2bd4432a2113ea35765ebf89ca325dee27804c514d2645317b2f5a7ae",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1379756,
+    "duracaoSeg": 229.9,
+    "geradaEm": "2026-10-22T03:55:40.760Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.1,
+      "picoDb": -1,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 229.9
+    }
+  },
+  "panico-ou-infarto-diagnostico-diferencial": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/panico-ou-infarto-diagnostico-diferencial.mp3",
+    "hash": "4474280f6601d0f96276611f5084eced908e4f969b1357c34371aa412e886f5d",
+    "sha256": "ea0bd2dc10953af861f3dedc32a160df0bcadef779d2d558cae9a0f57a12bc45",
+    "fonteHash": "868a20c39034a644eb6707b00b37ff32908da058d6710cd113a74d4af33b4250",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1573724,
+    "duracaoSeg": 262.2,
+    "geradaEm": "2026-10-22T03:56:12.648Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.12,
+      "picoDb": -1.3,
+      "medioDb": -17,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 262.2
+    }
+  },
+  "peso-psicologico-doenca-cronica": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/peso-psicologico-doenca-cronica.mp3",
+    "hash": "d817cb0cbf5d0aa9594547faa32d2a8d516c6dc9b8ba06af7e8bbd41fef68de1",
+    "sha256": "34d1afd4ca5bec3264412978f6a6899c7364984592f7a1ecd7d3c344531f6c40",
+    "fonteHash": "ddd2b7465cca949313c8006c584e0e029190efda59fc48ceea50b806befdfabd",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1264988,
+    "duracaoSeg": 210.7,
+    "geradaEm": "2026-10-22T03:50:31.431Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.102,
+      "picoDb": -1.3,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 210.7
+    }
+  },
+  "polifarmacia-idoso-delirium": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/polifarmacia-idoso-delirium.mp3",
+    "hash": "85ebcef3d3c207c2fe2294ed8ac257a31b93200af19cd999a567205f512705f9",
+    "sha256": "0bb5e09dec51b41e450af96652b7ed2243d7a6d1c5f303e4329f50b74c7cba0f",
+    "fonteHash": "8a2b1ec6ded97b3d40db757203bdff62525ef4baa370952106ccac45c356b788",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1219772,
+    "duracaoSeg": 203.2,
+    "geradaEm": "2026-10-22T03:51:00.065Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.123,
+      "picoDb": -1.4,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 203.2
+    }
+  },
+  "sindrome-do-cuidador-sinais": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/sindrome-do-cuidador-sinais.mp3",
+    "hash": "90fda4445cc9cf156e39164e14809f01f5b5e9042d325b683443a89b5f382142",
+    "sha256": "4919bb3630f9fcb7eca7120afd62b335fbec82025b35a4257dc5169baf408dd8",
+    "fonteHash": "cb44a8b25075f53b46628cde7186856479e1eec9b275c6cfa98ca6e29202faec",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1281548,
+    "duracaoSeg": 213.5,
+    "geradaEm": "2026-10-22T03:56:37.526Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.09,
+      "picoDb": -1.1,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 213.5
+    }
+  },
+  "tdah-ou-agitacao-infantil": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/tdah-ou-agitacao-infantil.mp3",
+    "hash": "296e3b1b10b90c36753ce119b9637b2596a598224da68c643bf3965204b1da57",
+    "sha256": "45d2bb5c2ba3e31c4b9249aa2ab238599874aa1c6bdfecdc79a4cb30509a2d71",
+    "fonteHash": "7fbaef326726bd9bed74fe039d3df7f61e74a33c77648845079905e3de113c54",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1299260,
+    "duracaoSeg": 216.4,
+    "geradaEm": "2026-10-22T03:57:01.412Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.117,
+      "picoDb": -1.5,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 216.4
+    }
+  },
+  "tept-violencia-urbana-assalto": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/tept-violencia-urbana-assalto.mp3",
+    "hash": "3b9a2f22d50cf18f3f9f645688cebd96b4a8821447df64cb555d1ee27262d248",
+    "sha256": "b651a274b6919e945f367901fc57434a3619fb3043d731e26d57f42c08a366db",
+    "fonteHash": "8c45aa56d2cf0dafba254be61d99a5e3083e0e1fa872ecbb83b1e7ea3beef75f",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1384796,
+    "duracaoSeg": 230.7,
+    "geradaEm": "2026-10-22T03:51:34.529Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.092,
+      "picoDb": -1.1,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 230.7
+    }
+  },
+  "vape-nicotina-adolescentes": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/vape-nicotina-adolescentes.mp3",
+    "hash": "2b359bb66af7b4c5d8f5aa52e8c7a775fa3827b73146bbaab2d3ce02a332802a",
+    "sha256": "c252be9560059bf213bf0f65e3342882f0f9d7a1aa7d8ba91fe7f029317439a7",
+    "fonteHash": "78be9252a54bb546f208d9bfb7d7b278cd339ccab36a6c15692155fddb4235bd",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1249148,
+    "duracaoSeg": 208.1,
+    "geradaEm": "2026-10-22T03:44:57.001Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.126,
+      "picoDb": -0.5,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 208.1
+    }
+  },
+  "vicio-em-apostas-bets-sinais-de-alerta": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/vicio-em-apostas-bets-sinais-de-alerta.mp3",
+    "hash": "33f499bec97b720a74a08ef2d1fb3bc305b1d20d2a2fcb5c8b4cc63744df76ed",
+    "sha256": "561b45cd7217ab308148a98b6ee0a6f9fe327f94acd596264d619ccbc50f5106",
+    "fonteHash": "c9bbe2ffa0f6b2e6fdf4df971dfa7393f3ee56363636484843df5717b1c786c8",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1499996,
+    "duracaoSeg": 249.9,
+    "geradaEm": "2026-10-22T03:58:05.237Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.123,
+      "picoDb": -1.2,
+      "medioDb": -16.9,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 249.9
+    }
+  },
+  "violencia-domestica-sinais-na-consulta": {
+    "url": "https://aiugtmhfxo0cio1y.public.blob.vercel-storage.com/narracoes/app/violencia-domestica-sinais-na-consulta.mp3",
+    "hash": "40f55887e5283d0de48af4758db2a265a4e8f9d4215165643505d78a8c888beb",
+    "sha256": "24e701a34329c53a3f6ac1c22c0615584dc80f185e20c9c09486ac7a44317ed5",
+    "fonteHash": "9f62a13762c8f04df944414104d9def309fce3cf7829c6d9351baa96c6b9fee9",
+    "vinhetaVersao": 1,
+    "voz": "pt-BR-AntonioNeural",
+    "bytes": 1478540,
+    "duracaoSeg": 246.3,
+    "geradaEm": "2026-10-22T03:58:33.578Z",
+    "renarrar": false,
+    "conferencia": {
+      "wer": 0.106,
+      "picoDb": -1,
+      "medioDb": -16.8,
+      "silencioMaxSeg": 0,
+      "esperadaSeg": 246.3
+    }
+  }
+}

@@ -211,10 +211,27 @@ function gravarManifesto(manifesto) {
   fs.writeFileSync(MANIFESTO, JSON.stringify(ordenado, null, 2) + '\n');
 }
 
-async function enviarBlob(slug, buffer) {
-  const { put } = require('@vercel/blob');
-  const r = await put(`narracoes/app/${slug}.mp3`, buffer, { access: 'public', contentType: 'audio/mpeg', addRandomSuffix: false, allowOverwrite: true });
-  return r.url;
+const BASE_API = process.env.NARRACAO_API_BASE || 'https://drsaudemental.vercel.app';
+
+/** Envio pela rota de narrações do app (mesma autenticação de narrar-artigos: ADMIN_TOKEN). Quem grava no Blob é o servidor. */
+async function enviarPelaApi(slug, buffer, { hash, renarrar }) {
+  const headers = { Authorization: `Bearer ${process.env.ADMIN_TOKEN}`, 'Content-Type': 'audio/mpeg', 'X-Narracao-Hash': hash };
+  if (renarrar) headers['X-Narracao-Renarrar'] = '1';
+  const resp = await fetch(`${BASE_API}/api/artigos/${encodeURIComponent(slug)}/midia/narracao-app`, { method: 'PUT', headers, body: buffer });
+  const corpo = await resp.json().catch(() => ({}));
+  if (!resp.ok) throw new Error(`envio HTTP ${resp.status}: ${corpo.erro || ''}`.slice(0, 300));
+  return corpo.url;
+}
+
+/** Confere a URL publicada: HTTP 200 e o mesmo tamanho e SHA-256 do MP3 que passou na conferência. */
+async function conferirUrl(url, arquivo) {
+  const resp = await fetch(url, { cache: 'no-store' });
+  if (resp.status !== 200) throw new Error(`URL publicada respondeu HTTP ${resp.status}`);
+  const publicado = Buffer.from(await resp.arrayBuffer());
+  const local = fs.readFileSync(arquivo);
+  const sha = (b) => crypto.createHash('sha256').update(b).digest('hex');
+  if (publicado.length !== local.length || sha(publicado) !== sha(local)) throw new Error('conteúdo publicado difere do MP3 conferido');
+  return sha(publicado);
 }
 
 /** Carrega a fonte de um item e tudo o que se calcula dela (sem gerar áudio). */
@@ -296,14 +313,18 @@ async function main() {
         resultados.push({ item, resultado: 'REPROVADO (áudio)', detalhe: `${conf.motivos.join('; ')} | ${metricas}` });
         continue;
       }
-      if (args.includes('--sem-envio') || !process.env.BLOB_READ_WRITE_TOKEN) {
+      if (args.includes('--sem-envio') || !process.env.ADMIN_TOKEN) {
         resultados.push({ item, resultado: 'CONFERIDO (aguardando envio)', detalhe: metricas });
         continue;
       }
-      const url = await enviarBlob(item.slug, fs.readFileSync(conf.mp3));
+      // Hash diferente do que já está publicado: é renarração, e a rota exige a ordem (X-Narracao-Renarrar).
+      const renarrar = Boolean(atual && atual.hash !== p.hash);
+      const url = await enviarPelaApi(item.slug, fs.readFileSync(conf.mp3), { hash: p.hash, renarrar });
+      const sha256 = await conferirUrl(url, conf.mp3);
       manifesto[item.slug] = {
         url,
         hash: p.hash,
+        sha256,
         fonteHash: p.fonteHash,
         vinhetaVersao: vinheta.VINHETA_VERSAO,
         voz: VOZ_NARRACAO,
