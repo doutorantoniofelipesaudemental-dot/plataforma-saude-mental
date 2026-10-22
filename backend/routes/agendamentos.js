@@ -10,7 +10,7 @@ const {
 const router = express.Router();
 
 // Até 5 envios por minuto por IP na criação (ver ressalva em middleware/index.js).
-const limiteEnvio = limitarTaxa({ janelaMs: 60_000, maximo: 5 });
+const limiteEnvio = limitarTaxa({ nome: 'agendamentos-envio', janelaMs: 60_000, maximo: 5 });
 
 /** Campos que o público pode enviar. Qualquer outro é descartado. */
 const CAMPOS_PERMITIDOS = [

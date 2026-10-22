@@ -3,6 +3,7 @@ const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin } = require('../middleware');
 const { textoParaNarracao, hashNarracao, VOZ_NARRACAO, VOZES_NARRACAO } = require('../lib/narracao');
 const { log } = require('../lib/log');
+const { caminhoNarracaoApp, caminhoHashNarracaoApp, validarEnvioNarracaoApp, decidirGravacaoNarracaoApp, lerHashNarracaoApp } = require('../lib/narracaoApp');
 
 const router = express.Router();
 
@@ -154,6 +155,48 @@ router.put(
     } catch (err) {
       log.erro('[midia] erro ao gravar a capa:', err.message);
       res.status(500).json({ erro: 'Não foi possível gravar a capa.' });
+    }
+  }
+);
+
+/**
+ * PUT /api/artigos/:slug/midia/narracao-app — narração de um texto do app Next (domínio único), que não está no MongoDB.
+ * Corpo: o MP3 (audio/mpeg, até 4,4 MB). Cabeçalhos: X-Narracao-Hash (SHA-256 do texto narrado, obrigatório) e
+ * X-Narracao-Renarrar: 1 (só para trocar um áudio de texto diferente). Grava em narracoes/app/<slug>.mp3 (sem sufixo aleatório).
+ */
+router.put(
+  '/:slug/midia/narracao-app',
+  exigirAdmin,
+  express.raw({ type: 'audio/mpeg', limit: '4400kb' }),
+  async (req, res) => {
+    try {
+      const slug = req.params.slug;
+      const hash = String(req.get('x-narracao-hash') || '');
+      const invalido = validarEnvioNarracaoApp({ slug, audio: req.body, hash });
+      if (invalido) return res.status(invalido.status).json({ erro: invalido.mensagem });
+      if (!process.env.BLOB_READ_WRITE_TOKEN) return res.status(503).json({ erro: 'Blob não configurado.' });
+
+      const { put, list } = require('@vercel/blob');
+      const existente = await lerHashNarracaoApp(slug, list);
+      const decisao = decidirGravacaoNarracaoApp({ existente, hash, renarrar: req.get('x-narracao-renarrar') === '1' });
+      if (!decisao.gravar) return res.status(decisao.status).json({ erro: decisao.mensagem });
+
+      const mp3 = await put(caminhoNarracaoApp(slug), req.body, {
+        access: 'public',
+        contentType: 'audio/mpeg',
+        addRandomSuffix: false,
+        allowOverwrite: true,
+      });
+      await put(caminhoHashNarracaoApp(slug), JSON.stringify({ hash, geradaEm: new Date().toISOString() }), {
+        access: 'public',
+        contentType: 'application/json',
+        addRandomSuffix: false,
+        allowOverwrite: true,
+      });
+      res.json({ ok: true, url: mp3.url, hash });
+    } catch (err) {
+      log.erro('[midia] erro ao gravar a narração do app:', err.message);
+      res.status(500).json({ erro: 'Não foi possível gravar a narração.' });
     }
   }
 );
