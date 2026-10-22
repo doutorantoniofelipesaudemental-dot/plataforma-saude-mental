@@ -98,7 +98,7 @@ const OPCOES_ENQUETE = {
   perfil: ['gestorRh', 'profissionalSaude', 'usoPessoal'],
 };
 
-const limiteEnquete = limitarTaxa({ janelaMs: 60_000, maximo: 20 });
+const limiteEnquete = limitarTaxa({ nome: 'artigos-enquete', janelaMs: 60_000, maximo: 20 });
 
 /**
  * POST /api/artigos/:slug/enquete
@@ -128,7 +128,7 @@ router.post('/:slug/enquete', limiteEnquete, exigirBanco, async (req, res) => {
   }
 });
 
-const limiteSolicitarNarracao = limitarTaxa({ janelaMs: 60_000, maximo: 20 });
+const limiteSolicitarNarracao = limitarTaxa({ nome: 'artigos-narracao', janelaMs: 60_000, maximo: 20 });
 
 /**
  * POST /api/artigos/:slug/solicitar-narracao
@@ -154,7 +154,7 @@ router.post('/:slug/solicitar-narracao', limiteSolicitarNarracao, exigirBanco, a
   }
 });
 
-const limiteFerramentaUso = limitarTaxa({ janelaMs: 60_000, maximo: 30 });
+const limiteFerramentaUso = limitarTaxa({ nome: 'artigos-ferramenta', janelaMs: 60_000, maximo: 30 });
 
 /**
  * POST /api/artigos/:slug/ferramenta-uso

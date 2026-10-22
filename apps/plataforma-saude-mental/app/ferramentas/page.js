@@ -1,4 +1,5 @@
 import SistemaIntegradoSaudeMental from './sistema-integrado-saude-mental';
+import AvisoPsicoeducacional from '@/src/components/ferramentas/AvisoPsicoeducacional';
 
 export const metadata = {
   title: 'Ferramenta Clínica',
@@ -7,5 +8,10 @@ export const metadata = {
 };
 
 export default function FerramentaPage() {
-  return <SistemaIntegradoSaudeMental />;
+  return (
+    <>
+      <AvisoPsicoeducacional />
+      <SistemaIntegradoSaudeMental />
+    </>
+  );
 }
