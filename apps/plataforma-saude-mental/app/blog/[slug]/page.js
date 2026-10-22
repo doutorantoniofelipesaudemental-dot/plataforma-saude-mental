@@ -3,6 +3,10 @@ import { canonicalDoTexto } from '../../slugsDominioPrincipal';
 import { ArrowLeft } from 'lucide-react';
 import { EIXOS } from '@/content/blog/eixos';
 import RodapeIdentificacao from '@/app/RodapeIdentificacao';
+import ArtigoNarracao from '@/app/ArtigoNarracao';
+import { narracaoDoTexto } from '@/app/narracaoDoTexto';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 export function generateStaticParams() {
   return EIXOS.map(({ slug }) => ({ slug }));
@@ -34,6 +38,7 @@ export default async function ArtigoPage({ params }) {
   const { slug } = await params;
   const { default: Artigo, metadata } = await import(`@/content/blog/${slug}.mdx`);
   const info = EIXOS.find((e) => e.slug === slug);
+  const urlNarracao = narracaoDoTexto(slug, readFileSync(join(process.cwd(), 'content', 'blog', `${slug}.mdx`), 'utf8'));
 
   return (
     <main className="flex-1">
@@ -63,6 +68,8 @@ export default async function ArtigoPage({ params }) {
           <span>{metadata.tempoLeitura} min de leitura</span>
         </p>
       </header>
+
+      {urlNarracao && <ArtigoNarracao url={urlNarracao} />}
 
       <div className="prose prose-marca max-w-none leading-relaxed">
         <Artigo />
