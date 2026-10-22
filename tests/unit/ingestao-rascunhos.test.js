@@ -32,10 +32,10 @@ ${corpo ?? 'Abertura **clara** do texto.\n\n## Guia Prático\n\n- passo um\n- pa
 
 const ler = (txt, arquivo = 'a.md') => ({ arquivo, ...ing.lerFrontmatter(txt) });
 
-// Registro com hash (relatorios/revisoes/registro.json): aprovação só vale com o hash do corpo atual.
+// Registro com hash (relatorios/revisoes/registro.json): aprovação do rascunho por `rascunho:<slug>`, só com o hash do corpo atual.
 const R = require('../../backend/lib/revisaoMedica');
-const aprovadoNoRegistro = (slugs, corpo = null) => Object.fromEntries(slugs.map((slug) => [slug, R.aprovar({
-  slug, hash: R.hashConteudo(ler(rascunho({ slug }, corpo)).corpo), revisor: 'teste', data: new Date(),
+const aprovadoNoRegistro = (slugs, corpo = null) => Object.fromEntries(slugs.map((slug) => [ing.chaveRascunho(slug), R.aprovar({
+  slug: ing.chaveRascunho(slug), hash: R.hashConteudo(ler(rascunho({ slug }, corpo)).corpo), revisor: 'teste', data: new Date(),
 })]));
 
 function modeloFalso() {

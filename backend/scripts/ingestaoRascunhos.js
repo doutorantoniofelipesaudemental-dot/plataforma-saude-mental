@@ -19,10 +19,19 @@ const R = require('../lib/revisaoMedica');
 
 // Registro da revisão médica (npm run revisao:aprovar): única fonte de aprovação. O Frontmatter não vale.
 const REGISTRO_REVISAO = path.resolve(__dirname, '..', '..', 'relatorios', 'revisoes', 'registro.json');
-function lerRegistroRevisao() {
-  if (!fs.existsSync(REGISTRO_REVISAO)) return {};
-  return JSON.parse(fs.readFileSync(REGISTRO_REVISAO, 'utf8'));
+// Registro corrompido ou ilegível dá erro (nunca "sem aprovações"): a ingestão para antes de gravar.
+function lerRegistroRevisao(arquivo = REGISTRO_REVISAO) {
+  if (!fs.existsSync(arquivo)) return {};
+  try {
+    const reg = JSON.parse(fs.readFileSync(arquivo, 'utf8'));
+    if (!reg || typeof reg !== 'object' || Array.isArray(reg)) throw new Error('não é um objeto');
+    return reg;
+  } catch (e) {
+    throw new Error(`registro de revisão corrompido (${path.basename(arquivo)}): ${e.message}. Nada foi gravado.`);
+  }
 }
+// Chave própria do rascunho no registro: a aprovação de um rascunho não depende do texto do app.
+const chaveRascunho = (slug) => `rascunho:${slug}`;
 
 const PASTA_RASCUNHOS = path.join(__dirname, '..', '..', 'CONTEUDO_INSTAGRAM', 'pautas', 'rascunhos');
 const RE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -124,7 +133,7 @@ function validarRascunho(rascunho, { categorias = null, registro = {} } = {}) {
   if (!dados.slug || !RE_SLUG.test(dados.slug)) motivos.push('slug ausente ou inválido');
   if (!dados.titulo) motivos.push('título ausente');
   else if (dados.titulo.length > 180) motivos.push('título acima de 180 caracteres');
-  const revisao = R.estadoRevisao({ registro: registro[dados.slug], hashAtual: R.hashConteudo(corpo) });
+  const revisao = R.estadoRevisao({ registro: registro[chaveRascunho(dados.slug)], hashAtual: R.hashConteudo(corpo) });
   if (!revisao.valido) motivos.push(`revisão médica sem aprovação registrada com hash${revisao.motivo ? ` (${revisao.motivo})` : ''} (npm run revisao:aprovar)`);
   if (!/^aprovado/i.test(dados.checagensAutomaticas || '')) motivos.push('checagens automáticas não aprovadas');
   if (categorias && !categorias.includes(dados.categoria)) motivos.push(`categoria "${dados.categoria || ''}" fora de CATEGORIAS do modelo Artigo`);
@@ -242,4 +251,4 @@ if (require.main === module) {
   main().catch((e) => { console.error(`Erro: ${e.message}`); process.exit(1); });
 }
 
-module.exports = { lerFrontmatter, markdownParaHtml, extrairCorpo, validarRascunho, montarArtigo, lerRascunhos, filtrarPorLote, ingerir, argumentos };
+module.exports = { lerFrontmatter, markdownParaHtml, extrairCorpo, validarRascunho, montarArtigo, lerRascunhos, filtrarPorLote, ingerir, argumentos, lerRegistroRevisao, chaveRascunho, PASTA_RASCUNHOS };
