@@ -59,6 +59,17 @@
       "dest": "/public/google79736b5242e37404.html"
     },
     {
+      "src": "/podcast/feed.xml",
+      "dest": "/backend/index.js",
+      "headers": {
+        "Content-Type": "application/rss+xml; charset=utf-8"
+      }
+    },
+    {
+      "src": "/podcast/?",
+      "dest": "/public/podcast.html"
+    },
+    {
       "src": "/sitemap-index.xml",
       "dest": "/backend/index.js"
     },

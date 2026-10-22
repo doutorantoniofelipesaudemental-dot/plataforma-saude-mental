@@ -1,8 +1,8 @@
 /**
  * Ingestão dos rascunhos de CONTEUDO_INSTAGRAM/pautas/rascunhos/*.md no MongoDB Atlas.
  *
- * Só entra o rascunho com o campo revisaoMedica com valor de aprovação escrito à mão no Frontmatter (PENDÊNCIA: passar a ler
- * o registro com hash de relatorios/revisoes/registro.json), checagens automáticas aprovadas, categoria válida, sem marcadores
+ * Só entra o rascunho com revisão médica aprovada no registro com hash (relatorios/revisoes/registro.json; o Frontmatter
+ * `revisaoMedica` não vale), checagens automáticas aprovadas, categoria válida, sem marcadores
  * [... A CONFIRMAR] e com referências já verificadas. Os demais são listados com o motivo
  * e não são gravados. O upsert é por `slug`; ao inserir, o artigo nasce NÃO publicado
  * (`publicado: false`, status de redes "rascunho"), e ao atualizar não mexe nesses campos.
@@ -15,6 +15,23 @@
 const fs = require('fs');
 const path = require('path');
 const { escapeHtml, slugify } = require('../lib/texto');
+const R = require('../lib/revisaoMedica');
+
+// Registro da revisão médica (npm run revisao:aprovar): única fonte de aprovação. O Frontmatter não vale.
+const REGISTRO_REVISAO = path.resolve(__dirname, '..', '..', 'relatorios', 'revisoes', 'registro.json');
+// Registro corrompido ou ilegível dá erro (nunca "sem aprovações"): a ingestão para antes de gravar.
+function lerRegistroRevisao(arquivo = REGISTRO_REVISAO) {
+  if (!fs.existsSync(arquivo)) return {};
+  try {
+    const reg = JSON.parse(fs.readFileSync(arquivo, 'utf8'));
+    if (!reg || typeof reg !== 'object' || Array.isArray(reg)) throw new Error('não é um objeto');
+    return reg;
+  } catch (e) {
+    throw new Error(`registro de revisão corrompido (${path.basename(arquivo)}): ${e.message}. Nada foi gravado.`);
+  }
+}
+// Chave própria do rascunho no registro: a aprovação de um rascunho não depende do texto do app.
+const chaveRascunho = (slug) => `rascunho:${slug}`;
 
 const PASTA_RASCUNHOS = path.join(__dirname, '..', '..', 'CONTEUDO_INSTAGRAM', 'pautas', 'rascunhos');
 const RE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -104,17 +121,20 @@ function extrairCorpo(corpo) {
 
 const temMarcadorPendente = (corpo) => RE_MARCADOR.test(extrairCorpo(corpo).markdown);
 
-/* A aprovação médica não é gravada aqui: só pelo registro com hash (npm run revisao:aprovar). */
-
-/** Motivos pelos quais o rascunho NÃO pode ser gravado (lista vazia = pode). */
-function validarRascunho(rascunho, { categorias = null } = {}) {
+/**
+ * Motivos pelos quais o rascunho NÃO pode ser gravado (lista vazia = pode).
+ * A revisão médica vale só pelo registro com hash (`registro`, de relatorios/revisoes/registro.json):
+ * o campo `revisaoMedica` do Frontmatter é ignorado, porque qualquer um consegue escrevê-lo.
+ */
+function validarRascunho(rascunho, { categorias = null, registro = {} } = {}) {
   const { dados, corpo, valido } = rascunho;
   const motivos = [];
   if (!valido) return ['Frontmatter ausente ou malformado'];
   if (!dados.slug || !RE_SLUG.test(dados.slug)) motivos.push('slug ausente ou inválido');
   if (!dados.titulo) motivos.push('título ausente');
   else if (dados.titulo.length > 180) motivos.push('título acima de 180 caracteres');
-  if (!/^aprovad[oa]$/i.test(dados.revisaoMedica || '')) motivos.push(`revisão médica ${dados.revisaoMedica || 'ausente'} (exige "aprovada")`);
+  const revisao = R.estadoRevisao({ registro: registro[chaveRascunho(dados.slug)], hashAtual: R.hashConteudo(corpo) });
+  if (!revisao.valido) motivos.push(`revisão médica sem aprovação registrada com hash${revisao.motivo ? ` (${revisao.motivo})` : ''} (npm run revisao:aprovar)`);
   if (!/^aprovado/i.test(dados.checagensAutomaticas || '')) motivos.push('checagens automáticas não aprovadas');
   if (categorias && !categorias.includes(dados.categoria)) motivos.push(`categoria "${dados.categoria || ''}" fora de CATEGORIAS do modelo Artigo`);
   const { resumo, markdown } = extrairCorpo(corpo);
@@ -160,11 +180,11 @@ function filtrarPorLote(rascunhos, lote, registros) {
  * Valida e faz o upsert por slug. `modelo` é o Artigo (ou um dublê com `updateOne`).
  * Em dryRun nada é gravado. Retorna { gravados, ignorados, falhas }.
  */
-async function ingerir(rascunhos, { modelo, dryRun = false, categorias = null } = {}) {
+async function ingerir(rascunhos, { modelo, dryRun = false, categorias = null, registro = {} } = {}) {
   const resultado = { gravados: [], ignorados: [], falhas: [] };
   const vistos = new Set();
   for (const r of rascunhos) {
-    const motivos = validarRascunho(r, { categorias });
+    const motivos = validarRascunho(r, { categorias, registro });
     if (r.dados.slug && vistos.has(r.dados.slug)) motivos.push('slug duplicado entre os rascunhos');
     if (motivos.length) { resultado.ignorados.push({ arquivo: r.arquivo, motivos }); continue; }
     vistos.add(r.dados.slug);
@@ -216,7 +236,7 @@ async function main() {
   const db = require('../lib/db');
   if (!dryRun) await db.connect();
   try {
-    const r = await ingerir(rascunhos, { modelo: Artigo, dryRun, categorias: Artigo.CATEGORIAS });
+    const r = await ingerir(rascunhos, { modelo: Artigo, dryRun, categorias: Artigo.CATEGORIAS, registro: lerRegistroRevisao() });
     for (const g of r.gravados) console.log(`  [${g.acao}] ${g.slug}`);
     for (const i of r.ignorados) console.log(`  [ignorado] ${i.arquivo}\n      ${i.motivos.join('\n      ')}`);
     for (const f of r.falhas) console.log(`  [falha] ${f.arquivo}: ${f.erro}`);
@@ -231,4 +251,4 @@ if (require.main === module) {
   main().catch((e) => { console.error(`Erro: ${e.message}`); process.exit(1); });
 }
 
-module.exports = { lerFrontmatter, markdownParaHtml, extrairCorpo, validarRascunho, montarArtigo, lerRascunhos, filtrarPorLote, ingerir, argumentos };
+module.exports = { lerFrontmatter, markdownParaHtml, extrairCorpo, validarRascunho, montarArtigo, lerRascunhos, filtrarPorLote, ingerir, argumentos, lerRegistroRevisao, chaveRascunho, PASTA_RASCUNHOS };

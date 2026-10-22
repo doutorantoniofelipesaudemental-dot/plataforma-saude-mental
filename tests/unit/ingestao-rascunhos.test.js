@@ -32,6 +32,12 @@ ${corpo ?? 'Abertura **clara** do texto.\n\n## Guia Prático\n\n- passo um\n- pa
 
 const ler = (txt, arquivo = 'a.md') => ({ arquivo, ...ing.lerFrontmatter(txt) });
 
+// Registro com hash (relatorios/revisoes/registro.json): aprovação do rascunho por `rascunho:<slug>`, só com o hash do corpo atual.
+const R = require('../../backend/lib/revisaoMedica');
+const aprovadoNoRegistro = (slugs, corpo = null) => Object.fromEntries(slugs.map((slug) => [ing.chaveRascunho(slug), R.aprovar({
+  slug: ing.chaveRascunho(slug), hash: R.hashConteudo(ler(rascunho({ slug }, corpo)).corpo), revisor: 'teste', data: new Date(),
+})]));
+
 function modeloFalso() {
   const chamadas = [];
   const existentes = new Set(['ja-existe']);
@@ -71,14 +77,20 @@ test('markdownParaHtml: títulos descem um nível, listas, ênfase e escape de H
   assert.match(html, /<ol>\n<li>um<\/li>\n<li>dois<\/li>\n<\/ol>/);
 });
 
-test('validarRascunho exige revisão médica aprovada, checagens, categoria e ausência de marcadores', () => {
+test('validarRascunho exige revisão médica aprovada no registro com hash, checagens, categoria e ausência de marcadores', () => {
   const ok = ler(rascunho());
-  assert.deepEqual(ing.validarRascunho(ok, { categorias: CATEGORIAS }), []);
-  assert.ok(ing.validarRascunho(ler(rascunho({ revisao: 'pendente' }))).some((m) => /revisão médica pendente/.test(m)));
-  assert.ok(ing.validarRascunho(ler(rascunho({ checagens: 'reprovado — ética' }))).some((m) => /checagens/.test(m)));
-  assert.ok(ing.validarRascunho(ler(rascunho({ categoria: 'Inexistente' })), { categorias: CATEGORIAS }).some((m) => /categoria/.test(m)));
-  assert.ok(ing.validarRascunho(ler(rascunho({}, 'Dose [DOSE A CONFIRMAR].')), {}).some((m) => /A CONFIRMAR/.test(m)));
-  assert.ok(ing.validarRascunho(ler(rascunho({ slug: 'Slug Ruim' }))).some((m) => /slug/.test(m)));
+  const reg = aprovadoNoRegistro(['guia-pratico-de-teste']);
+  assert.deepEqual(ing.validarRascunho(ok, { categorias: CATEGORIAS, registro: reg }), []);
+  // Frontmatter "aprovada" sem registro não vale (qualquer um escreve esse campo).
+  assert.ok(ing.validarRascunho(ok, { categorias: CATEGORIAS }).some((m) => /sem aprovação registrada/.test(m)));
+  // Texto mudou depois da aprovação: a aprovação cai.
+  const mudou = ler(rascunho({}, 'Texto novo, outro conteúdo.'));
+  assert.ok(ing.validarRascunho(mudou, { categorias: CATEGORIAS, registro: reg }).some((m) => /sem aprovação registrada/.test(m)));
+  assert.ok(ing.validarRascunho(ler(rascunho({ revisao: 'pendente' })), { categorias: CATEGORIAS, registro: reg }).length === 0, 'o campo do Frontmatter é ignorado');
+  assert.ok(ing.validarRascunho(ler(rascunho({ checagens: 'reprovado — ética' })), { registro: reg }).some((m) => /checagens/.test(m)));
+  assert.ok(ing.validarRascunho(ler(rascunho({ categoria: 'Inexistente' })), { categorias: CATEGORIAS, registro: reg }).some((m) => /categoria/.test(m)));
+  assert.ok(ing.validarRascunho(ler(rascunho({}, 'Dose [DOSE A CONFIRMAR].')), { registro: aprovadoNoRegistro(['guia-pratico-de-teste'], 'Dose [DOSE A CONFIRMAR].') }).some((m) => /A CONFIRMAR/.test(m)));
+  assert.ok(ing.validarRascunho(ler(rascunho({ slug: 'Slug Ruim' })), { registro: reg }).some((m) => /slug/.test(m)));
 });
 
 test('ingerir faz upsert por slug, só do que foi aprovado, e nasce não publicado', async () => {
@@ -88,7 +100,8 @@ test('ingerir faz upsert por slug, só do que foi aprovado, e nasce não publica
     ler(rascunho({ slug: 'ja-existe' }), 'existe.md'),
     ler(rascunho({ slug: 'pendente', revisao: 'pendente' }), 'pendente.md'),
   ];
-  const r = await ing.ingerir(lista, { modelo, categorias: CATEGORIAS });
+  const registro = aprovadoNoRegistro(['novo-artigo', 'ja-existe']);
+  const r = await ing.ingerir(lista, { modelo, categorias: CATEGORIAS, registro });
   assert.deepEqual(r.gravados.map((g) => [g.slug, g.acao]), [['novo-artigo', 'inserido'], ['ja-existe', 'atualizado']]);
   assert.equal(r.ignorados.length, 1);
   assert.equal(r.ignorados[0].arquivo, 'pendente.md');
@@ -106,18 +119,19 @@ test('ingerir faz upsert por slug, só do que foi aprovado, e nasce não publica
 
 test('--dry-run não chama o modelo', async () => {
   const modelo = modeloFalso();
-  const r = await ing.ingerir([ler(rascunho())], { modelo, dryRun: true });
+  const r = await ing.ingerir([ler(rascunho())], { modelo, dryRun: true, registro: aprovadoNoRegistro(['guia-pratico-de-teste']) });
   assert.equal(modelo.chamadas.length, 0);
   assert.equal(r.gravados[0].acao, 'simulado');
 });
 
 test('slug duplicado entre rascunhos é ignorado; falha do banco vai para falhas', async () => {
   const modelo = modeloFalso();
-  const r = await ing.ingerir([ler(rascunho(), 'a.md'), ler(rascunho(), 'b.md')], { modelo });
+  const registro = aprovadoNoRegistro(['guia-pratico-de-teste']);
+  const r = await ing.ingerir([ler(rascunho(), 'a.md'), ler(rascunho(), 'b.md')], { modelo, registro });
   assert.equal(r.gravados.length, 1);
   assert.match(r.ignorados[0].motivos.join(), /duplicado/);
   const ruim = { async updateOne() { throw new Error('conexão recusada'); } };
-  const f = await ing.ingerir([ler(rascunho())], { modelo: ruim });
+  const f = await ing.ingerir([ler(rascunho())], { modelo: ruim, registro });
   assert.equal(f.falhas[0].erro, 'conexão recusada');
 });
 
@@ -144,7 +158,7 @@ test('texto novo que já existe no banco (mesmo título) é recusado antes de gr
     findOne: async () => null,
     find: () => ({ toArray: async () => [{ slug: 'outro-slug', titulo: 'Guia prático de teste' }] }),
   };
-  const r = await ing.ingerir([ler(rascunho({ slug: 'slug-novo' }))], { modelo });
+  const r = await ing.ingerir([ler(rascunho({ slug: 'slug-novo' }))], { modelo, registro: aprovadoNoRegistro(['slug-novo']) });
   assert.equal(r.gravados.length, 0);
   assert.match(r.ignorados[0].motivos.join(), /título já existe no banco/);
   assert.equal(modelo.chamadas.length, 0, 'nada gravado');
@@ -156,7 +170,7 @@ test('texto que já existe no banco com o mesmo slug é atualizado normalmente (
     findOne: async () => ({ _id: 'x' }),
     find: () => ({ toArray: async () => [{ slug: 'mesmo', titulo: 'Guia prático de teste' }] }),
   };
-  const r = await ing.ingerir([ler(rascunho({ slug: 'mesmo' }))], { modelo });
+  const r = await ing.ingerir([ler(rascunho({ slug: 'mesmo' }))], { modelo, registro: aprovadoNoRegistro(['mesmo']) });
   assert.equal(r.gravados.length, 1);
   assert.equal(modelo.chamadas.length, 1);
 });

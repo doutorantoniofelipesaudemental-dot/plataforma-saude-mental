@@ -9,6 +9,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
+const { planejarTrocaBranch } = require('./lib/trocaBranch');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -39,14 +40,36 @@ function sair(msg, cod = 1) {
 
   origem = git('branch', '--show-current').stdout.trim();
   git('fetch', 'origin', info.baseRefName, info.headRefName);
-  if (origem !== info.headRefName) {
-    const sw = git('switch', info.headRefName);
-    if (sw.status !== 0) {
-      const co = git('switch', '-c', info.headRefName, '--track', `origin/${info.headRefName}`);
-      if (co.status !== 0) sair(`não consegui trocar para ${info.headRefName} (árvore de trabalho com alterações em conflito?): ${(co.stderr || sw.stderr).trim()}`);
-    }
+  // Decide antes de trocar: nunca força, nunca apaga commit (ver scripts/lib/trocaBranch.js).
+  const destino = info.headRefName;
+  const lista = (texto) => texto.split('\n').map((l) => l.trim()).filter(Boolean);
+  const existeLocal = git('show-ref', '--verify', '--quiet', `refs/heads/${destino}`).status === 0;
+  let localAdiantado = false;
+  let localAtrasado = false;
+  if (existeLocal) {
+    const [soLocal, soRemoto] = git('rev-list', '--left-right', '--count', `${destino}...origin/${destino}`).stdout.trim().split(/\s+/).map(Number);
+    localAdiantado = soLocal > 0;
+    localAtrasado = soRemoto > 0;
   }
-  git('merge', '--ff-only', `origin/${info.headRefName}`);
+  const plano = planejarTrocaBranch({
+    branchAtual: origem,
+    destino,
+    existeLocal,
+    localAtrasadoDoRemoto: localAtrasado,
+    localAdiantadoDoRemoto: localAdiantado,
+    arquivosSujos: lista(git('status', '--porcelain', '--untracked-files=no').stdout).map((l) => l.slice(3)),
+    arquivosDoDestino: lista(git('diff', '--name-only', 'HEAD', `origin/${destino}`).stdout),
+  });
+  if (plano.acao === 'parar') sair(plano.motivo);
+  console.log(`Troca de branch: ${plano.motivo}`);
+  if (origem !== destino) {
+    const sw = plano.acao === 'criar'
+      ? git('switch', '-c', destino, '--track', `origin/${destino}`)
+      : git('switch', destino);
+    if (sw.status !== 0) sair(`não consegui trocar para ${destino}: ${sw.stderr.trim()}`);
+  }
+  const ff = git('merge', '--ff-only', `origin/${destino}`);
+  if (ff.status !== 0) sair(`não consegui alinhar ${destino} com origin/${destino}: ${ff.stderr.trim()}`);
 
   console.log(`\nRodando o portão sobre ${info.headRefName} (base origin/${info.baseRefName})...`);
   const p = spawnSync('npm', ['run', 'portao', '--', `--base=origin/${info.baseRefName}`], { cwd: RAIZ, stdio: 'inherit', shell: process.platform === 'win32' });
