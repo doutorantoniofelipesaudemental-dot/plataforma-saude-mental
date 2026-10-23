@@ -9,7 +9,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
-const { planejarTrocaBranch } = require('./lib/trocaBranch');
+const { planejarTrocaBranch, worktreeDoBranch } = require('./lib/trocaBranch');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -53,6 +53,7 @@ function sair(msg, cod = 1) {
   }
   const plano = planejarTrocaBranch({
     branchAtual: origem,
+    worktreeDoDestino: worktreeDoBranch(git('worktree', 'list', '--porcelain').stdout, destino, RAIZ),
     destino,
     existeLocal,
     localAtrasadoDoRemoto: localAtrasado,
