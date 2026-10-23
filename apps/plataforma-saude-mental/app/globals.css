@@ -72,3 +72,29 @@ body {
   --tw-prose-th-borders: color-mix(in srgb, var(--color-tinta-media) 25%, transparent);
   --tw-prose-td-borders: color-mix(in srgb, var(--color-tinta-media) 15%, transparent);
 }
+
+/* Player de narração do texto (mesmas classes do site: backend/lib/renderizarArtigo.js). Cores da marca do app. */
+.artigo-narracao {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--color-verde-claro) 14%, white);
+  border: 1px solid color-mix(in srgb, var(--color-verde-claro) 45%, white);
+  border-radius: 0.5rem;
+}
+.artigo-narracao__rotulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-verde-escuro);
+  letter-spacing: 0.01em;
+}
+.artigo-narracao__rotulo svg { color: var(--color-verde); flex-shrink: 0; }
+.artigo-narracao audio { width: 100%; display: block; }
+.artigo-narracao__aviso {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-verde-escuro);
+}

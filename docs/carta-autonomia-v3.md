@@ -37,5 +37,8 @@ Toda execução passa por: auditoria geral + tripla checagem (técnica, científ
 
 A automação pode fazer push de branches de trabalho (feat/, fix/, chore/) e abrir PR depois do portão aprovado. Continua proibido: push para main, force push, apagar branch remota e merge. Merge é sempre do Dr. Antônio.
 
+## Política de travas e bloqueios (21/10/2026)
+Mesma regra do CLAUDE.md (seção "Política de travas e bloqueios"): falha de infraestrutura repete em 5 min, até 2 vezes; bloqueio do classificador nunca é contornado; ação só do Dr. Antônio vira comando pronto; regra contra regra aplica a mais restritiva; risco no ar só em etapas; push e PR só pelo publicarBranch.js com portão aprovado.
+
 ## Regra de ouro das aprovações (21/10/2026)
 Mesma regra do CLAUDE.md: checagens completas antes de apresentar a aprovação, e de novo depois dela, com hash igual ao aprovado e página renderizada conferida. Aprovação não publica sozinha.

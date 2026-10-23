@@ -74,6 +74,18 @@
       "dest": "/backend/index.js"
     },
     {
+      "src": "^/_next/(.*)$",
+      "dest": "https://plataforma-saude-mental-steel.vercel.app/_next/$1"
+    },
+    {
+      "src": "^/artigo/(afastamento-trabalho-laudo-aps|anorexia-bulimia-adolescencia|ansiedade-depressao-gestacional|benzodiazepinicos-uso-cronico-riscos|burnout-docente-sala-de-aula|colapso-do-cuidador-emergencia-pa|comparacao-redes-sociais-autoestima|luto-gestacional-e-neonatal|peso-psicologico-doenca-cronica|polifarmacia-idoso-delirium|tept-violencia-urbana-assalto|vape-nicotina-adolescentes)/?$",
+      "dest": "https://plataforma-saude-mental-steel.vercel.app/artigos/$1"
+    },
+    {
+      "src": "^/blog/(ansiedade-por-inteligencia-artificial|baby-blues-ou-depressao-pos-parto|esquecimento-normal-ou-alzheimer|exercicio-fisico-como-prescricao-medica|fadiga-por-compaixao-profissionais-saude|fome-emocional-compulsao-alimentar|luto-normal-ou-complicado|panico-ou-infarto-diagnostico-diferencial|sindrome-do-cuidador-sinais|tdah-ou-agitacao-infantil|vicio-em-apostas-bets-sinais-de-alerta|violencia-domestica-sinais-na-consulta)/?$",
+      "dest": "https://plataforma-saude-mental-steel.vercel.app/blog/$1"
+    },
+    {
       "src": "/sitemap-artigos.xml",
       "dest": "/backend/index.js"
     },

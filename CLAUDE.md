@@ -230,6 +230,17 @@ Resumo: o ecossistema opera sozinho e o Dr. Antônio é chamado só para: merge-
 - Git: a automação pode fazer push de branches de trabalho (feat/, fix/, chore/) e abrir PR, depois do portão aprovado. Continua proibido: push para main, force push, apagar branch remota e merge. Merge é sempre do Dr. Antônio (merge-seguro).
 - Manutenção semanal: scripts/manutencaoSemanal.js (segunda prepara o branch; sexta envia o branch da semana). Ver docs/manutencao-semanal.md.
 
+## Política de travas e bloqueios (21/10/2026, ordem do Dr. Antônio)
+Quando algo travar, classificar e agir SEM parar o resto do trabalho:
+1. Falha de rede ou infraestrutura (DNS, Atlas, Vercel, API fora): esperar 5 min e repetir até 2 vezes. Se persistir, registrar e seguir para o próximo item.
+2. Classificador ou hook bloqueou um comando: NUNCA contornar. Procurar caminho equivalente permitido (script npm em vez de comando solto; loadEnvFile em vez de --env-file). Se não houver, passar o comando exato ao Dr. Antônio e seguir.
+3. Ação só do Dr. Antônio (merge, freio, permissão, login, tarefa do Windows com "Acesso negado"): passar o comando pronto (PowerShell como ADMINISTRADOR quando precisar) e seguir.
+4. Regra contra regra: aplicar a mais restritiva, propor a solução e seguir.
+5. Checagem reprovada: corrigir a causa (até 2 tentativas). Se não der, mandar para a lista de revisão e seguir.
+6. Risco de quebrar algo no ar: não executar; preparar a solução segura em etapas.
+No fim de cada rodada: lista única de "comandos para o Dr. Antônio", na ordem, uma linha cada.
+Push e PR só pelo `scripts/publicarBranch.js`, depois de PORTÃO APROVADO.
+
 ## Regra de ouro das aprovações (21/10/2026, ordem do Dr. Antônio)
 Toda aprovação do Dr. Antônio tem auditoria geral + tripla checagem (técnica, científica, ética e humanizada) em DOIS momentos:
 - ANTES: nada chega para aprovação sem ter passado nas checagens. Itens reprovados não são apresentados; vão para correção.

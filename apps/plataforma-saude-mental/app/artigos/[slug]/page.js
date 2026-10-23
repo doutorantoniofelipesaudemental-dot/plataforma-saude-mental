@@ -3,6 +3,8 @@ import { canonicalDoTexto } from '../../slugsDominioPrincipal';
 import { ArrowLeft } from 'lucide-react';
 import { TODOS_ARTIGOS } from '@/src/content/artigos';
 import RodapeIdentificacao from '@/app/RodapeIdentificacao';
+import ArtigoNarracao from '@/app/ArtigoNarracao';
+import { narracaoDoTexto } from '@/app/narracaoDoTexto';
 import { AVISO_PROTOCOLOS, precisaAviso } from '@/app/avisoProtocolos';
 import { CAIXA_VIOLENCIA_TITULO, CAIXA_VIOLENCIA_ITENS, precisaCaixaViolencia } from '@/app/caixaViolencia';
 import { readFileSync } from 'node:fs';
@@ -40,6 +42,7 @@ export default async function ArtigoPage({ params }) {
   const textoBruto = readFileSync(join(process.cwd(), 'src', 'content', 'artigos', `${slug}.mdx`), 'utf8');
   const mostrarCaixaViolencia = precisaCaixaViolencia({ titulo: metadata.titulo, texto: textoBruto });
   const mostrarAviso = precisaAviso({ slug, categoria: metadata.categoria, texto: textoBruto });
+  const urlNarracao = narracaoDoTexto(slug, textoBruto);
 
   return (
     <main className="flex-1">
@@ -71,6 +74,8 @@ export default async function ArtigoPage({ params }) {
           <span>{metadata.tempoLeitura} min de leitura</span>
         </p>
       </header>
+
+      {urlNarracao && <ArtigoNarracao url={urlNarracao} />}
 
       <div className="prose prose-marca max-w-none leading-relaxed">
         <Artigo />
