@@ -115,6 +115,17 @@ async function narracoesETrava(d) {
   for (const a of futuros) { const r = await http(`${SITE}/api/artigos/${a.slug}`); (r.status === 404 || r.status === 200 && !(await r.json().catch(() => ({}))).audioNarracaoUrl ? ok : falha)(`trava B (agendado ${a.slug}): sem áudio exposto antes da data (HTTP ${r.status})`); }
 }
 
+// Uso do Vercel Blob (ordem de 23/10/2026): acima de 80% do plano vira alerta. Só leitura; sem ADMIN_TOKEN vira aviso.
+async function usoBlob() {
+  secao('5. Armazenamento do Blob');
+  const token = process.env.ADMIN_TOKEN;
+  if (!token) return aviso('Blob: uso não medido (ADMIN_TOKEN ausente no ambiente)');
+  const { avaliarUsoBlob, lerTotalMBBlob } = require('./usoBlob');
+  const totalMB = await lerTotalMBBlob({ base: process.env.NARRACAO_API_BASE || 'https://drsaudemental.vercel.app', token });
+  const a = avaliarUsoBlob({ totalMB });
+  (a.alerta ? falha : ok)(a.texto);
+}
+
 function outrasFilas() {
   secao('4. YouTube, LinkedIn e tarefas do Windows');
   try {
@@ -159,7 +170,7 @@ function alertaNoEstadoGeral() {
 (async () => {
   await db.connect();
   const d = mongoose.connection.db;
-  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
+  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas, usoBlob]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
   backupDoEstado(); // gravação à parte, na mesma tarefa: a conferência em si segue só de leitura
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });
   const md = `# Conferência diária — ${hoje}\n\n**Resultado: ${falhas.length ? `${falhas.length} FALHA(S)` : 'tudo certo'}${avisos.length ? ` · ${avisos.length} aviso(s)` : ''}** (somente leitura: nada foi publicado, apagado nem alterado; freios intactos)\n${linhas.join('\n')}\n`;
