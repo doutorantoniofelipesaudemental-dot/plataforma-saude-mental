@@ -10,6 +10,7 @@ const { listarPostsRecentes, renderizarInstagramHtml } = require('./lib/renderiz
 const { gerarSitemapArtigosXml, gerarSitemapIndexXml, gerarSitemapPaginasXml } = require('./lib/sitemap');
 const agendamentosRouter = require('./routes/agendamentos');
 const contatoRouter = require('./routes/contato');
+const capturaRouter = require('./routes/captura');
 const artigosRouter = require('./routes/artigos');
 const midiaRouter = require('./routes/midia');
 const carrosselRouter = require('./routes/carrossel');
@@ -65,6 +66,7 @@ app.get('/api/health', async (req, res) => {
 
 app.use('/api/agendamentos', agendamentosRouter);
 app.use('/api/contato', contatoRouter);
+app.use('/api/captura-email', capturaRouter);
 app.use('/api/artigos', artigosRouter);
 // Mesmo prefixo de artigosRouter: as rotas de mídia (PUT .../midia/audio e
 // .../midia/capa) usadas pelo backend Python de automação vivem sob

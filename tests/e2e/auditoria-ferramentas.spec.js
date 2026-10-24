@@ -42,11 +42,31 @@ async function listarSlugsComFerramenta(request) {
 
 const lote = (lista, i, total) => lista.filter((_, k) => k % total === i);
 
+// Captura, além do total de CLS, os elementos responsáveis pelos deslocamentos (LayoutShift.sources),
+// com seletor e posição antes/depois. O limite de CLS não muda: isto só explica a falha quando ela ocorre.
 async function observarCls(page) {
   await page.addInitScript(() => {
     window.__cls = 0;
+    window.__clsFontes = [];
+    const seletor = (n) => {
+      if (!n || !n.tagName) return 'desconhecido';
+      const id = n.id ? `#${n.id}` : '';
+      const classes = typeof n.className === 'string' && n.className.trim() ? `.${n.className.trim().split(/\s+/).slice(0, 2).join('.')}` : '';
+      return `${n.tagName.toLowerCase()}${id}${classes}`;
+    };
+    const caixa = (r) => (r ? { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) } : null);
     new PerformanceObserver((lista) => {
-      for (const e of lista.getEntries()) if (!e.hadRecentInput) window.__cls += e.value;
+      for (const e of lista.getEntries()) {
+        if (e.hadRecentInput) continue;
+        window.__cls += e.value;
+        if (e.value >= 0.005) {
+          window.__clsFontes.push({
+            valor: +e.value.toFixed(4),
+            t: Math.round(e.startTime),
+            fontes: (e.sources || []).slice(0, 3).map((s) => ({ seletor: seletor(s.node), antes: caixa(s.previousRect), depois: caixa(s.currentRect) })),
+          });
+        }
+      }
     }).observe({ type: 'layout-shift', buffered: true });
   });
 }
@@ -79,12 +99,13 @@ test.describe('Artigos — SSR, CLS e layout (mobile)', () => {
             capaSemDimensoes: capa ? !(capa.getAttribute('width') && capa.getAttribute('height')) : false,
             overflowX: document.documentElement.scrollWidth > window.innerWidth + 1,
             cls: window.__cls,
+            fontes: window.__clsFontes.sort((a, b) => b.valor - a.valor).slice(0, 3),
           };
         });
         expect.soft(dom.h1, `${slug}: h1`).toBe(true);
         expect.soft(dom.capaSemDimensoes, `${slug}: capa sem width/height`).toBe(false);
         expect.soft(dom.overflowX, `${slug}: rolagem horizontal no mobile`).toBe(false);
-        expect.soft(dom.cls, `${slug}: CLS`).toBeLessThan(CLS_MAXIMO);
+        expect.soft(dom.cls, `${slug}: CLS ${dom.cls.toFixed(4)} (limite ${CLS_MAXIMO}) · maiores deslocamentos: ${JSON.stringify(dom.fontes)}`).toBeLessThan(CLS_MAXIMO);
         expect.soft(errosJs, `${slug}: erros de JS`).toEqual([]);
       }
     });

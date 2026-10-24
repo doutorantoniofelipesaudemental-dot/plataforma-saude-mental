@@ -7,6 +7,7 @@
  * Se persistir, registra "falha de infraestrutura" e NÃO abre PR.
  */
 const { spawnSync } = require('node:child_process');
+const { adquirirTrava, liberarTrava } = require('./trava-portao');
 const path = require('node:path');
 
 const RAIZ = path.resolve(__dirname, '..');
@@ -100,6 +101,11 @@ if (require.main === module) {
   (async () => {
     const soPortao = process.argv.includes('--so-portao');
     const branch = branchAtual();
+    // Um portão por vez (ordem de 23/10/2026): trava com PID e hora na pasta principal do repositório.
+    const trava = adquirirTrava();
+    if (!trava.ok) { console.log(`NÃO APROVADO: ${trava.motivo}. Espere o outro portão terminar.`); process.exitCode = 1; return; }
+    if (trava.aviso) console.log(trava.aviso);
+    process.on('exit', () => liberarTrava());
     console.log(`Branch: ${branch}. Rodando o portão antes de qualquer push.`);
     if (soPortao) {
       const r = rodarPortaoReal();

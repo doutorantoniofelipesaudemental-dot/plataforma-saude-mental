@@ -10,7 +10,7 @@ const {
 const router = express.Router();
 
 // Mesmo limite do formulário de agendamento.
-const limiteEnvio = limitarTaxa({ janelaMs: 60_000, maximo: 5 });
+const limiteEnvio = limitarTaxa({ nome: 'contato-envio', janelaMs: 60_000, maximo: 5 });
 
 /** Campos que o público pode enviar. Qualquer outro é descartado. */
 const CAMPOS_PERMITIDOS = ['nome', 'email', 'telefone', 'tipoAtendimento', 'mensagem', 'consentimentoLGPD'];
