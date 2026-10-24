@@ -5,7 +5,8 @@
  *   npm run narrar -- --slugs=tmc-aps,burnout-aps         gera os MP3 em narracoes-geradas/
  *   npm run narrar -- --pendentes --limite=20             os que não estão "ok": legado primeiro, depois ausentes
  *   ... --enviar                                          e envia para produção
- *   ... --provedor=edge                                   Edge-TTS em vez do Azure (padrão)
+ *   ... --provedor=edge                                   Edge-TTS (padrão desde 22/10/2026)
+ *   ... --provedor=azure --ordem=<id>                     Azure, SÓ com ordem registrada em config/ordens-azure.json
  *
  * Provedor padrão: Azure Speech (voz pt-BR-AntonioNeural), com
  * AZURE_SPEECH_KEY e AZURE_SPEECH_REGION no .env LOCAL — nunca no
@@ -181,7 +182,9 @@ async function enviar(gerado) {
 
 async function main() {
   const args = argumentos();
-  const provedor = args.provedor === 'edge' ? 'edge' : 'azure';
+  // Padrão Edge (gratuito). Azure só com --provedor=azure --ordem=<id de ordem registrada em config/ordens-azure.json>.
+  const provedor = args.provedor === 'azure' ? 'azure' : 'edge';
+  if (provedor === 'azure') require('../lib/ordemAzure').exigirAzureAutorizado({ ordem: args.ordem });
   await db.connect();
   const publicados = await Artigo.find({ publicado: true }).lean();
 

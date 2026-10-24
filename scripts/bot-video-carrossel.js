@@ -132,10 +132,12 @@ async function main() {
     console.log('\n  Use --slug=<slug> [--narrar --provedor=azure|edge|kokoro|openai|elevenlabs --voz=...] [--audio="<faixa.mp3>" | --sem-trilha] [--saida=<arquivo.mp4>].\n');
     process.exit(1);
   }
-  // ElevenLabs (voz acolhedora desenhada) quando há ELEVENLABS_VOICE_ID; senão Azure.
-  const provedor = String(args.provedor || (process.env.ELEVENLABS_VOICE_ID ? 'elevenlabs' : 'azure'));
+  // ElevenLabs (voz acolhedora desenhada) quando há ELEVENLABS_VOICE_ID; senão Edge (gratuito, 22/10/2026).
+  const provedor = String(args.provedor || (process.env.ELEVENLABS_VOICE_ID ? 'elevenlabs' : 'edge'));
   const voz = args.voz ? String(args.voz) : vozPadrao(provedor);
   if (args.narrar) validarProvedor(provedor, voz);
+  if (args.narrar && provedor === 'azure') require('../backend/lib/ordemAzure').exigirAzureAutorizado({ ordem: args.ordem });
+  if (args.narrar && ['elevenlabs', 'openai'].includes(provedor)) require('../backend/lib/ordemPaga').exigirPagoAutorizado({ provedor, ordem: args.ordem });
   const pasta = PASTAS.find((p) => fs.existsSync(path.join(p, `${slug}.md`)));
   if (!pasta) throw new Error(`"${slug}" não está em aprovados/ nem em publicados/ — só vira vídeo o carrossel aprovado`);
   const arquivoMeta = path.join(pasta, `${slug}.json`);
@@ -175,7 +177,7 @@ async function main() {
       for (const [i, slide] of aprovado.slides.entries()) {
         const texto = textoNarradoDoSlide(slide.texto, i);
         const f = path.join(tmp, `audio-${i + 1}.mp3`);
-        fs.writeFileSync(f, await sintetizar(texto, { provedor, voz }));
+        fs.writeFileSync(f, await sintetizar(texto, { provedor, voz, ordemAzure: args.ordem, ordemPaga: args.ordem }));
         audios.push({ f, d: (await duracao(f)) + RESPIRO });
       }
       imagens.forEach((img, i) => entradas.push('-loop', '1', '-t', audios[i].d.toFixed(2), '-i', img));

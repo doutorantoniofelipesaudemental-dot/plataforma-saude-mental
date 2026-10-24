@@ -53,9 +53,12 @@ test('checagem cruzada: aprovado sem conferência, reprovado pelo conferidor, ha
   assert.match(r[3].motivo, /versão antiga/);
 });
 
-test('checagem cruzada: a fila real não tem divergência', () => {
-  const raiz = path.join(__dirname, '../..');
-  const fila = JSON.parse(fs.readFileSync(path.join(raiz, 'relatorios/youtube/fila.json'), 'utf8')).itens;
-  const r = F.divergencias(fila, F.lerConferenciaDoDisco(raiz));
-  assert.equal(r.length, 0, JSON.stringify(r.slice(0, 3)));
+test('checagem cruzada: fila conferida (ok, versão atual, mesmo hash) não tem divergência', () => {
+  // Fixture: a checagem da fila real fica na conferência diária (scripts/conferencias/conferenciaDiaria.js), que lê arquivos locais ignorados pelo Git.
+  const itens = [
+    { id: 'x', status: 'aprovado-checagem', pasta: 'ok1', hashVideo: 'h1' },
+    { id: 'y', status: 'reprovado', pasta: 'ok2', hashVideo: 'h2' },
+  ];
+  const mapa = { ok1: { ok: true, versao: C.VERSAO, hashVideo: 'h1' } };
+  assert.deepEqual(F.divergencias(itens, (p) => mapa[p] || null), []);
 });

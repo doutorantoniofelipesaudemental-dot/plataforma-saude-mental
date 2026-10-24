@@ -1,0 +1,4 @@
+{
+  "_aviso": "Ordens escritas do Dr. Antônio para usar vozes PAGAS (ElevenLabs, OpenAI TTS). Sem entrada aqui, recusado (backend/lib/ordemPaga.js). Cada entrada: id, data, autorizadoPor, escopo.",
+  "ordens": []
+}
