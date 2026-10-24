@@ -9,7 +9,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
-const { planejarTrocaBranch } = require('./lib/trocaBranch');
+const { planejarTrocaBranch, worktreeDoBranch } = require('./lib/trocaBranch');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -53,6 +53,7 @@ function sair(msg, cod = 1) {
   }
   const plano = planejarTrocaBranch({
     branchAtual: origem,
+    worktreeDoDestino: worktreeDoBranch(git('worktree', 'list', '--porcelain').stdout, destino, RAIZ),
     destino,
     existeLocal,
     localAtrasadoDoRemoto: localAtrasado,
@@ -72,8 +73,16 @@ function sair(msg, cod = 1) {
   if (ff.status !== 0) sair(`não consegui alinhar ${destino} com origin/${destino}: ${ff.stderr.trim()}`);
 
   console.log(`\nRodando o portão sobre ${info.headRefName} (base origin/${info.baseRefName})...`);
-  const p = spawnSync('npm', ['run', 'portao', '--', `--base=origin/${info.baseRefName}`], { cwd: RAIZ, stdio: 'inherit', shell: process.platform === 'win32' });
-  if (p.status !== 0) sair('o portão reprovou (ver relatorios/portao-*.md mais recente).');
+  const p = spawnSync('npm', ['run', 'portao', '--', `--base=origin/${info.baseRefName}`], { cwd: RAIZ, encoding: 'utf8', shell: process.platform === 'win32' });
+  // Log completo do portão (ordem do Dr. Antônio): mesmo conteúdo que aparece na tela, gravado em relatorios/logs/.
+  const saida = `${p.stdout || ''}${p.stderr || ''}`;
+  const dLog = new Date();
+  const arqLog = path.join(RAIZ, 'relatorios', 'logs', `merge-seguro-pr${pr}-${dLog.getFullYear()}${p2(dLog.getMonth() + 1)}${p2(dLog.getDate())}-${p2(dLog.getHours())}${p2(dLog.getMinutes())}.log`);
+  fs.mkdirSync(path.dirname(arqLog), { recursive: true });
+  fs.writeFileSync(arqLog, saida, 'utf8');
+  process.stdout.write(saida);
+  console.log(`Log completo do portão: ${path.relative(RAIZ, arqLog)}`);
+  if (p.status !== 0) sair(`o portão reprovou (ver relatorios/portao-*.md mais recente e ${path.relative(RAIZ, arqLog)}).`);
 
   const antes = gh('api', `repos/{owner}/{repo}/commits/${info.baseRefName}`, '--jq', '.sha').stdout.trim();
   const m = gh('pr', 'merge', pr, '--merge');
