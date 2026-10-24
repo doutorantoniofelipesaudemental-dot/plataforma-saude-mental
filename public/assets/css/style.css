@@ -76,7 +76,7 @@
   font-family: 'Fraunces Fallback';
   font-weight: 600;
   src: local('Times New Roman Bold'), local('TimesNewRomanPS-BoldMT'), local('Times Bold');
-  size-adjust: 111%;
+  size-adjust: 110%;
   ascent-override: 88.4%;
   descent-override: 23.4%;
   line-gap-override: 0%;
@@ -1164,6 +1164,19 @@ a:hover { color: var(--verde-500); }
 
 /* Endereço de e-mail longo no meio do texto não pode abrir rolagem horizontal no celular. */
 a[href^="mailto:"] { overflow-wrap: anywhere; }
+
+/* Fallback do h1 no celular (até 1107 px): calibrado para a altura do título com a Fraunces real.
+   Família própria para não mudar os demais títulos (miniaplicativos), cuja aparência não pode mudar. */
+@font-face {
+  font-family: 'Fraunces Fallback Movel';
+  font-weight: 600;
+  src: local('Times New Roman Bold'), local('TimesNewRomanPS-BoldMT'), local('Times Bold');
+  size-adjust: 111%;
+  ascent-override: 88.4%;
+  descent-override: 23.4%;
+  line-gap-override: 0%;
+}
+h1 { font-family: "Fraunces", "Fraunces Fallback Movel", "Iowan Old Style", Georgia, "Times New Roman", serif; }
 
 /* Fallback do título em telas largas (≥1108 px, h1 em 57,6 px): a Fraunces real fica mais estreita
    nesse tamanho (eixo óptico), então o fallback de desktop tem outro size-adjust. Só o h1 usa esta
