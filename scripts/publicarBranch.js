@@ -7,6 +7,7 @@
  * Se persistir, registra "falha de infraestrutura" e NÃO abre PR.
  */
 const { spawnSync } = require('node:child_process');
+const { lerSincronia } = require('./lib/branchSincronizado');
 const path = require('node:path');
 
 const RAIZ = path.resolve(__dirname, '..');
@@ -100,6 +101,9 @@ if (require.main === module) {
   (async () => {
     const soPortao = process.argv.includes('--so-portao');
     const branch = branchAtual();
+    // Lição de 23/10/2026: local e remoto no mesmo commit antes de qualquer portão (evita aprovar código velho).
+    const sincronia = lerSincronia(RAIZ);
+    if (!sincronia.ok) { console.log(`NÃO APROVADO: ${sincronia.motivo}`); process.exitCode = 1; return; }
     console.log(`Branch: ${branch}. Rodando o portão antes de qualquer push.`);
     if (soPortao) {
       const r = rodarPortaoReal();
