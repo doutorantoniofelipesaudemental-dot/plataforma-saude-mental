@@ -18,6 +18,9 @@ const RAIZ = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const base = (args.find((a) => a.startsWith('--base=')) || '--base=origin/main').split('=')[1];
 const soChecagem = args.includes('--so-checagem');
+// Lição de 23/10/2026: o portão só roda com a branch local igual ao remoto (senão aprova código velho).
+const sincronia = require('./lib/branchSincronizado').lerSincronia(RAIZ);
+if (!sincronia.ok) { console.log(`PORTÃO NÃO EXECUTADO: ${sincronia.motivo}`); process.exit(1); }
 const NPM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 const agora = new Date();
