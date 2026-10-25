@@ -96,7 +96,7 @@ function refResumida(ref) {
   const autor = (partes[0] || '').split(',')[0].replace(/\bet al\.?/i, '').trim();
   const ano = (limpa.match(/\b(19|20)\d{2}\b/) || [''])[0];
   const fonte = partes.find((p, k) => k >= 1 && /[A-Za-zÀ-ú]/.test(p) && p.length < 90) || '';
-  return [autor && `${autor} et al.`, fonte && fonte.replace(/\.$/, ''), ano].filter(Boolean).join(', ').slice(0, 150);
+  return [autor && `${autor} et al.`, fonte && fonte.replace(/\.$/, '').trim(), ano].filter(Boolean).join(', ').slice(0, 150);
 }
 
 /**

@@ -12,12 +12,18 @@ const { FONTE_SERIF, FONTE_SANS, caminhoTexto, caminhoLinhas, quebrarLinhas, lar
 const COR = { marinho: '#0b1f3a', marinhoClaro: '#13315c', dourado: '#d4af37', branco: '#ffffff', suave: 'rgba(255,255,255,0.82)' };
 const LARGURA_UTIL = LARGURA - MARGEM * 2;
 const CREDITO = 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito'; // crédito discreto no último cartão (16/10/2026)
-const ASSINATURA = ['Dr. Antônio Felipe · Médico · CRM-BA 41322', 'RQE 26638 – Medicina de Família e Comunidade'];
+// Assinatura de 3 linhas (padrão de mídias sociais, CLAUDE.md §1.B). A 3ª linha cabe em 22 px (853 de 912 px úteis).
+const ASSINATURA = [
+  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
+  'RQE 26638 – Medicina de Família e Comunidade',
+  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
+];
 
 const fundo = (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${COR.marinho}"/><stop offset="1" stop-color="${COR.marinhoClaro}"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#${id})"/>`;
 const assinatura = () => `<rect x="${MARGEM}" y="${ALTURA - 150}" width="${LARGURA_UTIL}" height="2" fill="${COR.dourado}" opacity="0.7"/>
-  ${caminhoTexto(FONTE_SANS, ASSINATURA[0], MARGEM, ALTURA - 100, 28, COR.branco, { negrito: true })}
-  ${caminhoTexto(FONTE_SANS, ASSINATURA[1], MARGEM, ALTURA - 60, 26, COR.suave)}`;
+  ${caminhoTexto(FONTE_SANS, ASSINATURA[0], MARGEM, ALTURA - 110, 28, COR.branco, { negrito: true })}
+  ${caminhoTexto(FONTE_SANS, ASSINATURA[1], MARGEM, ALTURA - 78, 26, COR.suave)}
+  ${caminhoTexto(FONTE_SANS, ASSINATURA[2], MARGEM, ALTURA - 48, 22, COR.suave)}`;
 const contador = (i, n) => caminhoTexto(FONTE_SANS, `${i + 1}/${n}`, LARGURA - MARGEM - larguraTexto(FONTE_SANS, `${i + 1}/${n}`, 26), 100, 26, COR.suave);
 const barraOuro = (y) => `<rect x="${MARGEM}" y="${y}" width="96" height="6" rx="3" fill="${COR.dourado}"/>`;
 
@@ -77,7 +83,7 @@ async function renderizarTelas(telas) {
 const textoAlternativo = (tela, i, total) => {
   const corpo = [tela.titulo, tela.texto].filter(Boolean).map((x) => String(x).replace(/[.\s]+$/, '')).join('. ');
   const credito = tela.tipo === 'final' ? ` ${CREDITO}.` : '';
-  return `Tela ${i + 1} de ${total}, fundo azul-marinho com detalhes dourados: ${corpo}.${credito} Assinatura: Dr. Antônio Felipe, médico, CRM-BA 41322, RQE 26638, Medicina de Família e Comunidade.`;
+  return `Tela ${i + 1} de ${total}, fundo azul-marinho com detalhes dourados: ${corpo}.${credito} Assinatura: Dr. Antônio Felipe, médico, CRM-BA 41322, RQE 26638, Medicina de Família e Comunidade. Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS).`;
 };
 
 module.exports = { renderizarTelas, textoAlternativo, glifosAusentes, ASSINATURA, COR, CREDITO };
