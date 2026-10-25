@@ -2,12 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "node -e \"console.log(\\\"site estatico em public e funcao em api: sem build\\\")\"",
   "installCommand": "npm install --no-audit",
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 60,
-      "includeFiles": "{backend/data/reescritas/**,public/*.html}"
-    }
-  },
   "redirects": [
     {
       "source": "/((?!api/).*)",
