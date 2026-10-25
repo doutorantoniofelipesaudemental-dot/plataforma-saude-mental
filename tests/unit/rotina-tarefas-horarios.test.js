@@ -7,16 +7,16 @@ const quando = (iso) => new Date(`${iso}-03:00`);
 const esperado = (nome, ate) => horarioEsperado(nome, quando(ate)).toISOString();
 const salvador = (iso) => new Date(`${iso}-03:00`).toISOString();
 
-test('(a) narração: seg a sex 17:45; sábado 20:30; domingo 10:00 (ordem 25/10/2026)', () => {
-  assert.equal(esperado('DrSM-Narracao-Noite', '2026-10-20T20:00'), salvador('2026-10-20T17:45'));
+test('(a) narração: seg a sex 17:35; sábado 20:30; sem narração no domingo (correção 25/10/2026)', () => {
+  assert.equal(esperado('DrSM-Narracao-Noite', '2026-10-20T20:00'), salvador('2026-10-20T17:35'));
   assert.equal(esperado('DrSM-Narracao-Noite', '2026-10-24T22:00'), salvador('2026-10-24T20:30'));
-  assert.equal(esperado('DrSM-Narracao-Noite', '2026-10-25T12:00'), salvador('2026-10-25T10:00'));
-  assert.equal(esperado('DrSM-Narracao-Noite', '2026-10-25T08:00'), salvador('2026-10-24T20:30'));
+  assert.equal(esperado('DrSM-Narracao-Noite', '2026-10-25T12:00'), salvador('2026-10-24T20:30'));
 });
 
-test('(b) gera-mídia: seg a sex 18:45, após a narração', () => {
-  assert.equal(esperado('DrSM-YouTube-Gera-Midia', '2026-10-20T19:00'), salvador('2026-10-20T18:45'));
-  assert.equal(esperado('DrSM-YouTube-Gera-Midia', '2026-10-20T18:00'), salvador('2026-10-19T18:45'));
+test('(b) gera-mídia: seg a sex 19:45, depois da narração; domingo 10:00', () => {
+  assert.equal(esperado('DrSM-YouTube-Gera-Midia', '2026-10-20T20:00'), salvador('2026-10-20T19:45'));
+  assert.equal(esperado('DrSM-YouTube-Gera-Midia', '2026-10-20T19:00'), salvador('2026-10-19T19:45'));
+  assert.equal(esperado('DrSM-YouTube-Gera-Midia', '2026-10-25T12:00'), salvador('2026-10-25T10:00'));
 });
 
 test('(c) YouTube publica: seg a sex e domingo 20:15; sábado 20:45', () => {

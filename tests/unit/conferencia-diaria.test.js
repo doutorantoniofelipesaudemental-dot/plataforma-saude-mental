@@ -32,7 +32,7 @@ test('o relatório vai para relatorios/conferencias/AAAA-MM-DD.md e o alerta fic
 
 test('tarefa DrSM-Conferencia-Diaria em janelas de Salvador (17:35 seg a sex), oculta (S4U), com retry, e o instalador aceita registrar só uma tarefa', () => {
   const ps = ler('scripts/agendar-tarefas-windows.ps1');
-  assert.match(ps, /DrSM-Conferencia-Diaria[\s\S]{0,400}-At 17:35/);
+  assert.match(ps, /DrSM-Conferencia-Diaria[\s\S]{0,400}-At 18:15/);
   assert.match(ps, /LogonType S4U/);
   assert.match(ps, /-RestartCount 3/);
   assert.match(ps, /-Hidden/);
