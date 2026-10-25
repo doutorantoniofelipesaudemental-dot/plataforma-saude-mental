@@ -130,8 +130,6 @@ async function main() {
   }
   gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados: resultado.agendados });
   console.log(`agendados hoje: ${resultado.agendados}`);
-
-  console.log(`agendados hoje: ${agendados}`);
 }
 
 module.exports = { classificarSaida, jaRodouHoje, limitarPosts, MAX_POSTS, INTERVALO_MS };
