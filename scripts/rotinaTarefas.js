@@ -13,9 +13,9 @@ const RAIZ = path.resolve(__dirname, '..');
 // horário marcado de cada tarefa (hora local; dow = dia da semana 1=segunda; "uma vez" tem data) — o mesmo de scripts/agendar-tarefas-windows.ps1
 const HORARIOS = {
   'DrSM-Rotina-Semanal': { h: 18, m: 30, dow: 1 },
-  'DrSM-Narracao-Noite': { slots: [{ dows: [1, 2, 3, 4, 5], h: 17, m: 35 }, { dows: [6], h: 20, m: 30 }] },
+  'DrSM-Narracao-Noite': { slots: [{ dows: [1, 2, 3, 4, 5], h: 17, m: 35 }, { dows: [6], h: 20, m: 30 }, { dows: [0], h: 9, m: 30 }] },
   'DrSM-YouTube-Gera-Midia': { slots: [{ dows: [1, 2, 3, 4, 5], h: 19, m: 45 }, { dows: [0], h: 10, m: 0 }] },
-  'DrSM-YouTube-Publica': { slots: [{ dows: [1, 2, 3, 4, 5, 0], h: 20, m: 15 }, { dows: [6], h: 20, m: 45 }] },
+  'DrSM-YouTube-Publica': { slots: [{ dows: [1, 2, 3, 4, 5, 0], h: 21, m: 15 }, { dows: [6], h: 20, m: 45 }] },
   'DrSM-LinkedIn-Lembrete': { h: 19, m: 25, dows: [1, 3, 5] },
   'DrSM-Conferencia-19-10': { uma: '2026-10-19T19:30:00-03:00' },
   'DrSM-Conferencia-26-10': { uma: '2026-10-26T19:30:00-03:00' },
