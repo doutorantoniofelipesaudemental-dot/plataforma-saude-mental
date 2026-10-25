@@ -26,7 +26,7 @@ test('contato só por e-mail; sem mensageria, formulário, chatbot nem "psiquiat
 });
 
 test('rota, sitemap e links a partir da home e da /links', () => {
-  assert.match(fs.readFileSync(path.join(RAIZ, 'vercel.json'), 'utf8'), /"\/mentoria\/\?"[\s\S]{0,40}public\/mentoria\.html/);
+  assert.match(fs.readFileSync(path.join(RAIZ, 'vercel.json'), 'utf8'), /"source": "\/mentoria\/"[\s\S]{0,60}"destination": "\/mentoria\.html"/);
   assert.match(gerarSitemapPaginasXml(), /\/mentoria<\/loc>/);
   for (const f of ['index.html', 'links.html']) assert.match(fs.readFileSync(path.join(RAIZ, 'public', f), 'utf8'), /href="\/mentoria"/);
 });

@@ -49,7 +49,7 @@ test('artigos do seletor existem e os links apontam para a /mentoria', () => {
 });
 
 test('rota, sitemap e links no rodapé e na /links', () => {
-  assert.match(ler('vercel.json'), /"\/linkedin\/\?"[\s\S]{0,40}public\/linkedin\.html/);
+  assert.match(ler('vercel.json'), /"source": "\/linkedin\/"[\s\S]{0,60}"destination": "\/linkedin\.html"/);
   assert.match(ler('backend/index.js'), /app\.get\('\/linkedin'/);
   assert.match(gerarSitemapPaginasXml(), /\/linkedin<\/loc>/);
   for (const f of ['index.html', 'blog.html', 'artigo.html', 'instagram.html', 'mentoria.html', 'privacidade.html', 'links.html']) assert.match(ler(`public/${f}`), /href="\/linkedin"/, f);

@@ -1,147 +1,281 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "backend/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 60,
-        "includeFiles": [
-          "backend/data/reescritas/**",
-          "public/*.html"
-        ]
-      }
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node -e \"console.log(\\\"site estatico em public e funcao em api: sem build\\\")\"",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60,
+      "includeFiles": "{backend/data/reescritas/**,public/*.html}"
     }
-  ],
-  "routes": [
+  },
+  "redirects": [
     {
-      "src": "/((?!api/).*)",
+      "source": "/((?!api/).*)",
       "has": [
         {
           "type": "host",
           "value": "drsaudemental.vercel.app"
         }
       ],
-      "status": 301,
-      "headers": {
-        "Location": "https://www.drantoniofelipemedico.com.br/$1"
-      }
+      "destination": "https://www.drantoniofelipemedico.com.br/$1",
+      "statusCode": 301
     },
     {
-      "src": "/api/(.*)",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/migracao-saude-mental",
+      "destination": "/artigo/migracao-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/public/assets/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=86400, must-revalidate"
-      }
+      "source": "/blog/migracao/migracao-saude-mental.html",
+      "destination": "/artigo/migracao-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/(favicon.svg|manifest.webmanifest|robots.txt|sitemap.xml)",
-      "dest": "/public/$1"
+      "source": "/blog/migracao/criancas-adolescentes-migrantes-saude-mental",
+      "destination": "/artigo/criancas-adolescentes-migrantes-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/sw.js",
-      "dest": "/public/sw.js",
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate",
-        "Service-Worker-Allowed": "/"
-      }
+      "source": "/blog/migracao/criancas-adolescentes-migrantes-saude-mental.html",
+      "destination": "/artigo/criancas-adolescentes-migrantes-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/google79736b5242e37404.html",
-      "dest": "/public/google79736b5242e37404.html"
+      "source": "/blog/migracao/mulher-migrante-saude-mental",
+      "destination": "/artigo/mulher-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/podcast/feed.xml",
-      "dest": "/backend/index.js",
-      "headers": {
-        "Content-Type": "application/rss+xml; charset=utf-8"
-      }
+      "source": "/blog/migracao/mulher-migrante-saude-mental.html",
+      "destination": "/artigo/mulher-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/podcast/?",
-      "dest": "/public/podcast.html"
+      "source": "/blog/migracao/homem-migrante-saude-mental",
+      "destination": "/artigo/homem-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/sitemap-index.xml",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/homem-migrante-saude-mental.html",
+      "destination": "/artigo/homem-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/sitemap-artigos.xml",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/trabalhador-migrante-saude-mental",
+      "destination": "/artigo/trabalhador-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/sitemap-paginas.xml",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/trabalhador-migrante-saude-mental.html",
+      "destination": "/artigo/trabalhador-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/blog/migracao/(migracao-saude-mental|criancas-adolescentes-migrantes-saude-mental|mulher-migrante-saude-mental|homem-migrante-saude-mental|trabalhador-migrante-saude-mental|estudante-migrante-saude-mental|refugiados-trauma-saude-mental|xenofobia-racismo-saude-mental-migrantes|familias-separadas-migracao-quem-fica|migrantes-como-buscar-ajuda-saude-mental-sus)([.]html)?/?",
-      "status": 301,
-      "headers": {
-        "Location": "/artigo/$1"
-      }
+      "source": "/blog/migracao/estudante-migrante-saude-mental",
+      "destination": "/artigo/estudante-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/blog/migracao([.]html)?/?",
-      "status": 301,
-      "headers": {
-        "Location": "/artigo/migracao-saude-mental"
-      }
+      "source": "/blog/migracao/estudante-migrante-saude-mental.html",
+      "destination": "/artigo/estudante-migrante-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/blog/?",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/refugiados-trauma-saude-mental",
+      "destination": "/artigo/refugiados-trauma-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/instagram/?",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/refugiados-trauma-saude-mental.html",
+      "destination": "/artigo/refugiados-trauma-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/artigo/[^/]+/?",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao/xenofobia-racismo-saude-mental-migrantes",
+      "destination": "/artigo/xenofobia-racismo-saude-mental-migrantes",
+      "statusCode": 301
     },
     {
-      "src": "/privacidade/?",
-      "dest": "/public/privacidade.html"
+      "source": "/blog/migracao/xenofobia-racismo-saude-mental-migrantes.html",
+      "destination": "/artigo/xenofobia-racismo-saude-mental-migrantes",
+      "statusCode": 301
     },
     {
-      "src": "/links/?",
-      "dest": "/public/links.html"
+      "source": "/blog/migracao/familias-separadas-migracao-quem-fica",
+      "destination": "/artigo/familias-separadas-migracao-quem-fica",
+      "statusCode": 301
     },
     {
-      "src": "/mentoria/?",
-      "dest": "/public/mentoria.html"
+      "source": "/blog/migracao/familias-separadas-migracao-quem-fica.html",
+      "destination": "/artigo/familias-separadas-migracao-quem-fica",
+      "statusCode": 301
     },
     {
-      "src": "/linkedin/?",
-      "dest": "/public/linkedin.html"
+      "source": "/blog/migracao/migrantes-como-buscar-ajuda-saude-mental-sus",
+      "destination": "/artigo/migrantes-como-buscar-ajuda-saude-mental-sus",
+      "statusCode": 301
     },
     {
-      "src": "/youtube/?",
-      "dest": "/public/youtube.html"
+      "source": "/blog/migracao/migrantes-como-buscar-ajuda-saude-mental-sus.html",
+      "destination": "/artigo/migrantes-como-buscar-ajuda-saude-mental-sus",
+      "statusCode": 301
     },
     {
-      "src": "/redes/previa/?",
-      "dest": "/backend/index.js"
+      "source": "/blog/migracao",
+      "destination": "/artigo/migracao-saude-mental",
+      "statusCode": 301
     },
     {
-      "src": "/admin/?",
-      "dest": "/public/admin.html"
+      "source": "/blog/migracao.html",
+      "destination": "/artigo/migracao-saude-mental",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
     },
     {
-      "src": "/(index[.]html)?",
-      "dest": "/public/index.html"
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
     },
     {
-      "src": "/(.*)",
-      "dest": "/backend/index.js"
+      "source": "/podcast/feed.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/podcast/feed.xml",
+      "destination": "/api"
+    },
+    {
+      "source": "/podcast",
+      "destination": "/podcast.html"
+    },
+    {
+      "source": "/podcast/",
+      "destination": "/podcast.html"
+    },
+    {
+      "source": "/sitemap-index.xml",
+      "destination": "/api"
+    },
+    {
+      "source": "/sitemap-artigos.xml",
+      "destination": "/api"
+    },
+    {
+      "source": "/sitemap-paginas.xml",
+      "destination": "/api"
+    },
+    {
+      "source": "/blog",
+      "destination": "/api"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/api"
+    },
+    {
+      "source": "/instagram",
+      "destination": "/api"
+    },
+    {
+      "source": "/instagram/",
+      "destination": "/api"
+    },
+    {
+      "source": "/artigo/:slug",
+      "destination": "/api"
+    },
+    {
+      "source": "/artigo/:slug/",
+      "destination": "/api"
+    },
+    {
+      "source": "/privacidade",
+      "destination": "/privacidade.html"
+    },
+    {
+      "source": "/privacidade/",
+      "destination": "/privacidade.html"
+    },
+    {
+      "source": "/links",
+      "destination": "/links.html"
+    },
+    {
+      "source": "/links/",
+      "destination": "/links.html"
+    },
+    {
+      "source": "/mentoria",
+      "destination": "/mentoria.html"
+    },
+    {
+      "source": "/mentoria/",
+      "destination": "/mentoria.html"
+    },
+    {
+      "source": "/linkedin",
+      "destination": "/linkedin.html"
+    },
+    {
+      "source": "/linkedin/",
+      "destination": "/linkedin.html"
+    },
+    {
+      "source": "/youtube",
+      "destination": "/youtube.html"
+    },
+    {
+      "source": "/youtube/",
+      "destination": "/youtube.html"
+    },
+    {
+      "source": "/redes/previa",
+      "destination": "/api"
+    },
+    {
+      "source": "/redes/previa/",
+      "destination": "/api"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/admin/",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api"
     }
   ],
   "crons": [

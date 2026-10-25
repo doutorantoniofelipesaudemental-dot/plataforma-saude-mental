@@ -96,5 +96,9 @@
   "devDependencies": {
     "@playwright/test": "1.49.1",
     "husky": "^9.1.7"
+  },
+  "allowScripts": {
+    "protobufjs": true,
+    "@google/genai": true
   }
 }

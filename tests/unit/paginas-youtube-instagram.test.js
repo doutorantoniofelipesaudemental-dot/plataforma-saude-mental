@@ -67,7 +67,7 @@ test('/instagram: link para /mentoria, /youtube e /linkedin; mantém a lista dos
 });
 
 test('rota, sitemap e links no rodapé e na /links', () => {
-  assert.match(ler('vercel.json'), /"\/youtube\/\?"[\s\S]{0,40}public\/youtube\.html/);
+  assert.match(ler('vercel.json'), /"source": "\/youtube\/"[\s\S]{0,60}"destination": "\/youtube\.html"/);
   assert.match(ler('backend/index.js'), /app\.get\('\/youtube'/);
   const sm = gerarSitemapPaginasXml();
   assert.match(sm, /\/youtube<\/loc>/); assert.match(sm, /\/instagram<\/loc>/);
