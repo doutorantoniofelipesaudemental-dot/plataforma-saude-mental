@@ -33,3 +33,8 @@
 - #150: documentação do contrato do funil. Nenhuma mudança visível.
 - #153: correção do CLS no título dos artigos (fallback da fonte). Visível: título estável ao carregar.
 - #154: merge-seguro com worktree. Nenhuma mudança visível.
+
+**7. Atualização (25/10/2026): o Root Directory ainda não foi aplicado.**
+- Teste discriminador (`test/vercel-discriminador-20261025`, `9f8f1fd`, deploy `dpl_D3aWAcdWr95LMG2wqBPrr8euDeAJ`): ERROR com "The specified Root Directory "apps/plataforma-saude-mental" does not exist".
+- Conclusão: o painel ainda aponta para `apps/`. Passo 2 do plano (ajuste pelo Dr.) continua pendente.
+- Após o ajuste: repetir o reprodutor (`test/vercel-reprodutor-147-20261025`). Se a saída voltar (functions e static), seguir os itens 3 a 6.
