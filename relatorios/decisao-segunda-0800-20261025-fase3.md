@@ -76,8 +76,7 @@ Faltam 8 h 18 min até 22:00. Parte 2 sem execução.
 - Não colar token, app secret, senha ou código. Detalhes: `relatorios/instagram-erro-190-20261025.md`.
 
 3.2 Manutenção-Semanal: `--sexta` recusa branch fora de `chore/manutencao`; `--segunda` recusa árvore suja. Correção mínima (não aplicada): worktree dedicado no branch de manutenção, log em caminho fixo. Não afeta publicações.
-3.3 Consolidação: `relatorios/consolidacao-registros-20261025.md` (arquivo novo).
-3.4 Plano: Pro. O Hobby é restrito a uso pessoal/não comercial (https://vercel.com/docs/limits/fair-use-guidelines).
+3.3 Consolidação: `relatorios/consolidacao-registros-20261025.md`. 3.4 Plano: Pro (Hobby é só pessoal/não comercial: https://vercel.com/docs/limits/fair-use-guidelines).
 
 ## Lições
 - `date` do Git Bash é UTC: horários em Salvador via PowerShell `Get-Date`.
