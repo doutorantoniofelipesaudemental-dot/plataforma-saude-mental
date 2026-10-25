@@ -44,8 +44,7 @@ Conclusão: se a Meta aceitar o token às 08:00 de segunda, sai 1 post (26/10, 5
 - Cron no Hobby: uma execução por dia; pode disparar em qualquer minuto da hora marcada; duração máx. 300 s; pode ser pulado ou repetido. https://vercel.com/docs/cron-jobs/usage-and-pricing
 - Desativar: Cron Jobs → "Disable Cron Jobs" (projeto inteiro, não por cron); sem deploy; persiste em promoção e Instant Rollback; reativação manual na mesma tela; desativados continuam listados. https://vercel.com/docs/cron-jobs/manage-cron-jobs
 - Variáveis de ambiente: a mudança vale só para deploys novos; deploys existentes mantêm os valores. https://vercel.com/docs/environment-variables/managing-environment-variables
-- Crons chamam o deploy de produção: herdado da pesquisa anterior; não reconfirmado nesta rodada.
-- Plano da conta: evidência indireta (comentário "Hobby: 1x/dia" no código e retenção de 1 h dos logs). Painel não lido.
+- Crons chamam o deploy de produção (herdado; não reconfirmado). Plano Hobby: evidência indireta (código e retenção de 1 h); painel não lido.
 - Alias divergente: NÃO EXPLICADO. Docs: `--skip-domain` vale só com `--prod` e desativa a promoção automática de domínios; não diz se o alias derivado por deployment fica de fora. Relatos de comunidade: o alias derivado foi reatribuído. https://vercel.com/docs/cli/deploy e https://community.vercel.com/t/production-alias-reassigned-despite-skip-domain/50528
 
 ## 7. Opções para 08:00 de segunda (executar hoje, antes das 22:00)
@@ -64,14 +63,11 @@ Recomendação para [B]: O1 é a única ação hoje que para o 08:00 sem depende
 - Logs de cron de 08:00 podem ter expirado (retenção de 1 h): conferir pelo perfil e pelo painel.
 
 ## 10. Janela de promoção de segunda (17:30–21:30)
-- Evitar 19:30 (LinkedIn cron, seg/qua/sex; desligado sem flag) e 20:00 (diagnóstico), e 20:15 (YouTube publica no PC).
-- Margem para desfazer até 22:00. Não promover sem a decisão do freio (item 7) registrada.
+- Evitar 19:30 (cron LinkedIn), 20:00 (diagnóstico) e 20:15 (YouTube no PC). Desfazer possível até 22:00. Sem promover sem o freio (item 7) decidido.
 
 ## 11. Proposta de horários das tarefas DrSM-* (não aplicada)
-- Conferência 09:30 e relatório: sem ação do Dr.; manter.
-- LinkedIn-Agendar (11:00 diário): mover para 18:00 seg a sex; o Chrome precisa de login do Dr.
-- Manutenção-Semanal (seg e sex 11:00): mover para 18:00.
-- Rotina-Semanal (seg 07:30): mover para 18:30.
+- Conferência 09:30: manter. LinkedIn-Agendar (11:00 diário): 18:00 seg a sex (precisa de login do Dr.).
+- Manutenção-Semanal (seg e sex 11:00) e Rotina-Semanal (seg 07:30): 18:00 e 18:30.
 - Narração (22:00 seg/ter/qua/sex/sáb; 14:00 qui/dom): propor 18:00 seg a qui, 21:00 sáb, 14:00 dom.
 - Gera-mídia (23:30; 15:30 qui/dom): propor 19:00 seg a qui e sáb 21:00 (depois da narração).
 - Publica YouTube (20:15; 17:15 qui/dom): sáb 20:45; qui 20:15 (se o Dr. confirmar o conflito de quinta).
@@ -79,6 +75,5 @@ Recomendação para [B]: O1 é a única ação hoje que para o 08:00 sem depende
 - Arquivos a mudar: `scripts/agendar-tarefas-windows.ps1`, o mapa de horários da rotina e os testes que fixam horários (localizar com grep antes).
 
 ## 12. Lição e sugestão para o CLAUDE.md (só sugestão)
-- Lição: o `date` do Git Bash é UTC; relatórios em Salvador usam PowerShell `Get-Date` ou fuso explícito.
-- Sugestão para o CLAUDE.md (uma linha): "Horários: sempre em America/Bahia (Salvador); no Windows usar PowerShell Get-Date, pois o `date` do Git Bash devolve UTC."
+- Lição: o `date` do Git Bash é UTC. Sugestão para o CLAUDE.md: "Horários: sempre em America/Bahia; no Windows usar PowerShell Get-Date (o `date` do Git Bash devolve UTC)."
 - Commit `8363441` (plano de segunda) ainda não enviado: `! git -C C:/DRS-promocao push -u origin docs/vercel-promocao-20261025`
