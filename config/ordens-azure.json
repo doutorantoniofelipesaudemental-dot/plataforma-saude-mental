@@ -1,0 +1,4 @@
+{
+  "_aviso": "Ordens escritas do Dr. Antônio para usar o Azure Speech. Sem entrada aqui, o Azure é recusado (backend/lib/ordemAzure.js). Cada entrada: id, data, autorizadoPor, escopo.",
+  "ordens": []
+}

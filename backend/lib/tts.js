@@ -2,9 +2,9 @@
  * Síntese de voz dos vídeos do bot (scripts/bot-video-carrossel.js), com cinco
  * provedores escolhidos por --provedor:
  *
- *   azure  (padrão) pt-BR-AntonioNeural, a voz do site. AZURE_SPEECH_KEY /
- *          AZURE_SPEECH_REGION; trava da cota gratuita mensal (azureTts.js).
- *   edge   mesma voz, pelo Edge-TTS (sem chave, sem contrato de serviço).
+ *   edge   (padrão desde 22/10/2026) pt-BR-AntonioNeural pelo Edge-TTS (sem chave, sem contrato de serviço).
+ *   azure  pt-BR-AntonioNeural pelo Azure Speech. SÓ com ordem registrada em config/ordens-azure.json
+ *          (backend/lib/ordemAzure.js): sem ela, recusado. AZURE_SPEECH_KEY / AZURE_SPEECH_REGION; cota mensal (azureTts.js).
  *   kokoro servidor LOCAL Kokoro-FastAPI (KOKORO_URL, padrão http://localhost:8880),
  *          API no formato da OpenAI; vozes pt-BR pm_alex (padrão), pm_santa, pf_dora.
  *          Custo zero e sem limite, mas o português do Kokoro é declarado "fraco"
@@ -24,10 +24,14 @@ const os = require('os');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const azure = require('./azureTts');
+const { exigirAzureAutorizado } = require('./ordemAzure');
+const { exigirPagoAutorizado } = require('./ordemPaga');
 const elevenlabs = require('./elevenlabs');
 const { VOZ_NARRACAO } = require('./narracao');
 
 const PROVEDORES = ['azure', 'edge', 'kokoro', 'openai', 'elevenlabs'];
+// Padrão gratuito e sem contrato. O Azure exige ordem registrada (ordemAzure.js).
+const PROVEDOR_PADRAO = 'edge';
 const VOZES_OPENAI = ['onyx', 'echo'];
 // Kokoro v1.0: só estas três são pt-BR (lang_code 'p').
 const VOZES_KOKORO = ['pm_alex', 'pm_santa', 'pf_dora'];
@@ -158,13 +162,14 @@ function sintetizarEdge(texto, voz) {
 }
 
 /** MP3 de um trecho curto (um slide) no provedor escolhido. */
-async function sintetizar(texto, { provedor = 'azure', voz = vozPadrao(provedor) } = {}) {
+async function sintetizar(texto, { provedor = PROVEDOR_PADRAO, voz = vozPadrao(provedor), ordemAzure, ordemPaga } = {}) {
   validarProvedor(provedor, voz);
-  if (provedor === 'openai') return sintetizarOpenAI(texto, voz);
-  if (provedor === 'elevenlabs') return elevenlabs.sintetizar(texto, { vozId: voz });
+  if (provedor === 'openai') { exigirPagoAutorizado({ provedor, ordem: ordemPaga }); return sintetizarOpenAI(texto, voz); }
+  if (provedor === 'elevenlabs') { exigirPagoAutorizado({ provedor, ordem: ordemPaga }); return elevenlabs.sintetizar(texto, { vozId: voz }); }
   if (provedor === 'kokoro') return sintetizarKokoro(texto, voz);
   if (provedor === 'edge') return sintetizarEdge(texto, voz);
+  exigirAzureAutorizado({ ordem: ordemAzure });
   return azure.sintetizar(texto, { voz });
 }
 
-module.exports = { sintetizar, sintetizarOpenAI, sintetizarKokoro, corpoKokoro, VOZES_KOKORO, classificarErroOpenAI, validarProvedor, vozPadrao, corpoOpenAI, PROVEDORES, VOZES_OPENAI, LIMITE_OPENAI };
+module.exports = { PROVEDOR_PADRAO, sintetizar,sintetizarOpenAI, sintetizarKokoro, corpoKokoro, VOZES_KOKORO, classificarErroOpenAI, validarProvedor, vozPadrao, corpoOpenAI, PROVEDORES, VOZES_OPENAI, LIMITE_OPENAI };

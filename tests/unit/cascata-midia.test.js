@@ -113,7 +113,8 @@ test('voz: provedores e vozes liberados; OpenAI com instruções só no gpt-4o-m
   const chave = process.env.OPENAI_API_KEY;
   delete process.env.OPENAI_API_KEY;
   try {
-    await assert.rejects(tts.sintetizar('Oi.', { provedor: 'openai', voz: 'onyx' }), /OPENAI_API_KEY precisa estar no \.env local/);
+    // Desde 22/10/2026 a voz paga exige ordem registrada antes da checagem da chave (ordemPaga.js).
+    await assert.rejects(tts.sintetizar('Oi.', { provedor: 'openai', voz: 'onyx' }), /Voz paga bloqueada \(openai\)/);
   } finally {
     if (chave !== undefined) process.env.OPENAI_API_KEY = chave;
   }
