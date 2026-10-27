@@ -2,8 +2,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const a = require('../../scripts/youtube/montarAnexoAuditoria');
 
-// PNG de 1 pixel (dados de exemplo, não é captura real)
-const PNG_1PX = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=', 'base64');
+// Bytes de exemplo: o teste não decodifica a imagem.
+const IMAGEM_DE_EXEMPLO = Buffer.from('bytes de exemplo, sem conteúdo real');
 
 test('classifica as imagens pelo prefixo e ignora o que não é imagem', () => {
   const g = a.classificarCapturas(['oauth-02-escopos.png', 'site-termos.png', 'oauth-01-consentimento.jpg', 'notas.txt', 'foto-solta.png']);
@@ -27,7 +27,7 @@ test('sem link, o HTML mostra o espaço a preencher; com link, mostra o link', (
 });
 
 test('imagem entra no HTML como data URI, sem caminho de arquivo', () => {
-  const uri = a.imagemComoDataUri(PNG_1PX, 'oauth-01.png');
+  const uri = a.imagemComoDataUri(IMAGEM_DE_EXEMPLO, 'oauth-01.png');
   assert.match(uri, /^data:image\/png;base64,/);
   const html = a.montarHtml({ oauth: ['oauth-01.png'], imagens: { 'oauth-01.png': uri } });
   assert.ok(html.includes(uri));
