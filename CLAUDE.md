@@ -122,6 +122,7 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - Trava dupla: regras deny em `.claude/settings.json` + hook `.claude/hooks/guarda.js` (bloqueia merge direto, push da/para main, leitura do `.env`, mudança dos freios, DELETE nas redes, tarefas fora de `DrSM-*`).
 
 ### Regra de merge (16/10/2026)
+- **Sincronia antes do portão (23/10/2026):** `publicarBranch.js` e `portao.js` param se a branch local não estiver no mesmo commit de `origin/<mesmo nome>`. Depois de `git push origin HEAD:<branch>`, confirme com `git rev-parse HEAD` e `git rev-parse origin/<branch>`. Nunca rode portão numa branch desatualizada.
 - Merge na `main` só depois de auditoria com 0 falhas, build OK e 100% dos testes passando. Se o merge for bloqueado pelas permissões, NÃO contornar: deixar o PR pronto e escrever ao Dr. Antônio o comando exato.
 
 ### Ferramentas não permitidas (decisão de 15/10/2026)
