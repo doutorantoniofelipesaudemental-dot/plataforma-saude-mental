@@ -132,6 +132,7 @@ function outrasFilas() {
     if (Number.isNaN(codigo)) { aviso(`tarefa ${nome}: resultado não lido (verificar o Agendador)`); continue; }
     const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo });
     if (a !== 'ok') falha(a.alerta);
+    linhas.push(`- ${nome}: LastTaskResult ${codigo} → ${require('./codigosTarefa').interpretarResultado(codigo)}`);
   }
   const li = spawnSync(process.execPath, ['scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
   const linha = String(li.stdout).trim().split('\n').pop();
