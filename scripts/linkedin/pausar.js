@@ -17,6 +17,13 @@ if (process.argv.includes('--simular')) {
   process.exit(0);
 }
 
+// Registro ANTES de desativar (mesma regra da desativação automática, ordem de 26/10/2026): sem registro gravado, a tarefa não é desativada.
+const { montarRegistroDesativacao, registrarDesativacao } = require('./agendarDiario');
+const registro = registrarDesativacao(montarRegistroDesativacao({ data: new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10), motivo: 'pausa manual (npm run linkedin:pausar)', mensagem: '', codigoSaida: null }));
+if (!registro.gravado) {
+  console.log(`NÃO pausado: o registro da desativação não foi gravado (${registro.motivo}). Nada foi alterado.`);
+  process.exit(1);
+}
 const r = spawnSync('powershell', ['-NoProfile', '-Command', `Disable-ScheduledTask -TaskName ${TAREFA}`], { encoding: 'utf8' });
 let estado = {};
 try { estado = JSON.parse(fs.readFileSync(ESTADO, 'utf8')); } catch { /* sem estado ainda */ }
