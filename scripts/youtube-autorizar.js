@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Obtém o YOUTUBE_REFRESH_TOKEN (OAuth 2.0, escopo youtube.upload) e grava
+ * Obtém o YOUTUBE_REFRESH_TOKEN (OAuth 2.0, escopo youtube.force-ssl) e grava
  * direto no .env local — o token nunca aparece no terminal nem no chat.
  *
  *   npm run youtube:autorizar
@@ -38,7 +38,9 @@ url.search = new URLSearchParams({
   client_id: id,
   redirect_uri: REDIRECT,
   response_type: 'code',
-  scope: 'https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube', // upload + playlists/miniaturas (ampliado em 15/10/2026)
+  // Escopo único e mínimo que cobre todos os métodos usados (documentação oficial, 27/10/2026): videos.insert,
+  // thumbnails.set, playlists.insert, playlistItems.insert e captions.insert (legendas). Antes eram youtube.upload + youtube.
+  scope: 'https://www.googleapis.com/auth/youtube.force-ssl',
   access_type: 'offline',
   prompt: 'consent',
 }).toString();
