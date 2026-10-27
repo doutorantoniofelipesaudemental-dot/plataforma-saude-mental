@@ -39,6 +39,8 @@ function sair(msg, cod = 1) {
   console.log(`PR #${pr}: ${info.title} (${info.headRefName} → ${info.baseRefName})`);
 
   origem = git('branch', '--show-current').stdout.trim();
+  // pasta principal sempre na main (ordem de 27/10/2026): aviso se estiver em outro branch
+  if (origem !== 'main') console.log(`AVISO: a pasta principal está em ${origem}, não na main. Regra: a pasta principal fica sempre na main.`);
   git('fetch', 'origin', info.baseRefName, info.headRefName);
   // Decide antes de trocar: nunca força, nunca apaga commit (ver scripts/lib/trocaBranch.js).
   const destino = info.headRefName;
