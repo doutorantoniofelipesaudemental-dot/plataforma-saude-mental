@@ -112,6 +112,10 @@
       "dest": "/public/privacidade.html"
     },
     {
+      "src": "/termos/?",
+      "dest": "/public/termos.html"
+    },
+    {
       "src": "/links/?",
       "dest": "/public/links.html"
     },
