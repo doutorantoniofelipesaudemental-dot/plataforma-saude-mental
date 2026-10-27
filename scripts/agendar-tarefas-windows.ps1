@@ -31,12 +31,12 @@ $tarefas = @(
   # Lembrete MANUAL do LinkedIn DESATIVADO (19/10/2026): o agendamento agora é automático. Mantido como opção comentada.
   # @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
   @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/travaDiaria.js DrSM-Conferencia-26-10 scripts/conferirPrimeiroPost.js'; Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 },
-  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Criada DESATIVADA: a ativação é do Dr. Antônio.
+  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Ativada pelo Dr. Antônio em 26/10/2026: NÃO nasce desativada (recriar a tarefa não pode desligá-la).
   # Agendamento diário do LinkedIn (autorizado em 18/10/2026, CLAUDE.md): 11:00, sessão do usuário (precisa do Chrome com o perfil logado), uma execução por dia (scripts/linkedin/agendarDiario.js). Desligar: npm run linkedin:pausar
   @{ Nome = 'DrSM-LinkedIn-Agendar';    Args = 'scripts/linkedin/agendarDiario.js';                 Gatilho = (New-ScheduledTaskTrigger -Daily -At 11:00); Horas = 1; Interativa = $true; NascerDesativada = $true },
   # PR semanal (19/10/2026): sexta 11:00, SÓ PREPARA (scripts/prSemanal.js: portão + relatorios\PR-SEMANAL.md; sem push, PR ou merge). Criada DESATIVADA.
   @{ Nome = 'DrSM-PR-Semanal';          Args = 'scripts/travaDiaria.js DrSM-PR-Semanal scripts/prSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Friday -At 11:00); Horas = 1; NascerDesativada = $true },
-  @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true; NascerDesativada = $true }
+  @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true; NascerDesativada = $false }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
 
@@ -48,7 +48,11 @@ if (-not $Remover -and -not $So -and -not $Simular) {
 
 # Estado atual da tarefa (só leitura) + decisão do agendadorEstado.js. Vazio = falha: a tarefa não é mexida.
 function Decidir($t) {
-  $atual = Get-ScheduledTask -TaskName $t.Nome -ErrorAction SilentlyContinue
+  # Só "não encontrada" conta como tarefa nova. Qualquer outro erro (ex.: serviço do Agendador ocupado) não pode virar
+  # "criar": antes, um erro passageiro recriava a tarefa como desativada. Nesse caso a tarefa não é mexida.
+  $atual = $null
+  try { $atual = Get-ScheduledTask -TaskName $t.Nome -ErrorAction Stop }
+  catch { if ("$_" -notmatch 'MSFT_ScheduledTask.*(encontrad|found)') { return '' } }
   $existe = [int]([bool]$atual)
   $ativa = [int]([bool]$atual -and $atual.State -ne 'Disabled')
   $nascer = [int]([bool]$t.NascerDesativada)
