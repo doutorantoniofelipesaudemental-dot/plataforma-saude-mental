@@ -1,5 +1,5 @@
 {
- "geradoEm": "2026-10-19T12:30:13.240Z",
+ "geradoEm": "2026-10-27T20:14:32.533Z",
  "regra": "seg/qua/sex 19:30 (Bahia), publicação MANUAL no perfil pessoal (sem API)",
  "itens": [
   {
@@ -173,8 +173,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/alta-pa-psiquiatrico",
    "slug": "alta-pa-psiquiatrico",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:52.985Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-21T00:26:11.492Z",
+   "agendadoLinkedinEm": "2026-10-20",
    "caracteres": 1620
   },
   {
@@ -186,8 +187,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/matriciamento-saude-mental",
    "slug": "matriciamento-saude-mental",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.055Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-21T22:17:45.612Z",
+   "agendadoLinkedinEm": "2026-10-21",
    "caracteres": 1633
   },
   {
@@ -199,8 +201,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/ansiedade-corporativa-sintomas-tratamento",
    "slug": "ansiedade-corporativa-sintomas-tratamento",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.125Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-22T14:03:03.420Z",
+   "agendadoLinkedinEm": "2026-10-22",
    "caracteres": 1816
   },
   {
@@ -212,8 +215,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/grupos-terapeuticos-aps",
    "slug": "grupos-terapeuticos-aps",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.196Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-22T14:05:39.746Z",
+   "agendadoLinkedinEm": "2026-10-22",
    "caracteres": 1541
   },
   {
@@ -223,8 +227,9 @@
    "slot": "2026-12-04T22:30:00.000Z",
    "titulo": "\"Narrativa composta\": o que significa",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.266Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-22T14:08:14.158Z",
+   "agendadoLinkedinEm": "2026-10-22",
    "caracteres": 1384
   },
   {
@@ -236,8 +241,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/tempo-tela-consulta-medicos",
    "slug": "tempo-tela-consulta-medicos",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.336Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-23T20:19:35.420Z",
+   "agendadoLinkedinEm": "2026-10-23",
    "caracteres": 1386
   },
   {
@@ -262,8 +268,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/redes-sociais-consulta-medicos",
    "slug": "redes-sociais-consulta-medicos",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.483Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-23T20:22:12.156Z",
+   "agendadoLinkedinEm": "2026-10-23",
    "caracteres": 1676
   },
   {
@@ -275,8 +282,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/alimentacao-consulta-medicos",
    "slug": "alimentacao-consulta-medicos",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.556Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-23T20:24:49.391Z",
+   "agendadoLinkedinEm": "2026-10-23",
    "caracteres": 1685
   },
   {
@@ -288,8 +296,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/rotina-consulta-medicos",
    "slug": "rotina-consulta-medicos",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.627Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-24T23:10:38.453Z",
+   "agendadoLinkedinEm": "2026-10-24",
    "caracteres": 1712
   },
   {
@@ -301,8 +310,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/depressao-ansiedade-produtividade",
    "slug": "depressao-ansiedade-produtividade",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.698Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-24T23:10:39.452Z",
+   "agendadoLinkedinEm": "2026-10-24",
    "caracteres": 1449
   },
   {
@@ -314,8 +324,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/sobrecarga-cuidador-consulta",
    "slug": "sobrecarga-cuidador-consulta",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.767Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-25T14:01:50.650Z",
+   "agendadoLinkedinEm": "2026-10-25",
    "caracteres": 1476
   },
   {
@@ -325,8 +336,9 @@
    "slot": "2026-12-23T22:30:00.000Z",
    "titulo": "Por que todo texto com conduta traz o aviso dos protocolos locais",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.841Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-25T14:04:31.437Z",
+   "agendadoLinkedinEm": "2026-10-25",
    "caracteres": 1413
   },
   {
@@ -351,8 +363,9 @@
    "url": "https://www.drantoniofelipemedico.com.br/artigo/afastamento-transtorno-mental",
    "slug": "afastamento-transtorno-mental",
    "checagem": [],
-   "status": "aprovado-checagem",
-   "atualizadoEm": "2026-10-15T20:46:53.981Z",
+   "status": "agendado-linkedin",
+   "atualizadoEm": "2026-10-25T14:07:06.662Z",
+   "agendadoLinkedinEm": "2026-10-25",
    "caracteres": 1737
   },
   {

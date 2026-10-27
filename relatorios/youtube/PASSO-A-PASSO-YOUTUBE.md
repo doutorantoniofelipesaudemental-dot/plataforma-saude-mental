@@ -5,7 +5,8 @@ Enquanto isto não estiver feito, **nada é publicado**: tudo fica pronto em `re
 
 ## Onde você está (conferido em 16/10/2026, à noite)
 - ✅ Chave secreta, autorização e teste privado: **feitos**. O vídeo de teste está privado em https://www.youtube.com/shorts/z_JHmmpw880 (só você vê; pode apagar no YouTube Studio).
-- ⚠ O app do Google está em modo **"Testando"**: a autorização feita em **16/10/2026 vence em 23/10/2026**. A rotina avisa 2 dias antes (arquivo `relatorios/youtube/AVISO-REAUTORIZAR.md` e uma linha no topo do `ESTADO-GERAL.md`). **Para a autorização não vencer, faça a seção "Publicar o app" logo abaixo.**
+- ✅ O app do Google está **"Em produção" desde 18/10/2026**. O refresh token não vence. O antigo aviso de "vence em 23/10" era falso e foi removido (`relatorios/youtube/validade.json`, decisão do Dr. Antônio em 27/10/2026).
+- ⚠ **Escopo da autorização (27/10/2026):** o `youtube:autorizar` precisa ser rodado **com a pasta principal na `main`** (o escopo é `youtube.force-ssl`). Se foi rodado com a pasta no branch antigo, o escopo é `youtube.upload` + `youtube`, e é preciso rodar de novo. Quem confere é o `npm run youtube:teste-playlists` (só leitura).
 - ❌ O freio está **desligado** (é o certo por enquanto): `YOUTUBE_PUBLICACAO_ATIVA` não existe. Só se liga no passo D.
 - ❌ Os vídeos só poderão ficar **públicos** depois da auditoria da API (seção "Auditoria da API"; respostas prontas em `relatorios/youtube/AUDITORIA-API-RESPOSTAS.md`). Até lá, mesmo com o freio ligado, o YouTube deixa tudo como privado.
 
