@@ -235,3 +235,9 @@ Toda aprovação do Dr. Antônio tem auditoria geral + tripla checagem (técnica
 - ANTES: nada chega para aprovação sem ter passado nas checagens. Itens reprovados não são apresentados; vão para correção.
 - DEPOIS: a aprovação não publica nada sozinha. Antes de ir ao ar, tudo passa de novo: hash igual ao aprovado, página ou vídeo renderizado, schema, links e CFM. Se algo falhar depois da aprovação, não publica, avisa o Dr. Antônio e registra.
 Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/unit/revisao-medica.test.js).
+
+## Validação de carrosséis na Graph API (regra permanente, 25/10/2026, ordem do Dr. Antônio)
+- Nunca validar em lote na hora anterior ao publicador (08:00) nem ao diagnóstico (20:00), America/Bahia.
+- Validação antecipada só em janela rolante de 7 dias e até 01/11, no máximo 7 posts por execução, com pausa de 60 s.
+- Código 4 da Meta (limite de aplicação): parar a execução e não tentar de novo no mesmo dia.
+- Implementado em `backend/lib/redesV2/travaValidacao.js` e usado por `backend/scripts/redes/testeCarrossel.js --validar`; testes em `tests/unit/trava-validacao.test.js`.

@@ -18,6 +18,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const mongoose = require('mongoose');
 const db = require('../../lib/db');
+const t = require("../../lib/redesV2/travaValidacao");
 const { validarPostNoInstagram: validarPost } = require('../../lib/redesV2/validacaoCarrossel');
 
 const DIR = path.resolve(__dirname, '../../../relatorios/redes/teste-carrossel');
@@ -34,16 +35,32 @@ const col = (n) => mongoose.connection.db.collection(n);
 
 async function validar() {
   const id = arg('id');
-  const n = Number(arg('proximos') || 7);
-  const filtro = { status: { $in: ['aprovado-checagem', 'fila-manual'] }, ...(id ? { _id: id } : {}) };
-  const posts = await col('redes_v2').find(filtro).sort({ dataSugerida: 1 }).limit(id ? 1 : n).toArray();
-  if (!posts.length) throw new Error('nenhum post para validar');
+  const agora = new Date();
+  if (!id && t.janelaProibida(agora)) throw new Error('validação em lote bloqueada na hora anterior a 08:00 e 20:00 (America/Bahia); tente depois');
+  let v = null; try { v = JSON.parse(fs.readFileSync(VALIDACAO, 'utf8')); } catch { /* primeira validação */ }
+  const jaValidados = (v?.resultados || []).filter((r) => r.ok).map((r) => r.id);
+  const todos = await col('redes_v2').find({ status: { $in: ['aprovado-checagem', 'fila-manual'] }, ...(id ? { _id: id } : {}) }).sort({ dataSugerida: 1 }).toArray();
+  const posts = id ? todos.slice(0, 1) : t.selecionarParaValidar({ posts: todos, jaValidados, agora, limite: Number(arg('proximos') || t.LIMITE_POR_EXECUCAO) });
+  if (!posts.length) throw new Error('nenhum post para validar (todos já validados ou fora da janela de 01/11)');
   const resultados = [];
-  for (const p of posts) { const r = await validarPost(p); resultados.push(r); console.log(`${r.ok ? 'OK    ' : 'FALHOU'} ${r.id} · ${r.itens} itens${r.falhas.length ? ' · ' + r.falhas.join(' | ').slice(0, 300) : ''}`); }
-  const geral = { validadoEm: new Date().toISOString(), total: resultados.length, aprovados: resultados.filter((r) => r.ok).length, todosOk: resultados.every((r) => r.ok), publicouAlgo: false, resultados };
+  for (const [i, p] of posts.entries()) {
+    if (i > 0) await new Promise((r) => setTimeout(r, t.PAUSA_MS));
+    let r;
+    try { r = await validarPost(p); } catch (e) {
+      console.log(`PARADO ${p._id} · ${String(e.message).slice(0, 200)}`);
+      if (t.ehLimiteMeta(e.message)) { console.log('limite da Meta (código 4): execução parada; não tentar de novo hoje.'); break; }
+      throw e;
+    }
+    resultados.push(r);
+    console.log(`${r.ok ? 'OK    ' : 'FALHOU'} ${r.id} · ${r.itens} itens${r.falhas.length ? ' · ' + r.falhas.join(' | ').slice(0, 300) : ''}`);
+    if (r.falhas.some((f) => /código 4\//.test(f))) { console.log('limite da Meta (código 4): execução parada.'); break; }
+  }
+  const anteriores = (v?.resultados || []).filter((r) => !resultados.some((n) => n.id === r.id));
+  const todosResultados = [...anteriores, ...resultados];
+  const geral = { validadoEm: agora.toISOString(), total: todosResultados.length, aprovados: todosResultados.filter((r) => r.ok).length, todosOk: todosResultados.every((r) => r.ok), publicouAlgo: false, resultados: todosResultados };
   fs.mkdirSync(path.dirname(VALIDACAO), { recursive: true });
   fs.writeFileSync(VALIDACAO, JSON.stringify(geral, null, 1), 'utf8');
-  console.log(JSON.stringify({ validados: geral.total, aprovados: geral.aprovados, todosOk: geral.todosOk, publicouAlgo: false, arquivo: path.relative(process.cwd(), VALIDACAO) }, null, 1));
+  console.log(JSON.stringify({ nestaExecucao: resultados.length, aprovadosNestaExecucao: resultados.filter((r) => r.ok).length, totalValidados: geral.aprovados, publicouAlgo: false }, null, 1));
 }
 
 async function preparar() {
