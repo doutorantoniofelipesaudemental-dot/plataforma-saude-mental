@@ -18,7 +18,7 @@ const { lerContagens, interpretarLote } = require('./travaDuplicidade');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const ESTADO = path.join(RAIZ, 'relatorios/linkedin/agendar-diario-estado.json');
-const MAX_POSTS = 3;
+const MAX_POSTS = 2;
 const INTERVALO_MS = 2 * 60e3;
 const TAREFA = 'DrSM-LinkedIn-Agendar';
 

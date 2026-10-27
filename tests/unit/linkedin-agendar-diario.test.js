@@ -2,10 +2,10 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { classificarSaida, jaRodouHoje, limitarPosts, MAX_POSTS, INTERVALO_MS } = require('../../scripts/linkedin/agendarDiario');
 
-test('limites: máximo 3 posts por dia e 2 min entre eles', () => {
-  assert.equal(MAX_POSTS, 3);
+test('limites: máximo 2 posts por dia e 2 min entre eles', () => {
+  assert.equal(MAX_POSTS, 2);
   assert.equal(INTERVALO_MS, 120000);
-  assert.equal(limitarPosts(10), 3);
+  assert.equal(limitarPosts(10), 2);
   assert.equal(limitarPosts(2), 2);
   assert.equal(limitarPosts(-1), 0);
 });
