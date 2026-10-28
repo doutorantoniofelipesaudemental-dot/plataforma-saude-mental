@@ -10,6 +10,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { planejarTrocaBranch, worktreeDoBranch } = require('./lib/trocaBranch');
+const { arquivosQueColidem } = require('./lib/colisoes');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -30,7 +31,7 @@ function sair(msg, cod = 1) {
 }
 
 (async () => {
-  const v = gh('pr', 'view', pr, '--json', 'state,headRefName,baseRefName,mergeable,title,isDraft');
+  const v = gh('pr', 'view', pr, '--json', 'state,headRefName,baseRefName,mergeable,title,isDraft,files');
   if (v.status !== 0) sair(`não consegui ler o PR #${pr}: ${v.stderr.trim()}`);
   const info = JSON.parse(v.stdout);
   if (info.state !== 'OPEN') sair(`PR #${pr} está ${info.state}.`);
@@ -41,6 +42,24 @@ function sair(msg, cod = 1) {
   origem = git('branch', '--show-current').stdout.trim();
   // pasta principal sempre na main (ordem de 27/10/2026): aviso se estiver em outro branch
   if (origem !== 'main') console.log(`AVISO: a pasta principal está em ${origem}, não na main. Regra: a pasta principal fica sempre na main.`);
+  // arquivo que o PR cria e que já existe como não rastreado na pasta principal: o checkout do merge o sobrescreveria (ordem de 28/10/2026).
+  // Copia para .tmp/ (confere a cópia) e só então tira da pasta principal. Nada é apagado sem cópia.
+  const naoRastreados = git('ls-files', '--others', '--exclude-standard').stdout.split('\n').map((l) => l.trim()).filter(Boolean);
+  const colisoes = arquivosQueColidem({ arquivosDoPr: (info.files || []).map((f) => f.path), naoRastreados });
+  if (colisoes.length) {
+    const d = new Date(Date.now() - 3 * 3600e3);
+    const p2 = (n) => String(n).padStart(2, '0');
+    const destino = path.join(RAIZ, '.tmp', `estado-${d.toISOString().slice(0, 10).replace(/-/g, '')}-${p2(d.getUTCHours())}${p2(d.getUTCMinutes())}`);
+    for (const rel of colisoes) {
+      const origemArq = path.join(RAIZ, rel);
+      const alvo = path.join(destino, rel);
+      fs.mkdirSync(path.dirname(alvo), { recursive: true });
+      fs.copyFileSync(origemArq, alvo);
+      if (!fs.readFileSync(alvo).equals(fs.readFileSync(origemArq))) sair(`cópia de ${rel} não confere; nada foi removido.`);
+      fs.unlinkSync(origemArq);
+    }
+    console.log(`Colisão resolvida: ${colisoes.length} arquivo(s) não rastreado(s) que o PR também cria foram copiados para ${path.relative(RAIZ, destino)} e removidos da pasta principal: ${colisoes.join(', ')}`);
+  }
   git('fetch', 'origin', info.baseRefName, info.headRefName);
   // Decide antes de trocar: nunca força, nunca apaga commit (ver scripts/lib/trocaBranch.js).
   const destino = info.headRefName;

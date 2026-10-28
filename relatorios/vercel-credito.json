@@ -1,0 +1,28 @@
+{
+ "atualizadoEm": "2026-10-26T23:30:00.000-03:00",
+ "fonte": "leitura via conector Vercel (/v1/billing/charges), 5 janelas semanais contíguas de 16/10 a 15/11 (dados até 26/10)",
+ "plano": "Pro",
+ "cicloInicio": "2026-10-16",
+ "cicloFim": "2026-11-16",
+ "creditoIncluidoUsd": 20,
+ "creditoUsadoUsd": 23.57,
+ "limiteAlertaPct": 70,
+ "faturadoUsd": 11.16,
+ "pctUsado": 117.9,
+ "topServicos": [
+  {
+   "servico": "Pro",
+   "efetivoUsd": 10.97
+  },
+  {
+   "servico": "Build CPU Minutes",
+   "efetivoUsd": 3.25
+  },
+  {
+   "servico": "Fast Origin Transfer",
+   "efetivoUsd": 0.65
+  }
+ ],
+ "ultimaLeitura": "conector",
+ "ultimaLeituraMotivo": "ATENÇÃO: a API soma US$ 23,57 de custo efetivo; o painel informou US$ 4,19 usados. Conferir qual métrica o painel usa antes de confiar no alerta."
+}
