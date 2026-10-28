@@ -166,6 +166,11 @@ function passoNarracao() {
   extras.passoYoutube({ sec, problemas });
   await extras.passoAutorizacaoYoutube({ sec, problemas });
   extras.passoLinkedinManual({ sec, problemas }); // fila manual do LinkedIn (perfil pessoal)
+  // Crédito da Vercel (26/10/2026): lê pela CLI ou pede atualização manual; alerta acima de 70% antes do fim do ciclo.
+  const credito = require('./creditoVercel').atualizarCredito({ hoje: new Date().toISOString().slice(0, 10) });
+  sec.push(`## Crédito da Vercel\n- ${credito.status === 'lido' ? `uso ${credito.pct}% (US$ ${credito.usadoUsd})` : credito.motivo}`);
+  if (credito.alerta) problemas.push(`crédito da Vercel em ${credito.pct}% antes do fim do ciclo (limite de alerta 70%)`);
+  if (credito.status === 'manual') problemas.push('crédito da Vercel: atualizar manualmente relatorios/vercel-credito.json');
   // 11. Tarefas do Windows: última execução, resultado e se o PC estava ligado (grava relatorios/tarefas-estado.md e o bloco do ESTADO-GERAL.md)
   let tarRes = null;
   try { const tar = require('./rotinaTarefas').gravar(); tarRes = tar; sec.push(`## 11. Tarefas do Windows\n${tar.md.replace(/^### .*\n/, '')}`); problemas.push(...tar.problemas); } catch (e) { sec.push(`## 11. Tarefas do Windows\n- não consegui conferir (${e.message.slice(0, 60)})`); }
