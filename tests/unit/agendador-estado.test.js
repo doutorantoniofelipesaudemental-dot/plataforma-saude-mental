@@ -31,3 +31,17 @@ test('script do agendador: tem -Simular e não recria o gatilho antigo das 12:30
   assert.match(ps, /\[switch\]\$Simular/);
   assert.doesNotMatch(ps, /-At 12:30/);
 });
+
+// Regressão (26/10/2026): o script não pode desligar a rotina do Blob ao recriar tarefas, e erro de consulta não vira "criar".
+test('Blob mensal não nasce desativada e erro de consulta não recria a tarefa', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const ps1 = fs.readFileSync(path.join(__dirname, '../../scripts/agendar-tarefas-windows.ps1'), 'utf8');
+  const linhaBlob = ps1.split('\n').find((l) => l.includes("'DrSM-Blob-Rotina-Mensal'"));
+  assert.ok(linhaBlob, 'linha do Blob no script');
+  assert.match(linhaBlob, /NascerDesativada = \$false/);
+  assert.doesNotMatch(linhaBlob, /NascerDesativada = \$true/);
+  assert.match(ps1, /Get-ScheduledTask -TaskName \$t\.Nome -ErrorAction Stop/);
+  assert.match(ps1, /MSFT_ScheduledTask\.\*\(encontrad\|found\)/);
+  assert.match(ps1, /catch \{ if \("\$_" -notmatch[^}]*\) \{ return '' \} \}/);
+});

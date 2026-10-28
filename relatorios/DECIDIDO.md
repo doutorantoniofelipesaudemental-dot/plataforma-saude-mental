@@ -1,0 +1,49 @@
+# Decidido — não perguntar de novo
+
+Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer decisão, conferir este arquivo. Se algo aqui estiver errado, o Dr. corrige; não reabrir por conta própria.
+
+## Decisões
+- **YouTube:** o app está "Em produção" desde 18/10/2026. O refresh token não vence. O aviso de "vence em 23/10" era falso: `relatorios/youtube/validade.json` foi corrigido (`autorizacaoVenceEm: null`), e o alerta deixa de disparar.
+- **YouTube, escopo:** o `youtube:autorizar` tem de rodar com a pasta na `main` (escopo `youtube.force-ssl`). Rodado no branch antigo, o escopo fica errado. Conferir com `npm run youtube:teste-playlists`.
+- **REDES_PUBLICACAO_ATIVA:** ligado. O post de 26/10 saiu.
+- **Plano da Vercel:** Pro, confirmado (US$ 4,19 de 20 de crédito).
+- **Root Directory da Vercel:** o deploy #158 funciona, então a configuração está correta. Encerrado.
+- **Vídeos F (54 regerados):** fila atual com 97 `aprovado-checagem` e 12 `reserva`, nenhum reprovado. O PR #115 foi mesclado em 20/10/2026.
+- **Opção A (domínio único):** os 24 textos ficam no site oficial (`www.drantoniofelipemedico.com.br`). Não é a regra a/b do Blob.
+- **Regra a/b do Blob** (outra coisa): itens das listas a (publicados) e b (agendados) nunca são apagados; a rotina gera alerta.
+- **Referências:** decidido na ordem de 27/10. Sem detalhe adicional nesta ordem (conferir a ordem antes de citar).
+- **Vozes pagas:** bloqueadas. Só Edge-TTS (`pt-BR-AntonioNeural`).
+- **Crons diários:** publicar redes todos os dias (PR #166, aberto).
+- **Cron legado do LinkedIn (publicava por API):** removido no PR #166 (aberto; vale quando mesclado).
+- **Manutenção semanal:** a etapa de segunda roda numa worktree própria a partir de `origin/main` (branch `fix/manutencao-arvore-limpa-20261026`).
+- **Pasta principal:** SEMPRE na `main`. Trabalho só em worktrees curtos, removidos depois do merge.
+- **Worktree de PR:** nunca passar merge com o branch aberto em worktree.
+- **#145 (token do Instagram):** fechado em 27/10/2026. Superado pela main; removia a redação do token.
+- **#138 (domínio único, textos e assets):** pausado (Opção A). Não mesclar sem ordem.
+
+## Não decidido (aguarda o Dr.)
+- Carrossel A e carrossel B (28/10) e o Reel corrigido: avaliação do Dr. Caminhos em `relatorios/ESTADO-GERAL.md`.
+- Horários do #159.
+- Migração do `vercel.json`.
+- Limpeza das worktrees restantes (`DRS-cand`, `DRS-pr77`, `DRS-deploy-main`, `DRS-manut-20261026`, `DRS-post-check`, `DRS-promocao`, `DRS-registro`, `DRS-fix-manut`).
+
+## Continuação (27/10/2026, 19h, ordem única)
+- **Tarefas do Windows:** nunca desativar uma tarefa que o Dr. Antônio ativou. Antes de mexer em qualquer tarefa `DrSM-*`, conferir `relatorios/DECIDIDO.md` e o topo de `relatorios/ESTADO-GERAL.md`.
+- **Blob (`DrSM-Blob-Rotina-Mensal`):** o Dr. reativa como administrador. Confirmar pelo log de amanhã (28/10). Quem desativou em 27/10 foi o Claude Code, por engano (ver ESTADO-GERAL).
+- **LinkedIn (`DrSM-LinkedIn-Agendar`):** reativar só depois do merge do #167. O #167 recebe o registro obrigatório de desativação; a conferência diária passa a mostrar o `LastTaskResult` com a interpretação do código.
+- **YouTube, escopos:** `youtube.force-ssl` é aceito por `videos.insert`, `thumbnails.set`, `playlists.insert`, `playlistItems.insert` e `captions.insert`. Para `playlists.list` a página não confirma; o teste de leitura confirma (ver `relatorios/youtube/AUDITORIA-API-RESPOSTAS.md`).
+- **YouTube, rodar de novo:** o Dr. roda `npm run youtube:autorizar` e `npm run youtube:teste-playlists` com a pasta na `main`.
+- **Opção A (domínio único):** os 24 textos ficam no site oficial. Não é a regra a/b do Blob.
+- **Ordem de merges (14 PRs):** terça: 172 → 173 → 159 → 160 → 161 → 162 → 163. Quarta: 164 → 165 → 166 → 167 → 168 → 169 → 156. Um por vez, com `npm run merge-seguro -- N`. Depois de cada merge, atualizar o próximo se tiver conflito, um portão por vez.
+- **Estado perdido e recuperado:** `ESTADO-GERAL.md` e `PROMPT-ATUAL.md` nunca foram rastreados pelo Git. A cópia mais recente deles era de 22/10. Ver o aviso no topo de cada arquivo. Antes de trocar de branch: `npm run estado:guardar`.
+
+## Alerta de custo da Vercel (27/10/2026, 22h30, ordem única)
+- **Alerta de custo da Vercel = `billedCost` do ciclo (cobrança real) acima de US$ 0,50**, mais o crédito do painel informado manualmente (`creditoPainel`). Acima de 70% do crédito de US$ 20 (US$ 14), alerta.
+- **`effectiveCost` é só informativo** (tendência por serviço). Ele soma o uso coberto pelas franquias do Pro, que não consome o crédito de US$ 20. Por isso deu US$ 23,57 (117,9%) enquanto o painel mostra US$ 4,19.
+- O valor do painel ("crédito incluído usado") a API não mostra. É atualizado à mão em `creditoPainel`, com a data da leitura (hoje: US$ 4,19 de US$ 20,00, em 26/10).
+
+## Estado fora do Git e alerta de custo (28/10/2026, ordem do Dr. Antônio)
+- **Arquivos que a automação escreve não ficam no Git:** PENDENTES.md, AUTORIZACOES.md, FILA-MANUAL.md, tarefas-estado.md e relatorios/linkedin/fila.json. Ficam no `.gitignore`; o backup é feito por `scripts/backupEstado.js`.
+- **Fila do LinkedIn:** o portão lê a fixture versionada `tests/fixtures/linkedin-fila.json`. A fila real só é lida pela conferência diária.
+- **Versionados (só mudam por PR):** CLAUDE.md, DECIDIDO.md, LICOES.md, documentos (AUDITORIA-API-RESPOSTAS.md, PASSO-A-PASSO-YOUTUBE.md) e configurações (validade.json).
+- **Alerta de custo da Vercel:** só o uso sob demanda conta (billedCost sem a assinatura). A linha "Pro" (US$ 20/mês), os assentos e as taxas fixas do plano ficam FORA do alerta. Alerta = uso sob demanda acima de US$ 0,50 no ciclo. Teste: a linha "Pro" sozinha não alerta.

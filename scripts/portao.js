@@ -18,6 +18,9 @@ const RAIZ = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const base = (args.find((a) => a.startsWith('--base=')) || '--base=origin/main').split('=')[1];
 const soChecagem = args.includes('--so-checagem');
+// Lição de 23/10/2026: o portão só roda com a branch local igual ao remoto (senão aprova código velho).
+const sincronia = require('./lib/branchSincronizado').lerSincronia(RAIZ);
+if (!sincronia.ok) { console.log(`PORTÃO NÃO EXECUTADO: ${sincronia.motivo}`); process.exit(1); }
 const NPM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 const agora = new Date();
@@ -100,14 +103,14 @@ async function triplaChecagem() {
     }
   }
 
-  // filas de LinkedIn alteradas: itens "aprovado-checagem" passam por checarPost (mesma checagem do publicador)
-  if (itens.includes('relatorios/linkedin/fila.json')) {
+  // fixture versionada da fila de LinkedIn (a fila real fica fora do Git, ordem de 28/10/2026): itens "aprovado-checagem" passam por checarPost
+  if (itens.includes('tests/fixtures/linkedin-fila.json')) {
     try {
       const { checarPost } = require('../backend/lib/linkedinChecagem');
-      const j = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios/linkedin/fila.json'), 'utf8'));
+      const j = JSON.parse(fs.readFileSync(path.join(RAIZ, 'tests/fixtures/linkedin-fila.json'), 'utf8'));
       const lista = Array.isArray(j) ? j : j.itens || [];
-      for (const it of lista.filter((i) => i.status === 'aprovado-checagem' && i.texto)) for (const x of checarPost(it)) f('ética', `linkedin/fila.json#${it.id || it._id}`, x);
-    } catch (e) { f('técnica', 'relatorios/linkedin/fila.json', `ilegível (${e.message})`); }
+      for (const it of lista.filter((i) => i.status === 'aprovado-checagem' && i.texto)) for (const x of checarPost(it)) f('ética', `tests/fixtures/linkedin-fila.json#${it.id || it._id}`, x);
+    } catch (e) { f('técnica', 'tests/fixtures/linkedin-fila.json', `ilegível (${e.message})`); }
   }
 
   // científica: DOI/PMID dos textos alterados (rede indisponível = "não verificado", nunca reprova)

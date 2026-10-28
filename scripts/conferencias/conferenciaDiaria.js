@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
 const db = require('../../backend/lib/db');
 const { estadoNarracao, precisaVinheta } = require('../../backend/lib/narracao');
 const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
+const { resultadoAlertaCusto } = require('./alertaCustoVercel');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const SITE = 'https://www.drantoniofelipemedico.com.br';
@@ -23,6 +24,20 @@ const falhas = [], avisos = [], linhas = [];
 const ok = (t) => linhas.push(`- ✔ ${t}`);
 const falha = (t) => { falhas.push(t); linhas.push(`- ✘ **${t}**`); };
 const aviso = (t) => { avisos.push(t); linhas.push(`- ⚠ ${t}`); };
+
+// Alerta de custo da Vercel (ordem de 28/10/2026). Trabalha numa cópia em .tmp/: o registro rastreado
+// (relatorios/vercel-credito.json) não é gravado pela conferência, para não sujar a pasta principal.
+function alertaCustoDoDia() {
+  const copia = path.join(RAIZ, '.tmp', 'vercel-credito-diario.json');
+  fs.mkdirSync(path.dirname(copia), { recursive: true });
+  fs.copyFileSync(path.join(RAIZ, 'relatorios/vercel-credito.json'), copia);
+  const { atualizarCredito } = require('../creditoVercel');
+  const r = atualizarCredito({ hoje, arquivo: copia });
+  const res = resultadoAlertaCusto(JSON.stringify(r));
+  if (res.nivel === 'falha') falha(res.texto);
+  else if (res.nivel === 'aviso') aviso(res.texto);
+  else ok('custo Vercel dentro do limite');
+}
 
 // Backup diário do estado que saiu do Git (scripts/backupEstado.js). Falha ou mais de 2 dias sem backup = alerta com ação.
 function backupDoEstado() {
@@ -125,14 +140,20 @@ function outrasFilas() {
     const div = CF.divergencias(f.itens, CF.lerConferenciaDoDisco(RAIZ));
     if (div.length) falha(`YouTube: ${div.length} divergência(s) entre a fila e o conferidor (ex.: ${div[0].id}: ${div[0].motivo})`);
   } catch (e) { aviso(`YouTube: fila ilegível (${e.message.slice(0, 60)})`); }
+  // pasta principal sempre na main (ordem de 27/10/2026): fora da main vira aviso com a ação
+  const branchPrincipal = spawnSync('git', ['branch', '--show-current'], { cwd: RAIZ, encoding: 'utf8' }).stdout.trim();
+  if (branchPrincipal && branchPrincipal !== 'main') aviso(`pasta principal fora da main (está em ${branchPrincipal}): trocar para a main com a alteração guardada em stash`);
+  else ok('pasta principal na main');
   // monitoramento das tarefas DrSM-* (ordem de 20/10/2026): leitura do último resultado; falha vira alerta com a correção
   for (const nome of ['DrSM-LinkedIn-Agendar', 'DrSM-Manutencao-Semanal']) {
-    const r = spawnSync('powershell', ['-NoProfile', '-Command', `(Get-ScheduledTaskInfo -TaskName '${nome}').LastTaskResult`], { encoding: 'utf8', timeout: 30000 });
-    const codigo = parseInt(String(r.stdout || '').trim(), 10);
+    const r = spawnSync('powershell', ['-NoProfile', '-Command', `$i = Get-ScheduledTaskInfo -TaskName '${nome}'; $t = Get-ScheduledTask -TaskName '${nome}'; "$($i.LastTaskResult)|$($t.State)"`], { encoding: 'utf8', timeout: 30000 });
+    const [res, estado] = String(r.stdout || '').trim().split('|');
+    const codigo = parseInt(res, 10);
     if (Number.isNaN(codigo)) { aviso(`tarefa ${nome}: resultado não lido (verificar o Agendador)`); continue; }
-    const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo });
-    if (a !== 'ok') falha(a.alerta);
+    const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo, estado: (estado || '').trim(), hoje });
     linhas.push(`- ${nome}: LastTaskResult ${codigo} → ${require('./codigosTarefa').interpretarResultado(codigo)}`);
+    if (a === 'ok') continue;
+    if (a.aviso) aviso(a.aviso); else falha(a.alerta);
   }
   const li = spawnSync(process.execPath, ['scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
   const linha = String(li.stdout).trim().split('\n').pop();
@@ -160,8 +181,9 @@ function alertaNoEstadoGeral() {
 (async () => {
   await db.connect();
   const d = mongoose.connection.db;
-  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
-  backupDoEstado(); // gravação à parte, na mesma tarefa: a conferência em si segue só de leitura
+  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas, alertaCustoDoDia]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
+  // Backup do estado: passo isolado (falha vira alerta com ação; a conferência segue). Gravação à parte, na mesma tarefa.
+  try { backupDoEstado(); } catch (e) { falha(`backup do estado falhou: ${String(e.message).slice(0, 160)}`); }
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });
   const md = `# Conferência diária — ${hoje}\n\n**Resultado: ${falhas.length ? `${falhas.length} FALHA(S)` : 'tudo certo'}${avisos.length ? ` · ${avisos.length} aviso(s)` : ''}** (somente leitura: nada foi publicado, apagado nem alterado; freios intactos)\n${linhas.join('\n')}\n`;
   fs.writeFileSync(path.join(pasta, `${hoje}.md`), md, 'utf8');

@@ -19,24 +19,25 @@ $vbs = Join-Path $PSScriptRoot 'rodar-oculto.vbs'
 # nome, argumentos do node, gatilho(s), limite de execução (horas)
 # Tarefas com trava diária (travaDiaria.js) rodam uma vez por dia com sucesso. Blob mensal tem trava própria; LinkedIn tem a sua (agendarDiario.js).
 $tarefas = @(
-  @{ Nome = 'DrSM-Rotina-Semanal';      Args = 'scripts/travaDiaria.js DrSM-Rotina-Semanal scripts/rotinaSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 07:30); Horas = 2 },
-  # Narração: 22:00 nos dias normais; quintas e domingos 14:00 (plantão)
-  @{ Nome = 'DrSM-Narracao-Noite';      Args = 'scripts/travaDiaria.js DrSM-Narracao-Noite scripts/cicloNarracao.js --lotes=4'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Friday,Saturday -At 22:00), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Thursday,Sunday -At 14:00)); Horas = 6 },
-  # YouTube gera-mídia: 23:30 nos dias normais; quintas e domingos 15:30 (plantão)
-  @{ Nome = 'DrSM-YouTube-Gera-Midia';  Args = 'scripts/travaDiaria.js DrSM-YouTube-Gera-Midia scripts/youtube/montarFila.js --aplicar --gerar --limite=25'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Friday,Saturday -At 23:30), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Thursday,Sunday -At 15:30)); Horas = 5 },
-  @{ Nome = 'DrSM-YouTube-Publica';     Args = 'scripts/travaDiaria.js DrSM-YouTube-Publica scripts/youtube/publicarYoutube.js'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Friday,Saturday -At 20:15), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Thursday,Sunday -At 17:15)); Horas = 1 },
-  # Conferência diária das redes (18/10/2026): SOMENTE LEITURA, 09:30 de Salvador; grava relatorios\conferencias\AAAA-MM-DD.md e, se falhar, o alerta no topo do ESTADO-GERAL.md
-  @{ Nome = 'DrSM-Conferencia-Diaria';  Args = 'scripts/travaDiaria.js DrSM-Conferencia-Diaria scripts/conferencias/conferenciaDiaria.js'; Gatilho = (New-ScheduledTaskTrigger -Daily -At 09:30); Horas = 1 },
+  @{ Nome = 'DrSM-Rotina-Semanal';      Args = 'scripts/travaDiaria.js DrSM-Rotina-Semanal scripts/rotinaSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At 18:30); Horas = 2 },
+  # Narração (ajuste 25/10/2026, medido nos logs: ciclo de 1 a 4 min): seg a sex 17:35; sábado 20:30; domingo 09:30.
+  @{ Nome = 'DrSM-Narracao-Noite';      Args = 'scripts/travaDiaria.js DrSM-Narracao-Noite scripts/cicloNarracao.js --lotes=4'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At 17:35), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Saturday -At 20:30), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 09:30)); Horas = 6 },
+  # Gera-mídia (ajuste 25/10/2026): depois da narração. Seg a sex 19:45; domingo 10:00. --limite=10: pior caso p90 de 307 s por item = ~51 min.
+  @{ Nome = 'DrSM-YouTube-Gera-Midia';  Args = 'scripts/travaDiaria.js DrSM-YouTube-Gera-Midia scripts/youtube/montarFila.js --aplicar --gerar --limite=10'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At 19:45), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 10:00)); Horas = 5 },
+  # YouTube publica (ajuste 25/10/2026): seg a sex e domingo 21:15 (margem de 20 min após o pior caso da gera-mídia); sábado 20:45
+  @{ Nome = 'DrSM-YouTube-Publica';     Args = 'scripts/travaDiaria.js DrSM-YouTube-Publica scripts/youtube/publicarYoutube.js'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday,Sunday -At 21:15), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Saturday -At 20:45)); Horas = 1 },
+  # Conferência diária das redes: SOMENTE LEITURA. Seg a sex 18:15; sábado 21:00; domingo 09:00 (correção 25/10/2026). Grava relatorios\conferencias\AAAA-MM-DD.md e, se falhar, o alerta no topo do ESTADO-GERAL.md
+  @{ Nome = 'DrSM-Conferencia-Diaria';  Args = 'scripts/travaDiaria.js DrSM-Conferencia-Diaria scripts/conferencias/conferenciaDiaria.js'; Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At 18:15), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Saturday -At 21:00), (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 09:00)); Horas = 1 },
   @{ Nome = 'DrSM-Conferencia-19-10';   Args = 'scripts/travaDiaria.js DrSM-Conferencia-19-10 scripts/conferirPosRenovacao.js'; Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-19 19:30'); Horas = 1 },
   # Lembrete MANUAL do LinkedIn DESATIVADO (19/10/2026): o agendamento agora é automático. Mantido como opção comentada.
   # @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
   @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/travaDiaria.js DrSM-Conferencia-26-10 scripts/conferirPrimeiroPost.js'; Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 },
-  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Criada DESATIVADA: a ativação é do Dr. Antônio.
+  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00; só grupos c/d, com a trava de blob-rotina-mensal.js. Ativada pelo Dr. Antônio em 26/10/2026: NÃO nasce desativada (recriar a tarefa não pode desligá-la).
   # Agendamento diário do LinkedIn (autorizado em 18/10/2026, CLAUDE.md): 11:00, sessão do usuário (precisa do Chrome com o perfil logado), uma execução por dia (scripts/linkedin/agendarDiario.js). Desligar: npm run linkedin:pausar
   @{ Nome = 'DrSM-LinkedIn-Agendar';    Args = 'scripts/linkedin/agendarDiario.js';                 Gatilho = (New-ScheduledTaskTrigger -Daily -At 11:00); Horas = 1; Interativa = $true; NascerDesativada = $true },
   # PR semanal (19/10/2026): sexta 11:00, SÓ PREPARA (scripts/prSemanal.js: portão + relatorios\PR-SEMANAL.md; sem push, PR ou merge). Criada DESATIVADA.
   @{ Nome = 'DrSM-PR-Semanal';          Args = 'scripts/travaDiaria.js DrSM-PR-Semanal scripts/prSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Friday -At 11:00); Horas = 1; NascerDesativada = $true },
-  @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true; NascerDesativada = $true }
+  @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true; NascerDesativada = $false }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
 
@@ -48,7 +49,11 @@ if (-not $Remover -and -not $So -and -not $Simular) {
 
 # Estado atual da tarefa (só leitura) + decisão do agendadorEstado.js. Vazio = falha: a tarefa não é mexida.
 function Decidir($t) {
-  $atual = Get-ScheduledTask -TaskName $t.Nome -ErrorAction SilentlyContinue
+  # Só "não encontrada" conta como tarefa nova. Qualquer outro erro (ex.: serviço do Agendador ocupado) não pode virar
+  # "criar": antes, um erro passageiro recriava a tarefa como desativada. Nesse caso a tarefa não é mexida.
+  $atual = $null
+  try { $atual = Get-ScheduledTask -TaskName $t.Nome -ErrorAction Stop }
+  catch { if ("$_" -notmatch 'MSFT_ScheduledTask.*(encontrad|found)') { return '' } }
   $existe = [int]([bool]$atual)
   $ativa = [int]([bool]$atual -and $atual.State -ne 'Disabled')
   $nascer = [int]([bool]$t.NascerDesativada)

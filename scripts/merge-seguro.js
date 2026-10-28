@@ -10,6 +10,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { planejarTrocaBranch, worktreeDoBranch } = require('./lib/trocaBranch');
+const { verificarAntesDaTroca } = require('./lib/colisoes');
+const { listaProtegida, protegerEstado, verificarEstado } = require('./lib/protecaoEstado');
+const { LISTA: LISTA_BACKUP } = require('./backupEstado');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -30,15 +33,43 @@ function sair(msg, cod = 1) {
 }
 
 (async () => {
-  const v = gh('pr', 'view', pr, '--json', 'state,headRefName,baseRefName,mergeable,title,isDraft');
+  const v = gh('pr', 'view', pr, '--json', 'state,headRefName,baseRefName,mergeable,title,isDraft,files');
   if (v.status !== 0) sair(`não consegui ler o PR #${pr}: ${v.stderr.trim()}`);
   const info = JSON.parse(v.stdout);
   if (info.state !== 'OPEN') sair(`PR #${pr} está ${info.state}.`);
   if (info.isDraft) sair(`PR #${pr} é rascunho.`);
   if (info.mergeable === 'CONFLICTING') sair(`PR #${pr} tem conflitos.`);
   console.log(`PR #${pr}: ${info.title} (${info.headRefName} → ${info.baseRefName})`);
+  // Regra de 28/10/2026: sem a linha PRONTO, não há merge. Remove sozinho o worktree do branch se estiver limpo e enviado.
+  const pronto = spawnSync(process.execPath, [path.join(RAIZ, 'scripts', 'prontoParaMerge.js'), pr, `--pasta=${RAIZ}`], { cwd: RAIZ, encoding: 'utf8' });
+  process.stdout.write(pronto.stdout || '');
+  if (pronto.status !== 0 || !/^PRONTO$/m.test(pronto.stdout || '')) sair('o PR não está PRONTO (motivos acima). Nada foi trocado nem mesclado.');
 
   origem = git('branch', '--show-current').stdout.trim();
+  // pasta principal sempre na main (ordem de 27/10/2026): aviso se estiver em outro branch
+  if (origem !== 'main') console.log(`AVISO: a pasta principal está em ${origem}, não na main. Regra: a pasta principal fica sempre na main.`);
+  // Antes de trocar de branch (ordem de 27/10/2026): para se houver arquivo rastreado alterado na pasta principal,
+  // ou arquivo não rastreado que o PR também adiciona. Não troca, não copia, não apaga: só explica o que fazer.
+  const linhas = (texto) => texto.split('\n').map((l) => l.trim()).filter(Boolean);
+  const pre = verificarAntesDaTroca({
+    rastreadosAlterados: linhas(git('diff', '--name-only').stdout),
+    naoRastreadosLocais: linhas(git('ls-files', '--others', '--exclude-standard').stdout),
+    arquivosDoPr: (info.files || []).map((f) => f.path),
+  });
+  if (!pre.ok) {
+    console.error('\nCHECAGEM ANTES DA TROCA: PARADO, nada foi trocado nem movido.');
+    for (const b of pre.bloqueios) console.error(`- ${b.arquivo}: ${b.motivo}`);
+    sair('resolva os itens acima e rode de novo.');
+  }
+  console.log('Checagem antes da troca: sem bloqueios.');
+  if (process.argv.includes('--checar')) process.exit(0);
+  // Proteção dos arquivos de estado (ordem de 28/10/2026): cópia em .tmp/ ANTES de trocar de branch.
+  let protecao;
+  try {
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 13).replace('T', '-');
+    protecao = protegerEstado({ raiz: RAIZ, lista: listaProtegida(LISTA_BACKUP), destino: path.join(RAIZ, '.tmp', `estado-${stamp}`) });
+    console.log(`Estado protegido: ${Object.keys(protecao.manifesto).length} arquivo(s) copiados para ${path.relative(RAIZ, protecao.destino)}.`);
+  } catch (e) { sair(`não consegui proteger os arquivos de estado: ${e.message}`); }
   git('fetch', 'origin', info.baseRefName, info.headRefName);
   // Decide antes de trocar: nunca força, nunca apaga commit (ver scripts/lib/trocaBranch.js).
   const destino = info.headRefName;
@@ -116,5 +147,12 @@ function sair(msg, cod = 1) {
   ].join('\n'), 'utf8');
   console.log(`\nMERGE OK · deploy: ${deploy} · site HTTP ${http} · rollback gravado em ${path.relative(RAIZ, arq)}`);
   if (origem && origem !== info.headRefName) git('switch', origem);
+  // Depois do merge e da volta para a main: atualiza a main (ff-only) e confere o estado protegido (restaura o que sumiu).
+  if (origem === 'main') {
+    git('fetch', 'origin', 'main');
+    const ff = git('merge', '--ff-only', 'origin/main');
+    if (ff.status !== 0) console.log(`AVISO: não consegui atualizar a main (ff-only): ${(ff.stderr || '').trim()}`);
+  }
+  if (protecao) for (const linha of verificarEstado({ raiz: RAIZ, manifesto: protecao.manifesto, destino: protecao.destino })) console.log(linha);
   process.exit(deploy === 'success' && http === '200' ? 0 : 3);
 })();

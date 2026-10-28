@@ -34,8 +34,6 @@ CONTEUDO_INSTAGRAM/publicados/
 # Trilhas licenciadas: não redistribuir (repositório público)
 assets/audio/*.mp3
 
-# Bases da regressão visual (por sistema, ~11 MB): geradas localmente por npm run test:visual
-tests/e2e/*-snapshots/
 
 # Saída de testes locais (ex.: bot:video-carrossel --saida=scratchpad)
 scratchpad/
@@ -132,3 +130,10 @@ relatorios/ESTADO-GERAL.md
 relatorios/PROMPT-ATUAL.md
 # Amostras de voz geradas localmente (não versionar áudio)
 relatorios/voz-amostras/*.mp3
+
+# Estado que a automação escreve (fora do Git desde 28/10/2026; backup por scripts/backupEstado.js)
+relatorios/PENDENTES.md
+relatorios/AUTORIZACOES.md
+relatorios/linkedin/FILA-MANUAL.md
+relatorios/tarefas-estado.md
+relatorios/linkedin/fila.json

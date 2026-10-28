@@ -24,6 +24,8 @@ export const metadata = {
   },
   description:
     "Ferramentas clínicas do Dr. Antônio Felipe para APS, Pronto Atendimento Psiquiátrico, Saúde Ocupacional e Escola.",
+  // Ambiente de teste interno (Opção A, 23/10/2026): fora do índice do Google.
+  robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
 };
 
 export default function RootLayout({ children }) {
