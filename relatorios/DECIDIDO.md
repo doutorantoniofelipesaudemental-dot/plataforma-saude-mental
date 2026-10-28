@@ -26,3 +26,18 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Horários do #159.
 - Migração do `vercel.json`.
 - Limpeza das worktrees restantes (`DRS-cand`, `DRS-pr77`, `DRS-deploy-main`, `DRS-manut-20261026`, `DRS-post-check`, `DRS-promocao`, `DRS-registro`, `DRS-fix-manut`).
+
+## Continuação (27/10/2026, 19h, ordem única)
+- **Tarefas do Windows:** nunca desativar uma tarefa que o Dr. Antônio ativou. Antes de mexer em qualquer tarefa `DrSM-*`, conferir `relatorios/DECIDIDO.md` e o topo de `relatorios/ESTADO-GERAL.md`.
+- **Blob (`DrSM-Blob-Rotina-Mensal`):** o Dr. reativa como administrador. Confirmar pelo log de amanhã (28/10). Quem desativou em 27/10 foi o Claude Code, por engano (ver ESTADO-GERAL).
+- **LinkedIn (`DrSM-LinkedIn-Agendar`):** reativar só depois do merge do #167. O #167 recebe o registro obrigatório de desativação; a conferência diária passa a mostrar o `LastTaskResult` com a interpretação do código.
+- **YouTube, escopos:** `youtube.force-ssl` é aceito por `videos.insert`, `thumbnails.set`, `playlists.insert`, `playlistItems.insert` e `captions.insert`. Para `playlists.list` a página não confirma; o teste de leitura confirma (ver `relatorios/youtube/AUDITORIA-API-RESPOSTAS.md`).
+- **YouTube, rodar de novo:** o Dr. roda `npm run youtube:autorizar` e `npm run youtube:teste-playlists` com a pasta na `main`.
+- **Opção A (domínio único):** os 24 textos ficam no site oficial. Não é a regra a/b do Blob.
+- **Ordem de merges (14 PRs):** terça: 172 → 173 → 159 → 160 → 161 → 162 → 163. Quarta: 164 → 165 → 166 → 167 → 168 → 169 → 156. Um por vez, com `npm run merge-seguro -- N`. Depois de cada merge, atualizar o próximo se tiver conflito, um portão por vez.
+- **Estado perdido e recuperado:** `ESTADO-GERAL.md` e `PROMPT-ATUAL.md` nunca foram rastreados pelo Git. A cópia mais recente deles era de 22/10. Ver o aviso no topo de cada arquivo. Antes de trocar de branch: `npm run estado:guardar`.
+
+## Alerta de custo da Vercel (27/10/2026, 22h30, ordem única)
+- **Alerta de custo da Vercel = `billedCost` do ciclo (cobrança real) acima de US$ 0,50**, mais o crédito do painel informado manualmente (`creditoPainel`). Acima de 70% do crédito de US$ 20 (US$ 14), alerta.
+- **`effectiveCost` é só informativo** (tendência por serviço). Ele soma o uso coberto pelas franquias do Pro, que não consome o crédito de US$ 20. Por isso deu US$ 23,57 (117,9%) enquanto o painel mostra US$ 4,19.
+- O valor do painel ("crédito incluído usado") a API não mostra. É atualizado à mão em `creditoPainel`, com a data da leitura (hoje: US$ 4,19 de US$ 20,00, em 26/10).
