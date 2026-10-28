@@ -41,3 +41,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Alerta de custo da Vercel = `billedCost` do ciclo (cobrança real) acima de US$ 0,50**, mais o crédito do painel informado manualmente (`creditoPainel`). Acima de 70% do crédito de US$ 20 (US$ 14), alerta.
 - **`effectiveCost` é só informativo** (tendência por serviço). Ele soma o uso coberto pelas franquias do Pro, que não consome o crédito de US$ 20. Por isso deu US$ 23,57 (117,9%) enquanto o painel mostra US$ 4,19.
 - O valor do painel ("crédito incluído usado") a API não mostra. É atualizado à mão em `creditoPainel`, com a data da leitura (hoje: US$ 4,19 de US$ 20,00, em 26/10).
+
+## Estado fora do Git e alerta de custo (28/10/2026, ordem do Dr. Antônio)
+- **Arquivos que a automação escreve não ficam no Git:** PENDENTES.md, AUTORIZACOES.md, FILA-MANUAL.md, tarefas-estado.md e relatorios/linkedin/fila.json. Ficam no `.gitignore`; o backup é feito por `scripts/backupEstado.js`.
+- **Fila do LinkedIn:** o portão lê a fixture versionada `tests/fixtures/linkedin-fila.json`. A fila real só é lida pela conferência diária.
+- **Versionados (só mudam por PR):** CLAUDE.md, DECIDIDO.md, LICOES.md, documentos (AUDITORIA-API-RESPOSTAS.md, PASSO-A-PASSO-YOUTUBE.md) e configurações (validade.json).
+- **Alerta de custo da Vercel:** só o uso sob demanda conta (billedCost sem a assinatura). A linha "Pro" (US$ 20/mês), os assentos e as taxas fixas do plano ficam FORA do alerta. Alerta = uso sob demanda acima de US$ 0,50 no ciclo. Teste: a linha "Pro" sozinha não alerta.
