@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
 const db = require('../../backend/lib/db');
 const { estadoNarracao, precisaVinheta } = require('../../backend/lib/narracao');
 const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
+const { resultadoAlertaCusto } = require('./alertaCustoVercel');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const SITE = 'https://www.drantoniofelipemedico.com.br';
@@ -23,6 +24,20 @@ const falhas = [], avisos = [], linhas = [];
 const ok = (t) => linhas.push(`- ✔ ${t}`);
 const falha = (t) => { falhas.push(t); linhas.push(`- ✘ **${t}**`); };
 const aviso = (t) => { avisos.push(t); linhas.push(`- ⚠ ${t}`); };
+
+// Alerta de custo da Vercel (ordem de 28/10/2026). Trabalha numa cópia em .tmp/: o registro rastreado
+// (relatorios/vercel-credito.json) não é gravado pela conferência, para não sujar a pasta principal.
+function alertaCustoDoDia() {
+  const copia = path.join(RAIZ, '.tmp', 'vercel-credito-diario.json');
+  fs.mkdirSync(path.dirname(copia), { recursive: true });
+  fs.copyFileSync(path.join(RAIZ, 'relatorios/vercel-credito.json'), copia);
+  const { atualizarCredito } = require('../creditoVercel');
+  const r = atualizarCredito({ hoje, arquivo: copia });
+  const res = resultadoAlertaCusto(JSON.stringify(r));
+  if (res.nivel === 'falha') falha(res.texto);
+  else if (res.nivel === 'aviso') aviso(res.texto);
+  else ok('custo Vercel dentro do limite');
+}
 
 // Backup diário do estado que saiu do Git (scripts/backupEstado.js). Falha ou mais de 2 dias sem backup = alerta com ação.
 function backupDoEstado() {
@@ -163,8 +178,9 @@ function alertaNoEstadoGeral() {
 (async () => {
   await db.connect();
   const d = mongoose.connection.db;
-  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
-  backupDoEstado(); // gravação à parte, na mesma tarefa: a conferência em si segue só de leitura
+  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas, alertaCustoDoDia]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
+  // Backup do estado: passo isolado (falha vira alerta com ação; a conferência segue). Gravação à parte, na mesma tarefa.
+  try { backupDoEstado(); } catch (e) { falha(`backup do estado falhou: ${String(e.message).slice(0, 160)}`); }
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });
   const md = `# Conferência diária — ${hoje}\n\n**Resultado: ${falhas.length ? `${falhas.length} FALHA(S)` : 'tudo certo'}${avisos.length ? ` · ${avisos.length} aviso(s)` : ''}** (somente leitura: nada foi publicado, apagado nem alterado; freios intactos)\n${linhas.join('\n')}\n`;
   fs.writeFileSync(path.join(pasta, `${hoje}.md`), md, 'utf8');
