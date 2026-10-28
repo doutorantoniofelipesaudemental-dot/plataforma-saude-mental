@@ -15,6 +15,11 @@ test('"Dr." (como o Whisper escreve "Doutor") passa na fala; a forma escrita é 
   assert.deepEqual(checarCreditoFalado(['', 'Conteúdo do portal de saúde mental Dr. Antônio Felipe Garabito.'], true), []);
 });
 
+test('transcrição com "do Dr." no meio (caso real do Short cuidador, 28/10) passa; sem Garabito não', () => {
+  assert.deepEqual(checarCreditoFalado(['', 'conteúdo do portal de saúde mental do Dr. Antonio Felipe Garabito.'], true), []);
+  assert.equal(checarCreditoFalado(['', 'conteúdo do portal de saúde mental do Dr. Antonio Felipe.'], true).length, 1);
+});
+
 test('sem "Garabito" reprova', () => {
   assert.equal(checarCreditoFalado(['', 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe.'], true).length, 1);
 });

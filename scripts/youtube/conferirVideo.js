@@ -19,15 +19,15 @@ const REG_FINAL_LONGO = [100, 320, 1700, 760]; // região das 5 linhas da assina
 
 const sem = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 // Crédito falado (ordem de 28/10/2026): nome completo do Portal, com "Doutor". Sem "Garabito" reprova.
-// O Whisper transcreve "Doutor" como "Dr." (não dá para distinguir a fala): por isso "dr" vira "doutor" aqui,
-// e a forma escrita da fala fica garantida pelo teste de TEXTOS da vinheta (tests/unit/credito-falado.test.js).
-const CREDITO_FALADO = 'portal de saude mental doutor antonio felipe garabito';
+// O Whisper transcreve "Doutor" como "Dr." ou "do Dr." (variação da transcrição, não da fala): por isso "dr" vira "doutor"
+// e um "do"/"de" antes dele é aceito. A forma escrita fica garantida pelo teste de TEXTOS da vinheta (tests/unit/credito-falado.test.js).
+const CREDITO_FALADO = /portal de saude mental (?:do |de )?doutor antonio felipe garabito/;
 const normFala = (s) => sem(s).replace(/\bdr\b/g, 'doutor').replace(/[^a-z0-9]+/g, ' ').trim();
 // Função pura: falhas do crédito falado na transcrição (fala = [início, fim]). Shorts só conferem o fim.
 function checarCreditoFalado(fala, ehShort) {
   const falhas = [];
-  if (!ehShort && !normFala(fala[0] || '').includes(CREDITO_FALADO)) falhas.push(`crédito falado ausente ou fora do padrão no início ("${String(fala[0] || '').slice(0, 70)}")`);
-  if (!normFala(fala[1] || '').includes(CREDITO_FALADO)) falhas.push(`crédito falado ausente ou fora do padrão no fim ("${String(fala[1] || '').slice(0, 70)}")`);
+  if (!ehShort && !CREDITO_FALADO.test(normFala(fala[0] || ''))) falhas.push(`crédito falado ausente ou fora do padrão no início ("${String(fala[0] || '').slice(0, 70)}")`);
+  if (!CREDITO_FALADO.test(normFala(fala[1] || ''))) falhas.push(`crédito falado ausente ou fora do padrão no fim ("${String(fala[1] || '').slice(0, 70)}")`);
   return falhas;
 }
 const ff = (args) => spawnSync('ffmpeg', ['-v', 'error', '-y', ...args], { encoding: 'utf8' });
