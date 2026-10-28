@@ -237,8 +237,17 @@ Toda aprovação do Dr. Antônio tem auditoria geral + tripla checagem (técnica
 - DEPOIS: a aprovação não publica nada sozinha. Antes de ir ao ar, tudo passa de novo: hash igual ao aprovado, página ou vídeo renderizado, schema, links e CFM. Se algo falhar depois da aprovação, não publica, avisa o Dr. Antônio e registra.
 Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/unit/revisao-medica.test.js).
 
+- **vercel.json (25/10/2026):** migração de builds para zero config só depois de LER as configurações do projeto na Vercel e testar um preview de controle; promoção de deploy só pelo Dr. Antônio.
+
+- **Root Directory (25/10/2026):** antes de qualquer deploy ou migração do vercel.json, conferir no painel da Vercel o Root Directory (drsaudemental: vazio = raiz); apps/plataforma-saude-mental faz o vercel.json da raiz ser ignorado.
+
 ## Validação de carrosséis na Graph API (regra permanente, 25/10/2026, ordem do Dr. Antônio)
 - Nunca validar em lote na hora anterior ao publicador (08:00) nem ao diagnóstico (20:00), America/Bahia.
 - Validação antecipada só em janela rolante de 7 dias e até 01/11, no máximo 7 posts por execução, com pausa de 60 s.
 - Código 4 da Meta (limite de aplicação): parar a execução e não tentar de novo no mesmo dia.
 - Implementado em `backend/lib/redesV2/travaValidacao.js` e usado por `backend/scripts/redes/testeCarrossel.js --validar`; testes em `tests/unit/trava-validacao.test.js`.
+
+## Arquivos rastreados e pasta principal (regra permanente, 27/10/2026, ordem do Dr. Antônio)
+- `LICOES.md`, `CLAUDE.md`, `DECIDIDO.md` e qualquer arquivo rastreado pelo Git NUNCA são editados direto na pasta principal: só em worktree curto, com PR.
+- Na pasta principal só se editam os arquivos de estado ignorados (`ESTADO-GERAL.md`, `PROMPT-ATUAL.md`, `PENDENTES.md`, filas e logs).
+- `merge-seguro` para antes de trocar de branch se houver arquivo rastreado alterado na pasta principal ou arquivo não rastreado que o PR também adiciona. Nada é copiado, movido ou apagado automaticamente.
