@@ -9,9 +9,30 @@
 const { spawnSync } = require('node:child_process');
 const { lerSincronia } = require('./lib/branchSincronizado');
 const { adquirirTrava, liberarTrava } = require('./trava-portao');
+const { decidirRemoverWorktree } = require('./lib/worktreeLimpo');
 const path = require('node:path');
 
 const RAIZ = path.resolve(__dirname, '..');
+
+// Regra de 28/10/2026: após publicar, remove os OUTROS worktrees do mesmo branch se estiverem limpos e iguais ao remoto.
+// O worktree em que este comando roda não é removido aqui (não dá para apagar a pasta em uso); o merge-seguro e o pronto-para-merge cuidam dele.
+function removerOutrosWorktrees(branch) {
+  const git = (...a) => spawnSync('git', a, { cwd: RAIZ, encoding: 'utf8' });
+  const norm = (p) => String(p).split(String.fromCharCode(92)).join('/').replace(/\/+$/, '').toLowerCase();
+  const blocos = (git('worktree', 'list', '--porcelain').stdout || '').split(/\n\s*\n/);
+  const remoto = (git('rev-parse', `origin/${branch}`).stdout || '').trim();
+  for (const bloco of blocos) {
+    const caminho = ((bloco.match(/^worktree (.+)$/m) || [])[1] || '').trim();
+    const ramo = (bloco.match(/^branch refs\/heads\/(.+)$/m) || [])[1];
+    if (!caminho || ramo !== branch || norm(caminho) === norm(RAIZ)) continue;
+    const sujo = (spawnSync('git', ['status', '--porcelain'], { cwd: caminho, encoding: 'utf8' }).stdout || '').trim() !== '';
+    const headLocal = (spawnSync('git', ['rev-parse', 'HEAD'], { cwd: caminho, encoding: 'utf8' }).stdout || '').trim();
+    const dec = decidirRemoverWorktree({ caminho, arvoreLimpa: !sujo, headLocal, headRemoto: remoto });
+    if (!dec.remover) { console.log(`Worktree mantido: ${dec.motivo}`); continue; }
+    const rm = git('worktree', 'remove', caminho);
+    console.log(rm.status === 0 ? dec.motivo : `Worktree não removido: ${(rm.stderr || '').trim()}`);
+  }
+}
 const ESPERA_MS = 5 * 60 * 1000;
 const MAXIMO_REPETICOES = 2;
 const REGEX_APROVADO = /PORTÃO APROVADO · relatório: (.+)$/m;
@@ -125,7 +146,10 @@ if (require.main === module) {
       esperar: (ms) => new Promise((ok) => setTimeout(ok, ms)),
       log: (m) => console.log(m),
     });
-    if (res.publicado) console.log(`Publicado: ${res.pr}`);
+    if (res.publicado) {
+      console.log(`Publicado: ${res.pr}`);
+      removerOutrosWorktrees(branch);
+    }
     else process.exitCode = 1;
   })().catch((e) => { console.error('ERRO:', e.message.slice(0, 300)); process.exitCode = 1; });
 }

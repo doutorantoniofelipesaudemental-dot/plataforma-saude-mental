@@ -67,6 +67,7 @@
     "marca:aplicar": "node scripts/aplicarMarca.js",
     "portao": "node scripts/portao.js",
     "merge-seguro": "node scripts/merge-seguro.js",
+    "pronto-para-merge": "node scripts/prontoParaMerge.js",
     "publicar-seguro": "node --env-file-if-exists=.env scripts/publicar-seguro.js",
     "linkedin:pre": "node scripts/linkedin/preAgendamento.js",
     "linkedin:agendar": "node scripts/linkedin/agendarDiario.js",
