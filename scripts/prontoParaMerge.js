@@ -10,7 +10,9 @@ const { spawnSync } = require('node:child_process');
 const { verificarAntesDaTroca } = require('./lib/colisoes');
 const { worktreeDoBranch } = require('./lib/trocaBranch');
 const { decidirRemoverWorktree } = require('./lib/worktreeLimpo');
-const { avaliarProntoParaMerge } = require('./lib/prontoMerge');
+const { avaliarProntoParaMerge, avisosArquivosIgnorados } = require('./lib/prontoMerge');
+const { listaProtegida } = require('./lib/protecaoEstado');
+const { LISTA: LISTA_BACKUP } = require('./backupEstado');
 
 const RAIZ = path.resolve(__dirname, '..');
 const run = (cmd, a, cwd = RAIZ) => spawnSync(cmd, a, { cwd, encoding: 'utf8' });
@@ -45,7 +47,12 @@ function verificarPronto(pr, pastaPrincipal = RAIZ) {
     naoRastreadosLocais: linhas(run('git', ['ls-files', '--others', '--exclude-standard'], pastaPrincipal).stdout),
     arquivosDoPr: (info.files || []).map((f) => f.path),
   });
-  return avaliarProntoParaMerge({ pr: info, headRemoto, pre, worktree });
+  // Aviso (não bloqueia): arquivo de estado que o branch rastreia e a main ignora (ordem de 28/10/2026).
+  const protegidos = listaProtegida(LISTA_BACKUP);
+  const rastreadosNoPr = linhas(git('ls-tree', '-r', '--name-only', `origin/${info.headRefName}`).stdout).filter((f) => protegidos.includes(f));
+  const ignoradosNaMain = rastreadosNoPr.filter((f) => run('git', ['check-ignore', '-q', f], pastaPrincipal).status === 0);
+  const avisos = avisosArquivosIgnorados({ rastreadosNoPr, ignoradosNaMain });
+  return avaliarProntoParaMerge({ pr: info, headRemoto, pre, worktree, avisos });
 }
 
 if (require.main === module) {
@@ -53,6 +60,7 @@ if (require.main === module) {
   if (!pr) { console.error('Uso: npm run pronto-para-merge -- <número do PR> [--pasta=<caminho da pasta principal>]'); process.exit(2); }
   const pasta = (process.argv.find((a) => a.startsWith('--pasta=')) || '').slice('--pasta='.length) || RAIZ;
   const r = verificarPronto(pr, pasta);
+  for (const a of r.avisos || []) console.log(a);
   if (r.pronto) {
     console.log(`PR #${pr}: checagens OK.`);
     console.log('PRONTO');
