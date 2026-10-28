@@ -10,6 +10,7 @@ const { spawnSync } = require('node:child_process');
 const { lerSincronia } = require('./lib/branchSincronizado');
 const { adquirirTrava, liberarTrava } = require('./trava-portao');
 const { decidirRemoverWorktree } = require('./lib/worktreeLimpo');
+const { prepararDependencias } = require('./lib/dependencias');
 const path = require('node:path');
 
 const RAIZ = path.resolve(__dirname, '..');
@@ -132,6 +133,10 @@ if (require.main === module) {
     if (trava.aviso) console.log(trava.aviso);
     process.on('exit', () => liberarTrava());
     console.log(`Branch: ${branch}. Rodando o portão antes de qualquer push.`);
+    // Regra de 28/10/2026: npm ci sozinho onde falta node_modules (worktree novo), antes do portão. Atalho não é seguido.
+    try {
+      for (const p of prepararDependencias(RAIZ)) console.log(`Dependências ${path.relative(RAIZ, p.dir) || '.'}: ${p.acao}${p.motivo ? ` (${p.motivo})` : ''}`);
+    } catch (e) { console.log(`NÃO APROVADO: ${e.message}`); process.exitCode = 1; return; }
     if (soPortao) {
       const r = rodarPortaoReal();
       const d = decidirPelaSaida(r.saida, r.codigo);
