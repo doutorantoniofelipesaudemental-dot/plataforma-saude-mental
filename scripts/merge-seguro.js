@@ -11,6 +11,8 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { planejarTrocaBranch, worktreeDoBranch } = require('./lib/trocaBranch');
 const { verificarAntesDaTroca } = require('./lib/colisoes');
+const { listaProtegida, protegerEstado, verificarEstado } = require('./lib/protecaoEstado');
+const { LISTA: LISTA_BACKUP } = require('./backupEstado');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -61,6 +63,13 @@ function sair(msg, cod = 1) {
   }
   console.log('Checagem antes da troca: sem bloqueios.');
   if (process.argv.includes('--checar')) process.exit(0);
+  // Proteção dos arquivos de estado (ordem de 28/10/2026): cópia em .tmp/ ANTES de trocar de branch.
+  let protecao;
+  try {
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').slice(0, 13).replace('T', '-');
+    protecao = protegerEstado({ raiz: RAIZ, lista: listaProtegida(LISTA_BACKUP), destino: path.join(RAIZ, '.tmp', `estado-${stamp}`) });
+    console.log(`Estado protegido: ${Object.keys(protecao.manifesto).length} arquivo(s) copiados para ${path.relative(RAIZ, protecao.destino)}.`);
+  } catch (e) { sair(`não consegui proteger os arquivos de estado: ${e.message}`); }
   git('fetch', 'origin', info.baseRefName, info.headRefName);
   // Decide antes de trocar: nunca força, nunca apaga commit (ver scripts/lib/trocaBranch.js).
   const destino = info.headRefName;
@@ -138,5 +147,12 @@ function sair(msg, cod = 1) {
   ].join('\n'), 'utf8');
   console.log(`\nMERGE OK · deploy: ${deploy} · site HTTP ${http} · rollback gravado em ${path.relative(RAIZ, arq)}`);
   if (origem && origem !== info.headRefName) git('switch', origem);
+  // Depois do merge e da volta para a main: atualiza a main (ff-only) e confere o estado protegido (restaura o que sumiu).
+  if (origem === 'main') {
+    git('fetch', 'origin', 'main');
+    const ff = git('merge', '--ff-only', 'origin/main');
+    if (ff.status !== 0) console.log(`AVISO: não consegui atualizar a main (ff-only): ${(ff.stderr || '').trim()}`);
+  }
+  if (protecao) for (const linha of verificarEstado({ raiz: RAIZ, manifesto: protecao.manifesto, destino: protecao.destino })) console.log(linha);
   process.exit(deploy === 'success' && http === '200' ? 0 : 3);
 })();
