@@ -1,7 +1,9 @@
 /**
- * Alerta de crédito da Vercel (ordem de 26/10/2026, 23h): lê o custo efetivo do ciclo pela CLI oficial
- * (`vercel api /v1/billing/charges`, equipe do projeto) e avisa se passar de 70% do crédito antes do fim do ciclo.
- * Sem .env e sem token impresso. Se a CLI não conseguir ler (ex.: sem login, ou resposta em JSON Lines que ela não interpreta),
+ * Alerta de custo da Vercel (ordem de 27/10/2026, 22h30, decisão única).
+ * ALERTA = cobrança real do ciclo (`billedCost`, acima de US$ 0,50) OU crédito do painel informado à mão (`creditoPainel`, acima de 70% do incluído).
+ * `effectiveCost` é SÓ INFORMATIVO (tendência por serviço): inclui o uso coberto pelas franquias do Pro, que não consome o crédito de US$ 20.
+ * Lê pela CLI oficial (`vercel api /v1/billing/charges`, equipe do projeto). Sem .env e sem token impresso.
+ * Se a CLI não conseguir ler (ex.: sem login, ou resposta em JSON Lines que ela não interpreta),
  * NÃO falha: mantém o último valor gravado e alerta "atualizar manualmente".
  * Registro: relatorios/vercel-credito.json. Alerta: primeira linha do relatorios/RESUMO-DO-DIA.md.
  */
@@ -48,12 +50,15 @@ function somarJanelas(resultados) {
   return { efetivoUsd: +efetivo.toFixed(2), faturadoUsd: +faturado.toFixed(2), registros, contiguo, topServicos };
 }
 
-// Função pura: alerta se o uso passar de alertaPct% do limite, e só enquanto o ciclo não acabou.
-function avaliarCredito({ usadoUsd, limiteUsd, alertaPct, hoje, cicloFim }) {
-  const limiteAlertaUsd = +(limiteUsd * alertaPct / 100).toFixed(2);
-  const pct = +(usadoUsd / limiteUsd * 100).toFixed(1);
+// Função pura: alerta se há cobrança real acima do limite, ou se o crédito do painel passou de alertaPct% do incluído. Só enquanto o ciclo não acabou.
+function avaliarAlerta({ cobrancaUsd, limiteCobrancaUsd, creditoPainelUsd, incluidoUsd, alertaPct, hoje, cicloFim }) {
+  const motivos = [];
+  if (cobrancaUsd > limiteCobrancaUsd) motivos.push('cobrança sob demanda');
+  const limitePainelUsd = +(incluidoUsd * alertaPct / 100).toFixed(2);
+  const pctPainel = +(creditoPainelUsd / incluidoUsd * 100).toFixed(1);
+  if (creditoPainelUsd > limitePainelUsd) motivos.push('crédito do painel');
   const dentroDoCiclo = hoje < cicloFim;
-  return { alerta: dentroDoCiclo && usadoUsd > limiteAlertaUsd, pct, limiteAlertaUsd };
+  return { alerta: dentroDoCiclo && motivos.length > 0, motivos, pctPainel, limitePainelUsd };
 }
 
 // Tenta ler o ciclo pela CLI. Qualquer falha vira { ok: false, motivo } (nunca lança).
@@ -72,43 +77,50 @@ function lerRegistro(arquivo) {
   try { return JSON.parse(fs.readFileSync(arquivo, 'utf8')); } catch { return null; }
 }
 
-// Passo da rotina semanal. Atualiza o registro se conseguir ler; avisa para atualizar à mão se não conseguir.
+// Passo da rotina semanal. Atualiza a cobrança se conseguir ler; avisa para atualizar à mão se não conseguir.
+// O crédito do painel (creditoPainel) é sempre o informado à mão: a API não o mostra.
 function atualizarCredito({ hoje, arquivo = REGISTRO, resumo = RESUMO, executar } = {}) {
   const reg = lerRegistro(arquivo);
-  if (!reg) return { status: 'sem-registro', alerta: false, motivo: 'vercel-credito.json ausente' };
+  if (!reg || !reg.creditoPainel || typeof reg.cobrancaCicloUsd !== 'number') return { status: 'sem-registro', alerta: false, motivo: 'vercel-credito.json ausente ou incompleto' };
   const leitura = lerPelaCli({ inicio: reg.cicloInicio, fim: reg.cicloFim, executar });
-  let usado = reg.creditoUsadoUsd;
-  let fonte = reg.fonte;
-  let topServicos = reg.topServicos || [];
+  let novo = { ...reg };
   let status = 'manual';
   let motivo = 'atualizar manualmente (não foi possível ler pela CLI: ' + (leitura.ok ? '' : leitura.motivo) + ')';
   if (leitura.ok) {
     const soma = somarJanelas(leitura.resultados);
     if (soma.contiguo) {
-      usado = soma.efetivoUsd;
-      topServicos = soma.topServicos;
-      fonte = 'vercel api /v1/billing/charges (CLI), soma das janelas semanais';
+      novo = { ...novo, cobrancaCicloUsd: soma.faturadoUsd, custoEfetivoInformativoUsd: soma.efetivoUsd, topServicos: soma.topServicos, fonte: 'vercel api /v1/billing/charges (CLI), soma das janelas semanais' };
       status = 'lido';
       motivo = '';
-      reg.faturadoUsd = soma.faturadoUsd;
     } else {
       motivo = 'janelas com lacuna ou sobreposição: atualizar manualmente';
     }
   }
-  const aval = avaliarCredito({ usadoUsd: usado, limiteUsd: reg.creditoIncluidoUsd, alertaPct: reg.limiteAlertaPct, hoje, cicloFim: reg.cicloFim });
-  const novo = { ...reg, atualizadoEm: new Date().toISOString(), fonte, creditoUsadoUsd: usado, topServicos, ultimaLeitura: status, ultimaLeituraMotivo: motivo, pctUsado: aval.pct };
+  const aval = avaliarAlerta({
+    cobrancaUsd: novo.cobrancaCicloUsd,
+    limiteCobrancaUsd: novo.limiteCobrancaUsd,
+    creditoPainelUsd: novo.creditoPainel.usadoUsd,
+    incluidoUsd: novo.creditoPainel.incluidoUsd,
+    alertaPct: novo.limiteAlertaPct,
+    hoje,
+    cicloFim: novo.cicloFim,
+  });
+  novo = { ...novo, atualizadoEm: new Date().toISOString(), ultimaLeitura: status, ultimaLeituraMotivo: motivo, pctCreditoPainel: aval.pctPainel };
   fs.writeFileSync(arquivo, JSON.stringify(novo, null, 1) + '\n', 'utf8');
   if (aval.alerta || status === 'manual') {
+    const partes = [];
+    if (aval.motivos.includes('cobrança sob demanda')) partes.push(`cobrança sob demanda de US$ ${novo.cobrancaCicloUsd} no ciclo (acima de US$ ${novo.limiteCobrancaUsd})`);
+    if (aval.motivos.includes('crédito do painel')) partes.push(`crédito do painel em ${aval.pctPainel}% (US$ ${novo.creditoPainel.usadoUsd} de US$ ${novo.creditoPainel.incluidoUsd}, acima de ${novo.limiteAlertaPct}%)`);
     const linha = aval.alerta
-      ? `PRECISA DE VOCÊ: SIM — Vercel: crédito em ${aval.pct}% (US$ ${usado} de US$ ${reg.creditoIncluidoUsd}), acima de ${reg.limiteAlertaPct}% antes do fim do ciclo (${reg.cicloFim}). Maior gasto: ${topServicos.map((s) => `${s.servico} US$ ${s.efetivoUsd}`).join(', ') || 'sem dados'}.`
-      : `PRECISA DE VOCÊ: SIM — Vercel: ${motivo}. Último valor: US$ ${usado} (${reg.atualizadoEm ? 'registro de ' + reg.atualizadoEm.slice(0, 10) : 'sem data'}).`;
+      ? `PRECISA DE VOCÊ: SIM — Vercel: ${partes.join('; ')}. Fim do ciclo: ${novo.cicloFim}. Custo efetivo do ciclo (só informativo): US$ ${novo.custoEfetivoInformativoUsd ?? 'sem dados'}.`
+      : `PRECISA DE VOCÊ: SIM — Vercel: ${motivo}. Última cobrança registrada: US$ ${novo.cobrancaCicloUsd}.`;
     const atual = fs.existsSync(resumo) ? fs.readFileSync(resumo, 'utf8') : '';
     fs.writeFileSync(resumo, `${linha}\n${atual.replace(/^PRECISA DE VOCÊ: SIM — Vercel:.*\n?/, '')}`, 'utf8');
   }
-  return { status, alerta: aval.alerta, pct: aval.pct, usadoUsd: usado, motivo };
+  return { status, alerta: aval.alerta, motivos: aval.motivos, pctPainel: aval.pctPainel, cobrancaUsd: novo.cobrancaCicloUsd, motivo };
 }
 
-module.exports = { janelasSemanais, somarJanelas, avaliarCredito, lerPelaCli, atualizarCredito, TEAM_ID };
+module.exports = { janelasSemanais, somarJanelas, avaliarAlerta, lerPelaCli, atualizarCredito, TEAM_ID };
 
 if (require.main === module) {
   const r = atualizarCredito({ hoje: new Date().toISOString().slice(0, 10) });

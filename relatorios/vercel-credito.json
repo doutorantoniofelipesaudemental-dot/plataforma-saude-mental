@@ -4,11 +4,15 @@
  "plano": "Pro",
  "cicloInicio": "2026-10-16",
  "cicloFim": "2026-11-16",
- "creditoIncluidoUsd": 20,
- "creditoUsadoUsd": 23.57,
  "limiteAlertaPct": 70,
- "faturadoUsd": 11.16,
- "pctUsado": 117.9,
+ "limiteCobrancaUsd": 0.5,
+ "cobrancaCicloUsd": 11.16,
+ "custoEfetivoInformativoUsd": 23.57,
+ "creditoPainel": {
+  "usadoUsd": 4.19,
+  "incluidoUsd": 20,
+  "lidoEm": "2026-10-26"
+ },
  "topServicos": [
   {
    "servico": "Pro",
@@ -24,5 +28,5 @@
   }
  ],
  "ultimaLeitura": "conector",
- "ultimaLeituraMotivo": "ATENÇÃO: a API soma US$ 23,57 de custo efetivo; o painel informou US$ 4,19 usados. Conferir qual métrica o painel usa antes de confiar no alerta."
+ "ultimaLeituraMotivo": "Regra de 27/10/2026: alerta = cobrança real (billedCost) acima de US$ 0,50 ou crédito do painel acima de 70%. effectiveCost é só informativo."
 }
