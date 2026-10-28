@@ -31,3 +31,11 @@
 - Lição: ler o Root Directory do painel e comparar um deploy bom e um ruim ANTES de migrar o vercel.json. Migrar o formato não corrige um painel errado.
 - Limite: a API não expõe o histórico de mudanças do painel; a data exata da mudança não foi confirmada.
 - Reprodutor (25/10/2026): o código do #147, sem mudança, sai vazio na CLI 65.1.0 hoje. O código fica excluído; a causa é o ambiente (painel). Para reproduzir um commit já implantado, o Git integration não criou deploy; foi preciso um commit vazio sobre ele.
+- **Root Directory (25/10/2026):** declarado vazio pelo Dr. às 08:00 (Salvador), não confirmado pela API. O preview reprodutor (3ac645c) continuou vazio: o Root vazio não resolveu sozinho. Causa aberta entre painel não aplicado e CLI 65.1.0 ignorando builds (logs idênticos). Parado por resultado incerto.
+
+## 26/10/2026 (noite) — lições da ordem
+- Conferir sempre a fonte que o publicador usa (banco redes_v2), não arquivos locais. A pasta conteudo/redes-v2 de 15/10 não é a fonte.
+- A checagem automática aprovou sem a 3ª linha da assinatura: validar a presença das 3 linhas por leitura da imagem ou por hash do template.
+- Tarefas que gravam arquivos rastreados (ex.: relatorios/*) sujam a pasta principal e fazem a manutenção recusar rodar.
+- Código de saída 1 por achados (conferência com falha) vira "terminou com erro" no Windows. Proposta: gravar o alerta e sair com 0.
+- Data no Git Bash é UTC: para horário de Salvador usar PowerShell Get-Date com fuso.
