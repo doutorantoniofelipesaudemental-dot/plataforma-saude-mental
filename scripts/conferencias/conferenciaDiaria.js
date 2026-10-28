@@ -146,11 +146,13 @@ function outrasFilas() {
   else ok('pasta principal na main');
   // monitoramento das tarefas DrSM-* (ordem de 20/10/2026): leitura do último resultado; falha vira alerta com a correção
   for (const nome of ['DrSM-LinkedIn-Agendar', 'DrSM-Manutencao-Semanal']) {
-    const r = spawnSync('powershell', ['-NoProfile', '-Command', `(Get-ScheduledTaskInfo -TaskName '${nome}').LastTaskResult`], { encoding: 'utf8', timeout: 30000 });
-    const codigo = parseInt(String(r.stdout || '').trim(), 10);
+    const r = spawnSync('powershell', ['-NoProfile', '-Command', `$i = Get-ScheduledTaskInfo -TaskName '${nome}'; $t = Get-ScheduledTask -TaskName '${nome}'; "$($i.LastTaskResult)|$($t.State)"`], { encoding: 'utf8', timeout: 30000 });
+    const [res, estado] = String(r.stdout || '').trim().split('|');
+    const codigo = parseInt(res, 10);
     if (Number.isNaN(codigo)) { aviso(`tarefa ${nome}: resultado não lido (verificar o Agendador)`); continue; }
-    const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo });
-    if (a !== 'ok') falha(a.alerta);
+    const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo, estado: (estado || '').trim(), hoje });
+    if (a === 'ok') continue;
+    if (a.aviso) aviso(a.aviso); else falha(a.alerta);
   }
   const li = spawnSync(process.execPath, ['scripts/linkedin/filaManual.js', 'estado'], { cwd: RAIZ, encoding: 'utf8', timeout: 30000 });
   const linha = String(li.stdout).trim().split('\n').pop();
