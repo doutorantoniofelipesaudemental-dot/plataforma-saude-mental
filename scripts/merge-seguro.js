@@ -38,6 +38,10 @@ function sair(msg, cod = 1) {
   if (info.isDraft) sair(`PR #${pr} é rascunho.`);
   if (info.mergeable === 'CONFLICTING') sair(`PR #${pr} tem conflitos.`);
   console.log(`PR #${pr}: ${info.title} (${info.headRefName} → ${info.baseRefName})`);
+  // Regra de 28/10/2026: sem a linha PRONTO, não há merge. Remove sozinho o worktree do branch se estiver limpo e enviado.
+  const pronto = spawnSync(process.execPath, [path.join(RAIZ, 'scripts', 'prontoParaMerge.js'), pr, `--pasta=${RAIZ}`], { cwd: RAIZ, encoding: 'utf8' });
+  process.stdout.write(pronto.stdout || '');
+  if (pronto.status !== 0 || !/^PRONTO$/m.test(pronto.stdout || '')) sair('o PR não está PRONTO (motivos acima). Nada foi trocado nem mesclado.');
 
   origem = git('branch', '--show-current').stdout.trim();
   // pasta principal sempre na main (ordem de 27/10/2026): aviso se estiver em outro branch
