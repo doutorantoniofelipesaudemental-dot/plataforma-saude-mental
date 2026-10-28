@@ -7,10 +7,10 @@
 //   - contraste AAA: 7:1 para texto normal, 4.5:1 para texto grande
 //     (≥ 24 px, ou ≥ 18,66 px em negrito), contra o fundo efetivo;
 //   - regressão visual: captura do bloco da ferramenta comparada com a base em
-//     tests/e2e/visual-miniapps.spec.js-snapshots/ (atualizar de propósito com
-//     `npm run test:visual:atualizar`, nunca para "fazer passar"). As bases
-//     são por sistema (-win32) e ficam FORA do git (~11 MB); base ausente é
-//     gravada na primeira execução, sem acusar falha.
+//     tests/e2e/visual-miniapps.spec.js-snapshots/ (versionada no git; por sistema,
+//     sufixo -win32). Base ausente é FALHA (não é gravada em silêncio). Para
+//     atualizar de propósito: `npm run test:visual:atualizar` com
+//     MOTIVO_ATUALIZACAO_VISUAL preenchido (mín. 10 caracteres), nunca para "fazer passar".
 // Contador /ferramenta-uso interceptado: não polui o /admin.
 const fs = require('fs');
 const path = require('path');
@@ -143,18 +143,27 @@ for (const [aparelho, config] of Object.entries(APARELHOS)) {
           const nomeBase = `${raiz}-${estado}-${aparelho}.png`;
           const opcoes = { animations: 'disabled', caret: 'hide', scale: 'css', };
           const base = test.info().snapshotPath(nomeBase);
-          if (!fs.existsSync(base)) {
-            // Clone novo ou miniapp novo: grava a base e registra — não é regressão.
-            fs.mkdirSync(path.dirname(base), { recursive: true });
-            await bloco.screenshot({ ...opcoes, path: base });
-            test.info().annotations.push({ type: 'base visual criada', description: nomeBase });
-          } else {
-            const atual = await bloco.screenshot(opcoes);
-            if (test.info().config.updateSnapshots === 'all') { fs.writeFileSync(base, atual); continue; }
-            const r = await compararComTolerancia(atual, base);
-            if (!r.ok) fs.writeFileSync(test.info().outputPath(`${nomeBase}-actual.png`), atual);
-            expect.soft(r.ok, `${rotulo}: regressão visual — ${r.motivo}`).toBe(true);
+          const atual = await bloco.screenshot(opcoes);
+          if (test.info().config.updateSnapshots === 'all') {
+            // Atualização só com flag explícita e motivo registrado (ordem de 24/10/2026).
+            const motivo = (process.env.MOTIVO_ATUALIZACAO_VISUAL || '').trim();
+            expect.soft(motivo.length >= 10, 'atualizar bases exige MOTIVO_ATUALIZACAO_VISUAL (mín. 10 caracteres)').toBe(true);
+            if (motivo.length >= 10) {
+              fs.mkdirSync(path.dirname(base), { recursive: true });
+              fs.writeFileSync(base, atual);
+              test.info().annotations.push({ type: 'base visual atualizada', description: `${nomeBase}: ${motivo}` });
+            }
+            continue;
           }
+          if (!fs.existsSync(base)) {
+            // Base ausente é falha: nunca gravada em silêncio (o relatório traz a captura atual).
+            fs.writeFileSync(test.info().outputPath(`${nomeBase}-actual.png`), atual);
+            expect.soft(false, `${rotulo}: base visual ausente (${nomeBase})`).toBe(true);
+            continue;
+          }
+          const r = await compararComTolerancia(atual, base);
+          if (!r.ok) fs.writeFileSync(test.info().outputPath(`${nomeBase}-actual.png`), atual);
+          expect.soft(r.ok, `${rotulo}: regressão visual — ${r.motivo}`).toBe(true);
         }
       }
     });
