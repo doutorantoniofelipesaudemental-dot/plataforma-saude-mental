@@ -7,6 +7,7 @@
  * Se persistir, registra "falha de infraestrutura" e NÃO abre PR.
  */
 const { spawnSync } = require('node:child_process');
+const { lerSincronia } = require('./lib/branchSincronizado');
 const { adquirirTrava, liberarTrava } = require('./trava-portao');
 const path = require('node:path');
 
@@ -101,6 +102,9 @@ if (require.main === module) {
   (async () => {
     const soPortao = process.argv.includes('--so-portao');
     const branch = branchAtual();
+    // Lição de 23/10/2026: local e remoto no mesmo commit antes de qualquer portão (evita aprovar código velho).
+    const sincronia = lerSincronia(RAIZ);
+    if (!sincronia.ok) { console.log(`NÃO APROVADO: ${sincronia.motivo}`); process.exitCode = 1; return; }
     // Um portão por vez (ordem de 23/10/2026): trava com PID e hora na pasta principal do repositório.
     const trava = adquirirTrava();
     if (!trava.ok) { console.log(`NÃO APROVADO: ${trava.motivo}. Espere o outro portão terminar.`); process.exitCode = 1; return; }

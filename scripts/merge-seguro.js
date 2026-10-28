@@ -10,6 +10,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { planejarTrocaBranch, worktreeDoBranch } = require('./lib/trocaBranch');
+const { verificarAntesDaTroca } = require('./lib/colisoes');
 
 const RAIZ = path.resolve(__dirname, '..');
 const SITE = 'https://www.drantoniofelipemedico.com.br/';
@@ -30,7 +31,7 @@ function sair(msg, cod = 1) {
 }
 
 (async () => {
-  const v = gh('pr', 'view', pr, '--json', 'state,headRefName,baseRefName,mergeable,title,isDraft');
+  const v = gh('pr', 'view', pr, '--json', 'state,headRefName,baseRefName,mergeable,title,isDraft,files');
   if (v.status !== 0) sair(`não consegui ler o PR #${pr}: ${v.stderr.trim()}`);
   const info = JSON.parse(v.stdout);
   if (info.state !== 'OPEN') sair(`PR #${pr} está ${info.state}.`);
@@ -39,6 +40,23 @@ function sair(msg, cod = 1) {
   console.log(`PR #${pr}: ${info.title} (${info.headRefName} → ${info.baseRefName})`);
 
   origem = git('branch', '--show-current').stdout.trim();
+  // pasta principal sempre na main (ordem de 27/10/2026): aviso se estiver em outro branch
+  if (origem !== 'main') console.log(`AVISO: a pasta principal está em ${origem}, não na main. Regra: a pasta principal fica sempre na main.`);
+  // Antes de trocar de branch (ordem de 27/10/2026): para se houver arquivo rastreado alterado na pasta principal,
+  // ou arquivo não rastreado que o PR também adiciona. Não troca, não copia, não apaga: só explica o que fazer.
+  const linhas = (texto) => texto.split('\n').map((l) => l.trim()).filter(Boolean);
+  const pre = verificarAntesDaTroca({
+    rastreadosAlterados: linhas(git('diff', '--name-only').stdout),
+    naoRastreadosLocais: linhas(git('ls-files', '--others', '--exclude-standard').stdout),
+    arquivosDoPr: (info.files || []).map((f) => f.path),
+  });
+  if (!pre.ok) {
+    console.error('\nCHECAGEM ANTES DA TROCA: PARADO, nada foi trocado nem movido.');
+    for (const b of pre.bloqueios) console.error(`- ${b.arquivo}: ${b.motivo}`);
+    sair('resolva os itens acima e rode de novo.');
+  }
+  console.log('Checagem antes da troca: sem bloqueios.');
+  if (process.argv.includes('--checar')) process.exit(0);
   git('fetch', 'origin', info.baseRefName, info.headRefName);
   // Decide antes de trocar: nunca força, nunca apaga commit (ver scripts/lib/trocaBranch.js).
   const destino = info.headRefName;

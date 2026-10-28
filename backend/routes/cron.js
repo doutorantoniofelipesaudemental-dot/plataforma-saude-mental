@@ -7,7 +7,6 @@ const { redesAtivas } = require('../lib/freioRedes');
 const { publicarDevidos } = require('../lib/redesV2/fila');
 const { gerarRelatorio } = require('../lib/redesV2/relatorio');
 const { log } = require('../lib/log');
-const { publicarDevidos: publicarLinkedin } = require('../lib/linkedinFila');
 
 const router = express.Router();
 
@@ -65,19 +64,6 @@ router.get('/publicar-redes-v2', exigirCron, exigirBanco, async (req, res) => {
   } catch (err) {
     log.erro('[redes-v2] erro inesperado:', err);
     res.status(500).json({ erro: 'Falha inesperada na publicação das redes.' });
-  }
-});
-
-/** GET /api/cron/publicar-linkedin — seg/qua/sex 19:30 (Salvador). 1 texto por execução, com freio próprio LINKEDIN_PUBLICACAO_ATIVA (ver backend/lib/linkedinFila.js). */
-router.get('/publicar-linkedin', exigirCron, exigirBanco, async (req, res) => {
-  try {
-    const { mongoose } = require('../lib/db');
-    const r = await publicarLinkedin({ db: mongoose.connection.db, simular: req.query.simular === '1' });
-    log.info('[linkedin]', JSON.stringify({ publicado: r.publicado, motivo: r.motivo, id: r.id }));
-    res.json(r);
-  } catch (err) {
-    log.erro('[linkedin] erro inesperado:', err);
-    res.status(500).json({ erro: 'Falha inesperada na publicação do LinkedIn.' });
   }
 });
 

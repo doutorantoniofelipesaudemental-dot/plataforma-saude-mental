@@ -122,6 +122,7 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 - Trava dupla: regras deny em `.claude/settings.json` + hook `.claude/hooks/guarda.js` (bloqueia merge direto, push da/para main, leitura do `.env`, mudança dos freios, DELETE nas redes, tarefas fora de `DrSM-*`).
 
 ### Regra de merge (16/10/2026)
+- **Sincronia antes do portão (23/10/2026):** `publicarBranch.js` e `portao.js` param se a branch local não estiver no mesmo commit de `origin/<mesmo nome>`. Depois de `git push origin HEAD:<branch>`, confirme com `git rev-parse HEAD` e `git rev-parse origin/<branch>`. Nunca rode portão numa branch desatualizada.
 - Merge na `main` só depois de auditoria com 0 falhas, build OK e 100% dos testes passando. Se o merge for bloqueado pelas permissões, NÃO contornar: deixar o PR pronto e escrever ao Dr. Antônio o comando exato.
 
 ### Ferramentas não permitidas (decisão de 15/10/2026)
@@ -239,3 +240,14 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 - **vercel.json (25/10/2026):** migração de builds para zero config só depois de LER as configurações do projeto na Vercel e testar um preview de controle; promoção de deploy só pelo Dr. Antônio.
 
 - **Root Directory (25/10/2026):** antes de qualquer deploy ou migração do vercel.json, conferir no painel da Vercel o Root Directory (drsaudemental: vazio = raiz); apps/plataforma-saude-mental faz o vercel.json da raiz ser ignorado.
+
+## Validação de carrosséis na Graph API (regra permanente, 25/10/2026, ordem do Dr. Antônio)
+- Nunca validar em lote na hora anterior ao publicador (08:00) nem ao diagnóstico (20:00), America/Bahia.
+- Validação antecipada só em janela rolante de 7 dias e até 01/11, no máximo 7 posts por execução, com pausa de 60 s.
+- Código 4 da Meta (limite de aplicação): parar a execução e não tentar de novo no mesmo dia.
+- Implementado em `backend/lib/redesV2/travaValidacao.js` e usado por `backend/scripts/redes/testeCarrossel.js --validar`; testes em `tests/unit/trava-validacao.test.js`.
+
+## Arquivos rastreados e pasta principal (regra permanente, 27/10/2026, ordem do Dr. Antônio)
+- `LICOES.md`, `CLAUDE.md`, `DECIDIDO.md` e qualquer arquivo rastreado pelo Git NUNCA são editados direto na pasta principal: só em worktree curto, com PR.
+- Na pasta principal só se editam os arquivos de estado ignorados (`ESTADO-GERAL.md`, `PROMPT-ATUAL.md`, `PENDENTES.md`, filas e logs).
+- `merge-seguro` para antes de trocar de branch se houver arquivo rastreado alterado na pasta principal ou arquivo não rastreado que o PR também adiciona. Nada é copiado, movido ou apagado automaticamente.

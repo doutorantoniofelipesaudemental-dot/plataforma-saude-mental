@@ -18,7 +18,8 @@ const { lerContagens, interpretarLote } = require('./travaDuplicidade');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const ESTADO = path.join(RAIZ, 'relatorios/linkedin/agendar-diario-estado.json');
-const MAX_POSTS = 3;
+const REGISTRO_DESATIVACOES = path.join(RAIZ, 'relatorios/linkedin/desativacoes.jsonl');
+const MAX_POSTS = 2;
 const INTERVALO_MS = 2 * 60e3;
 const TAREFA = 'DrSM-LinkedIn-Agendar';
 
@@ -67,6 +68,30 @@ function alertar(texto, hoje) {
   const linha = `PRECISA DE VOCÊ: SIM — LinkedIn: ${texto}`;
   const atual = fs.existsSync(resumo) ? fs.readFileSync(resumo, 'utf8') : '';
   fs.writeFileSync(resumo, `${linha}\n${atual.replace(/^PRECISA DE VOCÊ:.*\n?/, '')}`, 'utf8');
+}
+
+// Registro de toda desativação da tarefa (data, motivo, mensagem da tela e código de saída). Função pura, sem I/O.
+// A mensagem é cortada em 300 caracteres: basta para identificar a tela, sem guardar a saída inteira.
+function montarRegistroDesativacao({ data, motivo, mensagem, codigoSaida }) {
+  return {
+    registradoEm: new Date().toISOString(),
+    tarefa: TAREFA,
+    data,
+    motivo: String(motivo || 'sem motivo informado'),
+    mensagem: String(mensagem || '').replace(/\s+/g, ' ').trim().slice(0, 300),
+    codigoSaida: codigoSaida ?? null,
+  };
+}
+
+// Grava uma linha JSON no arquivo de registro. Nunca lança: devolve { gravado, motivo } para o alerta dizer o que aconteceu.
+function registrarDesativacao(registro, arquivo = REGISTRO_DESATIVACOES) {
+  try {
+    fs.mkdirSync(path.dirname(arquivo), { recursive: true });
+    fs.appendFileSync(arquivo, `${JSON.stringify(registro)}\n`, 'utf8');
+    return { gravado: true, motivo: '' };
+  } catch (e) {
+    return { gravado: false, motivo: String(e.message).slice(0, 120) };
+  }
 }
 
 function desativarTarefa() {
@@ -124,14 +149,20 @@ async function main() {
   try { depois = await lerContagens(mongoose); } catch (e) { depois = null; }
   const resultado = interpretarLote(saida, { antes, depois, esperados: alvo });
   if (!resultado.ok) {
-    if (c.desativar) desativarTarefa();
-    alertar(`lote parado: ${resultado.motivo}. Conferir o LinkedIn e o banco antes de reativar.`, hoje);
+    let registro = null;
+    if (c.desativar) {
+      // Registro ANTES de desativar (ordem de 26/10/2026): sem causa registrada, a tarefa não é desativada por este caminho.
+      registro = registrarDesativacao(montarRegistroDesativacao({ data: hoje, motivo: c.motivo, mensagem: saida, codigoSaida: r.status }));
+      desativarTarefa();
+    }
+    const nota = c.desativar ? ` Registro da desativação: ${registro.gravado ? 'gravado' : `NÃO gravado (${registro.motivo})`}.` : '';
+    alertar(`lote parado: ${resultado.motivo}. Conferir o LinkedIn e o banco antes de reativar.${nota}`, hoje);
     return gravarEstado({ ultimoDia: hoje, status: 'parado', motivo: resultado.motivo, agendados: resultado.agendados, desativadaAutomaticamente: c.desativar });
   }
   gravarEstado({ ultimoDia: hoje, status: 'concluido', agendados: resultado.agendados });
   console.log(`agendados hoje: ${resultado.agendados}`);
 }
 
-module.exports = { classificarSaida, jaRodouHoje, limitarPosts, MAX_POSTS, INTERVALO_MS };
+module.exports = { classificarSaida, jaRodouHoje, limitarPosts, montarRegistroDesativacao, registrarDesativacao, MAX_POSTS, INTERVALO_MS };
 
 if (require.main === module) main().catch((e) => { console.error('ERRO:', e.message); process.exit(1); }).finally(() => mongoose.disconnect());
