@@ -125,6 +125,10 @@ function outrasFilas() {
     const div = CF.divergencias(f.itens, CF.lerConferenciaDoDisco(RAIZ));
     if (div.length) falha(`YouTube: ${div.length} divergência(s) entre a fila e o conferidor (ex.: ${div[0].id}: ${div[0].motivo})`);
   } catch (e) { aviso(`YouTube: fila ilegível (${e.message.slice(0, 60)})`); }
+  // pasta principal sempre na main (ordem de 27/10/2026): fora da main vira aviso com a ação
+  const branchPrincipal = spawnSync('git', ['branch', '--show-current'], { cwd: RAIZ, encoding: 'utf8' }).stdout.trim();
+  if (branchPrincipal && branchPrincipal !== 'main') aviso(`pasta principal fora da main (está em ${branchPrincipal}): trocar para a main com a alteração guardada em stash`);
+  else ok('pasta principal na main');
   // monitoramento das tarefas DrSM-* (ordem de 20/10/2026): leitura do último resultado; falha vira alerta com a correção
   for (const nome of ['DrSM-LinkedIn-Agendar', 'DrSM-Manutencao-Semanal']) {
     const r = spawnSync('powershell', ['-NoProfile', '-Command', `(Get-ScheduledTaskInfo -TaskName '${nome}').LastTaskResult`], { encoding: 'utf8', timeout: 30000 });

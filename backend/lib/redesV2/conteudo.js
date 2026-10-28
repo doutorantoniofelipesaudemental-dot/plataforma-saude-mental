@@ -90,13 +90,15 @@ function referencias(html) {
   return [...html.slice(i).matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)].map((m) => textoPuro(m[1]).replace(/\s+/g, ' '));
 }
 
+// Espaço antes de pontuação e espaços duplos saem da referência (o PDF do autor traz "Psychol Aging ." e isso virava "Aging ,").
+const limparRef = (t) => t.replace(/\s+([,.;:])/g, '$1').replace(/\s{2,}/g, ' ').trim();
 function refResumida(ref) {
-  const limpa = ref.replace(/https?:\/\/\S+/g, '').replace(/\bdoi:\S+/gi, '').trim();
+  const limpa = limparRef(ref.replace(/https?:\/\/\S+/g, '').replace(/\bdoi:\S+/gi, ''));
   const partes = limpa.split('. ').filter(Boolean);
-  const autor = (partes[0] || '').split(',')[0].replace(/\bet al\.?/i, '').trim();
+  const autor = limparRef((partes[0] || '').split(',')[0].replace(/\bet al\.?/i, ''));
   const ano = (limpa.match(/\b(19|20)\d{2}\b/) || [''])[0];
-  const fonte = partes.find((p, k) => k >= 1 && /[A-Za-zÀ-ú]/.test(p) && p.length < 90) || '';
-  return [autor && `${autor} et al.`, fonte && fonte.replace(/\.$/, ''), ano].filter(Boolean).join(', ').slice(0, 150);
+  const fonte = limparRef(partes.find((p, k) => k >= 1 && /[A-Za-zÀ-ú]/.test(p) && p.length < 90) || '').replace(/\.$/, '');
+  return limparRef([autor && `${autor} et al.`, fonte, ano].filter(Boolean).join(', ')).slice(0, 150);
 }
 
 /**
@@ -165,4 +167,4 @@ function montarLegenda(plano, { limite = 1500 } = {}) {
   return legenda;
 }
 
-module.exports = { planejarPost, montarLegenda, textoPuro, palavras, encurtar, MAX_PALAVRAS_TELA, ORIENTACAO, LINHA_CRISE, LINHA_CREDITO };
+module.exports = { refResumida, planejarPost, montarLegenda, textoPuro, palavras, encurtar, MAX_PALAVRAS_TELA, ORIENTACAO, LINHA_CRISE, LINHA_CREDITO };
