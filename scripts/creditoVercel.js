@@ -29,25 +29,43 @@ function janelasSemanais(inicio, fim) {
   return janelas;
 }
 
+// Função pura: linhas do plano (assinatura Pro, assentos, taxas fixas). Não são cobrança sob demanda e ficam fora do alerta (ordem de 28/10/2026).
+function ehAssinatura(s) {
+  return s.serviceCategory === 'Subscription Licenses' || s.serviceName === 'Pro' || s.serviceName === 'Additional Team Seats';
+}
+
 // Função pura: soma as janelas (cada uma é o `result` da API). Confere se são contíguas, para não contar nada em dobro nem deixar lacuna.
 function somarJanelas(resultados) {
   const ordenadas = [...resultados].sort((x, y) => x.summary.periodStart.localeCompare(y.summary.periodStart));
   let efetivo = 0;
   let faturado = 0;
   let registros = 0;
+  let usoFaturado = 0;
   const porServico = {};
   for (const r of ordenadas) {
     efetivo += r.summary.totalEffectiveCost;
     faturado += r.summary.totalBilledCost;
     registros += r.summary.recordCount;
-    for (const s of r.byService || []) porServico[s.serviceName] = (porServico[s.serviceName] || 0) + s.effectiveCost;
+    for (const s of r.byService || []) {
+      porServico[s.serviceName] = (porServico[s.serviceName] || 0) + s.effectiveCost;
+      if (!ehAssinatura(s)) usoFaturado += s.billedCost || 0;
+    }
   }
   const contiguo = ordenadas.every((r, i) => i === 0 || r.summary.periodStart === ordenadas[i - 1].summary.periodEnd);
   const topServicos = Object.entries(porServico)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 3)
     .map(([servico, valor]) => ({ servico, efetivoUsd: +valor.toFixed(2) }));
-  return { efetivoUsd: +efetivo.toFixed(2), faturadoUsd: +faturado.toFixed(2), registros, contiguo, topServicos };
+  // usoFaturadoUsd é o que alerta (cobrança sob demanda, sem a assinatura do plano). assinaturaFaturadaUsd é só informativo.
+  return {
+    efetivoUsd: +efetivo.toFixed(2),
+    faturadoUsd: +faturado.toFixed(2),
+    usoFaturadoUsd: +usoFaturado.toFixed(2),
+    assinaturaFaturadaUsd: +(faturado - usoFaturado).toFixed(2),
+    registros,
+    contiguo,
+    topServicos,
+  };
 }
 
 // Função pura: alerta se há cobrança real acima do limite, ou se o crédito do painel passou de alertaPct% do incluído. Só enquanto o ciclo não acabou.
@@ -89,7 +107,7 @@ function atualizarCredito({ hoje, arquivo = REGISTRO, resumo = RESUMO, executar 
   if (leitura.ok) {
     const soma = somarJanelas(leitura.resultados);
     if (soma.contiguo) {
-      novo = { ...novo, cobrancaCicloUsd: soma.faturadoUsd, custoEfetivoInformativoUsd: soma.efetivoUsd, topServicos: soma.topServicos, fonte: 'vercel api /v1/billing/charges (CLI), soma das janelas semanais' };
+      novo = { ...novo, cobrancaCicloUsd: soma.usoFaturadoUsd, assinaturaCicloUsd: soma.assinaturaFaturadaUsd, custoEfetivoInformativoUsd: soma.efetivoUsd, topServicos: soma.topServicos, fonte: 'vercel api /v1/billing/charges (CLI), soma das janelas semanais' };
       status = 'lido';
       motivo = '';
     } else {

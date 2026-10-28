@@ -8,7 +8,7 @@ const c = require('../../scripts/creditoVercel');
 // Dados de EXEMPLO (não são os valores reais da conta).
 const janela = (ini, fim, efetivo, servicos, faturado = efetivo / 2) => ({
   summary: { periodStart: ini, periodEnd: fim, totalEffectiveCost: efetivo, totalBilledCost: faturado, recordCount: 10 },
-  byService: servicos.map(([serviceName, effectiveCost]) => ({ serviceName, effectiveCost })),
+  byService: servicos.map(([serviceName, effectiveCost]) => ({ serviceName, effectiveCost, billedCost: faturado / servicos.length })),
 });
 const exemplo = () => [
   janela('2026-10-16T07:00:00.000Z', '2026-10-22T07:00:00.000Z', 4, [['Pro', 2], ['Build CPU Minutes', 2]]),
@@ -52,6 +52,24 @@ test('somarJanelas detecta lacuna entre janelas', () => {
   const r = exemplo();
   r[1].summary.periodStart = '2026-10-23T07:00:00.000Z';
   assert.equal(c.somarJanelas(r).contiguo, false);
+});
+
+test('uso faturado exclui a assinatura: linha Pro sozinha não entra no alerta', () => {
+  const pro = [{ summary: { periodStart: '2026-10-16T07:00:00.000Z', periodEnd: '2026-10-22T07:00:00.000Z', totalEffectiveCost: 10.97, totalBilledCost: 10.97, recordCount: 2 }, byService: [{ serviceName: 'Pro', serviceCategory: 'Subscription Licenses', effectiveCost: 10.97, billedCost: 10.97 }] }];
+  const s = c.somarJanelas(pro);
+  assert.equal(s.usoFaturadoUsd, 0);
+  assert.equal(s.assinaturaFaturadaUsd, 10.97);
+  const r = c.avaliarAlerta({ cobrancaUsd: s.usoFaturadoUsd, limiteCobrancaUsd: 0.5, creditoPainelUsd: 4.19, incluidoUsd: 20, alertaPct: 70, hoje: '2026-10-27', cicloFim: '2026-11-16' });
+  assert.equal(r.alerta, false);
+});
+
+test('uso faturado soma só os serviços de uso (billedCost)', () => {
+  const mix = [{ summary: { periodStart: '2026-10-16T07:00:00.000Z', periodEnd: '2026-10-22T07:00:00.000Z', totalEffectiveCost: 11, totalBilledCost: 10.6, recordCount: 3 }, byService: [{ serviceName: 'Pro', serviceCategory: 'Subscription Licenses', effectiveCost: 10, billedCost: 10 }, { serviceName: 'Blob Data Transfer', serviceCategory: 'Vercel Delivery Network', effectiveCost: 1, billedCost: 0.6 }] }];
+  const s = c.somarJanelas(mix);
+  assert.equal(s.usoFaturadoUsd, 0.6);
+  assert.equal(s.assinaturaFaturadaUsd, 10);
+  const r = c.avaliarAlerta({ cobrancaUsd: s.usoFaturadoUsd, limiteCobrancaUsd: 0.5, creditoPainelUsd: 4.19, incluidoUsd: 20, alertaPct: 70, hoje: '2026-10-27', cicloFim: '2026-11-16' });
+  assert.equal(r.alerta, true);
 });
 
 test('billedCost zero não alerta (crédito do painel dentro do limite)', () => {
