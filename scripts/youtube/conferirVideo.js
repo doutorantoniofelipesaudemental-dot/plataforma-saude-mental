@@ -18,6 +18,18 @@ const VERSAO = 'v3';
 const REG_FINAL_LONGO = [100, 320, 1700, 760]; // região das 5 linhas da assinatura na tela final do vídeo longo
 
 const sem = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+// Crédito falado (ordem de 28/10/2026): nome completo do Portal, com "Doutor". Sem "Garabito" reprova.
+// O Whisper transcreve "Doutor" como "Dr." (não dá para distinguir a fala): por isso "dr" vira "doutor" aqui,
+// e a forma escrita da fala fica garantida pelo teste de TEXTOS da vinheta (tests/unit/credito-falado.test.js).
+const CREDITO_FALADO = 'portal de saude mental doutor antonio felipe garabito';
+const normFala = (s) => sem(s).replace(/\bdr\b/g, 'doutor').replace(/[^a-z0-9]+/g, ' ').trim();
+// Função pura: falhas do crédito falado na transcrição (fala = [início, fim]). Shorts só conferem o fim.
+function checarCreditoFalado(fala, ehShort) {
+  const falhas = [];
+  if (!ehShort && !normFala(fala[0] || '').includes(CREDITO_FALADO)) falhas.push(`crédito falado ausente ou fora do padrão no início ("${String(fala[0] || '').slice(0, 70)}")`);
+  if (!normFala(fala[1] || '').includes(CREDITO_FALADO)) falhas.push(`crédito falado ausente ou fora do padrão no fim ("${String(fala[1] || '').slice(0, 70)}")`);
+  return falhas;
+}
 const ff = (args) => spawnSync('ffmpeg', ['-v', 'error', '-y', ...args], { encoding: 'utf8' });
 // regiões (x0,y0,x1,y1) por orientação
 const REG = {
@@ -87,8 +99,7 @@ async function conferirVideo(dir, meta) {
   try { fala = JSON.parse(t.stdout.trim().split('\n').pop()); } catch { falhas.push('transcrição da vinheta falhou'); }
   // Shorts (até 60 s): só o crédito curto, no fim (decisão do gerador); vídeos longos: abertura e encerramento
   const ehShort = meta.tipo === 'short';
-  if (!ehShort && !/portal de saude mental/.test(sem(fala[0]))) falhas.push(`vinheta falada ausente no início ("${fala[0].slice(0, 70)}")`);
-  if (!/portal de saude mental/.test(sem(fala[1]))) falhas.push(`vinheta falada ausente no fim ("${fala[1].slice(0, 70)}")`);
+  falhas.push(...checarCreditoFalado(fala, ehShort));
   if (!ehShort) { // vídeo longo: assinatura falada curta (sem as 5 linhas: nada de pós-graduação nem "não especialista" na fala)
     const fim = sem(fala[1]);
     if (!/bahia|baia/.test(fim) || !/medicina de familia/.test(fim)) falhas.push(`assinatura falada curta ausente no fim ("${fala[1].slice(-90)}")`);
@@ -99,7 +110,7 @@ async function conferirVideo(dir, meta) {
   fs.writeFileSync(arqCache, JSON.stringify(res, null, 1));
   return res;
 }
-module.exports = { conferirVideo, assinaturaConferencia, statusPelaConferencia, VERSAO };
+module.exports = { conferirVideo, assinaturaConferencia, statusPelaConferencia, checarCreditoFalado, VERSAO };
 
 if (require.main === module) { // node scripts/youtube/conferirVideo.js <pasta-do-video>
   (async () => { const d = path.resolve(process.argv[2]); const meta = JSON.parse(fs.readFileSync(path.join(d, 'meta.json'), 'utf8')); fs.rmSync(path.join(d, 'conferencia.json'), { force: true }); console.log(JSON.stringify(await conferirVideo(d, meta), null, 1)); })();
