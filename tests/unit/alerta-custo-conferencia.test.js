@@ -14,9 +14,15 @@ test('alerta de cobrança vira falha com os motivos', () => {
   assert.match(r.texto, /cobrança sob demanda/);
 });
 
-test('leitura manual vira aviso, sem falha', () => {
-  const r = resultadoAlertaCusto('{"status":"manual","alerta":false}');
+test('leitura indisponível da API vira aviso, sem falha', () => {
+  const r = resultadoAlertaCusto('{"status":"indisponivel","alerta":false,"motivos":[]}');
   assert.equal(r.nivel, 'aviso');
+  assert.match(r.texto, /indisponível/);
+});
+
+test('alerta pelo crédito do painel continua falha, mesmo com leitura indisponível', () => {
+  const r = resultadoAlertaCusto('{"status":"indisponivel","alerta":true,"motivos":["crédito do painel"]}');
+  assert.equal(r.nivel, 'falha');
 });
 
 test('tudo certo não gera nada', () => {
