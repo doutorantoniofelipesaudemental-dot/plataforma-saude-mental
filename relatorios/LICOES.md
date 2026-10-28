@@ -39,3 +39,7 @@
 - Tarefas que gravam arquivos rastreados (ex.: relatorios/*) sujam a pasta principal e fazem a manutenção recusar rodar.
 - Código de saída 1 por achados (conferência com falha) vira "terminou com erro" no Windows. Proposta: gravar o alerta e sair com 0.
 - Data no Git Bash é UTC: para horário de Salvador usar PowerShell Get-Date com fuso.
+
+## Trocar de branch na pasta principal (27/10/2026)
+- Regra: trocar de branch apaga arquivo que era rastreado no branch de origem e é ignorado no destino. Antes de qualquer troca, rodar `npm run estado:guardar` (copia os arquivos de estado para `.tmp/estado-<data-hora>/`).
+- Verificado no mesmo dia: `ESTADO-GERAL.md` e `PROMPT-ATUAL.md` nunca estiveram no Git; não estavam no stash e a cópia mais recente deles era de 22/10. Por isso entraram na lista de backup (`scripts/backupEstado.js`).

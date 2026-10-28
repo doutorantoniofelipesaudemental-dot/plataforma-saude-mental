@@ -1,7 +1,7 @@
 # Fila manual do LinkedIn — perfil pessoal
 
 Perfil: https://www.linkedin.com/in/doutor-ant%C3%B4nio-felipe-70990b438
-Quando: segunda, quarta e sexta, 19:30 (Bahia), de 28/10/2026 a 29/01/2027. Total 43 · publicados à mão 0 · abertos 33 · atrasados 0.
+Quando: segunda, quarta e sexta, 19:30 (Bahia), de 28/10/2026 a 29/01/2027. Total 43 · publicados à mão 0 · abertos 20 · atrasados 0.
 No dia: `! npm run linkedin:hoje -- --copiar --abrir` (a tarefa `DrSM-LinkedIn-Lembrete` faz isso sozinha às 19:25).
 
 | Dia | Tipo | Título | Situação |
@@ -18,21 +18,21 @@ No dia: `! npm run linkedin:hoje -- --copiar --abrir` (a tarefa `DrSM-LinkedIn-L
 | qua 18/11 | texto | Como as referências dos textos são conferidas | 🗓 agendado no LinkedIn (2026-10-17) |
 | sex 20/11 | texto | Intoxicação exógena e agitação: diferenciando causas no PA | 🗓 agendado no LinkedIn (2026-10-17) |
 | seg 23/11 | carrossel PDF | NR-1 na prática clínica e na rotina de saúde | aberto (manual) |
-| qua 25/11 | texto | Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise | aberto (manual) |
-| sex 27/11 | texto | Matriciamento em saúde mental: como funciona na prática | aberto (manual) |
-| seg 30/11 | texto | Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico | aberto (manual) |
-| qua 02/12 | texto | Grupos terapêuticos na APS: uma ferramenta subutilizada | aberto (manual) |
-| sex 04/12 | texto | "Narrativa composta": o que significa | aberto (manual) |
-| seg 07/12 | texto | Tempo de tela: como abordar o tema na consulta com crianças e famílias | aberto (manual) |
+| qua 25/11 | texto | Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise | 🗓 agendado no LinkedIn (2026-10-20) |
+| sex 27/11 | texto | Matriciamento em saúde mental: como funciona na prática | 🗓 agendado no LinkedIn (2026-10-21) |
+| seg 30/11 | texto | Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico | 🗓 agendado no LinkedIn (2026-10-22) |
+| qua 02/12 | texto | Grupos terapêuticos na APS: uma ferramenta subutilizada | 🗓 agendado no LinkedIn (2026-10-22) |
+| sex 04/12 | texto | "Narrativa composta": o que significa | 🗓 agendado no LinkedIn (2026-10-22) |
+| seg 07/12 | texto | Tempo de tela: como abordar o tema na consulta com crianças e famílias | 🗓 agendado no LinkedIn (2026-10-23) |
 | qua 09/12 | carrossel PDF | Burnout na Atenção Primária: sinais e cuidado | aberto (manual) |
-| sex 11/12 | texto | Redes sociais: como abordar o tema na consulta com adolescentes | aberto (manual) |
-| seg 14/12 | texto | Alimentação infantil: como abordar na consulta sem reforçar ansiedade alimentar | aberto (manual) |
-| qua 16/12 | texto | Rotina infantil: como avaliar na consulta e identificar sinais de desorganização | aberto (manual) |
-| sex 18/12 | texto | Depressão e ansiedade: o impacto real na produtividade | aberto (manual) |
-| seg 21/12 | texto | Sobrecarga do cuidador: como identificar na consulta de rotina | aberto (manual) |
-| qua 23/12 | texto | Por que todo texto com conduta traz o aviso dos protocolos locais | aberto (manual) |
+| sex 11/12 | texto | Redes sociais: como abordar o tema na consulta com adolescentes | 🗓 agendado no LinkedIn (2026-10-23) |
+| seg 14/12 | texto | Alimentação infantil: como abordar na consulta sem reforçar ansiedade alimentar | 🗓 agendado no LinkedIn (2026-10-23) |
+| qua 16/12 | texto | Rotina infantil: como avaliar na consulta e identificar sinais de desorganização | 🗓 agendado no LinkedIn (2026-10-24) |
+| sex 18/12 | texto | Depressão e ansiedade: o impacto real na produtividade | 🗓 agendado no LinkedIn (2026-10-24) |
+| seg 21/12 | texto | Sobrecarga do cuidador: como identificar na consulta de rotina | 🗓 agendado no LinkedIn (2026-10-25) |
+| qua 23/12 | texto | Por que todo texto com conduta traz o aviso dos protocolos locais | 🗓 agendado no LinkedIn (2026-10-25) |
 | sex 25/12 | carrossel PDF | Burnout de equipe: o que muda na gestão | aberto (manual) |
-| seg 28/12 | texto | Afastamento por transtorno mental: o que a empresa precisa saber | aberto (manual) |
+| seg 28/12 | texto | Afastamento por transtorno mental: o que a empresa precisa saber | 🗓 agendado no LinkedIn (2026-10-25) |
 | qua 30/12 | texto | Saúde mental perinatal: rastreio na consulta de pré-natal e puerpério | aberto (manual) |
 | sex 01/01 | texto | Saúde mental do idoso: rastreio na consulta de rotina | aberto (manual) |
 | seg 04/01 | texto | Auditoria antes de publicar: o que olhamos | aberto (manual) |

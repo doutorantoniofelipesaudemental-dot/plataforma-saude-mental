@@ -23,3 +23,12 @@ Não autorizado nesta ordem (continuam só com o Dr. Antônio): push, PR, merge-
 - Hook de segredos: marcador "segredos:permitir" autorizado SOMENTE nas linhas do token fictício do teste atualizarToken (valor fictício confirmado, "FICTICIO"). Nenhuma outra exceção.
 - relatorios/youtube/fila.json: gerado pela tarefa do YouTube. Fica na lista de pré-existentes (arquivo rastreado, por isso não entra no .gitignore) e não entra em commit de outra tarefa.
 - Host da API: IGAA → graph.instagram.com (instagram_business_content_publish); demais tokens → graph.facebook.com (instagram_content_publish). Regra única em backend/lib/instagramHost.js. INSTAGRAM_GRAPH_HOST só vale quando coerente com o token.
+
+## 25/10/2026: painel do Root Directory (declaração escrita do Dr. Antônio, ordem de 25/10)
+- O Dr. declarou ter alterado o Root Directory do projeto drsaudemental para VAZIO em 25/10/2026 às 08:00 (Salvador). Valor anterior: apps/plataforma-saude-mental. Sem promoção nem rollback; produção segue no #147.
+- Verificação: a API não expõe o Root Directory (get_project não traz o campo). O relógio do sistema, nessa mesma sessão, marcava 03:17 de Salvador; a declaração não foi conferida contra ele. O `updatedAt` do projeto não mudou desde 24/10 às 21:52 (Salvador).
+- Preview reprodutor com Root declarado vazio (3ac645c, dpl_6MHQJ89sUedALBUQYsRwJpGVD7a4): saída vazia (sem aviso de builds, sem install, 29 ms). Resultado não confirma a alteração.
+
+## 25/10/2026: teste discriminador (autonomia para pendências possíveis)
+- Branch test/vercel-discriminador-20261025 (9f8f1fd, sem pasta apps/, vercel.json com builds na raiz), dpl_D3aWAcdWr95LMG2wqBPrr8euDeAJ: ERROR com "The specified Root Directory "apps/plataforma-saude-mental" does not exist".
+- Conclusão: o Root Directory do projeto drsaudemental continua apontando para apps/plataforma-saude-mental. A alteração declarada para vazio NÃO está aplicada no painel. A causa mais provável deixa de ser o código ou a CLI e passa a ser o painel.
