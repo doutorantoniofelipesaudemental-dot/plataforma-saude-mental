@@ -170,7 +170,6 @@ function passoNarracao() {
   const credito = require('./creditoVercel').atualizarCredito({ hoje: new Date().toISOString().slice(0, 10) });
   sec.push(`## Custo da Vercel\n- ${credito.status === 'lido' ? `cobrança sob demanda no ciclo US$ ${credito.cobrancaUsd}; crédito do painel em ${credito.pctPainel}%` : credito.motivo}`);
   if (credito.alerta) problemas.push(`custo da Vercel: ${credito.motivos.join(' e ')} (ver relatorios/vercel-credito.json)`);
-  if (credito.status === 'manual') problemas.push('crédito da Vercel: atualizar manualmente relatorios/vercel-credito.json');
   // 11. Tarefas do Windows: última execução, resultado e se o PC estava ligado (grava relatorios/tarefas-estado.md e o bloco do ESTADO-GERAL.md)
   let tarRes = null;
   try { const tar = require('./rotinaTarefas').gravar(); tarRes = tar; sec.push(`## 11. Tarefas do Windows\n${tar.md.replace(/^### .*\n/, '')}`); problemas.push(...tar.problemas); } catch (e) { sec.push(`## 11. Tarefas do Windows\n- não consegui conferir (${e.message.slice(0, 60)})`); }

@@ -99,17 +99,39 @@ test('depois do fim do ciclo não alerta, mesmo com cobrança', () => {
   assert.equal(r.alerta, false);
 });
 
-test('CLI sem resposta: não lança, mantém os valores e avisa para atualizar manualmente', () => {
+test('CLI sem resposta: não lança, mantém os valores e é só AVISO (leitura indisponível), sem linha de alerta', () => {
   const { dir, arq, res } = tmp();
   fs.writeFileSync(arq, JSON.stringify(registro()));
   const falsa = () => ({ status: 1, stdout: '' });
   const r = c.atualizarCredito({ hoje: '2026-10-26', arquivo: arq, resumo: res, executar: falsa });
-  assert.equal(r.status, 'manual');
-  assert.match(r.motivo, /atualizar manualmente/);
+  assert.equal(r.status, 'indisponivel');
+  assert.match(r.motivo, /leitura da cobrança indisponível/);
+  assert.equal(r.alerta, false);
   const reg = JSON.parse(fs.readFileSync(arq, 'utf8'));
   assert.equal(reg.creditoPainel.usadoUsd, 4.19);
   assert.equal(reg.cobrancaCicloUsd, 0);
-  assert.match(fs.readFileSync(res, 'utf8'), /^PRECISA DE VOCÊ: SIM — Vercel: atualizar manualmente/);
+  assert.equal(fs.existsSync(res), false);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('CLI sem resposta com cobrança antiga no registro: não alerta por cobrança (valor antigo não é cobrança real)', () => {
+  const { dir, arq, res } = tmp();
+  fs.writeFileSync(arq, JSON.stringify(registro({ cobrancaCicloUsd: 11.16 })));
+  const r = c.atualizarCredito({ hoje: '2026-10-28', arquivo: arq, resumo: res, executar: () => ({ status: 1, stdout: '' }) });
+  assert.equal(r.status, 'indisponivel');
+  assert.equal(r.alerta, false);
+  assert.deepEqual(r.motivos, []);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('CLI sem resposta, mas crédito do painel acima de 70%: alerta pelo painel (o alerta manual continua valendo)', () => {
+  const { dir, arq, res } = tmp();
+  fs.writeFileSync(arq, JSON.stringify(registro({ creditoPainel: { usadoUsd: 15, incluidoUsd: 20, lidoEm: '2026-10-28' } })));
+  const r = c.atualizarCredito({ hoje: '2026-10-28', arquivo: arq, resumo: res, executar: () => ({ status: 1, stdout: '' }) });
+  assert.equal(r.status, 'indisponivel');
+  assert.equal(r.alerta, true);
+  assert.deepEqual(r.motivos, ['crédito do painel']);
+  assert.match(fs.readFileSync(res, 'utf8'), /^PRECISA DE VOCÊ: SIM — Vercel: crédito do painel em 75%/);
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
