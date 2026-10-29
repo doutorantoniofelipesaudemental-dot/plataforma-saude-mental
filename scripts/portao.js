@@ -21,9 +21,15 @@ const soChecagem = args.includes('--so-checagem');
 // Lição de 28/10/2026: um portão por vez, em qualquer caminho (publicarBranch, merge-seguro, manutenção, direto).
 // Dois portões ao mesmo tempo brigavam pela porta do e2e. Quem chega com a trava ocupada espera (lib/portaoTrava).
 const { aguardarTravaSync, soltarTrava } = require('./lib/portaoTrava');
+const { encerrarTesteOrfao } = require('./lib/encerrarTesteOrfao');
 aguardarTravaSync({ aviso: (m) => console.log(`PORTÃO: ${m}`) });
-process.on('exit', () => soltarTrava());
-process.on('SIGINT', () => process.exit(130));
+// Lição de 28/10/2026: um portão interrompido deixava o servidor de teste (porta 3000) e navegadores vivos, e o
+// portão seguinte reaproveitava esse servidor e caía no meio. Com a trava na mão, limpa os órfãos antes de começar
+// e de novo ao sair, e só então solta a trava. Não há handler de SIGINT: ele mataria o processo sem disparar 'exit'
+// (a trava velha é tomada pelo próximo portão, pelo pid morto). Dentro do spawnSync um handler não rodaria a tempo.
+const limparTeste = () => { const mortos = encerrarTesteOrfao(); if (mortos.length) console.log(`PORTÃO: encerrados órfãos de teste (pids ${mortos.join(', ')})`); };
+limparTeste();
+process.on('exit', () => { limparTeste(); soltarTrava(); });
 // Lição de 23/10/2026: o portão só roda com a branch local igual ao remoto (senão aprova código velho).
 const sincronia = require('./lib/branchSincronizado').lerSincronia(RAIZ);
 if (!sincronia.ok) { console.log(`PORTÃO NÃO EXECUTADO: ${sincronia.motivo}`); process.exit(1); }
