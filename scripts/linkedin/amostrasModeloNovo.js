@@ -7,6 +7,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const F = require('./formatoPost');
+const { checarPost } = require('../../backend/lib/linkedinChecagem');
 
 const RAIZ = path.resolve(__dirname, '..', '..');
 // A fila manual (texto atual) fica na pasta principal, fora do Git: DRS_RAIZ_FILA aponta para ela.
@@ -24,14 +25,15 @@ const AMOSTRAS = [
     nome: 'Amostra 1: quando-encaminhar-aps (fila 02/11/2026)',
     pasta: '02-11-texto-i-2026-11-02',
     slug: 'quando-encaminhar-aps',
-    gancho: 'Dois erros opostos prejudicam o cuidado em saúde mental na Atenção Primária: encaminhar tudo, sobrecarregando a rede, ou não encaminhar quando é preciso.',
+    gancho: 'Cuidado colaborativo na Atenção Primária, com apoio especializado, está associado a melhora da depressão e da ansiedade.',
     dado: null,
     dadoMotivo: 'Sem número verificável nesta amostra; a linha é omitida.',
-    sinais: ['Encaminhar tudo, sem avaliar a própria capacidade de cuidado', 'Não encaminhar quando há sinal de urgência ou de risco'],
+    sinais: ['Depressão em adultos atendidos na atenção primária', 'Ansiedade em adultos atendidos na atenção primária'],
+    referenciaConferida: { pmid: '23076925', doi: '10.1002/14651858.CD006525.pub2' },
     ajuda: ['Resumo clínico claro, com hipótese diagnóstica e tratamentos já tentados', 'Motivo específico do encaminhamento, não apenas "avaliação psiquiátrica"', 'Comunicação direta com o serviço receptor'],
     fonteAjuda: 'seção "Como encaminhar bem" do artigo',
-    // Referência trocada: a da OMS (mhGAP) não tem PubMed nem DOI. Archer et al. 2012 conferido no PubMed (PMID 23076925, DOI 10.1002/14651858.CD006525.pub2).
-    // Ela sustenta o cuidado colaborativo na APS, não cada item de "Sinais": conferir antes de aprovar.
+    // Archer et al. 2012 (PMID 23076925, conferido). Sustenta: cuidado colaborativo associado a melhora de depressão e ansiedade na APS (conclusão do resumo).
+    // Os itens de "Sinais" descrevem a população do estudo, não diagnóstico; "O que ajuda" vem do próprio artigo (seção "Como encaminhar bem"), não do Archer.
     referencia: 'Archer J, Bower P, Gilbody S, et al. Collaborative care for depression and anxiety problems. Cochrane Database Syst Rev. 2012;10(10):CD006525.',
     mentoria: true,
     conduta: true,
@@ -43,6 +45,7 @@ const AMOSTRAS = [
     slug: 'jogos-online-consulta-medicos',
     gancho: 'Jogos online como Roblox, Fortnite e Free Fire são diferentes do "tempo de tela" genérico: envolvem conversa com desconhecidos, compras dentro do jogo e mecânicas que prendem a atenção.',
     // O número só entra se estiver no resumo do PubMed (dadoVerificado); a frase em português repete o número conferido.
+    referenciaConferida: { pmid: '30462669' },
     dado: DADO_ZENDLE ? 'Em uma pesquisa com 7.422 jogadores, os gastos em caixas de recompensa (loot boxes) apareceram ligados ao jogo problemático (fonte: resumo no PubMed, PMID 30462669).' : null,
     dadoMotivo: 'Número conferido no resumo do PubMed.',
     sinais: ['Conversa com desconhecidos dentro do jogo', 'Gastos dentro do jogo (moedas virtuais, skins)', 'Dificuldade de parar quando é hora de parar'],
@@ -64,6 +67,7 @@ const AMOSTRAS = [
     ajuda: ['Encaminhamento urgente, sem aguardar agendamento eletivo', 'Comunicar o serviço receptor com resumo clínico', 'Orientar a família sem minimizar e sem dramatizar'],
     fonteAjuda: 'seção "Conduta inicial" do artigo (APS e família)',
     // Penttilä et al. 2014 conferido no PubMed (PMID 25252316, DOI 10.1192/bjp.bp.113.127753). O resumo descreve correlação "pequena, mas consistente".
+    referenciaConferida: { pmid: '25252316', doi: '10.1192/bjp.bp.113.127753' },
     referencia: 'Penttilä M, Jääskeläinen E, Hirvonen N, et al. Duration of untreated psychosis as predictor of long-term outcome in schizophrenia: systematic review and meta-analysis. Br J Psychiatry. 2014;205(2):88-94.',
     mentoria: false,
     conduta: true,
@@ -83,7 +87,8 @@ function montarNovo(a) {
     linkArtigo: `https://www.drantoniofelipemedico.com.br/artigo/${a.slug}`, mentoria: a.mentoria,
     referencia: a.referencia, rodape, conduta: a.conduta,
   });
-  return { texto, falhas: F.validarPostNovo(texto, { mentoria: a.mentoria, hashtags: a.hashtags }) };
+  const checagem = checarPost({ tipo: 'texto', texto, referenciaConferida: a.referenciaConferida });
+  return { texto, falhas: F.validarPostNovo(texto, { mentoria: a.mentoria, hashtags: a.hashtags }), checagem };
 }
 
 const blocos = AMOSTRAS.map((a) => {
@@ -123,5 +128,5 @@ fs.writeFileSync(SAIDA, `${cabecalho}\n${blocos.join('\n')}`, 'utf8');
 console.log(`gravado: ${path.relative(RAIZ, SAIDA)}`);
 for (const a of AMOSTRAS) {
   const n = montarNovo(a);
-  console.log(`${a.slug}: ${n.falhas.length ? `FALHAS ${n.falhas.join(' | ')}` : 'ok'} (${n.texto.length} caracteres)`);
+  console.log(`${a.slug}: modelo ${n.falhas.length ? `FALHAS ${n.falhas.join(' | ')}` : 'ok'} · checagem real ${n.checagem.length ? `FALHAS ${n.checagem.join(' | ')}` : 'ok'} (${n.texto.length} caracteres)`);
 }

@@ -21,7 +21,7 @@ function comEnv(vars, fn) {
   Object.assign(process.env, vars);
   return Promise.resolve(fn()).finally(() => { for (const k of ENV) { if (antes[k] === undefined) delete process.env[k]; else process.env[k] = antes[k]; } });
 }
-const item = (extra = {}) => ({ _id: 'li-1', tipo: 'texto', status: 'aprovado-checagem', slot: '2026-10-28T22:30:00.000Z', titulo: 'T', texto: TEXTO, url: 'https://www.drantoniofelipemedico.com.br/artigo/x', slug: 'x', ...extra });
+const item = (extra = {}) => ({ _id: 'li-1', referenciaConferida: { doi: '10.1002/14651858.CD006525.pub2' }, tipo: 'texto', status: 'aprovado-checagem', slot: '2026-10-28T22:30:00.000Z', titulo: 'T', texto: TEXTO, url: 'https://www.drantoniofelipemedico.com.br/artigo/x', slug: 'x', ...extra });
 const AGORA = new Date('2026-10-28T23:00:00Z');
 const OK = { LINKEDIN_PUBLICACAO_ATIVA: 'true', LINKEDIN_ACCESS_TOKEN: 't', LINKEDIN_AUTHOR_URN: 'urn:li:person:1' };
 
