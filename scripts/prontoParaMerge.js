@@ -33,10 +33,10 @@ function verificarPronto(pr, pastaPrincipal = RAIZ) {
     const sujo = (run('git', ['status', '--porcelain'], caminho).stdout || '').trim() !== '';
     const headLocal = (run('git', ['rev-parse', 'HEAD'], caminho).stdout || '').trim();
     const dec = decidirRemoverWorktree({ caminho, arvoreLimpa: !sujo, headLocal, headRemoto });
+    // Regra de 28/10/2026 (ensaio): nunca remove worktree automaticamente. Um worktree pode estar em uso (npm, portão, editor).
+    // Só avisa, com o comando exato, e deixa a remoção para o Dr. Antônio.
     if (dec.remover) {
-      const rm = git('worktree', 'remove', caminho);
-      worktree = rm.status === 0 ? { ok: true, motivo: dec.motivo } : { ok: false, motivo: `não consegui remover ${caminho}: ${(rm.stderr || '').trim()}` };
-      if (rm.status === 0) console.log(dec.motivo);
+      worktree = { ok: true, motivo: `AVISO: ${caminho} está limpo e igual ao remoto, mas NÃO foi removido. Remover quando não estiver em uso: git worktree remove "${caminho}"` };
     } else {
       worktree = { ok: false, motivo: dec.motivo };
     }
