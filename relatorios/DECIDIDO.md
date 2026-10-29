@@ -29,13 +29,23 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 
 ## Continuação (27/10/2026, 19h, ordem única)
 - **Tarefas do Windows:** nunca desativar uma tarefa que o Dr. Antônio ativou. Antes de mexer em qualquer tarefa `DrSM-*`, conferir `relatorios/DECIDIDO.md` e o topo de `relatorios/ESTADO-GERAL.md`.
-- **Blob (`DrSM-Blob-Rotina-Mensal`):** o Dr. reativa como administrador. Confirmar pelo log de amanhã (28/10). Quem desativou em 27/10 foi o Claude Code, por engano (ver ESTADO-GERAL).
+- **Blob (`DrSM-Blob-Rotina-Mensal`):** SUPERADO em 28/10 (ver "Continuação 28/10"): a tarefa fica READY. Quem a desativou em 27/10 foi o Claude Code, por engano.
 - **LinkedIn (`DrSM-LinkedIn-Agendar`):** reativar só depois do merge do #167. O #167 recebe o registro obrigatório de desativação; a conferência diária passa a mostrar o `LastTaskResult` com a interpretação do código.
 - **YouTube, escopos:** `youtube.force-ssl` é aceito por `videos.insert`, `thumbnails.set`, `playlists.insert`, `playlistItems.insert` e `captions.insert`. Para `playlists.list` a página não confirma; o teste de leitura confirma (ver `relatorios/youtube/AUDITORIA-API-RESPOSTAS.md`).
 - **YouTube, rodar de novo:** o Dr. roda `npm run youtube:autorizar` e `npm run youtube:teste-playlists` com a pasta na `main`.
 - **Opção A (domínio único):** os 24 textos ficam no site oficial. Não é a regra a/b do Blob.
 - **Ordem de merges (14 PRs):** terça: 172 → 173 → 159 → 160 → 161 → 162 → 163. Quarta: 164 → 165 → 166 → 167 → 168 → 169 → 156. Um por vez, com `npm run merge-seguro -- N`. Depois de cada merge, atualizar o próximo se tiver conflito, um portão por vez.
 - **Estado perdido e recuperado:** `ESTADO-GERAL.md` e `PROMPT-ATUAL.md` nunca foram rastreados pelo Git. A cópia mais recente deles era de 22/10. Ver o aviso no topo de cada arquivo. Antes de trocar de branch: `npm run estado:guardar`.
+
+## Continuação 28/10/2026 (19h, ordem escrita do Dr. Antônio: vale sobre as notas anteriores)
+- **Blob (`DrSM-Blob-Rotina-Mensal`) fica READY.** O Dr. ativou em 26/10 de propósito e confirmou em 27/10. As notas de 19/10 e 27/10 estão superadas. Nunca sugerir desativar o que o Dr. ativou.
+- **Produção:** está no deploy do #185 (`dpl_35MJE…`, `main` f3e11f2) e a atribuição automática voltou. Itens "#146/#147" e "produção não verificada": encerrados.
+- **Vídeos F (54):** encerrado. Fila com 97 aprovados e 0 reprovados.
+- **Links quebrados:** trocas aprovadas em 26/10 e aplicadas no banco (forumseguranca → `/publicacoes/anuario-brasileiro-de-seguranca-publica/`; portaldeimigracao → `gov.br/mj/pt-br/assuntos/seus-direitos/migracoes`). Conferidas em 28/10 (200). bvsms: retestado em 28/10, 200, sem troca. Referências não são narradas, então o áudio não muda.
+- **Crédito do Reel:** o padrão é "Portal de Saúde Mental Doutor Antônio Felipe Garabito", com "Doutor" por extenso, na fala e na tela, em Shorts, longos e Reels.
+- **Custo da Vercel:** falha de leitura da API é só AVISO ("leitura indisponível"), nunca falha nem alerta de custo. Só o crédito do painel (informado à mão) alerta. A cobrança antiga do registro não entra no alerta. Hoje: US$ 4,19 de US$ 20, lido pelo Dr. em 26/10.
+- **PR semanal de sexta (`DrSM-PR-Semanal`):** ENCERRADO. A tarefa não existe mais; a Manutenção semanal abre o PR na sexta.
+- **#138 (domínio único):** segue pausado (Opção A). Sem decisão agora.
 
 ## Alerta de custo da Vercel (27/10/2026, 22h30, ordem única)
 - **Alerta de custo da Vercel = `billedCost` do ciclo (cobrança real) acima de US$ 0,50**, mais o crédito do painel informado manualmente (`creditoPainel`). Acima de 70% do crédito de US$ 20 (US$ 14), alerta.
