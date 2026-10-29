@@ -32,11 +32,10 @@ $tarefas = @(
   # Lembrete MANUAL do LinkedIn DESATIVADO (19/10/2026): o agendamento agora é automático. Mantido como opção comentada.
   # @{ Nome = 'DrSM-LinkedIn-Lembrete';  Args = 'scripts/linkedin/filaManual.js hoje --copiar --abrir'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Wednesday,Friday -At 19:25); Horas = 1; Interativa = $true },
   @{ Nome = 'DrSM-Conferencia-26-10';   Args = 'scripts/travaDiaria.js DrSM-Conferencia-26-10 scripts/conferirPrimeiroPost.js'; Gatilho = (New-ScheduledTaskTrigger -Once -At '2026-10-26 19:30'); Horas = 1 },
-  # Rotina mensal do Blob (18/10/2026): dia 1 às 08:00 (28/10/2026: era 03:00); só grupos c/d, com a trava de blob-rotina-mensal.js. Ativada pelo Dr. Antônio em 26/10/2026: NÃO nasce desativada (recriar a tarefa não pode desligá-la).
-  # Agendamento do LinkedIn (autorizado em 18/10/2026; janelas do Dr. em 28/10/2026, CLAUDE.md "Disponibilidade"): 11:00 seg a sex e domingo; NÃO roda no sábado (fora da janela do Dr.). Sessão do usuário (precisa do Chrome com o perfil logado), uma execução por dia (scripts/linkedin/agendarDiario.js). Desligar: npm run linkedin:pausar
-  @{ Nome = 'DrSM-LinkedIn-Agendar';    Args = 'scripts/linkedin/agendarDiario.js';                 Gatilho = @((New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday,Sunday -At 11:00)); Horas = 1; Interativa = $true; NascerDesativada = $true },
-  # PR semanal (19/10/2026): sexta 11:00, SÓ PREPARA (scripts/prSemanal.js: portão + relatorios\PR-SEMANAL.md; sem push, PR ou merge). Criada DESATIVADA.
-  @{ Nome = 'DrSM-PR-Semanal';          Args = 'scripts/travaDiaria.js DrSM-PR-Semanal scripts/prSemanal.js'; Gatilho = (New-ScheduledTaskTrigger -Weekly -DaysOfWeek Friday -At 11:00); Horas = 1; NascerDesativada = $true },
+  # Rotina mensal do Blob (18/10/2026): dia 1 às 03:00 (voltou de 08:00 em 28/10/2026; o alerta sobrevive à conferência das 09:30 pelo resumoDoDia.js); só grupos c/d, com a trava de blob-rotina-mensal.js. Ativada pelo Dr. Antônio em 26/10/2026: NÃO nasce desativada (recriar a tarefa não pode desligá-la).
+  # Agendamento do LinkedIn (autorizado em 18/10/2026; ordem de 28/10/2026): TODOS OS DIAS às 11:00, inclusive sábado. É automático e não depende do Dr. Antônio; as janelas dele valem só para pedidos feitos a ele. Sessão do usuário (precisa do Chrome com o perfil logado), uma execução por dia (scripts/linkedin/agendarDiario.js). Desligar: npm run linkedin:pausar
+  @{ Nome = 'DrSM-LinkedIn-Agendar';    Args = 'scripts/linkedin/agendarDiario.js';                 Gatilho = (New-ScheduledTaskTrigger -Daily -At 11:00); Horas = 1; Interativa = $true; NascerDesativada = $true },
+  # DrSM-PR-Semanal: APOSENTADA em 28/10/2026 (ordem do Dr. Antônio). Não é mais registrada pelo script; a tarefa no Windows não foi apagada.
   @{ Nome = 'DrSM-Blob-Rotina-Mensal';  Args = 'scripts/blob-rotina-mensal.js --aplicar';           Gatilho = $null; Horas = 1; Mensal = $true; NascerDesativada = $false }
 )
 $usuario = "$env:USERDOMAIN\$env:USERNAME"
@@ -75,16 +74,16 @@ foreach ($t in $tarefas) {
   if ($Simular) { Write-Host "[simular] $($t.Nome): $decisao"; continue }
   $log = Join-Path $logs "$($t.Nome).log"
   if ($t.Mensal) {
-    # gatilho mensal (dia 1, 08:00): o PowerShell não tem -Monthly; registra diário e troca o gatilho por XML. Criada DESATIVADA.
+    # gatilho mensal (dia 1, 03:00): o PowerShell não tem -Monthly; registra diário e troca o gatilho por XML. Criada DESATIVADA.
     $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""
     $conf = New-ScheduledTaskSettingsSet -StartWhenAvailable -WakeToRun -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 10) -ExecutionTimeLimit (New-TimeSpan -Hours $t.Horas) -MultipleInstances IgnoreNew -Hidden
-    Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger (New-ScheduledTaskTrigger -Daily -At 08:00) -Settings $conf -Description 'Portal Dr. Antônio Felipe (sem Claude)' -Force | Out-Null
+    Register-ScheduledTask -TaskName $t.Nome -Action $acao -Trigger (New-ScheduledTaskTrigger -Daily -At 03:00) -Settings $conf -Description 'Portal Dr. Antônio Felipe (sem Claude)' -Force | Out-Null
     $meses = 'January','February','March','April','May','June','July','August','September','October','November','December' | ForEach-Object { "<$_/>" }
     $xml = (Export-ScheduledTask -TaskName $t.Nome) -replace '(?s)<ScheduleByDay>.*?</ScheduleByDay>', "<ScheduleByMonth><DaysOfMonth><Day>1</Day></DaysOfMonth><Months>$($meses -join '')</Months></ScheduleByMonth>"
-    $xml = $xml -replace '<StartBoundary>[^<]*</StartBoundary>', '<StartBoundary>2026-11-01T08:00:00</StartBoundary>'
+    $xml = $xml -replace '<StartBoundary>[^<]*</StartBoundary>', '<StartBoundary>2026-11-01T03:00:00</StartBoundary>'
     Register-ScheduledTask -TaskName $t.Nome -Xml $xml -Force | Out-Null
     AplicarEstado $t.Nome $decisao
-    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · mensal, dia 1 às 08:00 · $decisao"
+    Write-Host "registrada: $($t.Nome)  ($($t.Args)) · mensal, dia 1 às 03:00 · $decisao"
     continue
   }
   $acao = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$vbs`" `"$log`" `"$node`" `"$($t.Args)`""

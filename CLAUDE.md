@@ -253,14 +253,17 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 - `merge-seguro` para antes de trocar de branch se houver arquivo rastreado alterado na pasta principal ou arquivo não rastreado que o PR também adiciona. Nada é copiado, movido ou apagado automaticamente.
 
 ## Disponibilidade do Dr. Antônio (28/10/2026, retificação por ordem escrita; substitui a agenda de plantões de 19/10)
-- **Janelas em que o Dr. Antônio está disponível** (fora delas, NADA pode depender dele):
+- **Escopo das janelas (ordem de 28/10, 2ª retificação):** valem SÓ para pedidos feitos ao Dr. Antônio, merges e cliques dele. Tarefas automáticas (narração, gera-mídia, publicação, conferências, LinkedIn, Blob) podem rodar a qualquer hora.
+- **Janelas em que o Dr. Antônio está disponível** (fora delas, nenhum pedido pode depender dele):
   - segunda, terça e sexta: 17:30 às 23:00;
   - quinta: só 17:30 às 18:00 (depois, plantão no PAP);
   - sábado: SÓ 20:00 às 23:00;
   - domingo: do início da manhã até as 18:00 (depois, plantão no PAP).
-- **Dias úteis:** trabalho do Claude Code das 07:30 às 17:15. Nunca pedir nada de madrugada.
+- **Horário de trabalho do Dr. Antônio:** dias úteis das 07:30 às 17:15. É o horário dele, não um limite da automação. Nunca pedir nada a ele de madrugada.
 - **Sessão semanal:** domingo às 09:00 (no máximo 1 hora). Reserva: sexta às 18:30. Até sábado às 20:00, o bloco "SESSÃO DE DOMINGO" do topo do `relatorios/ESTADO-GERAL.md` fica pronto com: (a) merges PRONTOS da semana, um por linha; (b) até 3 decisões, cada uma com recomendação; (c) lote de revisão médica da semana; (d) itens que precisam de clique do Dr. (formulários, logins, tarefas de administrador).
 - **Urgência no meio da semana:** agir pela política de travas (rollback, adiar o post) e avisar na janela seguinte.
-- **Tarefas automáticas:** rodam sozinhas nos horários de `scripts/agendar-tarefas-windows.ps1`. Tarefa que pede login, CAPTCHA ou clique do Dr. só fica agendada dentro de uma janela dele: LinkedIn (`DrSM-LinkedIn-Agendar`) seg a sex e domingo às 11:00, nunca no sábado.
+- **Tarefas automáticas:** rodam sozinhas nos horários de `scripts/agendar-tarefas-windows.ps1`, todos os dias. LinkedIn (`DrSM-LinkedIn-Agendar`): todo dia às 11:00, inclusive sábado. Se a tarefa precisar de login ou CAPTCHA, ela PARA e registra o alerta para o Dr. ver na janela dele (regra de parada do `agendarDiario.js`).
+- **Alerta do Blob:** a rotina mensal (`DrSM-Blob-Rotina-Mensal`, dia 1 às 03:00) grava o alerta no topo do `relatorios/RESUMO-DO-DIA.md`; a conferência das 09:30 mantém esse alerta no mesmo dia (`scripts/conferencias/resumoDoDia.js`).
+- **Aposentada:** `DrSM-PR-Semanal` (28/10/2026). O script não a registra mais. A tarefa no Windows não foi apagada.
 - **Auditoria do YouTube:** domingo, 01/11/2026, às 09:00 (dentro da janela da manhã). Tudo pronto e conferido no sábado.
 - **Merge automático:** só proposta até nova ordem (ver `docs/proposta-automerge-docs.md`). Nada é implementado antes da aprovação.

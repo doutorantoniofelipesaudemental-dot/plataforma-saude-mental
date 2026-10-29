@@ -69,5 +69,7 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Sessão semanal: domingo 09:00 (máx. 1 h); reserva sexta 18:30. Bloco "SESSÃO DE DOMINGO" no topo do ESTADO-GERAL pronto até sábado 20:00.
 - Auditoria do YouTube: domingo 01/11/2026, 09:00.
 - Merge automático de baixo risco: só proposta (`docs/proposta-automerge-docs.md`); não implementar antes de aprovação no domingo.
-- Horários (esta PR, aplicados pelo Dr. com `scripts/agendar-tarefas-windows.ps1`): LinkedIn 11:00 seg a sex e domingo, sem sábado; Blob mensal às 08:00 do dia 1 (era 03:00, para o alerta cair em horário de trabalho).
-- Demais tarefas: já estavam dentro das janelas (narração, gera-mídia, publicação do YouTube, conferências 18:15/20:45–21:15/09:00, rotina segunda 18:30, PR semanal sexta 11:00). Mantidas.
+- Horários (aplicados pelo Dr. com `scripts/agendar-tarefas-windows.ps1`): LinkedIn `DrSM-LinkedIn-Agendar` TODOS OS DIAS às 11:00, inclusive sábado (ordem de 28/10, 2ª retificação: é automática; as janelas valem só para pedidos ao Dr.). Blob mensal segue às 03:00 do dia 1; o alerta dele sobrevive à conferência das 09:30 (`resumoDoDia.js`).
+- Janelas e horário de trabalho: valem só para pedidos, merges e cliques do Dr. Antônio. A automação roda a qualquer hora.
+- **Aposentada em 28/10/2026:** `DrSM-PR-Semanal` (encerrada pelo Dr.). O script não a registra mais; a tarefa no Windows não foi apagada.
+- Demais tarefas: mantidas como estão.
