@@ -3,7 +3,11 @@ const { checarEticaCfm } = require('./checagensAprovacao');
 
 function checarPost(it) {
   const f = []; const t = it.texto || '';
-  if (it.tipo === 'texto' && (t.length < 1300 || t.length > 2000)) f.push(`tamanho ${t.length} caracteres (esperado 1300–2000)`);
+  // Tamanho (decisão do Dr. Antônio, 28/10/2026): 1.000 a 2.200. O limite técnico do LinkedIn (3.000) fica no preAgendamento.
+  if (it.tipo === 'texto' && (t.length < 1000 || t.length > 2200)) f.push(`tamanho ${t.length} caracteres (esperado 1000–2200)`);
+  // Referência obrigatória e específica (decisão do Dr. Antônio, 28/10/2026): sem referência real, o post não é publicado.
+  const ref = (t.match(/^Referência: (.+)$/m) || [])[1] || '';
+  if (it.tipo === 'texto' && (!ref || !/\b(19|20)\d{2}\b/.test(ref) || /ver lista|principal do artigo|revis[aã]o sobre|gen[eé]ric/i.test(ref))) f.push('referência ausente ou genérica (exige referência específica conferida no PubMed ou pelo DOI)');
   const n = (re) => (t.match(re) || []).length;
   if (n(/CRM-BA 41322/g) !== 1) f.push('CRM-BA 41322 deve aparecer 1 vez');
   if (n(/RQE 26638/g) !== 1 || !/Medicina de Família e Comunidade/.test(t)) f.push('RQE 26638 junto de Medicina de Família e Comunidade (1 vez)');

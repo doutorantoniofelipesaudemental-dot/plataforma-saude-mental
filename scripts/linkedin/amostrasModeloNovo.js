@@ -12,7 +12,7 @@ const RAIZ = path.resolve(__dirname, '..', '..');
 // A fila manual (texto atual) fica na pasta principal, fora do Git: DRS_RAIZ_FILA aponta para ela.
 const FILA = path.join(process.env.DRS_RAIZ_FILA || RAIZ, 'relatorios', 'linkedin', 'fila-manual');
 const SAIDA = path.join(RAIZ, 'relatorios', 'linkedin', 'amostras-modelo-novo.md');
-const IDENT = 'Dr. Antônio Felipe · Médico · CRM-BA 41322 · MFC RQE 26638 · Atuo em PAP e APS';
+const IDENT = 'Dr. Antônio Felipe · Médico · CRM-BA 41322 · Especialista em Medicina de Família e Comunidade · RQE 26638';
 const AVISO_IA = 'Conteúdo produzido com apoio de ferramentas de IA, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
 
 // Resumo do PubMed, PMID 30462669 (Zendle D, Cairns P. PLoS One. 2018): frase com o número.
@@ -26,11 +26,13 @@ const AMOSTRAS = [
     slug: 'quando-encaminhar-aps',
     gancho: 'Dois erros opostos prejudicam o cuidado em saúde mental na Atenção Primária: encaminhar tudo, sobrecarregando a rede, ou não encaminhar quando é preciso.',
     dado: null,
-    dadoMotivo: 'A referência principal é um guia da OMS, sem registro no PubMed; sem número verificável, a linha é omitida.',
+    dadoMotivo: 'Sem número verificável nesta amostra; a linha é omitida.',
     sinais: ['Encaminhar tudo, sem avaliar a própria capacidade de cuidado', 'Não encaminhar quando há sinal de urgência ou de risco'],
     ajuda: ['Resumo clínico claro, com hipótese diagnóstica e tratamentos já tentados', 'Motivo específico do encaminhamento, não apenas "avaliação psiquiátrica"', 'Comunicação direta com o serviço receptor'],
     fonteAjuda: 'seção "Como encaminhar bem" do artigo',
-    referencia: 'World Health Organization. mhGAP Intervention Guide for mental, neurological and substance use disorders in non-specialized health settings, version 2.0. Geneva: WHO; 2016.',
+    // Referência trocada: a da OMS (mhGAP) não tem PubMed nem DOI. Archer et al. 2012 conferido no PubMed (PMID 23076925, DOI 10.1002/14651858.CD006525.pub2).
+    // Ela sustenta o cuidado colaborativo na APS, não cada item de "Sinais": conferir antes de aprovar.
+    referencia: 'Archer J, Bower P, Gilbody S, et al. Collaborative care for depression and anxiety problems. Cochrane Database Syst Rev. 2012;10(10):CD006525.',
     mentoria: true,
     conduta: true,
     hashtags: ['#AtencaoPrimaria', '#MedicinaDeFamilia', '#SaudeMental'],
@@ -55,13 +57,14 @@ const AMOSTRAS = [
     nome: 'Amostra 3: primeiro-episodio-psicotico (fila 13/11/2026)',
     pasta: '13-11-texto-i-2026-11-13',
     slug: 'primeiro-episodio-psicotico',
-    gancho: 'O tempo entre os primeiros sintomas de psicose e o início do tratamento adequado influencia o prognóstico.',
+    gancho: 'Quanto mais tempo passa sem tratamento nos primeiros episódios de psicose, maior a associação com pior evolução a longo prazo.',
     dado: null,
     dadoMotivo: 'Sem número verificável nesta amostra; a linha é omitida.',
     sinais: ['Mudança de comportamento que se afasta do cotidiano habitual', 'Desconfiança ou ideias que não se encaixam no contexto'],
     ajuda: ['Encaminhamento urgente, sem aguardar agendamento eletivo', 'Comunicar o serviço receptor com resumo clínico', 'Orientar a família sem minimizar e sem dramatizar'],
     fonteAjuda: 'seção "Conduta inicial" do artigo (APS e família)',
-    referencia: 'Referência principal do artigo primeiro-episodio-psicotico (ver lista de referências do próprio artigo).',
+    // Penttilä et al. 2014 conferido no PubMed (PMID 25252316, DOI 10.1192/bjp.bp.113.127753). O resumo descreve correlação "pequena, mas consistente".
+    referencia: 'Penttilä M, Jääskeläinen E, Hirvonen N, et al. Duration of untreated psychosis as predictor of long-term outcome in schizophrenia: systematic review and meta-analysis. Br J Psychiatry. 2014;205(2):88-94.',
     mentoria: false,
     conduta: true,
     hashtags: ['#SaudeMental', '#AtencaoPrimaria', '#PrimeiroEpisodio'],
