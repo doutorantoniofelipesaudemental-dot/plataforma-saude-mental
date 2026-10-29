@@ -53,3 +53,16 @@
 - **Fato (28/10, merge-seguro do #187 reprovou no e2e):** 5 falhas com `ERR_CONNECTION_REFUSED` e `ECONNRESET` na porta 3000. O servidor de teste caiu no meio da execução. Com `reuseExistingServer: true`, o Playwright reaproveitava um servidor de outra execução, que morreu quando interrompi o portão do worktree de lições. Verificado depois: porta 3000 livre, sem trava, sem navegador de teste órfão (os `chrome.exe` restantes são do usuário e do MCP, não foram tocados).
 - **Regra:** ao interromper ou terminar um portão, encerrar o servidor de teste e os navegadores do Playwright órfãos e liberar a trava. Quem faz: `scripts/lib/encerrarTesteOrfao.js` (só o que é do projeto; navegador só se o pai já morreu), chamado no início e na saída de `portao.js`. Teste em `tests/unit/encerrar-teste-orfao.test.js`.
 - **Regra:** `playwright.config.js` com `reuseExistingServer: false`. Porta ocupada vira erro claro, não reaproveitamento silencioso.
+
+## Conferir o DECIDIDO antes de apontar conflito (29/10/2026, ordem do Dr. Antônio)
+- **Fato:** apontei como conflito o status do app do YouTube ("Testando" no FALTA-DO-ANTONIO de 19/10 contra "em produção" nos JSON). O DECIDIDO.md já registrava "Em produção" desde 18/10, e o aviso de vencimento em 23/10 era falso.
+- **Regra:** antes de apontar um conflito entre registros, consultar o `relatorios/DECIDIDO.md` primeiro. Se ele decide o ponto, usar a decisão e marcar o registro antigo como desatualizado, sem apagar.
+
+## Capa de carrossel mostra o rótulo de público, não o tema (29/10/2026)
+- **Fato:** a capa (`backend/lib/capaRedes.js`, `textoDoSelo`) usa `artigo.categoria` como selo quando não é "Geral". Esse campo é o público-alvo ("Médicos & Enfermeiros", "Pacientes & Famílias", "Relatos da Prática"). O texto "Primeiros episódios psicóticos" tem `categoria: 'Médicos & Enfermeiros'` no frontmatter, e por isso a capa diz "Médicos & Enfermeiros" sobre psicose. Há 23 artigos com esse rótulo; 9 não têm nenhum termo profissional no título nem no slug.
+- **Regra pendente de decisão do Dr. Antônio:** o selo da capa deve mostrar o público, o tema, ou os dois. Até decidir, nenhuma capa publicada ou agendada muda. A checagem de coerência entre selo e tema precisa dessa regra antes de virar teste.
+- **Regra:** teste de capa só depois dessa decisão. Um teste feito agora sobre a palavra "médico" no título daria falso positivo nos 9 casos de conteúdo para profissionais.
+
+## Feed público sem revisão (29/10/2026)
+- **Fato:** `episodiosDe` (backend/lib/podcast.js) filtrava só por publicado, narração e data. Nenhum episódio tinha revisão médica, e o feed público expunha todos os textos publicados.
+- **Regra:** o feed só inclui episódio com revisão APROVADA e hash do corpo igual ao aprovado (trava C). Sem fonte de revisões no servidor, o feed fica válido e vazio.
