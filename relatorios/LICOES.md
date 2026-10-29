@@ -46,7 +46,7 @@
 
 ## Gerador não sobrescreve sem backup; um portão por vez (28/10/2026, ordem do Dr. Antônio)
 - **Fato:** `gerarShorts.js` apagava a pasta do Short antes de regerar. Uma regeração com `--slug` (sem `--post`) gerou no id `resumo` e sobrescreveu `saude-mental-cuidador/short-resumo` (16/10), sem cópia. Não estava na fila e não há registro de envio ao YouTube.
-- **Regra:** antes de apagar ou regravar uma pasta existente, o gerador copia o que estiver lá para `backups/<pasta>-<AAAAMMDD-HHMM>/` (`scripts/lib/backupPasta.js`, com teste). Vale para `gerarShorts.js` e `gerarVideosLongos.js`.
+- **Regra:** antes de apagar ou regravar uma pasta existente, o gerador copia o que estiver lá para `backups/<pasta>-<AAAAMMDD-HHMM>/` (`scripts/lib/backupPasta.js`, com teste). Vale para `gerarShorts.js`, `gerarVideosLongos.js` e `backend/scripts/redes/gerarFila.js` (carrosséis).
 - **Regra:** ao regerar um Short, usar `--post=<id-do-post>` (o id da fila), nunca `--slug`, para que a pasta gerada seja a da fila.
 - **Fato:** dois portões rodaram ao mesmo tempo e brigaram pela porta do e2e (webServer caiu com "exited early").
-- **Regra:** `scripts/portao.js` pega a trava `.tmp/portao.lock` (`scripts/lib/portaoTrava.js`, com teste) antes de qualquer coisa. Quem chega com a trava ocupada espera; trava de processo morto ou com mais de 2 h é tomada com aviso. Vale para `npm run portao` direto e para o que o chama (publicarBranch, merge-seguro, manutenção, PR semanal).
+- **Regra:** `scripts/portao.js` pega a trava a trava `drsaudemental-portao.lock` na pasta temporária do usuário (`scripts/lib/portaoTrava.js`, com teste; fica fora do repositório para valer entre worktrees) antes de qualquer coisa. Quem chega com a trava ocupada espera; trava de processo morto ou com mais de 2 h é tomada com aviso. Vale para `npm run portao` direto e para o que o chama (publicarBranch, merge-seguro, manutenção, PR semanal).

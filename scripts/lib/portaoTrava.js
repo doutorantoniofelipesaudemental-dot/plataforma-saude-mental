@@ -1,13 +1,14 @@
 /**
  * Trava de "um portão por vez" (ordem de 28/10/2026): dois portões ao mesmo tempo brigam pela porta do e2e.
- * O arquivo de trava (.tmp/portao.lock) guarda o pid e o momento. Quem chega com a trava ocupada espera.
- * Trava de processo morto ou com mais de 2 horas é tomada (com aviso). Vale para `npm run portao` em qualquer caminho.
+ * O arquivo de trava guarda o pid e o momento. Fica na pasta temporária do usuário, e não dentro do repositório,
+ * para que portões de worktrees diferentes (que são pastas diferentes) disputem a mesma trava.
+ * Quem chega com a trava ocupada espera. Trava de processo morto ou com mais de 2 horas é tomada (com aviso).
  */
 const fs = require('node:fs');
+const os = require('node:os');
 const path = require('node:path');
 
-const RAIZ = path.resolve(__dirname, '..', '..');
-const TRAVA = path.join(RAIZ, '.tmp', 'portao.lock');
+const TRAVA = path.join(os.tmpdir(), 'drsaudemental-portao.lock');
 const VELHA_MS = 2 * 60 * 60 * 1000;
 
 const processoVivo = (pid) => {
