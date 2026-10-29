@@ -1,13 +1,14 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const P = require('../../backend/lib/podcast');
+const R = require('../../backend/lib/revisaoMedica');
 const V = require('../../scripts/podcast/validarFeed');
 
 const BASE = 'https://www.drantoniofelipemedico.com.br';
 const AGORA = new Date('2026-10-25T12:00:00Z');
 // Revisão aprovada para o texto de teste (hash igual ao do corpo).
 const HASH = 'hash-do-corpo';
-const REVISADO = { revisaoDe: () => ({ status: 'aprovada', hash: HASH }), hashDe: () => HASH };
+const REVISADO = { revisaoDe: () => ({ status: R.STATUS.APROVADA, hash: HASH }), hashDe: () => HASH };
 const texto = (extra = {}) => ({
   slug: 'texto-um', titulo: 'Rotina de sono na adolescência', resumo: 'Sono e telas.', publicado: true,
   publicadoEm: '2026-10-21T11:00:00Z', narracao: { url: 'https://blob.exemplo.com/a.mp3', bytes: 5000, caracteres: 3000 }, ...extra,
@@ -73,6 +74,6 @@ test('sem revisão aprovada, o feed fica vazio (trava C)', () => {
 });
 
 test('texto alterado depois da aprovação sai do feed (trava C)', () => {
-  const eps = P.episodiosDe([texto()], { base: BASE, agora: AGORA, revisaoDe: () => ({ status: 'aprovada', hash: 'antigo' }), hashDe: () => HASH });
+  const eps = P.episodiosDe([texto()], { base: BASE, agora: AGORA, revisaoDe: () => ({ status: R.STATUS.APROVADA, hash: 'antigo' }), hashDe: () => HASH });
   assert.deepEqual(eps, []);
 });
