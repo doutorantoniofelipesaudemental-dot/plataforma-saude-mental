@@ -57,3 +57,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Fila do LinkedIn:** o portão lê a fixture versionada `tests/fixtures/linkedin-fila.json`. A fila real só é lida pela conferência diária.
 - **Versionados (só mudam por PR):** CLAUDE.md, DECIDIDO.md, LICOES.md, documentos (AUDITORIA-API-RESPOSTAS.md, PASSO-A-PASSO-YOUTUBE.md) e configurações (validade.json).
 - **Alerta de custo da Vercel:** só o uso sob demanda conta (billedCost sem a assinatura). A linha "Pro" (US$ 20/mês), os assentos e as taxas fixas do plano ficam FORA do alerta. Alerta = uso sob demanda acima de US$ 0,50 no ciclo. Teste: a linha "Pro" sozinha não alerta.
+
+## 28/10/2026 — LinkedIn: tarefa ATIVA (ordem do Dr. Antônio, 07:40)
+- `DrSM-LinkedIn-Agendar` foi religada pelo Dr. Antônio como administrador antes de sair (estado Ready). Não foi criada nenhuma tarefa nova.
+- Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
+- Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
+- Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
