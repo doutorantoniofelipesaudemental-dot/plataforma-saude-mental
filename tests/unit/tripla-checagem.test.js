@@ -136,15 +136,12 @@ test('"Free Fire" passa como nome próprio; "free" solto não', async () => {
   assert.match(solto.motivo, /inglês na legenda: "free"/);
 });
 
-test('selo da capa: categoria "Geral" vira o tema do título ou some', () => {
+test('selo da capa: "Geral" não tem selo; categoria de público vira "Para …" (decisão de 29/10/2026)', () => {
   const { textoDoSelo } = require('../../backend/lib/capaRedes');
-  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Saúde mental de professores' }), 'Professores');
-  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Um tema qualquer' }), '');
-  // Limites de palavra (\b) dos padrões de tema — já saíram corrompidos uma vez.
-  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Burnout em médicos' }), 'Médicos & Enfermeiros');
-  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Quando o luto demora' }), 'Luto');
-  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Saúde mental na APS' }), 'Atenção primária');
+  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Saúde mental de professores' }), '');
+  assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Burnout em médicos' }), '');
+  assert.equal(textoDoSelo({ categoria: 'Médicos & Enfermeiros', titulo: 'x' }), 'Para Médicos & Enfermeiros');
+  assert.equal(textoDoSelo({ categoria: 'Luto & Divórcio', titulo: 'x' }), '');
   const tags = montarLegendaInstagram({ ...ARTIGO, categoria: 'Geral', titulo: 'Luto no RH' }).partes.hashtags;
   assert.ok(tags.includes('#luto') && tags.includes('#saudementalnotrabalho'), tags.join(' '));
-  assert.equal(textoDoSelo({ categoria: 'Luto & Divórcio', titulo: 'x' }), 'Luto & Divórcio');
 });

@@ -14,6 +14,7 @@
  * repetida de outro artigo.
  */
 const crypto = require('crypto');
+const { rotuloPublico, problemasDaCapa } = require('./seloPublico');
 const sharp = require('sharp');
 const {
   FONTE_SERIF,
@@ -46,28 +47,9 @@ function tamanhoTitulo(titulo) {
   return TAMANHOS_TITULO.find((t) => titulo.length <= t.ate).tamanho;
 }
 
-// "Geral" não diz nada no selo: nessa categoria o selo mostra o tema tirado
-// do título (o primeiro que casar) ou some.
-const TEMAS_SELO = [
-  [/professor|docente|escola/i, 'Professores'],
-  [/m[eé]dic[oa]s?\b|enfermeir/i, 'Médicos & Enfermeiros'],
-  [/resid[eê]ncia|residentes/i, 'Residência médica'],
-  [/crian[cç]a|infantil|infância/i, 'Infância'],
-  [/adolescen/i, 'Adolescência'],
-  [/idos[oa]|envelhec|terceira idade/i, 'Terceira idade'],
-  [/cuidador/i, 'Cuidadores'],
-  [/gesta[cç]|puerp|materni|amamenta/i, 'Maternidade'],
-  [/trabalh|empresa|gestor|lideran|\bRH\b/i, 'Saúde no trabalho'],
-  [/aten[cç][aã]o prim[aá]ria|\bAPS\b/i, 'Atenção primária'],
-  [/\bluto\b/i, 'Luto'],
-  [/ansiedade/i, 'Ansiedade'],
-  [/depress/i, 'Depressão'],
-];
-
+// Selo: público com "Para" (seloPublico.js). O título grande é o tema.
 function textoDoSelo(artigo) {
-  if (artigo.categoria && artigo.categoria !== 'Geral') return artigo.categoria;
-  const tema = TEMAS_SELO.find(([re]) => re.test(artigo.titulo || ''));
-  return tema ? tema[1] : '';
+  return rotuloPublico(artigo.categoria);
 }
 
 function seloCategoria(textoSelo) {
@@ -203,6 +185,7 @@ module.exports = {
   garantirCapaRedes,
   capaAtualizada,
   textoDoSelo,
+  problemasDaCapa,
   hashBuffer,
   ErroCapaRedes,
   MODELO_CAPA: MODELO,
