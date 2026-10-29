@@ -46,3 +46,8 @@ test('fila não lida: NÃO', () => {
 test('são exatamente os PRs 193 a 196', () => {
   assert.deepEqual(Object.keys(PRS_ESPERADOS), ['193', '194', '195', '196']);
 });
+
+test('status reais de publicação não contam como desconhecidos', () => {
+  const r = avaliarProntoParaSexta({ ...base, statusFila: { publicado: 3, parado: 1, concluido: 2, 'publicado-manual': 1 } });
+  assert.equal(r.pronto, true);
+});

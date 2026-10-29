@@ -8,7 +8,7 @@ const { spawnSync } = require('node:child_process');
 
 const DATA_ALVO = '2026-10-30';
 const PRS_ESPERADOS = { 193: '6da3e51', 194: '106b895', 195: '3cd3364', 196: 'cabf32f' };
-const STATUS_CONHECIDOS = ['agendado-linkedin', 'aprovado-checagem', 'manual'];
+const STATUS_CONHECIDOS = ['agendado', 'agendado-linkedin', 'aprovado', 'aprovado-checagem', 'concluido', 'manual', 'parado', 'publicado', 'publicado-manual', 'publicando', 'reprovado', 'sem-conteudo'];
 
 // Função pura: decide a linha. Fora do dia alvo, não há linha (retorna null).
 function avaliarProntoParaSexta({ hoje, siteCodigo, prs, statusFila }) {
