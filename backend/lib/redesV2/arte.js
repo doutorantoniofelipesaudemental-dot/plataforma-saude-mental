@@ -39,17 +39,19 @@ function blocoCentralizado(linhas, tamanho, alturaLinha, yTopo, yBase) {
   return Math.max(yTopo, yTopo + (yBase - yTopo - h) / 2) + tamanho * 0.85;
 }
 
-function svgTela(tela, i, total) {
+function svgTela(tela, i, total, padrao = 'A') {
   let miolo;
   if (tela.tipo === 'capa') {
     const tam = tela.texto.length <= 60 ? 84 : tela.texto.length <= 100 ? 72 : 60;
     const linhas = quebrarLinhas(FONTE_SERIF, tela.texto, LARGURA_UTIL, tam, { maxLinhas: 7 });
-    const y = blocoCentralizado(linhas, tam, tam * 1.2, 180, ALTURA - 360);
+    const y = blocoCentralizado(linhas, tam, tam * 1.2, padrao === 'B' ? 700 : 180, ALTURA - 360);
     const sub = tela.titulo && tela.titulo !== tela.texto ? quebrarLinhas(FONTE_SANS, tela.titulo, LARGURA_UTIL, 32, { maxLinhas: 3 }) : [];
-    miolo = `${fundo('g')}${contador(i, total)}${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, y, tam * 1.2, tam, COR.branco, { negrito: true })}
+    const corpo = `${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, y, tam * 1.2, tam, COR.branco, { negrito: true })}
       ${barraOuro(y + linhas.length * tam * 1.2 - tam * 0.4)}
       ${caminhoLinhas(FONTE_SANS, sub, MARGEM, y + linhas.length * tam * 1.2 + 60, 44, 32, COR.suave)}
       ${caminhoTexto(FONTE_SANS, 'Deslize para o lado', LARGURA - MARGEM - larguraTexto(FONTE_SANS, 'Deslize para o lado', 26), ALTURA - 190, 26, COR.dourado)}`;
+    // No padrão B a faixa da foto (composta por renderizarTelas) cobre o topo: sem fundo nem contador por cima dela.
+    miolo = padrao === 'B' ? corpo : `${fundo('g')}${contador(i, total)}${corpo}`;
   } else if (tela.tipo === 'final') {
     const linhas = quebrarLinhas(FONTE_SERIF, tela.titulo, LARGURA_UTIL, 76, { maxLinhas: 3 });
     miolo = `${fundo('g')}${contador(i, total)}${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, 470, 92, 76, COR.branco, { negrito: true })}
@@ -71,12 +73,29 @@ function svgTela(tela, i, total) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${LARGURA}" height="${ALTURA}" viewBox="0 0 ${LARGURA} ${ALTURA}">${miolo}${assinatura()}</svg>`;
 }
 
-async function renderizarTelas(telas) {
+// Padrão B (ordem de 28/10/2026, em teste): capa com a foto numa faixa no topo e o título numa faixa sólida embaixo;
+// nas demais telas, uma tira fina da mesma foto no topo. Só vale com `padrao: 'B'` e a imagem da capa. O padrão A segue como default.
+const FAIXA_CAPA_B = 567;
+const TIRA_B = { y: 250, altura: 18 };
+
+async function renderizarTelas(telas, { padrao = 'A', capa } = {}) {
+  if (padrao === 'B' && !capa) throw new Error('padrão B exige a imagem da capa');
   const total = telas.length;
   const textos = [...ASSINATURA, CREDITO, 'Deslize para o lado', 'Em crise: CVV 188 · SAMU 192', ...telas.flatMap((t) => [t.titulo, t.texto].filter(Boolean))];
   const ausentes = [...glifosAusentes(textos, FONTE_SANS), ...glifosAusentes(textos, FONTE_SERIF)];
   const imagens = [];
-  for (const [i, t] of telas.entries()) imagens.push(await sharp(Buffer.from(svgTela(t, i, total))).png().toBuffer());
+  const faixaCapa = padrao === 'B' ? await sharp(capa).resize({ width: LARGURA, height: FAIXA_CAPA_B, fit: 'cover', position: 'centre' }).toBuffer() : null;
+  for (const [i, t] of telas.entries()) {
+    if (padrao !== 'B') { imagens.push(await sharp(Buffer.from(svgTela(t, i, total))).png().toBuffer()); continue; }
+    if (i === 0) {
+      const base = sharp({ create: { width: LARGURA, height: ALTURA, channels: 3, background: COR.marinho } });
+      imagens.push(await base.composite([{ input: faixaCapa, top: 0, left: 0 }, { input: Buffer.from(svgTela(t, i, total, 'B')) }]).png().toBuffer());
+    } else {
+      const tira = await sharp(faixaCapa).extract({ left: 0, top: TIRA_B.y, width: LARGURA, height: TIRA_B.altura }).toBuffer();
+      const png = await sharp(Buffer.from(svgTela(t, i, total))).composite([{ input: tira, top: 0, left: 0 }]).png().toBuffer();
+      imagens.push(png);
+    }
+  }
   return { imagens, glifosAusentes: [...new Set(ausentes)] };
 }
 
