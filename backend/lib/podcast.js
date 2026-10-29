@@ -1,9 +1,12 @@
 /**
  * Feed RSS do podcast (ordem de 20/10/2026, fase 1). Função pura: recebe os artigos e devolve o XML.
  * Só entram textos PUBLICADOS com narração gravada no Blob (trava B respeitada: texto agendado não aparece).
+ * Trava C (ordem de 29/10/2026): só entra texto com revisão médica APROVADA e hash do corpo igual ao aprovado.
+ * Sem revisão, o feed fica válido e vazio.
  * Cada episódio: título, resumo, link do texto, aviso educativo, CVV 188 · SAMU 192 quando o tema pede,
  * e a frase "Narração com voz sintética".
  */
+const R = require('./revisaoMedica');
 const AVISO = 'Conteúdo educativo, não substitui consulta. Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.';
 const LINHA_CRISE = 'Em crise: CVV 188 · SAMU 192.';
 const VOZ = 'Narração com voz sintética.';
@@ -21,9 +24,10 @@ const duracaoSegundos = (caracteres) => Math.max(1, Math.round(Number(caracteres
 const rfc822 = (d) => new Date(d).toUTCString();
 
 // Função pura: escolhe os artigos que podem virar episódio. Trava B: só publicado, com narração e já no ar.
-function episodiosDe(artigos, { base, agora = new Date() }) {
+function episodiosDe(artigos, { base, agora = new Date(), revisaoDe = () => null, hashDe = () => null }) {
   return artigos
     .filter((a) => a && a.publicado === true && a.narracao && a.narracao.url && a.publicadoEm && new Date(a.publicadoEm) <= new Date(agora))
+    .filter((a) => R.estadoRevisao({ registro: revisaoDe(a.slug), hashAtual: hashDe(a) }).valido)
     .sort((a, b) => new Date(b.publicadoEm) - new Date(a.publicadoEm))
     .map((a) => {
       const link = `${base}/artigo/${a.slug}`;

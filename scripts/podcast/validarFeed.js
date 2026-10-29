@@ -54,7 +54,7 @@ if (require.main === module) {
   (async () => {
     const { montarFeed, episodiosDe, CANAL } = require('../../backend/lib/podcast');
     const arq = process.argv[2];
-    const xml = arq ? fs.readFileSync(path.resolve(arq), 'utf8') : montarFeed({ canal: CANAL, episodios: episodiosDe([{ slug: 'exemplo', titulo: 'Exemplo de episódio', resumo: 'Resumo de teste.', publicado: true, publicadoEm: new Date('2026-10-20T12:00:00Z'), narracao: { url: 'https://exemplo.blob.vercel-storage.com/exemplo.mp3', bytes: 123456, caracteres: 1500 } }], { base: 'https://www.drantoniofelipemedico.com.br' }) });
+    const xml = arq ? fs.readFileSync(path.resolve(arq), 'utf8') : montarFeed({ canal: CANAL, episodios: episodiosDe([{ slug: 'exemplo', titulo: 'Exemplo de episódio', resumo: 'Resumo de teste.', publicado: true, publicadoEm: new Date('2026-10-20T12:00:00Z'), narracao: { url: 'https://exemplo.blob.vercel-storage.com/exemplo.mp3', bytes: 123456, caracteres: 1500 } }], { revisaoDe: () => ({ status: 'aprovada', hash: 'exemplo' }), hashDe: () => 'exemplo', base: 'https://www.drantoniofelipemedico.com.br' }) });
     const erros = validarXml(xml);
     const capaPath = path.resolve(__dirname, '../../public/podcast/capa-3000.png');
     let capa = [];
