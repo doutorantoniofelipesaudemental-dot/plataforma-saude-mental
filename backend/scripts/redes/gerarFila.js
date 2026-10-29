@@ -10,6 +10,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { planejarPost, montarLegenda, palavras, encurtar } = require('../../lib/redesV2/conteudo');
+const { backupAntesDeSobrescrever } = require('../../../scripts/lib/backupPasta');
 const { renderizarTelas, textoAlternativo } = require('../../lib/redesV2/arte');
 const { checarPost } = require('../../lib/redesV2/checagem');
 const { publicoDe, FERIADOS } = require('../../lib/calendarioSite');
@@ -66,6 +67,9 @@ async function gerarEGravar({ id, doc, tipo, publico, dataSugerida }) {
   const r = await gerarUm(doc, tipo, dataSugerida.slice(0, 10));
   const aprovado = r.chk.ok;
   const dir = path.join(SAIDA, aprovado ? '' : 'revisar', id);
+  // Lição de 28/10/2026: a pasta existente vai para backups/ antes de ser apagada
+  const copia = backupAntesDeSobrescrever(dir);
+  if (copia) console.log(`backup da pasta anterior: ${copia}`);
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
   r.imagens.forEach((img, i) => fs.writeFileSync(path.join(dir, `tela-${i + 1}.png`), img));

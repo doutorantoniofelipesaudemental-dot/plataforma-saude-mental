@@ -21,7 +21,9 @@ module.exports = defineConfig({
     : {
         command: `node --env-file-if-exists="${arquivoEnv}" index.js`,
         url: `${baseURL}/api/health`,
-        reuseExistingServer: true,
+        // false: o portão não reaproveita servidor de outra execução (a que o deixou pode morrer no meio dos testes).
+        // Porta ocupada vira erro claro; o portão limpa órfãos antes de começar (scripts/lib/encerrarTesteOrfao.js).
+        reuseExistingServer: false,
         timeout: 30_000,
       },
 });

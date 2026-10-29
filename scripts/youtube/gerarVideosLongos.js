@@ -9,6 +9,7 @@ const path = require('node:path');
 const mongoose = require('mongoose');
 const L = require('./lib');
 const { checarImagemSemMarcaDagua } = require('../../backend/lib/checagensAprovacao');
+const { backupAntesDeSobrescrever } = require('../lib/backupPasta');
 
 const arg = (k) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').split('=').slice(1).join('=');
 const refazer = process.argv.includes('--refazer');
@@ -19,7 +20,11 @@ async function gerar(a, { dirSaida = '' } = {}) {
   let mp3 = await L.obterAudio(a);
   if (mp3) mp3 = L.comVinheta(a, mp3); // abertura + encerramento falados (crédito da marca)
   if (!mp3) return { slug: a.slug, pulou: 'sem áudio válido (hash difere do texto atual ou narração ausente)' };
-  const dir = dirSaida || path.join(L.MIDIA, a.slug); fs.mkdirSync(dir, { recursive: true }); // dirSaida: rascunho de regeração
+  const dir = dirSaida || path.join(L.MIDIA, a.slug);
+  // Lição de 28/10/2026: o que já existe na pasta vai para backups/ antes de ser regravado
+  const copia = backupAntesDeSobrescrever(dir);
+  if (copia) console.log(`backup da pasta anterior: ${copia}`);
+  fs.mkdirSync(dir, { recursive: true }); // dirSaida: rascunho de regeração
   const saida = path.join(dir, 'longo.mp4');
   if (fs.existsSync(saida) && fs.existsSync(path.join(dir, 'meta.json')) && !refazer) return { slug: a.slug, pulou: 'já gerado' };
 
