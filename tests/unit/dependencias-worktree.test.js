@@ -19,6 +19,7 @@ test('planejar: node_modules que é atalho nunca é seguido', () => {
 });
 
 test('prepararDependencias: instalação interrompida (pasta sem .package-lock.json) é reinstalada com npm ci', () => {
+  fs.mkdirSync(path.join(__dirname, '../../.tmp'), { recursive: true });
   const raiz = fs.mkdtempSync(path.join(__dirname, '../../.tmp/deps-teste-'));
   for (const dir of pastasDoProjeto(raiz)) {
     fs.mkdirSync(dir, { recursive: true });
@@ -36,6 +37,7 @@ test('prepararDependencias: instalação interrompida (pasta sem .package-lock.j
 });
 
 test('prepararDependencias: instalação completa não roda npm ci de novo', () => {
+  fs.mkdirSync(path.join(__dirname, '../../.tmp'), { recursive: true });
   const raiz = fs.mkdtempSync(path.join(__dirname, '../../.tmp/deps-teste-'));
   for (const dir of pastasDoProjeto(raiz)) {
     fs.mkdirSync(path.join(dir, 'node_modules'), { recursive: true });
