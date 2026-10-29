@@ -250,4 +250,5 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 ## Arquivos rastreados e pasta principal (regra permanente, 27/10/2026, ordem do Dr. Antônio)
 - `LICOES.md`, `CLAUDE.md`, `DECIDIDO.md` e qualquer arquivo rastreado pelo Git NUNCA são editados direto na pasta principal: só em worktree curto, com PR.
 - Na pasta principal só se editam os arquivos de estado ignorados (`ESTADO-GERAL.md`, `PROMPT-ATUAL.md`, `PENDENTES.md`, filas e logs).
+- **Fila manual do LinkedIn (28/10/2026):** `relatorios/linkedin/fila-manual/` é estado fora do Git (ignorada). Protegida pelo backup diário e pelo `merge-seguro`. Textos ficam em CRLF no disco. Ver DECIDIDO.md (28/10/2026).
 - `merge-seguro` para antes de trocar de branch se houver arquivo rastreado alterado na pasta principal ou arquivo não rastreado que o PR também adiciona. Nada é copiado, movido ou apagado automaticamente.

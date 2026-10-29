@@ -43,8 +43,17 @@ function avaliarRestauracao(manifesto, atual) {
 
 const sha = (buf) => require('node:crypto').createHash('sha256').update(buf).digest('hex');
 
+// Todos os arquivos de uma pasta, em caminho relativo à raiz (recursivo). Pasta ausente = lista vazia.
+function todosOsArquivos(raiz, pasta) {
+  const abs = path.join(raiz, pasta);
+  if (!fs.existsSync(abs)) return [];
+  return fs.readdirSync(abs, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? todosOsArquivos(raiz, `${pasta}${e.name}/`) : [`${pasta}${e.name}`]));
+}
+
 // Copia os arquivos que existem para o destino (com conferência byte a byte). Devolve o manifesto { rel: sha }.
-function protegerEstado({ raiz, lista, destino }) {
+function protegerEstado({ raiz, lista: listaBruta, destino }) {
+  // Entradas terminadas em / são pastas: protegidas com todos os arquivos que contêm (inclusive mídia; aqui é cópia de bytes).
+  const lista = [...new Set(listaBruta.flatMap((rel) => (rel.endsWith('/') ? todosOsArquivos(raiz, rel) : [rel])))];
   const existe = {};
   for (const rel of lista) existe[rel] = fs.existsSync(path.join(raiz, rel));
   const manifesto = {};
