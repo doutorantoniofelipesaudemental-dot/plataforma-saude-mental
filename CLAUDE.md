@@ -153,8 +153,8 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Decisões do Dr. Antônio (18/10/2026): assinatura por extenso (TCC) e PAP/APS só na versão de 3 linhas; landings e conteúdo já publicado/agendado só com plano e ordem dele; Newsletter, Podcast, Kit NR-1 e thumbnail com rosto = módulos planejados (PR próprio, sem tocar no existente; rosto só com foto aprovada).
 - **Instagram (18/10/2026, ordem do Dr. Antônio):** imagem única e carrossel pela Meta Graph (freio `REDES_PUBLICACAO_ATIVA` da Vercel). Carrossel LIBERADO em 18/10/2026 16:59 UTC após validação SEM publicar dos 7 próximos posts (`npm run redes:teste-carrossel -- --validar`); antes de cada `media_publish` o publicador reconfere o post e valida os containers (FINISHED), trava contra publicar 2 vezes, adia 1 dia e alerta se algo falhar, e confere pela API (só leitura) o post publicado e grava o ID da Meta. Reels e Stories: NÃO são produzidos por ora (sem fila manual); reavaliar em ~18/11. Conferência diária só de leitura às 09:30 (tarefa `DrSM-Conferencia-Diaria`, relatório em `relatorios/conferencias/`, alerta no topo do `ESTADO-GERAL.md`).
 
-### Agenda de plantões (19/10/2026)
-- Às QUINTAS e aos DOMINGOS o Dr. Antônio fica indisponível das 17:30 até as 10:30 do dia seguinte. O PC pode estar desligado nesse período.
+### Agenda de plantões (19/10/2026) — SUPERADA pela "Disponibilidade" (28/10/2026, no fim deste arquivo)
+- (Texto de 19/10, mantido por histórico.) Às QUINTAS e aos DOMINGOS o Dr. Antônio fica indisponível das 17:30 até as 10:30 do dia seguinte. O PC pode estar desligado nesse período.
 - Nessas noites: narração e YouTube gera-mídia adiantados para 14:00 e 15:30. Nos outros dias, mantidos às 22:00 e 23:30.
 - YouTube publica (ordem do Dr. Antônio, 19/10/2026): seg, ter, qua, sex e sáb às 20:15; qui e dom às 17:15 (antes era 12:30 todos os dias). Aplicado só após `scripts/agendar-tarefas-windows.ps1` rodar de novo, por ordem do Dr. Antônio.
 - Todas as tarefas `DrSM-*` com StartWhenAvailable e trava para não rodar duas vezes no mesmo dia. LinkedIn (11:00) e conferência (09:30), se o PC estiver desligado, rodam quando ele voltar.
@@ -251,3 +251,19 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 - `LICOES.md`, `CLAUDE.md`, `DECIDIDO.md` e qualquer arquivo rastreado pelo Git NUNCA são editados direto na pasta principal: só em worktree curto, com PR.
 - Na pasta principal só se editam os arquivos de estado ignorados (`ESTADO-GERAL.md`, `PROMPT-ATUAL.md`, `PENDENTES.md`, filas e logs).
 - `merge-seguro` para antes de trocar de branch se houver arquivo rastreado alterado na pasta principal ou arquivo não rastreado que o PR também adiciona. Nada é copiado, movido ou apagado automaticamente.
+
+## Disponibilidade do Dr. Antônio (28/10/2026, retificação por ordem escrita; substitui a agenda de plantões de 19/10)
+- **Escopo das janelas (ordem de 28/10, 2ª retificação):** valem SÓ para pedidos feitos ao Dr. Antônio, merges e cliques dele. Tarefas automáticas (narração, gera-mídia, publicação, conferências, LinkedIn, Blob) podem rodar a qualquer hora.
+- **Janelas em que o Dr. Antônio está disponível** (fora delas, nenhum pedido pode depender dele):
+  - segunda, terça e sexta: 17:30 às 23:00;
+  - quinta: só 17:30 às 18:00 (depois, plantão no PAP);
+  - sábado: SÓ 20:00 às 23:00;
+  - domingo: do início da manhã até as 18:00 (depois, plantão no PAP).
+- **Horário de trabalho do Dr. Antônio:** dias úteis das 07:30 às 17:15. É o horário dele, não um limite da automação. Nunca pedir nada a ele de madrugada.
+- **Sessão semanal:** domingo às 09:00 (no máximo 1 hora). Reserva: sexta às 18:30. Até sábado às 20:00, o bloco "SESSÃO DE DOMINGO" do topo do `relatorios/ESTADO-GERAL.md` fica pronto com: (a) merges PRONTOS da semana, um por linha; (b) até 3 decisões, cada uma com recomendação; (c) lote de revisão médica da semana; (d) itens que precisam de clique do Dr. (formulários, logins, tarefas de administrador).
+- **Urgência no meio da semana:** agir pela política de travas (rollback, adiar o post) e avisar na janela seguinte.
+- **Tarefas automáticas:** rodam sozinhas nos horários de `scripts/agendar-tarefas-windows.ps1`, todos os dias. LinkedIn (`DrSM-LinkedIn-Agendar`): todo dia às 11:00, inclusive sábado. Se a tarefa precisar de login ou CAPTCHA, ela PARA e registra o alerta para o Dr. ver na janela dele (regra de parada do `agendarDiario.js`).
+- **Alerta do Blob:** a rotina mensal (`DrSM-Blob-Rotina-Mensal`, dia 1 às 03:00) grava o alerta no topo do `relatorios/RESUMO-DO-DIA.md`; a conferência das 09:30 mantém esse alerta no mesmo dia (`scripts/conferencias/resumoDoDia.js`).
+- **Aposentada:** `DrSM-PR-Semanal` (28/10/2026). O script não a registra mais. A tarefa no Windows não foi apagada.
+- **Auditoria do YouTube:** domingo, 01/11/2026, às 09:00 (dentro da janela da manhã). Tudo pronto e conferido no sábado.
+- **Merge automático:** só proposta até nova ordem (ver `docs/proposta-automerge-docs.md`). Nada é implementado antes da aprovação.

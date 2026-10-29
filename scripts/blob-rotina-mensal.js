@@ -70,7 +70,8 @@ function alertarBlob(texto) {
   }
   const resumo = path.join(raiz, 'relatorios/RESUMO-DO-DIA.md');
   const atual = fs.existsSync(resumo) ? fs.readFileSync(resumo, 'utf8') : '';
-  fs.writeFileSync(resumo, `PRECISA DE VOCÊ: SIM — Blob: ${texto}\n${atual.replace(/^PRECISA DE VOCÊ:.*\n?/, '')}`, 'utf8');
+  // Mesmo formato lido por resumoDoDia.js (PREFIXO_ALERTA_BLOB): a conferência das 09:30 mantém esta linha no topo.
+  fs.writeFileSync(resumo, `PRECISA DO DR. ANTÔNIO: SIM — Blob: ${texto}\n${atual.replace(/^PRECISA DO DR\. ANTÔNIO:.*\n?/, '')}`, 'utf8');
 }
 
 async function main() {
