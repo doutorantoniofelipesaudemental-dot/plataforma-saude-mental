@@ -11,6 +11,7 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const mongoose = require('mongoose');
 const L = require('../youtube/lib');
+const { semEspacoAntesDePontuacao } = require('./formatoPost');
 const { BASTIDORES } = require('./bastidores');
 const { checarPost } = require('../../backend/lib/linkedinChecagem');
 
@@ -59,7 +60,7 @@ function melhorLista(a) {
   return melhor;
 }
 const encurtar = (t, n) => (t.length <= n ? t : `${t.slice(0, n).replace(/[\s,;(]+\S*$/, '')}…`);
-const PIE = (a) => ({ slug: a.slug, titulo: a.titulo, url: `${L.SITE}/artigo/${a.slug}`, ref: encurtar((L.referencias(a.conteudo)[0] || '').replace(/\s+https?:\/\/\S+$/, ''), 190) });
+const PIE = (a) => ({ slug: a.slug, titulo: a.titulo, url: `${L.SITE}/artigo/${a.slug}`, ref: encurtar(semEspacoAntesDePontuacao((L.referencias(a.conteudo)[0] || '').replace(/\s+https?:\/\/\S+$/, '')), 190) });
 
 const RODAPE = `\nConteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito.\nConteúdo educativo, não substitui consulta. Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.\n${L.CRISE}\n${L.AVISO_IA}\n\n${L.IDENTIFICACAO_3_LINHAS}`;
 const HASH = { educativo: '#SaudeMental #AtencaoPrimaria #MedicinaDeFamilia', trabalho: '#SaudeMentalNoTrabalho #NR1 #RiscosPsicossociais', bastidores: '#SaudeMental #AtencaoPrimaria #PraticaClinica' };
@@ -70,7 +71,7 @@ function montarPost(a, tema) {
   const info = PIE(a); const g = semAutor(gancho(a)); const resumo = semAutor(L.semTags(a.resumo || ''));
   for (let n = Math.min(5, lista.itens.length); n >= 3; n--) {
     const pontos = lista.itens.slice(0, n).map((i) => `• ${fimFrase(cap(i))}`).join('\n');
-    const texto = [g, resumo && !g.includes(resumo.slice(0, 40)) ? `\n${resumo}` : '', `\nPontos práticos${lista.h2 ? ` (${lista.h2.replace(/[?:]+$/, '')})` : ''}:\n${pontos}`, info.ref ? `\nReferência: ${info.ref}` : '', `\nTexto completo: ${info.url}`, RODAPE, `\n${HASH[tema]}`].join('\n').replace(/\n{3,}/g, '\n\n').trim();
+    const texto = [g, resumo && !g.includes(resumo.slice(0, 40)) ? `\n${resumo}` : '', `\nPontos práticos:\n${pontos}`, info.ref ? `\nReferência: ${info.ref}` : '', `\nTexto completo: ${info.url}`, RODAPE, `\n${HASH[tema]}`].join('\n').replace(/\n{3,}/g, '\n\n').trim();
     if (texto.length <= 1990) return { texto, slug: a.slug, titulo: a.titulo, url: info.url };
   }
   return null;

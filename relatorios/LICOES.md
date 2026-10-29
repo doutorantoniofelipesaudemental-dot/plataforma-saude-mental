@@ -66,3 +66,9 @@
 ## Feed público sem revisão (29/10/2026)
 - **Fato:** `episodiosDe` (backend/lib/podcast.js) filtrava só por publicado, narração e data. Nenhum episódio tinha revisão médica, e o feed público expunha todos os textos publicados.
 - **Regra:** o feed só inclui episódio com revisão APROVADA e hash do corpo igual ao aprovado (trava C). Sem fonte de revisões no servidor, o feed fica válido e vazio.
+## 28/10/2026 — alteração direta em arquivo rastreado (fila-manual)
+- **Fato:** 30 textos rastreados de `relatorios/linkedin/fila-manual/` foram editados direto na pasta principal, em vez de worktree + PR. A edição também trocou espaços antes de vírgula e ponto em 2 linhas do corpo, além do rótulo e das referências autorizados. Essas 2 linhas foram revertidas ao HEAD.
+- **Prova:** `git diff --ignore-cr-at-eol` com classificação por linha: 30 rótulos "Pontos práticos", 16 referências, 0 outras linhas. Backup antes da reversão: `.tmp/backup-fila-manual-20261028-antes-reverter/`.
+- **Causa do CRLF:** os 43 textos estão com CRLF no disco e LF no Git. Os 12 não tocados nesta sessão têm última gravação em 16/10 e 17/10. Nenhuma tarefa agendada reescreve esses arquivos; os únicos gravadores são `gerarConteudo.js --aplicar` e `aplicarCredito.js --aplicar`, ambos manuais.
+- **Regra:** arquivo rastreado só em worktree + PR, mesmo para correção pequena. Na pasta principal só arquivos de estado ignorados.
+- **Solução:** tratar a pasta como estado (ignorada), em PR próprio, com backup e conferência de hash no merge (ver CLAUDE.md e DECIDIDO.md).
