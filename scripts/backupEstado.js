@@ -31,6 +31,12 @@ const LISTA = [
   'relatorios/youtube/reprovados/REGERAR-FILA.txt',
   'relatorios/CONSUMO.md',
   'relatorios/consumo-claude.json',
+  // ordem de 27/10/2026: estado e registro que estavam só na pasta principal e ignorados pelo Git (sumiram ao trocar de branch)
+  'relatorios/ESTADO-GERAL.md',
+  'relatorios/PROMPT-ATUAL.md',
+  'relatorios/PENDENTES.md',
+  'relatorios/DECIDIDO.md',
+  'relatorios/LICOES.md',
 ];
 
 // Padrões de segredo. Só diz SIM/NÃO; nunca mostra o trecho encontrado.

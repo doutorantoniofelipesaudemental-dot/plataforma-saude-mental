@@ -28,6 +28,7 @@
     "bot:publicar": "node scripts/bot-publicar.js",
     "youtube:autorizar": "node scripts/youtube-autorizar.js",
     "youtube:teste-playlists": "node --env-file-if-exists=.env scripts/youtube/testeLeituraPlaylists.js",
+    "estado:guardar": "node scripts/guardarEstado.js",
     "bot:video-carrossel": "node scripts/bot-video-carrossel.js",
     "bot:matriz": "node scripts/bot-matriz.js",
     "bot:elevenlabs": "node scripts/bot-elevenlabs.js",
