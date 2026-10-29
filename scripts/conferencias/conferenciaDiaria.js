@@ -151,6 +151,7 @@ function outrasFilas() {
     const codigo = parseInt(res, 10);
     if (Number.isNaN(codigo)) { aviso(`tarefa ${nome}: resultado não lido (verificar o Agendador)`); continue; }
     const a = require('./monitorTarefas').avaliarTarefa({ nome, ultimoResultado: codigo, estado: (estado || '').trim(), hoje });
+    linhas.push(`- ${nome}: LastTaskResult ${codigo} → ${require('./codigosTarefa').interpretarResultado(codigo)}`);
     if (a === 'ok') continue;
     if (a.aviso) aviso(a.aviso); else falha(a.alerta);
   }
