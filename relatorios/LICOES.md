@@ -43,3 +43,10 @@
 ## Trocar de branch na pasta principal (27/10/2026)
 - Regra: trocar de branch apaga arquivo que era rastreado no branch de origem e é ignorado no destino. Antes de qualquer troca, rodar `npm run estado:guardar` (copia os arquivos de estado para `.tmp/estado-<data-hora>/`).
 - Verificado no mesmo dia: `ESTADO-GERAL.md` e `PROMPT-ATUAL.md` nunca estiveram no Git; não estavam no stash e a cópia mais recente deles era de 22/10. Por isso entraram na lista de backup (`scripts/backupEstado.js`).
+
+## Gerador não sobrescreve sem backup; um portão por vez (28/10/2026, ordem do Dr. Antônio)
+- **Fato:** `gerarShorts.js` apagava a pasta do Short antes de regerar. Uma regeração com `--slug` (sem `--post`) gerou no id `resumo` e sobrescreveu `saude-mental-cuidador/short-resumo` (16/10), sem cópia. Não estava na fila e não há registro de envio ao YouTube.
+- **Regra:** antes de apagar ou regravar uma pasta existente, o gerador copia o que estiver lá para `backups/<pasta>-<AAAAMMDD-HHMM>/` (`scripts/lib/backupPasta.js`, com teste). Vale para `gerarShorts.js` e `gerarVideosLongos.js`.
+- **Regra:** ao regerar um Short, usar `--post=<id-do-post>` (o id da fila), nunca `--slug`, para que a pasta gerada seja a da fila.
+- **Fato:** dois portões rodaram ao mesmo tempo e brigaram pela porta do e2e (webServer caiu com "exited early").
+- **Regra:** `scripts/portao.js` pega a trava `.tmp/portao.lock` (`scripts/lib/portaoTrava.js`, com teste) antes de qualquer coisa. Quem chega com a trava ocupada espera; trava de processo morto ou com mais de 2 h é tomada com aviso. Vale para `npm run portao` direto e para o que o chama (publicarBranch, merge-seguro, manutenção, PR semanal).

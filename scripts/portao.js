@@ -18,6 +18,12 @@ const RAIZ = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 const base = (args.find((a) => a.startsWith('--base=')) || '--base=origin/main').split('=')[1];
 const soChecagem = args.includes('--so-checagem');
+// Lição de 28/10/2026: um portão por vez, em qualquer caminho (publicarBranch, merge-seguro, manutenção, direto).
+// Dois portões ao mesmo tempo brigavam pela porta do e2e. Quem chega com a trava ocupada espera (lib/portaoTrava).
+const { aguardarTravaSync, soltarTrava } = require('./lib/portaoTrava');
+aguardarTravaSync({ aviso: (m) => console.log(`PORTÃO: ${m}`) });
+process.on('exit', () => soltarTrava());
+process.on('SIGINT', () => process.exit(130));
 // Lição de 23/10/2026: o portão só roda com a branch local igual ao remoto (senão aprova código velho).
 const sincronia = require('./lib/branchSincronizado').lerSincronia(RAIZ);
 if (!sincronia.ok) { console.log(`PORTÃO NÃO EXECUTADO: ${sincronia.motivo}`); process.exit(1); }

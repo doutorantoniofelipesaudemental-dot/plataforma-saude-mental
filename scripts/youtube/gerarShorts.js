@@ -9,6 +9,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const mongoose = require('mongoose');
 const L = require('./lib');
+const { backupAntesDeSobrescrever } = require('../lib/backupPasta');
 const { aplicarPronuncia } = require('../../backend/lib/pronunciaTts');
 const { checarImagemSemMarcaDagua } = require('../../backend/lib/checagensAprovacao');
 
@@ -44,6 +45,9 @@ async function gerar({ a, id, tituloTela, linhas, extraDescricao = '', dirSaida 
   const cp = await L.obterCapa(a);
   if (cp.erro) return { slug: a.slug, id, pulou: cp.erro };
   if (cp.buf) { const wm = await checarImagemSemMarcaDagua(cp.buf); if (!wm.ok) return { slug: a.slug, id, reprovado: `capa com marca d'água/ruído: ${wm.falhas.join('; ')}` }; }
+  // Lição de 28/10/2026: a pasta existente vai para backups/ antes de ser apagada (a short-resumo de 16/10 se perdeu assim)
+  const copia = backupAntesDeSobrescrever(dir);
+  if (copia) console.log(`backup da pasta anterior: ${copia}`);
   fs.mkdirSync(dir, { recursive: true }); for (const f of fs.readdirSync(dir)) fs.rmSync(path.join(dir, f), { recursive: true, force: true });
   let capa = '';
   if (cp.buf) { capa = path.join(dir, 'capa.jpg'); fs.writeFileSync(capa, cp.buf); }
