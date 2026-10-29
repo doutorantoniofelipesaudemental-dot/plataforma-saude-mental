@@ -35,6 +35,11 @@ function validarResultados(resultados) {
   return problemas;
 }
 
+// Função pura: garante o campo id em cada documento (o banco traz _id; o snapshot exportado pode trazer só _id).
+function comId(docs) {
+  return docs.map((d) => ({ ...d, id: String(d._id || d.id) }));
+}
+
 // Função pura: o que fazer em cada item citado no resultado. Itens fora do resultado não são tocados.
 function planejar(docs, resultados, conferidoEm) {
   const porId = new Map(docs.map((d) => [String(d._id || d.id), d]));
@@ -108,7 +113,7 @@ async function principal() {
   let col = null;
   let fechar = async () => {};
   if (fonte) {
-    docs = JSON.parse(fs.readFileSync(fonte, 'utf8'));
+    docs = comId(JSON.parse(fs.readFileSync(fonte, 'utf8')));
   } else {
     ({ col, fechar } = await lerFilaDoBanco());
     docs = await col.find({}).toArray();
@@ -154,7 +159,7 @@ async function principal() {
   await fechar();
 }
 
-module.exports = { validarResultados, planejar, conferirDepois };
+module.exports = { validarResultados, planejar, conferirDepois, comId };
 
 if (require.main === module) {
   principal().catch((e) => { console.error('ERRO:', e.message.slice(0, 300)); process.exitCode = 1; });

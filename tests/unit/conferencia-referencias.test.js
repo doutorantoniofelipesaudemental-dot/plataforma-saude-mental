@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { validarResultados, planejar, conferirDepois } = require('../../scripts/linkedin/conferenciaReferencias');
+const { validarResultados, planejar, conferirDepois, comId } = require('../../scripts/linkedin/conferenciaReferencias');
 
 const aprovado = { post: 'li-1', status: 'aprovado', pmid: '25455248', doi: '10.1016/S0140-6736(14)61276-9', motivo: 'ok' };
 const reprovado = { post: 'li-2', status: 'reprovado', motivo: 'sem referência' };
@@ -51,4 +51,10 @@ test('conferirDepois: aponta aprovado sem referência e reprovado que não foi p
     { _id: 'li-2', status: 'manual' },
   ], [aprovado, reprovado]);
   assert.deepEqual(ok, []);
+});
+
+test('comId: documento do snapshot sem id ganha id a partir do _id; o que já tem id fica', () => {
+  const [a, b] = comId([{ _id: 'li-1', status: 'x' }, { _id: 'li-2', id: 'li-2' }]);
+  assert.equal(a.id, 'li-1');
+  assert.equal(b.id, 'li-2');
 });
