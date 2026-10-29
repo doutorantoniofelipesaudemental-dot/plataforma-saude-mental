@@ -63,3 +63,11 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 28/10/2026 — Disponibilidade do Dr. Antônio e horários (ordem escrita, retificação da versão anterior)
+- Janelas: seg, ter e sex 17:30–23:00; qui só 17:30–18:00; sáb só 20:00–23:00; dom do início da manhã até 18:00. Trabalho do Claude Code nos dias úteis 07:30–17:15. Nada de madrugada.
+- Sessão semanal: domingo 09:00 (máx. 1 h); reserva sexta 18:30. Bloco "SESSÃO DE DOMINGO" no topo do ESTADO-GERAL pronto até sábado 20:00.
+- Auditoria do YouTube: domingo 01/11/2026, 09:00.
+- Merge automático de baixo risco: só proposta (`docs/proposta-automerge-docs.md`); não implementar antes de aprovação no domingo.
+- Horários (esta PR, aplicados pelo Dr. com `scripts/agendar-tarefas-windows.ps1`): LinkedIn 11:00 seg a sex e domingo, sem sábado; Blob mensal às 08:00 do dia 1 (era 03:00, para o alerta cair em horário de trabalho).
+- Demais tarefas: já estavam dentro das janelas (narração, gera-mídia, publicação do YouTube, conferências 18:15/20:45–21:15/09:00, rotina segunda 18:30, PR semanal sexta 11:00). Mantidas.
