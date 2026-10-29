@@ -28,6 +28,7 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
+const { rotuloPublico } = require('./seloPublico');
 const opentype = require('opentype.js');
 
 /**
@@ -259,7 +260,7 @@ function montarSlides(artigo) {
   }
 
   return [
-    { tipo: 'capa', titulo: artigo.titulo, categoria: artigo.categoria },
+    { tipo: 'capa', titulo: artigo.titulo, categoria: rotuloPublico(artigo.categoria) },
     ...conteudoSlides,
     { tipo: 'cta', categoria: artigo.categoria },
   ];
