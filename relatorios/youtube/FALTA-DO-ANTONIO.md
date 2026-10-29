@@ -1,3 +1,5 @@
+> **DESATUALIZADO (29/10/2026).** O app do YouTube está "Em produção" desde 18/10/2026, conforme `relatorios/DECIDIDO.md`. O aviso de vencimento em 23/10 era falso. Este registro fica para histórico e não deve ser usado como pendência.
+
 # YouTube: o que falta com você (19/10/2026)
 
 Revisão de `AUDITORIA-API-RESPOSTAS.md` contra o código. As respostas NÃO foram alteradas; a decisão é sua.
