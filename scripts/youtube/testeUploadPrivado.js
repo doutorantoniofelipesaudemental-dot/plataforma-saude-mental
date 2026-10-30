@@ -9,13 +9,15 @@ const fs = require('node:fs');
 const path = require('node:path');
 const L = require('./lib');
 const yt = require('../../backend/lib/youtube');
+const { itemPublicavel, itemDemoAuditoria } = require('./itemPublicavel');
 
 const confirmar = process.argv.includes('--confirmar');
 const idArg = (process.argv.find((a) => a.startsWith('--id=')) || '').split('=')[1];
 
 (async () => {
   const fila = JSON.parse(fs.readFileSync(path.join(L.REL, 'fila.json'), 'utf8')).itens;
-  const it = fila.find((i) => i.status === 'aprovado-checagem' && (idArg ? i.id === idArg : i.tipo === 'short'));
+  // Reprovado e imagem parada nunca são escolhidos. Com --id, só a demonstração da auditoria (ordem de 30/10/2026).
+  const it = fila.find((i) => (idArg ? i.id === idArg && itemDemoAuditoria(i) : itemPublicavel(i) && i.tipo === 'short'));
   if (!it) throw new Error('nenhum item aprovado encontrado');
   const dir = path.join(L.RAIZ, it.pasta);
   const meta = JSON.parse(fs.readFileSync(path.join(dir, 'meta.json'), 'utf8'));
