@@ -63,3 +63,13 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 30/10/2026 — Sessão de sexta (ordem escrita do Dr. Antônio, 11:00)
+- **Carrossel 28/10:** escolhida a versão A (`C:/DRS-post-check/amostras/carrossel-28/`), com a regra nova do selo: selo = "Para <público>" e título grande = tema. Vale para capas futuras. Sujeita à olhada final do Dr. Antônio (bloco 3). A versão B fica como referência.
+- **Vídeos YouTube (após a revisão do Dr. Antônio, bloco 1):**
+  - `tmc-aps`: público na sexta, 30/10.
+  - `saude-mental-cuidador` (Short): agendado para sábado, 31/10, às 12:00.
+  - `burnout-medicos-enfermeiros`: agendado para segunda, 02/11, às 18:00.
+  - Cada publicação depende da aprovação do vídeo pelo comando `npm run revisao:aprovar -- <slug>`. Reprovado: não sobe e a data fica livre.
+- **App do YouTube:** "Em produção" (confirmado de novo em 30/10).
+- **PRs #192 e #138:** fechados sem mesclar. As branches (`feat/reels-api-preparo-20261028` e `feat/dominio-unico-rewrite-20261021`) são preservadas e não são apagadas.
