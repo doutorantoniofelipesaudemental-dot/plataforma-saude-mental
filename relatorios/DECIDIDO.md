@@ -103,3 +103,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **`npm run youtube:autorizar`:** grava o refresh token só no `.env` local. Não revoga tokens existentes.
 - **Capturas OAuth:** as imagens vão para `relatorios/youtube/auditoria-envio/capturas/` com prefixo `oauth-` (exigência de `scripts/youtube/montarAnexoAuditoria.js`). Nomes: `oauth-01-consentimento`, `oauth-02-escopos`, `oauth-03-autorizado`, `oauth-04-revogacao`. Método: Win+PrtScn, com a cópia renomeada (a original em `Imagens\Capturas de tela` não é movida nem apagada). A pasta `evidencias/` não é usada.
 - **Frequência e revisão em lote:** confirmadas (3 Reels, 1 carrossel, Stories, 3 posts de LinkedIn, 3 Shorts + 1 vídeo longo, 1 episódio por semana, lote de no máximo 45 min). Conforme a entrada de 30/10 acima.
+
+## 30/10/2026 — Auditoria do YouTube: demonstração privada, fila e itens publicáveis (ordem escrita do Dr. Antônio)
+- **Screencast (opção C):** o Google exige ver o uso real do escopo de upload. Em vez de subir vídeo estático, cria-se uma demonstração técnica de 15 s, sem conteúdo clínico, com 4 cenas e crédito do Portal, na fila com status `demo-auditoria` (id `demo-auditoria-20261030`). Sobe SEMPRE privada, por `testeUploadPrivado.js --id=demo-auditoria-20261030`. Não é apagada.
+- **Fila:** `tmc-aps`, `saude-mental-cuidador` e `burnout-medicos-enfermeiros` (inclusive os itens futuros `short-resumo-*`) marcados como REPROVADOS no `fila.json`. O arquivo não é versionado (ignorado pelo Git): a marcação é de estado local, feita em 30/10; o backup de antes está em `.tmp/fila-antes-reprovar-30.json`.
+- **Código:** `itemPublicavel` impede publicação ou teste de item reprovado e de item com menos de 2 cenas (itens antigos contam como 1). Vale para `publicarYoutube.js` e `testeUploadPrivado.js`. Testes em `tests/unit/item-publicavel.test.js`.
+- **Vercel:** sem variável do YouTube (ver entrada anterior).
