@@ -22,7 +22,7 @@ test('demonstração da auditoria não é publicação normal', () => {
 });
 
 test('demonstração só vale como privada e com cenas suficientes', () => {
-  assert.equal(itemDemoAuditoria({ status: 'demo-auditoria', cenas: 4, privacidade: 'private' }), true);
+  assert.equal(itemDemoAuditoria({ status: 'demo-auditoria', cenas: 4, privacidade: 'private', conteudoClinico: false }), true);
   assert.equal(itemDemoAuditoria({ status: 'demo-auditoria', cenas: 4, privacidade: 'public' }), false);
   assert.equal(itemDemoAuditoria({ status: 'demo-auditoria', cenas: 1, privacidade: 'private' }), false);
   assert.equal(itemDemoAuditoria({ status: 'aprovado-checagem', cenas: 4, privacidade: 'private' }), false);
