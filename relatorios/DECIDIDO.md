@@ -109,3 +109,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Fila:** `tmc-aps`, `saude-mental-cuidador` e `burnout-medicos-enfermeiros` (inclusive os itens futuros `short-resumo-*`) marcados como REPROVADOS no `fila.json`. O arquivo não é versionado (ignorado pelo Git): a marcação é de estado local, feita em 30/10; o backup de antes está em `.tmp/fila-antes-reprovar-30.json`.
 - **Código:** `itemPublicavel` impede publicação ou teste de item reprovado e de item com menos de 2 cenas (itens antigos contam como 1). Vale para `publicarYoutube.js` e `testeUploadPrivado.js`. Testes em `tests/unit/item-publicavel.test.js`.
 - **Vercel:** sem variável do YouTube (ver entrada anterior).
+
+## 30/10/2026 — Freio, pausa estática e ordem de merges (ordem escrita do Dr. Antônio, 15:00)
+- **Freio do YouTube:** o Dr. confere `YOUTUBE_PUBLICACAO_ATIVA` no `.env` por conta própria. O assistente não lê o `.env`.
+- **Pausa dos estáticos:** os 92 itens `pausado-estatico` ficam pausados até o padrão animado ser aprovado. Reprovados (5) e a demo (`demo-auditoria`) também não são publicados pelo publicador.
+- **Conferido no código da main (`scripts/youtube/publicarYoutube.js`, linha 53):** o publicador só seleciona `status === 'aprovado-checagem'` com horário vencido. A tarefa `DrSM-YouTube-Publica` executa esse script via `travaDiaria.js`. Na fila atual, a seleção é de 0 itens.
+- **Captura OAuth 02:** o Dr. escolheu o método A (clicar em "Continuar" na tela de consentimento, capturar a lista de permissões e fechar sem concluir).
