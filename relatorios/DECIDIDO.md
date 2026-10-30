@@ -97,3 +97,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
   - (e) O tempo real do lote é medido. Se passar de 45 min, o vídeo longo passa a ser quinzenal.
 - **Reels e Stories na API:** a ativação em `backend/lib/redesV2/roteamento.js` continua proibida até a aprovação das amostras (domingo, 01/11). Depois, por PR, com o freio `REDES_PUBLICACAO_ATIVA` respeitado.
 - **Conflito com o CLAUDE.md:** corrigido nesta mesma branch (linha de Instagram).
+
+## 30/10/2026 — Capturas OAuth, Vercel e rotina de frequência (ordem escrita do Dr. Antônio, 12:30)
+- **Vercel (conferido pelo assistente, só nomes de variáveis, sem valores):** NÃO existe `YOUTUBE_REFRESH_TOKEN` nem outra variável do YouTube na Vercel. O YouTube roda só localmente. Não há passo na Vercel para a nova autorização.
+- **`npm run youtube:autorizar`:** grava o refresh token só no `.env` local. Não revoga tokens existentes.
+- **Capturas OAuth:** as imagens vão para `relatorios/youtube/auditoria-envio/capturas/` com prefixo `oauth-` (exigência de `scripts/youtube/montarAnexoAuditoria.js`). Nomes: `oauth-01-consentimento`, `oauth-02-escopos`, `oauth-03-autorizado`, `oauth-04-revogacao`. Método: Win+PrtScn, com a cópia renomeada (a original em `Imagens\Capturas de tela` não é movida nem apagada). A pasta `evidencias/` não é usada.
+- **Frequência e revisão em lote:** confirmadas (3 Reels, 1 carrossel, Stories, 3 posts de LinkedIn, 3 Shorts + 1 vídeo longo, 1 episódio por semana, lote de no máximo 45 min). Conforme a entrada de 30/10 acima.
