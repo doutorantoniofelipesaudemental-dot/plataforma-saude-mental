@@ -73,3 +73,11 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
   - Cada publicação depende da aprovação do vídeo pelo comando `npm run revisao:aprovar -- <slug>`. Reprovado: não sobe e a data fica livre.
 - **App do YouTube:** "Em produção" (confirmado de novo em 30/10).
 - **PRs #192 e #138:** fechados sem mesclar. As branches (`feat/reels-api-preparo-20261028` e `feat/dominio-unico-rewrite-20261021`) são preservadas e não são apagadas.
+
+## 30/10/2026 — Plano unificado de qualidade e GEO (ordem escrita do Dr. Antônio)
+- **Vídeos estáticos REPROVADOS:** `tmc-aps`, `saude-mental-cuidador` e `burnout-medicos-enfermeiros` não sobem por nenhum caminho. Não se apagam nem se movem. O comando `npm run revisao:aprovar` não é rodado para eles. Os agendamentos de 31/10 (Short) e 02/11 (longo) deste registro ficam CANCELADOS.
+- **Regra geral:** "vídeo estático está proibido em todas as redes; todo conteúdo novo segue o padrão aprovado nas amostras".
+- **Nada vai ao ar sem aprovação das amostras do Dr. Antônio.** Vale para o padrão novo (personagens, Reels, Stories, LinkedIn em PDF/vídeo, Spotify).
+- **Ferramentas:** só gratuitas, com licença conferida e citada. Excluídos: ElevenLabs, vozes pagas e clonagem de voz; Bing Image Creator; Make, n8n, CapCut, Opus Clip, InVideo, Luma, Kling e Pika. Orquestração: a atual.
+- **WhatsApp:** excluído por enquanto.
+- **Dependência:** o padrão novo para Reels e Stories conflita com a regra do CLAUDE.md ("Reels e Stories: não são produzidos por ora; reavaliar em ~18/11"). Esta ordem prevalece só depois de o CLAUDE.md ser alterado por PR.
