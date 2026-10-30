@@ -115,3 +115,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Pausa dos estáticos:** os 92 itens `pausado-estatico` ficam pausados até o padrão animado ser aprovado. Reprovados (5) e a demo (`demo-auditoria`) também não são publicados pelo publicador.
 - **Conferido no código da main (`scripts/youtube/publicarYoutube.js`, linha 53):** o publicador só seleciona `status === 'aprovado-checagem'` com horário vencido. A tarefa `DrSM-YouTube-Publica` executa esse script via `travaDiaria.js`. Na fila atual, a seleção é de 0 itens.
 - **Captura OAuth 02:** o Dr. escolheu o método A (clicar em "Continuar" na tela de consentimento, capturar a lista de permissões e fechar sem concluir).
+
+## 30/10/2026 — Exceção estreita ao freio, só para a demo de auditoria (ordem escrita do Dr. Antônio)
+- **Exceção:** o freio `REDES_PUBLICACAO_ATIVA` deixa de bloquear SOMENTE o envio de teste da demo de auditoria (`demo-auditoria-20261030`), quando: (a) chamado por `testeUploadPrivado.js`; (b) com `--confirmar` e `--id` explícito; (c) item com status `demo-auditoria`; (d) privacidade `private`, forçada no código; (e) sem conteúdo clínico (`conteudoClinico: false`).
+- **Nenhum freio é alterado:** `.env`, Vercel e sessão continuam como estão. A exceção é registrada em `relatorios/youtube/publicacao-log.md`, com data, hora e id, antes do envio.
+- **Em qualquer outro caso o freio continua bloqueando.** O publicador das 20:15 (`publicarYoutube.js`) não concede a exceção.
+- **Testes:** `tests/unit/freio-demo-excecao.test.js`.
