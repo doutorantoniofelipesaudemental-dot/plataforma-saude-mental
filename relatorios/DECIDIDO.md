@@ -81,3 +81,19 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Ferramentas:** só gratuitas, com licença conferida e citada. Excluídos: ElevenLabs, vozes pagas e clonagem de voz; Bing Image Creator; Make, n8n, CapCut, Opus Clip, InVideo, Luma, Kling e Pika. Orquestração: a atual.
 - **WhatsApp:** excluído por enquanto.
 - **Dependência:** o padrão novo para Reels e Stories conflita com a regra do CLAUDE.md ("Reels e Stories: não são produzidos por ora; reavaliar em ~18/11"). Esta ordem prevalece só depois de o CLAUDE.md ser alterado por PR.
+
+## 30/10/2026 — Calendário semanal e revisão em lote (ordem escrita do Dr. Antônio, continuação)
+- **Calendário semanal inicial:**
+  - Instagram: 3 Reels + 1 carrossel + Stories.
+  - LinkedIn: 3 posts (PDF do carrossel, 1 Reel como vídeo, 1 texto).
+  - YouTube: 3 Shorts (os mesmos Reels) + 1 vídeo longo.
+  - Spotify: 1 episódio.
+  - Não existem Shorts diários: os Shorts são os 3 Reels da semana.
+- **Regra da revisão em lote:**
+  - (a) O Dr. revisa o ARTIGO MASTER da semana e um CADERNO ÚNICO com roteiros, legendas, textos de slides, Stories e posts.
+  - (b) As peças derivadas só usam frases e afirmações clínicas presentes no master revisado. Frase clínica sem correspondência no master REPROVA e vai para o caderno destacada.
+  - (c) O Dr. assiste 1 Reel (amostra) e o vídeo longo em 1,5x.
+  - (d) Stories são só enquete, pergunta ou chamada, sem conteúdo clínico novo.
+  - (e) O tempo real do lote é medido. Se passar de 45 min, o vídeo longo passa a ser quinzenal.
+- **Reels e Stories na API:** a ativação em `backend/lib/redesV2/roteamento.js` continua proibida até a aprovação das amostras (domingo, 01/11). Depois, por PR, com o freio `REDES_PUBLICACAO_ATIVA` respeitado.
+- **Conflito com o CLAUDE.md:** corrigido nesta mesma branch (linha de Instagram).
