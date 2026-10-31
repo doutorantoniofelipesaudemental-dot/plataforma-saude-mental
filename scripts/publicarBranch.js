@@ -5,6 +5,8 @@
  * Regra: push e PR nunca acontecem sem "PORTÃO APROVADO" no resultado E código de saída 0.
  * Falha de infraestrutura (DNS, banco fora, rede caiu): espera 5 min e repete o portão até 2 vezes.
  * Se persistir, registra "falha de infraestrutura" e NÃO abre PR.
+ * Queda do processo do portão (crash ou código de saída anormal, sem relatório e sem teste reprovado) (ordem de 31/10/2026):
+ * repete UMA vez. Teste reprovado nunca repete. Cair duas vezes: "não publicado", com a saída completa em relatorios/logs/.
  */
 const { spawnSync } = require('node:child_process');
 const fs = require('node:fs');
@@ -37,6 +39,7 @@ function removerOutrosWorktrees(branch) {
 }
 const ESPERA_MS = 5 * 60 * 1000;
 const MAXIMO_REPETICOES = 2;
+const MAXIMO_QUEDAS = 1;
 const REGEX_APROVADO = /PORTÃO APROVADO · relatório: (.+)$/m;
 const REGEX_RELATORIO = /PORTÃO (?:APROVADO|REPROVADO) · relatório: (.+)$/m;
 const REGEX_INFRA = /ENOTFOUND|ECONNREFUSED|ETIMEDOUT|getaddrinfo|rede caiu|falha de conexão/i;
@@ -44,6 +47,8 @@ const REGEX_INFRA = /ENOTFOUND|ECONNREFUSED|ETIMEDOUT|getaddrinfo|rede caiu|falh
 // "Node.js v26.8.1"), sem a mensagem. Agora a primeira linha de erro é extraída da saída completa e reportada.
 const REGEX_ERRO = /^(\w*Error(?: \[[A-Z_]+\])?: .*)$/m;
 const REGEX_NODE_CRASH = /^Node\.js v\d+/m;
+// Teste reprovado (node --test: "# fail N" ou "not ok"). Teste reprovado nunca é queda do processo.
+const REGEX_TESTE_REPROVADO = /^# fail [1-9]|^not ok /m;
 
 // Função pura: o portão terminou com erro sem gerar relatório (crash do Node, erro de módulo, sintaxe).
 // Devolve a mensagem do erro, ou null se o portão gerou relatório ou saiu sem erro.
@@ -53,6 +58,14 @@ function resumirFalhaSemRelatorio(saida, codigo) {
   const erro = texto.match(REGEX_ERRO);
   if (!erro && !REGEX_NODE_CRASH.test(texto)) return null;
   return { mensagem: erro ? erro[1].trim() : 'erro sem mensagem (ver relatorios/logs/portao-falha-*.log)' };
+}
+
+// Função pura: queda do processo do portão = código diferente de 0, sem relatório e sem teste reprovado.
+function ehQueda(saida, codigo) {
+  const texto = String(saida || '');
+  if (codigo === 0) return false;
+  if (REGEX_RELATORIO.test(texto) || REGEX_TESTE_REPROVADO.test(texto)) return false;
+  return true;
 }
 
 // Função pura: decide pela saída e pelo código de saída. Só aprova com as duas condições.
@@ -65,41 +78,58 @@ function decidirPelaSaida(saida, codigo) {
   const infra = REGEX_INFRA.test(texto);
   const relatorio = texto.match(REGEX_RELATORIO);
   const semRelatorio = resumirFalhaSemRelatorio(texto, codigo);
+  const queda = ehQueda(texto, codigo);
+  const motivoQueda = semRelatorio
+    ? `portão terminou com erro antes do relatório: ${semRelatorio.mensagem}`
+    : `portão caiu sem relatório (código ${codigo})`;
   return {
     aprovado: false,
     relatorio: relatorio ? relatorio[1].trim() : null,
     infra,
+    queda,
     falhaSemRelatorio: semRelatorio ? semRelatorio.mensagem : null,
-    motivo: infra ? 'falha de infraestrutura' : semRelatorio ? `portão terminou com erro antes do relatório: ${semRelatorio.mensagem}` : 'portão reprovado (ver o relatório)',
+    motivo: infra ? 'falha de infraestrutura' : queda ? motivoQueda : 'portão reprovado (ver o relatório)',
   };
 }
 
 // Função pura: a sequência completa. Dependências entram como parâmetro (testável sem rede nem git).
 async function publicar({ rodarPortao, empurrar, abrirOuAtualizarPR, esperar = async () => {}, log = () => {} }) {
   let ultima = null;
-  for (let tentativa = 0; tentativa <= MAXIMO_REPETICOES; tentativa++) {
+  let esperasInfra = 0;
+  let quedas = 0;
+  let tentativas = 0;
+  for (;;) {
+    tentativas++;
     const { saida, codigo } = await rodarPortao();
     ultima = decidirPelaSaida(saida, codigo);
+    log(`Tentativa ${tentativas} do portão: ${ultima.aprovado ? `aprovado (${ultima.relatorio})` : ultima.motivo}`);
     if (ultima.aprovado) {
-      log(`Portão aprovado: ${ultima.relatorio}`);
       await empurrar();
       const pr = await abrirOuAtualizarPR();
-      return { publicado: true, pr, relatorio: ultima.relatorio, motivo: ultima.motivo };
+      return { publicado: true, pr, relatorio: ultima.relatorio, motivo: ultima.motivo, tentativas };
     }
-    if (!ultima.infra) break;
-    if (tentativa < MAXIMO_REPETICOES) {
-      log(`Falha de infraestrutura na tentativa ${tentativa + 1}. Espero 5 min e repito.`);
+    if (ultima.infra) {
+      if (esperasInfra >= MAXIMO_REPETICOES) break;
+      esperasInfra++;
+      log(`Falha de infraestrutura na tentativa ${tentativas}. Espero 5 min e repito.`);
       await esperar(ESPERA_MS);
+      continue;
     }
+    if (ultima.queda) {
+      if (quedas >= MAXIMO_QUEDAS) break;
+      quedas++;
+      log(`Queda do portão na tentativa ${tentativas}. Repito uma vez.`);
+      continue;
+    }
+    break;
   }
-  log(`NÃO publicado: ${ultima.motivo}${ultima.relatorio ? ` (relatório: ${ultima.relatorio})` : ''}`);
-  return { publicado: false, motivo: ultima.motivo, relatorio: ultima.relatorio };
+  log(`NÃO publicado após ${tentativas} tentativa(s): ${ultima.motivo}${ultima.relatorio ? ` (relatório: ${ultima.relatorio})` : ''}`);
+  return { publicado: false, motivo: ultima.motivo, relatorio: ultima.relatorio, tentativas };
 }
 
 // Lado real: git, gh e o portão. Usado só pela linha de comando.
-// Só o npm precisa de shell no Windows (é npm.cmd). git e gh rodam sem shell: com shell, o texto do
+// Só o npm, no Windows, precisa de shell (é npm.cmd). git e gh rodam sem shell: com shell, o texto do
 // título e do corpo do PR é colado sem aspas e o gh lê parte dele como opção (falhou em 21/10/2026).
-// Função pura: só o npm, no Windows, precisa de shell.
 function precisaShell(cmd, plataforma) {
   return cmd === 'npm' && plataforma === 'win32';
 }
@@ -116,13 +146,14 @@ function branchAtual() {
 function rodarPortaoReal() {
   const r = executar('npm', ['run', 'portao'], { maxBuffer: 64 * 1024 * 1024 });
   const falha = resumirFalhaSemRelatorio(r.saida, r.codigo);
-  if (falha) {
+  if (falha || ehQueda(r.saida, r.codigo)) {
     // Saída completa guardada para diagnóstico (relatorios/logs é ignorado pelo Git); o terminal mostra a mensagem.
     const pasta = path.join(RAIZ, 'relatorios', 'logs');
     fs.mkdirSync(pasta, { recursive: true });
     const arq = path.join(pasta, `portao-falha-${new Date().toISOString().replace(/[:.]/g, '-')}.log`);
     fs.writeFileSync(arq, r.saida, 'utf8');
-    process.stdout.write(`PORTÃO SEM RELATÓRIO: ${falha.mensagem}\nSaída completa: ${path.relative(RAIZ, arq)}\n`);
+    const mensagem = falha ? falha.mensagem : `queda do processo (código ${r.codigo})`;
+    process.stdout.write(`PORTÃO SEM RELATÓRIO: ${mensagem}\nSaída completa: ${path.relative(RAIZ, arq)}\n`);
   }
   process.stdout.write(r.saida.split('\n').slice(-6).join('\n') + '\n');
   return r;
@@ -144,7 +175,7 @@ function abrirOuAtualizarPRReal(branch) {
   return novo.saida.trim().split('\n').pop();
 }
 
-module.exports = { decidirPelaSaida, resumirFalhaSemRelatorio, publicar, precisaShell, ESPERA_MS, MAXIMO_REPETICOES };
+module.exports = { decidirPelaSaida, resumirFalhaSemRelatorio, ehQueda, publicar, precisaShell, ESPERA_MS, MAXIMO_REPETICOES, MAXIMO_QUEDAS };
 
 if (require.main === module) {
   (async () => {
