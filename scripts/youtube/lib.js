@@ -8,6 +8,8 @@ const crypto = require('node:crypto');
 const { spawnSync } = require('node:child_process');
 const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/conformidadeCfm');
 const { IDENTIFICACAO_3_LINHAS } = require('../../backend/lib/legendaInstagram');
+// Descrição de vídeo do YouTube: bloco de 5 linhas, com a linha de atuação no padrão PAP/APS (ordem de 30/10/2026).
+const IDENTIFICACAO_VIDEO = IDENTIFICACAO_COMPLETA.replace('Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde', 'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)');
 const { textoParaNarracao, hashNarracao, vozDaNarracao, estadoNarracao } = require('../../backend/lib/narracao');
 const { checarEticaCfm } = require('../../backend/lib/checagensAprovacao');
 const vinheta = require('../../backend/lib/vinheta');
@@ -191,13 +193,13 @@ function descricaoLongo(a, dur) {
   ];
   if (caps.length) L.push('', 'Capítulos:', ...caps.map((c) => `${mmss(c.t)} ${c.nome}`));
   if (refs.length) L.push('', 'Principais referências:', ...refs.map((r, i) => `${i + 1}. ${r}`));
-  L.push('', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
+  L.push('', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_VIDEO, '', AVISO_IA, '',
     `Mentoria para profissionais da APS e consultoria para empresas: ${SITE}/mentoria`, `Todos os links: ${SITE}/links`, ...linhaLinkedin(), `Canal e playlists: ${SITE}/youtube`);
   return L.join('\n').replace(/[<>]/g, '');
 }
 
 function descricaoShort(a, extra = '') {
-  return [vinheta.TEXTOS.curta.replace(/\.$/, ''), SITE, '', semTags(a.resumo || a.titulo), '', `Texto completo no site: ${SITE}/artigo/${a.slug}`, extra, '', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_COMPLETA, '', AVISO_IA, '',
+  return [vinheta.TEXTOS.curta.replace(/\.$/, ''), SITE, '', semTags(a.resumo || a.titulo), '', `Texto completo no site: ${SITE}/artigo/${a.slug}`, extra, '', AVISO_PROTOCOLOS, CRISE, '', IDENTIFICACAO_VIDEO, '', AVISO_IA, '',
     `Mentoria e consultoria: ${SITE}/mentoria`, ...linhaLinkedin(), `Canal e playlists: ${SITE}/youtube`, '#saudemental #cuidado'].filter((x, i, arr) => !(x === '' && arr[i - 1] === '')).join('\n').replace(/[<>]/g, '');
 }
 
@@ -256,4 +258,4 @@ function checarTexto(item) {
   return f;
 }
 
-module.exports = { linkOficialMarca, obterCapa, comVinheta, comAssinaturaFalada, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };
+module.exports = { IDENTIFICACAO_VIDEO, linkOficialMarca, obterCapa, comVinheta, comAssinaturaFalada, creditoAss, vinheta, mp3Selado, audioDisponivel, obterAudio, RAIZ, SITE, PY, MIDIA, NARR, REL, AVISO_IA, AVISO_PROTOCOLOS, CRISE, PLAYLISTS, IDENTIFICACAO_3_LINHAS, IDENTIFICACAO_COMPLETA, semTags, sha256, run, duracao, sondar, arte, secoes, referencias, playlistDe, tagsDe, capitulos, descricaoLongo, descricaoShort, srt, checarTexto, hashNarracao, textoParaNarracao, vozDaNarracao, mmss };
