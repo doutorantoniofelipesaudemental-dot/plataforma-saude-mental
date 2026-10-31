@@ -43,7 +43,7 @@ Site: narração. YouTube: 1 longo + 3 Shorts. Instagram: 1 carrossel + 2 Reels 
 - **Newsletter (planejada):** resumo do pacote da semana + 1 relato anonimizado + 1 recurso gratuito + 1 oferta.
 
 ## 7. Calendário e métricas
-Cadência base: site conforme a fila (dias úteis); YouTube 1 longo/semana + 3 Shorts; Instagram 3–4 posts/semana + Stories diários; LinkedIn 3 posts/semana + 1 PDF/semana; newsletter semanal. Métricas semanais por canal (YouTube: views, retenção, CTR, inscritos, cliques; Instagram: alcance, salvamentos, compartilhamentos, cliques; LinkedIn: impressões, comentários qualificados, contatos de empresas) e funil (e-mails, downloads do Kit NR-1, reuniões, contratos). Os 3 melhores conteúdos da semana definem o padrão (não o texto) do próximo pacote.
+Cadência base: site conforme a fila (dias úteis); YouTube 1 longo/semana + 3 Shorts; Instagram 3–4 posts/semana + Stories diários; LinkedIn 3 posts/semana + 1 PDF/semana; newsletter mensal. Métricas semanais por canal (YouTube: views, retenção, CTR, inscritos, cliques; Instagram: alcance, salvamentos, compartilhamentos, cliques; LinkedIn: impressões, comentários qualificados, contatos de empresas) e funil (e-mails, downloads do Kit NR-1, reuniões, contratos). Os 3 melhores conteúdos da semana definem o padrão (não o texto) do próximo pacote.
 
 ## 8. Protocolo
 - **Aprovação:** ver tabela de conflitos. Peça nova que passar na auditoria e na tripla checagem, sem marca d'água e com as correções feitas, pode ser publicada sem aprovação prévia (carta de autonomia, freios respeitados).

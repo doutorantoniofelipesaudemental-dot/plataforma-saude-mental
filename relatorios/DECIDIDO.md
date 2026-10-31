@@ -3,6 +3,7 @@
 Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer decisão, conferir este arquivo. Se algo aqui estiver errado, o Dr. corrige; não reabrir por conta própria.
 
 ## Decisões
+
 - **YouTube:** o app está "Em produção" desde 18/10/2026. O refresh token não vence. O aviso de "vence em 23/10" era falso: `relatorios/youtube/validade.json` foi corrigido (`autorizacaoVenceEm: null`), e o alerta deixa de disparar.
 - **YouTube, escopo:** o `youtube:autorizar` tem de rodar com a pasta na `main` (escopo `youtube.force-ssl`). Rodado no branch antigo, o escopo fica errado. Conferir com `npm run youtube:teste-playlists`.
 - **REDES_PUBLICACAO_ATIVA:** ligado. O post de 26/10 saiu.
@@ -63,3 +64,75 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 29/10/2026 — Exceção pontual: sexta 30/10 (ordem escrita do Dr. Antônio)
+- Sexta, 30/10/2026: sessão a partir das 10:00 (ajuste da ordem; a primeira versão dizia 07:00). Prazo de tudo pronto: 09:30. Relatório no topo do ESTADO-GERAL.md às 09:30, com o que ficou pronto, o que ficou para domingo (com motivo) e até 3 pendências do Dr.
+- Blocos da sexta, na ordem: 1) YouTube (formulário e upload manual de 3 vídeos); 2) merges na ordem do ensaio (#196, #193, #194, #195, #197), com git restore antes, restauração da fila depois, aplicação da conferência e horários com -Simular; 3) Instagram e Spotify; 4) newsletter (decisão).
+- É exceção pontual: só vale para sexta 30/10. As janelas normais (plantões, horários das tarefas DrSM-*) continuam valendo nos demais dias.
+- Nada disso altera freios (REDES_PUBLICACAO_ATIVA, YOUTUBE_PUBLICACAO_ATIVA, LINKEDIN_PUBLICACAO_ATIVA), nem a regra de merge (sempre merge-seguro, executado pelo Dr.).
+
+## 30/10/2026 — Sessão de sexta (ordem escrita do Dr. Antônio, 11:00)
+- **Carrossel 28/10:** escolhida a versão A (`C:/DRS-post-check/amostras/carrossel-28/`), com a regra nova do selo: selo = "Para <público>" e título grande = tema. Vale para capas futuras. Sujeita à olhada final do Dr. Antônio (bloco 3). A versão B fica como referência.
+- **Vídeos YouTube (após a revisão do Dr. Antônio, bloco 1):**
+  - `tmc-aps`: público na sexta, 30/10.
+  - `saude-mental-cuidador` (Short): agendado para sábado, 31/10, às 12:00.
+  - `burnout-medicos-enfermeiros`: agendado para segunda, 02/11, às 18:00.
+  - Cada publicação depende da aprovação do vídeo pelo comando `npm run revisao:aprovar -- <slug>`. Reprovado: não sobe e a data fica livre.
+- **App do YouTube:** "Em produção" (confirmado de novo em 30/10).
+- **PRs #192 e #138:** fechados sem mesclar. As branches (`feat/reels-api-preparo-20261028` e `feat/dominio-unico-rewrite-20261021`) são preservadas e não são apagadas.
+
+## 30/10/2026 — Plano unificado de qualidade e GEO (ordem escrita do Dr. Antônio)
+- **Vídeos estáticos REPROVADOS:** `tmc-aps`, `saude-mental-cuidador` e `burnout-medicos-enfermeiros` não sobem por nenhum caminho. Não se apagam nem se movem. O comando `npm run revisao:aprovar` não é rodado para eles. Os agendamentos de 31/10 (Short) e 02/11 (longo) deste registro ficam CANCELADOS.
+- **Regra geral:** "vídeo estático está proibido em todas as redes; todo conteúdo novo segue o padrão aprovado nas amostras".
+- **Nada vai ao ar sem aprovação das amostras do Dr. Antônio.** Vale para o padrão novo (personagens, Reels, Stories, LinkedIn em PDF/vídeo, Spotify).
+- **Ferramentas:** só gratuitas, com licença conferida e citada. Excluídos: ElevenLabs, vozes pagas e clonagem de voz; Bing Image Creator; Make, n8n, CapCut, Opus Clip, InVideo, Luma, Kling e Pika. Orquestração: a atual.
+- **WhatsApp:** excluído por enquanto.
+- **Dependência:** o padrão novo para Reels e Stories conflita com a regra do CLAUDE.md ("Reels e Stories: não são produzidos por ora; reavaliar em ~18/11"). Esta ordem prevalece só depois de o CLAUDE.md ser alterado por PR.
+
+## 30/10/2026 — Calendário semanal e revisão em lote (ordem escrita do Dr. Antônio, continuação)
+- **Calendário semanal inicial:**
+  - Instagram: 3 Reels + 1 carrossel + Stories.
+  - LinkedIn: 3 posts (PDF do carrossel, 1 Reel como vídeo, 1 texto).
+  - YouTube: 3 Shorts (os mesmos Reels) + 1 vídeo longo.
+  - Spotify: 1 episódio.
+  - Não existem Shorts diários: os Shorts são os 3 Reels da semana.
+- **Regra da revisão em lote:**
+  - (a) O Dr. revisa o ARTIGO MASTER da semana e um CADERNO ÚNICO com roteiros, legendas, textos de slides, Stories e posts.
+  - (b) As peças derivadas só usam frases e afirmações clínicas presentes no master revisado. Frase clínica sem correspondência no master REPROVA e vai para o caderno destacada.
+  - (c) O Dr. assiste 1 Reel (amostra) e o vídeo longo em 1,5x.
+  - (d) Stories são só enquete, pergunta ou chamada, sem conteúdo clínico novo.
+  - (e) O tempo real do lote é medido. Se passar de 45 min, o vídeo longo passa a ser quinzenal.
+- **Reels e Stories na API:** a ativação em `backend/lib/redesV2/roteamento.js` continua proibida até a aprovação das amostras (domingo, 01/11). Depois, por PR, com o freio `REDES_PUBLICACAO_ATIVA` respeitado.
+- **Conflito com o CLAUDE.md:** corrigido nesta mesma branch (linha de Instagram).
+
+## 30/10/2026 — Capturas OAuth, Vercel e rotina de frequência (ordem escrita do Dr. Antônio, 12:30)
+- **Vercel (conferido pelo assistente, só nomes de variáveis, sem valores):** NÃO existe `YOUTUBE_REFRESH_TOKEN` nem outra variável do YouTube na Vercel. O YouTube roda só localmente. Não há passo na Vercel para a nova autorização.
+- **`npm run youtube:autorizar`:** grava o refresh token só no `.env` local. Não revoga tokens existentes.
+- **Capturas OAuth:** as imagens vão para `relatorios/youtube/auditoria-envio/capturas/` com prefixo `oauth-` (exigência de `scripts/youtube/montarAnexoAuditoria.js`). Nomes: `oauth-01-consentimento`, `oauth-02-escopos`, `oauth-03-autorizado`, `oauth-04-revogacao`. Método: Win+PrtScn, com a cópia renomeada (a original em `Imagens\Capturas de tela` não é movida nem apagada). A pasta `evidencias/` não é usada.
+- **Frequência e revisão em lote:** confirmadas (3 Reels, 1 carrossel, Stories, 3 posts de LinkedIn, 3 Shorts + 1 vídeo longo, 1 episódio por semana, lote de no máximo 45 min). Conforme a entrada de 30/10 acima.
+
+## 30/10/2026 — Auditoria do YouTube: demonstração privada, fila e itens publicáveis (ordem escrita do Dr. Antônio)
+- **Screencast (opção C):** o Google exige ver o uso real do escopo de upload. Em vez de subir vídeo estático, cria-se uma demonstração técnica de 15 s, sem conteúdo clínico, com 4 cenas e crédito do Portal, na fila com status `demo-auditoria` (id `demo-auditoria-20261030`). Sobe SEMPRE privada, por `testeUploadPrivado.js --id=demo-auditoria-20261030`. Não é apagada.
+- **Fila:** `tmc-aps`, `saude-mental-cuidador` e `burnout-medicos-enfermeiros` (inclusive os itens futuros `short-resumo-*`) marcados como REPROVADOS no `fila.json`. O arquivo não é versionado (ignorado pelo Git): a marcação é de estado local, feita em 30/10; o backup de antes está em `.tmp/fila-antes-reprovar-30.json`.
+- **Código:** `itemPublicavel` impede publicação ou teste de item reprovado e de item com menos de 2 cenas (itens antigos contam como 1). Vale para `publicarYoutube.js` e `testeUploadPrivado.js`. Testes em `tests/unit/item-publicavel.test.js`.
+- **Vercel:** sem variável do YouTube (ver entrada anterior).
+
+## 30/10/2026 — Freio, pausa estática e ordem de merges (ordem escrita do Dr. Antônio, 15:00)
+- **Freio do YouTube:** o Dr. confere `YOUTUBE_PUBLICACAO_ATIVA` no `.env` por conta própria. O assistente não lê o `.env`.
+- **Pausa dos estáticos:** os 92 itens `pausado-estatico` ficam pausados até o padrão animado ser aprovado. Reprovados (5) e a demo (`demo-auditoria`) também não são publicados pelo publicador.
+- **Conferido no código da main (`scripts/youtube/publicarYoutube.js`, linha 53):** o publicador só seleciona `status === 'aprovado-checagem'` com horário vencido. A tarefa `DrSM-YouTube-Publica` executa esse script via `travaDiaria.js`. Na fila atual, a seleção é de 0 itens.
+- **Captura OAuth 02:** o Dr. escolheu o método A (clicar em "Continuar" na tela de consentimento, capturar a lista de permissões e fechar sem concluir).
+
+## 30/10/2026 — Exceção estreita ao freio, só para a demo de auditoria (ordem escrita do Dr. Antônio)
+- **Exceção:** o freio `REDES_PUBLICACAO_ATIVA` deixa de bloquear SOMENTE o envio de teste da demo de auditoria (`demo-auditoria-20261030`), quando: (a) chamado por `testeUploadPrivado.js`; (b) com `--confirmar` e `--id` explícito; (c) item com status `demo-auditoria`; (d) privacidade `private`, forçada no código; (e) sem conteúdo clínico (`conteudoClinico: false`).
+- **Nenhum freio é alterado:** `.env`, Vercel e sessão continuam como estão. A exceção é registrada em `relatorios/youtube/publicacao-log.md`, com data, hora e id, antes do envio.
+- **Em qualquer outro caso o freio continua bloqueando.** O publicador das 20:15 (`publicarYoutube.js`) não concede a exceção.
+- **Testes:** `tests/unit/freio-demo-excecao.test.js`.
+## 30/10/2026 — Screencast da auditoria do YouTube
+- Screencast enviado como NÃO LISTADO: https://youtu.be/-Z0uPYiwJ7I (arquivo 01-upload-teste-privado-youtube-studio-FINAL.mp4, sem áudio, intencional).
+- Demo privada usada na gravação: id Nf3dPwqjCOg (30/10/2026), com exceção estreita ao freio só para essa demo (registro na DECIDIDO de 30/10).
+- Anexo de apoio gerado com o link: relatorios/youtube/auditoria-envio/supporting-materials.pdf. O envio do formulário é do Dr. Antônio.
+
+## 30/10/2026 (23:20) — Publicação de branches docs/ (ordem do Dr. Antônio)
+- Autorizado: publicar branches `docs/` pelo `node scripts/publicarBranch.js` (portão → push → PR), sem pedir push pelo `!`. Vale para docs/decidido-screencast-20261030, docs/newsletter-mensal-20261030 e fix/grafia-anexo-youtube-20261030, e para branches docs/ futuras do mesmo tipo.
+- Continua valendo: merge só pelo `merge-seguro` (Dr. Antônio); nenhum push para main.
