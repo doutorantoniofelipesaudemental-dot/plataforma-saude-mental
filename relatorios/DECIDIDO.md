@@ -63,3 +63,8 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 30/10/2026 — Screencast da auditoria do YouTube
+- Screencast enviado como NÃO LISTADO: https://youtu.be/-Z0uPYiwJ7I (arquivo 01-upload-teste-privado-youtube-studio-FINAL.mp4, sem áudio, intencional).
+- Demo privada usada na gravação: id Nf3dPwqjCOg (30/10/2026), com exceção estreita ao freio só para essa demo (registro na DECIDIDO de 30/10).
+- Anexo de apoio gerado com o link: relatorios/youtube/auditoria-envio/supporting-materials.pdf. O envio do formulário é do Dr. Antônio.
