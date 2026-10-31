@@ -121,3 +121,11 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Nenhum freio é alterado:** `.env`, Vercel e sessão continuam como estão. A exceção é registrada em `relatorios/youtube/publicacao-log.md`, com data, hora e id, antes do envio.
 - **Em qualquer outro caso o freio continua bloqueando.** O publicador das 20:15 (`publicarYoutube.js`) não concede a exceção.
 - **Testes:** `tests/unit/freio-demo-excecao.test.js`.
+## 30/10/2026 — Screencast da auditoria do YouTube
+- Screencast enviado como NÃO LISTADO: https://youtu.be/-Z0uPYiwJ7I (arquivo 01-upload-teste-privado-youtube-studio-FINAL.mp4, sem áudio, intencional).
+- Demo privada usada na gravação: id Nf3dPwqjCOg (30/10/2026), com exceção estreita ao freio só para essa demo (registro na DECIDIDO de 30/10).
+- Anexo de apoio gerado com o link: relatorios/youtube/auditoria-envio/supporting-materials.pdf. O envio do formulário é do Dr. Antônio.
+
+## 30/10/2026 (23:20) — Publicação de branches docs/ (ordem do Dr. Antônio)
+- Autorizado: publicar branches `docs/` pelo `node scripts/publicarBranch.js` (portão → push → PR), sem pedir push pelo `!`. Vale para docs/decidido-screencast-20261030, docs/newsletter-mensal-20261030 e fix/grafia-anexo-youtube-20261030, e para branches docs/ futuras do mesmo tipo.
+- Continua valendo: merge só pelo `merge-seguro` (Dr. Antônio); nenhum push para main.
