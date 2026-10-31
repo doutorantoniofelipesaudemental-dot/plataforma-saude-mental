@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { decidirPelaSaida, publicar, precisaShell, MAXIMO_REPETICOES } = require('../../scripts/publicarBranch');
+const { decidirPelaSaida, resumirFalhaSemRelatorio, publicar, precisaShell, MAXIMO_REPETICOES } = require('../../scripts/publicarBranch');
 
 test('shell: só npm no Windows; gh e git sem shell (título com espaços e acentos não pode ser cortado)', () => {
   assert.equal(precisaShell('npm', 'win32'), true);
@@ -81,4 +81,36 @@ test('reprovação que não é de rede não é repetida', async () => {
   await publicar(d);
   assert.equal(d.chamadas.portao, 1);
   assert.equal(d.chamadas.esperas, 0);
+});
+
+// Falha de 30/10/2026: o portão caiu no carregamento (sem relatório). O publicador mostrava só as 6 últimas linhas
+// (pilha e "Node.js v26.8.1"), sem a mensagem. Agora a mensagem é extraída da saída completa.
+const CRASH = "node:internal/modules/cjs/loader:1386\n  throw err;\n  ^\n\nError: Cannot find module 'C:\\DRS-decidido-32\\scripts\\lib\\ausente.js'\nRequire stack:\n- C:\\DRS-decidido-32\\scripts\\portao.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1383:15)\n    at Module.load (node:internal/modules/cjs/loader:1656:32)\n    at Module._load (node:internal/modules/cjs/loader:1448:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47\n\nNode.js v26.8.1\n";
+
+test('falha sem relatório: a mensagem do erro é reportada (não só a pilha)', () => {
+  const r = resumirFalhaSemRelatorio(CRASH, 1);
+  assert.ok(r, 'crash de carregamento deve ser detectado');
+  assert.match(r.mensagem, /^Error: Cannot find module/);
+});
+
+test('falha sem relatório: sem a mensagem, a linha "Node.js vX" ainda acusa o crash', () => {
+  const r = resumirFalhaSemRelatorio(CRASH.split('\n').slice(-3).join('\n'), 1);
+  assert.ok(r);
+  assert.match(r.mensagem, /erro sem mensagem/);
+});
+
+test('falha sem relatório não é repetida como infraestrutura e não publica', async () => {
+  const d = dublê([{ saida: CRASH, codigo: 1 }]);
+  const res = await publicar(d);
+  assert.equal(res.publicado, false);
+  assert.equal(d.chamadas.portao, 1);
+  assert.equal(d.chamadas.esperas, 0);
+  assert.equal(d.chamadas.push, 0);
+  assert.match(res.motivo, /terminou com erro antes do relatório: Error: Cannot find module/);
+});
+
+test('portão com relatório (reprovado ou aprovado) não é tratado como falha sem relatório', () => {
+  assert.equal(resumirFalhaSemRelatorio(REPROVADA, 1), null);
+  assert.equal(resumirFalhaSemRelatorio(APROVADA, 0), null);
+  assert.equal(decidirPelaSaida(REPROVADA, 1).falhaSemRelatorio, null);
 });
