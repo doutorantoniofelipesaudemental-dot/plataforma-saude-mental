@@ -7,6 +7,7 @@
  * Se persistir, registra "falha de infraestrutura" e NÃO abre PR.
  */
 const { spawnSync } = require('node:child_process');
+const fs = require('node:fs');
 const { lerSincronia } = require('./lib/branchSincronizado');
 const { adquirirTrava, liberarTrava } = require('./trava-portao');
 const { decidirRemoverWorktree } = require('./lib/worktreeLimpo');
@@ -39,6 +40,20 @@ const MAXIMO_REPETICOES = 2;
 const REGEX_APROVADO = /PORTÃO APROVADO · relatório: (.+)$/m;
 const REGEX_RELATORIO = /PORTÃO (?:APROVADO|REPROVADO) · relatório: (.+)$/m;
 const REGEX_INFRA = /ENOTFOUND|ECONNREFUSED|ETIMEDOUT|getaddrinfo|rede caiu|falha de conexão/i;
+// Lição de 30/10/2026: um erro de carregamento (Node sem relatório) saía só com as últimas linhas da pilha ("at Module.load",
+// "Node.js v26.8.1"), sem a mensagem. Agora a primeira linha de erro é extraída da saída completa e reportada.
+const REGEX_ERRO = /^(\w*Error(?: \[[A-Z_]+\])?: .*)$/m;
+const REGEX_NODE_CRASH = /^Node\.js v\d+/m;
+
+// Função pura: o portão terminou com erro sem gerar relatório (crash do Node, erro de módulo, sintaxe).
+// Devolve a mensagem do erro, ou null se o portão gerou relatório ou saiu sem erro.
+function resumirFalhaSemRelatorio(saida, codigo) {
+  const texto = String(saida || '');
+  if (codigo === 0 || REGEX_RELATORIO.test(texto)) return null;
+  const erro = texto.match(REGEX_ERRO);
+  if (!erro && !REGEX_NODE_CRASH.test(texto)) return null;
+  return { mensagem: erro ? erro[1].trim() : 'erro sem mensagem (ver relatorios/logs/portao-falha-*.log)' };
+}
 
 // Função pura: decide pela saída e pelo código de saída. Só aprova com as duas condições.
 function decidirPelaSaida(saida, codigo) {
@@ -49,11 +64,13 @@ function decidirPelaSaida(saida, codigo) {
   }
   const infra = REGEX_INFRA.test(texto);
   const relatorio = texto.match(REGEX_RELATORIO);
+  const semRelatorio = resumirFalhaSemRelatorio(texto, codigo);
   return {
     aprovado: false,
     relatorio: relatorio ? relatorio[1].trim() : null,
     infra,
-    motivo: infra ? 'falha de infraestrutura' : 'portão reprovado (ver o relatório)',
+    falhaSemRelatorio: semRelatorio ? semRelatorio.mensagem : null,
+    motivo: infra ? 'falha de infraestrutura' : semRelatorio ? `portão terminou com erro antes do relatório: ${semRelatorio.mensagem}` : 'portão reprovado (ver o relatório)',
   };
 }
 
@@ -98,6 +115,15 @@ function branchAtual() {
 
 function rodarPortaoReal() {
   const r = executar('npm', ['run', 'portao'], { maxBuffer: 64 * 1024 * 1024 });
+  const falha = resumirFalhaSemRelatorio(r.saida, r.codigo);
+  if (falha) {
+    // Saída completa guardada para diagnóstico (relatorios/logs é ignorado pelo Git); o terminal mostra a mensagem.
+    const pasta = path.join(RAIZ, 'relatorios', 'logs');
+    fs.mkdirSync(pasta, { recursive: true });
+    const arq = path.join(pasta, `portao-falha-${new Date().toISOString().replace(/[:.]/g, '-')}.log`);
+    fs.writeFileSync(arq, r.saida, 'utf8');
+    process.stdout.write(`PORTÃO SEM RELATÓRIO: ${falha.mensagem}\nSaída completa: ${path.relative(RAIZ, arq)}\n`);
+  }
   process.stdout.write(r.saida.split('\n').slice(-6).join('\n') + '\n');
   return r;
 }
@@ -118,7 +144,7 @@ function abrirOuAtualizarPRReal(branch) {
   return novo.saida.trim().split('\n').pop();
 }
 
-module.exports = { decidirPelaSaida, publicar, precisaShell, ESPERA_MS, MAXIMO_REPETICOES };
+module.exports = { decidirPelaSaida, resumirFalhaSemRelatorio, publicar, precisaShell, ESPERA_MS, MAXIMO_REPETICOES };
 
 if (require.main === module) {
   (async () => {
