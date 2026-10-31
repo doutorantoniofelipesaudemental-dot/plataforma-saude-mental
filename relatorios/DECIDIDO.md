@@ -3,6 +3,13 @@
 Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer decisão, conferir este arquivo. Se algo aqui estiver errado, o Dr. corrige; não reabrir por conta própria.
 
 ## Decisões
+
+## 29/10/2026 — Exceção pontual: sexta 30/10 (ordem escrita do Dr. Antônio)
+- Sexta, 30/10/2026: sessão a partir das 10:00 (ajuste da ordem; a primeira versão dizia 07:00). Prazo de tudo pronto: 09:30. Relatório no topo do ESTADO-GERAL.md às 09:30, com o que ficou pronto, o que ficou para domingo (com motivo) e até 3 pendências do Dr.
+- Blocos da sexta, na ordem: 1) YouTube (formulário e upload manual de 3 vídeos); 2) merges na ordem do ensaio (#196, #193, #194, #195, #197), com git restore antes, restauração da fila depois, aplicação da conferência e horários com -Simular; 3) Instagram e Spotify; 4) newsletter (decisão).
+- É exceção pontual: só vale para sexta 30/10. As janelas normais (plantões, horários das tarefas DrSM-*) continuam valendo nos demais dias.
+- Nada disso altera freios (REDES_PUBLICACAO_ATIVA, YOUTUBE_PUBLICACAO_ATIVA, LINKEDIN_PUBLICACAO_ATIVA), nem a regra de merge (sempre merge-seguro, executado pelo Dr.).
+
 - **YouTube:** o app está "Em produção" desde 18/10/2026. O refresh token não vence. O aviso de "vence em 23/10" era falso: `relatorios/youtube/validade.json` foi corrigido (`autorizacaoVenceEm: null`), e o alerta deixa de disparar.
 - **YouTube, escopo:** o `youtube:autorizar` tem de rodar com a pasta na `main` (escopo `youtube.force-ssl`). Rodado no branch antigo, o escopo fica errado. Conferir com `npm run youtube:teste-playlists`.
 - **REDES_PUBLICACAO_ATIVA:** ligado. O post de 26/10 saiu.
