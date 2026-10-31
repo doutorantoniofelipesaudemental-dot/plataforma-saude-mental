@@ -80,7 +80,7 @@ function montarHtml({ link, oauth = [], site = [], outras = [], imagens = {}, re
   pre { white-space: pre-wrap; font: 11pt/1.5 Arial, sans-serif; }
 </style></head><body>
 <section><h1>Supporting materials — YouTube API compliance audit</h1>
-<p>Project: [PASTE PROJECT NUMBER]. Owner: Dr. Antonio Felipe Garabito. Contact: doutor.antoniofelipe.saudemental@gmail.com</p>
+<p>Project: [PASTE PROJECT NUMBER]. Owner: Dr. Antônio Felipe Garabito. Contact: doutor.antoniofelipe.saudemental@gmail.com</p>
 <h2>(a) Screencast of the upload</h2><p>${linkTexto}</p></section>
 ${secao('(b) OAuth consent, scopes and revocation', oauth, '[INSERT OAUTH SCREENSHOTS: save them as oauth-01-... .png in the capturas folder and run the script again]')}
 ${secao('(c) Privacy and terms pages (with address bar)', site, '[INSERT SCREENSHOTS: save them as site-privacidade.png and site-termos.png in the capturas folder and run the script again]')}
