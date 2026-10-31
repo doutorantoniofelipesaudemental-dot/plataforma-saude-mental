@@ -96,3 +96,33 @@ test('página /sobre: assinatura de 5 linhas com NÃO ESPECIALISTA logo após as
   assert.ok(!/wa\.me|whatsapp/i.test(sobre));
   assert.ok(!/psiquiatra\b/i.test(sobre.replace(/psiquiatria/gi, '')), 'não apresentar como psiquiatra');
 });
+
+test('Person do autor: jobTitle Médico, CRM-BA e RQE, e a especialidade ligada ao RQE por hasCredential', () => {
+  const j = montarJsonLdArtigo({ artigo: artigoBase });
+  const pessoa = j['@graph'].find((n) => n['@type'] === 'Person');
+  assert.equal(pessoa.jobTitle, 'Médico');
+  const valores = pessoa.identifier.map((i) => `${i.name}:${i.value}`);
+  assert.deepEqual(valores, ['CRM-BA:41322', 'RQE:26638']);
+  assert.equal(pessoa.hasCredential['@type'], 'EducationalOccupationalCredential');
+  assert.equal(pessoa.hasCredential.name, 'Medicina de Família e Comunidade');
+  assert.equal(pessoa.hasCredential.identifier, '26638');
+  assert.deepEqual(validarJsonLd(j), []);
+  const semCredencial = JSON.parse(JSON.stringify(j));
+  delete semCredencial['@graph'].find((n) => n['@type'] === 'Person').hasCredential;
+  assert.ok(validarJsonLd(semCredencial).some((e) => e.includes('hasCredential')));
+});
+
+test('renderizarArtigoHtml emite um único JSON-LD válido com o grafo GEO', () => {
+  const { renderizarArtigoHtml } = require('../../backend/lib/renderizarArtigo');
+  const html = renderizarArtigoHtml({
+    titulo: 'Teste', slug: 'teste', resumo: 'Resumo', conteudo: conteudoComFaq, categoria: 'Teste', autor: 'Dr. Antônio Felipe',
+    tempoLeitura: 1, publicadoEm: '2026-10-05T10:00:00.000Z', atualizadoEm: '2026-10-05T10:00:00.000Z',
+  });
+  const blocos = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  assert.equal(blocos.length, 1);
+  const volta = JSON.parse(blocos[0][1]);
+  assert.deepEqual(validarJsonLd(volta), []);
+  const tipos = volta['@graph'].map((n) => n['@type']);
+  assert.ok(tipos.includes('MedicalWebPage') && tipos.includes('Article') && tipos.includes('FAQPage'));
+  assert.ok(!blocos[0][1].includes('</script'));
+});

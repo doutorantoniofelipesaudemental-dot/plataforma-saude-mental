@@ -105,6 +105,14 @@ function montarJsonLdArtigo({ artigo, url, registroRevisao = null, hashAtual = n
         { '@type': 'PropertyValue', name: 'CRM-BA', value: '41322' },
         { '@type': 'PropertyValue', name: 'RQE', value: '26638', description: 'Medicina de Família e Comunidade' },
       ],
+      // Especialidade ligada ao RQE (credencial de especialista registrada no CRM-BA).
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'Medicina de Família e Comunidade',
+        credentialCategory: 'Especialista (RQE)',
+        identifier: '26638',
+        recognizedBy: { '@type': 'Organization', name: 'Conselho Regional de Medicina da Bahia (CRM-BA)' },
+      },
     },
     { '@type': 'Organization', '@id': idOrg, name: NOME_PORTAL, url: BASE_URL },
   ];
@@ -146,6 +154,13 @@ function validarJsonLd(obj) {
   });
   porTipo('MedicalWebPage').forEach((p) => {
     if (p.reviewedBy && !p.reviewedBy.name) erros.push('reviewedBy sem name');
+  });
+  porTipo('Person').forEach((pessoa) => {
+    const temRqe = (pessoa.identifier || []).some((i) => i.name === 'RQE');
+    const credenciais = [].concat(pessoa.hasCredential || []);
+    if (temRqe && !credenciais.some((c) => c['@type'] === 'EducationalOccupationalCredential' && c.name && c.identifier)) {
+      erros.push('Person com RQE sem hasCredential de especialidade');
+    }
   });
   return erros;
 }

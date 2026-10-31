@@ -4,6 +4,7 @@ const { CAIXA_VIOLENCIA_TITULO, CAIXA_VIOLENCIA_ITENS, precisaCaixaViolencia } =
 const path = require('path');
 const { escapeHtml, formatarData } = require('./texto');
 const { urlNarracaoTocavel, estadoNarracao } = require('./narracao');
+const { montarJsonLdArtigo, serializarJsonLd, validarJsonLd } = require('./jsonLdGeo');
 
 const BASE_URL = 'https://www.drantoniofelipemedico.com.br';
 const TEMPLATE_PATH = path.join(__dirname, '..', '..', 'public', 'artigo.html');
@@ -119,7 +120,8 @@ function caixaViolenciaHtml(artigo) {
   return `<aside class="aviso-legal caixa-violencia" data-caixa-violencia aria-label="Onde buscar ajuda em situação de violência" style="margin-top:2rem"><p><strong>${CAIXA_VIOLENCIA_TITULO}</strong></p><ul>${itens}</ul></aside>`;
 }
 
-function renderizarArtigoHtml(artigo) {
+// opcoes.registroRevisao / hashAtual: vêm só de aprovarRevisao (revisaoMedica); sem eles não sai reviewedBy.
+function renderizarArtigoHtml(artigo, opcoes = {}) {
   const url = `${BASE_URL}/artigo/${encodeURIComponent(artigo.slug)}`;
   const titulo = escapeHtml(artigo.titulo);
   const resumo = escapeHtml(artigo.resumo);
@@ -157,33 +159,19 @@ function renderizarArtigoHtml(artigo) {
     tagsExtras.push(`<meta property="og:image" content="${escapeHtml(artigo.imagemCapa)}">`);
   }
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': ['MedicalWebPage', 'Article'],
-    headline: artigo.titulo,
-    description: artigo.resumo,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    url,
-    inLanguage: 'pt-BR',
-    datePublished: artigo.publicadoEm,
-    dateModified: artigo.atualizadoEm || artigo.publicadoEm,
-    ...(artigo.imagemCapa ? { image: artigo.imagemCapa } : {}),
-    author: {
-      '@type': 'Person',
-      name: artigo.autor || 'Dr. Antônio Felipe',
-      jobTitle: 'Médico — Especialista em Medicina de Família e Comunidade',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Portal de Saúde Mental Doutor Antônio Felipe Garabito',
-      url: BASE_URL,
-    },
-  };
-  // JSON.stringify não fecha tags HTML sozinho — escapamos "</" para não
-  // permitir que o conteúdo do artigo feche a tag <script> prematuramente.
-  tagsExtras.push(
-    `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/<\//g, '<\\/')}</script>`
-  );
+  // Grafo GEO (MedicalWebPage + Article + Person com RQE + FAQ real). Se não validar, não sai JSON-LD
+  // (a página continua abrindo; a auditoria acusa a ausência). serializarJsonLd escapa "</" para não fechar o script.
+  if (artigo.titulo && artigo.slug) {
+    const jsonLd = montarJsonLdArtigo({
+      artigo,
+      url,
+      registroRevisao: opcoes.registroRevisao || null,
+      hashAtual: opcoes.hashAtual || null,
+    });
+    if (validarJsonLd(jsonLd).length === 0) {
+      tagsExtras.push(`<script type="application/ld+json">${serializarJsonLd(jsonLd)}</script>`);
+    }
+  }
 
   html = html.replace('</head>', `${tagsExtras.join('\n')}\n</head>`);
 
