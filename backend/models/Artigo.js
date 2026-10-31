@@ -142,6 +142,7 @@ const ArtigoSchema = new mongoose.Schema(
       vinhetaVersao: Number, // 1 = áudio com a vinheta de crédito da marca (backend/lib/vinheta.js); fora do hash
       caracteres: Number,
       bytes: Number,
+      duracaoSegundos: Number, // medida com ffprobe no envio (backend/lib/duracaoAudio.js); feed do podcast
       geradaEm: Date,
     },
     // Importação completa (PROMPT-MESTRE 14/10/2026): origem dos campos do lote, vínculos artigo↔relato

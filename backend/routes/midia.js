@@ -117,6 +117,8 @@ router.put(
         // Vinheta de crédito da marca (16/10/2026): campo separado, não entra no hash do texto.
         vinhetaVersao: Number(req.get('x-narracao-vinheta')) || 0,
         bytes: audio.length,
+        // Duração medida com ffprobe pela ferramenta de narração (30/10/2026); sem valor válido, fica de fora.
+        ...(Number(req.get("x-narracao-duracao")) > 0 ? { duracaoSegundos: Math.round(Number(req.get("x-narracao-duracao"))) } : {}),
         geradaEm: new Date(),
       };
       await Artigo.updateOne({ _id: artigo._id }, { $set: { narracao, audioNarracaoUrl: enviado.url } }, { timestamps: false });
