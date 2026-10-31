@@ -73,3 +73,28 @@ test('amostras geradas (quando existem) passam na checagem automática', () => {
   assert.deepEqual(resultado.motivos, []);
   assert.equal(resultado.aprovado, true);
 });
+
+test('trilha: ganho calculado deixa a música 22 dB abaixo da voz (RMS), não em valor absoluto', () => {
+  const { spawnSync } = require('child_process');
+  const dir = path.join(__dirname, '..', '..', 'scripts', 'padraoVisual');
+  const codigo = [
+    'import sys, json',
+    'sys.path.insert(0, sys.argv[1])',
+    'from ganhoTrilha import ganho_trilha_db, combinar_rms_db',
+    'print(json.dumps({',
+    '  "ganho": ganho_trilha_db(-20.0, -40.0),',
+    '  "ganhoSemAlvo": ganho_trilha_db(-20.0, -40.0, -20.0),',
+    '  "mediaIgual": combinar_rms_db([(-20.0, 3.0), (-20.0, 7.0)]),',
+    '  "mediaPonderada": combinar_rms_db([(-20.0, 1.0), (-30.0, 1.0)]),',
+    '}))',
+  ].join('\n');
+  const r = spawnSync('python', ['-c', codigo, dir], { encoding: 'utf8' });
+  assert.equal(r.status, 0, r.stderr);
+  const v = JSON.parse(r.stdout);
+  // voz -20 dB, alvo -22 => trilha final -42; bruta -40 => ganho -2 dB
+  assert.equal(v.ganho, -2);
+  assert.equal(v.ganhoSemAlvo, 0);
+  assert.ok(Math.abs(v.mediaIgual + 20) < 1e-9);
+  // média de potência de -20 e -30 dB (iguais em duração): 10*log10((0.01+0.001)/2) = -22.5963
+  assert.ok(Math.abs(v.mediaPonderada - (-22.5963)) < 1e-3);
+});

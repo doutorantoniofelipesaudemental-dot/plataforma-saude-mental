@@ -13,6 +13,8 @@ import sys
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
+from ganhoTrilha import combinar_rms_db, ganho_trilha_db, rms_db
+
 FONTE = "C:/Windows/Fonts/arial.ttf"
 FONTE_B = "C:/Windows/Fonts/arialbd.ttf"
 NAVY = (13, 25, 50)
@@ -308,11 +310,19 @@ def gerar_reel(saida, py_tts):
         t += dur
     duracao_total = t
 
-    # música de licença própria: síntese simples (sem arquivo de terceiros), a -22 dB
-    musica = os.path.join(pasta_tmp, "trilha.wav")
+    # música de licença própria: síntese simples (sem arquivo de terceiros), mixada a -22 dB RMS
+    # RELATIVOS à voz: o ganho é calculado a partir do RMS medido da narração (ganhoTrilha.py)
+    trilha_bruta = os.path.join(pasta_tmp, "trilha-bruta.wav")
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i",
                     f"aevalsrc=0.12*(sin(2*PI*130.81*t)+sin(2*PI*164.81*t)+sin(2*PI*196*t))*(0.7+0.3*sin(2*PI*0.2*t)):s=44100:d={duracao_total:.2f}",
-                    "-af", "volume=-22dB", musica], check=True)
+                    trilha_bruta], check=True)
+    rms_voz = combinar_rms_db([(rms_db(os.path.join(pasta_tmp, c["id"] + ".mp3")), tp["audio_dur"])
+                               for c, tp in zip(CENAS, tempos)])
+    ganho = ganho_trilha_db(rms_voz, rms_db(trilha_bruta))
+    musica = os.path.join(pasta_tmp, "trilha.wav")
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", trilha_bruta, "-af", f"volume={ganho:.2f}dB",
+                    musica], check=True)
+    print(f"reel: RMS voz {rms_voz:.2f} dB, ganho da trilha {ganho:+.2f} dB (alvo voz-22)")
 
     manifest_cenas = []
     caixas_todas = []
