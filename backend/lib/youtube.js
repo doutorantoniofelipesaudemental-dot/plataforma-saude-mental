@@ -65,8 +65,9 @@ function validarMetadados({ titulo, descricao, tags }) {
  * Envia o vídeo. `privacidade`: public | unlisted | private.
  * Devolve id, link, status HTTP e a privacidade que o YouTube aplicou.
  */
-async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade = 'public', short = false }) {
-  exigirRedesAtivas('upload no YouTube');
+async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade = 'public', short = false, excecaoFreio = false }) {
+  // A exceção vale só para envio PRIVADO e só quando o chamador a concedeu (demo de auditoria; ver testeUploadPrivado.js).
+  exigirRedesAtivas('upload no YouTube', { excecao: excecaoFreio === true && privacidade === 'private' });
   const token = await obterAccessToken();
   const tamanho = fs.statSync(arquivo).size;
   const inicio = await fetch('https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status', {

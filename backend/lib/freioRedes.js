@@ -6,8 +6,9 @@
  */
 const redesAtivas = (env = process.env) => !/^(false|0|off|nao|não)$/i.test(String(env.REDES_PUBLICACAO_ATIVA ?? '').trim());
 
-function exigirRedesAtivas(contexto = 'publicação em rede social') {
-  if (!redesAtivas()) {
+// `excecao: true` só é passado pelo envio de teste da demo de auditoria (ordem de 30/10/2026): nada mais libera o freio.
+function exigirRedesAtivas(contexto = 'publicação em rede social', { excecao = false } = {}) {
+  if (!redesAtivas() && excecao !== true) {
     const err = new Error(`REDES_PUBLICACAO_ATIVA=false: ${contexto} bloqueada pelo freio de emergência.`);
     err.codigo = 'REDES_PAUSADAS';
     throw err;

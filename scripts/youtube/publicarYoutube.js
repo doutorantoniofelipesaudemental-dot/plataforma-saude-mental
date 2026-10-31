@@ -15,6 +15,7 @@ const L = require('./lib');
 const mongoose = require('mongoose');
 const yt = require('../../backend/lib/youtube');
 const { redesAtivas } = require('../../backend/lib/freioRedes');
+const { itemPublicavel } = require('./itemPublicavel');
 
 const simular = process.argv.includes('--simular');
 const max = Math.min(4, Number((process.argv.find((a) => a.startsWith('--max=')) || '--max=2').split('=')[1]));
@@ -50,7 +51,7 @@ async function extras(token, id, item, meta, dir) {
   const artigos = mongoose.connection.db.collection('artigos');
   const aArg = (process.argv.find((a) => a.startsWith('--agora=')) || '').split('=')[1]; // só para simular (testes)
   const agora = aArg ? new Date(aArg).getTime() : Date.now();
-  const devidos = fila.itens.filter((i) => i.status === 'aprovado-checagem' && (idArg ? i.id === idArg : new Date(i.slot).getTime() <= agora)).sort((a, b) => new Date(a.slot) - new Date(b.slot)).slice(0, max);
+  const devidos = fila.itens.filter((i) => itemPublicavel(i) && (idArg ? i.id === idArg : new Date(i.slot).getTime() <= agora)).sort((a, b) => new Date(a.slot) - new Date(b.slot)).slice(0, max);
   if (!devidos.length) return log('nada devido agora.');
   const token = simular ? null : await yt.obterAccessToken();
   const registrados = mongoose.connection.db.collection(TRAVA.COLECAO);
