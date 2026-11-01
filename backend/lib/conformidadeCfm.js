@@ -10,7 +10,7 @@
 const { IDENTIFICACAO, LINHA_CVV } = require('./legendaInstagram');
 
 const AVISO_CFM =
-  'Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
+  'Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente.';
 
 // Assinatura PADRÃO COMPLETA (decisão de 15/10/2026, vale para todo o site): "NÃO ESPECIALISTA" logo abaixo da linha das
 // pós-graduações, que inclui a Terapia Cognitivo-Comportamental. A versão curta de 3 linhas das mídias sociais (CRM, RQE, PAP e APS)
