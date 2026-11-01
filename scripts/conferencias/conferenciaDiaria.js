@@ -190,7 +190,9 @@ function alertaNoEstadoGeral() {
   try { // resumo do dia (máx. 15 linhas): falha exige ação; aviso, não
     const resumo = require('./resumoDoDia');
     const dados = await resumo.coletar(d, hoje);
-    const alertas = [...falhas.map((texto) => ({ texto, acao: true })), ...avisos.map((texto) => ({ texto, acao: false }))];
+    // Lembrete permanente (ordem de 01/11/2026): remover esta linha quando o Google responder à auditoria da API do YouTube.
+    const lembreteYoutube = { texto: 'YouTube: olhar o Gmail (resposta do Google sobre a auditoria da API) até a aprovação', acao: false };
+    const alertas = [...falhas.map((texto) => ({ texto, acao: true })), ...avisos.map((texto) => ({ texto, acao: false })), lembreteYoutube];
     const { alertaValidade, lerVenceEm } = require('../youtube/validadeAutorizacao');
     const { contarPendentes } = require('../ollamaStatus');
     const validade = alertaValidade({ hoje, venceEm: lerVenceEm() });
