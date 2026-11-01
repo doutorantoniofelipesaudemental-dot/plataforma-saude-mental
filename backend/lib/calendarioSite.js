@@ -9,7 +9,8 @@
  *  - nunca a mesma categoria/tema em horários seguidos (inclusive na virada do dia).
  */
 // 11 por dia útil (autorização de 14/10/2026). Horários de hora em hora (08:00–18:00): suposição minha, pois o item 8 do pedido veio cortado.
-const HORARIOS = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+// Ordem de 01/11/2026: 2 por dia, 08:00 e 14:00 (Bahia), todos os dias (sem pular fim de semana nem feriado).
+const HORARIOS = ['08:00', '14:00'];
 const POR_DIA = HORARIOS.length;
 const INICIO = '2026-10-19';
 const FERIADOS = new Set(['2026-11-02', '2026-11-20', '2026-12-08', '2026-12-25', '2027-01-01']);
@@ -33,13 +34,13 @@ const temaDe = (it) => { const t = `${it.slug} ${(it.titulo || '').normalize('NF
 const ORDEM_PUBLICOS = ['pacientes', 'pais', 'profissionais', 'empresas', 'relatos'];
 const publicoDe = (categoria) => PUBLICO_POR_CATEGORIA[categoria] || 'pacientes';
 
-function diasUteis(n) {
+function diasUteis(n, { todosOsDias = false } = {}) {
   const dias = [];
   const d = new Date(`${INICIO}T12:00:00Z`);
   while (dias.length < n) {
     const iso = d.toISOString().slice(0, 10);
     const dow = d.getUTCDay();
-    if (dow !== 0 && dow !== 6 && !FERIADOS.has(iso)) dias.push(iso);
+    if (todosOsDias || (dow !== 0 && dow !== 6 && !FERIADOS.has(iso))) dias.push(iso);
     d.setUTCDate(d.getUTCDate() + 1);
   }
   return dias;
@@ -85,7 +86,7 @@ function montarCalendario(itens, { fixosPorDia = [] } = {}) {
   const avisos = [];
   const total = itens.length;
   const nDias = Math.ceil(total / POR_DIA);
-  const dias = diasUteis(nDias);
+  const dias = diasUteis(nDias, { todosOsDias: true });
   const porSlug = new Map(itens.map((i) => [i.slug, i]));
 
   const corpo = itens.filter((i) => i.serie).sort((a, b) => a.numeroSerie - b.numeroSerie);
