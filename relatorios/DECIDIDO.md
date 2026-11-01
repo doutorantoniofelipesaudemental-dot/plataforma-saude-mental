@@ -63,3 +63,16 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 01/11/2026 — Eixos oficiais do plano diretor (ordem do Dr. Antônio, 17:45)
+Nomes EXATOS dos 7 eixos (substituem a lista de `relatorios/plano-diretor/ARQUITETURA-ARTIGOS.md`, que fica como histórica):
+1. Infância, Adolescência, Professores & Escola
+2. Maternidade, Puerpério & Saúde Perinatal
+3. Vida Adulta & Envelhecimento
+4. Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1)
+5. Ansiedade, Humor, Pânico & Compulsões
+6. Hábitos, Estilo de Vida & Sono
+7. Sociedade, Cultura & Existência
+- A categoria de origem continua sendo o PÚBLICO ("Para <público>"), não o eixo.
+- Reclassificação por título e conteúdo (automática, com marcação "revisar"); conferência pendente do Dr. Antônio.
+- Decididos em 01/11 e registrados aqui: 26 fora da agenda (`aguarda-revisao-medica`); 10 duplicados de volta, espaçados ≥ 30 dias; paliativos na agenda, espaçados ≥ 3 dias; 2 por dia, 03/11/2026 a 21/04/2027 (339 agendados).

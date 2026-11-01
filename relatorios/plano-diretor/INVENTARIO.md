@@ -1,40 +1,34 @@
-# Inventário do acervo (PROPOSTA — só leitura)
+# Inventário do acervo — reclassificado (PROPOSTA, só leitura)
 
-Gerado em 01/11/2026 a partir de `textos-banco.json` (export do banco, 726 registros). Sem alterar banco, site ou Vercel.
-Arquivo detalhado: `relatorios/plano-diretor/INVENTARIO.csv` (uma linha por texto).
+Gerado em 01/11/2026 (17:45) a partir de `textos-banco.json` (export) e `agenda-pos-aplicacao.json` (agenda aplicada hoje). Nada alterado no banco, no site ou na Vercel.
+CSV com uma linha por texto: `INVENTARIO.csv`. Eixo por TÍTULO + CONTEÚDO; público = categoria.
 
 ## Totais
 - Textos: **726**
-- Status: publicados **361** · agendados **365** · fora **0**
-- Vertical A (relatos, categoria "Relatos da Prática"): **190** · Vertical B (psicoeducação): **536**
-- Com ≥ 4 referências: **714** · abaixo de 4: **12**
-- Pré-triagem sensível (palavra-chave no título): **45** (pré-triagem; decisão do Dr. Antônio)
+- Status: publicados **361** · agendados **339** (03/11/2026 a 21/04/2027, 2 por dia) · fora da agenda **26** (aguarda-revisao-medica, Nível 1)
+- Vertical A (relatos): **190** · Vertical B (psicoeducação): **536**
+- Marcados para revisão (eixo mais provável + "revisar"): **216**
+- Referências fora do padrão (sem lista formatada): **12** (agenda não alterada)
+- Títulos sensíveis (palavra-chave, pré-triagem): **19**
 
-## Por eixo (PROVISÓRIO: derivado da categoria)
+## Totais por eixo (1–7, nomes oficiais)
 | Eixo | Textos |
 |---|---|
-| indefinido | 189 |
-| E4 | 158 |
-| E1 | 109 |
-| E5 | 99 |
-| E2 | 90 |
-| E6 | 61 |
-| E7 | 14 |
-| E3 | 6 |
+| 1 — Infância, Adolescência, Professores & Escola | 166 |
+| 2 — Maternidade, Puerpério & Saúde Perinatal | 16 |
+| 3 — Vida Adulta & Envelhecimento | 43 |
+| 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | 95 |
+| 5 — Ansiedade, Humor, Pânico & Compulsões | 200 |
+| 6 — Hábitos, Estilo de Vida & Sono | 62 |
+| 7 — Sociedade, Cultura & Existência | 144 |
 
 ## Por vertical × status
-| Vertical | Publicados | Agendados |
-|---|---|---|
-| A (relatos) | 81 | 109 |
-| B (psicoeducação) | 280 | 256 |
+| Vertical | Publicados | Agendados | Fora |
+|---|---|---|---|
+| A (relatos) | 81 | 107 | 2 |
+| B (psicoeducação) | 280 | 232 | 24 |
 
-## Por público
-| geral | 369 |
-| pacientes | 204 |
-| profissionais | 80 |
-| gestores/RH | 73 |
-
-## Por categoria de origem
+## Público (categoria de origem)
 | Relatos da Prática | 190 |
 | Pacientes & Famílias | 102 |
 | Empresas & RH | 73 |
@@ -59,8 +53,7 @@ Arquivo detalhado: `relatorios/plano-diretor/INVENTARIO.csv` (uma linha por text
 | Pós-Graduação & Concursos | 1 |
 | Transição de Carreira & Aposentadoria | 1 |
 
-## Limites deste inventário
-- **Eixos provisórios.** Os nomes oficiais dos 7 eixos não estão no repositório. Os eixos foram derivados da categoria de origem. Os relatos (A) não têm eixo por categoria: estão como "indefinido" até a classificação por conteúdo.
-- **Revisão médica:** o banco não tem campo de status de revisão. Nenhum texto tem o campo; a contagem fica para a revisão.
-- **Sensíveis:** pré-triagem por palavra-chave no título; não é classificação clínica.
-- **Referências:** contadas no bloco `ol.referencias`. Não verificadas (DOI e retratação ficam com o varredor).
+## Limites
+- O eixo é uma **classificação automática por palavras-chave** no título (peso ×3) e em trechos específicos do corpo. Não é leitura clínica. Os 216 marcados como "revisar" precisam de conferência; os relatos são os mais afetados.
+- O status vem da agenda aplicada hoje (339 agendados). O export original tinha 365 agendados; os 26 fora são os do Nível 1.
+- Revisão médica: o banco não tem campo de status de revisão.
