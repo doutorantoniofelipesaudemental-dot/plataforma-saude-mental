@@ -84,3 +84,9 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - **Selo dinâmico** (página do artigo recebe o status do registro): PR separado, depois destes.
 - **Ordem de merge de hoje:** (1) aviso honesto; (2) trava do reagendamento (#218); (3) calendário 2 por dia; (4) docs (esta, #219, com #216).
 - **Formulário da auditoria do YouTube (registro, 01/11, 10:50):** respostas registradas em `relatorios/youtube/auditoria-envio/RESPOSTAS.md`. Ponto em aberto: a seção 1 do formulário estava com "NÃO pedir cota adicional", e a ordem do Dr. Antônio fala em "request for additional quota" com "a cota padrão é suficiente". Confirmar antes do envio.
+
+## 01/11/2026 — Formulário da API do YouTube enviado (12:12)
+- Enviado em 01/11/2026 às 12:12 (confirmação: "Your email has been sent. Thank you for submitting the YouTube API Services Form."). Registro completo em `relatorios/youtube/auditoria-envio/RESPOSTAS.md`.
+- Seção 1: compliance audit com cota padrão. Seção 4: "Portal de Saúde Mental", não público, sem credenciais de demonstração. Seção 5: videos.insert (3.200/dia), videos.update, thumbnails.set, captions.insert, playlists.list, playlists.insert, playlistItems.insert; quota "No change / Default". Seção 6: arquitetura.pdf, fluxo-usuario.pdf, supporting-materials.pdf e as evidências de site.
+- **Regra:** qualquer endpoint novo ou mudança de uso da API exige aviso por escrito ao YouTube ANTES (compromisso da Seção 7). Checagem no portão: endpoint fora da lista reprova (ver PR de checagem).
+- Lembrete diário em RESUMO-DO-DIA: "olhar o Gmail (resposta do Google sobre a auditoria)", até a aprovação.
