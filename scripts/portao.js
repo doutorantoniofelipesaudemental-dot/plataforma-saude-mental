@@ -144,6 +144,16 @@ async function triplaChecagem() {
   const t = await triplaChecagem();
   etapas.push({ nome: '2. Tripla checagem (técnica, científica, ética, humanizada)', ok: t.falhas.length === 0, detalhe: t.falhas.length ? `${t.falhas.length} falha(s)` : `${t.total} itens, 0 falhas`, itens: t.falhas });
   if (t.falhas.length) { t.falhas.slice(0, 30).forEach((x) => console.log('  ✗ ' + x)); encerrar(false); }
+  // 2b. Endpoints da API do YouTube: só os 7 do formulário enviado em 01/11/2026 (compromisso da Seção 7).
+  {
+    const { analisarTexto } = require('./lib/endpointsYoutube');
+    const arquivos = spawnSync('git', ['ls-files', 'backend', 'scripts', 'apps'], { cwd: RAIZ, encoding: 'utf8' }).stdout
+      .split('\n').filter((f) => /\.(js|mjs|cjs|ts|tsx|jsx|py)$/.test(f) && !/\.test\./.test(f));
+    const violacoes = arquivos.flatMap((f) => { try { return analisarTexto(fs.readFileSync(path.join(RAIZ, f), 'utf8'), f); } catch { return []; } });
+    violacoes.slice(0, 30).forEach((v) => console.log(`  ✗ endpoint do YouTube fora da lista: ${v.arquivo}:${v.linha} ${v.endpoint}`));
+    etapas.push({ nome: '2b. Endpoints da API do YouTube (só os do formulário)', ok: violacoes.length === 0, detalhe: violacoes.length ? violacoes.slice(0, 5).map((v) => `${v.arquivo}:${v.linha} ${v.endpoint}`).join('; ') : `${arquivos.length} arquivos, 0 fora da lista`, itens: violacoes });
+    if (violacoes.length) encerrar(false);
+  }
   if (!soChecagem) {
     comando('3. Build', NPM, ['run', 'build']);
     comando('4. Testes unitários', NPM, ['run', 'test:unit']);
