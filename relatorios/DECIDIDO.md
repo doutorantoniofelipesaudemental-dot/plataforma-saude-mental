@@ -63,3 +63,16 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 01/11/2026 — Reagendamento, ritmo e publicação delegada (ordens do Dr. Antônio, 09:05, 09:35 e 09:50)
+- **Ritmo:** 2 posts por dia, 08:00 e 14:00 (Bahia), todos os dias da semana. Primeiro slot 03/11/2026 08:00. Agenda aplicada: 339 com data, 26 sem data (Nível 1), 12 com aviso `revisao-medica-pendente`.
+- **Nível 1 (sensíveis):** 26 textos saem da agenda sem data, status `aguarda-revisao-medica`. Só voltam com leitura do Dr. Antônio. Incluem *Remédios numa caixa de sapato* e *O último comprimido da noite*.
+- **Duplicados de título:** a comparação de texto deu 0,1% a 14% (nenhum acima de 60%). Não são duplicados: os 10 voltam à agenda, com 30 dias ou mais entre os dois de cada par. A série do segurança fica em ordem ("me seguia" antes de "me seguiu de novo"). Não há união de textos.
+- **Relatos:** distribuídos cerca de 1 a cada 2 dias (medido: 1 a cada 1,77 dias).
+- **Trava:** `scripts/reagendar.js` e `backend/scripts/importarTudo.js` recusam `--aplicar` sem `--ordem-dr`. Recálculo da agenda só com ordem escrita do Dr. Antônio.
+- **Publicação delegada (ordem de 01/11, 09:50):** artigos e posts APROVADOS na auditoria geral e na tripla checagem automática (técnica, científica, ética e humanizada; referências, CFM 2.336/2023 e 2.454/2026; sem "psiquiatra"; "Antônio" com acento; CVV 188 e SAMU 192) podem ser publicados no site e nas redes. Continua sob responsabilidade do Dr. Antônio.
+  - Aviso para textos aprovados só pela checagem: "Conteúdo verificado por checagem automática técnica, científica e ética e publicado sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente."
+  - Aviso para textos revisados pelo Dr. (`revisao:aprovar`, com hash): "Revisado pelo Dr. Antônio Felipe em DD/MM/AAAA." Nunca mostrar esse selo sem o registro.
+  - Exceções que continuam exigindo leitura do Dr. Antônio: Nível 1, conteúdo com nome de remédio ou dose, e qualquer item com dúvida na checagem. Vão para o caderno de domingo.
+- **Freios:** `REDES_PUBLICACAO_ATIVA` e `YOUTUBE_PUBLICACAO_ATIVA` continuam mudando só por ordem escrita do Dr. Antônio, item por item. Esta autorização não liga freio algum.
+- **Aviso honesto no site:** `public/artigo.html` deixa de afirmar "revisão e responsabilidade médica final" e passa a dizer "Revisão médica individual: pendente". O mesmo texto ainda aparece em blog, home, instagram, linkedin, mentoria, na landing do app e em `backend/lib/conformidadeCfm.js` (constante `AVISO_CFM`, usada pelas checagens de YouTube e LinkedIn). Essas páginas ficam para PR próprio.
