@@ -25,6 +25,8 @@ const args = process.argv.slice(2);
 const val = (k) => (args.find((a) => a.startsWith(`--${k}=`)) || '').split('=')[1] || (args.includes(`--${k}`) ? args[args.indexOf(`--${k}`) + 1] : null);
 const etapaArg = val('etapa');
 const aplicar = args.includes('--aplicar');
+// Trava (ordem de 01/11/2026): o calendário de importação segue a agenda; gravar exige --ordem-dr.
+if (aplicar && !args.includes('--ordem-dr')) { console.error('RECUSADO: importarTudo --aplicar travado desde 01/11/2026. Use --ordem-dr somente com ordem escrita do Dr. Antônio.'); process.exit(1); }
 
 const CATEGORIAS = require('../models/Artigo').CATEGORIAS;
 const ORIGEM_CATEGORIA = { empresas: 'Empresas & RH', medicos: 'Médicos & Enfermeiros', pacientes: 'Pacientes & Famílias', pais: 'Pais & Famílias', relatos: 'Relatos da Prática' };
