@@ -30,8 +30,9 @@ function prepararDependencias(raiz, executar = spawnSync) {
     let ehLink = false;
     try {
       const st = fs.lstatSync(nm);
-      existe = true;
       ehLink = st.isSymbolicLink();
+      // Completa só se o npm terminou (ele grava .package-lock.json ao fim). Pasta parcial de uma instalação interrompida conta como ausente.
+      existe = !ehLink && fs.existsSync(path.join(nm, '.package-lock.json'));
     } catch { /* não existe */ }
     return { dir, temPackage: fs.existsSync(path.join(dir, 'package.json')), existe, ehLink };
   });

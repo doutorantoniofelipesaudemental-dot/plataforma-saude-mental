@@ -15,6 +15,8 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 
 const RAIZ = path.resolve(__dirname, '..');
+// Regra de 28/10/2026: o portão instala o que falta (raiz e app Next) antes de qualquer etapa; não depende do publicarBranch.
+try { require('./lib/dependencias').prepararDependencias(RAIZ); } catch (e) { console.error(`NÃO APROVADO: ${e.message}`); process.exit(1); }
 const args = process.argv.slice(2);
 const base = (args.find((a) => a.startsWith('--base=')) || '--base=origin/main').split('=')[1];
 const soChecagem = args.includes('--so-checagem');

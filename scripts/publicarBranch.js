@@ -29,9 +29,9 @@ function removerOutrosWorktrees(branch) {
     const sujo = (spawnSync('git', ['status', '--porcelain'], { cwd: caminho, encoding: 'utf8' }).stdout || '').trim() !== '';
     const headLocal = (spawnSync('git', ['rev-parse', 'HEAD'], { cwd: caminho, encoding: 'utf8' }).stdout || '').trim();
     const dec = decidirRemoverWorktree({ caminho, arvoreLimpa: !sujo, headLocal, headRemoto: remoto });
-    if (!dec.remover) { console.log(`Worktree mantido: ${dec.motivo}`); continue; }
-    const rm = git('worktree', 'remove', caminho);
-    console.log(rm.status === 0 ? dec.motivo : `Worktree não removido: ${(rm.stderr || '').trim()}`);
+    // Regra de 28/10/2026 (ensaio): não remove worktree automaticamente (pode estar em uso). Só avisa com o comando exato.
+    if (dec.remover) console.log(`Worktree mantido (limpo e igual ao remoto; remover à mão quando não estiver em uso): git worktree remove "${caminho}"`);
+    else console.log(`Worktree mantido: ${dec.motivo}`);
   }
 }
 const ESPERA_MS = 5 * 60 * 1000;
