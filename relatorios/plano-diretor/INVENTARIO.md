@@ -7,20 +7,22 @@ CSV com uma linha por texto: `INVENTARIO.csv`. Eixo por TÍTULO + CONTEÚDO; pú
 - Textos: **726**
 - Status: publicados **361** · agendados **339** (03/11/2026 a 21/04/2027, 2 por dia) · fora da agenda **26** (aguarda-revisao-medica, Nível 1)
 - Vertical A (relatos): **190** · Vertical B (psicoeducação): **536**
-- Marcados para revisão (eixo mais provável + "revisar"): **216**
+- Marcados para revisão ("revisar" = sim): **97** (eram 216; lista em `reclassificacao-02-11-revisar.txt`)
 - Referências fora do padrão (sem lista formatada): **12** (agenda não alterada)
 - Títulos sensíveis (palavra-chave, pré-triagem): **19**
 
-## Totais por eixo (1–7, nomes oficiais)
+## Totais por eixo (1–7, nomes oficiais de 02/11/2026)
+Reclassificação com as regras da ordem de 02/11 (paliativos → 3, exceto quem cuida → 4; luto → 3, ou 7 se ligado a violência/sociedade; categoria = público). Regras e decisões manuais: `reclassificar-eixos.js` e `reclassificacao-02-11-overrides.json`.
+
 | Eixo | Textos |
 |---|---|
-| 1 — Infância, Adolescência, Professores & Escola | 166 |
-| 2 — Maternidade, Puerpério & Saúde Perinatal | 16 |
-| 3 — Vida Adulta & Envelhecimento | 43 |
-| 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | 95 |
-| 5 — Ansiedade, Humor, Pânico & Compulsões | 200 |
-| 6 — Hábitos, Estilo de Vida & Sono | 62 |
-| 7 — Sociedade, Cultura & Existência | 144 |
+| 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar | 163 |
+| 2 — Maternidade, Puerpério & Saúde Perinatal | 19 |
+| 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos | 84 |
+| 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | 131 |
+| 5 — Transtornos Mentais | 142 |
+| 6 — Hábitos, Estilo de Vida & Sono | 55 |
+| 7 — Sociedade, Cultura & Existência | 132 |
 
 ## Por vertical × status
 | Vertical | Publicados | Agendados | Fora |
