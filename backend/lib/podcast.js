@@ -15,8 +15,13 @@ const escapar = (s) => String(s == null ? '' : s)
 // Função pura: o tema pede o CVV quando o título ou o resumo tratam de crise, violência, luto ou risco.
 const temaSensivel = (texto) => SENSIVEL.test(String(texto || ''));
 
-// Duração estimada (segundos) a partir dos caracteres narrados (~15 caracteres por segundo de fala).
+// Duração em segundos do episódio: medida com ffprobe no envio da narração (narracao.duracaoSegundos).
+// Sem medição (textos antigos), usa a estimativa por caracteres ÷ 15, que o feed sinaliza como aproximada.
 const duracaoSegundos = (caracteres) => Math.max(1, Math.round(Number(caracteres || 0) / 15));
+const duracaoDoEpisodio = (a) => {
+  const medida = Number(a.narracao && a.narracao.duracaoSegundos);
+  return Number.isFinite(medida) && medida > 0 ? Math.round(medida) : duracaoSegundos(a.caracteres || (a.narracao && a.narracao.caracteres));
+};
 
 const rfc822 = (d) => new Date(d).toUTCString();
 
@@ -38,7 +43,7 @@ function episodiosDe(artigos, { base, agora = new Date() }) {
         link,
         audio: a.narracao.url,
         bytes: Number(a.narracao.bytes || 0),
-        duracao: duracaoSegundos(a.caracteres || (a.narracao && a.narracao.caracteres)),
+        duracao: duracaoDoEpisodio(a),
         publicadoEm: a.publicadoEm,
       };
     });
@@ -98,4 +103,4 @@ const CANAL = {
   capa: 'https://www.drantoniofelipemedico.com.br/podcast/capa-3000.png',
 };
 
-module.exports = { escapar, temaSensivel, duracaoSegundos, episodiosDe, montarFeed, CANAL, AVISO, LINHA_CRISE, VOZ };
+module.exports = { escapar, temaSensivel, duracaoSegundos, duracaoDoEpisodio, episodiosDe, montarFeed, CANAL, AVISO, LINHA_CRISE, VOZ };
