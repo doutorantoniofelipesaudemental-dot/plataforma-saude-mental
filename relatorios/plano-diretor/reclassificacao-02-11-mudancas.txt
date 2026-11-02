@@ -1,0 +1,20 @@
+6->1 | A conversa que o pai adiou | decisão manual
+3->4 | A mesa vazia do escritório | decisão manual
+5->4 | A primeira vez que ele disse "não estou bem" | decisão manual
+5->4 | A sirene que não parava na cabeça | decisão manual
+6->4 | O telefone que tocava às onze da noite | decisão manual
+7->5 | O banho que demorou duas semanas | decisão manual
+5->6 | Segunda-feira eu começo | decisão manual
+5->6 | "Magro demais": comentários sobre o corpo magro também ferem | decisão manual
+7->6 | Brasil entre os países que mais fazem cirurgias plásticas: o que isso diz sobre nós | decisão manual
+1->6 | "Você engordou?": comentários de família que machucam e como responder | decisão manual
+5->6 | Casal e corpo: intimidade, comparação e insegurança | decisão manual
+7->3 | A primeira vez que alguém perguntou o que importava para ela | decisão manual
+1->3 | A festa de bodas antecipada | decisão manual
+1->7 | A festa da turma | decisão manual
+6->7 | A moto que parou do lado | decisão manual
+1->7 | Dois anos depois da porta fechada | decisão manual
+5->7 | Ninguém acreditou nele | decisão manual
+6->7 | A banca que o fiscal levou | decisão manual
+4->7 | As mãos que sabiam suturar | decisão manual
+5->7 | O frio que não era só do inverno | decisão manual

@@ -142,3 +142,33 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 ## 30/10/2026 (23:20) — Publicação de branches docs/ (ordem do Dr. Antônio)
 - Autorizado: publicar branches `docs/` pelo `node scripts/publicarBranch.js` (portão → push → PR), sem pedir push pelo `!`. Vale para docs/decidido-screencast-20261030, docs/newsletter-mensal-20261030 e fix/grafia-anexo-youtube-20261030, e para branches docs/ futuras do mesmo tipo.
 - Continua valendo: merge só pelo `merge-seguro` (Dr. Antônio); nenhum push para main.
+## 01/11/2026 — Eixos oficiais do plano diretor (ordem do Dr. Antônio, 17:45)
+Nomes EXATOS dos 7 eixos (substituem a lista de `relatorios/plano-diretor/ARQUITETURA-ARTIGOS.md`, que fica como histórica):
+1. Infância, Adolescência, Professores & Escola
+2. Maternidade, Puerpério & Saúde Perinatal
+3. Vida Adulta & Envelhecimento
+4. Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1)
+5. Ansiedade, Humor, Pânico & Compulsões
+6. Hábitos, Estilo de Vida & Sono
+7. Sociedade, Cultura & Existência
+- A categoria de origem continua sendo o PÚBLICO ("Para <público>"), não o eixo.
+- Reclassificação por título e conteúdo (automática, com marcação "revisar"); conferência pendente do Dr. Antônio.
+- Decididos em 01/11 e registrados aqui: 26 fora da agenda (`aguarda-revisao-medica`); 10 duplicados de volta, espaçados ≥ 30 dias; paliativos na agenda, espaçados ≥ 3 dias; 2 por dia, 03/11/2026 a 21/04/2027 (339 agendados).
+
+## 02/11/2026 — Eixos oficiais atualizados e regras de classificação (ordem do Dr. Antônio, 08:10; substitui a lista de 01/11)
+Nomes EXATOS (usar exatamente):
+1. Infância, Adolescência, Pais & Família, Professores & Saúde Escolar
+2. Maternidade, Puerpério & Saúde Perinatal
+3. Vida Adulta, Envelhecimento & Cuidados Paliativos
+4. Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1)
+5. Transtornos Mentais
+6. Hábitos, Estilo de Vida & Sono
+7. Sociedade, Cultura & Existência
+
+Regras:
+- Cuidados paliativos → Eixo 3, EXCETO os focados em quem cuida (equipes, cuidadores, trabalhadores que cuidam de familiares, burnout em paliativos) → Eixo 4, com link cruzado para o pilar do Eixo 3.
+- Eixo 5 reúne ansiedade, depressão, pânico, compulsões, TOC, bipolar, psicose, TEPT, transtornos alimentares etc.
+- Luto → Eixo 3 (exceto luto ligado a violência/sociedade → Eixo 7).
+- A categoria continua sendo o PÚBLICO ("Para <público>"), não o eixo.
+- Reclassificação aplicada em 02/11 (726 textos): 11 marcados "revisar" (eram 216). Totais: E1 157 · E2 19 · E3 88 · E4 134 · E5 138 · E6 54 · E7 136. Registro: `relatorios/plano-diretor/INVENTARIO.md` e `.csv`.
+- Pilares: ordem proposta (só o Eixo 4 como amostra; os demais dependem de aprovação) em `relatorios/plano-diretor/PROPOSTA-ADAPTADA.md`.
