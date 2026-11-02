@@ -17,6 +17,8 @@ const TAMANHO_MAX = 8 * 1024 * 1024; // bytes; acima disso o arquivo não cabe c
 
 // Arquivos de estado que saíram do Git. Caminho relativo à raiz do projeto.
 const LISTA = [
+  // Pasta inteira (ordem de 28/10/2026): entradas terminadas em / são expandidas para os .txt/.md/.json lá dentro.
+  'relatorios/linkedin/fila-manual/',
   'relatorios/linkedin/agendamento-lote.json',
   'relatorios/linkedin/agendamento-lote.md',
   'relatorios/linkedin/agendar-diario-estado.json',
@@ -61,9 +63,24 @@ function verificarSeguro(arquivo, conteudo) {
   return { ok: true };
 }
 
+// Expande uma pasta da LISTA (entrada terminada em /) nos arquivos de texto que ela contém (.txt, .md, .json). Mídia fica de fora.
+const EXTENSOES_TEXTO = /\.(txt|md|json)$/i;
+function expandirPasta(raiz, pasta) {
+  const abs = path.join(raiz, pasta);
+  if (!fs.existsSync(abs)) return [];
+  const achados = [];
+  for (const e of fs.readdirSync(abs, { withFileTypes: true })) {
+    const rel = `${pasta}${e.name}`;
+    if (e.isDirectory()) achados.push(...expandirPasta(raiz, `${rel}/`));
+    else if (EXTENSOES_TEXTO.test(e.name)) achados.push(rel);
+  }
+  return achados;
+}
+
 // Lista os arquivos da LISTA que existem no disco (ausentes são normais: ainda não foram gerados).
 function arquivosDeEstado(raiz = RAIZ, lista = LISTA) {
-  return lista.filter((rel) => fs.existsSync(path.join(raiz, rel))).map((rel) => ({ arquivo: rel, abs: path.join(raiz, rel) }));
+  const planos = lista.flatMap((rel) => (rel.endsWith('/') ? expandirPasta(raiz, rel) : [rel]));
+  return planos.filter((rel) => fs.existsSync(path.join(raiz, rel))).map((rel) => ({ arquivo: rel, abs: path.join(raiz, rel) }));
 }
 
 // Faz o backup do dia. `col` precisa ter findOne e insertOne (coleção do MongoDB ou equivalente).
@@ -100,7 +117,7 @@ async function ultimoBackup({ col }) {
   return docs.length ? docs.map((d) => d.data).sort().at(-1) : null;
 }
 
-module.exports = { LISTA, COLECAO, DIAS_RETENCAO, RAIZ, sha256, verificarSeguro, arquivosDeEstado, backupDoDia, limparAntigos, ultimoBackup };
+module.exports = { LISTA, COLECAO, DIAS_RETENCAO, RAIZ, sha256, verificarSeguro, expandirPasta, arquivosDeEstado, backupDoDia, limparAntigos, ultimoBackup };
 
 // Execução (chamada pela conferência das 09:30): faz o backup do dia, limpa o que tem mais de 30 dias e imprime o resultado em JSON.
 if (require.main === module && process.argv.includes('--executar')) {
