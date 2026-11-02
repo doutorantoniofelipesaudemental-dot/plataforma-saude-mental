@@ -43,12 +43,23 @@ async function coletar(d, hoje) {
   return { publicadosOntem, saiHoje };
 }
 
-// Grava o arquivo. Alertas: lista de { texto, acao }. Não faz nada além disso.
-function gravar(linhas) {
-  const raiz = path.resolve(__dirname, '../..');
-  const arquivo = path.join(raiz, 'relatorios/RESUMO-DO-DIA.md');
-  fs.writeFileSync(arquivo, `${linhas.join('\n')}\n`, 'utf8');
-  return arquivo;
+// Alerta do Blob gravado pela rotina mensal (blob-rotina-mensal.js), que roda antes desta conferência (28/10/2026).
+const PREFIXO_ALERTA_BLOB = 'PRECISA DO DR. ANTÔNIO: SIM — Blob:';
+
+// Grava o arquivo. Alertas: lista de { texto, acao }. Se o alerta do Blob foi gravado HOJE (mesmo dia do arquivo),
+// ele fica no topo: sem isso a regravação das 09:30 o apagaria antes das 17:30.
+function gravar(linhas, { arquivo, agora = new Date() } = {}) {
+  const destino = arquivo || path.join(path.resolve(__dirname, '../..'), 'relatorios/RESUMO-DO-DIA.md');
+  let final = linhas;
+  if (fs.existsSync(destino)) {
+    const primeira = fs.readFileSync(destino, 'utf8').split('\n')[0];
+    const mesmoDia = fs.statSync(destino).mtime.toDateString() === agora.toDateString();
+    if (mesmoDia && primeira.startsWith(PREFIXO_ALERTA_BLOB)) {
+      final = [primeira, ...linhas.filter((l, i) => !(i === 0 && l.startsWith('PRECISA DO DR.')))];
+    }
+  }
+  fs.writeFileSync(destino, `${final.join('\n')}\n`, 'utf8');
+  return destino;
 }
 
 module.exports = { montarResumo, coletar, gravar, MAX_LINHAS };
