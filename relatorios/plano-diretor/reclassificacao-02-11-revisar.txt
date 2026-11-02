@@ -1,14 +1,5 @@
-5 | O resgate de um vínculo perdido | decisão manual
-5 | O silêncio que quase foi fatal | decisão manual
 5 | A receita que não veio sozinha | decisão manual
 1 | O território que conhece seus segredos | decisão manual
-5 | A última consulta antes de desistir | decisão manual
-1 | Crise psiquiátrica na família: o que fazer (e o que evitar) até a ajuda chegar | decisão manual
-1 | O caderno de desenhos que substituiu a lâmina | decisão manual
-5 | O casamento que quase não sobreviveu ao diagnóstico | decisão manual
-6 | O retorno que ninguém esperava | decisão manual
-3 | Delirium, demência e depressão: diagnóstico diferencial na prática | decisão manual
-1 | Traumas da infância na vida adulta: como as marcas aparecem e os caminhos de cuidado | decisão manual
 4 | A planta que sobreviveu na janela do posto | decisão manual
 5 | A receita dobrada no bolso do casaco | decisão manual
 7 | A sala de espera que respirava em silêncio | decisão manual
@@ -17,25 +8,19 @@
 5 | O domingo à tarde em que o telefone não chamou | decisão manual
 7 | O lenço esquecido na cadeira do consultório | decisão manual
 4 | O relógio na parede do pronto atendimento | decisão manual
-1 | O pai que descobriu o extrato | decisão manual
-1 | O espelho do celular | decisão manual
 5 | Calor aos quarenta e oito | decisão manual
-1 | Quinze minutos para a prova | decisão manual
-3 | Depressão no idoso não é "coisa da idade": como ela aparece, por que passa despercebida e o tratamento que funciona | ambiguo:3/5
 5 | Ele só veio por causa da pressão | decisão manual
 3 | O lado vazio da cama | decisão manual
 3 | Remédios numa caixa de sapato | decisão manual
 7 | O dinheiro que ele mandava para casa | decisão manual
 5 | A dor que nenhum exame mostrava | decisão manual
 2 | O quarto pintado de amarelo | decisão manual
-6 | Álcool em territórios indígenas: o que está por trás do problema e como cuidar com respeito à cultura | decisão manual
 1 | O jantar em que ele contou | decisão manual
 6 | A conversa que o pai adiou | decisão manual
 1 | Mangas compridas em janeiro | decisão manual
 3 | A mesa vazia do escritório | decisão manual
 5 | A primeira vez que ele disse "não estou bem" | decisão manual
 3 | A cadeira vazia no almoço de domingo | decisão manual
-5 | Segunda-feira de volta | decisão manual
 5 | A sirene que não parava na cabeça | decisão manual
 6 | O telefone que tocava às onze da noite | decisão manual
 7 | Quando ele deixou de acreditar | decisão manual
@@ -46,15 +31,9 @@
 7 | O segurança me seguia | decisão manual
 7 | O endereço que ela tirava do currículo | decisão manual
 7 | O banho que demorou duas semanas | decisão manual
-6 | Clonazepam, diazepam e outros calmantes: riscos do uso prolongado e como reduzir com segurança | decisão manual
 2 | Novecentos gramas e uma culpa que não era dela | decisão manual
 5 | O ponto de ônibus que ela evitava | decisão manual
-6 | "Corpo ideal" existe? Como os padrões mudam e quem lucra com eles | decisão manual
 6 | Insatisfação com o corpo no Brasil: o que os números mostram por idade, gênero e renda | decisão manual
-1 | Espelho, filtro e câmera frontal: como as redes mudaram o jeito de nos vermos | decisão manual
-6 | Neutralidade e respeito ao corpo: alternativas realistas ao "ame seu corpo" | decisão manual
-7 | Receita retida, genéricos e mercado paralelo: o que mudou nas canetas emagrecedoras | decisão manual
-6 | Parei a caneta e engordei de novo: como lidar com o reganho | decisão manual
 5 | Segunda-feira eu começo | decisão manual
 5 | "Magro demais": comentários sobre o corpo magro também ferem | decisão manual
 7 | Brasil entre os países que mais fazem cirurgias plásticas: o que isso diz sobre nós | decisão manual

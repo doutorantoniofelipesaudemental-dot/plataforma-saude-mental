@@ -92,5 +92,5 @@ Regras:
 - Eixo 5 reúne ansiedade, depressão, pânico, compulsões, TOC, bipolar, psicose, TEPT, transtornos alimentares etc.
 - Luto → Eixo 3 (exceto luto ligado a violência/sociedade → Eixo 7).
 - A categoria continua sendo o PÚBLICO ("Para <público>"), não o eixo.
-- Reclassificação aplicada em 02/11 (726 textos): 97 marcados "revisar" (eram 216). Totais: E1 163 · E2 19 · E3 84 · E4 131 · E5 142 · E6 55 · E7 132. Registro: `relatorios/plano-diretor/INVENTARIO.md` e `.csv`.
+- Reclassificação aplicada em 02/11 (726 textos): 76 marcados "revisar" (eram 216). Totais: E1 160 · E2 19 · E3 87 · E4 131 · E5 144 · E6 53 · E7 132. Registro: `relatorios/plano-diretor/INVENTARIO.md` e `.csv`.
 - Pilares: ordem proposta (só o Eixo 4 como amostra; os demais dependem de aprovação) em `relatorios/plano-diretor/PROPOSTA-ADAPTADA.md`.

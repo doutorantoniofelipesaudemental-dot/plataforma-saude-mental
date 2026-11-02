@@ -42,15 +42,28 @@ Não há a frase "11 por dia" no `CLAUDE.md` rastreado. A versão anterior desta
 ## Ordem proposta dos 7 pilares (02/11/2026, PROPOSTA)
 Critério: publicados disponíveis (base do pilar), tamanho do eixo, risco clínico e custo de conferência.
 1. **Eixo 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1)** — 131 textos (85 publicados); consultoria NR-1; amostra já pronta (`amostras/pilar-eixo4-cuidar-de-quem-cuida.md`).
-2. **Eixo 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos** — 84 (24 publicados, 55 agendados); paliativos com sensibilidade clínica alta; segundo, como indicado.
-3. **Eixo 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar** — 163 (91 publicados); maior público.
-4. **Eixo 5 — Transtornos Mentais** — 142 (88 publicados); maior volume clínico, exige revisão de sentido clínico por texto.
-5. **Eixo 6 — Hábitos, Estilo de Vida & Sono** — 55 (34 publicados).
+2. **Eixo 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos** — 87 (25 publicados, 57 agendados); paliativos com sensibilidade clínica alta; segundo, como indicado.
+3. **Eixo 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar** — 160 (89 publicados); maior público.
+4. **Eixo 5 — Transtornos Mentais** — 144 (91 publicados); maior volume clínico, exige revisão de sentido clínico por texto.
+5. **Eixo 6 — Hábitos, Estilo de Vida & Sono** — 53 (32 publicados).
 6. **Eixo 7 — Sociedade, Cultura & Existência** — 132 (32 publicados, 95 agendados); pilar com muitos textos ainda não no ar.
 7. **Eixo 2 — Maternidade, Puerpério & Saúde Perinatal** — 19 (7 publicados); menor volume, pode ser fundido com o Eixo 1 se o Dr. preferir.
 Só o pilar do Eixo 4 segue como amostra. Os demais: após aprovação.
 
 ## Pendências para o Dr. decidir (segunda, 18:00)
 1. **Pilar do eixo 4 (amostra):** aprovar o rascunho (10 satélites sobre cuidado de quem cuida e trabalho). Publicar só depois da aprovação do sentido clínico.
-2. **Reclassificação:** conferir os 97 "revisar" (lista em `reclassificacao-02-11-revisar.txt`); os demais já seguem a regra.
+2. **Reclassificação:** conferir os 76 "revisar" (lista em `reclassificacao-02-11-revisar.txt`); os demais já seguem a regra.
 3. **Monetização:** não há decisão registrada no repositório. Entra na pauta só se você quiser decidir agora.
+
+## Lacuna prioritária: Eixo 2 — Maternidade, Puerpério & Saúde Perinatal (02/11/2026, PROPOSTA)
+O Eixo 2 tem 19 textos (7 publicados, 12 agendados). É a lacuna mais urgente do plano. Regra proposta: no máximo 1 artigo novo por semana para este eixo, sempre com aprovação de sentido clínico do Dr. Antônio antes de ir ao ar.
+
+Oito temas propostos (fonte oficial a conferir no capítulo antes da redação):
+1. **Depressão pós-parto: sinais, rastreio e tratamento** — OMS, Depressão: https://www.who.int/news-room/fact-sheets/detail/depression
+2. **Ansiedade na gestação e no pós-parto** — OMS, Guia para integração da saúde mental perinatal (2022): https://www.who.int/publications/i/item/9789240057142
+3. **Psicose pós-parto: quando procurar urgência** — mesmo guia (capítulo de sinais de alerta a conferir)
+4. **Perda gestacional e neonatal: o luto dos pais** — mesmo guia; ligar ao Eixo 3 (luto) por link cruzado
+5. **Pais também adoecem no perinatal** — mesmo guia (capítulo sobre pais a conferir)
+6. **Violência na gestação e no pós-parto: sinais e proteção** — OMS, Saúde materna: https://www.who.int/news-room/fact-sheets/detail/maternal-health (confirmar o trecho sobre violência)
+7. **Gravidez na adolescência e saúde mental** — OMS, Saúde mental dos adolescentes: https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health
+8. **Medicamentos na gestação e na amamentação: decidir com a equipe** — mesmo guia perinatal (capítulo de medicamentos a conferir); sem indicação de dose, só orientação geral.
