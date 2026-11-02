@@ -26,7 +26,7 @@ export default function Aterramento54321() {
         <div className="space-y-3" aria-live="polite">
           <p className="text-sm font-semibold text-slate-800">Passo {passo + 1} de {PASSOS.length}: {PASSOS[passo].quantidade} {PASSOS[passo].sentido}</p>
           <p className="text-sm text-slate-700">{PASSOS[passo].instrucao}</p>
-          <button type="button" onClick={() => setPasso(passo + 1)} className="min-h-[44px] rounded-lg bg-verde-escuro px-4 py-2 text-sm font-semibold text-white">
+          <button type="button" onClick={() => setPasso(passo + 1)} className="min-h-[44px] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2  bg-verde-escuro px-4 py-2 text-sm font-semibold text-white">
             Feito, próximo passo
           </button>
         </div>
@@ -34,7 +34,7 @@ export default function Aterramento54321() {
         <div className="space-y-3" aria-live="polite">
           <p className="text-sm text-slate-800">Respire devagar algumas vezes e perceba como você está agora.</p>
           <p className="text-sm text-slate-700">Se a angústia não passar, ou se você estiver em crise, procure apoio: <strong>CVV 188</strong> (24 h, gratuito) ou <strong>SAMU 192</strong>.</p>
-          <button type="button" onClick={() => setPasso(0)} className="min-h-[44px] rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800">
+          <button type="button" onClick={() => setPasso(0)} className="min-h-[44px] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2  border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800">
             Recomeçar
           </button>
         </div>

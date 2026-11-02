@@ -88,7 +88,7 @@ export default function RegistroPensamentos() {
             maxLength={600}
             value={registro[c.nome]}
             onChange={(e) => setRegistro({ ...registro, [c.nome]: e.target.value })}
-            className="w-full rounded-lg border border-slate-300 p-2 text-sm text-slate-900"
+            className="w-full rounded-lg border border-slate-300 p-2 text-sm text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2"
           />
         </div>
       ))}
@@ -105,10 +105,10 @@ export default function RegistroPensamentos() {
       </div>
 
       <div className="flex flex-wrap gap-3">
-        <button type="button" onClick={salvar} disabled={!pronto} className="min-h-[44px] rounded-lg bg-verde-escuro px-4 py-2 text-sm font-semibold text-white disabled:opacity-50">
+        <button type="button" onClick={salvar} disabled={!pronto} className="min-h-[44px] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2  bg-verde-escuro px-4 py-2 text-sm font-semibold text-white disabled:opacity-50">
           Salvar registro
         </button>
-        <button type="button" onClick={apagarTodos} disabled={registros.length === 0} className="min-h-[44px] rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 disabled:opacity-50">
+        <button type="button" onClick={apagarTodos} disabled={registros.length === 0} className="min-h-[44px] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2  border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 disabled:opacity-50">
           Apagar meus registros
         </button>
       </div>

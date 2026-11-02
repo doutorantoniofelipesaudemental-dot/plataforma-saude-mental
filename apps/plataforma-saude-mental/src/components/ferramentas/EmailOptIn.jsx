@@ -57,7 +57,7 @@ export default function EmailOptIn() {
           autoComplete="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full min-h-[44px] rounded-lg border border-slate-300 p-2 text-sm text-slate-900"
+          className="w-full min-h-[44px] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2  border border-slate-300 p-2 text-sm text-slate-900"
         />
 
         <label className="flex min-h-[44px] items-start gap-2 text-xs text-slate-800">
@@ -68,7 +68,7 @@ export default function EmailOptIn() {
           </span>
         </label>
 
-        <button type="submit" disabled={!consentimento || estado.tipo === 'enviando'} className="min-h-[44px] rounded-lg bg-verde-escuro px-4 py-2 text-sm font-semibold text-white disabled:opacity-50">
+        <button type="submit" disabled={!consentimento || estado.tipo === 'enviando'} className="min-h-[44px] rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2  bg-verde-escuro px-4 py-2 text-sm font-semibold text-white disabled:opacity-50">
           Quero receber
         </button>
       </form>

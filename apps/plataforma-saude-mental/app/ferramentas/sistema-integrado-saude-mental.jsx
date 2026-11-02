@@ -133,7 +133,8 @@ export default function SistemaIntegradoSaudeMental() {
                     <button
                       key={chave}
                       onClick={() => setActiveTab(chave)}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                      aria-pressed={activeTab === chave}
+                      className={`flex min-h-[44px] items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dourado focus-visible:ring-offset-2 ${
                         activeTab === chave ? 'bg-dourado text-verde-escuro shadow' : 'text-slate-200 hover:text-white hover:bg-white/10'
                       }`}
                     >
