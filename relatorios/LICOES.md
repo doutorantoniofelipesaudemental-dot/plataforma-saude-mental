@@ -54,6 +54,12 @@
 - **Regra:** ao interromper ou terminar um portão, encerrar o servidor de teste e os navegadores do Playwright órfãos e liberar a trava. Quem faz: `scripts/lib/encerrarTesteOrfao.js` (só o que é do projeto; navegador só se o pai já morreu), chamado no início e na saída de `portao.js`. Teste em `tests/unit/encerrar-teste-orfao.test.js`.
 - **Regra:** `playwright.config.js` com `reuseExistingServer: false`. Porta ocupada vira erro claro, não reaproveitamento silencioso.
 
+## 28/10/2026 — alteração direta em arquivo rastreado (fila-manual)
+- **Fato:** 30 textos rastreados de `relatorios/linkedin/fila-manual/` foram editados direto na pasta principal, em vez de worktree + PR. A edição também trocou espaços antes de vírgula e ponto em 2 linhas do corpo, além do rótulo e das referências autorizados. Essas 2 linhas foram revertidas ao HEAD.
+- **Prova:** `git diff --ignore-cr-at-eol` com classificação por linha: 30 rótulos "Pontos práticos", 16 referências, 0 outras linhas. Backup antes da reversão: `.tmp/backup-fila-manual-20261028-antes-reverter/`.
+- **Causa do CRLF:** os 43 textos estão com CRLF no disco e LF no Git. Os 12 não tocados nesta sessão têm última gravação em 16/10 e 17/10. Nenhuma tarefa agendada reescreve esses arquivos; os únicos gravadores são `gerarConteudo.js --aplicar` e `aplicarCredito.js --aplicar`, ambos manuais.
+- **Regra:** arquivo rastreado só em worktree + PR, mesmo para correção pequena. Na pasta principal só arquivos de estado ignorados.
+- **Solução:** tratar a pasta como estado (ignorada), em PR próprio, com backup e conferência de hash no merge (ver CLAUDE.md e DECIDIDO.md).
 ## Portão que cai no carregamento sem relatório (30/10/2026, ordem do Dr. Antônio)
 - **Fato:** a primeira tentativa de publicar `docs/decidido-screencast-20261030` saiu com pilha de Node ("at Module.load", "Node.js v26.8.1") e sem mensagem; a segunda passou sem mudança de código. Nenhum relatório `portao-*.md` foi gerado para a tentativa que caiu (os de 23:16 a 23:31 são todos aprovados).
 - **Causa do sintoma sem mensagem:** `publicarBranch.js` mostrava só as 6 últimas linhas da saída do portão. Num crash de Node, essas linhas são só pilha e "Node.js vX"; a linha `Error: ...` fica acima e se perdia. O erro virava "portão reprovado", sem diagnóstico.
