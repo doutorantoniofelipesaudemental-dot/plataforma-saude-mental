@@ -69,3 +69,35 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 - Limite: 2 posts por dia (`MAX_POSTS = 2` em `scripts/linkedin/agendarDiario.js`). O comentário do cabeçalho ainda diz 3; corrigir em PR próprio quando houver outra mudança no arquivo.
 - Salvaguardas em vigor: 2 min entre posts, uma execução por dia, agendador NATIVO do LinkedIn, perfil persistente do Chrome, parada imediata em deslogado, CAPTCHA, verificação, limite ou atividade incomum (esta última também desativa a tarefa).
 - Parada por aviso: não tentar de novo no mesmo dia; a mensagem exata vai para `relatorios/ESTADO-GERAL.md` para o Dr. ver às 18:00.
+
+## 01/11/2026 — Reagendamento, ritmo e publicação delegada (ordens do Dr. Antônio, 09:05, 09:35 e 09:50)
+- **Ritmo:** 2 posts por dia, 08:00 e 14:00 (Bahia), todos os dias da semana. Primeiro slot 03/11/2026 08:00. Agenda aplicada: 339 com data, 26 sem data (Nível 1), 12 com aviso `revisao-medica-pendente`.
+- **Nível 1 (sensíveis):** 26 textos saem da agenda sem data, status `aguarda-revisao-medica`. Só voltam com leitura do Dr. Antônio. Incluem *Remédios numa caixa de sapato* e *O último comprimido da noite*.
+- **Duplicados de título:** a comparação de texto deu 0,1% a 14% (nenhum acima de 60%). Não são duplicados: os 10 voltam à agenda, com 30 dias ou mais entre os dois de cada par. A série do segurança fica em ordem ("me seguia" antes de "me seguiu de novo"). Não há união de textos.
+- **Relatos:** distribuídos cerca de 1 a cada 2 dias (medido: 1 a cada 1,77 dias).
+- **Trava:** `scripts/reagendar.js` e `backend/scripts/importarTudo.js` recusam `--aplicar` sem `--ordem-dr`. Recálculo da agenda só com ordem escrita do Dr. Antônio.
+- **Publicação delegada (ordem de 01/11, 09:50):** artigos e posts APROVADOS na auditoria geral e na tripla checagem automática (técnica, científica, ética e humanizada; referências, CFM 2.336/2023 e 2.454/2026; sem "psiquiatra"; "Antônio" com acento; CVV 188 e SAMU 192) podem ser publicados no site e nas redes. Continua sob responsabilidade do Dr. Antônio.
+  - Aviso para textos aprovados só pela checagem: "Conteúdo verificado por checagem automática técnica, científica e ética e publicado sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente."
+  - Aviso para textos revisados pelo Dr. (`revisao:aprovar`, com hash): "Revisado pelo Dr. Antônio Felipe em DD/MM/AAAA." Nunca mostrar esse selo sem o registro.
+  - Exceções que continuam exigindo leitura do Dr. Antônio: Nível 1, conteúdo com nome de remédio ou dose, e qualquer item com dúvida na checagem. Vão para o caderno de domingo.
+- **Freios:** `REDES_PUBLICACAO_ATIVA` e `YOUTUBE_PUBLICACAO_ATIVA` continuam mudando só por ordem escrita do Dr. Antônio, item por item. Esta autorização não liga freio algum.
+- **Aviso honesto no site:** `public/artigo.html` deixa de afirmar "revisão e responsabilidade médica final" e passa a dizer "Revisão médica individual: pendente". O mesmo texto ainda aparece em blog, home, instagram, linkedin, mentoria, na landing do app e em `backend/lib/conformidadeCfm.js` (constante `AVISO_CFM`, usada pelas checagens de YouTube e LinkedIn). Essas páginas ficam para PR próprio.
+
+## 01/11/2026 — Aviso honesto em todos os lugares e registro do formulário do YouTube (ordens de 10:05 e 10:50)
+- **Aviso (substitui o item "Aviso honesto no site" acima):** a frase "com revisão e responsabilidade médica final" saiu de todas as páginas (artigo, blog, home, instagram, linkedin, mentoria, podcast, youtube), da landing do app, da constante `AVISO_CFM` (`backend/lib/conformidadeCfm.js`, fonte única das checagens de YouTube e LinkedIn) e dos testes correspondentes. Texto padrão: "Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente."
+- Com revisão registrada (`revisao:aprovar` com hash atual): acrescentar "Revisado pelo Dr. Antônio Felipe em DD/MM/AAAA." Nunca mostrar sem o registro.
+- **Não alterado nesta rodada:** legendas já agendadas em `CONTEUDO_INSTAGRAM/agendamento/` (659 arquivos com a frase antiga) e o texto de arte de `scripts/linkedin/carrossel.py`. O modelo do roteiro multimídia foi atualizado.
+- **Selo dinâmico** (página do artigo recebe o status do registro): PR separado, depois destes.
+- **Ordem de merge de hoje:** (1) aviso honesto; (2) trava do reagendamento (#218); (3) calendário 2 por dia; (4) docs (esta, #219, com #216).
+- **Formulário da auditoria do YouTube (registro, 01/11, 10:50):** respostas registradas em `relatorios/youtube/auditoria-envio/RESPOSTAS.md`. Ponto em aberto: a seção 1 do formulário estava com "NÃO pedir cota adicional", e a ordem do Dr. Antônio fala em "request for additional quota" com "a cota padrão é suficiente". Confirmar antes do envio.
+
+## 01/11/2026 — Formulário da API do YouTube enviado (12:12)
+- Enviado em 01/11/2026 às 12:12 (confirmação: "Your email has been sent. Thank you for submitting the YouTube API Services Form."). Registro completo em `relatorios/youtube/auditoria-envio/RESPOSTAS.md`.
+- Seção 1: compliance audit com cota padrão. Seção 4: "Portal de Saúde Mental", não público, sem credenciais de demonstração. Seção 5: videos.insert (3.200/dia), videos.update, thumbnails.set, captions.insert, playlists.list, playlists.insert, playlistItems.insert; quota "No change / Default". Seção 6: arquitetura.pdf, fluxo-usuario.pdf, supporting-materials.pdf e as evidências de site.
+- **Regra:** qualquer endpoint novo ou mudança de uso da API exige aviso por escrito ao YouTube ANTES (compromisso da Seção 7). Checagem no portão: endpoint fora da lista reprova (ver PR de checagem).
+- Lembrete diário em RESUMO-DO-DIA: "olhar o Gmail (resposta do Google sobre a auditoria)", até a aprovação.
+
+## 01/11/2026 — Respostas do fim do dia (ordem do Dr. Antônio, 17:15)
+- **calendario-publicacao-site.md: Opção A.** Gerar o arquivo fora do Git (pasta ignorada, com backup diário como os outros arquivos de estado) e tirá-lo do repositório por PR (`git rm --cached`, sem apagar o arquivo local). `backend/scripts/reagendar.js` e `backend/scripts/importarTudo.js` passam a gravar no novo local. PR previsto para a janela de segunda, depois do #221, com o mesmo cuidado do #195 (backup antes; restauração e conferência depois do merge).
+- **"Política de travas" (contenção de danos quando algo quebra sem o Dr. Antônio):** se algo quebrar sem ele (site fora do ar, publicação errada, post com defeito): conter o dano (rollback do deploy pelo registro de rollback; pausar ou adiar SÓ o item com problema; nunca apagar), registrar em `relatorios/PENDENTES.md` e avisar na próxima janela. Nunca mexer em freios nem publicar no lugar.
+- **Até segunda às 18:00:** automação normal, sem pedir nada ao Dr. Antônio.
