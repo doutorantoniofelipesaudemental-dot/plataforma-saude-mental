@@ -12,7 +12,7 @@ const IDENTIFICACAO = [
 ];
 
 const AVISO_CFM =
-  'Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
+  'Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente.';
 
 const PUBLICOS = [
   {

@@ -71,6 +71,8 @@ relatorios/youtube/fila-manual/**/*.png
 relatorios/youtube/canal/*.mp4
 relatorios/youtube/propostas/**/*.mp4
 relatorios/linkedin/fila-manual/**/*.pdf
+# Fila manual do LinkedIn: arquivo de ESTADO (ordem de 28/10/2026). Não é versionada; protegida pelo backup_estado e pelo merge-seguro.
+relatorios/linkedin/fila-manual/
 relatorios/logs-agendador/
 
 # Pasta de teste solta (16/10/2026): o Dr. Antônio apaga pelo Explorador de Arquivos
