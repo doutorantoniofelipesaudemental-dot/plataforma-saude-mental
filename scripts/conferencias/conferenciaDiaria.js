@@ -184,9 +184,15 @@ function alertaNoEstadoGeral() {
   for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas, alertaCustoDoDia]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
   // Backup do estado: passo isolado (falha vira alerta com ação; a conferência segue). Gravação à parte, na mesma tarefa.
   try { backupDoEstado(); } catch (e) { falha(`backup do estado falhou: ${String(e.message).slice(0, 160)}`); }
+  // Linha de prontidão para sexta 30/10 (ordem de 29/10/2026): só nesse dia; só leitura.
+  let linhaPronto = null;
+  try { const p = await require('./prontoParaSexta').prontoParaSexta(d, hoje); linhaPronto = p ? p.linha : null; } catch (e) { linhaPronto = `PRONTO PARA SEXTA 10:00: NÃO (erro na checagem: ${String(e.message).slice(0, 120)})`; }
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });
   const md = `# Conferência diária — ${hoje}\n\n**Resultado: ${falhas.length ? `${falhas.length} FALHA(S)` : 'tudo certo'}${avisos.length ? ` · ${avisos.length} aviso(s)` : ''}** (somente leitura: nada foi publicado, apagado nem alterado; freios intactos)\n${linhas.join('\n')}\n`;
   fs.writeFileSync(path.join(pasta, `${hoje}.md`), md, 'utf8');
+  if (linhaPronto) fs.appendFileSync(path.join(pasta, `${hoje}.md`), `
+**${linhaPronto}**
+`, 'utf8');
   try { // resumo do dia (máx. 15 linhas): falha exige ação; aviso, não
     const resumo = require('./resumoDoDia');
     const dados = await resumo.coletar(d, hoje);
@@ -211,6 +217,7 @@ function alertaNoEstadoGeral() {
     const r = await enviarAlerta({ assunto: `${falhas.length} falha(s) na conferência ${hoje}`, texto: `${falhas.map((f) => `- ${f}`).join('\n')}\n\nDetalhes: relatorios/conferencias/${hoje}.md` });
     if (!r.enviado) console.log(`e-mail de alerta não enviado: ${r.motivo}`);
   }
+  if (linhaPronto) console.log(linhaPronto);
   console.log(`conferência ${hoje}: ${falhas.length} falha(s), ${avisos.length} aviso(s) → relatorios/conferencias/${hoje}.md`);
   await mongoose.disconnect();
   process.exit(falhas.length ? 1 : 0);
