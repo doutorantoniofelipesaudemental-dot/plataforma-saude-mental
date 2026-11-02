@@ -7,7 +7,7 @@ CSV com uma linha por texto: `INVENTARIO.csv`. Eixo por TÍTULO + CONTEÚDO; pú
 - Textos: **726**
 - Status: publicados **361** · agendados **339** (03/11/2026 a 21/04/2027, 2 por dia) · fora da agenda **26** (aguarda-revisao-medica, Nível 1)
 - Vertical A (relatos): **190** · Vertical B (psicoeducação): **536**
-- Marcados para revisão ("revisar" = sim): **76** (eram 216; lista em `reclassificacao-02-11-revisar.txt`)
+- Marcados para revisão ("revisar" = sim): **11** (eram 216; lista em `reclassificacao-02-11-revisar.txt`)
 - Referências fora do padrão (sem lista formatada): **12** (agenda não alterada)
 - Títulos sensíveis (palavra-chave, pré-triagem): **19**
 
@@ -16,13 +16,13 @@ Reclassificação com as regras da ordem de 02/11 (paliativos → 3, exceto quem
 
 | Eixo | Textos |
 |---|---|
-| 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar | 160 |
+| 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar | 157 |
 | 2 — Maternidade, Puerpério & Saúde Perinatal | 19 |
-| 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos | 87 |
-| 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | 131 |
-| 5 — Transtornos Mentais | 144 |
-| 6 — Hábitos, Estilo de Vida & Sono | 53 |
-| 7 — Sociedade, Cultura & Existência | 132 |
+| 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos | 88 |
+| 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | 134 |
+| 5 — Transtornos Mentais | 138 |
+| 6 — Hábitos, Estilo de Vida & Sono | 54 |
+| 7 — Sociedade, Cultura & Existência | 136 |
 
 ## Por vertical × status
 | Vertical | Publicados | Agendados | Fora |

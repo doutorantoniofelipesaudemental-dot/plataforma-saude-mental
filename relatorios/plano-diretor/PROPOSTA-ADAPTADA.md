@@ -42,17 +42,17 @@ Não há a frase "11 por dia" no `CLAUDE.md` rastreado. A versão anterior desta
 ## Ordem proposta dos 7 pilares (02/11/2026, PROPOSTA)
 Critério: publicados disponíveis (base do pilar), tamanho do eixo, risco clínico e custo de conferência.
 1. **Eixo 4 — Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1)** — 131 textos (85 publicados); consultoria NR-1; amostra já pronta (`amostras/pilar-eixo4-cuidar-de-quem-cuida.md`).
-2. **Eixo 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos** — 87 (25 publicados, 57 agendados); paliativos com sensibilidade clínica alta; segundo, como indicado.
-3. **Eixo 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar** — 160 (89 publicados); maior público.
-4. **Eixo 5 — Transtornos Mentais** — 144 (91 publicados); maior volume clínico, exige revisão de sentido clínico por texto.
-5. **Eixo 6 — Hábitos, Estilo de Vida & Sono** — 53 (32 publicados).
-6. **Eixo 7 — Sociedade, Cultura & Existência** — 132 (32 publicados, 95 agendados); pilar com muitos textos ainda não no ar.
-7. **Eixo 2 — Maternidade, Puerpério & Saúde Perinatal** — 19 (7 publicados); menor volume, pode ser fundido com o Eixo 1 se o Dr. preferir.
+2. **Eixo 3 — Vida Adulta, Envelhecimento & Cuidados Paliativos** — 88 (25 publicados, 58 agendados); paliativos com sensibilidade clínica alta; segundo, como indicado.
+3. **Eixo 1 — Infância, Adolescência, Pais & Família, Professores & Saúde Escolar** — 157 (88 publicados, 60 agendados); maior público.
+4. **Eixo 5 — Transtornos Mentais** — 138 (91 publicados, 44 agendados); maior volume clínico, exige revisão de sentido clínico por texto.
+5. **Eixo 6 — Hábitos, Estilo de Vida & Sono** — 54 (32 publicados, 21 agendados).
+6. **Eixo 7 — Sociedade, Cultura & Existência** — 136 (33 publicados, 98 agendados); pilar com muitos textos ainda não no ar.
+7. **Eixo 2 — Maternidade, Puerpério & Saúde Perinatal** — 19 (7 publicados, 12 agendados); menor volume, pode ser fundido com o Eixo 1 se o Dr. preferir.
 Só o pilar do Eixo 4 segue como amostra. Os demais: após aprovação.
 
 ## Pendências para o Dr. decidir (segunda, 18:00)
 1. **Pilar do eixo 4 (amostra):** aprovar o rascunho (10 satélites sobre cuidado de quem cuida e trabalho). Publicar só depois da aprovação do sentido clínico.
-2. **Reclassificação:** conferir os 76 "revisar" (lista em `reclassificacao-02-11-revisar.txt`); os demais já seguem a regra.
+2. **Reclassificação:** conferir os 11 "revisar" (os demais foram decididos pela leitura do texto) (lista em `reclassificacao-02-11-revisar.txt`); os demais já seguem a regra.
 3. **Monetização:** não há decisão registrada no repositório. Entra na pauta só se você quiser decidir agora.
 
 ## Lacuna prioritária: Eixo 2 — Maternidade, Puerpério & Saúde Perinatal (02/11/2026, PROPOSTA)
