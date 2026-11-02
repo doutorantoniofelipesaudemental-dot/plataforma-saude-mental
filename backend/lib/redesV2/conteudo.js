@@ -34,6 +34,25 @@ const textoPuro = (html) => String(html || '').replace(/<(script|style)[\s\S]*?<
 const palavras = (t) => String(t).trim().split(/\s+/).filter(Boolean);
 const semIngles = (t) => SUBSTITUICOES_INGLES.reduce((x, [re, novo]) => x.replace(re, novo), t);
 
+/** Forma comparável: minúsculas, sem pontuação nem espaços extras (para achar repetição, não para exibir). */
+const formaComparavel = (t) => String(t).toLowerCase().replace(/[^a-zà-ú0-9]+/g, ' ').trim();
+/** Um começa igual ao outro (ao menos 20 caracteres em cada), como o gancho repetido no início do resumo. */
+function mesmoInicio(a, b) {
+  const x = formaComparavel(a), y = formaComparavel(b);
+  return x.length >= 20 && y.length >= 20 && (x.startsWith(y) || y.startsWith(x));
+}
+/** Tira blocos vazios e blocos repetidos (igual, ou um contido no início do outro) — evita o gancho sair duas vezes na legenda. */
+function semRepeticao(blocos) {
+  const vistos = [];
+  return blocos.filter((b) => {
+    const n = formaComparavel(b);
+    if (!n) return false;
+    if (vistos.some((v) => mesmoInicio(v, n) || v === n)) return false;
+    vistos.push(n);
+    return true;
+  });
+}
+
 const maiuscula = (t) => String(t || '').replace(/^[\s“"'—-]*([a-zà-ú])/, (m, c) => m.slice(0, -1) + c.toUpperCase());
 
 /** Encurta a `max` palavras cortando num limite de oração (; , :) quando possível, nunca no meio de uma lista. */
@@ -124,10 +143,13 @@ function planejarPost(artigo, { tipo = 'artigo' } = {}) {
 
   if (tipo === 'relato') {
     const paragrafos = textoPuro(html.replace(/<div[^>]*reflection-box[\s\S]*$/i, '')).split('\n').map((p) => p.trim()).filter((p) => palavras(p).length >= 8 && !/narrativa composta/i.test(p));
-    for (const p of paragrafos.slice(0, 3)) telas.push({ tipo: 'trecho', texto: trecho(p, 24) });
+    // trecho que repete o gancho sai (o gancho já é a capa); a reflexão usa o primeiro texto que não repete o gancho
+    for (const p of paragrafos.filter((x) => !mesmoInicio(x, gancho)).slice(0, 3)) telas.push({ tipo: 'trecho', texto: trecho(p, 24) });
     const caixa = html.match(/reflection-box[\s\S]*$/i);
     const reflexao = caixa ? textoPuro(caixa[0]).split('\n').map((x) => x.trim()).filter((x) => palavras(x).length >= 6 && !/ensinou/i.test(x)) : [];
-    telas.push({ tipo: 'reflexao', titulo: 'O que esse encontro ensina', texto: frase(reflexao[0] || paragrafos.at(-1) || resumoLimpo, 24) });
+    const frases = [reflexao[0], ...paragrafos.slice().reverse(), resumoLimpo].filter(Boolean)
+      .flatMap((x) => String(x).split(/(?<=[.!?])\s+/)).filter((s) => palavras(s).length >= 6 && !mesmoInicio(s, gancho));
+    if (frases.length) telas.push({ tipo: 'reflexao', titulo: 'O que esse encontro ensina', texto: frase(frases[0], 24) });
   } else {
     const sec = secoes(html);
     for (const s of sec.slice(0, 5)) {
@@ -148,7 +170,8 @@ function planejarPost(artigo, { tipo = 'artigo' } = {}) {
   const refs = referencias(html).slice(0, 2).map(refResumida).filter(Boolean);
   const resumoCurto = frase(resumoLimpo, 38);
   const pontos = telas.filter((t) => t.tipo === 'ideia').slice(0, 2).map((t) => t.texto);
-  const legendaCorpo = [gancho, '', resumoCurto, ...(pontos.length ? ['', pontos.map((p) => `• ${p}`).join('\n')] : []), '', 'Texto completo no link da bio.'].join('\n');
+  const blocos = semRepeticao([gancho, resumoCurto, pontos.length ? pontos.map((p) => `• ${p}`).join('\n') : '']);
+  const legendaCorpo = [blocos.join('\n\n'), '', 'Texto completo no link da bio.'].join('\n');
   const hashtags = (HASHTAGS_CATEGORIA[artigo.categoria] || ['#saudemental', '#cuidado', '#bemestar']).slice(0, 4);
   return { telas, legendaCorpo: semIngles(legendaCorpo), refs, hashtags, sensivel, gancho };
 }
