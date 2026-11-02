@@ -11,6 +11,11 @@ const { montarCalendario } = require('../lib/calendarioSite');
 
 const RAIZ = path.resolve(__dirname, '../..');
 const aplicar = process.argv.includes('--aplicar');
+// Trava (ordem de 01/11/2026): recalcular a agenda com 11 por dia desfaria o plano de 2 por dia. Só com --ordem-dr.
+if (aplicar && !process.argv.includes('--ordem-dr')) {
+  console.error('RECUSADO: reagendar.js --aplicar está travado desde 01/11/2026 (recalcularia a agenda com 11 por dia). Use --aplicar --ordem-dr somente com ordem escrita do Dr. Antônio.');
+  process.exit(1);
+}
 const PRIORITARIOS = new Set(['migracao-saude-mental', 'criancas-adolescentes-migrantes-saude-mental', 'mulher-migrante-saude-mental', 'homem-migrante-saude-mental', 'trabalhador-migrante-saude-mental', 'estudante-migrante-saude-mental', 'refugiados-trauma-saude-mental', 'xenofobia-racismo-saude-mental-migrantes', 'familias-separadas-migracao-quem-fica', 'migrantes-como-buscar-ajuda-saude-mental-sus']); // os 10 com 301 (vercel.json)
 
 (async () => {
