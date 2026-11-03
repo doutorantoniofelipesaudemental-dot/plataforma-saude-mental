@@ -73,10 +73,10 @@ export default async function ArtigoPage({ params }) {
           Quer conversar sobre isso com o Dr. Antônio Felipe?
         </p>
         <Link
-          href="/"
+          href="/blog"
           className="inline-flex items-center gap-2 rounded-xl bg-dourado px-5 py-2.5 text-sm font-semibold text-verde-escuro transition-colors hover:bg-white"
         >
-          Agendar consulta
+          Ler mais artigos
         </Link>
       </div>
       <RodapeIdentificacao />

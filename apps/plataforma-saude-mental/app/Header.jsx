@@ -45,10 +45,10 @@ export default function Header() {
         </nav>
 
         <a
-          href={`mailto:${EMAIL_CONTATO}`}
+          href="/mentoria"
           className="hidden items-center rounded-lg bg-verde-escuro px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-verde focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dourado md:inline-flex"
         >
-          Agendar consulta
+          Mentoria, consultoria e formação
         </a>
 
         <button
@@ -82,10 +82,10 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href={`mailto:${EMAIL_CONTATO}`}
+                href="/mentoria"
                 className="mt-2 rounded-lg bg-verde-escuro px-3 py-2.5 text-center text-sm font-semibold text-white"
               >
-                Agendar consulta
+                Mentoria, consultoria e formação
               </a>
             </div>
           </motion.nav>
