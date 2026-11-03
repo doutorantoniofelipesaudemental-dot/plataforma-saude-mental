@@ -59,6 +59,14 @@ function lerRegistro() {
 function gravarRegistro(reg) {
   fs.mkdirSync(path.dirname(REGISTRO), { recursive: true });
   fs.writeFileSync(REGISTRO, JSON.stringify(reg, null, 2) + '\n', 'utf8');
+  // Espelho no banco (coleção revisoes_medicas), ordem de 02/11/2026. Só quando há MONGODB_URI no ambiente.
+  if (process.env.MONGODB_URI) {
+    const { spawnSync } = require('node:child_process');
+    const r = spawnSync(process.execPath, [path.join(__dirname, 'sincronizarBanco.js'), '--aplicar'], { stdio: 'inherit', env: process.env });
+    if (r.status !== 0) console.error('AVISO: banco não atualizado; registro.json gravado. Rode sincronizarBanco.js --aplicar depois.');
+  } else {
+    console.error('AVISO: MONGODB_URI ausente; só o registro.json foi gravado.');
+  }
 }
 
 // Função pura: checagem do aviso antes da aprovação (técnica e ética, mínima).

@@ -153,7 +153,14 @@ app.get('/artigo/:slug', async (req, res) => {
     if (!artigo) return res.status(404).sendFile(path.join(PUBLIC_DIR, '404.html'));
 
     res.set('Content-Type', 'text/html; charset=utf-8');
-    res.send(renderizarArtigoHtml(artigo));
+    let revisao = null;
+    try {
+      const { COLECAO, lerRevisao } = require('./lib/revisaoRepo');
+      revisao = await lerRevisao(require('mongoose').connection.db.collection(COLECAO), artigo.slug);
+    } catch (e) {
+      console.error('[artigo] status de revisão indisponível, mantendo pendente:', e.message);
+    }
+    res.send(renderizarArtigoHtml({ ...artigo, revisao }));
   } catch (err) {
     console.error('[artigo] falha ao pré-renderizar, caindo para o shell estático:', err.message);
     shellEstatico();
