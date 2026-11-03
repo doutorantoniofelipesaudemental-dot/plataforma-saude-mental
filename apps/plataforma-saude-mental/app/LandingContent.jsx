@@ -335,10 +335,10 @@ export default function LandingContent() {
             saúde ocupacional — presencial ou telemedicina.
           </p>
           <a
-            href={`mailto:${'doutor.antoniofelipe.saudemental@gmail.com'}`}
+            href="/mentoria"
             className="inline-flex items-center gap-2 rounded-xl bg-dourado px-6 py-3.5 text-sm font-semibold text-verde-escuro transition-colors hover:bg-white"
           >
-            Agendar consulta
+            Mentoria, consultoria e formação
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
