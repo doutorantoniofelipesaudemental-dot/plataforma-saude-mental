@@ -45,3 +45,21 @@ Semana 1 = 03/11 a 08/11 (os dias antes de 03/11 não entram).
 ## Para aplicar às 18:00 (pendências técnicas)
 - O `aplicar-agenda.js` lê `simulacao.json` fixo e tem uma trava de backup: conta 365 documentos e confere o sha256 de `agenda-atual.bak.json`. Hoje o banco tem 339 agendados (não 365), então o `--backup` recusa. Antes de aplicar, é preciso (a) apontar o script para `simulacao-v4.json` e (b) atualizar a trava para o estado atual. Não alterei o script nesta rodada.
 - O plano não mexe nos 26 "fora" nem nos publicados.
+
+## Decisões de 02/11/2026 (18:20, ordem do Dr. Antônio) e atualização do teto de relatos
+- (a) Proporção por eixo pelo estoque, sem teto fixo. Resultado: E7 ≈ 4 por semana; E2 ≈ 0,5 por semana.
+- (b) Relatos como estão, com **no máximo 1 relato por dia**. A simulação anterior tinha dias com 2 relatos (e 10 pares em dias seguidos). Teto aplicado em `simular-v4.js` (`relatoDia`). Versão anterior guardada em `.tmp/backup-agenda-20261101/simulacao-v4-antes-teto-relato.json`.
+- Efeito do teto: **320 alocados e 19 sem slot** (antes 339). Relatos agendados: 88 (antes 107). Pares de título com intervalo ≥ 30 dias: 0 violações. Máximo por dia de qualquer tipo: 2.
+- Os 19 sem slot saem da agenda (`agendamento.agendado=false`, motivo `fila-apos-teto-relato-20261102`) e ficam na fila. O `--aplicar` faz isso com backup. Decisão pendente: aceitar os 19 na fila ou abrir a janela além de 21/04/2027.
+- Dry-run atualizado: `.tmp/backup-agenda-v4/dry-run-2.log` (320 slots, de 03/11/2026 11:00Z a 21/04/2027, máximo 2 por dia).
+- Trava de contagem do script: 339 agendados ATUAIS (antes de aplicar). Depois de aplicar, a contagem esperada é o tamanho do plano (320).
+
+## Ampliação da janela (02/11/2026, 23:20, ordem do Dr. Antônio)
+- Ordem: alocar os 19 sem slot ampliando a janela, sem nenhum item na fila, com o mesmo ritmo e as mesmas regras.
+- Script: `simular-v4.js` agora lê `AGENDA_FIM` (padrão 2027-04-21). Versão final com `AGENDA_FIM=2027-05-31`.
+- Resultado: **339 alocados, 0 sem slot**. Primeiro slot 03/11/2026 11:00Z; último 05/05/2027 11:00Z. Janela efetiva de 210 dias.
+- Regras conferidas: máximo 2 por dia; **máximo 1 relato por dia**; pares de título ≥ 30 dias: 0 violações; paliativos ≥ 3 dias.
+- Números: relatos 107 (todos alocados). Por eixo: E1 60, E2 12, E3 58, E4 46, E5 44, E6 21, E7 98. Média de 13 slots por semana. E7 ≈ 3,7/semana; E2 ≈ 0,46/semana.
+- Versões anteriores preservadas: `simulacao-v4-antes-teto-relato.json` (sem teto) e `simulacao-v4-320-antes-ampliacao.json` (com teto, janela até 21/04/2027, 320 alocados).
+- Dry-run: `.tmp/backup-agenda-v4/dry-run-3.log` (339 agendados, máximo 2 por dia, nada gravado).
+- Contagem do `--backup`: 339 agendados atuais + 26 fora (a trava confere isso). Após `--aplicar`: 339 agendados e 26 fora.
