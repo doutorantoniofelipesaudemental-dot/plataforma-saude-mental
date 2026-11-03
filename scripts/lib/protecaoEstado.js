@@ -15,6 +15,7 @@ const ESTADO_FIXO = [
   'relatorios/AUTORIZACOES.md',
   'relatorios/linkedin/FILA-MANUAL.md',
   'relatorios/tarefas-estado.md',
+  'relatorios/vercel-credito.json',
 ];
 
 // Função pura: união sem repetição, na ordem em que aparece.
