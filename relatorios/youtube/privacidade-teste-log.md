@@ -1,0 +1,1 @@
+- 2026-11-03T10:25:25.199Z vídeo Nf3dPwqjCOg: private -> unlisted | resposta: HTTP 200; privacyStatus devolvido: unlisted | videos.list após a mudança: unlisted

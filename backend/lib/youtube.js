@@ -6,9 +6,8 @@
  * refresh token com `npm run youtube:autorizar`). Service Account NÃO serve:
  * o YouTube não permite que conta de serviço publique num canal.
  *
- * Atenção: vídeos enviados por projeto do Google Cloud não verificado ficam
- * privados até o projeto passar pela auditoria de conformidade da API do
- * YouTube — o `privacyStatus` pedido pode ser rebaixado para "private".
+ * Atenção: o `privacyStatus` pedido é o aplicado; a verificação do resultado é feita depois do envio.
+ * (03/11/2026: a auditoria do YouTube foi encerrada pelo Google em 02/11; a API não força privado por projeto não verificado.)
  *
  * Upload resumível oficial: POST (metadados) → Location → PUT (bytes).
  * O access token vai só no cabeçalho; nunca é gravado nem logado.

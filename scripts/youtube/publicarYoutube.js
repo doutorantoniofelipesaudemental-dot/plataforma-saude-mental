@@ -73,7 +73,7 @@ async function extras(token, id, item, meta, dir) {
       catch (e) { log(`ATENÇÃO: ${it.id} foi enviado (${r.id}) mas NÃO registrado no banco: ${e.message.slice(0, 80)}. Parado.`); break; }
       const notas = await extras(token, r.id, it, meta, dir);
       Object.assign(it, { status: 'publicado', youtubeId: r.id, publicadoEm: new Date().toISOString(), privacidadeAplicada: r.privacidade });
-      log(`PUBLICADO ${it.id} → ${r.link} · privacidade aplicada: ${r.privacidade} · ${notas.join('; ')}${r.privacidade !== 'public' ? ' · ATENÇÃO: projeto do Google Cloud não verificado deixa o vídeo privado (ver PASSO-A-PASSO)' : ''}`);
+      log(`PUBLICADO ${it.id} → ${r.link} · privacidade aplicada: ${r.privacidade} · ${notas.join('; ')}${r.privacidade !== 'public' ? ' · ATENÇÃO: privacidade aplicada diferente da pedida (conferir no YouTube Studio)' : ''}`);
     } catch (e) {
       const cota = /quota/i.test(e.message);
       log(`${cota ? 'COTA DA API ESGOTADA' : 'ERRO'} em ${it.id}: ${e.message.slice(0, 200)}`);

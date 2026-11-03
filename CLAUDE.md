@@ -165,7 +165,7 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Clicar em "Enviar" na auditoria do YouTube.
 - Login no LinkedIn quando cair; CAPTCHA e verificação.
 - PC ligado nos horários fora dos plantões (narração 22:00 e YouTube 23:30 nas demais noites, conferências 19:30). Nas quintas e domingos, ver "Agenda de plantões".
-- Ligar `YOUTUBE_PUBLICACAO_ATIVA` somente após aprovação da auditoria.
+- Ligar `YOUTUBE_PUBLICACAO_ATIVA` somente por ordem do Dr. Antônio. A auditoria do YouTube foi encerrada pelo Google em 02/11/2026 (informado em 03/11); a API não força privado por projeto não verificado.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se necessário.
 - Push e abertura de PR quando o classificador bloquear. Nesse caso, o Claude Code deixa o commit local pronto e entrega os comandos com "!" (nunca contorna o bloqueio).

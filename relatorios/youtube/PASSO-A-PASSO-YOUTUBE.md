@@ -1,5 +1,8 @@
 # Passo a passo — deixar o YouTube publicando sozinho
 
+> **Atualização 03/11/2026:** a premissa "uploads pela API ficam privados até a auditoria" está SUPERADA, segundo a resposta do Google de 02/11 informada pelo Dr. Antônio (cópia não arquivada no repositório). Teste de 03/11: a mudança de privacidade pela API ficou gravada. Ver `relatorios/DECIDIDO.md` (03/11). Antes de basear decisão, conferir a documentação oficial atual.
+
+
 Linguagem simples. **Nunca cole chaves em chat.** Elas vão só no arquivo `.env` deste computador.
 Enquanto isto não estiver feito, **nada é publicado**: tudo fica pronto em `relatorios/youtube/fila-manual/` (uma pasta por semana, com vídeo, capa, título, descrição, tags e legenda) para subir à mão.
 

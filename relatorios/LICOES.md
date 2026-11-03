@@ -67,3 +67,9 @@
 - **Causa da queda em si:** não reproduzida. Descartados: módulo ausente nos scripts do portão (todos existem e carregam, e `node --check` passa em scripts/); `sharp` ausente no worktree (existe); dependências em junção (o portão só usa `npm ci` quando falta node_modules); lock (`scripts/trava-portao.js` usa `.tmp/portao.lock` na pasta principal e o portão usa `drsaudemental-portao.lock` na pasta temporária; as duas travas são aninhadas e não se atropelam). Suspeitos, sem prova: arquivo de `scripts/` escrito por outro git no mesmo worktree no momento da carga (mesma assinatura de `SyntaxError: Unexpected token '<<'` em `C:\DRS-sync`, log `publicar-sync.log`), e `node_modules` existente mas incompleto (`prepararDependencias` só checa se a pasta existe).
 - **Regra:** antes de dar uma falha de portão como "reprovado", ler a mensagem de erro da saída completa; crash sem relatório não é reprovação de conteúdo e não é repetido sozinho.
 - **Pendente:** decidir se crash sem relatório deve repetir uma vez automaticamente (não foi feito).
+
+
+## 03/11/2026 — Confirmar regras de plataforma na documentação oficial atual
+- Uma regra de plataforma ("projeto não verificado só envia privado") foi usada como premissa, em código e em documentos, sem conferir a documentação oficial atual. Foi desmentida pelo comunicado do Google de 02/11 (informado pelo Dr.).
+- **Regra:** antes de basear decisão, freio ou código numa regra de plataforma, conferir a documentação oficial atual e registrar a fonte com a data. Se a fonte for um comunicado, guardar a cópia.
+- Teste de comportamento real (ex.: mudar a privacidade de um vídeo de demonstração) vale mais do que a documentação antiga.

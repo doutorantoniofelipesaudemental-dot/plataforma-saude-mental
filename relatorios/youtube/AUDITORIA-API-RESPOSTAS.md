@@ -1,5 +1,8 @@
 # Auditoria da YouTube API — respostas prontas (português e inglês)
 
+> **Atualização 03/11/2026:** a premissa "uploads pela API ficam privados até a auditoria" está SUPERADA, segundo a resposta do Google de 02/11 informada pelo Dr. Antônio (cópia não arquivada no repositório). Teste de 03/11: a mudança de privacidade pela API ficou gravada. Ver `relatorios/DECIDIDO.md` (03/11). Antes de basear decisão, conferir a documentação oficial atual.
+
+
 **Para que serve:** projetos do Google Cloud ainda não auditados têm os vídeos enviados pela API **forçados para "privado"**. A auditoria de conformidade do Google remove essa trava e os vídeos podem ficar públicos. Enquanto isso não sai, a pasta `relatorios/youtube/fila-manual/` continua valendo (subir à mão).
 
 **Formulário (oficial):** https://support.google.com/youtube/contact/yt_api_form — título "YouTube Data API Services — Audit and Quota Extension Form".
