@@ -127,7 +127,7 @@ export default function LandingContent() {
         className="mx-auto flex w-full max-w-4xl flex-col gap-8 px-6 pb-16 pt-20 sm:px-8"
       >
         <motion.p variants={item} className="text-sm font-medium text-verde">
-          Consultas online e presenciais
+          Mentoria, consultoria e formação em saúde mental
         </motion.p>
 
         <motion.h1
@@ -328,11 +328,10 @@ export default function LandingContent() {
       >
         <div className="mx-auto flex w-full max-w-4xl flex-col items-start gap-4 px-6 py-16 sm:px-8">
           <h2 className="font-serif text-2xl font-bold text-white">
-            Pronto para agendar sua consulta?
+            Quer levar saúde mental para sua equipe, escola ou instituição?
           </h2>
           <p className="max-w-xl text-slate-300">
-            Atendimento em Atenção Primária, Pronto Atendimento Psiquiátrico e
-            saúde ocupacional — presencial ou telemedicina.
+            Mentoria para profissionais de saúde, consultoria para empresas (NR-1) e formação para escolas, famílias, cuidadores e instituições que acolhem migrantes. Contato somente por e-mail.
           </p>
           <a
             href="/mentoria"

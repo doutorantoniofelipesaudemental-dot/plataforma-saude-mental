@@ -24,3 +24,10 @@ test('botão do artigo aponta para /blog com "Ler mais artigos"', () => {
   assert.ok(b.includes('Ler mais artigos'));
   assert.ok(b.includes('href="/blog"'));
 });
+
+test('landing e rodapé do app não oferecem consulta nem agendamento de consulta', () => {
+  const landing = ler('LandingContent.jsx');
+  for (const t of ['Consultas online', 'Pronto para agendar', 'telemedicina']) assert.ok(!landing.includes(t), t);
+  assert.ok(landing.includes('Quer levar saúde mental para sua equipe, escola ou instituição?'));
+  assert.ok(ler('RodapeGeral.jsx').includes('Contato somente por e-mail'));
+});
