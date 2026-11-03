@@ -17,7 +17,7 @@ test('home sem serviços de consulta, agenda ou fluxo de atendimento particular'
 
 test('home com estrutura nova: Temas, Para quem é, Sobre, Contato e linha PAP/APS no rodapé', () => {
   const html = ler('index.html');
-  for (const id of ['id="temas"', 'id="para-quem-e"', 'id="sobre"', 'id="contato"']) assert.ok(html.includes(id), id);
+  for (const id of ['id="temas"', 'id="para-quem-e"', 'id="sobre"', 'id="contato-servicos"']) assert.ok(html.includes(id), id);
   assert.ok(html.includes('Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)'));
   assert.ok(html.includes('Portal de Saúde Mental Doutor Antônio Felipe Garabito: saúde mental explicada com ciência e acolhimento'));
 });
