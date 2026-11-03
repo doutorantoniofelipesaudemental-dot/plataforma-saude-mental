@@ -44,3 +44,14 @@ test('todas trazem o aviso de orientação geral e CVV/SAMU', () => {
     assert.match(html, /CVV 188 · SAMU 192/, f);
   }
 });
+
+test('cada pilar tem "Comece por aqui" com até 12 artigos e grupos recolhíveis', () => {
+  for (const f of ARQUIVOS) {
+    const html = fs.readFileSync(path.join(DIR, f), 'utf8');
+    assert.match(html, /<h2>Comece por aqui<\/h2>/, f);
+    const topo = html.split('Comece por aqui')[1].split('<h2>Todos os textos')[0];
+    const n = (topo.match(/<li>/g) || []).length;
+    assert.ok(n <= 12, `${f}: topo com ${n} itens`);
+    assert.match(html, /<details>/, f);
+  }
+});
