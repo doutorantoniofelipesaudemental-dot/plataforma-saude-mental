@@ -89,6 +89,23 @@
       }
       return total;
     };
+    var alertaItem9 = function () {
+      var marcado = form.querySelector('input[name="phq9"]:checked');
+      var aviso = document.getElementById('plano-alerta-9');
+      var risco = !!marcado && Number(marcado.value) > 0;
+      if (!aviso) {
+        aviso = document.createElement('div');
+        aviso.id = 'plano-alerta-9';
+        aviso.className = 'plano__crise';
+        aviso.setAttribute('role', 'alert');
+        form.parentNode.insertBefore(aviso, form);
+      }
+      aviso.hidden = !risco;
+      aviso.innerHTML = risco ? '<p><strong>Se você tem pensado em se ferir ou em morrer, procure ajuda agora: <a href="tel:188">CVV 188</a> (24 h, gratuito), <a href="tel:192">SAMU 192</a> ou o pronto-socorro mais próximo.</strong></p>' : '';
+    };
+    form.addEventListener('change', function (e) {
+      if (e.target && e.target.name === 'phq9') alertaItem9();
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var phq = soma('phq', 9);
@@ -105,7 +122,7 @@
       var risco = !!item9 && Number(item9.value) > 0;
       var html = '';
       if (risco) {
-        html += '<div class="plano__crise" role="alert"><p><strong>Você não precisa passar por isso sozinho(a).</strong> Você marcou pensamentos de se ferir ou de que seria melhor estar morto(a). Fale com alguém agora: <a href="tel:188">CVV 188</a> (ligação gratuita, 24 horas; também por chat em <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>) ou <a href="tel:192">SAMU 192</a>. Se houver risco imediato, procure uma UPA, um pronto-socorro ou o CAPS da sua cidade.</p></div>';
+        html += '<div class="plano__crise" role="alert"><p><strong>Se você tem pensado em se ferir ou em morrer, procure ajuda agora: <a href="tel:188">CVV 188</a> (24 h, gratuito), <a href="tel:192">SAMU 192</a> ou o pronto-socorro mais próximo.</strong></p></div><p><small>Você também pode procurar a UPA ou o pronto-socorro mais próximo e, para acompanhamento, o CAPS ou a UBS. Mais informações: <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a></small></p>';
       }
       html += '<h3>Seu resultado</h3><ul><li>Humor (PHQ-9), ' + phq + ' de 27 pontos: suas respostas sugerem sintomas ' + faixaPhq(phq) + '.</li><li>Ansiedade (GAD-7), ' + gad + ' de 21 pontos: suas respostas sugerem sintomas ' + faixaGad(gad) + '.</li></ul>';
       if (phq >= 10 || gad >= 10 || risco) {

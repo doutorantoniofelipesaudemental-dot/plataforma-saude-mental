@@ -18,7 +18,7 @@ Sua missão é gerar código, artigos, interfaces, carrosséis e scripts de míd
 #### A. IDENTIFICAÇÃO NO PORTAL E BLOG (PADRÃO COMPLETO 5 LINHAS — ASSINATURA PADRÃO, VALE PARA TODO O SITE, SEM EXCEÇÃO; DECISÃO DE 15/10/2026)
 Dr. Antônio Felipe — Médico — CRM-BA 41322
 Especialista em Medicina de Família e Comunidade — RQE 26638
-Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde
+Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
 Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho
 NÃO ESPECIALISTA
 
@@ -110,7 +110,7 @@ Skills de apoio (Design DNA, Genjutsu, GSAP, Motion Design, Three.js) são refer
 
 ### Decisões do Dr. Antônio (14/10/2026)
 - **Identificação ÚNICA por página (15/10/2026):** o bloco oficial é SÓ o rodapé do template (5 linhas, com a TCC): `public/artigo.html` no site e `app/RodapeIdentificacao.jsx` no app Next. O corpo dos textos (MongoDB e .mdx) NÃO leva CRM, RQE, "NÃO ESPECIALISTA" nem a linha de pós-graduações, e os geradores de conteúdo novo não os colocam. Na página renderizada, "CRM-BA 41322", "RQE 26638" e "NÃO ESPECIALISTA" aparecem exatamente 1 vez e a TCC no rodapé (conferido por `npm run auditoria` e `tests/unit/identificacao-unica.test.js`). A linha "Responsável técnico" do rodapé traz só o rótulo e o nome (CRM/RQE já estão no bloco).
-- **Assinatura padrão (15/10/2026):** o Dr. Antônio TEM pós-graduação em Terapia Cognitivo-Comportamental. A assinatura de 5 linhas do §1.A ("—", "Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde", pós-graduações com a TCC e sem ponto final, "NÃO ESPECIALISTA" logo abaixo da linha das pós-graduações) vale em todo o site, sem exceção. A assinatura curta de 3 linhas das mídias sociais (CRM, RQE, PAP e APS) continua como está, pois não lista pós-graduações. O bloco de identificação NÃO entra na narração nem no hash da narração (`backend/lib/narracao.js`): trocar a assinatura não invalida áudios.
+- **Assinatura padrão (15/10/2026):** o Dr. Antônio TEM pós-graduação em Terapia Cognitivo-Comportamental. A assinatura de 5 linhas do §1.A ("—", "Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)", pós-graduações com a TCC e sem ponto final, "NÃO ESPECIALISTA" logo abaixo da linha das pós-graduações) vale em todo o site, sem exceção. A assinatura curta de 3 linhas das mídias sociais (CRM, RQE, PAP e APS) continua como está, pois não lista pós-graduações. O bloco de identificação NÃO entra na narração nem no hash da narração (`backend/lib/narracao.js`): trocar a assinatura não invalida áudios.
 - **§D (hash de narração) — liberado** para os itens do PROMPT-MESTRE e para correções aprovadas da auditoria. Nesses itens: marcar a narração como `pendente`; ocultar o player do áudio antigo até o novo ser gerado; NÃO apagar o arquivo de áudio antigo e NÃO gerar áudio agora. Para todos os outros textos, o §D continua valendo.
 - **§F ("Antonio" sem acento nas artes) — REVOGADO.** Em toda arte a assinatura é "Antônio", com acento. Se a causa for técnica (fonte sem "ô", gerador que quebra acento), corrigir a causa com fonte de suporte completo ao português. A checagem técnica confere o acento na imagem renderizada; arte com acento quebrado é reprovada e vai para `revisar/`. (Origem do §F: decisão de grafia de marca do commit `2e890da`, 08/10/2026; não há registro de limitação técnica.) ATUALIZAÇÃO de 15/10/2026: a exceção da `/links` e de `assets/marca/` também foi REVOGADA; "Antônio" leva acento em todo lugar, exceto endereços, @, e-mail e nomes técnicos.
 
@@ -165,7 +165,7 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 - Clicar em "Enviar" na auditoria do YouTube.
 - Login no LinkedIn quando cair; CAPTCHA e verificação.
 - PC ligado nos horários fora dos plantões (narração 22:00 e YouTube 23:30 nas demais noites, conferências 19:30). Nas quintas e domingos, ver "Agenda de plantões".
-- Ligar `YOUTUBE_PUBLICACAO_ATIVA` somente após aprovação da auditoria.
+- Ligar `YOUTUBE_PUBLICACAO_ATIVA` somente por ordem do Dr. Antônio. A auditoria do YouTube foi encerrada pelo Google em 02/11/2026 (informado em 03/11); a API não força privado por projeto não verificado.
 - Aprovar mudança de sentido clínico, novos módulos (Newsletter, Podcast, Kit NR-1) e uso de foto de rosto.
 - Ativar crédito extra ou recarga, se necessário.
 - Push e abertura de PR quando o classificador bloquear. Nesse caso, o Claude Code deixa o commit local pronto e entrega os comandos com "!" (nunca contorna o bloqueio).
@@ -252,3 +252,6 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 - Na pasta principal só se editam os arquivos de estado ignorados (`ESTADO-GERAL.md`, `PROMPT-ATUAL.md`, `PENDENTES.md`, filas e logs).
 - **Fila manual do LinkedIn (28/10/2026):** `relatorios/linkedin/fila-manual/` é estado fora do Git (ignorada). Protegida pelo backup diário e pelo `merge-seguro`. Textos ficam em CRLF no disco. Ver DECIDIDO.md (28/10/2026).
 - `merge-seguro` para antes de trocar de branch se houver arquivo rastreado alterado na pasta principal ou arquivo não rastreado que o PR também adiciona. Nada é copiado, movido ou apagado automaticamente.
+
+## Assinatura de 5 linhas (02/11/2026, ordem expressa do Dr. Antônio)
+- A 3ª linha da assinatura de 5 linhas é: "Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)". Vale em todo o site e nos rodapés de YouTube, LinkedIn, Instagram e podcast. Testes: `tests/unit/assinatura-cfm.test.js` e `tests/unit/identificacao-unica.test.js` (a frase aparece exatamente uma vez por página de artigo).

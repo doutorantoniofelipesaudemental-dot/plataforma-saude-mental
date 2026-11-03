@@ -54,3 +54,15 @@ function reprovar({ slug, motivo, data }) {
 }
 
 module.exports = { STATUS, hashConteudo, formatarData, avisoPendente, estadoRevisao, selo, aprovar, reprovar };
+
+// Texto público do artigo (ordem de 02/11/2026, item 3a). Função pura.
+// Com aprovação válida (mesmo hash do corpo atual): "Revisado pelo Dr. Antônio Felipe Garabito em DD/MM/AAAA".
+// Sem ela, ou se o texto mudou depois da aprovação: aviso de revisão pendente. Nunca diz "revisado" sem registro.
+function textoRevisaoPublica({ registro, corpo, atualizadoEm }) {
+  const hashAtual = corpo == null ? null : hashConteudo(corpo);
+  const s = selo({ registro, hashAtual });
+  if (s) return { selo: s, aviso: null };
+  return { selo: null, aviso: avisoPendente({ atualizadoEm }) };
+}
+
+module.exports.textoRevisaoPublica = textoRevisaoPublica;

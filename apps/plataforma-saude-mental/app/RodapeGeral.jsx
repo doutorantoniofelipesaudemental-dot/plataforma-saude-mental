@@ -13,7 +13,7 @@ export default function RodapeGeral() {
           SAMU <a className="font-semibold underline" href="tel:192">192</a>. Em risco imediato, procure uma UPA, um pronto-socorro ou o CAPS.
         </p>
         <p>
-          Contato e agendamento somente por e-mail:{' '}
+          Contato somente por e-mail:{' '}
           <a className="underline" href="mailto:doutor.antoniofelipe.saudemental@gmail.com">doutor.antoniofelipe.saudemental@gmail.com</a>.
           Não envie informações de saúde por e-mail. <Link className="underline" href="/privacidade">Privacidade</Link>
         </p>

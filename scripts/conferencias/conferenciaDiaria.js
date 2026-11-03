@@ -110,6 +110,22 @@ async function instagram(d) {
   }
 }
 
+// 3b (ordem de 02/11/2026): artigos com horário ontem e hoje publicados no horário e respondendo 200.
+async function publicacaoAgendada(d) {
+  secao('3b. Publicação dos artigos agendados (ontem e hoje)');
+  const { alvosDoDia, avaliarPublicacao } = require('./publicacaoAgendada');
+  const artigos = await d.collection('artigos').find({ 'agendamento.slot': { $exists: true } }, { projection: { slug: 1, publicado: 1, publicadoEm: 1, agendamento: 1 } }).toArray();
+  const alvos = alvosDoDia({ hoje, artigos });
+  linhas.push(`- artigos com horário ontem/hoje: ${alvos.length}`);
+  if (!alvos.length) { ok('nenhum artigo agendado para ontem ou hoje'); return; }
+  const agora = new Date();
+  for (const a of alvos) {
+    const r = a.publicado === true ? await http(`${SITE}/artigo/${a.slug}`, { method: 'HEAD' }) : { status: null };
+    const av = avaliarPublicacao({ artigo: a, agora, statusHttp: r.status });
+    if (av.nivel === 'ok') ok(av.texto); else if (av.nivel === 'aviso') aviso(av.texto); else falha(av.texto);
+  }
+}
+
 async function narracoesETrava(d) {
   secao('3. Narrações e trava B');
   const docs = await d.collection('artigos').find({}).toArray();
@@ -181,7 +197,7 @@ function alertaNoEstadoGeral() {
 (async () => {
   await db.connect();
   const d = mongoose.connection.db;
-  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), outrasFilas, alertaCustoDoDia]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
+  for (const passo of [paginas, () => instagram(d), () => narracoesETrava(d), () => publicacaoAgendada(d), outrasFilas, alertaCustoDoDia]) { try { await passo(); } catch (e) { falha(`passo falhou: ${String(e.message).slice(0, 160)}`); } }
   // Backup do estado: passo isolado (falha vira alerta com ação; a conferência segue). Gravação à parte, na mesma tarefa.
   try { backupDoEstado(); } catch (e) { falha(`backup do estado falhou: ${String(e.message).slice(0, 160)}`); }
   const pasta = path.join(RAIZ, 'relatorios/conferencias'); fs.mkdirSync(pasta, { recursive: true });

@@ -172,3 +172,15 @@ Regras:
 - A categoria continua sendo o PÚBLICO ("Para <público>"), não o eixo.
 - Reclassificação aplicada em 02/11 (726 textos): 11 marcados "revisar" (eram 216). Totais: E1 157 · E2 19 · E3 88 · E4 134 · E5 138 · E6 54 · E7 136. Registro: `relatorios/plano-diretor/INVENTARIO.md` e `.csv`.
 - Pilares: ordem proposta (só o Eixo 4 como amostra; os demais dependem de aprovação) em `relatorios/plano-diretor/PROPOSTA-ADAPTADA.md`.
+
+
+## 03/11/2026 — Auditoria do YouTube encerrada pelo Google; API não força privado (ordem escrita do Dr. Antônio)
+- **Fato informado pelo Dr.:** em 02/11 o YouTube API Services respondeu que vídeos enviados pela API não ficam automaticamente privados, e encerrou o pedido de auditoria. A cópia da resposta não está no repositório: fica registrada como comunicado do Dr.
+- **Teste feito em 03/11:** `scripts/youtube/mudarPrivacidadeDemo.js --confirmar` mudou SÓ o vídeo de demonstração `Nf3dPwqjCOg` de "private" para "unlisted". Leitura por `videos.list` confirmou "unlisted". Registro: `relatorios/youtube/privacidade-teste-log.md`. Testes da regra: `tests/unit/mudar-privacidade-demo.test.js`.
+- **Limite do teste:** mostra que a mudança de privacidade pela API fica gravada. Não prova sozinho que um upload novo, sem pedido de privacidade, fica público. Esse ponto só se confirma com um upload de teste na hora de ligar o freio.
+- **Cota:** a padrão (10.000 unidades/dia) basta. Não se pede cota extra.
+- **Freio:** nada mudou. `YOUTUBE_PUBLICACAO_ATIVA` continua sob ordem do Dr. Antônio. O vídeo estático continua proibido; só entra o padrão animado aprovado.
+- **Documentos superados:** `DECISAO-FREIO.md`, `PASSO-A-PASSO-YOUTUBE.md`, `AUDITORIA-API-RESPOSTAS.md` e `PACOTE-30-10.md` ganharam aviso no topo. `CLAUDE.md` e o comentário de `backend/lib/youtube.js` foram corrigidos.
+- **Demo e screencast:** não apagados. Demo `Nf3dPwqjCOg` agora não listada; screencast `-Z0uPYiwJ7I` segue não listado.
+- **Relação com o PR #204 (03/11):** `excecaoFreioDemo` em `scripts/youtube/itemPublicavel.js` (#204, ainda não mesclado) e `scripts/youtube/mudarPrivacidadeDemo.js` (aqui) são caminhos separados. Este script só altera privacidade da demo; o #204 trata do envio de teste. Os dois respeitam o freio geral.
+- **Envio único da demo como não listado (03/11):** `scripts/youtube/enviarDemoNaoListada.js`. Tentativa bloqueada pelo freio geral `REDES_PUBLICACAO_ATIVA=false`; freio não alterado. Registro em `relatorios/youtube/privacidade-teste-log.md`.

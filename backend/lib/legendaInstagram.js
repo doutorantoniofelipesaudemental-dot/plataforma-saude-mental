@@ -28,7 +28,7 @@ const IDENTIFICACAO_3_LINHAS = [
 const IDENTIFICACAO_3_LINHAS_PADRAO_COMPLETO = [
   'Dr. Antônio Felipe — Médico — CRM-BA 41322',
   'Especialista em Medicina de Família e Comunidade — RQE 26638',
-  'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde',
+  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
 ].join('\n');
 const temIdentificacaoSocial = (t) => String(t).includes(IDENTIFICACAO_3_LINHAS) || String(t).includes(IDENTIFICACAO_3_LINHAS_PADRAO_COMPLETO) || String(t).includes(IDENTIFICACAO);
 const LINHA_BIO = '🔗 Artigo completo no link da bio';

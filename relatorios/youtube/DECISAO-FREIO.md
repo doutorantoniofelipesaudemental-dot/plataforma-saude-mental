@@ -1,5 +1,8 @@
 # Decisão: ligar o freio do YouTube agora ou esperar a auditoria? (18/10/2026)
 
+> **Atualização 03/11/2026:** a premissa "uploads pela API ficam privados até a auditoria" está SUPERADA, segundo a resposta do Google de 02/11 informada pelo Dr. Antônio (cópia não arquivada no repositório). Teste de 03/11: a mudança de privacidade pela API ficou gravada. Ver `relatorios/DECIDIDO.md` (03/11). Antes de basear decisão, conferir a documentação oficial atual.
+
+
 **Nada foi ligado.** Esta página só descreve as duas opções; a decisão e os ajustes no `.env` são seus.
 
 ## Onde estamos
