@@ -16,7 +16,8 @@ test('página renderizada: CRM-BA 41322, RQE 26638 e NÃO ESPECIALISTA aparecem 
   assert.equal(conta(v, 'RQE 26638'), 1);
   assert.equal(conta(v, 'NÃO ESPECIALISTA'), 1);
   assert.ok(v.includes('Terapia Cognitivo-Comportamental'));
-  assert.ok(!/Atuo em Pronto/.test(v), 'sem a redação antiga');
+  // Ordem de 02/11/2026: a frase padrão do PAP/APS aparece exatamente uma vez por página de artigo.
+  assert.equal(conta(v, 'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)'), 1);
 });
 
 test('se o corpo ainda tiver o bloco, a página renderizada duplica (a auditoria precisa pegar isso)', () => {

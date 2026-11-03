@@ -13,7 +13,7 @@ const RAIZ = path.join(__dirname, '..', '..');
 const OFICIAL = [
   'Dr. Antônio Felipe — Médico — CRM-BA 41322',
   'Especialista em Medicina de Família e Comunidade — RQE 26638',
-  'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde',
+  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
   'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho',
   'NÃO ESPECIALISTA',
 ];
