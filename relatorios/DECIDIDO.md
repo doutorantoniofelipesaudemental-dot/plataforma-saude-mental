@@ -184,3 +184,10 @@ Regras:
 - **Demo e screencast:** não apagados. Demo `Nf3dPwqjCOg` agora não listada; screencast `-Z0uPYiwJ7I` segue não listado.
 - **Relação com o PR #204 (03/11):** `excecaoFreioDemo` em `scripts/youtube/itemPublicavel.js` (#204, ainda não mesclado) e `scripts/youtube/mudarPrivacidadeDemo.js` (aqui) são caminhos separados. Este script só altera privacidade da demo; o #204 trata do envio de teste. Os dois respeitam o freio geral.
 - **Envio único da demo como não listado (03/11):** `scripts/youtube/enviarDemoNaoListada.js`. Tentativa bloqueada pelo freio geral `REDES_PUBLICACAO_ATIVA=false`; freio não alterado. Registro em `relatorios/youtube/privacidade-teste-log.md`.
+
+## 03/11/2026 — Introduções dos 7 eixos aprovadas com ajustes (ordem escrita do Dr. Antônio, 20:05)
+- Eixo 2: "sempre decidido com a equipe de saúde, inclusive durante a amamentação".
+- Eixo 3: "Depressão e demência não são parte normal do envelhecimento e, muitas vezes, há tratamento ou manejo; o luto merece acolhimento."
+- Eixo 4: frase da NR-1 aprovada; fonte: Portaria MTE nº 1.419, de 27/08/2024 (DOU de 28/08/2024). Link oficial do gov.br: a confirmar (os endereços testados deram 404; não publicado). Serviço municipal trocado por CEREST (Centro de Referência em Saúde do Trabalhador).
+- Crise padronizada em todos os eixos: "Em crise, ligue 188 (CVV) ou 192 (SAMU)."
+- Demais textos aprovados. Home (public/index.html): os cartões mostram só a primeira frase de cada eixo; nenhuma frase alterada aparece lá, então a home não muda.
