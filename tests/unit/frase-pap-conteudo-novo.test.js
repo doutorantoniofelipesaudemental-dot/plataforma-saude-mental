@@ -7,7 +7,8 @@ const path = require('node:path');
 // Textos já publicados (ex.: backend/data/reescritas/semana-1, no ar) ficam como estão e não entram aqui.
 const ANTIGA = 'Atua no Pronto Atendimento Psiquiátrico e na Atenção Primária à Saúde';
 const RAIZ = path.join(__dirname, '..', '..');
-const PASTAS = ['backend/tools', 'backend/lib', 'scripts'];
+// Validadores (backend/lib, scripts/gerarOgLandings.py) são cobertos pelo PR #228; aqui só geradores de conteúdo.
+const PASTAS = ['backend/tools'];
 
 function arquivos(dir) {
   const abs = path.join(RAIZ, dir);
