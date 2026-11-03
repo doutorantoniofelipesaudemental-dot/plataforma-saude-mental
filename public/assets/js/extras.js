@@ -122,7 +122,7 @@
       var risco = !!item9 && Number(item9.value) > 0;
       var html = '';
       if (risco) {
-        html += '<div class="plano__crise" role="alert"><p><strong>Se você tem pensado em se ferir ou em morrer, procure ajuda agora: <a href="tel:188">CVV 188</a> (24 h, gratuito), <a href="tel:192">SAMU 192</a> ou o pronto-socorro mais próximo.</strong></p></div>';
+        html += '<div class="plano__crise" role="alert"><p><strong>Se você tem pensado em se ferir ou em morrer, procure ajuda agora: <a href="tel:188">CVV 188</a> (24 h, gratuito), <a href="tel:192">SAMU 192</a> ou o pronto-socorro mais próximo.</strong></p></div><p><small>Você também pode procurar a UPA ou o pronto-socorro mais próximo e, para acompanhamento, o CAPS ou a UBS. Mais informações: <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a></small></p>';
       }
       html += '<h3>Seu resultado</h3><ul><li>Humor (PHQ-9), ' + phq + ' de 27 pontos: suas respostas sugerem sintomas ' + faixaPhq(phq) + '.</li><li>Ansiedade (GAD-7), ' + gad + ' de 21 pontos: suas respostas sugerem sintomas ' + faixaGad(gad) + '.</li></ul>';
       if (phq >= 10 || gad >= 10 || risco) {
