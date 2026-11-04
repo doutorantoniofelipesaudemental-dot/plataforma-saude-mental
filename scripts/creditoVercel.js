@@ -5,14 +5,14 @@
  * Lê pela CLI oficial (`vercel api /v1/billing/charges`, equipe do projeto). Sem .env e sem token impresso.
  * Se a CLI não conseguir ler (ex.: sem login, ou resposta em JSON Lines que ela não interpreta),
  * NÃO falha: mantém o último valor gravado e alerta "atualizar manualmente".
- * Registro: relatorios/vercel-credito.json. Alerta: primeira linha do relatorios/RESUMO-DO-DIA.md.
+ * Registro: relatorios/estado-local/vercel-credito.json. Alerta: primeira linha do relatorios/RESUMO-DO-DIA.md.
  */
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 
 const RAIZ = path.resolve(__dirname, '..');
-const REGISTRO = path.join(RAIZ, 'relatorios/vercel-credito.json');
+const REGISTRO = path.join(RAIZ, 'relatorios/estado-local/vercel-credito.json');
 const RESUMO = path.join(RAIZ, 'relatorios/RESUMO-DO-DIA.md');
 const TEAM_ID = 'team_O3FHueRcQi1CDRuz64SmQPS7';
 
@@ -123,6 +123,7 @@ function atualizarCredito({ hoje, arquivo = REGISTRO, resumo = RESUMO, executar 
     cicloFim: novo.cicloFim,
   });
   novo = { ...novo, atualizadoEm: new Date().toISOString(), ultimaLeitura: status, ultimaLeituraMotivo: motivo, pctCreditoPainel: aval.pctPainel };
+  fs.mkdirSync(path.dirname(arquivo), { recursive: true });
   fs.writeFileSync(arquivo, JSON.stringify(novo, null, 1) + '\n', 'utf8');
   // Só o alerta real entra no resumo. Leitura indisponível fica como aviso na conferência, não como "PRECISA DE VOCÊ".
   if (aval.alerta) {
