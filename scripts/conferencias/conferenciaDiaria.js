@@ -26,11 +26,11 @@ const falha = (t) => { falhas.push(t); linhas.push(`- ✘ **${t}**`); };
 const aviso = (t) => { avisos.push(t); linhas.push(`- ⚠ ${t}`); };
 
 // Alerta de custo da Vercel (ordem de 28/10/2026). Trabalha numa cópia em .tmp/: o registro rastreado
-// (relatorios/vercel-credito.json) não é gravado pela conferência, para não sujar a pasta principal.
+// (relatorios/estado-local/vercel-credito.json) não é gravado pela conferência, para não sujar a pasta principal.
 function alertaCustoDoDia() {
   const copia = path.join(RAIZ, '.tmp', 'vercel-credito-diario.json');
   fs.mkdirSync(path.dirname(copia), { recursive: true });
-  fs.copyFileSync(path.join(RAIZ, 'relatorios/vercel-credito.json'), copia);
+  fs.copyFileSync(path.join(RAIZ, 'relatorios/estado-local/vercel-credito.json'), copia);
   const { atualizarCredito } = require('../creditoVercel');
   const r = atualizarCredito({ hoje, arquivo: copia });
   const res = resultadoAlertaCusto(JSON.stringify(r));

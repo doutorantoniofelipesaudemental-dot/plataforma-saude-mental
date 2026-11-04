@@ -40,7 +40,7 @@ const LISTA = [
   'relatorios/DECIDIDO.md',
   'relatorios/LICOES.md',
   // ordem de 02/11/2026: crédito da Vercel (atualização manual), arquivo de estado fora do Git
-  'relatorios/vercel-credito.json',
+  'relatorios/estado-local/vercel-credito.json',
 ];
 
 // Padrões de segredo. Só diz SIM/NÃO; nunca mostra o trecho encontrado.
