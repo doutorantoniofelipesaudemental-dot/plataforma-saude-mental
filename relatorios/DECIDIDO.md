@@ -4,6 +4,7 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 
 ## Decisões
 
+- **Cloudflare (04/11/2026):** os complementos pagos (Page Rules e SSL dedicado) do domínio drantoniofelipemedico.com.br foram cancelados. O DNS aponta direto para a Vercel (76.76.21.21); os nameservers são do Registro.br (b/c.sec.dns.br); não há MX. Sem impacto no Portal. Não reativar.
 - **YouTube:** o app está "Em produção" desde 18/10/2026. O refresh token não vence. O aviso de "vence em 23/10" era falso: `relatorios/youtube/validade.json` foi corrigido (`autorizacaoVenceEm: null`), e o alerta deixa de disparar.
 - **YouTube, escopo:** o `youtube:autorizar` tem de rodar com a pasta na `main` (escopo `youtube.force-ssl`). Rodado no branch antigo, o escopo fica errado. Conferir com `npm run youtube:teste-playlists`.
 - **REDES_PUBLICACAO_ATIVA:** ligado. O post de 26/10 saiu.
