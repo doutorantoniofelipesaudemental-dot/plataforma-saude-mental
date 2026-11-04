@@ -104,7 +104,9 @@ function sair(msg, cod = 1) {
   if (ff.status !== 0) sair(`não consegui alinhar ${destino} com origin/${destino}: ${ff.stderr.trim()}`);
 
   console.log(`\nRodando o portão sobre ${info.headRefName} (base origin/${info.baseRefName})...`);
-  const p = spawnSync('npm', ['run', 'portao', '--', `--base=origin/${info.baseRefName}`], { cwd: RAIZ, encoding: 'utf8', shell: process.platform === 'win32' });
+  // Sem shell (DEP0190): chama o npm-cli.js pelo próprio Node, que é o mesmo npm desta instalação.
+  const npmCli = path.join(path.dirname(process.execPath), 'node_modules', 'npm', 'bin', 'npm-cli.js');
+  const p = spawnSync(process.execPath, [npmCli, 'run', 'portao', '--', `--base=origin/${info.baseRefName}`], { cwd: RAIZ, encoding: 'utf8' });
   // Log completo do portão (ordem do Dr. Antônio): mesmo conteúdo que aparece na tela, gravado em relatorios/logs/.
   const saida = `${p.stdout || ''}${p.stderr || ''}`;
   const dLog = new Date();
