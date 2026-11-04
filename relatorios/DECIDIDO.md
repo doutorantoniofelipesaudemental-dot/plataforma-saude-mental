@@ -191,3 +191,8 @@ Regras:
 - Eixo 4: frase da NR-1 aprovada; fonte: Portaria MTE nº 1.419, de 27/08/2024 (DOU de 28/08/2024). Link oficial do gov.br: a confirmar (os endereços testados deram 404; não publicado). Serviço municipal trocado por CEREST (Centro de Referência em Saúde do Trabalhador).
 - Crise padronizada em todos os eixos: "Em crise, ligue 188 (CVV) ou 192 (SAMU)."
 - Demais textos aprovados. Home (public/index.html): os cartões mostram só a primeira frase de cada eixo; nenhuma frase alterada aparece lá, então a home não muda.
+
+## 03/11/2026 — Item encerrado: bloco de identificação duplicado já ausente
+- Item encerrado: bloco duplicado já ausente (dry-run 03/11, removidos 0).
+- Conferência em produção (leitura, 03/11, /artigo/<slug>): burnout-aps, professores-saude-mental, psicofarmacos-mitos-culturais e tmc-aps têm exatamente 1 ocorrência da linha "Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)".
+- Nada foi aplicado (sem --aplicar).
