@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const L = require('./lib');
 const { checarImagemSemMarcaDagua } = require('../../backend/lib/checagensAprovacao');
 const { backupAntesDeSobrescrever } = require('../lib/backupPasta');
+const { exigirCenasMinimas } = require('./cenasMinimas');
 
 const arg = (k) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').split('=').slice(1).join('=');
 const refazer = process.argv.includes('--refazer');
@@ -17,6 +18,7 @@ const refazer = process.argv.includes('--refazer');
 async function baixar(url) { const r = await fetch(url); if (!r.ok) throw new Error(`capa HTTP ${r.status}`); return Buffer.from(await r.arrayBuffer()); }
 
 async function gerar(a, { dirSaida = '' } = {}) {
+  exigirCenasMinimas(1, 'Vídeo longo'); // hoje um único quadro (ffmpeg -loop 1): bloqueado até o padrão com cenas
   let mp3 = await L.obterAudio(a);
   if (mp3) mp3 = L.comVinheta(a, mp3); // abertura + encerramento falados (crédito da marca)
   if (!mp3) return { slug: a.slug, pulou: 'sem áudio válido (hash difere do texto atual ou narração ausente)' };

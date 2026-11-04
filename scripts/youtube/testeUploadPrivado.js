@@ -9,13 +9,15 @@ const fs = require('node:fs');
 const path = require('node:path');
 const L = require('./lib');
 const yt = require('../../backend/lib/youtube');
+const { itemPublicavel, itemDemoAuditoria, excecaoFreioDemo } = require('./itemPublicavel');
 
 const confirmar = process.argv.includes('--confirmar');
 const idArg = (process.argv.find((a) => a.startsWith('--id=')) || '').split('=')[1];
 
 (async () => {
   const fila = JSON.parse(fs.readFileSync(path.join(L.REL, 'fila.json'), 'utf8')).itens;
-  const it = fila.find((i) => i.status === 'aprovado-checagem' && (idArg ? i.id === idArg : i.tipo === 'short'));
+  // Reprovado e imagem parada nunca são escolhidos. Com --id, só a demonstração da auditoria (ordem de 30/10/2026).
+  const it = fila.find((i) => (idArg ? i.id === idArg && itemDemoAuditoria(i) : itemPublicavel(i) && i.tipo === 'short'));
   if (!it) throw new Error('nenhum item aprovado encontrado');
   const dir = path.join(L.RAIZ, it.pasta);
   const meta = JSON.parse(fs.readFileSync(path.join(dir, 'meta.json'), 'utf8'));
@@ -27,7 +29,12 @@ const idArg = (process.argv.find((a) => a.startsWith('--id=')) || '').split('=')
   if (bloqueios.length) throw new Error(`bloqueado: ${bloqueios.join(' | ')}`);
   if (!yt.credenciaisYoutube()) throw new Error('sem credenciais do YouTube no .env (siga relatorios/youtube/PASSO-A-PASSO-YOUTUBE.md)');
   if (!confirmar) { console.log('Conferido. Nada enviado (use --confirmar para subir 1 vídeo PRIVADO).'); return; }
-  const r = await yt.enviarVideo({ arquivo: arq, titulo: `[TESTE PRIVADO] ${meta.titulo}`.slice(0, 100), descricao: meta.descricao, tags: meta.tags, privacidade: 'private', short: it.tipo === 'short' });
+  const excecaoFreio = excecaoFreioDemo(it, { confirmar, idArg, privacidade: 'private' });
+  if (excecaoFreio) {
+    // registro da exceção ao freio, antes do envio (data, hora e id)
+    fs.appendFileSync(path.join(L.REL, 'publicacao-log.md'), `- ${new Date().toISOString()} EXCEÇÃO DO FREIO REDES_PUBLICACAO_ATIVA (só demo de auditoria, privada, com --id): ${it.id}\n`);
+  }
+  const r = await yt.enviarVideo({ arquivo: arq, titulo: `[TESTE PRIVADO] ${meta.titulo}`.slice(0, 100), descricao: meta.descricao, tags: meta.tags, privacidade: 'private', short: it.tipo === 'short', excecaoFreio });
   console.log(`ENVIADO como PRIVADO: ${r.link} (privacidade aplicada: ${r.privacidade})`);
   // registra como "teste": fora de relatórios e da fila (relatorios/youtube/videos-teste.json)
   const regArq = path.join(L.REL, 'videos-teste.json');
