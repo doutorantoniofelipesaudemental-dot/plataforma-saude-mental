@@ -57,6 +57,17 @@
 - Publicação só com o OK do Dr. Antônio para o deploy.
 
 ## 4. Decisões do Dr. Antônio (leitura de sexta)
+
+**Recomendações a confirmar na sexta (ordem de 04/11, 19:15):**
+1. Formulário sai da /mentoria; só e-mail.
+2. Página pública: "farmacoterapia na APS com base em diretrizes", sem nomes de medicamento nem doses. Conteúdo técnico só nas sessões.
+3. "Relatório educativo consultivo", que não substitui o PGR nem o PCMSO da empresa.
+4. Prospecção sem envio em massa: só e-mails individuais a endereços institucionais públicos, escritos e enviados pelo Dr. Antônio, com linha de descadastro. O Claude Code só rascunha.
+5. Valores fora do site; enviados por e-mail a quem pedir.
+6. Operadoras e Home Care fora por ora.
+7. Números do cenário epidemiológico fora até checagem em fonte oficial (sexta).
+
+**Oferta de consulta:** o Dr. Antônio não faz consulta particular. Nenhum texto deste plano oferece consulta. As menções a "consulta" aqui se referem ao tempo de atendimento do profissional na APS ou são negativas.
 1. **Formulário da /mentoria:** confirmar a remoção e manter só e-mail.
 2. **Medicamentos no Público 1 (Módulo B):** aprovar um texto de orientação geral com aviso de protocolos locais, ou manter fora.
 3. **Parecer para o PGR (Público 2):** aceitar "relatório educativo" ou definir o formato.
