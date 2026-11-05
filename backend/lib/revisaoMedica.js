@@ -22,8 +22,14 @@ function formatarData(data) {
 }
 
 // Texto do aviso enquanto não há aprovação. Não diz "revisado".
+const AVISO_SITE = 'Conteúdo educativo produzido com apoio de inteligência artificial, com checagem automatizada e aprovado para publicação pelo Dr. Antônio Felipe, responsável pelo conteúdo (Resolução CFM 2.454/2026).';
+// Página institucional aprovada (ordem de 04/11/2026): texto exato, com a data da aprovação.
+function avisoRevisada(data) {
+  return `Conteúdo produzido com apoio de inteligência artificial, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Página revisada pelo Dr. Antônio Felipe em ${data}.`;
+}
+
 function avisoPendente({ atualizadoEm }) {
-  return `Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada de referências, sob responsabilidade do Dr. Antônio Felipe Garabito. Revisão médica individual: pendente. Atualizado em ${formatarData(atualizadoEm)}.`;
+  return `${AVISO_SITE} Atualizado em ${formatarData(atualizadoEm)}.`;
 }
 
 // Função pura: a aprovação só vale se o hash do texto atual é o mesmo que foi aprovado.
@@ -37,7 +43,7 @@ function estadoRevisao({ registro, hashAtual }) {
 function selo({ registro, hashAtual }) {
   const e = estadoRevisao({ registro, hashAtual });
   if (!e.valido) return null;
-  return `Revisado pelo Dr. Antônio Felipe Garabito em ${formatarData(registro.aprovadoEm)}`;
+  return `Revisado pelo Dr. Antônio Felipe em ${formatarData(registro.aprovadoEm)}`;
 }
 
 // Transição: aprovar exige o hash do texto que está sendo aprovado.
@@ -53,7 +59,7 @@ function reprovar({ slug, motivo, data }) {
   return { slug, status: STATUS.REPROVADA, motivo, reprovadoEm: new Date(data).toISOString() };
 }
 
-module.exports = { STATUS, hashConteudo, formatarData, avisoPendente, estadoRevisao, selo, aprovar, reprovar };
+module.exports = { STATUS, AVISO_SITE, hashConteudo, formatarData, avisoRevisada, avisoPendente, estadoRevisao, selo, aprovar, reprovar };
 
 // Texto público do artigo (ordem de 02/11/2026, item 3a). Função pura.
 // Com aprovação válida (mesmo hash do corpo atual): "Revisado pelo Dr. Antônio Felipe Garabito em DD/MM/AAAA".

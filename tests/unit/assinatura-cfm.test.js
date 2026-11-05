@@ -54,10 +54,12 @@ test('HTMLs do portal: as 5 linhas aparecem, cada uma no seu lugar, com NÃO ESP
 });
 
 test('páginas públicas (início, blog, artigo e Instagram) trazem a nota de transparência de IA (Res. CFM 2.454/2026), igual à fonte única', () => {
-  const { AVISO_CFM } = require('../../backend/lib/conformidadeCfm');
+  const { AVISO_GERAL } = require('../../scripts/revisao/paginasInstitucionais');
+  const paginaRevisada = /Página revisada pelo Dr\. Antônio Felipe em \d{2}\/\d{2}\/\d{4}\./;
   for (const pagina of ['index.html', 'blog.html', 'artigo.html', 'instagram.html']) {
     const html = ler(`public/${pagina}`);
-    assert.ok(html.includes(AVISO_CFM), `${pagina}: falta a nota de IA com a Resolução CFM 2.454/2026`);
+    // Início pode mostrar o aviso da página revisada (só com registro do Dr. Antônio); as demais, o aviso geral.
+    assert.ok(html.includes(AVISO_GERAL) || (pagina === 'index.html' && paginaRevisada.test(html)), `${pagina}: falta a nota de IA com a Resolução CFM 2.454/2026`);
     assert.strictEqual((html.match(/id="nota-ia"/g) || []).length, 1, `${pagina}: a nota de IA deve aparecer uma só vez (id nota-ia)`);
   }
   // A página pré-renderizada parte do mesmo template, então herda a nota.
@@ -66,5 +68,5 @@ test('páginas públicas (início, blog, artigo e Instagram) trazem a nota de tr
     titulo: 'Teste', slug: 'teste', resumo: 'Resumo', conteudo: '<p>Texto</p>', categoria: 'Teste', autor: 'Dr. Antônio Felipe',
     tempoLeitura: 1, publicadoEm: new Date('2026-10-05'), atualizadoEm: new Date('2026-10-05'),
   });
-  assert.ok(pre.includes(AVISO_CFM), 'página pré-renderizada sem a nota de IA');
+  assert.ok(pre.includes(AVISO_GERAL), 'página pré-renderizada sem a nota de IA');
 });

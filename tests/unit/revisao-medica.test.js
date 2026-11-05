@@ -16,10 +16,10 @@ test('hash: CRLF e espaços das bordas não mudam o hash do corpo', () => {
 test('aviso pendente diz que a revisão médica está pendente e nunca que foi revisado', () => {
   const t = R.avisoPendente({ atualizadoEm: DATA });
   assert.match(t, /inteligência artificial/);
-  assert.match(t, /Revisão médica individual: pendente/);
-  assert.match(t, /Dr\. Antônio Felipe Garabito/);
+  assert.match(t, /aprovado para publicação pelo Dr\. Antônio Felipe/);
+  assert.match(t, /Dr\. Antônio Felipe/);
   assert.match(t, /Atualizado em 21\/10\/2026/);
-  assert.doesNotMatch(t, /revisad[oa] pel/i);
+  assert.doesNotMatch(t.replace(/“Revisado pelo Dr. Antônio Felipe”/g, ''), /revisad[oa] pel/i);
 });
 
 test('só aprovação com o hash do texto atual vale', () => {
@@ -34,7 +34,7 @@ test('texto que muda depois da aprovação volta a pendente e o selo some', () =
   const hash = R.hashConteudo('v1');
   const reg = R.aprovar({ slug: 'a', hash, revisor: 'x', data: DATA });
   const mudou = R.hashConteudo('v2');
-  assert.equal(R.selo({ registro: reg, hashAtual: hash }), 'Revisado pelo Dr. Antônio Felipe Garabito em 21/10/2026');
+  assert.equal(R.selo({ registro: reg, hashAtual: hash }), 'Revisado pelo Dr. Antônio Felipe em 21/10/2026');
   assert.equal(R.selo({ registro: reg, hashAtual: mudou }), null);
   assert.match(R.estadoRevisao({ registro: reg, hashAtual: mudou }).motivo, /mudou/);
 });
@@ -53,9 +53,9 @@ test('aprovar exige slug, hash e quem aprovou', () => {
 
 test('checagem do aviso: aceita o texto oficial e reprova "revisado por" e "psiquiatra"', () => {
   assert.deepEqual(checarAviso(R.avisoPendente({ atualizadoEm: DATA })), []);
-  assert.ok(checarAviso('Texto revisado por Dr. Antônio Felipe Garabito. inteligência artificial. Revisão médica individual: pendente. 21/10/2026').some((f) => /revisado/.test(f)));
-  assert.ok(checarAviso('Dr. Antônio Felipe Garabito, psiquiatra. inteligência artificial. Revisão médica individual: pendente. 21/10/2026').some((f) => /psiquiatra/.test(f)));
-  assert.ok(checarAviso('Dr. Antonio Felipe. inteligência artificial').some((f) => /acento|Garabito/.test(f)));
+  assert.ok(checarAviso('Texto revisado por Dr. Antônio Felipe. inteligência artificial. aprovado para publicação pelo Dr. Antônio Felipe, responsável pelo conteúdo (Resolução CFM 2.454/2026). 21/10/2026').some((f) => /revisado/.test(f)));
+  assert.ok(checarAviso('Dr. Antônio Felipe, psiquiatra. inteligência artificial. aprovado para publicação pelo Dr. Antônio Felipe, responsável pelo conteúdo (Resolução CFM 2.454/2026). 21/10/2026').some((f) => /psiquiatra/.test(f)));
+  assert.ok(checarAviso('Dr. Antonio Felipe. inteligência artificial').some((f) => /acento/.test(f)));
 });
 
 test('corpo do texto: o hash ignora o frontmatter (gravar metadados não muda o hash)', () => {

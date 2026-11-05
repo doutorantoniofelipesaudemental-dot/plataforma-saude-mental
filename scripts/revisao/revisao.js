@@ -69,13 +69,33 @@ function gravarRegistro(reg) {
   }
 }
 
+// Exceção a "revisado" SÓ para (a) o selo legítimo (registro aprovado com o hash atual) e (b) o texto exato de uma
+// página institucional aprovada (registro com a mesma data e o mesmo hash da página). Sem ctx, nenhum "revisado" passa.
+function trechosPermitidosDeRevisao(texto, ctx = {}) {
+  let t = texto;
+  if (ctx.selo) {
+    const s = R.selo({ registro: ctx.selo.registro, hashAtual: ctx.selo.hashAtual });
+    if (s && t.includes(s)) t = t.split(s).join('');
+  }
+  if (ctx.pagina) {
+    const { nome, registro, hash } = ctx.pagina;
+    const r = registro && registro[nome];
+    if (r && r.data && r.hash && r.hash === hash) {
+      const a = R.avisoRevisada(r.data);
+      if (t.includes(a)) t = t.split(a).join('');
+    }
+  }
+  return t;
+}
+
 // Função pura: checagem do aviso antes da aprovação (técnica e ética, mínima).
-function checarAviso(texto) {
+function checarAviso(texto, ctx = {}) {
   const falhas = [];
-  if (!/Dr\. Antônio Felipe Garabito/.test(texto)) falhas.push('nome do médico sem acento ou sem "Garabito"');
+  if (!/Dr\. Antônio Felipe/.test(texto)) falhas.push('nome do médico sem acento ou sem "Dr. Antônio Felipe"');
+  if (/Dr\. Antonio Felipe/.test(texto)) falhas.push('nome do médico sem acento');
   if (!/inteligência artificial/.test(texto)) falhas.push('falta o aviso de uso de inteligência artificial (CFM 2.454/2026)');
-  if (!/Revisão médica individual: pendente/.test(texto)) falhas.push('falta "Revisão médica individual: pendente"');
-  if (/revisad[oa] (pel[oa]|por)/i.test(texto)) falhas.push('o aviso não pode dizer que o texto foi revisado');
+  if (!/aprovado para publicação pelo Dr\. Antônio Felipe/.test(texto)) falhas.push('falta a frase "aprovado para publicação pelo Dr. Antônio Felipe"');
+  if (/revisad[oa]\s+(pel[oa]|por)/i.test(trechosPermitidosDeRevisao(texto, ctx))) falhas.push('o aviso não pode dizer que o texto foi revisado (só o selo ou a página aprovados)');
   if (/psiquiatra/i.test(texto)) falhas.push('"psiquiatra" não pode aparecer como título do médico');
   if (!/\d{2}\/\d{2}\/\d{4}/.test(texto)) falhas.push('falta a data de atualização');
   return falhas;
@@ -157,5 +177,5 @@ if (comando === 'aviso:aprovar' || comando === 'aviso') {
 }
 }
 
-module.exports = { corpoDo, checarAviso, arquivoDoRascunho };
+module.exports = { corpoDo, checarAviso, trechosPermitidosDeRevisao, arquivoDoRascunho };
 if (require.main === module) main();

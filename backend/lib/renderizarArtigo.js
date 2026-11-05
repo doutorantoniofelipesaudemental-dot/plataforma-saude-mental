@@ -130,7 +130,7 @@ function renderizarArtigoHtml(artigo) {
 
   // Selo dinâmico (ordem de 02/11/2026): só com aprovação válida (hash igual ao do corpo). Sem ela, fica "pendente".
   const rv = textoRevisaoPublica({ registro: artigo.revisao || null, corpo: artigo.conteudo || null, atualizadoEm: artigo.atualizadoEm });
-  if (rv.selo) html = html.split('Revisão médica individual: pendente.').join(rv.selo + '.');
+  html = html.split('<!--selo-revisao-->').join(rv.selo ? ' ' + rv.selo + '.' : '');
 
   html = html.replace(
     /<title>.*?<\/title>/,

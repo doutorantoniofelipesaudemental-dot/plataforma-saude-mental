@@ -76,7 +76,8 @@
     "aviso:aprovar": "node scripts/revisao/revisao.js aviso:aprovar",
     "revisao:aprovar": "node scripts/revisao/revisao.js revisao:aprovar",
     "revisao:reprovar": "node scripts/revisao/revisao.js revisao:reprovar",
-    "revisao:lote": "node scripts/revisao/revisao.js revisao:lote"
+    "revisao:lote": "node scripts/revisao/revisao.js revisao:lote",
+    "aviso:paginas": "node scripts/revisao/paginasInstitucionais.js"
   },
   "engines": {
     "node": ">=20"
