@@ -27,9 +27,9 @@ test('trocar o aviso não altera o hash da página', () => {
   assert.equal(P.hashPagina(trocado), P.hashPagina(HTML));
 });
 
-test('o aviso geral contém a frase de selo e a Resolução CFM 2.454/2026', () => {
+test('o aviso geral diz que o conteúdo foi aprovado para publicação e cita a Resolução CFM 2.454/2026', () => {
   assert.match(P.AVISO_GERAL, /Resolução CFM 2\.454\/2026/);
-  assert.match(P.AVISO_GERAL, /Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr\. Antônio Felipe”\./);
+  assert.match(P.AVISO_GERAL, /aprovado para publicação pelo Dr\. Antônio Felipe, responsável pelo conteúdo \(Resolução CFM 2\.454\/2026\)\./);
 });
 
 test('as quatro páginas institucionais estão no estado do registro (sem página marcada como revisada)', () => {

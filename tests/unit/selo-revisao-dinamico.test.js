@@ -9,13 +9,13 @@ const aprovado = R.aprovar({ slug: 'x', hash, revisor: 'Dr. Antônio Felipe', da
 test('sem registro: aviso de revisão pendente e nenhum selo', () => {
   const r = R.textoRevisaoPublica({ registro: null, corpo, atualizadoEm: '2026-11-01T00:00:00Z' });
   assert.equal(r.selo, null);
-  assert.match(r.aviso, /Os textos revisados individualmente pelo autor exibem o selo/);
+  assert.match(r.aviso, /aprovado para publicação pelo Dr\. Antônio Felipe/);
 });
 
 test('aprovação com o mesmo hash: selo com a data de Salvador', () => {
   const r = R.textoRevisaoPublica({ registro: aprovado, corpo });
   assert.equal(r.aviso, null);
-  assert.equal(r.selo, 'Revisado pelo Dr. Antônio Felipe Garabito em 02/11/2026');
+  assert.equal(r.selo, 'Revisado pelo Dr. Antônio Felipe em 02/11/2026');
 });
 
 test('texto mudou depois da aprovação: aviso, sem selo', () => {

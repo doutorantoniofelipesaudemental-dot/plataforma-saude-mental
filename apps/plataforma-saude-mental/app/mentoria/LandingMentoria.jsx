@@ -12,7 +12,7 @@ const IDENTIFICACAO = [
 ];
 
 const AVISO_CFM =
-  'Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”.';
+  'Conteúdo educativo produzido com apoio de inteligência artificial, com checagem automatizada e aprovado para publicação pelo Dr. Antônio Felipe, responsável pelo conteúdo (Resolução CFM 2.454/2026).';
 
 const PUBLICOS = [
   {

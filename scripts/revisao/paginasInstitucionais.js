@@ -19,11 +19,10 @@ const PUBLIC = path.join(RAIZ, 'public');
 const REGISTRO = path.join(RAIZ, 'relatorios/revisoes/paginas-revisadas.json');
 const PAGINAS = ['index.html', 'mentoria.html', 'links.html', 'privacidade.html'];
 
-const AVISO_GERAL = 'Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”.';
-const avisoRevisada = (data) => `Conteúdo produzido com apoio de inteligência artificial, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Página revisada pelo Dr. Antônio Felipe em ${data}.`;
+const { AVISO_SITE: AVISO_GERAL, avisoRevisada } = require('../../backend/lib/revisaoMedica');
 
 // Regex do aviso atual OU da versão "página revisada" (para o aviso ser trocado, não duplicado).
-const REGEX_AVISO = /Conteúdo (?:educativo )?produzido com apoio de inteligência artificial(?: e checagem automatizada)?, sob responsabilidade do Dr\. Antônio Felipe \(Resolução CFM 2\.454\/2026\)\.[^<]*/;
+const REGEX_AVISO = /Conteúdo (?:educativo )?produzido com apoio de inteligência artificial[^<]*?\(Resolução CFM 2\.454\/2026\)\.[^<]*/;
 const MARCA = '[[AVISO-DA-PAGINA]]';
 
 // Hash do HTML com o aviso trocado por uma marca fixa: o próprio aviso não entra no hash.
