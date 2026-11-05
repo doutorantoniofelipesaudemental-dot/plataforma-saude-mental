@@ -4,6 +4,7 @@ Atualizado em 27/10/2026, por ordem do Dr. Antônio. Antes de pedir qualquer dec
 
 ## Decisões
 
+- **Mentoria (04/11/2026, ordem do Dr. Antônio, 20:23, "aprovo as 7"):** (1) formulário sai, contato só por e-mail; (2) página pública com "farmacoterapia na APS com base em diretrizes", sem nomes de medicamento nem doses, conteúdo técnico só nas sessões; (3) "relatório educativo consultivo", que não substitui o PGR nem o PCMSO; (4) prospecção sem envio em massa, só e-mails individuais a endereços institucionais públicos, escritos e enviados pelo Dr. Antônio, com linha de descadastro (Claude Code só rascunha); (5) valores fora do site, enviados por e-mail a quem pedir; (6) operadoras e Home Care fora por ora; (7) números do cenário fora até checagem em fonte oficial. Detalhe: `relatorios/plano-diretor/PLANO-MENTORIA-AJUSTADO.md`, seção 4.
 - **Cloudflare (04/11/2026):** os complementos pagos (Page Rules e SSL dedicado) do domínio drantoniofelipemedico.com.br foram cancelados. O DNS aponta direto para a Vercel (76.76.21.21); os nameservers são do Registro.br (b/c.sec.dns.br); não há MX. Sem impacto no Portal. Não reativar.
 - **YouTube:** o app está "Em produção" desde 18/10/2026. O refresh token não vence. O aviso de "vence em 23/10" era falso: `relatorios/youtube/validade.json` foi corrigido (`autorizacaoVenceEm: null`), e o alerta deixa de disparar.
 - **YouTube, escopo:** o `youtube:autorizar` tem de rodar com a pasta na `main` (escopo `youtube.force-ssl`). Rodado no branch antigo, o escopo fica errado. Conferir com `npm run youtube:teste-playlists`.

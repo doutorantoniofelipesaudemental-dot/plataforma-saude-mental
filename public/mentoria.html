@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mentoria e Consultoria em Saúde Mental · Dr. Antônio Felipe</title>
-<meta name="description" content="Mentoria para profissionais da Atenção Primária, consultoria em saúde mental para empresas e formação educativa e institucional. Contato por e-mail.">
+<title>Mentoria, consultoria e formação em saúde mental · Dr. Antônio Felipe</title>
+<meta name="description" content="Mentoria para profissionais da Atenção Primária, consultoria para empresas, formação para escolas, oficinas para cuidadores e capacitação para instituições que acolhem migrantes. Contato somente por e-mail.">
 <link rel="canonical" href="https://www.drantoniofelipemedico.com.br/mentoria">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Mentoria e Consultoria em Saúde Mental · Dr. Antônio Felipe">
-<meta property="og:description" content="Mentoria para profissionais da Atenção Primária, consultoria em saúde mental para empresas e formação educativa. Contato e agendamento por e-mail.">
+<meta property="og:title" content="Mentoria, consultoria e formação em saúde mental · Dr. Antônio Felipe">
+<meta property="og:description" content="Serviços educativos e institucionais em saúde mental para cinco públicos. Contato somente por e-mail.">
 <meta property="og:url" content="https://www.drantoniofelipemedico.com.br/mentoria">
 <meta property="og:image" content="https://www.drantoniofelipemedico.com.br/assets/img/og-cover.png">
 <meta property="og:locale" content="pt_BR">
@@ -30,15 +30,21 @@
   h1 { font-size:1.9rem; }
   h2 { font-size:1.5rem; margin-bottom:1rem; }
   h3 { font-size:1.15rem; margin-bottom:.5rem; }
+  h3.sub { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:1rem; margin-top:1.25rem; color:var(--verde); text-transform:uppercase; letter-spacing:.04em; }
   p { margin:0 0 1rem; }
   section { padding:2.5rem 0; }
+  section[id^="modulo-"] { scroll-margin-top:1rem; }
   .etiqueta { margin:0 0 .5rem; font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--verde); }
   .apoio { color:var(--tinta-media); }
+  .aviso { background:#fff; border-left:4px solid var(--dourado); border-radius:.5rem; padding:.75rem 1rem; margin:1.25rem 0 0; }
   .grade { display:grid; gap:1rem; grid-template-columns:1fr; }
-  .cartao { background:#fff; border:1px solid var(--linha); border-radius:1rem; padding:1.25rem; }
+  .cartao { background:#fff; border:1px solid var(--linha); border-radius:1rem; padding:1.25rem; display:flex; flex-direction:column; }
   .cartao ul { margin:.75rem 0 1.25rem; padding-left:1.1rem; }
   .cartao li { margin-bottom:.35rem; }
+  .cartao .botao { margin-top:auto; }
   .faixa { background:#fff; border-top:1px solid var(--linha); border-bottom:1px solid var(--linha); }
+  ul.lista { margin:.5rem 0 1rem; padding-left:1.2rem; }
+  ul.lista li { margin-bottom:.4rem; }
   a.botao { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:.75rem 1.4rem; border-radius:.9rem; font-weight:600; text-decoration:none; background:var(--verde-escuro); color:#fff; border:2px solid var(--verde-escuro); }
   a.botao:hover { background:var(--verde); border-color:var(--verde); }
   a.botao--vazado { background:transparent; color:var(--verde-escuro); }
@@ -86,18 +92,15 @@
   <section>
     <div class="container">
       <p class="etiqueta">Serviços</p>
-      <h1>Mentoria, Consultoria e Formação em Saúde Mental</h1>
+      <h1>Mentoria, consultoria e formação em saúde mental</h1>
       <p class="apoio" style="margin-top:1rem;">
-        Meu trabalho em saúde mental acontece em dois lugares: no Pronto Atendimento Psiquiátrico, onde a urgência pede decisões
-        seguras, e na Atenção Primária à Saúde, onde o cuidado se constrói com o tempo, em vínculo com pessoas, famílias e equipes.
-        Esta página reúne as formas de trabalhar juntos.
+        Trabalho com profissionais de saúde, empresas, escolas, famílias e instituições que acolhem pessoas.
+        Os serviços são educativos e institucionais, feitos para fortalecer o cuidado de quem já cuida.
       </p>
-      <p class="apoio">
-        Atuo diretamente com profissionais e organizações que precisam estruturar cuidado em saúde mental.
-      </p>
+      <p class="aviso"><strong>Esta página não oferece consulta médica, diagnóstico nem tratamento.</strong></p>
       <div class="acoes">
         <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Mentoria%20e%20consultoria%20em%20sa%C3%BAde%20mental">Escrever por e-mail</a>
-        <a class="botao botao--vazado" href="#servicos">Ver os serviços</a>
+        <a class="botao botao--vazado" href="#servicos">Escolher o seu público</a>
       </div>
     </div>
   </section>
@@ -105,89 +108,176 @@
   <section id="servicos" class="faixa" aria-labelledby="t-servicos">
     <div class="container">
       <h2 id="t-servicos">Para quem é</h2>
-      <p class="apoio">Os serviços são educativos e institucionais. Não há atendimento clínico individual por esta página.</p>
+      <p class="apoio">Escolha o seu público. Cada um tem um módulo com o que inclui, o formato e como começar.</p>
       <div class="grade">
         <article class="cartao" id="publico-profissionais">
-          <h3>Profissionais de saúde</h3>
-          <p>Para médicos, enfermeiros, residentes e equipes que atuam na APS e no Pronto Atendimento e querem fortalecer o raciocínio clínico em saúde mental.</p>
-          <ul>
-            <li>Mentoria individual ou em grupo</li>
-            <li>Supervisão de casos anonimizados</li>
-            <li>Raciocínio clínico em saúde mental na APS e no PA</li>
-          </ul>
-          <p class="apoio"><strong>Para ler antes:</strong></p>
-          <ul>
-            <li><a href="/artigo/burnout-medicos-enfermeiros">Burnout em médicos e enfermeiros: quando o cuidador precisa de ajuda</a></li>
-            <li><a href="/artigo/quando-encaminhar-aps">Quando encaminhar e quando não encaminhar na APS</a></li>
-          </ul>
-          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Mentoria%20para%20profissionais%20de%20sa%C3%BAde">Falar sobre mentoria</a>
+          <h3>Profissionais de saúde da APS</h3>
+          <p>Para médicos, enfermeiros, residentes e equipes da Atenção Primária que querem mais segurança na avaliação do sofrimento psíquico.</p>
+          <a class="botao botao--vazado" href="#modulo-aps">Ver o módulo</a>
         </article>
 
         <article class="cartao" id="publico-empresas">
-          <h3>Empresas, RH e trabalhadores</h3>
-          <p>Para empresas e equipes de RH que precisam organizar a prevenção de riscos psicossociais no trabalho.</p>
-          <ul>
-            <li>Consultoria NR-1 e Kit NR-1 (riscos psicossociais)</li>
-            <li>Palestras e rodas de conversa para equipes</li>
-            <li>Formação de lideranças</li>
-          </ul>
-          <p class="apoio"><strong>Para ler antes:</strong></p>
-          <ul>
-            <li><a href="/artigo/afastamento-transtorno-mental">Afastamento por transtorno mental: o que a empresa precisa saber</a></li>
-            <li><a href="/artigo/ansiedade-trabalho-lidando">Ansiedade relacionada ao trabalho: como lidar no dia a dia</a></li>
-          </ul>
-          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Consultoria%20para%20empresas%20e%20RH">Falar sobre consultoria</a>
+          <h3>Empresas, RH e SESMT</h3>
+          <p>Para empresas que querem organizar a prevenção de riscos psicossociais no trabalho.</p>
+          <a class="botao botao--vazado" href="#modulo-empresas">Ver o módulo</a>
         </article>
 
         <article class="cartao" id="publico-escolas">
           <h3>Escolas e professores</h3>
           <p>Para escolas que querem apoiar professores e famílias na rede de cuidado de crianças e adolescentes.</p>
-          <ul>
-            <li>Formação de professores em saúde mental escolar</li>
-            <li>Apoio para organizar fluxos de acolhimento e encaminhamento à rede</li>
-            <li>Palestras para pais e comunidade escolar</li>
-          </ul>
-          <p class="apoio">A Lei 13.935/2019 prevê psicólogos e assistentes sociais nas redes públicas de educação básica. Este trabalho é formação educativa e não substitui essas equipes.</p>
-          <p class="apoio"><strong>Para ler antes:</strong></p>
-          <ul>
-            <li><a href="/artigo/adolescencia-mudancas-humor">Adolescência: diferenciando oscilação normal de sinal de alerta</a></li>
-            <li><a href="/artigo/redes-sociais-criancas">Redes sociais e saúde mental de crianças e adolescentes</a></li>
-          </ul>
-          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Escolas%20e%20forma%C3%A7%C3%A3o%20de%20professores">Falar sobre formação escolar</a>
+          <a class="botao botao--vazado" href="#modulo-escola">Ver o módulo</a>
         </article>
 
         <article class="cartao" id="publico-familias">
           <h3>Pais, famílias e cuidadores</h3>
-          <p>Oficinas e palestras psicoeducativas em grupo, incluindo o "Cuidar de quem cuida" para cuidadores de idosos, de pessoas com doença crônica e em cuidados paliativos.</p>
-          <ul>
-            <li>Oficinas e palestras psicoeducativas em grupo</li>
-            <li>Cuidar de quem cuida: cuidadores de idosos, doença crônica e cuidados paliativos</li>
-            <li>Encontros para famílias e comunidades</li>
-          </ul>
-          <p class="apoio"><strong>Para ler antes:</strong></p>
-          <ul>
-            <li><a href="/artigo/relato-peso-invisivel-cuidador">O peso invisível de quem cuida</a></li>
-            <li><a href="/artigo/cuidar-pais-com-demencia">Cuidar de pai ou mãe com demência</a></li>
-          </ul>
-          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Oficinas%20para%20fam%C3%ADlias%20e%20cuidadores">Falar sobre oficinas</a>
+          <p>Oficinas em grupo para quem cuida de idosos, de pessoas com doença crônica ou em cuidados paliativos.</p>
+          <a class="botao botao--vazado" href="#modulo-cuidadores">Ver o módulo</a>
         </article>
 
         <article class="cartao" id="publico-migrantes">
-          <h3>Migrantes e instituições que os acolhem</h3>
-          <p>Para ONGs, abrigos, comunidades religiosas e empresas que contratam ou acolhem pessoas migrantes.</p>
-          <ul>
-            <li>Palestras para ONGs e abrigos</li>
-            <li>Formação para comunidades religiosas e empresas que contratam migrantes</li>
-            <li>Rodas de conversa com equipes de acolhimento</li>
-          </ul>
-          <p class="apoio"><strong>Para ler antes:</strong></p>
-          <ul>
-            <li><a href="/artigo/migracao-saude-mental">Migrar não é adoecer: o que a ciência sabe sobre migração e saúde mental</a></li>
-            <li><a href="/artigo/estresse-migratorio-adaptacao-cultural">Estresse migratório: o que ninguém conta sobre recomeçar em outro país</a></li>
-          </ul>
-          <a class="botao botao--vazado" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Forma%C3%A7%C3%A3o%20para%20institui%C3%A7%C3%B5es%20que%20acolhem%20migrantes">Falar sobre formação</a>
+          <h3>Instituições que acolhem migrantes</h3>
+          <p>Para ONGs, abrigos, assistência social, comunidades religiosas e empresas que contratam pessoas migrantes.</p>
+          <a class="botao botao--vazado" href="#modulo-migrantes">Ver o módulo</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section id="modulo-aps" class="faixa" aria-labelledby="m-aps">
+    <div class="container">
+      <p class="etiqueta">Módulo 1 · Profissionais da Atenção Primária</p>
+      <h2 id="m-aps">Mentoria para profissionais da APS</h2>
+      <p>Para médicos generalistas, médicos de família, residentes e equipes de APS (eSF e UBS) que atendem sofrimento psíquico no dia a dia.</p>
+      <h3 class="sub">O que inclui</h3>
+      <ul class="lista">
+        <li>Como conduzir a avaliação do sofrimento psíquico no tempo da consulta</li>
+        <li>Estratificação de risco e articulação com o CAPS e o Pronto Atendimento</li>
+        <li>Ferramentas breves de terapia cognitivo-comportamental e de estilo de vida</li>
+        <li>Sono e respiração em crises de pânico</li>
+        <li>Farmacoterapia na APS com base em diretrizes. O conteúdo técnico detalhado é tratado nas sessões.</li>
+      </ul>
+      <h3 class="sub">Formato</h3>
+      <p>Mentoria individual, de 4 a 8 sessões de 60 min, ou supervisão em turma de 6 a 10 vagas, em 6 encontros de 90 min. Online, individual ou em grupo fechado.</p>
+      <h3 class="sub">Como começar</h3>
+      <p>Escreva com o assunto <strong>Mentoria APS</strong>, informando nome, município, unidade, função e duas datas de preferência.</p>
+      <div class="acoes">
+        <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Mentoria%20APS">Escrever com o assunto “Mentoria APS”</a>
+      </div>
+      <p class="apoio" style="margin-top:1.25rem;">Condutas e doses seguem sempre os protocolos hospitalares, do Pronto Atendimento e da rede de saúde local. Este é um conteúdo de orientação geral.</p>
+      <p><strong>Para ler antes:</strong></p>
+      <ul class="lista">
+        <li><a href="/artigo/burnout-medicos-enfermeiros">Burnout em médicos e enfermeiros: quando o cuidador precisa de ajuda</a></li>
+        <li><a href="/artigo/quando-encaminhar-aps">Quando encaminhar e quando não encaminhar na APS</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="modulo-empresas" aria-labelledby="m-empresas">
+    <div class="container">
+      <p class="etiqueta">Módulo 2 · Empresas, RH e SESMT</p>
+      <h2 id="m-empresas">Consultoria para empresas, RH e SESMT</h2>
+      <p>Para empresas que querem organizar a prevenção de riscos psicossociais no trabalho, com atenção à NR-1.</p>
+      <h3 class="sub">O que inclui</h3>
+      <ul class="lista">
+        <li>Levantamento anônimo e agregado do clima e da sobrecarga (Kit NR-1). Nenhum dado individual de colaborador é coletado.</li>
+        <li>Relatório educativo consultivo sobre a gestão de riscos psicossociais. Ele não substitui o PGR nem o PCMSO da empresa.</li>
+        <li>Formação de lideranças, de 2 a 4 h, sobre sinais de sobrecarga e acolhimento sem assédio</li>
+        <li>Palestras para equipes, como a SIPAT, sobre sono, limites e convivência</li>
+      </ul>
+      <h3 class="sub">Formato</h3>
+      <p>Pacote pontual ou acompanhamento. Presencial ou online.</p>
+      <h3 class="sub">Como começar</h3>
+      <p>Escreva com o assunto <strong>Consultoria empresas</strong>, informando o porte da empresa e o principal desafio. Os valores não ficam nesta página: são enviados por e-mail a quem pedir.</p>
+      <div class="acoes">
+        <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Consultoria%20empresas">Escrever com o assunto “Consultoria empresas”</a>
+      </div>
+      <p style="margin-top:1.25rem;"><strong>Para ler antes:</strong></p>
+      <ul class="lista">
+        <li><a href="/artigo/afastamento-transtorno-mental">Afastamento por transtorno mental: o que a empresa precisa saber</a></li>
+        <li><a href="/artigo/ansiedade-trabalho-lidando">Ansiedade relacionada ao trabalho: como lidar no dia a dia</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="modulo-escola" class="faixa" aria-labelledby="m-escola">
+    <div class="container">
+      <p class="etiqueta">Módulo 3 · Escolas</p>
+      <h2 id="m-escola">Formação para escolas e professores</h2>
+      <p>Para escolas que querem apoiar professores, pedagogos, direção e famílias na rede de cuidado de crianças e adolescentes.</p>
+      <h3 class="sub">O que inclui</h3>
+      <ul class="lista">
+        <li>Formação docente, de 6 a 8 h em módulos, sobre sinais de alarme e primeiros cuidados em sala de aula</li>
+        <li>Orientação para desenhar o fluxo interno de acolhimento e encaminhamento à rede (UBS, CAPS infantojuvenil, Conselho Tutelar)</li>
+        <li>Roda de conversa com famílias, de 2 h</li>
+      </ul>
+      <p class="apoio"><strong>Em emergências, acione o SAMU 192.</strong></p>
+      <h3 class="sub">Formato</h3>
+      <p>Presencial ou online, com turmas combinadas com a escola.</p>
+      <h3 class="sub">Como começar</h3>
+      <p>Escreva com o assunto <strong>Formação escola</strong>, informando o nome da escola, a rede (pública ou privada) e o número de docentes.</p>
+      <div class="acoes">
+        <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Forma%C3%A7%C3%A3o%20escola">Escrever com o assunto “Formação escola”</a>
+      </div>
+      <p class="apoio" style="margin-top:1.25rem;">A <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13935.htm">Lei 13.935/2019</a> prevê psicólogos e assistentes sociais nas redes públicas de educação básica. Este trabalho é formação educativa e não substitui essas equipes.</p>
+      <p><strong>Para ler antes:</strong></p>
+      <ul class="lista">
+        <li><a href="/artigo/adolescencia-mudancas-humor">Adolescência: diferenciando oscilação normal de sinal de alerta</a></li>
+        <li><a href="/artigo/redes-sociais-criancas">Redes sociais e saúde mental de crianças e adolescentes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="modulo-cuidadores" aria-labelledby="m-cuidadores">
+    <div class="container">
+      <p class="etiqueta">Módulo 4 · Pais, famílias e cuidadores</p>
+      <h2 id="m-cuidadores">Oficinas para familiares e cuidadores</h2>
+      <p>Para famílias e cuidadores de idosos, de pessoas com demência, com doença crônica ou em cuidados paliativos.</p>
+      <h3 class="sub">O que inclui</h3>
+      <ul class="lista">
+        <li>Sobrecarga do cuidador e autocuidado sem culpa</li>
+        <li>Manejo não medicamentoso de comportamentos desafiadores</li>
+        <li>Cuidados paliativos e luto antecipatório</li>
+        <li>Redes de apoio, para reduzir o isolamento de quem cuida</li>
+      </ul>
+      <h3 class="sub">Formato</h3>
+      <p>Oficinas em grupo, de 4 encontros de 2 h. Inscrição por e-mail.</p>
+      <h3 class="sub">Como começar</h3>
+      <p>Escreva com o assunto <strong>Oficina cuidadores</strong>, informando o tipo de cuidado (idoso, demência, doença crônica ou paliativos) e a cidade.</p>
+      <div class="acoes">
+        <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Oficina%20cuidadores">Escrever com o assunto “Oficina cuidadores”</a>
+      </div>
+      <p><strong style="display:block; margin-top:1.25rem;">Para ler antes:</strong></p>
+      <ul class="lista">
+        <li><a href="/artigo/relato-peso-invisivel-cuidador">O peso invisível de quem cuida</a></li>
+        <li><a href="/artigo/cuidar-pais-com-demencia">Cuidar de pai ou mãe com demência</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="modulo-migrantes" class="faixa" aria-labelledby="m-migrantes">
+    <div class="container">
+      <p class="etiqueta">Módulo 5 · Instituições que acolhem migrantes</p>
+      <h2 id="m-migrantes">Capacitação para quem acolhe migrantes</h2>
+      <p>Para ONGs, abrigos, equipes de assistência social (CRAS e CREAS), comunidades religiosas e empresas que contratam pessoas migrantes.</p>
+      <h3 class="sub">O que inclui</h3>
+      <ul class="lista">
+        <li>Workshop de 4 a 6 h sobre luto migratório e estresse de aculturação</li>
+        <li>Primeiros cuidados com sensibilidade intercultural</li>
+        <li>Barreiras de idioma no atendimento</li>
+        <li>Orientação para o acesso ao SUS e à Rede de Atenção Psicossocial (RAPS)</li>
+      </ul>
+      <h3 class="sub">Formato</h3>
+      <p>Presencial ou online, conforme a instituição.</p>
+      <h3 class="sub">Como começar</h3>
+      <p>Escreva com o assunto <strong>Capacitação migrantes</strong>, informando o tipo de instituição e a população atendida.</p>
+      <div class="acoes">
+        <a class="botao" href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Capacita%C3%A7%C3%A3o%20migrantes">Escrever com o assunto “Capacitação migrantes”</a>
+      </div>
+      <p style="margin-top:1.25rem;"><strong>Para ler antes:</strong></p>
+      <ul class="lista">
+        <li><a href="/artigo/migracao-saude-mental">Migrar não é adoecer: o que a ciência sabe sobre migração e saúde mental</a></li>
+        <li><a href="/artigo/estresse-migratorio-adaptacao-cultural">Estresse migratório: o que ninguém conta sobre recomeçar em outro país</a></li>
+      </ul>
     </div>
   </section>
 
@@ -195,7 +285,7 @@
     <div class="container">
       <h2 id="t-como">Como funciona</h2>
       <ol class="etapas">
-        <li><div><h3>Contato por e-mail</h3><p class="apoio">Você escreve contando o contexto e o que busca. Não envie dados de saúde por e-mail: bastam o perfil e o objetivo.</p></div></li>
+        <li><div><h3>Contato por e-mail</h3><p class="apoio">Você escreve com o assunto do seu módulo, contando o contexto e o que busca. Não envie dados de saúde nem de pacientes por e-mail: bastam o perfil e o objetivo.</p></div></li>
         <li><div><h3>Conversa inicial</h3><p class="apoio">Juntos, definimos se mentoria, consultoria ou formação é o caminho adequado.</p></div></li>
         <li><div><h3>Plano combinado</h3><p class="apoio">Objetivos, formato e frequência dos encontros ficam claros desde o começo.</p></div></li>
         <li><div><h3>Encontros e acompanhamento</h3><p class="apoio">Encontros com foco na sua realidade, com revisão do que funcionou e do que precisa de ajuste.</p></div></li>
@@ -207,12 +297,20 @@
     <div class="container">
       <h2 id="t-faq">Perguntas frequentes</h2>
       <details>
-        <summary>A mentoria/oficina substitui atendimento?</summary>
-        <p>Não. A mentoria é um espaço de aprendizado e supervisão para profissionais. Quem precisa de avaliação ou tratamento deve procurar cuidado individual, na unidade de saúde ou com um profissional de confiança.</p>
+        <summary>A mentoria ou a oficina substitui atendimento?</summary>
+        <p>Não. Mentoria, consultoria, formação e oficinas são espaços educativos. Quem precisa de avaliação ou tratamento deve procurar cuidado individual, na UBS, no CAPS ou com um profissional de confiança. Em crise: CVV 188 · SAMU 192.</p>
       </details>
       <details>
         <summary>Posso mandar detalhes de um caso clínico por e-mail?</summary>
         <p>Por favor, não. Por segurança e sigilo, não envie dados de saúde nem informações que identifiquem pacientes. Os casos são discutidos nos encontros, sempre de forma anonimizada.</p>
+      </details>
+      <details>
+        <summary>Há formulário ou chat nesta página?</summary>
+        <p>Não. O contato é somente por e-mail.</p>
+      </details>
+      <details>
+        <summary>Quanto custa?</summary>
+        <p>Os valores não ficam publicados nesta página. Escreva para o e-mail do consultório e a informação é enviada a quem pedir.</p>
       </details>
       <details>
         <summary>Os encontros são presenciais ou online?</summary>
@@ -221,10 +319,6 @@
       <details>
         <summary>A consultoria serve para qual tipo de empresa?</summary>
         <p>Para empresas, equipes de RH e instituições de saúde que querem estruturar o cuidado em saúde mental, com atenção aos riscos psicossociais previstos na NR-1.</p>
-      </details>
-      <details>
-        <summary>Como entro em contato?</summary>
-        <p>Somente por e-mail: <a href="mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20mentoria%20e%20forma%C3%A7%C3%A3o">doutor.antoniofelipe.saudemental@gmail.com</a>.</p>
       </details>
       <details>
         <summary>Atende casos individuais?</summary>
@@ -272,7 +366,7 @@
     </p>
     <p class="legal">
       O conteúdo deste site tem caráter informativo e educativo e não substitui consulta, diagnóstico ou tratamento realizados por profissional de saúde habilitado.
-      Este site não realiza atendimento de urgência ou emergência. Não há promessa de resultado.
+      Este site não realiza atendimento de urgência ou emergência. Não há promessa de resultado. Em crise: CVV 188 · SAMU 192.
     </p>
     <p class="legal">
       Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente.

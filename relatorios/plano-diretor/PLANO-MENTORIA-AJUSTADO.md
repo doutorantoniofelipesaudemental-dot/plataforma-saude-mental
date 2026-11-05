@@ -58,14 +58,18 @@
 
 ## 4. Decisões do Dr. Antônio (leitura de sexta)
 
-**Recomendações a confirmar na sexta (ordem de 04/11, 19:15):**
-1. Formulário sai da /mentoria; só e-mail.
-2. Página pública: "farmacoterapia na APS com base em diretrizes", sem nomes de medicamento nem doses. Conteúdo técnico só nas sessões.
-3. "Relatório educativo consultivo", que não substitui o PGR nem o PCMSO da empresa.
-4. Prospecção sem envio em massa: só e-mails individuais a endereços institucionais públicos, escritos e enviados pelo Dr. Antônio, com linha de descadastro. O Claude Code só rascunha.
-5. Valores fora do site; enviados por e-mail a quem pedir.
-6. Operadoras e Home Care fora por ora.
-7. Números do cenário epidemiológico fora até checagem em fonte oficial (sexta).
+**APROVADAS em 04/11 (ordem escrita do Dr. Antônio, 20:23: "aprovo as 7"):**
+1. APROVADA: formulário sai da /mentoria; contato só por e-mail.
+2. APROVADA: página pública com "farmacoterapia na APS com base em diretrizes", sem nomes de medicamento nem doses; conteúdo técnico só nas sessões.
+3. APROVADA: "relatório educativo consultivo", que não substitui o PGR nem o PCMSO da empresa.
+4. APROVADA: prospecção sem envio em massa; só e-mails individuais a endereços institucionais públicos, escritos e enviados pelo Dr. Antônio, com linha de descadastro. O Claude Code só rascunha.
+5. APROVADA: valores fora do site; enviados por e-mail a quem pedir.
+6. APROVADA: operadoras e Home Care fora por ora.
+7. APROVADA: números do cenário epidemiológico fora até checagem em fonte oficial.
+
+Aplicação na página `public/mentoria.html` (branch `feat/mentoria-modulos-20261104`): itens 1, 2, 3, 5 e 6 refletidos; item 4 não tem texto na página; item 7 sem números de cenário.
+
+**Oferta de consulta:** o Dr. Antônio não faz consulta particular. Nenhum texto deste plano oferece consulta. As menções a "consulta" aqui se referem ao tempo de atendimento do profissional na APS ou são negativas.
 
 **Oferta de consulta:** o Dr. Antônio não faz consulta particular. Nenhum texto deste plano oferece consulta. As menções a "consulta" aqui se referem ao tempo de atendimento do profissional na APS ou são negativas.
 1. **Formulário da /mentoria:** confirmar a remoção e manter só e-mail.
