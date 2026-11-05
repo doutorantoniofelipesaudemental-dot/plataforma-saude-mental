@@ -8,7 +8,7 @@ Total: 120 textos, ~511 min de leitura (sem contar a pausa).
 3. G3 — agendados após 15/11 — 24 textos, ~107 min
 4. G4 — já publicados (revisão posterior) — 57 textos, ~240 min
 
-1. Comece pelo **ALERTA** do `INDICE.md` (se houver).
+1. Comece pelo **ALERTA** do `INDICE.md`: os 3 primeiros textos do G1 foram retirados da agenda em 04/11 até a revisão; reagendar após aprovação.
 2. Leia um texto por arquivo `NN-slug.md`. Os medicamentos e as doses aparecem em **negrito**.
 3. Em cada arquivo, marque uma opção no final:
    - `[x] Aprovo`: publica como está.

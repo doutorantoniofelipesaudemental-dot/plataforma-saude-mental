@@ -1,13 +1,10 @@
 # Índice — revisão de sábado 07/11/2026
 
-## ALERTA — decidir hoje (antes de 05/11, 08:00)
-Estes textos do G1 têm medicamento e estão agendados antes de 08/11. **A agenda não foi alterada.** Decisão do Dr. Antônio: manter, tirar do ar ou reagendar.
-
-- `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` — 2026-11-05 — trecho: lítio, antidepressiv, antipsicótic, estabilizador
-- `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` — 2026-11-06 — trecho: lítio, estabilizador, anticonvulsiv
-- `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` — 2026-11-07 — trecho: antidepressiv, ansiolític, benzodiazep
+## ALERTA — resolvido em 04/11/2026
+Os 3 textos do G1 com medicamento agendados antes de 08/11 foram **retirados da agenda** (agendado=false, motivo aguarda-revisao-medica; slot original guardado em agendamento.slot_original). Ficam no topo do G1 até a revisão. Reagendar após aprovação.
 
 ## Resumo
+- Retirados da agenda em 04/11/2026 (topo do G1): 3
 - G1 — agendados até 15/11 (urgentes): 13 textos, ~66 min
 - G2 — fora da agenda (Nível 1): 26 textos, ~98 min
 - G3 — agendados após 15/11: 24 textos, ~107 min
@@ -17,11 +14,11 @@ Estes textos do G1 têm medicamento e estão agendados antes de 08/11. **A agend
 ## Tabela
 | nº | grupo | slug | título | eixo | data | motivo | leitura |
 |---|---|---|---|---|---|---|---|
-| 01 | G1 | `a-planta-que-sobreviveu-na-janela-do-posto` | A planta que sobreviveu na janela do posto | 4 Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | agendado 2026-11-05 08:00 (Bahia) | dúvida da checagem | ~4 min |
-| 02 | G1 | `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` | Abandono de tratamento psiquiátrico: estratégias de resgate na UBS | 5 Transtornos Mentais | agendado 2026-11-05 08:00 (Bahia) | medicamento | ~6 min |
-| 03 | G1 | `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` | Conviver com a oscilação de humor: limites e apoio familiar | 5 Transtornos Mentais | agendado 2026-11-06 08:00 (Bahia) | medicamento | ~6 min |
-| 04 | G1 | `o-relogio-na-parede-do-pronto-atendimento` | O relógio na parede do pronto atendimento | 4 Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | agendado 2026-11-07 08:00 (Bahia) | dúvida da checagem | ~4 min |
-| 05 | G1 | `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` | Manejo de Sintomas Dissociativos Associados ao Trauma e Estresse Crônico na APS: Guia de Acolhimento e Autorregulação | 5 Transtornos Mentais | agendado 2026-11-07 08:00 (Bahia) | medicamento | ~6 min |
+| 01 | G1 | `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` | Abandono de tratamento psiquiátrico: estratégias de resgate na UBS | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-05 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
+| 02 | G1 | `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` | Conviver com a oscilação de humor: limites e apoio familiar | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-06 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
+| 03 | G1 | `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` | Manejo de Sintomas Dissociativos Associados ao Trauma e Estresse Crônico na APS: Guia de Acolhimento e Autorregulação | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-07 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
+| 04 | G1 | `a-planta-que-sobreviveu-na-janela-do-posto` | A planta que sobreviveu na janela do posto | 4 Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | agendado 2026-11-05 08:00 (Bahia) | dúvida da checagem | ~4 min |
+| 05 | G1 | `o-relogio-na-parede-do-pronto-atendimento` | O relógio na parede do pronto atendimento | 4 Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | agendado 2026-11-07 08:00 (Bahia) | dúvida da checagem | ~4 min |
 | 06 | G1 | `primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para` | Primeiro atendimento em psiquiatria na UBS: guia prático para residentes | 4 Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1) | agendado 2026-11-08 08:00 (Bahia) | medicamento | ~6 min |
 | 07 | G1 | `a-receita-dobrada-no-bolso-do-casaco` | A receita dobrada no bolso do casaco | 5 Transtornos Mentais | agendado 2026-11-09 08:00 (Bahia) | medicamento + dúvida da checagem | ~5 min |
 | 08 | G1 | `remedios-demais-no-idoso` | Remédios demais no idoso: como a polifarmácia causa quedas e confusão e como revisar a lista com segurança | 3 Vida Adulta, Envelhecimento & Cuidados Paliativos | agendado 2026-11-09 14:00 (Bahia) | medicamento | ~4 min |
