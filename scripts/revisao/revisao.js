@@ -74,8 +74,8 @@ function checarAviso(texto) {
   const falhas = [];
   if (!/Dr\. Antônio Felipe Garabito/.test(texto)) falhas.push('nome do médico sem acento ou sem "Garabito"');
   if (!/inteligência artificial/.test(texto)) falhas.push('falta o aviso de uso de inteligência artificial (CFM 2.454/2026)');
-  if (!/Revisão médica individual: pendente/.test(texto)) falhas.push('falta "Revisão médica individual: pendente"');
-  if (/revisad[oa] (pel[oa]|por)/i.test(texto)) falhas.push('o aviso não pode dizer que o texto foi revisado');
+  if (!/Os textos revisados individualmente pelo autor exibem o selo/.test(texto)) falhas.push('falta a frase do aviso sobre o selo de revisão');
+  if (/revisad[oa] (pel[oa]|por)/i.test(texto.replace(/“Revisado pelo Dr. Antônio Felipe”/g, ""))) falhas.push('o aviso não pode dizer que o texto foi revisado');
   if (/psiquiatra/i.test(texto)) falhas.push('"psiquiatra" não pode aparecer como título do médico');
   if (!/\d{2}\/\d{2}\/\d{4}/.test(texto)) falhas.push('falta a data de atualização');
   return falhas;

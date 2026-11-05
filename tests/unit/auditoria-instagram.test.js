@@ -70,7 +70,8 @@ test('listarMarkdown percorre as subpastas e deixa pautas/ de fora; auditarPasta
 test('landing de Mentoria: identificação completa, atuação PAP/APS, CTA de Mentoria, aviso CFM e CVV', () => {
   const fonte = fs.readFileSync(path.join(__dirname, '..', '..', 'apps', 'plataforma-saude-mental', 'app', 'mentoria', 'LandingMentoria.jsx'), 'utf8');
   for (const linha of IDENTIFICACAO_COMPLETA.split('\n')) assert.ok(fonte.includes(linha), `falta: ${linha}`);
-  assert.ok(fonte.includes(AVISO_CFM));
+  const { AVISO_GERAL } = require('../../scripts/revisao/paginasInstitucionais');
+  assert.ok(fonte.includes(AVISO_GERAL));
   assert.match(fonte, /Agendar uma mentoria/);
   assert.match(fonte, /Pronto Atendimento Psiquiátrico \(PAP\)/);
   assert.match(fonte, /Atenção Primária à Saúde \(APS\)/);

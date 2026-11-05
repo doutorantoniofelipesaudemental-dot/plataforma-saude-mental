@@ -16,10 +16,10 @@ test('hash: CRLF e espaços das bordas não mudam o hash do corpo', () => {
 test('aviso pendente diz que a revisão médica está pendente e nunca que foi revisado', () => {
   const t = R.avisoPendente({ atualizadoEm: DATA });
   assert.match(t, /inteligência artificial/);
-  assert.match(t, /Revisão médica individual: pendente/);
+  assert.match(t, /Os textos revisados individualmente pelo autor exibem o selo/);
   assert.match(t, /Dr\. Antônio Felipe Garabito/);
   assert.match(t, /Atualizado em 21\/10\/2026/);
-  assert.doesNotMatch(t, /revisad[oa] pel/i);
+  assert.doesNotMatch(t.replace(/“Revisado pelo Dr. Antônio Felipe”/g, ''), /revisad[oa] pel/i);
 });
 
 test('só aprovação com o hash do texto atual vale', () => {
@@ -53,8 +53,8 @@ test('aprovar exige slug, hash e quem aprovou', () => {
 
 test('checagem do aviso: aceita o texto oficial e reprova "revisado por" e "psiquiatra"', () => {
   assert.deepEqual(checarAviso(R.avisoPendente({ atualizadoEm: DATA })), []);
-  assert.ok(checarAviso('Texto revisado por Dr. Antônio Felipe Garabito. inteligência artificial. Revisão médica individual: pendente. 21/10/2026').some((f) => /revisado/.test(f)));
-  assert.ok(checarAviso('Dr. Antônio Felipe Garabito, psiquiatra. inteligência artificial. Revisão médica individual: pendente. 21/10/2026').some((f) => /psiquiatra/.test(f)));
+  assert.ok(checarAviso('Texto revisado por Dr. Antônio Felipe Garabito. inteligência artificial. Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”. 21/10/2026').some((f) => /revisado/.test(f)));
+  assert.ok(checarAviso('Dr. Antônio Felipe Garabito, psiquiatra. inteligência artificial. Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”. 21/10/2026').some((f) => /psiquiatra/.test(f)));
   assert.ok(checarAviso('Dr. Antonio Felipe. inteligência artificial').some((f) => /acento|Garabito/.test(f)));
 });
 

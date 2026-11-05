@@ -23,7 +23,7 @@ function formatarData(data) {
 
 // Texto do aviso enquanto não há aprovação. Não diz "revisado".
 function avisoPendente({ atualizadoEm }) {
-  return `Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada de referências, sob responsabilidade do Dr. Antônio Felipe Garabito. Revisão médica individual: pendente. Atualizado em ${formatarData(atualizadoEm)}.`;
+  return `Conteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada de referências, sob responsabilidade do Dr. Antônio Felipe Garabito. Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”. Atualizado em ${formatarData(atualizadoEm)}.`;
 }
 
 // Função pura: a aprovação só vale se o hash do texto atual é o mesmo que foi aprovado.

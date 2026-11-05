@@ -9,7 +9,7 @@ const aprovado = R.aprovar({ slug: 'x', hash, revisor: 'Dr. Antônio Felipe', da
 test('sem registro: aviso de revisão pendente e nenhum selo', () => {
   const r = R.textoRevisaoPublica({ registro: null, corpo, atualizadoEm: '2026-11-01T00:00:00Z' });
   assert.equal(r.selo, null);
-  assert.match(r.aviso, /Revisão médica individual: pendente/);
+  assert.match(r.aviso, /Os textos revisados individualmente pelo autor exibem o selo/);
 });
 
 test('aprovação com o mesmo hash: selo com a data de Salvador', () => {

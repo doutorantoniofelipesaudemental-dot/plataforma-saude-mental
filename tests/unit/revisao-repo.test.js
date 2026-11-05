@@ -66,8 +66,8 @@ const visivel = (html) => html.replace(/<head[\s\S]*?<\/head>/i, '').replace(/<(
 
 test('render: sem registro, mostra "pendente" e nenhum selo', () => {
   const v = visivel(renderizarArtigoHtml({ ...BASE, revisao: null }));
-  assert.ok(v.includes('Revisão médica individual: pendente.'));
-  assert.ok(!v.includes('Revisado pelo Dr.'));
+  assert.ok(v.includes('Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”.'));
+  assert.ok(!v.includes('Revisado pelo Dr. Antônio Felipe Garabito em'));
 });
 
 test('render: aprovação com o mesmo hash mostra o selo com a data de Salvador', () => {
@@ -75,11 +75,11 @@ test('render: aprovação com o mesmo hash mostra o selo com a data de Salvador'
   const revisao = R.aprovar({ slug: 'teste', hash, revisor: 'Dr. Antônio Felipe', data: '2026-11-02T13:00:00.000Z' });
   const v = visivel(renderizarArtigoHtml({ ...BASE, revisao }));
   assert.ok(v.includes('Revisado pelo Dr. Antônio Felipe Garabito em 02/11/2026.'));
-  assert.ok(!v.includes('Revisão médica individual: pendente.'));
+  assert.ok(!v.includes('Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”.'));
 });
 
 test('render: texto mudou depois da aprovação volta a "pendente"', () => {
   const revisao = R.aprovar({ slug: 'teste', hash: R.hashConteudo('outro texto'), revisor: 'Dr.', data: '2026-11-02T13:00:00.000Z' });
   const v = visivel(renderizarArtigoHtml({ ...BASE, revisao }));
-  assert.ok(v.includes('Revisão médica individual: pendente.'));
+  assert.ok(v.includes('Os textos revisados individualmente pelo autor exibem o selo “Revisado pelo Dr. Antônio Felipe”.'));
 });
