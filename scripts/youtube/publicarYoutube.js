@@ -3,7 +3,7 @@
  * Os vídeos ficam no computador do consultório, por isso o agendador é local (a Vercel não enxerga esses arquivos).
  * Publica só itens "aprovado-checagem" cujo horário chegou, e só se:
  *   - YOUTUBE_PUBLICACAO_ATIVA=true no .env (freio próprio; qualquer outro valor ou ausência = NADA é publicado);
- *   - REDES_PUBLICACAO_ATIVA não está em false (freio geral, checado por backend/lib/youtube.js);
+ *   - REDES_PUBLICACAO_ATIVA=true (freio geral: sem ele, ausente ou diferente de "true" = nada publicado; checado por backend/lib/freioRedes.js e usado na linha 46 deste arquivo);
  *   - o arquivo de vídeo tem o mesmo hash registrado na checagem e a checagem de texto passa de novo agora.
  * Cota: cada upload custa ~1 600 unidades da API (padrão 10 000/dia): no máximo 2 por execução (--max até 4). Cota esgotada = para sem marcar.
  *   node --env-file=.env scripts/youtube/publicarYoutube.js [--simular] [--max=2]

@@ -76,6 +76,7 @@ global.fetch = async (url, opcoes = {}) => {
 process.env.CRON_SECRET = 'segredo-de-teste-' + '123456'; // segredos:permitir (valor falso de teste)
 process.env.INSTAGRAM_ACCOUNT_ID = '17841400000000000';
 process.env.INSTAGRAM_ACCESS_TOKEN = TOKEN_REVOGADO;
+process.env.REDES_PUBLICACAO_ATIVA = 'true'; // freio em padrão seguro desde 06/11: o teste precisa ligá-lo
 
 const { publicarProximoDaFila } = require(path.join(RAIZ, 'lib/filaRedes.js'));
 const { estadoPausa } = require(path.join(RAIZ, 'lib/tokenInstagram.js'));
