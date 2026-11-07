@@ -216,3 +216,7 @@ Regras:
 - Agendados ainda não publicados: só depois da data de publicação do PT.
 - Nada publica sozinho. Gravação no banco só por script do projeto, com --backup, dry-run e --reverter, rodado pelo Dr. Antônio.
 - Ver `relatorios/plano-diretor/PROJETO-ES.md`, seção 15.
+
+- **Fundamento (ordem de 06/11/2026, 23:40):** o texto PT já foi aprovado (tripla checagem ou leitura do Dr. Antônio nas exceções). A tradução fiel não cria sentido clínico novo; por isso não se enquadra na classe 3 da carta v3. Mesmo princípio da tradução em telemedicina.
+- **Regra de retenção (salvaguarda):** se a checagem determinística ou a revisão independente (retrotradução) detectar QUALQUER mudança de sentido, acréscimo, omissão, número, dose ou termo fora do glossário, a tradução fica RETIDA e não é publicada.
+- Trava `ES_PUBLICACAO_ATIVA` em padrão seguro. O Dr. Antônio a liga no painel da Vercel só depois dos merges e da importação.

@@ -253,3 +253,9 @@ Autorização delegada para ES **após o piloto**:
 - Trava nova `ES_PUBLICACAO_ATIVA` (padrão seguro). Publicação gradual pelo mesmo cron das 08:00, até 2 por dia, só com a trava em "true". Sem mudança em vercel.json.
 - Infraestrutura, um PR de cada vez: A) importação com dry-run, --backup, --aplicar, --conferir e --reverter; B) site /es/ com hreflang e sitemap; C) publicação gradual; D) alertas na Conferência Diária.
 - **Registro de risco:** a carta de autonomia v3 (classe 3) reserva ao Dr. Antônio mudança de sentido clínico. Esta ordem a delega à checagem automática. Fica registrado como ordem dele, para revisão quando houver primeiro resultado.
+
+### 15.1 Fundamento e salvaguarda (06/11/2026, 23:40)
+- **Fundamento:** o texto PT já foi aprovado (tripla checagem ou leitura do Dr. Antônio nas exceções). A tradução fiel não cria sentido clínico novo; não se enquadra na classe 3 da carta v3. Mesmo princípio da tradução em telemedicina.
+- **Salvaguarda:** RETENÇÃO. Qualquer mudança de sentido, acréscimo, omissão, número, dose ou termo fora do glossário, detectada pela checagem determinística ou pela retrotradução independente, deixa a tradução RETIDA (não publica).
+- **Trava** `ES_PUBLICACAO_ATIVA` segue em padrão seguro; ligada pelo Dr. Antônio só após os merges e a importação.
+- **Cronograma:** sábado, 20:00: piloto de 10 + até 20 publicados e PRs A, B, C e D na ordem, um portão por vez.
