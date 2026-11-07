@@ -243,3 +243,19 @@ Autorização delegada para ES **após o piloto**:
 - **Ida ao ar em ES (Nível 3, 2 por dia):** 367 ÷ 2 = **cerca de 184 dias** (aproximadamente 6 meses), pois a publicação segue o ritmo do cron, não o da tradução.
 - **Fila de textos ainda não traduzidos:** não contada nesta sessão (documento, sem leitura do banco). Fórmula: nº de textos ÷ (30 a 40) semanas para traduzir; nº ÷ 2 dias para publicar.
 - Medir o ritmo real no piloto e registrar em `relatorios/CONSUMO.md`; ajustar esta estimativa depois.
+
+## 15) Autorização delegada (06/11/2026, 23:30; substitui 9, 11 e 13 quanto a aprovações)
+- O Dr. Antônio não lê traduções nem o piloto. Aprovação = passar na auditoria geral + tripla checagem (técnica determinística; científica e de sentido com revisão independente, retrotradução e comparação parágrafo a parágrafo; ética e humanizada). Na dúvida: RETIDA, com motivo.
+- Escopo: piloto de 10 (seção 9); depois artigos já publicados por prioridade (acesso ao SUS, migração, ansiedade, depressão, sono, trabalho; depois os demais eixos).
+- Fora: relatos da prática; Nível 1; textos com nome ou dose de medicamento (inclui os 57 do G4); dúvida no INVENTARIO. Agendados não publicados: só após a data do PT.
+- Saídas: `.tmp/es/<slug>/` (es.html, checagem.json, revisao-independente.md) e `.tmp/es/PROGRESSO.md`.
+- Textos fixos ES (identificação, aviso "Traducción asistida por IA", quadro de acolhimento com a Lei 13.445/2017 art. 4º VIII literal): mesma tripla checagem; aprovados, entram em uso.
+- Trava nova `ES_PUBLICACAO_ATIVA` (padrão seguro). Publicação gradual pelo mesmo cron das 08:00, até 2 por dia, só com a trava em "true". Sem mudança em vercel.json.
+- Infraestrutura, um PR de cada vez: A) importação com dry-run, --backup, --aplicar, --conferir e --reverter; B) site /es/ com hreflang e sitemap; C) publicação gradual; D) alertas na Conferência Diária.
+- **Registro de risco:** a carta de autonomia v3 (classe 3) reserva ao Dr. Antônio mudança de sentido clínico. Esta ordem a delega à checagem automática. Fica registrado como ordem dele, para revisão quando houver primeiro resultado.
+
+### 15.1 Fundamento e salvaguarda (06/11/2026, 23:40)
+- **Fundamento:** o texto PT já foi aprovado (tripla checagem ou leitura do Dr. Antônio nas exceções). A tradução fiel não cria sentido clínico novo; não se enquadra na classe 3 da carta v3. Mesmo princípio da tradução em telemedicina.
+- **Salvaguarda:** RETENÇÃO. Qualquer mudança de sentido, acréscimo, omissão, número, dose ou termo fora do glossário, detectada pela checagem determinística ou pela retrotradução independente, deixa a tradução RETIDA (não publica).
+- **Trava** `ES_PUBLICACAO_ATIVA` segue em padrão seguro; ligada pelo Dr. Antônio só após os merges e a importação.
+- **Cronograma:** sábado, 20:00: piloto de 10 + até 20 publicados e PRs A, B, C e D na ordem, um portão por vez.
