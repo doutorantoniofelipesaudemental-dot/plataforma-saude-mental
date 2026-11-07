@@ -208,3 +208,11 @@ Regras:
 - Níveis 1 a 4 e alertas propostos (agenda PT < 30 dias; estoque ES < 14 dias): ver `relatorios/plano-diretor/PROJETO-ES.md`, seção 14.
 - O publicador PT não depende de IA nem de Claude; atrasados saem em até 48 por execução (leitura do código, 06/11).
 - Nada implementado nesta data: é documento. Nenhuma trava foi alterada.
+
+## 06/11/2026 (23:30) — Autorização delegada do ES (substitui as anteriores sobre ES)
+- **Decisão do Dr. Antônio:** o Dr. Antônio NÃO lê traduções, nem o piloto, nem relatório para aprovar. Toda tradução que passar na auditoria geral + tripla checagem (técnica, científica, ética e humanizada) está APROVADA. Na dúvida, fica RETIDA (não publica, não vai para leitura dele).
+- Trava nova `ES_PUBLICACAO_ATIVA`: padrão seguro (ausente ou diferente de "true" = não publica), igual ao freio das redes (PR #250).
+- Fora desta etapa: relatos da prática; Nível 1; textos com nome ou dose de medicamento (inclui os 57 do G4); textos marcados com dúvida no INVENTARIO. Entram só depois que o Dr. Antônio aprovar o PT (pasta de sábado).
+- Agendados ainda não publicados: só depois da data de publicação do PT.
+- Nada publica sozinho. Gravação no banco só por script do projeto, com --backup, dry-run e --reverter, rodado pelo Dr. Antônio.
+- Ver `relatorios/plano-diretor/PROJETO-ES.md`, seção 15.
