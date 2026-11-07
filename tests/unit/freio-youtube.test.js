@@ -11,7 +11,7 @@ test('freio do YouTube nasce desligado: só "true" liga', () => {
 });
 
 test('freio geral das redes também bloqueia o YouTube', () => {
-  assert.equal(youtubeAtivo({ YOUTUBE_PUBLICACAO_ATIVA: 'true' }), true);
+  assert.equal(youtubeAtivo({ YOUTUBE_PUBLICACAO_ATIVA: 'true' }), false); // sem REDES=true, o padrão agora é não publicar (06/11)
   assert.equal(youtubeAtivo({ YOUTUBE_PUBLICACAO_ATIVA: 'true', REDES_PUBLICACAO_ATIVA: 'false' }), false);
 });
 
