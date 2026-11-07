@@ -211,3 +211,35 @@ Cada tema será casado a um texto PT **já publicado** (status `publicado` no in
 6. Aprovar a lista do piloto (9), inclusive a troca de CAPS e UBS por temas já publicados.
 7. Autorizar, em fase posterior, a verificação do PHQ-9 e do GAD-7 em espanhol (g).
 8. Confirmar o CVV com a instituição (8, a). Até lá, "atención en portugués".
+
+## 14) Cascata e continuidade (documento, 06/11/2026; nada implementado)
+Leitura do código feita em 06/11 (A1):
+- (a) **O publicador PT não depende de IA nem de Claude.** `backend/routes/cron.js` → `publicarVencidos` (`backend/lib/publicarAgendados.js`) só usa o modelo `Artigo` e `auditoriaTexto.js` (checagem determinística, sem `fetch` nem SDK de IA).
+- (b) **Se o cron falhar um dia, o dia seguinte publica os atrasados**, até **48 por execução** (`.limit(48)`, com limite `fimDoDiaBahia` no modo diário). Se o atraso passar de 48, o restante sai nas execuções seguintes, 48 por dia.
+- (c) **A Conferência Diária (`scripts/conferencias/conferenciaDiaria.js`) verifica hoje:** páginas; Instagram (token, posts devidos atrasados, log de alertas e erros das últimas 26 h, post publicado conferido pela Meta, só leitura); narrações e trava; publicação dos artigos agendados de ontem e hoje (publicados e respondendo 200); pasta principal na main; tarefas `DrSM-*`; custo da Vercel; backup do estado; validade da autorização do YouTube; alertas do token.
+- Horário do cron PT: `0 11 * * *` (UTC) = 08:00 em Salvador (`vercel.json`).
+
+### Níveis
+- **Nível 1 — PT sozinho.** O publicador PT publica pelo cron das 08:00, sem IA e sem Claude. É a base; nada aqui pode depender de tradução.
+- **Nível 2 — tradução nas sessões interativas.** Tradução só em sessão interativa (nunca `claude -p`), com checkpoint por texto. Cada texto grava em `traducoes_es` com status `aprovado_para_fila`. Não publica na hora.
+- **Nível 3 — publicação ES gradual.** Publicação ES pelo **mesmo cron das 08:00** (sem alterar `vercel.json`), **2 por dia**, lendo o estoque com status `aprovado_para_fila`. Proposta; só entra depois do piloto.
+- **Nível 4 — limite e estoque vazio.** Se o limite do Claude acabar, a tradução pausa e retoma na sessão seguinte. Se o estoque ES estiver vazio, o ES pausa sem erro. O PT segue sempre.
+
+### Alertas propostos na Conferência Diária
+- Agenda PT com menos de **30 dias** de artigos agendados: aviso.
+- Estoque ES aprovado com menos de **14 dias** de publicação (2 por dia): aviso.
+(Proposta. Implementar só em PR próprio, com teste.)
+
+### Decisão do Dr. Antônio — APROVADA em 06/11/2026
+Autorização delegada para ES **após o piloto**:
+- Piloto de **10 textos**, lidos pelo Dr. Antônio.
+- Depois do piloto: publicação ES com checagem aprovada e o aviso **"Tradução assistida por IA"**.
+- Exceções (Nível 1, medicamento, dúvida da checagem) só com leitura dele.
+- Registrada também em `relatorios/DECIDIDO.md` (06/11/2026).
+
+### Estimativa de prazo (piloto; 10 textos por sessão; 3 a 4 sessões por semana)
+- Ritmo de tradução: 30 a 40 textos por semana.
+- **367 textos publicados em PT:** 367 ÷ (30 a 40) = **cerca de 9 a 12 semanas** de tradução (2 a 3 meses), sem contar o piloto.
+- **Ida ao ar em ES (Nível 3, 2 por dia):** 367 ÷ 2 = **cerca de 184 dias** (aproximadamente 6 meses), pois a publicação segue o ritmo do cron, não o da tradução.
+- **Fila de textos ainda não traduzidos:** não contada nesta sessão (documento, sem leitura do banco). Fórmula: nº de textos ÷ (30 a 40) semanas para traduzir; nº ÷ 2 dias para publicar.
+- Medir o ritmo real no piloto e registrar em `relatorios/CONSUMO.md`; ajustar esta estimativa depois.

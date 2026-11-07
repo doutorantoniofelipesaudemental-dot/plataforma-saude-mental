@@ -202,3 +202,9 @@ Regras:
 - Item encerrado: bloco duplicado já ausente (dry-run 03/11, removidos 0).
 - Conferência em produção (leitura, 03/11, /artigo/<slug>): burnout-aps, professores-saude-mental, psicofarmacos-mitos-culturais e tmc-aps têm exatamente 1 ocorrência da linha "Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)".
 - Nada foi aplicado (sem --aplicar).
+
+## 06/11/2026 — Cascata e continuidade do ES (aprovada)
+- **Decisão do Dr. Antônio (aprovada em 06/11):** autorização delegada para a publicação ES **após o piloto** de 10 textos lidos por ele. Depois, publicação com checagem aprovada e o aviso "Tradução assistida por IA". Exceções (Nível 1, medicamento, dúvida da checagem) só com leitura dele.
+- Níveis 1 a 4 e alertas propostos (agenda PT < 30 dias; estoque ES < 14 dias): ver `relatorios/plano-diretor/PROJETO-ES.md`, seção 14.
+- O publicador PT não depende de IA nem de Claude; atrasados saem em até 48 por execução (leitura do código, 06/11).
+- Nada implementado nesta data: é documento. Nenhuma trava foi alterada.
