@@ -22,10 +22,12 @@ Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (
 Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho
 NÃO ESPECIALISTA
 
-#### B. IDENTIFICAÇÃO NO INSTAGRAM E MÍDIAS SOCIAIS (PADRÃO SINTÉTICO 3 LINHAS)
-Dr. Antônio Felipe · Médico · CRM-BA 41322
-Especialista em Medicina de Família e Comunidade · RQE 26638
+#### B. IDENTIFICAÇÃO NO INSTAGRAM E MÍDIAS SOCIAIS (IDENTIFICAÇÃO DE 5 LINHAS — ORDEM DE 08/11/2026; o padrão sintético de 3 linhas foi substituída pela ordem de 08/11/2026)
+Dr. Antônio Felipe — Médico — CRM-BA 41322
+Especialista em Medicina de Família e Comunidade — RQE 26638
 Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)
+Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho
+NÃO ESPECIALISTA
 
 #### C. REGRAS ESTRITAS DE CONTEÚDO E AUTOMAÇÃO
 - VETO ABSOLUTO: É estritamente PROIBIDO apresentar o Dr. Antônio Felipe como "psiquiatra" ou "especialista em psiquiatria/saúde mental".
@@ -151,7 +153,7 @@ Ponytail evita código desnecessário, mas NUNCA justifica pular testes, backup,
 ### Prompt mestre unificado (18/10/2026)
 - Texto integral e tabela de conflitos: **[docs/prompt-mestre-unificado.md](docs/prompt-mestre-unificado.md)** — vale como parte deste arquivo; **em conflito prevalece este `CLAUDE.md`** (assinatura por extenso, regras de segurança e freios) e, entre duas regras, a mais restritiva.
 - Resumo: não-regressão (conteúdo aprovado/publicado/agendado não muda sem ordem; o novo entra como arquivo/módulo novo); fonte única = artigo publicado; 1 artigo → pacote multicanal; públicos separados (pacientes, profissionais, gestores/RH); nada de atendimento em comentários/DM/e-mail; fatos normativos (NR-1, GRO, resoluções) só após checagem na fonte oficial; pesquisa de referência extrai só padrões, sem copiar; relatório final no formato [AUDITORIA DE EXECUÇÃO].
-- Decisões do Dr. Antônio (18/10/2026): assinatura por extenso (TCC) e PAP/APS só na versão de 3 linhas; landings e conteúdo já publicado/agendado só com plano e ordem dele; Newsletter, Podcast, Kit NR-1 e thumbnail com rosto = módulos planejados (PR próprio, sem tocar no existente; rosto só com foto aprovada).
+- Decisões do Dr. Antônio (18/10/2026): assinatura por extenso (TCC) e PAP/APS só na versão de 3 linhas (substituída pela ordem de 08/11/2026 (identificação de 5 linhas)); landings e conteúdo já publicado/agendado só com plano e ordem dele; Newsletter, Podcast, Kit NR-1 e thumbnail com rosto = módulos planejados (PR próprio, sem tocar no existente; rosto só com foto aprovada).
 - **Instagram (18/10/2026, ordem do Dr. Antônio):** imagem única e carrossel pela Meta Graph (freio `REDES_PUBLICACAO_ATIVA` da Vercel). Carrossel LIBERADO em 18/10/2026 16:59 UTC após validação SEM publicar dos 7 próximos posts (`npm run redes:teste-carrossel -- --validar`); antes de cada `media_publish` o publicador reconfere o post e valida os containers (FINISHED), trava contra publicar 2 vezes, adia 1 dia e alerta se algo falhar, e confere pela API (só leitura) o post publicado e grava o ID da Meta. Reels e Stories: padrão novo ordenado em 30/10/2026 (ver `DECIDIDO.md`). A ativação na API continua PROIBIDA até a aprovação das amostras pelo Dr. Antônio (domingo, 01/11); depois, só por PR, com o freio `REDES_PUBLICACAO_ATIVA` respeitado. Substitui o antigo "reavaliar em ~18/11". Conferência diária só de leitura às 09:30 (tarefa `DrSM-Conferencia-Diaria`, relatório em `relatorios/conferencias/`, alerta no topo do `ESTADO-GERAL.md`).
 
 ### Agenda de plantões (19/10/2026)

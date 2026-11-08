@@ -18,6 +18,25 @@ test('humanHandoff fora de crise: acolhe, indica o caminho de cuidado e o contat
   assert.match(js, /categoria === 'crise'\s*\?\s*\{ canal: 'telefone', texto: 'Você importa\. Ligue agora para o CVV 188 \(24 h\) ou SAMU 192\.'/);
 });
 
+test('CLAUDE.md §1.B: identificação de 5 linhas; menção de "3 linhas" só se marcada como substituída', () => {
+  const md = ler('CLAUDE.md');
+  const linhas = md.split('\n');
+  const inicio = linhas.findIndex((l) => l.startsWith('#### B. IDENTIFICAÇÃO NO INSTAGRAM'));
+  const fim = linhas.findIndex((l, i) => i > inicio && l.startsWith('#'));
+  const secao = linhas.slice(inicio, fim).join('\n');
+  assert.match(secao, /IDENTIFICAÇÃO DE 5 LINHAS/);
+  assert.match(secao, /Pós-graduação em Psiquiatria/);
+  assert.match(secao, /NÃO ESPECIALISTA/);
+  // Histórico preservado: a decisão de 18/10 continua no arquivo, marcada como substituída.
+  const decisao1810 = linhas.find((l) => l.startsWith('- Decisões do Dr. Antônio (18/10/2026)'));
+  assert.ok(decisao1810, 'decisão de 18/10 não encontrada');
+  assert.match(decisao1810, /PAP\/APS só na versão de 3 linhas \(substituída pela ordem de 08\/11\/2026 \(identificação de 5 linhas\)\)/);
+  // Nenhuma menção a "3 linhas" dentro da §1.B fora da marca de substituição.
+  for (const l of secao.split('\n')) {
+    if (/\b3 linhas\b/.test(l)) assert.match(l, /substituída pela ordem de 08\/11\/2026/, l.slice(0, 80));
+  }
+});
+
 test('CLAUDE.md: legendas e roteiros usam a identificação de 5 linhas, não o bloco de 3 linhas', () => {
   const md = ler('CLAUDE.md');
   const regra = md.split('\n').find((l) => l.startsWith('- Toda legenda/roteiro:'));
