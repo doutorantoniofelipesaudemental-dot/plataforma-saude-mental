@@ -6,9 +6,13 @@ Os 3 textos do G1 com medicamento agendados antes de 08/11 foram **retirados da 
 ## ALERTA 2 — 07/11/2026, 23:25 (ordem do Dr. Antônio)
 O texto "Eu queria morrer logo: como acolher o desejo de antecipar a morte" (`paliativos-desejo-de-morrer`) foi **retirado da agenda até a revisão** (agendado=false, motivo aguarda-revisao-medica, slot original em agendamento.slot_original). Arquivo: `00-paliativos-desejo-de-morrer.md`. Varredura de temas sensíveis (sem retirar nada): `VARREDURA-SENSIVEIS-20261107.md`.
 
+## ALERTA 3 — 08/11/2026, 00:06 (ordem do Dr. Antônio)
+Os 8 textos do **grupo A** da varredura (pedido ou desejo de morte) foram **retirados da agenda até a revisão** (agendado=false, motivo aguarda-revisao-medica, slot em agendamento.slot_original). Arquivos: `00a` a `00h` (topo do G1). Agenda após a retirada: 317 agendados, 38 fora.
+
 ## Resumo
 - Retirados da agenda em 07/11/2026 (topo do G1): 1 (`paliativos-desejo-de-morrer`) · 04/11/2026: 3
-- Retirados da agenda até a revisão (total): 4
+- Retirados da agenda em 08/11/2026 (grupo A): 8 (topo do G1: 00a a 00h)
+- Retirados da agenda até a revisão (total): 13 (1 + 8 + 4 de 04/11)
 - G1 — agendados até 15/11 (urgentes): 13 textos, ~66 min
 - G2 — fora da agenda (Nível 1): 26 textos, ~98 min
 - G3 — agendados após 15/11: 24 textos, ~107 min
@@ -18,6 +22,14 @@ O texto "Eu queria morrer logo: como acolher o desejo de antecipar a morte" (`pa
 ## Tabela
 | nº | grupo | slug | título | eixo | data | motivo | leitura |
 |---|---|---|---|---|---|---|---|
+| 00a | G1 | `relato-primeira-vez-nao-estou-bem` | A primeira vez que ele disse "não estou bem" | 4 | RETIRADO da agenda em 08/11/2026 (era 23/11/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00b | G1 | `paliativos-desmoralizacao-sentido` | Quando a vida perde o sentido: desmoralização e terapias centradas em significado | 3 | RETIRADO da agenda em 08/11/2026 (era 27/11/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00c | G1 | `paliativos-psicoterapias-evidencias` | Psicoterapias no fim da vida: o que funciona, o que promete e o que ainda é experimental | 3 | RETIRADO da agenda em 08/11/2026 (era 02/12/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00d | G1 | `paliativos-depressao-ansiedade-paciente` | Depressão e ansiedade na doença grave: tristeza esperada ou transtorno que precisa de tratamento? | 5 | RETIRADO da agenda em 08/11/2026 (era 15/12/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00e | G1 | `relato-paliativo-o-que-importa` | A primeira vez que alguém perguntou o que importava para ela | 3 | RETIRADO da agenda em 08/11/2026 (era 22/12/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00f | G1 | `paliativos-formacao-profissionais` | Formação em cuidados paliativos: por que todo profissional de saúde precisa do básico | 4 | RETIRADO da agenda em 08/11/2026 (era 23/12/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00g | G1 | `violencia-namoro-adolescente` | Violência no namoro adolescente: ciúme, controle pelo celular e os sinais que ninguém deveria ignorar | 1 | RETIRADO da agenda em 08/11/2026 (era 24/12/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
+| 00h | G1 | `relato-paliativo-pedido` | "Doutor, me ajuda a ir embora" | 3 | RETIRADO da agenda em 08/11/2026 (era 29/12/2026 08:00 Bahia). Reagendar só após revisão | grupo A da varredura (desejo/pedido de morte) | ~8 min |
 | 00 | G1 | `paliativos-desejo-de-morrer` | "Eu queria morrer logo": como acolher o desejo de antecipar a morte | 7 Sociedade, Cultura & Existência | RETIRADO da agenda em 07/11/2026 (era 2026-12-08 14:00 Bahia). Reagendar só após revisão e aprovação | desejo de antecipar a morte (revisão clínica) | ~8 min |
 | 01 | G1 | `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` | Abandono de tratamento psiquiátrico: estratégias de resgate na UBS | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-05 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
 | 02 | G1 | `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` | Conviver com a oscilação de humor: limites e apoio familiar | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-06 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
