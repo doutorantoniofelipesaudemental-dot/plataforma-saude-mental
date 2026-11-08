@@ -168,6 +168,14 @@ function checarHumanizacao(texto) {
 
 /* ========================== 3. Ética médica e CFM ========================== */
 
+// Oferta de consulta, agendamento ou atendimento individual: o Dr. NÃO faz consulta particular (ordem de 08/11/2026).
+const OFERTA_CONSULTA = [
+  [/\b(?:agende|agendar|agendamento de|marque|marcar)\s+(?:uma\s+|sua\s+|seu\s+|a\s+|um\s+)?(?:consultas?|atendimentos?)\b/i, 'oferta de agendamento de consulta'],
+  [/\bconsultas?\s+particular(?:es)?\b|\batendimentos?\s+particular(?:es)?\b/i, 'oferta de consulta/atendimento particular'],
+  [/\b(?:atendo|ofere[cç]\w*|fazemos|fa[cç]o)\s+(?:consultas?\s+|atendimentos?\s+)?(?:individua(?:l|is)|particular(?:es)?|online)\b/i, 'oferta de atendimento individual'],
+  [/quer conversar sobre (?:um )?atendimento|subject=Agendamento/i, 'oferta de atendimento/agendamento'],
+];
+
 // Promessa de cura, garantia de resultado e sensacionalismo (soma-se a TERMOS_CFM).
 const PROMESSA_OU_SENSACIONALISMO = [
   [/\bcura (?:garantida|definitiva|total|certa|r[aá]pida)\b/i, 'promessa de cura'],
@@ -205,7 +213,7 @@ function checarEticaCfm(texto, { contexto = 'portal', sensivel, exigirIdentifica
   const t = String(texto || '');
   if (!t.trim()) return resultado(['texto ausente']);
 
-  for (const [re, motivo] of [...TERMOS_CFM, ...PROMESSA_OU_SENSACIONALISMO]) {
+  for (const [re, motivo] of [...TERMOS_CFM, ...PROMESSA_OU_SENSACIONALISMO, ...OFERTA_CONSULTA]) {
     const m = t.match(re);
     if (m) falhas.push(`CFM: ${motivo} ("${m[0]}")`);
   }

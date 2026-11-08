@@ -433,10 +433,10 @@ function renderizarSlideConteudo(slide, indice, total, categoria) {
 }
 
 function renderizarSlideCta(slide, indice, total) {
-  const linhas1 = quebrarLinhas(FONTE_SERIF, 'Quer conversar sobre isso?', LARGURA_UTIL, 62, { maxLinhas: 2 });
+  const linhas1 = quebrarLinhas(FONTE_SERIF, 'Quer aprofundar o tema?', LARGURA_UTIL, 62, { maxLinhas: 2 });
   const linhas2 = quebrarLinhas(
     FONTE_SANS,
-    'Agende uma consulta ou tire suas dúvidas — link na bio.',
+    'Leia o artigo completo — link na bio.',
     LARGURA_UTIL,
     34,
     { maxLinhas: 3 }
@@ -449,7 +449,6 @@ function renderizarSlideCta(slide, indice, total) {
     ${caminhoLinhas(FONTE_SERIF, linhas1, MARGEM, 560, 74, 62, COR.branco, { negrito: true })}
     ${caminhoLinhas(FONTE_SANS, linhas2, MARGEM, 560 + linhas1.length * 74 + 50, 46, 34, 'rgba(255,255,255,0.82)')}
     <rect x="${MARGEM}" y="${ALTURA - 260}" width="90" height="5" rx="2.5" fill="${COR.dourado}" />
-    ${caminhoTexto(FONTE_SANS, 'doutor.antoniofelipe.saudemental@gmail.com', MARGEM, ALTURA - 210, 28, 'rgba(255,255,255,0.75)')}
     ${rodapeMarca(true)}`;
 }
 
@@ -481,7 +480,7 @@ function montarLegenda(artigo, slides) {
     linhas.push('', 'Neste carrossel:', ...topicos);
   }
 
-  linhas.push('', 'Quer conversar sobre isso? Agende uma consulta — link na bio.');
+  linhas.push('', 'Leia o artigo completo — link na bio.');
   linhas.push('', IDENTIFICACAO_COMPLETA);
 
   const nomesHashtag = [
