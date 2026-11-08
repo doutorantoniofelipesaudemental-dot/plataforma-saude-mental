@@ -55,11 +55,11 @@ const redes = {
   /**
    * Encaminhamento a humano. ATENÇÃO: o pedido original citava WhatsApp, mas o
    * CLAUDE.md §3.B proíbe mensageria de terceiros. Crise → CVV 188/SAMU 192;
-   * consulta → e-mail do consultório (único canal de agendamento).
+   * demais assuntos → e-mail de contato institucional (o Portal não agenda consultas, ordem de 08/11/2026).
    */
   humanHandoff: ({ categoria }) => categoria === 'crise'
     ? { canal: 'telefone', texto: 'Você importa. Ligue agora para o CVV 188 (24 h) ou SAMU 192.', urgente: true }
-    : { canal: 'email', texto: `Para agendar, escreva para ${EMAIL_CONSULTORIO} (assunto: Agendamento de consulta).`, link: `mailto:${EMAIL_CONSULTORIO}?subject=Agendamento%20de%20consulta`, urgente: false },
+    : { canal: 'email', texto: `O Portal não agenda consultas. Para contato institucional, escreva para ${EMAIL_CONSULTORIO} (assunto: Contato).`, link: `mailto:${EMAIL_CONSULTORIO}?subject=Contato`, urgente: false },
 };
 
 const registro = new Map([

@@ -4,18 +4,18 @@ export const metadata = {
   title: 'Links',
   alternates: { canonical: 'https://www.drantoniofelipemedico.com.br/links' },
   description:
-    'Dr. Antônio Felipe, médico de família e comunidade: agendamento de consulta, mentoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
+    'Dr. Antônio Felipe, médico de família e comunidade: mentoria e consultoria em saúde mental, portal de conteúdo com narrações em áudio e Instagram.',
 };
 
-// Canal unico de agendamento: e-mail do consultorio.
-const AGENDAMENTO = 'mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Agendamento%20de%20consulta';
+// Contato institucional por e-mail. O Dr. não faz consulta particular: nenhum canal oferece consulta ou agendamento.
+const CONTATO = 'mailto:doutor.antoniofelipe.saudemental@gmail.com?subject=Contato%20mentoria%20e%20consultoria';
 
 const BOTOES = [
   {
-    emoji: '🟢',
-    label: 'Agendamento de Consulta Médica',
-    detalhe: 'Solicite seu horário por e-mail',
-    href: AGENDAMENTO,
+    emoji: '✉️',
+    label: 'Contato: mentoria, consultoria e formação',
+    detalhe: 'Escreva por e-mail sobre trabalho institucional',
+    href: CONTATO,
     externo: true,
     destaque: true,
   },
