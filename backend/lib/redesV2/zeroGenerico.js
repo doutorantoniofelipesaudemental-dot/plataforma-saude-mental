@@ -87,7 +87,8 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   }
 
   // (b) frases clínicas: cada uma tem de ser literal (normalizada) no corpo do artigo
-  const corpo = normalizar(art.corpo);
+  // corpo em HTML: tags inline (<strong>, <em>) não podem quebrar a comparação literal
+  const corpo = normalizar(String(art.corpo || '').replace(/<[^>]+>/g, ' '));
   const frases = post.frasesClinicas || [];
   if (!frases.length) f('b-frase-clinica', 'nenhuma frase clínica declarada para conferir com o artigo');
   for (const frase of frases) {

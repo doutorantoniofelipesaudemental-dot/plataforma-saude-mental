@@ -118,3 +118,9 @@ test('(c) ponto parafraseado (não literal do artigo) não conta como concreto',
   const r = checarZeroGenerico({ post: { ...BASE, pontos: [{ tipo: 'sinal', texto: 'Perda de peso e humor baixo são sinais importantes' }] }, dataISO: DATA });
   assert.ok(r.falhas.some((f) => f.regra === 'c-ponto-concreto'));
 });
+
+test('(c) corpo em HTML com tags inline: ponto literal continua contando', () => {
+  const html = '<p><strong>Procure ajuda:</strong> se houver tristeza persistente, procure a UBS.</p>';
+  const r = checarZeroGenerico({ post: { ...BASE, artigo: { ...ART, corpo: html }, pontos: [{ tipo: 'sinal', texto: 'Procure ajuda: se houver tristeza persistente, procure a UBS.' }] }, dataISO: DATA });
+  assert.equal(r.falhas.filter((f) => f.regra === 'c-ponto-concreto').length, 0);
+});
