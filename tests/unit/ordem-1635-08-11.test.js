@@ -35,6 +35,10 @@ test('CLAUDE.md §1.B: identificação de 5 linhas; menção de "3 linhas" só s
   for (const l of secao.split('\n')) {
     if (/\b3 linhas\b/.test(l)) assert.match(l, /substituída pela ordem de 08\/11\/2026/, l.slice(0, 80));
   }
+  // Decisão de 15/10 (assinatura curta de 3 linhas): histórica, marcada como substituída.
+  const decisao1510 = linhas.find((l) => l.startsWith('- **Assinatura padrão (15/10/2026)'));
+  assert.ok(decisao1510, 'decisão de 15/10 não encontrada');
+  assert.match(decisao1510, /assinatura curta de 3 linhas[^.]*\(substituída pela ordem de 08\/11\/2026 \(identificação de 5 linhas\)\)/);
 });
 
 test('CLAUDE.md: legendas e roteiros usam a identificação de 5 linhas, não o bloco de 3 linhas', () => {
