@@ -220,3 +220,13 @@ Regras:
 - **Fundamento (ordem de 06/11/2026, 23:40):** o texto PT já foi aprovado (tripla checagem ou leitura do Dr. Antônio nas exceções). A tradução fiel não cria sentido clínico novo; por isso não se enquadra na classe 3 da carta v3. Mesmo princípio da tradução em telemedicina.
 - **Regra de retenção (salvaguarda):** se a checagem determinística ou a revisão independente (retrotradução) detectar QUALQUER mudança de sentido, acréscimo, omissão, número, dose ou termo fora do glossário, a tradução fica RETIDA e não é publicada.
 - Trava `ES_PUBLICACAO_ATIVA` em padrão seguro. O Dr. Antônio a liga no painel da Vercel só depois dos merges e da importação.
+
+## Decisões de 07/11/2026 (ordem escrita do Dr. Antônio, sábado 22:45)
+Registro: `relatorios/plano-diretor/DECISOES-20261107.md`. Estas decisões substituem, onde conflitarem, a decisão de 06/11 sobre o espanhol (item d).
+- **a)** Aprovado integralmente o "Guia de Aprimoramento do Ecossistema v1.6" (20 melhorias, monetização ética, YouTube 5A, bilíngue 5B, plano de 1.000 artigos, cascata de continuidade).
+- **b)** Fila já aprovada: 5 por dia a partir de 08/11/2026 (fim ~11/01/2027). Artigos novos: 1 por dia a partir de 12/01/2027; a elaboração começa em novembro.
+- **c)** Cascata: estoques mínimos de 60 dias (artigos novos), 14 dias (redes) e 14 dias (espanhol); alertas na Conferência Diária; produção por prioridade (novos > redes > ES); pausa limpa, sem troca de modelo.
+- **d)** Espanhol (substitui a decisão de 06/11 sobre leitura): a tradução aprovada pela tripla checagem entra no ar com NOINDEX; o Dr. Antônio (fluente em espanhol) faz curadoria rápida (2 a 3 min) e só então a página passa a INDEX. Fundamento: política de spam do Google ("texto traduzido por ferramenta automática sem revisão ou curadoria humana"). Páginas ES: um idioma por página, hreflang es-419, sem redirecionamento automático, e aviso "Si estás fuera de Brasil, llama al número de emergencias de tu país" (lista de países só com fonte oficial verificada).
+- **e)** Terminologia: "pessoas com TEA" (padrão do Portal).
+- **f)** YouTube: canal sem vídeos; lançamento do zero em dezembro com a metodologia nova; candidatura ao YouTube Health (Brasil elegível) após o lançamento.
+- **g)** Instagram: fila antiga DESATIVADA (marcar como descartada, sem apagar); fila nova com "zero genérico".
