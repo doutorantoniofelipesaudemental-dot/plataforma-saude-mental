@@ -115,7 +115,7 @@ test('cliente de LLM sem nenhuma chave explica o que falta', async () => {
   delete process.env.GROQ_API_KEY;
   delete process.env.OPENAI_API_KEY;
   const { gerarJson } = require('../../backend/lib/llm');
-  await assert.rejects(gerarJson({ sistema: 's', usuario: 'u', schema: {} }), /GEMINI_API_KEY, GROQ_API_KEY e\/ou OPENAI_API_KEY/);
+  await assert.rejects(gerarJson({ sistema: 's', usuario: 'u', schema: {} }), /desativada por ordem de 08\/11\/2026/);
   if (antes.g !== undefined) process.env.GEMINI_API_KEY = antes.g;
   if (antes.q !== undefined) process.env.GROQ_API_KEY = antes.q;
   if (antes.o !== undefined) process.env.OPENAI_API_KEY = antes.o;

@@ -90,7 +90,6 @@
     "clsx": "^2.1.1",
     "express": "^5.2.1",
     "framer-motion": "^13.3.0",
-    "groq-sdk": "^1.6.0",
     "lucide-react": "^1.46.0",
     "mongoose": "^9.9.5",
     "opentype.js": "^2.0.0",
