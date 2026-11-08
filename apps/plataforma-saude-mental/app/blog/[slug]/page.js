@@ -70,7 +70,7 @@ export default async function ArtigoPage({ params }) {
 
       <div className="mt-12 rounded-2xl bg-verde-escuro p-6 text-white">
         <p className="mb-3 text-sm font-medium text-slate-200">
-          Quer conversar sobre isso com o Dr. Antônio Felipe?
+          Continue lendo no portal.
         </p>
         <Link
           href="/blog"
