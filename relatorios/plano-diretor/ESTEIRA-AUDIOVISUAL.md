@@ -29,14 +29,22 @@ Regras comuns a todos os canais:
 
 ## 3. Cascata de ferramentas (cota × sem cota)
 
-Ordem do Dr. (08/11). Divisão por custo e risco:
+Fonte: seção 7A "Cascata de ferramentas: produção sem recesso" do Roteiro de Produção Audiovisual v1.1 (`relatorios/plano-diretor/guias/Roteiro-Producao-Audiovisual-v1.1.pdf`, cópia local, fora do Git), decisão do Dr. Antônio de 08/11/2026.
 
-1. **Claude** (cota do `claude -p`, teto de 3 por dia e 15 por semana, `relatorios/CONSUMO.md`): roteiro, estilo e tradução de canal. Só quando o texto precisa de adaptação.
-2. **Automação sem IA** (zero cota, local): render das lâminas (Playwright), render de vídeo (FFmpeg), legendas SRT, checagens determinísticas (zero genérico, arte, identificação, links, CFM).
-3. **Narração**: Edge-TTS `pt-BR-AntonioNeural` é o único padrão permitido por `CLAUDE.md` (custo zero). A ordem cita narração Kokoro local (licença em `relatorios/voz-amostras/KOKORO-LICENCA-21102026.md`, não tracked). Kokoro só entra depois de ordem escrita do Dr. Antônio que altere o `CLAUDE.md`.
-4. **Modelo local (Ollama)**: só para tarefas de baixo risco (listas, contagens, extração de campos, resumo curto). Nunca decide sozinho: "reprovado", "incerto" ou JSON inválido vão para correção (`CLAUDE.md`, uso do Ollama, O5).
-5. **Estoque**: 14 dias de peças prontas e aprovadas por canal (redes e vídeos), antes de abrir nova fila. Artigos novos seguem 60 dias (Guia de Aprimoramento, §6.5).
-6. **Pausa limpa**: se a cota acabar, a esteira para no ponto atual, registra em `relatorios/PENDENTES.md` e retoma sem perda. Com estoque, pausas de 2 a 3 semanas não afetam o Portal (Guia, §6.5).
+Níveis (a produção de vídeo, depois de pronto o Estilo Portal e os modelos, é código e narração local, sem gastar tokens):
+
+1. **Claude** (assinatura; gasta cota do `claude -p`, teto de 3 por dia e 15 por semana, `relatorios/CONSUMO.md`): julgamento clínico e de linguagem: roteiro a partir do artigo, tradução, revisão independente, criação de estilos e modelos novos.
+2. **Automação sem IA** (não gasta cota): render de vídeos a partir de roteiros aprovados, legendas, cartelas, miniaturas, checagens automáticas, agendamento e publicação.
+3. **Narração local Kokoro** (Apache-2.0; não gasta cota). Autorizada pelo Dr. Antônio em 08/11/2026 para **vídeos novos** (a partir do piloto de segunda); narrações existentes não mudam. Edge-TTS `pt-BR-AntonioNeural` segue como padrão para o restante (`CLAUDE.md`, §F). Licença em `relatorios/voz-amostras/KOKORO-LICENCA-21102026.md` (não tracked).
+4. **Modelo local aberto** (Ollama; não gasta cota): só tarefas de baixo risco e formato: sugerir capítulos, títulos alternativos, descrições, hashtags, ordenar fila. Passa sempre pela checagem zero genérico. Nunca texto clínico novo nem tradução. O nível 4 nunca gera conteúdo clínico. Só roda se a memória do computador aguentar (o Claude Code confere antes, só lendo).
+5. **Estoque de 14 dias** de vídeos prontos (publicação continua pelo agendamento enquanto a cota se renova). Artigos novos seguem 60 dias (Guia de Aprimoramento, §6.5).
+6. **Pausa limpa**: se os níveis acima se esgotarem, só a produção de vídeo pausa, sem erro; artigos e redes seguem (Guia, §6.5).
+
+Regras da cascata (do v1.1):
+- Sem API nova e sem IA gratuita que use o conteúdo para treino (ex.: Gemini grátis). Por isso Gemini, Groq e OpenAI estão desativados no código (ordem de 08/11/2026, `backend/lib/llm.js`).
+- Sem troca silenciosa: cada peça registra qual nível a produziu.
+- Opção extra só com ordem escrita do Dr.: plano de assinatura com mais cota. Nenhuma contratação automática.
+- Prioridade quando a cota está baixa: 1º artigos novos, 2º redes, 3º roteiros de vídeo, 4º espanhol. A renderização (nível 2) continua sempre, porque não usa cota.
 
 ## 4. Calendário e estoque
 
@@ -62,7 +70,7 @@ Ordem do Dr. (08/11). Divisão por custo e risco:
 
 ## 7. Pendências e próximos passos
 
-1. **Seção 7A: não encontrada.** Verificado em 08/11 (tarde) no PDF `Roteiro-Producao-Audiovisual-09-11.pdf`: o documento tem seções 1 a 8; a seção 7 é "Riscos e cuidados"; não existe 7A. A cascata acima vem da ordem escrita de 08/11 e do Guia, §6.5. Conferir com o Dr. se a versão correta é outra.
+1. **Seção 7A: encontrada e incorporada (08/11).** Está no Roteiro v1.1 (`Roteiro-Producao-Audiovisual-v1.1.pdf`). A versão `Roteiro-Producao-Audiovisual-09-11.pdf` tem só as seções 1 a 8, sem 7A; use a v1.1.
 2. Implementar a atomização por canal em PR próprio, com testes e portão.
 3. Gerar a prévia de 14 dias por canal e submeter ao Dr. Antônio.
 4. Piloto de vídeo (segunda, 17:30, sem instalar nada antes): Node v26.8.1, Python 3.12.10 e ffmpeg 9.0.1 já estão no computador (atendem Node 20+, Python 3.11+ e ffmpeg 7+).
