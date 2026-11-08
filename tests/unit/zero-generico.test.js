@@ -13,7 +13,7 @@ const BASE = {
   eixo: 'E4', // segunda-feira
   artigo: ART,
   frasesClinicas: ['A insônia que persiste por mais de duas semanas merece avaliação na Atenção Primária'],
-  pontos: [{ tipo: 'sinal', texto: 'perda de peso e humor baixo persistentes' }],
+  pontos: [{ tipo: 'sinal', texto: 'Sinais de alerta incluem perda de peso e humor persistentemente baixo' }],
 };
 const DATA = '2026-11-09'; // segunda
 
@@ -43,9 +43,10 @@ test('(b) aceita frase literal mesmo com acento e caixa diferentes', () => {
 test('(c) reprova post sem ponto concreto e dado sem fonte https', () => {
   const vazio = checarZeroGenerico({ post: { ...BASE, pontos: [] }, dataISO: DATA });
   assert.ok(vazio.falhas.some((f) => f.regra === 'c-ponto-concreto'));
-  const semFonte = checarZeroGenerico({ post: { ...BASE, pontos: [{ tipo: 'dado', texto: '40%' }] }, dataISO: DATA });
+  const LIT = 'Sinais de alerta incluem perda de peso e humor persistentemente baixo';
+  const semFonte = checarZeroGenerico({ post: { ...BASE, pontos: [{ tipo: 'dado', texto: LIT }] }, dataISO: DATA });
   assert.ok(semFonte.falhas.some((f) => f.regra === 'c-ponto-concreto'));
-  const comFonte = checarZeroGenerico({ post: { ...BASE, pontos: [{ tipo: 'dado', texto: '40%', fonte: 'https://doi.org/10.1000/x' }] }, dataISO: DATA });
+  const comFonte = checarZeroGenerico({ post: { ...BASE, pontos: [{ tipo: 'dado', texto: LIT, fonte: 'https://doi.org/10.1000/x' }] }, dataISO: DATA });
   assert.equal(comFonte.falhas.filter((f) => f.regra === 'c-ponto-concreto').length, 0);
 });
 
@@ -89,4 +90,31 @@ test('(g) reprova sem CVV/SAMU ou sem o aviso de IA', () => {
   assert.ok(semCrise.falhas.some((f) => f.regra === 'g-crise'));
   const semAviso = checarZeroGenerico({ post: { ...BASE, legenda: `Insônia.\n\n${CRISE}` }, dataISO: DATA });
   assert.ok(semAviso.falhas.some((f) => f.regra === 'g-aviso'));
+});
+
+test('(h) número ou percentual sem referência listada reprova; com referência passa', () => {
+  const comNumero = { ...BASE, legenda: LEGENDA_BOA.replace('perda de peso', 'perda de 40% do peso') };
+  const sem = checarZeroGenerico({ post: { ...comNumero, artigo: { ...ART, corpo: ART.corpo + ' Em 40% dos casos.' }, pontos: [{ tipo: 'sinal', texto: 'Sinais de alerta incluem perda de peso e humor persistentemente baixo' }] }, dataISO: DATA });
+  assert.ok(sem.falhas.some((f) => f.regra === 'h-numero-sem-referencia'));
+  const comRef = { ...comNumero, legenda: comNumero.legenda.replace(`\n\n${CRISE}`, '\n\nReferências: Autor, Revista, 2020\n\n' + CRISE) };
+  const ok = checarZeroGenerico({ post: { ...comRef, artigo: { ...ART, corpo: ART.corpo + ' Em 40% dos casos.' }, pontos: BASE.pontos }, dataISO: DATA });
+  assert.equal(ok.falhas.filter((f) => f.regra === 'h-numero-sem-referencia').length, 0);
+});
+
+test('(h) ano não conta como número; "seis em cada dez" conta', () => {
+  const ano = checarZeroGenerico({ post: { ...BASE, legenda: LEGENDA_BOA.replace('pede avaliação', 'pede avaliação desde 2024') }, dataISO: DATA });
+  assert.equal(ano.falhas.filter((f) => f.regra === 'h-numero-sem-referencia').length, 0);
+  const extenso = checarZeroGenerico({ post: { ...BASE, legenda: LEGENDA_BOA.replace('pede avaliação', 'seis em cada dez pedem avaliação') }, dataISO: DATA });
+  assert.ok(extenso.falhas.some((f) => f.regra === 'h-numero-sem-referencia'));
+});
+
+test('(h) gancho que repete o resumo do artigo reprova', () => {
+  const RESUMO = 'Insônia por mais de duas semanas pede avaliação e a APS é o primeiro lugar para isso.';
+  const r = checarZeroGenerico({ post: { ...BASE, artigo: { ...ART, resumo: RESUMO } }, dataISO: DATA });
+  assert.ok(r.falhas.some((f) => f.regra === 'h-gancho-repete-resumo'));
+});
+
+test('(c) ponto parafraseado (não literal do artigo) não conta como concreto', () => {
+  const r = checarZeroGenerico({ post: { ...BASE, pontos: [{ tipo: 'sinal', texto: 'Perda de peso e humor baixo são sinais importantes' }] }, dataISO: DATA });
+  assert.ok(r.falhas.some((f) => f.regra === 'c-ponto-concreto'));
 });

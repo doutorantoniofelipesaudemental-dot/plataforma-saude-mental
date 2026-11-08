@@ -96,9 +96,25 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
 
   // (c) ponto concreto: sinal, dado com fonte (https) ou passo prático
   const pontos = post.pontos || [];
-  const concreto = pontos.some((p) => PONTOS_CONCRETOS.includes(p.tipo) && String(p.texto || '').trim()
+  // Ponto concreto tem de ser frase LITERAL do artigo (regra h, 07/11/2026): paráfrase não conta.
+  const literal = (p) => String(p.texto || '').trim() && corpo.includes(normalizar(p.texto));
+  const concreto = pontos.some((p) => PONTOS_CONCRETOS.includes(p.tipo) && literal(p)
     && (p.tipo !== 'dado' || /^https:\/\//.test(String(p.fonte || ''))));
-  if (!concreto) f('c-ponto-concreto', 'sem ponto concreto (sinal, dado com fonte ou passo prático)');
+  if (!concreto) f('c-ponto-concreto', 'sem ponto concreto literal do artigo (sinal, dado com fonte ou passo prático)');
+
+  // (h) número ou percentual no post exige referência listada; gancho não pode repetir o resumo do artigo
+  const corpoLegenda = corpoDaLegenda(legenda);
+  const temRef = /Refer[êe]ncias:\s*\S/.test(legenda);
+  const numeros = (corpoLegenda.match(/\d+(?:[.,]\d+)?/g) || []).filter((n) => !/^(19|20)\d\d$/.test(n));
+  const porExtenso = /\bem cada (?:\w+ )?\w+\b|\bmetade\b|\bdobro\b|\bpela metade\b/i.test(corpoLegenda);
+  if ((numeros.length || porExtenso) && !temRef) f('h-numero-sem-referencia', 'número ou percentual no post sem referência listada');
+  const gancho = normalizar(legenda.split('\n')[0]);
+  const resumo = normalizar(art.resumo || '');
+  if (resumo && gancho.length > 20) {
+    const pal = gancho.split(' ').filter(Boolean);
+    const repetidas = pal.filter((w) => resumo.split(' ').includes(w)).length;
+    if (resumo.includes(gancho) || repetidas / pal.length >= 0.8) f('h-gancho-repete-resumo', 'o gancho repete o resumo do artigo');
+  }
 
   // (d) gancho: primeira linha não pode começar com item da lista proibida
   const primeira = normalizar(legenda.split('\n')[0]);
