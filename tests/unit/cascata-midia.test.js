@@ -36,7 +36,7 @@ test('LinkedIn: post do bot sai com identificação, aviso CFM e CVV em tema sen
   const { montarTextoLinkedin } = require('../../scripts/bot-publicar');
   const texto = montarTextoLinkedin('Post corporativo.\n\nLeia o artigo completo no site.', { titulo: 'Burnout em médicos', categoria: 'Burnout', conteudo: '' });
   assert.deepEqual(faltasConformidade(texto, { sensivel: true }), []);
-  assert.match(texto, /Dr\. Antônio Felipe · Médico · CRM-BA 41322/);
+  assert.match(texto, /Dr\. Antônio Felipe — Médico — CRM-BA 41322/); // bloco de 5 linhas (ordem de 08/11)
 });
 
 test('matriz: pacote novo tem os seis formatos pendentes', () => {
