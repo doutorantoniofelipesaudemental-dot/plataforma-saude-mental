@@ -246,7 +246,7 @@ Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segu
 - 4-10s: "Numa crise psiquiátrica aguda, o que você faz nos primeiros minutos importa mais do que parece."
 - 11-20s: "Passo 1: garantir segurança do ambiente. Passo 2: falar calmo e claro. Passo 3: não confrontar, não discutir."
 - 21-26s: "Se houver risco à vida, ligue para ajuda profissional imediatamente."
-- 27-30s: "Emergência: CVV 188 ou pronto-socorro. Para acompanhamento contínuo: agende sua consulta — link na bio."
+- 27-30s: "Emergência: CVV 188 ou pronto-socorro. Leia o artigo completo — link na bio."
 **Texto na tela:** "PRIMEIROS 5 MINUTOS" → "SEGURANÇA. CALMA. SEM CONFRONTO." → "188 CVV EM EMERGÊNCIA"
 **Áudio sugerido:** trilha tensa, ritmo firme.
 **Legenda:** O que fazer nos primeiros minutos de uma crise psiquiátrica aguda. Salve este vídeo. 📖 [LINK] 🆘 CVV 188 📅 [LINK BIO]
@@ -486,7 +486,7 @@ Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segu
 - 4-10s: "1. Nunca discuta ou tente 'convencer com lógica' durante a crise."
 - 11-20s: "2. Nunca faça promessas que não vai cumprir só pra acalmar no momento."
 - 21-26s: "3. Nunca ignore sinais de risco à vida — busque ajuda imediatamente."
-- 27-30s: "Emergência: CVV 188. Pra montar um plano de segurança: agende sua consulta — link na bio."
+- 27-30s: "Emergência: CVV 188. Leia o artigo completo — link na bio."
 **Texto na tela:** "NUNCA FAÇA ISSO NUMA CRISE" (lista de 3 itens)
 **Áudio sugerido:** trilha tensa, ritmo firme.
 **Legenda:** 3 erros comuns durante uma crise psiquiátrica na família — e o que fazer no lugar. Salve este vídeo. 📖 [LINK] 🆘 CVV 188 📅 [LINK BIO]
@@ -534,7 +534,7 @@ Baseado nos 65 artigos do blog (MongoDB, coleção `artigos`). Cada roteiro segu
 - 4-10s: "Muita gente evita perguntar diretamente sobre suicídio, com medo de 'plantar a ideia'. Não é assim que funciona."
 - 11-20s: "Perguntar com cuidado — 'você chegou a pensar em se machucar ou desistir da vida?' — abre espaço pra ajuda, não fecha."
 - 21-26s: "Sinais de alerta: mudança brusca de humor, frases sobre 'ser um peso', isolamento repentino."
-- 27-30s: "Se é uma emergência agora, ligue 188 (CVV) ou procure o pronto-socorro. Para acompanhamento contínuo, agende sua consulta — link na bio."
+- 27-30s: "Se é uma emergência agora, ligue 188 (CVV) ou procure o pronto-socorro. Leia o artigo completo — link na bio."
 **Texto na tela:** "PERGUNTAR NÃO PLANTA A IDEIA" → "PERGUNTAR PODE SALVAR" → "188 CVV"
 **Áudio sugerido:** trilha séria e respeitosa, sem sensacionalismo.
 **Legenda:** Perguntar sobre suicídio não planta a ideia — o silêncio é que é perigoso. Sinais de alerta que valem atenção. 📖 [LINK] 🆘 CVV 188 (24h, gratuito) 📅 [LINK BIO]

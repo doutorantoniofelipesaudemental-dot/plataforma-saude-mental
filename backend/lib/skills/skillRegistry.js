@@ -59,7 +59,7 @@ const redes = {
    */
   humanHandoff: ({ categoria }) => categoria === 'crise'
     ? { canal: 'telefone', texto: 'Você importa. Ligue agora para o CVV 188 (24 h) ou SAMU 192.', urgente: true }
-    : { canal: 'email', texto: `O Portal não agenda consultas. Para contato institucional, escreva para ${EMAIL_CONSULTORIO} (assunto: Contato).`, link: `mailto:${EMAIL_CONSULTORIO}?subject=Contato`, urgente: false },
+    : { canal: 'email', texto: `Para cuidado em saúde mental, procure a UBS ou o CAPS da sua região, ou o seu plano de saúde. Em crise: CVV 188 · SAMU 192. O Portal não agenda consultas; contato institucional (mentoria, consultoria e formação): ${EMAIL_CONSULTORIO} (assunto: Contato).`, link: `mailto:${EMAIL_CONSULTORIO}?subject=Contato`, urgente: false },
 };
 
 const registro = new Map([
