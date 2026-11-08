@@ -6,7 +6,7 @@ Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artig
 
 - **1 carrossel por dia**, 30 dias corridos (14/09/2026 a 13/10/2026), com rotação de pilares para não cansar o público e atingir públicos diferentes ao longo da semana.
 - Cada post traz: artigo-base do blog, estrutura pronta de slides (7 cartas), legenda pronta para copiar/colar e hashtags.
-- **Sempre feche com o link do artigo completo no site + CTA de agendamento.** Troque `[LINK]` pelo link do artigo (`drsaudemental.com/blog/<slug>`) e `[LINK BIO]` pelo link de agendamento na bio.
+- **Sempre feche com o link do artigo completo no site + CTA de leitura do artigo.** Troque `[LINK]` pelo link do artigo (`drsaudemental.com/blog/<slug>`) e `[LINK BIO]` pelo link de agendamento na bio.
 - **Formato de imagem:** 1080×1350 (o próprio projeto já gera esse formato — veja `backend/tools/gerar-carrosseis.js`, script `npm run carrosseis`).
 
 ### Rotina semanal de pilares
@@ -28,9 +28,9 @@ Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artig
 #bemestaremocional #terapia #cuidadocomamente #saudeemocional
 ```
 
-### CTA padrão de agendamento (variar a chamada, manter o link)
+### CTA padrão de leitura (variar a chamada, manter o link)
 
-- Público geral/pacientes: **"📅 Quer conversar sobre isso com o Dr. Antônio Felipe? Agende sua consulta — link na bio."**
+- Público geral/pacientes: **"📅 Leia o artigo completo — link na bio."**
 - Público médico/residente: **"📅 Quer apoio para lidar com isso na sua prática clínica? Agende uma mentoria — link na bio."**
 - Público empresas/RH: **"📅 Quer estruturar isso na sua empresa? Agende uma consultoria — link na bio."**
 
@@ -84,14 +84,14 @@ Baseado na análise dos 65 artigos publicados no blog (MongoDB, coleção `artig
 4. Por trás dos sintomas físicos, um sofrimento psíquico escondido havia anos.
 5. Por que isso acontece: o corpo fala o que a mente ainda não consegue dizer.
 6. Sinal de alerta: sintoma físico recorrente, exames normais, sem melhora.
-7. **CTA:** Se isso te lembrou alguém, agende uma consulta — link na bio.
+7. **CTA:** Se isso te lembrou alguém, leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Ele passou por sete consultas antes de alguém perguntar como ele estava, de verdade. 💙
 Este é um relato real da prática clínica (detalhes alterados para preservar identidade), sobre como o sofrimento psíquico pode se disfarçar de dor no corpo, cansaço e insônia por anos, sem que ninguém — nem o próprio paciente — perceba.
 Se os exames sempre dão "normais" mas alguma coisa não está bem, talvez seja hora de olhar além do corpo.
 📖 Artigo completo no blog: [LINK]
-📅 Quer conversar sobre isso? Agende sua consulta — link na bio.
+📅 Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #somatização #saudeemocional #relatodeconsultorio
 
@@ -108,14 +108,14 @@ Se os exames sempre dão "normais" mas alguma coisa não está bem, talvez seja 
 4. Sinal de alerta real: quando tirar a tela vira crise emocional grande.
 5. Sinal de alerta real: quando o sono ou a rotina escolar pioram.
 6. 3 passos práticos para equilibrar sem transformar isso em guerra em casa.
-7. **CTA:** Agende uma consulta para uma orientação personalizada.
+7. **CTA:** leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 "Quanto tempo de tela é saudável?" Essa é a pergunta que mais recebo de pais — e a resposta não está só no relógio. ⏱️
 O que importa de verdade é o que a tela está deixando de lado: sono, brincadeira, conversa, movimento.
 Neste post, 3 sinais reais de alerta (e o que fazer sem transformar a tela em campo de batalha em casa).
 📖 Artigo completo: [LINK]
-📅 Dúvidas sobre o seu filho? Agende uma consulta — link na bio.
+📅 Dúvidas sobre o seu filho? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #paisefilhos #telaseCriancas #parentalidade
 
@@ -132,14 +132,14 @@ Neste post, 3 sinais reais de alerta (e o que fazer sem transformar a tela em ca
 4. Mito 2: quem toma psicofármaco fica "dependente para sempre". (Depende do caso, e é acompanhado.)
 5. Mito 3: "é só força de vontade". (Não é.)
 6. Por que esses mitos custam caro: gente que precisa de ajuda e não procura por medo.
-7. **CTA:** Dúvidas sobre um tratamento? Agende sua consulta.
+7. **CTA:** Dúvidas sobre um tratamento? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 "Remédio de cabeça vicia", "muda quem você é", "é só força de vontade"... Você já deve ter ouvido pelo menos um desses. 🚫
 Nenhum é verdade — e neste carrossel eu explico de onde vêm esses mitos e por que eles continuam tão fortes na nossa cultura.
 Desinformação sobre psicofármacos afasta muita gente de um tratamento que poderia mudar a vida.
 📖 Artigo completo: [LINK]
-📅 Tem dúvidas sobre algum tratamento? Agende sua consulta — link na bio.
+📅 Tem dúvidas sobre algum tratamento? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #mitosdesaudemental #psicofarmacos #antidepressivo
 
@@ -179,13 +179,13 @@ Neste post, 3 sinais que diferenciam o cansaço comum do burnout de verdade, e p
 4. O que o médico realmente investiga: história, sintomas, contexto de vida, não só "sintomas isolados".
 5. O que perguntar na consulta: 3 perguntas que ajudam você a entender seu diagnóstico.
 6. Depois da consulta: diagnóstico não é rótulo, é ponto de partida.
-7. **CTA:** Pronto para dar o primeiro passo? Agende sua consulta.
+7. **CTA:** Pronto para dar o primeiro passo? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Marcar a primeira consulta com um psiquiatra costuma dar mais medo do que a consulta em si. 💭
 Neste carrossel, desmonto as dúvidas mais comuns de quem nunca foi: o que o médico pergunta, como entender o diagnóstico e que perguntas você pode (e deve) fazer.
 📖 Artigo completo: [LINK]
-📅 Pronto para dar o primeiro passo? Agende sua consulta — link na bio.
+📅 Pronto para dar o primeiro passo? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #primeiraconsulta #diagnostico #saudementalimporta
 
@@ -225,13 +225,13 @@ Neste guia, os passos práticos para estruturar um programa de saúde mental ocu
 4. A consequência: o paciente voltou a piorar semanas depois.
 5. O aprendizado: crise psiquiátrica não termina na alta — o pós-crise é onde tudo se decide.
 6. Reflexão: cuidado em saúde mental é rede, não evento isolado.
-7. **CTA:** Passando por algo parecido? Agende uma consulta.
+7. **CTA:** Passando por algo parecido? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Essa crise não precisava ter acontecido. 💔
 Um relato real (com detalhes alterados) sobre o que acontece quando o elo entre a urgência psiquiátrica e o cuidado contínuo se rompe — e por que a alta do pronto-socorro nunca deveria ser o fim da história.
 📖 Artigo completo: [LINK]
-📅 Você ou alguém da família está passando por algo assim? Agende uma consulta — link na bio.
+📅 Você ou alguém da família está passando por algo assim? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #urgenciapsiquiatrica #relatodeconsultorio
 
@@ -248,13 +248,13 @@ Um relato real (com detalhes alterados) sobre o que acontece quando o elo entre 
 4. Por que isso importa: família exausta cuida pior — mesmo com toda boa vontade.
 5. O que mudou: incluir a família no plano de cuidado, não só o paciente.
 6. Aprendizado: cuidar de quem cuida também é tratamento.
-7. **CTA:** Sua família está sobrecarregada? Agende uma consulta.
+7. **CTA:** Sua família está sobrecarregada? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Numa crise psiquiátrica, todo mundo pergunta como está o paciente. Quase ninguém pergunta como está a família dele. 💙
 Este relato mostra por que o cuidado não pode parar na pessoa diagnosticada — e como incluir a família muda o resultado do tratamento.
 📖 Artigo completo: [LINK]
-📅 Sua família está sobrecarregada? Agende uma consulta — link na bio.
+📅 Sua família está sobrecarregada? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #familiaesaudemental #cuidadoemsaude
 
@@ -271,13 +271,13 @@ Este relato mostra por que o cuidado não pode parar na pessoa diagnosticada —
 4. O que mudou com o ECA Digital: mais responsabilidade das plataformas, mas o olhar da família continua essencial.
 5. Sinal de alerta: comparação constante, queda de autoestima, isolamento após o uso.
 6. O que fazer: conversar sem julgamento é mais eficaz do que proibir.
-7. **CTA:** Precisa de orientação? Agende uma consulta.
+7. **CTA:** Precisa de orientação? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 O ECA Digital trouxe mudanças importantes — mas nenhuma lei substitui a conversa em casa. 📱
 Veja o que pais precisam saber sobre redes sociais e saúde mental dos filhos: os riscos reais, os sinais de alerta e como conversar sem transformar isso em briga.
 📖 Artigo completo: [LINK]
-📅 Precisa de orientação sobre o seu filho? Agende uma consulta — link na bio.
+📅 Precisa de orientação sobre o seu filho? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #ecadigital #adolescentes #redessociais
 
@@ -294,13 +294,13 @@ Veja o que pais precisam saber sobre redes sociais e saúde mental dos filhos: o
 4. Mito: é só uma "muleta química". Verdade: é tratamento de saúde, como qualquer outro.
 5. Mito: se eu parar de sentir sintomas, posso parar sozinho. Verdade: suspensão precisa de acompanhamento.
 6. O que importa: cada caso é único — e só o acompanhamento clínico responde essas dúvidas de verdade.
-7. **CTA:** Tem dúvidas sobre seu tratamento? Agende sua consulta.
+7. **CTA:** Tem dúvidas sobre seu tratamento? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 "Vou depender disso para sempre?" É uma das perguntas que mais escuto no consultório. 💊
 Neste post, separo mito de verdade sobre tratamento medicamentoso em saúde mental — dependência, personalidade, tempo de uso e mais.
 📖 Artigo completo: [LINK]
-📅 Tem dúvidas sobre o seu tratamento? Agende sua consulta — link na bio.
+📅 Tem dúvidas sobre o seu tratamento? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #psicofarmacos #tratamentopsiquiatrico #mitoseverdades
 
@@ -317,7 +317,7 @@ Neste post, separo mito de verdade sobre tratamento medicamentoso em saúde ment
 4. Sinal de alerta 2: frases sobre "ser um peso" ou "sumir".
 5. Sinal de alerta 3: isolamento repentino, se despedir de bens ou pessoas.
 6. O que fazer: perguntar diretamente, não julgar, buscar ajuda especializada.
-7. **CTA:** Em caso de emergência, ligue 188 (CVV) ou procure o pronto-socorro mais próximo. Para acompanhamento, agende uma consulta.
+7. **CTA:** Em caso de emergência, ligue 188 (CVV) ou procure o pronto-socorro mais próximo. Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Perguntar sobre suicídio não "planta a ideia" na cabeça de ninguém — o silêncio é que é perigoso. ⚠️
@@ -341,13 +341,13 @@ Este post é voltado a profissionais de saúde da Atenção Primária, mas vale 
 4. Evite: discutir, confrontar ou tentar "convencer com lógica" durante a crise.
 5. Evite: fazer promessas que não pode cumprir só para acalmar.
 6. Quando ligar para ajuda profissional: sempre que houver risco à vida ou perda total de controle.
-7. **CTA:** Já passou por isso? Agende uma consulta para montar um plano de segurança.
+7. **CTA:** Já passou por isso? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Uma crise psiquiátrica na família pode durar minutos — mas o que você faz nesses minutos importa muito. 🚨
 Salve este post: o que fazer e o que evitar até a ajuda profissional chegar.
 📖 Artigo completo: [LINK]
-📅 Já passou por uma crise na família? Agende uma consulta para montar um plano de segurança — link na bio.
+📅 Já passou por uma crise na família? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #crisepsiquiatrica #saudedafamilia #salveparadepois
 
@@ -387,13 +387,13 @@ Neste post: CAT, INSS e como estruturar um retorno ao trabalho que realmente fun
 4. O ponto de virada: ouvir o motivo do abandono antes de tentar "trazer de volta".
 5. Aprendizado: vínculo terapêutico se reconstrói, não se impõe.
 6. Reflexão: nunca é tarde para retomar um tratamento.
-7. **CTA:** Já abandonou um tratamento antes? Agende uma nova consulta, sem julgamento.
+7. **CTA:** Já abandonou um tratamento antes? Leia o artigo completo.
 
 **Legenda sugerida:**
 Ele tinha desistido do tratamento um ano antes. Voltou — e o processo de reconstruir a confiança começou do zero. 🌱
 Um relato real sobre abandono e retomada de tratamento, e por que nunca é tarde para tentar de novo.
 📖 Artigo completo: [LINK]
-📅 Já parou um tratamento antes? Agende uma nova consulta, sem julgamento — link na bio.
+📅 Já parou um tratamento antes? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #vinculoterapeutico #retomartratamento
 
@@ -410,13 +410,13 @@ Um relato real sobre abandono e retomada de tratamento, e por que nunca é tarde
 4. O que se revelou: um sofrimento silencioso que ninguém tinha percebido.
 5. Por que isso importa: nem toda dor grita — muitas sussurram.
 6. Aprendizado: escutar com atenção pode ser o que separa uma tragédia de uma recuperação.
-7. **CTA:** Percebeu algo assim em alguém? Não espere — agende uma consulta.
+7. **CTA:** Percebeu algo assim em alguém? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Às vezes, o sofrimento não grita — ele sussurra num detalhe quase invisível numa consulta de rotina. 🕯️
 Este relato mostra como parar para escutar pode mudar completamente o rumo de uma história.
 📖 Artigo completo: [LINK]
-📅 Percebeu algo assim em alguém? Não espere — agende uma consulta — link na bio.
+📅 Percebeu algo assim em alguém? Não espere — leia o artigo completo — link na bio.
 
 **Hashtags extras:** #escutaativa #relatodeconsultorio
 
@@ -433,13 +433,13 @@ Este relato mostra como parar para escutar pode mudar completamente o rumo de um
 4. Sinal de alerta 2: culpa extrema após comer, ou recusa alimentar persistente.
 5. O papel dos pais: ambiente alimentar sem pressão, sem prêmio/castigo com comida.
 6. O que fazer: observar sem alarmismo, conversar sem culpa.
-7. **CTA:** Precisa de orientação? Agende uma consulta.
+7. **CTA:** Precisa de orientação? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 A relação do seu filho com a comida é, muitas vezes, sobre emoção — não sobre nutrição. 🍽️
 Veja como construir um ambiente alimentar mais saudável em casa e os sinais de alerta que merecem atenção.
 📖 Artigo completo: [LINK]
-📅 Precisa de orientação sobre o seu filho? Agende uma consulta — link na bio.
+📅 Precisa de orientação sobre o seu filho? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #alimentacaoinfantil #saudementalinfantil
 
@@ -456,13 +456,13 @@ Veja como construir um ambiente alimentar mais saudável em casa e os sinais de 
 4. Sinal 3: tentativas de parar que não se sustentam.
 5. Mito a derrubar: "é só ter força de vontade". Não é.
 6. Caminhos de tratamento disponíveis: da Atenção Primária ao CAPS AD.
-7. **CTA:** Você ou alguém da família precisa de ajuda? Agende uma consulta.
+7. **CTA:** Você ou alguém da família precisa de ajuda? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Dependência química não é falta de caráter — é uma doença, e como toda doença, tem tratamento. 💙
 Veja os sinais de alerta em si mesmo ou em alguém da família, e os caminhos de tratamento disponíveis.
 📖 Artigo completo: [LINK]
-📅 Você ou alguém da família precisa de ajuda? Agende uma consulta — link na bio.
+📅 Você ou alguém da família precisa de ajuda? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #dependenciaquimica #alcoolismo #tratamento
 
@@ -502,13 +502,13 @@ Como cuidar da própria saúde mental durante os anos de formação, sem abrir m
 4. Sinal de alerta 2: irritabilidade constante, culpa por "não ser suficiente".
 5. Sinal de alerta 3: isolamento social progressivo.
 6. O que fazer: buscar apoio não é abandonar quem você cuida — é garantir que consiga continuar cuidando.
-7. **CTA:** Você é cuidador de alguém? Agende sua consulta.
+7. **CTA:** Você é cuidador de alguém? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Quem cuida também precisa ser cuidado. 💙
 Se você cuida de um familiar doente, idoso ou com deficiência, este post é para você: os sinais de sobrecarga que costumam passar despercebidos.
 📖 Artigo completo: [LINK]
-📅 Você é cuidador de alguém da família? Agende sua consulta — link na bio.
+📅 Você é cuidador de alguém da família? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #saudedocuidador #cuidadorfamiliar #sobrecarga
 
@@ -525,13 +525,13 @@ Se você cuida de um familiar doente, idoso ou com deficiência, este post é pa
 4. O erro comum: tratar isso só com "tirar umas férias" ou "relaxar mais".
 5. O que realmente ajuda: identificação precoce e cuidado contínuo, não paliativo.
 6. Reflexão: sofrimento no trabalho é assunto de saúde pública, não fraqueza individual.
-7. **CTA:** Sente que o trabalho está afetando sua saúde mental? Agende sua consulta.
+7. **CTA:** Sente que o trabalho está afetando sua saúde mental? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Ansiedade e depressão ligadas ao trabalho não são exceção — são a rotina de muitos consultórios hoje. 💼
 Veja o que revela a prática da Atenção Primária sobre sofrimento no trabalho, e por que isso não é "frescura".
 📖 Artigo completo: [LINK]
-📅 Sente que o trabalho está afetando sua saúde mental? Agende sua consulta — link na bio.
+📅 Sente que o trabalho está afetando sua saúde mental? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #saudementaltrabalho #ansiedadenotrabalho #burnout
 
@@ -548,13 +548,13 @@ Veja o que revela a prática da Atenção Primária sobre sofrimento no trabalho
 4. O ponto de virada: perguntar em vez de proibir.
 5. O que se revelou: comparação constante, ansiedade, medo de ser excluída.
 6. Aprendizado: adolescentes precisam ser ouvidos, não sermoneados.
-7. **CTA:** Preocupado com seu filho adolescente? Agende uma consulta.
+7. **CTA:** Preocupado com seu filho adolescente? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Ela vivia entre dois mundos — o de fora e o das redes sociais. Um deles estava sufocando ela. 📱💔
 Um relato sobre o sofrimento de uma adolescente e o desafio de conversar sobre isso sem julgamento.
 📖 Artigo completo: [LINK]
-📅 Preocupado com seu filho adolescente? Agende uma consulta — link na bio.
+📅 Preocupado com seu filho adolescente? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #adolescencia #saudementaldigital
 
@@ -571,13 +571,13 @@ Um relato sobre o sofrimento de uma adolescente e o desafio de conversar sobre i
 4. O risco: negação atrasa o tratamento e piora o prognóstico.
 5. O que ajudou: tempo, informação e acolhimento — sem confronto.
 6. Aprendizado: aceitar um diagnóstico é um processo, não um evento único.
-7. **CTA:** Sua família está enfrentando isso? Agende uma consulta.
+7. **CTA:** Sua família está enfrentando isso? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 A família ouviu o diagnóstico do filho — e decidiu não acreditar nele. 💭
 Este relato mostra por que a negação é tão comum diante de um transtorno mental grave, e como o acolhimento (sem confronto) pode abrir caminho para o tratamento.
 📖 Artigo completo: [LINK]
-📅 Sua família está enfrentando algo parecido? Agende uma consulta — link na bio.
+📅 Sua família está enfrentando algo parecido? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #transtornomental #familia #aceitacao
 
@@ -594,13 +594,13 @@ Este relato mostra por que a negação é tão comum diante de um transtorno men
 4. Sinal de desorganização: transições (escola, tela, sono) sempre viram conflito.
 5. O que fazer: rotina não é rigidez — é previsibilidade com flexibilidade.
 6. Passo prático: comece pelo sono, depois pelas refeições.
-7. **CTA:** Quer ajuda para organizar a rotina em casa? Agende uma consulta.
+7. **CTA:** Quer ajuda para organizar a rotina em casa? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 O pilar mais subestimado da saúde mental infantil não é remédio, nem terapia. É a rotina. ⏰
 Veja por que a previsibilidade do dia a dia protege a saúde emocional dos filhos — e como começar a organizar isso em casa.
 📖 Artigo completo: [LINK]
-📅 Quer ajuda para organizar a rotina em casa? Agende uma consulta — link na bio.
+📅 Quer ajuda para organizar a rotina em casa? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #rotinainfantil #paisefilhos
 
@@ -617,13 +617,13 @@ Veja por que a previsibilidade do dia a dia protege a saúde emocional dos filho
 4. Sinal 3: culpa intensa e vergonha depois de comer.
 5. O que não é: compulsão alimentar não é "falta de força de vontade" nem escolha.
 6. Quando buscar ajuda: quando os episódios se repetem e afetam a vida emocional.
-7. **CTA:** Reconheceu algum sinal? Agende sua consulta, sem julgamento.
+7. **CTA:** Reconheceu algum sinal? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Compulsão alimentar não é sobre gula, é sobre perda de controle — e vem quase sempre acompanhada de culpa e vergonha. 💛
 Veja os sinais que merecem atenção e quando é hora de buscar ajuda profissional.
 📖 Artigo completo: [LINK]
-📅 Reconheceu algum sinal em você? Agende sua consulta, sem julgamento — link na bio.
+📅 Reconheceu algum sinal em você? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #compulsaoalimentar #transtornoalimentar
 
@@ -640,13 +640,13 @@ Veja os sinais que merecem atenção e quando é hora de buscar ajuda profission
 4. Sinal de alerta: exaustão que não passa nas férias, irritabilidade constante, desmotivação.
 5. Por que isso importa: professor esgotado impacta gerações de alunos.
 6. Reflexão: cuidar de quem cuida da educação também é investimento em saúde pública.
-7. **CTA:** Você é educador e reconheceu esses sinais? Agende sua consulta.
+7. **CTA:** Você é educador e reconheceu esses sinais? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Professores passam a vida formando pessoas — e raramente alguém pergunta como eles estão. 📚
 O adoecimento silencioso de quem educa: sinais de alerta e por que isso merece mais atenção.
 📖 Artigo completo: [LINK]
-📅 Você é educador e reconheceu esses sinais em você? Agende sua consulta — link na bio.
+📅 Você é educador e reconheceu esses sinais em você? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #saudementaldocente #professores #educacao
 
@@ -663,13 +663,13 @@ O adoecimento silencioso de quem educa: sinais de alerta e por que isso merece m
 4. Sinal de alerta 3 (raro, grave): sinais de psicose puerperal — atenção imediata.
 5. O papel da família: observar sem culpar, incentivar a buscar ajuda.
 6. O que ajuda: acompanhamento desde o pré-natal, não só depois que a crise chega.
-7. **CTA:** Está passando por isso ou conhece alguém? Agende uma consulta.
+7. **CTA:** Está passando por isso ou conhece alguém? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Nem toda tristeza depois do parto é "baby blues" passageiro. Saiba diferenciar. 🤱
 Sinais de alerta na gestação e no puerpério que toda família deveria conhecer — para agir a tempo.
 📖 Artigo completo: [LINK]
-📅 Está passando por isso ou conhece alguém? Agende uma consulta — link na bio.
+📅 Está passando por isso ou conhece alguém? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #saudementalmaterna #depressaoposparto #puerperio
 
@@ -686,13 +686,13 @@ Sinais de alerta na gestação e no puerpério que toda família deveria conhece
 4. Sinal 3: tentar parar e não conseguir, mesmo com prejuízos claros.
 5. O impacto: financeiro, familiar e emocional — muitas vezes escondido por vergonha.
 6. Quando buscar ajuda: assim que o jogo deixa de ser lazer e vira necessidade.
-7. **CTA:** Reconheceu esses sinais em você ou na família? Agende sua consulta.
+7. **CTA:** Reconheceu esses sinais em você ou na família? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Jogo patológico não é falta de disciplina — é um transtorno reconhecido, com tratamento. 🎰🚫
 Veja os sinais de alerta em si mesmo ou em alguém da família, e quando é hora de buscar ajuda.
 📖 Artigo completo: [LINK]
-📅 Reconheceu esses sinais em você ou em alguém da família? Agende sua consulta — link na bio.
+📅 Reconheceu esses sinais em você ou em alguém da família? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #jogopatologico #apostas #vicioemjogos
 
@@ -709,13 +709,13 @@ Veja os sinais de alerta em si mesmo ou em alguém da família, e quando é hora
 4. A descoberta: era depressão — tratável, reversível na maior parte dos sintomas.
 5. Por que isso é comum: sofrimento emocional no idoso é frequentemente normalizado como "coisa da idade".
 6. Aprendizado: nem todo esquecimento é demência, e nem toda tristeza no idoso é "natural".
-7. **CTA:** Tem um idoso na família com esses sinais? Agende uma consulta.
+7. **CTA:** Tem um idoso na família com esses sinais? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 "É a idade mesmo, doutor." Só que não era — era depressão, e tinha tratamento. 👴💙
 Um relato sobre como diferenciar depressão de declínio cognitivo em pacientes idosos, e por que isso muda tudo.
 📖 Artigo completo: [LINK]
-📅 Tem um idoso na família com esses sinais? Agende uma consulta — link na bio.
+📅 Tem um idoso na família com esses sinais? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #saudementaldoidoso #depressaonoidoso
 
@@ -732,13 +732,13 @@ Um relato sobre como diferenciar depressão de declínio cognitivo em pacientes 
 4. O processo: passos pequenos, autonomia recuperada aos poucos.
 5. O resultado: volta ao convívio social, ao trabalho, à própria rotina.
 6. Aprendizado: diagnóstico grave não é sentença — com rede de apoio certa, há caminho.
-7. **CTA:** Precisa entender melhor as opções de tratamento? Agende uma consulta.
+7. **CTA:** Precisa entender melhor as opções de tratamento? Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Um diagnóstico grave não é uma sentença. 🌤️
 Este relato mostra como a rede de Atenção Psicossoocial (CAPS) pode reconstruir, aos poucos, a vida de alguém — com autonomia e dignidade.
 📖 Artigo completo: [LINK]
-📅 Quer entender melhor as opções de tratamento disponíveis? Agende uma consulta — link na bio.
+📅 Quer entender melhor as opções de tratamento disponíveis? Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #caps #atencaopsicossocial #esperanca
 
@@ -755,13 +755,13 @@ Este relato mostra como a rede de Atenção Psicossoocial (CAPS) pode reconstrui
 4. Sinal de alerta 3: isolamento social crescente.
 5. O que diferencia do envelhecimento normal: intensidade, duração e impacto na rotina.
 6. O que a família pode fazer: observar, acolher e não normalizar o sofrimento.
-7. **CTA:** Fechando o mês: sua saúde mental (ou a de quem você ama) importa. Agende uma consulta.
+7. **CTA:** Fechando o mês: sua saúde mental (ou a de quem você ama) importa. Leia o artigo completo — link na bio.
 
 **Legenda sugerida:**
 Tristeza na velhice não é "normal da idade" — é um sinal que merece o mesmo cuidado de qualquer outra fase da vida. 💙
 Encerrando este mês de conteúdo: os sinais de sofrimento psíquico no idoso que toda família deveria conhecer.
 📖 Artigo completo: [LINK]
-📅 Sua saúde mental, ou a de quem você ama, importa. Agende uma consulta — link na bio.
+📅 Sua saúde mental, ou a de quem você ama, importa. Leia o artigo completo — link na bio.
 
 **Hashtags extras:** #saudementaldoidoso #familia #cuidadocomidoso
 

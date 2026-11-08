@@ -83,7 +83,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@google/genai": "^2.24.0",
     "@vercel/blob": "^2.8.0",
     "archiver": "^8.0.0",
     "canvas-confetti": "^1.9.4",
