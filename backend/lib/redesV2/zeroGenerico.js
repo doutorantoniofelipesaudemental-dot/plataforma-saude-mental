@@ -17,6 +17,14 @@ const JANELA_SEMANAS = 8;
 const LINHA_CRISE_TRECHOS = ['CVV 188', 'SAMU 192'];
 const PONTOS_CONCRETOS = ['sinal', 'dado', 'passo'];
 const SITE_ARTIGO = /^https:\/\/www\.drantoniofelipemedico\.com\.br\/artigo\/[a-z0-9-]+$/;
+// Rodapé fixo das legendas (montarLegenda): tudo a partir daqui não é texto do post.
+const { LINHA_CREDITO, ORIENTACAO } = require('./conteudo');
+const MARCAS_RODAPE = [LINHA_CREDITO, ORIENTACAO, 'Em crise:', AVISO_CFM].filter(Boolean);
+function corpoDaLegenda(legenda) {
+  const s = String(legenda || '');
+  const cortes = MARCAS_RODAPE.map((m) => s.indexOf(m)).filter((i) => i >= 0);
+  return cortes.length ? s.slice(0, Math.min(...cortes)) : s;
+}
 
 // Lista proibida de ganchos (começo da primeira linha, sem acento e em minúsculas). Criada em 06/11/2026.
 const GANCHOS_PROIBIDOS = [
@@ -97,15 +105,16 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   const proibido = GANCHOS_PROIBIDOS.find((g) => primeira.startsWith(normalizar(g)));
   if (proibido) f('d-gancho-generico', `gancho genérico da lista proibida: "${proibido}"`);
 
-  // (e) similaridade com posts das últimas 8 semanas
-  const alvo = trigramas(legenda);
+  // (e) similaridade com posts das últimas 8 semanas. Compara só o CORPO da legenda (sem o rodapé fixo:
+  // crédito, orientação, aviso CFM e assinatura são iguais em todos os posts e inflavam a medida: ~0,33 contra 0,05 do corpo).
+  const alvo = trigramas(corpoDaLegenda(legenda));
   const limiteData = new Date(`${dataISO}T00:00:00Z`).getTime() - JANELA_SEMANAS * 7 * 86400e3;
   let similaridadeMax = 0;
   for (const h of historico) {
     const t = new Date(`${h.dataISO}T00:00:00Z`).getTime();
     if (t < limiteData || t >= new Date(`${dataISO}T00:00:00Z`).getTime()) continue;
     if (h.slug && h.slug === art.slug) continue;
-    similaridadeMax = Math.max(similaridadeMax, jaccard(alvo, trigramas(h.legenda)));
+    similaridadeMax = Math.max(similaridadeMax, jaccard(alvo, trigramas(corpoDaLegenda(h.legenda))));
   }
   if (similaridadeMax > LIMITE_SIMILARIDADE) {
     f('e-parecido', `parecido com post das últimas ${JANELA_SEMANAS} semanas: ${similaridadeMax.toFixed(2)} (limite ${LIMITE_SIMILARIDADE})`);

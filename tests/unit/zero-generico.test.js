@@ -67,6 +67,16 @@ test('(e) reprova post parecido com o das últimas 8 semanas e ignora o de fora 
   assert.equal(foraJanela.falhas.filter((f) => f.regra === 'e-parecido').length, 0);
 });
 
+test('(e) rodapé fixo igual não torna o post parecido: só o corpo conta', () => {
+  const { LINHA_CREDITO, ORIENTACAO } = require('../../backend/lib/redesV2/conteudo');
+  const rodape = [LINHA_CREDITO, ORIENTACAO, CRISE, AVISO_CFM, '#saudemental #cuidado'].join('\n\n');
+  const legendaOutra = `Ansiedade no trabalho começa com sinais simples no dia a dia.\n\n${rodape}`;
+  const hist = [{ slug: 'outro', legenda: `Insônia persistente pede avaliação na Atenção Primária sem alarme.\n\n${rodape}`, dataISO: '2026-10-20' }];
+  const r = checarZeroGenerico({ post: { ...BASE, legenda: legendaOutra }, dataISO: DATA, historico: hist });
+  assert.equal(r.falhas.filter((f) => f.regra === 'e-parecido').length, 0);
+  assert.ok(r.similaridadeMax < LIMITE_SIMILARIDADE);
+});
+
 test('(f) reprova eixo fora do eixo do dia (segunda exige E4)', () => {
   const r = checarZeroGenerico({ post: { ...BASE, eixo: 'E1' }, dataISO: DATA });
   assert.ok(r.falhas.some((f) => f.regra === 'f-eixo-do-dia'));
