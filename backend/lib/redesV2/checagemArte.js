@@ -17,7 +17,7 @@ const CORPO_MIN_PX = 40;
 const PALAVRAS_MAX = 25;
 const CONTRASTE_MIN = 4.5;
 const FUNDO_LUM_MIN = 0.4;
-const ROTULOS = ['Sinal de alerta', 'Dado', 'Passo'];
+const ROTULOS = ['Sinal de alerta', 'Dado', 'Passo', 'Para refletir']; // "Para refletir": relatos (ordem de 08/11, pendência 4)
 const AVISO_APROVADO = 'aprovado pelo Dr. Antônio Felipe (CFM 2.454/2026)';
 
 function luminancia(hex) {
@@ -55,8 +55,8 @@ function checarAvisoLegenda(legenda, selo) {
   return falhas;
 }
 
-/** Dado precisa de referência nomeada: "et al." ou "(ano)". */
-const temReferenciaNomeada = (t) => /et al\.|\(\d{4}\)/.test(String(t || ''));
+/** Dado precisa de referência nomeada: "et al.", "(ano)" ou norma com número e ano, ex.: "NR-1 (Portaria MTE 1.419/2024)". */
+const temReferenciaNomeada = (t) => /et al\.|\(\d{4}\)|Portaria[^()]*\d{4}/.test(String(t || ''));
 
 /**
  * @param {object} lamina medidas: { n, tituloPx, corpoPx, palavras, corCorpo, fundo, transbordou, fonteOk, iconeOk, colisoes, pares,

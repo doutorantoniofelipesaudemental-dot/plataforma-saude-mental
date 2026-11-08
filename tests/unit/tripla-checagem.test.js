@@ -5,7 +5,8 @@ const { test } = require('node:test');
 const assert = require('node:assert');
 const sharp = require('sharp');
 
-const { montarLegendaInstagram, IDENTIFICACAO_3_LINHAS: IDENTIFICACAO, IDENTIFICACAO: IDENTIFICACAO_LEGADA, LINHA_BIO } = require('../../backend/lib/legendaInstagram');
+const { montarLegendaInstagram, IDENTIFICACAO: IDENTIFICACAO_LEGADA, LINHA_BIO } = require('../../backend/lib/legendaInstagram');
+const { IDENTIFICACAO_COMPLETA: IDENTIFICACAO } = require('../../backend/lib/identificacaoCfm');
 const { renderizarCapaRedes } = require('../../backend/lib/capaRedes');
 const { executarTriplaChecagem } = require('../../backend/lib/checagemRedes');
 

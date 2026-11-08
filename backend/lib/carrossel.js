@@ -464,6 +464,7 @@ function renderizarSlideSVG(slide, indice, total, categoria) {
 
 /* -------------------------------- Legenda ---------------------------------- */
 
+const { IDENTIFICACAO_COMPLETA } = require('./identificacaoCfm');
 function montarLegenda(artigo, slides) {
   const emoji = EMOJI_CATEGORIA[artigo.categoria] || '🧠';
   const topicos = slides
@@ -481,6 +482,7 @@ function montarLegenda(artigo, slides) {
   }
 
   linhas.push('', 'Quer conversar sobre isso? Agende uma consulta — link na bio.');
+  linhas.push('', IDENTIFICACAO_COMPLETA);
 
   const nomesHashtag = [
     ...HASHTAGS_BASE,

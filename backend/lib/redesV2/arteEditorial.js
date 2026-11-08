@@ -19,11 +19,17 @@ const CORPO_COR = '#1B1B1B';
 const AVISO_CURTO = 'Conteúdo educativo com apoio de IA, aprovado pelo Dr. Antônio Felipe (CFM 2.454/2026).';
 const RODAPE_3 = ['Dr. Antônio Felipe · Médico · CRM-BA 41322', 'Especialista em Medicina de Família e Comunidade · RQE 26638', 'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)'];
 const RODAPE_5 = IDENTIFICACAO_COMPLETA.split('\n');
-// Tema → ícone 3D (somente os 7 ícones confirmados como CC0 em relatorios/redes/LICENCAS do estilo editorial).
+// Banco de ícones 3D CC0 (pacote realvjy/3dicons, pasta static/). Cada ícone tem a licença registrada aqui e no LICENCAS.md.
+// Regra (ordem de 08/11, item 5): nenhum ícone repetido na mesma semana. Polegar (hand.png) e livro preto proibidos para estes temas.
+const BANCO_ICONES_CC0 = {
+  'heart-1.png': 'CC0-1.0 (repo LICENSE)', 'heart-2.png': 'CC0-1.0 (repo LICENSE)', 'heart-3.png': 'CC0-1.0 (repo LICENSE)',
+  'premium.png': 'CC0-1.0 (repo LICENSE)', 'notebook-dynamic-00.png': 'CC0-1.0 (repo LICENSE)', 'bubble.png': 'CC0-1.0 (repo LICENSE)',
+  'setting.png': 'CC0-1.0 (repo LICENSE)', 'clay.png': 'CC0-1.0 (repo LICENSE)', 'colored.png': 'CC0-1.0 (repo LICENSE)', 'dynamic.png': 'CC0-1.0 (repo LICENSE)',
+};
 const ICONE_POR_TEMA = {
   'ansiedade-infantil-sinais': 'heart-1.png',
   'esquecimento-ou-demencia': 'notebook-dynamic-00.png',
-  'cirurgia-bariatrica-saude-mental': 'heart-1.png',
+  'cirurgia-bariatrica-saude-mental': 'heart-3.png',
   'racismo-cotidiano-saude-mental': 'premium.png',
   'o-corredor-que-parecia-nao-ter-fim': 'bubble.png',
   'assedio-sexual-trabalho-prevencao': 'setting.png',
@@ -65,7 +71,7 @@ body{font-family:"RalewayPC",sans-serif;color:${CORPO_COR}}
 .slide::before{content:"";position:absolute;inset:0;opacity:.22;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.3  0 0 0 0 0.25  0 0 0 0 0.2  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 .wrap{position:absolute;left:90px;right:90px;top:170px;bottom:${rh + 40}px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .kicker{font-family:"OswaldPC";font-weight:500;font-size:38px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
-#t{font-family:"OswaldPC";font-weight:700;text-transform:uppercase;line-height:1.22;font-size:104px;margin-bottom:44px}
+#t{font-family:"OswaldPC";font-weight:700;text-transform:uppercase;line-height:${l.lhTitulo || 1.22};font-size:104px;margin-bottom:44px}
 mark{background:linear-gradient(transparent 12%,#FFE46B 12%,#FFE46B 92%,transparent 92%);color:inherit;padding:0 6px}
 .rotulo{font-family:"OswaldPC";font-weight:600;font-size:36px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
 .corpo{font-size:48px;line-height:1.35;font-weight:600}
@@ -179,4 +185,4 @@ async function renderizarEditorial(laminas, { ativos } = {}) {
   return { imagens, medidas, checagem: checarArte(medidas) };
 }
 
-module.exports = { renderizarEditorial, PALETA, AVISO_CURTO, RODAPE_3, RODAPE_5, ICONE_POR_TEMA, ICONE_FINAL, paginaHtml, medirELayout };
+module.exports = { renderizarEditorial, PALETA, AVISO_CURTO, RODAPE_3, RODAPE_5, ICONE_POR_TEMA, ICONE_FINAL, BANCO_ICONES_CC0, paginaHtml, medirELayout };

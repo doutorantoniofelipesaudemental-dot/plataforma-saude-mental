@@ -16,6 +16,9 @@ const LIMITE_SIMILARIDADE = 0.3; // Jaccard sobre trigramas de palavras; acima d
 const JANELA_SEMANAS = 8;
 const LINHA_CRISE_TRECHOS = ['CVV 188', 'SAMU 192'];
 const PONTOS_CONCRETOS = ['sinal', 'dado', 'passo'];
+// Textos padrão de segurança (ordem de 08/11, pendência 2): isentos da regra de literalidade. Nova lista = nova ordem do Dr. Antônio.
+const TEXTOS_PADRAO_SEGURANCA = ['Se surgirem pensamentos de morte, procure ajuda: CVV 188 · SAMU 192.'];
+const ehTextoPadrao = (t) => TEXTOS_PADRAO_SEGURANCA.some((p) => normalizar(p) === normalizar(t));
 const SITE_ARTIGO = /^https:\/\/www\.drantoniofelipemedico\.com\.br\/artigo\/[a-z0-9-]+$/;
 // Rodapé fixo das legendas (montarLegenda): tudo a partir daqui não é texto do post.
 const { LINHA_CREDITO, ORIENTACAO } = require('./conteudo');
@@ -98,7 +101,15 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   // (c) ponto concreto: sinal, dado com fonte (https) ou passo prático
   const pontos = post.pontos || [];
   // Ponto concreto tem de ser frase LITERAL do artigo (regra h, 07/11/2026): paráfrase não conta.
-  const literal = (p) => String(p.texto || '').trim() && corpo.includes(normalizar(p.texto));
+  // Ordem de 08/11 (pendência 2): texto padrão de segurança é isento; trecho entre «aspas» é comparado sozinho.
+  const literal = (p) => {
+    const t = String(p.texto || '').trim();
+    if (!t) return false;
+    if (ehTextoPadrao(t)) return true;
+    const trechos = [...t.matchAll(/«([^»]+)»/g)].map((m) => m[1]);
+    if (trechos.length) return trechos.every((x) => corpo.includes(normalizar(x)));
+    return corpo.includes(normalizar(t));
+  };
   const concreto = pontos.some((p) => PONTOS_CONCRETOS.includes(p.tipo) && literal(p)
     && (p.tipo !== 'dado' || /^https:\/\//.test(String(p.fonte || ''))));
   if (!concreto) f('c-ponto-concreto', 'sem ponto concreto literal do artigo (sinal, dado com fonte ou passo prático)');
@@ -153,4 +164,4 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   };
 }
 
-module.exports = { checarZeroGenerico, GANCHOS_PROIBIDOS, EIXO_DO_DIA, LIMITE_SIMILARIDADE, JANELA_SEMANAS, trigramas, jaccard, normalizar };
+module.exports = { checarZeroGenerico, GANCHOS_PROIBIDOS, EIXO_DO_DIA, LIMITE_SIMILARIDADE, JANELA_SEMANAS, trigramas, jaccard, normalizar, TEXTOS_PADRAO_SEGURANCA, ehTextoPadrao };

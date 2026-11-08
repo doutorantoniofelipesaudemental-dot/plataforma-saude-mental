@@ -93,7 +93,8 @@ test('humanização: texto longo e seco, sem acolhimento, reprova', () => {
 
 test('CFM portal: exige as 5 linhas, CRM e RQE', () => {
   assert.deepStrictEqual(checarEticaCfm(`${TEXTO_ACOLHEDOR}\n\n${PORTAL}`).falhas, []);
-  const r = checarEticaCfm(`${TEXTO_ACOLHEDOR}\n\n${SOCIAL}`); // só 3 linhas
+  const TRES = 'Dr. Antônio Felipe — Médico — CRM-BA 41322\nEspecialista em Medicina de Família e Comunidade — RQE 26638\nAtuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)';
+  const r = checarEticaCfm(`${TEXTO_ACOLHEDOR}\n\n${TRES}`); // só 3 linhas (versão curta)
   assert.ok(r.falhas.some((f) => /5 linhas/.test(f)), r.falhas.join('|'));
 });
 
@@ -150,15 +151,16 @@ test('fluxo: peça conforme é aprovada; qualquer falha bloqueia com motivo por 
 
 /* -------------- Integração: legenda de 3 linhas e legado ------------------- */
 
-test('legenda do feed usa a assinatura de 3 linhas; conteúdo legado (1 linha) continua válido', () => {
+test('legenda do feed usa a assinatura de 5 linhas (ordem de 08/11); conteúdo legado (1 linha) continua válido', () => {
   const { montarLegendaInstagram, IDENTIFICACAO, IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../../backend/lib/legendaInstagram');
+  const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/identificacaoCfm');
   const artigo = {
     titulo: 'Sono e cuidado: quando descansar pede ajuda',
     resumo: 'Como o sono muda quando a rotina pesa e quando procurar apoio.',
     categoria: 'Geral',
     conteudo: '<p>Dormir mal cansa o corpo e a mente.</p><p>Você merece descansar e pedir ajuda sem culpa.</p>',
   };
-  assert.ok(montarLegendaInstagram(artigo).texto.includes(IDENTIFICACAO_3_LINHAS));
+  assert.ok(montarLegendaInstagram(artigo).texto.includes(IDENTIFICACAO_COMPLETA));
   const legado = montarLegendaInstagram(artigo, { legado: true }).texto;
   assert.ok(legado.includes(IDENTIFICACAO) && !legado.includes(IDENTIFICACAO_3_LINHAS));
   assert.ok(temIdentificacaoSocial(legado) && temIdentificacaoSocial(IDENTIFICACAO_3_LINHAS));
