@@ -17,6 +17,14 @@ const JANELA_SEMANAS = 8;
 const LINHA_CRISE_TRECHOS = ['CVV 188', 'SAMU 192'];
 const PONTOS_CONCRETOS = ['sinal', 'dado', 'passo'];
 const SITE_ARTIGO = /^https:\/\/www\.drantoniofelipemedico\.com\.br\/artigo\/[a-z0-9-]+$/;
+// Rodapé fixo das legendas (montarLegenda): tudo a partir daqui não é texto do post.
+const { LINHA_CREDITO, ORIENTACAO } = require('./conteudo');
+const MARCAS_RODAPE = [LINHA_CREDITO, ORIENTACAO, 'Em crise:', AVISO_CFM].filter(Boolean);
+function corpoDaLegenda(legenda) {
+  const s = String(legenda || '');
+  const cortes = MARCAS_RODAPE.map((m) => s.indexOf(m)).filter((i) => i >= 0);
+  return cortes.length ? s.slice(0, Math.min(...cortes)) : s;
+}
 
 // Lista proibida de ganchos (começo da primeira linha, sem acento e em minúsculas). Criada em 06/11/2026.
 const GANCHOS_PROIBIDOS = [
@@ -79,7 +87,8 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   }
 
   // (b) frases clínicas: cada uma tem de ser literal (normalizada) no corpo do artigo
-  const corpo = normalizar(art.corpo);
+  // corpo em HTML: tags inline (<strong>, <em>) não podem quebrar a comparação literal
+  const corpo = normalizar(String(art.corpo || '').replace(/<[^>]+>/g, ' '));
   const frases = post.frasesClinicas || [];
   if (!frases.length) f('b-frase-clinica', 'nenhuma frase clínica declarada para conferir com o artigo');
   for (const frase of frases) {
@@ -88,24 +97,41 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
 
   // (c) ponto concreto: sinal, dado com fonte (https) ou passo prático
   const pontos = post.pontos || [];
-  const concreto = pontos.some((p) => PONTOS_CONCRETOS.includes(p.tipo) && String(p.texto || '').trim()
+  // Ponto concreto tem de ser frase LITERAL do artigo (regra h, 07/11/2026): paráfrase não conta.
+  const literal = (p) => String(p.texto || '').trim() && corpo.includes(normalizar(p.texto));
+  const concreto = pontos.some((p) => PONTOS_CONCRETOS.includes(p.tipo) && literal(p)
     && (p.tipo !== 'dado' || /^https:\/\//.test(String(p.fonte || ''))));
-  if (!concreto) f('c-ponto-concreto', 'sem ponto concreto (sinal, dado com fonte ou passo prático)');
+  if (!concreto) f('c-ponto-concreto', 'sem ponto concreto literal do artigo (sinal, dado com fonte ou passo prático)');
+
+  // (h) número ou percentual no post exige referência listada; gancho não pode repetir o resumo do artigo
+  const corpoLegenda = corpoDaLegenda(legenda);
+  const temRef = /Refer[êe]ncias:\s*\S/.test(legenda);
+  const numeros = (corpoLegenda.match(/\d+(?:[.,]\d+)?/g) || []).filter((n) => !/^(19|20)\d\d$/.test(n));
+  const porExtenso = /\bem cada (?:\w+ )?\w+\b|\bmetade\b|\bdobro\b|\bpela metade\b/i.test(corpoLegenda);
+  if ((numeros.length || porExtenso) && !temRef) f('h-numero-sem-referencia', 'número ou percentual no post sem referência listada');
+  const gancho = normalizar(legenda.split('\n')[0]);
+  const resumo = normalizar(art.resumo || '');
+  if (resumo && gancho.length > 20) {
+    const pal = gancho.split(' ').filter(Boolean);
+    const repetidas = pal.filter((w) => resumo.split(' ').includes(w)).length;
+    if (resumo.includes(gancho) || repetidas / pal.length >= 0.8) f('h-gancho-repete-resumo', 'o gancho repete o resumo do artigo');
+  }
 
   // (d) gancho: primeira linha não pode começar com item da lista proibida
   const primeira = normalizar(legenda.split('\n')[0]);
   const proibido = GANCHOS_PROIBIDOS.find((g) => primeira.startsWith(normalizar(g)));
   if (proibido) f('d-gancho-generico', `gancho genérico da lista proibida: "${proibido}"`);
 
-  // (e) similaridade com posts das últimas 8 semanas
-  const alvo = trigramas(legenda);
+  // (e) similaridade com posts das últimas 8 semanas. Compara só o CORPO da legenda (sem o rodapé fixo:
+  // crédito, orientação, aviso CFM e assinatura são iguais em todos os posts e inflavam a medida: ~0,33 contra 0,05 do corpo).
+  const alvo = trigramas(corpoDaLegenda(legenda));
   const limiteData = new Date(`${dataISO}T00:00:00Z`).getTime() - JANELA_SEMANAS * 7 * 86400e3;
   let similaridadeMax = 0;
   for (const h of historico) {
     const t = new Date(`${h.dataISO}T00:00:00Z`).getTime();
     if (t < limiteData || t >= new Date(`${dataISO}T00:00:00Z`).getTime()) continue;
     if (h.slug && h.slug === art.slug) continue;
-    similaridadeMax = Math.max(similaridadeMax, jaccard(alvo, trigramas(h.legenda)));
+    similaridadeMax = Math.max(similaridadeMax, jaccard(alvo, trigramas(corpoDaLegenda(h.legenda))));
   }
   if (similaridadeMax > LIMITE_SIMILARIDADE) {
     f('e-parecido', `parecido com post das últimas ${JANELA_SEMANAS} semanas: ${similaridadeMax.toFixed(2)} (limite ${LIMITE_SIMILARIDADE})`);
