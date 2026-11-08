@@ -3,8 +3,12 @@
 ## ALERTA — resolvido em 04/11/2026
 Os 3 textos do G1 com medicamento agendados antes de 08/11 foram **retirados da agenda** (agendado=false, motivo aguarda-revisao-medica; slot original guardado em agendamento.slot_original). Ficam no topo do G1 até a revisão. Reagendar após aprovação.
 
+## ALERTA 2 — 07/11/2026, 23:25 (ordem do Dr. Antônio)
+O texto "Eu queria morrer logo: como acolher o desejo de antecipar a morte" (`paliativos-desejo-de-morrer`) foi **retirado da agenda até a revisão** (agendado=false, motivo aguarda-revisao-medica, slot original em agendamento.slot_original). Arquivo: `00-paliativos-desejo-de-morrer.md`. Varredura de temas sensíveis (sem retirar nada): `VARREDURA-SENSIVEIS-20261107.md`.
+
 ## Resumo
-- Retirados da agenda em 04/11/2026 (topo do G1): 3
+- Retirados da agenda em 07/11/2026 (topo do G1): 1 (`paliativos-desejo-de-morrer`) · 04/11/2026: 3
+- Retirados da agenda até a revisão (total): 4
 - G1 — agendados até 15/11 (urgentes): 13 textos, ~66 min
 - G2 — fora da agenda (Nível 1): 26 textos, ~98 min
 - G3 — agendados após 15/11: 24 textos, ~107 min
@@ -14,6 +18,7 @@ Os 3 textos do G1 com medicamento agendados antes de 08/11 foram **retirados da 
 ## Tabela
 | nº | grupo | slug | título | eixo | data | motivo | leitura |
 |---|---|---|---|---|---|---|---|
+| 00 | G1 | `paliativos-desejo-de-morrer` | "Eu queria morrer logo": como acolher o desejo de antecipar a morte | 7 Sociedade, Cultura & Existência | RETIRADO da agenda em 07/11/2026 (era 2026-12-08 14:00 Bahia). Reagendar só após revisão e aprovação | desejo de antecipar a morte (revisão clínica) | ~8 min |
 | 01 | G1 | `abandono-de-tratamento-psiquiatrico-estrategias-de-resgate-n` | Abandono de tratamento psiquiátrico: estratégias de resgate na UBS | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-05 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
 | 02 | G1 | `conviver-com-a-oscilacao-de-humor-limites-e-apoio-familiar` | Conviver com a oscilação de humor: limites e apoio familiar | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-06 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
 | 03 | G1 | `manejo-de-sintomas-dissociativos-associados-ao-trauma-e-estr` | Manejo de Sintomas Dissociativos Associados ao Trauma e Estresse Crônico na APS: Guia de Acolhimento e Autorregulação | 5 Transtornos Mentais | RETIRADO da agenda em 04/11/2026 (era 2026-11-07 08:00 Bahia). Reagendar só após aprovação | retirado da agenda até a revisão (aguarda-revisao-medica) + medicamento | ~6 min |
