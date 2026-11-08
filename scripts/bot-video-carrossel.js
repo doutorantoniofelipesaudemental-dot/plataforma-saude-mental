@@ -236,6 +236,7 @@ async function main() {
 }
 
 if (require.main === module) {
+  require('../backend/lib/llm').avisarBotDesativado('bot-video-carrossel');
   main().catch((err) => {
     console.error('\n  Falha:', err.message, '\n');
     process.exit(1);

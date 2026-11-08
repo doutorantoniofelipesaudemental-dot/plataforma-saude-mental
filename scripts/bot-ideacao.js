@@ -257,11 +257,10 @@ ${rej.map(resumo).join('\n')}`);
   console.log('\n  Use --propor [--n=6 --tema="..." --tipo=...], --demanda="...", --listar, --aprovar=<id> ou --rejeitar=<id>.\n');
 }
 
+// Ordem de 08/11/2026: IA externa desativada. Este bot só existe para gerar pautas com IA: encerra sem chamar API.
 if (require.main === module) {
-  main().catch((err) => {
-    console.error('  ERRO:', err.message);
-    process.exitCode = 1;
-  });
+  require('../backend/lib/llm').avisarBotDesativado('bot-ideacao');
+  process.exitCode = 1;
 }
 
 module.exports = { main };

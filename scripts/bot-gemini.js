@@ -888,14 +888,11 @@ async function main() {
   }
 }
 
-if (require.main === module) main().catch(async (err) => {
-  console.error('\n  Falha:', err.message, '\n');
-  try {
-    await db.mongoose.disconnect();
-  } catch {
-    // conexão já pode ter caído.
-  }
-  process.exit(1);
-});
+// Ordem de 08/11/2026: IA externa desativada. Este script depende de IA para escrever rascunhos,
+// então encerra sem chamar nenhuma API. As funções de hash continuam exportadas para os outros bots.
+if (require.main === module) {
+  require('../backend/lib/llm').avisarBotDesativado('bot-gemini');
+  process.exitCode = 1;
+}
 
 module.exports = { garantirAvisoCaixaPerguntas, ajustarGancho, ajustarGanchos, gerarRascunho, verificar, verificarPacoteMultimidia, garantirChamadaAudio, garantirNarrativaComposta, verificarYoutube, garantirLinhasFixas, normalizar, pecasDoRascunho, hashArtigo, hashTexto, blocoMetadados, segundos, AVISO_CFM, IDENTIFICACAO_COMPLETA, SCHEMA, SISTEMA };

@@ -234,6 +234,7 @@ async function main() {
 }
 
 if (require.main === module) {
+  require('../backend/lib/llm').avisarBotDesativado('bot-aprovar');
   main().catch(async (err) => {
     console.error('\n  Falha:', err.message, '\n');
     try {
