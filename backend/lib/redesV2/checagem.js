@@ -3,6 +3,7 @@
  * novo de redes (PROMPT-MESTRE 3.3). Determinística (sem LLM): a revisão científica profunda é do texto de origem,
  * já auditado na Parte 2; aqui só se confere que a peça não distorce, não promete e carrega os avisos obrigatórios.
  */
+const { checarArte } = require('./checagemArte');
 const crypto = require('node:crypto');
 const sharp = require('sharp');
 const { checarEticaCfm, checarImagemSemMarcaDagua } = require('../checagensAprovacao');
@@ -69,4 +70,10 @@ async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }
   return { ok: !falhas.length, falhas, hashes };
 }
 
-module.exports = { checarPost };
+/** Falhas da checagem AUTOMÁTICA DA ARTE (checagemArte.js) no formato do portão: grupo 'arte'. Sem medidas, nada a reportar. */
+function falhasDeArte(medidas) {
+  if (!Array.isArray(medidas)) return [];
+  return checarArte(medidas).falhas.map((x) => ({ grupo: 'arte', msg: x.msg }));
+}
+
+module.exports = { checarPost, falhasDeArte };
