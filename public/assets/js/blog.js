@@ -1,6 +1,7 @@
 /* =========================================================================
-   Listagem do blog: busca, filtro por categoria e paginação.
-   O estado vive na query string, então links e o botão voltar funcionam.
+   Listagem do blog: busca, filtro por tema (7 temas + Relatos da Prática) e paginação.
+   O estado vive na query string (?tema=<slug> ou ?formato=relatos), então links
+   compartilhados e o botão voltar funcionam.
    ========================================================================= */
 (function () {
   'use strict';
@@ -12,21 +13,29 @@
   const campoBusca = document.getElementById('campo-busca');
   const paginacao = document.getElementById('paginacao');
   const paginacaoInfo = document.getElementById('paginacao-info');
+  const tituloTema = document.getElementById('blog-tema-titulo');
 
   const LIMITE = 9;
+  const FORMATO_RELATOS = 'relatos';
 
   const estado = {
-    categoria: '',
+    tema: '',
+    formato: '',
     busca: '',
     pagina: 1,
     paginas: 1,
   };
 
+  // Nomes dos temas e de Relatos para o título da página (preenchidos pela lista de /artigos/temas).
+  const nomes = { temas: {}, relatos: 'Relatos da Prática' };
+  const TITULO_BASE = document.title;
+
   /* --------------------------- Query string ---------------------------- */
 
   function lerUrl() {
     const p = new URLSearchParams(location.search);
-    estado.categoria = p.get('categoria') || '';
+    estado.formato = p.get('formato') === FORMATO_RELATOS ? FORMATO_RELATOS : '';
+    estado.tema = estado.formato ? '' : p.get('tema') || '';
     estado.busca = p.get('busca') || '';
     estado.pagina = Math.max(1, parseInt(p.get('pagina'), 10) || 1);
     if (campoBusca) campoBusca.value = estado.busca;
@@ -34,7 +43,8 @@
 
   function escreverUrl(substituir) {
     const p = new URLSearchParams();
-    if (estado.categoria) p.set('categoria', estado.categoria);
+    if (estado.formato) p.set('formato', estado.formato);
+    else if (estado.tema) p.set('tema', estado.tema);
     if (estado.busca) p.set('busca', estado.busca);
     if (estado.pagina > 1) p.set('pagina', String(estado.pagina));
 
@@ -42,38 +52,80 @@
     history[substituir ? 'replaceState' : 'pushState']({ ...estado }, '', url);
   }
 
-  /* ---------------------------- Categorias ----------------------------- */
+  /* ------------------------------ Filtros ------------------------------ */
 
-  async function carregarCategorias() {
+  // Mesma marcação que backend/lib/renderizarBlog.js (montarFiltrosHtml).
+  function montarFiltros(dados) {
+    const temas = (dados && dados.temas) || [];
+    const relatos = (dados && dados.relatos) || { total: 0 };
+    const botoes = [
+      `<button class="filtro" type="button" data-tema="" aria-pressed="${!estado.tema && !estado.formato}">Todos</button>`,
+      ...temas.map(
+        (t) =>
+          `<button class="filtro" type="button" data-tema="${esc(t.slug)}" title="${esc(t.nome)}" aria-label="${esc(t.nome)}" aria-pressed="${t.slug === estado.tema}">${esc(t.curto)} <span class="filtro__total">${t.total}</span></button>`
+      ),
+      '<span class="filtros__divisor" aria-hidden="true"></span>',
+      `<button class="filtro" type="button" data-formato="relatos" title="${esc(relatos.nome || nomes.relatos)}" aria-label="${esc(relatos.nome || nomes.relatos)}" aria-pressed="${estado.formato === FORMATO_RELATOS}">${esc(relatos.nome || nomes.relatos)} <span class="filtro__total">${relatos.total}</span></button>`,
+    ];
+    return botoes.join('');
+  }
+
+  function guardarNomes(dados) {
+    (dados.temas || []).forEach((t) => {
+      nomes.temas[t.slug] = t.nome;
+    });
+    if (dados.relatos && dados.relatos.nome) nomes.relatos = dados.relatos.nome;
+  }
+
+  async function carregarFiltros() {
     if (!filtros) return;
     try {
-      const dados = await api('/artigos/categorias');
-      const comArtigos = (dados.categorias || []).filter((c) => c.total > 0);
-
-      filtros.insertAdjacentHTML(
-        'beforeend',
-        comArtigos
-          .map(
-            (c) =>
-              `<button class="filtro" type="button" data-categoria="${esc(c.nome)}" aria-pressed="false">${esc(c.nome)} <span style="opacity:.6;margin-left:.35rem;">${c.total}</span></button>`
-          )
-          .join('')
-      );
+      const dados = await api('/artigos/temas');
+      guardarNomes(dados);
+      filtros.innerHTML = montarFiltros(dados);
       marcarFiltroAtivo();
+      atualizarIndicadorRolagem();
     } catch (err) {
-      // Sem categorias o blog ainda funciona — só perde o filtro.
-      console.warn('[categorias]', err.message);
+      // Sem os temas o blog ainda lista os artigos — só perde o filtro.
+      console.warn('[temas]', err.message);
     }
   }
 
-  function marcarFiltroAtivo() {
+  // Degradê nas bordas só quando há botões escondidos (classes filtros--mais-direita/esquerda).
+  function atualizarIndicadorRolagem() {
     if (!filtros) return;
-    filtros.querySelectorAll('.filtro').forEach((botao) => {
-      botao.setAttribute(
-        'aria-pressed',
-        String((botao.dataset.categoria || '') === estado.categoria)
-      );
-    });
+    const maximo = filtros.scrollWidth - filtros.clientWidth;
+    filtros.classList.toggle('filtros--mais-direita', filtros.scrollLeft < maximo - 2);
+    filtros.classList.toggle('filtros--mais-esquerda', filtros.scrollLeft > 2);
+  }
+
+  if (filtros) {
+    filtros.addEventListener('scroll', atualizarIndicadorRolagem, { passive: true });
+    window.addEventListener('resize', atualizarIndicadorRolagem);
+  }
+
+  function marcarFiltroAtivo() {
+    if (filtros) {
+      filtros.querySelectorAll('.filtro').forEach((botao) => {
+        let ativo;
+        if (botao.dataset.formato) ativo = estado.formato === FORMATO_RELATOS;
+        else ativo = !estado.formato && (botao.dataset.tema || '') === estado.tema;
+        botao.setAttribute('aria-pressed', String(ativo));
+      });
+    }
+    atualizarTituloTema();
+  }
+
+  function atualizarTituloTema() {
+    let titulo = '';
+    if (estado.formato === FORMATO_RELATOS) titulo = nomes.relatos;
+    else if (estado.tema && nomes.temas[estado.tema]) titulo = nomes.temas[estado.tema];
+
+    if (tituloTema) {
+      tituloTema.textContent = titulo;
+      tituloTema.hidden = !titulo;
+    }
+    document.title = titulo ? `${titulo} — ${TITULO_BASE}` : TITULO_BASE;
   }
 
   /* ------------------------------ Artigos ------------------------------ */
@@ -90,7 +142,8 @@
     mostrarEsqueletos();
 
     const p = new URLSearchParams({ limite: String(LIMITE), pagina: String(estado.pagina) });
-    if (estado.categoria) p.set('categoria', estado.categoria);
+    if (estado.formato) p.set('formato', estado.formato);
+    else if (estado.tema) p.set('tema', estado.tema);
     if (estado.busca) p.set('busca', estado.busca);
 
     try {
@@ -103,11 +156,11 @@
         lista.innerHTML = estado.busca
           ? estadoVazio(
               'Nenhum artigo encontrado',
-              `Não achamos nada para "${estado.busca}". Tente outro termo ou veja todas as categorias.`
+              `Não achamos nada para "${estado.busca}". Tente outro termo ou veja todos os temas.`
             )
           : estadoVazio(
               'Nenhum artigo por aqui ainda',
-              'Em breve publicaremos conteúdo nesta categoria.'
+              'Em breve publicaremos conteúdo neste tema.'
             );
         atualizarPaginacao(0);
         return;
@@ -150,7 +203,13 @@
     filtros.addEventListener('click', (evento) => {
       const botao = evento.target.closest('.filtro');
       if (!botao) return;
-      estado.categoria = botao.dataset.categoria || '';
+      if (botao.dataset.formato) {
+        estado.formato = FORMATO_RELATOS;
+        estado.tema = '';
+      } else {
+        estado.formato = '';
+        estado.tema = botao.dataset.tema || '';
+      }
       estado.pagina = 1;
       marcarFiltroAtivo();
       escreverUrl();
@@ -211,8 +270,11 @@
   // (marca #lista-artigos[data-ssr="1"]). Nesse caso não refazemos o fetch
   // inicial nem mostramos skeleton — só a partir da próxima interação
   // (filtro, busca, paginação) o client-side assume, normalmente.
+  // Os nomes completos dos temas (title/aria-label) vêm do /artigos/temas.
   if (lista.dataset.ssr !== '1') {
-    carregarCategorias();
+    carregarFiltros();
     carregarArtigos();
+  } else {
+    carregarFiltros();
   }
 })();

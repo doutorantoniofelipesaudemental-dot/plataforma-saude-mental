@@ -74,3 +74,14 @@ Regras da cascata (do v1.1):
 2. Implementar a atomização por canal em PR próprio, com testes e portão.
 3. Gerar a prévia de 14 dias por canal e submeter ao Dr. Antônio.
 4. Piloto de vídeo (segunda, 17:30, sem instalar nada antes): Node v26.8.1, Python 3.12.10 e ffmpeg 9.0.1 já estão no computador (atendem Node 20+, Python 3.11+ e ffmpeg 7+).
+
+## Dois fluxos (ordem de 09/11/2026)
+
+**(A) Artigos médicos (7 temas)** continuam alimentando YouTube (vídeos educativos), Instagram, LinkedIn e podcast (narração), como hoje.
+
+**(B) Relatos da Prática** alimentam:
+- redes: carrossel e Reels com trechos; nota de ficção na legenda e no último slide;
+- podcast "Relatos da Prática": nota de ficção lida no início e na descrição;
+- fase futura, **minissérie animada**: temporada = tema, episódio = relato; nota de ficção na tela (início) e na descrição; aviso de IA (CFM 2.454/2026) sempre; animação NÃO realista; narração Kokoro; as regras de Relatos (CLAUDE.md, seção "Temas, Blog e Relatos") valem para o roteiro.
+
+Status: o fluxo (B) começa só depois do piloto de vídeo de hoje ser aprovado. Nada de produção agora.

@@ -258,3 +258,9 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 
 ## Assinatura de 5 linhas (02/11/2026, ordem expressa do Dr. Antônio)
 - A 3ª linha da assinatura de 5 linhas é: "Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)". Vale em todo o site e nos rodapés de YouTube, LinkedIn, Instagram e podcast. Testes: `tests/unit/assinatura-cfm.test.js` e `tests/unit/identificacao-unica.test.js` (a frase aparece exatamente uma vez por página de artigo).
+
+## Temas, Blog e Relatos da Prática (ordem de 09/11/2026)
+- **Regra editorial de temas:** "Transtornos Mentais" = conceito, diagnóstico e conduta; os outros 6 temas = psicoeducação e cuidados; "Relatos da Prática" = artigos literários (independente, sem tema). Fonte dos 7 temas: `backend/lib/temas.js` (mesmos nomes e frases de `public/index.html` e `scripts/plano-diretor/pilares.js`). Ponte categoria → tema provisória até a reclassificação (`relatorios/reclassificacao-temas-20261109.md`) ser aplicada pelo Dr. Antônio.
+- **Links cruzados:** artigo de psicoeducação sobre um transtorno aponta para o artigo clínico ("Para saber mais: conceito, diagnóstico e conduta") e vice-versa.
+- **Blog:** filtros = Todos + 7 temas (nome curto visível; nome completo em `title`/`aria-label`) + divisor + "Relatos da Prática" (fora dos temas). URL: `?tema=<slug>` ou `?formato=relatos`. Proibido "consultório" no Blog.
+- **Relatos da Prática:** (a) sem lista de referências na narrativa; (b) nota de ficção obrigatória, texto exato em `backend/lib/relatos.js` (CEM art. 75); (c) informação clínica → caixa "Para entender" com 1 a 3 referências e link ao artigo do tema; (d) suicídio/autolesão conforme OMS 2023, sem método nem local, termina com CVV 188 · SAMU 192; (e) "pessoa com depressão", "pessoas com TEA", "morreu por suicídio" (nunca "cometeu").

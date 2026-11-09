@@ -3,6 +3,8 @@ const { slugify } = require('../lib/texto');
 
 // Taxonomia baseada nos públicos reais atendidos pelo trabalho de mentoria e
 // consultoria do Dr. Antônio Felipe (migrada do site anterior).
+const { TEMAS } = require('../lib/temas');
+
 const CATEGORIAS = [
   'Relatos da Prática',
   'Pacientes & Famílias',
@@ -69,6 +71,14 @@ const ArtigoSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: { values: CATEGORIAS, message: 'Categoria inválida.' },
+      index: true,
+    },
+    // Tema do Portal (slug de backend/lib/temas.js). Vazio = ainda sem tema próprio:
+    // a listagem usa a categoria como ponte até a reclassificação (ordem de 09/11/2026).
+    tema: {
+      type: String,
+      default: '',
+      enum: { values: [...TEMAS.map((t) => t.slug), ''], message: 'Tema inválido.' },
       index: true,
     },
     tags: {

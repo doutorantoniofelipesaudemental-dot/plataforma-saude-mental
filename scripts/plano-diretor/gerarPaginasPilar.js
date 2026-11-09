@@ -47,7 +47,8 @@ function pagina(n, nome, intro, arts) {
   const resto = ordenados.filter((a) => !topoSlugs.has(a.slug));
 
   const grupos = new Map();
-  for (const a of resto) {
+  // "Todos os textos deste eixo" lista todos (inclusive os do topo), para o eixo nunca ficar sem grupos.
+  for (const a of ordenados) {
     const k = a.publico || 'Geral';
     if (!grupos.has(k)) grupos.set(k, []);
     grupos.get(k).push(a);
@@ -84,11 +85,17 @@ function pagina(n, nome, intro, arts) {
 </style>
 </head>
 <body>
-<main>
-  <p><a href="/">← Portal</a></p>
+<main itemscope itemtype="https://schema.org/MedicalWebPage">
+  <meta itemprop="name" content="${escapar(`Eixo ${n}: ${nome}`)}">
+  <meta itemprop="inLanguage" content="pt-BR">
+  ${n === 5 ? '<div itemprop="about" itemscope itemtype="https://schema.org/MedicalCondition" hidden><meta itemprop="name" content="Transtornos mentais"></div>' : ''}
+  <nav aria-label="Trilha de navegação"><ol itemscope itemtype="https://schema.org/BreadcrumbList" style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.25rem .5rem;font-size:.92rem;">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Início</span></a> › <meta itemprop="position" content="1"></li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/#temas"><span itemprop="name">Temas</span></a> › <meta itemprop="position" content="2"></li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">${escapar(nome)}</span><meta itemprop="position" content="3"><meta itemprop="item" content="https://www.drantoniofelipemedico.com.br/pilares/eixo-${n}"></li>
+  </ol></nav>
   <h1>Eixo ${n}: ${escapar(nome)}</h1>
   <p>${escapar(intro)}</p>
-  <p><small>Introdução em aprovação pelo Dr. Antônio Felipe.</small></p>
   <h2>Comece por aqui</h2>
   ${topoHtml}
   <h2>Todos os textos deste eixo</h2>
@@ -113,6 +120,8 @@ function main() {
       .filter((l) => (l.status || '').trim() === 'publicado')
       .filter((l) => (l.revisar || '').trim().toLowerCase() !== 'sim')
       .filter((l) => (l.eixo_nome || '').trim() === nome)
+      // Relatos da Prática são independentes e não entram nas páginas de tema (ordem de 09/11/2026).
+      .filter((l) => (l.publico || '').trim() !== 'Relatos da Prática')
       .map((l) => ({ slug: l.slug, titulo: l.titulo, publico: (l.publico || '').trim(), refs: Number(l.referencias) || 0 }));
     const intro = intros[n] || '';
     if (!intro) throw new Error(`introdução do eixo ${n} não encontrada`);

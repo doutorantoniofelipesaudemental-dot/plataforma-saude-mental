@@ -4,7 +4,7 @@ const express = require('express');
 const db = require('./lib/db');
 const Artigo = require('./models/Artigo');
 const { renderizarArtigoHtml } = require('./lib/renderizarArtigo');
-const { listarArtigos, listarCategorias } = require('./lib/listarArtigos');
+const { listarArtigos, listarTemas } = require('./lib/listarArtigos');
 const { renderizarBlogHtml } = require('./lib/renderizarBlog');
 const { listarPostsRecentes, renderizarInstagramHtml } = require('./lib/renderizarInstagram');
 const { gerarSitemapArtigosXml, gerarSitemapIndexXml, gerarSitemapPaginasXml } = require('./lib/sitemap');
@@ -103,13 +103,13 @@ app.get('/blog', async (req, res) => {
 
   try {
     await db.connect();
-    const [{ itens, paginacao, categoria, busca }, categorias] = await Promise.all([
+    const [{ itens, paginacao, tema, formato, busca }, filtros] = await Promise.all([
       listarArtigos(req.query),
-      listarCategorias(),
+      listarTemas(),
     ]);
 
     res.set('Content-Type', 'text/html; charset=utf-8');
-    res.send(renderizarBlogHtml({ itens, paginacao, categoria, busca, categorias }));
+    res.send(renderizarBlogHtml({ itens, paginacao, tema, formato, busca, filtros }));
   } catch (err) {
     console.error('[blog] falha ao pré-renderizar, caindo para o shell estático:', err.message);
     shellEstatico();
