@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { escapeHtml, formatarData } = require('./texto');
+const { RELATOS } = require('./temas');
 
 const TEMPLATE_PATH = path.join(__dirname, '..', '..', 'public', 'blog.html');
 
@@ -51,7 +52,7 @@ const SKELETON_LISTA = `<div class="grade grade--3" id="lista-artigos" aria-busy
         <div class="esqueleto esqueleto--cartao"></div>
       </div>`;
 
-const BOTAO_TODOS = '<button class="filtro" type="button" data-categoria="" aria-pressed="true">Todos</button>';
+const BOTAO_TODOS = '<button class="filtro" type="button" data-tema="" aria-pressed="true">Todos</button>';
 
 const CAMPO_BUSCA = '<input type="search" id="campo-busca" placeholder="Buscar por assunto…" autocomplete="off">';
 
@@ -61,17 +62,23 @@ const NAV_PAGINACAO = `<nav class="paginacao" id="paginacao" aria-label="Pagina�
         <button class="botao botao--vazado botao--pequeno" type="button" data-acao="proxima">Próxima</button>
       </nav>`;
 
-function montarFiltrosHtml(categorias, categoriaAtual) {
-  const todosAtivo = categoriaAtual === '';
-  const botaoTodos = `<button class="filtro" type="button" data-categoria="" aria-pressed="${todosAtivo}">Todos</button>`;
-  const botoes = (categorias || [])
-    .filter((c) => c.total > 0)
+/**
+ * Filtros do blog: Todos + 7 temas (nome curto visível, nome completo em title/aria-label),
+ * divisor e "Relatos da Prática" (fora dos temas). Mesma ordem e rótulos de blog.js.
+ */
+function montarFiltrosHtml(filtros, { tema, formato }) {
+  const temas = (filtros && filtros.temas) || [];
+  const relatos = (filtros && filtros.relatos) || { total: 0 };
+  const botaoTodos = `<button class="filtro" type="button" data-tema="" aria-pressed="${!tema && formato !== 'relatos'}">Todos</button>`;
+  const botoesTemas = temas
     .map(
-      (c) =>
-        `<button class="filtro" type="button" data-categoria="${escapeHtml(c.nome)}" aria-pressed="${c.nome === categoriaAtual}">${escapeHtml(c.nome)} <span style="opacity:.6;margin-left:.35rem;">${c.total}</span></button>`
+      (t) =>
+        `<button class="filtro" type="button" data-tema="${escapeHtml(t.slug)}" title="${escapeHtml(t.nome)}" aria-label="${escapeHtml(t.nome)}" aria-pressed="${t.slug === tema}">${escapeHtml(t.curto)} <span class="filtro__total">${t.total}</span></button>`
     )
     .join('');
-  return botaoTodos + botoes;
+  const divisor = '<span class="filtros__divisor" aria-hidden="true"></span>';
+  const botaoRelatos = `<button class="filtro" type="button" data-formato="relatos" title="${escapeHtml(RELATOS)}" aria-label="${escapeHtml(RELATOS)}" aria-pressed="${formato === 'relatos'}">${escapeHtml(RELATOS)} <span class="filtro__total">${relatos.total}</span></button>`;
+  return botaoTodos + botoesTemas + divisor + botaoRelatos;
 }
 
 function montarPaginacaoHtml({ pagina, paginas, total }) {
@@ -98,7 +105,7 @@ function montarPaginacaoHtml({ pagina, paginas, total }) {
  * botão "Todos") baterem exatamente com o template — caso contrário, deixa
  * tudo como está e o client-side assume a renderização inteira, como sempre.
  */
-function renderizarBlogHtml({ itens, paginacao, categoria, busca, categorias }) {
+function renderizarBlogHtml({ itens, paginacao, tema, formato, busca, filtros }) {
   let html = lerTemplate();
 
   const templateCompativel =
@@ -112,14 +119,14 @@ function renderizarBlogHtml({ itens, paginacao, categoria, busca, categorias }) 
   const listaHtml = itens.length
     ? itens.map(montarCartaoArtigo).join('')
     : busca
-      ? montarEstadoVazio('Nenhum artigo encontrado', `Não achamos nada para "${busca}". Tente outro termo ou veja todas as categorias.`)
-      : montarEstadoVazio('Nenhum artigo por aqui ainda', 'Em breve publicaremos conteúdo nesta categoria.');
+      ? montarEstadoVazio('Nenhum artigo encontrado', `Não achamos nada para "${busca}". Tente outro termo ou veja todos os temas.`)
+      : montarEstadoVazio('Nenhum artigo por aqui ainda', 'Em breve publicaremos conteúdo neste tema.');
 
   html = html.replace(
     SKELETON_LISTA,
     `<div class="grade grade--3" id="lista-artigos" aria-busy="false" aria-live="polite" data-ssr="1">${listaHtml}</div>`
   );
-  html = html.replace(BOTAO_TODOS, montarFiltrosHtml(categorias, categoria));
+  html = html.replace(BOTAO_TODOS, montarFiltrosHtml(filtros, { tema, formato }));
   html = html.replace(
     CAMPO_BUSCA,
     busca

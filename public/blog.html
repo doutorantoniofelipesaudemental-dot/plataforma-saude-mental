@@ -20,6 +20,14 @@
 
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/extras.css">
+<style>
+/* Filtros por tema (ordem de 09/11/2026): uma linha, rolagem horizontal no celular, sem quebra de texto. */
+.filtros--temas { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: .4rem; }
+.filtros--temas .filtro { white-space: nowrap; min-height: 44px; }
+.filtros__divisor { flex: 0 0 1px; align-self: stretch; margin: .3rem .25rem; background: currentColor; opacity: .25; }
+.filtro__total { opacity: .6; margin-left: .35rem; }
+.blog-tema-titulo { margin: 0 0 1rem; }
+</style>
 </head>
 <body>
 
@@ -55,11 +63,10 @@
 
   <section class="hero" style="padding-bottom:clamp(2rem,5vw,3rem);">
     <div class="container" style="max-width:46rem;">
-      <p class="etiqueta">Blog</p>
-      <h1 style="font-size:clamp(2rem,4.6vw,3.1rem);">Conteúdo sobre saúde mental, sem jargão</h1>
+      <p class="etiqueta">ARTIGOS</p>
+      <h1 style="font-size:clamp(2rem,4.6vw,3.1rem);">Saúde mental em cada fase da vida, sem jargão</h1>
       <p class="hero__texto" style="max-width:38rem;margin-bottom:0;">
-        Textos psicoeducativos escritos no consultório: o que os sintomas significam,
-        quando procurar ajuda e como o tratamento funciona na prática.
+        Artigos com referências científicas e narração em áudio, organizados nos mesmos temas do Portal. Nos temas, psicoeducação e cuidados para o dia a dia. Em Transtornos Mentais, conceito, diagnóstico e conduta. E nos Relatos da Prática, artigos literários que mostram o lado humano do cuidado, com identidades protegidas.
       </p>
     </div>
   </section>
@@ -73,9 +80,11 @@
         <input type="search" id="campo-busca" placeholder="Buscar por assunto…" autocomplete="off">
       </div>
 
-      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria">
-        <button class="filtro" type="button" data-categoria="" aria-pressed="true">Todos</button>
+      <div class="filtros filtros--temas" id="filtros" role="group" aria-label="Filtrar por tema">
+        <button class="filtro" type="button" data-tema="" aria-pressed="true">Todos</button>
       </div>
+
+      <h2 class="blog-tema-titulo" id="blog-tema-titulo" hidden></h2>
 
       <div class="grade grade--3" id="lista-artigos" aria-busy="true" aria-live="polite">
         <div class="esqueleto esqueleto--cartao"></div>

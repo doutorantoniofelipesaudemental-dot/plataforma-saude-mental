@@ -3,7 +3,7 @@ const { estadoNarracao, urlNarracaoTocavel } = require('../lib/narracao');
 const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin, tratarErroValidacao, limitarTaxa } = require('../middleware');
 const { slugify } = require('../lib/texto');
-const { listarArtigos, listarCategorias, CAMPOS_LISTA } = require('../lib/listarArtigos');
+const { listarArtigos, listarCategorias, listarTemas, CAMPOS_LISTA } = require('../lib/listarArtigos');
 const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
 const { ehRobo } = require('../lib/robos');
 const { log } = require('../lib/log');
@@ -39,9 +39,19 @@ router.get('/categorias', exigirBanco, async (req, res) => {
   }
 });
 
+/** GET /api/artigos/temas — os 7 temas do Portal com contagem publicada + Relatos da Prática à parte. */
+router.get('/temas', exigirBanco, async (req, res) => {
+  try {
+    res.json(await listarTemas());
+  } catch (err) {
+    log.erro('[artigos] erro ao agregar temas:', err);
+    res.status(500).json({ erro: 'Não foi possível carregar os temas.' });
+  }
+});
+
 /**
  * GET /api/artigos
- * Query: categoria, busca, pagina, limite, destaque
+ * Query: tema, formato (relatos), categoria, busca, pagina, limite, destaque
  * Retorna apenas artigos publicados. Mesma lógica usada pelo SSR da
  * listagem do blog (ver backend/lib/renderizarBlog.js).
  */
