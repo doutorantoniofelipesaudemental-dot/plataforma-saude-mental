@@ -15,13 +15,7 @@ const AVISO_CFM =
 // Assinatura PADRÃO COMPLETA (decisão de 15/10/2026, vale para todo o site): "NÃO ESPECIALISTA" logo abaixo da linha das
 // pós-graduações, que inclui a Terapia Cognitivo-Comportamental. A versão curta de 3 linhas das mídias sociais (CRM, RQE, PAP e APS)
 // continua em legendaInstagram.IDENTIFICACAO_3_LINHAS e NÃO lista pós-graduações.
-const IDENTIFICACAO_COMPLETA = [
-  'Dr. Antônio Felipe — Médico — CRM-BA 41322',
-  'Especialista em Medicina de Família e Comunidade — RQE 26638',
-  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
-  'Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho',
-  'NÃO ESPECIALISTA',
-].join('\n');
+const { IDENTIFICACAO_COMPLETA } = require('./identificacaoCfm');
 
 // Versão curta, para dentro de arte (último slide, último Story).
 const APOIO_CURTO = 'Apoio agora: CVV 188 · SAMU 192';

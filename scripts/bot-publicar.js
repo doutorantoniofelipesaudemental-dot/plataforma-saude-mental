@@ -105,12 +105,12 @@ function lerMeta(slug) {
 
 /** Legenda final: a aprovada + (tema sensível) CVV + identificação + aviso CFM, antes das hashtags. */
 function montarLegenda(legendaAprovada, { sensivel = false } = {}) {
-  return garantirConformidade(legendaAprovada, { sensivel, identificacao: IDENTIFICACAO_3_LINHAS });
+  return garantirConformidade(legendaAprovada, { sensivel, identificacao: IDENTIFICACAO_COMPLETA }); // 5 linhas (ordem de 08/11)
 }
 
 /** Post do LinkedIn: o aprovado + CVV (tema sensível), identificação e aviso CFM. */
 function montarTextoLinkedin(texto, artigo) {
-  return garantirConformidade(texto, { sensivel: temaSensivel(artigo), identificacao: IDENTIFICACAO_3_LINHAS });
+  return garantirConformidade(texto, { sensivel: temaSensivel(artigo), identificacao: IDENTIFICACAO_COMPLETA });
 }
 
 /** Grava o .json do pacote com a matriz multimídia recalculada (backend/lib/matrizMidia.js). */

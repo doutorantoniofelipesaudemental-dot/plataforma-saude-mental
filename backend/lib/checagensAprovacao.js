@@ -196,7 +196,7 @@ const RE_SENSIVEL = /suic[ií]d|autoextermin|tirar (?:a )?(?:minha |a própria )
 // As linhas fixas de cada padrão (CFM): 5 no portal/blog/artigo, 3 em Instagram e mídias sociais.
 const LINHAS_PORTAL = IDENTIFICACAO_COMPLETA.split('\n');
 // Mídias sociais: assinatura curta de 3 linhas (sem pós-graduações), que NÃO coincide com as 3 primeiras do padrão completo.
-const LINHAS_SOCIAL = require('./legendaInstagram').IDENTIFICACAO_3_LINHAS.split('\n');
+const LINHAS_SOCIAL = IDENTIFICACAO_COMPLETA.split('\n'); // ordem de 02/11 e pendência 3 de 08/11: 5 linhas também no social
 
 const RE_APRESENTA_COMO_PSIQUIATRA =
   /\b(?:dr\.?|doutor)\s+ant[oô]nio\s+felipe[^.\n]{0,60}\bpsiquiatra\b|\bespecialista em (?:psiquiatria|sa[uú]de mental)\b|\bpsiquiatra (?:dr\.?|doutor)\s+ant[oô]nio/i;
