@@ -5,8 +5,8 @@
  * Os artigos hoje são classificados pela categoria do banco (enum `CATEGORIAS` em
  * backend/models/Artigo.js). `categorias` é a ponte PROVISÓRIA categoria → tema até o
  * levantamento de reclassificação (relatorios/reclassificacao-temas-20261109.md) ser
- * aplicado pelo Dr. Antônio. Categorias fora de qualquer tema ficam em `SEM_TEMA`
- * (públicos profissionais, que não entram nos filtros de tema) e "Relatos da Prática"
+ * aplicado pelo Dr. Antônio. Pontes órfãs (Médicos & Enfermeiros, Residentes & Estudantes,
+ * Pós-Graduação & Concursos, Geral) são PROVISÓRIAS (ordem de 09/11/2026, item 4). "Relatos da Prática"
  * é tratado à parte (`RELATOS`), fora dos filtros de tema.
  */
 
@@ -32,14 +32,14 @@ const TEMAS = Object.freeze([
     nome: 'Vida Adulta, Envelhecimento & Cuidados Paliativos',
     curto: 'Vida Adulta & Envelhecimento',
     frase: 'Ao longo da vida adulta e do envelhecimento, a saúde mental acompanha trabalho, família, perdas e mudanças do corpo.',
-    categorias: ['Saúde Mental na Terceira Idade', 'Luto & Divórcio', 'Transição de Carreira & Aposentadoria'],
+    categorias: ['Saúde Mental na Terceira Idade', 'Luto & Divórcio', 'Transição de Carreira & Aposentadoria', 'Pós-Graduação & Concursos'],
   },
   {
     slug: 'cuidar-de-quem-cuida',
     nome: 'Cuidar de Quem Cuida & Saúde do Trabalhador (NR-1)',
     curto: 'Cuidar de Quem Cuida (NR-1)',
     frase: 'Quem cuida de um familiar doente, de pacientes ou de equipes também precisa de cuidado.',
-    categorias: ['Cuidadores & Famílias', 'Trabalho Doméstico & Cuidados do Lar', 'Linhas de Cuidado (Cuidadores & Professores)', 'Empresas & RH', 'Pacientes & Famílias'],
+    categorias: ['Cuidadores & Famílias', 'Trabalho Doméstico & Cuidados do Lar', 'Linhas de Cuidado (Cuidadores & Professores)', 'Empresas & RH', 'Pacientes & Famílias', 'Médicos & Enfermeiros', 'Residentes & Estudantes'],
   },
   {
     slug: 'transtornos-mentais',
@@ -60,12 +60,9 @@ const TEMAS = Object.freeze([
     nome: 'Sociedade, Cultura & Existência',
     curto: 'Sociedade & Cultura',
     frase: 'Saúde mental também depende do lugar onde a pessoa vive, trabalha e se relaciona.',
-    categorias: ['Migrantes & Expatriados', 'Terceiro Setor & Causas Sociais'],
+    categorias: ['Migrantes & Expatriados', 'Terceiro Setor & Causas Sociais', 'Geral'],
   },
 ]);
-
-/** Categorias do banco que não pertencem a nenhum dos 7 temas (público profissional e geral). */
-const SEM_TEMA = Object.freeze(['Médicos & Enfermeiros', 'Residentes & Estudantes', 'Pós-Graduação & Concursos', 'Geral']);
 
 /** Texto do filtro "Relatos da Prática" (independente dos temas). */
 const RELATOS_FRASE = 'Artigos literários inspirados na prática clínica, com identidades protegidas, que mostram o lado humano do cuidado.';
@@ -80,4 +77,18 @@ function categoriasDoTema(slug) {
   return tema ? [...tema.categorias] : [];
 }
 
-module.exports = { TEMAS, SEM_TEMA, RELATOS, RELATOS_FRASE, temaPorSlug, categoriasDoTema };
+/** Categorias que só ganharam tema por ponte PROVISÓRIA (aguardam decisão do Dr. Antônio). */
+const PONTES_PROVISORIAS = Object.freeze(['Médicos & Enfermeiros', 'Residentes & Estudantes', 'Pós-Graduação & Concursos', 'Geral']);
+
+/**
+ * Tema efetivo de um artigo: o campo `tema` se preenchido; senão a ponte categoria → tema.
+ * Relatos da Prática nunca têm tema. Retorna o slug ou '' (só Todos).
+ */
+function temaEfetivo(artigo) {
+  if (artigo.tema) return artigo.tema;
+  if (artigo.categoria === RELATOS) return '';
+  const tema = TEMAS.find((t) => t.categorias.includes(artigo.categoria));
+  return tema ? tema.slug : '';
+}
+
+module.exports = { TEMAS, RELATOS, RELATOS_FRASE, PONTES_PROVISORIAS, temaPorSlug, categoriasDoTema, temaEfetivo };

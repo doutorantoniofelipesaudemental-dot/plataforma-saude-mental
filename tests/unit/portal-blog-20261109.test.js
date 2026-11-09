@@ -8,7 +8,7 @@ const RAIZ = path.join(__dirname, '..', '..');
 const ler = (rel) => fs.readFileSync(path.join(RAIZ, rel), 'utf8').replace(/\r\n/g, '\n');
 const semEspacos = (s) => s.replace(/\s+/g, ' ').trim();
 
-const { TEMAS, SEM_TEMA, RELATOS, RELATOS_FRASE, categoriasDoTema } = require('../../backend/lib/temas');
+const { TEMAS, RELATOS, RELATOS_FRASE, categoriasDoTema, temaEfetivo } = require('../../backend/lib/temas');
 const { CATEGORIAS } = require('../../backend/models/Artigo');
 const { EIXOS_OFICIAIS } = require('../../scripts/plano-diretor/pilares');
 const { NOTA_FICCAO, NOTA_FICCAO_TEXTO, checarRelato } = require('../../backend/lib/relatos');
@@ -77,12 +77,59 @@ test('nomes curtos dos filtros exatos e um slug por tema', () => {
   assert.equal(new Set(TEMAS.map((t) => t.slug)).size, 7);
 });
 
-test('toda categoria do banco cai em um tema, em SEM_TEMA ou é Relatos (nenhuma some do filtro)', () => {
-  const cobertas = new Set([...TEMAS.flatMap((t) => t.categorias), ...SEM_TEMA, RELATOS]);
-  const sobrando = CATEGORIAS.filter((c) => !cobertas.has(c));
+test('toda categoria do banco cai em exatamente um tema, ou é Relatos (nenhum artigo fica sem tema)', () => {
+  const todas = TEMAS.flatMap((t) => t.categorias);
+  const sobrando = CATEGORIAS.filter((c) => c !== RELATOS && !todas.includes(c));
   assert.deepEqual(sobrando, []);
-  const duplicadas = TEMAS.flatMap((t) => t.categorias).filter((c, i, arr) => arr.indexOf(c) !== i);
+  const duplicadas = todas.filter((c, i, arr) => arr.indexOf(c) !== i);
   assert.deepEqual(duplicadas, []);
+});
+
+test('soma dos 7 temas + Relatos = total publicado (cada artigo conta uma vez)', () => {
+  const publicados = [];
+  CATEGORIAS.forEach((categoria, i) => {
+    for (let n = 0; n < i % 3 + 1; n++) publicados.push({ categoria, tema: '' });
+  });
+  const contagem = Object.fromEntries(TEMAS.map((t) => [t.slug, 0]));
+  let relatos = 0;
+  for (const a of publicados) {
+    const t = temaEfetivo(a);
+    if (t) contagem[t] += 1;
+    else if (a.categoria === RELATOS) relatos += 1;
+  }
+  const somaTemas = Object.values(contagem).reduce((s, n) => s + n, 0);
+  assert.equal(somaTemas + relatos, publicados.length);
+});
+
+test('ponte órfã provisória: artigos de categoria órfã entram num tema, não só em Todos', () => {
+  assert.equal(temaEfetivo({ categoria: 'Médicos & Enfermeiros', tema: '' }), 'cuidar-de-quem-cuida');
+  assert.equal(temaEfetivo({ categoria: 'Geral', tema: '' }), 'sociedade-cultura');
+  assert.equal(temaEfetivo({ categoria: RELATOS, tema: '' }), '');
+  assert.equal(temaEfetivo({ categoria: 'Geral', tema: 'transtornos-mentais' }), 'transtornos-mentais');
+});
+
+test('indicador de rolagem: classes de degradê ligadas por JS e definidas no CSS', () => {
+  assert.ok(blog.includes('.filtros--temas.filtros--mais-direita {'));
+  assert.ok(blog.includes('.filtros--temas.filtros--mais-esquerda {'));
+  assert.ok(blogJs.includes("classList.toggle('filtros--mais-direita'"));
+  assert.ok(blogJs.includes("classList.toggle('filtros--mais-esquerda'"));
+});
+
+test('scripts de temas gravam relatórios e backups só em relatorios/logs (ignorado pelo Git)', () => {
+  const lev = ler('backend/scripts/portal/levantamentoTemas.js');
+  const rec = ler('backend/scripts/portal/reclassificarTemas.js');
+  assert.ok(lev.includes("path.join(RAIZ, 'relatorios', 'logs')"));
+  assert.ok(rec.includes("path.join(RAIZ, 'relatorios', 'logs', 'backups-temas')"));
+  assert.equal(/writeFileSync\(path\.join\(RAIZ, 'relatorios', '[^l]/.test(lev), false);
+});
+
+test('páginas de tema não exibem aviso de aprovação pendente', () => {
+  const pilares = fs.readdirSync(path.join(RAIZ, 'public', 'pilares')).filter((f) => f.endsWith('.html'));
+  assert.equal(pilares.length, 7);
+  for (const f of pilares) {
+    assert.equal(ler(path.join('public', 'pilares', f)).includes('Introdução em aprovação'), false, f);
+  }
+  assert.equal(ler('scripts/plano-diretor/gerarPaginasPilar.js').includes('Introdução em aprovação'), false);
 });
 
 // ---------------------------------------------------------------- Blog
@@ -146,12 +193,11 @@ test('filtroDoTema: tema próprio OU categoria-ponte quando o tema estiver vazio
 });
 
 // ---------------------------------------------------------------- Relatos da Prática
-test('nota de ficção exata (texto aprovado) e citação do CEM art. 75', () => {
-  assert.equal(
-    NOTA_FICCAO_TEXTO,
-    'Relato literário inspirado na prática clínica. Personagens, nomes, lugares e detalhes foram criados para proteger a identidade das pessoas. Qualquer semelhança é coincidência.'
-  );
-  assert.equal(NOTA_FICCAO, `${NOTA_FICCAO_TEXTO} (Código de Ética Médica, art. 75).`);
+test('nota de ficção exibida é exatamente o texto aprovado, sem citação', () => {
+  const aprovado = 'Relato literário inspirado na prática clínica. Personagens, nomes, lugares e detalhes foram criados para proteger a identidade das pessoas. Qualquer semelhança é coincidência.';
+  assert.equal(NOTA_FICCAO_TEXTO, aprovado);
+  assert.equal(NOTA_FICCAO, aprovado);
+  assert.equal(NOTA_FICCAO.includes('Código de Ética'), false);
   assert.equal(RELATOS_FRASE, 'Artigos literários inspirados na prática clínica, com identidades protegidas, que mostram o lado humano do cuidado.');
 });
 

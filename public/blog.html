@@ -24,6 +24,10 @@
 /* Filtros por tema (ordem de 09/11/2026): uma linha, rolagem horizontal no celular, sem quebra de texto. */
 .filtros--temas { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: .4rem; }
 .filtros--temas .filtro { white-space: nowrap; min-height: 44px; }
+/* Degradê nas bordas quando há mais botões fora da tela (classes ligadas por blog.js). */
+.filtros--temas.filtros--mais-direita { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent); }
+.filtros--temas.filtros--mais-esquerda { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 3rem), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 3rem), transparent); }
+.filtros--temas.filtros--mais-direita.filtros--mais-esquerda { -webkit-mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent); mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent); }
 .filtros__divisor { flex: 0 0 1px; align-self: stretch; margin: .3rem .25rem; background: currentColor; opacity: .25; }
 .filtro__total { opacity: .6; margin-left: .35rem; }
 .blog-tema-titulo { margin: 0 0 1rem; }

@@ -1,24 +1,28 @@
 #!/usr/bin/env node
 /*
- * Reclassificação de temas (ordem de 09/11/2026, item 6). Só mexe no campo `tema` dos artigos.
+ * Reclassificação de temas (ordem de 09/11/2026). Só grava o campo `tema` dos artigos.
  * Não altera `conteudo`, títulos nem slugs (o hash de narração continua válido).
+ * Aplica só os grupos A e B do levantamento; o grupo C (dúvidas) fica de fora até decisão do Dr. Antônio.
  *
  * Modos (um por vez):
- *   (padrão) ou --dry-run          mostra quantos mudariam; não grava
- *   --backup                       salva backups/reclassificacao-temas-AAAAMMDD-HHMM/artigos-tema.json
- *   --aplicar --etapa 1 --backup-dir <pasta>   grava o campo tema (só com backup já feito e aprovação do Dr. Antônio)
- *   --conferir --backup-dir <pasta>            confere o banco contra a proposta
- *   --reverter --backup-dir <pasta>            restaura o campo tema salvo no backup
- * Execução: node --env-file-if-exists=.env backend/scripts/portal/reclassificarTemas.js <modo>
+ *   (padrão) ou --dry-run                       mostra quantos mudariam; não grava
+ *   --backup                                    salva relatorios/logs/backups-temas/<AAAAMMDD-HHMM>/artigos-tema.json
+ *   --aplicar --etapa 1 --backup-dir <pasta>    grava o campo tema (exige backup informado e aprovação do Dr.)
+ *   --conferir --backup-dir <pasta>             confere o banco contra a proposta A+B
+ *   --reverter --backup-dir <pasta>             restaura o campo tema salvo no backup
+ * Execução (pasta principal, depois do merge):
+ *   node --env-file-if-exists=.env backend/scripts/portal/reclassificarTemas.js <modo>
  */
 const fs = require('node:fs');
 const path = require('node:path');
 const db = require('../../lib/db');
 const Artigo = require('../../models/Artigo');
-const { TEMAS, RELATOS } = require('../../lib/temas');
+const { TEMAS, RELATOS, PONTES_PROVISORIAS, temaEfetivo } = require('../../lib/temas');
+const { temaProposto, duvidaRegra5 } = require('../../lib/classificacaoTemas');
 const { parseCsv } = require('../../../scripts/plano-diretor/pilares');
 
 const RAIZ = path.resolve(__dirname, '..', '..', '..');
+const DIR_BACKUPS = path.join(RAIZ, 'relatorios', 'logs', 'backups-temas');
 const args = process.argv.slice(2);
 const flag = (nome) => args.includes(nome);
 const valor = (nome) => {
@@ -32,27 +36,23 @@ function carimbo() {
   return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`;
 }
 
-function propostaDoInventario() {
-  const inventario = parseCsv(fs.readFileSync(path.join(RAIZ, 'relatorios', 'plano-diretor', 'INVENTARIO.csv'), 'utf8'));
-  const mapa = new Map();
-  for (const linha of inventario) {
-    const tema = TEMAS.find((t) => t.nome === (linha.eixo_nome || '').trim());
-    if (tema) mapa.set(linha.slug, tema.slug);
-  }
-  return mapa;
-}
-
 async function carregar() {
   return Artigo.find({ $or: [{ publicado: true }, { 'agendamento.agendado': true }] })
-    .select('slug categoria tema')
+    .select('slug titulo resumo categoria tema')
     .lean();
 }
 
-/** Proposta por artigo: tema do inventário; Relatos ficam sem tema; sem proposta = não muda. */
+/** Alvos A+B: não-relatos com tema proposto, sem dúvida da regra 5. Órfãos entram (passam a aparecer num tema). */
 function alvos(artigos, proposta) {
-  return artigos
-    .filter((a) => a.categoria !== RELATOS && proposta.has(a.slug))
-    .map((a) => ({ _id: a._id, slug: a.slug, de: a.tema || '', para: proposta.get(a.slug) }));
+  const saida = [];
+  for (const a of artigos) {
+    if (a.categoria === RELATOS) continue;
+    const proposto = proposta.get(a.slug);
+    if (!proposto) continue;
+    if (duvidaRegra5(a.titulo, a.resumo, proposto)) continue;
+    saida.push({ _id: a._id, slug: a.slug, de: a.tema || '', para: proposto, orfao: PONTES_PROVISORIAS.includes(a.categoria) });
+  }
+  return saida;
 }
 
 function exigirBackupDir() {
@@ -67,14 +67,15 @@ async function main() {
   if (!db.isConfigured()) throw new Error('Banco não configurado. Rode com --env-file-if-exists=.env.');
   await db.connect();
   try {
+    const proposta = temaProposto(parseCsv(fs.readFileSync(path.join(RAIZ, 'relatorios', 'plano-diretor', 'INVENTARIO.csv'), 'utf8')));
+
     if (flag('--backup')) {
       const todos = await Artigo.find({}).select('slug titulo categoria tema').lean();
-      const dir = path.join(RAIZ, 'backups', `reclassificacao-temas-${carimbo()}`);
+      const dir = path.join(DIR_BACKUPS, carimbo());
       fs.mkdirSync(dir, { recursive: true });
       const salvo = todos.map((a) => ({ _id: String(a._id), slug: a.slug, titulo: a.titulo, categoria: a.categoria, tema: a.tema || '' }));
       fs.writeFileSync(path.join(dir, 'artigos-tema.json'), JSON.stringify(salvo, null, 2), 'utf8');
-      const lido = JSON.parse(fs.readFileSync(path.join(dir, 'artigos-tema.json'), 'utf8'));
-      console.log(JSON.stringify({ modo: 'backup', dir, documentos: lido.length }));
+      console.log(JSON.stringify({ modo: 'backup', dir, documentos: salvo.length }));
       return;
     }
 
@@ -89,19 +90,16 @@ async function main() {
 
     if (flag('--conferir')) {
       exigirBackupDir();
-      const alvosAtuais = alvos(await carregar(), propostaDoInventario());
-      const divergentes = alvosAtuais.filter((a) => (a.de || '') !== a.para && a.para !== '');
-      const aplicados = alvosAtuais.filter((a) => a.de === a.para).length;
-      console.log(JSON.stringify({ modo: 'conferir', alvos: alvosAtuais.length, aplicados, pendentes: divergentes.length }));
+      const lista = alvos(await carregar(), proposta);
+      const aplicados = lista.filter((a) => a.de === a.para).length;
+      console.log(JSON.stringify({ modo: 'conferir', alvos: lista.length, aplicados, pendentes: lista.length - aplicados }));
       return;
     }
 
-    // Padrão: dry-run. Gravação só com --aplicar --etapa 1 e backup informado.
-    const aplicar = flag('--aplicar');
-    const lista = alvos(await carregar(), propostaDoInventario());
+    const lista = alvos(await carregar(), proposta);
     const mudam = lista.filter((a) => a.de !== a.para);
-    if (!aplicar) {
-      console.log(JSON.stringify({ modo: 'dry-run', mudariam: mudam.length, exemplos: mudam.slice(0, 5).map((a) => `${a.slug}: "${a.de || '—'}" → "${a.para}"`) }, null, 2));
+    if (!flag('--aplicar')) {
+      console.log(JSON.stringify({ modo: 'dry-run', alvosAB: lista.length, mudariam: mudam.length, orfaosQueMudam: mudam.filter((a) => a.orfao).length, exemplos: mudam.slice(0, 5).map((a) => `${a.slug}: "${a.de || '—'}" → "${a.para}"`) }, null, 2));
       return;
     }
     if (valor('--etapa') !== '1') throw new Error('Gravação exige --etapa 1 (aprovação explícita do Dr. Antônio).');

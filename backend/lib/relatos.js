@@ -3,10 +3,11 @@
  * nenhum texto é alterado aqui. A nota de ficção é o texto aprovado pelo Dr. Antônio Felipe.
  */
 
+// Texto exibido, exatamente o aprovado (ordem de 09/11/2026, 18:40). Base legal (CEM art. 75) só em comentário.
 const NOTA_FICCAO_TEXTO =
   'Relato literário inspirado na prática clínica. Personagens, nomes, lugares e detalhes foram criados para proteger a identidade das pessoas. Qualquer semelhança é coincidência.';
 
-const NOTA_FICCAO = `${NOTA_FICCAO_TEXTO} (Código de Ética Médica, art. 75).`;
+const NOTA_FICCAO = NOTA_FICCAO_TEXTO;
 
 const RE_REFERENCIAS = /^\s*#{0,6}\s*\**\s*Refer[êe]ncias\b/im;
 const RE_CLINICO = /\b(sintomas?|diagn[óo]sticos?|tratamentos?|medicamentos?|doses?|sinais?)\b|\b\d+\s?mg\b/i;

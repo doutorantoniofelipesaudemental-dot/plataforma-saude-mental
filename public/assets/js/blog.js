@@ -84,10 +84,24 @@
       guardarNomes(dados);
       filtros.innerHTML = montarFiltros(dados);
       marcarFiltroAtivo();
+      atualizarIndicadorRolagem();
     } catch (err) {
       // Sem os temas o blog ainda lista os artigos — só perde o filtro.
       console.warn('[temas]', err.message);
     }
+  }
+
+  // Degradê nas bordas só quando há botões escondidos (classes filtros--mais-direita/esquerda).
+  function atualizarIndicadorRolagem() {
+    if (!filtros) return;
+    const maximo = filtros.scrollWidth - filtros.clientWidth;
+    filtros.classList.toggle('filtros--mais-direita', filtros.scrollLeft < maximo - 2);
+    filtros.classList.toggle('filtros--mais-esquerda', filtros.scrollLeft > 2);
+  }
+
+  if (filtros) {
+    filtros.addEventListener('scroll', atualizarIndicadorRolagem, { passive: true });
+    window.addEventListener('resize', atualizarIndicadorRolagem);
   }
 
   function marcarFiltroAtivo() {

@@ -96,7 +96,6 @@ function pagina(n, nome, intro, arts) {
   </ol></nav>
   <h1>Eixo ${n}: ${escapar(nome)}</h1>
   <p>${escapar(intro)}</p>
-  <p><small>Introdução em aprovação pelo Dr. Antônio Felipe.</small></p>
   <h2>Comece por aqui</h2>
   ${topoHtml}
   <h2>Todos os textos deste eixo</h2>
