@@ -8,6 +8,7 @@ const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
 const { ehRobo } = require('../lib/robos');
 const { log } = require('../lib/log');
 const { checarOriginalidade } = require('../lib/originalidade');
+const { htmlRelato } = require('../lib/relatosTemplate');
 
 /**
  * Dispara a esteira de publicação automática (Seção 20 do CLAUDE.md) quando
@@ -83,6 +84,8 @@ router.get('/:slug', exigirBanco, async (req, res) => {
     // O player só toca narração que corresponde ao texto atual (lib/narracao.js).
     artigo.narracaoEstado = estadoNarracao(artigo).estado;
     artigo.audioNarracaoUrl = urlNarracaoTocavel(artigo);
+    // Blocos do template dos Relatos (nota, "Para entender", CVV): o cliente só insere o HTML pronto.
+    artigo.relatoHtml = htmlRelato(artigo);
 
     const relacionados = await Artigo.find({
       _id: { $ne: artigo._id },

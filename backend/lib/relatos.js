@@ -11,7 +11,7 @@ const NOTA_FICCAO = NOTA_FICCAO_TEXTO;
 
 const RE_REFERENCIAS = /^\s*#{0,6}\s*\**\s*Refer[êe]ncias\b/im;
 const RE_CLINICO = /\b(sintomas?|diagn[óo]sticos?|tratamentos?|medicamentos?|doses?|sinais?)\b|\b\d+\s?mg\b/i;
-const RE_SUICIDIO = /suic[íi]dio|autoles[ãa]o|tirar a pr[óo]pria vida|se matou/i;
+const RE_SUICIDIO = /suic[íi]d|autoles[ãa]o|tirar a pr[óo]pria vida|\bse matou\b|\bse matar\b|\bmatar-se\b|tentou se matar/i;
 const RE_CAIXA_ENTENDER = /Para entender/;
 
 /**
@@ -33,4 +33,4 @@ function checarRelato(texto) {
   return problemas;
 }
 
-module.exports = { NOTA_FICCAO, NOTA_FICCAO_TEXTO, checarRelato };
+module.exports = { NOTA_FICCAO, NOTA_FICCAO_TEXTO, RE_SUICIDIO, checarRelato };

@@ -170,7 +170,8 @@ const ArtigoSchema = new mongoose.Schema(
     capaPendente: { type: Boolean, default: false },
     redesLegado: { statusAnterior: String, publicadoRedesEm: Date, arquivadoEm: Date },
     historicoTitulos: [{ titulo: String, em: Date }],
-    agendamento: { agendado: { type: Boolean, default: false }, slot: Date, falha: String },
+    // motivoRetirada: preenchido só pela retirada de revisão (scripts/portal/retirarAgendadosAltoRisco.js).
+    agendamento: { agendado: { type: Boolean, default: false }, slot: Date, falha: String, motivoRetirada: String },
     // Linha curta opcional abaixo do título na capa das redes.
     subtituloRedes: { type: String, default: '', trim: true, maxlength: 120 },
     // Reescrita aprovada importada (backend/tools/importar-reescritas.js).

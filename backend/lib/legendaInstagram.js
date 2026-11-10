@@ -31,6 +31,7 @@ const IDENTIFICACAO_3_LINHAS_PADRAO_COMPLETO = [
   'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
 ].join('\n');
 const { IDENTIFICACAO_COMPLETA } = require('./identificacaoCfm');
+const { NOTA_FICCAO_TEXTO } = require('./relatos');
 const temIdentificacaoSocial = (t) => String(t).includes(IDENTIFICACAO_COMPLETA) || String(t).includes(IDENTIFICACAO_3_LINHAS) || String(t).includes(IDENTIFICACAO_3_LINHAS_PADRAO_COMPLETO) || String(t).includes(IDENTIFICACAO);
 const LINHA_BIO = '🔗 Artigo completo no link da bio';
 const LINHA_CVV = 'Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192';
@@ -194,7 +195,9 @@ function montarLegendaInstagram(artigo, { legado = false } = {}) {
   const chamada = sensivel ? CHAMADA_COMPARTILHAR : CHAMADA_SALVAR;
   const hashtags = hashtagsDoArtigo(artigo);
 
-  const blocos = [gancho, paragrafo1, paragrafo2, avisoComposta, chamada, LINHA_BIO];
+  // Relatos da Prática: nota de ficção exata (ordem de 09/11/2026), antes da chamada.
+  const nota = artigo.categoria === 'Relatos da Prática' ? NOTA_FICCAO_TEXTO : '';
+  const blocos = [gancho, paragrafo1, paragrafo2, avisoComposta, nota, chamada, LINHA_BIO];
   if (sensivel) blocos.push(LINHA_CVV);
   blocos.push(legado ? IDENTIFICACAO : IDENTIFICACAO_COMPLETA, hashtags.join(' '));
 
