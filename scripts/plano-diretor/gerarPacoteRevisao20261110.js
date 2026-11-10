@@ -88,8 +88,8 @@ const totais = {
 };
 
 const decisoesClinicas = [
-  'Conferência de números (10/11, item 4): depressao-pos-parto-ansiedade-perinatal diz "cerca de uma em cada cinco gestantes" com ansiedade; Dennis 2017 indica cerca de 15% (antenatal) e 10–15% (pós-parto). NÃO alterado. Decidir o número a usar.',
-  'Conferência de números (10/11, item 4): burnout-na-gestao-fatores-de-risco diz "20–30%" de sintomas de burnout sem referência no texto. NÃO alterado. Pedir fonte ou remover.',
+  'Conferência de números (10/11, item 4): depressao-pos-parto-ansiedade-perinatal diz "cerca de uma em cada cinco gestantes" com ansiedade; Dennis 2017 indica cerca de 15% (antenatal) e 10–15% (pós-parto). NÃO alterado. RECOMENDAÇÃO: alinhar à fonte citada ("cerca de 1 em cada 7 gestantes", ~15%), ou indicar fonte que sustente "1 em 5". O Dr. decide; não aplicado.',
+  'Conferência de números (10/11, item 4): burnout-na-gestao-fatores-de-risco diz "20–30%" de sintomas de burnout sem referência no texto. NÃO alterado. RECOMENDAÇÃO: remover o número, ou acrescentar fonte verificável que sustente 20–30%. O Dr. decide; não aplicado.',
   'Eixo 5 (Transtornos Mentais): introdução mantida. É o texto-base do Dr. Antônio; a linha de crise já está no texto.',
   '"pessoas com TEA": a ordem de 09/11 lista como erro, mas a regra de relatos (CLAUDE.md, item e) aprova "pessoas com TEA". Não alterado. Decidir qual forma vale.',
   'relato-silencio-fatal: "já tinha pensado em como faria" (sem método nem local descritos). Mantido. Confirmar.',
