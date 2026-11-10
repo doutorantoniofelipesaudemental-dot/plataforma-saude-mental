@@ -5,6 +5,7 @@ const path = require('path');
 const { textoRevisaoPublica } = require('./revisaoMedica');
 const { escapeHtml, formatarData } = require('./texto');
 const { urlNarracaoTocavel, estadoNarracao } = require('./narracao');
+const { htmlRelato } = require('./relatosTemplate');
 
 const BASE_URL = 'https://www.drantoniofelipemedico.com.br';
 const TEMPLATE_PATH = path.join(__dirname, '..', '..', 'public', 'artigo.html');
@@ -200,9 +201,10 @@ function renderizarArtigoHtml(artigo) {
   if (templateCompativel) {
     html = html.replace('<article>', '<article data-ssr="1">');
     html = html.replace(SKELETON_CABECALHO, montarCabecalhoHtml(artigo));
+    const relato = htmlRelato(artigo);
     html = html.replace(
       SKELETON_CONTEUDO,
-      `<div class="conteudo-artigo" id="artigo-conteudo" aria-busy="false">${artigo.conteudo}</div>${caixaViolenciaHtml(artigo)}${avisoProtocolosHtml(artigo)}`
+      `${relato ? relato.nota : ''}<div class="conteudo-artigo" id="artigo-conteudo" aria-busy="false">${artigo.conteudo}</div>${relato ? relato.paraEntender + relato.apoio : ''}${caixaViolenciaHtml(artigo)}${avisoProtocolosHtml(artigo)}`
     );
   } else {
     console.warn('[renderizarArtigo] skeleton do template mudou — pulando SSR do corpo, so o <head> foi pre-renderizado.');

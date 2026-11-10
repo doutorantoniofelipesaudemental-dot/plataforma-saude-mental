@@ -189,7 +189,11 @@
       conteudo.setAttribute('aria-busy', 'false');
       // O conteúdo é HTML escrito pela clínica pelas rotas administrativas
       // autenticadas — não é entrada de usuário anônimo.
+      // Relatos da Prática: nota no início e "Para entender"/apoio no fim, gerados pelo servidor (não alteram o texto).
+      const bloco = artigo.relatoHtml;
+      if (bloco) conteudo.insertAdjacentHTML('beforebegin', bloco.nota);
       conteudo.innerHTML = artigo.conteudo;
+      if (bloco) conteudo.insertAdjacentHTML('afterend', bloco.paraEntender + bloco.apoio);
       // Caixa de canais de apoio nos textos de violência (mesma regra de backend/lib/caixaViolencia.js; fora do texto narrado)
       const textoPuro = String(artigo.conteudo).replace(/<[^>]+>/g, ' ');
       const reViol = /(viol[êe]ncia dom[ée]stica|viol[êe]ncia contra a mulher|viol[êe]ncia no namoro|abuso sexual|abuso f[ií]sico|maus-tratos|relacionamento abusivo|Maria da Penha|viol[êe]ncia (?:f[ií]sica|psicol[óo]gica|sexual))/gi;

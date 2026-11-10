@@ -261,7 +261,7 @@ function montarSlides(artigo) {
   return [
     { tipo: 'capa', titulo: artigo.titulo, categoria: artigo.categoria },
     ...conteudoSlides,
-    { tipo: 'cta', categoria: artigo.categoria },
+    { tipo: 'cta', categoria: artigo.categoria, nota: artigo.categoria === RELATOS ? NOTA_FICCAO_TEXTO : '' },
   ];
 }
 
@@ -448,6 +448,7 @@ function renderizarSlideCta(slide, indice, total) {
     ${indicadorPagina(indice, total, true)}
     ${caminhoLinhas(FONTE_SERIF, linhas1, MARGEM, 560, 74, 62, COR.branco, { negrito: true })}
     ${caminhoLinhas(FONTE_SANS, linhas2, MARGEM, 560 + linhas1.length * 74 + 50, 46, 34, 'rgba(255,255,255,0.82)')}
+    ${slide.nota ? caminhoLinhas(FONTE_SANS, quebrarLinhas(FONTE_SANS, slide.nota, LARGURA_UTIL, 26, { maxLinhas: 3 }), MARGEM, 960, 36, 26, 'rgba(255,255,255,0.78)') : ''}
     <rect x="${MARGEM}" y="${ALTURA - 260}" width="90" height="5" rx="2.5" fill="${COR.dourado}" />
     ${rodapeMarca(true)}`;
 }
@@ -464,6 +465,8 @@ function renderizarSlideSVG(slide, indice, total, categoria) {
 /* -------------------------------- Legenda ---------------------------------- */
 
 const { IDENTIFICACAO_COMPLETA } = require('./identificacaoCfm');
+const { NOTA_FICCAO_TEXTO } = require('./relatos');
+const { RELATOS } = require('./temas');
 function montarLegenda(artigo, slides) {
   const emoji = EMOJI_CATEGORIA[artigo.categoria] || '🧠';
   const topicos = slides
