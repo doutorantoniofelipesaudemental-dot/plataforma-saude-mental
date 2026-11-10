@@ -22,6 +22,15 @@ const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').
 const decisoes = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios', 'revisao-20261110', 'decisoes-temas.json'), 'utf8'));
 const dados = JSON.parse(fs.readFileSync(path.join(RAIZ, '.tmp', 'revisao-20261110', 'dados.json'), 'utf8'));
 const introsNovas = fs.readFileSync(path.join(RAIZ, 'relatorios', 'plano-diretor', 'INTRODUCOES-EIXOS.md'), 'utf8');
+const ofertas = JSON.parse(fs.readFileSync(path.join(RAIZ, 'relatorios', 'revisao-20261110', 'ofertas-individuais.json'), 'utf8'));
+const tabelaOfertas = `<h3>Ofertas individuais (varredura só leitura, ordem 09/11 23:35)</h3>
+<p>${esc(ofertas.resultado)}</p>
+<div class="wrap"><table><thead><tr><th>Artigo</th><th>Tipo</th><th>Trecho atual</th><th>Proposta</th><th>Decisão</th></tr></thead><tbody>
+${ofertas.itens.map((i) => `<tr><td>${esc(i.slug)}</td><td>${esc(i.tipo)}</td><td>${esc(i.atual)}</td><td>${esc(i.proposta)}</td><td>${esc(i.decisao)}</td></tr>`).join('\n')}
+</tbody></table></div>
+<h3>Revisto e mantido (não é oferta individual)</h3>
+<ul>${ofertas.revisto_nao_e_oferta.map((r) => `<li>${esc(r.slug)} — ${esc(r.trecho)}: ${esc(r.motivo)}</li>`).join('')}</ul>
+<p>${esc(ofertas.pendencia_tecnica)}</p>`;
 const introsAntigas = execSync('git show origin/main:relatorios/plano-diretor/INTRODUCOES-EIXOS.md', { cwd: RAIZ, encoding: 'utf8' });
 
 const extrairIntros = (md) => {
@@ -134,7 +143,7 @@ ol li{margin:6px 0}
 <div><b>${decisoesClinicas.length}</b>decisões clínicas</div>
 </div>
 <input type="radio" name="aba" id="t-temas" checked><input type="radio" name="aba" id="t-intros"><input type="radio" name="aba" id="t-relatos"><input type="radio" name="aba" id="t-erros"><input type="radio" name="aba" id="t-decisoes">
-<div class="tabs"><label for="t-temas">Temas (${totais.temas})</label><label for="t-intros">Introduções (7)</label><label for="t-relatos">Relatos (${medios.length})</label><label for="t-erros">Erros corrigidos (0)</label><label for="t-decisoes">Decisões clínicas (${decisoesClinicas.length})</label></div>
+<div class="tabs"><label for="t-temas">Temas (${totais.temas})</label><label for="t-intros">Introduções (7)</label><label for="t-relatos">Relatos (${medios.length})</label><label for="t-erros">Erros e ofertas (propostas)</label><label for="t-decisoes">Decisões clínicas (${decisoesClinicas.length})</label></div>
 
 <section class="aba p-temas"><h2>Temas — regra 5 (Transtornos = conceito, diagnóstico e conduta; outros 6 = psicoeducação e cuidados; Relatos sem tema)</h2>
 <p class="meta">Linhas em destaque: confiança média. Só o campo tema muda; nenhuma narração nova.</p>
@@ -162,7 +171,9 @@ ${linhasMedios}
 <li>"louco", "doido", "drogado": aparecem entre aspas, como exemplos de estigma ou fala de personagem, e não foram alterados.</li>
 <li>"cometeu": 2 ocorrências fora de relatos ("cometeu o ataque", em texto de prevenção a ataques), sem relação com suicídio. Mantido.</li>
 <li><strong>Não verificado nesta rodada:</strong> links quebrados (exige rede; a auditoria do portão cobre links) e grafia geral (sem revisor ortográfico automático).</li>
-</ol></section>
+</ol>
+${tabelaOfertas}
+</section>
 
 <section class="aba p-decisoes"><h2>Decisões clínicas (para o Dr. Antônio)</h2>
 <ol>${decisoesClinicas.map((d) => `<li>${esc(d)}</li>`).join('\n')}</ol>
