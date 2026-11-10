@@ -1,0 +1,4529 @@
+[
+  {
+    "slug": "abuso-sexual-infantil-proteger",
+    "titulo": "Violência sexual contra crianças: prevenção, sinais de alerta e o que fazer para proteger",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "acidente-trabalho-trauma-psicologico",
+    "titulo": "Depois do acidente de trabalho: como reconhecer e cuidar do trauma psicológico de quem se acidentou e de quem viu",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "adocao-saude-mental-filho",
+    "titulo": "Adoção: apoiando a saúde mental do filho adotivo",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "adolescente-corpo-mudanca-aceitacao",
+    "titulo": "Mudanças corporais na adolescência: apoiando a aceitação do próprio corpo",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "adolescente-escolha-profissional-pressao",
+    "titulo": "Escolha profissional: reduzindo a pressão sobre adolescentes",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "adolescente-experimentacao-alcool-conversa",
+    "titulo": "Conversando sobre álcool com adolescentes, antes que a experimentação aconteça",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "adolescente-primeiro-namoro",
+    "titulo": "Primeiro namoro na adolescência: como os pais podem apoiar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "adolescente-quarto-bagunca-privacidade",
+    "titulo": "Quarto bagunçado e privacidade: negociando limites com adolescentes",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "agressividade-infantil-morder-bater",
+    "titulo": "Criança que morde e bate: por que acontece e como ensinar outro caminho sem violência",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "alcool-masculinidade",
+    "titulo": "Álcool e masculinidade: por que tantos homens bebem para aguentar, os sinais de alerta e como pedir ajuda",
+    "de": "Hábitos & Sono",
+    "para": "Hábitos & Sono",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "alcool-territorios-indigenas",
+    "titulo": "Álcool em territórios indígenas: o que está por trás do problema e como cuidar com respeito à cultura",
+    "de": "Hábitos & Sono",
+    "para": "Hábitos & Sono",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "alimentacao-criancas",
+    "titulo": "Alimentação e saúde mental de crianças e adolescentes: muito além do prato",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "ansiedade-corporativa-sintomas-tratamento",
+    "titulo": "Ansiedade Corporativa: Diferenciando o Estresse do Dia a Dia de um Transtorno Clínico",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "ansiedade-trabalho-lidando",
+    "titulo": "Ansiedade relacionada ao trabalho: como lidar no dia a dia",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "apostas-online-trabalhadores-empresa",
+    "titulo": "Apostas online entre trabalhadores: sinais, riscos e o que a empresa pode fazer",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "assedio-moral-prevencao-empresa",
+    "titulo": "Assédio moral no trabalho: como prevenir institucionalmente",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "assedio-moral-reconhecer",
+    "titulo": "Assédio moral no trabalho: como diferenciar de um conflito, o impacto na saúde e os caminhos para se proteger",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "assedio-sexual-trabalho-prevencao",
+    "titulo": "Assédio sexual no trabalho: impacto na saúde mental, o que a lei exige e como prevenir de verdade",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "atraso-de-fala-quando-procurar",
+    "titulo": "Atraso de fala: até quando esperar e quando procurar avaliação",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "birras-infantis-entendendo",
+    "titulo": "Birras infantis: o que está por trás delas",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "brincar-livre-importancia-desenvolvimento",
+    "titulo": "A importância do brincar livre, sem estrutura ou objetivo",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "burnout-coletivo-equipe-inteira",
+    "titulo": "Quando o burnout é da equipe inteira, não apenas individual",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "burnout-na-gestao-fatores-de-risco",
+    "titulo": "Síndrome de Burnout na Gestão: Como Identificar Fatores de Risco Psicossocial nas Equipes",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "burnout-sinais-reconhecer",
+    "titulo": "Burnout: como saber se é isso o que você está sentindo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "calor-extremo-trabalho-saude-mental",
+    "titulo": "Calor extremo no trabalho: riscos físicos e mentais e como proteger as equipes",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "celular-na-escola",
+    "titulo": "Celular proibido na escola: o que diz a lei, o que mostram os estudos e o que escola e família podem fazer",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "certificado-empresa-promotora-saude-mental",
+    "titulo": "Certificado Empresa Promotora da Saúde Mental (Lei 14.831/2024): o que exige e como se preparar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "ciume-irmaos-chegada-bebe",
+    "titulo": "Ciúme entre irmãos: lidando com a chegada de um novo bebê",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "clima-organizacional-pesquisa-efetiva",
+    "titulo": "Pesquisa de clima organizacional: fazendo perguntas que realmente importam",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "comportamento-desafiador-opositor",
+    "titulo": "Filho desafiador: quando o “não” vira confronto constante",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "compulsao-alimentar-compras-compulsivas",
+    "titulo": "Compulsão alimentar e compras compulsivas: quando o alívio vira um padrão que aprisiona",
+    "de": "Transtornos Mentais",
+    "para": "Transtornos Mentais",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "comunicacao-nao-violenta-equipe",
+    "titulo": "Comunicação não violenta como ferramenta de gestão",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "controle-esfincteriano-atraso",
+    "titulo": "Desfralde: entendendo o ritmo de cada criança",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "criancas-adotadas-perguntas-origem",
+    "titulo": "Quando o filho adotado pergunta sobre a família biológica",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "criancas-ansiedade-desempenho-escolar",
+    "titulo": "Ansiedade de desempenho escolar: quando a cobrança vira sofrimento",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "criancas-doenca-cronica-familia",
+    "titulo": "Quando um irmão tem doença crônica: cuidando também dos outros filhos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "criancas-medo-agulha-vacina",
+    "titulo": "Medo de agulha e vacina: tornando o momento menos traumático",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "criancas-superdotadas-sinais",
+    "titulo": "Altas habilidades: reconhecendo sinais além do desempenho escolar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "criancas-superprotecao-riscos",
+    "titulo": "Superproteção: quando o cuidado em excesso também traz riscos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "crise-humanitaria-impacto-equipe",
+    "titulo": "Como apoiar equipes durante crises externas (desastres, luto coletivo)",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "cyberbullying-reconhecendo-agindo",
+    "titulo": "Cyberbullying: sinais, riscos para a saúde mental, o que diz a lei e como agir",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "dependencia-quimica-comportamental-sinais",
+    "titulo": "Sinais de dependência: química ou comportamental, o padrão é parecido",
+    "de": "Hábitos & Sono",
+    "para": "Hábitos & Sono",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "depressao-pos-parto-ansiedade-perinatal",
+    "titulo": "Depressão pós-parto e ansiedade perinatal: reconhecendo os sinais além do \"baby blues\"",
+    "de": "Maternidade & Perinatal",
+    "para": "Maternidade & Perinatal",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "desafios-perigosos-internet",
+    "titulo": "Desafios perigosos na internet: como proteger crianças e adolescentes",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "desinformacao-saude-mental",
+    "titulo": "Desinformação e saúde mental: como as notícias falsas espalham medo, raiva e desconfiança, e como se proteger",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "desligamento-humanizado",
+    "titulo": "Desligamento humanizado: reduzindo o impacto psicológico",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "dislexia-dificuldades-aprendizagem",
+    "titulo": "Dislexia: quando ler é muito difícil para uma criança inteligente",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "divorcio-impacto-filhos-idade",
+    "titulo": "Divórcio: como o impacto varia conforme a idade dos filhos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "employee-assistance-program",
+    "titulo": "Programa de Apoio ao Empregado (EAP): vale a pena implementar?",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "enurese-noturna-xixi-na-cama",
+    "titulo": "Xixi na cama depois dos 5 anos: causas e tratamentos que funcionam",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "envelhecimento-ativo-isolamento-social",
+    "titulo": "Saúde mental na terceira idade: isolamento social e preservação emocional",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "estresse-migratorio-adaptacao-cultural",
+    "titulo": "Estresse migratório: o que ninguém conta sobre recomeçar em outro país",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "estudante-migrante-saude-mental",
+    "titulo": "Estudar longe de casa: saúde mental de estudantes internacionais e de quem migra para a faculdade",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "fadiga-compaixao-cuidado-idosos",
+    "titulo": "Fadiga da compaixão: quando cuidar de alguém amado está te esgotando",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "falar-saude-mental-em-casa",
+    "titulo": "Como falar de saúde mental com os filhos: por que eles não pedem ajuda e roteiros de conversa por idade",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "familia-apoiar-filho-lgbtqia",
+    "titulo": "Meu filho é LGBTQIA+: como a aceitação da família protege a saúde mental e o que fazer (e evitar) na prática",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "familias-recompostas-adaptacao",
+    "titulo": "Famílias recompostas: apoiando a adaptação dos filhos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "filho-aposta-como-conversar",
+    "titulo": "Meu filho adolescente aposta: sinais, um roteiro de conversa e como agir sem romper o vínculo",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "filho-desabafa-chatbot",
+    "titulo": "Meu filho desabafa com uma IA: o que a ciência mostra, quando se preocupar e como conversar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "filho-unico-mitos-realidade",
+    "titulo": "Filho único: desconstruindo mitos sobre desenvolvimento social",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "filhos-de-pais-com-transtorno-mental",
+    "titulo": "Quando o pai ou a mãe tem um transtorno mental: como cuidar dos filhos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "fusao-aquisicao-impacto-psicologico",
+    "titulo": "Fusões e aquisições: o impacto psicológico nas equipes",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "gagueira-infantil-quando-preocupar",
+    "titulo": "Gagueira infantil: quando é fase e quando buscar avaliação",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "gestao-conflitos-equipe-saude-mental",
+    "titulo": "Gestão de conflitos e seu impacto na saúde mental da equipe",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "home-office-saude-mental",
+    "titulo": "Home office e saúde mental: riscos e boas práticas de gestão",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "homem-migrante-saude-mental",
+    "titulo": "Homem migrante: o peso de ser forte, mandar dinheiro e não poder falhar",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "ideacao-suicida-adolescencia",
+    "titulo": "Pensamentos suicidas na adolescência: sinais de alerta, por que perguntar protege e como agir no mesmo dia",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "indicadores-saude-mental-empresa",
+    "titulo": "Indicadores de saúde mental que toda empresa deveria acompanhar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "inteligencia-artificial-trabalho-ansiedade",
+    "titulo": "Inteligência artificial no trabalho: como reduzir a ansiedade das equipes",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "irmaos-criancas-doenca-cronica",
+    "titulo": "Irmãos de crianças com doença crônica ou deficiência: o impacto emocional e como os pais podem cuidar de todos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "isolamento-social-adolescente-prolongado",
+    "titulo": "Adolescente que não sai do quarto: quando o isolamento é sinal de sofrimento",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "jogos-online-criancas",
+    "titulo": "Roblox, Fortnite e jogos online: o que pais precisam saber sobre saúde mental dos filhos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "jovens-primeiro-emprego-saude-mental",
+    "titulo": "Jovens no primeiro emprego: como apoiar a saúde mental de quem está começando",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "lgpd-dados-saude-trabalhador",
+    "titulo": "Saúde mental e LGPD: o que o RH pode e não pode saber",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "licenca-medica-gestao-institucional",
+    "titulo": "Gestão institucional de licenças médicas por saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "limites-disciplina-positiva",
+    "titulo": "Disciplina positiva: colocando limites sem gritar ou punir",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "luto-no-trabalho",
+    "titulo": "Luto no trabalho: como acolher quem perdeu alguém",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "medo-escuro-criancas",
+    "titulo": "Medo do escuro: por que acontece e como ajudar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "menores-16-redes-sociais",
+    "titulo": "Redes sociais antes dos 16: o que o ECA Digital mudou, o que a ciência mostra e como combinar em casa",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "mentiras-criancas-o-que-fazer",
+    "titulo": "Meu filho está mentindo: o que isso significa, e o que fazer",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "metas-agressivas-saude-mental",
+    "titulo": "Metas agressivas e saúde mental: onde está o limite",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-aculturacao-identidade",
+    "titulo": "Entre duas culturas: aculturação, identidade e saúde mental de migrantes e seus filhos",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-alcool-drogas",
+    "titulo": "Álcool e outras drogas na migração: quando o alívio vira problema",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-clima-e-desastres",
+    "titulo": "Clima, desastres e deslocamento: a migração forçada que já começou",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-convivencia-comunidade-acolhida",
+    "titulo": "Convivência entre migrantes e comunidade local: o que a saúde mental tem a ver com isso",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-culpa-vergonha",
+    "titulo": "Culpa de quem partiu, vergonha de não dar certo: emoções silenciosas da migração",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-decisao-de-migrar",
+    "titulo": "A decisão de migrar: expectativas, medos e como cuidar da saúde mental antes de partir",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-depressao-ansiedade-quanto-e-comum",
+    "titulo": "Depressão, ansiedade e estresse pós-traumático em migrantes: quanto é comum e como reconhecer",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-direitos-lei-de-migracao-e-refugio",
+    "titulo": "Lei de Migração e Lei do Refúgio: os direitos que protegem a saúde de quem chega ao Brasil",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-efeito-imigrante-saudavel",
+    "titulo": "O \"imigrante saudável\" que adoece com o tempo: o que explica esse paradoxo",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-estresse-depois-da-chegada",
+    "titulo": "O que acontece depois da chegada pesa tanto quanto o passado: o estresse pós-migratório",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-formulacao-cultural-consulta",
+    "titulo": "Consulta com pessoas migrantes: como fazer uma avaliação culturalmente sensível",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-haitianos-e-africanos-no-brasil",
+    "titulo": "Haitianos e africanos no Brasil: migração, racismo e o direito ao cuidado",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-interna-no-brasil",
+    "titulo": "Migração dentro do Brasil: quem sai do interior ou de outra região também vive o luto migratório",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-intervencoes-psicossociais",
+    "titulo": "Intervenções psicossociais para migrantes e refugiados: o que funciona e pode ser feito no SUS",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-lgbtqia",
+    "titulo": "Pessoas LGBTQIA+ migrantes e refugiadas: fugir da perseguição e encontrar segurança",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-lingua-e-cuidado",
+    "titulo": "A barreira da língua na saúde: por que intérpretes e mediadores culturais fazem diferença",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-luto-migratorio",
+    "titulo": "Luto migratório: as perdas invisíveis de quem muda de país",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-papel-da-sociedade-e-politicas",
+    "titulo": "O papel da sociedade e das políticas públicas na saúde mental de migrantes",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-pessoa-idosa",
+    "titulo": "Envelhecer longe da terra natal: saúde mental da pessoa idosa migrante",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-primeiros-cuidados-psicologicos",
+    "titulo": "Primeiros cuidados psicológicos para quem chega: como acolher migrantes em situação de crise",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-resiliencia-fatores-de-protecao",
+    "titulo": "Resiliência na migração: o que protege a saúde mental de quem recomeça",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-saude-mental",
+    "titulo": "Migrar não é adoecer: o que a ciência sabe sobre migração e saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-sem-documentos",
+    "titulo": "Viver sem documentos: medo, invisibilidade e saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-sofrimento-no-corpo",
+    "titulo": "Quando o sofrimento fala pelo corpo: queixas físicas, cultura e saúde mental em migrantes",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-solidao-saudade-pertencimento",
+    "titulo": "Solidão, saudade e a busca por pertencimento: as emoções de quem vive longe de casa",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-venezuelanos-no-brasil",
+    "titulo": "Venezuelanos no Brasil: acolhida, interiorização e saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migracao-violencia-contra-mulheres",
+    "titulo": "Violência contra mulheres migrantes: reconhecer, proteger e garantir direitos",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migrante-endividado-apostas",
+    "titulo": "Migrante, endividado e longe de casa: a pressão das remessas, a armadilha das apostas e onde buscar apoio",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "migrantes-como-buscar-ajuda-saude-mental-sus",
+    "titulo": "Migrante no Brasil: seu direito ao SUS e onde buscar ajuda em saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "morte-avos-explicando-criancas",
+    "titulo": "Explicando a morte de um avô ou avó para crianças pequenas",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "mulher-migrante-saude-mental",
+    "titulo": "Mulher migrante: sobrecarga, violência e a força das redes que ela constrói",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "mulheres-apostas-online",
+    "titulo": "Mulheres e apostas online: por que o jogo chega diferente, por que é mais difícil pedir ajuda e o que funciona",
+    "de": "Hábitos & Sono",
+    "para": "Hábitos & Sono",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "mutismo-seletivo",
+    "titulo": "Mutismo seletivo: quando a criança fala em casa, mas não na escola",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "namoro-abusivo-adolescencia",
+    "titulo": "Namoro abusivo na adolescência: sinais de controle, impacto na saúde mental e como ajudar sem afastar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "neurodiversidade-no-trabalho",
+    "titulo": "Neurodiversidade no trabalho: como incluir pessoas autistas, com TDAH e dislexia",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "nr1-riscos-psicossociais-passo-a-passo",
+    "titulo": "NR-1 e riscos psicossociais: roteiro prático para o PGR da sua empresa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "obesidade-infantil-estigma-saude-mental",
+    "titulo": "Obesidade infantil e saúde mental: como cuidar sem envergonhar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "onboarding-saude-mental",
+    "titulo": "Integração de novos colaboradores: um momento crítico para saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "pais-separados-comunicacao-filhos",
+    "titulo": "Pais separados: comunicando decisões conjuntas sobre os filhos",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "paliativos-apoio-cuidadores-intervencoes",
+    "titulo": "Apoio ao cuidador: quais intervenções funcionam de verdade",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "paliativos-comunidades-compassivas",
+    "titulo": "Comunidades compassivas: quando o bairro inteiro ajuda a cuidar",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "paliativos-falar-sobre-a-morte",
+    "titulo": "Precisamos falar sobre a morte: letramento, mídia e o papel da sociedade",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "pesadelos-terror-noturno-diferenca",
+    "titulo": "Pesadelos e terror noturno: entendendo a diferença",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "politica-alcool-drogas-empresa",
+    "titulo": "Álcool e drogas no trabalho: como construir uma política que cuida e protege",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "politica-conflitos-familiares",
+    "titulo": "Política e família: quando a discussão vira ruptura, o que isso faz com a saúde mental e como preservar os vínculos",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "prevencao-suicidio-ambiente-trabalho",
+    "titulo": "Prevenção de suicídio no ambiente de trabalho: o papel da empresa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "primeiro-dia-escola-ansiedade",
+    "titulo": "Primeiro dia de escola: lidando com a ansiedade de separação",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "primeiros-socorros-psicologicos-lideranca",
+    "titulo": "Primeiros socorros psicológicos: o que toda liderança deveria saber",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "professor-aluno-em-crise",
+    "titulo": "O aluno em crise na sala de aula: como o professor pode perceber, acolher e encaminhar com segurança",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "programa-saude-mental-ocupacional",
+    "titulo": "Como estruturar um programa de saúde mental ocupacional do zero",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "programas-bem-estar-o-que-funciona",
+    "titulo": "Programas de bem-estar: o que funciona de verdade para a saúde mental no trabalho",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "psicofarmacos-mitos-verdades",
+    "titulo": "Psicofármacos: mitos e verdades sobre o tratamento medicamentoso em saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "puberdade-precoce-conversando",
+    "titulo": "Puberdade: conversando com seu filho antes que ele pergunte",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "quem-cuida-de-quem-cuida",
+    "titulo": "Quem cuida de quem cuida: sinais de esgotamento do cuidador familiar e o que realmente ajuda",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "redes-sociais-criancas",
+    "titulo": "Redes sociais e saúde mental de crianças e adolescentes: o que mudou e o que pais precisam saber",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "remedios-demais-no-idoso",
+    "titulo": "Remédios demais no idoso: como a polifarmácia causa quedas e confusão e como revisar a lista com segurança",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "reorganizacao-emocional-luto-divorcio",
+    "titulo": "Luto e divórcio: reorganizar a vida depois de uma perda significativa",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "retorno-pais-de-origem",
+    "titulo": "Voltar para casa depois de anos fora: o choque cultural reverso, o que pesa na volta e como se readaptar",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "retorno-trabalho-pos-licenca-empresa",
+    "titulo": "Retorno ao trabalho após licença médica: papel da empresa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "rotina-criancas",
+    "titulo": "Rotina e saúde mental de crianças e adolescentes: o pilar mais subestimado",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-call-center",
+    "titulo": "Saúde mental em call centers: gestão do desgaste emocional intenso",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-cuidador",
+    "titulo": "Saúde mental do cuidador: quem cuida de quem cuida?",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-financeira-trabalhador",
+    "titulo": "Saúde mental e finanças pessoais: uma conexão que a empresa pode endereçar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-lideranca-executiva",
+    "titulo": "Saúde mental de lideranças executivas: um ponto cego comum",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-pequenas-empresas",
+    "titulo": "Saúde mental em pequenas empresas: fazendo mais com menos recursos",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-pilar-de-performance-liderancas",
+    "titulo": "Saúde Mental como Pilar de Performance: O Papel dos Protocolos Preventivos nas Empresas",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-profissionais-saude-hospital",
+    "titulo": "Saúde mental de equipes hospitalares: gestão institucional necessária",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-reestruturacao-organizacional",
+    "titulo": "Reestruturações organizacionais: mitigando o impacto psicológico",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-servicos-essenciais",
+    "titulo": "Saúde mental em profissões de serviços essenciais: um risco subestimado",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-startups-pressao-crescimento",
+    "titulo": "Saúde mental em startups: a pressão do crescimento acelerado",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-tecnologia-fadiga-digital",
+    "titulo": "Fadiga digital: o impacto do excesso de notificações e reuniões",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-teletrabalho-isolamento",
+    "titulo": "Isolamento no teletrabalho: identificando e prevenindo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-trabalhadores-terceirizados",
+    "titulo": "Saúde mental de trabalhadores terceirizados: um ponto cego comum",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-trabalho-hibrido",
+    "titulo": "Trabalho híbrido: equilibrando flexibilidade e conexão da equipe",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-varejo-atendimento-publico",
+    "titulo": "Saúde mental no varejo: o desgaste do atendimento ao público",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "saude-mental-vendas-metas-comissao",
+    "titulo": "Saúde mental em equipes de vendas: pressão constante e comissão",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "seletividade-alimentar-criancas",
+    "titulo": "Seletividade alimentar: quando é fase e quando merece atenção",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "servico-consultoria-ocupacional",
+    "titulo": "Consultoria em saúde mental ocupacional e riscos psicossociais (NR-1)",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sharenting-exposicao-filhos-redes",
+    "titulo": "Postar fotos dos filhos nas redes: riscos do “sharenting” e boas práticas",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sinais-alerta-comportamentais-jovens",
+    "titulo": "Sinais de alerta em crianças e adolescentes: o que observar (e como agir)",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sinais-alerta-equipe-rh",
+    "titulo": "Sinais de alerta que o RH não deveria ignorar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sindrome-impostor-equipe",
+    "titulo": "Síndrome do impostor na equipe: como a liderança pode ajudar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sobrecarga-docente-descompressao",
+    "titulo": "Sobrecarga docente: reconhecendo o esgotamento antes que ele vire adoecimento",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sobrecarga-feminina-dupla-jornada",
+    "titulo": "Dupla jornada e carga mental: como a sobrecarga adoece as mulheres e o que pode mudar em casa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "sono-na-adolescencia",
+    "titulo": "Sono na adolescência: por que dormem tarde e como proteger a saúde mental",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "telas-primeira-infancia",
+    "titulo": "Telas antes dos 5 anos: o que a OMS recomenda, os efeitos na fala e no desenvolvimento e alternativas possíveis",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "tempo-tela-bebes-primeira-infancia",
+    "titulo": "Telas na primeira infância: o que as diretrizes recomendam",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "tempo-tela-criancas",
+    "titulo": "Tempo de tela em crianças e adolescentes: o que realmente importa para a saúde mental",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "tiques-tourette-criancas",
+    "titulo": "Tiques e síndrome de Tourette: o que os pais precisam saber",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "trabalhadores-aplicativo-jornada",
+    "titulo": "Motoristas e entregadores de aplicativo: jornadas sem fim, renda incerta e o impacto na saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "trabalhadores-cuidadores-familiares",
+    "titulo": "Trabalhadores que cuidam de familiares: a dupla jornada invisível",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "trabalho-domestico-invisivel-estresse",
+    "titulo": "O peso do trabalho doméstico invisível: estresse ocupacional de quem cuida da casa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "trabalho-noturno-turnos-saude-mental",
+    "titulo": "Trabalho noturno e escalas de turno: impacto na saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "transicao-carreira-aposentadoria-identidade",
+    "titulo": "Transição de carreira e aposentadoria: reorganizando identidade depois de uma mudança significativa",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "transtorno-obsessivo-compulsivo-na-aps-reconhecimento-e-mane",
+    "titulo": "Transtorno obsessivo-compulsivo na APS: reconhecimento e manejo inicial",
+    "de": "Transtornos Mentais",
+    "para": "Transtornos Mentais",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "vape-alcool-maconha-adolescente",
+    "titulo": "Vape, álcool e maconha na adolescência: o que a ciência mostra, o que diz a lei e como conversar com o seu filho",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-adolescentes-autores-socioeducativo",
+    "titulo": "Adolescentes que cometeram atos infracionais: violência sofrida, saúde mental e responsabilização",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-ataques-a-escolas",
+    "titulo": "Depois de um ataque a uma escola: como cuidar de alunos, famílias e professores",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-contra-pessoa-idosa",
+    "titulo": "Violência contra a pessoa idosa: a forma mais escondida de violência dentro de casa",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-criancas-com-deficiencia",
+    "titulo": "Crianças com deficiência sofrem mais violência: por que acontece e como proteger",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-criancas-em-acolhimento",
+    "titulo": "Crianças e adolescentes em acolhimento institucional: violência, perdas e saúde mental",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-domestica-e-trabalho",
+    "titulo": "Violência doméstica e trabalho: o que a empresa pode fazer quando a violência chega ao expediente",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-domestica-impacto-criancas",
+    "titulo": "Crianças que presenciam violência em casa: impacto, sinais e como proteger",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-escola-cuidar-equipe",
+    "titulo": "Depois da violência na escola: como cuidar de professores e funcionários nas primeiras horas e nas semanas seguintes",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-financeira-contra-idoso",
+    "titulo": "Violência financeira contra a pessoa idosa: quando a aposentadoria vira alvo",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-luto-por-homicidio",
+    "titulo": "Luto por homicídio: quando a morte é violenta e a dor tem camadas a mais",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-maes-que-perderam-filhos",
+    "titulo": "Mães que perderam filhos para a violência: luto, luta e saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-no-trabalho",
+    "titulo": "Violência no trabalho: agressões, ameaças e assédio como riscos à saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-prevencao-comunitaria",
+    "titulo": "Prevenir a violência no bairro: eficácia coletiva, programas comunitários e o que funciona",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-trabalhadores-expostos-a-assaltos",
+    "titulo": "Motoristas, entregadores, comerciantes e vigilantes: trabalho exposto à violência urbana e saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-trauma-vicario-rede-de-protecao",
+    "titulo": "Trauma vicário: o sofrimento de quem trabalha ouvindo histórias de violência",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "violencia-urbana-bairro-e-medo",
+    "titulo": "Viver com medo no próprio bairro: violência urbana e saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "viuvez-e-solidao",
+    "titulo": "Viuvez e solidão: o impacto do luto na saúde, o que é esperado e quando o luto precisa de cuidado",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "voltar-ao-trabalho-apos-afastamento",
+    "titulo": "Voltar ao trabalho depois de um afastamento por saúde mental: o que funciona, ajustes possíveis e o papel da empresa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "xenofobia-racismo-saude-mental-migrantes",
+    "titulo": "Quando a origem e a cor da pele viram alvo: racismo, xenofobia e saúde mental de migrantes",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "A",
+    "confianca": "alta",
+    "motivo": "proposta do classificador (só campo tema)"
+  },
+  {
+    "slug": "abstinencia-alcoolica-protocolo",
+    "titulo": "Síndrome de abstinência alcoólica: reconhecimento e manejo inicial",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "academia-cuidado-ou-obsessao-exercicio-compulsivo",
+    "titulo": "Academia como cuidado ou como obsessão: sinais de exercício compulsivo",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "adolescencia-mudancas-humor",
+    "titulo": "Adolescência: diferenciando oscilação normal de sinal de alerta",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "adolescentes-insatisfeitos-com-o-corpo",
+    "titulo": "Adolescentes insatisfeitos com o corpo: o que a PeNSE mostra e como agir",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "alimentacao-consulta-medicos",
+    "titulo": "Alimentação infantil: como abordar na consulta sem reforçar ansiedade alimentar",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "anabolizantes-chip-da-beleza-riscos",
+    "titulo": "Anabolizantes e \"chip da beleza\": riscos para o corpo, o humor e a dependência",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "ansiedade-de-saude-cibercondria",
+    "titulo": "Ansiedade de saúde e “Dr. Google”: quando pesquisar sintomas vira sofrimento",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "ansiedade-diferenca-nervosismo",
+    "titulo": "Ansiedade: quando deixa de ser nervosismo comum",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "ansiedade-generalizada-aps",
+    "titulo": "Transtorno de ansiedade generalizada: diagnóstico e manejo na APS",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "ansiedade-social-timidez",
+    "titulo": "Ansiedade social: quando a timidez vira algo mais",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "aparencia-e-trabalho-discriminacao",
+    "titulo": "Aparência e trabalho: discriminação e oportunidades",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "aposentadoria-saude-mental",
+    "titulo": "Aposentadoria e saúde mental: um momento que exige atenção",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "assedio-moral-identificacao",
+    "titulo": "Assédio moral no trabalho: como reconhecer na consulta, avaliar risco e orientar o trabalhador",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "atendimento-racialmente-sensivel",
+    "titulo": "Atendimento racialmente sensível na saúde: por que o racismo afasta do cuidado e o que muda na prática",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "atendimento-sem-discriminacao-lgbtqia",
+    "titulo": "Atendimento sem discriminação para pessoas LGBTQIA+: por que importa para a saúde mental e como reconhecer um serviço acolhedor",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "automutilacao-adolescentes-consulta",
+    "titulo": "Automutilação em adolescentes: abordagem na consulta",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "avaliacao-neuropsicologica-breve-aps",
+    "titulo": "Avaliação neuropsicológica breve na Atenção Primária",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "bets-dividas-familia",
+    "titulo": "Quando as bets endividam a família: como proteger a casa, cuidar de quem joga e não adoecer junto",
+    "de": "Hábitos & Sono",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "bipolar-diferenciando-depressao",
+    "titulo": "Transtorno bipolar: diferenciando de depressão unipolar",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "brasil-campeao-cirurgias-plasticas",
+    "titulo": "Brasil entre os países que mais fazem cirurgias plásticas: o que isso diz sobre nós",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "burnout-academico-pos-graduacao-concursos",
+    "titulo": "Burnout acadêmico: quando mestrado, doutorado ou concurso cobram um preço alto demais",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Pós-Graduação & Concursos): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "burnout-medicos-enfermeiros",
+    "titulo": "Burnout em médicos e enfermeiros: quando o cuidador precisa de ajuda",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "canabinoides-saude-mental",
+    "titulo": "Uso de canabinoides e saúde mental: o que considerar na anamnese",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "canetas-receita-retida-genericos-mercado-paralelo",
+    "titulo": "Receita retida, genéricos e mercado paralelo: o que mudou nas canetas emagrecedoras",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "capacitismo-saude-mental",
+    "titulo": "Capacitismo adoece: como o preconceito contra pessoas com deficiência afeta a saúde mental e o que protege",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "casal-e-corpo-intimidade-comparacao",
+    "titulo": "Casal e corpo: intimidade, comparação e insegurança",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "catatonia-reconhecimento-pa",
+    "titulo": "Catatonia: um quadro frequentemente não reconhecido no PA",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "cirurgia-bariatrica-saude-mental",
+    "titulo": "Cirurgia bariátrica e saúde mental: preparo, expectativas, álcool e o depois",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "comparacao-redes-sociais-saude-mental",
+    "titulo": "Comparação nas redes sociais: o impacto real na saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "comprometimento-cognitivo-leve",
+    "titulo": "Comprometimento cognitivo leve: quando encaminhar",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "compulsao-alimentar",
+    "titulo": "Compulsão alimentar: como reconhecer os sinais e quando buscar ajuda",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "compulsao-alimentar-rastreio",
+    "titulo": "Compulsão alimentar: como rastrear na consulta de rotina, sem reforçar estigma",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "compulsao-compras-o-que-e",
+    "titulo": "Compulsão por compras: quando comprar vira problema",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "corpo-com-deficiencia-ou-doenca-cronica",
+    "titulo": "Corpo com deficiência ou doença crônica: limites, aceitação e preconceito",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "corpo-ideal-padroes-de-beleza",
+    "titulo": "\"Corpo ideal\" existe? Como os padrões mudam e quem lucra com eles",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "corpo-idoso-forca-autonomia-invisibilidade",
+    "titulo": "O corpo idoso: perda de força, autonomia e invisibilidade",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "corpo-masculino-pressao-silenciosa",
+    "titulo": "O corpo masculino em pauta: a pressão silenciosa sobre homens e meninos",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "corpo-negro-cabelo-padroes-racismo",
+    "titulo": "Corpo negro, cabelo e padrões: racismo e imagem corporal",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "criancas-adolescentes-migrantes-saude-mental",
+    "titulo": "Crianças que migram: o que elas sentem, o que as protege e como os adultos podem ajudar",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "criancas-corpo-comida-sem-vergonha",
+    "titulo": "Como falar de corpo e comida com crianças sem plantar vergonha",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "criancas-medo-medico-consultas",
+    "titulo": "Medo de médico: tornando consultas menos assustadoras",
+    "de": "Infância & Família",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "crise-psiquiatrica-familia",
+    "titulo": "Crise psiquiátrica na família: o que fazer (e o que evitar) até a ajuda chegar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "cuidado-colaborativo-psiquiatra-familia",
+    "titulo": "Cuidado colaborativo: psiquiatra e médico de família trabalhando juntos",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "cultura-psicologicamente-segura",
+    "titulo": "Cultura de segurança psicológica: o que é e por que importa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "deficiencia-adquirida-reconstruir",
+    "titulo": "Deficiência adquirida: o luto pela vida anterior, a capacidade de adaptação e os caminhos para reconstruir",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "delirium-tremens-reconhecimento",
+    "titulo": "Delirium tremens: reconhecimento e conduta de urgência",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "dependencia-emocional-relacionamentos",
+    "titulo": "Dependência emocional em relacionamentos: reconhecendo os sinais",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "dependencia-quimica",
+    "titulo": "Dependência de álcool, drogas e tabaco: como reconhecer os sinais e buscar ajuda",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "dependencia-quimica-rastreio-aps",
+    "titulo": "Dependência química: rastreio e abordagem inicial na Atenção Primária",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "depressao-ansiedade-produtividade",
+    "titulo": "Depressão e ansiedade: o impacto real na produtividade",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "depressao-pos-parto-paterna",
+    "titulo": "Depressão pós-parto também atinge pais: quantos são afetados, como ela aparece nos homens e por que importa para o bebê",
+    "de": "Infância & Família",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Infância & Família"
+  },
+  {
+    "slug": "depressao-sinais-alem-tristeza",
+    "titulo": "Depressão: sinais além da tristeza que muita gente não reconhece",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "diabetes-saude-mental",
+    "titulo": "Diabetes e depressão: por que andam juntos, como afetam o controle da glicose e o cuidado integrado que funciona",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "dismorfia-corporal-procedimentos-esteticos",
+    "titulo": "Harmonização, plástica e espelho: quando a preocupação com a aparência é transtorno dismórfico corporal",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "diversidade-saude-mental-inclusao",
+    "titulo": "Diversidade e saúde mental: um olhar sobre grupos mais vulneráveis",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "dor-cronica-depressao",
+    "titulo": "Dor crônica e depressão: o ciclo de mão dupla e os tratamentos que ajudam a quebrá-lo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "envelhecer-num-mundo-que-vende-juventude",
+    "titulo": "Envelhecer num mundo que vende juventude",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "espelho-filtro-camera-frontal",
+    "titulo": "Espelho, filtro e câmera frontal: como as redes mudaram o jeito de nos vermos",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "esquecimento-comum-ou-sinal-de-alerta-conversando-sobre-memo",
+    "titulo": "Esquecimento comum ou sinal de alerta: conversando sobre memória",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "estigma-saude-mental-superando",
+    "titulo": "Estigma em saúde mental: por que ainda existe, e como superá-lo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "estimulantes-sem-prescricao-estudar",
+    "titulo": "Remédio para estudar? Os riscos do uso de estimulantes sem prescrição",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "estresse-pos-traumatico-violencia-urbana",
+    "titulo": "Assalto, tiroteio, bala perdida: quando o medo não passa depois da violência urbana e o que ajuda a se recuperar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "eventos-climaticos-primeiros-cuidados-psicologicos",
+    "titulo": "Enchentes, calor e desastres climáticos: primeiros cuidados psicológicos e seguimento em saúde mental",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "eventos-climaticos-saude-mental",
+    "titulo": "Enchentes, secas e calor extremo: como os eventos climáticos afetam a saúde mental e o que ajuda na recuperação",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "explicar-morte-crianca",
+    "titulo": "Como contar para uma criança que alguém morreu: palavras por idade, o que ajuda e quando o luto precisa de cuidado",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "fadiga-compaixao-voluntariado-terceiro-setor",
+    "titulo": "Fadiga da compaixão em quem trabalha por uma causa",
+    "de": "Sociedade & Cultura",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Cuidar de Quem Cuida (NR-1); hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "familias-separadas-migracao-quem-fica",
+    "titulo": "Filhos que ficam: o impacto da migração dos pais em crianças e adolescentes",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "ficar-igual-a-foto-com-filtro",
+    "titulo": "Querer ficar igual à foto com filtro",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "fiz-tudo-e-nao-fiquei-como-queria",
+    "titulo": "\"Fiz tudo e não fiquei como queria\": frustração, luto e recomeço",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "gestacao-maternidade-trabalho",
+    "titulo": "Gestação e retorno da licença-maternidade: saúde mental como prioridade",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "gestacao-pos-parto-voltar-ao-que-era",
+    "titulo": "Gestação e pós-parto: a cobrança para \"voltar ao que era\"",
+    "de": "(só em Todos)",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Maternidade & Perinatal"
+  },
+  {
+    "slug": "harmonizacao-facial-limites-complicacoes",
+    "titulo": "Harmonização facial: rostos iguais, complicações e o limite do excesso",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "homens-nao-pedem-ajuda",
+    "titulo": "Por que os homens não pedem ajuda em saúde mental, e como facilitar esse primeiro passo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "ia-terapeuta-o-que-pode",
+    "titulo": "Conversar com uma IA é fazer terapia? O que a ciência mostra, os limites e como usar com segurança",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "imagem-corporal-o-que-e",
+    "titulo": "Imagem corporal: o que é, como se forma e quando vira sofrimento",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "insatisfacao-corporal-brasil-numeros",
+    "titulo": "Insatisfação com o corpo no Brasil: o que os números mostram por idade, gênero e renda",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "insonia-consulta-rotina",
+    "titulo": "Insônia na consulta de rotina: além da prescrição automática",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "insonia-o-que-fazer",
+    "titulo": "Insônia: o que fazer antes de recorrer a remédios",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "intoxicacao-agitacao-pa",
+    "titulo": "Intoxicação exógena e agitação: diferenciando causas no PA",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "intoxicacao-psicofarmacos-pa",
+    "titulo": "Intoxicação por psicofármacos: conduta inicial no PA",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "jogo-patologico-rastreio",
+    "titulo": "Jogo patológico: como rastrear na consulta de rotina",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "jogos-online-consulta-medicos",
+    "titulo": "Jogos online (Roblox, Fortnite): como abordar na consulta com crianças e adolescentes",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "lgbt-corpo-identidade-pressoes",
+    "titulo": "Pessoas LGBT+: corpo, identidade e pressões específicas",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "lgbtqia-preconceito-saude-mental",
+    "titulo": "Preconceito e saúde mental de pessoas LGBTQIA+: o estresse de minoria, o peso da rejeição familiar e o que protege",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "luto-gestacional-neonatal",
+    "titulo": "Luto gestacional e neonatal: a dor de perder um bebê, o que é esperado e como acolher pais e mães",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "luto-quanto-tempo-normal",
+    "titulo": "Luto: quanto tempo é considerado normal?",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "magro-demais-comentarios-que-ferem",
+    "titulo": "\"Magro demais\": comentários sobre o corpo magro também ferem",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "manejo-crise-psiquiatrica",
+    "titulo": "Manejo da crise psiquiátrica aguda: o que fazer nos primeiros minutos",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "manejo-paciente-violento-pa",
+    "titulo": "Desescalada verbal no pronto atendimento: prevenir a agressividade e proteger paciente e equipe",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "matriciamento-saude-mental",
+    "titulo": "Matriciamento em saúde mental: como funciona na prática",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "medicos-abordar-peso-imagem-corporal-sem-estigma",
+    "titulo": "Para médicos: como abordar peso e imagem corporal na consulta sem estigmatizar",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "menopausa-peso-autoestima-humor",
+    "titulo": "Menopausa: peso, autoestima e humor",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "migracao-adolescentes-entre-dois-mundos",
+    "titulo": "Adolescentes migrantes: identidade, pertencimento e saúde mental entre dois mundos",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-brasileiros-que-emigram",
+    "titulo": "Brasileiros que vivem fora: saúde mental de quem foi tentar a vida em outro país",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-criancas-desacompanhadas",
+    "titulo": "Crianças e adolescentes desacompanhados: os migrantes mais vulneráveis",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-criancas-detidas-familias-separadas",
+    "titulo": "Crianças detidas e famílias separadas nas fronteiras: o que a ciência diz sobre o impacto",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-diploma-e-profissao-perdida",
+    "titulo": "Médica que vira faxineira, engenheiro que vira entregador: a perda da profissão na migração",
+    "de": "Sociedade & Cultura",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Cuidar de Quem Cuida (NR-1); hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-escola-acolhimento",
+    "titulo": "A escola que acolhe: como receber crianças migrantes e proteger sua saúde mental",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-gravidez-e-puerperio",
+    "titulo": "Gravidez, parto e pós-parto longe de casa: saúde mental da gestante migrante",
+    "de": "Sociedade & Cultura",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-maternidade-longe-da-rede",
+    "titulo": "Ser mãe longe da própria mãe: maternidade, migração e a rede que falta",
+    "de": "Sociedade & Cultura",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-pais-idosos-que-ficam",
+    "titulo": "Os pais que ficam: saúde mental de idosos cujos filhos migraram",
+    "de": "Sociedade & Cultura",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migracao-trafico-e-trabalho-escravo",
+    "titulo": "Tráfico de pessoas e trabalho escravo: reconhecer, proteger e cuidar dos sobreviventes",
+    "de": "Sociedade & Cultura",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Cuidar de Quem Cuida (NR-1); hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "migrantes-refugiados-aps",
+    "titulo": "Migrantes e refugiados na Atenção Primária: sofrimento, xenofobia e direito ao cuidado",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "mindfulness-o-que-e-realmente",
+    "titulo": "Mindfulness: o que é de verdade, além da moda",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "natureza-saude-mental",
+    "titulo": "Natureza e saúde mental: o que o verde, o mar e as praças fazem pela mente, e por que isso é questão de justiça",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "neuropsicologia-pratica-clinica",
+    "titulo": "Neuropsicologia na prática clínica: quando suspeitar de comprometimento cognitivo",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "neutralidade-corporal-respeito-ao-corpo",
+    "titulo": "Neutralidade e respeito ao corpo: alternativas realistas ao \"ame seu corpo\"",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "noticias-ruins-ansiedade",
+    "titulo": "Notícias ruins o dia todo: como o excesso de informação afeta a saúde mental e como se informar sem adoecer",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "nr1-riscos-psicossociais-pratica-clinica",
+    "titulo": "NR-1 e riscos psicossociais: o que muda na consulta do trabalhador adoecido",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "pais-de-prematuros-uti-neonatal",
+    "titulo": "Bebê na UTI neonatal: a saúde mental de mães e pais de prematuros",
+    "de": "Infância & Família",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Infância & Família"
+  },
+  {
+    "slug": "paliativos-alem-do-cancer",
+    "titulo": "Cuidados paliativos além do câncer: coração, pulmão, rins, demência e fragilidade",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-ambulatorio-consulta",
+    "titulo": "Cuidados paliativos no ambulatório: como funciona a consulta e por que começar cedo",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-aps-medicina-familia",
+    "titulo": "Cuidados paliativos na Atenção Primária: o papel da equipe de Saúde da Família",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-burnout-equipes",
+    "titulo": "Burnout em equipes de cuidados paliativos: quem cuida do fim da vida também adoece",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-cardiacos-pulmonares",
+    "titulo": "Insuficiência cardíaca e DPOC: cuidados paliativos para quem vive com falta de ar",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-comunicacao-mas-noticias",
+    "titulo": "Más notícias em cuidados paliativos: como comunicar sem tirar a esperança",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-conferencia-familiar-conflitos",
+    "titulo": "Conferência familiar em cuidados paliativos: como reduzir conflitos e decidir junto",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-cuidado-da-equipe-schwartz",
+    "titulo": "Cuidar de quem cuida: rodas de conversa, Schwartz Rounds e apoio institucional às equipes",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-demencia",
+    "titulo": "Cuidados paliativos na demência: planejar cedo, cuidar do conforto e apoiar a família",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-diretivas-antecipadas",
+    "titulo": "Diretivas antecipadas de vontade e planejamento do cuidado: decidir antes da crise",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-domicilio-melhor-em-casa",
+    "titulo": "Cuidados paliativos em casa: o que esperar, como se organizar e onde buscar apoio no SUS",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-dor-total",
+    "titulo": "Dor total: por que a dor de quem está gravemente doente não é só física",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-emergencia-pronto-atendimento",
+    "titulo": "Cuidados paliativos no pronto-socorro: decisões rápidas sem atropelar valores",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-empresas-trabalhador-cuidador",
+    "titulo": "Trabalhadores que cuidam de familiares com doença grave: o papel das empresas",
+    "de": "Sociedade & Cultura",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Cuidar de Quem Cuida (NR-1); hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "paliativos-equipe-interprofissional",
+    "titulo": "A equipe interprofissional em cuidados paliativos: quem faz o quê e por que todos são necessários",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-espiritualidade",
+    "titulo": "Espiritualidade em cuidados paliativos: uma necessidade que a equipe precisa escutar",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-fadiga-por-compaixao",
+    "titulo": "Fadiga por compaixão e estresse traumático secundário em quem cuida do fim da vida",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-filhos-pai-mae-doenca-grave",
+    "titulo": "Como conversar com crianças e adolescentes quando o pai ou a mãe tem uma doença grave",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-historia-cicely-saunders",
+    "titulo": "De Cicely Saunders ao SUS: uma breve história dos cuidados paliativos",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-internacao-equipe-consultora",
+    "titulo": "Cuidados paliativos na internação: o papel da equipe consultora no hospital",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-luto-antecipatorio",
+    "titulo": "Luto antecipatório: quando a perda começa antes da morte",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-luto-apos-a-morte",
+    "titulo": "O luto depois da morte em cuidados paliativos: quando é esperado e quando precisa de ajuda",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-luto-do-profissional",
+    "titulo": "O luto do profissional de saúde: quando o paciente que morre também era importante para nós",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "paliativos-mitos-verdades",
+    "titulo": "Sete mitos sobre cuidados paliativos que atrasam o cuidado",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-necessidade-crescente",
+    "titulo": "A necessidade de cuidados paliativos vai quase dobrar: por que o tema é urgente",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-normas-brasil",
+    "titulo": "O que dizem as normas brasileiras sobre cuidados paliativos",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-o-que-sao",
+    "titulo": "Cuidados paliativos: o que são, para quem e quando começar",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-pais-enlutados",
+    "titulo": "Quando um filho morre: o luto dos pais em cuidados paliativos pediátricos",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-papel-das-instituicoes",
+    "titulo": "O papel das instituições: como hospitais, municípios e serviços podem implantar cuidados paliativos",
+    "de": "Sociedade & Cultura",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "paliativos-pediatricos",
+    "titulo": "Cuidados paliativos pediátricos: cuidar da criança, dos pais e dos irmãos",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-pessoa-idosa-fragilidade",
+    "titulo": "Fragilidade e envelhecimento: cuidados paliativos para a pessoa idosa",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-populacao-em-situacao-de-rua",
+    "titulo": "Morrer na rua: cuidados paliativos para pessoas em situação de rua",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-por-que-importam",
+    "titulo": "Por que os cuidados paliativos importam: o que a evidência mostra",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-qualidade-servicos",
+    "titulo": "Qualidade em cuidados paliativos: como saber se um serviço é bom",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-sofrimento-moral",
+    "titulo": "Sofrimento moral: quando o profissional sabe o que é certo, mas não consegue fazer",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "paliativos-transtorno-mental-grave",
+    "titulo": "Cuidados paliativos para pessoas com transtorno mental grave e uso de substâncias",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "paliativos-uti-familia",
+    "titulo": "Cuidados paliativos na UTI: o sofrimento das famílias e como reduzi-lo",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "parar-de-fumar-saude-mental",
+    "titulo": "Parar de fumar melhora a saúde mental: o que a ciência mostra",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "parei-a-caneta-e-engordei-de-novo",
+    "titulo": "Parei a caneta e engordei de novo: como lidar com o reganho",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "perimenopausa-humor",
+    "titulo": "Perimenopausa e saúde mental: por que o risco de depressão aumenta, os sinais e os tratamentos disponíveis",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "peso-emocional-diagnostico-cronico",
+    "titulo": "O peso emocional de uma doença crônica: depressão, adesão ao tratamento e o cuidado que integra corpo e mente",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "primeira-consulta-saude-mental",
+    "titulo": "Entendendo o diagnóstico: o que esperar de uma primeira consulta em saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "primeiro-atendimento-em-psiquiatria-na-ubs-guia-pratico-para",
+    "titulo": "Primeiro atendimento em psiquiatria na UBS: guia prático para residentes",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Residentes & Estudantes): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "primeiro-episodio-psicotico",
+    "titulo": "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "procrastinacao-saude-mental-relacao",
+    "titulo": "Procrastinação: quando é preguiça e quando é algo mais",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "professores-saude-mental",
+    "titulo": "Saúde mental de professores: o adoecimento silencioso de quem forma pessoas",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "profissionais-saude-violencia-esgotamento",
+    "titulo": "Violência contra profissionais de saúde: o tamanho do problema, o impacto e o que instituições precisam fazer",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "quando-o-corpo-vira-divida",
+    "titulo": "Quando o corpo vira dívida: parcelamento, turismo estético e clínicas irregulares",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "querer-e-nao-poder-pagar-estetica-privilegio",
+    "titulo": "Querer e não poder pagar: desigualdade e a estética como privilégio",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "quero-engordar-e-nao-consigo",
+    "titulo": "Quero engordar e não consigo: magreza, saúde e o preconceito que ninguém vê",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "racismo-cotidiano-saude-mental",
+    "titulo": "Racismo do dia a dia adoece: o que a ciência mostra e como cuidar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "raiva-esconde-depressao",
+    "titulo": "Quando a raiva esconde uma depressão: a face masculina do sofrimento e como a família pode ajudar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "realidade-saude-mental-aps",
+    "titulo": "O que ninguém te conta sobre atender saúde mental na atenção primária",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Residentes & Estudantes): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "recaida-depressao-prevencao",
+    "titulo": "A depressão pode voltar: como reconhecer os sinais e prevenir a recaída",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "reconciliacao-medicamentosa-idosos",
+    "titulo": "Reconciliação medicamentosa em pacientes psiquiátricos idosos",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "rede-de-apoio-saude-mental",
+    "titulo": "Rede de apoio e saúde mental: por que ninguém se cuida sozinho e como fortalecer a sua",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Sociedade & Cultura"
+  },
+  {
+    "slug": "redes-sociais-consulta-medicos",
+    "titulo": "Redes sociais: como abordar o tema na consulta com adolescentes",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "retorno-trabalho-afastamento",
+    "titulo": "Retorno ao trabalho após afastamento psiquiátrico",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "rotina-consulta-medicos",
+    "titulo": "Rotina infantil: como avaliar na consulta e identificar sinais de desorganização",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "saude-mental-idoso",
+    "titulo": "Saúde mental do idoso: o que toda família precisa saber",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "saude-mental-idoso-consulta",
+    "titulo": "Saúde mental do idoso: rastreio na consulta de rotina",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "saude-mental-indigena-jovens",
+    "titulo": "Suicídio entre jovens indígenas no Brasil: o que os dados mostram, o que está por trás e o que protege",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "saude-mental-industria-chao-fabrica",
+    "titulo": "Saúde mental na indústria: particularidades do chão de fábrica",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Hábitos & Sono; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "saude-mental-perinatal-consulta",
+    "titulo": "Saúde mental perinatal: rastreio na consulta de pré-natal e puerpério",
+    "de": "(só em Todos)",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Maternidade & Perinatal"
+  },
+  {
+    "slug": "saude-mental-professores-educadores",
+    "titulo": "Saúde mental de professores: gestão em instituições de ensino",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "saude-mental-residencia",
+    "titulo": "Saúde mental na residência: como sobreviver (e se desenvolver) nos anos de formação",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Residentes & Estudantes): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "saude-mental-universidade",
+    "titulo": "Saúde mental na universidade: o que os estudos mostram, os desafios do primeiro ano e onde buscar apoio",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Residentes & Estudantes): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "separacao-divorcio-saude-mental",
+    "titulo": "Separação e divórcio: cuidando da saúde mental nesse processo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Vida Adulta & Envelhecimento; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "sindrome-neuroleptica-maligna",
+    "titulo": "Síndrome neuroléptica maligna: reconhecimento precoce",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "sindrome-panico-o-que-e",
+    "titulo": "Síndrome do pânico: entendendo o que acontece no corpo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "sobrecarga-cuidador-consulta",
+    "titulo": "Sobrecarga do cuidador: como identificar na consulta de rotina",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "socorristas-trauma-estresse",
+    "titulo": "Quem chega primeiro: estresse pós-traumático, suicídio e proteção de policiais, bombeiros e socorristas",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "solidao-como-sair-dela",
+    "titulo": "Solidão faz mal à saúde: o que a OMS e a ciência mostram e passos práticos para se reconectar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "solidao-diferenca-estar-sozinho",
+    "titulo": "Solidão: a diferença entre estar sozinho e se sentir sozinho",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "tcc-quando-indicar-aps",
+    "titulo": "Terapia cognitivo-comportamental: quando indicar na APS",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "média",
+    "motivo": "ajuste da revisão (regra 5)"
+  },
+  {
+    "slug": "tempo-tela-consulta-medicos",
+    "titulo": "Tempo de tela: como abordar o tema na consulta com crianças e famílias",
+    "de": "(só em Todos)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Infância & Família"
+  },
+  {
+    "slug": "tept-aps",
+    "titulo": "Estresse pós-traumático na Atenção Primária: rastreio com o PC-PTSD-5, tratamento e rede de proteção",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "tmc-aps",
+    "titulo": "O que o consultório de atenção primária revela sobre ansiedade, depressão e sofrimento no trabalho",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "toc-sinais-consulta",
+    "titulo": "TOC: sinais que merecem atenção na consulta de rotina",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Médicos & Enfermeiros): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "toc-sinais-tratamento",
+    "titulo": "TOC não é mania de organização: sinais e tratamento do transtorno obsessivo-compulsivo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "tpm-transtorno-disforico-pre-menstrual",
+    "titulo": "TPM ou transtorno disfórico pré-menstrual? Quando os sintomas do ciclo pedem tratamento",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "trabalhador-migrante-saude-mental",
+    "titulo": "Trabalho e migração: riscos psicossociais, direitos e o que as empresas precisam fazer",
+    "de": "Sociedade & Cultura",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Cuidar de Quem Cuida (NR-1); hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "transtorno-bipolar-na-aps-rastreio-e-manejo-intercrises",
+    "titulo": "Transtorno bipolar na APS: rastreio e manejo intercrises",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Residentes & Estudantes): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "transtorno-bipolar-sinais",
+    "titulo": "Transtorno bipolar: muito além da mudança de humor",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "transtorno-dismorfico-corporal",
+    "titulo": "Transtorno dismórfico corporal: o defeito que só você vê",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinic",
+    "titulo": "Transtornos somatoformes na UBS: investigação e manejo clínico",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Residentes & Estudantes): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "trauma-infancia-adulto",
+    "titulo": "Traumas da infância na vida adulta: como as marcas aparecem e os caminhos de cuidado",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "uso-problematico-de-telas-e-dependencia-digital-na-infancia",
+    "titulo": "Uso problemático de telas e dependência digital na infância e APS",
+    "de": "Transtornos Mentais",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Transtornos Mentais"
+  },
+  {
+    "slug": "vigorexia-dismorfia-muscular",
+    "titulo": "Vigorexia: quando nunca se está grande o suficiente",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Transtornos Mentais"
+  },
+  {
+    "slug": "violencia-acolhimento-e-notificacao-profissionais",
+    "titulo": "Para profissionais: como acolher, notificar e cuidar de pessoas em situação de violência",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-assedio-e-importunacao-na-faculdade",
+    "titulo": "Assédio, importunação e humilhação na faculdade: quando o ambiente acadêmico adoece",
+    "de": "Infância & Família",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Infância & Família"
+  },
+  {
+    "slug": "violencia-ciclo-entre-geracoes",
+    "titulo": "É possível quebrar o ciclo? Violência entre gerações e o que protege as famílias",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-contra-pessoas-com-transtorno-mental",
+    "titulo": "Pessoas com transtorno mental são mais vítimas do que autoras de violência",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-convivencia-familiar-sem-violencia",
+    "titulo": "Brigar sem machucar: convivência familiar e conflitos sem violência",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-depois-de-sair-reconstruir",
+    "titulo": "Depois de sair de uma relação violenta: reconstruir a vida, a saúde mental e a confiança",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-digital-e-perseguicao",
+    "titulo": "Violência digital e perseguição: stalking, exposição de imagens íntimas e controle pelo celular",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-domestica-saude-mental",
+    "titulo": "Violência doméstica deixa marcas na mente: formas, sinais, como ajudar e onde buscar proteção",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-experiencias-adversas-infancia",
+    "titulo": "Experiências adversas na infância: o que o estudo ACE ensinou sobre violência e saúde ao longo da vida",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-feminicidio-sinais-de-risco",
+    "titulo": "Feminicídio pode ser prevenido: sinais de risco e o Formulário Nacional de Avaliação de Risco",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-grupos-reflexivos-para-autores",
+    "titulo": "Grupos reflexivos para homens autores de violência: o que são, o que a lei prevê e o que se sabe",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-homens-vitimas",
+    "titulo": "Homens também são vítimas: violência, silêncio e saúde mental masculina",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-idoso-e-cuidador-sobrecarregado",
+    "titulo": "Quando o cuidado vira violência: sobrecarga do cuidador e risco de maus-tratos contra idosos",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Cuidar de Quem Cuida (NR-1); hoje Vida Adulta & Envelhecimento"
+  },
+  {
+    "slug": "violencia-institucional-e-revitimizacao",
+    "titulo": "Violência institucional: quando o serviço que deveria proteger machuca de novo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-juventude-e-homicidios",
+    "titulo": "Juventude, violência armada e homicídios: o impacto na saúde mental de quem cresce no meio do conflito",
+    "de": "Infância & Família",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Infância & Família"
+  },
+  {
+    "slug": "violencia-lgbtfobia",
+    "titulo": "LGBTfobia e saúde mental: violência, estresse de minoria e caminhos de proteção",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-medo-e-hipervigilancia",
+    "titulo": "Quando o perigo passou, mas o medo ficou: hipervigilância e ansiedade depois da violência",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-na-gestacao-e-pos-parto",
+    "titulo": "Violência na gravidez e no pós-parto: um risco para a mãe e para o bebê",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-obstetrica",
+    "titulo": "Violência obstétrica: desrespeito no parto e as marcas na saúde mental",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Maternidade & Perinatal",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Maternidade & Perinatal; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-onde-buscar-ajuda",
+    "titulo": "Violência: onde buscar ajuda no Brasil — um guia da rede de proteção",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-perdao-e-reparacao",
+    "titulo": "Perdão depois da violência: escolha, não obrigação",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-psicologica-controle-coercitivo",
+    "titulo": "Violência psicológica e controle coercitivo: quando não há marcas no corpo, mas há prisão",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-raiva-como-lidar",
+    "titulo": "Raiva não é violência: como reconhecer e lidar com a raiva antes que ela machuque",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-saude-mental-panorama",
+    "titulo": "Violência e saúde mental: um problema de saúde pública que atravessa todas as idades",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-tept-tratamentos-que-funcionam",
+    "titulo": "Estresse pós-traumático tem tratamento: o que a ciência recomenda hoje",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Transtornos Mentais; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-tiroteios-e-criancas",
+    "titulo": "Tiroteios, operações e escolas fechadas: o impacto da violência armada na saúde mental das crianças",
+    "de": "Sociedade & Cultura",
+    "para": "Infância & Família",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Infância & Família; hoje Sociedade & Cultura"
+  },
+  {
+    "slug": "violencia-trauma-corpo-e-mente",
+    "titulo": "O que a violência faz com o corpo e a mente: reações esperadas e sinais de trauma",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "violencia-vergonha-e-culpa",
+    "titulo": "Vergonha e culpa depois da violência: por que tantas vítimas se culpam e como sair desse lugar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "inventário propõe Sociedade & Cultura; hoje Cuidar de Quem Cuida (NR-1)"
+  },
+  {
+    "slug": "voce-engordou-comentarios-de-familia",
+    "titulo": "\"Você engordou?\": comentários de família que machucam e como responder",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "whey-creatina-suplementos-ciencia-promessa",
+    "titulo": "Whey, creatina e suplementos: o que é ciência e o que é promessa",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "B",
+    "confianca": "alta",
+    "motivo": "categoria órfã (Geral): hoje só em Todos; passa a aparecer em Hábitos & Sono"
+  },
+  {
+    "slug": "afastamento-transtorno-mental",
+    "titulo": "Afastamento por transtorno mental: o que a empresa precisa saber",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "alta-pa-psiquiatrico",
+    "titulo": "Alta do PA Psiquiátrico: o que ajuda a reduzir o risco de nova crise",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "ansiedade-filhos-pais-o-que-fazer",
+    "titulo": "Ansiedade em filhos: o que os pais podem fazer",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "ansiedade-infantil-sinais",
+    "titulo": "Ansiedade na infância: quando o medo passa do normal, como aparece no corpo e o tratamento que funciona",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "ansiedade-na-gestacao",
+    "titulo": "Ansiedade na gravidez: quando a preocupação passa do esperado, como é feito o rastreio e o que ajuda",
+    "de": "Maternidade & Perinatal",
+    "para": "Maternidade & Perinatal",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "ansiedade-provas-enem",
+    "titulo": "Ansiedade de prova, ENEM e vestibular: por que dá branco, o que fazer antes e durante e como a família pode ajudar",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "ansiedade-social-medo-julgamento",
+    "titulo": "Ansiedade social: quando o medo do julgamento limita a vida",
+    "de": "Transtornos Mentais",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "ansiedade-social-timidez-adolescencia",
+    "titulo": "Timidez ou ansiedade social na adolescência? Como diferenciar, sinais de alerta e os tratamentos que funcionam",
+    "de": "Transtornos Mentais",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "antes-de-operar-perguntas-saude-mental",
+    "titulo": "Antes de operar: perguntas de saúde mental para fazer a si mesmo e ao cirurgião",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "apostas-online-sinais-dependencia",
+    "titulo": "Bets e apostas online: quando o jogo vira dependência, os sinais de alerta e onde se tratar pelo SUS",
+    "de": "Hábitos & Sono",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "autismo-adulto-diagnostico-tardio",
+    "titulo": "Autismo diagnosticado na vida adulta: sinais, avaliação e o que muda depois",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "autismo-primeiros-sinais",
+    "titulo": "Primeiros sinais de possível autismo: o que observar",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "autodiagnostico-saude-mental-redes",
+    "titulo": "Autodiagnóstico pelas redes: quando o vídeo ajuda e quando atrapalha",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "autoestima-como-trabalhar",
+    "titulo": "Autoestima: por onde começar a trabalhar de verdade",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "avaliacao-desempenho-saude-mental",
+    "titulo": "Avaliação de desempenho: reduzindo o impacto psicológico do processo",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "benzodiazepinicos-urgencia",
+    "titulo": "Uso de benzodiazepínicos na urgência psiquiátrica",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "bullying-sinais-o-que-fazer",
+    "titulo": "Bullying não é brincadeira: sinais, impacto na saúde mental e o que funciona para acabar com ele",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "burnout-aps",
+    "titulo": "Burnout em médicos e enfermeiros da Atenção Primária: quando quem cuida precisa de cuidados",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "burnout-nr1-direitos-trabalhador",
+    "titulo": "Burnout no trabalho: o que é, o que a NR-1 passou a exigir das empresas e quais são os direitos de quem adoece",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "calmantes-benzodiazepinicos-uso-prolongado",
+    "titulo": "Clonazepam, diazepam e outros calmantes: riscos do uso prolongado e como reduzir com segurança",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "caneta-sem-indicacao-magreza",
+    "titulo": "Caneta sem indicação: quando quem já é magro quer ficar mais magro",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "canetas-emagrecedoras-saude-mental",
+    "titulo": "Canetas emagrecedoras e saúde mental: o que se sabe e quais cuidados tomar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "canetas-emagrecedoras-saude-mental-humor",
+    "titulo": "Canetas emagrecedoras: o que se sabe sobre humor, ansiedade e comportamento alimentar",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "como-apoiar-alguem-deprimido",
+    "titulo": "Como apoiar alguém que você ama e está com depressão",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "compulsao-jogos",
+    "titulo": "Compulsão por jogos: como reconhecer os sinais em si mesmo ou em alguém da família",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "comunicacao-mas-noticias-saude-mental",
+    "titulo": "Comunicação de más notícias em saúde mental",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "contencao-mecanica-pa",
+    "titulo": "Contenção mecânica no PA Psiquiátrico: quando, como e os limites éticos",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "cuidar-pais-com-demencia",
+    "titulo": "Cuidar de pai ou mãe com demência: o luto antecipado, os limites que protegem e o apoio que funciona",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "delirium-demencia-depressao",
+    "titulo": "Delirium, demência e depressão: diagnóstico diferencial na prática",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "depois-da-cirurgia-arrependimento-expectativa",
+    "titulo": "Depois da cirurgia: arrependimento e expectativa frustrada",
+    "de": "(só em Todos)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "depressao-infantil-sinais",
+    "titulo": "Criança também tem depressão: sinais que vão além da tristeza",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "depressao-no-idoso",
+    "titulo": "Depressão no idoso não é \"coisa da idade\": como ela aparece, por que passa despercebida e o tratamento que funciona",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "depressao-pos-parto-amamentacao",
+    "titulo": "Depressão pós-parto e amamentação: por que tratar é cuidar do bebê e quais opções são compatíveis",
+    "de": "Maternidade & Perinatal",
+    "para": "Maternidade & Perinatal",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "dietas-da-moda-jejum-detox",
+    "titulo": "Dietas da moda, jejum e \"detox\": quando emagrecer vira restrição perigosa",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "dividas-estresse-financeiro-saude-mental",
+    "titulo": "Dívidas e saúde mental: como o estresse financeiro adoece e por onde recomeçar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "efeito-sanfona-custo-emocional",
+    "titulo": "Efeito sanfona: o custo emocional de tentar de novo, e de novo",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "esquecimento-ou-demencia",
+    "titulo": "Esquecimento normal ou demência? Sinais que pedem avaliação, causas tratáveis e os 14 fatores que protegem o cérebro",
+    "de": "Vida Adulta & Envelhecimento",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "estresse-ocupacional-vs-burnout",
+    "titulo": "Estresse ocupacional: diferenciando de burnout",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "fobia-social-quando-encaminhar",
+    "titulo": "Fobia social: quando encaminhar",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "fome-emocao-culpa-comida",
+    "titulo": "Fome, emoção e culpa: a relação com a comida vai além da força de vontade",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "gestacao-amamentacao-saude-mental",
+    "titulo": "Gestação, amamentação e saúde mental: o que toda família precisa saber",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Maternidade & Perinatal",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "gordofobia-estigma-do-peso",
+    "titulo": "Gordofobia adoece, inclusive dentro do consultório",
+    "de": "(só em Todos)",
+    "para": "Sociedade & Cultura",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "grupos-terapeuticos-aps",
+    "titulo": "Grupos terapêuticos na APS: uma ferramenta subutilizada",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "hidratacao-saude-mental",
+    "titulo": "Beber água ajuda a saúde mental? O que a ciência realmente mostra e como se hidratar no calor",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "higiene-autocuidado-saude-mental",
+    "titulo": "Quando tomar banho fica difícil: o autocuidado na depressão, o que a ciência mostra e como ajudar sem brigar",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "imagem-corporal-redes-transtornos-alimentares",
+    "titulo": "Filtros, comparação e transtornos alimentares: como as redes afetam a imagem corporal e o que a família pode fazer",
+    "de": "Transtornos Mentais",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "infertilidade-peso-emocional",
+    "titulo": "Infertilidade e reprodução assistida: o peso emocional, o mito do \"é só relaxar\" e o apoio que funciona",
+    "de": "Maternidade & Perinatal",
+    "para": "Maternidade & Perinatal",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "insonia-refrataria-na-atencao-primaria-investigacao-e-condut",
+    "titulo": "Insônia refratária na atenção primária: investigação e conduta",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "laudo-psiquiatrico-previdenciario",
+    "titulo": "Laudo psiquiátrico para fins previdenciários: o que considerar",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "linguagem-inclusiva-saude-mental-empresa",
+    "titulo": "Linguagem sobre saúde mental na comunicação institucional",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "luto-prolongado-cid11",
+    "titulo": "Transtorno de luto prolongado (CID-11): quando o luto deixa de seguir seu curso",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "medicacao-psiquiatrica-perguntas-medico",
+    "titulo": "Medicação psiquiátrica: perguntas que você pode fazer ao médico",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "menopausa-no-trabalho",
+    "titulo": "Menopausa no trabalho: sintomas, saúde mental e ajustes que fazem diferença",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "mudanca-vida-ansiedade",
+    "titulo": "Mudanças de vida e ansiedade: lidando com transições importantes",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "neurodivergencia-adulta-mascaramento-burnout",
+    "titulo": "Neurodivergência na vida adulta: mascaramento e o burnout que ele causa",
+    "de": "Transtornos Mentais",
+    "para": "Vida Adulta & Envelhecimento",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "nexo-causal-trabalho",
+    "titulo": "Nexo causal em transtornos mentais relacionados ao trabalho",
+    "de": "(só em Todos)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "pais-esgotados-burnout-parental",
+    "titulo": "Burnout parental: quando cuidar dos filhos esgota, os sinais, os riscos para a família e o que ajuda",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "paliativos-sobrecarga-cuidador-familiar",
+    "titulo": "Quem cuida de quem cuida? A saúde mental do cuidador familiar em cuidados paliativos",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Cuidar de Quem Cuida (NR-1)",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "perfeccionismo-saude-mental",
+    "titulo": "Perfeccionismo: quando a busca pela excelência prejudica você",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "por-que-e-dificil-emagrecer-e-manter",
+    "titulo": "Por que é tão difícil emagrecer e manter: a biologia do reganho, sem culpa",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "procrastinacao-ou-tdah",
+    "titulo": "Procrastinação ou TDAH no adulto? O que diferencia, o cuidado com vídeos nas redes e como é a avaliação",
+    "de": "Transtornos Mentais",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "procurar-ajuda-sinal-forca",
+    "titulo": "Buscar ajuda psicológica é sinal de força, não de fraqueza",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Sociedade & Cultura",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "psicofarmacos-aps-medicos",
+    "titulo": "Psicofármacos na Atenção Primária: princípios de raciocínio clínico",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "psicofarmacos-mitos-culturais",
+    "titulo": "Por que existe tanta desinformação sobre psicofármacos?",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "quando-encaminhar-aps",
+    "titulo": "Quando encaminhar e quando não encaminhar: o limite do cuidado em saúde mental na APS",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "quando-o-procedimento-da-errado",
+    "titulo": "Quando o procedimento dá errado: complicação estética e trauma",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "quando-procurar-psiquiatra-psicologo",
+    "titulo": "Psiquiatra ou psicólogo: qual devo procurar primeiro?",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "raiva-controle-emocional",
+    "titulo": "Raiva: aprendendo a lidar sem reprimir nem explodir",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "refugiados-trauma-saude-mental",
+    "titulo": "Pessoas refugiadas: trauma, estresse pós-traumático e o cuidado que respeita a dignidade",
+    "de": "Sociedade & Cultura",
+    "para": "Sociedade & Cultura",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "respiracao-relaxamento-meditacao",
+    "titulo": "Respiração, relaxamento e meditação: o que funciona contra o estresse e a ansiedade, com um exercício para fazer agora",
+    "de": "(só em Todos)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "risco-suicidio-aps",
+    "titulo": "Como reconhecer sinais de risco de suicídio na consulta de rotina",
+    "de": "(só em Todos)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "saude-mental-cronica-doenca-fisica",
+    "titulo": "Convivendo com doença física crônica: cuidando também da mente",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "tdah-adultos-sinais",
+    "titulo": "TDAH em adultos: sinais que muitas pessoas não reconhecem",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "tdah-infantil-sinais-tratamento",
+    "titulo": "TDAH na infância: sinais, diagnóstico cuidadoso e tratamento",
+    "de": "Infância & Família",
+    "para": "Infância & Família",
+    "grupo": "C",
+    "confianca": "alta",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "tdah-mulheres-adultas",
+    "titulo": "TDAH em mulheres adultas: por que o diagnóstico chega tarde, como os sintomas aparecem e como é a avaliação",
+    "de": "Transtornos Mentais",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "parece conceito/diagnóstico de transtorno (regra 5 sugere Transtornos Mentais)"
+  },
+  {
+    "slug": "terapia-online-funciona",
+    "titulo": "Terapia online: funciona tão bem quanto presencial?",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "terapia-primeira-vez-o-que-esperar",
+    "titulo": "Terapia pela primeira vez: o que esperar",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Transtornos Mentais",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  },
+  {
+    "slug": "vergonha-culpa-diferenca",
+    "titulo": "Vergonha e culpa: entendendo a diferença e por que importa",
+    "de": "Cuidar de Quem Cuida (NR-1)",
+    "para": "Hábitos & Sono",
+    "grupo": "C",
+    "confianca": "média",
+    "motivo": "inventário põe em Transtornos, mas sem sinal de conceito/diagnóstico/conduta (pode ser psicoeducação)"
+  }
+]

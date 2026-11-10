@@ -1,0 +1,180 @@
+{
+  "_nota": "Varredura SÓ LEITURA (10/11/2026) sobre o export do banco (688 artigos). Nada foi gravado. Correção no banco só pelo Dr. (script com --aplicar). Ordem de 09/11, 23:35, item 2.",
+  "termos_varridos": [
+    "tipo=particular",
+    "mentoria individual",
+    "atendimento individual",
+    "sessão individual",
+    "acompanhamento individual",
+    "agendar",
+    "particular",
+    "consulta",
+    "wa.me/whatsapp"
+  ],
+  "resultado": "1 oferta de consulta/avaliação individual real (CTA 'Agendar uma avaliação' em 8 artigos, âncora vazia /#agendar); 1 oferta de consulta de orientação ('Solicitar consulta de orientação', 1 artigo); 10 links de mentoria individual/médica apontando para /?tipo=particular (troca para /mentoria, ordem 09/11). Nenhum wa.me ou WhatsApp.",
+  "itens": [
+    {
+      "slug": "fadiga-compaixao-cuidado-idosos",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "sinais-alerta-comportamentais-jovens",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "reorganizacao-emocional-luto-divorcio",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "depressao-pos-parto-ansiedade-perinatal",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "envelhecimento-ativo-isolamento-social",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "transicao-carreira-aposentadoria-identidade",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "dependencia-quimica-comportamental-sinais",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "compulsao-alimentar-compras-compulsivas",
+      "tipo": "avaliacao-individual",
+      "atual": "CTA 'Agendar uma avaliação' -> /#agendar",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "ansiedade-corporativa-sintomas-tratamento",
+      "tipo": "consulta-orientacao",
+      "atual": "'Solicitar consulta de orientação' -> /?tipo=particular#contato-servicos",
+      "proposta": "REMOVER o CTA. A linha \"Para casos individuais, procure a UBS, o CAPS ou um profissional de confiança\" já existe no portal.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05): remover o CTA. Aplicar no banco só por script do Dr."
+    },
+    {
+      "slug": "saude-mental-residencia",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "tmc-aps",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "burnout-medicos-enfermeiros",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria médica' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "estresse-migratorio-adaptacao-cultural",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "sobrecarga-docente-descompressao",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "ansiedade-social-medo-julgamento",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "trabalho-domestico-invisivel-estresse",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "neurodivergencia-adulta-mascaramento-burnout",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "burnout-academico-pos-graduacao-concursos",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    },
+    {
+      "slug": "fadiga-compaixao-voluntariado-terceiro-setor",
+      "tipo": "mentoria-individual-link",
+      "atual": "'Falar sobre mentoria individual' -> /?tipo=particular#contato-servicos",
+      "proposta": "Rótulo \"Mentoria, consultoria e formação\" → /mentoria.",
+      "decisao": "DECIDIDO pelo Dr. (ordem 10/11, 00:05). Aplicar no banco só por script do Dr. Narração: não muda (CTA fica no bloco de ferramenta, excluído pelo textoParaNarracao)."
+    }
+  ],
+  "revisto_nao_e_oferta": [
+    {
+      "slug": "burnout-na-gestao-fatores-de-risco",
+      "trecho": "'Falar sobre consultoria institucional' -> /?tipo=consultoria-empresa#contato-servicos",
+      "motivo": "Institucional (consultoria para empresas). Mantido. O destino é contato só por e-mail."
+    },
+    {
+      "slug": "ansiedade-corporativa-sintomas-tratamento",
+      "trecho": "'Conheça a consultoria para empresas' -> /?tipo=consultoria-empresa#contato-servicos",
+      "motivo": "Institucional. Mantido."
+    },
+    {
+      "slug": "saude-mental-pilar-de-performance-liderancas",
+      "trecho": "'Solicitar diagnóstico real para minha empresa' -> /?tipo=consultoria-empresa#contato-servicos",
+      "motivo": "Institucional (empresa). Mantido."
+    },
+    {
+      "slug": "transtornos-somatoformes-na-ubs-investigacao-e-manejo-clinico (agendado)",
+      "trecho": "'Agende retornos periódicos com hora marcada'",
+      "motivo": "Orientação ao paciente sobre o próprio acompanhamento na UBS. Não é oferta do Dr. Mantido."
+    },
+    {
+      "slug": "relato-na-fila-do-sus-o-mesmo-espelho (agendado) e demais",
+      "trecho": "'clínica particular', 'aula particular', 'em particular'",
+      "motivo": "Uso comum da palavra no relato ou na orientação. Não é oferta. Mantido."
+    }
+  ],
+  "pendencia_tecnica": "A origem dos links está no conteúdo do banco (artigos), não em gerador de código. Não há o que corrigir no código do portal (public/assets/js/home.js só lê ?tipo; o campo Contato.tipoAtendimento tem o valor técnico 'particular', que não aparece como oferta ao visitante). O texto da home já diz: 'Não respondo sobre casos clínicos individuais'.",
+  "decisao_dr_10_11": "Ordem 10/11 00:05: CTAs de avaliação/consulta REMOVIDOS; \"Falar sobre mentoria individual\" → \"Mentoria, consultoria e formação\" (/mentoria). Não aplicado no banco.",
+  "narracao": "Nenhuma narração nova: os CTAs ficam no bloco de ferramenta, que textoParaNarracao exclui."
+}
