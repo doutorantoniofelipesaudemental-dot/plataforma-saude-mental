@@ -31,5 +31,5 @@ test('legenda do Instagram traz a linha de crédito; o cartão final desenha o c
   const l = montarLegenda({ legendaCorpo: 'Gancho?\n\nResumo.\n\nTexto completo no link da bio.', refs: [], hashtags: ['#a', '#b', '#c'], sensivel: false });
   assert.ok(l.includes(LINHA_CREDITO));
   assert.equal(LINHA_CREDITO, 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito');
-  assert.match(fs.readFileSync(path.join(__dirname, '../../backend/lib/redesV2/arte.js'), 'utf8'), /CREDITO, MARGEM, ALTURA - 178/);
+  assert.match(fs.readFileSync(path.join(__dirname, '../../backend/lib/redesV2/arte.js'), 'utf8'), /CREDITO, MARGEM, ALTURA - 290/);
 });

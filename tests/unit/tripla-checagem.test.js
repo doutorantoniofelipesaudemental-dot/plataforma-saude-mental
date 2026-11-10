@@ -62,7 +62,7 @@ test('reprova legenda com "Antonio" sem acento, #psiquiatria, URL solta ou sem l
     [`${base.texto} #psiquiatria`, /#psiquiatria/],
     [base.texto.replace(LINHA_BIO, 'Leia em https://drsaudemental.vercel.app/artigo/x'), /URL solta/],
     [base.texto.replace(LINHA_BIO, ''), /link da bio/],
-    [base.texto.replace(IDENTIFICACAO, ''), /identificação resumida/],
+    [base.texto.replace(IDENTIFICACAO, ''), /identificação completa/],
     [base.texto.replace(/#[^\s]+/g, ''), /hashtags/],
   ];
   for (const [texto, esperado] of casos) {

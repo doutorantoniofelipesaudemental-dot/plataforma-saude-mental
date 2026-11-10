@@ -1,0 +1,49 @@
+{
+  "_nota": "Ordem de 10/11/2026, 06:15. Textos do corpo são frases literais dos artigos (conferidas no export de 10/11). Eixo do dia: seg E4, ter E5, qua E1, qui E3, sex E6, dom Relato. Trocas: pauta do dia que não cabe no eixo do dia (ou que não passa sem mudar o sentido) é substituída pela próxima pauta aprovada do eixo do dia.",
+  "trocas": {
+    "relato-familia-em-crise": "redes-sociais-criancas",
+    "rotina-criancas": "saude-mental-idoso",
+    "matriciamento-saude-mental": "insonia-consulta-rotina"
+  },
+  "ovs": {
+    "acidente-trabalho-trauma-psicologico": {
+      "eixo": "E4",
+      "legendaCorpo": "Depois de um acidente de trabalho, a atenção costuma se voltar para a lesão física.\n\n• lembranças repetidas, pesadelos e sobressaltos;\n• medo de voltar ao local ou ao equipamento;\n• insônia, irritabilidade, dificuldade de concentração;\n\nSe durarem mais de um mês, procure a UBS ou o CEREST.\n\nTexto completo no link da bio.",
+      "pontos": [
+        { "tipo": "sinal", "texto": "lembranças repetidas, pesadelos e sobressaltos;" },
+        { "tipo": "passo", "texto": "Se durarem mais de um mês, procure a UBS ou o CEREST." }
+      ]
+    },
+    "relato-vinculo-perdido": {
+      "eixo": "E5",
+      "legendaCorpo": "Na primeira consulta depois desse retorno, percebi algo além da recaída em si: havia vergonha.\n\n• Manter o antidepressivo depois da melhora reduz em mais da metade o risco de recaída da depressão.\n• A vergonha e o estigma também afastam as pessoas do cuidado contínuo.\n\nTexto completo no link da bio.",
+      "pontos": [
+        { "tipo": "dado", "texto": "Manter o antidepressivo depois da melhora reduz em mais da metade o risco de recaída da depressão.", "fonte": "https://doi.org/10.1016/S0140-6736(03)12599-8" }
+      ]
+    },
+    "redes-sociais-criancas": {
+      "eixo": "E1",
+      "legendaCorpo": "No Brasil, praticamente todos os adolescentes entre 15 e 17 anos já têm perfil em pelo menos uma rede social.\n\n• Ansiedade acentuada relacionada a curtidas, comentários ou comparação com a vida de outras pessoas\n• Privação de sono associada ao uso noturno de redes sociais\n• Isolamento social presencial crescente, substituído por interação majoritariamente online\n\nA lei não proíbe o uso por menores, mas reforça a supervisão dos responsáveis como eixo central de proteção.\n\nTexto completo no link da bio.",
+      "pontos": [
+        { "tipo": "sinal", "texto": "Privação de sono associada ao uso noturno de redes sociais" },
+        { "tipo": "passo", "texto": "A lei não proíbe o uso por menores, mas reforça a supervisão dos responsáveis como eixo central de proteção" }
+      ]
+    },
+    "saude-mental-idoso": {
+      "eixo": "E3",
+      "legendaCorpo": "\"É normal ficar assim na idade dele\" é uma das frases mais comuns — e mais perigosas — quando se trata da saúde mental de idosos.\n\n• Isolamento social crescente, recusa em participar de atividades antes apreciadas\n• Mudança significativa de apetite ou padrão de sono\n• Negligência progressiva do autocuidado ou de medicações necessárias\n\nTexto completo no link da bio.",
+      "pontos": [
+        { "tipo": "sinal", "texto": "Isolamento social crescente, recusa em participar de atividades antes apreciadas" },
+        { "tipo": "sinal", "texto": "Negligência progressiva do autocuidado ou de medicações necessárias" }
+      ]
+    },
+    "insonia-consulta-rotina": {
+      "eixo": "E6",
+      "legendaCorpo": "A insônia é uma das queixas mais frequentes na Atenção Primária, e uma das que mais terminam em prescrição automática.\n\n• dificuldade para iniciar o sono, despertares, despertar precoce.\n• cama só para dormir; sair da cama se não dormir em cerca de 20 minutos;\n• horário fixo para acordar, inclusive nos fins de semana;\n\nRevise periodicamente prescrições antigas e planeje a retirada gradual.\n\nTexto completo no link da bio.",
+      "pontos": [
+        { "tipo": "sinal", "texto": "dificuldade para iniciar o sono, despertares, despertar precoce." },
+        { "tipo": "passo", "texto": "Revise periodicamente prescrições antigas e planeje a retirada gradual." }
+      ]
+    }
+  }
+}

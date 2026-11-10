@@ -16,6 +16,7 @@
  * o gerador desenhou com o título atual —, não por OCR.
  */
 const sharp = require('sharp');
+const { IDENTIFICACAO_COMPLETA } = require('./identificacaoCfm');
 const { hashBuffer, textoDoSelo, MODELO_CAPA, LARGURA_CAPA, ALTURA_CAPA } = require('./capaRedes');
 const { reescritaPendente } = require('./reescritas');
 const {
@@ -24,8 +25,6 @@ const {
   temaSensivel,
   ehRelatoClinico,
   RE_NARRATIVA_COMPOSTA,
-  IDENTIFICACAO,
-  temIdentificacaoSocial,
   LINHA_BIO,
   CHAMADA_SALVAR,
   CHAMADA_COMPARTILHAR,
@@ -95,7 +94,7 @@ function checarConteudo(artigo, legenda) {
   if ((partes.paragrafos || []).length < 2) falhas.push('menos de 2 parágrafos tirados do artigo');
   if (!texto.includes(CHAMADA_SALVAR) && !texto.includes(CHAMADA_COMPARTILHAR)) falhas.push('sem chamada para salvar ou compartilhar');
   if (!texto.includes(LINHA_BIO)) falhas.push('sem "🔗 Artigo completo no link da bio"');
-  if (!temIdentificacaoSocial(texto)) falhas.push('sem a identificação resumida (CRM + especialidade com RQE)');
+  if (!texto.includes(IDENTIFICACAO_COMPLETA)) falhas.push('sem a identificação completa de 5 linhas (CFM; ordem de 08/11 e 10/11/2026)');
 
   const hashtags = texto.match(/#[\p{L}\d_]+/gu) || [];
   if (hashtags.length < 3 || hashtags.length > 5) falhas.push(`${hashtags.length} hashtags (precisa de 3 a 5)`);

@@ -229,12 +229,12 @@ function checarEticaCfm(texto, { contexto = 'portal', sensivel, exigirIdentifica
     const linhas = contexto === 'social' ? LINHAS_SOCIAL : LINHAS_PORTAL;
     const norm = (s) => s.replace(/\s+/g, ' ').trim();
     const corpo = norm(t);
-    // Conteúdo legado (social) traz a identificação de uma linha: continua válido.
-    const legado = contexto === 'social' && corpo.includes(norm(IDENTIFICACAO));
+    // Desde 10/11/2026 (ordem escrita do Dr.): o contexto social exige as 5 linhas; a identificação de 1 linha não é mais aceita.
+    const legado = false;
     // 4ª linha do padrão completo (pós-graduações) é SEM ponto final; a redação antiga com ponto é erro (15/10/2026).
     const comPontoAntigo = contexto !== 'social' && linhas.some((l) => /Medicina do Trabalho$/.test(l) && corpo.includes(`${norm(l)}.`));
     const ausentes = legado ? [] : linhas.filter((l) => !corpo.includes(norm(l)) || (comPontoAntigo && /Medicina do Trabalho$/.test(l)));
-    if (ausentes.length) falhas.push(`identificação CFM incompleta (${contexto === 'social' ? '3' : '5'} linhas): falta "${ausentes.map((l) => l.slice(0, 40)).join('", "')}…"`);
+    if (ausentes.length) falhas.push(`identificação CFM incompleta (5 linhas): falta "${ausentes.map((l) => l.slice(0, 40)).join('", "')}…"`);
     if (!/CRM-BA 41322/.test(t)) falhas.push('sem CRM-BA 41322');
     if (!/RQE 26638/.test(t)) falhas.push('sem RQE 26638');
   }
