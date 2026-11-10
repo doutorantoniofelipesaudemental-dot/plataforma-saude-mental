@@ -12,18 +12,29 @@ const { FONTE_SERIF, FONTE_SANS, caminhoTexto, caminhoLinhas, quebrarLinhas, lar
 const COR = { marinho: '#0b1f3a', marinhoClaro: '#13315c', dourado: '#d4af37', branco: '#ffffff', suave: 'rgba(255,255,255,0.82)' };
 const LARGURA_UTIL = LARGURA - MARGEM * 2;
 const CREDITO = 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito'; // crédito discreto no último cartão (16/10/2026)
-// Assinatura de 3 linhas (padrão de mídias sociais, CLAUDE.md §1.B). A 3ª linha cabe em 22 px (853 de 912 px úteis).
-const ASSINATURA = [
-  'Dr. Antônio Felipe · Médico · CRM-BA 41322',
-  'RQE 26638 – Medicina de Família e Comunidade',
-  'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)',
-];
+// Assinatura de 5 linhas: bloco oficial IDENTIFICACAO_COMPLETA (CLAUDE.md §1.B; ordem de 08/11/2026 e
+// autorização escrita de 10/11/2026 para o contexto social). A 4ª linha (pós-graduações) quebra em 2 linhas na arte.
+const { IDENTIFICACAO_COMPLETA } = require('../identificacaoCfm');
+const ASSINATURA = IDENTIFICACAO_COMPLETA.split('\n');
+const ASSINATURA_TAMANHOS = [26, 24, 20, 18, 20];
+const ASSINATURA_NEGRITO = [true, false, false, false, true];
 
 const fundo = (id) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${COR.marinho}"/><stop offset="1" stop-color="${COR.marinhoClaro}"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#${id})"/>`;
-const assinatura = () => `<rect x="${MARGEM}" y="${ALTURA - 150}" width="${LARGURA_UTIL}" height="2" fill="${COR.dourado}" opacity="0.7"/>
-  ${caminhoTexto(FONTE_SANS, ASSINATURA[0], MARGEM, ALTURA - 110, 28, COR.branco, { negrito: true })}
-  ${caminhoTexto(FONTE_SANS, ASSINATURA[1], MARGEM, ALTURA - 78, 26, COR.suave)}
-  ${caminhoTexto(FONTE_SANS, ASSINATURA[2], MARGEM, ALTURA - 48, 22, COR.suave)}`;
+const LINHAS_ASSINATURA_ARTE = ASSINATURA.flatMap((texto, i) => {
+  const tam = ASSINATURA_TAMANHOS[i];
+  const partes = i === 3 ? quebrarLinhas(FONTE_SANS, texto, LARGURA_UTIL, tam, { maxLinhas: 2 }) : [texto];
+  return partes.map((t) => ({ t, tam, neg: ASSINATURA_NEGRITO[i] }));
+});
+// Bloco de 5 linhas (6 linhas de texto): régua em ALTURA - 205; 1ª linha de base em ALTURA - 180.
+const assinatura = () => {
+  let base = ALTURA - 180;
+  const trechos = LINHAS_ASSINATURA_ARTE.map((l) => {
+    const svg = caminhoTexto(FONTE_SANS, l.t, MARGEM, base, l.tam, l.neg ? COR.branco : COR.suave, { negrito: l.neg });
+    base += Math.round(l.tam * 1.3);
+    return svg;
+  });
+  return `<rect x="${MARGEM}" y="${ALTURA - 205}" width="${LARGURA_UTIL}" height="2" fill="${COR.dourado}" opacity="0.7"/>${trechos.join('')}`;
+};
 const contador = (i, n) => caminhoTexto(FONTE_SANS, `${i + 1}/${n}`, LARGURA - MARGEM - larguraTexto(FONTE_SANS, `${i + 1}/${n}`, 26), 100, 26, COR.suave);
 const barraOuro = (y) => `<rect x="${MARGEM}" y="${y}" width="96" height="6" rx="3" fill="${COR.dourado}"/>`;
 
@@ -49,7 +60,7 @@ function svgTela(tela, i, total, padrao = 'A') {
     const corpo = `${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, y, tam * 1.2, tam, COR.branco, { negrito: true })}
       ${barraOuro(y + linhas.length * tam * 1.2 - tam * 0.4)}
       ${caminhoLinhas(FONTE_SANS, sub, MARGEM, y + linhas.length * tam * 1.2 + 60, 44, 32, COR.suave)}
-      ${caminhoTexto(FONTE_SANS, 'Deslize para o lado', LARGURA - MARGEM - larguraTexto(FONTE_SANS, 'Deslize para o lado', 26), ALTURA - 190, 26, COR.dourado)}`;
+      ${caminhoTexto(FONTE_SANS, 'Deslize para o lado', LARGURA - MARGEM - larguraTexto(FONTE_SANS, 'Deslize para o lado', 26), ALTURA - 250, 26, COR.dourado)}`;
     // No padrão B a faixa da foto (composta por renderizarTelas) cobre o topo: sem fundo nem contador por cima dela.
     miolo = padrao === 'B' ? corpo : `${fundo('g')}${contador(i, total)}${corpo}`;
   } else if (tela.tipo === 'final') {
@@ -57,8 +68,8 @@ function svgTela(tela, i, total, padrao = 'A') {
     miolo = `${fundo('g')}${contador(i, total)}${caminhoLinhas(FONTE_SERIF, linhas, MARGEM, 470, 92, 76, COR.branco, { negrito: true })}
       ${barraOuro(470 + linhas.length * 92 - 40)}
       ${caminhoTexto(FONTE_SANS, tela.texto, MARGEM, 470 + linhas.length * 92 + 50, 44, COR.dourado, { negrito: true })}
-      ${tela.apoio ? caminhoTexto(FONTE_SANS, 'Em crise: CVV 188 · SAMU 192', MARGEM, ALTURA - 230, 38, COR.branco, { negrito: true }) : ''}
-      ${caminhoTexto(FONTE_SANS, CREDITO, MARGEM, ALTURA - 178, 24, COR.suave)}`;
+      ${tela.apoio ? caminhoTexto(FONTE_SANS, 'Em crise: CVV 188 · SAMU 192', MARGEM, ALTURA - 330, 38, COR.branco, { negrito: true }) : ''}
+      ${caminhoTexto(FONTE_SANS, CREDITO, MARGEM, ALTURA - 290, 24, COR.suave)}`;
   } else {
     const tamT = 50, tamX = tela.tipo === 'trecho' ? 46 : 44;
     const lt = tela.titulo ? quebrarLinhas(FONTE_SERIF, tela.titulo, LARGURA_UTIL, tamT, { maxLinhas: 3 }) : [];
@@ -102,7 +113,7 @@ async function renderizarTelas(telas, { padrao = 'A', capa } = {}) {
 const textoAlternativo = (tela, i, total) => {
   const corpo = [tela.titulo, tela.texto].filter(Boolean).map((x) => String(x).replace(/[.\s]+$/, '')).join('. ');
   const credito = tela.tipo === 'final' ? ` ${CREDITO}.` : '';
-  return `Tela ${i + 1} de ${total}, fundo azul-marinho com detalhes dourados: ${corpo}.${credito} Assinatura: Dr. Antônio Felipe, médico, CRM-BA 41322, RQE 26638, Medicina de Família e Comunidade. Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS).`;
+  return `Tela ${i + 1} de ${total}, fundo azul-marinho com detalhes dourados: ${corpo}.${credito} Assinatura: Dr. Antônio Felipe, médico, CRM-BA 41322, RQE 26638, Medicina de Família e Comunidade. Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS). Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho. NÃO ESPECIALISTA.`;
 };
 
 module.exports = { renderizarTelas, textoAlternativo, glifosAusentes, ASSINATURA, COR, CREDITO };

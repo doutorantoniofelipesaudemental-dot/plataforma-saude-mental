@@ -151,7 +151,7 @@ test('fluxo: peça conforme é aprovada; qualquer falha bloqueia com motivo por 
 
 /* -------------- Integração: legenda de 3 linhas e legado ------------------- */
 
-test('legenda do feed usa a assinatura de 5 linhas (ordem de 08/11); conteúdo legado (1 linha) continua válido', () => {
+test('legenda do feed usa a assinatura de 5 linhas; a identificação de 1 linha (legado) é reprovada no social (ordem de 10/11)', () => {
   const { montarLegendaInstagram, IDENTIFICACAO, IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../../backend/lib/legendaInstagram');
   const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/identificacaoCfm');
   const artigo = {
@@ -163,8 +163,10 @@ test('legenda do feed usa a assinatura de 5 linhas (ordem de 08/11); conteúdo l
   assert.ok(montarLegendaInstagram(artigo).texto.includes(IDENTIFICACAO_COMPLETA));
   const legado = montarLegendaInstagram(artigo, { legado: true }).texto;
   assert.ok(legado.includes(IDENTIFICACAO) && !legado.includes(IDENTIFICACAO_3_LINHAS));
-  assert.ok(temIdentificacaoSocial(legado) && temIdentificacaoSocial(IDENTIFICACAO_3_LINHAS));
-  assert.deepStrictEqual(checarEticaCfm(`${TEXTO_ACOLHEDOR}\n\n${IDENTIFICACAO}`, { contexto: 'social' }).falhas, []);
+  // Ordem de 10/11/2026: a identificação de 1 linha não basta no social; só o bloco de 5 linhas passa.
+  assert.ok(temIdentificacaoSocial(IDENTIFICACAO_COMPLETA));
+  assert.ok(checarEticaCfm(`${TEXTO_ACOLHEDOR}\n\n${IDENTIFICACAO}`, { contexto: 'social' }).falhas.some((f) => /5 linhas/.test(f)));
+  assert.deepStrictEqual(checarEticaCfm(`${TEXTO_ACOLHEDOR}\n\n${IDENTIFICACAO_COMPLETA}`, { contexto: 'social' }).falhas, []);
 });
 
 test('tripla checagem: a 4ª etapa bloqueia promessa de cura na legenda e não vaza buffer para o registro', async () => {

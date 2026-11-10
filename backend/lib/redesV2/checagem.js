@@ -28,9 +28,9 @@ async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }
   }
   if (alts.length !== imagens.length || alts.some((a) => !a || a.length < 20)) f('técnica', 'texto alternativo ausente em alguma imagem');
   if (glifosAusentes.length) f('técnica', `acento/caractere sem glifo na arte: ${glifosAusentes.join(' ')} (arte reprovada)`);
-  // A arte tem de trazer a assinatura de 3 linhas (25/10/2026: o post de 26/10 saiu com 2 e a checagem não viu).
-  if (ASSINATURA.length !== 3) f('técnica', `assinatura da arte com ${ASSINATURA.length} linhas (esperado 3)`);
-  if (alts.some((a) => !String(a).includes(ASSINATURA[2]))) f('técnica', 'texto alternativo sem a 3ª linha da assinatura');
+  // A arte tem de trazer a assinatura de 5 linhas (IDENTIFICACAO_COMPLETA; autorizado em 10/11/2026 para o contexto social).
+  if (ASSINATURA.length !== 5) f('técnica', `assinatura da arte com ${ASSINATURA.length} linhas (esperado 5)`);
+  if (alts.some((a) => !String(a).includes(ASSINATURA[4]))) f('técnica', 'texto alternativo sem a 5ª linha da assinatura');
   for (const [i, t] of telas.entries()) {
     const n = palavras(`${t.titulo || ''} ${t.texto || ''}`).length;
     if (n > MAX_PALAVRAS_TELA) f('técnica', `tela ${i + 1} com ${n} palavras (máx. ${MAX_PALAVRAS_TELA})`);

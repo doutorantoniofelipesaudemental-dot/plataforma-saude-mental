@@ -1,26 +1,26 @@
 /**
- * Troca as legendas das peças 11–17/11 da fila (conteudo/redes-v2) pela versão com a identificação de 5 linhas.
- * Ordem de 10/11/2026, 00:05 (item 2). Padrão: DRY-RUN (só mostra o que faria).
+ * Substitui, na fila (conteudo/redes-v2), as peças 11–17/11 pela versão regenerada com identificação de 5 linhas.
+ * Ordem de 10/11/2026, 00:05 (item 2), com autorização escrita para o contexto social (10/11/2026).
+ * Padrão: DRY-RUN (só mostra o que faria). Quem roda é o Dr. Antônio, na pasta principal.
  *
- *   node scripts/redes/trocarLegendasFila11a17.js                     -> dry-run
- *   node scripts/redes/trocarLegendasFila11a17.js --backup            -> copia legenda.txt e meta.json para backups/
- *   node scripts/redes/trocarLegendasFila11a17.js --aplicar           -> grava as legendas novas (exige --backup antes)
- *   node scripts/redes/trocarLegendasFila11a17.js --conferir          -> confere 5 linhas, CVV e ausência de oferta
- *   node scripts/redes/trocarLegendasFila11a17.js --reverter          -> devolve legenda.txt e meta.json do backup mais recente
+ *   node scripts/redes/trocarLegendasFila11a17.js                 -> dry-run
+ *   node scripts/redes/trocarLegendasFila11a17.js --backup        -> copia legenda, alt, telas e meta para backups/ (conferido)
+ *   node scripts/redes/trocarLegendasFila11a17.js --aplicar       -> grava as peças novas (exige --backup antes)
+ *   node scripts/redes/trocarLegendasFila11a17.js --conferir      -> confere 5 linhas, CVV, oferta e assinatura na arte
+ *   node scripts/redes/trocarLegendasFila11a17.js --reverter      -> devolve a peça do backup mais recente
  *
- * Efeito em meta.json: status vira "pendente-rechecagem" (o publicador não publica peça sem nova checagem).
- * A arte (última lâmina, assinatura de 3 linhas) NÃO é alterada por este script.
- * Freio REDES_PUBLICACAO_ATIVA: não tocado.
+ * Efeito: status vira "pendente-rechecagem" (o publicador não publica peça sem nova checagem).
+ * Freio REDES_PUBLICACAO_ATIVA: não tocado. Variáveis: REDES_FILA, REDES_ORIGEM (regeradas), REDES_BACKUPS.
  */
 const fs = require('node:fs');
 const path = require('node:path');
 
 const RAIZ = path.join(__dirname, '..', '..');
-// A fila e os backups são estado fora do Git: na pasta principal. Em worktree, passe REDES_FILA e REDES_BACKUPS.
 const FILA = process.env.REDES_FILA || path.join(RAIZ, 'conteudo', 'redes-v2');
-const PROPOSTAS = process.env.REDES_PROPOSTAS || path.join(RAIZ, '.tmp', 'es-piloto-20261110', 'redes-11-17-propostas');
+const ORIGEM = process.env.REDES_ORIGEM || path.join(RAIZ, 'conteudo', 'redes-v2');
 const BACKUPS = process.env.REDES_BACKUPS || path.join(RAIZ, 'backups');
-const RE_PEÇA = /^2026-11-(1[1-7])-/;
+const RE_PECA = /^2026-11-(1[1-7])-/;
+const ARQUIVOS = ['legenda.txt', 'alt.txt', 'meta.json'];
 const IDENTIFICACAO = [
   'Dr. Antônio Felipe — Médico — CRM-BA 41322',
   'Especialista em Medicina de Família e Comunidade — RQE 26638',
@@ -31,82 +31,84 @@ const IDENTIFICACAO = [
 const RE_OFERTA = /tipo=particular|agendar uma avalia|solicitar consulta|mentoria individual|wa\.me|whatsapp/i;
 
 const args = new Set(process.argv.slice(2));
-const pecas = fs.readdirSync(FILA).filter((d) => RE_PEÇA.test(d)).sort();
 const agora = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+const telasDe = (dir) => fs.readdirSync(dir).filter((f) => /^tela-\d+\.png$/.test(f));
+const pecas = () => (fs.existsSync(ORIGEM) ? fs.readdirSync(ORIGEM).filter((d) => RE_PECA.test(d)).sort() : []);
 
-function listar() {
-  return pecas.map((d) => ({
-    d,
-    dir: path.join(FILA, d),
-    legAtual: path.join(FILA, d, 'legenda.txt'),
-    meta: path.join(FILA, d, 'meta.json'),
-    proposta: path.join(PROPOSTAS, d, 'legenda.txt'),
-  }));
-}
-
-function conferir(texto) {
+function conferirPeca(dirOrigem) {
   const erros = [];
-  const linhas = IDENTIFICACAO.filter((l) => texto.replace(/\s+/g, ' ').includes(l.replace(/\s+/g, ' ')));
-  if (linhas.length !== IDENTIFICACAO.length) erros.push(`identificação: ${linhas.length}/5 linhas`);
+  const texto = fs.readFileSync(path.join(dirOrigem, 'legenda.txt'), 'utf8').replace(/\s+/g, ' ');
+  const linhas = IDENTIFICACAO.filter((l) => texto.includes(l.replace(/\s+/g, ' ')));
+  if (linhas.length !== 5) erros.push(`identificação: ${linhas.length}/5 linhas`);
   if (!/CVV 188/.test(texto) || !/SAMU 192/.test(texto)) erros.push('sem CVV 188 · SAMU 192');
   if (RE_OFERTA.test(texto)) erros.push('oferta individual no texto');
+  const alt = fs.readFileSync(path.join(dirOrigem, 'alt.txt'), 'utf8');
+  if (!alt.includes(IDENTIFICACAO[4])) erros.push('texto alternativo sem a 5ª linha');
+  if (!telasDe(dirOrigem).length) erros.push('sem telas');
   return erros;
 }
 
 function dryRunOuAplicar(aplicar) {
-  let ok = 0;
-  for (const p of listar()) {
-    if (!fs.existsSync(p.proposta)) { console.log(`${p.d}: sem proposta, pulado`); continue; }
-    const nova = fs.readFileSync(p.proposta, 'utf8');
-    const erros = conferir(nova);
-    if (erros.length) { console.log(`${p.d}: NÃO aplicar (${erros.join('; ')})`); continue; }
-    const atual = fs.readFileSync(p.legAtual, 'utf8');
-    console.log(`${p.d}: ${atual === nova ? 'já igual' : `trocar legenda (${atual.length} → ${nova.length} caracteres)`}; status → pendente-rechecagem`);
-    if (aplicar && atual !== nova) {
-      fs.writeFileSync(p.legAtual, nova, 'utf8');
-      const meta = JSON.parse(fs.readFileSync(p.meta, 'utf8'));
-      meta.status = 'pendente-rechecagem';
-      meta.legendaRevisadaEm = new Date().toISOString();
-      fs.writeFileSync(p.meta, JSON.stringify(meta, null, 2), 'utf8');
+  let prontas = 0;
+  for (const d of pecas()) {
+    const origem = path.join(ORIGEM, d);
+    const destino = path.join(FILA, d);
+    const erros = conferirPeca(origem);
+    if (erros.length) { console.log(`${d}: NÃO aplicar (${erros.join('; ')})`); continue; }
+    if (!fs.existsSync(destino)) { console.log(`${d}: não existe na fila, pulado`); continue; }
+    console.log(`${d}: substituir legenda, alt, ${telasDe(origem).length} tela(s); status → pendente-rechecagem`);
+    if (aplicar) {
+      for (const f of ARQUIVOS) {
+        const meta = f === 'meta.json';
+        if (meta) {
+          const m = JSON.parse(fs.readFileSync(path.join(origem, f), 'utf8'));
+          m.status = 'pendente-rechecagem';
+          m.trocadaEm = new Date().toISOString();
+          fs.writeFileSync(path.join(destino, f), JSON.stringify(m, null, 2), 'utf8');
+        } else fs.copyFileSync(path.join(origem, f), path.join(destino, f));
+      }
+      for (const t of fs.readdirSync(destino).filter((f) => /^tela-\d+\.png$/.test(f))) fs.rmSync(path.join(destino, t));
+      for (const t of telasDe(origem)) fs.copyFileSync(path.join(origem, t), path.join(destino, t));
     }
-    ok += 1;
+    prontas += 1;
   }
-  console.log(aplicar ? `aplicadas: ${ok}` : `dry-run: ${ok} peça(s) prontas. Use --backup e depois --aplicar.`);
+  console.log(aplicar ? `aplicadas: ${prontas}` : `dry-run: ${prontas} peça(s) prontas. Use --backup e depois --aplicar.`);
 }
 
 function backup() {
-  const destino = path.join(BACKUPS, `redes-11-17-legendas-${agora}`);
-  fs.mkdirSync(destino, { recursive: true });
-  for (const p of listar()) {
-    const pasta = path.join(destino, p.d);
+  const destino = path.join(BACKUPS, `redes-11-17-${agora}`);
+  let n = 0;
+  for (const d of pecas()) {
+    const origem = path.join(FILA, d);
+    if (!fs.existsSync(origem)) continue;
+    const pasta = path.join(destino, d);
     fs.mkdirSync(pasta, { recursive: true });
-    fs.copyFileSync(p.legAtual, path.join(pasta, 'legenda.txt'));
-    fs.copyFileSync(p.meta, path.join(pasta, 'meta.json'));
+    for (const f of [...ARQUIVOS, ...telasDe(origem)]) fs.copyFileSync(path.join(origem, f), path.join(pasta, f));
+    n += 1;
   }
-  const aberto = listar().filter((p) => fs.existsSync(path.join(destino, p.d, 'legenda.txt'))).length;
-  console.log(`backup em ${destino}: ${aberto} peça(s) (conferido)`);
+  console.log(`backup em ${destino}: ${n} peça(s)`);
 }
 
 function reverter() {
-  const todos = fs.existsSync(BACKUPS) ? fs.readdirSync(BACKUPS).filter((n) => n.startsWith('redes-11-17-legendas-')).sort() : [];
+  const todos = fs.existsSync(BACKUPS) ? fs.readdirSync(BACKUPS).filter((n) => n.startsWith('redes-11-17-')).sort() : [];
   if (!todos.length) { console.log('nenhum backup encontrado'); return; }
   const ultimo = path.join(BACKUPS, todos[todos.length - 1]);
-  for (const p of listar()) {
-    const origem = path.join(ultimo, p.d);
-    if (!fs.existsSync(origem)) continue;
-    fs.copyFileSync(path.join(origem, 'legenda.txt'), p.legAtual);
-    fs.copyFileSync(path.join(origem, 'meta.json'), p.meta);
+  for (const d of fs.readdirSync(ultimo)) {
+    const destino = path.join(FILA, d);
+    for (const t of telasDe(destino)) fs.rmSync(path.join(destino, t));
+    for (const f of fs.readdirSync(path.join(ultimo, d))) fs.copyFileSync(path.join(ultimo, d, f), path.join(destino, f));
   }
   console.log(`revertido a partir de ${ultimo}`);
 }
 
 function conferirFila() {
   let falhas = 0;
-  for (const p of listar()) {
-    const texto = fs.readFileSync(p.legAtual, 'utf8');
-    const erros = conferir(texto);
-    const status = JSON.parse(fs.readFileSync(p.meta, 'utf8')).status;
-    console.log(`${p.d}: ${erros.length ? 'FALHA — ' + erros.join('; ') : 'ok'} · status ${status}`);
+  for (const d of pecas()) {
+    const dir = path.join(FILA, d);
+    if (!fs.existsSync(dir)) continue;
+    const erros = conferirPeca(dir);
+    const status = JSON.parse(fs.readFileSync(path.join(dir, 'meta.json'), 'utf8')).status;
+    console.log(`${d}: ${erros.length ? 'FALHA — ' + erros.join('; ') : 'ok'} · status ${status}`);
     if (erros.length) falhas += 1;
   }
   console.log(falhas ? `${falhas} peça(s) com falha` : 'todas as peças conferem');
