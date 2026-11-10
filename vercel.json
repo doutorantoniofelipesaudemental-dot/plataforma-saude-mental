@@ -36,6 +36,10 @@
       "dest": "/backend/index.js"
     },
     {
+      "src": "/es/(.*)",
+      "dest": "/backend/index.js"
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/public/assets/$1",
       "headers": {

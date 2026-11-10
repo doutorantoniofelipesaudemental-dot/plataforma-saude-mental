@@ -17,6 +17,7 @@ const carrosselRouter = require('./routes/carrossel');
 const adminRouter = require('./routes/admin');
 const cronRouter = require('./routes/cron');
 const redesV2 = require('./routes/redesV2');
+const esRouter = require('./routes/es'); // piloto ES, desligado por padrão (ES_PILOTO_ATIVO)
 
 const app = express();
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
@@ -76,6 +77,7 @@ app.use('/api/carrossel', carrosselRouter);
 app.use('/api/admin', adminRouter);
 app.use('/api/cron', cronRouter);
 app.use('/api/redes-v2', redesV2.api);
+app.use('/es', esRouter);
 app.get('/redes/previa', ...redesV2.pagina);
 
 // Qualquer outra rota sob /api é 404 em JSON — nunca cai no HTML do site.

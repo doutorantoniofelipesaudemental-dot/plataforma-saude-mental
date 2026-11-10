@@ -240,7 +240,9 @@ function checarEticaCfm(texto, { contexto = 'portal', sensivel, exigirIdentifica
   }
 
   const ehSensivel = sensivel ?? RE_SENSIVEL.test(t);
-  if (ehSensivel && !/CVV 188/.test(t)) falhas.push('tema sensível sem o alerta do CVV 188');
+  // Variantes equivalentes a "CVV 188" (ordem 09/11, 23:35, item 3): "ligue 188 (CVV…)" e "188 (CVV)".
+  const RE_CVV = /CVV 188|ligue 188 \(CVV|188 \(CVV\)/;
+  if (ehSensivel && !RE_CVV.test(t)) falhas.push('tema sensível sem o alerta do CVV 188');
 
   return resultado(falhas);
 }
