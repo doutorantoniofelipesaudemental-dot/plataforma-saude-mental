@@ -14,6 +14,7 @@ const { backupAntesDeSobrescrever } = require('../../../scripts/lib/backupPasta'
 const { renderizarTelas, textoAlternativo } = require('../../lib/redesV2/arte');
 const { checarPost } = require('../../lib/redesV2/checagem');
 const { publicoDe, FERIADOS } = require('../../lib/calendarioSite');
+const { carregarOverrides, aplicarOverride, historicoDe, avaliarZeroGenerico } = require('../../lib/redesV2/zgGate');
 
 const RAIZ = path.resolve(__dirname, '../../..');
 const SAIDA = path.join(RAIZ, 'conteudo/redes-v2');
@@ -23,6 +24,8 @@ const INICIO = arg('inicio', '2026-10-26');
 const SO_PLANEJAR = process.argv.includes('--so-planejar');
 const REFAZER_EXISTENTES = process.argv.includes('--refazer-existentes'); // mantém ids e datas da fila atual; só regera arte e legenda (crédito da marca)
 const SITE = 'https://www.drantoniofelipemedico.com.br';
+// Overrides versionados (texto literal, eixo, pontos) e trocas de pauta do dia (ordem de 10/11/2026, 06:15).
+const OVERRIDES = carregarOverrides(process.env.REDES_OVERRIDES || path.join(RAIZ, 'scripts/redes/overrides-11-17.json'));
 const ROTACAO = ['pacientes', 'pais', 'profissionais', 'empresas'];
 
 const diaBahia = (d) => new Date(new Date(d).getTime() - 3 * 3600e3).toISOString().slice(0, 10);
@@ -46,8 +49,8 @@ function corrigirPlano(plano, falhas, tentativa) {
   return p;
 }
 
-async function gerarUm(doc, tipo, dataPost) {
-  let plano = planejarPost(doc, { tipo });
+async function gerarUm(doc, tipo, dataPost, ov) {
+  let plano = aplicarOverride(planejarPost(doc, { tipo }), ov);
   let tentativas = 0, ultimo = null;
   for (;;) {
     const legenda = montarLegenda(plano, { limite: tentativas ? 1300 : 1500 });
@@ -63,9 +66,15 @@ async function gerarUm(doc, tipo, dataPost) {
 }
 
 /** Gera e grava um post (pasta, imagens, legenda, alt, meta). Devolve {aprovado, r}. */
-async function gerarEGravar({ id, doc, tipo, publico, dataSugerida }) {
-  const r = await gerarUm(doc, tipo, dataSugerida.slice(0, 10));
-  const aprovado = r.chk.ok;
+async function gerarEGravar({ id, doc, tipo, publico, dataSugerida, historico = [] }) {
+  const ov = OVERRIDES.ovs[doc.slug];
+  const dataPost = dataSugerida.slice(0, 10);
+  const r = await gerarUm(doc, tipo, dataPost, ov);
+  const urlTexto = `${SITE}/artigo/${doc.slug}`;
+  const zg = avaliarZeroGenerico({ doc, legenda: r.legenda, ov, dataISO: dataPost, historico, urlTexto });
+  // Aprovação exige a checagem de arte/ética E o zero genérico (regras a–h).
+  const aprovado = r.chk.ok && zg.aprovado;
+  if (!zg.aprovado) r.chk.falhas.push(...zg.falhas.map((f) => ({ regra: 'zero-generico', msg: `${f.regra}: ${f.msg}` })));
   const dir = path.join(SAIDA, aprovado ? '' : 'revisar', id);
   // Lição de 28/10/2026: a pasta existente vai para backups/ antes de ser apagada
   const copia = backupAntesDeSobrescrever(dir);
@@ -81,22 +90,40 @@ async function gerarEGravar({ id, doc, tipo, publico, dataSugerida }) {
     categoria: doc.categoria, hashtags: r.plano.hashtags, telas: r.plano.telas.length, legendaCaracteres: r.legenda.length,
     origemImagens: 'geradas localmente (vetor + sharp), sem banco de imagens, sem Canva, sem IA generativa — nenhuma marca d\'água', tentativasDeCorrecao: r.tentativas,
     creditoMarca: 'v1', checagem: { ok: aprovado, falhas: r.chk.falhas, hashes: r.chk.hashes, em: new Date().toISOString() },
+    zeroGenerico: { aprovado: zg.aprovado, falhas: zg.falhas, similaridadeMax: zg.similaridadeMax, limite: zg.limite, eixo: ov?.eixo || null },
   };
   fs.writeFileSync(path.join(dir, 'meta.json'), JSON.stringify(meta, null, 2), 'utf8');
   return { aprovado, r };
 }
 
-async function refazerExistentes(docs) {
-  const porSlug = new Map(docs.map((d) => [d.slug, d]));
+async function refazerExistentes(docs, extras = []) {
+  const porSlug = new Map([...docs, ...extras].map((d) => [d.slug, d]));
   const resumo = { aprovados: 0, revisar: 0, falhas: [] };
+  // Lê a fila e também revisar/ (peças reprovadas em execuções anteriores são regeradas aqui).
+  const pastas = [];
   for (const nome of fs.readdirSync(SAIDA).sort()) {
-    const f = path.join(SAIDA, nome, 'meta.json');
-    if (nome === 'revisar' || !fs.existsSync(f)) continue;
+    if (nome === 'revisar') for (const r of fs.readdirSync(path.join(SAIDA, 'revisar')).sort()) pastas.push({ nome: r, dir: path.join(SAIDA, 'revisar', r) });
+    else pastas.push({ nome, dir: path.join(SAIDA, nome) });
+  }
+  for (const { nome, dir } of pastas) {
+    const f = path.join(dir, 'meta.json');
+    if (!fs.existsSync(f)) continue;
     const m = JSON.parse(fs.readFileSync(f, 'utf8'));
-    const doc = porSlug.get(m.slug);
+    // Troca de pauta (ordem de 10/11, 06:15): a vaga do dia passa a ter outro artigo do mesmo eixo; o id e a data são mantidos.
+    const slugNovo = OVERRIDES.trocas[m.slug] || m.slug;
+    const doc = porSlug.get(slugNovo);
     if (!doc) { resumo.revisar += 1; resumo.falhas.push(`${nome}: texto de origem não encontrado`); continue; }
     try {
-      const { aprovado, r } = await gerarEGravar({ id: m.id, doc, tipo: m.tipo, publico: m.publico, dataSugerida: m.dataSugerida });
+      const historico = historicoDe(SAIDA, { excluirId: nome });
+      const novoId = slugNovo === m.slug ? m.id : `${m.dataSugerida.slice(0, 10)}-${slugNovo}`;
+      // A pasta atual (na fila ou em revisar/) vai para backups/ antes de ser regerada; evita duplicata.
+      const copia = backupAntesDeSobrescrever(dir);
+      if (copia) console.log(`backup da pasta anterior: ${copia}`);
+      fs.rmSync(dir, { recursive: true, force: true });
+      const trocou = slugNovo !== m.slug;
+      const tipo = trocou ? (doc.importacao?.tipo || (doc.categoria === 'Relatos da Prática' ? 'relato' : 'artigo')) : m.tipo;
+      const publico = trocou ? (doc.categoria === 'Relatos da Prática' ? 'relato' : publicoDe(doc.categoria)) : m.publico;
+      const { aprovado, r } = await gerarEGravar({ id: novoId, doc, tipo, publico, dataSugerida: m.dataSugerida, historico });
       if (aprovado) resumo.aprovados += 1; else { resumo.revisar += 1; resumo.falhas.push(`${nome}: ${r.chk.falhas.map((x) => x.msg).join(' | ')}`); }
     } catch (e) { resumo.revisar += 1; resumo.falhas.push(`${nome}: ERRO ${e.message}`); }
   }
@@ -109,9 +136,12 @@ async function refazerExistentes(docs) {
   await mongoose.connect(process.env.MONGODB_URI, { dbName: process.env.MONGODB_DB || 'drsaudemental', serverSelectionTimeoutMS: 10000 });
   const col = mongoose.connection.db.collection('artigos');
   const docs = await col.find({ 'importacao.pasta': { $exists: true }, 'importacao.serie': { $exists: false }, 'agendamento.falha': { $in: ['', null] } }).toArray();
+  // Pautas de troca (podem não estar no filtro acima): busca só pelo slug, leitura apenas.
+  const extras = REFAZER_EXISTENTES && Object.values(OVERRIDES.trocas).length
+    ? await col.find({ slug: { $in: Object.values(OVERRIDES.trocas) } }).toArray() : [];
   await mongoose.disconnect();
 
-  if (REFAZER_EXISTENTES) return refazerExistentes(docs);
+  if (REFAZER_EXISTENTES) return refazerExistentes(docs, extras);
   const hoje = diaBahia(new Date());
   const cand = docs.map((d) => ({
     d, tipo: d.importacao.tipo || (d.categoria === 'Relatos da Prática' ? 'relato' : 'artigo'),
@@ -140,7 +170,8 @@ async function refazerExistentes(docs) {
   for (const p of plano) {
     const id = `${p.data}-${p.d.slug}`;
     try {
-      const { aprovado, r } = await gerarEGravar({ id, doc: p.d, tipo: p.tipo, publico: p.publico, dataSugerida: `${p.data}T08:00:00-03:00` });
+      const historico = historicoDe(SAIDA, { excluirId: id });
+      const { aprovado, r } = await gerarEGravar({ id, doc: p.d, tipo: p.tipo, publico: p.publico, dataSugerida: `${p.data}T08:00:00-03:00`, historico });
       if (aprovado) resumo.aprovados += 1; else { resumo.revisar += 1; resumo.falhas.push(`${id}: ${r.chk.falhas.map((x) => x.msg).join(' | ')}`); }
     } catch (e) { resumo.revisar += 1; resumo.falhas.push(`${id}: ERRO ${e.message}`); }
   }
