@@ -29,7 +29,25 @@ function listarProcessos() {
   const script = `$escuta = @(Get-NetTCPConnection -LocalPort ${PORTA_TESTE} -State Listen -ErrorAction SilentlyContinue | ForEach-Object { [int]$_.OwningProcess }); $procs = @(Get-CimInstance Win32_Process | ForEach-Object { [pscustomobject]@{ pid = [int]$_.ProcessId; paiPid = [int]$_.ParentProcessId; cmd = [string]$_.CommandLine; exe = [string]$_.ExecutablePath } }); [pscustomobject]@{ escuta = $escuta; processos = $procs } | ConvertTo-Json -Depth 4 -Compress`;
   const r = spawnSync('powershell', ['-NoProfile', '-Command', script], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
   if (r.status !== 0 || !r.stdout) return { escuta: [], processos: [] };
-  const j = JSON.parse(r.stdout);
+  return interpretarSaidaProcessos(r.stdout);
+}
+
+/**
+ * Interpreta a saída JSON do PowerShell. A linha de comando de alguns processos traz caractere de controle
+ * que o ConvertTo-Json (PowerShell 5.1) não escapa: isso quebrava o JSON.parse e o portão parava no 1º passo.
+ * Caracteres de controle viram espaço (são irrelevantes na estrutura JSON). Saída vazia = nenhum processo.
+ * Se ainda assim não for JSON válido, LANÇA erro: não se finge que a limpeza rodou (falha fechada).
+ */
+function interpretarSaidaProcessos(saida) {
+  const semBom = String(saida).replace(/^﻿/, '');
+  const limpo = semBom.replace(/[\u0000-\u001f]+/g, ' ').trim();
+  if (!limpo) return { escuta: [], processos: [] };
+  let j;
+  try {
+    j = JSON.parse(limpo);
+  } catch (erro) {
+    throw new Error('encerrarTesteOrfao: saída de processos não é JSON válido (' + erro.message + ')');
+  }
   return { escuta: [].concat(j.escuta || []), processos: [].concat(j.processos || []) };
 }
 
@@ -41,4 +59,4 @@ function encerrarTesteOrfao({ dryRun = false } = {}) {
   return pids;
 }
 
-module.exports = { encerrarTesteOrfao, candidatosAEncerrar, PORTA_TESTE };
+module.exports = { encerrarTesteOrfao, candidatosAEncerrar, interpretarSaidaProcessos, PORTA_TESTE };
