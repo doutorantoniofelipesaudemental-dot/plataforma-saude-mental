@@ -35,3 +35,5 @@ router.get('/:slug', (req, res) => {
 });
 
 module.exports = router;
+
+module.exports.paginaEs = paginaEs;
