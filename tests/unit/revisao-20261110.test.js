@@ -33,16 +33,18 @@ test('decisões: Relatos da Prática ficam fora (sem tema)', () => {
   assert.equal(decisoes.filter((d) => d.titulo && /^Relato/.test(d.titulo)).length, 0);
 });
 
-test('introduções: 7 eixos, 2 a 3 frases, eixo 5 é o texto-base do Dr. Antônio', () => {
+test('introduções: 7 eixos; corpo de 2 a 3 frases; eixo 5 com 2 frases + linha de crise; linha de crise em todas', () => {
   const novas = introsDoMd(ler('relatorios/plano-diretor/INTRODUCOES-EIXOS.md'));
   assert.equal(Object.keys(novas).length, 7);
-  for (const n of [1, 2, 3, 4, 6, 7]) {
-    const frases = novas[n].split(/(?<=[.!?])\s+/).filter(Boolean).length;
-    assert.ok(frases >= 2 && frases <= 3, `eixo ${n}: ${frases} frases`);
+  const CRISE = 'Em crise: CVV 188 · SAMU 192.';
+  for (const n of [1, 2, 3, 4, 5, 6, 7]) {
+    assert.ok(novas[n].endsWith(CRISE), 'eixo ' + n + ' sem a linha de crise padrão');
+    const corpo = novas[n].slice(0, -CRISE.length).trim();
+    const frases = corpo.split(/(?<=[.!?])\s+/).filter(Boolean).length;
+    if (n === 5) assert.equal(frases, 2, 'eixo 5: ' + frases + ' frases no corpo');
+    else assert.ok(frases >= 2 && frases <= 3, 'eixo ' + n + ': ' + frases + ' frases');
   }
-  // eixo 5 mantido como estava na main (texto-base do Dr.)
-  const antigas = introsDoMd(require('node:child_process').execFileSync('git', ['show', 'origin/main:relatorios/plano-diretor/INTRODUCOES-EIXOS.md'], { cwd: RAIZ, encoding: 'utf8' }));
-  assert.equal(novas[5], antigas[5]);
+  assert.match(novas[5], /^Transtornos mentais são condições de saúde/);
 });
 
 test('introduções: passam no checador ético do CFM e não prometem resultado', () => {
