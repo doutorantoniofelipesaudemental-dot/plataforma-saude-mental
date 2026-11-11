@@ -264,3 +264,8 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 - **Links cruzados:** artigo de psicoeducação sobre um transtorno aponta para o artigo clínico ("Para saber mais: conceito, diagnóstico e conduta") e vice-versa.
 - **Blog:** filtros = Todos + 7 temas (nome curto visível; nome completo em `title`/`aria-label`) + divisor + "Relatos da Prática" (fora dos temas). URL: `?tema=<slug>` ou `?formato=relatos`. Proibido "consultório" no Blog.
 - **Relatos da Prática:** (a) sem lista de referências na narrativa; (b) nota de ficção obrigatória, texto exato em `backend/lib/relatos.js` (CEM art. 75); (c) informação clínica → caixa "Para entender" com 1 a 3 referências e link ao artigo do tema; (d) suicídio/autolesão conforme OMS 2023, sem método nem local, termina com CVV 188 · SAMU 192; (e) "pessoa com depressão", "pessoas com TEA", "morreu por suicídio" (nunca "cometeu").
+
+## Plugins e ferramentas de terceiros (regra de 10/11/2026, ordem do Dr. Antônio)
+- Nenhum plugin ou recomendação de setup é instalado ou configurado sem PR e aprovação do Dr.
+- PROIBIDO instalar: OmniRoute, Headroom, claude-mem e "observador de tarefas".
+- Recomendações de setup (ex.: plugin oficial claude-code-setup, somente leitura) são registradas em `.tmp\setup-<data>\RECOMENDACOES.md`, com auditoria de cada uma (adotar | não adotar | motivo), antes de qualquer PR.

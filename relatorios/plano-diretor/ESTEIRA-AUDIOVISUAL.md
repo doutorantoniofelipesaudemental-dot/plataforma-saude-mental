@@ -85,3 +85,18 @@ Regras da cascata (do v1.1):
 - fase futura, **minissérie animada**: temporada = tema, episódio = relato; nota de ficção na tela (início) e na descrição; aviso de IA (CFM 2.454/2026) sempre; animação NÃO realista; narração Kokoro; as regras de Relatos (CLAUDE.md, seção "Temas, Blog e Relatos") valem para o roteiro.
 
 Status: o fluxo (B) começa só depois do piloto de vídeo de hoje ser aprovado. Nada de produção agora.
+
+## Atualização 10/11/2026 (ordem unificada, itens B5–B9)
+
+- **B5 — teste Hyperframes (0.9.31, Apache-2.0):** piloto "insônia" em `.tmp\piloto-video-20261110\` (MP4 1920×1080, 30 fps, −14 LUFS, cartela final de 8 s com a assinatura de 5 linhas, aviso CFM 2.454/2026 e CVV 188 · SAMU 192). Relatório: `.tmp\piloto-video-20261110\RELATORIO.md`. Recomendação: ver o relatório. Remotion não foi instalado nesta rodada (a comparação de licença é só documental).
+- **B6 — skills de formato:** `.claude/skills/` (explicativo-portal, transtornos-clinico, frase-chave, relato-animado, nr1-empresas). Cada uma lê `docs/DESIGN.md` e embute as regras fixas. Testes em `tests/unit/skills-esteira.test.js`.
+- **B7 — exemplos por skill:** pendentes (ver `relatorios/PENDENTES.md`). Nenhum exemplo foi renderizado para lote em revisão.
+- **B8 — modelo de canal:** `relatorios/plano-diretor/CANAL-YOUTUBE.md`. 4 séries AGUARDANDO aprovação do Dr.
+- Regras que valem para toda a esteira: público adulto, narrador (nunca apresentador), sem voz nem rosto do Dr. nos vídeos novos, Kokoro local para vídeos novos (risco residual aceito em 10/11/2026), Edge-TTS só para narrações antigas, sem música por IA, sem anúncio de produto, sem gerador pago.
+
+## Atualização 11/11/2026 (ordem unificada, itens 2, 4 e 6)
+- **Ferramenta padrão recomendada: Hyperframes** (licença Apache-2.0). Remotion 4.0.542 também foi testado (5 MP4 em 10/11), mas a licença depende do porte da empresa (acima de 3 pessoas exige Company License) e o áudio saiu em −23,1 LUFS. Relatório: `.tmp\piloto-video-20261110\RELATORIO.md`.
+- **Piloto corrigido:** cena de texto com fonte legível; áudio em −14,0 LUFS; cartela com assinatura de 5 linhas, aviso CFM 2.454/2026 e CVV.
+- **B7 — exemplos (5, um por skill):** frases literais de artigos publicados fora dos lotes em revisão (`.tmp\skills-exemplos-20261110\`). Kokoro (pf_dora), −14 LUFS, legendas SRT, narração com tempos reais por cena. A skill `relato-animado` saiu como texto em movimento; a versão 2D ilustrada não foi feita.
+- **Limitação do banco:** nenhum artigo tem status de revisão preenchido (campo `revisao.status` vazio em todos os 688). A escolha dos exemplos usa "publicado" e exclui o lote de 24 relatos em revisão.
+- **C13 (propostas de tarefas) e C15 (pendências legais):** `.tmp\pos-quarta-20261111\`. Nenhuma tarefa criada; nenhum fato normativo afirmado sem fonte oficial.
