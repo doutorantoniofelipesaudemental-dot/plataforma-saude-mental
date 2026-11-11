@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const L = require('./lib');
 const { backupAntesDeSobrescrever } = require('../lib/backupPasta');
 const { aplicarPronuncia } = require('../../backend/lib/pronunciaTts');
+const { exigirCenasMinimas } = require('./cenasMinimas');
 const { checarImagemSemMarcaDagua } = require('../../backend/lib/checagensAprovacao');
 
 const arg = (k) => (process.argv.find((a) => a.startsWith(`--${k}=`)) || '').split('=').slice(1).join('=');
@@ -39,6 +40,7 @@ function ass(trechos, W = 1080, H = 1920) {
 }
 
 async function gerar({ a, id, tituloTela, linhas, extraDescricao = '', dirSaida = '' }) {
+  exigirCenasMinimas(1, 'Short'); // hoje um único quadro (ffmpeg -loop 1): bloqueado até o padrão com cenas
   const dir = dirSaida || path.join(L.MIDIA, a.slug, `short-${id}`); // dirSaida: rascunho de regeração (pasta original intocada)
   if (fs.existsSync(path.join(dir, 'meta.json')) && !refazer) return { slug: a.slug, id, pulou: 'já gerado' };
   // capa ANTES de apagar a pasta: se falhar, o que já existe fica intacto
