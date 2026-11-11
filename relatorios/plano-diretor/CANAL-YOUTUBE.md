@@ -1,6 +1,6 @@
 # Modelo de canal do YouTube — Portal de Saúde Mental Doutor Antônio Felipe Garabito
 
-Versão de 10/11/2026 (ordem unificada, item B8). Status: **proposta**. As 4 séries abaixo AGUARDAM aprovação do Dr. Antônio. Nada publicado.
+Versão de 10/11/2026 (ordem unificada, item B8). Status: **séries aprovadas em 11/11/2026 (ordem do Dr., 06:35)**. Nada publicado: publicação segue as regras de publicação e os freios.
 
 ## 1. Público e marcação
 - Público: **adulto**. Todos os vídeos são marcados "Não é conteúdo para crianças" (campo de público do YouTube Studio).
@@ -14,7 +14,7 @@ Versão de 10/11/2026 (ordem unificada, item B8). Status: **proposta**. As 4 sé
 - **Vídeos de compilação** (ver seção 4) reúnem cenas próprias do canal e não reaproveitam vídeo de terceiro.
 - Recusados pelo Dr.: anúncio de produto, "canal dark", música por IA, geradores pagos de imagem ou vídeo (Higgsfield e similares).
 
-## 3. Séries e playlists (4 propostas, AGUARDANDO aprovação)
+## 3. Séries e playlists (4 séries APROVADAS pelo Dr. Antônio em 11/11/2026, 06:35)
 
 | # | Série (playlist) | Tema editorial | Formato | Ponto de partida |
 |---|---|---|---|---|
@@ -79,7 +79,7 @@ Regras da descrição: sem link de mensageria, sem oferta de consulta, sem prome
 - Enquanto a monetização não é decidida, o canal segue sem monetização, sem alterar o formato.
 
 ## 9. Pendências (para o Dr.)
-- Aprovar ou ajustar as 4 séries (seção 3).
+- ~~Aprovar ou ajustar as 4 séries (seção 3)~~: APROVADAS em 11/11/2026.
 - Decidir o plano B (seção 8).
 - Confirmar a voz Kokoro para vídeos novos (ver `KOKORO-LICENCA-21102026.md`: origem das vozes pt-BR não documentada por voz; o Dr. aceitou o risco residual em 10/11/2026).
 - Escolher a série do primeiro vídeo.
