@@ -63,6 +63,14 @@ function transformarOferta(conteudo) {
   return { novo, contagem: c, restou: RESTOS.test(novo) };
 }
 
+// ---------- Textos aprovados (relatos OMS e item 358) ----------
+const hashTexto = (s) => crypto.createHash('sha256').update(String(s || ''), 'utf8').digest('hex');
+function carregarTextos() {
+  const arq = path.join(REVISAO_DIR, 'textos-revisao.json');
+  if (!fs.existsSync(arq)) return [];
+  const lista = JSON.parse(fs.readFileSync(arq, 'utf8')).itens || [];
+  return lista.filter((x) => x.status === 'aprovado');
+}
 function slugsDeOferta() {
   const itens = JSON.parse(fs.readFileSync(OFERTAS, 'utf8')).itens || [];
   return [...new Set(itens.map((x) => x.slug))];
@@ -104,7 +112,7 @@ async function main() {
   if (!flag('--aplicar') && !flag('--backup') && !flag('--conferir') && !flag('--reverter')) {
     const porTema = {};
     decisoes.forEach((d) => (porTema[d.para] = (porTema[d.para] || 0) + 1));
-    const base = { modo: 'DRY-RUN', nada_gravado: true, itens: decisoes.length, aprovados: aprovados.length, mudancasDeTema: decisoes.filter((d) => d.de !== d.para).length, porTemaFinal: porTema, relatosAlterados: 0, textos: { item358: 'aguarda aprovação do Dr.' } };
+    const base = { modo: 'DRY-RUN', nada_gravado: true, itens: decisoes.length, aprovados: aprovados.length, mudancasDeTema: decisoes.filter((d) => d.de !== d.para).length, porTemaFinal: porTema, relatosAlterados: 0 };
     const db = require('../../lib/db');
     if (!db.isConfigured()) {
       console.log(JSON.stringify({ ...base, ofertas: { artigos: slugsOferta.length, aviso: 'sem banco configurado: dry-run das ofertas não foi feito' } }, null, 2));
@@ -127,6 +135,11 @@ async function main() {
         if (t.restou) restam.push(slug);
         if (t.novo !== d.conteudo) comAlteracao += 1;
       }
+      const todos = JSON.parse(fs.readFileSync(path.join(REVISAO_DIR, 'textos-revisao.json'), 'utf8')).itens || [];
+      const docsTextos = await Artigo.find({ slug: { $in: todos.map((x) => x.slug) } }).select('slug conteudo').lean();
+      const hashDoBanco = new Map(docsTextos.map((x) => [x.slug, hashTexto(x.conteudo)]));
+      const antesConfere = todos.filter((x) => hashDoBanco.get(x.slug) === x.antesHash).length;
+      base.textos = { propostos: todos.length, aprovados: carregarTextos().length, antesConferemComBanco: antesConfere, naoConferem: todos.filter((x) => hashDoBanco.get(x.slug) !== x.antesHash).map((x) => x.slug) };
       console.log(JSON.stringify({ ...base, ofertas: { artigos: slugsOferta.length, encontrados: docs.length, naoEncontrados, comAlteracao, substituicoes: soma, restamPadroesProibidos: restam } }, null, 2));
     } finally {
       await db.mongoose.disconnect();
@@ -143,6 +156,8 @@ async function main() {
       const ofertas = await Artigo.find({ slug: { $in: slugsOferta } }).select('slug conteudo').lean();
       const pasta = path.join(RAIZ, 'backups', `revisao-20261110-${carimbo()}`);
       escreverJson(path.join(pasta, 'temas-antes.json'), temas.map((x) => ({ _id: String(x._id), slug: x.slug, tema: x.tema || '' })));
+      const textosDocs = await Artigo.find({ slug: { $in: carregarTextos().map((x) => x.slug) } }).select('slug titulo resumo conteudo').lean();
+      escreverJson(path.join(pasta, 'textos-antes.json'), textosDocs.map((x) => ({ _id: String(x._id), slug: x.slug, titulo: x.titulo || '', resumo: x.resumo || '', hash: hashTexto(x.conteudo), conteudo: x.conteudo })));
       escreverJson(path.join(pasta, 'ofertas-antes.json'), ofertas.map((x) => ({ _id: String(x._id), slug: x.slug, hash: hash(x.conteudo), conteudo: x.conteudo })));
       console.log(JSON.stringify({ backup: true, pasta, temas: temas.length, ofertas: ofertas.length, gravou: false }, null, 2));
       return;
@@ -175,12 +190,55 @@ async function main() {
         console.log(JSON.stringify({ revertido: 'ofertas', modificados: r.modifiedCount }, null, 2));
         return;
       }
+      if (etapa === 'reverter-textos') {
+        const antes = JSON.parse(fs.readFileSync(path.join(backupDirArg, 'textos-antes.json'), 'utf8'));
+        const ops = antes.map((x) => ({ updateOne: { filter: { _id: x._id }, update: { $set: { titulo: x.titulo, resumo: x.resumo, conteudo: x.conteudo } } } }));
+        const r = ops.length ? await Artigo.bulkWrite(ops) : { modifiedCount: 0 };
+        console.log(JSON.stringify({ revertido: 'textos', modificados: r.modifiedCount }, null, 2));
+        return;
+      }
       throw new Error('Reversão exige --aplicar --etapa reverter-temas ou reverter-ofertas.');
     }
 
     if (!flag('--aplicar')) throw new Error('Gravação exige --aplicar.');
-    if (ETAPAS_TEXTO.includes(etapa)) {
-      console.log(JSON.stringify({ etapa, itens: 0, gravou: false, aviso: 'Aguarda aprovação do Dr. (23 relatos e item 358). Nenhum item nesta rodada.' }, null, 2));
+    if (etapa === 'textos') {
+      const itens = carregarTextos();
+      const antes = JSON.parse(fs.readFileSync(path.join(backupDirArg, 'textos-antes.json'), 'utf8'));
+      const porSlug = new Map(antes.map((x) => [x.slug, x]));
+      const docs = await Artigo.find({ slug: { $in: itens.map((x) => x.slug) } }).select('slug titulo resumo conteudo').lean();
+      const porDoc = new Map(docs.map((x) => [x.slug, x]));
+      const recusados = [];
+      const ops = [];
+      for (const it of itens) {
+        const d = porDoc.get(it.slug);
+        const b = porSlug.get(it.slug);
+        if (!d || !b) { recusados.push(`${it.slug}: fora do backup`); continue; }
+        if (hashTexto(d.conteudo) !== b.hash) { recusados.push(`${it.slug}: conteúdo mudou desde o backup`); continue; }
+        if (hashTexto(d.conteudo) !== it.antesHash) { recusados.push(`${it.slug}: o "antes" não confere com o banco`); continue; }
+        const set = { conteudo: it.depois };
+        const tituloNovo = typeof it.titulo === 'string' ? it.titulo : it.titulo?.depois;
+        if (tituloNovo) set.titulo = tituloNovo;
+        if (it.resumo && it.resumo.depois) set.resumo = it.resumo.depois;
+        ops.push({ updateOne: { filter: { _id: d._id }, update: { $set: set } } });
+      }
+      if (recusados.length) throw new Error(`Não aplico: ${recusados.slice(0, 5).join('; ')}`);
+      const r = ops.length ? await Artigo.bulkWrite(ops) : { modifiedCount: 0 };
+      console.log(JSON.stringify({ etapa: 'textos', aprovados: itens.length, modificados: r.modifiedCount, gravou: true, aviso: 'A narração de cada texto alterado fica desatualizada (o player some) até a nova ser enviada. Selo: revisao:aprovar depois de conferir.' }, null, 2));
+      return;
+    }
+    if (etapa === 'audios') {
+      // Só local: copia os MP3 (com vinheta) para narracoes-geradas/revisao-20261110. Nada vai ao Blob e o banco não muda.
+      const itens = carregarTextos();
+      const destino = path.join(RAIZ, 'narracoes-geradas', 'revisao-20261110');
+      const faltam = [];
+      fs.mkdirSync(destino, { recursive: true });
+      for (const it of itens) {
+        const origem = path.join(REVISAO_DIR, 'audios', `${it.slug}.mp3`);
+        if (!fs.existsSync(origem)) { faltam.push(it.slug); continue; }
+        fs.copyFileSync(origem, path.join(destino, `${it.slug}.mp3`));
+      }
+      if (faltam.length) throw new Error(`Sem áudio para: ${faltam.join(', ')}`);
+      console.log(JSON.stringify({ etapa: 'audios', copiados: itens.length, destino, gravou: false, aviso: 'Local. Envio ao Blob e troca do narracao no banco ficam para o Dr.' }, null, 2));
       return;
     }
 
