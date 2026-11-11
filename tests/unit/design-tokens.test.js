@@ -44,9 +44,10 @@ test('contraste WCAG AA: corpo da arte sobre todos os fundos e texto do rodapé'
 test('contraste WCAG AA: pares de texto do site', () => {
   const c = TOKENS.site.cores;
   const pares = [['tinta', 'areia-50'], ['tinta', 'papel'], ['tinta-media', 'papel'], ['tinta-media', 'areia-100'], ['tinta-fraca', 'areia-50'], ['tinta-fraca', 'papel'], ['papel', 'verde-700'], ['papel', 'verde-900']];
-  // Achados abertos (REVISAO.md): tinta-fraca sobre areia-100 (4,41:1) e verde-100 (4,19:1) reprovam AA.
-  // Ficam registrados aqui para não sumirem; a correção no CSS depende de ordem do Dr. (public/ protegido).
-  assert.ok(contraste(c['tinta-fraca'], c['areia-100']) < 4.5 && contraste(c['tinta-fraca'], c['verde-100']) < 4.5, 'achado registrado');
+  // 11/11/2026 (ordem do Dr.): tinta-fraca corrigida; links da seção verde escura com verde-300 (≥ 4,5:1) e componentes ≥ 3:1.
+  assert.ok(contraste(c['tinta-fraca'], c['areia-100']) >= 4.5 && contraste(c['tinta-fraca'], c['verde-100']) >= 4.5, 'tinta-fraca reprova AA');
+  assert.ok(contraste(c['verde-300'], c['verde-900']) >= 4.5, 'link da seção verde escura reprova AA');
+  assert.ok(contraste(c['verde-500'], c['verde-900']) < 4.5, 'verde-500 não serve para link escuro (registro)');
   for (const [a, b] of pares) assert.ok(contraste(c[a], c[b]) >= 4.5, `${a} sobre ${b}: ${contraste(c[a], c[b]).toFixed(2)}`);
 });
 
@@ -62,4 +63,10 @@ test('DESIGN.md: seções obrigatórias e padrões proibidos listados', () => {
   const d = lerRaiz('docs/DESIGN.md');
   for (const titulo of ['## 1. Cores', '## 2. Tipografia', '## 3. Espaçamento', '## 4. Ícones', '## 5. Componentes', '## 6. Regras fixas', '## 7. Acessibilidade', '## 8. Padrões proibidos', '## 9. Bloco de tokens']) assert.ok(d.includes(titulo), titulo);
   for (const p of ['gradiente roxo', 'cérebro', 'fotos geradas por ia', 'promessa de cura', 'visual infantil']) assert.ok(d.toLowerCase().includes(p), p);
+});
+
+test('WCAG 2.2 AA (11/11/2026): regras de link e botão sobre a seção verde escura estão no CSS', () => {
+  const css = fs.readFileSync(path.join(__dirname, '..', '..', 'public', 'assets', 'css', 'style.css'), 'utf8');
+  assert.ok(css.includes('.secao--verde a:not(.botao)') && css.includes('color: var(--verde-300)'), 'regra do link verde ausente');
+  assert.ok(css.includes('.secao--verde a.botao:not([class*="botao--"]) { color: #fff'), 'regra do botão puro ausente');
 });

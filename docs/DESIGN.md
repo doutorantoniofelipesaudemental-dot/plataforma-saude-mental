@@ -18,7 +18,8 @@ O `public/` não foi alterado por este documento (regra do CLAUDE.md). Os tokens
 |---|---|---|
 | verde-900 | #0d3330 | fundo de destaque escuro |
 | verde-700 | #185d58 | títulos de seção, botões |
-| verde-600 | #1f7a72 | links, ícones |
+| verde-600 | #1f7a72 | ícones; links em fundo claro usam verde-700 |
+| verde-300 (em .secao--verde) | #8cc4b8 | links dentro de seção verde escura (6,98:1 sobre verde-900; verde-500 reprova com 3,86:1) |
 | verde-100 | #dbeee8 | caixas claras |
 | areia-50 | #faf7f2 | fundo da página |
 | areia-100 | #f4efe6 | faixas |
@@ -26,7 +27,7 @@ O `public/` não foi alterado por este documento (regra do CLAUDE.md). Os tokens
 | dourado | #c9a227 | filete e marca de destaque |
 | tinta | #17211f | texto principal |
 | tinta-media | #45564f | texto secundário |
-| tinta-fraca | #5f736c | legendas. 4,73:1 sobre areia-50 (AA). REPROVA AA sobre areia-100 (4,41:1) e verde-100 (4,19:1): ver REVISAO-WCAG (achado aberto, correção depende de ordem para public/) |
+| tinta-fraca | #5a6e66 | legendas. 5,10:1 sobre areia-50; 4,75:1 sobre areia-100; 4,51:1 sobre verde-100 (AA em todos). Corrigido de #5f736c em 11/11/2026 (ordem do Dr., acessibilidade) |
 | verde-800 / verde-500 / verde-300 / verde-50 | #114240 / #2b978d / #8cc4b8 / #eef7f4 | estados de hover, bordas, fundos claros |
 | areia-200 | #e9e0d2 | bordas e divisórias |
 | papel | #ffffff | cartões |
@@ -111,7 +112,7 @@ O `public/` não foi alterado por este documento (regra do CLAUDE.md). Os tokens
     "cores": {
       "verde-900": "#0d3330", "verde-800": "#114240", "verde-700": "#185d58", "verde-600": "#1f7a72", "verde-500": "#2b978d", "verde-300": "#8cc4b8", "verde-100": "#dbeee8", "verde-50": "#eef7f4", "areia-200": "#e9e0d2",
       "areia-100": "#f4efe6", "areia-50": "#faf7f2", "terracota": "#c0714f", "dourado": "#c9a227",
-      "tinta": "#17211f", "tinta-media": "#45564f", "tinta-fraca": "#5f736c", "papel": "#ffffff"
+      "tinta": "#17211f", "tinta-media": "#45564f", "tinta-fraca": "#5a6e66", "papel": "#ffffff"
     },
     "fontes": { "titulo": "Fraunces", "texto": "Inter" },
     "raio": 14, "raioGrande": 24, "larguraMax": 1140, "alvoMinimoPx": 44
