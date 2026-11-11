@@ -113,7 +113,9 @@ function aplicar() {
 
 function conferir() {
   let falhas = 0;
-  for (const d of fs.readdirSync(FILA).filter((x) => RE_PECA.test(x)).sort()) {
+  // Inclui 18/11 (a peça redes-sociais-criancas foi remarcada para essa data e não podia ficar de fora).
+  const RE_CONFERIR = /^2026-11-(1[1-8])-/;
+  for (const d of fs.readdirSync(FILA).filter((x) => RE_CONFERIR.test(x)).sort()) {
     const m = JSON.parse(fs.readFileSync(path.join(FILA, d, 'meta.json'), 'utf8'));
     const data = m.dataSugerida.slice(0, 10);
     const erros = [];
