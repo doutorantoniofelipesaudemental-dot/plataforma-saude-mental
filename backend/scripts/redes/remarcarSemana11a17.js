@@ -53,6 +53,14 @@ function planejar() {
   const erros = [];
   const pecas = pecasOrigem();
   if (pecas.length !== 5) erros.push(`esperadas 5 peças na origem, achei ${pecas.length}`);
+  // Exige o relatório da rechecagem (rechecagem11a17.js --relatorio=...) com as 5 peças aprovadas.
+  const rec = process.env.REDES_RECHECAGEM;
+  if (!rec || !fs.existsSync(rec)) erros.push('falta REDES_RECHECAGEM (relatório da rechecagem)');
+  else {
+    const r = JSON.parse(fs.readFileSync(rec, 'utf8'));
+    const naoOk = (r.itens || []).filter((x) => !x.ok);
+    if (r.pecas !== 5 || naoOk.length) erros.push(`rechecagem não passou: ${naoOk.map((x) => x.id).join(', ') || 'peças fora de 5'}`);
+  }
   for (const p of pecas) {
     if (!p.data) erros.push(`${p.slug}: sem data no PLANO`);
     else if (p.data < '2026-11-11') erros.push(`${p.slug}: data passada`);
