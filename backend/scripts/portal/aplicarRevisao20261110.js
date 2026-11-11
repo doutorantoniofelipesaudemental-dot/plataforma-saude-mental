@@ -102,7 +102,15 @@ async function main() {
   const slugsOferta = slugsDeOferta();
 
   if (!flag('--aplicar') && !flag('--backup') && !flag('--conferir') && !flag('--reverter')) {
-    const db = await abrirBanco();
+    const porTema = {};
+    decisoes.forEach((d) => (porTema[d.para] = (porTema[d.para] || 0) + 1));
+    const base = { modo: 'DRY-RUN', nada_gravado: true, itens: decisoes.length, aprovados: aprovados.length, mudancasDeTema: decisoes.filter((d) => d.de !== d.para).length, porTemaFinal: porTema, relatosAlterados: 0, textos: { item358: 'aguarda aprovação do Dr.' } };
+    const db = require('../../lib/db');
+    if (!db.isConfigured()) {
+      console.log(JSON.stringify({ ...base, ofertas: { artigos: slugsOferta.length, aviso: 'sem banco configurado: dry-run das ofertas não foi feito' } }, null, 2));
+      return;
+    }
+    await db.connect();
     try {
       const Artigo = require('../../models/Artigo');
       const docs = await Artigo.find({ slug: { $in: slugsOferta } }).select('slug publicado conteudo').lean();
@@ -119,14 +127,7 @@ async function main() {
         if (t.restou) restam.push(slug);
         if (t.novo !== d.conteudo) comAlteracao += 1;
       }
-      const porTema = {};
-      decisoes.forEach((d) => (porTema[d.para] = (porTema[d.para] || 0) + 1));
-      console.log(JSON.stringify({
-        modo: 'DRY-RUN', nada_gravado: true,
-        temas: { itens: decisoes.length, aprovados: aprovados.length, mudancasDeTema: decisoes.filter((d) => d.de !== d.para).length, porTemaFinal: porTema },
-        ofertas: { artigos: slugsOferta.length, encontrados: docs.length, naoEncontrados, comAlteracao, substituicoes: soma, restamPadroesProibidos: restam },
-        textos: { relatosAlterados: 0, item358: 'aguarda aprovação do Dr.' },
-      }, null, 2));
+      console.log(JSON.stringify({ ...base, ofertas: { artigos: slugsOferta.length, encontrados: docs.length, naoEncontrados, comAlteracao, substituicoes: soma, restamPadroesProibidos: restam } }, null, 2));
     } finally {
       await db.mongoose.disconnect();
     }
