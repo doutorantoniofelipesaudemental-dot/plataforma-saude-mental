@@ -104,7 +104,7 @@
 
   --tinta: #17211f;
   --tinta-media: #45564f;
-  --tinta-fraca: #5f736c; /* escurecido de #6e817a (3,87:1) para 4,73:1 sobre areia: WCAG AA */
+  --tinta-fraca: #5a6e66; /* 11/11/2026: escurecido de #5f736c (4,41:1 sobre areia-100) para 4,75:1 sobre areia-100, 4,51:1 sobre verde-100, 5,10:1 sobre areia-50: WCAG AA */
 
   --papel: #ffffff;
   --linha: rgba(13, 51, 48, 0.12);
@@ -173,6 +173,11 @@ p:last-child { margin-bottom: 0; }
 
 a { color: var(--verde-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--verde-500); }
+/* 11/11/2026 (WCAG 2.2 AA): links dentro da seção verde escura. verde-700 dava 1,79:1. Botões ficam com a própria cor. */
+.secao--verde a:not(.botao) { color: var(--verde-300); }
+.secao--verde a:not(.botao):hover { color: #fff; }
+/* botão sem modificador dentro da seção verde escura: sem cor própria, herdava verde-700 (1,79:1). */
+.secao--verde a.botao:not([class*="botao--"]) { color: #fff; border-color: rgba(255, 255, 255, 0.7); }
 
 :focus-visible {
   outline: 3px solid var(--verde-500);

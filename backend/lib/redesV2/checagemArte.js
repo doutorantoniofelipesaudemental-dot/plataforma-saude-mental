@@ -12,12 +12,14 @@
  */
 const crypto = require('node:crypto');
 
-const TITULO_MIN_PX = 64;
-const CORPO_MIN_PX = 40;
-const PALAVRAS_MAX = 25;
-const CONTRASTE_MIN = 4.5;
-const FUNDO_LUM_MIN = 0.4;
-const ROTULOS = ['Sinal de alerta', 'Dado', 'Passo', 'Para refletir']; // "Para refletir": relatos (ordem de 08/11, pendência 4)
+// Limites vêm de docs/tokens.json (fonte: docs/DESIGN.md, seção 9). Valores iguais aos anteriores.
+const { TOKENS } = require('./tokens');
+const TITULO_MIN_PX = TOKENS.arte.tamanhos.tituloMinPx;
+const CORPO_MIN_PX = TOKENS.arte.tamanhos.corpoMinPx;
+const PALAVRAS_MAX = TOKENS.arte.palavrasMax;
+const CONTRASTE_MIN = TOKENS.arte.contrasteMin;
+const FUNDO_LUM_MIN = TOKENS.arte.fundoLuminanciaMin;
+const ROTULOS = TOKENS.arte.rotulos; // "Para refletir": relatos (ordem de 08/11, pendência 4)
 const AVISO_APROVADO = 'aprovado pelo Dr. Antônio Felipe (CFM 2.454/2026)';
 
 function luminancia(hex) {
