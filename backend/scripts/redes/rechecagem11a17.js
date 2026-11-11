@@ -5,6 +5,7 @@
  * (mesmo plano, mesmas correções de forma), compara legenda e telas com as da pasta (hash), e roda checarPost
  * (técnica, arte, 5 linhas, CVV), zero genérico, checarEticaCfm (contexto social) e a regra do link (na bio).
  *
+ *   REDES_HISTORICO=<pasta da fila para o histórico de similaridade> (padrão: a própria REDES_FILA)
  *   REDES_FILA=<pasta da fila> node --env-file-if-exists=.env backend/scripts/redes/rechecagem11a17.js [--relatorio=<arquivo.json>]
  */
 const fs = require('node:fs');
@@ -90,7 +91,7 @@ async function gerarComoNaFila(doc, tipo, ov) {
       if (novas.length !== hashesAtuais.length || novas.some((h, i) => h !== hashesAtuais[i])) erros.push('arte refeita não coincide com as telas da pasta (hash)');
       if (meta.checagem?.hashes?.length && hashesAtuais.some((h, i) => h !== meta.checagem.hashes[i])) erros.push('telas da pasta diferentes das registradas na checagem');
       for (const f of r.chk.falhas) erros.push(`${f.grupo}: ${f.msg}`);
-      const zg = avaliarZeroGenerico({ doc, legenda: r.legenda, ov, dataISO: meta.dataSugerida.slice(0, 10), historico: historicoDe(FILA, { excluirId: id }), urlTexto: linkEsperado });
+      const zg = avaliarZeroGenerico({ doc, legenda: r.legenda, ov, dataISO: meta.dataSugerida.slice(0, 10), historico: historicoDe(process.env.REDES_HISTORICO || FILA, { excluirId: id }), urlTexto: linkEsperado });
       for (const f of zg.falhas) erros.push(`zero-genérico ${f.regra}: ${f.msg}`);
       const etica = checarEticaCfm(legenda, { contexto: 'social' });
       if (!etica.ok) erros.push(`ética CFM legenda: ${etica.falhas.join(' | ')}`);
