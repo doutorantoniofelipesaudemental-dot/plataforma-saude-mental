@@ -173,6 +173,7 @@ async function enviar(gerado) {
       'X-Narracao-Provedor': gerado.provedor,
       'X-Narracao-Voz': VOZ_NARRACAO,
       'X-Narracao-Vinheta': fs.existsSync(path.join(PASTA_SAIDA, `${gerado.slug}.vinheta`)) ? '1' : '0',
+      'X-Narracao-Duracao': String(require('../lib/duracaoAudio').medirDuracaoMp3(gerado.arquivoMp3) || 0),
     },
     body: fs.readFileSync(gerado.arquivoMp3),
   });
