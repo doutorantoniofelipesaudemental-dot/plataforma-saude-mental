@@ -13,8 +13,11 @@ const fs = require('node:fs');
 const { checarArte } = require('./checagemArte');
 const { IDENTIFICACAO_COMPLETA } = require('../conformidadeCfm');
 
-const PALETA = ['#F7F1E3', '#ECEEF0', '#DDEFD9', '#CFF1E4', '#FBE0CF'];
-const CORPO_COR = '#1B1B1B';
+// Cores e medidas vêm de docs/tokens.json (fonte: docs/DESIGN.md, seção 9). Valores iguais aos anteriores.
+const { TOKENS } = require('./tokens');
+const A = TOKENS.arte;
+const PALETA = A.fundos;
+const CORPO_COR = A.corpo;
 // Aviso aprovado pelo Dr. Antônio (ordem de 08/11/2026, 00:50). "revisado" só com selo (ver checagemArte.avisoValido).
 const AVISO_CURTO = 'Conteúdo educativo com apoio de IA, aprovado pelo Dr. Antônio Felipe (CFM 2.454/2026).';
 const RODAPE_3 = ['Dr. Antônio Felipe · Médico · CRM-BA 41322', 'Especialista em Medicina de Família e Comunidade · RQE 26638', 'Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)'];
@@ -72,13 +75,13 @@ body{font-family:"RalewayPC",sans-serif;color:${CORPO_COR}}
 .wrap{position:absolute;left:90px;right:90px;top:170px;bottom:${rh + 40}px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
 .kicker{font-family:"OswaldPC";font-weight:500;font-size:38px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px}
 #t{font-family:"OswaldPC";font-weight:700;text-transform:uppercase;line-height:${l.lhTitulo || 1.22};font-size:104px;margin-bottom:44px}
-mark{background:linear-gradient(transparent 12%,#FFE46B 12%,#FFE46B 92%,transparent 92%);color:inherit;padding:0 6px}
+mark{background:linear-gradient(transparent 12%,${A.marcaTexto} 12%,${A.marcaTexto} 92%,transparent 92%);color:inherit;padding:0 6px}
 .rotulo{font-family:"OswaldPC";font-weight:600;font-size:36px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
 .corpo{font-size:48px;line-height:1.35;font-weight:600}
 .cvv{font-family:"OswaldPC";font-weight:700;font-size:70px;text-transform:uppercase;margin-bottom:28px}
 .aviso{font-size:42px;line-height:1.3;font-weight:500}
 .icone{position:absolute;right:80px;top:56px;width:170px;height:170px;object-fit:contain}
-.rodape{position:absolute;left:0;right:0;bottom:0;height:${rh}px;background:#1B1B1B;color:#FFFFFF;padding:24px 80px;display:flex;flex-direction:column;justify-content:center;border-top:8px solid #C9A227}
+.rodape{position:absolute;left:0;right:0;bottom:0;height:${rh}px;background:${A.rodape};color:${A.rodapeTexto};padding:24px 80px;display:flex;flex-direction:column;justify-content:center;border-top:8px solid ${A.rodapeFilete}}
 .rodape p{font-size:${rf}px;line-height:1.3;font-weight:500}
 .rodape p:first-child{font-family:"OswaldPC";font-size:${rf + 6}px;font-weight:600}
 </style></head><body><section class="slide"><img class="icone" src="${icone}" alt="">
