@@ -46,13 +46,35 @@ test('cada tema tem um ícone CC0 próprio, existente e sem repetição', () => 
 });
 
 test('dado-chave só com marcador de referência que aponta para entrada identificável', () => {
+  const conteudo = '<p>Uma meta-análise estimou depressão em cerca de 20% dos migrantes por trabalho, e mais entre refugiados<sup>2</sup>.</p>' +
+    '<h2>Referências</h2><ol><li>Polanczyk GV, Salum GA, 2015. Título A.</li>' +
+    '<li>Lindert J, 2009. Título B.</li></ol>';
+  const v = cap.dadoChave(base({ conteudo, slug: 'estresse-migratorio-adaptacao-cultural' }));
+  assert.ok(v, 'deveria haver dado-chave');
+  assert.equal(v.numero, '20%');
+  assert.equal(v.fonte, 'Lindert, 2009');
+});
+
+test('dado-chave exige artigo VERIFICADO na fonte: sem slug na lista, usa frase-chave', () => {
   const conteudo = '<p>Um estudo mostrou que cerca de 13% das crianças têm transtorno mental<sup>2</sup>.</p>' +
     '<h2>Referências</h2><ol><li>Polanczyk GV, Salum GA, 2015. Título A.</li>' +
     '<li>Kessler RC, 2005. Título B.</li></ol>';
-  const v = cap.dadoChave(base({ conteudo }));
-  assert.ok(v, 'deveria haver dado-chave');
-  assert.equal(v.numero, '13%');
-  assert.equal(v.fonte, 'Kessler, 2005');
+  assert.equal(cap.dadoChave(base({ conteudo })), null);
+  assert.equal(cap.dadoChave(base({ conteudo, slug: 'artigo-nao-verificado' })), null);
+});
+
+test('dado verificado com fonte ou frase diferente do texto atual não vira dado-chave', () => {
+  // Texto ainda com a referência errada (Cox, 1987): só entra depois da correção aprovada em staging.
+  const conteudo = '<p>No Brasil, um estudo de validação em Pelotas avaliou vários pontos de corte: acima de 13 pontos, a especificidade foi de 88% e a sensibilidade de 60%<sup>2</sup>.</p>' +
+    '<h2>Referências</h2><ol><li>Cox JL, Holden JM, 1987. Título.</li></ol>';
+  assert.equal(cap.dadoChave(base({ conteudo, slug: 'saude-mental-perinatal-consulta' })), null);
+});
+
+test('frase verificada que o texto atual não reproduz exatamente fica de fora', () => {
+  // Mata 2015: o texto atual ainda tem a cláusula sem fonte; a lista só aceita a frase corrigida.
+  const conteudo = '<p>Uma meta-análise estimou que cerca de 29% dos médicos residentes apresentam depressão ou sintomas depressivos, e entre estudantes de medicina a proporção é parecida<sup>2</sup>.</p>' +
+    '<h2>Referências</h2><ol><li>Mata DA, Ramos MA, 2015. Título.</li></ol>';
+  assert.equal(cap.dadoChave(base({ conteudo, slug: 'saude-mental-residencia' })), null);
 });
 
 test('sem marcador <sup>, não há dado-chave mesmo com número e referências', () => {

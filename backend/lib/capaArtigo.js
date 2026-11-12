@@ -71,6 +71,17 @@ function autorAno(entrada) {
   return autor && anos.length ? `${autor}, ${anos[anos.length - 1]}` : null;
 }
 
+/** Lista versionada de dados conferidos na fonte (PubMed). Sem entrada igual, não há dado-chave. */
+const VERIFICADOS = require('./dadosChaveVerificados.json').verificados;
+const normaliza = (t) => String(t || '').replace(/\s+/g, ' ').trim();
+
+/** True só se slug, número, fonte e frase baterem exatamente com uma entrada verificada. */
+function verificado(slug, dado) {
+  if (!slug || !dado) return false;
+  return VERIFICADOS.some((v) => v.slug === slug && v.numero === dado.numero
+    && v.fonte === dado.fonte && normaliza(v.frase) === normaliza(dado.frase));
+}
+
 /**
  * Dado-chave: frase com número cujo marcador <sup>n</sup> do próprio artigo aponta para a entrada n da seção
  * "Referências" (autor e ano). Sem marcador, ou sem entrada identificável, não há dado-chave (retorna null).
@@ -89,7 +100,8 @@ function dadoChave(artigo) {
     const fonte = entradas[idx - 1] ? autorAno(entradas[idx - 1]) : null;
     if (!fonte) continue;
     const limpa = f.replace(MARCADOR, '').replace(/\s+([.,;:])/g, '$1').replace(/\s+/g, ' ').trim();
-    return { numero: n[0].trim(), frase: limpa, fonte };
+    const dado = { numero: n[0].trim(), frase: limpa, fonte };
+    if (verificado(artigo.slug, dado)) return dado;
   }
   return null;
 }
