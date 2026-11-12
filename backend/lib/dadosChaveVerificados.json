@@ -59,6 +59,40 @@
       "medida": "prevalência agrupada de depressão ou sintomas depressivos (28,8%)",
       "aplicadoNoTexto": false,
       "pendente": "Texto atual tem a cláusula 'estudantes de medicina' sem fonte. Correção em staging."
+    },
+    {
+      "slug": "risco-suicidio-aps",
+      "numero": "45%",
+      "fonte": "Luoma, 2002",
+      "frase": "Uma revisão mostrou que cerca de 45% das pessoas que morreram por suicídio tinham consultado um profissional da atenção primária no mês anterior.",
+      "pmid": "12042175",
+      "doi": "10.1176/appi.ajp.159.6.909",
+      "populacao": "pessoas que morreram por suicídio (revisão de 40 estudos)",
+      "medida": "proporção com contato com atenção primária em até 1 mês antes da morte (média 45%)",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "tmc-aps",
+      "numero": "83%",
+      "fonte": "Mari, 1986",
+      "frase": "\" Rastreamento com instrumento validado: o SRQ-20, validado em unidades de atenção primária de São Paulo, mostrou sensibilidade de 83% e especificidade de 80% para identificar sofrimento psíquico.",
+      "pmid": "3955316",
+      "doi": "10.1192/bjp.148.1.23",
+      "populacao": "pacientes de três unidades de atenção primária de São Paulo (875 aplicados; 260 entrevistados)",
+      "medida": "sensibilidade 83% e especificidade 80% do SRQ-20",
+      "aplicadoNoTexto": true,
+      "obs": "Frase do texto atual começa com aspas soltas: correção de texto pendente de OK do Dr."
+    },
+    {
+      "slug": "sinais-alerta-comportamentais-jovens",
+      "numero": "13%",
+      "fonte": "Polanczyk, 2015",
+      "frase": "Uma meta-análise mundial estimou que cerca de 13% das crianças e adolescentes têm algum transtorno mental.",
+      "pmid": "25649325",
+      "doi": "10.1111/jcpp.12381",
+      "populacao": "crianças e adolescentes (41 estudos, 27 países)",
+      "medida": "prevalência agrupada de transtorno mental (13,4%)",
+      "aplicadoNoTexto": true
     }
   ],
   "fora_da_lista": {
