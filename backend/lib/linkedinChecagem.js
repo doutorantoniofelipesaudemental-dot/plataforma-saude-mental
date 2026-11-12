@@ -33,14 +33,21 @@ function checarPost(it) {
     if (!/US\$\s?\d/.test(t)) f.push('valor em dólar sem "US$" e número');
     if (!/[A-ZÀ-Ú][\p{L}'-]+(?: et al\.?)?[,(]? ?(?:19|20)\d{2}/u.test(t)) f.push('valor monetário sem autor e ano do estudo');
   }
-  // D2 (ordem de 11/11/2026): NR-1 "passou a vigorar em 26 de maio de 2026"; "fiscalização" não entra como fato da norma.
+  // D2 (ordem de 11/11/2026, ajuste 23:25): reprova "fiscalização" como marco de início da NR-1 e qualquer data de início
+  // diferente de 26/05/2026. Não exige a frase quando o post não fala de data.
   if (/NR-?1\b/.test(t)) {
-    if (!/passou a vigorar em 26 de maio de 2026/.test(t)) f.push('NR-1 sem a frase "passou a vigorar em 26 de maio de 2026"');
-    if (/fiscaliza[çc][ãa]o/i.test(t)) f.push('NR-1 com "fiscalização" (usar "passou a vigorar em 26 de maio de 2026")');
+    if (/fiscaliza[çc][ãa]o/i.test(t)) f.push('NR-1 com "fiscalização" como marco de início (usar 26 de maio de 2026)');
+    const datas = [...t.matchAll(/(?:vigor\w*|come[çc]\w*|entr\w*|in[ií]cio|passou a valer)[^.\n]{0,40}?(\d{1,2}\s+de\s+[a-zç]+\s+de\s+\d{4}|\d{1,2}\/\d{1,2}\/\d{4})/gi)].map((m) => m[1].replace(/\s+/g, ' ').toLowerCase());
+    if (datas.some((d) => !/^26 de maio de 2026$|^26\/05\/2026$/.test(d))) f.push('NR-1 com data de início diferente de 26/05/2026');
   }
-  // D3 (ordem de 11/11/2026): isolamento e morte, com a frase de Holt-Lunstad (2015) e as três formas de exposição.
-  if (/isolamento|solid[ãa]o|morar sozinho/i.test(t) && /\bmorte\b/i.test(t) && !/aumento de 26% a 32% na probabilidade de morte, conforme o tipo: solid[ãa]o, isolamento social ou morar sozinho/i.test(t)) {
-    f.push('isolamento e morte sem a frase D3 (Holt-Lunstad 2015: 26% a 32%, conforme o tipo)');
+  // D3 (ordem de 11/11/2026, ajuste 23:25): reprova número de risco de morte por isolamento diferente de 26%–32% (Holt-Lunstad 2015),
+  // ou número sem a distinção de tipos. Não exige a frase quando não há número.
+  if (/isolamento|solid[ãa]o|morar sozinho/i.test(t) && /\bmorte\b/i.test(t)) {
+    const nums = [...t.matchAll(/(\d{1,3})\s?%[^.\n]{0,60}?\bmorte\b|\bmorte\b[^.\n]{0,60}?(\d{1,3})\s?%/gi)].map((m) => +(m[1] || m[2]));
+    if (nums.some((n) => n < 26 || n > 32)) f.push('risco de morte por isolamento fora de 26% a 32% (Holt-Lunstad 2015)');
+    if (nums.length && !/solid[ãa]o/i.test(t) || nums.length && !/isolamento social/i.test(t) || nums.length && !/morar sozinho/i.test(t)) {
+      f.push('número de risco de morte sem a distinção solidão, isolamento social ou morar sozinho');
+    }
   }
   const OFICIAL = /^https?:\/\/(www\.drantoniofelipemedico\.com\.br|instagram\.com\/doutor\.antoniofelipe\.smental)/;
   for (const u of t.match(/https?:\/\/[^\s)]+/g) || []) if (!OFICIAL.test(u)) f.push(`link fora do domínio oficial: ${u.slice(0, 60)}`);

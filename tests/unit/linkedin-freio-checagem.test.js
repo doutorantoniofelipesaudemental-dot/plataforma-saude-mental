@@ -29,16 +29,20 @@ test('D1: "dólar" não é proibido; valor monetário exige US$ com número e au
   assert.equal(falhasDolar('Estudo de 2016 estimou US$ 4 de retorno. Referência: X 2016.').some((f) => /autor e ano/.test(f)), true, 'sem autor, reprova');
 });
 
-test('D2: NR-1 exige "passou a vigorar em 26 de maio de 2026" e não aceita "fiscalização"', () => {
-  const t = (frase) => `${frase} Referência: X 2026.`;
-  assert.equal(checarPost({ tipo: 'social', texto: t('A NR-1 passou a vigorar em 26 de maio de 2026.') }).some((f) => /NR-1/.test(f)), false);
-  assert.equal(checarPost({ tipo: 'social', texto: t('A NR-1 entrou em fiscalização.') }).some((f) => /NR-1/.test(f)), true);
+test('D2: NR-1 reprova "fiscalização" como início e data de início diferente de 26/05/2026; sem data, não exige a frase', () => {
+  const nr1 = (frase) => checarPost({ tipo: 'social', texto: `${frase} Referência: X 2026.` }).filter((f) => /NR-1/.test(f));
+  assert.equal(nr1('A NR-1 passou a vigorar em 26 de maio de 2026.').length, 0);
+  assert.equal(nr1('A NR-1 trata dos riscos psicossociais no trabalho.').length, 0, 'post sem data não exige a frase');
+  assert.equal(nr1('A NR-1 entrou em fiscalização em 2026.').length > 0, true, 'fiscalização como início reprova');
+  assert.equal(nr1('A NR-1 passou a vigorar em 1 de julho de 2026.').length > 0, true, 'data diferente reprova');
 });
 
-test('D3: isolamento e morte exige a frase Holt-Lunstad (26% a 32%, conforme o tipo)', () => {
-  const frase = 'aumento de 26% a 32% na probabilidade de morte, conforme o tipo: solidão, isolamento social ou morar sozinho';
-  assert.equal(checarPost({ tipo: 'social', texto: `Isolamento social se associa a ${frase}. Referência: X 2015.` }).some((f) => /D3/.test(f)), false);
-  assert.equal(checarPost({ tipo: 'social', texto: 'Isolamento social aumenta o risco de morte em 50%. Referência: X 2015.' }).some((f) => /D3/.test(f)), true);
+test('D3: isolamento e morte reprovam número fora de 26%–32% ou sem os três tipos; sem número, não exige a frase', () => {
+  const d3 = (texto) => checarPost({ tipo: 'social', texto: `${texto} Referência: X 2015.` }).filter((f) => /isolamento|morte/.test(f));
+  assert.equal(d3('Isolamento e morte: o risco aumenta. Solidão, isolamento social ou morar sozinho são fatores.').length, 0, 'sem número não exige a frase');
+  assert.equal(d3('Solidão, isolamento social ou morar sozinho se associam a aumento de 26% a 32% na probabilidade de morte.').length, 0);
+  assert.equal(d3('Isolamento social aumenta em 50% o risco de morte.').length > 0, true, 'número fora da faixa reprova');
+  assert.equal(d3('Solidão aumenta em 30% o risco de morte.').length > 0, true, 'número sem os três tipos reprova');
 });
 
 test('selo da capa usa o nome do tema, não a categoria antiga', () => {
