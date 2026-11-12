@@ -65,7 +65,12 @@ const TEMAS_SELO = [
 ];
 
 function textoDoSelo(artigo) {
-  if (artigo.categoria && artigo.categoria !== 'Geral') return artigo.categoria;
+  // Selo = nome dos 7 temas (ordem de 11/11/2026): categorias antigas ("Médicos & Enfermeiros", "Residentes & Estudantes") não aparecem mais.
+  if (artigo.categoria && artigo.categoria !== 'Geral') {
+    const { temaEfetivo, temaPorSlug } = require('./temas');
+    const temaDoArtigo = temaPorSlug(temaEfetivo(artigo));
+    return temaDoArtigo ? temaDoArtigo.nome : artigo.categoria;
+  }
   const tema = TEMAS_SELO.find(([re]) => re.test(artigo.titulo || ''));
   return tema ? tema[1] : '';
 }

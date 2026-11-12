@@ -108,6 +108,10 @@ async function main() {
   const estado = lerEstado();
   if (estado.pausado) return console.log('pausado (npm run linkedin:pausar). Nada feito.');
   if (jaRodouHoje(estado, hoje)) return console.log(`já rodou hoje (${estado.status}). Nada feito.`);
+  if (!simular && !require('../../backend/lib/freioRedes').linkedinAtivo()) {
+    console.log('freio LINKEDIN_PUBLICACAO_ATIVA desligado (ausente ou diferente de "true"). Nada agendado.');
+    return gravarEstado({ ultimoDia: hoje, status: 'freio', motivo: 'LINKEDIN_PUBLICACAO_ATIVA desligado', agendados: 0 });
+  }
 
   // 1) pré-checagem: auditoria + tripla do lote (só escreve o lote; não agenda nada)
   const env = { ...process.env, LOTE_SIMULACAO: simular ? '1' : '' };
