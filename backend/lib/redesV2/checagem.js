@@ -14,6 +14,26 @@ const { ASSINATURA } = require('./arte');
 
 const RE_INGLES = /\b(the|and|with|your|feedback|online|home office|stress|follow|link in bio|swipe)\b/i; // "burnout" é a única exceção aprovada
 const RE_MENSAGERIA = /wa\.me|whatsapp|t\.me\/|telegram/i;
+// Conector que abre fragmento sem antecedente no próprio quadro (ordem de 11/11/2026).
+const RE_CONECTOR_SOLTO = /^(Nesses casos|Nessas situações|Nesse caso|Nessa situação|Isso|Isso significa|Por isso|Assim|Dessa forma|Num |Nesse |Nessa |Esse |Essa |Ele |Ela |Eles |Elas |Também |Então )/i;
+
+/** Regras de texto por quadro (ordem de 11/11/2026): frase cortada, conector solto, parêntese aberto, "Dr." solto, título sem texto. */
+function falhasDeTexto(telas) {
+  const out = [];
+  for (const [i, t] of telas.entries()) {
+    const txt = String(t.texto || '').trim();
+    const tit = String(t.titulo || '').trim();
+    const n = i + 1;
+    if (txt && !/[.!?…"”')]$/.test(txt)) out.push(`quadro ${n}: frase sem pontuação final ("…${txt.slice(-30)}")`);
+    if (RE_CONECTOR_SOLTO.test(txt)) out.push(`quadro ${n}: fragmento iniciado por conector sem antecedente ("${txt.slice(0, 30)}…")`);
+    const abre = (txt.match(/\(/g) || []).length;
+    const fecha = (txt.match(/\)/g) || []).length;
+    if (abre !== fecha) out.push(`quadro ${n}: parêntese aberto ou fechado a mais`);
+    if (/\bDr\.?$/.test(txt) || /\bDr\.?$/.test(tit)) out.push(`quadro ${n}: termina em "Dr." solto`);
+    if (t.tipo !== 'capa' && tit && !txt) out.push(`quadro ${n}: título sem texto`);
+  }
+  return out;
+}
 const RE_PRECO_DEPOIMENTO = /\b(R\$\s?\d|reais|valor da consulta|pre[çc]o|promo[çc][ãa]o|depoimento de paciente|antes e depois)\b/i;
 
 async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }) {
@@ -41,6 +61,7 @@ async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }
   const primeira = legenda.split('\n')[0];
   if (!primeira || primeira.length > 140) f('técnica', 'primeira linha da legenda sem gancho claro (vazia ou > 140 caracteres)');
   if (!telas[0] || !telas[0].texto) f('técnica', 'primeira tela sem gancho');
+  for (const msg of falhasDeTexto(telas)) f('texto', msg);
 
   /* ética (Res. CFM 2.336/2023 e 2.454/2026) */
   for (const x of checarEticaCfm(legenda, { contexto: 'social' }).falhas) f('ética', x);
@@ -76,4 +97,4 @@ function falhasDeArte(medidas) {
   return checarArte(medidas).falhas.map((x) => ({ grupo: 'arte', msg: x.msg }));
 }
 
-module.exports = { checarPost, falhasDeArte };
+module.exports = { checarPost, falhasDeArte, falhasDeTexto };

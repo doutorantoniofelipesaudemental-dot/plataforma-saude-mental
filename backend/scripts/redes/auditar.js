@@ -30,7 +30,6 @@ function corrigirPlano(plano, falhas, tentativa) {
     t.texto = encurtar(t.texto, Math.max(6, (tentativa === 1 ? 24 : 18) - palavras(t.titulo || '').length)).replace(/([^.!?…])$/, '$1.');
   }
   if (msgs.some((m) => /legenda com \d+ caracteres|hashtags/.test(m)) || tentativa === 2) {
-    p.refs = [];
     p.legendaCorpo = p.legendaCorpo.split('\n').slice(0, tentativa === 2 ? 1 : 5).join('\n');
   }
   if (msgs.some((m) => /hashtags/.test(m))) p.hashtags = [...new Set([...p.hashtags, '#saudemental', '#cuidado', '#bemestar'])].slice(0, 4);
