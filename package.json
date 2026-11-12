@@ -12,6 +12,7 @@
     "seed:reset": "node --env-file-if-exists=.env backend/seed.js --reset",
     "carrosseis": "node --env-file-if-exists=.env backend/tools/gerar-carrosseis.js",
     "publicar-redes": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/publicar-redes.js",
+    "redes:envio-seguro": "node --env-file-if-exists=.env backend/scripts/redes/enviarFilaSeguro.js",
     "renovar-token-instagram": "node --env-file-if-exists=.env --env-file-if-exists=.env.local backend/tools/renovar-token-instagram.js",
     "test:e2e": "playwright test",
     "prepare": "husky || true",
