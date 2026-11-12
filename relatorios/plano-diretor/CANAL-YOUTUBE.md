@@ -23,3 +23,6 @@ Nada é enviado ao YouTube sem ordem; a publicação continua com `YOUTUBE_PUBLI
 ## Status
 - Prévia gerada localmente em `.tmp/estreias-20261111/` (fora do Git). Não publicada.
 - Vozes pt-BR liberadas para o ar pelo Dr. Antônio (ordem de 12/11/2026, 07:35). Espeak-ng (GPLv3) não impede: publicamos só o áudio.
+- Artigos conferidos no banco (12/11/2026): os 4 estão `publicado: true`, status `arquivado`, com 3 a 4 DOIs cada. Os 14 DOIs resolvem no Crossref (HTTP 200); a sustentação frase a frase não foi conferida.
+- Episódios regenerados em 12/11/2026 (16:9 e Short 9:16, −14,1 LUFS): aviso CFM 2.454/2026 incluído na narração. Prévia e página de revisão em `.tmp/estreias-20261111/revisao/index.html` (fora do Git). Não publicada.
+- Pendente: aprovação do Dr. (sentido clínico) e a descrição e o "Sobre" do canal (passo a passo na página de revisão).
