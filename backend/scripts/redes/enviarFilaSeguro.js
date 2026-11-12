@@ -2,30 +2,28 @@
  * Envio SEGURO à fila de redes (redes_v2). Não altera enviarFila.js.
  * Padrão = DRY-RUN (só lista; não grava). Flags:
  *   --slugs=a,b,c   envia só essas pastas (nome da pasta em conteudo/redes-v2)
- *   --backup        copia redes_v2 para backups/envio-seguro-<data>/ (com EJSON, preserva datas e imagens)
- *   --aplicar       faz backup, grava as peças e registra o que foi criado ou substituído
- *                   (substitui SÓ documentos com status descartado-*; guarda a cópia completa do anterior)
- *   --conferir      compara banco x pasta (legenda, data, status, hashes); só leitura
- *   --reverter      desfaz SÓ o que o registro diz: remove o criado e restaura o substituído (--registro=CAMINHO ou o mais recente)
+ *   --backup        copia redes_v2 para backups/envio-seguro-<data>/ (EJSON)
+ *   --aplicar       faz backup e grava (substitui SÓ descartado-*; guarda o anterior)
+ *   --conferir      compara banco x pasta; só leitura (sai com 1 se houver divergência)
+ *   --reverter      desfaz o registrado (o mais recente, ou --registro=CAMINHO)
+ * Dados ignorados pelo Git (conteudo, backups) ficam na pasta principal; DRS_RAIZ_DADOS aponta para lá.
  */
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const mongoose = require('mongoose');
-const { EJSON } = require('bson');
 const db = require('../../lib/db');
-const { planejarEnvio, conferirPar, paraData } = require('../../lib/redesV2/envioSeguro');
+const { planejarEnvio, paraData } = require('../../lib/redesV2/envioSeguro');
+const banco = require('../../lib/redesV2/envioSeguroBanco');
 
-const RAIZ = process.env.DRS_RAIZ_DADOS || path.resolve(__dirname, '../../..'); // conteudo e backups são ignorados pelo Git: ficam na pasta principal
+const RAIZ = process.env.DRS_RAIZ_DADOS || path.resolve(__dirname, '../../..');
 const DIR_CONTEUDO = path.join(RAIZ, 'conteudo/redes-v2');
 const DIR_BACKUPS = path.join(RAIZ, 'backups');
-const STATUS_SUBSTITUIVEL = /^descartado-/;
 const sha = (b) => crypto.createHash('sha256').update(b).digest('hex');
 const args = process.argv.slice(2);
 const flag = (n) => args.includes(`--${n}`);
 const valor = (n) => { const a = args.find((x) => x.startsWith(`--${n}=`)); return a ? a.slice(n.length + 3) : null; };
 const carimbo = () => new Date().toISOString().replace(/[:.]/g, '-');
-const gravarJson = (f, obj) => fs.writeFileSync(f, JSON.stringify(obj, null, 1));
 
 function lerPastas() {
   return fs.readdirSync(DIR_CONTEUDO)
@@ -80,91 +78,6 @@ function mostrarPlano(plano, existentes, slugs) {
   else console.log(`fora do envio (não aprovadas ou com data passada): ${plano.recusadas.length} pastas`);
 }
 
-async function fazerBackup(dbx) {
-  const dir = path.join(DIR_BACKUPS, `envio-seguro-${carimbo()}`);
-  fs.mkdirSync(dir, { recursive: true });
-  const docs = await dbx.collection('redes_v2').find({}).toArray();
-  const imgs = await dbx.collection('redes_v2_img').find({}, { projection: { postId: 1, n: 1, hash: 1 } }).toArray();
-  fs.writeFileSync(path.join(dir, 'redes_v2.ejson'), EJSON.stringify(docs));
-  gravarJson(path.join(dir, 'redes_v2_img_hashes.json'), imgs);
-  const relidos = EJSON.parse(fs.readFileSync(path.join(dir, 'redes_v2.ejson'), 'utf8')).length;
-  if (relidos !== docs.length) throw new Error('backup não confere ao reler');
-  console.log(`backup: ${dir} (redes_v2: ${docs.length} documentos; redes_v2_img: ${imgs.length} registros de hash)`);
-  return dir;
-}
-
-async function aplicar(dbx, plano, dirBackup, existentes) {
-  const caminhoRegistro = path.join(dirBackup, 'registro.json');
-  const registro = { criadoEm: new Date().toISOString(), backup: dirBackup, inseridos: [] };
-  gravarJson(caminhoRegistro, registro);
-  for (const p of plano.selecionadas) {
-    const substitui = existentes.has(p.id);
-    let arquivoPrevio = null;
-    if (substitui) {
-      const previo = await dbx.collection('redes_v2').findOne({ _id: p.id });
-      const imgsPrevias = await dbx.collection('redes_v2_img').find({ postId: p.id }).toArray();
-      arquivoPrevio = `previo-${p.id}.ejson`;
-      fs.writeFileSync(path.join(dirBackup, arquivoPrevio), EJSON.stringify({ doc: previo, imgs: imgsPrevias }));
-      await dbx.collection('redes_v2_img').deleteMany({ postId: p.id });
-    }
-    const novo = {
-      _id: p.id,
-      ...p.meta,
-      dataSugerida: paraData(p.meta.dataSugerida),
-      legenda: p.legenda,
-      alts: p.alts,
-      status: 'aprovado-checagem',
-      enviadoEm: new Date(),
-    };
-    if (substitui) await dbx.collection('redes_v2').replaceOne({ _id: p.id }, novo);
-    else await dbx.collection('redes_v2').insertOne(novo);
-    registro.inseridos.push({ slug: p.slug, id: p.id, substituiu: substitui, arquivoPrevio });
-    gravarJson(caminhoRegistro, registro);
-    await dbx.collection('redes_v2_img').insertMany(p.imagens.map((data, i) => ({ postId: p.id, n: i + 1, hash: p.hashes[i], data })));
-    console.log(`${substitui ? 'substituído' : 'enviado'}: ${p.slug} (${p.id})`);
-  }
-  console.log(`registro: ${caminhoRegistro}`);
-}
-
-async function conferir(dbx, pastas, slugs) {
-  const alvo = slugs
-    ? pastas.filter((p) => slugs.includes(p.slug))
-    : pastas.filter((p) => p.meta.status === 'aprovado-checagem');
-  let divergentes = 0;
-  for (const p of alvo) {
-    const banco = await dbx.collection('redes_v2').findOne({ _id: p.id });
-    const imgs = banco ? await dbx.collection('redes_v2_img').find({ postId: p.id }).sort({ n: 1 }).toArray() : [];
-    const d = conferirPar({
-      banco: banco && { status: banco.status, legenda: banco.legenda, dataSugerida: banco.dataSugerida, hashes: imgs.map((i) => i.hash) },
-      pasta: { status: p.meta.status, legenda: p.legenda, dataSugerida: p.meta.dataSugerida, hashes: p.hashes },
-    });
-    if (d.length) divergentes += 1;
-    console.log(`${d.length ? 'DIVERGE' : 'OK     '} ${p.slug}${d.length ? ` | ${d.join(' | ')}` : ''}`);
-  }
-  console.log(`conferidos: ${alvo.length} | divergentes: ${divergentes}`);
-  return divergentes;
-}
-
-async function reverter(dbx, caminho) {
-  const dirBackup = path.dirname(caminho);
-  const reg = JSON.parse(fs.readFileSync(caminho, 'utf8'));
-  for (const e of reg.inseridos) {
-    const atual = await dbx.collection('redes_v2').findOne({ _id: e.id }, { projection: { status: 1 } });
-    if (!atual) { console.log(`ausente (nada a desfazer): ${e.slug}`); continue; }
-    if (atual.status !== 'aprovado-checagem') { console.log(`NÃO DESFAÇO ${e.slug}: status ${atual.status} (já saiu da fila)`); continue; }
-    await dbx.collection('redes_v2_img').deleteMany({ postId: e.id });
-    if (e.substituiu) {
-      const { doc, imgs } = EJSON.parse(fs.readFileSync(path.join(dirBackup, e.arquivoPrevio), 'utf8'));
-      await dbx.collection('redes_v2').replaceOne({ _id: e.id }, doc);
-      if (imgs.length) await dbx.collection('redes_v2_img').insertMany(imgs);
-      console.log(`restaurado o anterior: ${e.slug} (imagens: ${imgs.length})`);
-    } else {
-      await dbx.collection('redes_v2').deleteOne({ _id: e.id });
-      console.log(`removido: ${e.slug}`);
-    }
-  }
-}
-
 function registroMaisRecente() {
   const pastas = fs.existsSync(DIR_BACKUPS)
     ? fs.readdirSync(DIR_BACKUPS).filter((n) => n.startsWith('envio-seguro-')).sort()
@@ -179,14 +92,23 @@ function registroMaisRecente() {
     const caminho = valor('registro') || registroMaisRecente();
     console.log(`desfazendo pelo registro: ${caminho}`);
     await db.connect();
-    await reverter(mongoose.connection.db, caminho);
+    for (const l of await banco.reverter(mongoose.connection.db, caminho)) console.log(l);
     process.exit(0);
   }
   const pastas = lerPastas();
   await db.connect();
   const dbx = mongoose.connection.db;
-  if (flag('conferir')) process.exit((await conferir(dbx, pastas, slugs)) ? 1 : 0);
-  if (flag('backup') && !flag('aplicar')) { await fazerBackup(dbx); process.exit(0); }
+  if (flag('conferir')) {
+    const r = await banco.conferir(dbx, pastas, slugs);
+    for (const l of r.linhas) console.log(l);
+    console.log(`conferidos: ${r.conferidos} | divergentes: ${r.divergentes}`);
+    process.exit(r.divergentes ? 1 : 0);
+  }
+  if (flag('backup') && !flag('aplicar')) {
+    const b = await banco.fazerBackup(dbx, DIR_BACKUPS, carimbo());
+    console.log(`backup: ${b.dir} (redes_v2: ${b.documentos}; redes_v2_img: ${b.imagens} registros de hash)`);
+    process.exit(0);
+  }
 
   const plano = planejarEnvio({ pecas: pastas, slugs, agora: new Date() });
   const existentes = new Map();
@@ -194,11 +116,11 @@ function registroMaisRecente() {
     const ex = await dbx.collection('redes_v2').findOne({ _id: p.id }, { projection: { status: 1 } });
     if (ex) existentes.set(p.id, ex.status);
   }
-  const bloqueados = [...existentes].filter(([, st]) => !STATUS_SUBSTITUIVEL.test(st));
+  const bloqueados = banco.bloqueadosPorStatus(existentes);
   if (!flag('aplicar')) {
     console.log('DRY-RUN: nada foi gravado.');
     mostrarPlano(plano, existentes, slugs);
-    if (bloqueados.length) console.log(`ATENÇÃO: já existem com status que não pode ser substituído: ${bloqueados.map(([id, st]) => `${id} (${st})`).join('; ')}`);
+    if (bloqueados.length) console.log(`ATENÇÃO: não substituível: ${bloqueados.map(([id, st]) => `${id} (${st})`).join('; ')}`);
     process.exit(0);
   }
   if (slugs && plano.recusadas.length) {
@@ -209,11 +131,15 @@ function registroMaisRecente() {
   if (!plano.selecionadas.length) { console.log('ABORTADO: nenhuma peça válida.'); process.exit(1); }
   if (bloqueados.length) {
     mostrarPlano(plano, existentes, slugs);
-    console.log(`ABORTADO: já existe com status não substituível: ${bloqueados.map(([id, st]) => `${id} (${st})`).join('; ')}. Nada foi gravado.`);
+    console.log(`ABORTADO: status não substituível: ${bloqueados.map(([id, st]) => `${id} (${st})`).join('; ')}. Nada foi gravado.`);
     process.exit(1);
   }
-  const dirBackup = await fazerBackup(dbx);
-  await aplicar(dbx, plano, dirBackup, existentes);
-  const diverg = await conferir(dbx, pastas, plano.selecionadas.map((p) => p.slug));
-  process.exit(diverg ? 1 : 0);
+  const b = await banco.fazerBackup(dbx, DIR_BACKUPS, carimbo());
+  console.log(`backup: ${b.dir}`);
+  const registro = await banco.aplicar(dbx, plano, b.dir, existentes);
+  console.log(`registro: ${registro}`);
+  const r = await banco.conferir(dbx, pastas, plano.selecionadas.map((p) => p.slug));
+  for (const l of r.linhas) console.log(l);
+  console.log(`conferidos: ${r.conferidos} | divergentes: ${r.divergentes}`);
+  process.exit(r.divergentes ? 1 : 0);
 })().catch((e) => { console.error('ERRO:', e.message); process.exit(2); });
