@@ -135,7 +135,7 @@ test('páginas de tema não exibem aviso de aprovação pendente', () => {
 // ---------------------------------------------------------------- Blog
 test('topo do Blog: etiqueta, título e texto exatos; sem "consultório"', () => {
   assert.ok(blog.includes('<p class="etiqueta">ARTIGOS</p>'));
-  assert.ok(blog.includes('<h1 style="font-size:clamp(2rem,4.6vw,3.1rem);">Saúde mental em cada fase da vida, sem jargão</h1>'));
+  assert.ok(blog.includes('<h1 style="font-size:clamp(2rem,4.6vw,3.1rem);">Saúde mental em cada fase da vida, explicada com clareza e empatia</h1>'));
   assert.ok(semEspacos(blog).includes('Artigos com referências científicas e narração em áudio, organizados nos mesmos temas do Portal. Nos temas, psicoeducação e cuidados para o dia a dia. Em Transtornos Mentais, conceito, diagnóstico e conduta. E nos Relatos da Prática, artigos literários que mostram o lado humano do cuidado, com identidades protegidas.'));
   for (const [nome, texto] of [['blog.html', blog], ['blog.js', blogJs], ['renderizarBlog.js', ler('backend/lib/renderizarBlog.js')]]) {
     assert.equal(/consult[óo]rio/i.test(texto), false, `"consultório" em ${nome}`);
