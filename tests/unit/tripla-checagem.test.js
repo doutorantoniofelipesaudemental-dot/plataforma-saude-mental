@@ -147,5 +147,6 @@ test('selo da capa: categoria "Geral" vira o tema do título ou some', () => {
   assert.equal(textoDoSelo({ categoria: 'Geral', titulo: 'Saúde mental na APS' }), 'Atenção primária');
   const tags = montarLegendaInstagram({ ...ARTIGO, categoria: 'Geral', titulo: 'Luto no RH' }).partes.hashtags;
   assert.ok(tags.includes('#luto') && tags.includes('#saudementalnotrabalho'), tags.join(' '));
-  assert.equal(textoDoSelo({ categoria: 'Luto & Divórcio', titulo: 'x' }), 'Luto & Divórcio');
+  // Ordem de 11/11/2026: o selo mostra o nome do tema (7 temas), não a categoria antiga.
+  assert.equal(textoDoSelo({ categoria: 'Luto & Divórcio', titulo: 'x' }), 'Vida Adulta, Envelhecimento & Cuidados Paliativos');
 });

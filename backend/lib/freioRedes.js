@@ -14,4 +14,10 @@ function exigirRedesAtivas(contexto = 'publicação em rede social') {
   }
 }
 
-module.exports = { redesAtivas, exigirRedesAtivas };
+/**
+ * Freio próprio do LinkedIn (ordem de 11/11/2026): só LINKEDIN_PUBLICACAO_ATIVA="true" libera o AGENDAMENTO.
+ * Ausente ou qualquer outro valor = não agenda. Não desliga posts JÁ agendados no agendador nativo do LinkedIn.
+ */
+const linkedinAtivo = (env = process.env) => String(env.LINKEDIN_PUBLICACAO_ATIVA ?? '').trim().toLowerCase() === 'true';
+
+module.exports = { redesAtivas, exigirRedesAtivas, linkedinAtivo };

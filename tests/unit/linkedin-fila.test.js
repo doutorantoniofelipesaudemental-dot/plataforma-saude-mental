@@ -1,6 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { publicarDevidos } = require('../../backend/lib/linkedinFila');
+const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/identificacaoCfm');
 
 const RODAPE = 'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito.\nConteúdo educativo, não substitui consulta. Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.\nEm crise: CVV 188 · SAMU 192\nConteúdo educativo produzido com apoio de inteligência artificial e checagem automatizada, sob responsabilidade do Dr. Antônio Felipe (Resolução CFM 2.454/2026). Revisão médica individual: pendente.\n\nDr. Antônio Felipe · Médico · CRM-BA 41322\nEspecialista em Medicina de Família e Comunidade · RQE 26638\nAtuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)';
 const TEXTO = `Cuidar de quem cuida começa por reconhecer o cansaço.\n${'Ponto prático com informação útil para a equipe de saúde. '.repeat(14)}\nTexto completo: https://www.drantoniofelipemedico.com.br/artigo/x\nReferência: Archer J, Bower P, Gilbody S, et al. Collaborative care for depression and anxiety problems. Cochrane Database Syst Rev. 2012;10(10):CD006525.\n\n${RODAPE}`;
@@ -21,7 +22,7 @@ function comEnv(vars, fn) {
   Object.assign(process.env, vars);
   return Promise.resolve(fn()).finally(() => { for (const k of ENV) { if (antes[k] === undefined) delete process.env[k]; else process.env[k] = antes[k]; } });
 }
-const item = (extra = {}) => ({ _id: 'li-1', referenciaConferida: { doi: '10.1002/14651858.CD006525.pub2' }, tipo: 'texto', status: 'aprovado-checagem', slot: '2026-10-28T22:30:00.000Z', titulo: 'T', texto: TEXTO, url: 'https://www.drantoniofelipemedico.com.br/artigo/x', slug: 'x', ...extra });
+const item = (extra = {}) => ({ _id: 'li-1', referenciaConferida: { doi: '10.1002/14651858.CD006525.pub2' }, tipo: 'texto', status: 'aprovado-checagem', slot: '2026-10-28T22:30:00.000Z', titulo: 'T', texto: TEXTO.replace(/Dr\. Ant[^ ]+ Felipe [^ ]+ M[^ ]+dico[\s\S]*?\(APS\)/, IDENTIFICACAO_COMPLETA), url: 'https://www.drantoniofelipemedico.com.br/artigo/x', slug: 'x', ...extra });
 const AGORA = new Date('2026-10-28T23:00:00Z');
 const OK = { REDES_PUBLICACAO_ATIVA: 'true', LINKEDIN_PUBLICACAO_ATIVA: 'true', LINKEDIN_ACCESS_TOKEN: 't', LINKEDIN_AUTHOR_URN: 'urn:li:person:1' };
 
