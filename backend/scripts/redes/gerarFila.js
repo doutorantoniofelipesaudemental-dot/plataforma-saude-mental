@@ -44,7 +44,7 @@ function corrigirPlano(plano, falhas, tentativa) {
     if (t.tipo === 'capa' && palavras(`${t.titulo || ''} ${t.texto}`).length > 25) t.titulo = ''; // subtítulo da capa é opcional
     t.texto = encurtar(t.texto, Math.max(6, (tentativa === 1 ? 24 : 18) - palavras(t.titulo || '').length)).replace(/([^.!?…])$/, '$1.');
   }
-  if (msgs.some((m) => /legenda com \d+ caracteres|hashtags/.test(m)) || tentativa === 2) { p.refs = []; p.legendaCorpo = p.legendaCorpo.split('\n').slice(0, tentativa === 2 ? 1 : 5).join('\n') + '\n\nTexto completo no link da bio.'; }
+  if (msgs.some((m) => /legenda com \d+ caracteres|hashtags/.test(m)) || tentativa === 2) { p.legendaCorpo = p.legendaCorpo.split('\n').slice(0, tentativa === 2 ? 1 : 5).join('\n') + '\n\nTexto completo no link da bio.'; }
   if (msgs.some((m) => /hashtags/.test(m))) p.hashtags = [...new Set([...p.hashtags, '#saudemental', '#cuidado', '#bemestar'])].slice(0, 4);
   return p;
 }

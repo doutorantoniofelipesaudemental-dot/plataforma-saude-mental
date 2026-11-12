@@ -36,14 +36,21 @@ const semIngles = (t) => SUBSTITUICOES_INGLES.reduce((x, [re, novo]) => x.replac
 
 const maiuscula = (t) => String(t || '').replace(/^[\s“"'—-]*([a-zà-ú])/, (m, c) => m.slice(0, -1) + c.toUpperCase());
 
-/** Encurta a `max` palavras cortando num limite de oração (; , :) quando possível, nunca no meio de uma lista. */
+/**
+ * Encurta a `max` palavras SEM cortar frase: junta frases inteiras enquanto couberem.
+ * Se a primeira frase já passa do limite, devolve-a inteira (a checagem reprova o excesso; não corta no meio).
+ */
 function encurtar(texto, max) {
-  const p = palavras(texto);
-  if (p.length <= max) return texto;
-  const corte = p.slice(0, max).join(' ');
-  const i = Math.max(corte.lastIndexOf(';'), corte.lastIndexOf(','), corte.lastIndexOf(':'));
-  const base = i >= corte.length * 0.45 ? corte.slice(0, i) : corte;
-  return `${limparFim(base)}.`;
+  const s = String(texto || '').trim();
+  if (palavras(s).length <= max) return s;
+  const frases = s.match(/[^.!?…]+[.!?…]+["”')]*|[^.!?…]+$/g) || [s];
+  let out = '';
+  for (const f of frases) {
+    const cand = `${out} ${f}`.trim();
+    if (palavras(cand).length > max) break;
+    out = cand;
+  }
+  return out || frases[0].trim();
 }
 
 const SOLTAS = new Set(['de', 'da', 'do', 'das', 'dos', 'a', 'o', 'as', 'os', 'e', 'em', 'no', 'na', 'nos', 'nas', 'para', 'com', 'que', 'por', 'aos', 'ao', 'um', 'uma', 'ou', 'se', 'sobre']);
