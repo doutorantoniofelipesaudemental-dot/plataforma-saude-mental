@@ -21,10 +21,24 @@ test('identificação de 5 linhas é obrigatória (3 linhas reprovam)', () => {
   assert.equal(checarPost({ tipo: 'social', texto: base + '\n' + IDENTIFICACAO_COMPLETA }).some((f) => /5 linhas/.test(f)), false);
 });
 
-test('valor monetário em "dólar" por extenso reprova; US$ com ano passa', () => {
-  const t = (valor) => `Estudo de 2016 estimou ${valor}. Referência: X 2016.`;
-  assert.equal(checarPost({ tipo: 'social', texto: t('cerca de quatro dólares') }).some((f) => /dólar/.test(f)), true);
-  assert.equal(checarPost({ tipo: 'social', texto: t('cerca de US$ 4') }).some((f) => /dólar/.test(f)), false);
+test('D1: "dólar" não é proibido; valor monetário exige US$ com número e autor com ano', () => {
+  const t = (valor) => `Chisholm et al., 2016, estimou ${valor}. Referência: X 2016.`;
+  const falhasDolar = (texto) => checarPost({ tipo: 'social', texto }).filter((f) => /dólar|US\$|autor e ano/.test(f));
+  assert.equal(falhasDolar(t('US$ 3,3 a 5,7 de retorno')).length, 0);
+  assert.equal(falhasDolar(t('cerca de quatro dólares')).length > 0, true);
+  assert.equal(falhasDolar('Estudo de 2016 estimou US$ 4 de retorno. Referência: X 2016.').some((f) => /autor e ano/.test(f)), true, 'sem autor, reprova');
+});
+
+test('D2: NR-1 exige "passou a vigorar em 26 de maio de 2026" e não aceita "fiscalização"', () => {
+  const t = (frase) => `${frase} Referência: X 2026.`;
+  assert.equal(checarPost({ tipo: 'social', texto: t('A NR-1 passou a vigorar em 26 de maio de 2026.') }).some((f) => /NR-1/.test(f)), false);
+  assert.equal(checarPost({ tipo: 'social', texto: t('A NR-1 entrou em fiscalização.') }).some((f) => /NR-1/.test(f)), true);
+});
+
+test('D3: isolamento e morte exige a frase Holt-Lunstad (26% a 32%, conforme o tipo)', () => {
+  const frase = 'aumento de 26% a 32% na probabilidade de morte, conforme o tipo: solidão, isolamento social ou morar sozinho';
+  assert.equal(checarPost({ tipo: 'social', texto: `Isolamento social se associa a ${frase}. Referência: X 2015.` }).some((f) => /D3/.test(f)), false);
+  assert.equal(checarPost({ tipo: 'social', texto: 'Isolamento social aumenta o risco de morte em 50%. Referência: X 2015.' }).some((f) => /D3/.test(f)), true);
 });
 
 test('selo da capa usa o nome do tema, não a categoria antiga', () => {

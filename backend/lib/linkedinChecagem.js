@@ -28,7 +28,20 @@ function checarPost(it) {
   if (/wa\.me|whatsapp/i.test(t)) f.push('mensageria de terceiros');
   if (/(antes e depois|depoimento|garantid|100% eficaz|cura garantida)/i.test(t)) f.push('promessa/depoimento/antes-e-depois');
   // Valor monetário (ordem de 11/11/2026, caso do post de 11/11): "dólar" por extenso não; usar US$ com o ano do estudo.
-  if (/\bd[óo]lares?\b/i.test(t)) f.push('valor em "dólar" por extenso: usar "US$" e citar o ano do estudo');
+  // D1 (ordem de 11/11/2026, 22:45): "dólar" não é proibido. Valor monetário exige "US$" com número e autor com ano do estudo.
+  if (/\bd[óo]lares?\b|US\$/i.test(t)) {
+    if (!/US\$\s?\d/.test(t)) f.push('valor em dólar sem "US$" e número');
+    if (!/[A-ZÀ-Ú][\p{L}'-]+(?: et al\.?)?[,(]? ?(?:19|20)\d{2}/u.test(t)) f.push('valor monetário sem autor e ano do estudo');
+  }
+  // D2 (ordem de 11/11/2026): NR-1 "passou a vigorar em 26 de maio de 2026"; "fiscalização" não entra como fato da norma.
+  if (/NR-?1\b/.test(t)) {
+    if (!/passou a vigorar em 26 de maio de 2026/.test(t)) f.push('NR-1 sem a frase "passou a vigorar em 26 de maio de 2026"');
+    if (/fiscaliza[çc][ãa]o/i.test(t)) f.push('NR-1 com "fiscalização" (usar "passou a vigorar em 26 de maio de 2026")');
+  }
+  // D3 (ordem de 11/11/2026): isolamento e morte, com a frase de Holt-Lunstad (2015) e as três formas de exposição.
+  if (/isolamento|solid[ãa]o|morar sozinho/i.test(t) && /\bmorte\b/i.test(t) && !/aumento de 26% a 32% na probabilidade de morte, conforme o tipo: solid[ãa]o, isolamento social ou morar sozinho/i.test(t)) {
+    f.push('isolamento e morte sem a frase D3 (Holt-Lunstad 2015: 26% a 32%, conforme o tipo)');
+  }
   const OFICIAL = /^https?:\/\/(www\.drantoniofelipemedico\.com\.br|instagram\.com\/doutor\.antoniofelipe\.smental)/;
   for (const u of t.match(/https?:\/\/[^\s)]+/g) || []) if (!OFICIAL.test(u)) f.push(`link fora do domínio oficial: ${u.slice(0, 60)}`);
   for (const x of checarEticaCfm(t, { contexto: 'social', exigirIdentificacao: false }).falhas) f.push(`ética: ${x}`);
