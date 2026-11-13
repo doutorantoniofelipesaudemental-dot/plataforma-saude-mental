@@ -1,0 +1,101 @@
+{
+  "_regra": "Dado-chave só vai para a capa se o artigo estiver nesta lista E slug, número, fonte e frase baterem exatamente. Sem verificação, a capa usa a frase-chave. Conferência na fonte (PubMed) em 2026-11-12; número, população e tipo de medida conferidos.",
+  "_conferidoEm": "2026-11-12",
+  "verificados": [
+    {
+      "slug": "estresse-migratorio-adaptacao-cultural",
+      "numero": "20%",
+      "fonte": "Lindert, 2009",
+      "frase": "Uma meta-análise estimou depressão em cerca de 20% dos migrantes por trabalho, e mais entre refugiados.",
+      "pmid": "19539414",
+      "doi": "10.1016/j.socscimed.2009.04.032",
+      "populacao": "migrantes por trabalho (labor migrants)",
+      "medida": "proporção combinada de depressão (20% nos migrantes por trabalho; 44% nos refugiados)",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "dependencia-quimica-comportamental-sinais",
+      "numero": "5%",
+      "fonte": "Maraz, 2016",
+      "frase": "A compra compulsiva atinge cerca de 5% dos adultos.",
+      "pmid": "26517309",
+      "doi": "10.1111/add.13223",
+      "populacao": "adultos em amostras representativas",
+      "medida": "prevalência agrupada de compra compulsiva (4,9%, IC 3,4–6,9%)",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "burnout-medicos-enfermeiros",
+      "numero": "11%",
+      "fonte": "Woo, 2020",
+      "frase": "O problema é comum: uma meta-análise mundial estimou que cerca de 11% dos enfermeiros apresentam sintomas de burnout, e os estudos com médicos mostram números muito variados, conforme a forma de medir.",
+      "pmid": "32007680",
+      "doi": "10.1016/j.jpsychires.2019.12.015",
+      "populacao": "enfermeiros",
+      "medida": "prevalência agrupada de sintomas de burnout (11,23%)",
+      "aplicadoNoTexto": false,
+      "pendente": "Ano da referência: texto atual diz 'Woo, 2019'; a publicação é de 2020 (PubMed). Correção em staging."
+    },
+    {
+      "slug": "saude-mental-perinatal-consulta",
+      "numero": "88%",
+      "fonte": "Santos, 2007",
+      "frase": "No estudo de validação em Pelotas (Santos et al., 2007), com ponto de corte acima de 13, a escala acertou 88% das mães sem depressão, mas reconheceu cerca de 6 em cada 10 com depressão. Por isso ela serve para triagem, e o diagnóstico é feito na consulta.",
+      "pmid": "17952250",
+      "doi": "10.1590/s0102-311x2007001100005",
+      "populacao": "mães no pós-parto (coorte de Pelotas, 2004)",
+      "medida": "especificidade 88,4% e sensibilidade 59,5% no corte >13 (diagnóstico)",
+      "aplicadoNoTexto": false,
+      "pendente": "Texto e referência atuais estão errados (Cox, 1987). Correção em staging, para o Dr. aplicar."
+    },
+    {
+      "slug": "saude-mental-residencia",
+      "numero": "29%",
+      "fonte": "Mata, 2015",
+      "frase": "Uma meta-análise estimou que cerca de 29% dos médicos residentes apresentam depressão ou sintomas depressivos (Mata et al., 2015).",
+      "pmid": "26647259",
+      "doi": "10.1001/jama.2015.15845",
+      "populacao": "médicos residentes",
+      "medida": "prevalência agrupada de depressão ou sintomas depressivos (28,8%)",
+      "aplicadoNoTexto": false,
+      "pendente": "Texto atual tem a cláusula 'estudantes de medicina' sem fonte. Correção em staging."
+    },
+    {
+      "slug": "risco-suicidio-aps",
+      "numero": "45%",
+      "fonte": "Luoma, 2002",
+      "frase": "Uma revisão mostrou que cerca de 45% das pessoas que morreram por suicídio tinham consultado um profissional da atenção primária no mês anterior.",
+      "pmid": "12042175",
+      "doi": "10.1176/appi.ajp.159.6.909",
+      "populacao": "pessoas que morreram por suicídio (revisão de 40 estudos)",
+      "medida": "proporção com contato com atenção primária em até 1 mês antes da morte (média 45%)",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "sinais-alerta-comportamentais-jovens",
+      "numero": "13%",
+      "fonte": "Polanczyk, 2015",
+      "frase": "Uma meta-análise mundial estimou que cerca de 13% das crianças e adolescentes têm algum transtorno mental.",
+      "pmid": "25649325",
+      "doi": "10.1111/jcpp.12381",
+      "populacao": "crianças e adolescentes (41 estudos, 27 países)",
+      "medida": "prevalência agrupada de transtorno mental (13,4%)",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "envelhecimento-ativo-isolamento-social",
+      "numero": "26% a 32%",
+      "fonte": "Holt-Lunstad, 2015",
+      "frase": "Isolamento social e solidão aumentam em cerca de 26% a 32% o risco de morte.",
+      "pmid": "25910392",
+      "doi": "10.1177/1745691614568352",
+      "populacao": "estudos com desfecho de mortalidade (metanálise, buscas de 1980 a fev/2014)",
+      "medida": "razão de chance ajustada de mortalidade: solidão 1,26; isolamento social 1,29; morar sozinho 1,32",
+      "aplicadoNoTexto": true
+    }
+  ],
+  "fora_da_lista": {
+    "burnout-aps": "Número-chave '0%' é o limite inferior de uma faixa (0% a 80,5%); não representa o dado. Frase-chave.",
+    "psicofarmacos-mitos-verdades": "Texto atual diz '70% a chance' (chances, não probabilidade). Só entra depois da correção em staging (41% → 18%)."
+  }
+}
