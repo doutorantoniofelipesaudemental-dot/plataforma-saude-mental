@@ -36,6 +36,18 @@ function falhasDeTexto(telas) {
 }
 const RE_PRECO_DEPOIMENTO = /\b(R\$\s?\d|reais|valor da consulta|pre[çc]o|promo[çc][ãa]o|depoimento de paciente|antes e depois)\b/i;
 
+/** Itens de lista da legenda (linhas com • ou -) terminam em ponto; nunca em ";" (ordem 13/11/2026). */
+function falhasDeListaLegenda(legenda) {
+  const out = [];
+  for (const linha of String(legenda).split('\n')) {
+    const t = linha.trim();
+    if (!/^[•-]\s/.test(t)) continue;
+    if (t.endsWith(';')) out.push(`item de lista terminando em ";": "${t.slice(0, 50)}…"`);
+    else if (!t.endsWith('.')) out.push(`item de lista sem ponto final: "${t.slice(0, 50)}…"`);
+  }
+  return out;
+}
+
 async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }) {
   const falhas = [];
   const f = (grupo, msg) => falhas.push({ grupo, msg });
@@ -62,6 +74,7 @@ async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }
   if (!primeira || primeira.length > 140) f('técnica', 'primeira linha da legenda sem gancho claro (vazia ou > 140 caracteres)');
   if (!telas[0] || !telas[0].texto) f('técnica', 'primeira tela sem gancho');
   for (const msg of falhasDeTexto(telas)) f('texto', msg);
+  for (const msg of falhasDeListaLegenda(legenda)) f('texto', msg);
 
   /* ética (Res. CFM 2.336/2023 e 2.454/2026) */
   for (const x of checarEticaCfm(legenda, { contexto: 'social' }).falhas) f('ética', x);
@@ -97,4 +110,4 @@ function falhasDeArte(medidas) {
   return checarArte(medidas).falhas.map((x) => ({ grupo: 'arte', msg: x.msg }));
 }
 
-module.exports = { checarPost, falhasDeArte, falhasDeTexto };
+module.exports = { checarPost, falhasDeArte, falhasDeTexto, falhasDeListaLegenda };
