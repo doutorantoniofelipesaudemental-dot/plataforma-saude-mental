@@ -21,6 +21,12 @@ Sessão (uma por dia, até acabar a fila, no máximo 3 posts):
 7. **Atualizar** `relatorios/linkedin/FILA-MANUAL.md` (`filaManual.js` regrava) e o bloco do `relatorios/ESTADO-GERAL.md`; dizer ao Dr. Antônio: agendados hoje, último agendado, quantos faltam.
 8. **Fechar** com a linha `STATUS: OK` (ou PARAR/DESATIVAR, conforme o caso).
 
-Carrosséis (PDF): numa sessão, tentar agendar 1 documento (compositor → "Adicionar documento" com o PDF da pasta do post). Se o agendador não aceitar PDF, o carrossel continua na fila manual (`relatorios/linkedin/FILA-MANUAL.md`). O lembrete manual `DrSM-LinkedIn-Lembrete` está desativado, porque o agendamento agora é automático.
+Carrosséis (PDF), método que funcionou (relato do Dr. Antônio, 12/11/2026; validar numa sessão logada antes de usar na automação):
+1. Anexar o PDF primeiro ("Adicionar documento" no compositor).
+2. Colar o texto do post.
+3. Título do documento com no máximo 58 caracteres, com sentido completo (reescrever, não cortar).
+4. Agendar para as 08:00 (Bahia).
+5. Conferir na lista de agendados, com a recarga da página, sem duplicar. Duplicado = PARAR e registrar.
+Se o agendador não aceitar PDF, o carrossel continua na fila manual (`relatorios/linkedin/FILA-MANUAL.md`). O lembrete manual `DrSM-LinkedIn-Lembrete` está desativado, porque o agendamento agora é automático.
 
 A rotina semanal mostra o último agendado e quantos faltam, e avisa quando faltarem menos de 14 dias.
