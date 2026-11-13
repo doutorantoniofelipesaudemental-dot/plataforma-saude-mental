@@ -45,20 +45,18 @@
       "doi": "10.1590/s0102-311x2007001100005",
       "populacao": "mães no pós-parto (coorte de Pelotas, 2004)",
       "medida": "especificidade 88,4% e sensibilidade 59,5% no corte >13 (diagnóstico)",
-      "aplicadoNoTexto": false,
-      "pendente": "Texto e referência atuais estão errados (Cox, 1987). Correção em staging, para o Dr. aplicar."
+      "aplicadoNoTexto": true
     },
     {
       "slug": "saude-mental-residencia",
       "numero": "29%",
-      "fonte": "Mata, 2015",
-      "frase": "Uma meta-análise estimou que cerca de 29% dos médicos residentes apresentam depressão ou sintomas depressivos (Mata et al., 2015).",
+      "fonte": "Mata, 2015 (ref. 1); Rotenstein, 2016 (ref. 2, estudantes)",
+      "frase": "Uma meta-análise estimou que cerca de 29% dos médicos residentes apresentam depressão ou sintomas depressivos, e entre estudantes de medicina a proporção é parecida.",
       "pmid": "26647259",
       "doi": "10.1001/jama.2015.15845",
       "populacao": "médicos residentes",
       "medida": "prevalência agrupada de depressão ou sintomas depressivos (28,8%)",
-      "aplicadoNoTexto": false,
-      "pendente": "Texto atual tem a cláusula 'estudantes de medicina' sem fonte. Correção em staging."
+      "aplicadoNoTexto": true
     },
     {
       "slug": "risco-suicidio-aps",
@@ -91,6 +89,17 @@
       "doi": "10.1177/1745691614568352",
       "populacao": "estudos com desfecho de mortalidade (metanálise, buscas de 1980 a fev/2014)",
       "medida": "razão de chance ajustada de mortalidade: solidão 1,26; isolamento social 1,29; morar sozinho 1,32",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "recaida-depressao-prevencao",
+      "numero": "41% para 18%",
+      "fonte": "Geddes, 2003",
+      "frase": "Manter o antidepressivo pelo tempo indicado reduziu a recaída de 41% para 18%, em média (Geddes et al., 2003).",
+      "pmid": "12606176",
+      "doi": "10.1016/S0140-6736(03)12599-8",
+      "populacao": "pacientes com transtorno depressivo em remissão (revisão de 31 ensaios, 4410 participantes)",
+      "medida": "taxa média de recaída com placebo 41% contra 18% com tratamento ativo (odds 70% menores com antidepressivo)",
       "aplicadoNoTexto": true
     }
   ],
