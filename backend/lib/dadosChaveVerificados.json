@@ -72,18 +72,6 @@
       "aplicadoNoTexto": true
     },
     {
-      "slug": "tmc-aps",
-      "numero": "83%",
-      "fonte": "Mari, 1986",
-      "frase": "\" Rastreamento com instrumento validado: o SRQ-20, validado em unidades de atenção primária de São Paulo, mostrou sensibilidade de 83% e especificidade de 80% para identificar sofrimento psíquico.",
-      "pmid": "3955316",
-      "doi": "10.1192/bjp.148.1.23",
-      "populacao": "pacientes de três unidades de atenção primária de São Paulo (875 aplicados; 260 entrevistados)",
-      "medida": "sensibilidade 83% e especificidade 80% do SRQ-20",
-      "aplicadoNoTexto": true,
-      "obs": "Frase do texto atual começa com aspas soltas: correção de texto pendente de OK do Dr."
-    },
-    {
       "slug": "sinais-alerta-comportamentais-jovens",
       "numero": "13%",
       "fonte": "Polanczyk, 2015",
@@ -92,6 +80,17 @@
       "doi": "10.1111/jcpp.12381",
       "populacao": "crianças e adolescentes (41 estudos, 27 países)",
       "medida": "prevalência agrupada de transtorno mental (13,4%)",
+      "aplicadoNoTexto": true
+    },
+    {
+      "slug": "envelhecimento-ativo-isolamento-social",
+      "numero": "26% a 32%",
+      "fonte": "Holt-Lunstad, 2015",
+      "frase": "Isolamento social e solidão aumentam em cerca de 26% a 32% o risco de morte.",
+      "pmid": "25910392",
+      "doi": "10.1177/1745691614568352",
+      "populacao": "estudos com desfecho de mortalidade (metanálise, buscas de 1980 a fev/2014)",
+      "medida": "razão de chance ajustada de mortalidade: solidão 1,26; isolamento social 1,29; morar sozinho 1,32",
       "aplicadoNoTexto": true
     }
   ],
