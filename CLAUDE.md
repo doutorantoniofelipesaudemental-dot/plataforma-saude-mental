@@ -1,4 +1,6 @@
-﻿# SYSTEM DIRECTIVE: TOKEN & CONTEXT HYPER-OPTIMIZATION
+﻿**Referência obrigatória: docs/GUIA-MESTRE-DRSM.md**
+
+# SYSTEM DIRECTIVE: TOKEN & CONTEXT HYPER-OPTIMIZATION
 
 Você está operando sob regras estritas de economia de contexto e prevenção de limite de cota.
 1. LEAN & DIRECT RESPONSES: Seja extremamente conciso. Elimine explicações teóricas e saudações. Forneça apenas o código necessário ou diffs diretos.
