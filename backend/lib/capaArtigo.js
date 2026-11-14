@@ -184,8 +184,9 @@ function montarSvgCapaArtigo(artigo, { formato = 'og' } = {}) {
     ${caminhoTexto(FONTE_SANS, `Fonte: ${visual.dado.fonte}`, M + 32, yBlocoDado + altBloco - 22, 20, '#45564f')}`;
   } else if (visual.frase) {
     const linhasF = quebrarLinhas(FONTE_SERIF, visual.frase, W - M * 2, 38, { maxLinhas: 3 });
-    const yTopoFrase = yLimiteBloco - 40 - (linhasF.length - 1) * 50;
-    bloco = caminhoLinhas(FONTE_SERIF, linhasF, M, yTopoFrase, 50, 38, CORPO);
+    // layout original da frase-chave (inalterado: as 397 capas já aprovadas não mudam)
+    const yBloco = yRodape - 36 - (formato === 'blog' ? 230 : 190);
+    bloco = caminhoLinhas(FONTE_SERIF, linhasF, M, yBloco + 40, 50, 38, CORPO);
   }
 
   const etiqueta = caminhoLinhas(FONTE_SANS, linhasEtiqueta, M, yEtiqueta, 32, 26, CORPO, { negrito: true });
