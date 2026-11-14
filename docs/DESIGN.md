@@ -134,3 +134,15 @@ O `public/` não foi alterado por este documento (regra do CLAUDE.md). Os tokens
   }
 }
 ```
+
+## 10. Assinatura visual audiovisual (proposta, 14/11/2026)
+
+Vale para vídeos, Shorts, Reels e cartelas. Regras completas em `docs/METODO-DRSM.md`.
+
+- Linha de cuidado: traço contínuo em verde-900 que se desenha em 1,2 s no início e em cada cartela. Desligada com `prefers-reduced-motion`.
+- Vinheta de 2 s: ícone Lucide do tema, sem som automático.
+- Ícones: família plana Lucide (ISC). 3dicons só nas capas.
+- Cartões de conceito: fundo areia-50, borda ouro, texto verde-900 em Oswald.
+- Transições: corte seco ou desvanecimento de 0,4 s. Sem efeitos de zoom piscante.
+- Personagens: desenho adulto próprio. Sem realismo fotográfico (D2 do METODO-DRSM).
+- Cartela final: 5 linhas de identificação, CFM 2.454/2026 e CVV 188 · SAMU 192, por pelo menos 8 s.
