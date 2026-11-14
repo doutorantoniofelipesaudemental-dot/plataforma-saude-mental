@@ -126,3 +126,21 @@ test('renderização gera PNG com as dimensões do formato', async () => {
   assert.equal(meta.width, 1200);
   assert.equal(meta.height, 800);
 });
+
+// Ordem do Dr. (14/11/2026): frase que não cabe inteira NÃO é cortada com reticências.
+// A frase escolhida para a capa (relato, dado-chave ou frase-chave) cabe no bloco sem "…".
+const { quebrarLinhas, FONTE_SERIF, FONTE_SANS } = require('../../backend/lib/carrossel');
+test('frase escolhida para a capa cabe no bloco inteiro (sem reticências)', () => {
+  const longa = 'Frase de teste que é bem comprida e precisa de muitas palavras para tentar ultrapassar o limite de linhas da capa'.repeat(2);
+  const meio = 'Esta frase de teste tem tamanho intermediário e cabe em algumas linhas da capa com folga suficiente.';
+  for (const frase of [longa, meio]) {
+    const r = cap.escolherVisual(base({ conteudo: `<p>${frase}</p>`, tema: 'infancia-familia' }));
+    const alvo = r.frase || (r.dado && r.dado.frase);
+    if (!alvo) continue;
+    const linhas = quebrarLinhas(FONTE_SERIF, alvo, 1200 - 160, 38, { maxLinhas: 99 }).length;
+    assert.ok(linhas <= 3, `frase com ${linhas} linhas (máximo 3): ${alvo.slice(0, 40)}`);
+    assert.ok(!alvo.includes('…') && !alvo.includes('...'), 'não pode haver reticências');
+  }
+  const relato = cap.escolherVisual(base({ conteudo: `<p>${longa}</p>`, categoria: 'Relatos da Prática' }));
+  if (relato.frase) assert.ok(quebrarLinhas(FONTE_SERIF, relato.frase, 1200 - 160, 38, { maxLinhas: 99 }).length <= 3);
+});
