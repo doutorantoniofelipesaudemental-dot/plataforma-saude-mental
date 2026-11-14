@@ -6,6 +6,7 @@ const crypto = require('node:crypto');
 const mongoose = require('mongoose');
 const { conferir } = require('./fila');
 const { MIN_CARROSSEL, MAX_CARROSSEL } = require('./roteamento');
+const { IDENTIFICACAO_COMPLETA } = require('../identificacaoCfm');
 
 const sha = (b) => crypto.createHash('sha256').update(b).digest('hex');
 const col = (n) => mongoose.connection.db.collection(n);
@@ -21,7 +22,7 @@ async function conferirUrl(url, hashEsperado) {
   return falhas;
 }
 
-/** Legenda: link só do domínio oficial/perfil, créditos, CVV/SAMU, aviso de IA e assinatura de 3 linhas. */
+/** Legenda: link só do domínio oficial/perfil, créditos, CVV/SAMU, aviso de IA e identificação completa de 5 linhas (ordem de 08/11/2026, = checagemRedes.js). */
 
 function falhasDaLegenda(legenda) {
   const f = [];
@@ -29,7 +30,7 @@ function falhasDaLegenda(legenda) {
   if (!/Portal de Saúde Mental Doutor Antônio Felipe Garabito/.test(legenda)) f.push('sem o crédito do Portal');
   if (!/CVV 188 · SAMU 192/.test(legenda)) f.push('sem CVV 188 · SAMU 192');
   if (!/Resolução CFM 2\.454\/2026/.test(legenda)) f.push('sem o aviso de IA (CFM 2.454/2026)');
-  if (!/Dr\. Antônio Felipe · Médico · CRM-BA 41322/.test(legenda)) f.push('sem a assinatura de 3 linhas');
+  if (!legenda.includes(IDENTIFICACAO_COMPLETA)) f.push('sem a identificação completa de 5 linhas (ordem de 08/11/2026)');
   if (/#psiquiatria|(sou|médico|Dr\. Antônio Felipe[^\n]{0,40}) psiquiatra/i.test(legenda)) f.push('"psiquiatra" como título / #psiquiatria');
   return f;
 }
