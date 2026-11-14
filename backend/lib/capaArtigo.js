@@ -106,15 +106,22 @@ function dadoChave(artigo) {
   return null;
 }
 
-/** Frase-chave literal (sem número): primeira frase do resumo entre 30 e 140 caracteres; senão do texto. */
+/** Largura útil: se a frase não cabe no número de linhas, ela não é usada (nunca cortar com reticências). */
+const LARG_BLOCO_DADO = 1200 - 80 * 2 - 64;
+const LARG_FRASE = 1200 - 80 * 2;
+function cabeEm(fonte, texto, larguraPx, tamanho, maxLinhas) {
+  return quebrarLinhas(fonte, texto, larguraPx, tamanho, { maxLinhas: 99 }).length <= maxLinhas;
+}
+
+/** Frase-chave literal (sem número): primeira frase do resumo entre 30 e 140 caracteres que cabe em 3 linhas; senão do texto. */
 function fraseChave(artigo) {
   const candidatas = [...frases(semTags(artigo.resumo)), ...frases(semTags(artigo.conteudo))];
-  return candidatas.find((f) => f.length >= 30 && f.length <= 140 && !PALAVRAS_PROIBIDAS.test(f)) || null;
+  return candidatas.find((f) => f.length >= 30 && f.length <= 140 && !PALAVRAS_PROIBIDAS.test(f) && cabeEm(FONTE_SERIF, f, LARG_FRASE, 38, 3)) || null;
 }
 
 /** Relato: frase literal do próprio relato (sem paráfrase). */
 function fraseRelato(artigo) {
-  return frases(semTags(artigo.conteudo)).find((f) => f.length >= 40 && f.length <= 170 && !PALAVRAS_PROIBIDAS.test(f)) || null;
+  return frases(semTags(artigo.conteudo)).find((f) => f.length >= 40 && f.length <= 170 && !PALAVRAS_PROIBIDAS.test(f) && cabeEm(FONTE_SERIF, f, LARG_FRASE, 38, 3)) || null;
 }
 
 /** Escolha do visual: relato, tema com dado-chave, ou tema com frase-chave. */
@@ -124,7 +131,9 @@ function escolherVisual(artigo) {
   }
   const tema = temaDoArtigo(artigo);
   if (!tema) return { tipo: 'sem-tema', frase: fraseChave(artigo), cor: '#ECEEF0', rotulo: '' };
-  const dado = dadoChave(artigo);
+  const dadoBruto = dadoChave(artigo);
+  // dado-chave só entra se a frase inteira cabe em 2 linhas (sem reticências)
+  const dado = dadoBruto && cabeEm(FONTE_SANS, dadoBruto.frase, LARG_BLOCO_DADO, 26, 2) ? dadoBruto : null;
   return {
     tipo: dado ? 'dado' : 'frase',
     tema: tema.slug,
@@ -160,19 +169,23 @@ function montarSvgCapaArtigo(artigo, { formato = 'og' } = {}) {
   const altLinha = tamTitulo * 1.14;
 
   const yRodape = H - 40;
-  const yBloco = yRodape - 36 - (formato === 'blog' ? 230 : 190);
+  // Tudo termina 18 px acima do filete dourado (yRodape - 62): nada cruza o filete nem o selo.
+  const yFilete = yRodape - 62;
+  const yLimiteBloco = yFilete - 18;
   let bloco = '';
   if (visual.tipo === 'dado') {
     const linhasDado = quebrarLinhas(FONTE_SANS, visual.dado.frase, W - M * 2 - 64, 26, { maxLinhas: 2 });
     const altBloco = 200;
+    const yBlocoDado = yLimiteBloco - altBloco;
     bloco = `
-    <rect x="${M}" y="${yBloco}" width="${W - M * 2}" height="${altBloco}" rx="18" fill="#FFFFFF" opacity="0.92" />
-    ${caminhoTexto(FONTE_SERIF, visual.dado.numero, M + 32, yBloco + 78, 60, CORPO, { negrito: true })}
-    ${caminhoLinhas(FONTE_SANS, linhasDado, M + 32, yBloco + 116, 32, 26, CORPO)}
-    ${caminhoTexto(FONTE_SANS, `Fonte: ${visual.dado.fonte}`, M + 32, yBloco + altBloco - 22, 20, '#45564f')}`;
+    <rect x="${M}" y="${yBlocoDado}" width="${W - M * 2}" height="${altBloco}" rx="18" fill="#FFFFFF" opacity="0.92" />
+    ${caminhoTexto(FONTE_SERIF, visual.dado.numero, M + 32, yBlocoDado + 78, 60, CORPO, { negrito: true })}
+    ${caminhoLinhas(FONTE_SANS, linhasDado, M + 32, yBlocoDado + 116, 32, 26, CORPO)}
+    ${caminhoTexto(FONTE_SANS, `Fonte: ${visual.dado.fonte}`, M + 32, yBlocoDado + altBloco - 22, 20, '#45564f')}`;
   } else if (visual.frase) {
     const linhasF = quebrarLinhas(FONTE_SERIF, visual.frase, W - M * 2, 38, { maxLinhas: 3 });
-    bloco = caminhoLinhas(FONTE_SERIF, linhasF, M, yBloco + 40, 50, 38, CORPO);
+    const yTopoFrase = yLimiteBloco - 40 - (linhasF.length - 1) * 50;
+    bloco = caminhoLinhas(FONTE_SERIF, linhasF, M, yTopoFrase, 50, 38, CORPO);
   }
 
   const etiqueta = caminhoLinhas(FONTE_SANS, linhasEtiqueta, M, yEtiqueta, 32, 26, CORPO, { negrito: true });
