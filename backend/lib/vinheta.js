@@ -63,7 +63,7 @@ function garantirVinhetas({ pasta = PASTA_VINHETAS, forcar = false } = {}) {
 function juntar({ base, saida, encerramento, abertura, pausa = 0.7 }) {
   const args = ['-y', '-v', 'error', '-i', abertura, '-i', base, '-i', encerramento,
     '-filter_complex',
-    `[0:a]aresample=24000,aformat=channel_layouts=mono,apad=pad_dur=${pausa}[a];[1:a]aresample=24000,aformat=channel_layouts=mono,apad=pad_dur=${pausa}[b];[2:a]aresample=24000,aformat=channel_layouts=mono[c];[a][b][c]concat=n=3:v=0:a=1,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=24000[o]`,
+    `[0:a]aresample=24000,aformat=channel_layouts=mono,apad=pad_dur=${pausa}[a];[1:a]aresample=24000,aformat=channel_layouts=mono,apad=pad_dur=${pausa}[b];[2:a]aresample=24000,aformat=channel_layouts=mono[c];[a][b][c]concat=n=3:v=0:a=1,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=24000[o]`,
     '-map', '[o]', '-ac', '1', '-ar', '24000', '-b:a', '48k', saida];
   const r = spawnSync('ffmpeg', args, { encoding: 'utf8' });
   if (r.status !== 0 || String(r.stderr).trim()) throw new Error(`ffmpeg falhou: ${String(r.stderr).slice(0, 300)}`);
