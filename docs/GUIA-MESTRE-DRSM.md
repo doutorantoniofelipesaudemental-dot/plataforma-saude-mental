@@ -596,7 +596,17 @@ Aplica-se a vídeos (longos, Shorts), carrosséis, Stories, relatos e legendas. 
 - P4. A legenda tem pergunta acolhedora (não de culpa)?
 - Reprovação em qualquer portão: a peça volta para correção. Não entra na fila nem na revisão do Dr.
 
-**Pendente:** anexar as referências científicas das estratégias (com PMID/DOI conferidos). Até lá, este capítulo é regra de design, não afirmação de eficácia.
+**Referências (conferidas no PubMed em 15/11/2026; "de acordo com o PubMed"):**
+- Gruber MJ, Gelman BD, Ranganath C. 2014. Curiosidade e memória: a curiosidade melhora a memória (*Neuron*). PMID 25284006 · https://doi.org/10.1016/j.neuron.2014.08.060 · Conferido: "improved memory for information that they were curious about".
+- Kang MJ et al. 2009. Curiosidade e recompensa (*Psychological Science*). PMID 19619181 · https://doi.org/10.1111/j.1467-9280.2009.02402.x · Conferido: "epistemic curiosity activates reward circuitry and enhances memory".
+- Scholz C et al. 2017. Valor neural e compartilhamento (*PNAS*). PMID 28242678 · https://doi.org/10.1073/pnas.1615259114 · Conferido: "A neural model of valuation and information virality".
+- Tannenbaum MB et al. 2015. Apelos de medo (*Psychological Bulletin*). PMID 26501228 · https://doi.org/10.1037/a0039729 · Conferido: a efetividade do apelo de medo aumenta quando a mensagem inclui declarações de eficácia (base para a proibição de "medo sem saída").
+- Green MC, Brock TC. 2000. Transporte narrativo (*JPSP*). PMID 11079236 · https://doi.org/10.1037//0022-3514.79.5.701 · Conferido: transporte narrativo associado a crenças e avaliações. (DOI no formato do PubMed, com barra dupla.)
+- Redelmeier DA, Kahneman D. 1996. Regra do pico e do final (*Pain*). PMID 8857625 · https://doi.org/10.1016/0304-3959(96)02994-6 · Conferido: o total lembrado correlaciona com o pico e com o final.
+- **Pendente:** Berger J, Milkman KL. 2012 (*Journal of Marketing Research*), DOI informado https://doi.org/10.1509/jmr.10.0353. Não localizado no PubMed (periódico não indexado); conferir na editora antes de citar.
+- **Pendente:** Zhao et al. 2026 (*Psychology of Popular Media*), vídeos de esperança. Não localizado no PubMed nem por DOI; sem DOI conferido, não citar.
+
+Este capítulo é regra de design. As referências acima sustentam os pontos indicados; as estratégias sem referência conferida (ex.: esperança, novidade no familiar) ficam como regra de design, não como afirmação de eficácia.
 
 ## 12. Automação, rotina e papéis
 
