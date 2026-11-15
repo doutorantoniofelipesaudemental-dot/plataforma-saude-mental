@@ -117,6 +117,7 @@ O `public/` não foi alterado por este documento (regra do CLAUDE.md). Os tokens
     "fontes": { "titulo": "Fraunces", "texto": "Inter" },
     "raio": 14, "raioGrande": 24, "larguraMax": 1140, "alvoMinimoPx": 44
   },
+  "alerta": { "fundo": "#fbf1d9", "tinta": "#4a3606" },
   "arte": {
     "fundos": ["#F7F1E3", "#ECEEF0", "#DDEFD9", "#CFF1E4", "#FBE0CF"],
     "corpo": "#1B1B1B",
