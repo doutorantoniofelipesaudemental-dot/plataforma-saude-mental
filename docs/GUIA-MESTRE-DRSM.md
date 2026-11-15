@@ -566,6 +566,38 @@
 
 ---
 
+## 11-B. Psicologia do envolvimento ético (adendo do Dr., 15/11/2026)
+
+Aplica-se a vídeos (longos, Shorts), carrosséis, Stories, relatos e legendas. Objetivo: prender a atenção **com informação útil**, sem manipular. Quem assiste deve sair entendendo mais e com um passo possível, não mais ansioso.
+
+**Estratégias permitidas (10):**
+1. **Curiosidade com resposta no mesmo vídeo:** a pergunta do gancho é respondida antes do fim.
+2. **Relevância pessoal e social:** o tema aparece na vida de quem assiste (família, trabalho, escola).
+3. **Emoção positiva e encantamento:** imagem e som calmos, sem susto.
+4. **Esperança:** todo tema difícil termina com caminho de cuidado possível.
+5. **Mini-história:** um exemplo breve e genérico, sem paciente identificável.
+6. **Alerta sempre com "o que fazer":** todo sinal de alerta vem com uma ação.
+7. **Pico e final:** o ponto mais útil fica no meio e a conclusão fecha com esperança.
+8. **Fluência:** frases curtas, uma ideia por tela, leitura fácil no celular.
+9. **Novidade no familiar:** o tema conhecido ganha um ângulo novo, sem sensacionalismo.
+10. **Passo pequeno + validação:** termina com uma ação pequena e com a frase de que buscar ajuda é normal.
+
+**Proibido (sem exceção):**
+- gancho falso (promessa que o conteúdo não cumpre);
+- raiva, polêmica e indignação como motor;
+- medo sem saída (alerta sem "o que fazer");
+- comparação social (quem é "melhor" ou "pior");
+- retenção a qualquer custo (contagem regressiva, "não saia daqui", pausa artificial).
+
+**Portões automáticos (todo formato passa antes da checagem humana):**
+- P1. Gancho com pergunta: a pergunta foi respondida no conteúdo? (sim/não)
+- P2. Todo sinal de alerta tem "o que fazer" na mesma tela ou na frase seguinte?
+- P3. Termina com esperança e passo pequeno?
+- P4. A legenda tem pergunta acolhedora (não de culpa)?
+- Reprovação em qualquer portão: a peça volta para correção. Não entra na fila nem na revisão do Dr.
+
+**Pendente:** anexar as referências científicas das estratégias (com PMID/DOI conferidos). Até lá, este capítulo é regra de design, não afirmação de eficácia.
+
 ## 12. Automação, rotina e papéis
 
 ### 12.1 Rotina contínua
@@ -681,6 +713,6 @@
 ## Histórico de versões
 
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
-- **1.3 (15/11/2026):** trilha envolvente (seção de trilha da tabela de áudio, ordem 15/11 08:00); 3dicons nos vídeos (D3). Versão 1.2 (áudio −16 LUFS para artigos; vídeo −14 LUFS) fica como estava na linha da 1.2.
+- **1.3 (15/11/2026):** capítulo 11-B (psicologia do envolvimento ético, com portões P1–P4); trilha envolvente (seção de trilha da tabela de áudio, ordem 15/11 08:00); 3dicons nos vídeos (D3). Versão 1.2 (áudio −16 LUFS para artigos; vídeo −14 LUFS) fica como estava na linha da 1.2.
 - **1.2 (15/11/2026):** regra de loudness: **áudio só (narração de artigos, podcast) −16 LUFS; vídeo −14 LUFS**. Vinheta de crédito (`backendlibinheta.js`) volta para −16 LUFS; vinhetas já geradas não são regeradas.
 - **1.1 (14/11/2026):** caminho do `zgGate` corrigido (`backend\lib\redesV2\`) e `zeroGenerico.js` citado; tokens `alerta.fundo` (#fbf1d9) e `alerta.tinta` (#4a3606) acrescentados em `docs\DESIGN.md` (seção 9) e gerados em `docs\tokens.json`; vinheta com alvo de −14 LUFS (`backend\lib\vinheta.js`, só para renderizações novas).
