@@ -1,6 +1,6 @@
 # Guia Mestre DrSM
 
-**Versão 1.0 — 14/11/2026.** Aprovado pelo Dr. Antônio Felipe. Auditoria e redação: Claude.
+**Versão 1.3 — 15/11/2026.** Aprovado pelo Dr. Antônio Felipe. Auditoria e redação: Claude.
 
 > **Para o Claude Code:** este guia é a referência obrigatória de todo o ecossistema. **Consulte-o antes de qualquer tarefa.** Quando houver conflito, vale esta ordem:
 > 1. a ordem escrita mais recente do Dr.;
@@ -219,7 +219,7 @@
 - **D2. Imagem.** Proibido: foto ou vídeo **realista** de humano. Autorizado: **desenho animado e anime adultos, em estilo próprio**, inclusive gerados por IA.
   - Checagem automática descarta imagem fotorrealista (classificador CLIP).
   - **Ficha de personagem** fixa: mesmo rosto e roupa em todas as cenas.
-- **D3. Ícones.** Família plana **Lucide** (licença ISC) em vídeos e no site. **3dicons** (CC0) só nas capas.
+- **D3. Ícones.** Família plana **Lucide** (licença ISC) em vídeos e no site. **3dicons** (CC0) nas capas e, desde 15/11/2026, também nos vídeos como ilustração de apoio (ordem 15/11/2026).
 - **D4. IA gratuita na nuvem**, só com modelos de licença que permite uso comercial:
   - **Kaggle** (autorizado): FLUX.1-schnell para imagens e Wan 2.x para animar, ambos Apache-2.0;
   - **Cloudflare Workers AI** (autorizado): FLUX.1-schnell, sempre dentro da cota gratuita;
@@ -331,7 +331,7 @@
 
 ### 7.3 Ícones
 - **Lucide** (licença ISC): planos, traço 1,6 a 2 px, na cor do tema. Em vídeo, a partir de 72 px; na vinheta, 140 px.
-- **3dicons** (CC0): só nas capas dos artigos.
+- **3dicons** (CC0): nas capas dos artigos e nos vídeos (ordem 15/11/2026).
 
 ### 7.4 Assinatura visual DrSM
 - **"Linha de cuidado":** linha dourada ou na cor do tema que conduz o olhar e **liga os ícones e as ideias**. Aparece em todo vídeo, capa e página.
@@ -548,6 +548,7 @@
 | Voz | **Kokoro-82M** (pesos Apache-2.0), vozes `pf_dora`, `pm_alex` e `pm_santa`, liberadas pelo Dr. em 10/11 e 12/11/2026. Mesmo narrador em toda a série. |
 | Áudio | Fala a −14 LUFS integrado, pico ≤ −1,5 dBFS (normalização em duas passagens). Trilha a −24 LUFS sob a voz. |
 | Trilha | Banco com licença comercial gratuita e sem atribuição obrigatória (ex.: Pixabay Music). Registrar faixa, link e licença. Sem música por IA. |
+| Trilha envolvente (v1.3, 15/11/2026) | Composição **por código** (MIDI próprio, sem IA, sem samples de terceiros). Renderização: FluidSynth 2.6.2 (LGPL-2.1, SHA-256 conferido) + soundfont FluidR3_GM (MIT, Frank Wen; manter o aviso de copyright). Andamento: 75–90 BPM nos episódios e 100–115 nos Shorts/Reels; tom maior; timbres quentes. Assinatura sonora de 4 notas na abertura e no fecho. Fala: trilha 20–25 dB abaixo da voz, ducking de −14 a −18 dB (ataque 30 ms, liberação 400 ms), corte de 3 dB entre 1,5 e 3,5 kHz, sem melodia principal sob a narração. Mais presente na abertura e na cartela (+6 dB). Efeitos discretos (whoosh, pop, ding) sincronizados aos capítulos. Mix final −14 LUFS, pico ≤ −1,5 dBTP. |
 | Legendas | SRT em todo vídeo. Legenda queimada nos verticais. Relatos sem texto na tela; SRT opcional. |
 | Imagens por IA | Kaggle: FLUX.1-schnell e Wan 2.x, em notebook privado. Cloudflare: FLUX.1-schnell dentro da cota gratuita (começar com 30 por dia e só subir depois de conferir o painel). Classificador CLIP descarta fotorrealismo. |
 | Licenças | Registro em `.tmp\ordens\LICENCAS-FERRAMENTAS.md` e, depois, em `docs/`. |
@@ -564,6 +565,48 @@
 - **Vertical** (Short, Reel, LinkedIn): 9:16, até 90 s, legenda queimada.
 
 ---
+
+## 11-B. Psicologia do envolvimento ético (adendo do Dr., 15/11/2026)
+
+Aplica-se a vídeos (longos, Shorts), carrosséis, Stories, relatos e legendas. Objetivo: prender a atenção **com informação útil**, sem manipular. Quem assiste deve sair entendendo mais e com um passo possível, não mais ansioso.
+
+**Estratégias permitidas (10):**
+1. **Curiosidade com resposta no mesmo vídeo:** a pergunta do gancho é respondida antes do fim.
+2. **Relevância pessoal e social:** o tema aparece na vida de quem assiste (família, trabalho, escola).
+3. **Emoção positiva e encantamento:** imagem e som calmos, sem susto.
+4. **Esperança:** todo tema difícil termina com caminho de cuidado possível.
+5. **Mini-história:** um exemplo breve e genérico, sem paciente identificável.
+6. **Alerta sempre com "o que fazer":** todo sinal de alerta vem com uma ação.
+7. **Pico e final:** o ponto mais útil fica no meio e a conclusão fecha com esperança.
+8. **Fluência:** frases curtas, uma ideia por tela, leitura fácil no celular.
+9. **Novidade no familiar:** o tema conhecido ganha um ângulo novo, sem sensacionalismo.
+10. **Passo pequeno + validação:** termina com uma ação pequena e com a frase de que buscar ajuda é normal.
+
+**Proibido (sem exceção):**
+- gancho falso (promessa que o conteúdo não cumpre);
+- raiva, polêmica e indignação como motor;
+- medo sem saída (alerta sem "o que fazer");
+- comparação social (quem é "melhor" ou "pior");
+- retenção a qualquer custo (contagem regressiva, "não saia daqui", pausa artificial).
+
+**Portões automáticos (todo formato passa antes da checagem humana):**
+- P1. Gancho com pergunta: a pergunta foi respondida no conteúdo? (sim/não)
+- P2. Todo sinal de alerta tem "o que fazer" na mesma tela ou na frase seguinte?
+- P3. Termina com esperança e passo pequeno?
+- P4. A legenda tem pergunta acolhedora (não de culpa)?
+- Reprovação em qualquer portão: a peça volta para correção. Não entra na fila nem na revisão do Dr.
+
+**Referências (conferidas no PubMed em 15/11/2026; "de acordo com o PubMed"):**
+- Gruber MJ, Gelman BD, Ranganath C. 2014. Curiosidade e memória: a curiosidade melhora a memória (*Neuron*). PMID 25284006 · https://doi.org/10.1016/j.neuron.2014.08.060 · Conferido: "improved memory for information that they were curious about".
+- Kang MJ et al. 2009. Curiosidade e recompensa (*Psychological Science*). PMID 19619181 · https://doi.org/10.1111/j.1467-9280.2009.02402.x · Conferido: "epistemic curiosity activates reward circuitry and enhances memory".
+- Scholz C et al. 2017. Valor neural e compartilhamento (*PNAS*). PMID 28242678 · https://doi.org/10.1073/pnas.1615259114 · Conferido: "A neural model of valuation and information virality".
+- Tannenbaum MB et al. 2015. Apelos de medo (*Psychological Bulletin*). PMID 26501228 · https://doi.org/10.1037/a0039729 · Conferido: a efetividade do apelo de medo aumenta quando a mensagem inclui declarações de eficácia (base para a proibição de "medo sem saída").
+- Green MC, Brock TC. 2000. Transporte narrativo (*JPSP*). PMID 11079236 · https://doi.org/10.1037//0022-3514.79.5.701 · Conferido: transporte narrativo associado a crenças e avaliações. (DOI no formato do PubMed, com barra dupla.)
+- Redelmeier DA, Kahneman D. 1996. Regra do pico e do final (*Pain*). PMID 8857625 · https://doi.org/10.1016/0304-3959(96)02994-6 · Conferido: o total lembrado correlaciona com o pico e com o final.
+- **Pendente:** Berger J, Milkman KL. 2012 (*Journal of Marketing Research*), DOI informado https://doi.org/10.1509/jmr.10.0353. Não localizado no PubMed (periódico não indexado); conferir na editora antes de citar.
+- **Pendente:** Zhao et al. 2026 (*Psychology of Popular Media*), vídeos de esperança. Não localizado no PubMed nem por DOI; sem DOI conferido, não citar.
+
+Este capítulo é regra de design. As referências acima sustentam os pontos indicados; as estratégias sem referência conferida (ex.: esperança, novidade no familiar) ficam como regra de design, não como afirmação de eficácia.
 
 ## 12. Automação, rotina e papéis
 
@@ -680,5 +723,6 @@
 ## Histórico de versões
 
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
+- **1.3 (15/11/2026):** capítulo 11-B (psicologia do envolvimento ético, com portões P1–P4); trilha envolvente (seção de trilha da tabela de áudio, ordem 15/11 08:00); 3dicons nos vídeos (D3). Versão 1.2 (áudio −16 LUFS para artigos; vídeo −14 LUFS) fica como estava na linha da 1.2.
 - **1.2 (15/11/2026):** regra de loudness: **áudio só (narração de artigos, podcast) −16 LUFS; vídeo −14 LUFS**. Vinheta de crédito (`backendlibinheta.js`) volta para −16 LUFS; vinhetas já geradas não são regeradas.
 - **1.1 (14/11/2026):** caminho do `zgGate` corrigido (`backend\lib\redesV2\`) e `zeroGenerico.js` citado; tokens `alerta.fundo` (#fbf1d9) e `alerta.tinta` (#4a3606) acrescentados em `docs\DESIGN.md` (seção 9) e gerados em `docs\tokens.json`; vinheta com alvo de −14 LUFS (`backend\lib\vinheta.js`, só para renderizações novas).
