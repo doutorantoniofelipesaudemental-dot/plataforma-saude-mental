@@ -38,6 +38,12 @@ async function extras(token, id, item, meta, dir) {
       notas.push(r.ok ? `playlist "${item.playlist}" ok` : `playlist não aplicada (HTTP ${r.status})`);
     } else notas.push(`playlist "${item.playlist}" sem ID (rode criarPlaylists.js ou adicione à mão)`);
   } catch { notas.push('playlist: sem playlists.json'); }
+  if (meta.arquivos && meta.arquivos.legenda) {
+    try {
+      const srt = path.join(dir, meta.arquivos.legenda);
+      notas.push(`legenda enviada (HTTP ${await yt.enviarLegenda({ videoId: id, arquivo: srt, token })})`);
+    } catch (e) { notas.push('legenda falhou: ' + e.message.slice(0, 80)); }
+  }
   return notas;
 }
 
@@ -67,7 +73,8 @@ async function extras(token, id, item, meta, dir) {
       bloqueios.push(...L.checarTexto(meta), ...yt.validarMetadados({ titulo: meta.titulo, descricao: meta.descricao, tags: meta.tags }));
       if (bloqueios.length) { it.status = 'bloqueado'; it.motivo = bloqueios.join(' | '); log(`BLOQUEADO ${it.id}: ${it.motivo}`); continue; }
       if (simular) { log(`SIMULAÇÃO: publicaria ${it.id} (${it.tipo}) agendado para ${it.slot}`); continue; }
-      const r = await yt.enviarVideo({ arquivo: arq, titulo: meta.titulo, descricao: meta.descricao, tags: meta.tags, privacidade: 'public', short: it.tipo === 'short' });
+      // Itens com publicarEm (ordem 15/11/2026): enviados privados com publishAt. Os demais seguem como antes (público).
+      const r = await yt.enviarVideo({ arquivo: arq, titulo: meta.titulo, descricao: meta.descricao, tags: meta.tags, privacidade: 'public', publicarEm: meta.publicarEm || null, short: it.tipo === 'short' });
       // registra no banco ANTES de qualquer outra coisa: se falhar, o vídeo já está no ar e o lote para aqui
       try { await TRAVA.registrar(registrados, { id: it.id, youtubeId: r.id, publicadoEm: new Date().toISOString() }); }
       catch (e) { log(`ATENÇÃO: ${it.id} foi enviado (${r.id}) mas NÃO registrado no banco: ${e.message.slice(0, 80)}. Parado.`); break; }
