@@ -1,6 +1,6 @@
 # Guia Mestre DrSM
 
-**Versão 1.0 — 14/11/2026.** Aprovado pelo Dr. Antônio Felipe. Auditoria e redação: Claude.
+**Versão 1.3 — 15/11/2026.** Aprovado pelo Dr. Antônio Felipe. Auditoria e redação: Claude.
 
 > **Para o Claude Code:** este guia é a referência obrigatória de todo o ecossistema. **Consulte-o antes de qualquer tarefa.** Quando houver conflito, vale esta ordem:
 > 1. a ordem escrita mais recente do Dr.;
@@ -219,7 +219,7 @@
 - **D2. Imagem.** Proibido: foto ou vídeo **realista** de humano. Autorizado: **desenho animado e anime adultos, em estilo próprio**, inclusive gerados por IA.
   - Checagem automática descarta imagem fotorrealista (classificador CLIP).
   - **Ficha de personagem** fixa: mesmo rosto e roupa em todas as cenas.
-- **D3. Ícones.** Família plana **Lucide** (licença ISC) em vídeos e no site. **3dicons** (CC0) só nas capas.
+- **D3. Ícones.** Família plana **Lucide** (licença ISC) em vídeos e no site. **3dicons** (CC0) nas capas e, desde 15/11/2026, também nos vídeos como ilustração de apoio (ordem 15/11/2026).
 - **D4. IA gratuita na nuvem**, só com modelos de licença que permite uso comercial:
   - **Kaggle** (autorizado): FLUX.1-schnell para imagens e Wan 2.x para animar, ambos Apache-2.0;
   - **Cloudflare Workers AI** (autorizado): FLUX.1-schnell, sempre dentro da cota gratuita;
@@ -331,7 +331,7 @@
 
 ### 7.3 Ícones
 - **Lucide** (licença ISC): planos, traço 1,6 a 2 px, na cor do tema. Em vídeo, a partir de 72 px; na vinheta, 140 px.
-- **3dicons** (CC0): só nas capas dos artigos.
+- **3dicons** (CC0): nas capas dos artigos e nos vídeos (ordem 15/11/2026).
 
 ### 7.4 Assinatura visual DrSM
 - **"Linha de cuidado":** linha dourada ou na cor do tema que conduz o olhar e **liga os ícones e as ideias**. Aparece em todo vídeo, capa e página.
@@ -548,6 +548,7 @@
 | Voz | **Kokoro-82M** (pesos Apache-2.0), vozes `pf_dora`, `pm_alex` e `pm_santa`, liberadas pelo Dr. em 10/11 e 12/11/2026. Mesmo narrador em toda a série. |
 | Áudio | Fala a −14 LUFS integrado, pico ≤ −1,5 dBFS (normalização em duas passagens). Trilha a −24 LUFS sob a voz. |
 | Trilha | Banco com licença comercial gratuita e sem atribuição obrigatória (ex.: Pixabay Music). Registrar faixa, link e licença. Sem música por IA. |
+| Trilha envolvente (v1.3, 15/11/2026) | Composição **por código** (MIDI próprio, sem IA, sem samples de terceiros). Renderização: FluidSynth 2.6.2 (LGPL-2.1, SHA-256 conferido) + soundfont FluidR3_GM (MIT, Frank Wen; manter o aviso de copyright). Andamento: 75–90 BPM nos episódios e 100–115 nos Shorts/Reels; tom maior; timbres quentes. Assinatura sonora de 4 notas na abertura e no fecho. Fala: trilha 20–25 dB abaixo da voz, ducking de −14 a −18 dB (ataque 30 ms, liberação 400 ms), corte de 3 dB entre 1,5 e 3,5 kHz, sem melodia principal sob a narração. Mais presente na abertura e na cartela (+6 dB). Efeitos discretos (whoosh, pop, ding) sincronizados aos capítulos. Mix final −14 LUFS, pico ≤ −1,5 dBTP. |
 | Legendas | SRT em todo vídeo. Legenda queimada nos verticais. Relatos sem texto na tela; SRT opcional. |
 | Imagens por IA | Kaggle: FLUX.1-schnell e Wan 2.x, em notebook privado. Cloudflare: FLUX.1-schnell dentro da cota gratuita (começar com 30 por dia e só subir depois de conferir o painel). Classificador CLIP descarta fotorrealismo. |
 | Licenças | Registro em `.tmp\ordens\LICENCAS-FERRAMENTAS.md` e, depois, em `docs/`. |
@@ -680,5 +681,6 @@
 ## Histórico de versões
 
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
+- **1.3 (15/11/2026):** trilha envolvente (seção de trilha da tabela de áudio, ordem 15/11 08:00); 3dicons nos vídeos (D3). Versão 1.2 (áudio −16 LUFS para artigos; vídeo −14 LUFS) fica como estava na linha da 1.2.
 - **1.2 (15/11/2026):** regra de loudness: **áudio só (narração de artigos, podcast) −16 LUFS; vídeo −14 LUFS**. Vinheta de crédito (`backendlibinheta.js`) volta para −16 LUFS; vinhetas já geradas não são regeradas.
 - **1.1 (14/11/2026):** caminho do `zgGate` corrigido (`backend\lib\redesV2\`) e `zeroGenerico.js` citado; tokens `alerta.fundo` (#fbf1d9) e `alerta.tinta` (#4a3606) acrescentados em `docs\DESIGN.md` (seção 9) e gerados em `docs\tokens.json`; vinheta com alvo de −14 LUFS (`backend\lib\vinheta.js`, só para renderizações novas).
