@@ -157,6 +157,14 @@ async function triplaChecagem() {
   if (!soChecagem) {
     comando('3. Build', NPM, ['run', 'build']);
     comando('4. Testes unitários', NPM, ['run', 'test:unit']);
+    // Lição de 15/11/2026 (PR #294, 4 reprovações): um órfão ocupou a porta 3000 antes do E2E e o webServer do
+    // Playwright recusou ("already used"). Antes do E2E: encerra os órfãos de teste e confere a porta livre.
+    limparTeste();
+    const sondagem = spawnSync(process.execPath, ['-e', "const s=require('net').connect(3000,'127.0.0.1');s.setTimeout(800);s.on('connect',()=>{console.log('OCUPADA');s.destroy()});s.on('timeout',()=>{console.log('LIVRE');s.destroy()});s.on('error',()=>console.log('LIVRE'))"], { encoding: 'utf8' });
+    if (!/LIVRE/.test(sondagem.stdout || '')) {
+      etapas.push({ nome: '5. E2E completo', ok: false, detalhe: 'porta 3000 ocupada antes do E2E e não encerrada pelo portão (ver processos na porta)' });
+      encerrar(false);
+    }
     comando('5. E2E completo', NPM, ['run', 'test:e2e']);
   }
   encerrar(true);
