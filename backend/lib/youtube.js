@@ -64,7 +64,47 @@ function validarMetadados({ titulo, descricao, tags }) {
  * Envia o vídeo. `privacidade`: public | unlisted | private.
  * Devolve id, link, status HTTP e a privacidade que o YouTube aplicou.
  */
-async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade = 'public', short = false }) {
+// Status do envio. Com publicarEm (ISO): privado + publishAt (o YouTube publica sozinho na data). Sem: privacidade pedida.
+function montarStatus({ privacidade = 'public', publicarEm = null } = {}) {
+  if (publicarEm) {
+    if (Number.isNaN(Date.parse(publicarEm))) throw new ErroYoutube('publicarEm inválido (use ISO 8601)', 'YOUTUBE_PUBLICARTEM_INVALIDO');
+    return { privacyStatus: 'private', publishAt: new Date(publicarEm).toISOString(), selfDeclaredMadeForKids: false };
+  }
+  return { privacyStatus: privacidade, selfDeclaredMadeForKids: false };
+}
+
+// Corpo multipart/related da legenda (captions.insert com uploadType=multipart): metadados + arquivo SRT.
+function montarCorpoLegenda({ videoId, srt, boundary = 'drsm-legenda-boundary' }) {
+  const meta = { snippet: { videoId, language: 'pt', name: 'Português', isDraft: false } };
+  return Buffer.concat([
+    Buffer.from(`--${boundary}
+Content-Type: application/json; charset=UTF-8
+
+${JSON.stringify(meta)}
+--${boundary}
+Content-Type: application/octet-stream
+
+`, 'utf8'),
+    Buffer.from(srt, 'utf8'),
+    Buffer.from(`
+--${boundary}--
+`, 'utf8'),
+  ]);
+}
+
+async function enviarLegenda({ videoId, arquivo, token }) {
+  const boundary = 'drsm-legenda-boundary';
+  const corpo = montarCorpoLegenda({ videoId, srt: fs.readFileSync(arquivo, 'utf8'), boundary });
+  const r = await fetch('https://www.googleapis.com/upload/youtube/v3/captions?uploadType=multipart&part=snippet', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': `multipart/related; boundary=${boundary}` },
+    body: corpo,
+  });
+  if (!r.ok) throw new ErroYoutube(`legenda não enviada (HTTP ${r.status})`, 'YOUTUBE_LEGENDA_FALHOU');
+  return r.status;
+}
+
+async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade = 'public', publicarEm = null, short = false }) {
   exigirRedesAtivas('upload no YouTube');
   const token = await obterAccessToken();
   const tamanho = fs.statSync(arquivo).size;
@@ -78,7 +118,7 @@ async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade 
     },
     body: JSON.stringify({
       snippet: { title: titulo, description: descricao, tags, categoryId: CATEGORIA_PADRAO, defaultLanguage: 'pt-BR', defaultAudioLanguage: 'pt-BR' },
-      status: { privacyStatus: privacidade, selfDeclaredMadeForKids: false },
+      status: montarStatus({ privacidade, publicarEm }),
     }),
   });
   const destino = inicio.headers.get('location');
@@ -104,4 +144,4 @@ async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade 
   };
 }
 
-module.exports = { enviarVideo, obterAccessToken, validarMetadados, credenciaisYoutube, ErroYoutube };
+module.exports = { enviarVideo, enviarLegenda, montarStatus, montarCorpoLegenda, obterAccessToken, validarMetadados, credenciaisYoutube, ErroYoutube };
