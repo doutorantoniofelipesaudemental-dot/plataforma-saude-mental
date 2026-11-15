@@ -722,8 +722,16 @@ Este capítulo é regra de design. As referências acima sustentam os pontos ind
 
 ## Histórico de versões
 
+- **1.5 (15/11/2026):** regra de tela e referências (seção 17).
 - **1.4 (15/11/2026):** trilha B como padrão de todas as trilhas (linha Trilha envolvente): variações por série, marcas de capítulo reais, −16 LUFS para áudio e podcast e −14 para vídeo. PR pequeno, depois do merge da 1.3 (#291).
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
 - **1.3 (15/11/2026):** capítulo 11-B (psicologia do envolvimento ético, com portões P1–P4); trilha envolvente (seção de trilha da tabela de áudio, ordem 15/11 08:00); 3dicons nos vídeos (D3). Versão 1.2 (áudio −16 LUFS para artigos; vídeo −14 LUFS) fica como estava na linha da 1.2.
 - **1.2 (15/11/2026):** regra de loudness: **áudio só (narração de artigos, podcast) −16 LUFS; vídeo −14 LUFS**. Vinheta de crédito (`backendlibinheta.js`) volta para −16 LUFS; vinhetas já geradas não são regeradas.
 - **1.1 (14/11/2026):** caminho do `zgGate` corrigido (`backend\lib\redesV2\`) e `zeroGenerico.js` citado; tokens `alerta.fundo` (#fbf1d9) e `alerta.tinta` (#4a3606) acrescentados em `docs\DESIGN.md` (seção 9) e gerados em `docs\tokens.json`; vinheta com alvo de −14 LUFS (`backend\lib\vinheta.js`, só para renderizações novas).
+
+## 17. Regra de tela e referências (ordem do Dr. 15/11/2026, 15:40 — ratificada no adendo 15:50)
+- Todo texto visível em cena, Short ou landing que tenha **afirmação clínica** (número, efeito, comparação, eficácia) deve estar **na narração** e ter **referência conferida na fonte** (PubMed, com DOI) antes do render.
+- **Nome de medicamento ou dose na tela = proibido.**
+- Comparação de eficácia ("tão eficaz quanto…") sem referência conferida = proibida na tela e na narração.
+- Número na tela sem referência conferida: retirar ou pedir confirmação ao Dr.
+- Ao citar PubMed: identificar a fonte e incluir o DOI.
