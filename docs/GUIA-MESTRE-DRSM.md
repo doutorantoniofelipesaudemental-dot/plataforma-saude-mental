@@ -1,6 +1,6 @@
 # Guia Mestre DrSM
 
-**Versão 1.3 — 15/11/2026.** Aprovado pelo Dr. Antônio Felipe. Auditoria e redação: Claude.
+**Versão 1.4 — 15/11/2026.** Aprovado pelo Dr. Antônio Felipe. Auditoria e redação: Claude.
 
 > **Para o Claude Code:** este guia é a referência obrigatória de todo o ecossistema. **Consulte-o antes de qualquer tarefa.** Quando houver conflito, vale esta ordem:
 > 1. a ordem escrita mais recente do Dr.;
@@ -548,7 +548,7 @@
 | Voz | **Kokoro-82M** (pesos Apache-2.0), vozes `pf_dora`, `pm_alex` e `pm_santa`, liberadas pelo Dr. em 10/11 e 12/11/2026. Mesmo narrador em toda a série. |
 | Áudio | Fala a −14 LUFS integrado, pico ≤ −1,5 dBFS (normalização em duas passagens). Trilha a −24 LUFS sob a voz. |
 | Trilha | Banco com licença comercial gratuita e sem atribuição obrigatória (ex.: Pixabay Music). Registrar faixa, link e licença. Sem música por IA. |
-| Trilha envolvente (v1.3, 15/11/2026) | Composição **por código** (MIDI próprio, sem IA, sem samples de terceiros). Renderização: FluidSynth 2.6.2 (LGPL-2.1, SHA-256 conferido) + soundfont FluidR3_GM (MIT, Frank Wen; manter o aviso de copyright). Andamento: 75–90 BPM nos episódios e 100–115 nos Shorts/Reels; tom maior; timbres quentes. Assinatura sonora de 4 notas na abertura e no fecho. Fala: trilha 20–25 dB abaixo da voz, ducking de −14 a −18 dB (ataque 30 ms, liberação 400 ms), corte de 3 dB entre 1,5 e 3,5 kHz, sem melodia principal sob a narração. Mais presente na abertura e na cartela (+6 dB). Efeitos discretos (whoosh, pop, ding) sincronizados aos capítulos. Mix final −14 LUFS, pico ≤ −1,5 dBTP. |
+| Trilha envolvente (v1.3, 15/11/2026) | Composição **por código** (MIDI próprio, sem IA, sem samples de terceiros). Renderização: FluidSynth 2.6.2 (LGPL-2.1, SHA-256 conferido) + soundfont FluidR3_GM (MIT, Frank Wen; manter o aviso de copyright). Andamento: 75–90 BPM nos episódios e 100–115 nos Shorts/Reels; tom maior; timbres quentes. Assinatura sonora de 4 notas na abertura e no fecho. Fala: trilha 20–25 dB abaixo da voz, ducking de −14 a −18 dB (ataque 30 ms, liberação 400 ms), corte de 3 dB entre 1,5 e 3,5 kHz, sem melodia principal sob a narração. Mais presente na abertura e na cartela (+6 dB). Efeitos discretos (whoosh, pop, ding) sincronizados aos capítulos. Mix final −14 LUFS, pico ≤ −1,5 dBTP. **Padrão (v1.4, 15/11/2026):** a versão B é o padrão de TODAS as próximas trilhas (episódios, Shorts, Reels, Stories, vídeos de artigo e vinheta de podcast). Variações por série com `compor.py`: mesmo motivo de 4 notas, tom maior, 72–90 BPM nos episódios (Shorts/Reels: a definir), sem melodia competindo com a voz. Marcas de capítulo = início de cada cena do vídeo, mais 2 s da vinheta. Áudio e podcast a −16 LUFS; vídeo a −14 LUFS. |
 | Legendas | SRT em todo vídeo. Legenda queimada nos verticais. Relatos sem texto na tela; SRT opcional. |
 | Imagens por IA | Kaggle: FLUX.1-schnell e Wan 2.x, em notebook privado. Cloudflare: FLUX.1-schnell dentro da cota gratuita (começar com 30 por dia e só subir depois de conferir o painel). Classificador CLIP descarta fotorrealismo. |
 | Licenças | Registro em `.tmp\ordens\LICENCAS-FERRAMENTAS.md` e, depois, em `docs/`. |
@@ -722,6 +722,7 @@ Este capítulo é regra de design. As referências acima sustentam os pontos ind
 
 ## Histórico de versões
 
+- **1.4 (15/11/2026):** trilha B como padrão de todas as trilhas (linha Trilha envolvente): variações por série, marcas de capítulo reais, −16 LUFS para áudio e podcast e −14 para vídeo. PR pequeno, depois do merge da 1.3 (#291).
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
 - **1.3 (15/11/2026):** capítulo 11-B (psicologia do envolvimento ético, com portões P1–P4); trilha envolvente (seção de trilha da tabela de áudio, ordem 15/11 08:00); 3dicons nos vídeos (D3). Versão 1.2 (áudio −16 LUFS para artigos; vídeo −14 LUFS) fica como estava na linha da 1.2.
 - **1.2 (15/11/2026):** regra de loudness: **áudio só (narração de artigos, podcast) −16 LUFS; vídeo −14 LUFS**. Vinheta de crédito (`backendlibinheta.js`) volta para −16 LUFS; vinhetas já geradas não são regeradas.
