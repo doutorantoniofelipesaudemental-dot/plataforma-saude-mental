@@ -254,7 +254,8 @@
 | Roteiro | origem aprovada; frases curtas; texto fixo exato |
 | Referências | PubMed; compatibilidade da frase com a fonte |
 | Ética | CFM; OMS; zero genérico |
-| Áudio | −14 LUFS; pico ≤ −1,5 dBFS; sem pausa morta acima de 0,5 s |
+| Áudio (vídeo) | −14 LUFS; pico ≤ −1,5 dBFS; sem pausa morta acima de 0,5 s |
+| Áudio (só áudio: artigos, podcast) | −16 LUFS; pico ≤ −1,5 dBFS |
 | Visual | troca de imagem a cada 3–5 s; legibilidade no celular; fotorrealismo; licenças |
 | Miniatura | legível; sem sensacionalismo |
 | Textos das redes | `checarPost`; `falhasDeTexto`; tamanhos |
@@ -679,4 +680,5 @@
 ## Histórico de versões
 
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
+- **1.2 (15/11/2026):** regra de loudness: **áudio só (narração de artigos, podcast) −16 LUFS; vídeo −14 LUFS**. Vinheta de crédito (`backendlibinheta.js`) volta para −16 LUFS; vinhetas já geradas não são regeradas.
 - **1.1 (14/11/2026):** caminho do `zgGate` corrigido (`backend\lib\redesV2\`) e `zeroGenerico.js` citado; tokens `alerta.fundo` (#fbf1d9) e `alerta.tinta` (#4a3606) acrescentados em `docs\DESIGN.md` (seção 9) e gerados em `docs\tokens.json`; vinheta com alvo de −14 LUFS (`backend\lib\vinheta.js`, só para renderizações novas).
