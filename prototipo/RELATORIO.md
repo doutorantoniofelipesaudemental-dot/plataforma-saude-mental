@@ -41,4 +41,4 @@ Brutos: `C:/DRS-tools/proto/resultado.json` (fora do repositório). Medição fe
 4. Pilotos B–D da minissérie e a cena 8 do roteiro seguem com decisão do Dr.
 
 ## Encerramento
-- Servidores de teste (portas 3000 e 3001) encerrados em 20/11 20:28 (pids próprios). Portas livres.
+- Servidores de teste (portas 3000 e 3001) encerrados em 17/11 20:28 (pids próprios). Portas livres.
