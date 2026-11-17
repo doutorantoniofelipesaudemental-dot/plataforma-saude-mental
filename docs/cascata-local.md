@@ -25,3 +25,9 @@ Digite `/exit` no Aider. Ou use `-Modo off` para voltar ao Claude direto.
 - **Nunca** como roteador, gateway ou proxy. Nenhuma chave de API é usada; o Aider fala só com o Ollama local.
 - Não usar o Aider com Git automático: a flag `--no-auto-commits` está ativa. Commits são feitos à mão.
 - Se o Ollama não responder, o modo sai com código 2 e a mensagem `indisponível`.
+
+## Teste sem console (17/11/2026, ~06:10)
+- Comando: `aider --message "..." --yes --no-git --no-auto-commits --no-check-update --no-analytics` com entrada vazia, arquivo descartável em `C:/DRS-tools/teste-local/teste.css`.
+- Resultado: exit 0, 73 s, edição correta (`color:#17211f`), nenhuma outra linha alterada.
+- Avisos do prompt toolkit ("Can't initialize prompt toolkit") não impedem o modo `--message`.
+- **Pendência do Dr.:** o modo interativo (`-Modo local` sem `--message`) ainda precisa ser testado num PowerShell real.
