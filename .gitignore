@@ -143,3 +143,15 @@ relatorios/linkedin/fila.json
 # Crédito da Vercel: arquivo de ESTADO (ordem de 02/11/2026). Não é versionado; protegido pelo backup_estado e pelo merge-seguro.
 relatorios/vercel-credito.json
 relatorios/estado-local/
+
+# Sensíveis, pesados e temporários da árvore principal (ordem de 17/11/2026; por categoria e nome, sem ler conteúdo)
+.tmp_prfiles.txt
+relatorios/ESTADO-GERAL.antes-*.md
+relatorios/plano-diretor/SENSIVEIS-candidatos-local.md
+relatorios/plano-diretor/duplicados-local.json
+relatorios/youtube/auditoria-envio/evidencias/
+relatorios/youtube/fila-manual/**/*.mp4
+relatorios/youtube/fila-manual/**/*.png
+relatorios/voz-amostras/*.wav
+relatorios/voz-amostras/*.m4a
+relatorios/voz-amostras/*.ogg
