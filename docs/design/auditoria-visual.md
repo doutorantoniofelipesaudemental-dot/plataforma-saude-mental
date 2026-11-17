@@ -28,3 +28,24 @@ O repositório usa **Inter** (texto) e **Fraunces** (títulos), conforme `docs/D
 
 - Alvos de toque, ordem de títulos e foco em execução real: exigem navegador (não rodado, para não manter servidor ativo além da janela).
 - Página de Mentoria: sem WhatsApp (7 `mailto:`). Não alterada.
+
+## Medições em navegador (17/11/2026, 06:17, Playwright + Edge, 375 px e 1280 px)
+
+Servidor local em `127.0.0.1:3000`, encerrado após a medição (porta livre). Script e dados brutos em `C:/DRS-tools/medir.py` e `C:/DRS-tools/medicao-visual.json` (fora do repositório).
+
+| Página | Largura | Alvos < 44 px | Total | Títulos com salto de nível | h1 | Imagens sem width/height | Rolagem horizontal |
+|---|---|---|---|---|---|---|---|
+| index.html | 375 | 66 | 90 | 0 | 1 | 0 | não |
+| index.html | 1280 | 67 | 90 | 0 | 1 | 0 | não |
+| privacidade.html | 375 | 6 | 12 | 0 | 1 | 0 | não |
+| termos.html | 375 | 7 | 13 | 0 | 1 | 0 | não |
+| mentoria.html | 375 | 1 | 17 | 0 | 1 | 0 | não |
+| admin.html | 375 | 1 | 4 | 0 | 2 | 0 | não |
+
+- Rolagem horizontal: nenhuma das 26 medições (13 páginas × 2 larguras).
+- Títulos: nenhum salto de nível. `admin.html` tem 2 `h1` (documentado; não alterado).
+- Imagens: todas com dimensões.
+- Alvos pequenos: a maioria são links de navegação (16–19 px de altura) e um `input` de 13 px. Corrigir para 44 px mudaria o layout de forma perceptível. **Não aplicado, por regra.** Pendente de decisão visual do Dr.
+- Foco visível: não medido (exige teclado simulado). Regra global `:focus-visible` presente (style.css:182).
+
+Conclusão: não há commit de correção de alvos nesta rodada. Decisão do Dr.: aceitar links de navegação de 16–19 px com área de toque ampliada por padding invisível, ou manter.

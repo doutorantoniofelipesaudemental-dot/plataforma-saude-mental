@@ -1,0 +1,13 @@
+{
+  "_status": "PROPOSTA INATIVA (17/11/2026). Nome não carregado pelo Claude Code. Para ativar, o Dr. copia só o bloco permissions.deny para .claude/settings.json (mesclar, sem apagar as 45 regras existentes).",
+  "permissions": {
+    "deny": [
+      "Read(./relatorios/**)",
+      "Read(./backups/**)",
+      "Read(./.tmp/**)",
+      "Read(./node_modules/**)",
+      "Read(./assets/**)",
+      "Read(./importacao-completa/**)"
+    ]
+  }
+}
