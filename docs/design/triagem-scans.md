@@ -41,3 +41,16 @@ Nenhum achado indica exfiltração para domínio não declarado nem leitura do `
 | Auditoria anterior | `relatorios/auditoria-ponytail.md`: "APROVADO COM RESTRIÇÕES" (74 linhas) | — |
 
 Não alterado. Decisão para o Dr.: atualizar o `argument-hint` (um texto) ou manter a cópia como está.
+
+## 5. RTK (17/11/2026, somente leitura)
+
+Scan: score 100, DO NOT INSTALL, cobertura 86,5%, 0 CRITICAL, 459 HIGH. Detalhe completo em `docs/design/triagem-rtk.md`.
+
+- **(a) falso positivo para a maioria dos 459 HIGH:** Tool Misuse (345), Privilege Escalation (41), System Prompt Leakage, Anti-Refusal e YARA em texto de instrução e de testes (ex.: `.claude/commands/rtk-no-history-rewrite.md:7`).
+- **(b) comportamento real preocupante, pelo mecanismo:**
+  - `rtk init -g` cria `~/.claude/RTK.md` e acrescenta `@RTK.md` ao `~/.claude/CLAUDE.md` global (INSTALL.md:116–117).
+  - Oferece patch do `~/.claude/settings.json`, com backup (INSTALL.md:118–119).
+  - O hook (`src/hooks/hook_cmd.rs`, linhas 40–61) devolve `updatedInput` e **reescreve o comando antes da execução**. Pode alterar logs e verificações.
+- **(c)** `.claude/hooks/rtk-rewrite.sh:1` (Concealed Executable Artifact): não confirmado por completo.
+
+**Conclusão:** NÃO instalar. Elegível para reavaliação somente com aprovação escrita do Dr. e teste dos comandos reescritos.
