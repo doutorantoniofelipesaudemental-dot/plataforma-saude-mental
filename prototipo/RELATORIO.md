@@ -34,9 +34,11 @@ Brutos: `C:/DRS-tools/proto/resultado.json` (fora do repositório). Medição fe
 ## Peso
 - Binários: fundo-natureza-1.webp 19 KB e fundo-natureza-2.webp 31 KB (limite 150 KB cada). Total da pasta: 68 KB (limite 3 MB).
 
-## Pendências (não feitas)
-1. Processo do servidor antigo na porta 3000 (com o caminho de arquivo com erro) ainda ativo. Bloqueei a tentativa de encerrar `node.exe` em massa. Encerrar com `netstat -ano | findstr :3000` e `taskkill /PID <pid> /F`. Depois, `servidor.js` com PORTA=3001 segue ativo; encerrar do mesmo jeito.
-2. Vídeo de boas-vindas e narração de artigo não estão no protótipo. Entram na próxima etapa, quando o peso e a licença forem decididos.
-3. Lista de referências e corpo do artigo são placeholders.
-4. VLibras não foi integrado (licença do widget hospedado não lida).
-5. Pilotos B–D da minissérie e fundos da Fase 2 seguem pendentes.
+## Pendências
+1. Vídeo de boas-vindas e narração de artigo não estão no protótipo (vídeo acima do limite de 3 MB; áudio é placeholder). Entram quando peso e licença forem decididos.
+2. Lista de referências e corpo do artigo são placeholders.
+3. VLibras NÃO integrado: a busca não encontrou os termos de uso do widget hospedado. Só poderia entrar sob clique, depois de confirmar a licença e citar o terceiro na política.
+4. Pilotos B–D da minissérie e a cena 8 do roteiro seguem com decisão do Dr.
+
+## Encerramento
+- Servidores de teste (portas 3000 e 3001) encerrados em 20/11 20:28 (pids próprios). Portas livres.
