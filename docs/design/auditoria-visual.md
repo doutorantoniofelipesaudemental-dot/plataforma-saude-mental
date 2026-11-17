@@ -68,3 +68,8 @@ Demais alvos pequenos, fora do escopo de navegação/menu/rodapé/controle (não
 - "Saiba mais" em cartões (41×45 px; largura 41): links de cartão.
 - "CVV 188" / "SAMU 192" (26×19 px): faixa de crise.
 - Caixas de opção (13×13 px) dentro de `<label>`: o alvo é o rótulo.
+
+## Correção de registro (17/11/2026, 06:54)
+
+- **`da652f2` (verde-700 em `.etapa__numero`) não tem efeito visual.** A classe `.etapa__numero` existe só em `public/assets/css/style.css`; nenhum HTML do repositório a usa (`git grep` em origin/main). A medição "1,84:1 → 7,16:1" descrevia uma regra que nenhuma página renderiza. O commit foi mantido no histórico; não há ação visual.
+- **`c510d74` (tinta-fraca → tinta-media): confirmado em produção.** O `style.css` publicado em www.drantoniofelipemedico.com.br tem 25 usos de `color: var(--tinta-media)` e 0 de `color: var(--tinta-fraca)`, igual ao origin/main.
