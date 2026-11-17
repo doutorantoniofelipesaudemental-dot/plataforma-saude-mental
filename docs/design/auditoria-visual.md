@@ -99,3 +99,25 @@ Metas: AA = 4,5:1 (texto pequeno) ou 3:1 (grande: ≥ 24 px, ou ≥ 18,66 px em 
 **Escopo desta rodada:** a sua regra limita as trocas a `<style>` inline e a `style=""`. Dentro desse escopo, não há falha de AA, e o único desvio de AAA (`a.botao` dourado) não tem solução com tokens travados. Por isso não há commit de contraste nesta rodada. Os pares fora do escopo estão listados acima para decisão.
 
 **Registro corrigido:** `da652f2` não tem efeito visual (`.etapa__numero` não é usada em página). Ver a correção de 06:54.
+
+## Atualização (17/11/2026, 07:05): correção e resultados das Etapas 2, 3 e 5
+
+**Correção do parágrafo "Escopo desta rodada" acima:** houve troca de cor. Commits em `feat/drsm-contraste-inline` (C:/DRS-toque): `4096d43` (mentoria), `11828fd` (linkedin), `6a76cc6` (youtube). Cada um troca `.cta a.botao` de `var(--verde-escuro)` para `var(--tinta)` (token travado, `#17211f`). Razão sobre dourado: 5,66:1 → 6,82:1. **AA já passava** (5,66 ≥ 4,5); **AAA (7:1) continua não atingido**, porque nenhum token travado chega a 7:1 sobre `#c9a227`. A troca é a melhor possível sem criar cor nova.
+Prova antes/depois: capturas de página inteira em 375 e 1280 px (Playwright, Edge), com `prefers-reduced-motion`. Em cada página e largura há **uma única região** diferente (571 pixels), e ela cai dentro da caixa do botão medida no DOM: mentoria 375 (41–134, 9887–9899) dentro de (16–159, 9866–9919); 1280 (313–406, 7533–7545) dentro de (288–431, 7512–7566). Linkedin e youtube: mesma prova, mesma forma. Nenhum outro pixel mudou.
+Não corrigido nesta rodada, fora do escopo de `<style>` inline e `style=""`: rodapé (`style.css`), `summary` terracota (`extras.css`, `#a85d3c` não é token), etiquetas `#1f7a72` sobre `#faf7f2` (4,81:1), `#8cc4b8` sobre `#0d3330` (6,98:1, 0,02 abaixo de 7). Ver a tabela acima.
+
+**Etapa 3: critérios de tamanho de alvo (W3C, WCAG 2.2, Understanding).**
+- 2.5.8 Target Size (Minimum), **nível AA**: alvo de **24 × 24 CSS px**, ou espaçamento suficiente: um círculo de 24 px de diâmetro centrado em cada alvo menor não pode tocar outro alvo. Fonte: https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+- 2.5.5 Target Size (Enhanced), **nível AAA**: alvo de **44 × 44 CSS px**. Fonte: https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html
+- Conclusão para o rodapé atual: os links têm cerca de 19 px de altura, então estão abaixo de 24 px. Cumprem o AA **pela exceção de espaçamento**: a distância entre centros é de cerca de 35 px (19 px de altura + 16 px de espaço), e um círculo de 24 px não toca o vizinho. Os **44 px são meta AAA do projeto**, não exigência AA.
+- Medição (`C:/DRS-tools/rodape-cap.py`, altura < 44 px, 18 links em `index.html`): antes 17 (375 px) e 16 (1280 px); variante de layout 0 e 0 (patch em `C:/DRS-tools/toque-44-layout.patch`, 14 linhas, não commitado). Capturas em `C:/DRS-tools/capturas-rodape/` (`antes2-375.png`, `antes2-1280.png`, `depois-375.png`, `depois-1280.png`).
+- Mudança de layout da variante: `.rodape ul` com `gap: 0` e `.rodape ul li a` com `display: flex; align-items: center; min-height: 44px`. O rodapé fica mais alto. Decisão do Dr.
+
+**Etapa 5: verificação estática de links (somente leitura, `C:/DRS-tools/links-estatico.py`).** 14 páginas em `public/`.
+- Href/src internos inexistentes: **0**. Verificados como arquivo, `.html`, pasta com `index.html` ou rota de `vercel.json` com destino explícito.
+- Âncoras sem alvo: **0** (inclui `/#sobre` e `/#contato-servicos` contra `index.html`).
+- Imagens sem `alt`: **0**.
+- Limite: 25 links `/artigo/<slug>` são roteados para o backend (`vercel.json`, `/artigo/[^/]+`) e **não foram confirmados contra o banco**. Confirmar o slug exige consulta ao banco (não feita).
+- Nada foi corrigido nesta etapa.
+
+**Achados de conformidade fora do escopo de contraste (para o Dr).** Código morto em `public/assets/js/home.js`: a lógica dos formulários de agendamento (`tipoAtendimento: 'particular'`) e de contato segue no JS, mas os formulários não existem mais no HTML, e os endpoints do backend respondem 410. Ver o rascunho da política, ponto 3 e ponto 4.
