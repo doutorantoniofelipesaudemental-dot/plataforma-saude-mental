@@ -49,3 +49,22 @@ Servidor local em `127.0.0.1:3000`, encerrado após a medição (porta livre). S
 - Foco visível: não medido (exige teclado simulado). Regra global `:focus-visible` presente (style.css:182).
 
 Conclusão: não há commit de correção de alvos nesta rodada. Decisão do Dr.: aceitar links de navegação de 16–19 px com área de toque ampliada por padding invisível, ou manter.
+
+## Técnica de toque no rodapé (17/11/2026, 06:52): medido, NÃO commitado
+
+Técnica testada: `.rodape a { position: relative }` e `.rodape a::before` (área de toque expandida, sem alterar layout). Escopo: 17 links do rodapé de 19 px de altura.
+
+| Medida | Antes | Depois (inset −8 px vertical, −6 px horizontal) |
+|---|---|---|
+| Alvos < 44 px (index, 375 px) | 66 de 90 | 66 de 90 (sem queda) |
+| Alvos < 44 px (index, 1280 px) | 67 de 90 | 67 de 90 (sem queda) |
+| Alvos < 44 px (mentoria, privacidade, termos) | 1/17, 6/12, 7/13 | iguais |
+| Rolagem horizontal | não | não |
+| Diferença de pixel (8 capturas, 375 e 1280 px) | — | 0 pixel diferente |
+
+Motivo de não commitar: a contagem não caiu. Os links do rodapé estão empilhados com 16 px de folga; sem sobrepor vizinhos, a área máxima é 19 + 16 = 35 px de altura, abaixo de 44. Atingir 44 px exige aumentar o espaçamento (mudança de layout) ou aceitar sobreposição (proibido). Patch guardado em `C:/DRS-tools/toque-44.patch`, para decisão do Dr.
+
+Demais alvos pequenos, fora do escopo de navegação/menu/rodapé/controle (não alterados):
+- "Saiba mais" em cartões (41×45 px; largura 41): links de cartão.
+- "CVV 188" / "SAMU 192" (26×19 px): faixa de crise.
+- Caixas de opção (13×13 px) dentro de `<label>`: o alvo é o rótulo.
