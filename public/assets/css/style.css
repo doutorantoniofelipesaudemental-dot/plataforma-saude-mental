@@ -333,7 +333,7 @@ a:hover { color: var(--verde-500); }
   color: #fff;
 }
 .marca__nome { font-family: var(--fonte-titulo); font-weight: 600; font-size: 1.05rem; line-height: 1.2; }
-.marca__descricao { font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--tinta-fraca); }
+.marca__descricao { font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--tinta-media); }
 
 .navegacao { display: flex; align-items: center; gap: 2rem; }
 .navegacao__lista { display: flex; align-items: center; gap: 1.75rem; list-style: none; margin: 0; padding: 0; }
@@ -463,7 +463,7 @@ a:hover { color: var(--verde-500); }
   color: var(--verde-800);
   line-height: 1.1;
 }
-.prova__rotulo { font-size: 0.85rem; color: var(--tinta-fraca); }
+.prova__rotulo { font-size: 0.85rem; color: var(--tinta-media); }
 
 /* Cartão visual do hero */
 .hero__visual { position: relative; }
@@ -607,7 +607,7 @@ a:hover { color: var(--verde-500); }
   font-family: var(--fonte-titulo);
   font-size: 2.4rem;
   font-weight: 600;
-  color: var(--verde-300);
+  color: var(--verde-700);
   line-height: 1;
   display: block;
   margin-bottom: 0.85rem;
@@ -659,7 +659,7 @@ a:hover { color: var(--verde-500); }
 .artigo-cartao__resumo { font-size: 0.95rem; color: var(--tinta-media); margin: 0 0 1.25rem; flex: 1; }
 .artigo-cartao__rodape {
   display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.83rem; color: var(--tinta-fraca);
+  font-size: 0.83rem; color: var(--tinta-media);
   padding-top: 0.9rem; border-top: 1px solid var(--linha-suave);
 }
 
@@ -723,14 +723,14 @@ a:hover { color: var(--verde-500); }
   transition: border-color var(--transicao), box-shadow var(--transicao);
 }
 .busca input:focus { outline: none; border-color: var(--verde-500); box-shadow: 0 0 0 4px var(--verde-50); }
-.busca svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--tinta-fraca); }
+.busca svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--tinta-media); }
 
 /* ------------------------ Artigo (página interna) ----------------------- */
 
 .artigo-topo { padding: clamp(2.5rem, 6vw, 4rem) 0 2rem; background: var(--papel); border-bottom: 1px solid var(--linha-suave); }
 .artigo-topo__interno { max-width: 46rem; margin-inline: auto; }
 .artigo-topo h1 { margin: 0.9rem 0 1rem; text-wrap: balance; }
-.artigo-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.9rem; color: var(--tinta-fraca); }
+.artigo-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.9rem; color: var(--tinta-media); }
 
 /* Capa gerada do artigo. Proporção fixa (1200x630, mesma das imagens do
    pipeline) reserva o espaço antes da imagem carregar e evita layout shift. */
@@ -921,7 +921,7 @@ a:hover { color: var(--verde-500); }
 
 .campo { display: flex; flex-direction: column; gap: 0.4rem; }
 .campo label { font-size: 0.9rem; font-weight: 600; color: var(--verde-900); }
-.campo label .opcional { font-weight: 400; color: var(--tinta-fraca); }
+.campo label .opcional { font-weight: 400; color: var(--tinta-media); }
 
 .campo input[type="text"],
 .campo input[type="email"],
@@ -948,7 +948,7 @@ a:hover { color: var(--verde-500); }
   border-color: #c2543a;
   box-shadow: 0 0 0 4px #fbeae5;
 }
-.campo .dica { font-size: 0.82rem; color: var(--tinta-fraca); }
+.campo .dica { font-size: 0.82rem; color: var(--tinta-media); }
 .campo .erro { font-size: 0.85rem; color: #b04527; font-weight: 500; min-height: 0; }
 .campo .erro:empty { display: none; }
 
@@ -1129,7 +1129,7 @@ a:hover { color: var(--verde-500); }
 .estado-vazio {
   text-align: center;
   padding: 3.5rem 1.5rem;
-  color: var(--tinta-fraca);
+  color: var(--tinta-media);
   border: 1px dashed var(--linha);
   border-radius: var(--raio);
   grid-column: 1 / -1;
@@ -1155,7 +1155,7 @@ a:hover { color: var(--verde-500); }
   gap: 0.5rem;
   margin-top: 2.5rem;
 }
-.paginacao__info { font-size: 0.9rem; color: var(--tinta-fraca); padding: 0 0.75rem; }
+.paginacao__info { font-size: 0.9rem; color: var(--tinta-media); padding: 0 0.75rem; }
 
 .revelar {
   opacity: 0;
