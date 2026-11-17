@@ -33,3 +33,11 @@ MCPs: o `.mcp.json` da raiz não tem servidores configurados. Não encontrei MCP
 ## Para ativar (decisão do Dr.)
 
 Copiar apenas `permissions.deny` de `.claude/settings.proposta.json` para `.claude/settings.json`, mesclando com as 45 regras existentes. Não apagar nenhuma.
+
+## Confirmado na documentação oficial (17/11/2026)
+
+Fonte: https://code.claude.com/docs/en/settings-reference.md (lida diretamente, 17/11/2026).
+
+- **`effortLevel`**: existe. Valores `low`, `medium`, `high`, `xhigh`. Padrão para modelos sem nível salvo. Sugestão `medium`: mais barato, menos raciocínio. Não recomendado para tarefas clínicas. Só como opção comentada.
+- **`claudeMdExcludes`**: existe. Array de globs. Exemplo oficial `["**/vendor/**/CLAUDE.md"]`. **Risco:** pode tirar o CLAUDE.md do projeto do contexto carregado. Não usar para o CLAUDE.md da raiz. Só como opção comentada.
+- Nada ativado. `.claude/settings.proposta.json` não é carregado pelo Claude Code.

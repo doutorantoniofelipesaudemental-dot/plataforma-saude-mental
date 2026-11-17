@@ -9,5 +9,12 @@
       "Read(./assets/**)",
       "Read(./importacao-completa/**)"
     ]
+  },
+  "_opcoes_comentadas": {
+    "_aviso": "NÃO ATIVAR. Opções só para leitura. Fonte: code.claude.com/docs/en/settings-reference.md (17/11/2026).",
+    "effortLevel": "medium  // valores: low | medium | high | xhigh. Risco: menos raciocínio em tarefas complexas.",
+    "claudeMdExcludes": [
+      "**/vendor/**/CLAUDE.md"
+    ]
   }
 }
