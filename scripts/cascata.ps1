@@ -54,18 +54,16 @@ switch ($Modo) {
       if ($instalados -match [regex]::Escape($m)) { Write-Host "  $k -> $m (instalado)" }
       else { Write-Host "  $k -> $m (NÃO instalado: não será baixado por este script)" }
     }
-    # Ferramenta local: ordem de teste Claude Code -> OpenCode -> Aider. Claude Code não fala com este Ollama
-    # (versão 0.40.16 não responde em /v1/messages, teste de 16/11). Usa a primeira que existir no PATH.
-    $ferramenta = $null
-    foreach ($c in @('opencode', 'aider')) {
-      if (Get-Command $c -ErrorAction SilentlyContinue) { $ferramenta = $c; break }
-    }
-    if ($ferramenta) {
-      Write-Host "Abrindo $ferramenta (modelo: $($Modelos.codigo))."
-      & $ferramenta --model "ollama/$($Modelos.codigo)"
-    } else {
-      Write-Host 'Nenhuma ferramenta local instalada (OpenCode/Aider). Modo local não disponível ainda.'
+    # Ferramenta escolhida: Aider (teste de 17/11: qwen2.5-coder:14b, CSS descartável, 78 s, edição correta).
+    # Claude Code não serve: Ollama 0.40.16 não responde em /v1/messages. Detalhes em docs/cascata-local.md.
+    $aider = 'C:\DRS-tools\aider-venv\Scripts\aider.exe'
+    if (-not (Test-Path $aider)) {
+      Write-Host 'indisponível: Aider não instalado (ver docs/cascata-local.md). Modo local não disponível.'
       exit 2
     }
+    $env:OLLAMA_API_BASE = 'http://127.0.0.1:11434'
+    Write-Host "Abrindo Aider (modelo: $($Modelos.codigo)). NUNCA use com conteúdo clínico ou textos de vídeo."
+    & $aider --model "ollama_chat/$($Modelos.codigo)" --no-git --no-auto-commits --no-check-update --no-analytics --no-show-model-warnings
+    Remove-Item Env:OLLAMA_API_BASE -ErrorAction SilentlyContinue
   }
 }
