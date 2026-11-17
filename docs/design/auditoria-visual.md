@@ -73,3 +73,29 @@ Demais alvos pequenos, fora do escopo de navegação/menu/rodapé/controle (não
 
 - **`da652f2` (verde-700 em `.etapa__numero`) não tem efeito visual.** A classe `.etapa__numero` existe só em `public/assets/css/style.css`; nenhum HTML do repositório a usa (`git grep` em origin/main). A medição "1,84:1 → 7,16:1" descrevia uma regra que nenhuma página renderiza. O commit foi mantido no histórico; não há ação visual.
 - **`c510d74` (tinta-fraca → tinta-media): confirmado em produção.** O `style.css` publicado em www.drantoniofelipemedico.com.br tem 25 usos de `color: var(--tinta-media)` e 0 de `color: var(--tinta-fraca)`, igual ao origin/main.
+
+## Contraste renderizado (17/11/2026, 07:10): páginas, seletores, pares e razões
+
+Método: Playwright (Edge) lendo `getComputedStyle` de cada elemento com texto, em 375 px e 1280 px, para as 13 páginas de `public/` (exceto o arquivo de verificação do Google). Fundo efetivo = primeiro `background-color` opaco subindo pelos ancestrais. Registros: 1.969. Dados brutos em `C:/DRS-tools/contraste/antes.json`.
+Limite conhecido: fundos em gradiente e imagem não entram no cálculo (aparecem como falso positivo; ver o avatar abaixo).
+Metas: AA = 4,5:1 (texto pequeno) ou 3:1 (grande: ≥ 24 px, ou ≥ 18,66 px em negrito). AAA do projeto = 7:1 (texto pequeno) ou 4,5:1 (grande).
+
+**Falhas de AA: 1 par (2 registros).** `index.html` `div.sobre-avatar` ("AF", branco sobre `#eef7f4`, 1,09:1). **Falso positivo:** o fundo é `linear-gradient(140deg, verde-600, verde-800)` (style.css:563-566), que o cálculo não lê. Sobre verde-600 o branco dá cerca de 5:1, o que passa em AA para texto grande.
+
+**Pares abaixo da meta AAA: 33 pares únicos (110 registros).** Por página: index 11, blog 5, instagram 5, artigo 4, privacidade 3, termos 3, linkedin 1, mentoria 1, youtube 1.
+
+| Página | Seletor | Par (texto/fundo) | Razão | Tamanho | Onde está a regra | Situação |
+|---|---|---|---|---|---|---|
+| mentoria, linkedin, youtube | `a.botao` | `#0d3330` / `#c9a227` | 5,66 | 16 px | `<style>` inline | **Passa AA. AAA inalcançável com tokens:** o melhor token sobre dourado é `tinta` (6,82). Não alterado. |
+| todas (rodapé) | `span`, `p`, `.aviso-legal` | branco / `#0d3330` | 4,58 a 6,21 | 13,6 a 14,7 px | style.css (rodapé) | Fora do escopo (estilo compartilhado) |
+| todas | `summary` ("Preciso de ajuda agora") | branco / `#a85d3c` | 4,89 | 15,2 px | extras.css:48 | Fora do escopo. `#a85d3c` **não é token** (escolha documentada: "terracota escurecida") |
+| blog, index, instagram, privacidade, termos | `p.etiqueta` | `#1f7a72` / `#faf7f2` ou branco | 4,81 a 5,14 | 12,5 px | style.css:216 | Fora do escopo |
+| index | `.etiqueta` no `.secao--verde` | `#8cc4b8` / `#0d3330` | 6,98 | 12,5 px | style.css | Fora do escopo (0,02 abaixo) |
+| index | `p` "Médico — CRM-BA 41322" | `#5a6e66` / `#eef7f4` | 4,99 | 15,2 px | bloco de identificação | **Não alterado** (bloco de identificação) |
+| index | links "CVV 188" | `#8cc4b8` / `#0d3330` | 6,98 | 15 a 17 px | `<style>` / style.css | Fora do escopo (0,02 abaixo) |
+
+**Etapas numeradas da mentoria:** `.etapas li::before` (branco sobre `var(--verde-escuro)` = `#0d3330`) dá 13,7:1, acima da meta. Passa.
+
+**Escopo desta rodada:** a sua regra limita as trocas a `<style>` inline e a `style=""`. Dentro desse escopo, não há falha de AA, e o único desvio de AAA (`a.botao` dourado) não tem solução com tokens travados. Por isso não há commit de contraste nesta rodada. Os pares fora do escopo estão listados acima para decisão.
+
+**Registro corrigido:** `da652f2` não tem efeito visual (`.etapa__numero` não é usada em página). Ver a correção de 06:54.
