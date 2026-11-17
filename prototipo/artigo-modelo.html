@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protótipo: modelo de artigo · Portal de Saúde Mental Doutor Antônio Felipe Garabito</title>
+<meta name="description" content="Modelo de página de artigo do novo visual. O corpo do texto é um placeholder.">
+<link rel="stylesheet" href="assets/proto.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Modelo de artigo","inLanguage":"pt-BR",
+ "about":{"@type":"MedicalCondition","name":"Tema do artigo (placeholder)"},
+ "reviewedBy":{"@type":"Person","name":"Dr. Antônio Felipe","jobTitle":"Médico","identifier":"CRM-BA 41322"},
+ "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+   {"@type":"ListItem","position":1,"name":"Início","item":"https://www.drantoniofelipemedico.com.br/"},
+   {"@type":"ListItem","position":2,"name":"Artigos","item":"https://www.drantoniofelipemedico.com.br/blog"}]}}
+</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header><div class="container"><a href="/">Saúde Mental · Doutor Antônio Felipe</a><a href="/blog">Artigos</a></div></header>
+<main id="conteudo" class="container">
+<nav aria-label="Caminho" style="font-size:.95rem;padding-top:12px"><a href="/">Início</a> › <a href="/blog">Artigos</a></nav>
+<article class="artigo">
+  <h1>Título do artigo (placeholder)</h1>
+  <p class="meta">Escrito e revisado por Dr. Antônio Felipe · Tempo de leitura: 6 min
+    <span id="data-revisao"></span></p>
+  <div class="ferramentas" role="group" aria-label="Conforto de leitura">
+    <button type="button" id="fonte-mais" aria-label="Aumentar a letra">A+</button>
+    <button type="button" id="fonte-menos" aria-label="Diminuir a letra">A−</button>
+    <button type="button" id="modo-escuro" aria-pressed="false">Modo escuro</button>
+    <button type="button" id="modo-calmo" aria-pressed="false">Modo calmo</button>
+    <button type="button" id="ouvir" aria-describedby="aviso-ia">Ouvir este artigo</button>
+  </div>
+  <p id="aviso-ia" style="font-size:.9rem">Narração gerada por inteligência artificial (Kokoro), sob responsabilidade do Dr. Antônio Felipe. O áudio só carrega quando você clica.</p>
+  <div id="audio-area"></div>
+  <div class="texto-grande" id="corpo">
+    <p>[Corpo do artigo: placeholder. Texto real não incluído neste protótipo.]</p>
+  </div>
+  <section aria-labelledby="t-ref"><h2 id="t-ref" style="font-size:1.2rem">Referências</h2>
+    <p>[Lista de referências do artigo: placeholder.]</p></section>
+  <section aria-labelledby="t-rel"><h2 id="t-rel" style="font-size:1.2rem">Conteúdo relacionado</h2>
+    <ul><li><a href="/blog">Ver outros artigos</a></li></ul></section>
+</article>
+</main>
+<footer class="rodape"><div class="container">
+  <p>Dr. Antônio Felipe — Médico — CRM-BA 41322</p>
+  <p>Especialista em Medicina de Família e Comunidade — RQE 26638</p>
+  <p>Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)</p>
+  <p>Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho</p>
+  <p>NÃO ESPECIALISTA</p>
+</div></footer>
+<script>
+(function(){
+  var raiz=document.documentElement, corpo=document.getElementById('corpo'), tam=1.2;
+  function ajustar(d){tam=Math.max(1,Math.min(1.6,tam+d));corpo.style.fontSize=tam+'rem';}
+  document.getElementById('fonte-mais').onclick=function(){ajustar(0.1);};
+  document.getElementById('fonte-menos').onclick=function(){ajustar(-0.1);};
+  var escuro=document.getElementById('modo-escuro');
+  escuro.onclick=function(){var on=raiz.getAttribute('data-theme')!=='dark';raiz.setAttribute('data-theme',on?'dark':'light');escuro.setAttribute('aria-pressed',on?'true':'false');};
+  var calmo=document.getElementById('modo-calmo');
+  calmo.onclick=function(){var on=!document.body.classList.contains('modo-calmo');document.body.classList.toggle('modo-calmo',on);calmo.setAttribute('aria-pressed',on?'true':'false');};
+  var ouvir=document.getElementById('ouvir');
+  ouvir.onclick=function(){
+    ouvir.disabled=true;
+    var a=document.createElement('audio');a.controls=true;a.preload='metadata';
+    a.setAttribute('aria-label','Narração do artigo');
+    var s=document.createElement('source');s.src='assets/narracao-placeholder.mp3';s.type='audio/mpeg';a.appendChild(s);
+    a.addEventListener('error',function(){document.getElementById('audio-area').textContent='Narração indisponível neste protótipo.';});
+    document.getElementById('audio-area').appendChild(a);
+  };
+})();
+</script>
+</body>
+</html>

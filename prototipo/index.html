@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protótipo: início · Portal de Saúde Mental Doutor Antônio Felipe Garabito</title>
+<meta name="description" content="Protótipo do novo visual do portal. Informação em linguagem simples, com fontes conferidas e revisão médica.">
+<link rel="stylesheet" href="assets/proto.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Portal de Saúde Mental Doutor Antônio Felipe Garabito","inLanguage":"pt-BR"}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header><div class="container"><a href="#">Saúde Mental · Doutor Antônio Felipe</a><a href="/blog">Artigos</a><a href="/mentoria">Mentoria, consultoria e formação</a></div></header>
+<main id="conteudo">
+<div class="hero"><div class="container">
+  <div class="cartao">
+    <h1>Informação em português, em linguagem simples</h1>
+    <p>Fontes conferidas e revisão médica. Este portal não oferece consulta particular nem agendamento.</p>
+    <label for="busca" class="sr">Buscar no portal</label>
+    <input id="busca" type="search" placeholder="Buscar um tema ou página" autocomplete="off" aria-describedby="busca-ajuda">
+    <p id="busca-ajuda" style="font-size:.9rem">Exemplo: ansiedade, sono, escola.</p>
+    <ul id="sugestoes" aria-live="polite" style="list-style:none;padding:0;margin:0"></ul>
+  </div>
+</div></div>
+
+<section aria-labelledby="t-comece"><div class="container">
+  <h2 id="t-comece">Comece por aqui</h2>
+  <div class="trilhas">
+    <a class="trilha" href="/blog?tema=transtornos-mentais"><strong>Estou ansioso(a)</strong>Artigos sobre ansiedade e outros transtornos, com linguagem simples.</a>
+    <a class="trilha" href="/blog?tema=infancia-familia"><strong>Meu filho precisa de ajuda</strong>Temas de infância e família, para entender e conversar.</a>
+    <a class="trilha" href="/linkedin"><strong>Sou profissional de saúde</strong>Conteúdos e mentoria para quem atua na rede.</a>
+    <a class="trilha" href="/mentoria"><strong>Sou gestor(a) ou escola</strong>Mentoria, consultoria e formação, por e-mail.</a>
+  </div>
+</div></section>
+
+<section aria-labelledby="t-video"><div class="container">
+  <h2 id="t-video">Boas-vindas em vídeo</h2>
+  <div class="video"><div class="cartao">
+    <p>Um minuto sobre o portal. Narração gerada com inteligência artificial (Kokoro), sob responsabilidade do Dr. Antônio Felipe.</p>
+    <button class="botao" id="play-bv" type="button">Assistir com legenda</button>
+    <p id="bv-status" aria-live="polite" style="font-size:.9rem"></p>
+    <div id="bv-area"></div>
+  </div></div>
+  <p style="margin-top:12px">Sem reprodução automática e sem som ao abrir a página. O vídeo só carrega quando você clica.</p>
+</div></section>
+</main>
+
+<details class="ajuda" id="ajuda">
+  <summary>Preciso de ajuda agora</summary>
+  <div class="painel">
+    <p><strong>Em crise, procure ajuda agora.</strong></p>
+    <a href="tel:188">CVV 188 (24 h, gratuito)</a>
+    <a href="tel:192">SAMU 192 (emergência)</a>
+    <p>Você também pode procurar a sua Unidade Básica de Saúde (UBS) ou o CAPS da sua cidade.</p>
+  </div>
+</details>
+
+<footer class="rodape"><div class="container">
+  <p>Dr. Antônio Felipe — Médico — CRM-BA 41322</p>
+  <p>Especialista em Medicina de Família e Comunidade — RQE 26638</p>
+  <p>Atuo em Pronto Atendimento Psiquiátrico (PAP) e Atenção Primária à Saúde (APS)</p>
+  <p>Pós-graduação em Psiquiatria, Saúde Mental, Atenção Psicossocial, Terapia Cognitivo-Comportamental, Neuropsicologia e Medicina do Trabalho</p>
+  <p>NÃO ESPECIALISTA</p>
+</div></footer>
+<script src="assets/proto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+:root{--verde-900:#0d3330;--verde-700:#185d58;--verde-100:#dbeee8;--areia-50:#faf7f2;--tinta:#17211f;--dourado:#c9a227;--terracota:#c0714f;--link:#185d58}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--areia-50:#0d3330;--tinta:#eef7f4;--link:#b5e0d5}}
+:root[data-theme="dark"]{--areia-50:#0d3330;--tinta:#eef7f4;--link:#b5e0d5}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--areia-50);color:var(--tinta);line-height:1.55}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;color:#17211f;padding:8px;z-index:9}
+.container{max-width:1080px;margin:0 auto;padding:0 16px}
+header{background:var(--verde-900);color:#fff;padding:12px 0}
+header a{color:#fff;font-weight:600;text-decoration:none;margin-right:16px;display:inline-block;min-height:44px;line-height:44px}
+.hero{background:var(--verde-900) url("fundo-natureza-1.webp") center/cover;padding:48px 0;min-height:360px;display:flex;align-items:center}
+.cartao{background:rgba(13,51,48,.94);color:#fff;border-radius:16px;padding:24px;max-width:640px}
+.cartao h1{font-size:1.9rem;margin:0 0 8px}
+.cartao p{margin:0 0 12px;color:var(--verde-100)}
+input[type=search]{width:100%;min-height:48px;font-size:1rem;padding:10px 12px;border-radius:10px;border:2px solid var(--verde-100)}
+.botao{display:inline-flex;align-items:center;min-height:48px;padding:10px 18px;border-radius:999px;background:var(--dourado);color:#000;font-weight:700;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+section{padding:40px 0}
+h2{color:var(--tinta);font-size:1.5rem}
+.trilhas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.trilha{display:block;background:#fff;border-radius:14px;padding:18px;color:#17211f;text-decoration:none;border:2px solid var(--verde-100);min-height:110px}
+.trilha strong{display:block;color:var(--verde-900);font-size:1.1rem;margin-bottom:4px}
+.video{background:var(--verde-900) url("fundo-natureza-2.webp") center/cover;border-radius:16px;padding:16px}
+.video .cartao{max-width:none}
+.ajuda{position:fixed;right:12px;bottom:12px;z-index:8}
+.ajuda summary{list-style:none;background:#7a3b1f;color:#fff;font-weight:700;padding:12px 16px;border-radius:999px;cursor:pointer;min-height:48px;min-width:44px}
+.ajuda summary::-webkit-details-marker{display:none}
+.ajuda .painel{background:#fff;color:#17211f;border-radius:14px;padding:16px;margin-top:8px;max-width:300px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.ajuda .painel a{display:block;min-height:44px;line-height:44px;font-weight:700}
+.rodape{background:var(--verde-900);color:var(--verde-100);padding:24px 0;font-size:.95rem}
+.rodape p{margin:4px 0}
+.artigo{max-width:720px;margin:0 auto;padding:24px 0}
+.artigo .meta{color:var(--tinta);font-size:.95rem}
+.ferramentas{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.ferramentas button{min-height:44px;min-width:44px;padding:8px 14px;border-radius:10px;border:2px solid var(--verde-700);background:#fff;color:var(--verde-900);font-weight:600;cursor:pointer}
+.texto-grande{font-size:1.2rem}
+.modo-calmo *{transition:none!important;animation:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
