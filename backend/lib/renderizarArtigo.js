@@ -1,3 +1,4 @@
+const { capaPublica } = require('./capaLocal');
 const fs = require('fs');
 const { AVISO_PROTOCOLOS, precisaAviso } = require('./avisoProtocolos');
 const { CAIXA_VIOLENCIA_TITULO, CAIXA_VIOLENCIA_ITENS, precisaCaixaViolencia } = require('./caixaViolencia');
@@ -36,9 +37,10 @@ const SKELETON_CONTEUDO = `<div class="conteudo-artigo" id="artigo-conteudo" ari
 
 /** Monta o HTML da capa (com width/height fixos, mesma proporção 1200x630 do CSS) e do player de narração. */
 function montarCapaENarracao(artigo) {
-  const capaHtml = artigo.imagemCapa
+  const capaSrc = capaPublica(artigo);
+  const capaHtml = capaSrc
     ? `<div class="artigo-capa">
-             <img src="${escapeHtml(artigo.imagemCapa)}" alt="Capa do artigo: ${escapeHtml(artigo.titulo)}" width="1200" height="630" loading="eager">
+             <img src="${escapeHtml(capaSrc)}" alt="Capa do artigo: ${escapeHtml(artigo.titulo)}" width="1200" height="630" loading="eager">
            </div>`
     : '';
 
@@ -159,8 +161,9 @@ function renderizarArtigoHtml(artigo) {
   );
 
   const tagsExtras = [];
-  if (artigo.imagemCapa) {
-    tagsExtras.push(`<meta property="og:image" content="${escapeHtml(artigo.imagemCapa)}">`);
+  const capaSrcOg = capaPublica(artigo);
+  if (capaSrcOg) {
+    tagsExtras.push(`<meta property="og:image" content="${escapeHtml(capaSrcOg)}">`);
   }
 
   const jsonLd = {
@@ -173,7 +176,7 @@ function renderizarArtigoHtml(artigo) {
     inLanguage: 'pt-BR',
     datePublished: artigo.publicadoEm,
     dateModified: artigo.atualizadoEm || artigo.publicadoEm,
-    ...(artigo.imagemCapa ? { image: artigo.imagemCapa } : {}),
+    ...(capaPublica(artigo) ? { image: capaPublica(artigo) } : {}),
     author: {
       '@type': 'Person',
       name: artigo.autor || 'Dr. Antônio Felipe',

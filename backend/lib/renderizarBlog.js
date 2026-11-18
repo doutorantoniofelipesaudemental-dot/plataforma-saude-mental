@@ -1,3 +1,4 @@
+const { capaPublica } = require('./capaLocal');
 const fs = require('fs');
 const path = require('path');
 const { escapeHtml, formatarData } = require('./texto');
@@ -19,8 +20,8 @@ const ICONE_CAPA = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 
 /** Mesmo markup de assets/js/site.js#cartaoArtigo, gerado no servidor. */
 function montarCartaoArtigo(artigo) {
-  const capa = artigo.imagemCapa
-    ? `<img src="${escapeHtml(artigo.imagemCapa)}" alt="Capa do artigo: ${escapeHtml(artigo.titulo)}" loading="lazy">`
+  const capa = capaPublica(artigo)
+    ? `<img src="${escapeHtml(capaPublica(artigo))}" alt="Capa do artigo: ${escapeHtml(artigo.titulo)}" loading="lazy">`
     : ICONE_CAPA;
 
   return `
