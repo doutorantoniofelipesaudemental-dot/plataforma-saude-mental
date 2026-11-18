@@ -1,44 +1,34 @@
-# Protótipo do novo visual: relatório (17/11/2026)
+# Protótipo do novo visual: relatório (17/11/2026, ordem 12)
 
-Branch `feat/proto-novo-visual` a partir de `origin/main` (311183c). Só a pasta `prototipo/` foi criada. `public/` não foi alterado (0 linhas no diff).
+Branch feat/proto-novo-visual, sobre origin/main (311183c). public/ não foi tocado.
+Portão (npm run portao): APROVADO em 23:16 (31 testes e2e, build e auditoria). Commits locais, sem push.
 
-## O que está no protótipo
-- Início (`index.html`): busca, quatro trilhas (ansiedade, filho, profissional, gestor), vídeo de boas-vindas só ao clicar com legenda VTT, painel "Preciso de ajuda agora" (CVV 188 e SAMU 192), identificação de 5 linhas aprovada no rodapé.
-- Busca: índice local `assets/indice.json` gerado de títulos reais de `public/` (17 páginas e 7 pilares), sem chamada à API. Admin, 404 e modelo de artigo ficam fora.
-- Modelo de artigo (`artigo-modelo.html`): data de revisão, tempo de leitura, aumentar/diminuir letra, modo escuro, modo calmo (desliga animações), "Ouvir este artigo" só ao clicar, JSON-LD MedicalWebPage com revisor e migalhas.
-- Respeita `prefers-reduced-motion`. Sem reprodução automática.
+## Páginas
+- index.html: início com busca, quatro trilhas, "Preciso de ajuda agora" (188 e 192), bloco de vídeo com aviso "disponível após aprovação" (sem vídeo publicado no YouTube; D4.5).
+- blog.html: 317 artigos publicados (títulos do backup), filtro por tema (8 séries), capas reais só nos 8 de amostra; demais com cartão de texto.
+- mentoria.html e pilares/eixo-1..7.html: conteúdo do <main> copiado de public/ sem reescrita; cabeçalho e rodapé novos com a identificação aprovada.
+- artigos/<slug>.html (8 de amostra, um por série): HTML real do backup; capa nova; ler/diminuir/aumentar letra; modo escuro; modo calmo; "Ouvir este artigo" só ao clique (URL publicada do backup); schema MedicalWebPage com reviewedBy.
+- Sem data de revisão (não há metadado de revisão no backup); sem link de mensageria; sem oferta de consulta.
 
-## Medições (Microsoft Edge, 375 px, CPU 4x, 4G 1,6 Mbps/150 ms)
-| Página | Tema | LCP (ms) | CLS | Rolagem horizontal | Violações axe (WCAG 2.2 AA) |
-|---|---|---:|---:|---|---:|
-| index.html | claro | 804 | 0 | não | 0 |
-| index.html | escuro | 772 | 0 | não | 0 |
-| artigo-modelo.html | claro | 520 | 0 | não | 0 |
-| artigo-modelo.html | escuro | 552 | 0 | não | 0 |
+## Medições (Edge, 375 px, CPU 4x, 4G 1,6 Mbps/150 ms)
+| Página | Tema | LCP (ms) | CLS | Rolagem horizontal | Violações AA (WCAG 2.2) | Nós AAA (contraste) |
+|---|---|---:|---:|---|---:|---:|
+| index.html | light | 796 | 0 | não | 0 | 0 |
+| index.html | dark | 812 | 0 | não | 0 | 0 |
+| blog.html | light | 592 | 0 | não | 0 | 0 |
+| blog.html | dark | 544 | 0 | não | 0 | 0 |
+| mentoria.html | light | 592 | 0 | não | 0 | 0 |
+| mentoria.html | dark | 592 | 0 | não | 0 | 0 |
+| pilares/eixo-1.html | light | 572 | 0 | não | 0 | 0 |
+| pilares/eixo-1.html | dark | 584 | 0 | não | 0 | 0 |
+| artigos/relato-paciente-invisivel.html | light | 672 | 0 | não | 0 | 0 |
+| artigos/relato-paciente-invisivel.html | dark | 652 | 0 | não | 0 | 0 |
 
-Brutos: `C:/DRS-tools/proto/resultado.json` (fora do repositório). Medição feita em servidor local na porta 3001 (ver pendências).
-
-## Contraste (cálculo WCAG)
-- Branco sobre cartão verde-900: 13,70:1. Verde-100 sobre verde-900: 11,35:1.
-- Botão "Preciso de ajuda" (branco sobre terracota escura #7a3b1f): 8,49:1. A terracota clara anterior (#c0714f) dava 3,67:1 e foi trocada.
-- Botão dourado com texto preto (#000 sobre #c9a227): 8,68:1.
-- Link em modo escuro (#b5e0d5 sobre verde-900): 9,51:1.
-
-## Testes de comportamento (Edge)
-- Busca: "ansiedade" retorna 1 resultado. Busca por slug ("infancia") retorna 0, porque o índice busca no título.
-- Vídeo e legenda: 0 requisições de mídia antes do clique, 2 depois.
-- Áudio: 0 elementos antes do clique, 1 depois.
-- Painel de ajuda, aumento de fonte, modo escuro e modo calmo: funcionam.
-- Erros de console: 3 respostas 404. São o vídeo `assets/video/bv-16x9.mp4` (não copiado: limite de 3 MB) e o áudio `assets/narracao-placeholder.mp3` (placeholder), além de um recurso extra.
-
-## Peso
-- Binários: fundo-natureza-1.webp 19 KB e fundo-natureza-2.webp 31 KB (limite 150 KB cada). Total da pasta: 68 KB (limite 3 MB).
+Contraste calculado (WCAG): branco sobre cartão 13,70:1; dourado 9,56:1; verde-100 sobre verde-900 11,35:1; link escuro 9,51:1; botão de ajuda 8,49:1; dourado com preto 8,68:1. Pior caso do cartão de capa: branco 10,82:1; dourado 7,55:1.
+Observação: o axe marca 0 nós AAA, mas não confirmei que a regra de contraste AAA rodou; a verificação dos pares acima é a referência.
 
 ## Pendências
-1. Vídeo de boas-vindas e narração de artigo não estão no protótipo (vídeo acima do limite de 3 MB; áudio é placeholder). Entram quando peso e licença forem decididos.
-2. Lista de referências e corpo do artigo são placeholders.
-3. VLibras NÃO integrado: a busca não encontrou os termos de uso do widget hospedado. Só poderia entrar sob clique, depois de confirmar a licença e citar o terceiro na política.
-4. Pilotos B–D da minissérie e a cena 8 do roteiro seguem com decisão do Dr.
-
-## Encerramento
-- Servidores de teste (portas 3000 e 3001) encerrados em 17/11 20:28 (pids próprios). Portas livres.
+1. Vídeo de boas-vindas: aguarda aprovação e publicação no YouTube (D4.5). Quando houver link, entra com youtube-nocookie só ao clique.
+2. 309 artigos sem página de texto completo neste protótipo (só os 8 de amostra). Capas dos demais: no Blob, ver manifesto de C:/DRS-capas.
+3. VLibras fora desta fase (D4.4).
+4. Política de privacidade deve citar o YouTube se o vídeo for incorporado.
