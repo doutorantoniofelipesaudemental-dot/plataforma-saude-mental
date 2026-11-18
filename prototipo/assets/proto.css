@@ -37,3 +37,14 @@ h2{color:var(--tinta);font-size:1.5rem}
 .modo-calmo *{transition:none!important;animation:none!important}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+img{max-width:100%;height:auto}
+a{overflow-wrap:anywhere}
+.grade-artigos img{width:100%;height:auto;aspect-ratio:1200/630}
+.card-artigo{background:#fff;border-radius:12px;padding:10px;color:#17211f}
+.card-artigo a{color:#185d58}
+.filtro{min-height:44px;margin:4px 2px;padding:8px 12px;border-radius:999px;border:2px solid #185d58;background:#fff;color:#0d3330;font-weight:600;cursor:pointer}
+.filtro[aria-pressed="true"]{background:#0d3330;color:#fff}
+.corpo p,.corpo li{max-width:70ch}
+.card-artigo, .card-artigo h2, .card-artigo h2 span, .card-artigo p {color:#17211f}
+.card-artigo a{color:#185d58}

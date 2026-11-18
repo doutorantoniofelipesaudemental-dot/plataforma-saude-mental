@@ -1,70 +1,82 @@
 [
  {
-  "titulo": "Artigos — Saúde Mental · Doutor Antônio Felipe",
-  "url": "/blog"
+  "titulo": "Início",
+  "url": "index.html"
  },
  {
-  "titulo": "Saúde Mental · Doutor Antônio Felipe Garabito",
-  "url": "/"
+  "titulo": "Artigos",
+  "url": "blog.html"
  },
  {
-  "titulo": "Do Instagram ao Portal — Saúde Mental · Doutor Antônio Felipe",
-  "url": "/instagram"
+  "titulo": "Mentoria, consultoria e formação",
+  "url": "mentoria.html"
  },
  {
-  "titulo": "Saúde Mental para Profissionais de Saúde, Gestores e Empresas · Dr. Antônio Felipe",
-  "url": "/linkedin"
+  "url": "pilares/eixo-1.html",
+  "titulo": "Eixo 1: Infância, Adolescência, Pais &amp; Família, Professores &amp; Saúde Escolar"
  },
  {
-  "titulo": "Links · Dr. Antônio Felipe",
-  "url": "/links"
+  "url": "pilares/eixo-2.html",
+  "titulo": "Eixo 2: Maternidade, Puerpério &amp; Saúde Perinatal"
  },
  {
-  "titulo": "Mentoria, consultoria e formação em saúde mental · Dr. Antônio Felipe",
-  "url": "/mentoria"
+  "url": "pilares/eixo-3.html",
+  "titulo": "Eixo 3: Vida Adulta, Envelhecimento &amp; Cuidados Paliativos"
  },
  {
-  "titulo": "Podcast · Portal de Saúde Mental Doutor Antônio Felipe Garabito",
-  "url": "/podcast"
+  "url": "pilares/eixo-4.html",
+  "titulo": "Eixo 4: Cuidar de Quem Cuida &amp; Saúde do Trabalhador (NR-1)"
  },
  {
-  "titulo": "Política de Privacidade — Saúde Mental · Doutor Antônio Felipe",
-  "url": "/privacidade"
+  "url": "pilares/eixo-5.html",
+  "titulo": "Eixo 5: Transtornos Mentais"
  },
  {
-  "titulo": "Termos de Uso — Saúde Mental · Doutor Antônio Felipe",
-  "url": "/termos"
+  "url": "pilares/eixo-6.html",
+  "titulo": "Eixo 6: Hábitos, Estilo de Vida &amp; Sono"
  },
  {
-  "titulo": "Canal no YouTube: saúde mental em vídeo · Dr. Antônio Felipe",
-  "url": "/youtube"
+  "url": "pilares/eixo-7.html",
+  "titulo": "Eixo 7: Sociedade, Cultura &amp; Existência"
  },
  {
-  "titulo": "Pilar 1: Ansiedade e rotina",
-  "url": "/pilares/eixo-1.html"
+  "url": "artigos/tempo-tela-criancas.html",
+  "titulo": "Tempo de tela em crianças e adolescentes: o que realmente importa para a saúde mental",
+  "serie": "infancia-familia"
  },
  {
-  "titulo": "Pilar 2: Saúde mental perinatal",
-  "url": "/pilares/eixo-2.html"
+  "url": "artigos/depressao-pos-parto-ansiedade-perinatal.html",
+  "titulo": "Depressão pós-parto e ansiedade perinatal: reconhecendo os sinais além do \"baby blues\"",
+  "serie": "maternidade-perinatal"
  },
  {
-  "titulo": "Pilar 3: Idosos",
-  "url": "/pilares/eixo-3.html"
+  "url": "artigos/reorganizacao-emocional-luto-divorcio.html",
+  "titulo": "Luto e divórcio: reorganizar a vida depois de uma perda significativa",
+  "serie": "vida-adulta-envelhecimento"
  },
  {
-  "titulo": "Pilar 4: Cuidar de quem cuida",
-  "url": "/pilares/eixo-4.html"
+  "url": "artigos/primeiro-episodio-psicotico.html",
+  "titulo": "Primeiros episódios psicóticos: reconhecimento precoce e conduta inicial",
+  "serie": "cuidar-de-quem-cuida"
  },
  {
-  "titulo": "Pilar 5: Transtornos mentais",
-  "url": "/pilares/eixo-5.html"
+  "url": "artigos/neurodivergencia-adulta-mascaramento-burnout.html",
+  "titulo": "Neurodivergência na vida adulta: mascaramento e o burnout que ele causa",
+  "serie": "transtornos-mentais"
  },
  {
-  "titulo": "Pilar 6: Sono e hábitos",
-  "url": "/pilares/eixo-6.html"
+  "url": "artigos/dependencia-quimica-comportamental-sinais.html",
+  "titulo": "Sinais de dependência: química ou comportamental, o padrão é parecido",
+  "serie": "habitos-sono"
  },
  {
-  "titulo": "Pilar 7: Sociedade e cultura",
-  "url": "/pilares/eixo-7.html"
+  "url": "artigos/psicofarmacos-mitos-culturais.html",
+  "titulo": "Por que existe tanta desinformação sobre psicofármacos?",
+  "serie": "sociedade-cultura"
+ },
+ {
+  "url": "artigos/relato-paciente-invisivel.html",
+  "titulo": "O paciente que ninguém via",
+  "serie": "relatos"
  }
 ]
