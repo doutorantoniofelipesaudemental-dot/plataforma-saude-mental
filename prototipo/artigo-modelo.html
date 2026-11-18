@@ -22,6 +22,13 @@
 <nav aria-label="Caminho" style="font-size:.95rem;padding-top:12px"><a href="/">Início</a> › <a href="/blog">Artigos</a></nav>
 <article class="artigo">
   <h1>Título do artigo (placeholder)</h1>
+  <figure class="hero-anim">
+    <div class="hero-quadro">
+      <img id="hero-poster" src="assets/capas-animadas/relato-comecar-de-novo-sobre-rodas.jpg" width="1200" height="630" alt="Capa do artigo: Começar de novo sobre rodas, a primeira visita domiciliar foi seis meses depois do acidente">
+      <video id="hero-video" muted loop playsinline preload="none" poster="assets/capas-animadas/relato-comecar-de-novo-sobre-rodas.jpg" aria-hidden="true"></video>
+    </div>
+    <figcaption><button type="button" id="hero-pausa" aria-pressed="false">Pausar animação</button></figcaption>
+  </figure>
   <p class="meta">Escrito e revisado por Dr. Antônio Felipe · Tempo de leitura: 6 min
     <span id="data-revisao"></span></p>
   <div class="ferramentas" role="group" aria-label="Conforto de leitura">
@@ -59,6 +66,13 @@
   escuro.onclick=function(){var on=raiz.getAttribute('data-theme')!=='dark';raiz.setAttribute('data-theme',on?'dark':'light');escuro.setAttribute('aria-pressed',on?'true':'false');};
   var calmo=document.getElementById('modo-calmo');
   calmo.onclick=function(){var on=!document.body.classList.contains('modo-calmo');document.body.classList.toggle('modo-calmo',on);calmo.setAttribute('aria-pressed',on?'true':'false');};
+  var heroV=document.getElementById('hero-video'), heroB=document.getElementById('hero-pausa'), heroF=document.querySelector('.hero-anim');
+  var calmoSis=window.matchMedia('(prefers-reduced-motion: reduce)'), heroCarregado=false, heroTocando=!calmoSis.matches;
+  function heroCarregar(){ if(!heroCarregado){ heroCarregado=true; var w=document.createElement('source'); w.src='assets/capas-animadas/relato-comecar-de-novo-sobre-rodas.webm'; w.type='video/webm'; var m=document.createElement('source'); m.src='assets/capas-animadas/relato-comecar-de-novo-sobre-rodas.mp4'; m.type='video/mp4'; heroV.appendChild(w); heroV.appendChild(m); heroV.load(); } heroV.play().catch(function(){}); }
+  function heroRotulo(){ heroB.textContent = heroTocando ? 'Pausar animação' : 'Animar capa'; heroB.setAttribute('aria-pressed', heroTocando ? 'false' : 'true'); }
+  heroB.onclick=function(){ heroTocando=!heroTocando; if(heroTocando){ heroCarregar(); } else { heroV.pause(); } heroRotulo(); };
+  heroRotulo();
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting && heroTocando){ heroCarregar(); } else if(heroCarregado){ heroV.pause(); } }); },{threshold:0.2}).observe(heroF); }
   var ouvir=document.getElementById('ouvir');
   ouvir.onclick=function(){
     ouvir.disabled=true;
