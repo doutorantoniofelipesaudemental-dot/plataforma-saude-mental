@@ -18,7 +18,7 @@ async function gerarRascunho({ categoria, sistema, usuario }, { gerar = ollama.g
   if (r.indisponivel) return { status: 'indisponivel', nivel: 'direto', motivo: r.erro || 'Ollama indisponível' };
   const g = checar(r.texto, { contexto: 'portal', exigirIdentificacao: false });
   if (!g.ok) return { status: 'reprovado', nivel: 'direto', motivo: 'portão automático reprovou', falhas: g.falhas, modelo: r.modelo };
-  return { status: 'rascunho', nivel: 'local', texto: r.texto, modelo: r.modelo, aprovado: false };
+  return { status: 'rascunho-cascata', nivel: 'local', texto: r.texto, modelo: r.modelo, aprovado: false };
 }
 
 module.exports = { gerarRascunho, CATEGORIAS_PERMITIDAS, CATEGORIAS_BLOQUEADAS };

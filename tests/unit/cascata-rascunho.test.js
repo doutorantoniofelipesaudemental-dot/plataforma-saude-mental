@@ -30,5 +30,5 @@ test('portão reprova e não entrega texto', async () => {
 
 test('rascunho aprovado no portão sai sempre com aprovado: false', async () => {
   const r = await gerarRascunho({ categoria: 'css', usuario: 'x' }, { gerar: gerarOk, checar: okChecar });
-  assert.equal(r.status, 'rascunho'); assert.equal(r.aprovado, false); assert.equal(r.nivel, 'local');
+  assert.equal(r.status, 'rascunho-cascata'); assert.equal(r.aprovado, false); assert.equal(r.nivel, 'local');
 });
