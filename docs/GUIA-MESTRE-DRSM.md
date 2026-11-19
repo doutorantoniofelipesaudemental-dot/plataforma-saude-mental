@@ -722,6 +722,7 @@ Este capítulo é regra de design. As referências acima sustentam os pontos ind
 
 ## Histórico de versões
 
+- **1.6 (19/11/2026):** seção 18 (regras da semana): legenda = fala, referência só com frase sustentada, PMID conferido, pergunta específica na tela 1, capas v4, mascotes cachorro e gato, método dos Shorts, rascunho da cascata nunca publica.
 - **1.5 (15/11/2026):** regra de tela e referências (seção 17).
 - **1.4 (15/11/2026):** trilha B como padrão de todas as trilhas (linha Trilha envolvente): variações por série, marcas de capítulo reais, −16 LUFS para áudio e podcast e −14 para vídeo. PR pequeno, depois do merge da 1.3 (#291).
 - **1.0 (14/11/2026):** primeira versão. Consolida as decisões de 08 a 14/11/2026: Método DrSM, D1–D5, identidade visual, arquitetura do Portal, canais, calendário, ferramentas, metas 2027.
@@ -735,3 +736,14 @@ Este capítulo é regra de design. As referências acima sustentam os pontos ind
 - Comparação de eficácia ("tão eficaz quanto…") sem referência conferida = proibida na tela e na narração.
 - Número na tela sem referência conferida: retirar ou pedir confirmação ao Dr.
 - Ao citar PubMed: identificar a fonte e incluir o DOI.
+
+## 18. Regras da semana (ordem do Dr., 19/11/2026)
+- **Legenda de vídeo = o que é falado.** Fonte: `cues.json` do episódio (o texto enviado ao Kokoro), alinhado aos tempos do Whisper. O roteiro serve só para conferir grafia de termos.
+- **Referência só quando sustenta a frase.** Número ou afirmação clínica precisa de referência conferida no PubMed (PMID ou DOI) com o número igual ao do resumo. Busca vazia = pendente, nunca "conferido".
+- **Número da frase = número do resumo.** Se o resumo não traz o valor, a frase vira orientação geral sem número.
+- **Tela 1 com pergunta específica**, nunca genérica.
+- **Tema do dia** pela tabela do calendário (seção 10).
+- **Capas:** padrão v4 (`relatorios/capas-v4/`).
+- **Mascotes:** cachorro e gato, com poses sentado, deitado, apontando e abraçando, e vistas de perfil e de costas. Aprovação do Dr. antes de uso público.
+- **Shorts:** método de 7 frases: abre com cena, uma ideia por frase, termina com "Envie para alguém que…", passo pequeno e CVV 188 · SAMU 192. Legenda = fala.
+- **Cascata:** rascunho nunca publica. Publicação só pelo crons com checagem ou `npm run publicar-seguro`.
