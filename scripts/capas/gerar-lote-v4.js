@@ -7,6 +7,7 @@ const fs = require('fs'), path = require('path');
 const sharp = require(require('path').join(RAIZ, 'node_modules/sharp'));
 const db = require(require('path').join(RAIZ, 'backend/lib/db.js'));
 const ASSETS = path.join(__dirname, 'assets'), OBJ = ASSETS + '/objetos', LIVRO = ASSETS + '/livro-clay.png', OUT = process.env.CAPAS_V4_SAIDA || path.join(RAIZ, '.tmp/capas-v4-lote/saida');
+const VERIFICADOS = require(path.join(RAIZ, 'backend/lib/dadosChaveVerificados.json')).verificados || [];
 const FUNDOS = ['1', '2', '3', '4', '5'].map((n) => ASSETS + '/s' + n + '-1.png');
 const CORES = ['#1f5f7a', '#7a3b5f', '#4a5a2b', '#6b4a1f', '#2e4a6b', '#3b2f6b', '#6b2f2f', '#1d4d4a'];
 const FORMATOS = [{ nome: 'stories', W: 1080, H: 1920 }, { nome: 'feed', W: 1080, H: 1350 }, { nome: 'site', W: 1200, H: 630 }];
@@ -32,7 +33,12 @@ const objetoPara = (doc, sens) => sens ? 'heart' : (doc.tipoLote === 'relato' ? 
 function montar(doc) {
   const tipo = doc.tipoLote;
   const sens = SENSIVEL.test(norm(`${doc.titulo} ${doc.resumo || ''} ${(doc.tags || []).join(' ')}`));
-  const gancho = tipo === 'relato' ? fraseLiteral(doc.conteudo) : null;
+  // Relato: 1ª frase literal do texto. Artigo: frase verificada (dadosChaveVerificados.json) se tiver até 12 palavras;
+  // senão, 1ª frase literal do resumo com 4–12 palavras e sem número (fallback). Sem frase, sem gancho.
+  const verificado = VERIFICADOS.find((x) => x.slug === doc.slug);
+  const ateDoze = (t) => !!t && t.trim().split(/s+/).length <= 12;
+  const fraseResumo = (() => { const txt = String(doc.resumo || '').replace(/<[^>]+>/g, ' ').replace(/s+/g, ' ').trim(); for (const f of txt.match(/[^.!?]+[.!?]/g) || []) { const t = f.trim(); const n = t.split(/s+/).length; if (n >= 4 && n <= 12 && !/d/.test(t) && !/…|.../.test(t) && txt.includes(t)) return t; } return null; })();
+  const gancho = tipo === 'relato' ? fraseLiteral(doc.conteudo) : (verificado && ateDoze(verificado.frase) ? verificado.frase : fraseResumo);
   const cor = CORES[hash(doc.categoria || '') % CORES.length];
   const fundo = FUNDOS[hash(doc.categoria || '') % FUNDOS.length];
   const min = Math.max(1, Math.round(+doc.tempoLeitura || 3));

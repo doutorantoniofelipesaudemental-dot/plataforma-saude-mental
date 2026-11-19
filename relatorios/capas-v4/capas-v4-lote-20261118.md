@@ -1,12 +1,14 @@
-# Lote capas v4 — relatório (18/11/2026, 21:22)
+# Lote capas v4 — relatório (18/11/2026, 22:27; revisão do Dr. 22:05)
 
-- Artigos publicados: 426 (1.278 peças, 3 formatos). Contraste mínimo: 11,04:1 (meta ≥ 7:1).
-- Relatos (gancho literal ≤ 12 palavras): 102. Artigos sem gancho: 324 (dadosChaveVerificados ausente em todos).
-- Temas sensíveis (objeto coração): 77. Com narração em áudio (narracao.url): 426 (áudio ainda não conferido por amostragem).
-- Validação: sobreposição objeto×texto e cortes corrigidos por redução automática da fonte do título. Falha restante: título ilegível a 160 px.
-- Reprovados (140 artigos, título longo): decisão do Dr. — aceitar a miniatura com título reduzido ou encurtar título (não alterado).
+- Artigos publicados: 426 (1.278 peças, 3 formatos). Contraste mínimo 11,04:1 (meta ≥ 7:1).
+- Gancho de relato: 1ª frase literal do texto (4–12 palavras). 102 relatos.
+- Gancho de artigo: frase de dadosChaveVerificados.json se tiver até 12 palavras (1 caso); senão, 1ª frase literal do resumo, 4–12 palavras, sem número (4 casos). Os demais artigos sem gancho. Nota: 8 dos 9 verificados têm frase acima de 12 palavras.
+- Temas sensíveis (objeto de acolhimento): 77.
+- Com narração em áudio (narracao.url): 426. Amostra de 5 áudios: HTTP 200, audio/mpeg.
+- Livro 3D (relatos): FLUX.1 schnell via Cloudflare, Apache-2.0 (ver LICENSE-livro-flux.txt).
+- Reprovados: 145 artigos, todos por título ilegível a 160 px. Aceitos pelo Dr. por agora (22:05); propor títulos curtos de capa para essas capas (lista para a auditoria).
 
-## Reprovados
+## Lista de reprovados por legibilidade a 160 px
 - abuso-sexual-infantil-proteger
 - acidente-trabalho-trauma-psicologico
 - adolescente-corpo-mudanca-aceitacao
@@ -52,13 +54,16 @@
 - deficiencia-adquirida-reconstruir
 - delirium-demencia-depressao
 - dependencia-quimica
+- dependencia-quimica-comportamental-sinais
 - depressao-no-idoso
 - depressao-pos-parto-amamentacao
 - depressao-pos-parto-ansiedade-perinatal
 - desinformacao-saude-mental
 - diabetes-saude-mental
 - dismorfia-corporal-procedimentos-esteticos
+- envelhecimento-ativo-isolamento-social
 - esquecimento-ou-demencia
+- estresse-migratorio-adaptacao-cultural
 - estresse-pos-traumatico-violencia-urbana
 - estudante-migrante-saude-mental
 - eventos-climaticos-primeiros-cuidados-psicologicos
@@ -117,6 +122,7 @@
 - remedios-demais-no-idoso
 - respiracao-relaxamento-meditacao
 - retorno-pais-de-origem
+- risco-suicidio-aps
 - rotina-consulta-medicos
 - rotina-criancas
 - saude-mental-financeira-trabalhador
@@ -126,6 +132,7 @@
 - saude-mental-profissionais-saude-hospital
 - saude-mental-universidade
 - servico-consultoria-ocupacional
+- sinais-alerta-comportamentais-jovens
 - sobrecarga-docente-descompressao
 - sobrecarga-feminina-dupla-jornada
 - solidao-como-sair-dela
