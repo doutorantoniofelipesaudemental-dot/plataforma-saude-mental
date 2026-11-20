@@ -1,0 +1,8 @@
+Livro 3D (livro-clay.png)
+- Modelo: FLUX.1 schnell (black-forest-labs), licença Apache-2.0.
+- Acesso: Cloudflare Workers AI (@cf/black-forest-labs/flux-1-schnell), cota gratuita. Nenhum conector pago usado.
+- Data da geração: 18/11/2026.
+- Prompt: "A single closed book, 3D clay render, soft matte material, pastel teal and cream colors, gentle studio lighting, centered, isolated object, plain pure white background, no text, no letters, no shadow on the ground, icon style similar to 3D clay icon set".
+- Tratamento: fundo branco removido por distância à cor branca (alfa); sem texto no objeto.
+- Observação: pequena sombra de contato residual na base.
+- Uso: capas v4 (relatos), conforme ordem do Dr. (18/11/2026, 20:50).
