@@ -141,7 +141,7 @@ test('abrir e salvar no editor (CRLF, BOM, espaço no fim) não conta como ediç
 test('publicador: legenda ganha identificação e aviso CFM antes das hashtags; bloqueia hashtag de marca', () => {
   const { montarLegenda, checarTexto } = require('../../scripts/bot-publicar');
   const { IDENTIFICACAO_COMPLETA: IDENTIFICACAO } = require('../../backend/lib/identificacaoCfm');
-  const { AVISO_CFM } = require('../../scripts/bot-gemini');
+  const { AVISO_IA_UNICO: AVISO_CFM } = require('../../backend/lib/conformidadeCfm');
   const legenda = montarLegenda('Gancho.\n\nTexto.\n\n🔗 Artigo completo no link da bio\n\nSe precisar de apoio: CVV 188\n\n#saudemental #ansiedade #trabalho');
   assert.ok(legenda.includes(`${IDENTIFICACAO}\n\n${AVISO_CFM}\n\n#saudemental`), 'identificação e aviso logo antes das hashtags');
 

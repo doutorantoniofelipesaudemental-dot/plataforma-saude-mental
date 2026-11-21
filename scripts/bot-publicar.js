@@ -52,7 +52,7 @@ const { estadoPausa, registrarTokenInvalido } = require('../backend/lib/tokenIns
 const { motivoParaAguardar } = require('../backend/lib/filaRedes');
 const { temaSensivel, IDENTIFICACAO_3_LINHAS, temIdentificacaoSocial } = require('../backend/lib/legendaInstagram');
 const { checarEticaCfm } = require('../backend/lib/checagensAprovacao');
-const { AVISO_CFM, IDENTIFICACAO, IDENTIFICACAO_COMPLETA, garantirConformidade, faltasConformidade } = require('../backend/lib/conformidadeCfm');
+const { AVISO_CFM, AVISO_IA_UNICO, temAvisoIA, IDENTIFICACAO, IDENTIFICACAO_COMPLETA, garantirConformidade, faltasConformidade } = require('../backend/lib/conformidadeCfm');
 const { calcularMatriz } = require('../backend/lib/matrizMidia');
 const { RE_INGLES, TERMOS_CFM, semNomesProprios } = require('../backend/lib/checagemRedes');
 const { hashArtigo, hashTexto } = require('./bot-gemini');
@@ -143,7 +143,7 @@ function checarTexto({ aprovado, legenda, artigo }) {
   if ([...legenda].length > LIMITE_LEGENDA) falhas.push(`legenda com ${[...legenda].length} caracteres (máx. ${LIMITE_LEGENDA})`);
   const hashtags = legenda.match(/#[\p{L}\d_]+/gu) || [];
   if (hashtags.length < 3 || hashtags.length > 5) falhas.push(`${hashtags.length} hashtags (3 a 5)`);
-  if (!legenda.includes(AVISO_CFM)) falhas.push('legenda sem o aviso da Res. CFM 2.454/2026');
+  if (!temAvisoIA(legenda)) falhas.push('legenda sem o aviso da Res. CFM 2.454/2026');
   if (!temIdentificacaoSocial(legenda)) falhas.push('legenda sem a identificação do médico');
   if (temaSensivel(artigo) && !legenda.includes('CVV 188')) falhas.push('tema sensível sem CVV 188 na legenda');
   // Ética médica/CFM (promessa de cura, sensacionalismo, identificação, CVV) — checagensAprovacao.js.
@@ -326,7 +326,7 @@ function montarDescricaoYoutube({ metadados, slug, sensivel, short }) {
   const partes = [metadados.descricao, `Artigo completo: ${SITE}/artigo/${slug}`];
   if (metadados.capitulos.length) partes.push(['Capítulos:', ...metadados.capitulos.map((c) => `${c.tempo} ${c.titulo}`)].join('\n'));
   partes.push(['Conteúdo educativo. Não substitui avaliação individual.', sensivel ? 'Se precisar de apoio: CVV 188 (ligação gratuita, 24h) · SAMU 192' : ''].filter(Boolean).join('\n'));
-  partes.push(IDENTIFICACAO_COMPLETA, AVISO_CFM);
+  partes.push(IDENTIFICACAO_COMPLETA, AVISO_IA_UNICO);
   if (short) partes.push('#Shorts');
   return partes.join('\n\n');
 }

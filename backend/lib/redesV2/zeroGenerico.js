@@ -9,7 +9,7 @@
  *   (f) foge do eixo do dia (seg E4, ter E5, qua E1, qui E3, sex E6, sáb E7, dom Relato);
  *   (g) não traz "Em crise: CVV 188 · SAMU 192" e o aviso da Res. CFM 2.454/2026.
  */
-const { AVISO_CFM } = require('../conformidadeCfm');
+const { AVISO_CFM, AVISO_IA_UNICO, temAvisoIA } = require('../conformidadeCfm');
 
 const EIXO_DO_DIA = { 1: 'E4', 2: 'E5', 3: 'E1', 4: 'E3', 5: 'E6', 6: 'E7', 0: 'Relato' }; // getUTCDay(): 0 = domingo
 const LIMITE_SIMILARIDADE = 0.3; // Jaccard sobre trigramas de palavras; acima disto = parecido demais
@@ -22,7 +22,7 @@ const ehTextoPadrao = (t) => TEXTOS_PADRAO_SEGURANCA.some((p) => normalizar(p) =
 const SITE_ARTIGO = /^https:\/\/www\.drantoniofelipemedico\.com\.br\/artigo\/[a-z0-9-]+$/;
 // Rodapé fixo das legendas (montarLegenda): tudo a partir daqui não é texto do post.
 const { LINHA_CREDITO, ORIENTACAO } = require('./conteudo');
-const MARCAS_RODAPE = [LINHA_CREDITO, ORIENTACAO, 'Em crise:', AVISO_CFM].filter(Boolean);
+const MARCAS_RODAPE = [LINHA_CREDITO, ORIENTACAO, 'Em crise:', AVISO_CFM, AVISO_IA_UNICO].filter(Boolean);
 function corpoDaLegenda(legenda) {
   const s = String(legenda || '');
   const cortes = MARCAS_RODAPE.map((m) => s.indexOf(m)).filter((i) => i >= 0);
@@ -154,7 +154,7 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
 
   // (g) crise e aviso de IA
   if (!LINHA_CRISE_TRECHOS.every((t) => legenda.includes(t))) f('g-crise', 'sem "Em crise: CVV 188 · SAMU 192"');
-  if (!legenda.includes(AVISO_CFM)) f('g-aviso', 'sem o aviso da Res. CFM 2.454/2026');
+  if (!temAvisoIA(legenda)) f('g-aviso', 'sem o aviso da Res. CFM 2.454/2026');
 
   return {
     aprovado: falhas.length === 0,

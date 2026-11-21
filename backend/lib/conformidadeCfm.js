@@ -20,6 +20,13 @@ const { IDENTIFICACAO_COMPLETA } = require('./identificacaoCfm');
 // Versão curta, para dentro de arte (último slide, último Story).
 const APOIO_CURTO = 'Apoio agora: CVV 188 · SAMU 192';
 
+// Redação ÚNICA do aviso de IA para as peças novas (ordem de 20/11/2026). AVISO_CFM continua aceito
+// nas checagens porque o estoque já checado usa essa redação; trocar o texto antigo exige revisão à parte.
+const AVISO_IA_UNICO =
+  'Conteúdo produzido com apoio de ferramentas de inteligência artificial, com revisão e responsabilidade médica final do Dr. Antônio Felipe (Resolução CFM 2.454/2026).';
+const AVISOS_IA_ACEITOS = [AVISO_IA_UNICO, AVISO_CFM];
+const temAvisoIA = (t) => AVISOS_IA_ACEITOS.some((a) => String(t).includes(a));
+
 const temIdentificacao = (t) => /CRM-BA 41322/.test(t) && /RQE 26638/.test(t);
 
 /**
@@ -34,7 +41,7 @@ function garantirConformidade(texto, { sensivel = false, identificacao = IDENTIF
   const fixos = [
     sensivel && !/CVV 188/.test(corpo) ? LINHA_CVV : null,
     temIdentificacao(corpo) ? null : identificacao,
-    corpo.includes(AVISO_CFM) ? null : AVISO_CFM,
+    temAvisoIA(corpo) ? null : AVISO_IA_UNICO,
   ].filter(Boolean);
   if (iHashtags < 0) return [...blocos, ...fixos].join('\n\n');
   return [...blocos.slice(0, iHashtags), ...fixos, ...blocos.slice(iHashtags)].join('\n\n');
@@ -45,9 +52,9 @@ function faltasConformidade(texto, { sensivel = false } = {}) {
   const t = String(texto);
   const faltas = [];
   if (!temIdentificacao(t)) faltas.push('sem a identificação do médico (CRM-BA 41322 · RQE 26638)');
-  if (!t.includes(AVISO_CFM)) faltas.push('sem o aviso da Res. CFM 2.454/2026');
+  if (!temAvisoIA(t)) faltas.push('sem o aviso da Res. CFM 2.454/2026');
   if (sensivel && !/CVV 188/.test(t)) faltas.push('tema sensível sem CVV 188');
   return faltas;
 }
 
-module.exports = { AVISO_CFM, IDENTIFICACAO, IDENTIFICACAO_COMPLETA, LINHA_CVV, APOIO_CURTO, garantirConformidade, faltasConformidade };
+module.exports = { AVISO_CFM, AVISO_IA_UNICO, temAvisoIA, IDENTIFICACAO, IDENTIFICACAO_COMPLETA, LINHA_CVV, APOIO_CURTO, garantirConformidade, faltasConformidade };
