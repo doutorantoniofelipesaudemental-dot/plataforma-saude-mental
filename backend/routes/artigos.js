@@ -4,6 +4,9 @@ const Artigo = require('../models/Artigo');
 const { exigirBanco, exigirAdmin, tratarErroValidacao, limitarTaxa } = require('../middleware');
 const { slugify } = require('../lib/texto');
 const { listarArtigos, listarCategorias, listarTemas, CAMPOS_LISTA } = require('../lib/listarArtigos');
+const { capaPublica } = require('../lib/capaLocal');
+// capaSite: capa local (public/artigos/<slug>/capa.jpg) quando existe; senão, a imagemCapa atual.
+const comCapaSite = (a) => ({ ...a, capaSite: capaPublica(a) });
 const { dispararPublicacaoAutomatica } = require('../lib/socialPublisher');
 const { ehRobo } = require('../lib/robos');
 const { log } = require('../lib/log');
@@ -59,7 +62,7 @@ router.get('/temas', exigirBanco, async (req, res) => {
 router.get('/', exigirBanco, async (req, res) => {
   try {
     const { itens, paginacao } = await listarArtigos(req.query);
-    res.json({ itens, paginacao });
+    res.json({ itens: itens.map(comCapaSite), paginacao });
   } catch (err) {
     log.erro('[artigos] erro ao listar:', err);
     res.status(500).json({ erro: 'Não foi possível carregar os artigos.' });
@@ -97,7 +100,7 @@ router.get('/:slug', exigirBanco, async (req, res) => {
       .limit(3)
       .lean();
 
-    res.json({ artigo, relacionados });
+    res.json({ artigo: comCapaSite(artigo), relacionados: relacionados.map(comCapaSite) });
   } catch (err) {
     log.erro('[artigos] erro ao buscar:', err);
     res.status(500).json({ erro: 'Não foi possível carregar o artigo.' });

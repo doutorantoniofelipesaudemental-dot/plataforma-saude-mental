@@ -16,6 +16,7 @@
  * Sai com código 1 se houver falha. Só lê: não altera nada.
  */
 const sharp = require('sharp');
+const { capaPublica } = require('../backend/lib/capaLocal');
 
 const BASE = (process.env.AUDITORIA_BASE_URL || 'https://www.drantoniofelipemedico.com.br').replace(/\/+$/, '');
 const CANONICO = 'https://www.drantoniofelipemedico.com.br';
@@ -128,7 +129,10 @@ async function main() {
     if (!ogImage) falhar('sem og:image');
     else {
       if (!/^https:\/\//.test(ogImage)) falhar(`og:image não é URL https absoluta: ${ogImage}`);
-      if (a.imagemCapa && ogImage !== a.imagemCapa) falhar('og:image diferente da imagemCapa do artigo');
+      // Capa esperada = a que o site entrega: local (public/artigos/<slug>/capa.jpg) ou imagemCapa.
+      const capaEsperada = capaPublica(a);
+      const capaEsperadaAbs = capaEsperada && capaEsperada.startsWith('/') ? 'https://www.drantoniofelipemedico.com.br' + capaEsperada : capaEsperada;
+      if (capaEsperadaAbs && ogImage !== capaEsperadaAbs) falhar('og:image diferente da capa do artigo (local ou imagemCapa)');
       const img = await conferirImagem(ogImage);
       if (!img.ok) falhar(`og:image não carrega (${img.motivo})`);
       else if (img.largura !== 1200 || img.altura !== 630) falhar(`og:image ${img.largura}×${img.altura} (esperado 1200×630)`);

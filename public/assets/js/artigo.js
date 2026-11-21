@@ -13,6 +13,12 @@
   const secaoRelacionados = document.getElementById('secao-relacionados');
   const listaRelacionados = document.getElementById('relacionados');
 
+  /** og:image e JSON-LD pedem URL absoluta; a capa local (capaSite) vem como caminho relativo. */
+  function capaAbsolutaCliente(artigo) {
+    const c = artigo.capaSite || artigo.imagemCapa;
+    return c && c.startsWith('/') ? 'https://www.drantoniofelipemedico.com.br' + c : c;
+  }
+
   /** Atualiza meta tags OpenGraph, canonical e o card JSON-LD com os dados reais do artigo. */
   function atualizarMetadados(artigo, slug) {
     const url = `${BASE_URL}/artigo/${encodeURIComponent(slug)}`;
@@ -29,10 +35,10 @@
     const canonical = document.getElementById('link-canonical');
     if (canonical) canonical.setAttribute('href', url);
 
-    if (artigo.imagemCapa) {
+    if ((artigo.capaSite || artigo.imagemCapa)) {
       const ogImage = document.createElement('meta');
       ogImage.setAttribute('property', 'og:image');
-      ogImage.setAttribute('content', artigo.imagemCapa);
+      ogImage.setAttribute('content', capaAbsolutaCliente(artigo));
       document.head.appendChild(ogImage);
     }
 
@@ -46,7 +52,7 @@
       inLanguage: 'pt-BR',
       datePublished: artigo.publicadoEm,
       dateModified: artigo.atualizadoEm || artigo.publicadoEm,
-      image: artigo.imagemCapa || undefined,
+      image: capaAbsolutaCliente(artigo) || undefined,
       about: artigo.categoria && artigo.categoria !== 'Geral' ? { '@type': 'MedicalCondition', name: artigo.categoria } : undefined,
       author: {
         '@type': 'Person',
@@ -131,9 +137,9 @@
       atualizarMetadados(artigo, slug);
 
       // Capa gerada (Vercel Blob) — só renderiza quando o artigo tiver uma.
-      const capaHtml = artigo.imagemCapa
+      const capaHtml = (artigo.capaSite || artigo.imagemCapa)
         ? `<div class="artigo-capa">
-             <img src="${esc(artigo.imagemCapa)}" alt="Capa do artigo: ${esc(artigo.titulo)}" width="1200" height="630" loading="eager">
+             <img src="${esc((artigo.capaSite || artigo.imagemCapa))}" alt="Capa do artigo: ${esc(artigo.titulo)}" width="1200" height="630" loading="eager">
            </div>`
         : '';
 
