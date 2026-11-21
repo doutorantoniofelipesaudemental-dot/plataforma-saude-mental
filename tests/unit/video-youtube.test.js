@@ -7,7 +7,8 @@ const { interpretarFfprobe, validarVideo } = require('../../backend/lib/videoRed
 const { validarMetadados } = require('../../backend/lib/youtube');
 const { lerMetadadosVideo } = require('../../backend/lib/carrosselAprovado');
 const { montarDescricaoYoutube, checarTextoVideo } = require('../../scripts/bot-publicar');
-const { blocoMetadados, AVISO_CFM, IDENTIFICACAO_COMPLETA } = require('../../scripts/bot-gemini');
+const { blocoMetadados, IDENTIFICACAO_COMPLETA } = require('../../scripts/bot-gemini');
+const { AVISO_IA_UNICO: AVISO_CFM } = require('../../backend/lib/conformidadeCfm');
 
 const ffprobe = (largura, altura, duracao, { rotate, audio = 'aac', video = 'h264' } = {}) => ({
   format: { duration: String(duracao) },
