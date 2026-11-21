@@ -3,7 +3,7 @@
  * gancho, as telas (uma ideia por tela, frases curtas) e a legenda. Nada é inventado: tudo vem do texto.
  */
 const { LINHAS_SOCIAL } = require('../checagensAprovacao');
-const { AVISO_CFM } = require('../conformidadeCfm');
+const { AVISO_IA_UNICO } = require('../conformidadeCfm');
 
 const MAX_PALAVRAS_TELA = 25;
 const ORIENTACAO = 'Orientação geral: respeitam-se sempre os protocolos hospitalares, do Pronto Atendimento (PA) e da rede de saúde locais.';
@@ -162,7 +162,7 @@ function planejarPost(artigo, { tipo = 'artigo' } = {}) {
 
 /** Legenda final: corpo + referências + avisos obrigatórios + assinatura de 3 linhas + hashtags (≤ 1500 caracteres). */
 function montarLegenda(plano, { limite = 1500 } = {}) {
-  const fixos = [LINHA_CREDITO, ORIENTACAO, plano.sensivel ? LINHA_CRISE : LINHA_CRISE, AVISO_CFM, LINHAS_SOCIAL.join('\n')].join('\n\n');
+  const fixos = [LINHA_CREDITO, ORIENTACAO, plano.sensivel ? LINHA_CRISE : LINHA_CRISE, AVISO_IA_UNICO, LINHAS_SOCIAL.join('\n')].join('\n\n');
   const tags = plano.hashtags.join(' ');
   const refs = plano.refs.length ? `Referências: ${plano.refs.join(' | ')}` : '';
   const montar = (corpo) => [corpo, refs, fixos, tags].filter(Boolean).join('\n\n');

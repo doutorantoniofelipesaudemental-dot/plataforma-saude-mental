@@ -6,7 +6,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 
-const { garantirConformidade, faltasConformidade, AVISO_CFM, IDENTIFICACAO, LINHA_CVV } = require('../../backend/lib/conformidadeCfm');
+const { garantirConformidade, faltasConformidade, AVISO_CFM, AVISO_IA_UNICO, IDENTIFICACAO, LINHA_CVV } = require('../../backend/lib/conformidadeCfm');
 const { calcularMatriz, marcarExecutado, IDS } = require('../../backend/lib/matrizMidia');
 const { listarTrilhas, escolherTrilha } = require('../../backend/lib/trilhas');
 const tts = require('../../backend/lib/tts');
@@ -15,7 +15,7 @@ test('conformidade: acrescenta CVV (tema sensível), identificação e aviso CFM
   const legenda = 'Gancho.\n\nParágrafo do artigo.\n\n#saudemental #burnout #aps';
   const final = garantirConformidade(legenda, { sensivel: true });
   const blocos = final.split('\n\n');
-  assert.deepEqual(blocos.slice(2, 5), [LINHA_CVV, IDENTIFICACAO, AVISO_CFM]);
+  assert.deepEqual(blocos.slice(2, 5), [LINHA_CVV, IDENTIFICACAO, AVISO_IA_UNICO]);
   assert.match(blocos.at(-1), /^#saudemental/);
   assert.equal(garantirConformidade(final, { sensivel: true }), final, 'idempotente');
   assert.deepEqual(faltasConformidade(final, { sensivel: true }), []);

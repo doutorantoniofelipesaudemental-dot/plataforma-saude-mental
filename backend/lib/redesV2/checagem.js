@@ -8,7 +8,7 @@ const crypto = require('node:crypto');
 const sharp = require('sharp');
 const { checarEticaCfm, checarImagemSemMarcaDagua } = require('../checagensAprovacao');
 const { checarTexto } = require('../auditoriaTexto');
-const { AVISO_CFM } = require('../conformidadeCfm');
+const { temAvisoIA } = require('../conformidadeCfm');
 const { MAX_PALAVRAS_TELA, palavras, ORIENTACAO, LINHA_CREDITO } = require('./conteudo');
 const { ASSINATURA } = require('./arte');
 
@@ -78,7 +78,7 @@ async function checarPost({ legenda, telas, imagens, alts, glifosAusentes = [] }
 
   /* ética (Res. CFM 2.336/2023 e 2.454/2026) */
   for (const x of checarEticaCfm(legenda, { contexto: 'social' }).falhas) f('ética', x);
-  if (!legenda.includes(AVISO_CFM)) f('ética', 'sem aviso de IA (Res. CFM 2.454/2026)');
+  if (!temAvisoIA(legenda)) f('ética', 'sem aviso de IA (Res. CFM 2.454/2026)');
   if (!legenda.includes(ORIENTACAO)) f('ética', 'sem aviso de orientação geral/protocolos locais');
   if (!legenda.includes(LINHA_CREDITO)) f('ética', 'sem a linha de crédito "Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito"');
   if (!telas.length || telas[telas.length - 1].tipo !== 'final') f('técnica', 'último cartão (com o crédito da marca) ausente');
