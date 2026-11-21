@@ -110,6 +110,34 @@ function registroMaisRecente() {
     process.exit(0);
   }
 
+  if (flag('atualizar-legenda')) {
+    if (!slugs) { console.log('ABORTADO: --atualizar-legenda exige --slugs=<lista>.'); process.exit(1); }
+    const { motivoAtualizacaoLegenda } = require('../../lib/redesV2/envioSeguro');
+    const linhas = [];
+    const selecionadas = [];
+    let recusa = 0;
+    for (const sl of slugs) {
+      const p = pastas.find((x) => x.slug === sl);
+      if (!p) { linhas.push(`RECUSADA  ${sl} | pasta não encontrada`); recusa += 1; continue; }
+      const dbBanco = await dbx.collection('redes_v2').findOne({ _id: p.id }, { projection: { status: 1, dataSugerida: 1, publicadoEm: 1, hashes: 1 } });
+      const imgs = dbBanco ? await dbx.collection('redes_v2_img').find({ postId: p.id }).sort({ n: 1 }).toArray() : [];
+      const banco = dbBanco && { ...dbBanco, hashes: imgs.map((i) => i.hash) };
+      const motivo = motivoAtualizacaoLegenda({ banco, pasta: p, agora: new Date() });
+      if (motivo) { linhas.push(`RECUSADA  ${sl} | ${motivo}`); recusa += 1; }
+      else { selecionadas.push(p); linhas.push(`ATUALIZA  ${sl} | só legenda, alts, data e checagem; imagens intactas`); }
+    }
+    for (const l of linhas) console.log(l);
+    if (!flag('aplicar')) { console.log('DRY-RUN: nada foi gravado.'); process.exit(recusa ? 1 : 0); }
+    if (recusa) { console.log('ABORTADO: há item recusado; nada foi gravado.'); process.exit(1); }
+    const b = await banco.fazerBackup(dbx, DIR_BACKUPS, carimbo());
+    console.log(`backup: ${b.dir}`);
+    const reg = await banco.atualizarLegenda(dbx, { selecionadas }, b.dir);
+    console.log(`registro: ${reg}`);
+    const r = await banco.conferir(dbx, pastas, selecionadas.map((p) => p.slug));
+    for (const l of r.linhas) console.log(l);
+    console.log(`conferidos: ${r.conferidos} | divergentes: ${r.divergentes}`);
+    process.exit(r.divergentes ? 1 : 0);
+  }
   const plano = planejarEnvio({ pecas: pastas, slugs, agora: new Date() });
   const existentes = new Map();
   for (const p of plano.selecionadas) {

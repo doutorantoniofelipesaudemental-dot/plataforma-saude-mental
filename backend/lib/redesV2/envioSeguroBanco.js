@@ -114,4 +114,26 @@ async function reverter(dbx, caminhoRegistro) {
   return linhas;
 }
 
-module.exports = { bloqueadosPorStatus, fazerBackup, aplicar, conferir, reverter };
+/**
+ * --atualizar-legenda: troca SÓ legenda, alts, dataSugerida e checagem de docs já aprovado-checagem.
+ * Não toca nas imagens (redes_v2_img). Guarda o documento anterior em dirBackup (previo-<id>.ejson).
+ */
+async function atualizarLegenda(dbx, plano, dirBackup) {
+  const caminhoRegistro = path.join(dirBackup, 'registro-atualizacao.json');
+  const registro = { criadoEm: new Date().toISOString(), backup: dirBackup, atualizados: [] };
+  gravarJson(caminhoRegistro, registro);
+  for (const p of plano.selecionadas) {
+    const previo = await dbx.collection('redes_v2').findOne({ _id: p.id });
+    const arquivoPrevio = `previo-${p.id}.ejson`;
+    fs.writeFileSync(path.join(dirBackup, arquivoPrevio), EJSON.stringify({ doc: previo }));
+    await dbx.collection('redes_v2').updateOne(
+      { _id: p.id, status: 'aprovado-checagem' },
+      { $set: { legenda: p.legenda, alts: p.alts, dataSugerida: paraData(p.meta.dataSugerida), checagem: p.meta.checagem, legendaCaracteres: p.meta.legendaCaracteres } },
+    );
+    registro.atualizados.push({ slug: p.slug, id: p.id, arquivoPrevio });
+    gravarJson(caminhoRegistro, registro);
+  }
+  return caminhoRegistro;
+}
+
+module.exports = { bloqueadosPorStatus, fazerBackup, aplicar, conferir, reverter, atualizarLegenda };
