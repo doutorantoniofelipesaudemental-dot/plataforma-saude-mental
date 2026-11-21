@@ -7,6 +7,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { checarZeroGenerico } = require('./zeroGenerico');
 const { IDENTIFICACAO_COMPLETA } = require('../identificacaoCfm');
+const { AVISO_CFM, AVISO_IA_UNICO } = require('../conformidadeCfm');
 const LINHAS_IDENTIFICACAO = new Set(IDENTIFICACAO_COMPLETA.split('\n').map((l) => l.trim()));
 
 /** Lê o arquivo de overrides: { ovs: { <slug>: {...} }, trocas: { <slugAntigo>: <slugNovo> } }. Ausente = vazio. */
@@ -47,14 +48,21 @@ const FIXOS = [/^Texto completo no link da bio\.?$/i, /^Refer[êe]ncias:/i, /^#/
  * Frases clínicas da legenda: cada sentença do corpo (sem rodapé fixo e sem marcadores), para conferir literalidade.
  * A conferência é feita sobre o que VAI AO AR; não se declara frase a parte.
  */
+// Aviso de IA (redação única e a antiga, aceitas por temAvisoIA): trecho oficial, não é frase clínica.
+const AVISOS_FIXOS = [AVISO_IA_UNICO, AVISO_CFM].map((a) => a.replace(/\s+/g, ' ').trim());
 function derivarFrases(legenda) {
   const corpo = String(legenda || '').split(/\n\s*\n/).filter((b) => !/^(Referências:|Conteúdo do Portal|Conteúdo educativo|Orientação geral|Em crise:|#|Salve para ler|Compartilhe com|Texto completo)/i.test(b.trim()))
     .join('\n').replace(/^•\s*/gm, '');
   const frases = [];
   for (const linha of corpo.split('\n')) {
-    const t = linha.trim();
+    let t = linha.trim();
+    for (const aviso of AVISOS_FIXOS) t = t.split(aviso).join(' ').replace(/\s+/g, ' ').trim();
     if (!t || LINHAS_IDENTIFICACAO.has(t) || FIXOS.some((re) => re.test(t))) continue;
-    for (const s of t.split(/(?<=[.!?])\s+/)) if (s.trim().length > 25) frases.push(s.trim());
+    // Pergunta de engajamento (P4) não é afirmação clínica: não entra na conferência de literalidade.
+    for (const s of t.split(/(?<=[.!?])\s+/)) {
+      const x = s.trim();
+      if (x.length > 25 && !x.endsWith('?')) frases.push(x);
+    }
   }
   return frases;
 }
