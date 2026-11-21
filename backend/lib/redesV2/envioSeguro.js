@@ -35,6 +35,7 @@ function motivoRecusa(p, agora) {
   const m = p.meta || {};
   if (m.status !== 'aprovado-checagem') return `status ${m.status} (só aprovado-checagem é enviado)`;
   if (!m.checagem || m.checagem.ok !== true) return 'sem checagem.ok = true';
+  if (m.checagem.parcial === true) return 'checagem parcial (sem telas.json): completar a checagem oficial';
   if (p.erroImagem) return p.erroImagem;
   const motivoTexto = motivoLegenda(p.legenda);
   if (motivoTexto) return motivoTexto;
@@ -90,4 +91,25 @@ function conferirPar({ banco, pasta }) {
   return d;
 }
 
-module.exports = { paraData, motivoLegenda, motivoRecusa, planejarEnvio, conferirPar };
+/**
+ * Atualização SÓ de legenda (--atualizar-legenda) de peça já no banco como aprovado-checagem.
+ * Recusa: fora de aprovado-checagem, já publicada/agendada, data passada, pasta recusada pelo envio
+ * (inclui checagem parcial) e imagens diferentes do banco (nesse caso só envio completo).
+ * @param {{banco: object|null, pasta: object, agora?: Date}} o
+ * @returns {string|null} motivo da recusa (null = pode atualizar)
+ */
+function motivoAtualizacaoLegenda({ banco, pasta, agora = new Date() }) {
+  if (!banco) return 'ausente no banco (use o envio completo)';
+  if (banco.status !== 'aprovado-checagem') return `status ${banco.status}: atualização só para aprovado-checagem`;
+  if (banco.publicadoEm || /publicad|agendad/.test(String(banco.status))) return 'já publicada ou agendada';
+  const dBanco = paraData(banco.dataSugerida);
+  if (!dBanco || dBanco.getTime() <= agora.getTime()) return 'data passada ou inválida no banco';
+  const motivo = motivoRecusa(pasta, agora);
+  if (motivo) return motivo;
+  const hb = banco.hashes || [];
+  const hp = pasta.hashes || [];
+  if (hb.length !== hp.length || hb.some((h, i) => h !== hp[i])) return 'imagens diferentes do banco (use o envio completo)';
+  return null;
+}
+
+module.exports = { paraData, motivoLegenda, motivoRecusa, planejarEnvio, conferirPar, motivoAtualizacaoLegenda };
