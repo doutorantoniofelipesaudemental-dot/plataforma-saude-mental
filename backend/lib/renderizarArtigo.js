@@ -1,4 +1,9 @@
 const { capaPublica } = require('./capaLocal');
+// og:image e JSON-LD exigem URL absoluta (https); a capa local vem como caminho relativo.
+const capaAbsoluta = (a) => {
+  const c = capaPublica(a);
+  return c && c.startsWith('/') ? BASE_URL + c : c;
+};
 const fs = require('fs');
 const { AVISO_PROTOCOLOS, precisaAviso } = require('./avisoProtocolos');
 const { CAIXA_VIOLENCIA_TITULO, CAIXA_VIOLENCIA_ITENS, precisaCaixaViolencia } = require('./caixaViolencia');
@@ -161,7 +166,7 @@ function renderizarArtigoHtml(artigo) {
   );
 
   const tagsExtras = [];
-  const capaSrcOg = capaPublica(artigo);
+  const capaSrcOg = capaAbsoluta(artigo);
   if (capaSrcOg) {
     tagsExtras.push(`<meta property="og:image" content="${escapeHtml(capaSrcOg)}">`);
   }
@@ -176,7 +181,7 @@ function renderizarArtigoHtml(artigo) {
     inLanguage: 'pt-BR',
     datePublished: artigo.publicadoEm,
     dateModified: artigo.atualizadoEm || artigo.publicadoEm,
-    ...(capaPublica(artigo) ? { image: capaPublica(artigo) } : {}),
+    ...(capaAbsoluta(artigo) ? { image: capaAbsoluta(artigo) } : {}),
     author: {
       '@type': 'Person',
       name: artigo.autor || 'Dr. Antônio Felipe',
