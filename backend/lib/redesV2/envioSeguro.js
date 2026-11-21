@@ -5,6 +5,9 @@
  * - conferirPar compara banco x pasta (status, legenda, data, hashes).
  */
 
+const { IDENTIFICACAO_COMPLETA } = require('../identificacaoCfm');
+const { temAvisoIA } = require('../conformidadeCfm');
+
 /** Data de uma peça. Data só com dia (AAAA-MM-DD) vale 00:00 de Brasília. */
 function paraData(s) {
   if (s instanceof Date) return Number.isNaN(s.getTime()) ? null : s;
@@ -13,12 +16,28 @@ function paraData(s) {
   return Number.isNaN(d.getTime()) ? null : d;
 }
 
+/**
+ * Trava de legenda (ordem de 20/11/2026): identificação de 5 linhas, CVV 188 e SAMU 192,
+ * aviso de IA (uma das 2 redações) e no máximo 2.200 caracteres. Vale no dry-run e no --aplicar.
+ */
+function motivoLegenda(t) {
+  if (!t) return 'sem legenda.txt';
+  const norm = (x) => x.replace(/\s+/g, ' ').trim();
+  const txt = norm(t);
+  if (IDENTIFICACAO_COMPLETA.split('\n').some((l) => !txt.includes(norm(l)))) return 'legenda sem a identificação de 5 linhas';
+  if (!t.includes('CVV 188') || !t.includes('SAMU 192')) return 'legenda sem "CVV 188" e "SAMU 192"';
+  if (!temAvisoIA(t)) return 'legenda sem o aviso de IA (Res. CFM 2.454/2026)';
+  if ([...t].length > 2200) return 'legenda acima de 2.200 caracteres';
+  return null;
+}
+
 function motivoRecusa(p, agora) {
   const m = p.meta || {};
   if (m.status !== 'aprovado-checagem') return `status ${m.status} (só aprovado-checagem é enviado)`;
   if (!m.checagem || m.checagem.ok !== true) return 'sem checagem.ok = true';
   if (p.erroImagem) return p.erroImagem;
-  if (!p.legenda) return 'sem legenda.txt';
+  const motivoTexto = motivoLegenda(p.legenda);
+  if (motivoTexto) return motivoTexto;
   if (!Array.isArray(m.checagem.hashes) || m.checagem.hashes.length === 0) return 'sem hashes de checagem';
   const d = paraData(m.dataSugerida);
   if (!d) return 'data inválida';
@@ -71,4 +90,4 @@ function conferirPar({ banco, pasta }) {
   return d;
 }
 
-module.exports = { paraData, motivoRecusa, planejarEnvio, conferirPar };
+module.exports = { paraData, motivoLegenda, motivoRecusa, planejarEnvio, conferirPar };

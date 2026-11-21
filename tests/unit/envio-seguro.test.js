@@ -1,11 +1,24 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { paraData, planejarEnvio, conferirPar } = require('../../backend/lib/redesV2/envioSeguro');
+const { paraData, motivoLegenda, planejarEnvio, conferirPar } = require('../../backend/lib/redesV2/envioSeguro');
+const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/identificacaoCfm');
+const { AVISO_IA_UNICO } = require('../../backend/lib/conformidadeCfm');
+
+const LEGENDA_OK = `Corpo.\n\nReferências: X.\n\nOrientação geral.\n\nEm crise: CVV 188 · SAMU 192\n\n${AVISO_IA_UNICO}\n\n${IDENTIFICACAO_COMPLETA}\n\n#saudemental`;
+
+test('trava de legenda: aceita a completa e recusa cada falta', () => {
+  assert.equal(motivoLegenda(LEGENDA_OK), null);
+  assert.match(motivoLegenda(LEGENDA_OK.replace('Atuo em Pronto', 'Outra linha')), /identificação de 5 linhas/);
+  assert.match(motivoLegenda(LEGENDA_OK.replace('SAMU 192', 'x')), /CVV 188/);
+  assert.match(motivoLegenda(LEGENDA_OK.replace(AVISO_IA_UNICO, 'sem aviso')), /aviso de IA/);
+  assert.match(motivoLegenda(LEGENDA_OK + 'x'.repeat(2300)), /2\.200/);
+  assert.match(motivoLegenda(null), /sem legenda/);
+});
 
 const AGORA = new Date('2026-11-12T03:50:00Z'); // 00:50 de 12/11 em Brasília
 const peca = (extra = {}) => ({
   slug: '2026-11-13-insonia-consulta-rotina',
-  legenda: 'texto',
+  legenda: LEGENDA_OK,
   erroImagem: null,
   meta: {
     status: 'aprovado-checagem',

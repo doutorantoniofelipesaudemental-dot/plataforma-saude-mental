@@ -6,6 +6,9 @@ const path = require('node:path');
 const { EJSON } = require('bson');
 const { planejarEnvio } = require('../../backend/lib/redesV2/envioSeguro');
 const banco = require('../../backend/lib/redesV2/envioSeguroBanco');
+const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/identificacaoCfm');
+const { AVISO_IA_UNICO } = require('../../backend/lib/conformidadeCfm');
+const LEG_NOVA = `Corpo.\n\nEm crise: CVV 188 · SAMU 192\n\n${AVISO_IA_UNICO}\n\n${IDENTIFICACAO_COMPLETA}`;
 
 // Driver falso (mock) para o teste. Não conecta em nenhum MongoDB.
 const igual = (d, q) => Object.keys(q).every((k) => JSON.stringify(d[k]) === JSON.stringify(q[k]));
@@ -50,7 +53,7 @@ function peca(imagens = [bytes('tela-a'), bytes('tela-b')], extra = {}) {
     hashes,
     imagens,
     erroImagem: null,
-    legenda: 'legenda nova',
+    legenda: LEG_NOVA,
     alts: ['alt 1', 'alt 2'],
     meta: { id: ID, status: 'aprovado-checagem', dataSugerida: '2026-11-13T08:00:00-03:00', checagem: { ok: true, hashes } },
     ...extra,
@@ -65,7 +68,7 @@ test('inserir novo: aplica, confere, e o reverter remove só o que criou', async
   const reg = await banco.aplicar(dbx, plano(peca()), b.dir, new Map());
   const doc = await dbx.collection('redes_v2').findOne({ _id: ID });
   assert.equal(doc.status, 'aprovado-checagem');
-  assert.equal(doc.legenda, 'legenda nova');
+  assert.equal(doc.legenda, LEG_NOVA);
   assert.equal(await dbx.collection('redes_v2_img').countDocuments({ postId: ID }), 2);
   const r = JSON.parse(fs.readFileSync(reg, 'utf8'));
   assert.equal(r.inseridos[0].substituiu, false);
@@ -93,7 +96,7 @@ test('substituir descartado-*: guarda o anterior e o reverter restaura exatament
 
   const novo = await dbx.collection('redes_v2').findOne({ _id: ID });
   assert.equal(novo.status, 'aprovado-checagem');
-  assert.equal(novo.legenda, 'legenda nova');
+  assert.equal(novo.legenda, LEG_NOVA);
   assert.equal(await dbx.collection('redes_v2_img').countDocuments({ postId: ID }), 2);
   assert.equal(JSON.parse(fs.readFileSync(reg, 'utf8')).inseridos[0].substituiu, true);
 
