@@ -75,4 +75,41 @@ function montarNovoConteudo(conteudoAtual, item) {
   return `${item.html.trim()}\n\n${conteudoAtual.slice(i)}`;
 }
 
-module.exports = { listarLotes, reescritaAprovada, reescritaPendente, montarNovoConteudo, hashTexto, MARCA_FERRAMENTA };
+/** HTML da reescrita → corpo MDX com os componentes do app (Lead, Callout, RefsNote). */
+function htmlParaMdx(html) {
+  return html
+    .replace(/<p class="lead-para">([\s\S]*?)<\/p>/g, '<Lead>\n$1\n</Lead>')
+    .replace(/<p class="refs-note">([\s\S]*?)<\/p>/g, '<RefsNote>\n$1\n</RefsNote>')
+    .replace(/<div class="callout"><strong>([\s\S]*?)<\/strong>\s*([\s\S]*?)<\/div>/g, (_, titulo, corpo) => {
+      const t = titulo.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+      return `<Callout titulo={'${t}'}>\n${corpo.trim()}\n</Callout>`;
+    })
+    .replace(/ class="/g, ' className="')
+    .replace(/<br>/g, '<br />')
+    .trim();
+}
+
+/**
+ * Compila o MDX de cada item de cada lote (mesma conversão do importador).
+ * Retorna as falhas; lista vazia = todos os lotes compilam antes do merge.
+ */
+async function validarMdxDosLotes(raiz) {
+  const { pathToFileURL } = require('url');
+  const compilador = path.join(raiz, 'apps', 'plataforma-saude-mental', 'node_modules', '@mdx-js', 'mdx', 'index.js');
+  const { compile } = await import(pathToFileURL(compilador).href);
+  const falhas = [];
+  let total = 0;
+  for (const l of listarLotes()) {
+    for (const item of l.itens) {
+      total++;
+      try {
+        await compile(htmlParaMdx(item.html));
+      } catch (e) {
+        falhas.push({ lote: l.lote, slug: item.slug, erro: String(e.message || e).split('\n')[0] });
+      }
+    }
+  }
+  return { total, falhas };
+}
+
+module.exports = { listarLotes, reescritaAprovada, reescritaPendente, montarNovoConteudo, hashTexto, MARCA_FERRAMENTA, htmlParaMdx, validarMdxDosLotes };

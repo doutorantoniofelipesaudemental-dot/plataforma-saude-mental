@@ -154,6 +154,8 @@ async function triplaChecagem() {
     etapas.push({ nome: '2b. Endpoints da API do YouTube (só os do formulário)', ok: violacoes.length === 0, detalhe: violacoes.length ? violacoes.slice(0, 5).map((v) => `${v.arquivo}:${v.linha} ${v.endpoint}`).join('; ') : `${arquivos.length} arquivos, 0 fora da lista`, itens: violacoes });
     if (violacoes.length) encerrar(false);
   }
+  // 2c. Lotes de reescrita: HTML → MDX compila (pega tag quebrada antes do merge; ordem do Dr. 22/11/2026).
+  comando('2c. Lotes de reescrita (HTML → MDX)', process.execPath, [path.join(RAIZ, 'backend', 'tools', 'validar-lotes-reescrita.js')]);
   if (!soChecagem) {
     comando('3. Build', NPM, ['run', 'build']);
     comando('4. Testes unitários', NPM, ['run', 'test:unit']);
