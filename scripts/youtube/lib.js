@@ -133,6 +133,9 @@ function referencias(html) {
     const link = (x[1].match(/href=["']([^"']+)["']/) || [])[1] || '';
     const txt = semTags(x[1]).replace(/\s+(doi:|www\.|planalto\.gov\.br|bvsms)\S*$/i, '');
     if (txt.length > 230) return link ? `${txt.slice(0, 230).replace(/[\s,;(]+\S*$/, '')}… ${link}` : `${txt.slice(0, 230).replace(/[\s,;(]+\S*$/, '')}…`;
+    // DOI em texto puro (ordem 21/11/2026): link doi.org fica fora da descrição (só domínio oficial).
+    const doi = link.match(/^https?:\/\/doi\.org\/(\S+)$/i);
+    if (doi) return `${txt} DOI ${doi[1]}`;
     return link ? `${txt} ${link}` : txt;
   });
 }
