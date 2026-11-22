@@ -20,7 +20,7 @@ const path = require('path');
 const { pathToFileURL } = require('url');
 const db = require('../lib/db');
 const Artigo = require('../models/Artigo');
-const { listarLotes, montarNovoConteudo } = require('../lib/reescritas');
+const { listarLotes, montarNovoConteudo, htmlParaMdx } = require('../lib/reescritas');
 
 const RAIZ = path.join(__dirname, '..', '..');
 const PASTA_MDX = path.join(RAIZ, 'apps', 'plataforma-saude-mental', 'src', 'content', 'artigos');
@@ -33,20 +33,6 @@ function argumentos() {
     args[chave] = valor === undefined ? true : valor;
   }
   return args;
-}
-
-/** HTML da reescrita → corpo MDX com os componentes do app (Lead, Callout, RefsNote). */
-function htmlParaMdx(html) {
-  return html
-    .replace(/<p class="lead-para">([\s\S]*?)<\/p>/g, '<Lead>\n$1\n</Lead>')
-    .replace(/<p class="refs-note">([\s\S]*?)<\/p>/g, '<RefsNote>\n$1\n</RefsNote>')
-    .replace(/<div class="callout"><strong>([\s\S]*?)<\/strong>\s*([\s\S]*?)<\/div>/g, (_, titulo, corpo) => {
-      const t = titulo.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-      return `<Callout titulo={'${t}'}>\n${corpo.trim()}\n</Callout>`;
-    })
-    .replace(/ class="/g, ' className="')
-    .replace(/<br>/g, '<br />')
-    .trim();
 }
 
 /** Troca resumo/tempoLeitura, grava atualizadoEm no bloco `metadata` e o corpo. */
