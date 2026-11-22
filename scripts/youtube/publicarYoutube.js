@@ -23,13 +23,18 @@ const TRAVA = require('./travaDuplicidadeYoutube');
 const FILA = path.join(L.REL, 'fila.json'), LOG = path.join(L.REL, 'publicacao-log.md'), PLAYLISTS = path.join(L.REL, 'playlists.json');
 const log = (t) => { fs.mkdirSync(L.REL, { recursive: true }); fs.appendFileSync(LOG, `${fs.existsSync(LOG) ? '' : '# Log de publicação do YouTube\n'}\n- ${new Date().toISOString()} · ${t}\n`, 'utf8'); console.log(t); };
 
+const pausa = (ms) => new Promise((r) => setTimeout(r, ms));
+
 async function extras(token, id, item, meta, dir) {
   const notas = [];
   if (item.tipo === 'longo') {
+    // Miniatura: uma repetição após 30 s se der 403 (o YouTube pode ainda estar liberando o canal).
     try {
-      const r = await fetch(`https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${id}`, { method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'image/png' }, body: fs.readFileSync(path.join(dir, meta.arquivos.capa)) });
-      notas.push(r.ok ? 'miniatura ok' : `miniatura não aplicada (HTTP ${r.status}: ative a verificação do canal / reautorize com o escopo novo)`);
-    } catch (e) { notas.push('miniatura falhou'); }
+      const enviar = () => fetch(`https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${id}`, { method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'image/png' }, body: fs.readFileSync(path.join(dir, meta.arquivos.capa)) });
+      let r = await enviar();
+      if (r.status === 403) { await pausa(30 * 1000); r = await enviar(); }
+      notas.push(r.ok ? 'miniatura ok' : `miniatura não aplicada (HTTP ${r.status} após 2 tentativas: confirme a verificação do canal no YouTube Studio; a miniatura pode ser subida à mão)`);
+    } catch (e) { notas.push('miniatura falhou: ' + e.message.slice(0, 80)); }
   }
   try {
     const mapa = JSON.parse(fs.readFileSync(PLAYLISTS, 'utf8'))[item.playlist];
@@ -41,8 +46,14 @@ async function extras(token, id, item, meta, dir) {
   if (meta.arquivos && meta.arquivos.legenda) {
     try {
       const srt = path.join(dir, meta.arquivos.legenda);
-      notas.push(`legenda enviada (HTTP ${await yt.enviarLegenda({ videoId: id, arquivo: srt, token })})`);
-    } catch (e) { notas.push('legenda falhou: ' + e.message.slice(0, 80)); }
+      // Legenda só depois do processamento concluído; uma repetição após 30 s se der HTTP 400.
+      const pronto = await yt.aguardarProcessamento({ videoId: id, token });
+      if (pronto !== 'pronto') throw new Error('o YouTube não terminou de processar o vídeo em 10 min (legenda não enviada; suba à mão)');
+      let status;
+      try { status = await yt.enviarLegenda({ videoId: id, arquivo: srt, token }); }
+      catch (e) { if (!/HTTP 400/.test(e.message)) throw e; await pausa(30 * 1000); status = await yt.enviarLegenda({ videoId: id, arquivo: srt, token }); }
+      notas.push(`legenda enviada (HTTP ${status})`);
+    } catch (e) { notas.push('legenda falhou: ' + e.message.slice(0, 120)); }
   }
   return notas;
 }
@@ -80,7 +91,7 @@ async function extras(token, id, item, meta, dir) {
       catch (e) { log(`ATENÇÃO: ${it.id} foi enviado (${r.id}) mas NÃO registrado no banco: ${e.message.slice(0, 80)}. Parado.`); break; }
       const notas = await extras(token, r.id, it, meta, dir);
       Object.assign(it, { status: 'publicado', youtubeId: r.id, publicadoEm: new Date().toISOString(), privacidadeAplicada: r.privacidade });
-      log(`PUBLICADO ${it.id} → ${r.link} · privacidade aplicada: ${r.privacidade} · ${notas.join('; ')}${r.privacidade !== 'public' ? ' · ATENÇÃO: privacidade aplicada diferente da pedida (conferir no YouTube Studio)' : ''}`);
+      log(`PUBLICADO ${it.id} → ${r.link} · privacidade aplicada: ${r.privacidade} · ${notas.join('; ')}${r.privacidade !== yt.privacidadeEsperada({ privacidade: 'public', publicarEm: meta.publicarEm || null }) ? ' · ATENÇÃO: privacidade aplicada diferente da esperada (conferir no YouTube Studio)' : ''}`);
     } catch (e) {
       const cota = /quota/i.test(e.message);
       log(`${cota ? 'COTA DA API ESGOTADA' : 'ERRO'} em ${it.id}: ${e.message.slice(0, 200)}`);

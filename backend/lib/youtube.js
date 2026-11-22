@@ -77,17 +77,17 @@ function montarStatus({ privacidade = 'public', publicarEm = null } = {}) {
 function montarCorpoLegenda({ videoId, srt, boundary = 'drsm-legenda-boundary' }) {
   const meta = { snippet: { videoId, language: 'pt', name: 'Português', isDraft: false } };
   return Buffer.concat([
-    Buffer.from(`--${boundary}
-Content-Type: application/json; charset=UTF-8
-
-${JSON.stringify(meta)}
---${boundary}
-Content-Type: application/octet-stream
-
+    Buffer.from(`--${boundary}
+Content-Type: application/json; charset=UTF-8
+
+${JSON.stringify(meta)}
+--${boundary}
+Content-Type: application/octet-stream
+
 `, 'utf8'),
     Buffer.from(srt, 'utf8'),
-    Buffer.from(`
---${boundary}--
+    Buffer.from(`
+--${boundary}--
 `, 'utf8'),
   ]);
 }
@@ -144,4 +144,34 @@ async function enviarVideo({ arquivo, titulo, descricao, tags = [], privacidade 
   };
 }
 
-module.exports = { enviarVideo, enviarLegenda, montarStatus, montarCorpoLegenda, obterAccessToken, validarMetadados, credenciaisYoutube, ErroYoutube };
+// Privacidade que o YouTube deve aplicar: com publicarEm o upload é sempre privado (publishAt publica na data).
+function privacidadeEsperada({ privacidade = 'public', publicarEm = null } = {}) {
+  return publicarEm ? 'private' : privacidade;
+}
+
+// Lê o estado de processamento de um vídeo (resposta de videos.list part=status,processingDetails).
+function interpretarProcessamento(json) {
+  const it = (json && json.items || [])[0];
+  if (!it) return 'aguardar';
+  const p = it.processingDetails?.processingStatus;
+  const u = it.status?.uploadStatus;
+  if (p === 'succeeded' || (!p && u === 'processed')) return 'pronto';
+  if (p === 'failed' || p === 'terminated' || u === 'failed' || u === 'rejected') return 'falha';
+  return 'aguardar';
+}
+
+// Espera o YouTube terminar de processar o vídeo antes de aceitar legenda (senão a legenda dá HTTP 400).
+// Devolve 'pronto' ou 'tempo esgotado'. Falha de processamento lança ErroYoutube.
+async function aguardarProcessamento({ videoId, token, limiteMs = 10 * 60 * 1000, intervaloMs = 20 * 1000, sleep = (ms) => new Promise((r) => setTimeout(r, ms)) }) {
+  const inicio = Date.now();
+  for (;;) {
+    const r = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=status,processingDetails&id=${encodeURIComponent(videoId)}`, { headers: { Authorization: `Bearer ${token}` } });
+    const estado = interpretarProcessamento(await r.json().catch(() => ({})));
+    if (estado === 'pronto') return 'pronto';
+    if (estado === 'falha') throw new ErroYoutube('processamento do vídeo falhou no YouTube', 'YOUTUBE_PROCESSAMENTO_FALHOU');
+    if (Date.now() - inicio >= limiteMs) return 'tempo esgotado';
+    await sleep(intervaloMs);
+  }
+}
+
+module.exports = { enviarVideo, enviarLegenda, montarStatus, montarCorpoLegenda, obterAccessToken, validarMetadados, credenciaisYoutube, ErroYoutube, privacidadeEsperada, interpretarProcessamento, aguardarProcessamento };
