@@ -68,7 +68,7 @@ async function extras(token, id, item, meta, dir) {
   const aArg = (process.argv.find((a) => a.startsWith('--agora=')) || '').split('=')[1]; // só para simular (testes)
   const agora = aArg ? new Date(aArg).getTime() : Date.now();
   const devidos = fila.itens.filter((i) => i.status === 'aprovado-checagem' && (idArg ? i.id === idArg : new Date(i.slot).getTime() <= agora)).sort((a, b) => new Date(a.slot) - new Date(b.slot)).slice(0, max);
-  if (!devidos.length) return log('nada devido agora.');
+  if (!devidos.length) { log('nada devido agora.'); await mongoose.disconnect(); return; }
   const token = simular ? null : await yt.obterAccessToken();
   const registrados = mongoose.connection.db.collection(TRAVA.COLECAO);
   for (const it of devidos) {
