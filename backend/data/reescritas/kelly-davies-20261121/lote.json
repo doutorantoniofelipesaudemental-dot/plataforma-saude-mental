@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "redes-sociais-criancas",
+    "resumo": "O que pais precisam saber sobre redes sociais, saúde mental dos filhos e o que muda com o ECA Digital, por Dr. Antônio Felipe.",
+    "tempoLeitura": 4,
+    "arquivo_conteudo": "redes-sociais-criancas.html",
+    "manter_ferramenta": false
+  },
+  {
+    "slug": "psicofarmacos-mitos-verdades",
+    "resumo": "Desmistificando dúvidas comuns sobre medicações psiquiátricas: dependência, personalidade, tempo de tratamento e mais, por Dr. Antônio Felipe.",
+    "tempoLeitura": 4,
+    "arquivo_conteudo": "psicofarmacos-mitos-verdades.html",
+    "manter_ferramenta": false
+  }
+]
