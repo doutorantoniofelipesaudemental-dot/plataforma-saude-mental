@@ -2,6 +2,14 @@
 
 Documento de planejamento. Nada aqui vai para produção: publicação, enquete ou série só entram com ordem do Dr. Antônio e passam pelo portão (auditoria geral + tripla checagem técnica, científica, ética e humanizada).
 
+## Nome do programa (decidido pelo Dr., 23/11/2026, 23:37)
+
+- **Nome:** Saúde Mental com Clareza
+- **Frase:** Entender para cuidar
+- **Autor:** Dr. Antônio Felipe
+- **Vale para todas as séries deste plano.** O videocast "Telas na infância e na adolescência" é uma série dentro desse programa. Kit em `.tmp/spotify-programa-20261123/` (fora do Git).
+- Substitui a sugestão anterior "Saúde Mental na Prática, com Dr. Antônio Felipe".
+
 ## (a) Séries, por prioridade
 
 1. **"O que você faria?"** — interativa, com enquetes nativas. Nunca sobre suicídio, autolesão ou risco. Resposta sempre com evidência e moderação de comentários.
