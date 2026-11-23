@@ -22,6 +22,18 @@ Documento de planejamento. Nada aqui vai para produção: publicação, enquete 
 8. **Migração (PT/ES)** — conteúdo sobre saúde mental de pessoas migrantes.
 9. **Personalidades** — por último. Só autodeclaração ou biografia séria; figuras históricas apenas como "hipótese debatida"; sem detalhes de suicídio; sem imagem de pessoas reais.
 
+## Quadro "Minuto de Saúde Mental" (decidido pelo Dr., 23/11/2026, 23:51)
+
+Status: PLANEJADO. Nada produzido. Piloto de 3 episódios só depois do estoque de dezembro e da criação do programa "Saúde Mental com Clareza".
+
+- **Títulos:** sempre "Minuto de Saúde Mental: <pergunta específica>".
+- **Duração:** 60 a 90 s.
+- **Estrutura:** (1) uma pergunta; (2) resposta com um dado e PMID conferido no PubMed; (3) uma ação prática (UBS ou CAPS); (4) fecho falado "Saúde Mental com Clareza" e cartela "CVV 188 · SAMU 192".
+- **Formatos:** vertical 1080×1920 para Shorts e Reels, áudio −14 LUFS; episódio curto no Spotify em temporada própria, áudio −16 LUFS.
+- **Método:** igual aos Shorts; a legenda é a fala.
+- **Piloto:** 3 episódios (ansiedade, sono, telas), a partir de artigos auditados.
+- **Regras de conteúdo:** identificação de 5 linhas, aviso de voz sintética, orientação geral com protocolos locais, sem consulta ou atendimento individual.
+
 ## (b) Formatos
 
 - Capítulos 1/3, 2/3 e 3/3 por tema, com publicação no Spotify e no YouTube.
