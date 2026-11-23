@@ -14,13 +14,15 @@
  *
  *   npm run importar-reescritas -- --lote=semana-1              (prévia)
  *   npm run importar-reescritas -- --lote=semana-1 --confirmar  (grava)
+ *   --mdx-saida=<pasta>: grava os .mdx nessa pasta (ex.: o worktree do PR), sem sujar a pasta principal.
+ *   Sem --mdx-saida, a prévia avisa quais .mdx rastreados vão mudar na pasta principal.
  */
 const fs = require('fs');
 const path = require('path');
 const { pathToFileURL } = require('url');
 const db = require('../lib/db');
 const Artigo = require('../models/Artigo');
-const { listarLotes, montarNovoConteudo, htmlParaMdx } = require('../lib/reescritas');
+const { listarLotes, montarNovoConteudo, htmlParaMdx, destinoMdx, avisoMdxRastreado } = require('../lib/reescritas');
 
 const RAIZ = path.join(__dirname, '..', '..');
 const PASTA_MDX = path.join(RAIZ, 'apps', 'plataforma-saude-mental', 'src', 'content', 'artigos');
@@ -63,6 +65,7 @@ async function validarMdx(texto) {
 async function main() {
   const args = argumentos();
   const confirmar = Boolean(args.confirmar);
+  const pastaMdx = destinoMdx({ pastaPadrao: PASTA_MDX, saida: args['mdx-saida'] });
   const lote = listarLotes().find((l) => l.lote === args.lote);
   if (!lote) {
     console.error(`\n  Lote "${args.lote}" não encontrado em backend/data/reescritas/.\n`);
@@ -80,7 +83,7 @@ async function main() {
     if (!artigo) throw new Error(`artigo "${item.slug}" não existe no banco`);
     const conteudo = montarNovoConteudo(artigo.conteudo, item);
 
-    const arquivoMdx = path.join(PASTA_MDX, `${item.slug}.mdx`);
+    const arquivoMdx = path.join(pastaMdx, `${item.slug}.mdx`);
     let mdx = null;
     if (fs.existsSync(arquivoMdx)) {
       const atual = fs.readFileSync(arquivoMdx, 'utf8').replace(/\r\n/g, '\n');
@@ -94,6 +97,10 @@ async function main() {
         ` · .mdx ${mdx ? 'válido' : 'inexistente'}`
     );
   }
+
+  const mdxNaPrincipal = planos.filter((p) => p.mdx).map((p) => path.basename(p.mdx.arquivo));
+  const aviso = avisoMdxRastreado(mdxNaPrincipal, { saida: args['mdx-saida'] });
+  if (aviso) console.log(`\n  ${aviso}`);
 
   if (!confirmar) {
     console.log('\n  PRÉVIA — nada foi gravado. Repita com --confirmar para importar.\n');
@@ -125,7 +132,10 @@ async function main() {
         },
       }
     );
-    if (mdx) fs.writeFileSync(mdx.arquivo, mdx.novo);
+    if (mdx) {
+      fs.mkdirSync(pastaMdx, { recursive: true });
+      fs.writeFileSync(mdx.arquivo, mdx.novo);
+    }
   }
   console.log(`\n  Importado: ${planos.length} artigo(s). Backup em backups/reescritas/${lote.lote}/.\n`);
   await db.mongoose.disconnect();
