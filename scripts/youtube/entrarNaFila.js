@@ -10,6 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
+const { checarSlot } = require('./travaSlot');
 
 const RAIZ_PRINCIPAL = process.env.DRS_RAIZ || 'C:/DRSAUDEMENTAL';
 const FILA = path.join(RAIZ_PRINCIPAL, 'relatorios/youtube/fila.json');
@@ -79,6 +80,11 @@ function main() {
   const tipo = opt('tipo', 'longo');
   const slot = opt('slot', SLOT_PADRAO);
   const modo = args.includes('--aplicar') ? 'aplicar' : args.includes('--backup') ? 'backup' : args.includes('--conferir') ? 'conferir' : 'dry-run';
+
+  // Trava de slot (23/11/2026): recusa quinta e domingo; avisa sábado antes das 20:45.
+  const trava = checarSlot(slot);
+  if (trava.bloqueio) { console.log('BLOQUEADO (trava de slot): ' + trava.bloqueio); return 1; }
+  trava.avisos.forEach((a) => console.log('AVISO (trava de slot): ' + a));
 
   if (modo === 'backup') {
     const problemas = checarPacote(pacote, meta);
