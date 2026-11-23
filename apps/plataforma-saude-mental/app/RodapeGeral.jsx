@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import SpotifyLink from './SpotifyLink';
+import { propsSpotify } from './spotifyLinkModelo';
+import { SPOTIFY_SHOW_URL } from './spotifyShow.generated';
 
 // Rodapé comum a todas as páginas do app: emergência (CVV/SAMU), contato só por e-mail e privacidade.
 // A identificação do médico NÃO fica aqui: ela aparece uma única vez por texto (RodapeIdentificacao.jsx).
@@ -17,6 +20,11 @@ export default function RodapeGeral() {
           <a className="underline" href="mailto:doutor.antoniofelipe.saudemental@gmail.com">doutor.antoniofelipe.saudemental@gmail.com</a>.
           Não envie informações de saúde por e-mail. <Link className="underline" href="/privacidade">Privacidade</Link>
         </p>
+        {propsSpotify(SPOTIFY_SHOW_URL) && (
+          <p>
+            <SpotifyLink className="font-semibold text-verde-escuro underline" />
+          </p>
+        )}
       </div>
     </footer>
   );

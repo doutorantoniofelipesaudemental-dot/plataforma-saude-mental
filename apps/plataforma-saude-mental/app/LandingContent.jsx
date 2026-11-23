@@ -8,6 +8,7 @@ import {
   CheckCircle2, AtSign, Wind, Moon, Users, RefreshCw,
 } from 'lucide-react';
 import CartaoArtigoAnimado from './CartaoArtigoAnimado';
+import SpotifyLink from './SpotifyLink';
 
 // Conteudo real da secao "Sobre" de public/index.html (site anterior) —
 // nao existe apresentacao institucional separada nos arquivos do usuario;
@@ -209,6 +210,8 @@ export default function LandingContent() {
               <AtSign className="h-3.5 w-3.5" aria-hidden="true" />
               @doutor.antoniofelipe.smental
             </a>
+
+            <SpotifyLink className="mt-3 px-4 text-xs font-semibold text-verde-escuro underline" />
           </motion.div>
 
           <motion.blockquote
