@@ -112,4 +112,23 @@ async function validarMdxDosLotes(raiz) {
   return { total, falhas };
 }
 
-module.exports = { listarLotes, reescritaAprovada, reescritaPendente, montarNovoConteudo, hashTexto, MARCA_FERRAMENTA, htmlParaMdx, validarMdxDosLotes };
+/**
+ * Destino dos .mdx do import. Sem `saida`: a pasta padrão (pasta principal, rastreada pelo Git).
+ * Com `saida` (--mdx-saida=<pasta>): grava na pasta informada, normalmente o worktree do PR.
+ */
+function destinoMdx({ pastaPadrao, saida }) {
+  if (saida === true) throw new Error('--mdx-saida exige um caminho: --mdx-saida=<pasta>');
+  return saida ? path.resolve(saida) : pastaPadrao;
+}
+
+/**
+ * Aviso para o Dr.: sem --mdx-saida, os .mdx rastreados mudam na pasta principal.
+ * Retorna null quando não há mudança na pasta principal (ou quando a saída é outra).
+ */
+function avisoMdxRastreado(arquivos, { saida }) {
+  if (saida || !arquivos.length) return null;
+  return `ATENÇÃO: ${arquivos.length} .mdx rastreado(s) vão mudar na pasta principal (${arquivos.join(', ')}). ` +
+    'Para não sujar a pasta principal, rode com --mdx-saida=<worktree>/apps/plataforma-saude-mental/src/content/artigos e publique um PR com esses arquivos.';
+}
+
+module.exports = { listarLotes, reescritaAprovada, reescritaPendente, montarNovoConteudo, hashTexto, MARCA_FERRAMENTA, htmlParaMdx, validarMdxDosLotes, destinoMdx, avisoMdxRastreado };
