@@ -8,6 +8,10 @@ const path = require('node:path');
 const ARQ = path.join(__dirname, '..', '..', 'config', 'marca.json');
 function ler() { try { return JSON.parse(fs.readFileSync(ARQ, 'utf8')); } catch { return {}; } }
 
+function spotifyValida(url) {
+  return /^https:\/\/open\.spotify\.com\/[^\s"<>]+$/.test(url) ? url : '';
+}
+
 function marca(env = process.env) {
   const j = ler();
   const url = String(env.LINKEDIN_PERFIL_URL || j.LINKEDIN_PERFIL_URL || '').trim();
@@ -20,6 +24,8 @@ function marca(env = process.env) {
     YOUTUBE_CANAL_URL: j.YOUTUBE_CANAL_URL || '',
     YOUTUBE_LANDING_URL: j.YOUTUBE_LANDING_URL || 'https://www.drantoniofelipemedico.com.br/youtube',
     INSTAGRAM_LANDING_URL: j.INSTAGRAM_LANDING_URL || 'https://www.drantoniofelipemedico.com.br/instagram',
+    // vazio por padrão: sem URL válida (open.spotify.com), o botão do Spotify não aparece (nada de link quebrado)
+    SPOTIFY_SHOW_URL: spotifyValida(String(env.SPOTIFY_SHOW_URL || j.SPOTIFY_SHOW_URL || '').trim()),
   };
 }
 
