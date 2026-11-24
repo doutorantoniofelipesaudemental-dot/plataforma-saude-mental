@@ -28,7 +28,7 @@ const MOTIVO = 'reinício da fila 24/11/2026 (conteúdo antigo não publicado)';
 
 const sha = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 const args = process.argv.slice(2);
-const modo = args.includes('--backup') ? 'backup' : args.includes('--aplicar') ? 'aplicar' : args.includes('--conferir') ? 'conferir' : 'dry-run';
+const modo = args.includes('--backup') ? 'backup' : args.includes('--aplicar') ? 'aplicar' : args.includes('--conferir') ? 'conferir' : args.includes('--eliminar') ? 'eliminar' : 'dry-run';
 const slugs = (args.find((a) => a.startsWith('--slugs=')) || '').slice(8).split(',').map((s) => s.trim()).filter(Boolean);
 const brt = (d) => (d ? new Date(new Date(d).getTime() - 3 * 3600e3).toISOString().slice(0, 16).replace('T', ' ') : '-');
 const fim = (code, msg) => { console.log(msg); process.exit(code); };
@@ -174,11 +174,57 @@ async function conferir() {
   fim(mudouMantido.length ? 1 : 0, mudouMantido.length ? `ALERTA: itens MANTER alterados: ${mudouMantido.join(', ')}` : 'CONFERIDO: nenhum item MANTER foi alterado.');
 }
 
+/**
+ * --eliminar --slugs=a,b,c (ordem do Dr., 24/11/2026 20:51): remove do relatorios/youtube/fila.json os itens NÃO infográficos
+ * (reprovado, pausado-estatico, reserva). Só roda se o backup conferir (SHA-256 do MANIFESTO) e se TODOS os slugs forem elegíveis;
+ * caso contrário não grava nada. Registra cada remoção em relatorios/REINICIO-FILA-ELIMINADOS-20261124.md.
+ * NUNCA apaga arquivo de vídeo do disco: só tira a entrada do fila.json (o item continua no backup).
+ */
+const ELIMINADOS_MD = path.join(RAIZ, 'relatorios', 'REINICIO-FILA-ELIMINADOS-20261124.md');
+function elegivelParaEliminar(i) {
+  return SUSPENDER_YT.has(i.status) && !MANTER_YT.has(i.id) && i.status !== 'publicado' && !i.youtubeId && !i.publicadoEm;
+}
+
+async function eliminar() {
+  if (!slugs.length) fim(1, 'BLOQUEADO: informe --slugs=... (ids completos)');
+  const manifestoPath = path.join(BKP, 'MANIFESTO.json');
+  if (!fs.existsSync(manifestoPath)) fim(1, 'BLOQUEADO: backup não encontrado (rode --backup antes). Nada foi removido.');
+  const manifesto = JSON.parse(fs.readFileSync(manifestoPath, 'utf8'));
+  const backupYT = path.join(BKP, 'youtube', 'fila.json');
+  const shaBackup = sha(fs.readFileSync(backupYT));
+  if (shaBackup !== manifesto.colecoes.youtube_fila_json.sha256) fim(1, 'BLOQUEADO: SHA-256 do backup de fila.json não bate com o MANIFESTO. Nada foi removido.');
+  const noBackup = new Map(JSON.parse(fs.readFileSync(backupYT, 'utf8')).itens.map((i) => [i.id, i]));
+  const fila = lerYT();
+  const atual = new Map(fila.itens.map((i) => [i.id, i]));
+  const problemas = [];
+  for (const s of slugs) {
+    const b = noBackup.get(s);
+    const a = atual.get(s);
+    if (!b) problemas.push(`${s}: não está no backup`);
+    else if (!elegivelParaEliminar(b)) problemas.push(`${s}: não elegível (status ${b.status}; infográfico ou publicado)`);
+    if (!a) problemas.push(`${s}: já não está no fila.json`);
+  }
+  if (problemas.length) fim(1, `BLOQUEADO (nada foi removido):\n - ${problemas.join('\n - ')}`);
+  const alvo = new Set(slugs);
+  const removidos = fila.itens.filter((i) => alvo.has(i.id));
+  const agora = new Date().toISOString();
+  fila.itens = fila.itens.filter((i) => !alvo.has(i.id));
+  const tmp = `${FILA_YT}.tmp`;
+  fs.writeFileSync(tmp, JSON.stringify(fila, null, 2));
+  fs.renameSync(tmp, FILA_YT);
+  const cabecalho = !fs.existsSync(ELIMINADOS_MD);
+  const linhas = removidos.map((i) => `| ${agora.slice(0, 16).replace('T', ' ')} UTC | \`${i.id}\` | ${i.tipo} | ${i.status} | ${(i.titulo || '').replace(/\|/g, '/')} | pasta mantida no disco: \`${i.pasta || '-'}\` |`);
+  const bloco = (cabecalho ? ['# Itens eliminados da fila do YouTube · 24/11/2026', '', 'Removidos do `relatorios/youtube/fila.json` por `--eliminar` (ordem do Dr., 24/11 20:51). Nenhum arquivo de vídeo foi apagado do disco. Cópia de cada item continua em `.tmp/backup-fila-20261124/youtube/fila.json`.', '', '| Data | Id | Tipo | Status | Título | Pasta |', '|---|---|---|---|---|---|'] : []).concat(linhas, '');
+  fs.appendFileSync(ELIMINADOS_MD, bloco.join('\n') + '\n');
+  fim(0, `ELIMINADOS da fila do YouTube: ${removidos.length} · registro: ${ELIMINADOS_MD}`);
+}
+
 (async () => {
   if (!db.isConfigured()) fim(1, 'MONGODB_URI não configurada (rode com --env-file-if-exists=.env)');
   await db.connect();
   if (modo === 'backup') return backup();
   if (modo === 'aplicar') return aplicar();
   if (modo === 'conferir') return conferir();
+  if (modo === 'eliminar') return eliminar();
   return dryRun();
 })().catch((e) => fim(1, `ERRO: ${e.message}`));
