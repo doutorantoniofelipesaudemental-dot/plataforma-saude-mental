@@ -764,3 +764,28 @@ Vale para as telas (Cap.1–3) e para as séries futuras (relatos e Minuto de Sa
 - **Minuto de Saúde Mental:** um mascote apresenta (cão e gato alternados por episódio): entrada, gestos, expressão, balão de fala, cartão do dado com fonte, fecho "Saúde Mental com Clareza" e cartela CVV/SAMU. Vertical 1080×1920, zona segura de Shorts/Reels.
 - **Portão por capítulo:** quadros-chave a cada 10 s, conferidos (sem corte, sem sobreposição, contraste); legenda casando ≥ 95% com a fala; LUFS e true peak. Entrega: MP4 + quadros-chave para aprovação do Dr. antes do Cap. seguinte.
 - **Ferramentas permitidas:** HyperFrames/GSAP, SVG próprio, Kokoro, FluidSynth. Proibidos: Higgsfield, Dreamina, ElevenLabs, IA de música, Wav2Lip, SadTalker, LivePortrait.
+
+### 19.1 Parâmetros da trilha (remix do Cap.1, ordem do Dr., 23/11/2026, 23:30)
+- Trilha instrumental (`compor.py`, FluidSynth/FluidR3_GM, 80 BPM) em −12 dB em relação à voz **durante a fala** (base −7 dB + ducking de 5 dB, ataque 60 ms, liberação 500 ms).
+- Vinheta (0–4,2 s): sem ducking (mais presente). Pausas ≥ 1 s: trilha no nível base.
+- Cartela final (últimos 8 s): trilha em −6 dB em relação à voz.
+- Fade in 1,0 s; fade out 1,5 s. Script: `.tmp/videocast-v2/cap1/remix/remix-musica.py` (fora do Git).
+- Masters: −14 LUFS (YouTube) e −16 LUFS (Spotify), true peak ≤ −2 dBTP. Sem novo render de vídeo para o remix.
+
+## 20. PADRÃO ANIMAÇÃO COM PERSONAGENS (ordem do Dr., 23/11/2026)
+Vale para os relatos, os capítulos e o Minuto de Saúde Mental (um mascote de desenho fala e explica).
+- **Personagens:** SVG próprio, estilo flat do piloto A, sem imitar Disney, Pixar ou Ghibli, sem humanos realistas. Família base de adultos (mãe, pai, avó), diversidade brasileira; cão e gato de desenho com personalidade.
+- **Rig obrigatório (ids fixos):** `boca-<visema>` com 6 visemas (fechada, mbp, a, ei, o, u; só um visível); `olho-esq`/`olho-dir` com `palpebra-*` (piscar por scaleY, origem no topo); `sobrancelhas` com 4 expressões (alegre, preocupado, pensativo, calmo); `braco-<lado>-<pose>` com 3 poses (baixo, apontando, gesto).
+- **Crianças:** só figuras de fundo, sem fala e sem destaque.
+- **Voz:** Kokoro. Mãe = pf_dora; pai = pm_alex; avó = pf_dora com velocidade 0,86 (única voz feminina restante). Animais reagem sem falar.
+- **Boca:** sincronizada pela amplitude do próprio áudio (envelope de 40 ms), não por fonemas.
+- **Piscar:** a cada ~3,5 s com variação. Gestos e expressões ligados às falas.
+- **Proibido:** Wav2Lip, SadTalker, LivePortrait, Higgsfield, ElevenLabs e IA de música.
+- **Aprovação:** folha de personagens e teste de atuação (MP4 + quadros-chave) para o Dr. antes de aplicar em vídeos.
+
+## 21. PADRÃO CINEMATOGRÁFICO 2D+3D (ordem do Dr., 23/11/2026, 23:31)
+- **Blender:** autorizado em modo automático, local (`blender --background --python <script próprio>`). Proibido o Blender MCP e qualquer servidor ou socket aberto; proibido baixar addons. Modelos e texturas só próprios ou CC0 (ex.: Poly Haven), com licença registrada em LICENCAS. Render em Eevee, 1080p, uma cena por vez, com limite de tempo por render.
+- **Câmera e imagem:** movimento suave (dolly-in, pan), profundidade de campo, paralaxe 2,5D em camadas, luz suave ("golden hour"), LUT própria por série, transições suaves e granulação sutil. Sem exagero que atrapalhe a leitura; contraste do texto ≥ 7:1 sempre.
+- **2D + 3D:** cenários 3D próprios (sala de jantar, quarto, escola, UBS) com os personagens 2D da folha em primeiro plano; objetos 3D próprios (celular, livro, relógio, xícara) para vídeos e capas de carrossel.
+- **Ordem:** primeiro o teste de atuação de 30–40 s (família no jantar) com cenário 3D e câmera; depois um carrossel-piloto com objeto 3D na capa (tema já auditado). Só após aprovação vira padrão.
+- **IA:** liberadas Cloudflare FLUX (imagens de apoio e fundo), Kokoro, faster-whisper e Kaggle. Continuam vetados: Higgsfield, Dreamina, ElevenLabs, IA de música, Wav2Lip, SadTalker, LivePortrait. Sem humanos realistas.
