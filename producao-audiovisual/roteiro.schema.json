@@ -1,47 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "roteiro.json · produção audiovisual DrSM",
+  "title": "roteiros/<slug>.json · produção audiovisual DrSM (PADRAO-AUDIOVISUAL-v3, seção 3)",
   "type": "object",
-  "required": ["id", "serie", "formato", "idioma", "titulo", "identificacao", "cenas", "avisos"],
+  "required": ["slug", "fonteArtigo", "formato", "titulo", "cenas", "avisos", "identificacao"],
   "properties": {
-    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "fonteArtigo": { "type": "string", "description": "slug do artigo PUBLICADO no portal (fonte única)" },
     "serie": { "type": "string" },
-    "formato": { "enum": ["episodio-16x9", "short-9x16", "minuto-9x16", "relato-filme"] },
-    "resolucao": { "enum": ["1920x1080", "1080x1920"] },
-    "idioma": { "const": "pt-BR" },
+    "formato": { "enum": ["animacao-9x16", "infografico-16x9", "carrossel-4x5"] },
+    "duracaoAlvoS": { "type": "object", "properties": { "min": { "type": "number" }, "max": { "type": "number" } } },
     "titulo": { "type": "string", "maxLength": 100 },
-    "fonteArtigo": { "type": "string", "description": "slug do artigo publicado de origem" },
-    "identificacao": { "type": "string", "description": "bloco de 5 linhas (conformidadeCfm.js)" },
-    "creditoMarca": { "type": "boolean", "const": true },
+    "identificacao": { "const": true, "description": "bloco de 5 linhas (IDENTIFICACAO_COMPLETA)" },
     "avisos": {
       "type": "object",
-      "required": ["ia", "cvvSamu"],
+      "required": ["ia", "cvvSamu", "orientacaoGeral"],
       "properties": {
-        "ia": { "type": "boolean", "const": true },
-        "cvvSamu": { "type": "boolean", "const": true }
+        "ia": { "const": true, "description": "Imagens e vozes criadas com IA. Personagens ilustrativos." },
+        "cvvSamu": { "const": true, "description": "CVV 188 · SAMU 192" },
+        "orientacaoGeral": { "const": true, "description": "Orientação geral; protocolos locais (PA e rede)" }
       }
     },
-    "narracao": {
-      "type": "object",
-      "properties": {
-        "motor": { "const": "kokoro" },
-        "licenca": { "const": "Apache-2.0" },
-        "lufsAlvo": { "enum": [-14, -16] }
-      }
-    },
+    "personagens": { "type": "array", "items": { "type": "string" }, "description": "só os da ficha em personagens/" },
     "cenas": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["inicioS", "fimS", "fala", "visual"],
+        "required": ["cena_id", "tipo", "duracao_s", "fala", "texto_tela", "fonte_pmid"],
         "properties": {
-          "inicioS": { "type": "number", "minimum": 0 },
-          "fimS": { "type": "number", "minimum": 0 },
+          "cena_id": { "type": "string" },
+          "tipo": { "enum": ["animacao", "infografico", "cartela"] },
+          "duracao_s": { "type": "number", "minimum": 0.5 },
+          "camera": { "type": "string" },
+          "emocao": { "type": "string" },
+          "personagens": { "type": "array", "items": { "type": "string" } },
           "fala": { "type": "string", "maxLength": 300 },
-          "visual": { "type": "string" },
-          "dadoComFonte": { "type": ["object", "null"] }
-        }
+          "texto_tela": { "type": "string", "maxLength": 200 },
+          "prompt_visual": { "type": "string", "description": "em inglês, para o Higgsfield" },
+          "fonte_pmid": { "type": ["string", "null"], "pattern": "^[0-9]+$", "description": "PMID conferido na PubMed; null se a cena não traz dado clínico" }
+        },
+        "additionalProperties": false
       }
     },
     "pendencias": { "type": "array", "items": { "type": "string" } }
