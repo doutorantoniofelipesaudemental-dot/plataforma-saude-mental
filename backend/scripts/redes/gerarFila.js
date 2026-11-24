@@ -29,9 +29,11 @@ const OVERRIDES = carregarOverrides(process.env.REDES_OVERRIDES || path.join(RAI
 const ROTACAO = ['pacientes', 'pais', 'profissionais', 'empresas'];
 
 const diaBahia = (d) => new Date(new Date(d).getTime() - 3 * 3600e3).toISOString().slice(0, 10);
+// Ordem de 24/11/2026: sábado e domingo LIBERADOS no Instagram; 24/12, 25/12 e 31/12 ficam vazios.
+const DIAS_VAZIOS_IG = new Set(['12-24', '12-25', '12-31']);
 function diasUteis(inicio, n) {
   const out = []; const d = new Date(`${inicio}T12:00:00Z`);
-  while (out.length < n) { const iso = d.toISOString().slice(0, 10); if (![0, 6].includes(d.getUTCDay()) && !FERIADOS.has(iso)) out.push(iso); d.setUTCDate(d.getUTCDate() + 1); }
+  while (out.length < n) { const iso = d.toISOString().slice(0, 10); if (!DIAS_VAZIOS_IG.has(iso.slice(5)) && !FERIADOS.has(iso)) out.push(iso); d.setUTCDate(d.getUTCDate() + 1); }
   return out;
 }
 

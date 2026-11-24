@@ -81,8 +81,9 @@ function main() {
   const slot = opt('slot', SLOT_PADRAO);
   const modo = args.includes('--aplicar') ? 'aplicar' : args.includes('--backup') ? 'backup' : args.includes('--conferir') ? 'conferir' : 'dry-run';
 
-  // Trava de slot (23/11/2026): recusa quinta e domingo; avisa sábado antes das 20:45.
-  const trava = checarSlot(slot);
+  // Trava de slot (24/11/2026): checa o DIA DO UPLOAD (--upload=ISO, padrão agora; seg/ter/qua/sex).
+  // A estreia (--slot, publishAt) pode cair em qualquer dia.
+  const trava = checarSlot(slot, opt('upload', new Date().toISOString()));
   if (trava.bloqueio) { console.log('BLOQUEADO (trava de slot): ' + trava.bloqueio); return 1; }
   trava.avisos.forEach((a) => console.log('AVISO (trava de slot): ' + a));
 

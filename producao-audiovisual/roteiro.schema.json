@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "roteiro.json · produção audiovisual DrSM",
+  "type": "object",
+  "required": ["id", "serie", "formato", "idioma", "titulo", "identificacao", "cenas", "avisos"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "serie": { "type": "string" },
+    "formato": { "enum": ["episodio-16x9", "short-9x16", "minuto-9x16", "relato-filme"] },
+    "resolucao": { "enum": ["1920x1080", "1080x1920"] },
+    "idioma": { "const": "pt-BR" },
+    "titulo": { "type": "string", "maxLength": 100 },
+    "fonteArtigo": { "type": "string", "description": "slug do artigo publicado de origem" },
+    "identificacao": { "type": "string", "description": "bloco de 5 linhas (conformidadeCfm.js)" },
+    "creditoMarca": { "type": "boolean", "const": true },
+    "avisos": {
+      "type": "object",
+      "required": ["ia", "cvvSamu"],
+      "properties": {
+        "ia": { "type": "boolean", "const": true },
+        "cvvSamu": { "type": "boolean", "const": true }
+      }
+    },
+    "narracao": {
+      "type": "object",
+      "properties": {
+        "motor": { "const": "kokoro" },
+        "licenca": { "const": "Apache-2.0" },
+        "lufsAlvo": { "enum": [-14, -16] }
+      }
+    },
+    "cenas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["inicioS", "fimS", "fala", "visual"],
+        "properties": {
+          "inicioS": { "type": "number", "minimum": 0 },
+          "fimS": { "type": "number", "minimum": 0 },
+          "fala": { "type": "string", "maxLength": 300 },
+          "visual": { "type": "string" },
+          "dadoComFonte": { "type": ["object", "null"] }
+        }
+      }
+    },
+    "pendencias": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

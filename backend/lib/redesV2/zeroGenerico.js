@@ -71,6 +71,16 @@ const jaccard = (a, b) => {
 
 const diaDaSemana = (dataISO) => new Date(`${dataISO}T12:00:00Z`).getUTCDay();
 
+// Domingo alterna Relato e E2 por semana (ordem de 24/11/2026). Âncora: domingo 29/11/2026 = Relato;
+// semana par a partir dela = Relato, ímpar = E2. Os outros dias seguem EIXO_DO_DIA.
+const ANCORA_DOMINGO_RELATO = '2026-11-29';
+function eixoDoDia(dataISO) {
+  const dow = diaDaSemana(dataISO);
+  if (dow !== 0) return EIXO_DO_DIA[dow];
+  const semanas = Math.round((Date.parse(`${dataISO}T12:00:00Z`) - Date.parse(`${ANCORA_DOMINGO_RELATO}T12:00:00Z`)) / (7 * 864e5));
+  return ((semanas % 2) + 2) % 2 === 0 ? 'Relato' : 'E2';
+}
+
 /**
  * @param {object} p
  * @param {object} p.post  { legenda, eixo, artigo:{slug, link, publicado, corpo}, frasesClinicas:[], pontos:[{tipo, texto, fonte?}] }
@@ -149,7 +159,7 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   }
 
   // (f) eixo do dia
-  const esperado = EIXO_DO_DIA[diaDaSemana(dataISO)];
+  const esperado = eixoDoDia(dataISO);
   if (post.eixo !== esperado) f('f-eixo-do-dia', `eixo "${post.eixo}" fora do eixo do dia (esperado ${esperado})`);
 
   // (g) crise e aviso de IA
@@ -164,4 +174,4 @@ function checarZeroGenerico({ post, dataISO, historico = [] }) {
   };
 }
 
-module.exports = { checarZeroGenerico, GANCHOS_PROIBIDOS, EIXO_DO_DIA, LIMITE_SIMILARIDADE, JANELA_SEMANAS, trigramas, jaccard, normalizar, TEXTOS_PADRAO_SEGURANCA, ehTextoPadrao };
+module.exports = { checarZeroGenerico, GANCHOS_PROIBIDOS, EIXO_DO_DIA, eixoDoDia,LIMITE_SIMILARIDADE, JANELA_SEMANAS, trigramas, jaccard, normalizar, TEXTOS_PADRAO_SEGURANCA, ehTextoPadrao };
