@@ -747,3 +747,20 @@ Este capítulo é regra de design. As referências acima sustentam os pontos ind
 - **Mascotes:** cachorro e gato, com poses sentado, deitado, apontando e abraçando, e vistas de perfil e de costas. Aprovação do Dr. antes de uso público.
 - **Shorts:** método de 7 frases: abre com cena, uma ideia por frase, termina com "Envie para alguém que…", passo pequeno e CVV 188 · SAMU 192. Legenda = fala.
 - **Cascata:** rascunho nunca publica. Publicação só pelo crons com checagem ou `npm run publicar-seguro`.
+
+## 19. PADRÃO VIDEOCAST v2 (ordem do Dr., 22/11–23/11/2026)
+Vale para as telas (Cap.1–3) e para as séries futuras (relatos e Minuto de Saúde Mental). Versão anterior (texto centralizado, legenda sobre o título, sem elementos visuais) está REPROVADA e não é mais usada.
+- **Formato:** 1920×1080 (vídeo longo) e 1080×1920 (Minuto, Shorts). HyperFrames.
+- **Fundo:** natureza desfocada, sem pessoas, tingida na cor da série, com cartão central para o texto principal. Contraste mínimo 7:1.
+- **Música:** trilha instrumental própria (`compor.py` + FluidSynth/FluidR3_GM, MIT, versão B aprovada), cerca de 20 dB abaixo da voz, com ducking automático. Sem IA de música.
+- **Loudness:** master −16 LUFS (Spotify) e −14 LUFS (YouTube); true peak ≤ −2 dBTP.
+- **Layout fixo:** selo "Cap. X/3" no canto superior direito (pequeno); nome da série discreto no canto superior esquerdo; selo AF.
+- **Legenda:** faixa inferior, máximo 2 linhas × 42 caracteres, margem segura de 5% (≥ 96 px), fundo semitransparente, nunca sobre outro texto. Legenda = fala (cues do Kokoro + Whisper).
+- **Visual:** troca de quadro a cada 5–10 s; infográficos animados (GSAP); mascotes cão e gato (SVG próprio, aprovados); ícones 3dicons CC0; cartão de dado com fonte (autor, ano, PMID) quando houver número. Sem humanos realistas.
+- **Cenas animadas 2D (5–15 s, 3–5 por capítulo):** personagens próprios, adultos, acolhedores, estilo da minissérie (piloto A). Sem imitar Disney, Pixar ou Ghibli. Crianças só como figuras de fundo, nunca em destaque nem em situação sensível. Sem cena de crise, autolesão ou violência desenhada.
+- **Abertura:** vinheta de 3–4 s "Saúde Mental com Clareza", com aviso falado de voz sintética.
+- **Encerramento:** cartela com CVV 188 · SAMU 192, identificação de 5 linhas, "No próximo capítulo…" (Cap.1 e 2) e o selo.
+- **Relatos:** Cap. 1 "A história" inteiro em desenho animado (narradora pf_dora, personagens com pm_alex), nota de ficção no início.
+- **Minuto de Saúde Mental:** um mascote apresenta (cão e gato alternados por episódio): entrada, gestos, expressão, balão de fala, cartão do dado com fonte, fecho "Saúde Mental com Clareza" e cartela CVV/SAMU. Vertical 1080×1920, zona segura de Shorts/Reels.
+- **Portão por capítulo:** quadros-chave a cada 10 s, conferidos (sem corte, sem sobreposição, contraste); legenda casando ≥ 95% com a fala; LUFS e true peak. Entrega: MP4 + quadros-chave para aprovação do Dr. antes do Cap. seguinte.
+- **Ferramentas permitidas:** HyperFrames/GSAP, SVG próprio, Kokoro, FluidSynth. Proibidos: Higgsfield, Dreamina, ElevenLabs, IA de música, Wav2Lip, SadTalker, LivePortrait.
