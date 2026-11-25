@@ -37,11 +37,14 @@
           "fala": { "type": "string", "maxLength": 300 },
           "texto_tela": { "type": "string", "maxLength": 200 },
           "prompt_visual": { "type": "string", "description": "em inglês, para o Higgsfield" },
-          "fonte_pmid": { "type": ["string", "null"], "pattern": "^[0-9]+$", "description": "PMID conferido na PubMed; null se a cena não traz dado clínico" }
+          "fonte_pmid": { "type": ["string", "null"], "pattern": "^[0-9]+$", "description": "PMID conferido na PubMed; null se a cena não traz dado clínico" },
+          "clip": { "type": "string", "description": "nome do clipe (pasta de clipes) usado na cena; o áudio nativo é a narração no modo clips" },
+          "cartao": { "type": "array", "items": { "type": "string" }, "description": "linhas do cartão final (obrigatório na cena tipo cartela): identificação de 5 linhas, crédito, CVV 188 · SAMU 192 e aviso de IA" }
         },
         "additionalProperties": false
       }
     },
+    "legenda": { "type": "string", "description": "caminho do arquivo .ass (legenda queimada, palavra a palavra)" },
     "pendencias": { "type": "array", "items": { "type": "string" } }
   },
   "additionalProperties": false

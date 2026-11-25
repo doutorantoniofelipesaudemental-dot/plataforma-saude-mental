@@ -99,3 +99,72 @@ test('corte 16:9 divide o vídeo (split) antes de usar o quadro duas vezes', () 
   assert.ok(a.includes('split=2'));
   assert.ok(a.includes('overlay='));
 });
+
+// --- Cartão final, textos de tela e narração dos clipes (ordem de 25/11, 06:00) ---
+const { errosCartao, quebrar, argsCartao, argsOverlay, argsNarracaoDeClipes, CREDITO_LINHA, CVV_LINHA, IA_LINHA } =
+  require('../../producao-audiovisual/montador/montar');
+const { IDENTIFICACAO_COMPLETA } = require('../../backend/lib/identificacaoCfm');
+const CARTAO_OK = [...IDENTIFICACAO_COMPLETA.split('\n'), CREDITO_LINHA, CVV_LINHA, IA_LINHA, 'Fontes: Dawson D, Reid K. Nature 1997;388:235 (PMID 9230429).'];
+const fsFalso = { writeFileSync() {} };
+
+test('cartão com identificação de 5 linhas, crédito, CVV e aviso de IA passa', () => {
+  assert.deepStrictEqual(errosCartao(CARTAO_OK), []);
+});
+
+test('cartão sem o crédito do Portal é recusado', () => {
+  const sem = CARTAO_OK.filter((l) => l !== CREDITO_LINHA);
+  assert.ok(errosCartao(sem).some((e) => /crédito/.test(e)));
+});
+
+test('cartão com "TCC" abreviado (fora da assinatura de 5 linhas) é recusado', () => {
+  const errado = CARTAO_OK.map((l) => (l.startsWith('Pós-graduação') ? 'Pós-graduações: Psiquiatria, TCC' : l));
+  assert.ok(errosCartao(errado).some((e) => /identificação/.test(e)));
+});
+
+test('validarRoteiro aceita cena de cartão completa e recusa cartão incompleto', () => {
+  const cenaCartao = { cena_id: 'cartao', tipo: 'cartela', duracao_s: 6, fala: '', texto_tela: '', fonte_pmid: null, cartao: CARTAO_OK };
+  assert.equal(validarRoteiro({ ...ROTEIRO, cenas: [CENA, cenaCartao] }).ok, true);
+  const ruim = { ...cenaCartao, cartao: CARTAO_OK.filter((l) => l !== IA_LINHA) };
+  assert.equal(validarRoteiro({ ...ROTEIRO, cenas: [CENA, ruim] }).ok, false);
+});
+
+test('cena cartela sem cartão e sem clipe é recusada', () => {
+  const r = { ...ROTEIRO, cenas: [{ cena_id: 'x', tipo: 'cartela', duracao_s: 5, fala: '', texto_tela: '', fonte_pmid: null }] };
+  assert.equal(validarRoteiro(r).ok, false);
+});
+
+test('quebrar respeita o limite de caracteres por linha e preserva o texto', () => {
+  const linhas = quebrar('um dois três quatro cinco seis sete oito nove dez', 12);
+  assert.ok(linhas.every((l) => l.length <= 12));
+  assert.equal(linhas.join(' '), 'um dois três quatro cinco seis sete oito nove dez');
+});
+
+test('argsCartao gera cor de fundo lavfi com drawtext e sem áudio', () => {
+  const a = argsCartao({ linhas: CARTAO_OK, duracao: 6, formato: 'animacao-9x16', saida: 'c.mp4', pastaTextos: '.', fs_: fsFalso }).join(' ');
+  assert.ok(a.includes('color=c=0x0B0F19:s=1080x1920'));
+  assert.ok(a.includes('drawtext='));
+  assert.ok(a.includes('-an'));
+});
+
+test('argsOverlay: cada linha de texto de tela tem janela between() e caixa escura de contraste', () => {
+  const cenas = [{ cena_id: 'c1', tipo: 'animacao', duracao_s: 9, texto_tela: '24 horas\nsem dormir' }];
+  const planos = planoTempos(cenas);
+  const a = argsOverlay({ entrada: 'b.mp4', saida: 'o.mp4', cenas, planos, pastaTextos: '.', fs_: fsFalso }).join(' ');
+  assert.ok(a.includes('between(t\\,0.000\\,9.000)'));
+  assert.ok(a.includes('boxcolor=black@0.62'));
+  assert.equal((a.match(/drawtext=/g) || []).length, 2);
+});
+
+test('argsOverlay sem textos de tela não aplica filtro de texto', () => {
+  const cenas = [{ cena_id: 'c1', tipo: 'animacao', duracao_s: 9, texto_tela: '' }];
+  const a = argsOverlay({ entrada: 'b.mp4', saida: 'o.mp4', cenas, planos: planoTempos(cenas), pastaTextos: '.', fs_: fsFalso });
+  assert.equal(a[a.indexOf('-vf') + 1], 'null');
+});
+
+test('argsNarracaoDeClipes: clipe com áudio é cortado; cartão vira silêncio; tudo concatenado', () => {
+  const cenas = [{ cena_id: 'p1', duracao_s: 12 }, { cena_id: 'cartao', duracao_s: 6 }];
+  const a = argsNarracaoDeClipes({ cenas, clipes: ['p1.mp4', null], saida: 'n.wav' }).join(' ');
+  assert.ok(a.includes('[0:a]atrim=0:12'));
+  assert.ok(a.includes('anullsrc'));
+  assert.ok(a.includes('concat=n=2:v=0:a=1'));
+});
