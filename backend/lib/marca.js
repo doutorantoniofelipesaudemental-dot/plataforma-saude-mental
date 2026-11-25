@@ -12,6 +12,11 @@ function spotifyValida(url) {
   return /^https:\/\/open\.spotify\.com\/[^\s"<>]+$/.test(url) ? url : '';
 }
 
+// Facebook: só ponte para o perfil/página (sem publicação automática). Vazio por padrão.
+function facebookValida(url) {
+  return /^https:\/\/(www\.)?facebook\.com\/[^\s"<>]+$/.test(url) ? url : '';
+}
+
 function marca(env = process.env) {
   const j = ler();
   const url = String(env.LINKEDIN_PERFIL_URL || j.LINKEDIN_PERFIL_URL || '').trim();
@@ -26,6 +31,7 @@ function marca(env = process.env) {
     INSTAGRAM_LANDING_URL: j.INSTAGRAM_LANDING_URL || 'https://www.drantoniofelipemedico.com.br/instagram',
     // vazio por padrão: sem URL válida (open.spotify.com), o botão do Spotify não aparece (nada de link quebrado)
     SPOTIFY_SHOW_URL: spotifyValida(String(env.SPOTIFY_SHOW_URL || j.SPOTIFY_SHOW_URL || '').trim()),
+    FACEBOOK_URL: facebookValida(String(env.FACEBOOK_URL || j.FACEBOOK_URL || '').trim()),
   };
 }
 

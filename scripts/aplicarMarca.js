@@ -43,7 +43,7 @@ if (require.main === module) {
   }
   // Home do app Next (apps/plataforma-saude-mental/app): mesma URL, gerada a partir de config/marca.json (fonte única)
   const geradoArq = path.join(__dirname, '..', 'apps', 'plataforma-saude-mental', 'app', 'spotifyShow.generated.js');
-  const geradoConteudo = `/* Gerado por scripts/aplicarMarca.js a partir de config/marca.json. Não editar à mão. */\nmodule.exports = { SPOTIFY_SHOW_URL: ${JSON.stringify(m.SPOTIFY_SHOW_URL)} };\n`;
+  const geradoConteudo = `/* Gerado por scripts/aplicarMarca.js a partir de config/marca.json. Não editar à mão. */\nmodule.exports = { SPOTIFY_SHOW_URL: ${JSON.stringify(m.SPOTIFY_SHOW_URL)}, FACEBOOK_URL: ${JSON.stringify(m.FACEBOOK_URL)}, YOUTUBE_CANAL_URL: ${JSON.stringify(m.YOUTUBE_CANAL_URL)}, LINKEDIN_HREF: ${JSON.stringify(m.LINKEDIN_PERFIL_LIMPO ? m.LINKEDIN_PERFIL_URL : m.LINKEDIN_LANDING_URL)} };\n`;
   const geradoAntes = fs.existsSync(geradoArq) ? fs.readFileSync(geradoArq, 'utf8') : '';
   if (geradoAntes !== geradoConteudo) { mudou++; console.log(`${conferir ? 'DIFERE' : 'atualizada'}: apps/plataforma-saude-mental/app/spotifyShow.generated.js`); if (!conferir) fs.writeFileSync(geradoArq, geradoConteudo, 'utf8'); }
   console.log(`LINKEDIN_PERFIL_URL=${m.LINKEDIN_PERFIL_URL} · perfil personalizado: ${m.LINKEDIN_PERFIL_LIMPO ? 'sim (link aparece em todo lugar)' : 'não (só landing e /links)'} · Spotify: ${m.SPOTIFY_SHOW_URL ? 'com URL' : 'oculto (sem URL)'} · páginas ${conferir ? 'fora do padrão' : 'atualizadas'}: ${mudou}`);
