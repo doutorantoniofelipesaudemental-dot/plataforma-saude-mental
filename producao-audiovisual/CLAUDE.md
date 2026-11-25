@@ -24,7 +24,7 @@ producao-audiovisual/
 6. **Safe messaging:** "Em crise: CVV 188 · SAMU 192" sempre na cartela; orientação geral com a nota de protocolos locais (PA e rede).
 7. **IA:** "Imagens e vozes criadas com IA. Personagens ilustrativos." na cartela; marcar "conteúdo sintético" no YouTube.
 8. **Personagens:** só os da ficha em `personagens/`, originais. **Crianças podem ser protagonistas conforme o roteiro** (decisão do Dr., 24/11/2026), em cenas protegidas: sem violência, crise ou risco; sem exposição do corpo; sem close em sofrimento; roteiro e quadros-chave aprovados pelo Dr. antes da geração. Sem humanos realistas fora da ficha.
-9. **Gasto:** teto por peça e por mês, definido pelo Dr. **Pendente** (não definido). Passou do teto, para e avisa. Nenhuma recarga ou crédito extra sem ordem do Dr.
+9. **Gasto:** o **teto do Claude Code é R$ 0** (decisão do Dr., 24/11/2026): o Claude Code NÃO gera imagem nem vídeo pago. A geração pela Higgsfield é feita pelo Claude, na conexão Higgsfield, com teste grátis até **27/11/2026 19:40**; o teto mensal dessa geração segue **pendente**, definido pelo Dr. Passou do teto, para e avisa. Nenhuma recarga ou crédito extra sem ordem do Dr.
 10. **Publicação:** nada vai para a fila sem aprovação do Dr. Tudo passa antes pela auditoria geral e pela tripla checagem (técnica, científica, ética e humanizada), e de novo antes de ir ao ar.
 
 ## Fluxo único: artigo → peça (seção 3)
