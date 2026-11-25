@@ -50,6 +50,7 @@
     "importar-tudo": "node --env-file-if-exists=.env backend/scripts/importarTudo.js",
     "build": "npm --prefix apps/plataforma-saude-mental run build",
     "redes:arquivar": "node --env-file-if-exists=.env backend/scripts/redes/arquivarFilaAntiga.js",
+    "redes:reinicio-fila": "node --env-file-if-exists=.env backend/scripts/redes/reinicioFila.js",
     "redes:gerar": "node --env-file-if-exists=.env backend/scripts/redes/gerarFila.js",
     "redes:enviar": "node --env-file-if-exists=.env backend/scripts/redes/enviarFila.js",
     "redes:publicar": "node --env-file-if-exists=.env backend/scripts/redes/publicarRedes.js",

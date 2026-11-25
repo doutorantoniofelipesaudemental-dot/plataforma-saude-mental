@@ -81,7 +81,7 @@ test('(e) rodapé fixo igual não torna o post parecido: só o corpo conta', () 
 test('(f) reprova eixo fora do eixo do dia (segunda exige E4)', () => {
   const r = checarZeroGenerico({ post: { ...BASE, eixo: 'E1' }, dataISO: DATA });
   assert.ok(r.falhas.some((f) => f.regra === 'f-eixo-do-dia'));
-  const dom = checarZeroGenerico({ post: { ...BASE, eixo: 'Relato' }, dataISO: '2026-11-08' });
+  const dom = checarZeroGenerico({ post: { ...BASE, eixo: 'Relato' }, dataISO: '2026-11-29' }); // domingo Relato (âncora de 24/11/2026)
   assert.equal(dom.falhas.filter((f) => f.regra === 'f-eixo-do-dia').length, 0);
 });
 
