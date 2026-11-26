@@ -266,3 +266,8 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 - **Links cruzados:** artigo de psicoeducação sobre um transtorno aponta para o artigo clínico ("Para saber mais: conceito, diagnóstico e conduta") e vice-versa.
 - **Blog:** filtros = Todos + 7 temas (nome curto visível; nome completo em `title`/`aria-label`) + divisor + "Relatos da Prática" (fora dos temas). URL: `?tema=<slug>` ou `?formato=relatos`. Proibido "consultório" no Blog.
 - **Relatos da Prática:** (a) sem lista de referências na narrativa; (b) nota de ficção obrigatória, texto exato em `backend/lib/relatos.js` (CEM art. 75); (c) informação clínica → caixa "Para entender" com 1 a 3 referências e link ao artigo do tema; (d) suicídio/autolesão conforme OMS 2023, sem método nem local, termina com CVV 188 · SAMU 192; (e) "pessoa com depressão", "pessoas com TEA", "morreu por suicídio" (nunca "cometeu").
+
+## Produção de episódios: skill, Bíblia e equipe (25/11/2026, ordem do Dr.)
+- **Skill obrigatória** para qualquer artigo → vídeo, carrossel ou post: `.claude/skills/artigo-para-video/SKILL.md`. Consultar a **BIBLIA.md** (mesma pasta) em cada etapa: personagens, cenários, câmera, atuação (3 batidas), trilha por emoção/personagem/eixo, infográfico, formatos e modelo de decupagem.
+- **Equipe:** `.claude/agents/00-showrunner.md` a `12-distribuicao.md` (13 agentes). Todo episódio começa pelo **showrunner**, que segue o pipeline até o pedido de cenas. Os agentes antigos (narrador, produtor-youtube, produtor-linkedin, agendador-linkedin, conferente, varredor, auditor) seguem válidos nas suas funções; em conflito, vale a equipe nova.
+- Gerar imagem e vídeo pagos continua fora do Claude Code (teto R$ 0): o pedido de cenas vai ao Claude no chat.
