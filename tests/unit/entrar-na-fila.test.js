@@ -20,6 +20,7 @@ function montar({ capitulos } = {}) {
   const descricao = [
     'Conteúdo do Portal de Saúde Mental Doutor Antônio Felipe Garabito', '',
     'Artigo: https://www.drantoniofelipemedico.com.br/artigo/teste', '',
+    'Conteúdo produzido com apoio de Inteligência Artificial.', '',
     'Dr. Antônio Felipe — Médico — CRM-BA 41322', 'Aviso (Resolução CFM 2.454/2026): conteúdo com IA.', '',
     'Capítulos:', ...caps.map((c) => `${c.inicio} ${c.titulo}`), '',
     'Em crise: CVV 188 · SAMU 192.',
@@ -34,7 +35,8 @@ function montar({ capitulos } = {}) {
 }
 
 function rodar(raiz, pacote, extra = []) {
-  return spawnSync(process.execPath, [SCRIPT, `--pacote=${pacote}`, ...extra], {
+  // upload fixado numa segunda: a trava de slot usa o dia atual (quinta bloqueia), o que tornava o teste dependente da data
+  return spawnSync(process.execPath, [SCRIPT, `--pacote=${pacote}`, '--upload=2026-12-07T10:00:00-03:00', ...extra], {
     env: { ...process.env, DRS_RAIZ: raiz }, encoding: 'utf8', timeout: 20000,
   });
 }
@@ -46,6 +48,16 @@ test('dry-run não grava e sai com 0 quando o pacote está completo', () => {
   assert.equal(r.status, 0, r.stdout + r.stderr);
   assert.equal(lerFila(raiz).itens.length, 0);
   assert.match(r.stdout, /DRY-RUN: nada gravado/);
+});
+
+test('bloqueia pacote sem a frase de aviso de IA na descrição', () => {
+  const { raiz, pacote } = montar();
+  const m = JSON.parse(fs.readFileSync(path.join(pacote, 'meta.json'), 'utf8'));
+  m.descricao = m.descricao.replace('Conteúdo produzido com apoio de Inteligência Artificial.', '');
+  fs.writeFileSync(path.join(pacote, 'meta.json'), JSON.stringify(m), 'utf8');
+  const r = rodar(raiz, pacote);
+  assert.equal(r.status, 1);
+  assert.match(r.stdout, /frase de aviso de IA ausente/);
 });
 
 test('bloqueia capítulos com menos de 10 s e não começa em 0:00', () => {
