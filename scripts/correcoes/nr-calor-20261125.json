@@ -1,0 +1,13 @@
+{
+  "id": "nr-calor-20261125",
+  "slug": "calor-extremo-trabalho-saude-mental",
+  "motivo": "Ordem do Dr. (25/11/2026, 22:45): NR-15 Anexo 3 não se aplica a atividade a céu aberto sem fonte artificial de calor (item 1.1.1). Trocar por NR-9 Anexo III e NR-1.",
+  "fontes": ["NR-9 Anexo III (texto consolidado MTE, nr-09-atualizada-2026)", "NR-1 (GRO)", "NR-15 Anexo 3, item 1.1.1 (texto oficial)"],
+  "substituicoes": [
+    {"campo": "resumo", "antes": "O impacto do calor na saúde mental, grupos vulneráveis, NR-15 e medidas de proteção.", "depois": "O impacto do calor na saúde mental, grupos vulneráveis, NR-9 (Anexo III), NR-1 e medidas de proteção."},
+    {"campo": "conteudo", "antes": "respeitar os limites de exposição ao calor previstos na NR-15;", "depois": "seguir as medidas de prevenção ao calor previstas na NR-9 (Anexo III) e o gerenciamento de riscos da NR-1;"},
+    {"campo": "conteudo", "antes": "Norma Regulamentadora nº 15 (NR-15), Anexo 3 — limites de exposição ocupacional ao calor.", "depois": "Norma Regulamentadora nº 9 (NR-9), Anexo III — exposição ocupacional ao calor."}
+  ],
+  "efeitos": "Narração do artigo fica pendente (hash muda); player oculto até nova narração. Não apagar o áudio antigo. Aplicar só com 'npm run ...' de importação em dry-run primeiro, backup e OK do Dr.",
+  "status": "aguardando-aprovacao-dr"
+}
