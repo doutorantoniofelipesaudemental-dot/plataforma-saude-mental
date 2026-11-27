@@ -105,3 +105,19 @@ Cuidar das condições de trabalho também é cuidar da saúde mental.
 📌 Artigo completo no Portal de Saúde Mental Doutor Antônio Felipe Garabito.
 Dr. Antônio Felipe · Médico · CRM-BA 41322 · Especialista em Medicina de Família e Comunidade · RQE 26638.
 Conteúdo educativo; não substitui avaliação profissional. Imagens criadas com IA.
+
+## Pipeline automático por episódio (26/11/2026, T13)
+Ordem: ficha → roteiro → checagem (T1 determinística, T2 científica, T3 ética) → pedido de cenas → GERAÇÃO no Higgsfield (antes: banco de cenas `producao-audiovisual/banco-de-cenas/INDICE.md`; estimar custo com `estimate_video_cost`) → conferência (Whisper + quadro) → montagem → `node scripts/checar-peca.js <pasta>` → revisor-ético (só itens novos) → pacote → dry-run (`scripts/youtube/entrarNaFila.js --pacote=<pasta>`, sem `--aplicar`).
+
+Parar e registrar em PENDENTES.md somente em:
+1. Tema com criança em situação sensível, personagem novo, ou artigo arquivado/sem slug publicado.
+2. Veto do revisor-ético.
+3. Gasto acima do teto de créditos aprovado pelo Dr. (teste grátis só vale no Claude chat/Cowork/ChatGPT).
+
+Nada é publicado: o pipeline para no dry-run. Regras fixas: frase "Conteúdo produzido com apoio de Inteligência Artificial."; sem a palavra "sintético"; CVV 188 · SAMU 192; PMID para dado numérico; sem consulta particular.
+
+## Contrato de arquivos por episódio (T20) e pílula de 1 minuto (T26)
+Em producao-audiovisual/episodios/<slug>/ cada etapa grava UM arquivo: 01-evidencias.md, 02-roteiro.md, 03-etica-portao1.md, 04-decupagem.md, 05-arte-figurino-luz.md, 06-pedido-cenas.md, 07-cenas.md, 08-montagem.md, 09-etica-portao2.md, 10-pacote.md. Episódios já existentes mantêm os nomes antigos.
+Pílula "Saúde Mental em um minuto" (9:16, 55–60 s, −14 LUFS, TP ≤ −2 dBTP): 0–5 s gancho; 5–35 s o que acontece e por quê (com fonte); 35–50 s orientação prática e sinal de alerta; 50–60 s cartão com as 5 linhas, CVV/SAMU, aviso de IA e Portal, e "Leia o artigo completo no Portal". Destino: YouTube Shorts e Instagram Reels. Não vai ao Spotify. LinkedIn pausado; Facebook só ponte.
+Ficha de evidências (T22): cada dado [CONFIRMADO — PMID ou link oficial] ou [REMOVER — sem fonte]; o roteirista usa só os confirmados. Plano B (T25): se uma cena falhar 2 vezes, reescrever de forma neutra (1 tentativa), depois banco-de-cenas, depois infográfico + pf_dora. Nunca parar o episódio por causa de uma cena.
+UTM (T27): <url>?utm_source={youtube|instagram|spotify}&utm_medium={episodio|shorts|reels|podcast}&utm_campaign=<slug>. Só se a landing de destino existir; não criada agora.
