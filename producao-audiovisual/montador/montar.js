@@ -138,7 +138,8 @@ function argsCartao({ linhas: linhasBrutas, duracao, formato, saida, pastaTextos
   const cadeia = linhas.map((texto, i) => {
     const arq = path.join(pastaTextos, `cartao-${i}.txt`).replace(/\\/g, '/').replace(/:/g, '\\:');
     fs_.writeFileSync(path.join(pastaTextos, `cartao-${i}.txt`), texto, 'utf8');
-    const tam = i === 0 ? 64 : 40;
+    // 40 em todas as linhas: a 1ª linha da identificação (42 caracteres) a 64 pt cortava nas bordas do 9:16.
+    const tam = 40;
     const cor = i === 0 ? 'yellow' : 'white';
     return `drawtext=fontfile='${FONTE_ESC}':textfile='${arq}':expansion=none:fontcolor=${cor}:fontsize=${tam}:x=(w-text_w)/2:y=${Math.round(h * 0.10)}+${i * 62}`;
   }).join(',');
