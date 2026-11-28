@@ -270,4 +270,10 @@ Nenhum caminho grava "aprovada" fora do comando de aprovação (teste em tests/u
 ## Produção de episódios: skill, Bíblia e equipe (25/11/2026, ordem do Dr.)
 - **Skill obrigatória** para qualquer artigo → vídeo, carrossel ou post: `.claude/skills/artigo-para-video/SKILL.md`. Consultar a **BIBLIA.md** (mesma pasta) em cada etapa: personagens, cenários, câmera, atuação (3 batidas), trilha por emoção/personagem/eixo, infográfico, formatos e modelo de decupagem.
 - **Equipe:** `.claude/agents/00-showrunner.md` a `12-distribuicao.md` (13 agentes). Todo episódio começa pelo **showrunner**, que segue o pipeline até o pedido de cenas. Os agentes antigos (narrador, produtor-youtube, produtor-linkedin, agendador-linkedin, conferente, varredor, auditor) seguem válidos nas suas funções; em conflito, vale a equipe nova.
-- Gerar imagem e vídeo pagos continua fora do Claude Code (teto R$ 0): o pedido de cenas vai ao Claude no chat.
+- ~~Gerar imagem e vídeo pagos continua fora do Claude Code (teto R$ 0): o pedido de cenas vai ao Claude no chat.~~ **Substituída pela ordem de 27/11/2026 (abaixo).**
+
+## Autorizações de 27/11/2026 (ordem escrita do Dr., 21:45; registrada em PR)
+- **Ordem de trabalho vigente:** `relatorios/PROMPT-MESTRE.md` (substitui os prompts anteriores; o que estiver pendente neles está consolidado nele).
+- **Higgsfield:** o Claude Code gera cenas pagas pelo conector MCP, dentro do teto de **1.000 créditos por semana** (Seção 3 do PROMPT-MESTRE). Antes de cada lote: `estimate_video_cost` e registro em `relatorios/CUSTOS-HIGGSFIELD.md`. Créditos são para a fábrica de ativos (produção audiovisual); **capas não usam crédito**. Renovação do plano Ultra: o Dr. decide em 20/12.
+- **public/ (capas, landing, páginas de eixo):** alteração autorizada **em branch + PR**, com capturas antes/depois, sem mudar URLs nem SEO. Publicação e deploy continuam com o Dr. (merge-seguro).
+- Merge e publicação continuam só do Dr. (`npm run merge-seguro -- N`).
