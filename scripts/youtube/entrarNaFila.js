@@ -44,6 +44,8 @@ function checarDescricao(meta) {
   return p;
 }
 
+const FRASE_IA = 'Conteúdo produzido com apoio de Inteligência Artificial.';
+
 function checarPacote(pacote, meta) {
   const p = [];
   for (const [k, v] of Object.entries(meta.arquivos || {})) if (!fs.existsSync(path.join(pacote, v))) p.push(`arquivo ausente (${k}): ${v}`);
@@ -53,6 +55,7 @@ function checarPacote(pacote, meta) {
   if (!meta.playlist) p.push('playlist ausente');
   if (meta.conteudoSintetico) p.push('conteúdo sintético marcado (decisão 15/11: não marcar)');
   p.push(...checarDescricao(meta));
+  if (!String(meta.descricao || '').includes(FRASE_IA)) p.push('frase de aviso de IA ausente na descrição ("' + FRASE_IA + '")');
   return p;
 }
 
