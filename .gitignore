@@ -155,3 +155,6 @@ relatorios/youtube/fila-manual/**/*.png
 relatorios/voz-amostras/*.wav
 relatorios/voz-amostras/*.m4a
 relatorios/voz-amostras/*.ogg
+saida_pronta/
+fila_producao/concluidos/
+fila_producao/teste-*.md
