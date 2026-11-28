@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import CartaoArtigoAnimado from './CartaoArtigoAnimado';
 import SpotifyLink from './SpotifyLink';
+import OndeMeAcompanhar from './OndeMeAcompanhar';
 
 // Conteudo real da secao "Sobre" de public/index.html (site anterior) —
 // nao existe apresentacao institucional separada nos arquivos do usuario;
@@ -345,6 +346,8 @@ export default function LandingContent() {
           </a>
         </div>
       </motion.section>
+
+      <OndeMeAcompanhar />
     </main>
   );
 }
