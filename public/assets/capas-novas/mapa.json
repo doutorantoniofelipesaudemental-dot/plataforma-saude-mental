@@ -1,0 +1,11 @@
+{
+  "versao": "27/11/2026",
+  "regra": "Capas compostas localmente: quadro de clipe do banco de b-rolls (sem rosto, sem texto gerado por IA) + selo e título compostos. Sem crédito de geração pago.",
+  "aplicacao": "A troca de imagemCapa no banco (MongoDB, coleção artigos) é feita pelo Dr. ou por comando autorizado; este PR só adiciona os arquivos.",
+  "capas": [
+    { "slug": "falar-saude-mental-em-casa", "arquivo": "/assets/capas-novas/falar-saude-mental-em-casa.jpg", "selo": "Infância e família", "alt": "Sala de aula vazia com desenhos nas paredes e luz de janela" },
+    { "slug": "relato-comecar-de-novo-sobre-rodas", "arquivo": "/assets/capas-novas/relato-comecar-de-novo-sobre-rodas.jpg", "selo": "Relato da prática", "alt": "Cenário de praia ao amanhecer, sem pessoas em primeiro plano" },
+    { "slug": "paliativos-normas-brasil", "arquivo": "/assets/capas-novas/paliativos-normas-brasil.jpg", "selo": "Condições específicas", "alt": "Cenário de cuidado em casa, iluminação suave" },
+    { "slug": "atendimento-sem-discriminacao-lgbtqia", "arquivo": "/assets/capas-novas/atendimento-sem-discriminacao-lgbtqia.jpg", "selo": "Sociedade e cultura", "alt": "Cenário urbano de Salvador, sem pessoas em primeiro plano" }
+  ]
+}
